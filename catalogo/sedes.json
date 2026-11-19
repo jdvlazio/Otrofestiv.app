@@ -61,6 +61,25 @@
    "ciudad": "Bogotá",
    "corto": "Pontificia Universidad Javeriana"
   },
+  "s_065b13d4": {
+   "nombre": "House of Demons",
+   "lat": 6.2394033,
+   "lng": -75.6004126,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/La+House+Of+Demons/@6.2394033,-75.6004126,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 80 #33-41, Laureles",
+   "alias": [
+    "House of Demons - Medellín"
+   ],
+   "festivales": [
+    "medellinhorror-2026"
+   ],
+   "ciudad": "Medellín"
+  },
   "s_0a4d1410": {
    "nombre": "Bar Yenyeré",
    "lat": 7.9884252,
@@ -4656,6 +4675,24 @@
    ],
    "ciudad": "Toro",
    "corto": "Colegio agrícola"
+  },
+  "s_ecedd1d7": {
+   "nombre": "Plaza Mayor",
+   "lat": 6.2416086,
+   "lng": -75.5763781,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+de+Convenciones+Plaza+Mayor/@6.2416086,-75.5763781,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [
+    "Plaza Mayor - Medellín"
+   ],
+   "festivales": [
+    "medellinhorror-2026"
+   ],
+   "ciudad": "Medellín"
   },
   "s_ed5a19ae": {
    "nombre": "Museo Casa Antonio Nariño",

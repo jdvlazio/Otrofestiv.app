@@ -1,0 +1,26 @@
+{
+ "_provenance": {
+  "fuente": "altas.py --sondar (registro medellinhorror-2026-altas.json)",
+  "capturado": "2026-11-18"
+ },
+ "fichas": {
+  "Happy": {
+   "tmdb": 1753034,
+   "_fuente": "https://www.themoviedb.org/movie/1753034",
+   "_por_que": "altas.py --sondar: tmdb_director: TMDB 1753034 «Happy» — director ✓ y año/duración ✓",
+   "_registro": "medellinhorror-2026-altas.json"
+  },
+  "Rewritten": {
+   "tmdb": 1285208,
+   "_fuente": "https://www.themoviedb.org/movie/1285208",
+   "_por_que": "altas.py --ficha: TMDB 1285208 «Reescrito» (Colombia, 2022, 12 min) en la filmografía de Andres Molano Moncada (3516325): mismo director, el título traducido, 12 vs 10 min (±3), Colombia. IMDb tt28152479 con los actores del póster",
+   "_registro": "medellinhorror-2026-altas.json"
+  },
+  "Forgetting": {
+   "tmdb": 1527240,
+   "_fuente": "https://www.themoviedb.org/movie/1527240",
+   "_por_que": "altas.py --ficha: TMDB 1527240 «El Olvido», único crédito de dirección de Jesús Cázares (5614732): el póster oficial del festival se titula «EL OLVIDO · un cortometraje de J. Cazares V.»",
+   "_registro": "medellinhorror-2026-altas.json"
+  }
+ }
+}

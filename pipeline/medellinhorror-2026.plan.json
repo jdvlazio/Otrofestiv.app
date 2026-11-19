@@ -1,0 +1,24 @@
+{
+ "_nota": "Medellín Horror Fest 2026, sexta edición (Medellín, 26–29 nov 2026). PRE-ONBOARDING, SIN PUBLICAR. Fuente: Revista Digital edición 01 (medellinhorrorfest.com, nov 2026) — 13 cortos de la Selección Oficial (dirección, país, duración) y 3 largometrajes en House of Demons Medellín con día y hora (26 nov 20:00 y 22:00, 27 nov 22:00; ENTRADA GRATIS). Los 13 pósteres del carrusel de medellinhorrorfest.com/seleccion-2026/ (14 nov) contrastan títulos y directores. Los cortos van en Hero Academy de Comic Con Medellín (Plaza Mayor, 27–29 nov) SIN día ni hora publicados (/actividades/, 18 nov: «muy pronto más información»). Sin bloque `festival`: se escribe al montar. Secciones, nombre y tagline: PROPUESTA para Juan.",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/medellinhorror-2026-catalogo.py",
+   "que": "revista ed. 01 (págs. 3–4, 9–10) + 13 pósteres de la web → catálogo (16 obras)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/medellinhorror-2026-catalogo.json",
+   "que": "la cascada de TMDB y lo ya publicado → catálogo enriquecido"
+  }
+ ],
+ "fuentes_vivas": [],
+ "_nota_fuentes_vivas": "Pre-onboarding sin parrilla: la programación de Hero Academy aún no salió. Al montar se declara medellinhorrorfest.com/actividades/.",
+ "radar": null,
+ "radar_nota": "Sin issue de radar: llegó por el vigía de IG (preonboarding de pipeline/ig-vigia-cuentas.json), que reportó la selección el 15 nov 2026.",
+ "_fuentes_versionadas": {
+  "festivals/staging/medellinhorror-2026-catalogo.json": "13 cortos + 3 largos desde la revista y la web",
+  "festivals/staging/medellinhorror-2026-catalogo-enriquecido.json": "fichas TMDB del catálogo",
+  "festivals/staging/medellinhorror-2026-correcciones.json": "fichas",
+  "festivals/staging/medellinhorror-2026-altas.json": "registro de altas (pipeline/altas.py)",
+  "festivals/staging/medellinhorror-2026-venues-geo.json": "sedes: House of Demons y Plaza Mayor, pines de Google Maps (almacén s_065b13d4, s_ecedd1d7)"
+ }
+}

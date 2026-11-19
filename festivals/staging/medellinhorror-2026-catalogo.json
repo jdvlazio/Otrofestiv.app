@@ -1,0 +1,264 @@
+{
+ "_provenance": {
+  "fuente": "Revista Digital edición 01 (https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf) + pósteres de https://medellinhorrorfest.com/seleccion-2026/",
+  "capturado": "2026-11-18",
+  "metodo": "pdftotext + lámina a ojo + OCR del sistema (pipeline/ocr.py) de los 13 pósteres"
+ },
+ "obras": [
+  {
+   "titulo": "Happy",
+   "director": "Victor Basallote",
+   "pais": "España",
+   "duracion_txt": "7 minutos",
+   "duracion_min": 7,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/Happy.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=9",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Happy.webp",
+    "date": "2026-11-18"
+   }
+  },
+  {
+   "titulo": "Last Generation",
+   "director": "Silvia Conesa",
+   "pais": "España",
+   "duracion_txt": "9 minutos",
+   "duracion_min": 9,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/Last-Generation.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=9",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Last-Generation.webp",
+    "date": "2026-11-18"
+   }
+  },
+  {
+   "titulo": "Rewritten",
+   "director": "Andrés Molano Moncada",
+   "pais": "Colombia",
+   "duracion_txt": "10 minutos",
+   "duracion_min": 10,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/Rewritten.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=9",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Rewritten.webp",
+    "date": "2026-11-18"
+   }
+  },
+  {
+   "titulo": "Familier / Familiar",
+   "director": "Julien Homère",
+   "pais": "Francia",
+   "duracion_txt": "10 minutos 39 segundos",
+   "duracion_min": 11,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/Familiar.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=9",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Familiar.webp",
+    "date": "2026-11-18"
+   },
+   "titulo_poster": "Familier",
+   "afiche": "assets/medellinhorror-2026/familier-familiar.jpg",
+   "_afiche_de": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Familiar.webp",
+   "_nota": "revista: «Versión con subtítulos en español según FilmFreeway»"
+  },
+  {
+   "titulo": "House Rules",
+   "director": "Geri Courtney-Austein",
+   "pais": "Estados Unidos",
+   "duracion_txt": "9 minutos 58 segundos",
+   "duracion_min": 10,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/House-Rules.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=9",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/House-Rules.webp",
+    "date": "2026-11-18"
+   }
+  },
+  {
+   "titulo": "Forgetting",
+   "director": "Jesus Cazares",
+   "pais": "México",
+   "duracion_txt": "10 minutos",
+   "duracion_min": 10,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/Forgetting.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=9",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Forgetting.webp",
+    "date": "2026-11-18"
+   },
+   "titulo_poster": "El olvido"
+  },
+  {
+   "titulo": "Tenebrios",
+   "director": "Tarik Antón Ferro",
+   "pais": "Argentina",
+   "duracion_txt": "6 minutos 59 segundos",
+   "duracion_min": 7,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/TENEBRIOS.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=9",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/TENEBRIOS.webp",
+    "date": "2026-11-18"
+   },
+   "afiche": "assets/medellinhorror-2026/tenebrios.jpg",
+   "_afiche_de": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/TENEBRIOS.webp",
+   "_corrige": "revista y póster en mayúsculas («TENEBRIOS»): caja de oración"
+  },
+  {
+   "titulo": "The Screaming",
+   "director": "Guillaume Boivin, Steve Villeneuve",
+   "pais": "Canadá",
+   "duracion_txt": "8 minutos",
+   "duracion_min": 8,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/The-Screaming.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=10",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/The-Screaming.webp",
+    "date": "2026-11-18"
+   },
+   "_corrige": "póster: «UN FILM DE GUILLAUME BOIVIN ET STEVE VILLENEUVE» (la revista: «Boivín»)"
+  },
+  {
+   "titulo": "There Is Something Behind You",
+   "director": "Julián Andrés Gómez Reyes",
+   "pais": "Colombia",
+   "duracion_txt": "6 minutos 25 segundos",
+   "duracion_min": 6,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/There-is-Something-Behind-You.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=10",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/There-is-Something-Behind-You.webp",
+    "date": "2026-11-18"
+   },
+   "afiche": "assets/medellinhorror-2026/there-is-something-behind-you.jpg",
+   "_afiche_de": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/There-is-Something-Behind-You.webp"
+  },
+  {
+   "titulo": "Bugaboo",
+   "director": "Benjamín Morehead",
+   "pais": "Estados Unidos",
+   "duracion_txt": "5 minutos 24 segundos",
+   "duracion_min": 5,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/Bugaboo.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=10",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Bugaboo.webp",
+    "date": "2026-11-18"
+   }
+  },
+  {
+   "titulo": "Snacktime",
+   "director": "Alphonse Ferrari",
+   "pais": "Francia",
+   "duracion_txt": "7 minutos 46 segundos",
+   "duracion_min": 8,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/Snacktime.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=10",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Snacktime.webp",
+    "date": "2026-11-18"
+   }
+  },
+  {
+   "titulo": "Closing Hour",
+   "director": "Tim Smink",
+   "pais": "Países Bajos",
+   "duracion_txt": "8 minutos 34 segundos",
+   "duracion_min": 9,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/Closing-Hour.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=10",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Closing-Hour.webp",
+    "date": "2026-11-18"
+   }
+  },
+  {
+   "titulo": "Borrowed Light",
+   "director": "Christian Stahlhofen",
+   "pais": "Suecia",
+   "duracion_txt": "6 minutos 16 segundos",
+   "duracion_min": 6,
+   "tipo": "corto",
+   "seccion": "Selección Oficial",
+   "franja": "Hero Academy · Comic Con Medellín, 27–29 nov (sin día ni hora publicados)",
+   "imagen_web": "fuentes/medellinhorror-2026/web/Borrowed-Light.webp",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=10",
+    "poster": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Borrowed-Light.webp",
+    "date": "2026-11-18"
+   },
+   "afiche": "assets/medellinhorror-2026/borrowed-light.jpg",
+   "_afiche_de": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Borrowed-Light.webp",
+   "_corrige": "póster: «DIRECTOR & CINEMATOGRAPHER CHRISTIAN STAHLHOFEN»; la revista dice «Submitter registrado en FilmFreeway Christian Markus Stalhhofen», no director"
+  },
+  {
+   "titulo": "El Susurro",
+   "director": "Gustavo Hernández",
+   "tipo": "largo",
+   "franja": "2026-11-26 20:00 · House of Demons Medellín (Cra. 80 #33-41, Laureles) · ENTRADA GRATIS",
+   "_evidencia": "pág. 4: «26 DE NOV 8:00PM»; póster: «DEL DIRECTOR DE VIRUS:32 · LA CASA MUDA» (= Gustavo Hernández); pág. 3: «LARGOMETRAJE INVITADO AL FESTIVAL · PELÍCULA DEL DIRECTOR DE VIRUS 32»",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=4",
+    "date": "2026-11-18"
+   }
+  },
+  {
+   "titulo": "Demonatrix",
+   "director": "Jeff Ferrell, Aurelio Voltaire",
+   "tipo": "largo",
+   "franja": "2026-11-26 22:00 · House of Demons Medellín (Cra. 80 #33-41, Laureles) · ENTRADA GRATIS",
+   "_evidencia": "pág. 4: «26 DE NOV 10:00PM»; póster: «A FILM BY JEFF FERRELL AND AURELIO VOLTAIRE»",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=4",
+    "date": "2026-11-18"
+   }
+  },
+  {
+   "titulo": "Sierra: El álbum mortuorio",
+   "director": "Carlos Ortiz",
+   "tipo": "largo",
+   "franja": "2026-11-27 22:00 · House of Demons Medellín (Cra. 80 #33-41, Laureles) · ENTRADA GRATIS",
+   "_evidencia": "pág. 4: «27 DE NOV 10:00PM»; pág. 3: «DIRIGIDA POR CARLOS ORTIZ»; índice: «Sierra: El álbum mortuorio»",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf#page=4",
+    "date": "2026-11-18"
+   }
+  }
+ ]
+}
