@@ -86,6 +86,23 @@
     "fecha": "2026-11-18"
    },
    "evidencia": "web oficial, tres caminos: HTML de la ficha de «La última ronda en Venecia» y HTML de la ficha de «Latido.» dicen «Medellín · Miércoles 18 nov · 19:00 · Centro Colombo Americano – Sala 1»; el texto renderizado de la ficha de «Latido.» (navegador) dice lo mismo; la lámina 00.jpg de Df3D47hlulW (17 nov) pone «INAUGURACIÓN / LA ÚLTIMA RONDA EN VENECIA 19h00» en la primera fila, que en la lámina 01.jpg es CENTRO COLOMBO AMERICANO - SALA 1"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "16:30"
+   },
+   "funcion": "f_5378451bd6",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf",
+    "fecha": "2026-11-18"
+   },
+   "evidencia": "catálogo oficial Al Este 2026 (PDF, 18 nov): «LOS GOLFOS · SALA CAPITAL | 29.11 | 16:30 · CONVERSATORIO TRAS LA PROYECCIÓN»"
   }
  ]
 }

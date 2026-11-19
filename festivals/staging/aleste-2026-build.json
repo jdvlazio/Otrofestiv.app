@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-18",
+  "capturado": "2026-11-19",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "16 nov 2026: las secciones son las de la web oficial (alestfestival.com/programa2026), tal cual. Se retiran «Al Este en el MAMM / en la Cinemateca», que eran rótulos nuestros por sede. «Fokus: Las grietas en el muro» (lámina IG) pasa a «del muro», como dice la web, que es la fuente más nueva. Emojis y nombres en inglés: propuesta, a confirmar con Juan.",
@@ -3064,7 +3064,7 @@
    "day_order": 11,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala Capital",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "Un grupo de amigos que sobreviven penosamente en los arrabales de Madrid cometen pequeños delitos con el propósito de financiar el debut como torero de uno de ellos.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/los-golfos.jpg",
@@ -3107,8 +3107,9 @@
      "fecha": "2026-11-16"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-18",
+     "url": "https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf"
     },
     "title": {
      "tipo": "festival-web",
@@ -3351,7 +3352,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-18T15:36:10",
+  "fecha": "2026-11-19T05:54:56",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
