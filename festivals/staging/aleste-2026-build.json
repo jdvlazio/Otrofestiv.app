@@ -305,7 +305,9 @@
      "_src": {
       "url": "https://www.instagram.com/p/DfkttriN6pD/",
       "date": "2026-11-12"
-     }
+     },
+     "synopsis": "Cada artista plasma su visión y sentir en los muros, gracias a una historia que se escribe desde los años 80 hasta hoy, en una Medellín que siempre ha estado en proceso de transformación.",
+     "synopsis_lang": "es"
     },
     {
      "title": "La última ronda en Venecia",
@@ -1330,6 +1332,8 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
    "has_qa": true,
+   "synopsis": "Tras la caída del comunismo en Europa del Este, el exdisidente y escritor checo Václav Havel se convirtió en el primer presidente electo democráticamente de la República Checa en 1993. Desde la campaña electoral hasta después de que terminaran sus 10 años en el cargo en el 2003, el cineasta y amigo de la familia, Pavel Koutecký, siguió de cerca a Havel durante los mítines de campaña, las deliberaciones del partido, las visitas de Estado y los asuntos privados.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/ciudadano-havel.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1634,6 +1638,8 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "has_qa": true,
+   "synopsis": "La única película dirigida por Václav Havel, basada en su última obra literaria, es una reflexión autobiográfica y una libre interpretación de «El rey Lear», de Shakespeare y «El jardín de los cerezos», de Chéjov.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/la-retirada.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1708,6 +1714,8 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "has_qa": false,
+   "synopsis": "Durante una estancia en Grecia, su país natal, la realizadora se entera de que una amiga está enferma. Sus médicos y familiares se lo ocultan y ella también debe guardar el secreto. Este hecho despierta recuerdos de su infancia en un entorno médico y de cómo esta práctica afectó a personas cercanas. Decide entonces conversar con su padre, médico, e iniciar una investigación íntima para comprender las razones detrás de las mentiras médicas.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/historias-de-una-mentira.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1782,6 +1790,8 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
    "has_qa": true,
+   "synopsis": "En julio de 2023, Nagorno-Karabaj lleva siete meses bajo el asedio de Azerbaiyán. Ante la inminencia de la guerra, la realizadora pide a su amigo Artsiv que filme su vida cotidiana junto a su esposa Tatev y sus cinco hijos. A través de imágenes de gran ternura emerge una forma silenciosa de resistencia: la de un pueblo que se encuentra al borde de tener que abandonar su hogar para siempre.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/aqui-en-otros-lugares.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -2007,6 +2017,8 @@
    "sala": "Sala 2",
    "has_qa": true,
    "qa_type": "team",
+   "synopsis": "Una aproximación analítica al trabajo del artista Rosemberg Sandoval, cuya producción abarca desde 1980 hasta la actualidad y se caracteriza por el uso del cuerpo propio y ajeno, especialmente de habitantes de calle, como material artístico.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.alestfestival.com/programa2026/labriego",
     "date": "2026-11-16",
@@ -2172,8 +2184,10 @@
      },
      "poster": "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
      "posterSource": "oficial",
+     "synopsis": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo.",
      "genre": "Familia",
-     "year": 2026
+     "year": 2026,
+     "synopsis_lang": "es"
     },
     {
      "title": "Junio 25. Andréi Tarkovski, visita a su tumba",
@@ -2189,7 +2203,9 @@
      "posterSource": "tmdb",
      "lbSlug": "junio-25-andrei-tarkovski-visita-a-su-tumba",
      "tmdb_id": 1193850,
-     "synopsis_en": "Log of a trip to the cemetery where the grave of the Russian filmmaker and poet Andrei Tarkovsky lies."
+     "synopsis": "En diciembre de 1986, el cineasta y poeta ruso Andréi Tarkovski muere a los 54 años a causa de un cáncer, luego de haberse exiliado de la URSS. Una tarde de verano del siglo 21, acompañado de una cámara súper8mm, viajo a visitar su tumba. Esta película es la bitácora de este viaje.",
+     "synopsis_en": "Log of a trip to the cemetery where the grave of the Russian filmmaker and poet Andrei Tarkovsky lies.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Lejanía",
@@ -2339,6 +2355,8 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
    "has_qa": false,
+   "synopsis": "Achiko lleva diez años en el programa estatal de terapia de sustitución, un sistema que ofrece rutina diaria pero deja pocas esperanzas de recuperación. A pesar de una soledad insoportable y una fuerte dependencia a las drogas, todavía sueña con vivir una vida plena.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/nadie-a-la-vista.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -2492,6 +2510,8 @@
    "sala": "Sala 3",
    "has_qa": true,
    "qa_type": "team",
+   "synopsis": "En 2021, Bartas perdió a su hija Ina Marija en un accidente. Viaja con su hija menor, Una, a la costa del Pacífico mexicano donde Ina Marija había elegido vivir. Entre manglares golpeados por huracanes, padre e hija atraviesan el duelo. Se estrenó en las Giornate degli Autori de Venecia 2025.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/laguna.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -2569,6 +2589,8 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
    "has_qa": false,
+   "synopsis": "Yuji y Mamoru son dos jóvenes que trabajan en una fábrica de Tokio, sin rumbo y sin futuro. Cuando Mamoru termina en prisión, Yuji queda a cargo de su medusa venenosa, que escapa a los canales de la ciudad y empieza a multiplicarse. En Cannes 2003 compitió por la Palma de Oro.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/bright-future.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -2643,6 +2665,8 @@
    "sala": "Sala Capital",
    "has_qa": true,
    "qa_type": "team",
+   "synopsis": "Convencida de que la cerámica antigua puede contener rastros de sonido grabado, la arqueóloga Sofía viaja a una remota isla griega para probar su teoría con Potter, un artista excéntrico que duda de su idea.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/the-megalomaniacs.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -2792,6 +2816,8 @@
    "day_order": 11,
    "venue": "Cinemateca Fontanar del Río - Bogotá",
    "has_qa": false,
+   "synopsis": "Cortometrajes de Altura es una selección de 5 animaciones bolivianas con una duración total de 41 minutos, presentada en el 9º Festival AL ESTE 2026, que reúne las obras «Cuentos de la Cuenca» (sobre el cuidado ambiental), «Ekeko» (acerca de la deidad andina de la abundancia), «La muñeca de maíz» (un tierno vínculo en el Chaco boliviano), «Pascay» (un relato sobre el duelo y las tradiciones del altiplano) y «Paulina y el cóndor» (una emotiva travesía a la gran ciudad realizada con la técnica de papel rasgado).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.alestfestival.com/programa2026/cortometrajes-de-altura",
     "date": "2026-11-16",
@@ -3142,6 +3168,8 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
    "has_qa": true,
+   "synopsis": "Tras diez años en coma, un joven despierta y debe enfrentarse a una vida que continuó sin él. Mientras intenta reconstruir sus vínculos familiares y encontrar su lugar en un mundo que ha cambiado, emprende un difícil proceso de adaptación.",
+   "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/license-to-live.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -3352,7 +3380,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T05:54:56",
+  "fecha": "2026-11-19T08:33:51",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
