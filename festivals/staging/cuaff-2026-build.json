@@ -280,6 +280,78 @@
    "id": "f_af9f2d1125"
   },
   {
+   "title": "Graffiti & Trenes",
+   "type": "film",
+   "section": "🎨 CUAFF 2026",
+   "country": "Colombia, Francia",
+   "flags": "🇨🇴🇫🇷",
+   "duration": "66 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-21",
+    "19:30"
+   ],
+   "day": "2026-11-21",
+   "time": "19:30",
+   "day_order": 1,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Sala 3",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Df7PVXvlVJz/",
+    "posts": [
+     "Df7PVXvlVJz"
+    ],
+    "tipo": "festival-ig",
+    "date": "2026-11-16",
+    "ficha_sala": "https://cinematecadebogota.gov.co/node/peliculas/4033"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Roofianes2",
+     "director": "Crew TSK",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2019,
+     "duration": "32 min",
+     "poster": "/assets/cuaff-2026/roofianes2.jpg",
+     "posterSource": "oficial",
+     "synopsis": "Desde las calles de Bogotá llega Roofianes 2, un documental realizado por la Crew TSK que nos sumerge en el universo más underground del graffiti bogotano. Una producción que registra las acciones de la crew TSK, sus recorridos, intervenciones y experiencias dentro de la escena del graffiti de la capital.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Graffiti Subway Mission",
+     "director": "Resk12",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "year": 2026,
+     "duration": "15 min"
+    },
+    {
+     "title": "Verticalbiner manila",
+     "director": "Samuel Aricapa",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "4 min"
+    },
+    {
+     "title": "Autosabotaje",
+     "director": "Sacrilegio",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "15 min"
+    }
+   ],
+   "description": "Entre túneles, vagones, muros y alturas, el graffiti underground se manifiesta como una expresión de identidad, rebeldía y libertad creativa. Este bloque reúne cuatro producciones audiovisuales que nos sumergen en el universo del graffiti, explorando la adrenalina de la intervención urbana, los códigos de la cultura clandestina y la relación entre el arte, el riesgo y la ciudad. Desde Colombia hasta París, estas historias presentan distintas miradas sobre una cultura que desafía los límites del espacio público y convierte el paisaje urbano en un territorio de expresión, resistencia y movimiento.",
+   "description_lang": "es",
+   "_fid": "f_bd66c8a701",
+   "id": "f_bd66c8a701"
+  },
+  {
    "title": "Hip Hop, Comunidad y Graffiti",
    "type": "film",
    "section": "🎨 CUAFF 2026",
@@ -522,8 +594,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T08:46:30",
-  "plan_sha": "8d9717eb85ec366c",
+  "fecha": "2026-11-19T09:16:47",
+  "plan_sha": "aea46c620f2a357b",
   "paso": 6,
   "cmd": "python3 pipeline/cuaff-2026-verificar.py"
  }

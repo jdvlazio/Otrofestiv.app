@@ -187,6 +187,14 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Roofianes2",
+   "poster": "/assets/cuaff-2026/roofianes2.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche de la obra («ROOFIANES · Documental»), lámina 1 del post de @colombianurbanfilm p/Df7PVXvlVJz (embed sin sesión), mirado a ojo; trae encima fecha y sala de la función",
+   "sinopsis": "Desde las calles de Bogotá llega Roofianes 2, un documental realizado por la Crew TSK que nos sumerge en el universo más underground del graffiti bogotano. Una producción que registra las acciones de la crew TSK, sus recorridos, intervenciones y experiencias dentro de la escena del graffiti de la capital.",
+   "_sinopsis": "https://www.instagram.com/p/Df7PVXvlVJz/"
+  },
+  {
    "titulo": "Código cypher vol1",
    "sinopsis": "Una propuesta audiovisual independiente que busca generar espacios para las raperas del underground. Una pieza con identidad propia, fuerza, creada para conectar, visibilizar y seguir construyendo lazos desde la música.",
    "_sinopsis": "https://www.instagram.com/p/Df2amWqlajg/"
@@ -368,13 +376,21 @@
  },
  "sin_ficha": [
   "Adrenaline Tour: Bella Ciao",
+  "Autosabotaje",
   "Código cypher vol1",
   "El arte de Gravitar",
-  "Homenajes de memorias, del Hip hop en ciudad Bolívar"
+  "Graffiti Subway Mission",
+  "Homenajes de memorias, del Hip hop en ciudad Bolívar",
+  "Roofianes2",
+  "Verticalbiner manila"
  ],
  "_sin_ficha_sondeo": {
   "Adrenaline Tour: Bella Ciao": {
    "director": "Ozono",
+   "fecha": "2026-11-19"
+  },
+  "Autosabotaje": {
+   "director": "Sacrilegio",
    "fecha": "2026-11-19"
   },
   "Código cypher vol1": {
@@ -385,8 +401,20 @@
    "director": "Camila Estupiñán",
    "fecha": "2026-11-19"
   },
+  "Graffiti Subway Mission": {
+   "director": "Resk12",
+   "fecha": "2026-11-19"
+  },
   "Homenajes de memorias, del Hip hop en ciudad Bolívar": {
    "director": "Kno Delix, Johan Duarte",
+   "fecha": "2026-11-19"
+  },
+  "Roofianes2": {
+   "director": "Crew TSK",
+   "fecha": "2026-11-19"
+  },
+  "Verticalbiner manila": {
+   "director": "Samuel Aricapa",
    "fecha": "2026-11-19"
   }
  }

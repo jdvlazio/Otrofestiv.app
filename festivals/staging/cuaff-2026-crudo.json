@@ -114,6 +114,61 @@
    "sinopsis": "El hip hop es mucho más que música: es memoria, identidad, resistencia y construcción colectiva. Este bloque reúne dos miradas documentales de Argentina y Colombia que exploran cómo la cultura urbana transforma territorios, conecta generaciones y fortalece los vínculos comunitarios. A través de sus protagonistas, las calles se convierten en escenarios de expresión, encuentro y memoria, donde el arte mantiene vivas las historias de quienes han construido el movimiento desde sus raíces."
   },
   {
+   "titulo": "Graffiti & Trenes",
+   "dia": "2026-11-21",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "seccion": "CUAFF 2026",
+   "tipo": "programa",
+   "duracion_min": 66,
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "obras": [
+    {
+     "titulo": "Roofianes2",
+     "director": "Crew TSK",
+     "pais": "Colombia",
+     "anio": 2019,
+     "duracion_min": 32,
+     "tipo": "corto"
+    },
+    {
+     "titulo": "Graffiti Subway Mission",
+     "director": "Resk12",
+     "pais": "Francia",
+     "anio": 2026,
+     "duracion_min": 15,
+     "tipo": "corto"
+    },
+    {
+     "titulo": "Verticalbiner manila",
+     "director": "Samuel Aricapa",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 4,
+     "tipo": "corto"
+    },
+    {
+     "titulo": "Autosabotaje",
+     "director": "Sacrilegio",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 15,
+     "tipo": "corto"
+    }
+   ],
+   "sede": "Cinemateca de Bogotá",
+   "_src": {
+    "url": "https://www.instagram.com/p/Df7PVXvlVJz/",
+    "posts": [
+     "Df7PVXvlVJz"
+    ],
+    "tipo": "festival-ig",
+    "date": "2026-11-16",
+    "ficha_sala": "https://cinematecadebogota.gov.co/node/peliculas/4033"
+   },
+   "sinopsis": "Entre túneles, vagones, muros y alturas, el graffiti underground se manifiesta como una expresión de identidad, rebeldía y libertad creativa. Este bloque reúne cuatro producciones audiovisuales que nos sumergen en el universo del graffiti, explorando la adrenalina de la intervención urbana, los códigos de la cultura clandestina y la relación entre el arte, el riesgo y la ciudad. Desde Colombia hasta París, estas historias presentan distintas miradas sobre una cultura que desafía los límites del espacio público y convierte el paisaje urbano en un territorio de expresión, resistencia y movimiento."
+  },
+  {
    "titulo": "Hip Hop, Comunidad y Graffiti",
    "dia": "2026-11-22",
    "hora": "13:30",
@@ -260,8 +315,5 @@
    },
    "sinopsis": "Documental que busca, en un relato de paralelismos, encontrar todos los matices posibles sobre un pedacito del centro de Bogotá, un microcosmos que se entrelaza y muere con la renovación de la ciudad. Graffiti, Rap y literatura (Mario Mendoza) aportan con datos inéditos todo lo que pasó en algún momento en uno de los barrios marginalizados del centro de Bogotá"
   }
- ],
- "_fuera": {
-  "Roofianes2, Graffiti Subway Mission, Verticalbiner manila, Autosabotaje (ficha 4033 «Graffiti & trenes»)": "ficha 4033 de la Cinemateca sin día ni hora en ninguna fuente (17 nov)"
- }
+ ]
 }
