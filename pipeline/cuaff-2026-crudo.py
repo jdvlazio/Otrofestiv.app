@@ -21,7 +21,7 @@ TÍTULOS: manda el afiche/post del festival sobre la ficha de la sala.
   «Still Free» (afiche del post DfkG3folR3w, «A film by Icer & Ka»; la Cinemateca
   dice «Latam tour», y el post lleva #LatamTour: es la misma obra, 18 min, Krone).
 
-FUERA: la ficha 4033 «Graffiti & trenes» (Roofianes2, Graffiti Subway Mission,
+ENTRA (19 nov, post Df7PVXvlVJz: «NOVIEMBRE 21 · SALA 3 HORA 7:30PM», programa de 66 min): la ficha 4033 «Graffiti & trenes» (Roofianes2, Graffiti Subway Mission,
 Verticalbiner manila, Autosabotaje; 66 min) existe en la Cinemateca, pero
 ningún post ni la agenda le dan día ni hora (17 nov). No se publica sin función.
 
@@ -59,9 +59,13 @@ F = [
     dict(titulo='Graffiti y cámara: documentar la calle', dia='21', hora='09:00', sala='Laboratorio 1',
          seccion='Taller', tipo='evento', event_kind='taller', duracion_min=120,
          acceso='Entrada libre con inscripción previa',
-         descripcion='Taller teórico-analítico sobre cómo registrar muralismo, graffiti y acciones urbanas '
-                     'desde una mirada audiovisual consciente. Dictado por Anonimato Visual. '
-                     'Inscripciones por mensaje directo a @colombianurbanfilm.',
+         # texto del post Dfz5iWUlVID, tal cual (19 nov)
+         descripcion='¿Cómo registrar el graffiti, el muralismo y las acciones urbanas sin intervenir en su '
+                     'esencia? Un taller teórico y analítico donde abordaremos referentes visuales, ritmo, '
+                     'composición, luz y narrativa del territorio, explorando estrategias para documentar el '
+                     'arte urbano desde una mirada consciente, respetando los códigos de calle y los procesos '
+                     'de creación. Dictado por Anonimato Visual, fotógrafo, artista multidisciplinar y docente '
+                     'en Artes Visuales de Bogotá.',
          _src={'ig': 'Dfz5iWUlVID'}),
     dict(titulo='Breaking la vida', dia='21', hora='14:30', sala='Sala 3', seccion=SEC,
          director='Abraham Escobedo-Salas', pais='México', anio=2022, duracion_min=92, acceso=LIBRE,
@@ -72,6 +76,13 @@ F = [
                 corto('Homenajes de memorias, del Hip hop en ciudad Bolívar', 'Kno Delix, Johan Duarte',
                       'Colombia', 2025, 39)],
          _src={'ig': 'DfkCq1vlXAe', 'cinemateca': 4032}),
+    dict(titulo='Graffiti & Trenes', dia='21', hora='19:30', sala='Sala 3', seccion=SEC,
+         tipo='programa', duracion_min=66, acceso=LIBRE,
+         obras=[corto('Roofianes2', 'Crew TSK', 'Colombia', 2019, 32),
+                corto('Graffiti Subway Mission', 'Resk12', 'Francia', 2026, 15),
+                corto('Verticalbiner manila', 'Samuel Aricapa', 'Colombia', 2025, 4),
+                corto('Autosabotaje', 'Sacrilegio', 'Colombia', 2025, 15)],
+         _src={'ig': 'Df7PVXvlVJz', 'cinemateca': 4033}),
     dict(titulo='Hip Hop, Comunidad y Graffiti', dia='22', hora='13:30', sala='Sala 3', seccion=SEC,
          tipo='programa', duracion_min=60, acceso=LIBRE,
          obras=[corto('Código cypher vol1', 'Hitana, Sir Cesaro', 'Argentina', 2026, 5),
@@ -101,7 +112,8 @@ SINOPSIS = {
  "4032": "El hip hop es mucho más que música: es memoria, identidad, resistencia y construcción colectiva. Este bloque reúne dos miradas documentales de Argentina y Colombia que exploran cómo la cultura urbana transforma territorios, conecta generaciones y fortalece los vínculos comunitarios. A través de sus protagonistas, las calles se convierten en escenarios de expresión, encuentro y memoria, donde el arte mantiene vivas las historias de quienes han construido el movimiento desde sus raíces.",
  "4034": "El hip hop y el graffiti son expresiones culturales que nacen de las calles, construyen identidad y fortalecen los lazos comunitarios. Este bloque reúne cinco producciones audiovisuales de Colombia y Argentina que exploran el arte urbano como lenguaje de encuentro, memoria, transformación social y resistencia cultural. A través del movimiento, la música, las intervenciones gráficas y las narrativas de sus protagonistas, descubrimos cómo las nuevas generaciones reinterpretan sus territorios, mantienen viva la cultura underground y encuentran en el arte una forma de expresión colectiva.",
  "4035": "El graffiti no conoce fronteras. Entre trenes, calles, muros y recorridos clandestinos, este bloque nos sumerge en la esencia más cruda y auténtica de la cultura underground. Cuatro producciones audiovisuales de Colombia, Italia y Argentina retratan la adrenalina, los viajes, los códigos y las experiencias que definen el graffiti sobre metal y el movimiento del street bombing. Una mirada a las conexiones internacionales entre escritores de graffiti, donde cada recorrido se convierte en una aventura y cada intervención deja una huella en el paisaje urbano. Arte, riesgo, identidad y libertad se encuentran en historias que revelan la fuerza de una cultura que permanece en constante movimiento.",
- "4036": "Documental que busca, en un relato de paralelismos, encontrar todos los matices posibles sobre un pedacito del centro de Bogotá, un microcosmos que se entrelaza y muere con la renovación de la ciudad. Graffiti, Rap y literatura (Mario Mendoza) aportan con datos inéditos todo lo que pasó en algún momento en uno de los barrios marginalizados del centro de Bogotá"
+ "4036": "Documental que busca, en un relato de paralelismos, encontrar todos los matices posibles sobre un pedacito del centro de Bogotá, un microcosmos que se entrelaza y muere con la renovación de la ciudad. Graffiti, Rap y literatura (Mario Mendoza) aportan con datos inéditos todo lo que pasó en algún momento en uno de los barrios marginalizados del centro de Bogotá",
+ "4033": "Entre túneles, vagones, muros y alturas, el graffiti underground se manifiesta como una expresión de identidad, rebeldía y libertad creativa. Este bloque reúne cuatro producciones audiovisuales que nos sumergen en el universo del graffiti, explorando la adrenalina de la intervención urbana, los códigos de la cultura clandestina y la relación entre el arte, el riesgo y la ciudad. Desde Colombia hasta París, estas historias presentan distintas miradas sobre una cultura que desafía los límites del espacio público y convierte el paisaje urbano en un territorio de expresión, resistencia y movimiento."
 }
 
 
@@ -118,6 +130,10 @@ def main():
             r['_src']['ficha_sala'] = CINE.format(src['cinemateca'])
             if str(src['cinemateca']) in SINOPSIS:
                 r['sinopsis'] = SINOPSIS[str(src['cinemateca'])]
+        # el texto de una ACTIVIDAD viaja como `sinopsis` (ensamblar lo pasa a
+        # description); `descripcion` no lo lee nadie y no llegaba al JSON
+        if r.get('tipo') == 'evento' and r.get('descripcion') and not r.get('sinopsis'):
+            r['sinopsis'] = r.pop('descripcion')
         if r.get('obras'):
             suma = sum(o['duracion_min'] for o in r['obras'])
             if abs(suma - r['duracion_min']) > 1:
@@ -127,8 +143,7 @@ def main():
         '_provenance': provenance('https://www.instagram.com/colombianurbanfilm/',
                                   metodo='pies de 11 posts por embed sin sesión + fichas 4030–4036 de la Cinemateca',
                                   que_aporta='día, hora, sala, acceso (IG); obras de cada programa (Cinemateca)'),
-        'funciones': funciones,
-        '_fuera': {'Roofianes2, Graffiti Subway Mission, Verticalbiner manila, Autosabotaje (ficha 4033 «Graffiti & trenes»)': 'ficha 4033 de la Cinemateca sin día ni hora en ninguna fuente (17 nov)'}},
+        'funciones': funciones},
         ensure_ascii=False, indent=1) + '\n')
     print(f'✓ {len(funciones)} funciones → {os.path.relpath(OUT, REPO)}')
 

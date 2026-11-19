@@ -31,6 +31,7 @@
  "_nota_fuentes_vivas": "Sin web propia con programa: todo sale de posts de IG (fijos) y de fichas de la Cinemateca bajadas el 17 nov. La agenda de la sala la vigila la tarea salas-agenda-festivales.",
  "_fuentes_versionadas": {
   "festivals/staging/cuaff-2026-crudo.json": "la programación (IG + Cinemateca)",
+  "festivals/staging/cuaff-2026-sinopsis.json": "sinopsis oficiales del IG del festival; lo lee enriquecer.py",
   "festivals/staging/cuaff-2026-venues-geo.json": "la Cinemateca de Bogotá, heredada (manual)",
   "festivals/staging/cuaff-2026-afiches.json": "8 afiches oficiales (lámina 1 de cada post), mirados a mano; los leen enriquecer.py y encuadrar-posters.py",
   "festivals/staging/cuaff-2026-correcciones.json": "sin_afiche de 4 cortos",
