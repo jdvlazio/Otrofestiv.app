@@ -982,7 +982,7 @@
    "section": "🎬 Muestra Oficial",
    "country": "Argentina, Alemania, Estados Unidos, Irán, Albania, Colombia",
    "flags": "🇦🇷🇩🇪🇺🇸🇮🇷🇦🇱🇨🇴",
-   "duration": "22 min",
+   "duration": "36 min",
    "_ancla": [
     "Librería Antimateria - Medellín",
     "2026-12-01",
@@ -1014,7 +1014,12 @@
      "director": "Thorsten Fleisch",
      "country": "Alemania",
      "flags": "🇩🇪",
-     "year": 2026
+     "year": 2026,
+     "lbSlug": "atombombenabend",
+     "tmdb_id": 1829843,
+     "synopsis_en": "A mockumentary fever dream that travels from artificial intelligence to the atomic bomb and back.",
+     "genre": "Comedia",
+     "duration": "14 min"
     },
     {
      "title": "Binary",
@@ -1348,7 +1353,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-18T19:55:53",
+  "fecha": "2026-11-18T20:03:46",
   "plan_sha": "de4c503917909c23",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"

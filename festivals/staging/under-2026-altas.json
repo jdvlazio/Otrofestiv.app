@@ -449,7 +449,9 @@
     "veredicto_criterio": null,
     "fecha": "2026-11-18"
    },
-   "estado": "alta_posible"
+   "estado": "alta_hecha",
+   "tmdb_id": 1829843,
+   "alta_fecha": "2026-11-18"
   },
   "Binary": {
    "titulo": "Binary",

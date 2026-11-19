@@ -102,6 +102,22 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Atombombenabend",
+   "tmdb_id": 1829843,
+   "titulo_original": "Atombombenabend",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A mockumentary fever dream that travels from artificial intelligence to the atomic bomb and back.",
+   "genero": "Comedia",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "lbSlug": "atombombenabend",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_director": "Thorsten Fleisch",
+   "_sondeado": "2026-11-18"
+  },
+  {
    "titulo": "Bisou ACAB",
    "tmdb_id": 1788221,
    "titulo_original": "Bisou ACAB",
@@ -1286,6 +1302,21 @@
    "poster": "/assets/under-2026/analogue-natives.jpg",
    "posterSource": "tmdb"
   },
+  "Atombombenabend": {
+   "tmdb_id": 1829843,
+   "titulo_original": "Atombombenabend",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A mockumentary fever dream that travels from artificial intelligence to the atomic bomb and back.",
+   "genero": "Comedia",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "lbSlug": "atombombenabend",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_director": "Thorsten Fleisch",
+   "_sondeado": "2026-11-18"
+  },
   "Bisou ACAB": {
    "tmdb_id": 1788221,
    "titulo_original": "Bisou ACAB",
@@ -2352,7 +2383,6 @@
   "1 paseo por la ciudad",
   "A Perfect Maryam",
   "Antifragility",
-  "Atombombenabend",
   "Binary",
   "Cut your wings and fly",
   "Lo que aún queda de mí",
@@ -2377,10 +2407,6 @@
   "Antifragility": {
    "director": "Serafim Chikhladze",
    "fecha": "2026-11-17"
-  },
-  "Atombombenabend": {
-   "director": "Thorsten Fleisch",
-   "fecha": "2026-11-18"
   },
   "Binary": {
    "director": "Padrick Ritch",
