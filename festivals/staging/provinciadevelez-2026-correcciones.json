@@ -1,0 +1,35 @@
+{
+ "_provenance": {
+  "fuente": "pre-onboarding de provinciadevelez-2026 (altas.py + decisiones con su porqué)",
+  "capturado": "2026-11-19",
+  "metodo": "correcciones con su porqué"
+ },
+ "fichas": {
+  "El fantástico Sr. Fox": {
+   "tmdb": 10315,
+   "_fuente": "https://www.themoviedb.org/movie/10315",
+   "_por_que": "altas.py --ficha: TMDB 10315 «Fantastic Mr. Fox» (2009) de Wes Anderson: la web la presenta como «El fantástico Sr. Fox · Wes Anderson · stop motion» y la lámina del 18 nov pinta el afiche francés «Fantastic Mr. Fox · un film de Wes Anderson» (Amalric, Huppert). Título en español de la obra",
+   "_registro": "provinciadevelez-2026-altas.json"
+  }
+ },
+ "misma_obra": {
+  "Sinfonía incompleta de oficios del Fonce": {
+   "festival": "ficfusa-2026",
+   "titulo": "Sinfonía incompleta de oficios del fonce",
+   "_por_que": "mismo título; TMDB 1817245 (Nelson Silva) es la ficha de las dos; la lámina de Vélez: «DIRECTOR Y PRODUCTOR EJECUTIVO NELSON SILVA», web «2024»"
+  }
+ },
+ "no_heredar": {
+  "Cicatrices": {
+   "festival": "guatape-2026",
+   "_por_que": "la de Guatapé no trae dirección (30 min); la de Vélez es de Jhon Amado, Filipinas (Arauca), 2026, escuela de cine comunitario: no hay con qué casarlas"
+  },
+  "Entre amigos": {
+   "festival": "anibia-2026",
+   "_por_que": "«Entre paredes y flores» de Valentina Molano Muñoz es otra obra; la de Vélez es de Edward Llanos y Simón Muñoz"
+  }
+ },
+ "sin_afiche": {
+  "La imaginada": "sin afiche oficial hallado (19 nov 2026). Revisado: la web del festival (no la incluye en la cartelera), el IG del festival (el post Df7ZYXrEaXh solo la anuncia en el pie), TMDB por título y por Carolina Muñoz (registro de altas), búsqueda web «La imaginada» Carolina Muñoz Barbosa"
+ }
+}
