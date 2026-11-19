@@ -296,6 +296,25 @@ def publicar(fid, forzar=False):
     if mudas:
         print(f'⚠ --forzar: se publican {len(mudas)} obra(s) sin afiche y sin porqué')
 
+    # ── ni sin sinopsis en español en silencio (pipeline/sinopsis.py, 19 nov) ──
+    # Frena solo lo que SUPERA la deuda congelada del festival: republicar un
+    # festival vivo con su deuda vieja sigue funcionando; empeorarla, no.
+    import sinopsis
+    _exc = sinopsis.excede(fid, out['films'])
+    if _exc and not forzar:
+        _pend, _techo = _exc
+        print(f'✗ NO se publica {fid}: {len(_pend)} obra(s) sin sinopsis en español '
+              f'(su deuda congelada es {_techo}). Cada una se traduce, se busca '
+              f'o lleva `sin_sinopsis` con su porqué y sus fuentes en '
+              f'festivals/staging/{fid}-correcciones.json:')
+        for x in _pend[:12]:
+            print('   ·', sinopsis.linea(x))
+        if len(_pend) > 12:
+            print(f'   … y {len(_pend) - 12} más   (python3 pipeline/sinopsis.py {fid})')
+        sys.exit(1)
+    if _exc:
+        print(f'⚠ --forzar: se publican {len(_exc[0])} obra(s) sin sinopsis (techo {_exc[1]})')
+
     # ── ni sin lo que OTRO festival nuestro ya publicó (trabajo 5) ──────────
     cruce = _cruce_con_lo_publicado(fid, out['films'])
     if cruce and not forzar:

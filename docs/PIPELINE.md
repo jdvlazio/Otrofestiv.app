@@ -1479,3 +1479,5 @@ Las claves obligatorias son `FUENTES_OBLIGATORIAS` de `pipeline/altas.py` (únic
 lista); un videoclip suma `canal_oficial_artista`. Toda ficha de
 `<fid>-correcciones.json` `fichas` nueva sale de este registro (`_registro`).
 Proceso completo: `pipeline/PROTOCOLO.md` § Paso 2·bis.
+
+`[sinopsis-cobertura]` (19 nov 2026, pedido de Juan tras CUAFF): toda OBRA publicada (película u obra de un programa; las actividades no) lleva `synopsis` en español, o `sin_sinopsis` en `<fid>-correcciones.json` con `_por_que` y `fuentes` revisadas. Si solo hay sinopsis en inglés, se traduce con el contexto de la obra. Cascada de búsqueda: ficha de la sala o del festival → TMDB es → TMDB en → FilmFreeway/Festhome → web del director. Dueño único `pipeline/sinopsis.py` (`python3 pipeline/sinopsis.py <id>` lista pendientes con su acción); lo exigen `publicar.py` al publicar y este guardián sobre lo publicado. Deuda del 19 nov en `pipeline/sinopsis-deuda.json`, solo baja (`--congelar`).

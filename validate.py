@@ -6464,6 +6464,61 @@ except Exception as _e:
     warn(check, f'no se pudo verificar afiche-cobertura: {_e}')
 
 
+# ── [sinopsis-cobertura] ninguna obra sin sinopsis en español en silencio ─────
+# Pedido de Juan (19 nov 2026), tras CUAFF: 0 de 14 sinopsis en español y nada
+# lo frenó. La regla vive en pipeline/sinopsis.py (dueño único, también la usa
+# publicar.py): toda OBRA publicada lleva `synopsis` en español, o su porqué en
+# `sin_sinopsis` con las fuentes revisadas. Lo ya publicado ese día quedó
+# congelado en pipeline/sinopsis-deuda.json y solo puede bajar.
+check = 'sinopsis-cobertura'
+try:
+    import sys as _sys_si
+    if 'pipeline' not in _sys_si.path:
+        _sys_si.path.insert(0, 'pipeline')
+    import sinopsis as _sino
+    import glob as _g_si, json as _j_si
+    _subio, _bajo, _malas, _total = [], [], [], 0
+    _techos = _sino.deuda()
+    for _p in sorted(_g_si.glob('festivals/*.json')):
+        _fid = _p.split('/')[-1][:-5]
+        try:
+            _d = _j_si.load(open(_p, encoding='utf-8'))
+        except Exception:
+            continue
+        if not isinstance(_d, dict) or not isinstance(_d.get('films'), list):
+            continue
+        _n_p = len(_sino.pendientes(_fid, _d['films']))
+        _total += _n_p
+        _t = _techos.get(_fid, 0)
+        if _n_p > _t:
+            _subio.append(f'{_fid}: {_n_p} > techo {_t}')
+        elif _n_p < _t:
+            _bajo.append(f'{_fid}: {_t} → {_n_p}')
+    # Una declaración sin porqué o sin fuentes no cuenta: avisarlo, o la obra
+    # queda pendiente sin que nadie sepa por qué su `sin_sinopsis` no sirvió.
+    for _cp in sorted(_g_si.glob('festivals/staging/*-correcciones.json')):
+        try:
+            _ss = (_j_si.load(open(_cp, encoding='utf-8')) or {}).get('sin_sinopsis') or {}
+        except Exception:
+            continue
+        for _k, _v in _ss.items():
+            _ok = isinstance(_v, dict) and str(_v.get('_por_que') or '').strip() \
+                and [x for x in (_v.get('fuentes') or []) if str(x).strip()]
+            if not _ok:
+                _malas.append(f'{_cp.split("/")[-1]}: «{_k[:40]}» sin porqué o sin fuentes')
+    if _subio or _malas:
+        fail(check, 'obras sin sinopsis en español por encima de la deuda congelada — '
+                    'traducir, buscar (python3 pipeline/sinopsis.py <id>) o declarar '
+                    '`sin_sinopsis` con porqué y fuentes: ' + '; '.join(_subio + _malas))
+    elif _bajo:
+        warn(check, 'la deuda de sinopsis BAJÓ — congelarla: python3 pipeline/sinopsis.py '
+                    '--congelar · ' + ', '.join(_bajo))
+    else:
+        ok(check, f'sinopsis: ninguna obra empeora la deuda congelada ({_total} pendientes heredadas)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sinopsis-cobertura: {_e}')
+
+
 
 # ── [config-esm] node --check da un VERDE FALSO ─────────────────────────────
 # src/config.js es un MÓDULO ES, y `node --check` lo analiza como script: un
