@@ -15,7 +15,7 @@ import { keepCityOnly, planCityVenues } from '../view/helpers.js';
 import { runCalc, _planCityVenues } from './calc.js';
 import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched, saveNotWatched, saveWatchedMeta, saveTicketed } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
-import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs, primerDiaVigente, _hoyManana } from './pipeline.js';
+import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs, primerDiaVigente, _hoyManana, _syncVistaIconos } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simNow, toMin } from '../domain/time.js';
 import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount, effectiveWatched, seCalifica, screeningEndDate, abiertaFase } from '../domain/film.js';
@@ -996,13 +996,7 @@ export function toggleProgramaView(){
 
 export function setProgramaView(view){
   programaViewMode=view;
-  document.getElementById('pmode-grid').classList.toggle('on',view==='grid');
-  document.getElementById('pmode-list').classList.toggle('on',view==='list');
-  // Sync single toggle icon
-  const icoG=document.getElementById('view-toggle-ico-grid');
-  const icoL=document.getElementById('view-toggle-ico-list');
-  if(icoG) icoG.style.display=view==='grid'?'':'none';
-  if(icoL) icoL.style.display=view==='list'?'':'none';
+  _syncVistaIconos();
   _renderProgramaContent(true); // toggle grid/list → scroll al tope
 }
 

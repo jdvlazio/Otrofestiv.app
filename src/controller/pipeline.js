@@ -227,6 +227,19 @@ export function _hoyManana(){
 // ya terminó. Corre desde _updateProgramaActiveFilter, por donde ya pasan TODOS
 // los cambios de lugar antes de pintar (filtro de Lugar, sheet de ciudad, quitar
 // el chip, filterByVenue, carga del festival).
+// El botón de vista (cuadrícula/lista) refleja programaViewMode. Varias rutas
+// cambian el modo sin pasar por setProgramaView (elegir una ciudad que ya
+// terminó lleva a «Todo» en cuadrícula, filterByVenue, la carga): sin esto el
+// ícono quedaba en el modo anterior. Dueño único; setProgramaView también lo usa.
+export function _syncVistaIconos(){
+  const v=programaViewMode;
+  document.getElementById('pmode-grid')?.classList.toggle('on',v==='grid');
+  document.getElementById('pmode-list')?.classList.toggle('on',v==='list');
+  const icoG=document.getElementById('view-toggle-ico-grid');
+  const icoL=document.getElementById('view-toggle-ico-list');
+  if(icoG) icoG.style.display=v==='grid'?'':'none';
+  if(icoL) icoL.style.display=v==='list'?'':'none';
+}
 export function _syncDiasCiudad(){
   const dias=new Set(diasVisibles());
   document.querySelectorAll('.dtab').forEach(t=>{
@@ -235,6 +248,7 @@ export function _syncDiasCiudad(){
   if(activeDay!=='all'&&!dias.has(activeDay)){
     activeDay=primerDiaVigente()||'all';
     programaViewMode=activeDay==='all'?'grid':'list';
+    _syncVistaIconos();
     document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on', t.dataset.day===activeDay));
     _syncPmodeTabs();
   }
@@ -307,6 +321,7 @@ export function initProgramaModeBar(){
   }
   // Tab activo/atenuado: derivado del día, no de programaSubMode (el espejo).
   _syncPmodeTabs();
+  _syncVistaIconos();
   // Mostrar/ocultar chips
   const chipsEl=document.getElementById('programa-chips');
   if(chipsEl){

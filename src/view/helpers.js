@@ -679,7 +679,7 @@ export function festivalCities(films){
 //
 // Devuelve null cuando no hay nada que recortar —sin ciudad elegida, o un
 // festival de una sola ciudad—, y los consumidores leen null como «todos».
-// Los días salen de festivalCities (de las FUNCIONES), no de un campo nuevo.
+// Los días salen de las FUNCIONES (y actividades abiertas), no de un campo nuevo.
 export function ciudadDeSeleccion(sel){
   if(!sel||sel==='all') return null;
   if(sel.startsWith('city:')) return sel.slice(5);
@@ -696,10 +696,13 @@ export function ciudadDeSeleccion(sel){
 export function diasDeCiudad(sel, films){
   const c=ciudadDeSeleccion(sel);
   if(!c) return null;
-  const cities=festivalCities(films);
-  if(cities.length<2) return null;
-  const hit=cities.find(x=>x.name===c);
-  return hit?hit.days:null;
+  if(festivalCities(films).length<2) return null;
+  // Los días se cuentan aparte y no se toman de festivalCities: esa deja fuera
+  // las actividades ABIERTAS (f.info), y un día de la ciudad con solo una
+  // exposición o una maratón se escondía de la tira. Las abiertas de varios
+  // días ya llegan como una copia por día (expandVentanas).
+  const dias=new Set((films||[]).filter(f=>f.venue&&f.day&&filterCity(f.venue)===c).map(f=>f.day));
+  return dias.size?[...dias].sort():null;
 }
 
 export function venueCity(v){
