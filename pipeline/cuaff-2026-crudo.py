@@ -94,6 +94,16 @@ F = [
          _src={'ig': 'DfkahZulbIz', 'cinemateca': 4036}),
 ]
 
+# SINOPSIS en español: el texto de cada ficha de la Cinemateca (4030–4036), verbatim (19 nov 2026).
+SINOPSIS = {
+ "4030": "Lo que mantiene unido a este grupo de amigos es una causa artística urbana llamada graffiti que persigue la ley. Tienen normas y valores propios. Se rigen por un código honesto y estricto y sueñan, que para eso son artistas, con fama, respeto y reconocimiento. Pero de momento toca agitar el spray con nocturnidad y lo más urgente, escapar de la policía y responder al reto de un grupo rival, los temibles KBS, que les arrojan el guante de pintar entero un tren de cercanías.",
+ "4031": "Seis jóvenes bailarines provenientes de distintas clases sociales y antecedentes son unidos por el poder del hip-hop. Su amistad y deseos de volverse profesionales los llevarán por un viaje vital y transformador filmado a lo largo de 8 años. A través de la paternidad, el amor, las batallas y decepciones, descubrirán qué tipo de hombres quieren ser.",
+ "4032": "El hip hop es mucho más que música: es memoria, identidad, resistencia y construcción colectiva. Este bloque reúne dos miradas documentales de Argentina y Colombia que exploran cómo la cultura urbana transforma territorios, conecta generaciones y fortalece los vínculos comunitarios. A través de sus protagonistas, las calles se convierten en escenarios de expresión, encuentro y memoria, donde el arte mantiene vivas las historias de quienes han construido el movimiento desde sus raíces.",
+ "4034": "El hip hop y el graffiti son expresiones culturales que nacen de las calles, construyen identidad y fortalecen los lazos comunitarios. Este bloque reúne cinco producciones audiovisuales de Colombia y Argentina que exploran el arte urbano como lenguaje de encuentro, memoria, transformación social y resistencia cultural. A través del movimiento, la música, las intervenciones gráficas y las narrativas de sus protagonistas, descubrimos cómo las nuevas generaciones reinterpretan sus territorios, mantienen viva la cultura underground y encuentran en el arte una forma de expresión colectiva.",
+ "4035": "El graffiti no conoce fronteras. Entre trenes, calles, muros y recorridos clandestinos, este bloque nos sumerge en la esencia más cruda y auténtica de la cultura underground. Cuatro producciones audiovisuales de Colombia, Italia y Argentina retratan la adrenalina, los viajes, los códigos y las experiencias que definen el graffiti sobre metal y el movimiento del street bombing. Una mirada a las conexiones internacionales entre escritores de graffiti, donde cada recorrido se convierte en una aventura y cada intervención deja una huella en el paisaje urbano. Arte, riesgo, identidad y libertad se encuentran en historias que revelan la fuerza de una cultura que permanece en constante movimiento.",
+ "4036": "Documental que busca, en un relato de paralelismos, encontrar todos los matices posibles sobre un pedacito del centro de Bogotá, un microcosmos que se entrelaza y muere con la renovación de la ciudad. Graffiti, Rap y literatura (Mario Mendoza) aportan con datos inéditos todo lo que pasó en algún momento en uno de los barrios marginalizados del centro de Bogotá"
+}
+
 
 def main():
     funciones = []
@@ -106,6 +116,8 @@ def main():
                      'tipo': 'festival-ig', 'date': '2026-11-16'}
         if src.get('cinemateca'):
             r['_src']['ficha_sala'] = CINE.format(src['cinemateca'])
+            if str(src['cinemateca']) in SINOPSIS:
+                r['sinopsis'] = SINOPSIS[str(src['cinemateca'])]
         if r.get('obras'):
             suma = sum(o['duracion_min'] for o in r['obras'])
             if abs(suma - r['duracion_min']) > 1:

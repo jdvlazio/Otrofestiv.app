@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "pipeline/fuentes_descubrir.py",
-  "capturado": "2026-11-17T10:39",
+  "capturado": "2026-11-19T08:09",
   "paginas_leidas": 60,
   "errores": []
  },
@@ -9,5 +9,24 @@
   "web": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
   "_sin_bio": "el perfil @colombianurbanfilm sin sesión no muestra enlace en la bio (og:description sin URL, 17 nov)"
  },
- "items": {}
+ "items": {
+  "https://drive.google.com/file/d/1VUnsXelRep6ZI7iiTe0WfoGizeHRSUky/view": {
+   "tipo": "drive",
+   "visto_en": "https://filmmakers.festhome.com/festival/815",
+   "primera_vez": "2026-11-19T08:08",
+   "ultima_vez": "2026-11-19T08:08",
+   "estado": "descartada",
+   "_por_que": "no es de CUAFF: llega por Festhome (política de FICCI o convocatoria de otro festival); vigía 17-18 nov",
+   "revisado": "2026-11-19T08:09"
+  },
+  "https://linktr.ee/festivalhanancine": {
+   "tipo": "bio",
+   "visto_en": "https://filmmakers.festhome.com/festival/6690",
+   "primera_vez": "2026-11-19T08:08",
+   "ultima_vez": "2026-11-19T08:08",
+   "estado": "descartada",
+   "_por_que": "no es de CUAFF: llega por Festhome (política de FICCI o convocatoria de otro festival); vigía 17-18 nov",
+   "revisado": "2026-11-19T08:09"
+  }
+ }
 }
