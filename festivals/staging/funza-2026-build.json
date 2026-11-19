@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
-  "capturado": "2026-11-18",
+  "capturado": "2026-11-19",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Sección = el «Componente» de la agenda, verbatim y en caja de Título (pedido de Juan, 25 oct).",
@@ -178,7 +178,8 @@
    "lng": -74.2124986,
    "address": "Calle 13 #12-21, Funza",
    "_prec": "manual",
-   "_match": "Google Maps «Institución educativa ágora» (18 nov 2026); dirección de la lámina del Bacatá"
+   "_match": "Google Maps «Institución educativa ágora» (18 nov 2026); dirección de la lámina del Bacatá",
+   "_matriz": "s_cd218eeb"
   },
   "Colegio de Valores Humanos Sathya Sai - Funza": {
    "short": "Colegio de Valores Humanos Sathya Sai",
@@ -187,7 +188,8 @@
    "lng": -74.1971832,
    "address": "Carrera 2b #25-15, Funza",
    "_prec": "manual",
-   "_match": "Google Maps «Colegio De Valores Humanos Sathya Sai» (18 nov 2026); dirección de la lámina del Bacatá"
+   "_match": "Google Maps «Colegio De Valores Humanos Sathya Sai» (18 nov 2026); dirección de la lámina del Bacatá",
+   "_matriz": "s_fd497563"
   },
   "CITI - Funza": {
    "short": "CITI",
@@ -196,7 +198,8 @@
    "lng": -74.2121741,
    "address": "Parque principal Capitán Ernesto Esguerra Cubides, Funza",
    "_prec": "manual",
-   "_match": "Google Maps no tiene ficha del CITI; la lámina lo ubica en el parque principal: pin de «Parque Principal de Funza - Parque Capitán Ernesto Esguerra Cubides» (18 nov 2026)"
+   "_match": "Google Maps no tiene ficha del CITI; la lámina lo ubica en el parque principal: pin de «Parque Principal de Funza - Parque Capitán Ernesto Esguerra Cubides» (18 nov 2026)",
+   "_matriz": "s_8b3ca384"
   },
   "Biblioteca de Ciudad Universitaria - Funza": {
    "short": "Biblioteca de Ciudad Universitaria",
@@ -834,6 +837,8 @@
     "fila": "8:30 a. m. – 9:00 a. m. · Apertura institucional"
    },
    "requires_registration": true,
+   "description": "Instalación del 1.er Encuentro Departamental de Cine y Comunicaciones.",
+   "description_lang": "es",
    "_fid": "f_69cc45b59e",
    "id": "f_69cc45b59e",
    "is_free": true,
@@ -1707,7 +1712,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-18T17:52:46",
+  "fecha": "2026-11-19T09:12:57",
   "plan_sha": "1e679e89c8d991cf",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"

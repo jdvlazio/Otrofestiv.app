@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
-  "capturado": "2026-11-18",
+  "capturado": "2026-11-19",
   "metodo": "transcripción a ojo fila por fila; cruzada con la capa de texto y el OCR en funza-2026-verificar.py",
   "que_aporta": "la programación entera: día, hora, componente, actividad, duración"
  },
@@ -231,7 +231,8 @@
    },
    "titulo": "Apertura institucional",
    "tipo": "evento",
-   "event_kind": "apertura"
+   "event_kind": "apertura",
+   "sinopsis": "Instalación del 1.er Encuentro Departamental de Cine y Comunicaciones."
   },
   {
    "dia": "2026-11-20",
