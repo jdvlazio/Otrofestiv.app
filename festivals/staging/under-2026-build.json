@@ -23,6 +23,7 @@
  "dias_vacios": [
   "2026-11-30"
  ],
+ "_por_que_seccion_default": "Decisión de Juan (18 nov 2026): las funciones que el PDF y el reel no rotulan van en «Muestra Oficial». El festival no les da nombre; precedentes: Vartex «Muestra Local», Cinemancia «Proyecciones especiales». Nunca «Programación».",
  "prioLimit": 4,
  "dias": [
   "2026-11-25",
@@ -143,8 +144,8 @@
    "archetype": "Muestra / País",
    "order": 1
   },
-  "🎬 Programación": {
-   "en": "Programme",
+  "🎬 Muestra Oficial": {
+   "en": "Official Showcase",
    "archetype": "Muestra / País",
    "order": 2
   },
@@ -318,7 +319,7 @@
   {
    "title": "Bisou ACAB + Memoria colectiva + 8 metros: La palabra subterránea",
    "type": "film",
-   "section": "🎬 Programación",
+   "section": "🎬 Muestra Oficial",
    "country": "Francia, Perú, Argentina",
    "flags": "🇫🇷🇵🇪🇦🇷",
    "duration": "12 min",
@@ -380,7 +381,7 @@
   {
    "title": "El coloquio de los pájaros",
    "type": "film",
-   "section": "🎬 Programación",
+   "section": "🎬 Muestra Oficial",
    "director": "Sofía Velázquez",
    "year": 2026,
    "country": "Perú",
@@ -563,7 +564,7 @@
   {
    "title": "Amor trava",
    "type": "film",
-   "section": "🎬 Programación",
+   "section": "🎬 Muestra Oficial",
    "director": "Lucrecia Mastrangelo",
    "year": 2026,
    "country": "Argentina",
@@ -905,7 +906,7 @@
   {
    "title": "Jubiladxs le enseñan + Norma también + To the rhythm of love and hate",
    "type": "film",
-   "section": "🎬 Programación",
+   "section": "🎬 Muestra Oficial",
    "country": "Argentina, Puerto Rico",
    "flags": "🇦🇷🇵🇷",
    "duration": "104 min",
@@ -972,7 +973,7 @@
   {
    "title": "Una Persona Distinta + 5 Obras",
    "type": "film",
-   "section": "🎬 Programación",
+   "section": "🎬 Muestra Oficial",
    "country": "Argentina, Alemania, Estados Unidos, Irán, Albania, Colombia",
    "flags": "🇦🇷🇩🇪🇺🇸🇮🇷🇦🇱🇨🇴",
    "duration": "22 min",
@@ -1063,7 +1064,7 @@
   {
    "title": "Cut your wings and fly + Quizás nunca + Mall + Shell Shock O'K",
    "type": "film",
-   "section": "🎬 Programación",
+   "section": "🎬 Muestra Oficial",
    "country": "Estados Unidos, Argentina, España, Alemania, Ucrania",
    "flags": "🇺🇸🇦🇷🇪🇸🇩🇪🇺🇦",
    "duration": "8 min",
@@ -1128,7 +1129,7 @@
   {
    "title": "A Perfect Maryam + Pluvia + Sinforme sinfinal + Les Voyageurs",
    "type": "film",
-   "section": "🎬 Programación",
+   "section": "🎬 Muestra Oficial",
    "country": "Irán, Estados Unidos, España, Perú, Camerún",
    "flags": "🇮🇷🇺🇸🇪🇸🇵🇪🇨🇲",
    "duration": "85 min",
@@ -1211,7 +1212,7 @@
   {
    "title": "Tuktu, Padre Maíz + 7 Obras",
    "type": "film",
-   "section": "🎬 Programación",
+   "section": "🎬 Muestra Oficial",
    "country": "Colombia, Turquía, Argentina, Italia, Alemania, India",
    "flags": "🇨🇴🇹🇷🇦🇷🇮🇹🇩🇪🇮🇳",
    "duration": "129 min",
@@ -1333,8 +1334,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-18T19:13:40",
-  "plan_sha": "4b92e840958da344",
+  "fecha": "2026-11-18T19:35:52",
+  "plan_sha": "de4c503917909c23",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"
  }

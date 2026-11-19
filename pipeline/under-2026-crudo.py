@@ -42,7 +42,7 @@ LIBRE = 'Entrada libre'
 PL, BB, DR, AM = 'Perpetua Lab', 'Bebop Bar', 'Donde Robin', 'Librería Antimateria'
 
 # Secciones: el rótulo de cada día en el reel, VERBATIM (propuesta: lo decide Juan).
-# Las funciones que solo trae el PDF van sin sección (seccion_default del plan).
+# Las funciones que solo trae el PDF van en «Muestra Oficial» (seccion_default del plan, Juan 18 nov).
 DOC = 'Documental Activismo Social'
 ANI = 'Animación'
 FEM = 'Feminismos y disidencias sexuales'

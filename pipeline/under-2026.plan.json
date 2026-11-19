@@ -64,9 +64,9 @@
     "en": "Academic Activity",
     "archetype": "Charlas / Industria"
    },
-   "Programación": {
+   "Muestra Oficial": {
     "emoji": "🎬",
-    "en": "Programme",
+    "en": "Official Showcase",
     "archetype": "Muestra / País"
    }
   },
@@ -107,6 +107,7 @@
   "dias_vacios": [
    "2026-11-30"
   ],
-  "seccion_default": "Programación"
+  "seccion_default": "Muestra Oficial",
+  "_por_que_seccion_default": "Decisión de Juan (18 nov 2026): las funciones que el PDF y el reel no rotulan van en «Muestra Oficial». El festival no les da nombre; precedentes: Vartex «Muestra Local», Cinemancia «Proyecciones especiales». Nunca «Programación»."
  }
 }
