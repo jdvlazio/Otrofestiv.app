@@ -30,6 +30,24 @@
    "genero": "Animación"
   },
   {
+   "titulo": "8 metros: La palabra subterránea",
+   "tmdb_id": 1688830,
+   "titulo_original": "8 Metros",
+   "poster_path": "/sxfPIe6LXG5MNUW3OuZucGKbHfH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a house in the Observatorio neighborhood of Córdoba, beneath the facade of a blacksmith shop and the everyday life of a family, a secret was hidden: eight meters underground, a clandestine printing press operated for the PRT-ERP (People's Revolutionary Army). There, they produced El Combatiente and Estrella Roja, publications distributed through an organized network to evade the dictatorship's persecution.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 60,
+   "pais_tmdb": "",
+   "lbSlug": "8-metros",
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 1688830 «8 Metros»: dir. Pablo Fernández Alberti, 60 min; El Delirio Cine y el tráiler de Vimeo la presentan como «8 metros: La palabra subterránea», mismo director",
+   "_director": "Pablo Fernández Alberti",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/8-metros-la-palabra-subterranea.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Amor trava",
    "tmdb_id": 1583322,
    "titulo_original": "Amor trava",
@@ -496,6 +514,25 @@
    "_director": "William Hong-xiao Wei",
    "_sondeado": "2026-11-18",
    "poster": "/assets/under-2026/elegy-for-the-lost.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Esas ruinas",
+   "tmdb_id": 1584751,
+   "titulo_original": "Esas ruinas",
+   "poster_path": "/n3nPQVTPm0OaMRpLDLdO94ZyTC0.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "On the shores of Embalse Lake, in the Argentine province of Córdoba, lie the ruins of three large hotels belonging to the Navy’s social welfare program. Construction began in 1940 on land and with funds donated by the national government, and was abandoned unfinished in 1949.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 21,
+   "pais_tmdb": "Argentina",
+   "title_en": "Those Ruins",
+   "lbSlug": "those-ruins",
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 1584751: dir. Gabriel Alberto Piñeiro, AR, 21 min; FIDBA 2025 la lista igual (Gabriel Piñeiro, 21 min)",
+   "_director": "Gabriel Piñeiro",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/esas-ruinas.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1180,6 +1217,23 @@
   }
  ],
  "verificadas": {
+  "8 metros: La palabra subterránea": {
+   "tmdb_id": 1688830,
+   "titulo_original": "8 Metros",
+   "poster_path": "/sxfPIe6LXG5MNUW3OuZucGKbHfH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a house in the Observatorio neighborhood of Córdoba, beneath the facade of a blacksmith shop and the everyday life of a family, a secret was hidden: eight meters underground, a clandestine printing press operated for the PRT-ERP (People's Revolutionary Army). There, they produced El Combatiente and Estrella Roja, publications distributed through an organized network to evade the dictatorship's persecution.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 60,
+   "pais_tmdb": "",
+   "lbSlug": "8-metros",
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 1688830 «8 Metros»: dir. Pablo Fernández Alberti, 60 min; El Delirio Cine y el tráiler de Vimeo la presentan como «8 metros: La palabra subterránea», mismo director",
+   "_director": "Pablo Fernández Alberti",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/8-metros-la-palabra-subterranea.jpg",
+   "posterSource": "tmdb"
+  },
   "Amor trava": {
    "tmdb_id": 1583322,
    "titulo_original": "Amor trava",
@@ -1634,6 +1688,24 @@
    "_director": "William Hong-xiao Wei",
    "_sondeado": "2026-11-18",
    "poster": "/assets/under-2026/elegy-for-the-lost.jpg",
+   "posterSource": "tmdb"
+  },
+  "Esas ruinas": {
+   "tmdb_id": 1584751,
+   "titulo_original": "Esas ruinas",
+   "poster_path": "/n3nPQVTPm0OaMRpLDLdO94ZyTC0.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "On the shores of Embalse Lake, in the Argentine province of Córdoba, lie the ruins of three large hotels belonging to the Navy’s social welfare program. Construction began in 1940 on land and with funds donated by the national government, and was abandoned unfinished in 1949.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 21,
+   "pais_tmdb": "Argentina",
+   "title_en": "Those Ruins",
+   "lbSlug": "those-ruins",
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 1584751: dir. Gabriel Alberto Piñeiro, AR, 21 min; FIDBA 2025 la lista igual (Gabriel Piñeiro, 21 min)",
+   "_director": "Gabriel Piñeiro",
+   "_sondeado": "2026-11-18",
+   "poster": "/assets/under-2026/esas-ruinas.jpg",
    "posterSource": "tmdb"
   },
   "Fata Morgana": {
@@ -2278,13 +2350,11 @@
  },
  "sin_ficha": [
   "1 paseo por la ciudad",
-  "8 metros: La palabra subterránea",
   "A Perfect Maryam",
   "Antifragility",
   "Atombombenabend",
   "Binary",
   "Cut your wings and fly",
-  "Esas ruinas",
   "Lo que aún queda de mí",
   "Mall",
   "Mamma",
@@ -2299,10 +2369,6 @@
   "1 paseo por la ciudad": {
    "director": "Alejandro Acuña Sevilla, Sara Coello Coello",
    "fecha": "2026-11-17"
-  },
-  "8 metros: La palabra subterránea": {
-   "director": "Pablo Fernández Alberti",
-   "fecha": "2026-11-18"
   },
   "A Perfect Maryam": {
    "director": "Solmaz Etemadzadeh, Ara Torosian",
@@ -2322,10 +2388,6 @@
   },
   "Cut your wings and fly": {
    "director": "Meryem Lahlou",
-   "fecha": "2026-11-18"
-  },
-  "Esas ruinas": {
-   "director": "Gabriel Piñeiro",
    "fecha": "2026-11-18"
   },
   "Lo que aún queda de mí": {

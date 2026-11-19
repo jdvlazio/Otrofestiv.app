@@ -33,6 +33,18 @@
    "_fuente": "https://www.themoviedb.org/movie/1829671",
    "_por_que": "alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_registro": "under-2026-altas.json"
+  },
+  "Esas ruinas": {
+   "tmdb": 1584751,
+   "_fuente": "https://www.themoviedb.org/movie/1584751",
+   "_por_que": "altas.py --ficha: TMDB 1584751: dir. Gabriel Alberto Piñeiro, AR, 21 min; FIDBA 2025 la lista igual (Gabriel Piñeiro, 21 min)",
+   "_registro": "under-2026-altas.json"
+  },
+  "8 metros: La palabra subterránea": {
+   "tmdb": 1688830,
+   "_fuente": "https://www.themoviedb.org/movie/1688830",
+   "_por_que": "altas.py --ficha: TMDB 1688830 «8 Metros»: dir. Pablo Fernández Alberti, 60 min; El Delirio Cine y el tráiler de Vimeo la presentan como «8 metros: La palabra subterránea», mismo director",
+   "_registro": "under-2026-altas.json"
   }
  }
 }

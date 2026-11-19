@@ -361,6 +361,11 @@
      "url": "https://vimeo.com/1154050700",
      "fecha": "2026-11-18",
      "resultado": "tráiler oficial (El Delirio Cine): sinopsis, créditos, 63 min"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/8-metros/",
+     "fecha": "2026-11-18",
+     "resultado": "Letterboxd /tmdb/1688830 → 8-metros"
     }
    },
    "afiche": {
@@ -376,7 +381,14 @@
     "veredicto_criterio": null,
     "fecha": "2026-11-18"
    },
-   "estado": "alta_posible"
+   "estado": "ficha_existente",
+   "tmdb_id": 1688830,
+   "evidencia": "TMDB 1688830 «8 Metros»: dir. Pablo Fernández Alberti, 60 min; El Delirio Cine y el tráiler de Vimeo la presentan como «8 metros: La palabra subterránea», mismo director",
+   "respaldo": [
+    "distribuidora_o_agencia",
+    "web_director_o_productora"
+   ],
+   "ficha_fecha": "2026-11-18"
   },
   "A Perfect Maryam": {
    "titulo": "A Perfect Maryam",
@@ -510,6 +522,11 @@
      "url": "https://fidba.org/2025/?p=2863",
      "fecha": "2026-11-18",
      "resultado": "FIDBA 2025: doc 21 min, 2023; afiche original"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/those-ruins/",
+     "fecha": "2026-11-18",
+     "resultado": "Letterboxd /tmdb/1584751 → those-ruins: la ficha TMDB existe y Letterboxd la importó"
     }
    },
    "afiche": {
@@ -525,7 +542,14 @@
     "veredicto_criterio": null,
     "fecha": "2026-11-18"
    },
-   "estado": "alta_posible"
+   "estado": "ficha_existente",
+   "tmdb_id": 1584751,
+   "evidencia": "TMDB 1584751: dir. Gabriel Alberto Piñeiro, AR, 21 min; FIDBA 2025 la lista igual (Gabriel Piñeiro, 21 min)",
+   "respaldo": [
+    "festivales_previos",
+    "letterboxd"
+   ],
+   "ficha_fecha": "2026-11-18"
   },
   "Lo que aún queda de mí": {
    "titulo": "Lo que aún queda de mí",

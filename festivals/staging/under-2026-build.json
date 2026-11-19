@@ -322,7 +322,7 @@
    "section": "🎬 Muestra Oficial",
    "country": "Francia, Perú, Argentina",
    "flags": "🇫🇷🇵🇪🇦🇷",
-   "duration": "12 min",
+   "duration": "72 min",
    "_ancla": [
     "Bebop Bar - Medellín",
     "2026-11-25",
@@ -372,7 +372,13 @@
      "director": "Pablo Fernández Alberti",
      "country": "Argentina",
      "flags": "🇦🇷",
-     "year": 2026
+     "year": 2026,
+     "poster": "/assets/under-2026/8-metros-la-palabra-subterranea.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "8-metros",
+     "tmdb_id": 1688830,
+     "synopsis_en": "In a house in the Observatorio neighborhood of Córdoba, beneath the facade of a blacksmith shop and the everyday life of a family, a secret was hidden: eight meters underground, a clandestine printing press operated for the PRT-ERP (People's Revolutionary Army). There, they produced El Combatiente and Estrella Roja, publications distributed through an organized network to evade the dictatorship's persecution.",
+     "duration": "60 min"
     }
    ],
    "_fid": "f_b5e0b64fe5",
@@ -1215,7 +1221,7 @@
    "section": "🎬 Muestra Oficial",
    "country": "Colombia, Turquía, Argentina, Italia, Alemania, India",
    "flags": "🇨🇴🇹🇷🇦🇷🇮🇹🇩🇪🇮🇳",
-   "duration": "129 min",
+   "duration": "150 min",
    "_ancla": [
     "Perpetua Lab - Medellín",
     "2026-12-03",
@@ -1271,7 +1277,15 @@
      "director": "Gabriel Piñeiro",
      "country": "Argentina",
      "flags": "🇦🇷",
-     "year": 2023
+     "year": 2023,
+     "poster": "/assets/under-2026/esas-ruinas.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "those-ruins",
+     "tmdb_id": 1584751,
+     "synopsis_en": "On the shores of Embalse Lake, in the Argentine province of Córdoba, lie the ruins of three large hotels belonging to the Navy’s social welfare program. Construction began in 1940 on land and with funds donated by the national government, and was abandoned unfinished in 1949.",
+     "title_en": "Those Ruins",
+     "genre": "Documental",
+     "duration": "21 min"
     },
     {
      "title": "Quisiera volverme río",
@@ -1334,9 +1348,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-18T19:53:10",
+  "fecha": "2026-11-18T19:55:53",
   "plan_sha": "de4c503917909c23",
-  "paso": 2,
-  "cmd": "python3 pipeline/enriquecer.py under-2026 --posters"
+  "paso": 4,
+  "cmd": "python3 pipeline/under-2026-verificar.py"
  }
 }
