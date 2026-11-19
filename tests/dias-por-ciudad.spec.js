@@ -76,3 +76,36 @@ test('DC3 — «Mañana» en el último día de la ciudad no salta a un día aje
   // queda encendida sobre el día al que llevó.
   expect(r.pillOn, 'la píldora «Mañana» coincide con el día').toBe(true);
 });
+
+// DC4 — una actividad ABIERTA cuenta como programación del día. SiembraFest:
+// el 13 sep Villeta solo tiene la Maratón fotográfica (info). festivalCities
+// deja fuera las abiertas, y tomar los días de ahí escondía ese día.
+test('DC4 — un día con solo una actividad abierta sigue en la tira de su ciudad', async ({ page }) => {
+  await enterFestival(page, 'siembrafest2026', '2026-09-12T10:00:00-05:00');
+  const r = await page.evaluate(async ({ tiraSrc }) => {
+    const w = ms => new Promise(res => setTimeout(res, ms));
+    const tira = eval(tiraSrc);
+    const C = await import('/src/controller/handlers.js');
+    C.citySheetPick('Villeta'); await w(300);
+    return tira();
+  }, { tiraSrc: tira.toString() });
+  expect(r.visibles, 'el 13, con solo la maratón, se ve').toContain('2026-09-13');
+  expect(r.visibles, 'el 18, solo de Sasaima, no').not.toContain('2026-09-18');
+});
+
+// DC5 — cuando la ciudad cambia la vista (de un día en lista a «Todo» en
+// cuadrícula), el botón de vista lo refleja. Dueño: _syncVistaIconos.
+test('DC5 — el ícono de vista sigue al modo cuando la ciudad lleva a «Todo»', async ({ page }) => {
+  await enterFestival(page, 'aleste2026', '2026-11-26T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(res => setTimeout(res, ms));
+    const C = await import('/src/controller/handlers.js');
+    C.filterByDay('2026-11-26'); C.setProgramaView('list'); await w(300);
+    C.citySheetPick('Medellín'); await w(300);
+    const vis = id => { const e = document.getElementById(id); return !!e && getComputedStyle(e).display !== 'none'; };
+    return { modo: programaViewMode, grid: vis('view-toggle-ico-grid'), list: vis('view-toggle-ico-list') };
+  });
+  expect(r.modo).toBe('grid');
+  expect(r.grid, 'el ícono de cuadrícula se ve').toBe(true);
+  expect(r.list, 'y el de lista no').toBe(false);
+});
