@@ -893,7 +893,7 @@
    }
   },
   {
-   "title": "Panel: Comunicación y nuevas narrativas",
+   "title": "Panel de comunicaciones",
    "type": "event",
    "section": "📡 Comunicaciones",
    "duration": "90 min",
@@ -958,8 +958,8 @@
     },
     "title": {
      "tipo": "juan",
-     "fecha": "2026-11-11",
-     "frase": "en el desktop algo que envió Funza para cargar en la app"
+     "fecha": "2026-11-19",
+     "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos."
     },
     "type": {
      "tipo": "festival-web",
@@ -969,10 +969,13 @@
      "tipo": "festival-web",
      "fecha": "2026-10-25"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "Panel: Comunicación y nuevas narrativas"
+   ]
   },
   {
-   "title": "Panel: Cine desde región",
+   "title": "Panel audiovisuales",
    "type": "event",
    "section": "🎥 Audiovisuales / Cine",
    "duration": "90 min",
@@ -1038,8 +1041,8 @@
     },
     "title": {
      "tipo": "juan",
-     "fecha": "2026-11-11",
-     "frase": "en el desktop algo que envió Funza para cargar en la app"
+     "fecha": "2026-11-19",
+     "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos."
     },
     "type": {
      "tipo": "festival-web",
@@ -1049,10 +1052,13 @@
      "tipo": "festival-web",
      "fecha": "2026-10-25"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "Panel: Cine desde región"
+   ]
   },
   {
-   "title": "Conferencia: Fotografía y territorio",
+   "title": "Conferencia: El arte de la fotografía narrativa",
    "type": "event",
    "section": "📷 Fotografía / Narrativas",
    "duration": "75 min",
@@ -1118,8 +1124,8 @@
     },
     "title": {
      "tipo": "juan",
-     "fecha": "2026-11-11",
-     "frase": "en el desktop algo que envió Funza para cargar en la app"
+     "fecha": "2026-11-19",
+     "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos."
     },
     "type": {
      "tipo": "festival-web",
@@ -1129,10 +1135,13 @@
      "tipo": "festival-web",
      "fecha": "2026-10-25"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "Conferencia: Fotografía y territorio"
+   ]
   },
   {
-   "title": "Charla: App de festivales de cine",
+   "title": "Charla sobre aplicaciones y plataformas para festivales de cine",
    "type": "event",
    "section": "📱 Circulación / Industria",
    "duration": "45 min",
@@ -1198,8 +1207,8 @@
     },
     "title": {
      "tipo": "juan",
-     "fecha": "2026-11-11",
-     "frase": "en el desktop algo que envió Funza para cargar en la app"
+     "fecha": "2026-11-19",
+     "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos."
     },
     "type": {
      "tipo": "festival-web",
@@ -1209,7 +1218,10 @@
      "tipo": "festival-web",
      "fecha": "2026-10-25"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "Charla: App de festivales de cine"
+   ]
   },
   {
    "title": "Rueda de negocios audiovisual",
@@ -1784,7 +1796,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T14:18:00",
+  "fecha": "2026-11-19T14:34:19",
   "plan_sha": "1e679e89c8d991cf",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"
