@@ -982,7 +982,7 @@
     "10:45"
    ],
    "day": "2026-11-20",
-   "time": "10:45",
+   "time": "14:00",
    "day_order": 2,
    "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "evento",
@@ -1006,8 +1006,9 @@
      "fecha": "2026-10-25"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-19",
+     "url": "https://www.instagram.com/p/Df7huLiG9SO/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -1061,7 +1062,7 @@
     "13:30"
    ],
    "day": "2026-11-20",
-   "time": "13:30",
+   "time": "11:00",
    "day_order": 2,
    "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "evento",
@@ -1085,8 +1086,9 @@
      "fecha": "2026-10-25"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-19",
+     "url": "https://www.instagram.com/p/Df7huLiG9SO/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -1140,7 +1142,7 @@
     "14:45"
    ],
    "day": "2026-11-20",
-   "time": "14:45",
+   "time": "16:30",
    "day_order": 2,
    "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "charla",
@@ -1164,8 +1166,9 @@
      "fecha": "2026-10-25"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-19",
+     "url": "https://www.instagram.com/p/Df7huLiG9SO/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -1705,6 +1708,75 @@
    "is_free": true,
    "id": "f_dcb0a78bb0",
    "day_order": 0
+  },
+  {
+   "title": "Las chinas no hablamos chino",
+   "type": "event",
+   "event_kind": "evento",
+   "section": "🛠️ Formación Especializada",
+   "day": "2026-11-19",
+   "time": "16:30",
+   "venue": "Centro Cultural Bacatá - Funza",
+   "sala": "Auditorio alterno",
+   "description": "Laboratorio de lenguaje, cultura pop y equidad de género de Left & Right, inspirado en el EP musical \"V Acts of Love\". Una conversación sobre las veces que hemos limitado nuestro talento, trabajado el doble o esperado en la fila por el momento para brillar. Nacimos para ser protagonistas, no espectadoras del éxito.",
+   "description_lang": "es",
+   "_src": {
+    "url": "pieza enviada por el festival a Juan (19 nov)",
+    "date": "2026-11-19"
+   },
+   "_ancla": [
+    "Centro Cultural Bacatá - Funza",
+    "2026-11-19",
+    "16:30"
+   ],
+   "_fid": "f_aa38c583a4",
+   "_procedencia": {
+    "existe": {
+     "tipo": "juan",
+     "fecha": "2026-11-19",
+     "frase": "Y escribieron: Este evento es hoy a las 4:30 auditorío alterno complejo cultural Bacatá"
+    },
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "is_free": true,
+   "id": "f_aa38c583a4",
+   "day_order": 1,
+   "duration": "90 min"
   }
  ],
  "_avisos_duracion": [
@@ -1712,7 +1784,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T09:12:57",
+  "fecha": "2026-11-19T14:02:26",
   "plan_sha": "1e679e89c8d991cf",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"
