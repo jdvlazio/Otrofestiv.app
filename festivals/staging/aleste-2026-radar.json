@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1397 — https://github.com/jdvlazio/Otrofestiv.app/issues/1397",
-  "capturado": "2026-11-18",
+  "capturado": "2026-11-19",
   "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 14
+  "comentarios": 19
  },
  "issue": 1397,
  "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
@@ -66,6 +66,26 @@
   {
    "fecha": "2026-11-18",
    "cuerpo": "Vigía 18 nov 13:00. Al Este:\n- **Aplicado:** la Noche Inaugural (mié 18, 19:00, Colombo) pasa a la **Sala 1**. Lo dicen la web (fichas de «La última ronda en Venecia» y «Latido.», en HTML y en el texto renderizado) y la grilla de IG Df3D47hlulW, que la pone en la fila de la Sala 1. PR #1529, ya publicado.\n- **Fuente nueva:** la ficha web https://www.alestfestival.com/programa2026/latido.-el-grafiti-como-arte-el-grafiti-como-forma-de-vida. Trae día, hora y sede que coinciden con la app. El título no coincide: la ficha dice «Latido. El grafiti como arte, el grafiti como forma de vida.» y la app (que lo tomó del IG) dice «Latidos: el grafiti como arte…». Va a Juan.\n- **Contradicción abierta (Juan), MAMM:** la grilla de IG Df3D47hlulW cambia el orden de las obras: Londres jue 19 18h30, The Souffleur sáb 21 16h30 y 1982 dom 22 16h00. La web del festival y la boletería del MAMM, leídas hoy de nuevo, coinciden con la app: Souffleur jue 19 18:30, 1982 sáb 21 16:30 y Londres dom 22 16:00. No se aplica nada.\n- Las otras 41 fichas de programa2026 coinciden con la app."
+  },
+  {
+   "fecha": "2026-11-18",
+   "cuerpo": "Vigía 18 nov 17:30: el catálogo PDF nuevo (https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf, creado hoy 15:47) contradice a la web en Bogotá. The Souffleur: 26.11 a las 17:30 en el catálogo, 17:00 en la web. En la ciudad blanca: 28.11, 17:00, Sala 3 en el catálogo; la web la tiene el 29.11 a las 16:30. Wittgenstein (Jarman): 29.11, 16:30, Sala 3 en el catálogo; no está en la web. Laguna (28.11, 17:00) no aparece en el catálogo. Va a Juan."
+  },
+  {
+   "fecha": "2026-11-19",
+   "cuerpo": "Vigía 18 nov 21:00 — **PDF NUEVO del programa** (catálogo de 32 págs., creado hoy 15:47): https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf\n\nContradice a la web (fichas /programa2026/, releídas hoy) y a lo publicado, que coinciden entre sí. Ninguna regla decide → JUAN / Onboarding:\n1. **Sala 3, sáb 28 nov 17:00:** el PDF pone «En la ciudad blanca» (Tanner, cineforo); la web y la app tienen «Laguna» (Bartas, presentación con el director). «Laguna» no aparece en el PDF.\n2. **Sala 3, dom 29 nov 16:30:** el PDF pone «Wittgenstein» (Derek Jarman, 1993, 75 min, Al Este Especial, conversatorio); la web y la app tienen «La ciudad blanca». «Wittgenstein» no está en la app ni tiene ficha web (404).\n3. **Hecho en Colombia:** el PDF arma los bloques distinto. B1 (28 nov 14:30, 73 min): Liminal, Refracción, Las piedras del río, Junio 25, Futuros luminosos. B2 (29 nov 14:00, 78 min): Todo lo que pasará mañana, Lejanía, Sol de niebla, Desde acá veo la tormenta, Muchas, muchas gracias, Transversal30FF. En la app «Futuros luminosos» y «Transversal30FF» no están, y «Desde acá…», «Lejanía» y «Sol de niebla» van en el B1, «Las piedras del río» en el B2 (igual que la web).\n4. **Los golfos** (Sala Capital, dom 29 nov 16:30): el PDF dice «Conversatorio tras la proyección»; la web no lo dice y la app tiene has_qa=false.\n5. **Kluk – Cortometrajes de Altura:** el PDF dice «*Funciones exclusivas para colegios» (sin hora ni sede); la app la publica como función abierta, dom 29 nov 14:00 en Fontanar (como la web).\n\nTodo lo demás del PDF (Medellín y Bogotá: días, horas, salas, conversatorios) coincide con la app.\n"
+  },
+  {
+   "fecha": "2026-11-19",
+   "cuerpo": "**Salas vs app — Al Este 2026 (lectura automática, 19 nov 2026)**\n\nDiferencias encontradas (nada se cargó; queda para la sesión de datos con OK de Juan):\n\n1. **Colombo Americano, «Pucallpa la europea»** — la sala dice **Sala 1, sábado 21, 2:00 pm**; la app dice 21 nov **19:00**, Sala 1. Fuente: https://www.colombomedellin.edu.co/peliculas/pucallpa-la-europea/ → corregir la hora a 14:00 (pasa en 2 días).\n2. **Colombo Americano, «Gioia mia» (2.ª función)** — la sala dice **Sala 1, domingo 22, 2:00 pm**; la app dice 22 nov **14:30**. Fuente: https://www.colombomedellin.edu.co/peliculas/gioia-mia/ → corregir a 14:00. (La del viernes 20, 7:00 pm, coincide.)\n3. **Cinemateca Fontanar del Río, «Cortometrajes de altura»** — la sala dice **sábado 28 nov, 2:00 PM, Entrada libre**; la app dice **domingo 29 nov 14:00** y la marca como paga (`is_free: false`). Fuentes: https://cinematecadebogota.gov.co/node/peliculas/4015?sede=80 y la agenda https://cinematecadebogota.gov.co/agenda/80 → mover al 28 y marcar gratis.\n4. **A vigilar (no confirmado)** — Cinemateca Centro, 29 nov, Sala 2: la app pone «Retorno antes de las 3 p. m.» a las 19:00 (74 min, hasta 20:14) y la agenda de la sala ya tiene «Cómo limpiar una casa en 10 pasos fáciles» en Sala 2 a las 8:00 pm. Una de las dos horas/salas no cuadra; revisar cuando la Cinemateca publique las funciones de Al Este.\n\nSin diferencias: MAMM (The Souffleur 19/18:30, Padre 20/18:30, 1982 21/16:30, Londres 22/16:00 — todo coincide; precio en la sala $14.000) y el resto del Colombo (Cenizas y diamantes, Regreso de África, Los inocentes encantadores, La tierra prometida, Gioia mia del 20).\n\nCinemateca Centro (25–29 nov): la sala ya creó las fichas rotuladas «Festival de Cine de Europa Central y Oriental Al Este» (nodos 4037–4044) pero **todavía sin funciones ni links de TuBoleta**, y la agenda no las lista. No es hallazgo aún; revisar en la próxima corrida para traer `ticket_url` por función.\n"
+  },
+  {
+   "fecha": "2026-11-19",
+   "cuerpo": "Vigía 19 nov 09:04 — «Desde acá veo la tormenta»: el post https://www.instagram.com/p/Df7JJA8x1GK/ (@elforro_6 con @aleste.colombia, lámina 1) dice «Domingo 29 de noviembre · 2 PM · Cinemateca de Bogotá · Sala 3». La web del festival y la app la tienen en el Bloque 1, sábado 28 nov a las 14:30 (Sala 3). Queda para que decida Juan. Las funciones de Medellín de hoy coinciden con la app."
+  },
+  {
+   "fecha": "2026-11-19",
+   "cuerpo": "Vigía 19 nov 13:10 — contradicción para decidir (JUAN):\n«Desde acá veo la tormenta» (Juan Felipe Restrepo). El post de @elforro_6, en colaboración con @aleste.colombia (https://www.instagram.com/p/Df7JJA8x1GK/, lámina 1, leída a ojo), dice **DOMINGO 29 DE NOVIEMBRE · 2 PM · CINEMATECA DE BOGOTÁ · SALA 3**. Esa es la franja del Bloque 2 de Hecho en Colombia.\nLa ficha web del festival (https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta, releída hoy) y la app la ponen en el **Bloque 1, sáb 28 nov, 14:30, Sala 3**.\nNo la apliqué: mover una obra de un bloque a otro no es un cambio de hora/sede y ninguna regla decide entre el post del realizador y la ficha oficial. Resto de la web de Al Este (46 funciones): coincide con la app.\n"
   }
  ]
 }
