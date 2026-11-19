@@ -56,6 +56,14 @@ OUT = f'{REPO}/festivals/staging/funza-2026-crudo.json'
 SEDE = 'Centro Cultural Bacatá'
 SRC = {'url': 'fuentes/funza-2026/agenda-2026.pdf', 'date': '2026-10-25', 'tipo': 'festival-mensaje'}
 
+# INVITADOS (láminas del Bacatá, IG Df7huLiG9SO, 19 nov): van en la descripción,
+# como siempre (Juan, 19 nov: «no necesitas campos de invitados»).
+INVITADOS = {
+    'Panel comunicación nuevas narrativas': 'Invitados: José Valerio, Nicolás León y Rubén Santa Rubio.',
+    'Panel cine desde región': 'Invitados: Édgar Medina, Felipe Suárez y Juan Esteban Rengifo.',
+    'Conferencia fotografía y territorio': 'Invitado: Mauricio Beltrán.',
+    'Charla app de festivales de cine': 'Invitado: Juan David Villa.',
+}
 # lo que NO se publica, con su porqué (actividad → razón)
 NO_SE_PUBLICA = {
     'Registro y bienvenida': 'logística del Encuentro (registro y estación de café)',
@@ -154,7 +162,7 @@ def main():
             reg['_nota'] = obs
         else:
             reg.update(titulo=act, tipo='evento', event_kind=KIND[act])
-            reg['sinopsis'] = obs
+            reg['sinopsis'] = obs + (' ' + INVITADOS[act] if act in INVITADOS else '')
         funciones.append(reg)
     for dia, hora, tit, quien, sede, lam in FB_TALLERES:
         funciones.append({'dia': dia, 'hora': hora, 'sede': sede, 'acceso': 'Entrada libre (no se anuncia pago)',
