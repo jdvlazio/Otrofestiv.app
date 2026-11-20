@@ -35,7 +35,31 @@
      "resultado": "",
      "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
     }
-   }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/1-paseo.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/1-paseo-por-la-ciudad.jpg",
+    "px": [
+     640,
+     960
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      640,
+      800
+     ],
+     "estirado": [
+      640,
+      960
+     ],
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_posible"
   },
   "Antifragility": {
    "titulo": "Antifragility",
@@ -409,7 +433,31 @@
      "fecha": "2026-11-18",
      "resultado": "Solmaz Etemadzadeh: sin perfil en TMDB; Ara Torosian: sin perfil en TMDB"
     }
-   }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/a-perfect-maryam.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/a-perfect-maryam.jpg",
+    "px": [
+     640,
+     960
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      640,
+      800
+     ],
+     "estirado": [
+      640,
+      960
+     ],
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_posible"
   },
   "Atombombenabend": {
    "titulo": "Atombombenabend",
@@ -472,7 +520,9 @@
      "fecha": "2026-11-18",
      "resultado": "Padrick Ritch (1859770): dirige 5; Padrick Sean Ritch (5084729): dirige 1"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "el festival no lo mandó (correo 20 nov 2026: llegaron 11 de los 13 pedidos el 18 nov); sin afiche en TMDB ni en la web (búsqueda 20 nov 2026)"
   },
   "Cut your wings and fly": {
    "titulo": "Cut your wings and fly",
@@ -572,7 +622,21 @@
      "fecha": "2026-11-18",
      "resultado": "Elena Bursztein (4013896): dirige 2"
     }
-   }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/lo-que-aun-queda-de-mi.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/lo-que-aun-queda-de-mi.jpg",
+    "px": [
+     566,
+     800
+    ],
+    "ratio": 0.7075,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_posible"
   },
   "Mall": {
    "titulo": "Mall",
@@ -593,7 +657,34 @@
      "fecha": "2026-11-18",
      "resultado": "Frida Balca: sin perfil en TMDB"
     }
-   }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/mall.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/mall.jpg",
+    "px": [
+     450,
+     675
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      450,
+      800
+     ],
+     "caja": [
+      0,
+      62,
+      450,
+      737
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "afiche_chico"
   },
   "Mamma": {
    "titulo": "Mamma",
@@ -654,7 +745,21 @@
      "fecha": "2026-11-18",
      "resultado": "Susana Parejas (5830686): dirige 1"
     }
-   }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/quisiera-volverme-rio.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/quisiera-volverme-rio.jpg",
+    "px": [
+     540,
+     800
+    ],
+    "ratio": 0.675,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_posible"
   },
   "Shell Shock O'K": {
    "titulo": "Shell Shock O'K",
@@ -702,7 +807,21 @@
      "resultado": "",
      "parcial": "FilmFreeway Private Project; 403 al bot, imagen no vista"
     }
-   }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/to-the-rhythm.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/to-the-rhythm-of-love-and-hate-a-punkumentary-on-salsa-with-.jpg",
+    "px": [
+     536,
+     800
+    ],
+    "ratio": 0.67,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_posible"
   },
   "Una persona distinta": {
    "titulo": "Una persona distinta",
@@ -723,12 +842,14 @@
      "fecha": "2026-11-18",
      "resultado": "Sergio Quatraro (2653521): dirige 1"
     }
-   }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "el festival no lo mandó (correo 20 nov 2026: llegaron 11 de los 13 pedidos el 18 nov); sin afiche en TMDB ni en la web (búsqueda 20 nov 2026)"
   }
  },
  "_provenance": {
   "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
-  "capturado": "2026-11-18"
+  "capturado": "2026-11-20"
  },
  "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano."
 }

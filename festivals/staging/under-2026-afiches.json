@@ -1,6 +1,6 @@
 {
  "_provenance": {
-  "fuente": "afiches que mandó el festival en el correo del 18 nov 2026 (zips de obra + IMG-20261117-WA0014.jpg = afiche de Cosmopoética), MIRADOS uno por uno",
+  "fuente": "afiches que mandó el festival en el correo del 18 nov 2026 (zips de obra + IMG-20261117-WA0014.jpg = afiche de Cosmopoética), MIRADOS uno por uno + correo del 20 nov 2026 (11 jpg, mirados uno por uno: título y créditos casan con director)",
   "capturado": "2026-11-18",
   "regla": "solo donde TMDB no tiene afiche; Antifragility no trae afiche (solo fotogramas) y no se usa ninguno; el «Poster» de Teatime es un fotograma 16:9 sin título: no se usa"
  },
@@ -35,6 +35,55 @@
    "archivo": "fuentes/under-2026/correo-2026-11-18/unz/Antifragility/Photo 1 20260327_ANTIHRUPKOST_MASTER.00_06_33_20.Still045.jpg",
    "fuente": "fotograma oficial enviado por el festival (correo 18 nov 2026): póster editorial",
    "editorial": true
+  },
+  "1 paseo por la ciudad": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/1-paseo.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026) — reemplaza el fotograma heredado de Villa del Cine",
+   "sobre_tmdb": true,
+   "_por_que": "la imagen heredada de villadelcine-2026 era un fotograma; sobre_tmdb quita también el póster reusado para que entre este"
+  },
+  "Bisou ACAB": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/bisou-acab.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026) — falta subirlo a su ficha TMDB 1788221"
+  },
+  "Ghost Noon": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/ghost-noon.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026) — falta subirlo a su ficha TMDB 1781720"
+  },
+  "Cyclotron": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/cyclotron.jpg",
+   "fuente": "imagen cuadrada sin título enviada como afiche por el festival (correo 20 nov 2026): póster editorial; ficha TMDB 1821440 sin póster",
+   "editorial": true
+  },
+  "Cut your wings and fly": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/cut-your-wings.jpg",
+   "fuente": "imagen cuadrada sin título enviada como afiche por el festival (correo 20 nov 2026): póster editorial",
+   "editorial": true
+  },
+  "Shell Shock O'K": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/shell-shock-ok.jpg",
+   "fuente": "fotograma 3:2 sin título enviado como afiche por el festival (correo 20 nov 2026): póster editorial",
+   "editorial": true
+  },
+  "Lo que aún queda de mí": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/lo-que-aun-queda-de-mi.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)"
+  },
+  "Mall": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/mall.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)"
+  },
+  "A Perfect Maryam": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/a-perfect-maryam.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)"
+  },
+  "Quisiera volverme río": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/quisiera-volverme-rio.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)"
+  },
+  "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra": {
+   "archivo": "fuentes/under-2026/correo-2026-11-20/to-the-rhythm.jpg",
+   "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)"
   }
  }
 }

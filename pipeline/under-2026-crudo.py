@@ -138,6 +138,10 @@ F = [
 ]
 
 
+# Sinopsis traducidas por nosotros (solo había inglés): pipeline/under-2026-sinopsis.json
+_SIN = json.load(io.open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'under-2026-sinopsis.json'), encoding='utf-8'))
+
+
 def main():
     funciones = []
     for dia, hora, sede, tit, sec, pag, obras, extra in F:
@@ -152,6 +156,9 @@ def main():
             o = {'titulo': t, 'director': d, 'pais': p, 'anio': a}
             if m:
                 o['duracion_min'] = m
+            if t in _SIN['sinopsis']:
+                o['sinopsis'] = _SIN['sinopsis'][t]
+                o['_sinopsis_fuente'] = _SIN['_fuente']
             ob.append(o)
         if len(ob) == 1:
             r.update({k: v for k, v in ob[0].items() if k != 'titulo'})

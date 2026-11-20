@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-18"
+  "capturado": "2026-11-20"
  },
  "obras": [
   {
@@ -21,13 +21,15 @@
    ],
    "_afiche_de": "ya publicada en villadelcine-2026",
    "_sinopsis_de": "ya publicada en villadelcine-2026",
-   "poster": "/assets/villadelcine-2026/1-paseo-por-la-ciudad.jpg",
    "_verificado": "ya publicada en villadelcine-2026: se reusa su afiche",
    "sinopsis": "En las calles de Ciudad de México, Ema y Lautaro quedan atrapados entre el crimen, los recortes de papel y la desaparición del territorio que habitan. Mediante acción en vivo y stop motion en collage, buscan imaginar un camino posible para escapar, florecer después del salto y recuperar el olvidado oficio de volar.",
    "pais": "México",
    "anio": 2025,
    "duracion_tmdb": 9,
-   "genero": "Animación"
+   "genero": "Animación",
+   "poster": "/assets/under-2026/1-paseo-por-la-ciudad.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026) — reemplaza el fotograma heredado de Villa del Cine"
   },
   {
    "titulo": "8 metros: La palabra subterránea",
@@ -43,7 +45,7 @@
    "lbSlug": "8-metros",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1688830 «8 Metros»: dir. Pablo Fernández Alberti, 60 min; El Delirio Cine y el tráiler de Vimeo la presentan como «8 metros: La palabra subterránea», mismo director",
    "_director": "Pablo Fernández Alberti",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/8-metros-la-palabra-subterranea.jpg",
    "posterSource": "tmdb"
   },
@@ -105,8 +107,8 @@
    "titulo": "Atombombenabend",
    "tmdb_id": 1829843,
    "titulo_original": "Atombombenabend",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/vmI8cHZOoZJQVvpySLfiGF7dnid.jpg",
+   "synopsis_es": "Un falso documental, un delirio febril que va de la inteligencia artificial a la bomba atómica y vuelve.",
    "synopsis_en": "A mockumentary fever dream that travels from artificial intelligence to the atomic bomb and back.",
    "genero": "Comedia",
    "anio_tmdb": 0,
@@ -115,7 +117,9 @@
    "lbSlug": "atombombenabend",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_director": "Thorsten Fleisch",
-   "_sondeado": "2026-11-18"
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/atombombenabend.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Bisou ACAB",
@@ -131,7 +135,10 @@
    "lbSlug": "bisou-acab",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_director": "Guillermo Gallo",
-   "_sondeado": "2026-11-18"
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/bisou-acab.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026) — falta subirlo a su ficha TMDB 1788221"
   },
   {
    "titulo": "Borrachos mientras escuchamos las gotas caer",
@@ -371,8 +378,8 @@
    "titulo": "Comb story",
    "tmdb_id": 1829663,
    "titulo_original": "Comb Story",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/kJMfUMpLaWNEReKqKMw0jBpZVNR.jpg",
+   "synopsis_es": "Elena sostiene un peine de madera mientras los recuerdos la llevan a su infancia: su madre peinándola despacio, todos los días, incluso cuando Elena ya era una mujer joven. Cuando la vida la llevó a la ciudad, Elena se cortó el pelo y con él cortó su camino de regreso a casa. Los años se llenaron de razones para no volver. Elena nunca entendió por qué su madre la peinaba, hasta el día en que por fin estuvo frente a ella, sacó el peine y se lo pasó por el pelo por primera vez.",
    "synopsis_en": "Elena holds a wooden comb in her hands as memories pull her back to childhood: her mother combing her hair slowly, every single day, even when Elena was already a grown young woman. When life swept her away to the city, Elena cut her hair and with it cut her way back home. The years filled up with reasons not to return. Elena never understood why her mother combed her hair until the day she finally stood in front of her mother, took out the comb, and ran it through her hair for the very first time.",
    "genero": "Animación",
    "anio_tmdb": 0,
@@ -381,17 +388,16 @@
    "lbSlug": "comb-story",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_director": "Ernesto Rodriguez Cruz",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/comb-story.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Cosmopoética: el ciclo de vida de una estrella masiva",
    "tmdb_id": 1829504,
    "titulo_original": "Cosmopoética: el ciclo de vida de una estrella masiva",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/sVqMwFnYScFvPqHrijn3n8nFFDL.jpg",
+   "synopsis_es": "Cosmopoética es un cortometraje experimental que explora la transformación y la vulnerabilidad del cambio. A partir del paralelo entre el ciclo vital de una estrella masiva y el proceso interior de una actriz que se despide del teatro, la obra propone una reflexión sobre los finales como origen de lo nuevo.",
    "synopsis_en": "Cosmopoética is an experimental short film that explores transformation and the vulnerability of change. Drawing a parallel between the life cycle of a massive star and the inner process of an actress saying goodbye to the theatre, the film reflects on endings as the origin of the new.",
    "genero": "",
    "anio_tmdb": 0,
@@ -400,10 +406,9 @@
    "lbSlug": "cosmopoetica-el-ciclo-de-vida-de-una-estrella",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_director": "Sofía Orozco Payares",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/cosmopoetica-el-ciclo-de-vida-de-una-estrella-masiva.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Cyclotron",
@@ -420,7 +425,10 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Cyclotron",
    "_director": "Brian Gibson",
-   "_sondeado": "2026-11-17"
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/cyclotron.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: imagen cuadrada sin título enviada como afiche por el festival (correo 20 nov 2026): póster editorial; ficha TMDB 1821440 sin póster"
   },
   {
    "titulo": "Distillery Dance",
@@ -437,7 +445,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Distillery Dance",
    "_director": "Elly Moghtaderi",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/distillery-dance.jpg",
    "posterSource": "tmdb"
   },
@@ -455,7 +463,7 @@
    "lbSlug": "duelo-2025",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1313242 «Duelo» — director ✓ y año/duración ✓",
    "_director": "Sebastian Barnes",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/duelo.jpg",
    "posterSource": "tmdb"
   },
@@ -473,7 +481,7 @@
    "lbSlug": "echoes-of-a-zephyr",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_director": "Josh Weissbach",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/echoes-of-a-zephyr.jpg",
    "posterSource": "tmdb"
   },
@@ -528,7 +536,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Elegy for the Lost",
    "_director": "William Hong-xiao Wei",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/elegy-for-the-lost.jpg",
    "posterSource": "tmdb"
   },
@@ -547,7 +555,7 @@
    "lbSlug": "those-ruins",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1584751: dir. Gabriel Alberto Piñeiro, AR, 21 min; FIDBA 2025 la lista igual (Gabriel Piñeiro, 21 min)",
    "_director": "Gabriel Piñeiro",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/esas-ruinas.jpg",
    "posterSource": "tmdb"
   },
@@ -555,8 +563,8 @@
    "titulo": "Fata Morgana",
    "tmdb_id": 1829503,
    "titulo_original": "Fata Morgana",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/zfDH76U1uPT3LX6TWZc7JpJqX2E.jpg",
+   "synopsis_es": "Un estudio experimental sobre la memoria, las imágenes y el acto de filmar, y sobre cómo los recuerdos pueden transformarse, oxidarse y desintegrarse.",
    "synopsis_en": "An experimental study of memory, images and filming and how memories can transform, rust and disintegrate.",
    "genero": "",
    "anio_tmdb": 0,
@@ -565,10 +573,9 @@
    "lbSlug": "fata-morgana-1",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_director": "Hannu Nieminen",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/fata-morgana.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Ghost Noon",
@@ -585,7 +592,10 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Ghost Noon",
    "_director": "Ting-Kin Chan",
-   "_sondeado": "2026-11-17"
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/ghost-noon.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026) — falta subirlo a su ficha TMDB 1781720"
   },
   {
    "titulo": "Hansel and Gretel Get Kicked Out",
@@ -602,7 +612,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Hansel and Gretel Get Kicked Out",
    "_director": "MilleFeuille",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/hansel-and-gretel-get-kicked-out.jpg",
    "posterSource": "tmdb"
   },
@@ -640,7 +650,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Las muertes más bellas del mundo",
    "_director": "Quique Avilés, Ellie Walton",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/las-muertes-mas-bellas-del-mundo.jpg",
    "posterSource": "tmdb"
   },
@@ -868,7 +878,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Quizás nunca",
    "_director": "Loana Isabel Pagani",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/quizas-nunca.jpg",
    "posterSource": "tmdb"
   },
@@ -887,7 +897,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "SKRFF",
    "_director": "Corrie Francis Parks, Daniel Nuderscher",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/skrff.jpg",
    "posterSource": "tmdb"
   },
@@ -906,7 +916,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Salman Wants to Go",
    "_director": "Ozan Takış",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/salman-wants-to-go.jpg",
    "posterSource": "tmdb"
   },
@@ -925,7 +935,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Ser, no ser, ser muchas",
    "_director": "Silbando bembas",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/ser-no-ser-ser-muchas.jpg",
    "posterSource": "tmdb"
   },
@@ -944,7 +954,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Sinforme sinfinal",
    "_director": "Patricio Lagos",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/sinforme-sinfinal.jpg",
    "posterSource": "tmdb"
   },
@@ -963,7 +973,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Spheres",
    "_director": "Martin Gerigk",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/spheres.jpg",
    "posterSource": "tmdb"
   },
@@ -982,7 +992,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Tapeworm Alexis & the Opera Diva",
    "_director": "Thaïs Odermatt",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/tapeworm-alexis-the-opera-diva.jpg",
    "posterSource": "tmdb"
   },
@@ -990,8 +1000,8 @@
    "titulo": "The Shapeshifter's lament",
    "tmdb_id": 1829671,
    "titulo_original": "The Shapeshifter's Lament",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/xpckplRrcN8cp7l0FSEcBIsU7KV.jpg",
+   "synopsis_es": "The Shapeshifter's Lament es una fantasía poética sobre las especies introducidas. Sitúa la supervivencia en las fronteras cambiantes entre distintas formas de vida y teje un relato de parentesco, metamorfosis y la frágil persistencia de la memoria. Queda la pregunta: ¿cómo podrían responder los habitantes originarios a los recién llegados, no invitados, que rompen la armonía de la tierra y de sus formas de vida?",
    "synopsis_en": "The Shapeshifter's Lament is a poetic fantasy reflecting on introduced species. Situating survival at the shifting boundaries between different life forms, it weaves a narrative of kinship, metamorphosis, and the fragile persistence of memory. The question remains: how might the original inhabitants respond to uninvited and introduced arrivals who disrupt the harmony of the land and its living forms?",
    "genero": "Animación",
    "anio_tmdb": 0,
@@ -1000,10 +1010,9 @@
    "lbSlug": "the-shapeshifters-lament",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_director": "Gaele Sobott",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/the-shapeshifter-s-lament.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "The sight is a wound",
@@ -1020,7 +1029,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "The sight is a wound",
    "_director": "Parham Ghalamdar",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/the-sight-is-a-wound.jpg",
    "posterSource": "tmdb"
   },
@@ -1189,7 +1198,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Und Ich behaupte",
    "_director": "Patrick Müller",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/und-ich-behaupte.jpg",
    "posterSource": "tmdb"
   },
@@ -1230,6 +1239,48 @@
    "poster": "/assets/under-2026/antifragility.jpg",
    "posterSource": "editorial",
    "_afiche": "declarado: fotograma oficial enviado por el festival (correo 18 nov 2026): póster editorial"
+  },
+  {
+   "titulo": "Cut your wings and fly",
+   "poster": "/assets/under-2026/cut-your-wings-and-fly.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: imagen cuadrada sin título enviada como afiche por el festival (correo 20 nov 2026): póster editorial"
+  },
+  {
+   "titulo": "Shell Shock O'K",
+   "poster": "/assets/under-2026/shell-shock-o-k.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma 3:2 sin título enviado como afiche por el festival (correo 20 nov 2026): póster editorial"
+  },
+  {
+   "titulo": "Lo que aún queda de mí",
+   "poster": "/assets/under-2026/lo-que-aun-queda-de-mi.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
+  },
+  {
+   "titulo": "Mall",
+   "poster": "/assets/under-2026/mall.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
+  },
+  {
+   "titulo": "A Perfect Maryam",
+   "poster": "/assets/under-2026/a-perfect-maryam.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
+  },
+  {
+   "titulo": "Quisiera volverme río",
+   "poster": "/assets/under-2026/quisiera-volverme-rio.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
+  },
+  {
+   "titulo": "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra",
+   "poster": "/assets/under-2026/to-the-rhythm-of-love-and-hate-a-punkumentary-on-salsa-with-.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
   }
  ],
  "verificadas": {
@@ -1246,7 +1297,7 @@
    "lbSlug": "8-metros",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1688830 «8 Metros»: dir. Pablo Fernández Alberti, 60 min; El Delirio Cine y el tráiler de Vimeo la presentan como «8 metros: La palabra subterránea», mismo director",
    "_director": "Pablo Fernández Alberti",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/8-metros-la-palabra-subterranea.jpg",
    "posterSource": "tmdb"
   },
@@ -1305,8 +1356,8 @@
   "Atombombenabend": {
    "tmdb_id": 1829843,
    "titulo_original": "Atombombenabend",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/vmI8cHZOoZJQVvpySLfiGF7dnid.jpg",
+   "synopsis_es": "Un falso documental, un delirio febril que va de la inteligencia artificial a la bomba atómica y vuelve.",
    "synopsis_en": "A mockumentary fever dream that travels from artificial intelligence to the atomic bomb and back.",
    "genero": "Comedia",
    "anio_tmdb": 0,
@@ -1315,7 +1366,9 @@
    "lbSlug": "atombombenabend",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_director": "Thorsten Fleisch",
-   "_sondeado": "2026-11-18"
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/atombombenabend.jpg",
+   "posterSource": "tmdb"
   },
   "Bisou ACAB": {
    "tmdb_id": 1788221,
@@ -1330,7 +1383,10 @@
    "lbSlug": "bisou-acab",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_director": "Guillermo Gallo",
-   "_sondeado": "2026-11-18"
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/bisou-acab.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026) — falta subirlo a su ficha TMDB 1788221"
   },
   "Borrachos mientras escuchamos las gotas caer": {
    "tmdb_id": 1743109,
@@ -1567,8 +1623,8 @@
   "Comb story": {
    "tmdb_id": 1829663,
    "titulo_original": "Comb Story",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/kJMfUMpLaWNEReKqKMw0jBpZVNR.jpg",
+   "synopsis_es": "Elena sostiene un peine de madera mientras los recuerdos la llevan a su infancia: su madre peinándola despacio, todos los días, incluso cuando Elena ya era una mujer joven. Cuando la vida la llevó a la ciudad, Elena se cortó el pelo y con él cortó su camino de regreso a casa. Los años se llenaron de razones para no volver. Elena nunca entendió por qué su madre la peinaba, hasta el día en que por fin estuvo frente a ella, sacó el peine y se lo pasó por el pelo por primera vez.",
    "synopsis_en": "Elena holds a wooden comb in her hands as memories pull her back to childhood: her mother combing her hair slowly, every single day, even when Elena was already a grown young woman. When life swept her away to the city, Elena cut her hair and with it cut her way back home. The years filled up with reasons not to return. Elena never understood why her mother combed her hair until the day she finally stood in front of her mother, took out the comb, and ran it through her hair for the very first time.",
    "genero": "Animación",
    "anio_tmdb": 0,
@@ -1577,16 +1633,15 @@
    "lbSlug": "comb-story",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_director": "Ernesto Rodriguez Cruz",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/comb-story.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+   "posterSource": "tmdb"
   },
   "Cosmopoética: el ciclo de vida de una estrella masiva": {
    "tmdb_id": 1829504,
    "titulo_original": "Cosmopoética: el ciclo de vida de una estrella masiva",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/sVqMwFnYScFvPqHrijn3n8nFFDL.jpg",
+   "synopsis_es": "Cosmopoética es un cortometraje experimental que explora la transformación y la vulnerabilidad del cambio. A partir del paralelo entre el ciclo vital de una estrella masiva y el proceso interior de una actriz que se despide del teatro, la obra propone una reflexión sobre los finales como origen de lo nuevo.",
    "synopsis_en": "Cosmopoética is an experimental short film that explores transformation and the vulnerability of change. Drawing a parallel between the life cycle of a massive star and the inner process of an actress saying goodbye to the theatre, the film reflects on endings as the origin of the new.",
    "genero": "",
    "anio_tmdb": 0,
@@ -1595,10 +1650,9 @@
    "lbSlug": "cosmopoetica-el-ciclo-de-vida-de-una-estrella",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_director": "Sofía Orozco Payares",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/cosmopoetica-el-ciclo-de-vida-de-una-estrella-masiva.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+   "posterSource": "tmdb"
   },
   "Cyclotron": {
    "tmdb_id": 1821440,
@@ -1614,7 +1668,10 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Cyclotron",
    "_director": "Brian Gibson",
-   "_sondeado": "2026-11-17"
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/cyclotron.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: imagen cuadrada sin título enviada como afiche por el festival (correo 20 nov 2026): póster editorial; ficha TMDB 1821440 sin póster"
   },
   "Distillery Dance": {
    "tmdb_id": 1720676,
@@ -1630,7 +1687,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Distillery Dance",
    "_director": "Elly Moghtaderi",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/distillery-dance.jpg",
    "posterSource": "tmdb"
   },
@@ -1647,7 +1704,7 @@
    "lbSlug": "duelo-2025",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1313242 «Duelo» — director ✓ y año/duración ✓",
    "_director": "Sebastian Barnes",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/duelo.jpg",
    "posterSource": "tmdb"
   },
@@ -1664,7 +1721,7 @@
    "lbSlug": "echoes-of-a-zephyr",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_director": "Josh Weissbach",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/echoes-of-a-zephyr.jpg",
    "posterSource": "tmdb"
   },
@@ -1717,7 +1774,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Elegy for the Lost",
    "_director": "William Hong-xiao Wei",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/elegy-for-the-lost.jpg",
    "posterSource": "tmdb"
   },
@@ -1735,15 +1792,15 @@
    "lbSlug": "those-ruins",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1584751: dir. Gabriel Alberto Piñeiro, AR, 21 min; FIDBA 2025 la lista igual (Gabriel Piñeiro, 21 min)",
    "_director": "Gabriel Piñeiro",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/esas-ruinas.jpg",
    "posterSource": "tmdb"
   },
   "Fata Morgana": {
    "tmdb_id": 1829503,
    "titulo_original": "Fata Morgana",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/zfDH76U1uPT3LX6TWZc7JpJqX2E.jpg",
+   "synopsis_es": "Un estudio experimental sobre la memoria, las imágenes y el acto de filmar, y sobre cómo los recuerdos pueden transformarse, oxidarse y desintegrarse.",
    "synopsis_en": "An experimental study of memory, images and filming and how memories can transform, rust and disintegrate.",
    "genero": "",
    "anio_tmdb": 0,
@@ -1752,10 +1809,9 @@
    "lbSlug": "fata-morgana-1",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_director": "Hannu Nieminen",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/fata-morgana.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+   "posterSource": "tmdb"
   },
   "Ghost Noon": {
    "tmdb_id": 1781720,
@@ -1771,7 +1827,10 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Ghost Noon",
    "_director": "Ting-Kin Chan",
-   "_sondeado": "2026-11-17"
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/ghost-noon.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026) — falta subirlo a su ficha TMDB 1781720"
   },
   "Hansel and Gretel Get Kicked Out": {
    "tmdb_id": 1699333,
@@ -1787,7 +1846,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Hansel and Gretel Get Kicked Out",
    "_director": "MilleFeuille",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/hansel-and-gretel-get-kicked-out.jpg",
    "posterSource": "tmdb"
   },
@@ -1823,7 +1882,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Las muertes más bellas del mundo",
    "_director": "Quique Avilés, Ellie Walton",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/las-muertes-mas-bellas-del-mundo.jpg",
    "posterSource": "tmdb"
   },
@@ -2044,7 +2103,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Quizás nunca",
    "_director": "Loana Isabel Pagani",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/quizas-nunca.jpg",
    "posterSource": "tmdb"
   },
@@ -2062,7 +2121,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "SKRFF",
    "_director": "Corrie Francis Parks, Daniel Nuderscher",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/skrff.jpg",
    "posterSource": "tmdb"
   },
@@ -2080,7 +2139,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Salman Wants to Go",
    "_director": "Ozan Takış",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/salman-wants-to-go.jpg",
    "posterSource": "tmdb"
   },
@@ -2098,7 +2157,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Ser, no ser, ser muchas",
    "_director": "Silbando bembas",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/ser-no-ser-ser-muchas.jpg",
    "posterSource": "tmdb"
   },
@@ -2116,7 +2175,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Sinforme sinfinal",
    "_director": "Patricio Lagos",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/sinforme-sinfinal.jpg",
    "posterSource": "tmdb"
   },
@@ -2134,7 +2193,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Spheres",
    "_director": "Martin Gerigk",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/spheres.jpg",
    "posterSource": "tmdb"
   },
@@ -2152,15 +2211,15 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Tapeworm Alexis & the Opera Diva",
    "_director": "Thaïs Odermatt",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/tapeworm-alexis-the-opera-diva.jpg",
    "posterSource": "tmdb"
   },
   "The Shapeshifter's lament": {
    "tmdb_id": 1829671,
    "titulo_original": "The Shapeshifter's Lament",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/xpckplRrcN8cp7l0FSEcBIsU7KV.jpg",
+   "synopsis_es": "The Shapeshifter's Lament es una fantasía poética sobre las especies introducidas. Sitúa la supervivencia en las fronteras cambiantes entre distintas formas de vida y teje un relato de parentesco, metamorfosis y la frágil persistencia de la memoria. Queda la pregunta: ¿cómo podrían responder los habitantes originarios a los recién llegados, no invitados, que rompen la armonía de la tierra y de sus formas de vida?",
    "synopsis_en": "The Shapeshifter's Lament is a poetic fantasy reflecting on introduced species. Situating survival at the shifting boundaries between different life forms, it weaves a narrative of kinship, metamorphosis, and the fragile persistence of memory. The question remains: how might the original inhabitants respond to uninvited and introduced arrivals who disrupt the harmony of the land and its living forms?",
    "genero": "Animación",
    "anio_tmdb": 0,
@@ -2169,10 +2228,9 @@
    "lbSlug": "the-shapeshifters-lament",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
    "_director": "Gaele Sobott",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/the-shapeshifter-s-lament.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 18 nov 2026)"
+   "posterSource": "tmdb"
   },
   "The sight is a wound": {
    "tmdb_id": 1484934,
@@ -2188,7 +2246,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "The sight is a wound",
    "_director": "Parham Ghalamdar",
-   "_sondeado": "2026-11-17",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/the-sight-is-a-wound.jpg",
    "posterSource": "tmdb"
   },
@@ -2355,7 +2413,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Und Ich behaupte",
    "_director": "Patrick Müller",
-   "_sondeado": "2026-11-18",
+   "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/und-ich-behaupte.jpg",
    "posterSource": "tmdb"
   },
