@@ -137,6 +137,40 @@
     "fecha": "2026-11-19"
    },
    "evidencia": "grilla oficial «Programación Bogotá» de @aleste.colombia (19 nov 21:00), lámina 2, Sala 2: «PULSE 118' Conversatorio 20h00»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Colombo Americano - Medellín",
+    "dia": "2026-11-21",
+    "hora": "14:00"
+   },
+   "funcion": "f_0ba6ba1a3a",
+   "casilla": "time",
+   "valor": "19:00",
+   "contra": "14:00",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.alestfestival.com/programa2026/pucallpa-la-europea",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "tres caminos coinciden: HTML de la ficha y texto renderizado (navegador) dicen «Medellín · Sábado 21 nov · 19:00 · Centro Colombo Americano – Sala 1»; el catálogo PDF oficial del 20 nov (https://www.alestfestival.com/_files/ugd/9df115_8c8d52967fb743b6b6604248e056a0df.pdf, pág. 27) dice «CENTRO COLOMBO AMERICANO. MEDELLÍN - SALA 1 / 21.11 | 19:00». La lámina 01.jpg de Df3D47hlulW (17 nov) ya decía «19h00»; las 14:00 venían de la lámina 04 de DfSV6Z3lpE1 (12 nov)"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Colombo Americano - Medellín",
+    "dia": "2026-11-22",
+    "hora": "14:00"
+   },
+   "funcion": "f_516f75f820",
+   "casilla": "time",
+   "valor": "14:30",
+   "contra": "14:00",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.alestfestival.com/programa2026/gioia-mia",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "tres caminos coinciden: HTML de la ficha y texto renderizado (navegador) dicen «Medellín · Domingo 22 nov · 14:30 · Centro Colombo Americano – Sala 1»; el catálogo PDF oficial del 20 nov (https://www.alestfestival.com/_files/ugd/9df115_8c8d52967fb743b6b6604248e056a0df.pdf, pág. 26) dice «CENTRO COLOMBO AMERICANO. MEDELLÍN - SALA 1 / 20.11 | 19:00 / 22.11 | 14:30». La lámina 01.jpg de Df3D47hlulW (17 nov) ya decía «14h30»"
   }
  ]
 }

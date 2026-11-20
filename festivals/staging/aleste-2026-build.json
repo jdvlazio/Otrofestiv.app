@@ -869,7 +869,7 @@
     "14:00"
    ],
    "day": "2026-11-21",
-   "time": "14:00",
+   "time": "19:00",
    "day_order": 3,
    "venue": "Centro Colombo Americano - Medellín",
    "has_qa": false,
@@ -898,7 +898,8 @@
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-12"
+     "fecha": "2026-11-20",
+     "url": "https://www.alestfestival.com/programa2026/pucallpa-la-europea"
     },
     "venue": {
      "tipo": "festival-web",
@@ -1099,7 +1100,7 @@
     "14:00"
    ],
    "day": "2026-11-22",
-   "time": "14:00",
+   "time": "14:30",
    "day_order": 4,
    "venue": "Centro Colombo Americano - Medellín",
    "has_qa": false,
@@ -1128,7 +1129,8 @@
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-12"
+     "fecha": "2026-11-20",
+     "url": "https://www.alestfestival.com/programa2026/gioia-mia"
     },
     "venue": {
      "tipo": "festival-web",
@@ -3386,7 +3388,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T13:32:15",
+  "fecha": "2026-11-20T17:15:50",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
