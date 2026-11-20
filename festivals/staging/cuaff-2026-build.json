@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "https://www.instagram.com/colombianurbanfilm/",
-  "capturado": "2026-11-19",
+  "capturado": "2026-11-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "El festival no publica secciones: sus programas tienen nombre propio (van como título). «CUAFF 2026» es el sello de todos los posts; «Clausura» lo dice el post de Sanber; «Taller» la lámina del taller. PROPUESTA para Juan.",
@@ -139,12 +139,57 @@
     "date": "2026-11-16",
     "ficha_sala": "https://cinematecadebogota.gov.co/node/peliculas/4030"
    },
-   "is_free": false,
    "lbSlug": "wholetrain",
    "tmdb_id": 14231,
    "synopsis_en": "This feature takes a look at the graffiti movement and young people who populate the niche culture. Following four such artists as they shape the graffiti community through both their art and their interactions, the film tells the story of how the foursome's decision to paint an entire train would affect their lives forever.",
    "_fid": "f_f4bdfa8168",
-   "id": "f_f4bdfa8168"
+   "id": "f_f4bdfa8168",
+   "is_free": false,
+   "ticket_url": "https://tuboleta.com/es/eventos/wholetrain",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-11-20",
+     "url": "https://tuboleta.com/es/eventos/wholetrain"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-20",
+     "url": "https://tuboleta.com/es/eventos/wholetrain"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Graffiti y cámara: documentar la calle",
@@ -171,12 +216,58 @@
     "tipo": "festival-ig",
     "date": "2026-11-16"
    },
-   "is_free": true,
    "requires_registration": true,
    "description": "¿Cómo registrar el graffiti, el muralismo y las acciones urbanas sin intervenir en su esencia? Un taller teórico y analítico donde abordaremos referentes visuales, ritmo, composición, luz y narrativa del territorio, explorando estrategias para documentar el arte urbano desde una mirada consciente, respetando los códigos de calle y los procesos de creación. Dictado por Anonimato Visual, fotógrafo, artista multidisciplinar y docente en Artes Visuales de Bogotá.",
    "description_lang": "es",
    "_fid": "f_2ebcde31ef",
-   "id": "f_2ebcde31ef"
+   "id": "f_2ebcde31ef",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Taller stop motion y graffiti",
@@ -203,12 +294,58 @@
     "date": "2026-11-16"
    },
    "registration_url": "https://forms.gle/wasQVqm61khgrsLK6",
-   "is_free": true,
    "requires_registration": true,
    "description": "En CUAFF 2026 exploraremos el encuentro entre el graffiti y el stop motion, una técnica de animación que permite crear movimiento a partir de imágenes capturadas cuadro a cuadro. Un espacio para descubrir nuevas posibilidades de expresión audiovisual, experimentar con la imagen y explorar cómo el arte urbano puede cobrar vida a través del cine y la animación. Cupos limitados.",
    "description_lang": "es",
    "_fid": "f_c11c5e1b57",
-   "id": "f_c11c5e1b57"
+   "id": "f_c11c5e1b57",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Breaking la vida",
@@ -244,12 +381,57 @@
     "date": "2026-11-16",
     "ficha_sala": "https://cinematecadebogota.gov.co/node/peliculas/4031"
    },
-   "is_free": true,
    "lbSlug": "breaking-la-vida",
    "tmdb_id": 654102,
    "synopsis_en": "A journey from youth to adulthood, facing the adversities that life presents to a group of break dancers.",
    "_fid": "f_97112ba5c6",
-   "id": "f_97112ba5c6"
+   "id": "f_97112ba5c6",
+   "is_free": false,
+   "ticket_url": "https://tuboleta.com/es/eventos/breaking-la-vida",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-11-20",
+     "url": "https://tuboleta.com/es/eventos/breaking-la-vida"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-20",
+     "url": "https://tuboleta.com/es/eventos/breaking-la-vida"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Hip Hop y Comunidad",
@@ -278,7 +460,6 @@
     "date": "2026-11-16",
     "ficha_sala": "https://cinematecadebogota.gov.co/node/peliculas/4032"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -309,7 +490,57 @@
    "description": "El hip hop es mucho más que música: es memoria, identidad, resistencia y construcción colectiva. Este bloque reúne dos miradas documentales de Argentina y Colombia que exploran cómo la cultura urbana transforma territorios, conecta generaciones y fortalece los vínculos comunitarios. A través de sus protagonistas, las calles se convierten en escenarios de expresión, encuentro y memoria, donde el arte mantiene vivas las historias de quienes han construido el movimiento desde sus raíces.",
    "description_lang": "es",
    "_fid": "f_af9f2d1125",
-   "id": "f_af9f2d1125"
+   "id": "f_af9f2d1125",
+   "is_free": false,
+   "ticket_url": "https://tuboleta.com/es/eventos/hip-hop-y-comunidad-0",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-11-20",
+     "url": "https://tuboleta.com/es/eventos/hip-hop-y-comunidad-0"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-20",
+     "url": "https://tuboleta.com/es/eventos/hip-hop-y-comunidad-0"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Graffiti & Trenes",
@@ -338,7 +569,6 @@
     "date": "2026-11-16",
     "ficha_sala": "https://cinematecadebogota.gov.co/node/peliculas/4033"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -381,7 +611,57 @@
    "description": "Entre túneles, vagones, muros y alturas, el graffiti underground se manifiesta como una expresión de identidad, rebeldía y libertad creativa. Este bloque reúne cuatro producciones audiovisuales que nos sumergen en el universo del graffiti, explorando la adrenalina de la intervención urbana, los códigos de la cultura clandestina y la relación entre el arte, el riesgo y la ciudad. Desde Colombia hasta París, estas historias presentan distintas miradas sobre una cultura que desafía los límites del espacio público y convierte el paisaje urbano en un territorio de expresión, resistencia y movimiento.",
    "description_lang": "es",
    "_fid": "f_bd66c8a701",
-   "id": "f_bd66c8a701"
+   "id": "f_bd66c8a701",
+   "is_free": false,
+   "ticket_url": "https://tuboleta.com/es/eventos/graffiti-trenes-0",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-11-20",
+     "url": "https://tuboleta.com/es/eventos/graffiti-trenes-0"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-20",
+     "url": "https://tuboleta.com/es/eventos/graffiti-trenes-0"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Hip Hop, Comunidad y Graffiti",
@@ -412,7 +692,6 @@
     "date": "2026-11-16",
     "ficha_sala": "https://cinematecadebogota.gov.co/node/peliculas/4034"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -483,7 +762,50 @@
    "description": "El hip hop y el graffiti son expresiones culturales que nacen de las calles, construyen identidad y fortalecen los lazos comunitarios. Este bloque reúne cinco producciones audiovisuales de Colombia y Argentina que exploran el arte urbano como lenguaje de encuentro, memoria, transformación social y resistencia cultural. A través del movimiento, la música, las intervenciones gráficas y las narrativas de sus protagonistas, descubrimos cómo las nuevas generaciones reinterpretan sus territorios, mantienen viva la cultura underground y encuentran en el arte una forma de expresión colectiva.",
    "description_lang": "es",
    "_fid": "f_db1a7e214a",
-   "id": "f_db1a7e214a"
+   "id": "f_db1a7e214a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Graffiti, Trenes y Street",
@@ -514,7 +836,6 @@
     "date": "2026-11-16",
     "ficha_sala": "https://cinematecadebogota.gov.co/node/peliculas/4035"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -577,7 +898,57 @@
    "description": "El graffiti no conoce fronteras. Entre trenes, calles, muros y recorridos clandestinos, este bloque nos sumerge en la esencia más cruda y auténtica de la cultura underground. Cuatro producciones audiovisuales de Colombia, Italia y Argentina retratan la adrenalina, los viajes, los códigos y las experiencias que definen el graffiti sobre metal y el movimiento del street bombing. Una mirada a las conexiones internacionales entre escritores de graffiti, donde cada recorrido se convierte en una aventura y cada intervención deja una huella en el paisaje urbano. Arte, riesgo, identidad y libertad se encuentran en historias que revelan la fuerza de una cultura que permanece en constante movimiento.",
    "description_lang": "es",
    "_fid": "f_c5065e87d1",
-   "id": "f_c5065e87d1"
+   "id": "f_c5065e87d1",
+   "is_free": false,
+   "ticket_url": "https://tuboleta.com/es/eventos/graffiti-trenes-y-street",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "sala",
+     "fecha": "2026-11-20",
+     "url": "https://tuboleta.com/es/eventos/graffiti-trenes-y-street"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-20",
+     "url": "https://tuboleta.com/es/eventos/graffiti-trenes-y-street"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   },
   {
    "title": "Sanber: vivencias de un bajo mundo",
@@ -613,12 +984,50 @@
     "date": "2026-11-16",
     "ficha_sala": "https://cinematecadebogota.gov.co/node/peliculas/4036"
    },
-   "is_free": true,
    "lbSlug": "sanber-vivencias-de-un-bajo-mundo",
    "tmdb_id": 1828501,
    "synopsis_en": "A documentary that, through a story of parallels, seeks every possible nuance of a small piece of downtown Bogotá: a microcosm that intertwines and dies with the city's renewal. Graffiti, rap and literature (Mario Mendoza) bring never-before-told accounts of what once happened in one of the marginalized neighborhoods of central Bogotá.",
    "_fid": "f_9d6b5ba2ba",
-   "id": "f_9d6b5ba2ba"
+   "id": "f_9d6b5ba2ba",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
+    }
+   }
   }
  ],
  "_avisos_duracion": [
@@ -626,7 +1035,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T21:24:14",
+  "fecha": "2026-11-20T09:22:03",
   "plan_sha": "aea46c620f2a357b",
   "paso": 6,
   "cmd": "python3 pipeline/cuaff-2026-verificar.py"
