@@ -352,6 +352,8 @@
      "country": "Francia",
      "flags": "🇫🇷",
      "year": 2026,
+     "synopsis": "Pierre va a encontrarse con Renaud para una jornada de manifestaciones en Marsella y se queda sin noticias de su amigo. Obligado a vagar solo por una ciudad paralizada por los bloqueos, poco a poco se deja arrastrar por el torbellino de los enfrentamientos.",
+     "synopsis_lang": "es",
      "poster": "/assets/under-2026/bisou-acab.jpg",
      "posterSource": "oficial",
      "lbSlug": "bisou-acab",
@@ -1108,6 +1110,8 @@
      "country": "Albania",
      "flags": "🇦🇱",
      "year": 2025,
+     "synopsis": "Un vistazo y un soplo de la Antigüedad.",
+     "synopsis_lang": "es",
      "poster": "/assets/under-2026/echoes-of-a-zephyr.jpg",
      "posterSource": "tmdb",
      "lbSlug": "echoes-of-a-zephyr",
@@ -1435,7 +1439,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T13:04:39",
+  "fecha": "2026-11-20T13:10:00",
   "plan_sha": "de4c503917909c23",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"
