@@ -88,7 +88,7 @@ F = [
      dict(tipo='evento', event_kind='fiesta', acceso='Con boleta: aporte $10.000',
           descripcion='Post punk, darkwave, industrial, EBM.')),
     ('11-28', '15:00', PL, 'Orígenes de los lenguajes experimentales y laboratorio de creación', CRE, 6, [],
-     dict(tipo='evento', event_kind='charla taller', acceso='Entrada libre con inscripción previa. Cupos limitados',
+     dict(tipo='evento', event_kind='taller', acceso='Entrada libre con inscripción previa. Cupos limitados',
           descripcion='A cargo de: Hernán D. Arango S. Realizador audiovisual, editor y docente universitario '
                       'con más de 20 años de experiencia en cine y televisión. Magíster en Artes Digitales.')),
     ('11-28', '19:00', PL, 'Experimental', EXP, 3,
@@ -100,10 +100,10 @@ F = [
       ('Und Ich behaupte', 'Patrick Müller', 'Alemania', 2026, 3),
       ('Hansel and Gretel Get Kicked Out', 'MilleFeuille', 'Canadá', 2026, 11)], {}),
     ('11-29', '15:00', PL, 'Hacerlo sin permiso. Laboratorio de apropiación', ACA, 6, [],
-     dict(tipo='evento', event_kind='charla taller',
+     dict(tipo='evento', event_kind='taller',
           descripcion='A cargo de: El Gabinete Cine Club / Manifiesto / La Pola Records.')),
     ('11-29', '17:00', PL, 'Proyección sorpresa', ACA, 6, [],
-     dict(tipo='evento', event_kind='función sorpresa', descripcion='El Gabinete Cine Club.')),  # el PDF no da hora: 17:00 es la del reel
+     dict(tipo='evento', event_kind='evento', descripcion='El Gabinete Cine Club.')),  # el PDF no da hora: 17:00 es la del reel
     ('12-01', '18:00', BB, 'Jubiladxs le enseñan + Norma también + To the rhythm of love and hate', None, 4,
      [('Jubiladxs le enseñan', 'Silbando Bembas', 'Argentina', 2025, None),
       ('Norma también', 'Natalia Andrea Vinelli, Alejandra Guzzo', 'Argentina', 2025, None),

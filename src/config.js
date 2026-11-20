@@ -141,6 +141,14 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // Under Medellín 2026 (20 nov): secciones del reel y del PDF del festival
+  '✊ Documental Activismo Social': 'Documentary · Social Activism',
+  '🌀 Cine Experimental': 'Experimental Film',
+  '🎨 Animación': 'Animation',
+  '🎬 Muestra Oficial': 'Official Showcase',
+  '🏳️‍🌈 Feminismos y Disidencias Sexuales': 'Feminisms and Sexual Dissidence',
+  '💬 Actividad Académica': 'Academic Activity',
+  '🛠️ Actividad Creativa': 'Creative Activity',
   // CUAFF 2026 (propuesta, 17 nov)
   '🎨 CUAFF 2026': 'CUAFF 2026',
   '📷 Taller': 'Workshop',
@@ -1022,6 +1030,24 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'under2026': {
+  // Nombre y subtítulo: el logo del afiche oficial («Festival Transterritorial de Cine
+    // Underground Medellín») y el IG @cineundermedellin («Under Medellín 2026», «XXII edición»).
+    name:'Under Medellín',displayName:'Under Medellín',fullName:'XXII Festival Transterritorial de Cine Underground',shortName:'UNDER',
+  city:'Medellín',country:'CO',
+  dates:'25 NOV–3 DIC',dates_en:'NOV 25–DEC 3',year:2026,timezoneOffset:'-05:00',
+  keyArt:'/assets/keyart/under2026.jpg',
+  tagline:'Festival Transterritorial de Cine Underground',
+  instagram:'cineundermedellin', storageKey:'under2026_',festivalStartStr:'2026-11-25T00:00:00',festivalEndStr:'2026-12-03T23:00:00',
+  festivalDates:{'2026-11-25':'2026-11-25','2026-11-26':'2026-11-26','2026-11-27':'2026-11-27','2026-11-28':'2026-11-28','2026-11-29':'2026-11-29','2026-11-30':'2026-11-30','2026-12-01':'2026-12-01','2026-12-02':'2026-12-02','2026-12-03':'2026-12-03'},
+  days:[{k:'2026-11-25',d:25,lbl:'MIÉ'},{k:'2026-11-26',d:26,lbl:'JUE'},{k:'2026-11-27',d:27,lbl:'VIE'},{k:'2026-11-28',d:28,lbl:'SÁB'},{k:'2026-11-29',d:29,lbl:'DOM'},{k:'2026-11-30',d:30,lbl:'LUN'},{k:'2026-12-01',d:1,lbl:'MAR'},{k:'2026-12-02',d:2,lbl:'MIÉ'},{k:'2026-12-03',d:3,lbl:'JUE'}],
+  dayKeys:['2026-11-25','2026-11-26','2026-11-27','2026-11-28','2026-11-29','2026-11-30','2026-12-01','2026-12-02','2026-12-03'],
+  dayShort:{'2026-11-25':'MIÉ 25','2026-11-26':'JUE 26','2026-11-27':'VIE 27','2026-11-28':'SÁB 28','2026-11-29':'DOM 29','2026-11-30':'LUN 30','2026-12-01':'MAR 1','2026-12-02':'MIÉ 2','2026-12-03':'JUE 3'},
+  dayShort_en:{'2026-11-25':'WED 25','2026-11-26':'THU 26','2026-11-27':'FRI 27','2026-11-28':'SAT 28','2026-11-29':'SUN 29','2026-11-30':'MON 30','2026-12-01':'TUE 1','2026-12-02':'WED 2','2026-12-03':'THU 3'},
+  dayLong:{'2026-11-25':'Miércoles 25 de noviembre','2026-11-26':'Jueves 26 de noviembre','2026-11-27':'Viernes 27 de noviembre','2026-11-28':'Sábado 28 de noviembre','2026-11-29':'Domingo 29 de noviembre','2026-11-30':'Lunes 30 de noviembre','2026-12-01':'Martes 1 de diciembre','2026-12-02':'Miércoles 2 de diciembre','2026-12-03':'Jueves 3 de diciembre'},
+  prioLimit:5,eventPosterLabel:['EVENTO',''],
+  films:null,posters:null,lbSlugs:{}
+},
   'cuaff2026': {
     // EL NOMBRE es la sigla del festival (@colombianurbanfilm); el subtítulo la expande.
     // 3.ª edición, Cinemateca de Bogotá. Festhome dice 27–29 nov: desactualizado (vigía, 17 nov).
@@ -1448,6 +1474,14 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // Under Medellín 2026 (20 nov): secciones del reel y del PDF del festival
+  '✊ Documental Activismo Social': 'Muestra / País',
+  '🌀 Cine Experimental': 'Cortos / Programas',
+  '🎨 Animación': 'Cortos / Programas',
+  '🎬 Muestra Oficial': 'Muestra / País',
+  '🏳️‍🌈 Feminismos y Disidencias Sexuales': 'Perspectivas / Miradas',
+  '💬 Actividad Académica': 'Charlas / Industria',
+  '🛠️ Actividad Creativa': 'Charlas / Industria',
   // ── CUAFF 2026 · Bogotá (propuesta a Juan, 17 nov) ─────────
   '🎨 CUAFF 2026': 'Muestra / País',
   '📷 Taller': 'Charlas / Industria',

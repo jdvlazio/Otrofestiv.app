@@ -6,30 +6,24 @@
  "obras": [
   {
    "titulo": "1 paseo por la ciudad",
-   "_ya_publicada": [
-    {
-     "festival": "villadelcine-2026",
-     "titulo": "1 Paseo por la Ciudad",
-     "poster": "/assets/villadelcine-2026/1-paseo-por-la-ciudad.jpg",
-     "posterSource": "oficial",
-     "country": "México",
-     "year": 2025,
-     "duration": "9 min",
-     "genre": "Animación",
-     "sinopsis": "En las calles de Ciudad de México, Ema y Lautaro quedan atrapados entre el crimen, los recortes de papel y la desaparición del territorio que habitan. Mediante acción en vivo y stop motion en collage, buscan imaginar un camino posible para escapar, florecer después del salto y recuperar el olvidado oficio de volar."
-    }
-   ],
-   "_afiche_de": "ya publicada en villadelcine-2026",
-   "_sinopsis_de": "ya publicada en villadelcine-2026",
-   "_verificado": "ya publicada en villadelcine-2026: se reusa su afiche",
-   "sinopsis": "En las calles de Ciudad de México, Ema y Lautaro quedan atrapados entre el crimen, los recortes de papel y la desaparición del territorio que habitan. Mediante acción en vivo y stop motion en collage, buscan imaginar un camino posible para escapar, florecer después del salto y recuperar el olvidado oficio de volar.",
-   "pais": "México",
-   "anio": 2025,
-   "duracion_tmdb": 9,
+   "tmdb_id": 1832923,
+   "titulo_original": "1 paseo por la ciudad",
+   "synopsis_es": "",
+   "synopsis_en": "On the streets of Mexico City, Ema and Lautaro are trapped between crime, paper cutouts and the disappearance of the territory they inhabit. Through live action and collage stop motion, they try to imagine a possible way out, to bloom after the leap and to recover the forgotten craft of flying.",
    "genero": "Animación",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "1-paseo-por-la-ciudad",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro under-2026-altas.json)",
+   "_director": "Alejandro Acuña Sevilla, Sara Coello Coello",
+   "_sondeado": "2026-11-20",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026) — reemplaza el fotograma heredado de Villa del Cine",
    "poster": "/assets/under-2026/1-paseo-por-la-ciudad.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026) — reemplaza el fotograma heredado de Villa del Cine"
+   "_heredado": {
+    "genero": "catálogo w_X28MM9G3G2GR (under-2026)"
+   }
   },
   {
    "titulo": "8 metros: La palabra subterránea",
@@ -48,6 +42,25 @@
    "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/8-metros-la-palabra-subterranea.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "A Perfect Maryam",
+   "tmdb_id": 1832927,
+   "titulo_original": "A Perfect Maryam",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A father's control over his daughter backfires when her younger sister, through an innocent act of mimicry, exposes the hidden violence within their home. A subtle but striking look at identity, girlhood, and repression in a traditional family.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "a-perfect-maryam",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro under-2026-altas.json)",
+   "_director": "Solmaz Etemadzadeh, Ara Torosian",
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/a-perfect-maryam.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
   },
   {
    "titulo": "Amor trava",
@@ -1034,6 +1047,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra",
+   "tmdb_id": 1832931,
+   "titulo_original": "To the Rhythm of Love and Hate: A Punkumentary on Salsa with the Macabeo Orchestra",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Eleven musicians, two cameras, and one room come together with no script and no predetermined outcome. What unfolds is a raw, observational portrait of Orquesta El Macabeo as they record the final song for their new salsa album, capturing process, tension, humor, fatigue, and creativity as they emerge. In this ethnographic punkumentary, music becomes an archive of la brega, the everyday strategies of survival, endurance, and resistance shaped by Puerto Rico’s condition under U.S. colonial rule.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "to-the-rhythm-of-love-and-hate-a-punkumentary",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro under-2026-altas.json)",
+   "_director": "Nelson Varas-Díaz",
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/to-the-rhythm-of-love-and-hate-a-punkumentary-on-salsa-with-.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
+  },
+  {
    "titulo": "Tuktu, padre maíz",
    "tmdb_id": 1592955,
    "titulo_original": "Tuktu, Padre Maíz",
@@ -1265,25 +1297,33 @@
    "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
   },
   {
-   "titulo": "A Perfect Maryam",
-   "poster": "/assets/under-2026/a-perfect-maryam.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
-  },
-  {
    "titulo": "Quisiera volverme río",
    "poster": "/assets/under-2026/quisiera-volverme-rio.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
-  },
-  {
-   "titulo": "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra",
-   "poster": "/assets/under-2026/to-the-rhythm-of-love-and-hate-a-punkumentary-on-salsa-with-.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
   }
  ],
  "verificadas": {
+  "1 paseo por la ciudad": {
+   "tmdb_id": 1832923,
+   "titulo_original": "1 paseo por la ciudad",
+   "synopsis_es": "",
+   "synopsis_en": "On the streets of Mexico City, Ema and Lautaro are trapped between crime, paper cutouts and the disappearance of the territory they inhabit. Through live action and collage stop motion, they try to imagine a possible way out, to bloom after the leap and to recover the forgotten craft of flying.",
+   "genero": "Animación",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "1-paseo-por-la-ciudad",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro under-2026-altas.json)",
+   "_director": "Alejandro Acuña Sevilla, Sara Coello Coello",
+   "_sondeado": "2026-11-20",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026) — reemplaza el fotograma heredado de Villa del Cine",
+   "poster": "/assets/under-2026/1-paseo-por-la-ciudad.jpg",
+   "posterSource": "oficial",
+   "_heredado": {
+    "genero": "catálogo w_X28MM9G3G2GR (under-2026)"
+   }
+  },
   "8 metros: La palabra subterránea": {
    "tmdb_id": 1688830,
    "titulo_original": "8 Metros",
@@ -1300,6 +1340,24 @@
    "_sondeado": "2026-11-20",
    "poster": "/assets/under-2026/8-metros-la-palabra-subterranea.jpg",
    "posterSource": "tmdb"
+  },
+  "A Perfect Maryam": {
+   "tmdb_id": 1832927,
+   "titulo_original": "A Perfect Maryam",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A father's control over his daughter backfires when her younger sister, through an innocent act of mimicry, exposes the hidden violence within their home. A subtle but striking look at identity, girlhood, and repression in a traditional family.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "lbSlug": "a-perfect-maryam",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro under-2026-altas.json)",
+   "_director": "Solmaz Etemadzadeh, Ara Torosian",
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/a-perfect-maryam.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
   },
   "Amor trava": {
    "tmdb_id": 1583322,
@@ -2250,6 +2308,24 @@
    "poster": "/assets/under-2026/the-sight-is-a-wound.jpg",
    "posterSource": "tmdb"
   },
+  "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra": {
+   "tmdb_id": 1832931,
+   "titulo_original": "To the Rhythm of Love and Hate: A Punkumentary on Salsa with the Macabeo Orchestra",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Eleven musicians, two cameras, and one room come together with no script and no predetermined outcome. What unfolds is a raw, observational portrait of Orquesta El Macabeo as they record the final song for their new salsa album, capturing process, tension, humor, fatigue, and creativity as they emerge. In this ethnographic punkumentary, music becomes an archive of la brega, the everyday strategies of survival, endurance, and resistance shaped by Puerto Rico’s condition under U.S. colonial rule.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "to-the-rhythm-of-love-and-hate-a-punkumentary",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro under-2026-altas.json)",
+   "_director": "Nelson Varas-Díaz",
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/under-2026/to-the-rhythm-of-love-and-hate-a-punkumentary-on-salsa-with-.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial enviado por el festival (correo 20 nov 2026)"
+  },
   "Tuktu, padre maíz": {
    "tmdb_id": 1592955,
    "titulo_original": "Tuktu, Padre Maíz",
@@ -2438,8 +2514,6 @@
   }
  },
  "sin_ficha": [
-  "1 paseo por la ciudad",
-  "A Perfect Maryam",
   "Antifragility",
   "Binary",
   "Cut your wings and fly",
@@ -2450,18 +2524,9 @@
   "Rattling",
   "Shell Shock O'K",
   "Teatime",
-  "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra",
   "Una persona distinta"
  ],
  "_sin_ficha_sondeo": {
-  "1 paseo por la ciudad": {
-   "director": "Alejandro Acuña Sevilla, Sara Coello Coello",
-   "fecha": "2026-11-17"
-  },
-  "A Perfect Maryam": {
-   "director": "Solmaz Etemadzadeh, Ara Torosian",
-   "fecha": "2026-11-18"
-  },
   "Antifragility": {
    "director": "Serafim Chikhladze",
    "fecha": "2026-11-17"
@@ -2501,10 +2566,6 @@
   "Teatime": {
    "director": "David Mathews",
    "fecha": "2026-11-17"
-  },
-  "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra": {
-   "director": "Nelson Varas-Díaz",
-   "fecha": "2026-11-18"
   },
   "Una persona distinta": {
    "director": "Sergio Quatraro",

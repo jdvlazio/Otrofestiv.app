@@ -10,7 +10,8 @@
   "Sara Coello Coello"
  ],
  "sinopsis": {
-  "es": "En las calles de Ciudad de México, Ema y Lautaro quedan atrapados entre el crimen, los recortes de papel y la desaparición del territorio que habitan. Mediante acción en vivo y stop motion en collage, buscan imaginar un camino posible para escapar, florecer después del salto y recuperar el olvidado oficio de volar."
+  "es": "En las calles de Ciudad de México, Ema y Lautaro quedan atrapados entre el crimen, los recortes de papel y la desaparición del territorio que habitan. Mediante acción en vivo y stop motion en collage, buscan imaginar un camino posible para escapar, florecer después del salto y recuperar el olvidado oficio de volar.",
+  "en": "On the streets of Mexico City, Ema and Lautaro are trapped between crime, paper cutouts and the disappearance of the territory they inhabit. Through live action and collage stop motion, they try to imagine a possible way out, to bloom after the leap and to recover the forgotten craft of flying."
  },
  "generos": [
   "Animación"
@@ -19,7 +20,10 @@
   "archivo": "/assets/under-2026/1-paseo-por-la-ciudad.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1832923,
+  "letterboxd": "1-paseo-por-la-ciudad"
+ },
  "versiones": [
   {
    "etiqueta": "8 min",

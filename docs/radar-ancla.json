@@ -6636,6 +6636,35 @@
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
    }
+  },
+  {
+   "clave": "under-medellin",
+   "nombre": "Under Medellín — Festival Transterritorial de Cine Underground",
+   "sigla": null,
+   "ciudad": "Medellín",
+   "departamento": "Antioquia",
+   "region": "Andina",
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "25 NOV–3 DIC 2026 (XXII edición, programa en PDF enviado por el festival a hola@, 18 nov)",
+   "web": null,
+   "ig": "@cineundermedellin",
+   "estado": "en_app",
+   "id_config": [
+    "under2026"
+   ],
+   "issue": [],
+   "apoyo": null,
+   "fuente": [
+    "https://www.instagram.com/cineundermedellin/"
+   ],
+   "nota": null,
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": null,
+   "origen": null,
+   "copias": null
   }
  ]
 }
