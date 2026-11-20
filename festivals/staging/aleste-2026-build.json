@@ -1863,7 +1863,7 @@
     "16:30"
    ],
    "day": "2026-11-27",
-   "time": "16:30",
+   "time": "17:00",
    "day_order": 9,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
@@ -1890,8 +1890,9 @@
      "fecha": "2026-11-16"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-19",
+     "url": "https://www.instagram.com/p/Df8iF1QFpzk/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -2859,7 +2860,7 @@
     "14:00"
    ],
    "day": "2026-11-29",
-   "time": "14:00",
+   "time": "14:30",
    "day_order": 11,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
@@ -2955,8 +2956,9 @@
      "fecha": "2026-11-16"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-19",
+     "url": "https://www.instagram.com/p/Df8iF1QFpzk/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -2997,7 +2999,7 @@
    }
   },
   {
-   "title": "La ciudad blanca",
+   "title": "En la ciudad blanca",
    "type": "film",
    "section": "🎞️ Fokus: Las Grietas del Muro",
    "director": "Alain Tanner",
@@ -3063,14 +3065,18 @@
      "fecha": "2026-11-16"
     },
     "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-18",
+     "url": "https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf"
     },
     "type": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "La ciudad blanca"
+   ]
   },
   {
    "title": "Los golfos",
@@ -3165,7 +3171,7 @@
     "17:00"
    ],
    "day": "2026-11-29",
-   "time": "17:00",
+   "time": "16:30",
    "day_order": 11,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
@@ -3191,8 +3197,9 @@
      "fecha": "2026-11-16"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-19",
+     "url": "https://www.instagram.com/p/Df8iF1QFpzk/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -3382,7 +3389,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T17:24:20",
+  "fecha": "2026-11-19T21:18:30",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
