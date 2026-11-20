@@ -40,8 +40,9 @@ def main():
         src = f['_src']
         pies = ' '.join(plano(json.load(io.open(f'{REPO}/fuentes/ig/{sc}/post.json', encoding='utf-8'))['pie'])
                         for sc in src['posts'])
-        toks = [(DIAS[f['day']], pies, 'IG'), (plano(hora12(f['time'])), pies, 'IG'),
-                (plano(f['sala']), pies, 'IG')]
+        toks = [(DIAS[f['day']], pies, 'IG'), (plano(hora12(f['time'])), pies, 'IG')]
+        if f.get('sala'):   # el taller de stop motion (Df8Q_qpjFpO) no publica sala
+            toks.append((plano(f['sala']), pies, 'IG'))
         if src.get('ficha_sala'):
             n = src['ficha_sala'].rsplit('/', 1)[1]
             ficha = plano(io.open(f'{REPO}/fuentes/cuaff-2026/cinemateca-{n}.html', encoding='utf-8').read())
