@@ -2858,7 +2858,7 @@
     "14:00"
    ],
    "day": "2026-11-29",
-   "time": "14:30",
+   "time": "14:00",
    "day_order": 11,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
@@ -2954,9 +2954,8 @@
      "fecha": "2026-11-16"
     },
     "time": {
-     "tipo": "festival-ig",
-     "fecha": "2026-11-19",
-     "url": "https://www.instagram.com/p/Df8iF1QFpzk/"
+     "tipo": "festival-web",
+     "fecha": "2026-11-16"
     },
     "venue": {
      "tipo": "festival-web",
@@ -3387,7 +3386,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T09:38:44",
+  "fecha": "2026-11-20T13:32:15",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
