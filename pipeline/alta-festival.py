@@ -184,6 +184,11 @@ def alta(fid, escribir=True):
     if faltan:
         pend.append('al plan le falta en "festival": ' + ', '.join(faltan)
                     + ' (lo editorial se decide con Juan; nada se inventa)')
+    avisos = []
+    if not f.get('instagram'):
+        # no frena: la app funciona sin él, pero el vigía de IG lo usa para seguir
+        # los cambios de programación
+        avisos.append('el plan no trae "instagram": sin él, el vigía no sigue sus cambios')
     if not os.path.exists(os.path.join(REPO, 'assets', 'keyart', f'{i}.jpg')):
         pend.append(f'falta el afiche de portada: assets/keyart/{i}.jpg')
 
@@ -232,7 +237,7 @@ def alta(fid, escribir=True):
                     hecho.append(f'{nombre}: regenerado')
                 else:
                     pend.append(f'{nombre}: {" ".join(cmd)} falló — {(r.stderr or r.stdout).strip()[-160:]}')
-    return hecho, pend
+    return hecho, pend, avisos
 
 
 if __name__ == '__main__':
@@ -240,10 +245,12 @@ if __name__ == '__main__':
     if len(args) != 1:
         sys.exit(__doc__)
     fid = args[0]
-    hecho, pend = alta(fid, escribir='--ver' not in sys.argv)
+    hecho, pend, avisos = alta(fid, escribir='--ver' not in sys.argv)
     print(f'ALTA de {fid}' + (' (--ver: no se escribe nada)' if '--ver' in sys.argv else ''))
     for x in hecho:
         print('  ✓', x)
+    for x in avisos:
+        print('  ⚠', x)
     for x in pend:
         print('  ✗', x)
     if '--ensayo' in sys.argv:
