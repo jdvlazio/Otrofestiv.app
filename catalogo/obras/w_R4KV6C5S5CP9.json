@@ -11,8 +11,17 @@
  ],
  "aliases": [
   {
+   "titulo": "Les Voyageurs",
+   "tipo": "festival"
+  },
+  {
    "titulo": "The Travelers",
    "tipo": "festival"
+  },
+  {
+   "titulo": "The Travelers",
+   "idioma": "en",
+   "tipo": "traduccion"
   }
  ],
  "sinopsis": {
@@ -38,6 +47,7 @@
  ],
  "presentaciones": [
   "midbo-2026",
-  "qaff-2026"
+  "qaff-2026",
+  "under-2026"
  ]
 }
