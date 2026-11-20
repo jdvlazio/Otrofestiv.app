@@ -4283,6 +4283,12 @@ try:
         ('cineparalapaz-2026', 'Premiación'),
         ('cineparalapaz-2026', 'Cierre musical · Concierto andino: Yananty y Runa Taky'),
         ('cineparalapaz-2026', 'Samay Punlla · Conmemoración a las almas'),
+        # Under — el PDF del festival (pág. 6) da solo la hora de inicio de estas
+        # actividades, o ninguna en la proyección sorpresa (20 nov 2026)
+        ('under-2026', 'Fiesta Under · El Vikingo Selektor'),   # «9:00 PM / FIESTA UNDER», sin hora de cierre
+        ('under-2026', 'Orígenes de los lenguajes experimentales y laboratorio de creación'),   # charla-taller 3:00 PM, sin duración
+        ('under-2026', 'Hacerlo sin permiso. Laboratorio de apropiación'),   # charla-taller 3:00 PM, sin duración
+        ('under-2026', 'Proyección sorpresa'),   # sin hora ni duración en el PDF
     }
     _viol = []
     for _fname in _ACTIVE:
