@@ -148,6 +148,10 @@ for (dia, hora, sede, sala), lst in sorted(grupos.items()):
         r.update(has_qa=True, qa_type='team')
     elif 'cineforo' in nota:
         r['has_qa'] = True
+    # La grilla oficial de Bogotá (IG Df8iF1QFpzk, 19 nov 21:00) agrega un conversatorio
+    # que la ficha web no menciona (no lo niega): «PULSE 118' Conversatorio 20h00».
+    if r.get('titulo') == 'Pulse' and dia == '2026-11-28':
+        r['has_qa'] = True
     # Inauguración y Clausura de Bogotá son la proyección de UNA película: se
     # quedan como película (con su sinopsis); la sección ya dice qué noche es.
     # Un event_kind la volvería evento y se perdería la ficha.

@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-19",
+  "capturado": "2026-11-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "16 nov 2026: las secciones son las de la web oficial (alestfestival.com/programa2026), tal cual. Se retiran «Al Este en el MAMM / en la Cinemateca», que eran rótulos nuestros por sede. «Fokus: Las grietas en el muro» (lámina IG) pasa a «del muro», como dice la web, que es la fuente más nueva. Emojis y nombres en inglés: propuesta, a confirmar con Juan.",
@@ -2729,7 +2729,7 @@
    "day_order": 10,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "Hace tiempo que Michi, Yunko y Yabe no tienen noticias de un amigo. Cuando Michi va a visitarlo a su casa lo encuentra un poco extraño. Aunque él dice encontrarse bien, al poco rato se encuentra colgado del techo. Por otro lado tenemos a Ryusuke, que prueba a conectarse a internet por primera vez, sin mucho éxito. De pronto su ordenador comienza a entrar solo en la red, y aparece una extraña página web, donde aparecen turbadoras imágenes de habitaciones oscuras y finalmente un inquietante mensaje: \"¿Quieres ver un fantasma?\".",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/pulse.jpg",
@@ -3389,7 +3389,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T21:18:30",
+  "fecha": "2026-11-20T05:49:11",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
