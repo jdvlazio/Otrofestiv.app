@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1397 — https://github.com/jdvlazio/Otrofestiv.app/issues/1397",
-  "capturado": "2026-11-19",
+  "capturado": "2026-11-20",
   "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 19
+  "comentarios": 22
  },
  "issue": 1397,
  "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
@@ -86,6 +86,18 @@
   {
    "fecha": "2026-11-19",
    "cuerpo": "Vigía 19 nov 13:10 — contradicción para decidir (JUAN):\n«Desde acá veo la tormenta» (Juan Felipe Restrepo). El post de @elforro_6, en colaboración con @aleste.colombia (https://www.instagram.com/p/Df7JJA8x1GK/, lámina 1, leída a ojo), dice **DOMINGO 29 DE NOVIEMBRE · 2 PM · CINEMATECA DE BOGOTÁ · SALA 3**. Esa es la franja del Bloque 2 de Hecho en Colombia.\nLa ficha web del festival (https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta, releída hoy) y la app la ponen en el **Bloque 1, sáb 28 nov, 14:30, Sala 3**.\nNo la apliqué: mover una obra de un bloque a otro no es un cambio de hora/sede y ninguna regla decide entre el post del realizador y la ficha oficial. Resto de la web de Al Este (46 funciones): coincide con la app.\n"
+  },
+  {
+   "fecha": "2026-11-20",
+   "cuerpo": "Vigía 19 nov 21:00 — grilla oficial Bogotá en IG (https://www.instagram.com/p/Df8iF1QFpzk/, 19 nov 21:00) contra la app:\n- «La salamandra» · vie 27 nov · Sala 3: lámina 2 dice **17h00**; app 16:30 (sale del catálogo PDF del 18 nov). IG más nuevo manda → 17:00.\n- «License to Live» · dom 29 nov · Sala 2: lámina 1 dice **16h30** (Cineforo); app 17:00 (PDF). → 16:30.\n- «Pulse» · sáb 28 nov 20:00 · Sala 2: lámina 1 dice **«Conversatorio»**; app has_qa=false. → true.\n- «Hecho en Colombia – Bloque 2» · dom 29 nov · Sala 3: lámina 2 dice 14h30; app 14:00. Contradicción entre dos posts de IG (Df7JJA8x1GK dice «2 PM»); regla de la más temprana → se queda 14:00.\nNo aplicado por el vigía: ig-lecturas.py no reconoce horas con formato «17h00» y marca ✗ en la hora, aunque Vision, Tesseract y la mirada leen «17h00», «16h30», «20h00» y «Conversatorio» (✓ en los tres). Lo retoma Onboarding.\n"
+  },
+  {
+   "fecha": "2026-11-20",
+   "cuerpo": "Vigía 20 nov 13:00 — Bogotá, Hecho en Colombia Bloque 2 (dom 29, Sala 3): la app tiene 14:30 (grilla oficial del 19 nov, lámina 3). La web (lista y ficha), el catálogo PDF y un post colaborativo de hoy (Df-GtckFZUf, equipo de «Todo lo que pasará mañana») dicen 14:00. Además, la web pone «Desde acá veo la tormenta» en el Bloque 1 (sáb 28 14:30), el PDF y la app en el Bloque 2, y el reparto de cortos por bloque difiere entre web, PDF y app."
+  },
+  {
+   "fecha": "2026-11-20",
+   "cuerpo": "Vigía 20 nov 17:20 — catálogo PDF oficial nuevo en la home (https://www.alestfestival.com/_files/ugd/9df115_8c8d52967fb743b6b6604248e056a0df.pdf, 32 págs., 20 nov). APLICADO (PR #1564): «Pucallpa la Europea» 21 nov 14:00→19:00 y «Gioia mia» 22 nov 14:00→14:30 (PDF + ficha web HTML + texto renderizado). CONTRADICCIÓN pendiente: el PDF y la web actual dicen «La salamandra» 27 nov 16:30 y «License to Live» 29 nov 17:00; la grilla IG del 19 nov (Df8iF1QFpzk) decía 17:00 y 16:30, y eso es lo publicado. Por la regla «la más temprana»: Salamandra → 16:30; License se queda en 16:30."
   }
  ]
 }
