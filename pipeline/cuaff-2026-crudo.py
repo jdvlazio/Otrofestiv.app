@@ -67,6 +67,16 @@ F = [
                      'de creación. Dictado por Anonimato Visual, fotógrafo, artista multidisciplinar y docente '
                      'en Artes Visuales de Bogotá.',
          _src={'ig': 'Dfz5iWUlVID'}),
+    dict(titulo='Taller stop motion y graffiti', dia='22', hora='10:00',
+         seccion='Taller', tipo='evento', event_kind='taller', duracion_min=120,
+         acceso='Entrada libre con inscripción previa', registration_url='https://forms.gle/wasQVqm61khgrsLK6',
+         # post Df8Q_qpjFpO (19 nov): título de la lámina; texto del pie, tal cual
+         descripcion='En CUAFF 2026 exploraremos el encuentro entre el graffiti y el stop motion, una técnica de '
+                     'animación que permite crear movimiento a partir de imágenes capturadas cuadro a cuadro. Un '
+                     'espacio para descubrir nuevas posibilidades de expresión audiovisual, experimentar con la '
+                     'imagen y explorar cómo el arte urbano puede cobrar vida a través del cine y la animación. '
+                     'Cupos limitados.',
+         _src={'ig': 'Df8Q_qpjFpO'}),
     dict(titulo='Breaking la vida', dia='21', hora='14:30', sala='Sala 3', seccion=SEC,
          director='Abraham Escobedo-Salas', pais='México', anio=2022, duracion_min=92, acceso=LIBRE,
          _src={'ig': 'DfkAU_slfaS', 'cinemateca': 4031}),

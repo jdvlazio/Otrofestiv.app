@@ -179,6 +179,38 @@
    "id": "f_2ebcde31ef"
   },
   {
+   "title": "Taller stop motion y graffiti",
+   "type": "event",
+   "section": "📷 Taller",
+   "duration": "120 min",
+   "_ancla": [
+    "Cinemateca de Bogotá - Bogotá",
+    "2026-11-22",
+    "10:00"
+   ],
+   "day": "2026-11-22",
+   "time": "10:00",
+   "day_order": 2,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "event_kind": "taller",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Df8Q_qpjFpO/",
+    "posts": [
+     "Df8Q_qpjFpO"
+    ],
+    "tipo": "festival-ig",
+    "date": "2026-11-16"
+   },
+   "registration_url": "https://forms.gle/wasQVqm61khgrsLK6",
+   "is_free": true,
+   "requires_registration": true,
+   "description": "En CUAFF 2026 exploraremos el encuentro entre el graffiti y el stop motion, una técnica de animación que permite crear movimiento a partir de imágenes capturadas cuadro a cuadro. Un espacio para descubrir nuevas posibilidades de expresión audiovisual, experimentar con la imagen y explorar cómo el arte urbano puede cobrar vida a través del cine y la animación. Cupos limitados.",
+   "description_lang": "es",
+   "_fid": "f_c11c5e1b57",
+   "id": "f_c11c5e1b57"
+  },
+  {
    "title": "Breaking la vida",
    "type": "film",
    "section": "🎨 CUAFF 2026",
@@ -594,7 +626,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T09:16:47",
+  "fecha": "2026-11-19T21:24:14",
   "plan_sha": "aea46c620f2a357b",
   "paso": 6,
   "cmd": "python3 pipeline/cuaff-2026-verificar.py"
