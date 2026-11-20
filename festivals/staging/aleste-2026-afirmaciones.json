@@ -103,6 +103,91 @@
     "fecha": "2026-11-18"
    },
    "evidencia": "catálogo oficial Al Este 2026 (PDF, 18 nov): «LOS GOLFOS · SALA CAPITAL | 29.11 | 16:30 · CONVERSATORIO TRAS LA PROYECCIÓN»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "16:30"
+   },
+   "funcion": "f_8b4e1bc31e",
+   "casilla": "title",
+   "valor": "En la ciudad blanca",
+   "contra": "La ciudad blanca",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf",
+    "fecha": "2026-11-18"
+   },
+   "evidencia": "catálogo oficial p. 20: «EN LA CIUDAD BLANCA · SALA 3»; lo confirma la producción del festival por correo a hola@ (Ada Quintana, 19 nov 2026): «fe de erratas: En la ciudad Blanca, el 29 de noviembre a las 4:30 p. m.»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-27",
+    "hora": "16:30"
+   },
+   "funcion": "f_2402b739a7",
+   "casilla": "time",
+   "valor": "17:00",
+   "contra": "16:30",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df8iF1QFpzk/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "grilla oficial «Programación Bogotá» de @aleste.colombia (19 nov 21:00), lámina 3, Sala 3: «LA SALAMANDRA 123' 17h00»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "17:00"
+   },
+   "funcion": "f_61974e3c92",
+   "casilla": "time",
+   "valor": "16:30",
+   "contra": "17:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df8iF1QFpzk/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "grilla oficial «Programación Bogotá» de @aleste.colombia (19 nov 21:00), lámina 2, Sala 2: «LICENSE TO LIVE 109' Cineforo 16h30»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-28",
+    "hora": "20:00"
+   },
+   "funcion": "f_aeab88b02c",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df8iF1QFpzk/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "grilla oficial «Programación Bogotá» de @aleste.colombia (19 nov 21:00), lámina 2, Sala 2: «PULSE 118' Conversatorio 20h00»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "14:00"
+   },
+   "funcion": "f_cb55e388f2",
+   "casilla": "time",
+   "valor": "14:30",
+   "contra": "14:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df8iF1QFpzk/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "grilla oficial «Programación Bogotá» de @aleste.colombia (19 nov 21:00), lámina 3, Sala 3: «HECHO EN COLOMBIA BLOQUE 2 75' Conversatorio con los realizadores 14h30»"
   }
  ]
 }
