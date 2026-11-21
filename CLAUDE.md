@@ -86,6 +86,7 @@ deliberada existe la etiqueta `frontera-ok`.
 
 | ID | Nombre | Ciudad | Fechas | Estado |
 |---|---|---|---|---|
+| `cajica2026` | Festival de Cine de Cajicá | Cajicá | 21–23 NOV | **Próximo / activo** |
 | `ficci65` | FICCI 65 | Cartagena | 14–19 ABR | Archivado |
 | `aff2026` | AFF 2026 | Medellín | 21–29 ABR | Archivado |
 | `tribeca2026` | Tribeca Festival |  |  | desconocido |

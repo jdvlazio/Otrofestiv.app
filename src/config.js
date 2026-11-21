@@ -356,6 +356,24 @@ export const NOTICES=[
 //
 // Al agregar festival: también actualizar FESTIVALS en tools/enricher.html
 export const FESTIVAL_CONFIG={
+  'cajica2026': {
+    // Alta con pipeline/alta-festival.py (2026-11-20): lo editorial sale de
+    // pipeline/cajica-2026.plan.json; los días, de festivalStartStr/festivalEndStr.
+    name:'Festival de Cine de Cajicá',displayName:'Festival de Cine de Cajicá',fullName:'Festival de Cine de Cajicá 2026',shortName:'CAJICÁ',
+    city:'Cajicá',country:'CO',
+    dates:'21–23 NOV',dates_en:'NOV 21–23',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/cajica2026.jpg',
+    tagline:'Cultura Audiovisual, Memoria y Territorio',
+    storageKey:'cajica2026_',festivalStartStr:'2026-11-21T00:00:00',festivalEndStr:'2026-11-23T23:59:00',
+    festivalDates:{'2026-11-21':'2026-11-21','2026-11-22':'2026-11-22','2026-11-23':'2026-11-23'},
+    days:[{k:'2026-11-21',d:21,lbl:'SÁB'},{k:'2026-11-22',d:22,lbl:'DOM'},{k:'2026-11-23',d:23,lbl:'LUN'}],
+    dayKeys:['2026-11-21','2026-11-22','2026-11-23'],
+    dayShort:{'2026-11-21':'SÁB 21','2026-11-22':'DOM 22','2026-11-23':'LUN 23'},
+    dayShort_en:{'2026-11-21':'SAT 21','2026-11-22':'SUN 22','2026-11-23':'MON 23'},
+    dayLong:{'2026-11-21':'Sábado 21 de noviembre','2026-11-22':'Domingo 22 de noviembre','2026-11-23':'Lunes 23 de noviembre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   // ── Bootstrap mínimo por festival ────────────────────────────────────────
   // Campos requeridos ANTES del fetch (usados por splash y _DEFAULT_FEST_ID):
   //   name, city, dates, dates_en, year, keyArt → _renderSplashRail()

@@ -983,7 +983,8 @@
    "festivales": [
     "under-2026"
    ],
-   "ciudad": "Medellín"
+   "ciudad": "Medellín",
+   "corto": "Donde Robin"
   },
   "s_30a5d6b9": {
    "nombre": "Potocine",
@@ -1883,7 +1884,8 @@
    "festivales": [
     "under-2026"
    ],
-   "ciudad": "Medellín"
+   "ciudad": "Medellín",
+   "corto": "Bebop Bar"
   },
   "s_67f4ce21": {
    "nombre": "Quinta Balmoral",
@@ -2808,7 +2810,8 @@
    "festivales": [
     "under-2026"
    ],
-   "ciudad": "Medellín"
+   "ciudad": "Medellín",
+   "corto": "Perpetua Lab"
   },
   "s_8d94ab1d": {
    "nombre": "Mambo House",
@@ -3713,7 +3716,10 @@
     "funza-2026"
    ],
    "ciudad": "Funza",
-   "corto": "Centro Cultural Bacatá"
+   "corto": "Centro Cultural Bacatá",
+   "salas": [
+    "Auditorio alterno"
+   ]
   },
   "s_bab68d8b": {
    "nombre": "Estación Metrocable Andalucía",
@@ -4740,6 +4746,25 @@
    "salas_alias": {
     "Salón principal · 2do piso": "Salón principal · 1er piso"
    }
+  },
+  "s_ee37319b": {
+   "nombre": "Centro Cultural y de Convenciones Fernando Botero",
+   "lat": 4.9155402,
+   "lng": -74.0229576,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/Centro+Cultural+y+de+Convenciones+Fernando+Botero+Cajic%C3%A1/@4.9155402,-74.0229576,18z",
+    "fecha": "2026-11-20",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 1A #040, Cajicá, Cundinamarca",
+   "alias": [
+    "Centro Cultural y de Convenciones Fernando Botero - Cajicá"
+   ],
+   "festivales": [
+    "cajica-2026"
+   ],
+   "ciudad": "Cajicá"
   },
   "s_ee9c7bec": {
    "nombre": "CineQuanon",
