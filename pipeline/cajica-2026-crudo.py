@@ -42,9 +42,13 @@ def mins(d):
     return round(int(m.group(1)) + int(m.group(2)) / 60)
 
 
-def corto(c):
+def corto(c, categoria=''):
     t = c['titulo']
     o = {'titulo': t, 'duracion_min': mins(c['duracion']), '_duracion_fuente': c['duracion']}
+    # País: SmartFilms es un concurso nacional colombiano; «Talento Local y Nacional» y el
+    # teaser del IMCTC (Cajicá) también son de Colombia. El resto, sin país declarado (20 nov).
+    if 'SmartFilms' in t or 'Talento Local y Nacional' in categoria or 'IMCTC' in t:
+        o['pais'] = 'Colombia'
     if ' – ' in t:
         a, b = t.split(' – ', 1)
         o['titulo'] = a.strip()
@@ -77,7 +81,7 @@ for dia in prog:
                       'requisito': ev.get('requisito', '')}}
         datos = '; '.join(f"{d['etiqueta']}: {d['texto']}" for d in ev.get('datos', []))
         if ev.get('cortos'):
-            f['obras'] = [corto(c) for c in ev['cortos']]
+            f['obras'] = [corto(c, ev['categoria']) for c in ev['cortos']]
             f['acceso'] = 'Entrada libre'
         elif ev['titulo'] in LARGOS:
             f.update(LARGOS[ev['titulo']])

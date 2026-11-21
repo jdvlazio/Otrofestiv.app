@@ -266,6 +266,8 @@
    "title": "Maratón de Cortos",
    "type": "film",
    "section": "🎞️ Cortometrajes / Exhibición",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "52 min",
    "_ancla": [
     "Centro Cultural y de Convenciones Fernando Botero - Cajicá",
@@ -308,26 +310,38 @@
     },
     {
      "title": "Dulce silencio",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "5 min"
     },
     {
      "title": "Amparo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "5 min"
     },
     {
      "title": "La última trenza",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "5 min"
     },
     {
      "title": "El juicio de Toby",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "1 min"
     },
     {
      "title": "Mi Tierrita",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "3 min"
     },
     {
      "title": "Teaser cortos Taller de actuación para cámara IMCTC",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "4 min"
     }
    ],
@@ -440,38 +454,52 @@
    "film_list": [
     {
      "title": "Che bacano",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "10 min"
     },
     {
      "title": "Sara Valentina",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "10 min"
     },
     {
      "title": "Nicolás Bello",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "7 min"
     },
     {
      "title": "Red eyes",
      "director": "Jhojan Fetecua",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "7 min"
     },
     {
      "title": "Buscando a papá",
-     "duration": "7 min",
      "country": "Colombia",
-     "director": "Mauro Andrade",
-     "flags": "🇨🇴"
+     "flags": "🇨🇴",
+     "duration": "7 min",
+     "director": "Mauro Andrade"
     },
     {
      "title": "Los amores de Juanita",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "5 min"
     },
     {
      "title": "El tesoro de Lu",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "5 min"
     },
     {
      "title": "Un trasteo para el alma",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "5 min"
     }
    ],
@@ -546,7 +574,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T22:25:11",
+  "fecha": "2026-11-20T22:47:50",
   "plan_sha": "c661ad39b01fc552",
   "paso": 5,
   "cmd": "python3 pipeline/cajica-2026-verificar.py"

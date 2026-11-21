@@ -141,6 +141,16 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
+  '🛠️ Taller / Eventos': 'Workshop / Events',
+  '🚂 Conversatorio / Historia y Patrimonio': 'Talk / History and Heritage',
+  '📺 Conversatorio / Series y Producción': 'Talk / Series and Production',
+  '🎞️ Cortometrajes / Exhibición': 'Short Films / Showcase',
+  '🎬 Largometraje / Ficción': 'Feature Film / Fiction',
+  '🎨 Largometraje Animado': 'Animated Feature Film',
+  '🌱 Cortometrajes / Talento Local y Nacional': 'Short Films / Local and National Talent',
+  '🎙️ Conversatorio sobre Producción y Narrativa Audiovisual': 'Talk on Audiovisual Production and Storytelling',
+  '🎤 Taller Especializado': 'Specialized Workshop',
   // Under Medellín 2026 (20 nov): secciones del reel y del PDF del festival
   '✊ Documental Activismo Social': 'Documentary · Social Activism',
   '🌀 Cine Experimental': 'Experimental Film',
@@ -1492,6 +1502,16 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
+  '🛠️ Taller / Eventos': 'Charlas / Industria',
+  '🚂 Conversatorio / Historia y Patrimonio': 'Charlas / Industria',
+  '📺 Conversatorio / Series y Producción': 'Charlas / Industria',
+  '🎞️ Cortometrajes / Exhibición': 'Cortos / Programas',
+  '🎬 Largometraje / Ficción': 'Muestra / País',
+  '🎨 Largometraje Animado': 'Muestra / País',
+  '🌱 Cortometrajes / Talento Local y Nacional': 'Cortos / Programas',
+  '🎙️ Conversatorio sobre Producción y Narrativa Audiovisual': 'Charlas / Industria',
+  '🎤 Taller Especializado': 'Charlas / Industria',
   // Under Medellín 2026 (20 nov): secciones del reel y del PDF del festival
   '✊ Documental Activismo Social': 'Muestra / País',
   '🌀 Cine Experimental': 'Cortos / Programas',
