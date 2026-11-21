@@ -1,6 +1,6 @@
 {
  "id": "w_Y3FKSW4K4VEE",
- "titulo_original": "Sangre de Dios",
+ "titulo_original": "La Sangre de Dios",
  "anio": 2026,
  "paises": [
   "CO"
@@ -8,10 +8,30 @@
  "directores": [
   "Lucho Velasco"
  ],
+ "aliases": [
+  {
+   "titulo": "Sangre de Dios",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "Gabriel, un exmilitar dispuesto a todo por salvar a su hija, se cruza con Nahuel, un guerrero indígena que guarda un secreto ancestral, y con Jaime Almagro, un empresario farmacéutico que quiere convertirlo en negocio. Los tres se disputan en el cañón del Chicamocha «la sangre de Dios», una sustancia que, según la leyenda, vence la enfermedad y desafía la muerte."
+  "es": "Gabriel, un excapitán del Ejército que ve cómo su hija mayor muere día a día por una enfermedad terminal, se entera de uno de los secretos mejor guardados de la historia: una cura milagrosa llamada «la sangre de Dios», que resguarda una tribu que conoce el lugar exacto donde se obtiene. Decide ir por ella como último recurso, pero un empresario farmacéutico corrupto también se entera y está dispuesto a exterminar a quien se le atraviese. El infierno comienza cuando los tres grupos se encuentran en la selva.",
+  "en": "Gabriel, a former army captain watching his eldest daughter slowly die of a terminal illness, learns of one of history’s best-kept secrets: a miraculous cure known as the blood of God, guarded by a tribe that knows exactly where to find it. He sets out for it as a last resort, but a corrupt pharmaceutical businessman also hears of it and is willing to wipe out anyone in his way. Hell breaks loose when the three groups meet in the jungle."
  },
- "xref": {},
+ "afiche": {
+  "archivo": "/assets/cajica-2026/la-sangre-de-dios.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1834002,
+  "letterboxd": "la-sangre-de-dios"
+ },
+ "versiones": [
+  {
+   "etiqueta": "82 min",
+   "duracion_min": 82
+  }
+ ],
  "presentaciones": [
   "cajica-2026"
  ]

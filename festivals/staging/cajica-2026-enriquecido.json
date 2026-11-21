@@ -19,8 +19,24 @@
    "duracion_tmdb": 5,
    "director_heredado": "Mauro Andrade",
    "_heredado": {
-    "director_heredado": "catálogo w_R4JE5BTF8EKJ (ficpa-2026)"
+    "director_heredado": "catálogo w_R4JE5BTF8EKJ (cajica-2026, ficpa-2026)"
    }
+  },
+  {
+   "titulo": "La Sangre de Dios",
+   "tmdb_id": 1834002,
+   "titulo_original": "La Sangre de Dios",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Gabriel, a former army captain watching his eldest daughter slowly die of a terminal illness, learns of one of history’s best-kept secrets: a miraculous cure known as the blood of God, guarded by a tribe that knows exactly where to find it. He sets out for it as a last resort, but a corrupt pharmaceutical businessman also hears of it and is willing to wipe out anyone in his way. Hell breaks loose when the three groups meet in the jungle.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "la-sangre-de-dios",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro cajica-2026-altas.json)",
+   "_director": "Lucho Velasco",
+   "_sondeado": "2026-11-20"
   },
   {
    "titulo": "Tundama",
@@ -42,6 +58,21 @@
   }
  ],
  "verificadas": {
+  "La Sangre de Dios": {
+   "tmdb_id": 1834002,
+   "titulo_original": "La Sangre de Dios",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Gabriel, a former army captain watching his eldest daughter slowly die of a terminal illness, learns of one of history’s best-kept secrets: a miraculous cure known as the blood of God, guarded by a tribe that knows exactly where to find it. He sets out for it as a last resort, but a corrupt pharmaceutical businessman also hears of it and is willing to wipe out anyone in his way. Hell breaks loose when the three groups meet in the jungle.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "la-sangre-de-dios",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro cajica-2026-altas.json)",
+   "_director": "Lucho Velasco",
+   "_sondeado": "2026-11-20"
+  },
   "Tundama": {
    "tmdb_id": 764925,
    "titulo_original": "Tundama",
@@ -76,7 +107,6 @@
   "Nicolás Bello",
   "Pozo Hondo",
   "Red eyes",
-  "Sangre de Dios",
   "Sara Valentina",
   "Teaser cortos Taller de actuación para cámara IMCTC",
   "Un trasteo para el alma"
@@ -140,10 +170,6 @@
   },
   "Red eyes": {
    "director": "Jhojan Fetecua",
-   "fecha": "2026-11-20"
-  },
-  "Sangre de Dios": {
-   "director": "Lucho Velasco",
    "fecha": "2026-11-20"
   },
   "Sara Valentina": {

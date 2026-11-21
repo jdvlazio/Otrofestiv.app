@@ -348,7 +348,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `language` | string | — | 9 fest |  |
 | `genre` | string | — | 45 fest |  |
 | `synopsis` | string | — | 48 fest | SIEMPRE en español. La traducción no es opcional. |
-| `synopsis_en` | string | — | 45 fest |  |
+| `synopsis_en` | string | — | 46 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
 | `synopsis_lang` | string | `es` · `en` · `pt` | 48 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
 | `description` | string | — | 46 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
@@ -369,7 +369,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
 | `sessions` | array | — | 1 fest |  |
 | `has_qa` | boolean | — | 46 fest | Afecta conflictos vía durationForTravel. |
-| `titulos_anteriores` | array | — | 23 fest | Títulos con que el festival publicó ANTES esta obra. Lo llena Onboarding cuando un festival renombra (p. ej. «Tránsito» → «Tránsitos»). La app mueve en silencio lo que el usuario guardó bajo el viejo (Interés, Plan, vista, prioridad, calificación, retrasos) — domain/titulos.js. Obra partida en dos: el viejo va en las dos y gana la primera del catálogo. Nunca un título que siga vigente. |
+| `titulos_anteriores` | array | — | 24 fest | Títulos con que el festival publicó ANTES esta obra. Lo llena Onboarding cuando un festival renombra (p. ej. «Tránsito» → «Tránsitos»). La app mueve en silencio lo que el usuario guardó bajo el viejo (Interés, Plan, vista, prioridad, calificación, retrasos) — domain/titulos.js. Obra partida en dos: el viejo va en las dos y gana la primera del catálogo. Nunca un título que siga vigente. |
 | `qa_type` | string | `team` · `guests` | 20 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | 1 fest |  |

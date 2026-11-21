@@ -62,9 +62,6 @@
   },
   "Red eyes": {
    "_por_que": "corto local/nacional (portafolio de estímulos o maratón de la web): solo título y minutaje en la web; sin ficha TMDB ni afiche en búsqueda web 20 nov 2026. Pedirlo al festival."
-  },
-  "Sangre de Dios": {
-   "_por_que": "sin ficha TMDB (búsqueda «Sangre de Dios»/«La sangre de Dios» y filmografía de Lucho Velasco, 20 nov 2026); la prensa (Publimetro 21 jul 2026, La República) solo trae fotogramas del tráiler, no el afiche. Ficha para dar de alta en TMDB cuando aparezca el afiche oficial."
   }
  },
  "sin_sinopsis": {
@@ -237,9 +234,6 @@
   },
   "Detrás de: Secuestro del vuelo 601": {
    "_por_que": "conversatorio: la web da solo la hora de inicio (3:00 p. m.)"
-  },
-  "Sangre de Dios": {
-   "_por_que": "sin ficha TMDB y ni la web ni la prensa (Publimetro, La República, El País) publican su duración (20 nov 2026)"
   }
  },
  "sin_pais": {
@@ -254,6 +248,14 @@
   },
   "Chucha la Zarigüeya y los guardianes del Palmar": {
    "_por_que": "la programación oficial (web del IMCTC) solo da título y minutaje; sin ficha ni fuente pública del país (20 nov)"
+  }
+ },
+ "fichas": {
+  "La Sangre de Dios": {
+   "tmdb": 1834002,
+   "_fuente": "https://www.themoviedb.org/movie/1834002",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-20 (registro cajica-2026-altas.json)",
+   "_registro": "cajica-2026-altas.json"
   }
  }
 }
