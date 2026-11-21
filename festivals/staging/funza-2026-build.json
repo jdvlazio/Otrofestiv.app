@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
-  "capturado": "2026-11-19",
+  "capturado": "2026-11-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Sección = el «Componente» de la agenda, verbatim y en caja de Título (pedido de Juan, 25 oct).",
@@ -1388,7 +1388,7 @@
    "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "125 min",
+   "duration": "77 min",
    "genre": "Comedia",
    "_ancla": [
     "Centro Cultural Bacatá - Funza",
@@ -1399,7 +1399,7 @@
    "time": "18:30",
    "day_order": 2,
    "venue": "Centro Cultural Bacatá - Funza",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "Fernando, un hombre de 45 años que aún vive con su sobreprotectora madre, intenta ocultarle ese secreto a su moderna novia, quien además es su jefa. Lo que comienza como una pequeña mentira durante una cena de cumpleaños se convierte en un enredo de secretos, choques generacionales y divertidas situaciones que lo obligarán a elegir entre la comodidad de mamá y el amor de su vida.",
    "synopsis_lang": "es",
    "poster": "/assets/funza-2026/basta-mama.jpg",
@@ -1438,8 +1438,9 @@
      "fecha": "2026-10-25"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "juan",
+     "fecha": "2026-11-20",
+     "frase": "Sí, es porque es con conversatorio. Arréglalo por favor"
     },
     "title": {
      "tipo": "festival-web",
@@ -1791,12 +1792,9 @@
    "duration": "90 min"
   }
  ],
- "_avisos_duracion": [
-  "«Basta Mamá»: 125 min en el festival, 77 en TMDB"
- ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T14:34:19",
+  "fecha": "2026-11-20T20:20:18",
   "plan_sha": "1e679e89c8d991cf",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"
