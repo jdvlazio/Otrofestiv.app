@@ -485,14 +485,10 @@
      "posterSource": "oficial",
      "lbSlug": "1-paseo-por-la-ciudad",
      "tmdb_id": 1832923,
+     "synopsis": "En las calles de Ciudad de México, Ema y Lautaro quedan atrapados entre el crimen, los recortes de papel y la desaparición del territorio que habitan. Mediante acción en vivo y stop motion en collage, buscan imaginar un camino posible para escapar, florecer después del salto y recuperar el olvidado oficio de volar.",
      "synopsis_en": "On the streets of Mexico City, Ema and Lautaro are trapped between crime, paper cutouts and the disappearance of the territory they inhabit. Through live action and collage stop motion, they try to imagine a possible way out, to bloom after the leap and to recover the forgotten craft of flying.",
      "genre": "Animación",
-     "synopsis": "En las calles de Ciudad de México, Ema y Lautaro quedan atrapados entre el crimen, los recortes de papel y la desaparición del territorio que habitan. Mediante acción en vivo y stop motion en collage, buscan imaginar un camino posible para escapar, florecer después del salto y recuperar el olvidado oficio de volar.",
-     "synopsis_lang": "es",
-     "_conservado": [
-      "synopsis",
-      "synopsis_lang"
-     ]
+     "synopsis_lang": "es"
     },
     {
      "title": "Comb story",
@@ -755,7 +751,7 @@
    "id": "f_3c01c359a6"
   },
   {
-   "title": "Orígenes de los lenguajes experimentales y laboratorio de creación",
+   "title": "Orígenes de los lenguajes audiovisuales experimentales y laboratorio de creación",
    "type": "event",
    "section": "🛠️ Actividad Creativa",
    "_ancla": [
@@ -775,12 +771,16 @@
     "date": "2026-11-18",
     "tipo": "festival-mensaje"
    },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfPOmpRt-XqqxNssm_S76cmQb0QR35cQu81IJB9Ua3PiJplTQ/viewform",
    "is_free": true,
    "requires_registration": true,
-   "description": "A cargo de: Hernán D. Arango S. Realizador audiovisual, editor y docente universitario con más de 20 años de experiencia en cine y televisión. Magíster en Artes Digitales.",
+   "description": "Un recorrido por los antecedentes y el origen de los lenguajes audiovisuales experimentales, centrado en la animación experimental de pioneros como Walter Ruttmann, Hans Richter y Viking Eggeling. Con esas referencias, los participantes hacen un ejercicio práctico de exploración colectiva en el que la imagen se aborda como materia plástica mediante técnicas manuales sobre papel, digitalización y montaje. No se requieren conocimientos previos. A cargo de Hernán D. Arango S., realizador audiovisual, editor y docente universitario con más de 20 años de experiencia en cine y televisión.",
    "description_lang": "es",
    "_fid": "f_4a2619264d",
-   "id": "f_4a2619264d"
+   "id": "f_4a2619264d",
+   "titulos_anteriores": [
+    "Orígenes de los lenguajes experimentales y laboratorio de creación"
+   ]
   },
   {
    "title": "Experimental",
@@ -1033,10 +1033,11 @@
      "synopsis": "Once músicos, dos cámaras y una sola sala se reúnen sin guion ni resultado previsto. Lo que surge es un retrato crudo y observacional de la Orquesta El Macabeo mientras graba la última canción de su nuevo disco de salsa: el proceso, la tensión, el humor, el cansancio y la creatividad tal como aparecen. En este punkumentary etnográfico, la música se vuelve archivo de «la brega», las estrategias cotidianas de supervivencia, aguante y resistencia que forja la condición de Puerto Rico bajo el dominio colonial de Estados Unidos. El resultado es una canción hecha a ritmo de amor y odio.",
      "synopsis_lang": "es",
      "poster": "/assets/under-2026/to-the-rhythm-of-love-and-hate-a-punkumentary-on-salsa-with-.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "to-the-rhythm-of-love-and-hate-a-punkumentary",
      "tmdb_id": 1832931,
-     "synopsis_en": "Eleven musicians, two cameras, and one room come together with no script and no predetermined outcome. What unfolds is a raw, observational portrait of Orquesta El Macabeo as they record the final song for their new salsa album, capturing process, tension, humor, fatigue, and creativity as they emerge. In this ethnographic punkumentary, music becomes an archive of la brega, the everyday strategies of survival, endurance, and resistance shaped by Puerto Rico’s condition under U.S. colonial rule."
+     "synopsis_en": "Eleven musicians, two cameras, and one room come together with no script and no predetermined outcome. What unfolds is a raw, observational portrait of Orquesta El Macabeo as they record the final song for their new salsa album, capturing process, tension, humor, fatigue, and creativity as they emerge. In this ethnographic punkumentary, music becomes an archive of la brega, the everyday strategies of survival, endurance, and resistance shaped by Puerto Rico’s condition under U.S. colonial rule.",
+     "genre": "Documental"
     }
    ],
    "_fid": "f_d1f628382b",
@@ -1254,7 +1255,7 @@
      "synopsis": "El control de un padre sobre su hija se vuelve en su contra cuando la hermana menor, con un inocente acto de imitación, deja al descubierto la violencia oculta en su hogar. «A Perfect Maryam» es una mirada sutil pero contundente a la identidad, la niñez femenina y la represión en una familia tradicional.",
      "synopsis_lang": "es",
      "poster": "/assets/under-2026/a-perfect-maryam.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "a-perfect-maryam",
      "tmdb_id": 1832927,
      "synopsis_en": "A father's control over his daughter backfires when her younger sister, through an innocent act of mimicry, exposes the hidden violence within their home. A subtle but striking look at identity, girlhood, and repression in a traditional family.",
@@ -1454,7 +1455,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T14:15:02",
+  "fecha": "2026-11-20T22:01:27",
   "plan_sha": "de4c503917909c23",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"

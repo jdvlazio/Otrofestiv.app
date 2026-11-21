@@ -87,10 +87,18 @@ F = [
     ('11-27', '21:00', PL, 'Fiesta Under · El Vikingo Selektor', FEM, 6, [],
      dict(tipo='evento', event_kind='fiesta', acceso='Con boleta: aporte $10.000',
           descripcion='Post punk, darkwave, industrial, EBM.')),
-    ('11-28', '15:00', PL, 'Orígenes de los lenguajes experimentales y laboratorio de creación', CRE, 6, [],
+    # Título y texto del formulario de inscripción que mandó el festival (20 nov):
+    # https://docs.google.com/forms/d/e/1FAIpQLSfPOmpRt-XqqxNssm_S76cmQb0QR35cQu81IJB9Ua3PiJplTQ/viewform
+    ('11-28', '15:00', PL, 'Orígenes de los lenguajes audiovisuales experimentales y laboratorio de creación', CRE, 6, [],
      dict(tipo='evento', event_kind='taller', acceso='Entrada libre con inscripción previa. Cupos limitados',
-          descripcion='A cargo de: Hernán D. Arango S. Realizador audiovisual, editor y docente universitario '
-                      'con más de 20 años de experiencia en cine y televisión. Magíster en Artes Digitales.')),
+          registration_url='https://docs.google.com/forms/d/e/1FAIpQLSfPOmpRt-XqqxNssm_S76cmQb0QR35cQu81IJB9Ua3PiJplTQ/viewform',
+          descripcion='Un recorrido por los antecedentes y el origen de los lenguajes audiovisuales experimentales, '
+                      'centrado en la animación experimental de pioneros como Walter Ruttmann, Hans Richter y Viking '
+                      'Eggeling. Con esas referencias, los participantes hacen un ejercicio práctico de exploración '
+                      'colectiva en el que la imagen se aborda como materia plástica mediante técnicas manuales sobre '
+                      'papel, digitalización y montaje. No se requieren conocimientos previos. A cargo de Hernán D. '
+                      'Arango S., realizador audiovisual, editor y docente universitario con más de 20 años de '
+                      'experiencia en cine y televisión.')),
     ('11-28', '19:00', PL, 'Experimental', EXP, 3,
      [('Cosmopoética: el ciclo de vida de una estrella masiva', 'Sofía Orozco Payares', 'Colombia', 2026, 10),
       ('Antifragility', 'Serafim Chikhladze', 'Rusia', 2026, 19),
