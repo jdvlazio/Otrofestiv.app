@@ -456,6 +456,23 @@
     "archivo": "fuentes/ig/Df7huLiG9SO/"
    },
    "evidencia": "título de la lámina del Bacatá (IG Df7huLiG9SO, 19 nov), más reciente que la pieza del 11 nov"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "18:30"
+   },
+   "funcion": "f_f499b071f9",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-20",
+    "frase": "Sí, es porque es con conversatorio. Arréglalo por favor"
+   },
+   "evidencia": "la agenda reserva 125 min (6:30–8:35 p. m.) para una película de 77 min: el bloque incluye el conversatorio (Juan)"
   }
  ]
 }
