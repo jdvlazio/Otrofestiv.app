@@ -62,7 +62,8 @@ def corto(c, categoria=''):
 # «Sangre de Dios»: sin ficha en TMDB (20 nov 2026) ni sinopsis del festival.
 # La sinopsis se redacta desde la prensa del tráiler (Publimetro, 21 jul 2026,
 # https://www.publimetro.co/cultura/2026/07/21/la-sangre-de-dios-revela-su-primer-trailer-la-nueva-pelicula-de-lucho-velasco-apuesta-por-la-accion-el-misterio-y-una-leyenda-ancestral-colombiana/).
-LARGOS = {'SANGRE DE DIOS': dict(director='Lucho Velasco', pais='Colombia', anio=2026, sinopsis=(
+# Sangre de Dios: 82 min, «hora y 22 minutos de duración» (MixRadio, premiere en Bogotá, jul 2026)
+LARGOS = {'SANGRE DE DIOS': dict(director='Lucho Velasco', pais='Colombia', anio=2026, duracion_min=82, sinopsis=(
               'Gabriel, un exmilitar dispuesto a todo por salvar a su hija, se cruza con Nahuel, un guerrero '
               'indígena que guarda un secreto ancestral, y con Jaime Almagro, un empresario farmacéutico que '
               'quiere convertirlo en negocio. Los tres se disputan en el cañón del Chicamocha «la sangre de Dios», '

@@ -356,6 +356,7 @@
    "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
+   "duration": "82 min",
    "_ancla": [
     "Centro Cultural y de Convenciones Fernando Botero - Cajicá",
     "2026-11-21",
@@ -574,7 +575,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T22:47:50",
+  "fecha": "2026-11-20T23:03:42",
   "plan_sha": "c661ad39b01fc552",
   "paso": 5,
   "cmd": "python3 pipeline/cajica-2026-verificar.py"
