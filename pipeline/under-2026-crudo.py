@@ -87,7 +87,7 @@ F = [
     ('11-27', '21:00', PL, 'Fiesta Under · El Vikingo Selektor', FEM, 6, [],
      # hasta la 1:30 a. m. (dato del festival que pasó Juan, 20 nov): 270 min
      dict(tipo='evento', event_kind='fiesta', acceso='Con boleta: aporte $10.000', duracion_min=270,
-          descripcion='Post punk, darkwave, industrial, EBM.')),
+          descripcion='El Vikingo Selektor: post punk, dark wave, dark techno, industrial y EBM. Aporte $10.000.')),
     # Título y texto del formulario de inscripción que mandó el festival (20 nov):
     # https://docs.google.com/forms/d/e/1FAIpQLSfPOmpRt-XqqxNssm_S76cmQb0QR35cQu81IJB9Ua3PiJplTQ/viewform
     ('11-28', '15:00', PL, 'Orígenes de los lenguajes audiovisuales experimentales y laboratorio de creación', CRE, 6, [],
@@ -100,7 +100,8 @@ F = [
                       'colectiva en el que la imagen se aborda como materia plástica mediante técnicas manuales sobre '
                       'papel, digitalización y montaje. No se requieren conocimientos previos. A cargo de Hernán D. '
                       'Arango S., realizador audiovisual, editor y docente universitario con más de 20 años de '
-                      'experiencia en cine y televisión.')),
+                      'experiencia en cine y televisión, magíster en Artes Digitales; ha trabajado en creación e '
+                      'investigación, y su obra ha sido exhibida en museos y festivales nacionales e internacionales.')),
     ('11-28', '19:00', PL, 'Experimental', EXP, 3,
      [('Cosmopoética: el ciclo de vida de una estrella masiva', 'Sofía Orozco Payares', 'Colombia', 2026, 10),
       ('Antifragility', 'Serafim Chikhladze', 'Rusia', 2026, 19),

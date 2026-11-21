@@ -739,6 +739,8 @@
    "venue": "Perpetua Lab - Medellín",
    "event_kind": "fiesta",
    "has_qa": false,
+   "poster": "/assets/under-2026/fiesta-under-el-vikingo-selektor.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
     "lamina": "p. 6",
@@ -746,7 +748,7 @@
     "tipo": "festival-mensaje"
    },
    "is_free": false,
-   "description": "Post punk, darkwave, industrial, EBM.",
+   "description": "El Vikingo Selektor: post punk, dark wave, dark techno, industrial y EBM. Aporte $10.000.",
    "description_lang": "es",
    "_fid": "f_3c01c359a6",
    "id": "f_3c01c359a6"
@@ -767,6 +769,8 @@
    "venue": "Perpetua Lab - Medellín",
    "event_kind": "taller",
    "has_qa": false,
+   "poster": "/assets/under-2026/origenes-de-los-lenguajes-audiovisuales-experimentales-y-lab.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
     "lamina": "p. 6",
@@ -776,7 +780,7 @@
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfPOmpRt-XqqxNssm_S76cmQb0QR35cQu81IJB9Ua3PiJplTQ/viewform",
    "is_free": true,
    "requires_registration": true,
-   "description": "Un recorrido por los antecedentes y el origen de los lenguajes audiovisuales experimentales, centrado en la animación experimental de pioneros como Walter Ruttmann, Hans Richter y Viking Eggeling. Con esas referencias, los participantes hacen un ejercicio práctico de exploración colectiva en el que la imagen se aborda como materia plástica mediante técnicas manuales sobre papel, digitalización y montaje. No se requieren conocimientos previos. A cargo de Hernán D. Arango S., realizador audiovisual, editor y docente universitario con más de 20 años de experiencia en cine y televisión.",
+   "description": "Un recorrido por los antecedentes y el origen de los lenguajes audiovisuales experimentales, centrado en la animación experimental de pioneros como Walter Ruttmann, Hans Richter y Viking Eggeling. Con esas referencias, los participantes hacen un ejercicio práctico de exploración colectiva en el que la imagen se aborda como materia plástica mediante técnicas manuales sobre papel, digitalización y montaje. No se requieren conocimientos previos. A cargo de Hernán D. Arango S., realizador audiovisual, editor y docente universitario con más de 20 años de experiencia en cine y televisión, magíster en Artes Digitales; ha trabajado en creación e investigación, y su obra ha sido exhibida en museos y festivales nacionales e internacionales.",
    "description_lang": "es",
    "_fid": "f_4a2619264d",
    "id": "f_4a2619264d",
@@ -1457,7 +1461,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T22:08:04",
+  "fecha": "2026-11-20T22:11:56",
   "plan_sha": "de4c503917909c23",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"
