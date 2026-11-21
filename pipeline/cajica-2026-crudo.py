@@ -64,10 +64,12 @@ def corto(c, categoria=''):
 # https://www.publimetro.co/cultura/2026/07/21/la-sangre-de-dios-revela-su-primer-trailer-la-nueva-pelicula-de-lucho-velasco-apuesta-por-la-accion-el-misterio-y-una-leyenda-ancestral-colombiana/).
 # Sangre de Dios: 82 min, «hora y 22 minutos de duración» (MixRadio, premiere en Bogotá, jul 2026)
 LARGOS = {'SANGRE DE DIOS': dict(director='Lucho Velasco', pais='Colombia', anio=2026, duracion_min=82, sinopsis=(
-              'Gabriel, un exmilitar dispuesto a todo por salvar a su hija, se cruza con Nahuel, un guerrero '
-              'indígena que guarda un secreto ancestral, y con Jaime Almagro, un empresario farmacéutico que '
-              'quiere convertirlo en negocio. Los tres se disputan en el cañón del Chicamocha «la sangre de Dios», '
-              'una sustancia que, según la leyenda, vence la enfermedad y desafía la muerte.')),
+              'Gabriel, un excapitán del Ejército que ve cómo su hija mayor muere día a día por una enfermedad '
+              'terminal, se entera de uno de los secretos mejor guardados de la historia: una cura milagrosa llamada '
+              '«la sangre de Dios», que resguarda una tribu que conoce el lugar exacto donde se obtiene. Decide ir '
+              'por ella como último recurso, pero un empresario farmacéutico corrupto también se entera y está '
+              'dispuesto a exterminar a quien se le atraviese. El infierno comienza cuando los tres grupos se '
+              'encuentran en la selva.')),  # sinopsis de Proimágenes (id_pelicula=3251), ajustada en estilo
           'TUNDAMA': dict(director='Diego Yaya, Edison Yaya', pais='Colombia')}
 funciones = []
 for dia in prog:
@@ -87,7 +89,7 @@ for dia in prog:
         elif ev['titulo'] in LARGOS:
             f.update(LARGOS[ev['titulo']])
             # la web grita el título de los largos: se publica en caja de título
-            f['titulo'] = {'SANGRE DE DIOS': 'Sangre de Dios', 'TUNDAMA': 'Tundama'}[ev['titulo']]
+            f['titulo'] = {'SANGRE DE DIOS': 'La Sangre de Dios', 'TUNDAMA': 'Tundama'}[ev['titulo']]  # «La Sangre de Dios»: afiche oficial y Proimágenes (Juan, 20 nov)
             f['acceso'] = 'Entrada libre'
         else:
             f['tipo'] = 'evento'

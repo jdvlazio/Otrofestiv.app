@@ -349,7 +349,7 @@
    "id": "f_b364696b00"
   },
   {
-   "title": "Sangre de Dios",
+   "title": "La Sangre de Dios",
    "type": "film",
    "section": "🎬 Largometraje / Ficción",
    "director": "Lucho Velasco",
@@ -368,7 +368,7 @@
    "venue": "Centro Cultural y de Convenciones Fernando Botero - Cajicá",
    "sala": "Auditorio Múltiple",
    "has_qa": false,
-   "synopsis": "Gabriel, un exmilitar dispuesto a todo por salvar a su hija, se cruza con Nahuel, un guerrero indígena que guarda un secreto ancestral, y con Jaime Almagro, un empresario farmacéutico que quiere convertirlo en negocio. Los tres se disputan en el cañón del Chicamocha «la sangre de Dios», una sustancia que, según la leyenda, vence la enfermedad y desafía la muerte.",
+   "synopsis": "Gabriel, un excapitán del Ejército que ve cómo su hija mayor muere día a día por una enfermedad terminal, se entera de uno de los secretos mejor guardados de la historia: una cura milagrosa llamada «la sangre de Dios», que resguarda una tribu que conoce el lugar exacto donde se obtiene. Decide ir por ella como último recurso, pero un empresario farmacéutico corrupto también se entera y está dispuesto a exterminar a quien se le atraviese. El infierno comienza cuando los tres grupos se encuentran en la selva.",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
@@ -380,8 +380,14 @@
     "requisito": ""
    },
    "is_free": true,
+   "lbSlug": "la-sangre-de-dios",
+   "tmdb_id": 1834002,
+   "synopsis_en": "Gabriel, a former army captain watching his eldest daughter slowly die of a terminal illness, learns of one of history’s best-kept secrets: a miraculous cure known as the blood of God, guarded by a tribe that knows exactly where to find it. He sets out for it as a last resort, but a corrupt pharmaceutical businessman also hears of it and is willing to wipe out anyone in his way. Hell breaks loose when the three groups meet in the jungle.",
    "_fid": "f_5560122863",
-   "id": "f_5560122863"
+   "id": "f_5560122863",
+   "titulos_anteriores": [
+    "Sangre de Dios"
+   ]
   },
   {
    "title": "Tundama",
@@ -575,7 +581,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T23:03:42",
+  "fecha": "2026-11-20T23:16:06",
   "plan_sha": "c661ad39b01fc552",
   "paso": 5,
   "cmd": "python3 pipeline/cajica-2026-verificar.py"
