@@ -289,10 +289,11 @@
    "seccion": "Feminismos y disidencias sexuales",
    "tipo": "evento",
    "event_kind": "fiesta",
-   "descripcion": "Post punk, darkwave, industrial, EBM."
+   "duracion_min": 270,
+   "descripcion": "El Vikingo Selektor: post punk, dark wave, dark techno, industrial y EBM. Aporte $10.000."
   },
   {
-   "titulo": "Orígenes de los lenguajes experimentales y laboratorio de creación",
+   "titulo": "Orígenes de los lenguajes audiovisuales experimentales y laboratorio de creación",
    "dia": "2026-11-28",
    "hora": "15:00",
    "sede": "Perpetua Lab",
@@ -306,7 +307,9 @@
    "seccion": "Actividad creativa",
    "tipo": "evento",
    "event_kind": "taller",
-   "descripcion": "A cargo de: Hernán D. Arango S. Realizador audiovisual, editor y docente universitario con más de 20 años de experiencia en cine y televisión. Magíster en Artes Digitales."
+   "duracion_min": 240,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfPOmpRt-XqqxNssm_S76cmQb0QR35cQu81IJB9Ua3PiJplTQ/viewform",
+   "descripcion": "Un recorrido por los antecedentes y el origen de los lenguajes audiovisuales experimentales, centrado en la animación experimental de pioneros como Walter Ruttmann, Hans Richter y Viking Eggeling. Con esas referencias, los participantes hacen un ejercicio práctico de exploración colectiva en el que la imagen se aborda como materia plástica mediante técnicas manuales sobre papel, digitalización y montaje. No se requieren conocimientos previos. A cargo de Hernán D. Arango S., realizador audiovisual, editor y docente universitario con más de 20 años de experiencia en cine y televisión, magíster en Artes Digitales; ha trabajado en creación e investigación, y su obra ha sido exhibida en museos y festivales nacionales e internacionales."
   },
   {
    "titulo": "Experimental",

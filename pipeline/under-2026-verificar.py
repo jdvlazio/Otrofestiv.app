@@ -25,6 +25,8 @@ TMP = f'{REPO}/fuentes/under-2026/correo-2026-11-18/paginas'
 
 # cómo imprime el PDF lo que el crudo normalizó o tituló
 EN_PDF = {'Fiesta Under · El Vikingo Selektor': 'El vikingo selektor',
+          # el formulario de inscripción (20 nov) suma «audiovisuales»; el PDF no lo trae
+          'Orígenes de los lenguajes audiovisuales experimentales y laboratorio de creación': 'Orígenes de los lenguajes experimentales',
           'Proyección sorpresa': 'Proyección sorpresa'}
 SEDE_PDF = {'Perpetua Lab': 'PERPETUA LAB', 'Bebop Bar': 'BEBOP', 'Donde Robin': 'DONDE ROBIN',
             'Librería Antimateria': 'ANTIMATERIA'}
