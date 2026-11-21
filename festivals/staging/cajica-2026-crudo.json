@@ -1,0 +1,335 @@
+{
+ "_provenance": {
+  "fuente": "https://www.culturacajica.gov.co/festival-de-cine-2026/ — const programacion + enlaces",
+  "capturado": "2026-11-20"
+ },
+ "funciones": [
+  {
+   "titulo": "Más allá de la pantalla: El auge del podcast en la creación de contenido",
+   "dia": "2026-11-21",
+   "hora": "09:00",
+   "sede": "Centro Cultural y de Convenciones Fernando Botero",
+   "sala": "Auditorio Múltiple",
+   "seccion": "Taller / Eventos",
+   "_src": {
+    "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+    "fecha": "Sábado 21 de noviembre de 2026",
+    "hora": "9:00 a. m.",
+    "lugar": "Auditorio Múltiple",
+    "categoria": "Taller / Eventos",
+    "tipo": "Taller de creación de podcast",
+    "requisito": "Requiere inscripción previa"
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "invitados": "Invitados / Dirige: Jasón Díaz (Conboy Creativo); Asisten: Stiven Castiblanco y Nicolás Rodríguez; Modera: Sebastián Ramírez",
+   "acceso": "Entrada libre con inscripción previa",
+   "registration_url": "https://culturacajica.app/eventos/index.php?id=359"
+  },
+  {
+   "titulo": "Detrás de la luz: Lanzamiento del clip de DARMAND",
+   "dia": "2026-11-21",
+   "hora": "11:00",
+   "sede": "Centro Cultural y de Convenciones Fernando Botero",
+   "sala": "Auditorio Múltiple",
+   "seccion": "Taller / Eventos",
+   "_src": {
+    "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+    "fecha": "Sábado 21 de noviembre de 2026",
+    "hora": "11:00 a. m.",
+    "lugar": "Auditorio Múltiple",
+    "categoria": "Taller / Eventos",
+    "tipo": "Taller de Dirección de Fotografía",
+    "requisito": "Requiere inscripción previa"
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "invitados": "Invitado: Farid Alexander Pinilla (Suculenta Producciones / Suculenta Estudios)",
+   "acceso": "Entrada libre con inscripción previa",
+   "registration_url": "https://culturacajica.app/eventos/index.php?id=358"
+  },
+  {
+   "titulo": "Los trenes en el cine en ocasión al Centenario de la estación del Tren de Cajicá",
+   "dia": "2026-11-21",
+   "hora": "14:00",
+   "sede": "Centro Cultural y de Convenciones Fernando Botero",
+   "sala": "Auditorio Múltiple",
+   "seccion": "Conversatorio / Historia y Patrimonio",
+   "_src": {
+    "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+    "fecha": "Sábado 21 de noviembre de 2026",
+    "hora": "2:00 p. m.",
+    "lugar": "Auditorio Múltiple",
+    "categoria": "Conversatorio / Historia y Patrimonio",
+    "tipo": "",
+    "requisito": ""
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "invitados": "Invitado: Norberto Cristancho",
+   "acceso": "Entrada libre"
+  },
+  {
+   "titulo": "Detrás de: Distrito Salvaje (La primera producción colombiana en Netflix)",
+   "dia": "2026-11-21",
+   "hora": "15:00",
+   "sede": "Centro Cultural y de Convenciones Fernando Botero",
+   "sala": "Auditorio Principal",
+   "seccion": "Conversatorio / Series y Producción",
+   "_src": {
+    "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+    "fecha": "Sábado 21 de noviembre de 2026",
+    "hora": "3:00 p. m.",
+    "lugar": "Auditorio Principal",
+    "categoria": "Conversatorio / Series y Producción",
+    "tipo": "",
+    "requisito": ""
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "invitados": "Invitado: Juan Fernando Sánchez; Modera: Cristian Villamil",
+   "acceso": "Entrada libre"
+  },
+  {
+   "titulo": "Maratón de cortos",
+   "dia": "2026-11-21",
+   "hora": "16:00",
+   "sede": "Centro Cultural y de Convenciones Fernando Botero",
+   "sala": "Auditorio Principal",
+   "seccion": "Cortometrajes / Exhibición",
+   "_src": {
+    "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+    "fecha": "Sábado 21 de noviembre de 2026",
+    "hora": "4:00 p. m.",
+    "lugar": "Auditorio Principal",
+    "categoria": "Cortometrajes / Exhibición",
+    "tipo": "Proyección",
+    "requisito": ""
+   },
+   "obras": [
+    {
+     "titulo": "Pozo Hondo",
+     "duracion_min": 3,
+     "_duracion_fuente": "3:29 min"
+    },
+    {
+     "titulo": "Brillaba",
+     "duracion_min": 9,
+     "_duracion_fuente": "9:21 min"
+    },
+    {
+     "titulo": "El horror del Bosque",
+     "duracion_min": 2,
+     "_duracion_fuente": "1:48 min"
+    },
+    {
+     "titulo": "Chucha la Zarigüeya y los guardianes del Palmar",
+     "duracion_min": 15,
+     "_duracion_fuente": "15:25 min"
+    },
+    {
+     "titulo": "Dulce silencio",
+     "duracion_min": 5,
+     "_duracion_fuente": "5:10 min",
+     "pais": "Colombia",
+     "_nota": "la web lo rotula «– SmartFilms»"
+    },
+    {
+     "titulo": "Amparo",
+     "duracion_min": 5,
+     "_duracion_fuente": "5:11 min",
+     "pais": "Colombia",
+     "_nota": "la web lo rotula «– SmartFilms»"
+    },
+    {
+     "titulo": "La última trenza",
+     "duracion_min": 5,
+     "_duracion_fuente": "5:11 min",
+     "pais": "Colombia",
+     "_nota": "la web lo rotula «– SmartFilms»"
+    },
+    {
+     "titulo": "El juicio de Toby",
+     "duracion_min": 1,
+     "_duracion_fuente": "1:12 min",
+     "pais": "Colombia",
+     "_nota": "la web lo rotula «– SmartFilms»"
+    },
+    {
+     "titulo": "Mi Tierrita",
+     "duracion_min": 3,
+     "_duracion_fuente": "3:09 min",
+     "pais": "Colombia",
+     "_nota": "la web lo rotula «– SmartFilms»"
+    },
+    {
+     "titulo": "Teaser cortos Taller de actuación para cámara IMCTC",
+     "duracion_min": 4,
+     "_duracion_fuente": "4:00 min",
+     "pais": "Colombia"
+    }
+   ],
+   "acceso": "Entrada libre"
+  },
+  {
+   "titulo": "Sangre de Dios",
+   "dia": "2026-11-21",
+   "hora": "17:30",
+   "sede": "Centro Cultural y de Convenciones Fernando Botero",
+   "sala": "Auditorio Múltiple",
+   "seccion": "Largometraje / Ficción",
+   "_src": {
+    "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+    "fecha": "Sábado 21 de noviembre de 2026",
+    "hora": "5:30 p. m.",
+    "lugar": "Auditorio Múltiple",
+    "categoria": "Largometraje / Ficción",
+    "tipo": "Proyección",
+    "requisito": ""
+   },
+   "director": "Lucho Velasco",
+   "pais": "Colombia",
+   "anio": 2026,
+   "sinopsis": "Gabriel, un exmilitar dispuesto a todo por salvar a su hija, se cruza con Nahuel, un guerrero indígena que guarda un secreto ancestral, y con Jaime Almagro, un empresario farmacéutico que quiere convertirlo en negocio. Los tres se disputan en el cañón del Chicamocha «la sangre de Dios», una sustancia que, según la leyenda, vence la enfermedad y desafía la muerte.",
+   "acceso": "Entrada libre"
+  },
+  {
+   "titulo": "Tundama",
+   "dia": "2026-11-22",
+   "hora": "11:00",
+   "sede": "Centro Cultural y de Convenciones Fernando Botero",
+   "sala": "Auditorio Múltiple",
+   "seccion": "Largometraje animado",
+   "_src": {
+    "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+    "fecha": "Domingo 22 de noviembre de 2026",
+    "hora": "11:00 a. m.",
+    "lugar": "Auditorio Múltiple",
+    "categoria": "Largometraje animado",
+    "tipo": "Proyección",
+    "requisito": ""
+   },
+   "director": "Diego Yaya, Edison Yaya",
+   "pais": "Colombia",
+   "acceso": "Entrada libre"
+  },
+  {
+   "titulo": "Maratón de cortos (Portafolio de Estímulos 2026)",
+   "dia": "2026-11-22",
+   "hora": "14:00",
+   "sede": "Centro Cultural y de Convenciones Fernando Botero",
+   "sala": "Auditorio Principal",
+   "seccion": "Cortometrajes / Talento Local y Nacional",
+   "_src": {
+    "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+    "fecha": "Domingo 22 de noviembre de 2026",
+    "hora": "2:00 p. m.",
+    "lugar": "Auditorio Principal",
+    "categoria": "Cortometrajes / Talento Local y Nacional",
+    "tipo": "Proyección",
+    "requisito": ""
+   },
+   "obras": [
+    {
+     "titulo": "Che bacano",
+     "duracion_min": 10,
+     "_duracion_fuente": "10:00 min",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Sara Valentina",
+     "duracion_min": 10,
+     "_duracion_fuente": "10:00 min",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Nicolás Bello",
+     "duracion_min": 7,
+     "_duracion_fuente": "7:00 min",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Red eyes",
+     "duracion_min": 7,
+     "_duracion_fuente": "7:00 min",
+     "pais": "Colombia",
+     "director": "Jhojan Fetecua"
+    },
+    {
+     "titulo": "Buscando a papá",
+     "duracion_min": 7,
+     "_duracion_fuente": "7:10 min",
+     "pais": "Colombia",
+     "_nota": "la web lo rotula «– SmartFilms»"
+    },
+    {
+     "titulo": "Los amores de Juanita",
+     "duracion_min": 5,
+     "_duracion_fuente": "5:11 min",
+     "pais": "Colombia",
+     "_nota": "la web lo rotula «– SmartFilms»"
+    },
+    {
+     "titulo": "El tesoro de Lu",
+     "duracion_min": 5,
+     "_duracion_fuente": "5:10 min",
+     "pais": "Colombia",
+     "_nota": "la web lo rotula «– SmartFilms»"
+    },
+    {
+     "titulo": "Un trasteo para el alma",
+     "duracion_min": 5,
+     "_duracion_fuente": "5:08 min",
+     "pais": "Colombia",
+     "_nota": "la web lo rotula «– SmartFilms»"
+    }
+   ],
+   "acceso": "Entrada libre"
+  },
+  {
+   "titulo": "Detrás de: Secuestro del vuelo 601",
+   "dia": "2026-11-22",
+   "hora": "15:00",
+   "sede": "Centro Cultural y de Convenciones Fernando Botero",
+   "sala": "Auditorio Principal",
+   "seccion": "Conversatorio sobre producción y narrativa audiovisual",
+   "_src": {
+    "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+    "fecha": "Domingo 22 de noviembre de 2026",
+    "hora": "3:00 p. m.",
+    "lugar": "Auditorio Principal",
+    "categoria": "Conversatorio sobre producción y narrativa audiovisual",
+    "tipo": "",
+    "requisito": ""
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "invitados": "Invitado: Óscar Botia (Productor); Modera: Mario Ruíz",
+   "acceso": "Entrada libre"
+  },
+  {
+   "titulo": "El Poder de la Voz con Juan Carlos Tinoco",
+   "dia": "2026-11-23",
+   "hora": "13:00",
+   "sede": "Centro Cultural y de Convenciones Fernando Botero",
+   "sala": "3.er piso, Biblioteca",
+   "seccion": "Taller Especializado",
+   "_src": {
+    "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+    "fecha": "Lunes 23 de noviembre de 2026",
+    "hora": "1:00 p. m. a 5:00 p. m.",
+    "lugar": "Centro Cultural y de Convenciones Fernando Botero de Cajicá — 3.er piso, Biblioteca",
+    "categoria": "Taller Especializado",
+    "tipo": "Taller Especializado de Doblaje e Interpretación Vocal",
+    "requisito": "Cupos limitados – Requiere inscripción previa"
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "invitados": "Invitado especial: Juan Carlos Tinoco (Actor de doblaje, voz oficial en español latino de Thanos en el UCM)",
+   "acceso": "Entrada libre con inscripción previa",
+   "registration_url": "https://culturacajica.app/eventos/index.php?id=356",
+   "duracion_min": 240,
+   "_duracion_de": "la franja de la web «1:00 p. m. a 5:00 p. m.»"
+  }
+ ]
+}

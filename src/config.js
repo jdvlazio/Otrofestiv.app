@@ -141,6 +141,16 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
+  '🛠️ Taller / Eventos': 'Workshop / Events',
+  '🚂 Conversatorio / Historia y Patrimonio': 'Talk / History and Heritage',
+  '📺 Conversatorio / Series y Producción': 'Talk / Series and Production',
+  '🎞️ Cortometrajes / Exhibición': 'Short Films / Showcase',
+  '🎬 Largometraje / Ficción': 'Feature Film / Fiction',
+  '🎨 Largometraje Animado': 'Animated Feature Film',
+  '🌱 Cortometrajes / Talento Local y Nacional': 'Short Films / Local and National Talent',
+  '🎙️ Conversatorio sobre Producción y Narrativa Audiovisual': 'Talk on Audiovisual Production and Storytelling',
+  '🎤 Taller Especializado': 'Specialized Workshop',
   // Under Medellín 2026 (20 nov): secciones del reel y del PDF del festival
   '✊ Documental Activismo Social': 'Documentary · Social Activism',
   '🌀 Cine Experimental': 'Experimental Film',
@@ -356,6 +366,24 @@ export const NOTICES=[
 //
 // Al agregar festival: también actualizar FESTIVALS en tools/enricher.html
 export const FESTIVAL_CONFIG={
+  'cajica2026': {
+    // Alta con pipeline/alta-festival.py (2026-11-20): lo editorial sale de
+    // pipeline/cajica-2026.plan.json; los días, de festivalStartStr/festivalEndStr.
+    name:'Festival de Cine de Cajicá',displayName:'Festival de Cine de Cajicá',fullName:'Festival de Cine de Cajicá 2026',shortName:'CAJICÁ',
+    city:'Cajicá',country:'CO',
+    dates:'21–23 NOV',dates_en:'NOV 21–23',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/cajica2026.jpg',
+    tagline:'Cultura Audiovisual, Memoria y Territorio',
+    storageKey:'cajica2026_',festivalStartStr:'2026-11-21T00:00:00',festivalEndStr:'2026-11-23T23:59:00',
+    festivalDates:{'2026-11-21':'2026-11-21','2026-11-22':'2026-11-22','2026-11-23':'2026-11-23'},
+    days:[{k:'2026-11-21',d:21,lbl:'SÁB'},{k:'2026-11-22',d:22,lbl:'DOM'},{k:'2026-11-23',d:23,lbl:'LUN'}],
+    dayKeys:['2026-11-21','2026-11-22','2026-11-23'],
+    dayShort:{'2026-11-21':'SÁB 21','2026-11-22':'DOM 22','2026-11-23':'LUN 23'},
+    dayShort_en:{'2026-11-21':'SAT 21','2026-11-22':'SUN 22','2026-11-23':'MON 23'},
+    dayLong:{'2026-11-21':'Sábado 21 de noviembre','2026-11-22':'Domingo 22 de noviembre','2026-11-23':'Lunes 23 de noviembre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   // ── Bootstrap mínimo por festival ────────────────────────────────────────
   // Campos requeridos ANTES del fetch (usados por splash y _DEFAULT_FEST_ID):
   //   name, city, dates, dates_en, year, keyArt → _renderSplashRail()
@@ -1474,6 +1502,16 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
+  '🛠️ Taller / Eventos': 'Charlas / Industria',
+  '🚂 Conversatorio / Historia y Patrimonio': 'Charlas / Industria',
+  '📺 Conversatorio / Series y Producción': 'Charlas / Industria',
+  '🎞️ Cortometrajes / Exhibición': 'Cortos / Programas',
+  '🎬 Largometraje / Ficción': 'Muestra / País',
+  '🎨 Largometraje Animado': 'Muestra / País',
+  '🌱 Cortometrajes / Talento Local y Nacional': 'Cortos / Programas',
+  '🎙️ Conversatorio sobre Producción y Narrativa Audiovisual': 'Charlas / Industria',
+  '🎤 Taller Especializado': 'Charlas / Industria',
   // Under Medellín 2026 (20 nov): secciones del reel y del PDF del festival
   '✊ Documental Activismo Social': 'Muestra / País',
   '🌀 Cine Experimental': 'Cortos / Programas',
