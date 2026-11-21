@@ -338,6 +338,19 @@ def publicar(fid, forzar=False, ensayo=False):
     if _exc:
         print(f'⚠ --forzar: se publican {len(_exc[0])} obra(s) sin sinopsis (techo {_exc[1]})')
 
+    # ── ni con una duración que contradice a TMDB en silencio (20 nov 2026) ──
+    # Funza, «Basta Mamá»: la franja de 125 min (película + conversatorio) entró
+    # como duración de una obra de 77. El ensamblador lo avisaba y nadie lo leía.
+    import duraciones
+    _dur = duraciones.distintas(fid, out['films'])
+    if _dur and not forzar:
+        print(f'✗ NO se publica {fid}: {len(_dur)} obra(s) con una duración que contradice a TMDB:')
+        for x in _dur[:12]:
+            print('   ·', duraciones.linea(x))
+        _frena(f'duración distinta de TMDB ({len(_dur)})')
+    if _dur and forzar:
+        print(f'⚠ --forzar: se publican {len(_dur)} duración(es) que contradicen a TMDB')
+
     # ── ni sin lo que OTRO festival nuestro ya publicó (trabajo 5) ──────────
     cruce = _cruce_con_lo_publicado(fid, out['films'])
     if cruce and not forzar:

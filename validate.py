@@ -4286,6 +4286,34 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar excepcion-sin-porque: {_e}')
 
+check = 'duracion-vs-tmdb'
+# Funza, 20 nov 2026: «Basta Mamá» publicada con 125 min (la franja con su
+# conversatorio) y dura 77. Dueño único: pipeline/duraciones.py — una obra cuya
+# duración difiere de TMDB en más de 5 min y del 10 % se corrige o se declara en
+# `duracion_distinta` de <id>-correcciones.json con su porqué. También la frena
+# publicar.py; acá se vigila lo YA publicado de los festivales vivos.
+try:
+    import sys as _sys_du
+    if 'pipeline' not in _sys_du.path:
+        _sys_du.path.insert(0, 'pipeline')
+    import duraciones as _dura
+    import json as _j_du
+    _dif, _mal_du = [], []
+    for _fdu in _festivalesVivos():
+        try:
+            _ddu = _j_du.load(open(f'festivals/{_fdu}.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        _dif += [f'{_fdu}: {_dura.linea(_x)}' for _x in _dura.distintas(_fdu, _ddu.get('films'))]
+        _mal_du += _dura.declaradas(_fdu)[1]
+    if _dif or _mal_du:
+        fail(check, f'{len(_dif)} duración(es) que contradicen a TMDB sin declarar · ' + ' · '.join((_mal_du + _dif)[:6])
+             + ('' if len(_mal_du + _dif) <= 6 else f' … y {len(_mal_du + _dif) - 6} más'))
+    else:
+        ok(check, 'ninguna obra de un festival vivo contradice la duración de TMDB sin su porqué')
+except Exception as _e:
+    warn(check, f'no se pudo verificar duracion-vs-tmdb: {_e}')
+
 check = 'activity-duration'
 try:
     import json as _json
