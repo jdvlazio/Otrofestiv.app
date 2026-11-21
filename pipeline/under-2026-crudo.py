@@ -85,12 +85,14 @@ F = [
       ('Perros', 'Ezequiel Rossi, Facundo Salomón', 'Argentina', 2026, 10)],
      dict(descripcion='Conversatorio con el Club de lectura y escritura de ciencia ficción anarco feminista.')),
     ('11-27', '21:00', PL, 'Fiesta Under · El Vikingo Selektor', FEM, 6, [],
-     dict(tipo='evento', event_kind='fiesta', acceso='Con boleta: aporte $10.000',
+     # hasta la 1:30 a. m. (dato del festival que pasó Juan, 20 nov): 270 min
+     dict(tipo='evento', event_kind='fiesta', acceso='Con boleta: aporte $10.000', duracion_min=270,
           descripcion='Post punk, darkwave, industrial, EBM.')),
     # Título y texto del formulario de inscripción que mandó el festival (20 nov):
     # https://docs.google.com/forms/d/e/1FAIpQLSfPOmpRt-XqqxNssm_S76cmQb0QR35cQu81IJB9Ua3PiJplTQ/viewform
     ('11-28', '15:00', PL, 'Orígenes de los lenguajes audiovisuales experimentales y laboratorio de creación', CRE, 6, [],
-     dict(tipo='evento', event_kind='taller', acceso='Entrada libre con inscripción previa. Cupos limitados',
+     # 4 horas (dato del festival que pasó Juan, 20 nov)
+     dict(tipo='evento', event_kind='taller', acceso='Entrada libre con inscripción previa. Cupos limitados', duracion_min=240,
           registration_url='https://docs.google.com/forms/d/e/1FAIpQLSfPOmpRt-XqqxNssm_S76cmQb0QR35cQu81IJB9Ua3PiJplTQ/viewform',
           descripcion='Un recorrido por los antecedentes y el origen de los lenguajes audiovisuales experimentales, '
                       'centrado en la animación experimental de pioneros como Walter Ruttmann, Hans Richter y Viking '

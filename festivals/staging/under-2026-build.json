@@ -727,6 +727,7 @@
    "title": "Fiesta Under · El Vikingo Selektor",
    "type": "event",
    "section": "🏳️‍🌈 Feminismos y Disidencias Sexuales",
+   "duration": "270 min",
    "_ancla": [
     "Perpetua Lab - Medellín",
     "2026-11-27",
@@ -754,6 +755,7 @@
    "title": "Orígenes de los lenguajes audiovisuales experimentales y laboratorio de creación",
    "type": "event",
    "section": "🛠️ Actividad Creativa",
+   "duration": "240 min",
    "_ancla": [
     "Perpetua Lab - Medellín",
     "2026-11-28",
@@ -1455,7 +1457,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T22:01:27",
+  "fecha": "2026-11-20T22:08:04",
   "plan_sha": "de4c503917909c23",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"
