@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
-  "capturado": "2026-11-19",
+  "capturado": "2026-11-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Sección = el «Componente» de la agenda, verbatim y en caja de Título (pedido de Juan, 25 oct).",
@@ -1388,7 +1388,7 @@
    "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "125 min",
+   "duration": "77 min",
    "genre": "Comedia",
    "_ancla": [
     "Centro Cultural Bacatá - Funza",
@@ -1791,12 +1791,9 @@
    "duration": "90 min"
   }
  ],
- "_avisos_duracion": [
-  "«Basta Mamá»: 125 min en el festival, 77 en TMDB"
- ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T14:34:19",
+  "fecha": "2026-11-20T20:14:52",
   "plan_sha": "1e679e89c8d991cf",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"

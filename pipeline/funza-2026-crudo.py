@@ -85,7 +85,9 @@ FB_TALLERES = [
 # proyección → la obra
 OBRAS = {
     'Proyección Reflejos': {'titulo': 'Reflejos', 'director': 'Miguel Urrutia', 'pais': 'Colombia'},  # «thriller colombiano»: cambiocolombia.com (dic 2025), enter.co
-    'Proyección Basta Mamá': {'titulo': 'Basta Mamá', 'director': 'Flora Martínez', 'pais': 'Colombia'},  # estreno en salas de Colombia, 12 feb 2026, elenco colombiano (infobae.com, 4 feb 2026); TMDB 1627217 dice US, sin país de producción: error de la ficha
+    # duracion: 77 min (TMDB 1627217 y Letterboxd). Los 125 min de la agenda son el BLOQUE
+    # (6:30–8:35 p. m., «Horario sujeto a duración oficial de la película»), no la obra (20 nov).
+    'Proyección Basta Mamá': {'titulo': 'Basta Mamá', 'director': 'Flora Martínez', 'duracion_min': 77, 'pais': 'Colombia'},  # estreno en salas de Colombia, 12 feb 2026, elenco colombiano (infobae.com, 4 feb 2026); TMDB 1627217 dice US, sin país de producción: error de la ficha
     'Proyección HORIZONTES': {'titulo': 'Horizonte', 'director': 'César Augusto Acevedo',
                               'titulo_fuente': 'HORIZONTES'},
 }
@@ -159,6 +161,8 @@ def main():
             reg.update(titulo=o['titulo'], director=o['director'], titulo_fuente=act)
             if o.get('pais'):
                 reg['pais'] = o['pais']
+            if o.get('duracion_min'):
+                reg['duracion_min'] = o['duracion_min']
             reg['_nota'] = obs
         else:
             reg.update(titulo=act, tipo='evento', event_kind=KIND[act])
