@@ -20,7 +20,8 @@ def h24(t):
 
 
 web = [(h24(a), l.split('— ')[-1]) for a, l in re.findall(r'hora:"([^"]+)",lugar:"([^"]+)"', h)]
-pub = sorted((f['time'], f.get('sala')) for f in b)
+# las funciones que salen de IG (no están en la web) no se comparan contra la web
+pub = sorted((f['time'], f.get('sala')) for f in b if 'instagram.com' not in (f.get('_src') or {}).get('url', ''))
 if sorted(web) != pub:
     errores.append(f'hora/sala: web {sorted(web)} ≠ build {pub}')
 cortos = re.findall(r'\{titulo:"([^"]+)",duracion:"(\d+):(\d+) min"\}', h)
