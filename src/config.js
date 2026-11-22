@@ -151,6 +151,7 @@ export const SECTION_EN = {
   '🌱 Cortometrajes / Talento Local y Nacional': 'Short Films / Local and National Talent',
   '🎙️ Conversatorio sobre Producción y Narrativa Audiovisual': 'Talk on Audiovisual Production and Storytelling',
   '🎤 Taller Especializado': 'Specialized Workshop',
+  '🍿 Largometraje': 'Feature Film',
   // Under Medellín 2026 (20 nov): secciones del reel y del PDF del festival
   '✊ Documental Activismo Social': 'Documentary · Social Activism',
   '🌀 Cine Experimental': 'Experimental Film',
@@ -1512,6 +1513,7 @@ export const SECTION_ARCHETYPES = {
   '🌱 Cortometrajes / Talento Local y Nacional': 'Cortos / Programas',
   '🎙️ Conversatorio sobre Producción y Narrativa Audiovisual': 'Charlas / Industria',
   '🎤 Taller Especializado': 'Charlas / Industria',
+  '🍿 Largometraje': 'Muestra / País',
   // Under Medellín 2026 (20 nov): secciones del reel y del PDF del festival
   '✊ Documental Activismo Social': 'Muestra / País',
   '🌀 Cine Experimental': 'Cortos / Programas',

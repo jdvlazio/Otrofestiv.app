@@ -119,7 +119,7 @@
    "archetype": "Charlas / Industria",
    "order": 9
   },
-  "🎬 Largometraje": {
+  "🍿 Largometraje": {
    "en": "Feature film",
    "archetype": "Muestra / País",
    "order": 10
@@ -589,7 +589,7 @@
   {
    "title": "Itzia Tango y Cacao",
    "type": "film",
-   "section": "🎬 Largometraje",
+   "section": "🍿 Largometraje",
    "director": "Flora Martínez",
    "year": 2023,
    "country": "Colombia",
@@ -626,8 +626,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-21T21:23:30",
-  "plan_sha": "4240b8d04c2ff6b4",
+  "fecha": "2026-11-21T21:28:10",
+  "plan_sha": "6d79b52c4762ba7c",
   "paso": 5,
   "cmd": "python3 pipeline/cajica-2026-verificar.py"
  }
