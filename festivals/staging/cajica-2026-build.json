@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "https://www.culturacajica.gov.co/festival-de-cine-2026/ — const programacion + enlaces",
-  "capturado": "2026-11-20",
+  "capturado": "2026-11-21",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Todo ocurre en el Centro Cultural y de Convenciones Fernando Botero; la sala (Auditorio Múltiple, Auditorio Principal, 3.er piso, Biblioteca) va en `sala`.",
@@ -118,6 +118,11 @@
    "en": "Specialized Workshop",
    "archetype": "Charlas / Industria",
    "order": 9
+  },
+  "🍿 Largometraje": {
+   "en": "Feature film",
+   "archetype": "Muestra / País",
+   "order": 10
   }
  },
  "venues": {
@@ -357,6 +362,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "82 min",
+   "genre": "Acción",
    "_ancla": [
     "Centro Cultural y de Convenciones Fernando Botero - Cajicá",
     "2026-11-21",
@@ -370,6 +376,8 @@
    "has_qa": false,
    "synopsis": "Gabriel, un excapitán del Ejército que ve cómo su hija mayor muere día a día por una enfermedad terminal, se entera de uno de los secretos mejor guardados de la historia: una cura milagrosa llamada «la sangre de Dios», que resguarda una tribu que conoce el lugar exacto donde se obtiene. Decide ir por ella como último recurso, pero un empresario farmacéutico corrupto también se entera y está dispuesto a exterminar a quien se le atraviese. El infierno comienza cuando los tres grupos se encuentran en la selva.",
    "synopsis_lang": "es",
+   "poster": "/assets/cajica-2026/la-sangre-de-dios.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
     "fecha": "Sábado 21 de noviembre de 2026",
@@ -577,12 +585,49 @@
    "description_lang": "es",
    "_fid": "f_20296232e0",
    "id": "f_20296232e0"
+  },
+  {
+   "title": "Itzia Tango y Cacao",
+   "type": "film",
+   "section": "🍿 Largometraje",
+   "director": "Flora Martínez",
+   "year": 2023,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "88 min",
+   "genre": "Drama",
+   "_ancla": [
+    "Centro Cultural y de Convenciones Fernando Botero - Cajicá",
+    "2026-11-22",
+    "16:30"
+   ],
+   "day": "2026-11-22",
+   "time": "16:30",
+   "day_order": 1,
+   "venue": "Centro Cultural y de Convenciones Fernando Botero - Cajicá",
+   "sala": "Auditorio Principal",
+   "has_qa": false,
+   "synopsis": "Itzia es una mujer sorda que asegura haber comenzado a escuchar una música peculiar que siempre proviene del mismo punto cardinal. En el pueblo donde vive la gente cree que está enloqueciendo y la intentan convencer para que vaya al médico. Pero Itzia está segura que esas melodías no son producto de su imaginación. Para demostrar que no está loca, deberá emprender un viaje para encontrar la fuente de la música.",
+   "synopsis_lang": "es",
+   "poster": "/assets/cajica-2026/itzia-tango-y-cacao.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DgBKBP_iVub/",
+    "lamina": "03.jpg",
+    "fecha": "2026-11-21"
+   },
+   "tmdb_id": 1170350,
+   "is_free": true,
+   "lbSlug": "itzia-tango-cacao",
+   "synopsis_en": "Itzia is a deaf woman who claims to have started hearing a peculiar music that always comes from the same cardinal point. In the village where she lives, people believe she is going crazy and try to convince her to see a doctor. But Itzia is certain that these melodies are not a product of her imagination. To prove she is not insane, she will have to embark on a journey to find the source of the music.",
+   "_fid": "f_1cc52c3da6",
+   "id": "f_1cc52c3da6"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T23:16:06",
-  "plan_sha": "c661ad39b01fc552",
+  "fecha": "2026-11-21T21:28:10",
+  "plan_sha": "6d79b52c4762ba7c",
   "paso": 5,
   "cmd": "python3 pipeline/cajica-2026-verificar.py"
  }

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-11-20"
+  "capturado": "2026-11-21"
  },
  "funciones": {
   "f_d4fb717c7f": {
@@ -73,6 +73,13 @@
    "hora": "13:00",
    "sala": "3.er piso, Biblioteca",
    "titulo": "el poder de la voz con juan carlos tinoco"
+  },
+  "f_1cc52c3da6": {
+   "sede": "Centro Cultural y de Convenciones Fernando Botero - Cajicá",
+   "dia": "2026-11-22",
+   "hora": "16:30",
+   "sala": "Auditorio Principal",
+   "titulo": "itzia tango y cacao"
   }
  }
 }

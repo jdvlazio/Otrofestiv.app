@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-20"
+  "capturado": "2026-11-21"
  },
  "obras": [
   {
@@ -23,20 +23,41 @@
    }
   },
   {
+   "titulo": "Itzia Tango y Cacao",
+   "tmdb_id": 1170350,
+   "titulo_original": "Itzia, Tango & Cacao",
+   "poster_path": "/f9iGgWVI8kig4k81ccDrbFt1Baf.jpg",
+   "synopsis_es": "Itzia es una mujer sorda que asegura haber comenzado a escuchar una música peculiar que siempre proviene del mismo punto cardinal. En el pueblo donde vive la gente cree que está enloqueciendo y la intentan convencer para que vaya al médico. Pero Itzia está segura que esas melodías no son producto de su imaginación. Para demostrar que no está loca, deberá emprender un viaje para encontrar la fuente de la música.",
+   "synopsis_en": "Itzia is a deaf woman who claims to have started hearing a peculiar music that always comes from the same cardinal point. In the village where she lives, people believe she is going crazy and try to convince her to see a doctor. But Itzia is certain that these melodies are not a product of her imagination. To prove she is not insane, she will have to embark on a journey to find the source of the music.",
+   "genero": "Drama",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 88,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "itzia-tango-cacao",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Itzia, Tango & Cacao",
+   "_director": "Flora Martínez",
+   "_sondeado": "2026-11-21",
+   "poster": "/assets/cajica-2026/itzia-tango-y-cacao.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "La Sangre de Dios",
    "tmdb_id": 1834002,
    "titulo_original": "La Sangre de Dios",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/wWIRM7cCSrhLrz5BG2ujbhEfCnF.jpg",
+   "synopsis_es": "Gabriel, un excapitán del Ejército que ve cómo su hija mayor muere día a día por una enfermedad terminal, se entera de uno de los secretos mejor guardados de la historia: una cura milagrosa llamada «la sangre de Dios», que resguarda una tribu que conoce el lugar exacto donde se obtiene. Decide ir por ella como último recurso, pero un empresario farmacéutico corrupto también se entera y está dispuesto a exterminar a quien se le atraviese. El infierno comienza cuando los tres grupos se encuentran en la selva.",
    "synopsis_en": "Gabriel, a former army captain watching his eldest daughter slowly die of a terminal illness, learns of one of history’s best-kept secrets: a miraculous cure known as the blood of God, guarded by a tribe that knows exactly where to find it. He sets out for it as a last resort, but a corrupt pharmaceutical businessman also hears of it and is willing to wipe out anyone in his way. Hell breaks loose when the three groups meet in the jungle.",
-   "genero": "",
+   "genero": "Acción",
    "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 82,
    "pais_tmdb": "",
    "lbSlug": "la-sangre-de-dios",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro cajica-2026-altas.json)",
    "_director": "Lucho Velasco",
-   "_sondeado": "2026-11-20"
+   "_sondeado": "2026-11-21",
+   "poster": "/assets/cajica-2026/la-sangre-de-dios.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Tundama",
@@ -58,20 +79,40 @@
   }
  ],
  "verificadas": {
+  "Itzia Tango y Cacao": {
+   "tmdb_id": 1170350,
+   "titulo_original": "Itzia, Tango & Cacao",
+   "poster_path": "/f9iGgWVI8kig4k81ccDrbFt1Baf.jpg",
+   "synopsis_es": "Itzia es una mujer sorda que asegura haber comenzado a escuchar una música peculiar que siempre proviene del mismo punto cardinal. En el pueblo donde vive la gente cree que está enloqueciendo y la intentan convencer para que vaya al médico. Pero Itzia está segura que esas melodías no son producto de su imaginación. Para demostrar que no está loca, deberá emprender un viaje para encontrar la fuente de la música.",
+   "synopsis_en": "Itzia is a deaf woman who claims to have started hearing a peculiar music that always comes from the same cardinal point. In the village where she lives, people believe she is going crazy and try to convince her to see a doctor. But Itzia is certain that these melodies are not a product of her imagination. To prove she is not insane, she will have to embark on a journey to find the source of the music.",
+   "genero": "Drama",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 88,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "itzia-tango-cacao",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Itzia, Tango & Cacao",
+   "_director": "Flora Martínez",
+   "_sondeado": "2026-11-21",
+   "poster": "/assets/cajica-2026/itzia-tango-y-cacao.jpg",
+   "posterSource": "tmdb"
+  },
   "La Sangre de Dios": {
    "tmdb_id": 1834002,
    "titulo_original": "La Sangre de Dios",
-   "poster_path": null,
-   "synopsis_es": "",
+   "poster_path": "/wWIRM7cCSrhLrz5BG2ujbhEfCnF.jpg",
+   "synopsis_es": "Gabriel, un excapitán del Ejército que ve cómo su hija mayor muere día a día por una enfermedad terminal, se entera de uno de los secretos mejor guardados de la historia: una cura milagrosa llamada «la sangre de Dios», que resguarda una tribu que conoce el lugar exacto donde se obtiene. Decide ir por ella como último recurso, pero un empresario farmacéutico corrupto también se entera y está dispuesto a exterminar a quien se le atraviese. El infierno comienza cuando los tres grupos se encuentran en la selva.",
    "synopsis_en": "Gabriel, a former army captain watching his eldest daughter slowly die of a terminal illness, learns of one of history’s best-kept secrets: a miraculous cure known as the blood of God, guarded by a tribe that knows exactly where to find it. He sets out for it as a last resort, but a corrupt pharmaceutical businessman also hears of it and is willing to wipe out anyone in his way. Hell breaks loose when the three groups meet in the jungle.",
-   "genero": "",
+   "genero": "Acción",
    "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 82,
    "pais_tmdb": "",
    "lbSlug": "la-sangre-de-dios",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro cajica-2026-altas.json)",
    "_director": "Lucho Velasco",
-   "_sondeado": "2026-11-20"
+   "_sondeado": "2026-11-21",
+   "poster": "/assets/cajica-2026/la-sangre-de-dios.jpg",
+   "posterSource": "tmdb"
   },
   "Tundama": {
    "tmdb_id": 764925,

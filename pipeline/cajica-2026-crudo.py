@@ -109,7 +109,18 @@ for dia in prog:
             f['_duracion_de'] = f'la franja de la web «{hora}»'
         funciones.append(f)
 
-if len(funciones) != ESPERADOS:
+# «Itzia Tango y Cacao»: NO está en la web (const programacion). Sale del programa de
+# IG: p/DgBKBP_iVub lámina 03 (21 nov) «Domingo 22 Noviembre · ITZIA TANGO Y CACAO ·
+# "Largometraje" · Directora: Flora Martínez · Clasificación: Todos · 4:30 p.m»; la
+# lámina 00 la pone en el Auditorio Principal. Repetida en Df-MpZQkcdR (04) y DgAQuo6EbKC (03).
+IG_ITZIA = 'https://www.instagram.com/p/DgBKBP_iVub/'
+funciones.append({'titulo': 'Itzia Tango y Cacao', 'dia': '2026-11-22', 'hora': '16:30',
+                  'sede': SEDE, 'sala': 'Auditorio Principal', 'seccion': 'Largometraje',
+                  'director': 'Flora Martínez', 'pais': 'Colombia', 'anio': 2023, 'duracion_min': 88,
+                  'tmdb_id': 1170350, 'acceso': 'Entrada libre',
+                  '_src': {'url': IG_ITZIA, 'lamina': '03.jpg', 'fecha': '2026-11-21'}})
+
+if len(funciones) != ESPERADOS + 1:
     sys.exit(f'la web trae {len(funciones)} actividades, se esperaban {ESPERADOS}: revisar')
 for t in enl:
     assert any(f['titulo'] == t for f in funciones), f'enlace sin actividad: {t}'
