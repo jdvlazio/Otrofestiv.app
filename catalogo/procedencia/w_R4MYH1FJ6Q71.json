@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "tmdb:1753830",
   "regla": "tmdb-manda"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23"
  }
 }

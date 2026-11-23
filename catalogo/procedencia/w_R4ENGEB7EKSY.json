@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23"
  }
 }

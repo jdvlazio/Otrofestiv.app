@@ -26,5 +26,11 @@
   "regla": "decisión",
   "motivo": "TMDB",
   "fecha": "2026-10-12"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23"
  }
 }
