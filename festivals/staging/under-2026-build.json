@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
-  "capturado": "2026-11-20",
+  "capturado": "2026-11-23",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "Under Medellín",
@@ -239,7 +239,7 @@
    "time": "18:30",
    "day_order": 0,
    "venue": "Perpetua Lab - Medellín",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
     "lamina": "p. 2",
@@ -1461,7 +1461,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T22:11:56",
+  "fecha": "2026-11-23T09:38:31",
   "plan_sha": "de4c503917909c23",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"
