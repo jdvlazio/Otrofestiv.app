@@ -284,8 +284,8 @@
    "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Centro Ático» (Pontificia Universidad Javeriana). · dirección del catálogo 2026 (Escenarios)",
    "lat": 4.6269751,
    "lng": -74.0650621,
-   "address": "Calle 40B # 6-23",
-   "_matriz": "s_e114d377"
+   "address": "Cl. 40b #6-23",
+   "_matriz": "s_5ce71f2b"
   },
   "CEFE Chapinero - Bogotá": {
    "short": "CEFE Chapinero",
@@ -16658,7 +16658,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-23T11:03:56",
+  "fecha": "2026-11-23T11:07:03",
   "plan_sha": "ad74bc16627e6e5c",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"
