@@ -1,5 +1,5 @@
 {
-  "_nota": "BOGOSHORTS 2026 — 24.º Bogotá Short Film Festival / Festival de Cortos de Bogotá (1–8 dic 2026). PRE-ONBOARDING (23 oct 2026): la GRILLA en PDF (programas por código con día, hora, sala y duración) + los cortos ya publicados de 10 programas (boletines de prensa 005/007/009 y pies de IG). La lista de cortos por programa no está publicada (el menú «Secciones y cortos 2026» apunta a localhost). Sin FESTIVAL_CONFIG. Radar #575.",
+  "_nota": "BOGOSHORTS 2026 — 24.º Bogotá Short Film Festival / Festival de Cortos de Bogotá (1–8 dic 2026). SIN PUBLICAR. Grilla PDF (13 nov) = funciones; catálogo PDF = cortos y sinopsis; agenda de la Cinemateca = TuBoleta. Radar #575.",
   "radar": 575,
   "pasos": [
     {
@@ -9,6 +9,10 @@
     {
       "cmd": "python3 pipeline/bogoshorts-2026-catalogo.py",
       "que": "el catálogo oficial PDF (13 nov, pdftotext -bbox-layout) → los cortos de los 53 programas (sidecar que lee el crudo; manda sobre boletines/IG)"
+    },
+    {
+      "cmd": "python3 pipeline/bogoshorts-2026-textos.py",
+      "que": "la descripción de las actividades, del catálogo"
     },
     {
       "cmd": "python3 pipeline/bogoshorts-2026-cinemateca.py",
@@ -23,47 +27,69 @@
       "que": "triple lectura: el crudo contra dos lecturas a ojo de la grilla (B por celdas, C por días) + contraste con IG"
     },
     {
+      "cmd": "python3 pipeline/bogoshorts-2026-afiches.py",
+      "que": "afiches oficiales (web del festival + registro de altas) donde TMDB no tiene"
+    },
+    {
       "cmd": "python3 pipeline/enriquecer.py bogoshorts-2026 --posters",
       "que": "TMDB + cascada + afiches de las obras ya publicadas"
     },
     {
       "cmd": "python3 pipeline/geocodificar.py bogoshorts-2026 --centro 4.6031,-74.0677 --ciudad \"Bogotá\"",
       "que": "pines: los 11 a mano desde Google Maps (3 a confirmar)"
+    },
+    {
+      "cmd": "python3 pipeline/ensamblar.py bogoshorts-2026",
+      "que": "crudo + plan → build"
+    },
+    {
+      "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json",
+      "que": "afiches a 780×1170"
     }
   ],
   "fuentes_vivas": [
     {
       "archivo": "fuentes/bogoshorts-2026/programacion2026.pdf",
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-      "como": "pagina",
-      "debe_contener": "%PDF",
-      "que": "la grilla de programación que lee el crudo"
+      "que": "la grilla de programación que lee el crudo",
+      "cmd": "curl -sfL --retry 3 --max-time 3000 -z fuentes/bogoshorts-2026/programacion2026.pdf -o fuentes/bogoshorts-2026/programacion2026.pdf https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf && head -c 4 fuentes/bogoshorts-2026/programacion2026.pdf | grep -q %PDF"
     },
     {
       "archivo": "fuentes/bogoshorts-2026/catalogo2026.pdf",
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "como": "pagina",
-      "debe_contener": "%PDF",
-      "que": "el catálogo: los cortos de cada programa"
+      "que": "el catálogo: los cortos de cada programa",
+      "cmd": "curl -sfL --retry 3 --max-time 3000 -z fuentes/bogoshorts-2026/catalogo2026.pdf -o fuentes/bogoshorts-2026/catalogo2026.pdf https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf && head -c 4 fuentes/bogoshorts-2026/catalogo2026.pdf | grep -q %PDF"
+    },
+    {
+      "archivo": "fuentes/bogoshorts-2026/cinemateca/agenda.html",
+      "cmd": "python3 pipeline/bogoshorts-2026-cinemateca.py --bajar",
+      "que": "agenda de la Cinemateca: hora, sala y TuBoleta"
     }
   ],
   "_fuentes_versionadas": {
     "festivals/staging/bogoshorts-2026-programas.json": "los cortos ya publicados de 10 programas; lo lee el crudo",
     "festivals/staging/bogoshorts-2026-cortos.json": "los cortos de cada programa desde el catálogo oficial (13 nov); lo lee el crudo y manda",
-    "festivals/staging/bogoshorts-2026-crudo.json": "la grilla → 119 funciones (formato intermedio)",
+    "festivals/staging/bogoshorts-2026-crudo.json": "la grilla → 130 funciones (formato intermedio)",
     "festivals/staging/bogoshorts-2026-lectura-b.json": "lectura B a ojo de la grilla (por celdas), la lee el verificador",
     "festivals/staging/bogoshorts-2026-lectura-c.json": "lectura C a ojo de la grilla (por días), la lee el verificador",
     "festivals/staging/bogoshorts-2026-venues-geo.json": "pines de Google Maps a mano",
     "festivals/staging/bogoshorts-2026-enriquecido.json": "fichas TMDB/cascada de las obras publicadas; lo escribe enriquecer.py",
-    "festivals/staging/bogoshorts-2026-radar.json": "el volcado del radar #575, que escribe y relee pipeline/radar.py"
+    "festivals/staging/bogoshorts-2026-radar.json": "el volcado del radar #575, que escribe y relee pipeline/radar.py",
+    "festivals/staging/bogoshorts-2026-cinemateca.json": "agenda de la Cinemateca: hora, sala, TuBoleta",
+    "festivals/staging/bogoshorts-2026-textos.json": "descripción de las actividades, del catálogo",
+    "festivals/staging/bogoshorts-2026-altas.json": "registro de altas (pipeline/altas.py)",
+    "festivals/staging/bogoshorts-2026-fichas-web.json": "la página de cada corto en festival.bogoshorts.com",
+    "festivals/staging/bogoshorts-2026-correcciones.json": "fichas TMDB verificadas",
+    "festivals/staging/bogoshorts-2026-afiches.json": "afiches oficiales que TMDB no tiene",
+    "festivals/staging/bogoshorts-2026-sinopsis.json": "sinopsis declaradas con su fuente"
   },
   "festival": {
     "radar": 575,
     "crudo": "festivals/staging/bogoshorts-2026-crudo.json",
     "geo": "festivals/staging/bogoshorts-2026-venues-geo.json",
     "enriquecido": "festivals/staging/bogoshorts-2026-enriquecido.json",
-    "_por_que_secciones": "Los grupos de la leyenda de la grilla, tal cual (el código lleva al grupo). «Franja Encuentros Cercanos» es el rótulo de la fila del Lounge. Emoji, inglés y arquetipo: propuesta, a confirmar con Juan.",
-    "_por_que_sedes": "La sede como la nombra la grilla; la sala (Sala Capital, Sala 2, Sala 3, Salón de la imagen, Lounge) viaja por función. Retina Latina (en línea) no es sede. Pines a mano; Alianza Francesa, CEFE y Sala Gaitán a confirmar.",
+    "_por_que_secciones": "Los grupos de la leyenda de la grilla, tal cual; para lo que la leyenda no trae, el rótulo del catálogo 2026 (Noche de Humor, Eventos especiales, BOGOSHORTS al tablero, BOGOSHORTS Expone, IMAGINATÓN, BFM - BOGOSHORTS Film Market). El inglés es el del propio catálogo cuando lo da. Emoji y arquetipo: propuesta, a confirmar con Juan. «Ganadores 24BOGOSHORTS» no tiene rótulo de sección en ninguna fuente: va en Eventos especiales como propuesta. Al Tablero, Expone, Imaginatón y BFM: el nombre del menú de la web y de la grilla, en la caja de la app (sin mayúscula sostenida).",
+    "_por_que_sedes": "La sede como la nombra la grilla; la sala viaja por función. CEFE = Centro Felicidad Chapinero, Alianza Francesa = Sede Centro y Sala Gaitán = Carrera 7 # 22-47, las tres confirmadas en el catálogo 2026. Retina Latina (en línea) no es sede.",
     "secciones": {
       "Competencia Nacional": {
         "emoji": "🇨🇴",
@@ -77,12 +103,12 @@
       },
       "Competencia VR (Realidad virtual)": {
         "emoji": "🥽",
-        "en": "VR Competition (Virtual Reality)",
+        "en": "Virtual Reality Competition",
         "archetype": "Competencia"
       },
       "Fanático Freak Fantástico F3": {
         "emoji": "👽",
-        "en": "Fanático Freak Fantástico F3",
+        "en": "Fan Freak Fantastic F3",
         "archetype": "Competencia"
       },
       "Conexión": {
@@ -116,7 +142,7 @@
         "archetype": "Cortos / Programas"
       },
       "Festivaleando": {
-        "emoji": "🤝",
+        "emoji": "🎪",
         "en": "Festivaleando",
         "archetype": "Muestra / País"
       },
@@ -132,13 +158,47 @@
       },
       "Colecciones": {
         "emoji": "📚",
-        "en": "Collections",
+        "en": "Collections Competition",
         "archetype": "Cortos / Programas"
       },
       "Franja Encuentros Cercanos": {
         "emoji": "🎙️",
         "en": "Close Encounters",
         "archetype": "Charlas / Industria"
+      },
+      "Noche de Humor": {
+        "emoji": "😂",
+        "en": "Comedy Night",
+        "archetype": "Especiales / Eventos"
+      },
+      "Eventos especiales": {
+        "emoji": "🎉",
+        "en": "Special Events",
+        "archetype": "Especiales / Eventos"
+      },
+      "BOGOSHORTS al tablero": {
+        "emoji": "🧑‍🏫",
+        "en": "To the Board",
+        "archetype": "Charlas / Industria",
+        "nombre": "Al Tablero"
+      },
+      "BOGOSHORTS Expone": {
+        "emoji": "🖼️",
+        "en": "Exhibits",
+        "archetype": "Especiales / Eventos",
+        "nombre": "Expone"
+      },
+      "IMAGINATÓN": {
+        "emoji": "🎥",
+        "en": "One-Minute Marathon",
+        "archetype": "Especiales / Eventos",
+        "nombre": "Imaginatón"
+      },
+      "BFM - BOGOSHORTS Film Market": {
+        "emoji": "🤝",
+        "en": "BFM",
+        "archetype": "Charlas / Industria",
+        "nombre": "BFM"
       }
     },
     "sedes": {
@@ -155,7 +215,7 @@
         ""
       ],
       "Cinemateca de Bogotá Sede Fontanar del Río": [
-        "Cinemateca de Bogotá Sede Fontanar del Río - Bogotá",
+        "Cinemateca Fontanar del Río - Bogotá",
         ""
       ],
       "Teatro El Parque": [
@@ -171,7 +231,7 @@
         ""
       ],
       "CEFE": [
-        "CEFE - Bogotá",
+        "CEFE Chapinero - Bogotá",
         ""
       ],
       "Teatro Delia Zapata Olivella": [
@@ -203,6 +263,7 @@
     "festivalEndStr": "2026-12-08T23:59:00",
     "sharedSlotIsOneScreening": false,
     "mes_es": "diciembre",
-    "dias_vacios": []
+    "dias_vacios": [],
+    "instagram": "bogoshorts"
   }
 }

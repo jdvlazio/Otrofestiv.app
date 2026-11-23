@@ -110,6 +110,56 @@ DESCARTES = {'Fiestas': 'fila «Fiestas» (13 nov): la grilla no dice dónde son
              'Alianza Francesa Sótano 1': 'Acreditaciones, 10:00 a.m. - 6:00 p.m.: no es una función',
              'Retina Latina': 'FI-ENA1 / FI-ENA2 en línea, «Disponibles entre el 1 y el 15 de diciembre»: sin sala ni hora',
              'Franja Encuentros Cercanos Competencia Nacional***': 'rótulo de la fila (flecha al mié 2), no una celda'}
+# EL NOMBRE del programa cuando el de la leyenda no basta: «Ficción 1» existe en la
+# Competencia Nacional y en la Internacional. Se usa el rótulo del catálogo
+# («Competencia Nacional Ficción - CN-FIC1») con el número que le pone la agenda de la
+# Cinemateca («CN-FIC1 | Competencia Nacional Ficción 1», «F3-01 | Fanático Freak Fantástico 1»).
+PREFIJO = {'Competencia Nacional': 'Competencia Nacional', 'Competencia Internacional': 'Competencia Internacional',
+           'Conexión': 'Conexión', 'Panorama': 'Panorama'}
+NOMBRE = {'CI-CP': 'Corto Periodístico', 'CVR': 'Competencia VR - Realidad Virtual',
+          'F3-01': 'Fanático Freak Fantástico 1', 'F3-02': 'Fanático Freak Fantástico 2',
+          'F3-03': 'Fanático Freak Fantástico 3',
+          'WT-CRO1': 'World Tour: Croacia 1', 'WT-CRO2': 'World Tour: Croacia 2'}
+# códigos que la leyenda no trae → (sección, título) del CATÁLOGO 2026
+FUERA_LEYENDA = {
+    'HOM-CESAR': ('Especiales', 'Estrella Fugaz: Un homenaje a César Heredia'),   # catálogo: índice «Especiales / Specials»
+    'HUMOR': ('Noche de Humor', 'Humor en corto'),            # catálogo: índice «Noche de Humor», rótulo «Humor en corto - HUMOR»
+    # una sola función con los dos videoclips; la agenda: «Competencia Nacional e Internacional»
+    'CI-VC/CN-VC': ('Competencia Internacional', 'Competencia Internacional y Nacional Videoclip'),
+}
+# ACTIVIDADES: texto de la celda (arranque) → lo que el catálogo dice de ella.
+# La sección es el rótulo del catálogo («BOGOSHORTS al tablero - BS-TAB», «Eventos
+# especiales», «BOGOSHORTS Expone»). Duración: la franja impresa (catálogo pág. 25-26;
+# programación del 10 BFM, «Al Tablero BFM 10:00 a.m. - 12:00 m.»).
+CAT = 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf'
+ACTIVIDADES = [
+    ('Inauguración', {'seccion': 'Eventos especiales', 'event_kind': 'apertura', 'acceso': 'Entrada con invitación'}),
+    ('Apertura BFM', {'seccion': 'Eventos especiales', 'event_kind': 'apertura',
+                      'acceso': 'Solo para acreditados de Industria BFM con registro previo'}),
+    ('Al Tablero BFM ¿Qué género', {'titulo': '¿Qué género es tu corto? Un viaje por lo extraordinario', 'min': 120}),
+    ('Al Tablero BFM ¿El futuro', {'titulo': '¿El futuro es vertical? Cambian los formatos, cambia la mirada', 'min': 120}),
+    ('Al Tablero BFM Los festivales', {'titulo': 'Los festivales frente a la IA. Aprobar, rechazar, sobrevivir', 'min': 120}),
+    ('Al Tablero BFM Robert', {'titulo': 'Robert Valley: dibujar lo que todavía no existe', 'min': 120, 'texto': 'robert'}),
+    ('Al Tablero De la viñeta', {'titulo': 'De la viñeta a la pantalla. Novela gráfica que se vuelve cine', 'min': 90, 'texto': 'vineta'}),
+    ('Al Tablero Croacia', {'titulo': 'Croacia: una cinematografía que crece desde el corto', 'min': 90, 'texto': 'croacia'}),
+    ('Al Tablero Cine y jazz', {'titulo': 'Cine y Jazz. La hermandad improvisada', 'min': 90, 'texto': 'jazz'}),
+    ('Exposición Andrósfera', {'titulo': 'Andrósfera: Hombres de verdad. Lectura dramatizada', 'seccion': 'BOGOSHORTS Expone',
+                               'event_kind': 'experiencia', 'texto': 'androsfera', 'sala': 'Sala Jules Verne'}),
+    ('IMAGINATÓN', {'titulo': 'Claqueteo XVII IMAGINATÓN', 'seccion': 'IMAGINATÓN', 'event_kind': 'evento', 'texto': 'imaginaton',
+                    'franja': 240}),
+    ('Estreno BFM-IV', {'titulo': 'Estreno BFM-IV - Furia', 'seccion': 'BFM - BOGOSHORTS Film Market'}),
+    ('BS degusta', {'titulo': 'BOGOSHORTS degusta: Picnic Nocturno', 'seccion': 'Eventos especiales', 'event_kind': 'experiencia',
+                    'acceso': 'Entrada con invitación', 'texto': 'picnic'}),
+    ('Ganadores', {'seccion': 'Eventos especiales', 'event_kind': 'awards'}),
+    ('Ceremonia de Clausura', {'titulo': 'Ceremonia de premiación y clausura - Noche de Santa Lucía', 'seccion': 'Eventos especiales',
+                               'event_kind': 'awards', 'acceso': 'Entrada con invitación'}),
+]
+KORINCO = {'titulo': 'La primera estampilla de Korinco', 'pais': 'Colombia, Indonesia, Corea del Sur', 'anio': 2026, 'duracion_min': 5,
+           'sinopsis': 'Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y '
+                       'BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.',
+           '_src': {'url': 'https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11', 'date': '2026-11-23'}}
+TEXTOS = json.load(open(f'{REPO}/festivals/staging/bogoshorts-2026-textos.json', encoding='utf-8'))
+DEF_FONTANAR = 'Entrada libre'   # catálogo, aviso de la sala: «fontanar del río … viernes, sábados y domingos 2:00 p.m. y 4:00 p.m. entrada libre»
 HORA = re.compile(r'^(\d{1,2}):(\d\d)$')
 
 
@@ -198,7 +248,9 @@ def main():
         if txt == 'CVR':
             # «2:00 - 6:00 p.m.» y «S, d y f 11:00 a.m. - 6:00 p.m.» (sáb, dom y festivos;
             # el mar 8 dic es festivo en Colombia: Inmaculada Concepción)
-            hora = '11:00' if DIAS[col] in ('2026-12-05', '2026-12-06', '2026-12-08') else '14:00'
+            # el mar 8 (festivo) lo dicen expreso el catálogo del 18 nov («Mié. 2, Jue. 3, Vie. 4 y
+            # Mar. 8 2:00 p.m. a 6:00 p.m.») y las fichas de la web (14:00): mandan sobre la nota genérica
+            hora = '11:00' if DIAS[col] in ('2026-12-05', '2026-12-06') else '14:00'
         f = {'dia': DIAS[col], 'hora': hora, 'sede': e[2], 'sala': e[3],
              'ciudad': 'Bogotá', 'texto_grilla': txt,
              '_src': {'url': URL, 'date': '2026-11-13'}}
@@ -213,6 +265,9 @@ def main():
                       'has_qa': cod[2] == '**'})
             if cod[1] not in LEYENDA:          # CN-FIC1 → «Ficción 1»
                 f['titulo'] = f'{nombre} {cod[1][-1]}'
+            if grupo in PREFIJO and not f['titulo'].startswith(PREFIJO[grupo]):
+                f['titulo'] = f"{PREFIJO[grupo]} {f['titulo']}"
+            f['titulo'] = NOMBRE.get(cod[1], f['titulo'])
             if cod[2] == '***':
                 f['_nota'] = '*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital'
         elif txt.startswith('Noche Frankenstein'):   # trae «Aliens (52')» = F3-ALIENS
@@ -220,22 +275,80 @@ def main():
                       'titulo': 'Noche Frankenstein Vol 10', 'has_qa': False,
                       '_nota': "la celda trae «Aliens (52')»: el programa F3-ALIENS (IG DehCoz4kZkM)"})
         elif cod and cod[1] in ('HOM-CESAR', 'HUMOR', 'CI-VC/CN-VC'):
-            f.update({'codigo': cod[1], 'titulo': re.sub(r"\s*\(\d+'\)", '', txt).replace('**', ''),
-                      'seccion': '', 'has_qa': cod[2] == '**',
-                      '_nota': 'el código no está en la leyenda de la grilla'})
+            sec_, tit_ = FUERA_LEYENDA[cod[1]]
+            f.update({'codigo': cod[1], 'titulo': tit_, 'seccion': sec_, 'has_qa': cod[2] == '**',
+                      '_nota': 'el código no está en la leyenda de la grilla: sección y título del catálogo'})
         else:
-            f.update({'titulo': txt.replace('*', '').strip(), 'seccion': '', 'tipo': 'evento'})
+            f.update({'titulo': txt.replace('*', '').strip(), 'seccion': '', 'tipo': 'evento', 'type': 'event',
+                      'has_qa': '**' in txt and '***' not in txt})
             if e[3].startswith('Lounge') and hora == '16:30':
-                f['seccion'] = 'Franja Encuentros Cercanos'
+                f.update({'titulo': 'Encuentros Cercanos: ' + f['titulo'], 'seccion': 'Franja Encuentros Cercanos',
+                          'event_kind': 'encuentro'})
+            act = next((d for k, d in ACTIVIDADES if txt.startswith(k)), None)
+            if act:
+                f['titulo'] = act.get('titulo', f['titulo'])
+                f['seccion'] = act.get('seccion', 'BOGOSHORTS al tablero')
+                f['event_kind'] = act.get('event_kind', 'charla')
+                if act.get('min'):
+                    f['duracion_min'] = act['min']
+                if act.get('franja'):
+                    f['duracion_min'] = act['franja']
+                if act.get('sala'):
+                    f['sala'] = act['sala']
+                if act.get('texto'):
+                    f['descripcion'] = TEXTOS['textos'][act['texto']]['es']
+                if act.get('acceso'):
+                    f['acceso'] = act['acceso']
+            elif f['seccion'] == '':
+                sys.exit(f'✗ actividad sin sección: {txt}')
+            if txt.startswith('Estreno BFM-IV'):     # la agenda de la sala da la obra
+                f.update({'codigo': 'BFM-IV'})
+                f.pop('event_kind'); f.pop('type'); f.pop('tipo')
         # «* Entrada con invitación»: un asterisco solo (** es Q&A, *** Encuentros)
-        f['acceso'] = 'Entrada con invitación' if re.search(r'(?<!\*)\*(?!\*)', txt) else DESCONOCIDO
+        f.setdefault('acceso', 'Entrada con invitación' if re.search(r'(?<!\*)\*(?!\*)', txt) else DESCONOCIDO)
+        if f.get('codigo') == 'F3-ALIENS':   # catálogo, escenarios y eventos especiales
+            f['acceso'] = 'Entrada con manilla'   # la grilla pone * (invitación); el catálogo y la web, más nuevos, manilla
+        if e[2] == 'Cinemateca de Bogotá Sede Fontanar del Río':
+            f['acceso'] = DEF_FONTANAR
+        if e[2] == 'Alianza Francesa' and not f['sala']:
+            f['sala'] = 'Sala Jules Verne'   # catálogo: «Alianza Francesa - Sala Jules Verne»
         # la sala vende: el enlace de TuBoleta de esa función en la agenda de la Cinemateca
         b = BOLETA.get((f['dia'], f['hora'], f['sala'])) if e[2] == 'Cinemateca de Bogotá' else None
-        if b:
+        if b and b['ticket_url']:
             f['acceso'], f['ticket_url'] = 'Con boleta', b['ticket_url']
+        elif b and b.get('entrada_libre'):
+            f['acceso'] = 'Entrada libre'
+        elif e[2] == 'Cinemateca de Bogotá' and f['acceso'] == DESCONOCIDO and (f.get('type') == 'event' or f.get('codigo') == 'CVR'):
+            f['acceso'] = 'Entrada libre (no se anuncia pago)'   # charlas y VR: la agenda de la sala no les vende boleta
+        elif e[2] == 'Cinemateca de Bogotá' and f.get('codigo') and f['codigo'] != 'CVR':
+            f['acceso'] = 'Con boleta'       # sede que siempre cobra (funcion.py): CHI-ANCY, sin enlace todavía
         if f.get('codigo') in progs:
             f['obras'] = progs[f['codigo']]
+        # KORINCO: está en la lista de la sala (CHI-KIDS, 6 obras) y en el texto del catálogo
+        # («La primera estampilla de KORINCO…»), pero el catálogo no le hizo ficha
+        if f.get('codigo') == 'CHI-KIDS':
+            f['obras'] = f['obras'] + [KORINCO]
+        if f.get('codigo') == 'CVR':
+            # «2:00 - 6:00 p.m.» / «11:00 a.m. - 6:00 p.m.»: se entra por turnos, no es una
+            # proyección con hora — el modelo de VR #OtrosMundosPosibles (NarrarElFuturo)
+            f.update({'type': 'event', 'info': True, 'event_kind': 'experiencia',
+                      'duracion_min': 420 if f['hora'] == '11:00' else 240})
+        if f.get('codigo') == 'BFM-IV':
+            f['obras'] = [{'titulo': 'Furia', 'director': 'Daniela Córdoba', 'pais': 'Colombia', 'anio': 2026,
+                           'duracion_min': 14, '_src': {'url': b['pagina'], 'date': '2026-11-23'}}]
+        # UN programa de UNA obra no es un programa: la función es esa obra (FI-LARGO, Furia)
+        if len(f.get('obras') or []) == 1:
+            u = f.pop('obras')[0]
+            f['_programa'] = f['titulo']
+            f.update({k: v for k, v in u.items() if k != '_src'})
         funciones.append(f)
+    # La Entrega clave IMAGINATÓN no tiene celda: la grilla dice «IMAGINATÓN 2:00 - 8:00 p.m.».
+    # El catálogo la trae aparte, y con dos horas: 7:00 p. m. (pág. 23) y 8:00 p. m. (escenarios
+    # y eventos especiales). Contradicción sin sala → la más temprana.
+    funciones.append({'dia': '2026-12-04', 'hora': '19:00', 'sede': 'Teatro El Parque', 'sala': '', 'ciudad': 'Bogotá',
+                      'texto_grilla': 'IMAGINATÓN', 'titulo': 'Entrega clave IMAGINATÓN', 'seccion': 'IMAGINATÓN',
+                      'tipo': 'evento', 'type': 'event', 'event_kind': 'evento', 'has_qa': False,
+                      'acceso': DESCONOCIDO, '_src': {'url': CAT, 'date': '2026-11-18'}})
     import unicodedata
     def _nfc(x):
         if isinstance(x, str): return unicodedata.normalize('NFC', x)

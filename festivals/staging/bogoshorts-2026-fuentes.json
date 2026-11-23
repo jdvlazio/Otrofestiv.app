@@ -1,0 +1,93 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/fuentes_descubrir.py",
+  "capturado": "2026-11-23T10:01",
+  "paginas_leidas": 60,
+  "errores": []
+ },
+ "raices": {
+  "web": "https://festival.bogoshorts.com/",
+  "_sin_bio": "el perfil de @bogoshorts no se pudo leer sin sesión; los enlaces de sus posts (bit.ly) van a la web"
+ },
+ "items": {
+  "https://docs.google.com/forms/d/e/1FAIpQLScwgnwNCQ2vuggHzQW3cXasg8z_JCie-lTQiKEeBNEYz9UGrQ/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://festival.bogoshorts.com/",
+   "primera_vez": "2026-11-23T10:01",
+   "ultima_vez": "2026-11-23T10:01",
+   "estado": "descartada",
+   "_por_que": "suscripción al newsletter, no es inscripción a una actividad",
+   "revisado": "2026-11-23T10:11"
+  },
+  "https://drive.google.com/file/d/10qnOzZsj-pnBccLXWTT1jp15KcMEet2v/view": {
+   "tipo": "drive",
+   "visto_en": "https://festival.bogoshorts.com/prensa",
+   "primera_vez": "2026-11-23T10:01",
+   "ultima_vez": "2026-11-23T10:01",
+   "estado": "descartada",
+   "_por_que": "catálogo de la edición 23 (2025)",
+   "revisado": "2026-11-23T10:11"
+  },
+  "https://festival.bogoshorts.com/pdf/informacion-escenarios-pagina%20web.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://festival.bogoshorts.com/escenarios",
+   "primera_vez": "2026-11-23T10:01",
+   "ultima_vez": "2026-11-23T10:01",
+   "estado": "descartada",
+   "_por_que": "escenarios de 2025; sedes 2026 en el catálogo",
+   "revisado": "2026-11-23T10:11"
+  },
+  "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/10BFM_catalogo2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://festival.bogoshorts.com/prensa",
+   "primera_vez": "2026-11-23T10:01",
+   "ultima_vez": "2026-11-23T10:01",
+   "estado": "sin-revisar"
+  },
+  "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/10BFM_programacion2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://festival.bogoshorts.com/interna/9",
+   "primera_vez": "2026-11-23T10:01",
+   "ultima_vez": "2026-11-23T10:01",
+   "estado": "usada",
+   "_por_que": "duración de Al Tablero BFM (10:00 a.m. - 12:00 m.); el resto es industria con acreditación",
+   "revisado": "2026-11-23T10:11"
+  },
+  "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://festival.bogoshorts.com/",
+   "primera_vez": "2026-11-23T10:01",
+   "ultima_vez": "2026-11-23T10:01",
+   "estado": "descartada",
+   "_por_que": "bases de acreditación, sin programación",
+   "revisado": "2026-11-23T10:11"
+  },
+  "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://festival.bogoshorts.com/",
+   "primera_vez": "2026-11-23T10:01",
+   "ultima_vez": "2026-11-23T10:01",
+   "estado": "usada",
+   "_por_que": "cortos, sinopsis, actividades, sedes y acceso",
+   "revisado": "2026-11-23T10:11"
+  },
+  "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://festival.bogoshorts.com/",
+   "primera_vez": "2026-11-23T10:01",
+   "ultima_vez": "2026-11-23T10:01",
+   "estado": "usada",
+   "_por_que": "la grilla",
+   "revisado": "2026-11-23T10:11"
+  },
+  "https://registro.bogoshorts.com/documentos/TERMINOS_Y_CONDICIONES_WEB_BOGOSHORTS.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://festival.bogoshorts.com/",
+   "primera_vez": "2026-11-23T10:01",
+   "ultima_vez": "2026-11-23T10:01",
+   "estado": "descartada",
+   "_por_que": "términos de la web",
+   "revisado": "2026-11-23T10:11"
+  }
+ }
+}

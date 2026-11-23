@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-  "capturado": "2026-11-15",
+  "capturado": "2026-11-23",
   "metodo": "pdftotext -bbox: columna por x del encabezado, fila por la hora más cercana dentro del espacio"
  },
  "funciones": [
@@ -17,8 +17,11 @@
     "date": "2026-11-13"
    },
    "titulo": "Inauguración",
-   "seccion": "",
+   "seccion": "Eventos especiales",
    "tipo": "evento",
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "apertura",
    "acceso": "Entrada con invitación"
   },
   {
@@ -32,9 +35,12 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Competencia Nacional Experimental",
+   "titulo": "Encuentros Cercanos: Competencia Nacional Experimental",
    "seccion": "Franja Encuentros Cercanos",
    "tipo": "evento",
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "encuentro",
    "acceso": "desconocido"
   },
   {
@@ -49,9 +55,12 @@
     "date": "2026-11-13"
    },
    "titulo": "Apertura BFM REFRESH Vol. 8",
-   "seccion": "",
+   "seccion": "Eventos especiales",
    "tipo": "evento",
-   "acceso": "desconocido"
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "apertura",
+   "acceso": "Solo para acreditados de Industria BFM con registro previo"
   },
   {
    "dia": "2026-12-02",
@@ -64,10 +73,14 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Al Tablero BFM ¿Qué género es tu corto? Un viaje por lo extraordinario",
-   "seccion": "",
+   "titulo": "¿Qué género es tu corto? Un viaje por lo extraordinario",
+   "seccion": "BOGOSHORTS al tablero",
    "tipo": "evento",
-   "acceso": "desconocido"
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "charla",
+   "duracion_min": 120,
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-02",
@@ -80,10 +93,15 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Al Tablero De la viñeta a la pantalla Novela gráfica que se vuelve cine",
-   "seccion": "",
+   "titulo": "De la viñeta a la pantalla. Novela gráfica que se vuelve cine",
+   "seccion": "BOGOSHORTS al tablero",
    "tipo": "evento",
-   "acceso": "desconocido"
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "charla",
+   "duracion_min": 90,
+   "descripcion": "¿Qué sucede cuando una historia dibujada adquiere movimiento, sonido y una duración que ya no decide el lector? A propósito del homenaje a Marjane Satrapi y del programa de cortometrajes que dialogan con su obra, BOGOSHORTS propone una conversación sobre los encuentros y las transformaciones entre la novela gráfica y el cine. Persépolis será el punto de partida para explorar un territorio más amplio: cómo se traducen las viñetas en planos, qué ocurre con los silencios y las elipsis entre imágenes y cómo conservar una voz propia al cambiar de lenguaje. Desde la animación hasta la imagen real, el diálogo abordará las decisiones narrativas y visuales que implica adaptar una obra y las posibilidades de reinterpretarla. Un encuentro para pensar cómo el trazo, el encuadre y el montaje construyen relatos, y cómo una misma historia puede encontrar distintas formas de conmovernos en el papel y en la pantalla.",
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-02",
@@ -99,7 +117,7 @@
    "duracion_min": 97,
    "codigo": "CN-EXP",
    "seccion": "Competencia Nacional",
-   "titulo": "Experimental",
+   "titulo": "Competencia Nacional Experimental",
    "has_qa": false,
    "_nota": "*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital",
    "acceso": "Con boleta",
@@ -229,7 +247,7 @@
    "duracion_min": 93,
    "codigo": "CI-CP",
    "seccion": "Competencia Internacional",
-   "titulo": "Corto periodístico",
+   "titulo": "Corto Periodístico",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313380",
@@ -334,7 +352,7 @@
    "duracion_min": 80,
    "codigo": "PAC-FIC",
    "seccion": "Panorama",
-   "titulo": "Colombia Ficción",
+   "titulo": "Panorama Colombia Ficción",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313381",
@@ -547,7 +565,7 @@
    "duracion_min": 91,
    "codigo": "CI-ANI1",
    "seccion": "Competencia Internacional",
-   "titulo": "Animación 1",
+   "titulo": "Competencia Internacional Animación 1",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313383",
@@ -714,7 +732,7 @@
    "duracion_min": 83,
    "codigo": "F3-02",
    "seccion": "Fanático Freak Fantástico F3",
-   "titulo": "Programa 02",
+   "titulo": "Fanático Freak Fantástico 2",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313384",
@@ -819,7 +837,7 @@
    "duracion_min": 92,
    "codigo": "WT-CRO1",
    "seccion": "World Tour",
-   "titulo": "Croacia 1",
+   "titulo": "World Tour: Croacia 1",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313385",
@@ -913,7 +931,7 @@
    "duracion_min": 102,
    "codigo": "CI-DOC1",
    "seccion": "Competencia Internacional",
-   "titulo": "Documental 1",
+   "titulo": "Competencia Internacional Documental 1",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313386",
@@ -962,7 +980,7 @@
      "duracion_min": 20,
      "_duracion": "20’00’’",
      "language": "Inglés, Urdu, Francés",
-     "sinopsis": "¿Qué aspecto tiene lo queer cuando has pasado la vida borrando What does queerness look like when you’ve spent a lifetime erasing sus huellas para sobrevivir? En Red Elephant, el director comparte every trace of it to stay alive? In Red Elephant, the director shares his su recorrido por la violencia silenciosa de la burocracia, donde lo journey through the quiet violence of bureaucracy, where queerness queer debe traducirse en pruebas y el trauma en testimonio. must be translated into evidence, and trauma into testimony. In En el sistema de asilo belga, a solicitantes LGBTQ+, muchos Belgium’s asylum system, LGBTQ+ seekers, many from worlds where provenientes de lugares donde callar era sobrevivir, se les exige silence meant survival, are asked to speak the unspeakable, recounnarrar lo indecible y contar sus heridas más íntimas a desconocidos. ting their most intimate wounds to strangers they’ve only just met.",
+     "sinopsis": "¿Qué aspecto tiene lo queer cuando has pasado la vida borrando sus huellas para sobrevivir? En Red Elephant, el director comparte su recorrido por la violencia silenciosa de la burocracia, donde lo queer debe traducirse en pruebas y el trauma en testimonio. En el sistema de asilo belga, a solicitantes LGBTQ+, muchos provenientes de lugares donde callar era sobrevivir, se les exige narrar lo indecible y contar sus heridas más íntimas a desconocidos.",
      "_src": {
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 90,
@@ -1015,7 +1033,7 @@
    "duracion_min": 87,
    "codigo": "CI-DOC2",
    "seccion": "Competencia Internacional",
-   "titulo": "Documental 2",
+   "titulo": "Competencia Internacional Documental 2",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313396",
@@ -1101,9 +1119,9 @@
    },
    "codigo": "CVR",
    "seccion": "Competencia VR (Realidad virtual)",
-   "titulo": "Competencia realidad virtual",
+   "titulo": "Competencia VR - Realidad Virtual",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Mirage",
@@ -1187,13 +1205,17 @@
       "date": "2026-11-13"
      }
     }
-   ]
+   ],
+   "type": "event",
+   "info": true,
+   "event_kind": "experiencia",
+   "duracion_min": 240
   },
   {
    "dia": "2026-12-02",
    "hora": "13:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CITY-BCN1 (104')",
    "_src": {
@@ -1342,7 +1364,7 @@
    "dia": "2026-12-02",
    "hora": "16:00",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CN-FIC1** (89')",
    "_src": {
@@ -1352,7 +1374,7 @@
    "duracion_min": 89,
    "codigo": "CN-FIC1",
    "seccion": "Competencia Nacional",
-   "titulo": "Ficción 1",
+   "titulo": "Competencia Nacional Ficción 1",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -1447,7 +1469,7 @@
    "dia": "2026-12-02",
    "hora": "18:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CI-EXP2** (84')",
    "_src": {
@@ -1457,7 +1479,7 @@
    "duracion_min": 84,
    "codigo": "CI-EXP2",
    "seccion": "Competencia Internacional",
-   "titulo": "Experimental 2",
+   "titulo": "Competencia Internacional Experimental 2",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -1691,29 +1713,19 @@
    "duracion_min": 117,
    "codigo": "FI-LARGO",
    "seccion": "Cortofilia",
-   "titulo": "Largo de cortos",
+   "titulo": "Yndige mennesker",
    "has_qa": false,
    "acceso": "desconocido",
-   "obras": [
-    {
-     "titulo": "Yndige mennesker",
-     "director": "Anders Jon, Kasper Juhl, Michael Kunov y Michael Panduro",
-     "pais": "Dinamarca",
-     "anio": 2025,
-     "titulos_alt": [
-      "Adorable Humans"
-     ],
-     "duracion_min": 117,
-     "_duracion": "117’",
-     "language": "Danés",
-     "sinopsis": "Cuatro cineastas daneses llevan el lado más oscuro de Hans Christian Andersen al terror contemporáneo. Un joven cuidador descubre que el hombre moribundo a su cargo guarda secretos; una madre intenta impedir la muerte de su hijo después de verla en un sueño; una pareja se muda al campo y encuentra un espejo que trastorna su vida; y un músico incapaz de componer empieza a sentirse acosado por su propia musa. Cada corto fue escrito y dirigido por un cineasta diferente pero todos se desarrollaron en colaboración y se entrelazan en torno a la pérdida, el deseo y el impulso de cambiar lo que parece inevitable. Four Danish filmmakers bring the darker side of Hans Christian Andersen into contemporary horror. A young caregiver discovers that the dying man in his care is hiding secrets; a mother tries to prevent her son’s death after seeing it in a dream; a couple move to the countryside and find a mirror that upends their lives; and a musician struggling to write is haunted by his own muse. Each short film was written and directed by a different filmmaker, but all four were developed together and are linked by loss, desire and the urge to change what seems inevitable.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 173,
-      "date": "2026-11-13"
-     }
-    }
-   ]
+   "_programa": "Largo de cortos",
+   "director": "Anders Jon, Kasper Juhl, Michael Kunov y Michael Panduro",
+   "pais": "Dinamarca",
+   "anio": 2025,
+   "titulos_alt": [
+    "Adorable Humans"
+   ],
+   "_duracion": "117’",
+   "language": "Danés",
+   "sinopsis": "Cuatro cineastas daneses llevan el lado más oscuro de Hans Christian Andersen al terror contemporáneo. Un joven cuidador descubre que el hombre moribundo a su cargo guarda secretos; una madre intenta impedir la muerte de su hijo después de verla en un sueño; una pareja se muda al campo y encuentra un espejo que trastorna su vida; y un músico incapaz de componer empieza a sentirse acosado por su propia musa. Cada corto fue escrito y dirigido por un cineasta diferente pero todos se desarrollaron en colaboración y se entrelazan en torno a la pérdida, el deseo y el impulso de cambiar lo que parece inevitable."
   },
   {
    "dia": "2026-12-03",
@@ -1726,9 +1738,12 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Competencia Nacional Animación",
+   "titulo": "Encuentros Cercanos: Competencia Nacional Animación",
    "seccion": "Franja Encuentros Cercanos",
    "tipo": "evento",
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "encuentro",
    "acceso": "desconocido"
   },
   {
@@ -1742,10 +1757,14 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Al Tablero BFM ¿El futuro es vertical? Cambian los formatos, cambia la mirada",
-   "seccion": "",
+   "titulo": "¿El futuro es vertical? Cambian los formatos, cambia la mirada",
+   "seccion": "BOGOSHORTS al tablero",
    "tipo": "evento",
-   "acceso": "desconocido"
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "charla",
+   "duracion_min": 120,
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-03",
@@ -1758,10 +1777,15 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Al Tablero Croacia: una cinematografía que crece desde el corto",
-   "seccion": "",
+   "titulo": "Croacia: una cinematografía que crece desde el corto",
+   "seccion": "BOGOSHORTS al tablero",
    "tipo": "evento",
-   "acceso": "desconocido"
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "charla",
+   "duracion_min": 90,
+   "descripcion": "¿Qué lugar ocupa el cortometraje en la construcción y el reconocimiento internacional de una cinematografía? La presencia de Croacia en esta edición de BOGOSHORTS, con doce películas en distintas secciones del festival, abre una oportunidad para explorar esta pregunta junto a los realizadores invitados e Irena Jelić, directora del Departamento de Promoción y Festivales del Croatian Audiovisual Centre (HAVC). A partir de sus experiencias, la conversación abordará las relaciones entre la búsqueda de una voz propia, las condiciones para crear y los caminos para llegar a públicos internacionales. Un encuentro para conocer cómo dialogan el trabajo de los cineastas y el acompañamiento institucional, qué lugar conserva el formato corto en sus trayectorias y qué aprendizajes pueden compartirse con Colombia. Más allá de descubrir las historias detrás de las películas, este diálogo busca acercar a dos comunidades cinematográficas y explorar posibilidades de intercambio y colaboración.",
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-03",
@@ -1777,7 +1801,7 @@
    "duracion_min": 64,
    "codigo": "CN-ANI",
    "seccion": "Competencia Nacional",
-   "titulo": "Animación",
+   "titulo": "Competencia Nacional Animación",
    "has_qa": false,
    "_nota": "*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital",
    "acceso": "Con boleta",
@@ -1926,7 +1950,7 @@
    "duracion_min": 94,
    "codigo": "CI-FIC1",
    "seccion": "Competencia Internacional",
-   "titulo": "Ficción 1",
+   "titulo": "Competencia Internacional Ficción 1",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313397",
@@ -2258,7 +2282,7 @@
    "duracion_min": 77,
    "codigo": "WT-CRO2",
    "seccion": "World Tour",
-   "titulo": "Croacia 2",
+   "titulo": "World Tour: Croacia 2",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313400",
@@ -2348,7 +2372,7 @@
    "duracion_min": 86,
    "codigo": "F3-03",
    "seccion": "Fanático Freak Fantástico F3",
-   "titulo": "Programa 03",
+   "titulo": "Fanático Freak Fantástico 3",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313401",
@@ -2448,7 +2472,7 @@
    "duracion_min": 83,
    "codigo": "CN-DOC",
    "seccion": "Competencia Nacional",
-   "titulo": "Documental",
+   "titulo": "Competencia Nacional Documental",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313405",
@@ -2715,7 +2739,7 @@
    "duracion_min": 85,
    "codigo": "CON-BRA",
    "seccion": "Conexión",
-   "titulo": "Brasil",
+   "titulo": "Conexión Brasil",
    "has_qa": false,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313403",
@@ -2810,7 +2834,7 @@
    "duracion_min": 89,
    "codigo": "CI-ANI2",
    "seccion": "Competencia Internacional",
-   "titulo": "Animación 2",
+   "titulo": "Competencia Internacional Animación 2",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313404",
@@ -2995,9 +3019,9 @@
    },
    "codigo": "CVR",
    "seccion": "Competencia VR (Realidad virtual)",
-   "titulo": "Competencia realidad virtual",
+   "titulo": "Competencia VR - Realidad Virtual",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Mirage",
@@ -3081,13 +3105,17 @@
       "date": "2026-11-13"
      }
     }
-   ]
+   ],
+   "type": "event",
+   "info": true,
+   "event_kind": "experiencia",
+   "duracion_min": 240
   },
   {
    "dia": "2026-12-03",
    "hora": "13:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CON-LATAM** (82')",
    "_src": {
@@ -3097,7 +3125,7 @@
    "duracion_min": 82,
    "codigo": "CON-LATAM",
    "seccion": "Conexión",
-   "titulo": "Latinoamérica",
+   "titulo": "Conexión Latinoamérica",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -3176,7 +3204,7 @@
    "dia": "2026-12-03",
    "hora": "16:00",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CN-FIC2** (81')",
    "_src": {
@@ -3186,7 +3214,7 @@
    "duracion_min": 81,
    "codigo": "CN-FIC2",
    "seccion": "Competencia Nacional",
-   "titulo": "Ficción 2",
+   "titulo": "Competencia Nacional Ficción 2",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -3283,16 +3311,20 @@
    "dia": "2026-12-03",
    "hora": "18:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "Exposición Andrósfera lectura en vivo",
    "_src": {
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Exposición Andrósfera lectura en vivo",
-   "seccion": "",
+   "titulo": "Andrósfera: Hombres de verdad. Lectura dramatizada",
+   "seccion": "BOGOSHORTS Expone",
    "tipo": "evento",
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "experiencia",
+   "descripcion": "Como extensión de esta experiencia, la lectura dramatizada propone una adaptación escénica y audiovisual del manga. A través de viñetas interpretadas en vivo, piezas audiovisuales que dan vida a los personajes y breves secuencias de animación, Pato León Conejo, David Vargas y Gabriela Pedraza transportarán al público al universo inquietante de la Andrósfera. La experiencia contará, además, con música en vivo y un intermedio a cargo de Tragedia Travesti, que presentará un espectáculo de horror drag. De esta manera, la narrativa gráfica trasciende sus páginas para convertirse en una experiencia escénica que articula teatro, cine, performance y música.",
    "acceso": "desconocido"
   },
   {
@@ -3413,7 +3445,7 @@
    "duracion_min": 103,
    "codigo": "CI-FIC2",
    "seccion": "Competencia Internacional",
-   "titulo": "Ficción 2",
+   "titulo": "Competencia Internacional Ficción 2",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -3668,10 +3700,10 @@
    },
    "duracion_min": 79,
    "codigo": "HOM-CESAR",
-   "titulo": "HOM-CESAR",
-   "seccion": "",
+   "titulo": "Estrella Fugaz: Un homenaje a César Heredia",
+   "seccion": "Especiales",
    "has_qa": false,
-   "_nota": "el código no está en la leyenda de la grilla",
+   "_nota": "el código no está en la leyenda de la grilla: sección y título del catálogo",
    "acceso": "desconocido",
    "obras": [
     {
@@ -3771,9 +3803,12 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Competencia Nacional Documental",
+   "titulo": "Encuentros Cercanos: Competencia Nacional Documental",
    "seccion": "Franja Encuentros Cercanos",
    "tipo": "evento",
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "encuentro",
    "acceso": "desconocido"
   },
   {
@@ -3787,10 +3822,14 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Al Tablero BFM Los festivales frente a la IA Aprobar, rechazar, sobrevivir",
-   "seccion": "",
+   "titulo": "Los festivales frente a la IA. Aprobar, rechazar, sobrevivir",
+   "seccion": "BOGOSHORTS al tablero",
    "tipo": "evento",
-   "acceso": "desconocido"
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "charla",
+   "duracion_min": 120,
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-04",
@@ -3803,10 +3842,15 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Al Tablero Cine y jazz La hermandad improvisada",
-   "seccion": "",
+   "titulo": "Cine y Jazz. La hermandad improvisada",
+   "seccion": "BOGOSHORTS al tablero",
    "tipo": "evento",
-   "acceso": "desconocido"
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "charla",
+   "duracion_min": 90,
+   "descripcion": "Una trompeta puede cambiar la manera en que vemos un rostro; una imagen, la forma en que escuchamos una melodía. A propósito del programa Miles Davis: 100 años de jazz, este Al Tablero celebra la complicidad entre dos artes que hacen del tiempo, el ritmo y el silencio su materia creativa. El encuentro de Davis con las imágenes de Ascensor para el cadalso, de Louis Malle, será el punto de partida para explorar una relación en la que la música puede sugerir lo que un personaje calla, transformar una atmósfera o llevar el relato hacia un lugar inesperado. ¿Qué puede aprender el cine de la improvisación? ¿Cómo dialogan un solo y un plano, una síncopa y un corte de montaje? Entre bandas sonoras, películas sobre músicos e imágenes que parecen tocar sus propias notas, esta charla será una declaración de amor al jazz y al cine: a su capacidad de escucharse, desafiarse y encontrar juntos algo que ninguno había imaginado por separado.",
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-04",
@@ -3822,7 +3866,7 @@
    "duracion_min": 83,
    "codigo": "CN-DOC",
    "seccion": "Competencia Nacional",
-   "titulo": "Documental",
+   "titulo": "Competencia Nacional Documental",
    "has_qa": false,
    "_nota": "*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital",
    "acceso": "Con boleta",
@@ -4025,7 +4069,7 @@
    "duracion_min": 94,
    "codigo": "F3-01",
    "seccion": "Fanático Freak Fantástico F3",
-   "titulo": "Programa 01",
+   "titulo": "Fanático Freak Fantástico 1",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313407",
@@ -4244,7 +4288,7 @@
    "duracion_min": 97,
    "codigo": "CI-EXP1",
    "seccion": "Competencia Internacional",
-   "titulo": "Experimental 1",
+   "titulo": "Competencia Internacional Experimental 1",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313409",
@@ -4379,7 +4423,7 @@
    "duracion_min": 82,
    "codigo": "CON-ESP",
    "seccion": "Conexión",
-   "titulo": "España",
+   "titulo": "Conexión España",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313410",
@@ -4491,7 +4535,7 @@
    "duracion_min": 64,
    "codigo": "CN-ANI",
    "seccion": "Competencia Nacional",
-   "titulo": "Animación",
+   "titulo": "Competencia Nacional Animación",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313395",
@@ -4879,7 +4923,7 @@
    "duracion_min": 99,
    "codigo": "CI-FIC3",
    "seccion": "Competencia Internacional",
-   "titulo": "Ficción 3",
+   "titulo": "Competencia Internacional Ficción 3",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313413",
@@ -4980,9 +5024,9 @@
    },
    "codigo": "CVR",
    "seccion": "Competencia VR (Realidad virtual)",
-   "titulo": "Competencia realidad virtual",
+   "titulo": "Competencia VR - Realidad Virtual",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Mirage",
@@ -5066,7 +5110,11 @@
       "date": "2026-11-13"
      }
     }
-   ]
+   ],
+   "type": "event",
+   "info": true,
+   "event_kind": "experiencia",
+   "duracion_min": 240
   },
   {
    "dia": "2026-12-04",
@@ -5082,9 +5130,9 @@
    "duracion_min": 89,
    "codigo": "CN-FIC1",
    "seccion": "Competencia Nacional",
-   "titulo": "Ficción 1",
+   "titulo": "Competencia Nacional Ficción 1",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "obras": [
     {
      "titulo": "Jülapüin Yonna",
@@ -5184,16 +5232,21 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "IMAGINATÓN",
-   "seccion": "",
+   "titulo": "Claqueteo XVII IMAGINATÓN",
+   "seccion": "IMAGINATÓN",
    "tipo": "evento",
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "evento",
+   "duracion_min": 240,
+   "descripcion": "El viernes 4 de diciembre, todos los participantes en Bogotá deberán reunirse en el Teatro El Parque para grabar sus claquetas oficiales y recibir, a las 7:00 p. m., la clave que dará inicio a la maratón. Desde este emblemático espacio del Parque Nacional se dará la partida para que los realizadores salgan a conquistar la ciudad con sus cámaras. Quienes participen desde otras regiones del país podrán acceder a la claqueta y la clave a través de los canales virtuales del festival, conectando distintas geografías en una misma experiencia de creación.",
    "acceso": "desconocido"
   },
   {
    "dia": "2026-12-04",
    "hora": "13:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CON-LTX** (89')",
    "_src": {
@@ -5203,7 +5256,7 @@
    "duracion_min": 89,
    "codigo": "CON-LTX",
    "seccion": "Conexión",
-   "titulo": "Latinxs en Norteamérica",
+   "titulo": "Conexión Latinxs en Norteamérica",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -5312,7 +5365,7 @@
    "dia": "2026-12-04",
    "hora": "16:00",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CITY-BCN2 (60')",
    "_src": {
@@ -5470,7 +5523,7 @@
    "dia": "2026-12-04",
    "hora": "18:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "ES-ASTRO (66')",
    "_src": {
@@ -5728,7 +5781,7 @@
    "duracion_min": 60,
    "codigo": "PAC-EXP",
    "seccion": "Panorama",
-   "titulo": "Colombia Experimental",
+   "titulo": "Panorama Colombia Experimental",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -5850,9 +5903,12 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Competencia Nacional Ficción 1",
+   "titulo": "Encuentros Cercanos: Competencia Nacional Ficción 1",
    "seccion": "Franja Encuentros Cercanos",
    "tipo": "evento",
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "encuentro",
    "acceso": "desconocido"
   },
   {
@@ -5866,10 +5922,15 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Al Tablero BFM Robert Valley: dibujar lo que todavía no existe",
-   "seccion": "",
+   "titulo": "Robert Valley: dibujar lo que todavía no existe",
+   "seccion": "BOGOSHORTS al tablero",
    "tipo": "evento",
-   "acceso": "desconocido"
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "charla",
+   "duracion_min": 120,
+   "descripcion": "Antes del movimiento, una línea puede contener toda una película. Robert Valley, director de Zima Blue y otros episodios de Love, Death & Robots de Netflix, nominado al Óscar y ganador de tres premios Emmy, llega a BOGOSHORTS para acercarnos al momento en que una idea comienza a encontrar su identidad visual. Conocido también por su trabajo con Gorillaz, el director, animador y diseñador canadiense abordará el concept art y el desarrollo visual como herramientas para construir personajes, atmósferas y mundos capaces de contar historias desde el primer trazo. ¿Cómo funciona su intuición y que hace su universo tan reconocible? Una oportunidad para explorar las decisiones que dan fuerza narrativa a las imágenes junto a un creador de inconfundible personalidad gráfica. Este encuentro se realiza en alianza con NonStop Barcelona, organizador del Visual Development Seminar, y celebra el dibujo como origen de nuevas posibilidades cinematográficas.",
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-05",
@@ -5885,7 +5946,7 @@
    "duracion_min": 89,
    "codigo": "CN-FIC1",
    "seccion": "Competencia Nacional",
-   "titulo": "Ficción 1",
+   "titulo": "Competencia Nacional Ficción 1",
    "has_qa": false,
    "_nota": "*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital",
    "acceso": "Con boleta",
@@ -5992,7 +6053,7 @@
    "duracion_min": 91,
    "codigo": "CI-ANI1",
    "seccion": "Competencia Internacional",
-   "titulo": "Animación 1",
+   "titulo": "Competencia Internacional Animación 1",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313415",
@@ -6159,7 +6220,7 @@
    "duracion_min": 83,
    "codigo": "F3-02",
    "seccion": "Fanático Freak Fantástico F3",
-   "titulo": "Programa 02",
+   "titulo": "Fanático Freak Fantástico 2",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313416",
@@ -6369,7 +6430,7 @@
    "duracion_min": 84,
    "codigo": "CI-EXP2",
    "seccion": "Competencia Internacional",
-   "titulo": "Experimental 2",
+   "titulo": "Competencia Internacional Experimental 2",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054053",
@@ -6497,7 +6558,8 @@
    "seccion": "Especiales",
    "titulo": "Volviendo a Persépolis sin Marjane Satrapi",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Con boleta",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054054",
    "obras": [
     {
      "titulo": "Our Uniform",
@@ -6628,7 +6690,7 @@
    "seccion": "chiquiSHORTS",
    "titulo": "Annecy Kids",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Con boleta",
    "obras": [
     {
      "titulo": "Cat Me If You Can",
@@ -6842,9 +6904,10 @@
    "duracion_min": 103,
    "codigo": "CI-FIC2",
    "seccion": "Competencia Internacional",
-   "titulo": "Ficción 2",
+   "titulo": "Competencia Internacional Ficción 2",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Con boleta",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054057",
    "obras": [
     {
      "titulo": "Ningú Borda",
@@ -6966,9 +7029,9 @@
    },
    "codigo": "CVR",
    "seccion": "Competencia VR (Realidad virtual)",
-   "titulo": "Competencia realidad virtual",
+   "titulo": "Competencia VR - Realidad Virtual",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Mirage",
@@ -7052,7 +7115,11 @@
       "date": "2026-11-13"
      }
     }
-   ]
+   ],
+   "type": "event",
+   "info": true,
+   "event_kind": "experiencia",
+   "duracion_min": 420
   },
   {
    "dia": "2026-12-05",
@@ -7068,9 +7135,9 @@
    "duracion_min": 64,
    "codigo": "CN-ANI",
    "seccion": "Competencia Nacional",
-   "titulo": "Animación",
+   "titulo": "Competencia Nacional Animación",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "obras": [
     {
      "titulo": "A Body that Hurts",
@@ -7215,9 +7282,9 @@
    "duracion_min": 81,
    "codigo": "CN-FIC2",
    "seccion": "Competencia Nacional",
-   "titulo": "Ficción 2",
+   "titulo": "Competencia Nacional Ficción 2",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "obras": [
     {
      "titulo": "Pelotón Trueno",
@@ -7412,6 +7479,17 @@
       "pagina": 192,
       "date": "2026-11-13"
      }
+    },
+    {
+     "titulo": "La primera estampilla de Korinco",
+     "pais": "Colombia, Indonesia, Corea del Sur",
+     "anio": 2026,
+     "duracion_min": 5,
+     "sinopsis": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.",
+     "_src": {
+      "url": "https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11",
+      "date": "2026-11-23"
+     }
     }
    ]
   },
@@ -7514,7 +7592,7 @@
    "dia": "2026-12-05",
    "hora": "13:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CON-BRA (85')",
    "_src": {
@@ -7524,7 +7602,7 @@
    "duracion_min": 85,
    "codigo": "CON-BRA",
    "seccion": "Conexión",
-   "titulo": "Brasil",
+   "titulo": "Conexión Brasil",
    "has_qa": false,
    "acceso": "desconocido",
    "obras": [
@@ -7608,7 +7686,7 @@
    "dia": "2026-12-05",
    "hora": "16:00",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "F3-PINI** (79')",
    "_src": {
@@ -7688,7 +7766,7 @@
    "dia": "2026-12-05",
    "hora": "18:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CI-CP** (93')",
    "_src": {
@@ -7698,7 +7776,7 @@
    "duracion_min": 93,
    "codigo": "CI-CP",
    "seccion": "Competencia Internacional",
-   "titulo": "Corto periodístico",
+   "titulo": "Corto Periodístico",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -7925,7 +8003,7 @@
    "duracion_min": 80,
    "codigo": "PAC-FIC",
    "seccion": "Panorama",
-   "titulo": "Colombia Ficción",
+   "titulo": "Panorama Colombia Ficción",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -8017,7 +8095,7 @@
    "titulo": "Noche Frankenstein Vol 10",
    "has_qa": false,
    "_nota": "la celda trae «Aliens (52')»: el programa F3-ALIENS (IG DehCoz4kZkM)",
-   "acceso": "Entrada con invitación",
+   "acceso": "Entrada con manilla",
    "obras": [
     {
      "titulo": "R’ha",
@@ -8107,9 +8185,12 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Competencia Nacional Ficción 2",
+   "titulo": "Encuentros Cercanos: Competencia Nacional Ficción 2",
    "seccion": "Franja Encuentros Cercanos",
    "tipo": "evento",
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "encuentro",
    "acceso": "desconocido"
   },
   {
@@ -8217,6 +8298,17 @@
       "pagina": 192,
       "date": "2026-11-13"
      }
+    },
+    {
+     "titulo": "La primera estampilla de Korinco",
+     "pais": "Colombia, Indonesia, Corea del Sur",
+     "anio": 2026,
+     "duracion_min": 5,
+     "sinopsis": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.",
+     "_src": {
+      "url": "https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11",
+      "date": "2026-11-23"
+     }
     }
    ]
   },
@@ -8234,7 +8326,7 @@
    "duracion_min": 81,
    "codigo": "CN-FIC2",
    "seccion": "Competencia Nacional",
-   "titulo": "Ficción 2",
+   "titulo": "Competencia Nacional Ficción 2",
    "has_qa": false,
    "_nota": "*** Solo Encuentros Cercanos, tras la proyección del programa en Sala Capital",
    "acceso": "Con boleta",
@@ -8343,7 +8435,7 @@
    "duracion_min": 60,
    "codigo": "PAC-EXP",
    "seccion": "Panorama",
-   "titulo": "Colombia Experimental",
+   "titulo": "Panorama Colombia Experimental",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054060",
@@ -8469,7 +8561,7 @@
    "duracion_min": 86,
    "codigo": "F3-03",
    "seccion": "Fanático Freak Fantástico F3",
-   "titulo": "Programa 03",
+   "titulo": "Fanático Freak Fantástico 3",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054061",
@@ -8702,7 +8794,7 @@
    "duracion_min": 102,
    "codigo": "CI-DOC1",
    "seccion": "Competencia Internacional",
-   "titulo": "Documental 1",
+   "titulo": "Competencia Internacional Documental 1",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054067",
@@ -8751,7 +8843,7 @@
      "duracion_min": 20,
      "_duracion": "20’00’’",
      "language": "Inglés, Urdu, Francés",
-     "sinopsis": "¿Qué aspecto tiene lo queer cuando has pasado la vida borrando What does queerness look like when you’ve spent a lifetime erasing sus huellas para sobrevivir? En Red Elephant, el director comparte every trace of it to stay alive? In Red Elephant, the director shares his su recorrido por la violencia silenciosa de la burocracia, donde lo journey through the quiet violence of bureaucracy, where queerness queer debe traducirse en pruebas y el trauma en testimonio. must be translated into evidence, and trauma into testimony. In En el sistema de asilo belga, a solicitantes LGBTQ+, muchos Belgium’s asylum system, LGBTQ+ seekers, many from worlds where provenientes de lugares donde callar era sobrevivir, se les exige silence meant survival, are asked to speak the unspeakable, recounnarrar lo indecible y contar sus heridas más íntimas a desconocidos. ting their most intimate wounds to strangers they’ve only just met.",
+     "sinopsis": "¿Qué aspecto tiene lo queer cuando has pasado la vida borrando sus huellas para sobrevivir? En Red Elephant, el director comparte su recorrido por la violencia silenciosa de la burocracia, donde lo queer debe traducirse en pruebas y el trauma en testimonio. En el sistema de asilo belga, a solicitantes LGBTQ+, muchos provenientes de lugares donde callar era sobrevivir, se les exige narrar lo indecible y contar sus heridas más íntimas a desconocidos.",
      "_src": {
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 90,
@@ -8954,7 +9046,7 @@
    "duracion_min": 82,
    "codigo": "CON-LATAM",
    "seccion": "Conexión",
-   "titulo": "Latinoamérica",
+   "titulo": "Conexión Latinoamérica",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054069",
@@ -9041,10 +9133,16 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Estreno BFM-IV",
-   "seccion": "",
-   "tipo": "evento",
-   "acceso": "desconocido"
+   "titulo": "Furia",
+   "seccion": "BFM - BOGOSHORTS Film Market",
+   "has_qa": true,
+   "codigo": "BFM-IV",
+   "acceso": "Entrada libre",
+   "_programa": "Estreno BFM-IV - Furia",
+   "director": "Daniela Córdoba",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 14
   },
   {
    "dia": "2026-12-06",
@@ -9060,7 +9158,7 @@
    "duracion_min": 89,
    "codigo": "CI-ANI2",
    "seccion": "Competencia Internacional",
-   "titulo": "Animación 2",
+   "titulo": "Competencia Internacional Animación 2",
    "has_qa": false,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054070",
@@ -9245,9 +9343,9 @@
    },
    "codigo": "CVR",
    "seccion": "Competencia VR (Realidad virtual)",
-   "titulo": "Competencia realidad virtual",
+   "titulo": "Competencia VR - Realidad Virtual",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Mirage",
@@ -9331,7 +9429,11 @@
       "date": "2026-11-13"
      }
     }
-   ]
+   ],
+   "type": "event",
+   "info": true,
+   "event_kind": "experiencia",
+   "duracion_min": 420
   },
   {
    "dia": "2026-12-06",
@@ -9349,7 +9451,7 @@
    "seccion": "chiquiSHORTS",
    "titulo": "Annecy Kids",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "obras": [
     {
      "titulo": "Cat Me If You Can",
@@ -9475,7 +9577,7 @@
    "duracion_min": 64,
    "codigo": "CN-ANI",
    "seccion": "Competencia Nacional",
-   "titulo": "Animación",
+   "titulo": "Competencia Nacional Animación",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -9712,6 +9814,17 @@
       "pagina": 192,
       "date": "2026-11-13"
      }
+    },
+    {
+     "titulo": "La primera estampilla de Korinco",
+     "pais": "Colombia, Indonesia, Corea del Sur",
+     "anio": 2026,
+     "duracion_min": 5,
+     "sinopsis": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.",
+     "_src": {
+      "url": "https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11",
+      "date": "2026-11-23"
+     }
     }
    ]
   },
@@ -9719,7 +9832,7 @@
    "dia": "2026-12-06",
    "hora": "13:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CON-ESP** (82')",
    "_src": {
@@ -9729,7 +9842,7 @@
    "duracion_min": 82,
    "codigo": "CON-ESP",
    "seccion": "Conexión",
-   "titulo": "España",
+   "titulo": "Conexión España",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -9830,7 +9943,7 @@
    "dia": "2026-12-06",
    "hora": "16:00",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CN-DOC** (83')",
    "_src": {
@@ -9840,7 +9953,7 @@
    "duracion_min": 83,
    "codigo": "CN-DOC",
    "seccion": "Competencia Nacional",
-   "titulo": "Documental",
+   "titulo": "Competencia Nacional Documental",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -9937,7 +10050,7 @@
    "dia": "2026-12-06",
    "hora": "18:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "WT-CRO1** (92')",
    "_src": {
@@ -9947,7 +10060,7 @@
    "duracion_min": 92,
    "codigo": "WT-CRO1",
    "seccion": "World Tour",
-   "titulo": "Croacia 1",
+   "titulo": "World Tour: Croacia 1",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -10162,7 +10275,7 @@
    "duracion_min": 84,
    "codigo": "PAC-DOC",
    "seccion": "Panorama",
-   "titulo": "Colombia Documental",
+   "titulo": "Panorama Colombia Documental",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -10253,10 +10366,10 @@
    },
    "duracion_min": 65,
    "codigo": "HUMOR",
-   "titulo": "HUMOR + StandUp",
-   "seccion": "",
+   "titulo": "Humor en corto",
+   "seccion": "Noche de Humor",
    "has_qa": false,
-   "_nota": "el código no está en la leyenda de la grilla",
+   "_nota": "el código no está en la leyenda de la grilla: sección y título del catálogo",
    "acceso": "desconocido",
    "obras": [
     {
@@ -10365,16 +10478,20 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "BS degusta Picnic nocturno",
-   "seccion": "",
+   "titulo": "BOGOSHORTS degusta: Picnic Nocturno",
+   "seccion": "Eventos especiales",
    "tipo": "evento",
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "experiencia",
+   "descripcion": "Bajo el cielo estrellado de la plazoleta CityU, el 10° Picnic Nocturno de Corto Europeo realizado con el apoyo del Instituto Goethe, propone una experiencia de sinestesia: ver un corto, sentirlo y luego probarlo. Cinco cortometrajes europeos inspiran a cinco aprendices de cocina del Servicio Nacional de Aprendizaje – SENA, quienes asumen el reto de traducir atmósferas, ritmos y gestos en sabores, texturas y aromas que despiertan la memoria y los sentidos. El lunes 7 de diciembre, en el Lounge BFM – Plazoleta CityU, el cine se comerá y el gusto proyectará imágenes invisibles: una noche donde cada sabor se vuelve emoción, y cada bocado, una escena más de esta proyección multisensorial.",
    "acceso": "Entrada con invitación"
   },
   {
    "dia": "2026-12-07",
    "hora": "13:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "FES-LADRA** (97')",
    "_src": {
@@ -10469,7 +10586,7 @@
    "dia": "2026-12-07",
    "hora": "16:00",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CI-EXP1** (97')",
    "_src": {
@@ -10479,7 +10596,7 @@
    "duracion_min": 97,
    "codigo": "CI-EXP1",
    "seccion": "Competencia Internacional",
-   "titulo": "Experimental 1",
+   "titulo": "Competencia Internacional Experimental 1",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -10603,7 +10720,7 @@
    "dia": "2026-12-07",
    "hora": "18:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "CN-EXP** (97')",
    "_src": {
@@ -10613,7 +10730,7 @@
    "duracion_min": 97,
    "codigo": "CN-EXP",
    "seccion": "Competencia Nacional",
-   "titulo": "Experimental",
+   "titulo": "Competencia Nacional Experimental",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -10741,7 +10858,7 @@
    "duracion_min": 87,
    "codigo": "CI-DOC2",
    "seccion": "Competencia Internacional",
-   "titulo": "Documental 2",
+   "titulo": "Competencia Internacional Documental 2",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -10827,7 +10944,7 @@
    "duracion_min": 99,
    "codigo": "CI-FIC3",
    "seccion": "Competencia Internacional",
-   "titulo": "Ficción 3",
+   "titulo": "Competencia Internacional Ficción 3",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -10927,10 +11044,10 @@
    },
    "duracion_min": 83,
    "codigo": "CI-VC/CN-VC",
-   "titulo": "CI-VC/CN-VC",
-   "seccion": "",
+   "titulo": "Competencia Internacional y Nacional Videoclip",
+   "seccion": "Competencia Internacional",
    "has_qa": true,
-   "_nota": "el código no está en la leyenda de la grilla",
+   "_nota": "el código no está en la leyenda de la grilla: sección y título del catálogo",
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054071",
    "obras": [
@@ -11274,7 +11391,7 @@
    "duracion_min": 84,
    "codigo": "PAC-DOC",
    "seccion": "Panorama",
-   "titulo": "Colombia Documental",
+   "titulo": "Panorama Colombia Documental",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054072",
@@ -11365,9 +11482,13 @@
     "date": "2026-11-13"
    },
    "titulo": "Ganadores 24BOGOSHORTS",
-   "seccion": "",
+   "seccion": "Eventos especiales",
    "tipo": "evento",
-   "acceso": "desconocido"
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "awards",
+   "acceso": "Con boleta",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054073"
   },
   {
    "dia": "2026-12-08",
@@ -11383,7 +11504,7 @@
    "duracion_min": 89,
    "codigo": "CN-FIC1",
    "seccion": "Competencia Nacional",
-   "titulo": "Ficción 1",
+   "titulo": "Competencia Nacional Ficción 1",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313414",
@@ -11489,7 +11610,7 @@
    "duracion_min": 94,
    "codigo": "F3-01",
    "seccion": "Fanático Freak Fantástico F3",
-   "titulo": "Programa 01",
+   "titulo": "Fanático Freak Fantástico 1",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054074",
@@ -11598,7 +11719,7 @@
    "duracion_min": 89,
    "codigo": "CON-LTX",
    "seccion": "Conexión",
-   "titulo": "Latinxs en Norteamérica",
+   "titulo": "Conexión Latinxs en Norteamérica",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054075",
@@ -11931,7 +12052,7 @@
    "duracion_min": 81,
    "codigo": "CN-FIC2",
    "seccion": "Competencia Nacional",
-   "titulo": "Ficción 2",
+   "titulo": "Competencia Nacional Ficción 2",
    "has_qa": true,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054059",
@@ -12127,34 +12248,24 @@
    "duracion_min": 117,
    "codigo": "FI-LARGO",
    "seccion": "Cortofilia",
-   "titulo": "Largo de cortos",
+   "titulo": "Yndige mennesker",
    "has_qa": false,
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054079",
-   "obras": [
-    {
-     "titulo": "Yndige mennesker",
-     "director": "Anders Jon, Kasper Juhl, Michael Kunov y Michael Panduro",
-     "pais": "Dinamarca",
-     "anio": 2025,
-     "titulos_alt": [
-      "Adorable Humans"
-     ],
-     "duracion_min": 117,
-     "_duracion": "117’",
-     "language": "Danés",
-     "sinopsis": "Cuatro cineastas daneses llevan el lado más oscuro de Hans Christian Andersen al terror contemporáneo. Un joven cuidador descubre que el hombre moribundo a su cargo guarda secretos; una madre intenta impedir la muerte de su hijo después de verla en un sueño; una pareja se muda al campo y encuentra un espejo que trastorna su vida; y un músico incapaz de componer empieza a sentirse acosado por su propia musa. Cada corto fue escrito y dirigido por un cineasta diferente pero todos se desarrollaron en colaboración y se entrelazan en torno a la pérdida, el deseo y el impulso de cambiar lo que parece inevitable. Four Danish filmmakers bring the darker side of Hans Christian Andersen into contemporary horror. A young caregiver discovers that the dying man in his care is hiding secrets; a mother tries to prevent her son’s death after seeing it in a dream; a couple move to the countryside and find a mirror that upends their lives; and a musician struggling to write is haunted by his own muse. Each short film was written and directed by a different filmmaker, but all four were developed together and are linked by loss, desire and the urge to change what seems inevitable.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 173,
-      "date": "2026-11-13"
-     }
-    }
-   ]
+   "_programa": "Largo de cortos",
+   "director": "Anders Jon, Kasper Juhl, Michael Kunov y Michael Panduro",
+   "pais": "Dinamarca",
+   "anio": 2025,
+   "titulos_alt": [
+    "Adorable Humans"
+   ],
+   "_duracion": "117’",
+   "language": "Danés",
+   "sinopsis": "Cuatro cineastas daneses llevan el lado más oscuro de Hans Christian Andersen al terror contemporáneo. Un joven cuidador descubre que el hombre moribundo a su cargo guarda secretos; una madre intenta impedir la muerte de su hijo después de verla en un sueño; una pareja se muda al campo y encuentra un espejo que trastorna su vida; y un músico incapaz de componer empieza a sentirse acosado por su propia musa. Cada corto fue escrito y dirigido por un cineasta diferente pero todos se desarrollaron en colaboración y se entrelazan en torno a la pérdida, el deseo y el impulso de cambiar lo que parece inevitable."
   },
   {
    "dia": "2026-12-08",
-   "hora": "11:00",
+   "hora": "14:00",
    "sede": "Cinemateca de Bogotá",
    "sala": "Taller de la imagen",
    "ciudad": "Bogotá",
@@ -12165,9 +12276,9 @@
    },
    "codigo": "CVR",
    "seccion": "Competencia VR (Realidad virtual)",
-   "titulo": "Competencia realidad virtual",
+   "titulo": "Competencia VR - Realidad Virtual",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Mirage",
@@ -12251,13 +12362,17 @@
       "date": "2026-11-13"
      }
     }
-   ]
+   ],
+   "type": "event",
+   "info": true,
+   "event_kind": "experiencia",
+   "duracion_min": 240
   },
   {
    "dia": "2026-12-08",
    "hora": "13:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "ES-MILES (71')",
    "_src": {
@@ -12400,7 +12515,7 @@
    "dia": "2026-12-08",
    "hora": "16:00",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "WT-CRO2** (77')",
    "_src": {
@@ -12410,7 +12525,7 @@
    "duracion_min": 77,
    "codigo": "WT-CRO2",
    "seccion": "World Tour",
-   "titulo": "Croacia 2",
+   "titulo": "World Tour: Croacia 2",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -12489,7 +12604,7 @@
    "dia": "2026-12-08",
    "hora": "18:30",
    "sede": "Alianza Francesa",
-   "sala": "",
+   "sala": "Sala Jules Verne",
    "ciudad": "Bogotá",
    "texto_grilla": "SO-FCO (100')",
    "_src": {
@@ -12592,7 +12707,7 @@
    "duracion_min": 94,
    "codigo": "CI-FIC1",
    "seccion": "Competencia Internacional",
-   "titulo": "Ficción 1",
+   "titulo": "Competencia Internacional Ficción 1",
    "has_qa": true,
    "acceso": "desconocido",
    "obras": [
@@ -12810,10 +12925,32 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "titulo": "Ceremonia de Clausura y Premiación",
-   "seccion": "",
+   "titulo": "Ceremonia de premiación y clausura - Noche de Santa Lucía",
+   "seccion": "Eventos especiales",
    "tipo": "evento",
-   "acceso": "desconocido"
+   "type": "event",
+   "has_qa": false,
+   "event_kind": "awards",
+   "acceso": "Entrada con invitación"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "19:00",
+   "sede": "Teatro El Parque",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "IMAGINATÓN",
+   "titulo": "Entrega clave IMAGINATÓN",
+   "seccion": "IMAGINATÓN",
+   "tipo": "evento",
+   "type": "event",
+   "event_kind": "evento",
+   "has_qa": false,
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
+    "date": "2026-11-18"
+   }
   }
  ],
  "_descartadas": [

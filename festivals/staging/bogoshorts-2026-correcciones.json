@@ -117,6 +117,17 @@
    "_fuente": "https://www.themoviedb.org/movie/1668922",
    "_por_que": "altas.py --ficha: TMDB 1668922 «Class Photo» (2026, 17 min, Lituania, dir. Arnas Balčiūnas) con sinopsis idéntica a la del catálogo (Ignas, escuela abandonada); imdb_id tt41815531 coincide con IMDb; LB class-photo alt. Klasės nuotrauka",
    "_registro": "bogoshorts-2026-altas.json"
+  },
+  "No todos los pájaros son aves": {
+   "tmdb": 1827960,
+   "_fuente": "https://www.themoviedb.org/movie/1827960",
+   "_por_que": "altas.py --sondar: tmdb_director: TMDB 1827960 «No todos los pájaros son aves» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  }
+ },
+ "duracion_distinta": {
+  "L’uomo meccanico": {
+   "_por_que": "el catálogo da 26'00'': es la copia parcial que se conserva; TMDB registra 80 min, la duración original"
   }
  }
 }

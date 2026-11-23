@@ -90,6 +90,26 @@ def huella(t):
     return re.sub(r'[^a-z0-9]', '', ''.join(c for c in t if not unicodedata.combining(c)))
 
 
+EN = re.compile(r"\b(the|and|of|his|her|with|is|a|to|that|their|from|who|an)\b", re.I)
+ES = re.compile(r"\b(el|la|los|las|de|que|y|en|un|una|su|con|por|se|del|al)\b", re.I)
+# dos columnas impresas en las mismas líneas: pdftotext las mezcla (leída a ojo, catálogo pág. 88)
+MEZCLADAS = {'Red Elephant': (
+    '¿Qué aspecto tiene lo queer cuando has pasado la vida borrando sus huellas para sobrevivir? En Red Elephant, el director '
+    'comparte su recorrido por la violencia silenciosa de la burocracia, donde lo queer debe traducirse en pruebas y el trauma '
+    'en testimonio. En el sistema de asilo belga, a solicitantes LGBTQ+, muchos provenientes de lugares donde callar era '
+    'sobrevivir, se les exige narrar lo indecible y contar sus heridas más íntimas a desconocidos.')}
+
+
+def solo_es(t):
+    """La sinopsis sin la versión en inglés que le sigue (Cortofilia las apila)."""
+    out = []
+    for fr in re.split(r'(?<=[.!?…])\s+', t):
+        if out and len(EN.findall(fr)) > len(ES.findall(fr)) + 1:
+            break
+        out.append(fr)
+    return ' '.join(out)
+
+
 def leer():
     progs, orden = {}, []
     for p in PAGINAS:
@@ -165,7 +185,7 @@ def leer():
                     if resto[-1] and not re.match(r'(Color|B&N|B&W)', resto[-1]):
                         obra['language'] = resto[-1]
                 if sin:
-                    obra['sinopsis'] = unir(sin)
+                    obra['sinopsis'] = MEZCLADAS.get(obra['titulo']) or solo_es(unir(sin))
                 obra['_src'] = {'url': URL, 'pagina': p, 'date': '2026-11-13'}
                 c = CODIGO_GRILLA.get(cod, cod)
                 if c not in progs:

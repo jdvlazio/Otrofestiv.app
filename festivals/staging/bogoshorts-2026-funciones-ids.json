@@ -1,0 +1,918 @@
+{
+ "_provenance": {
+  "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
+  "capturado": "2026-11-23"
+ },
+ "funciones": {
+  "f_659948e13a": {
+   "sede": "Teatro Jorge Eliécer Gaitán - Bogotá",
+   "dia": "2026-12-01",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "inauguracion"
+  },
+  "f_e6f3f8303a": {
+   "sede": "City U - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "16:30",
+   "sala": "Lounge BFM Plazoleta UHeart",
+   "titulo": "encuentros cercanos competencia nacional experimental"
+  },
+  "f_d61a8a9696": {
+   "sede": "City U - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "18:00",
+   "sala": "Lounge BFM Plazoleta UHeart",
+   "titulo": "apertura bfm refresh vol 8"
+  },
+  "f_d3910462ed": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "10:00",
+   "sala": "Sala Capital",
+   "titulo": "que genero es tu corto un viaje por lo extraordinario"
+  },
+  "f_1b1bc3f308": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "13:00",
+   "sala": "Sala Capital",
+   "titulo": "de la vineta a la pantalla novela grafica que se vuelve cine"
+  },
+  "f_0caff94a2e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo": "competencia nacional experimental"
+  },
+  "f_12a23fb4ac": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo": "corto periodistico"
+  },
+  "f_f2aaf2e896": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo": "panorama colombia ficcion"
+  },
+  "f_751d6b8509": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "el mundo es un balon"
+  },
+  "f_480b1e756b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo": "competencia internacional animacion 1"
+  },
+  "f_8faec1315d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo": "fanatico freak fantastico 2"
+  },
+  "f_f9d87c1926": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "world tour croacia 1"
+  },
+  "f_ba300b918f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "16:00",
+   "sala": "Sala 3",
+   "titulo": "competencia internacional documental 1"
+  },
+  "f_a26ec56d32": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "competencia internacional documental 2"
+  },
+  "f_b6b7b90bd7": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "14:00",
+   "sala": "Taller de la imagen",
+   "titulo": "competencia vr realidad virtual"
+  },
+  "f_1cce389f20": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "13:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "sinfonias femeninas desde barcelona"
+  },
+  "f_661e5e5f34": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "16:00",
+   "sala": "Sala Jules Verne",
+   "titulo": "competencia nacional ficcion 1"
+  },
+  "f_cd6a9dff40": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "18:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "competencia internacional experimental 2"
+  },
+  "f_10979b2923": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "el amor es corto"
+  },
+  "f_00e9cfb024": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-02",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "yndige mennesker"
+  },
+  "f_a699e4a664": {
+   "sede": "City U - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "16:30",
+   "sala": "Lounge BFM Plazoleta UHeart",
+   "titulo": "encuentros cercanos competencia nacional animacion"
+  },
+  "f_ed92fe4f4c": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "10:00",
+   "sala": "Sala Capital",
+   "titulo": "el futuro es vertical cambian los formatos cambia la mirada"
+  },
+  "f_63bab8d055": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "13:00",
+   "sala": "Sala Capital",
+   "titulo": "croacia una cinematografia que crece desde el corto"
+  },
+  "f_eb5cc66862": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo": "competencia nacional animacion"
+  },
+  "f_7027f65b7a": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo": "competencia internacional ficcion 1"
+  },
+  "f_1a93f9d3e0": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo": "jairo pinilla el origen de una obsesion"
+  },
+  "f_2323d4a7bd": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "diversidades"
+  },
+  "f_6ab66d9184": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo": "world tour croacia 2"
+  },
+  "f_2cf182245c": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo": "fanatico freak fantastico 3"
+  },
+  "f_c7ee9ac9d8": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "11:00",
+   "sala": "Sala 3",
+   "titulo": "competencia nacional documental"
+  },
+  "f_c4c3e4099a": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "ano gaudi la ciudad animada"
+  },
+  "f_b85571e9ad": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "16:00",
+   "sala": "Sala 3",
+   "titulo": "conexion brasil"
+  },
+  "f_c9639bf24b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "competencia internacional animacion 2"
+  },
+  "f_59ae83b792": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "14:00",
+   "sala": "Taller de la imagen",
+   "titulo": "competencia vr realidad virtual"
+  },
+  "f_40c580a270": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "13:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "conexion latinoamerica"
+  },
+  "f_3b49438af0": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "16:00",
+   "sala": "Sala Jules Verne",
+   "titulo": "competencia nacional ficcion 2"
+  },
+  "f_3587c9ac67": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "18:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "androsfera hombres de verdad lectura dramatizada"
+  },
+  "f_e45b0de929": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "cine dentro del cine"
+  },
+  "f_3cc8328112": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "competencia internacional ficcion 2"
+  },
+  "f_abb270357c": {
+   "sede": "CEFE Chapinero - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "17:30",
+   "sala": "",
+   "titulo": "volviendo a persepolis sin marjane satrapi"
+  },
+  "f_6e17a91f7c": {
+   "sede": "Sala Gaitán Antigua Cinemateca - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "estrella fugaz un homenaje a cesar heredia"
+  },
+  "f_77495e683e": {
+   "sede": "City U - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "16:30",
+   "sala": "Lounge BFM Plazoleta UHeart",
+   "titulo": "encuentros cercanos competencia nacional documental"
+  },
+  "f_38bbdbc21b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "10:00",
+   "sala": "Sala Capital",
+   "titulo": "los festivales frente a la ia aprobar rechazar sobrevivir"
+  },
+  "f_5fbe1ac640": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "13:00",
+   "sala": "Sala Capital",
+   "titulo": "cine y jazz la hermandad improvisada"
+  },
+  "f_3fe017db2f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo": "competencia nacional documental"
+  },
+  "f_ac4228af66": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo": "seleccion oficial"
+  },
+  "f_d7be29c93d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo": "fanatico freak fantastico 1"
+  },
+  "f_87f9200a8a": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "el amor es corto"
+  },
+  "f_ee507f414f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo": "competencia internacional experimental 1"
+  },
+  "f_292e374d27": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo": "conexion espana"
+  },
+  "f_31cc62b47e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "11:00",
+   "sala": "Sala 3",
+   "titulo": "competencia nacional animacion"
+  },
+  "f_7c90331d4d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "miles davis 100 anos de jazz"
+  },
+  "f_d80d7f70b1": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "16:00",
+   "sala": "Sala 3",
+   "titulo": "el perro que ladra"
+  },
+  "f_820f4ddd19": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "competencia internacional ficcion 3"
+  },
+  "f_e1a8800997": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "14:00",
+   "sala": "Taller de la imagen",
+   "titulo": "competencia vr realidad virtual"
+  },
+  "f_cb826e0a30": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "competencia nacional ficcion 1"
+  },
+  "f_0f47ae4440": {
+   "sede": "Teatro El Parque - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "claqueteo xvii imaginaton"
+  },
+  "f_767ead9c37": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "13:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "conexion latinxs en norteamerica"
+  },
+  "f_e25297cb6a": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "16:00",
+   "sala": "Sala Jules Verne",
+   "titulo": "ano gaudi la ciudad animada"
+  },
+  "f_f58604503e": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "18:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "especial astrologico presagios del cielo"
+  },
+  "f_c51e8db23d": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "crecer"
+  },
+  "f_522a341f7a": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "panorama colombia experimental"
+  },
+  "f_282f343638": {
+   "sede": "City U - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "16:30",
+   "sala": "Lounge BFM Plazoleta UHeart",
+   "titulo": "encuentros cercanos competencia nacional ficcion 1"
+  },
+  "f_e1ba726641": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "10:00",
+   "sala": "Sala Capital",
+   "titulo": "robert valley dibujar lo que todavia no existe"
+  },
+  "f_e6d3834562": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo": "competencia nacional ficcion 1"
+  },
+  "f_5f25add140": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo": "competencia internacional animacion 1"
+  },
+  "f_f1369a9ddf": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo": "fanatico freak fantastico 2"
+  },
+  "f_c1227c7280": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "cine dentro del cine"
+  },
+  "f_cdcb7924a9": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo": "competencia internacional experimental 2"
+  },
+  "f_d2080d6058": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo": "volviendo a persepolis sin marjane satrapi"
+  },
+  "f_704aa401d8": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "annecy kids"
+  },
+  "f_0f123b0d2e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "16:00",
+   "sala": "Sala 3",
+   "titulo": "metropolis cuerpos del futuro"
+  },
+  "f_594c63cf84": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "competencia internacional ficcion 2"
+  },
+  "f_be5e5b4bdb": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "11:00",
+   "sala": "Taller de la imagen",
+   "titulo": "competencia vr realidad virtual"
+  },
+  "f_0f453d05e3": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "competencia nacional animacion"
+  },
+  "f_057429d276": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "16:00",
+   "sala": "",
+   "titulo": "competencia nacional ficcion 2"
+  },
+  "f_482722604c": {
+   "sede": "Teatro El Parque - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "bogoshorts kids"
+  },
+  "f_64f45d4433": {
+   "sede": "Teatro El Parque - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "especial 40 anos caballeros del zodiaco"
+  },
+  "f_83a9049f6c": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "13:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "conexion brasil"
+  },
+  "f_59c96c2dc8": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "16:00",
+   "sala": "Sala Jules Verne",
+   "titulo": "jairo pinilla el origen de una obsesion"
+  },
+  "f_45df56b5d3": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "18:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "corto periodistico"
+  },
+  "f_85c6681f2c": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "diversidades"
+  },
+  "f_6f3bdb31d4": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "panorama colombia ficcion"
+  },
+  "f_cd2bb0c567": {
+   "sede": "Teatro al aire libre La Media Torta - Bogotá",
+   "dia": "2026-12-05",
+   "hora": "17:00",
+   "sala": "",
+   "titulo": "noche frankenstein vol 10"
+  },
+  "f_de14a03024": {
+   "sede": "City U - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "16:30",
+   "sala": "Lounge BFM Plazoleta UHeart",
+   "titulo": "encuentros cercanos competencia nacional ficcion 2"
+  },
+  "f_262de95bb6": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "11:30",
+   "sala": "Sala Capital",
+   "titulo": "bogoshorts kids"
+  },
+  "f_78af8e953b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo": "competencia nacional ficcion 2"
+  },
+  "f_7ebc528639": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo": "panorama colombia experimental"
+  },
+  "f_e686116f2b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo": "fanatico freak fantastico 3"
+  },
+  "f_b7cb144e4e": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "crecer"
+  },
+  "f_120d632f5b": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo": "competencia internacional documental 1"
+  },
+  "f_8f59b17826": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo": "sinfonias femeninas desde barcelona"
+  },
+  "f_6cca14c8d6": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "conexion latinoamerica"
+  },
+  "f_2a7aeada73": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "16:00",
+   "sala": "Sala 3",
+   "titulo": "furia"
+  },
+  "f_10400977f8": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo": "competencia internacional animacion 2"
+  },
+  "f_d5854c3e28": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "11:00",
+   "sala": "Taller de la imagen",
+   "titulo": "competencia vr realidad virtual"
+  },
+  "f_aa5209911c": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "annecy kids"
+  },
+  "f_e33dd31f50": {
+   "sede": "Teatro El Parque - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "11:00",
+   "sala": "",
+   "titulo": "competencia nacional animacion"
+  },
+  "f_58509ed531": {
+   "sede": "Teatro El Parque - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "bogoshorts kids"
+  },
+  "f_49b80a8e41": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "13:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "conexion espana"
+  },
+  "f_461086bc4e": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "16:00",
+   "sala": "Sala Jules Verne",
+   "titulo": "competencia nacional documental"
+  },
+  "f_a621b3b272": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "18:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "world tour croacia 1"
+  },
+  "f_a23f2842ab": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "el mundo es un balon"
+  },
+  "f_9adbaf188e": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "panorama colombia documental"
+  },
+  "f_2067536081": {
+   "sede": "Sala Gaitán Antigua Cinemateca - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "humor en corto"
+  },
+  "f_b1cd76e398": {
+   "sede": "City U - Bogotá",
+   "dia": "2026-12-07",
+   "hora": "18:00",
+   "sala": "Lounge BFM Plazoleta UHeart",
+   "titulo": "bogoshorts degusta picnic nocturno"
+  },
+  "f_c5eaf42bea": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-07",
+   "hora": "13:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "el perro que ladra"
+  },
+  "f_e15df51f84": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-07",
+   "hora": "16:00",
+   "sala": "Sala Jules Verne",
+   "titulo": "competencia internacional experimental 1"
+  },
+  "f_1d38a3191d": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-07",
+   "hora": "18:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "competencia nacional experimental"
+  },
+  "f_4f94fb5564": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-07",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "competencia internacional documental 2"
+  },
+  "f_4b8aac68ec": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-07",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "competencia internacional ficcion 3"
+  },
+  "f_976b82b80f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "14:00",
+   "sala": "Sala Capital",
+   "titulo": "competencia internacional y nacional videoclip"
+  },
+  "f_188f44059d": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo": "panorama colombia documental"
+  },
+  "f_b070327e09": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo": "ganadores 24bogoshorts"
+  },
+  "f_ee9e828d24": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "11:00",
+   "sala": "Sala 2",
+   "titulo": "competencia nacional ficcion 1"
+  },
+  "f_0f4ff25435": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo": "fanatico freak fantastico 1"
+  },
+  "f_5a5b7f4141": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo": "conexion latinxs en norteamerica"
+  },
+  "f_70ebe22c82": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo": "nexos femeninos"
+  },
+  "f_a2159d119f": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo": "especial astrologico presagios del cielo"
+  },
+  "f_ece9a40cff": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "15:30",
+   "sala": "Sala 3",
+   "titulo": "competencia nacional ficcion 2"
+  },
+  "f_e93e701b58": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "17:30",
+   "sala": "Sala 3",
+   "titulo": "metropolis cuerpos del futuro"
+  },
+  "f_ec2d2aa6b1": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "titulo": "yndige mennesker"
+  },
+  "f_337f034282": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "14:00",
+   "sala": "Taller de la imagen",
+   "titulo": "competencia vr realidad virtual"
+  },
+  "f_50249df760": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "13:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "miles davis 100 anos de jazz"
+  },
+  "f_fdd4020249": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "16:00",
+   "sala": "Sala Jules Verne",
+   "titulo": "world tour croacia 2"
+  },
+  "f_1bcb1f9e13": {
+   "sede": "Alianza Francesa - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "18:30",
+   "sala": "Sala Jules Verne",
+   "titulo": "seleccion oficial"
+  },
+  "f_5b1ba5fe8c": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "15:00",
+   "sala": "",
+   "titulo": "competencia internacional ficcion 1"
+  },
+  "f_c78486af98": {
+   "sede": "Centro Ático - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "especial 40 anos caballeros del zodiaco"
+  },
+  "f_3113445ec2": {
+   "sede": "Teatro Delia Zapata Olivella - Bogotá",
+   "dia": "2026-12-08",
+   "hora": "18:30",
+   "sala": "",
+   "titulo": "ceremonia de premiacion y clausura noche de santa lucia"
+  },
+  "f_5ade8fa1d3": {
+   "sede": "Teatro El Parque - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "entrega clave imaginaton"
+  }
+ }
+}

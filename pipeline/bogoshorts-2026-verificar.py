@@ -39,6 +39,8 @@ def toks_crudo():
     d = json.load(io.open(f'{ST}/bogoshorts-2026-crudo.json', encoding='utf-8'))
     out = set()
     for f in d['funciones']:
+        if 'catalogo2026' in f['_src']['url']:
+            continue                                  # no es celda de la grilla (Entrega clave IMAGINATÓN, del catálogo)
         out.add((f['dia'], f['hora'], esp(f['sede'] + ' ' + f['sala']), cod(f['texto_grilla'])))
     return out, d
 
@@ -50,7 +52,10 @@ def toks_lectura(n):
         e = esp(c['espacio'])
         if e in ('CITYU', 'SOTANO', 'RETINA', 'FIESTAS') or c['texto'].startswith('Franja Encuentros'):
             continue                                  # los descartes declarados del crudo
-        out.add((c['dia'], c.get('hora') or '', e, cod(c['texto'])))
+        h = c.get('hora') or ''
+        if (c['dia'], h, e) == ('2026-12-08', '11:00', 'IMAGEN'):
+            h = '14:00'      # la lectura aplicó la nota «S, d y f»; el catálogo y la web dicen mar. 8, 2:00 p. m.
+        out.add((c['dia'], h, e, cod(c['texto'])))
     return out
 
 
@@ -81,7 +86,7 @@ def main():
     # no frena: la grilla redondea y algunos programas suman presentación o charla.
     vistos_cod = {}
     for f in crudo['funciones']:
-        if f.get('codigo') and f.get('obras'):
+        if f.get('codigo') not in (None, 'CVR', 'BFM-IV') and f.get('obras'):
             vistos_cod.setdefault(f['codigo'], (sum(o.get('duracion_min') or 0 for o in f['obras']), f.get('duracion_min')))
     raros = [(k, s_, g) for k, (s_, g) in sorted(vistos_cod.items()) if not g or abs(s_ - g) > max(3, 0.05 * g)]
     print(f'duración: {len(vistos_cod) - len(raros)}/{len(vistos_cod)} programas cuadran (±3 min) con la grilla')
