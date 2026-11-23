@@ -106,17 +106,41 @@ for dia, hora, tit, sede, sec, (url, lam), extra in F:
     funciones.append(r)
 
 # ── Bogotá: la web ─────────────────────────────────────────────────────────
-# MOVIDA (19 nov): «Desde acá veo la tormenta» va en el Bloque 2 (dom 29, 14:00),
-# no en el 1 como dice la web: post Df7JJA8x1GK de @elforro_6 con @aleste.colombia
-# de coautor + catálogo oficial PDF del 18 nov. Lo más reciente del festival manda.
-MOVIDAS = {'Desde acá veo la tormenta': ('2026-11-29', '14:00', 'Competencia Hecho en Colombia – Bloque 2')}
+# MOVIDAS: donde otra fuente le gana a la web (obra → día, hora, sección, fuente).
+# · Hecho en Colombia (23 nov): el reparto es el de la sala (Cinemateca, fichas
+#   peliculas/4080 y 4087) y el catálogo oficial PDF del 18 y del 20 nov, que
+#   coinciden obra por obra. «Desde acá veo la tormenta» ya estaba movida por el
+#   post Df7JJA8x1GK. La web no trae «Futuros luminosos» ni «Transversal30FF».
+# · Cortometrajes de Altura (23 nov): la ficha 4015 y la agenda de Fontanar dicen
+#   sáb 28 nov 2:00 p. m., entrada libre; la web, dom 29 14:00. Manda la sala.
+# · La retirada (23 nov): la ficha 4041 y TuBoleta dicen 19:00; la web, 19:30.
+#   Sala 3 (TuBoleta, web y PDF; la ficha dice Sala 2, donde va «Ino Moxo»).
+SALA = 'https://cinematecadebogota.gov.co/node/peliculas/'
+TUBOLETA = 'https://cinemateca.checkout.tuboleta.com/selection/event/date?productId='
+B1 = ('2026-11-28', '14:30', 'Competencia Hecho en Colombia - Bloque 1')
+B2 = ('2026-11-29', '14:00', 'Competencia Hecho en Colombia – Bloque 2')
+BLOQUES = [(B1, ['Liminal', 'Refracción', 'Las piedras del río',
+                 'Junio 25. Andréi Tarkovski, visita a su tumba', 'Futuros luminosos']),
+           (B2, ['Todo lo que pasará mañana', 'Lejanía', 'Sol de niebla', 'Desde acá veo la tormenta',
+                 'Muchas, muchas gracias', 'Transversal30FF'])]
+MOVIDAS = {t: b for b, ts in BLOQUES for t in ts}
+MOVIDAS['Cortometrajes de Altura'] = ('2026-11-28', '14:00', None)
+MOVIDAS['La retirada'] = ('2026-11-26', '19:00', None)
+FUENTE = {'Cortometrajes de Altura': SALA + '4015?sede=80', 'La retirada': TUBOLETA + '10230607313356',
+          B1[:2]: SALA + '4080?sede=11', B2[:2]: SALA + '4087?sede=11'}
+ORDEN = {t: n for n, t in enumerate(t for _, ts in BLOQUES for t in ts)}
+for t in ('Futuros luminosos', 'Transversal30FF'):
+    web.append({'titulo': t, 'seccion': MOVIDAS[t][2], 'duracion_min': cat[t]['duracion_min'],
+                'funciones': [{'ciudad': 'Bogotá', 'sede': CINEMATECA, 'sala': 'Sala 3',
+                               'nota': 'Seguida de conversatorio con los realizadores'}]})
 for o in web:
     if o['titulo'] in MOVIDAS:
         dia_, hora_, sec_ = MOVIDAS[o['titulo']]
-        o['seccion'] = sec_
+        o['seccion'] = sec_ or o['seccion']
         for f in o['funciones']:
             if f['ciudad'] == 'Bogotá':
                 f['dia'], f['hora'] = dia_, hora_
+web.sort(key=lambda o: ORDEN.get(o['titulo'], -1))
 grupos = {}
 for o in web:
     for f in o['funciones']:
@@ -143,6 +167,11 @@ for (dia, hora, sede, sala), lst in sorted(grupos.items()):
         for k in ('director', 'pais', 'anio', 'duracion_min'):
             if c.get(k):
                 r[k] = c[k]
+    fuente_sala = FUENTE.get((dia, hora)) if len(lst) > 1 else FUENTE.get(r['titulo'])
+    if fuente_sala:
+        r['_src'] = {'url': fuente_sala, 'date': '2026-11-23', 'tipo': 'sala'}
+    if r['titulo'] == 'Cortometrajes de Altura':
+        r['acceso'] = 'Entrada libre'          # ficha 4015 de la Cinemateca
     nota = (f0['nota'] or '').lower()
     if 'conversatorio' in nota or 'presentación con' in nota:
         r.update(has_qa=True, qa_type='team')
@@ -158,7 +187,7 @@ for (dia, hora, sede, sala), lst in sorted(grupos.items()):
     funciones.append(r)
 n_bog = sum(1 for f in funciones if f['sede'].startswith('Cinemateca'))
 if n_bog != 26:
-    sys.exit(f'✗ Bogotá: {n_bog} funciones, se contaron 26 en la web (33 líneas; los 2 bloques juntan 9)')
+    sys.exit(f'✗ Bogotá: {n_bog} funciones, se contaron 26 en la web (33 líneas; los 2 bloques juntan 11)')
 
 io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
     '_provenance': provenance('MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)',

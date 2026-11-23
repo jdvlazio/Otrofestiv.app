@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "MAMM (ciclo 9º Festival Al Este) + IG @aleste.colombia (3, 5 y 10 nov 2026)",
-  "capturado": "2026-11-20",
+  "capturado": "2026-11-23",
   "url": "https://www.elmamm.org/cine/9o-festival-al-este/",
   "metodo": "fichas del MAMM y láminas de IG leídas a ojo y por OCR"
  },
@@ -551,6 +551,34 @@
     "date": "2026-11-16"
    },
    "director": "Santiago Calle García"
+  },
+  {
+   "titulo": "Futuros luminosos",
+   "director": "Ismael García Ramírez",
+   "anio": 2026,
+   "pais": "Colombia",
+   "duracion_min": 25,
+   "tipo": "corto",
+   "seccion": "Competencia Hecho en Colombia",
+   "sinopsis": "En un lugar extraño y oscuro, un grupo variopinto de jóvenes imagina su futuro.",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4080?sede=11",
+    "date": "2026-11-23"
+   }
+  },
+  {
+   "titulo": "Transversal30FF",
+   "director": "Sergio Mejía",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 6,
+   "tipo": "corto",
+   "seccion": "Competencia Hecho en Colombia",
+   "sinopsis": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4087?sede=11",
+    "date": "2026-11-23"
+   }
   }
  ]
 }

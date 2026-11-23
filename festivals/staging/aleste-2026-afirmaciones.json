@@ -360,6 +360,38 @@
     "fecha": "2026-11-23"
    },
    "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 28 5:00 PM · Sala 3», con ese link; TuBoleta dice «Sala 3 | 28.11.2026 - 17:00», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "19:00"
+   },
+   "funcion": "f_7eb873bf13",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313356",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 26 7:00 PM» con ese link; TuBoleta dice «Sala 3 | 26.11.2026 - 19:00 | La retirada»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "14:00"
+   },
+   "funcion": "f_cb55e388f2",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313365",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4087?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 29 2:00 PM · Sala 3» con ese link; TuBoleta, «Hecho en Colombia», Sala 3, ofrece «Sun 29 Nov 14:00» (y «Sat 28 Nov 14:30», el bloque 1)"
   }
  ]
 }
