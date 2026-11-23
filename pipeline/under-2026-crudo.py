@@ -152,6 +152,14 @@ F = [
 ]
 
 
+# Título y sinopsis en inglés impresos en el catálogo oficial de BOGOSHORTS 2026 (misma obra, tmdb 1743109; 23 nov)
+EN = {'Borrachos mientras escuchamos las gotas caer': (
+    'Drunk Hearing the Rain Drops Fall',
+    'A hybrid documentary of denunciation and reflection about León Ramírez and Isabel Velásquez, an elderly couple worn down '
+    'by the land that once gave them joy and now slowly kills them through state abuse. At nearly 90, they still run a small '
+    'store to survive. Their land, ravaged by armed groups and state policies, is now a purgatory where fruit rots on the '
+    'ground. Powerless, they close their shop and bury themselves alive in their land, embodying old age, abandonment, '
+    'uprootedness and resistance.')}
 # Sinopsis traducidas por nosotros (solo había inglés): pipeline/under-2026-sinopsis.json
 _SIN = json.load(io.open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'under-2026-sinopsis.json'), encoding='utf-8'))
 
@@ -170,6 +178,8 @@ def main():
             o = {'titulo': t, 'director': d, 'pais': p, 'anio': a}
             if m:
                 o['duracion_min'] = m
+            if t in EN:
+                o['title_en'], o['sinopsis_en'] = EN[t]
             if t in _SIN['sinopsis']:
                 o['sinopsis'] = _SIN['sinopsis'][t]
                 o['_sinopsis_fuente'] = _SIN['_fuente']
