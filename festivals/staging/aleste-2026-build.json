@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-20",
+  "capturado": "2026-11-23",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "16 nov 2026: las secciones son las de la web oficial (alestfestival.com/programa2026), tal cual. Se retiran «Al Este en el MAMM / en la Cinemateca», que eran rótulos nuestros por sede. «Fokus: Las grietas en el muro» (lámina IG) pasa a «del muro», como dice la web, que es la fuente más nueva. Emojis y nombres en inglés: propuesta, a confirmar con Juan.",
@@ -1271,7 +1271,7 @@
    "synopsis_en": "After losing their livelihood in a village, a Kosovar family is forced to move to the capital in pursuit of a place in a hypercapitalist society.",
    "_fid": "f_0372296ef6",
    "id": "f_0372296ef6",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1294,8 +1294,9 @@
      "fecha": "2026-11-16"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4037?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1423,6 +1424,7 @@
    "_fid": "f_43f9884be2",
    "id": "f_43f9884be2",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313355",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1447,6 +1449,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4040?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1498,6 +1505,7 @@
    "_fid": "f_ed7fe5d715",
    "id": "f_ed7fe5d715",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313354",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1522,6 +1530,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4039?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1882,6 +1895,7 @@
    "_fid": "f_2402b739a7",
    "id": "f_2402b739a7",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313361",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1906,6 +1920,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4077?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1957,6 +1976,7 @@
    "_fid": "f_4ef959b53d",
    "id": "f_4ef959b53d",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313360",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1981,6 +2001,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4076?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2027,6 +2052,7 @@
    "_fid": "f_2fd427a663",
    "id": "f_2fd427a663",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313362",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2051,6 +2077,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4078?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2107,6 +2138,7 @@
    "_fid": "f_28cdee8833",
    "id": "f_28cdee8833",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313364",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2131,6 +2163,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4079?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2270,6 +2307,7 @@
    "_fid": "f_1cbb3fe13a",
    "id": "f_1cbb3fe13a",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313365",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2294,6 +2332,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4080?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2428,6 +2471,7 @@
    "_fid": "f_1c1639d27e",
    "id": "f_1c1639d27e",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313367",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2452,6 +2496,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4082?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2508,6 +2557,7 @@
    "_fid": "f_866ea1f464",
    "id": "f_866ea1f464",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230624630079",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2532,6 +2582,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4091?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2587,6 +2642,7 @@
    "_fid": "f_1f013248ab",
    "id": "f_1f013248ab",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313369",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2611,6 +2667,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4084?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2663,6 +2724,7 @@
    "_fid": "f_c121fb1b75",
    "id": "f_c121fb1b75",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313370",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2687,6 +2749,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4085?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2742,6 +2809,7 @@
    "_fid": "f_aeab88b02c",
    "id": "f_aeab88b02c",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313371",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2766,6 +2834,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4086?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -3031,6 +3104,7 @@
    "_fid": "f_8b4e1bc31e",
    "id": "f_8b4e1bc31e",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313368",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3055,6 +3129,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4083?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -3111,6 +3190,7 @@
    "_fid": "f_5378451bd6",
    "id": "f_5378451bd6",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313372",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3135,6 +3215,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4089?sede=11"
     },
     "has_qa": {
      "tipo": "festival-pdf",
@@ -3385,7 +3470,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T17:27:41",
+  "fecha": "2026-11-23T08:32:13",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
