@@ -179,10 +179,16 @@ def ficha_de_tmdb(cid, key, titulo):
         if norm(t) in _titulos or (t and len(t.split()) <= 5 and t[-1] not in '.!?…»"'):
             return ''
         return t
+    from sinopsis_unicas import defectos as _defectos
+
+    def _sana(txt):
+        return '' if txt and _defectos(txt) else txt
     out = {'tmdb_id': cid,
            'titulo_original': det.get('original_title'),
            'poster_path': det.get('poster_path'),
-           'synopsis_es': _sinopsis(det.get('overview')) or _sinopsis(_tr_es),
+           # TMDB también trae textos que no son sinopsis (23 nov 2026: créditos de
+           # FilmAffinity, fichas técnicas): pasan por el mismo detector
+           'synopsis_es': _sana(_sinopsis(det.get('overview'))) or _sana(_sinopsis(_tr_es)),
            'synopsis_en': _sinopsis(det_en.get('overview')) or _sinopsis(_tr_en),
            'genero': (det.get('genres') or [{}])[0].get('name', ''),
            'anio_tmdb': int((det.get('release_date') or '0')[:4] or 0),

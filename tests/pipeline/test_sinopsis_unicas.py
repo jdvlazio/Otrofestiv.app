@@ -56,5 +56,21 @@ class Criterio(unittest.TestCase):
         self.assertEqual(su.decidir(BIEN, BIEN + ' Kari decide confrontar a los niños que la oprimen.', a_mano=True), 'revisar')
 
 
+class Aplicar(unittest.TestCase):
+    DEC = [{'campo': 'sinopsis.es', 'work_id': 'w1', 'valor': BIEN}, {'campo': 'sinopsis.es', 'work_id': 'w2', 'valor': ''}]
+
+    def test_llega_a_la_obra_y_a_la_de_un_programa(self):
+        d = {'films': [{'title': 'A', 'work_id': 'w1', 'synopsis': OTRA}, {'title': 'P', 'film_list': [{'title': 'A', 'work_id': 'w1'}]}]}
+        self.assertEqual(len(su.aplicar(d, decs=self.DEC)), 2)
+        self.assertEqual([d['films'][0]['synopsis'], d['films'][1]['film_list'][0]['synopsis']], [BIEN, BIEN])
+        self.assertEqual(su.aplicar(d, decs=self.DEC), [])          # idempotente
+
+    def test_la_vacia_quita_y_lo_demas_no_se_toca(self):
+        d = {'films': [{'title': 'B', 'work_id': 'w2', 'synopsis': 'x'}, {'title': 'C', 'work_id': 'w3', 'synopsis': OTRA}]}
+        su.aplicar(d, decs=self.DEC)
+        self.assertNotIn('synopsis', d['films'][0])
+        self.assertEqual(d['films'][1]['synopsis'], OTRA)
+
+
 if __name__ == '__main__':
     unittest.main()

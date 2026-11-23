@@ -6757,6 +6757,9 @@ try:
                    '(«es») dice «Cortometraje seleccionado en MIDBO 2023», que no es sinopsis (10 oct 2026)',
                    ('bhff-2026', 'Moviedreams'):
                    'TMDB 1776749: overview vacío en es-ES, es-MX y en-US (7 oct); la parrilla no trae sinopsis',
+                   ('popayan-2026', 'Nascemos para semente'):
+                   'TMDB 1700918: sin overview en español; en inglés dice «Born to Be Seed», que es el título '
+                   '(23 nov 2026). Lo publicado era la lista de actores',
                    ('bhff-2026', 'Esquirlas de Caracol'):
                    'TMDB 1718595: overview vacío en es-ES, es-MX y en-US (7 oct); la parrilla no trae sinopsis'}
     _malos = []
