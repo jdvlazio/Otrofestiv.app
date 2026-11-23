@@ -54,7 +54,7 @@ def main():
                     a['archivo'] = a['archivo'].replace('.jpg', '-original.jpg')
                 out[t] = {'archivo': a['archivo'], 'fuente': a['fuente'], 'url': a['url']}
                 continue
-            ap = [n(w) for x in re.split(r',| y ', o.get('director') or '') if x.strip() for w in x.split()[-2:] if len(w) > 3]
+            ap = [n(w) for x in re.split(r',| y ', o.get('director') or '') if x.strip() for w in x.split()[-2:] if len(w) > 2]
             for k, v in [c for x in [t] + o.get('titulos_alt', []) for c in ix.get(n(x), [])] + \
                     ([(ALIAS[t], web[ALIAS[t]])] if t in ALIAS else []):
                 if not v.get('poster'):
@@ -79,7 +79,7 @@ def main():
                     notas.append(f'{t}: {os.path.basename(p)} bajó incompleto')
                     continue
                 w, h = im.size
-                if not 0.6 <= w / h <= 0.8:
+                if not 0.55 <= w / h <= 0.8:
                     notas.append(f'{t}: {w}×{h} no es vertical 2:3')
                     continue
                 out[t] = {'archivo': os.path.relpath(os.path.realpath(p), os.path.realpath(REPO)) if not p.startswith(REPO) else p[len(REPO) + 1:],

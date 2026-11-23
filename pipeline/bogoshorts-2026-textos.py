@@ -12,7 +12,12 @@ from lib import provenance  # noqa: E402
 PDF = f'{REPO}/fuentes/bogoshorts-2026/catalogo2026.pdf'
 URL = 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf'
 OUT = f'{REPO}/festivals/staging/bogoshorts-2026-textos.json'
+BFM = f'{REPO}/fuentes/bogoshorts-2026/catalogo-bfm2026.pdf'   # 10BFM_catalogo2026.pdf
 TROZOS = {
+    'genero': ('En esta charla exploraremos los códigos', 'ecosistema Freak de BOGOSHORTS.'),
+    'vertical': ('¿Qué implica concebir una historia', 'cuando cambia la pantalla.'),
+    'ia': ('BOGOSHORTS reúne a tres de sus jurados', 'nuevas formas de hacer cine.'),
+    'furia': ('Felipe se cuela a un toque', 'y sus peores miedos.'),
     'vineta': ('¿Qué sucede cuando una historia dibujada', 'en el papel y en la pantalla.'),
     'croacia': ('¿Qué lugar ocupa el cortometraje', 'posibilidades de intercambio y colaboración.'),
     'jazz': ('Una trompeta puede cambiar', 'ninguno había imaginado por separado.'),
@@ -24,7 +29,7 @@ TROZOS = {
 
 
 def main():
-    t = subprocess.run(['pdftotext', PDF, '-'], capture_output=True, text=True).stdout
+    t = '\n'.join(subprocess.run(['pdftotext', x, '-'], capture_output=True, text=True).stdout for x in (PDF, BFM))
     t = re.sub(r'\f', '\n', t)
     t = re.sub(r'-\n(?=[a-záéíóúñ])', '', t)
     t = re.sub(r'\s+', ' ', t)

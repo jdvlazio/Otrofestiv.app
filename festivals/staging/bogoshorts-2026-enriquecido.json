@@ -2096,7 +2096,10 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La línea del mar",
    "_director": "Melissa Saavedra Gil",
-   "_sondeado": "2026-11-23"
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/la-linea-del-mar.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4140), 253×450"
   },
   {
    "titulo": "La maleza",
@@ -3132,6 +3135,23 @@
    "_director": "Luciana Espinoza Hoempler",
    "_sondeado": "2026-11-23",
    "poster": "/assets/bogoshorts-2026/no-hay-camino.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "No todos los pájaros son aves",
+   "tmdb_id": 1827960,
+   "titulo_original": "No todos los pájaros son aves",
+   "poster_path": "/kE32I3HaVzJaj9NpazHuqB8QQ6x.jpg",
+   "synopsis_es": "Jaco y Lila, dos jóvenes bogotanos, enfrentan el final de la relación más importante de sus veintes. Durante sus últimos dos días juntos, se adentran en los distintos lenguajes del amor mediante un diálogo íntimo y extenso que pone en palabras y sensaciones el dolor, la añoranza y la dificultad de amarse en medio de la condición humana.",
+   "synopsis_en": "",
+   "genero": "Romance",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1827960 «No todos los pájaros son aves» — director ✓ y año/duración ✓",
+   "_director": "Mateo Guerrero Quintero",
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/no-todos-los-pajaros-son-aves.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -4911,6 +4931,12 @@
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4375), 1587×2245"
   },
   {
+   "titulo": "La ciudad de las flores (Maleza y Los Floripondios)",
+   "poster": "/assets/bogoshorts-2026/la-ciudad-de-las-flores-maleza-y-los-floripondios.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4376), 253×450"
+  },
+  {
    "titulo": "Marea (Lido Pimienta)",
    "poster": "/assets/bogoshorts-2026/marea-lido-pimienta.jpg",
    "posterSource": "oficial",
@@ -4977,6 +5003,12 @@
    "_afiche": "declarado: Afiche del videoclip en ficha BOGOSHORTS corto/4344"
   },
   {
+   "titulo": "Cocodrilo (Dillom)",
+   "poster": "/assets/bogoshorts-2026/cocodrilo-dillom.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4346), 2592×3840"
+  },
+  {
    "titulo": "El píxel y la parcela",
    "poster": "/assets/bogoshorts-2026/el-pixel-y-la-parcela.jpg",
    "posterSource": "oficial",
@@ -5031,12 +5063,6 @@
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4219)"
   },
   {
-   "titulo": "No todos los pájaros son aves",
-   "poster": "/assets/bogoshorts-2026/no-todos-los-pajaros-son-aves.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: Afiche oficial en ficha BOGOSHORTS corto/4272 (con laurel); solo 300x450"
-  },
-  {
    "titulo": "Némica",
    "poster": "/assets/bogoshorts-2026/nemica.jpg",
    "posterSource": "oficial",
@@ -5047,6 +5073,12 @@
    "poster": "/assets/bogoshorts-2026/querido-river-phoenix.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: Afiche oficial en ficha BOGOSHORTS corto/4229"
+  },
+  {
+   "titulo": "Běi Huí Gu− Xiàn",
+   "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4259), 5400×7200"
   },
   {
    "titulo": "Varoncito",
@@ -7067,7 +7099,10 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La línea del mar",
    "_director": "Melissa Saavedra Gil",
-   "_sondeado": "2026-11-23"
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/la-linea-del-mar.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4140), 253×450"
   },
   "La maleza": {
    "tmdb_id": 1701420,
@@ -8035,6 +8070,22 @@
    "_director": "Luciana Espinoza Hoempler",
    "_sondeado": "2026-11-23",
    "poster": "/assets/bogoshorts-2026/no-hay-camino.jpg",
+   "posterSource": "tmdb"
+  },
+  "No todos los pájaros son aves": {
+   "tmdb_id": 1827960,
+   "titulo_original": "No todos los pájaros son aves",
+   "poster_path": "/kE32I3HaVzJaj9NpazHuqB8QQ6x.jpg",
+   "synopsis_es": "Jaco y Lila, dos jóvenes bogotanos, enfrentan el final de la relación más importante de sus veintes. Durante sus últimos dos días juntos, se adentran en los distintos lenguajes del amor mediante un diálogo íntimo y extenso que pone en palabras y sensaciones el dolor, la añoranza y la dificultad de amarse en medio de la condición humana.",
+   "synopsis_en": "",
+   "genero": "Romance",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1827960 «No todos los pájaros son aves» — director ✓ y año/duración ✓",
+   "_director": "Mateo Guerrero Quintero",
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/no-todos-los-pajaros-son-aves.jpg",
    "posterSource": "tmdb"
   },
   "Noon, le pain de Téhéran": {
@@ -9602,6 +9653,11 @@
    "poster": "/assets/bogoshorts-2026/piskoviste.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4286), 450×636"
+  },
+  "Běi Huí Gu− Xiàn": {
+   "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4259), 5400×7200"
   }
  },
  "sin_ficha": [
@@ -9650,7 +9706,6 @@
   "Nancy resabiada (Cumbia) (El Kalvo & La Banda Resabiada)",
   "Ni aquí, ni allá",
   "No te conozcas",
-  "No todos los pájaros son aves",
   "Nothing Here is Lost",
   "Némica",
   "O sigilo",
@@ -9862,10 +9917,6 @@
   },
   "No te conozcas": {
    "director": "Andrés Isaza Giraldo",
-   "fecha": "2026-11-23"
-  },
-  "No todos los pájaros son aves": {
-   "director": "Mateo Guerrero Quintero",
    "fecha": "2026-11-23"
   },
   "Nothing Here is Lost": {

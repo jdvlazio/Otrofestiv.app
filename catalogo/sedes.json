@@ -244,12 +244,15 @@
    },
    "address": "Calle 82 # 10-69",
    "alias": [
+    "CEFE",
+    "CEFE Chapinero - Bogotá",
     "Centro Felicidad Chapinero"
    ],
    "festivales": [
     "anibia-2026",
     "bhff-2026",
-    "biff-2026"
+    "biff-2026",
+    "bogoshorts-2026"
    ],
    "salas": [
     "Teatro",
@@ -436,6 +439,7 @@
     "anibia-2026",
     "bhff-2026",
     "biff-2026",
+    "bogoshorts-2026",
     "cuaff-2026",
     "midbo-2026",
     "narrarelfuturo-2026"
@@ -558,8 +562,11 @@
     "fuente": "midbo-2026-venues-geo.json"
    },
    "address": "Cra. 3 #18-45",
-   "alias": [],
+   "alias": [
+    "Alianza Francesa - Bogotá"
+   ],
    "festivales": [
+    "bogoshorts-2026",
     "midbo-2026"
    ],
    "salas": [
@@ -1532,9 +1539,12 @@
     "fuente": "biff-2026-venues-geo.json"
    },
    "address": "Cl. 19 #2A-10",
-   "alias": [],
+   "alias": [
+    "City U - Bogotá"
+   ],
    "festivales": [
-    "biff-2026"
+    "biff-2026",
+    "bogoshorts-2026"
    ],
    "salas": [
     "Plazoleta principal"
@@ -1658,8 +1668,12 @@
     "fuente": "midbo-2026-venues-geo.json"
    },
    "address": "Cl. 40b #6-23",
-   "alias": [],
+   "alias": [
+    "Centro Ático",
+    "Centro Ático - Bogotá"
+   ],
    "festivales": [
+    "bogoshorts-2026",
     "midbo-2026"
    ],
    "ciudad": "Bogotá",
@@ -2830,6 +2844,25 @@
    "ciudad": "Toro",
    "corto": "Mambo House"
   },
+  "s_9106c39d": {
+   "nombre": "Teatro al aire libre La Media Torta",
+   "lat": 4.6003444,
+   "lng": -74.0659169,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/?api=1&query=Teatro+al+Aire+Libre+La+Media+Torta+Bogota",
+    "fecha": "2026-11-23",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 18 # 1-05 Este",
+   "alias": [
+    "Teatro al aire libre La Media Torta - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá"
+  },
   "s_92850ca4": {
    "nombre": "Plaza Mayor",
    "lat": 5.6338197,
@@ -2911,6 +2944,25 @@
    ],
    "ciudad": "Guatapé",
    "corto": "Malecón"
+  },
+  "s_9717417e": {
+   "nombre": "Teatro El Parque",
+   "lat": 4.6230409,
+   "lng": -74.0636956,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/?api=1&query=Teatro+El+Parque+Bogota",
+    "fecha": "2026-11-23",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 5 # 36-05",
+   "alias": [
+    "Teatro El Parque - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá"
   },
   "s_98028200": {
    "nombre": "Centro Cultural Brisas de Mayo",
@@ -3242,6 +3294,25 @@
    "ciudad": "Medellín",
    "corto": "Finca Agroturística El Encanto de Mis Abuelos"
   },
+  "s_a4d046a3": {
+   "nombre": "Teatro Jorge Eliécer Gaitán",
+   "lat": 4.6086901,
+   "lng": -74.0707267,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/?api=1&query=Teatro+Municipal+Jorge+Eliecer+Gaitan+Bogota",
+    "fecha": "2026-11-23",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 7 # 22-47",
+   "alias": [
+    "Teatro Jorge Eliécer Gaitán - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá"
+  },
   "s_a4fd24e0": {
    "nombre": "Coliseo Institución Educativa Fray José Joaquín Escobar",
    "lat": 4.6092418,
@@ -3258,6 +3329,25 @@
    ],
    "ciudad": "Toro",
    "corto": "Coliseo Institución Educativa Fray José Joaquín Escobar"
+  },
+  "s_a6295d2a": {
+   "nombre": "Sala Gaitán Antigua Cinemateca",
+   "lat": 4.608881,
+   "lng": -74.0706722,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/?api=1&query=Carrera+7+%2322-47+Bogota",
+    "fecha": "2026-11-23",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 7 # 22-47",
+   "alias": [
+    "Sala Gaitán Antigua Cinemateca - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá"
   },
   "s_a6e0e0b3": {
    "nombre": "Cine Colombia Multiplex Avenida Chile",
@@ -3947,6 +4037,25 @@
    "ciudad": "Cali",
    "corto": "Cinemateca La Tertulia"
   },
+  "s_c47407fc": {
+   "nombre": "Teatro Delia Zapata Olivella",
+   "lat": 4.5974429,
+   "lng": -74.0745009,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/?api=1&query=Teatro+Delia+Zapata+Olivella+Bogota",
+    "fecha": "2026-11-23",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 11 # 5-60",
+   "alias": [
+    "Teatro Delia Zapata Olivella - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá"
+  },
   "s_c4b65a07": {
    "nombre": "Casa de la Cultura",
    "lat": 5.598525,
@@ -3991,12 +4100,14 @@
    },
    "address": "Calle 146 # 138A-99",
    "alias": [
-    "Cinemateca Fontanar del Río - Bogotá"
+    "Cinemateca Fontanar del Río - Bogotá",
+    "Cinemateca de Bogotá Sede Fontanar del Río"
    ],
    "festivales": [
     "aleste-2026",
     "anibia-2026",
     "bhff-2026",
+    "bogoshorts-2026",
     "narrarelfuturo-2026"
    ],
    "ciudad": "Bogotá",
@@ -4764,7 +4875,13 @@
    "festivales": [
     "cajica-2026"
    ],
-   "ciudad": "Cajicá"
+   "ciudad": "Cajicá",
+   "salas": [
+    "3.er piso, Biblioteca",
+    "Auditorio Múltiple",
+    "Auditorio Principal"
+   ],
+   "corto": "Centro Cultural y de Convenciones Fernando Botero"
   },
   "s_ee9c7bec": {
    "nombre": "CineQuanon",
@@ -5197,6 +5314,7 @@
   "s_c3221991": "s_11667bea",
   "s_c5c17b27": "s_e1907155",
   "s_dc769578": "s_b3c7c07a",
+  "s_e114d377": "s_5ce71f2b",
   "s_e4896ea4": "s_e1907155"
  },
  "decisiones": {
@@ -5240,6 +5358,11 @@
     "Antimateria Libros y Café",
     "Librería Antimateria",
     "Maps: «Antimateria», Calle 45E #72-09; librería y café son el mismo local"
+   ],
+   [
+    "Centro Ático",
+    "Centro Ático, Universidad Javeriana",
+    "el Centro Ático de la Javeriana, Calle 40B # 6-23 (catálogo BOGOSHORTS 2026)"
    ]
   ],
   "distintos": [
@@ -5352,6 +5475,11 @@
     "Centro Día Gerontológico",
     "Parque Principal",
     "mismo pin aproximado en el parque: revisar con Maps"
+   ],
+   [
+    "Sala Gaitán Antigua Cinemateca",
+    "Teatro Jorge Eliécer Gaitán",
+    "dos salas del mismo predio (Carrera 7 # 22-47): el teatro y la antigua Cinemateca Distrital"
    ]
   ]
  },

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "sondas TMDB por título, alternos y filmografía del director (movie/credits)",
-  "capturado": "2026-11-15"
+  "capturado": "2026-11-23"
  },
  "fichas": {
   "2000": {
@@ -128,6 +128,107 @@
  "duracion_distinta": {
   "L’uomo meccanico": {
    "_por_que": "el catálogo da 26'00'': es la copia parcial que se conserva; TMDB registra 80 min, la duración original"
+  }
+ },
+ "sin_afiche": {
+  "A Body that Hurts": {
+   "_por_que": "Ninguna fuente (TMDB, IMDb, Letterboxd, búsqueda web, perfil del director) muestra afiche ni imagen de la obra"
+  },
+  "Argentina Is Daing (Marttein)": {
+   "_por_que": "Videoclip: solo miniatura (fotograma) en el canal oficial; sin afiche"
+  },
+  "Barcelona de Foc": {
+   "_por_que": "su ficha de TMDB (750788) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026)"
+  },
+  "Berzingue (Crache)": {
+   "_por_que": "Videoclip: solo miniatura de YouTube y portada del EP (no del clip); sin afiche"
+  },
+  "Cada día paso por aquí": {
+   "_por_que": "su ficha de TMDB (438251) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026)"
+  },
+  "Cameras Take Five": {
+   "_por_que": "su ficha de TMDB (299661) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026)"
+  },
+  "Carta a un joven ladrón": {
+   "_por_que": "sin afiche tras catálogo, web/redes del director, plataformas y Bing Imágenes"
+  },
+  "Cassandra": {
+   "_por_que": "PACCPA y BOGOSHORTS solo tienen fotogramas apaisados; Bing Imágenes sin afiche"
+  },
+  "Clasificado personal": {
+   "_por_que": "sin afiche en catálogo, web ni Bing Imágenes"
+  },
+  "El gusano solitario": {
+   "_por_que": "su ficha de TMDB (1058527) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026)"
+  },
+  "Fantasy Land": {
+   "_por_que": "Ni Marvin&Wayne, ni Kabiria Films, ni ALTER-NATIVE ni Bing Imágenes tienen afiche: solo fotogramas. (Posible afiche en Instagram p/DeZmsJpDCHk, no revisable sin sesión)"
+  },
+  "Furia": {
+   "_por_que": "estreno de In Vitro BFM 2025: ni la agenda de la Cinemateca ni el catálogo del BFM traen afiche"
+  },
+  "Has estado aquí": {
+   "_por_que": "Ni D'A, ni CCCB, ni lamidanoimporta.cat, ni Bing Imágenes tienen afiche: solo fotogramas 16:9 y foto de la directora. Existe en IMDb tt27164701 pero no en TMDB"
+  },
+  "I Carry Them": {
+   "_por_que": "Dance film comisionado y lanzado en línea: el director, Films.Dance, Directors Notes y Onepointfour solo publican fotogramas horizontales; no se halló afiche vertical"
+  },
+  "Jazzed": {
+   "_por_que": "El único afiche original hallado (FilmAffinity, jazzed-201890773-large.jpg) mide 400x600, bajo el mínimo de 500x750 de TMDB, y el host bloquea la descarga directa (403); Unifrance y Les Films du Nord solo tienen fotogramas horizontales"
+  },
+  "La colère et après": {
+   "_por_que": "Estreno mundial en BOGOSHORTS sin presencia pública: ni Travelling ni ninguna otra fuente publica afiche o ficha de la obra"
+  },
+  "La primera estampilla de Korinco": {
+   "_por_que": "la ficha de la obra en la web del festival (corto/4335) no trae póster y el catálogo no le hizo ficha"
+  },
+  "Lucha": {
+   "_por_que": "Corto de 2019 de un director fallecido sin web, distribuidora ni perfil en plataformas; ni IMDb ni buscadores de imágenes tienen afiche."
+  },
+  "Mañana": {
+   "_por_que": "su ficha de TMDB (1445035) no tiene afiche y la web del festival no tiene fichas del programa HOM-CES (revisado 23 nov 2026)"
+  },
+  "Métae": {
+   "_por_que": "su ficha de TMDB (1558794) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026)"
+  },
+  "Nothing Here is Lost": {
+   "_por_que": "Gargantua (agencia) solo publica fotogramas; ficha BOGOSHORTS corto/4364 sin póster; Bing Imágenes sin afiche"
+  },
+  "O sigilo": {
+   "_por_que": "Ficha BOGOSHORTS corto/4361 sin póster (solo foto del director); sin web ni festivales previos; Bing Imágenes sin afiche"
+  },
+  "Oui (Balming Tiger)": {
+   "_por_que": "Videoclip: solo miniatura YouTube/Vimeo (fotograma) y portada del sencillo; ficha BOGOSHORTS corto/4349 sin póster"
+  },
+  "Para Dani": {
+   "_por_que": "Obra póstuma del homenaje a César Heredia (fallecido dic 2025); sin presencia web ni imagen"
+  },
+  "Paraíso": {
+   "_por_que": "Experiencia VR sin afiche publicado: ficha BOGOSHORTS 4423 solo trae foto del director; Bing Imágenes sin resultado."
+  },
+  "Robo macabro": {
+   "_por_que": "su ficha de TMDB (939823) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026)"
+  },
+  "Sunrise Meets Sunset": {
+   "_por_que": "su ficha de TMDB (1264445) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026)"
+  },
+  "The Beat (Matías Aguayo)": {
+   "_por_que": "Videoclip sin afiche: la web del festival no trae póster y solo hay miniatura de YouTube y portada del sencillo"
+  },
+  "Todo río lloverá sobre nosotros": {
+   "_por_que": "Sin afiche en ninguna fuente: no está en la web del festival, sin prensa, sin festivales previos ni imágenes"
+  },
+  "Transastralisme": {
+   "_por_que": "Solo fotogramas apaisados (Catalan Films, MUBI); la web del festival y L'Alternativa no tienen afiche"
+  },
+  "Un gallinazo sin suerte": {
+   "_por_que": "Corto de 1979 sin afiche en Proimágenes, Cineaparte, la web del festival ni en imágenes"
+  },
+  "When the Flowers Bloom": {
+   "_por_que": "Experiencia VR: ficha del festival sin póster; Acorn Den, TAICCA, KFF y Bing Imágenes solo tienen fotogramas/capturas horizontales o cuadradas"
+  },
+  "¿Cómo se ama? (Jorge Drexler)": {
+   "_por_que": "Videoclip: ficha del festival sin póster; YouTube/VEVO, prensa y Bing Imágenes solo con fotogramas y fotos de prensa"
   }
  }
 }

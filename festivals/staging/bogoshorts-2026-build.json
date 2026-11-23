@@ -7,7 +7,7 @@
  },
  "radar": 575,
  "_por_que_secciones": "Los grupos de la leyenda de la grilla, tal cual; para lo que la leyenda no trae, el rótulo del catálogo 2026 (Noche de Humor, Eventos especiales, BOGOSHORTS al tablero, BOGOSHORTS Expone, IMAGINATÓN, BFM - BOGOSHORTS Film Market). El inglés es el del propio catálogo cuando lo da. Emoji y arquetipo: propuesta, a confirmar con Juan. «Ganadores 24BOGOSHORTS» no tiene rótulo de sección en ninguna fuente: va en Eventos especiales como propuesta. Al Tablero, Expone, Imaginatón y BFM: el nombre del menú de la web y de la grilla, en la caja de la app (sin mayúscula sostenida).",
- "_por_que_sedes": "La sede como la nombra la grilla; la sala viaja por función. CEFE = Centro Felicidad Chapinero, Alianza Francesa = Sede Centro y Sala Gaitán = Carrera 7 # 22-47, las tres confirmadas en el catálogo 2026. Retina Latina (en línea) no es sede.",
+ "_por_que_sedes": "La sede como la nombra la grilla; la sala viaja por función. CEFE = Centro Felicidad Chapinero, Alianza Francesa = Sede Centro y Sala Gaitán = Carrera 7 # 22-47, las tres confirmadas en el catálogo 2026. Retina Latina (en línea) no es sede. Los 11 pines están puestos (almacén de sedes + Google Maps), por eso no hay paso de geocodificación.",
  "name": "BOGOSHORTS",
  "displayName": "BOGOSHORTS",
  "shortName": "BOGOSHORTS",
@@ -243,7 +243,8 @@
    "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro Municipal Jorge Eliécer Gaitán». · dirección del catálogo 2026 (Escenarios)",
    "lat": 4.6086901,
    "lng": -74.0707267,
-   "address": "Carrera 7 # 22-47"
+   "address": "Carrera 7 # 22-47",
+   "_matriz": "s_a4d046a3"
   },
   "City U - Bogotá": {
    "short": "City U",
@@ -283,7 +284,8 @@
    "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Centro Ático» (Pontificia Universidad Javeriana). · dirección del catálogo 2026 (Escenarios)",
    "lat": 4.6269751,
    "lng": -74.0650621,
-   "address": "Calle 40B # 6-23"
+   "address": "Calle 40B # 6-23",
+   "_matriz": "s_e114d377"
   },
   "CEFE Chapinero - Bogotá": {
    "short": "CEFE Chapinero",
@@ -303,7 +305,8 @@
    "_nota": "Catálogo 2026 (Escenarios): «Sala Gaitán (Antigua Cinemateca Distrital)», Carrera 7 # 22-47, la misma dirección del Teatro Jorge Eliécer Gaitán: sala del mismo predio, dos sedes reales. Pin del predio.",
    "lat": 4.608881,
    "lng": -74.0706722,
-   "address": "Carrera 7 # 22-47"
+   "address": "Carrera 7 # 22-47",
+   "_matriz": "s_a6295d2a"
   },
   "Cinemateca Fontanar del Río - Bogotá": {
    "short": "Cinemateca Fontanar del Río",
@@ -322,7 +325,8 @@
    "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro El Parque» (Parque Nacional). · dirección del catálogo 2026 (Escenarios)",
    "lat": 4.6230409,
    "lng": -74.0636956,
-   "address": "Carrera 5 # 36-05"
+   "address": "Carrera 5 # 36-05",
+   "_matriz": "s_9717417e"
   },
   "Teatro al aire libre La Media Torta - Bogotá": {
    "short": "Teatro al aire libre La Media Torta",
@@ -331,7 +335,8 @@
    "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro al Aire Libre La Media Torta». · dirección del catálogo 2026 (Escenarios)",
    "lat": 4.6003444,
    "lng": -74.0659169,
-   "address": "Calle 18 # 1-05 Este"
+   "address": "Calle 18 # 1-05 Este",
+   "_matriz": "s_9106c39d"
   },
   "Teatro Delia Zapata Olivella - Bogotá": {
    "short": "Teatro Delia Zapata Olivella",
@@ -340,7 +345,8 @@
    "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro Delia Zapata Olivella» (Centro Nacional de las Artes). · dirección del catálogo 2026 (Escenarios)",
    "lat": 4.5974429,
    "lng": -74.0745009,
-   "address": "Calle 11 # 5-60"
+   "address": "Calle 11 # 5-60",
+   "_matriz": "s_c47407fc"
   }
  },
  "_avisos_id": [],
@@ -437,6 +443,8 @@
     "date": "2026-11-13"
    },
    "is_free": true,
+   "description": "En esta charla exploraremos los códigos, convenciones, transformaciones y cruces de los géneros y subgéneros del cine de terror, fantasía y ciencia ficción. Recorreremos algunas de sus expresiones más importantes para descubrir cómo reconocerlas, apropiarnos de sus lenguajes y expandir sus posibilidades narrativas y estéticas en la creación de cortometrajes. Porque sí es posible construir pesadillas en pocos minutos y hacer creíble lo imposible en formato corto. La tallerista será Alejandra Rocas, montajista y curadora audiovisual con más de 10 años de experiencia que actualmente selecciona los cortometrajes de la competencia F3: Fanático Freak Fantástico. Esta sección, sumada a la Noche Frankenstein y al componente de industria Freak BFM, configuran el ecosistema Freak de BOGOSHORTS.",
+   "description_lang": "es",
    "_fid": "f_d3910462ed",
    "id": "f_d3910462ed"
   },
@@ -842,6 +850,8 @@
      },
      "synopsis": "En un pequeño pueblo del Pacífico colombiano, cinco jóvenes comparten sus días junto al mar. Entre conversaciones, caminatas y silencios, su amistad se entrelaza con el paisaje. La marea, las ruinas y los espacios que habitan revelan una transformación silenciosa. A medida que el océano avanza, su vínculo se enfrenta a una despedida inevitable marcada por la adultez, la nostalgia y la imposibilidad de quedarse.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/la-linea-del-mar.jpg",
+     "posterSource": "oficial",
      "lbSlug": "la-linea-del-mar",
      "tmdb_id": 1814340,
      "synopsis_en": "In a small town on Colombia’s Pacific coast, five young people spend their days by the sea. They walk, talk, and sit in silence, while time seems to stand still and the landscape becomes part of their friendship. As the ocean advances, an inevitable farewell looms.",
@@ -1684,6 +1694,10 @@
      "year": 2026,
      "duration": "18 min",
      "language": "Mandarín, Cantonés",
+     "poster": "/assets/bogoshorts-2026/tmdb-1736821.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "3-lost-in-towers",
+     "tmdb_id": 1736821,
      "_src": {
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 92,
@@ -2219,6 +2233,10 @@
      "year": 2026,
      "duration": "19 min",
      "language": "Chino",
+     "poster": "/assets/bogoshorts-2026/tmdb-1599912.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-apple-doesnt-fall",
+     "tmdb_id": 1599912,
      "_src": {
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 104,
@@ -2445,7 +2463,9 @@
      "synopsis": "Jaco y Lila, dos jóvenes bogotanos, enfrentan el final de la relación más importante de sus veintes. Durante sus últimos dos días juntos, se adentran en los distintos lenguajes del amor mediante un diálogo íntimo y extenso que pone en palabras y sensaciones el dolor, la añoranza y la dificultad de amarse en medio de la condición humana.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/no-todos-los-pajaros-son-aves.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "tmdb_id": 1827960,
+     "genre": "Romance"
     }
    ],
    "_fid": "f_10979b2923",
@@ -2532,6 +2552,8 @@
     "date": "2026-11-13"
    },
    "is_free": true,
+   "description": "¿Qué implica concebir una historia para una pantalla vertical? El protagonismo de los cortometrajes y las microseries en este formato invita a revisar cómo contamos, encuadramos y nos relacionamos con las imágenes. Abriremos una conversación sobre los desafíos de crear para un espacio que transforma la composición, la puesta en escena, el movimiento y la relación entre los cuerpos y su entorno. Pensar en vertical exige decisiones desde la escritura: qué mostramos, qué queda fuera de campo, cómo construimos el ritmo y cómo sostenemos una historia a través de episodios breves. El diálogo abordará también las condiciones de circulación y consumo en dispositivos móviles, la disputa por la atención y las tensiones entre la búsqueda de una voz propia y las exigencias de las plataformas. Una invitación a explorar qué posibilidades narrativas abre el formato vertical y a preguntarnos cuánto cambia nuestra mirada cuando cambia la pantalla.",
+   "description_lang": "es",
    "_fid": "f_ed92fe4f4c",
    "id": "f_ed92fe4f4c"
   },
@@ -3045,7 +3067,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "See You in the Morning",
@@ -5141,6 +5165,8 @@
     "date": "2026-11-13"
    },
    "is_free": true,
+   "description": "BOGOSHORTS reúne a tres de sus jurados —Joseba Lopezortega Aguirre, del Festival Internacional de Cine Documental y Cortometraje de Bilbao – ZINEBI; Wiebke Johanna Jung, del Festival Internacional de Cortometrajes de Oberhausen; y Pablo Guisa Koestinger, de Mórbido Film Fest— para conversar sobre cómo se posicionan frente a estos retos y dónde consideran necesario establecer límites. ¿Es suficiente que una obra declare el uso de IA? ¿Cómo distinguir entre una herramienta dentro del proceso creativo y la generación de una película? ¿Qué lugar ocupan los derechos de los artistas y las condiciones de trabajo en estas decisiones? Desde sus distintas perspectivas, el diálogo explorará qué implica abrir o cerrar las puertas a estas obras, cómo evaluarlas y qué responsabilidad tienen los festivales al legitimar nuevas formas de hacer cine.",
+   "description_lang": "es",
    "_fid": "f_38bbdbc21b",
    "id": "f_38bbdbc21b"
   },
@@ -5693,7 +5719,9 @@
      "synopsis": "Jaco y Lila, dos jóvenes bogotanos, enfrentan el final de la relación más importante de sus veintes. Durante sus últimos dos días juntos, se adentran en los distintos lenguajes del amor mediante un diálogo íntimo y extenso que pone en palabras y sensaciones el dolor, la añoranza y la dificultad de amarse en medio de la condición humana.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/no-todos-los-pajaros-son-aves.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "tmdb_id": 1827960,
+     "genre": "Romance"
     }
    ],
    "_fid": "f_87f9200a8a",
@@ -8477,6 +8505,10 @@
      "year": 2026,
      "duration": "19 min",
      "language": "Chino",
+     "poster": "/assets/bogoshorts-2026/tmdb-1599912.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-apple-doesnt-fall",
+     "tmdb_id": 1599912,
      "_src": {
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 104,
@@ -10305,7 +10337,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "See You in the Morning",
@@ -10499,6 +10533,8 @@
      },
      "synopsis": "En un pequeño pueblo del Pacífico colombiano, cinco jóvenes comparten sus días junto al mar. Entre conversaciones, caminatas y silencios, su amistad se entrelaza con el paisaje. La marea, las ruinas y los espacios que habitan revelan una transformación silenciosa. A medida que el océano avanza, su vínculo se enfrenta a una despedida inevitable marcada por la adultez, la nostalgia y la imposibilidad de quedarse.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/la-linea-del-mar.jpg",
+     "posterSource": "oficial",
      "lbSlug": "la-linea-del-mar",
      "tmdb_id": 1814340,
      "synopsis_en": "In a small town on Colombia’s Pacific coast, five young people spend their days by the sea. They walk, talk, and sit in silence, while time seems to stand still and the landscape becomes part of their friendship. As the ocean advances, an inevitable farewell looms.",
@@ -11844,6 +11880,8 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "has_qa": true,
+   "synopsis": "Felipe se cuela a un toque y descubre que su novio Eduardo lo oculta por miedo a aceptar su homosexualidad. Entre un primer trance químico y un pogo, se liberan y desinhiben, hasta que un intento de beso amenaza con desatar violencia y sus peores miedos.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
@@ -13995,6 +14033,10 @@
      "year": 2026,
      "duration": "18 min",
      "language": "Mandarín, Cantonés",
+     "poster": "/assets/bogoshorts-2026/tmdb-1736821.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "3-lost-in-towers",
+     "tmdb_id": 1736821,
      "_src": {
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 92,
@@ -14277,7 +14319,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Dirigido por Rocío Gastaldi y Andrés Capasso, “Cocodrilo” es un videoclip en stop motion construido a partir de tatuajes realizados sobre más de 250 fans de Dillom durante dos jornadas. Los tatuajes se hicieron antes del lanzamiento de su reciente disco LA NUEVA VIOLENCIA: los participantes marcaron para siempre sus cuerpos con imágenes de un disco que nunca habían escuchado. Un acto de fe ciega, devoción y locura.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/cocodrilo-dillom.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "The Beat (Matías Aguayo)",
@@ -14523,7 +14567,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Suba es la localidad más poblada de Bogotá, anteriormente fue un pueblo, allí vivieron indigenas muiscas. Es una localidad con grandes contradicciones sociales, Maleza es una cantautora de la localidad e hizo una canción a su madre, a la casa que ella construyó allí y a las mujeres de su entorno.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/la-ciudad-de-las-flores-maleza-y-los-floripondios.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Marea (Lido Pimienta)",
@@ -16609,5 +16655,12 @@
  "_avisos_duracion": [
   "«L’uomo meccanico»: 26 min en el festival, 80 en TMDB",
   "«L’uomo meccanico»: 26 min en el festival, 80 en TMDB"
- ]
+ ],
+ "_corrido": {
+  "por": "pipeline/correr.py",
+  "fecha": "2026-11-23T11:03:56",
+  "plan_sha": "ad74bc16627e6e5c",
+  "paso": 11,
+  "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"
+ }
 }

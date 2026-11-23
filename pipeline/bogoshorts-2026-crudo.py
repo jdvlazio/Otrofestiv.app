@@ -120,46 +120,14 @@ NOMBRE = {'CI-CP': 'Corto Periodístico', 'CVR': 'Competencia VR - Realidad Virt
           'F3-01': 'Fanático Freak Fantástico 1', 'F3-02': 'Fanático Freak Fantástico 2',
           'F3-03': 'Fanático Freak Fantástico 3',
           'WT-CRO1': 'World Tour: Croacia 1', 'WT-CRO2': 'World Tour: Croacia 2'}
-# códigos que la leyenda no trae → (sección, título) del CATÁLOGO 2026
-FUERA_LEYENDA = {
-    'HOM-CESAR': ('Especiales', 'Estrella Fugaz: Un homenaje a César Heredia'),   # catálogo: índice «Especiales / Specials»
-    'HUMOR': ('Noche de Humor', 'Humor en corto'),            # catálogo: índice «Noche de Humor», rótulo «Humor en corto - HUMOR»
-    # una sola función con los dos videoclips; la agenda: «Competencia Nacional e Internacional»
-    'CI-VC/CN-VC': ('Competencia Internacional', 'Competencia Internacional y Nacional Videoclip'),
-}
-# ACTIVIDADES: texto de la celda (arranque) → lo que el catálogo dice de ella.
-# La sección es el rótulo del catálogo («BOGOSHORTS al tablero - BS-TAB», «Eventos
-# especiales», «BOGOSHORTS Expone»). Duración: la franja impresa (catálogo pág. 25-26;
-# programación del 10 BFM, «Al Tablero BFM 10:00 a.m. - 12:00 m.»).
-CAT = 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf'
-ACTIVIDADES = [
-    ('Inauguración', {'seccion': 'Eventos especiales', 'event_kind': 'apertura', 'acceso': 'Entrada con invitación'}),
-    ('Apertura BFM', {'seccion': 'Eventos especiales', 'event_kind': 'apertura',
-                      'acceso': 'Solo para acreditados de Industria BFM con registro previo'}),
-    ('Al Tablero BFM ¿Qué género', {'titulo': '¿Qué género es tu corto? Un viaje por lo extraordinario', 'min': 120}),
-    ('Al Tablero BFM ¿El futuro', {'titulo': '¿El futuro es vertical? Cambian los formatos, cambia la mirada', 'min': 120}),
-    ('Al Tablero BFM Los festivales', {'titulo': 'Los festivales frente a la IA. Aprobar, rechazar, sobrevivir', 'min': 120}),
-    ('Al Tablero BFM Robert', {'titulo': 'Robert Valley: dibujar lo que todavía no existe', 'min': 120, 'texto': 'robert'}),
-    ('Al Tablero De la viñeta', {'titulo': 'De la viñeta a la pantalla. Novela gráfica que se vuelve cine', 'min': 90, 'texto': 'vineta'}),
-    ('Al Tablero Croacia', {'titulo': 'Croacia: una cinematografía que crece desde el corto', 'min': 90, 'texto': 'croacia'}),
-    ('Al Tablero Cine y jazz', {'titulo': 'Cine y Jazz. La hermandad improvisada', 'min': 90, 'texto': 'jazz'}),
-    ('Exposición Andrósfera', {'titulo': 'Andrósfera: Hombres de verdad. Lectura dramatizada', 'seccion': 'BOGOSHORTS Expone',
-                               'event_kind': 'experiencia', 'texto': 'androsfera', 'sala': 'Sala Jules Verne'}),
-    ('IMAGINATÓN', {'titulo': 'Claqueteo XVII IMAGINATÓN', 'seccion': 'IMAGINATÓN', 'event_kind': 'evento', 'texto': 'imaginaton',
-                    'franja': 240}),
-    ('Estreno BFM-IV', {'titulo': 'Estreno BFM-IV - Furia', 'seccion': 'BFM - BOGOSHORTS Film Market'}),
-    ('BS degusta', {'titulo': 'BOGOSHORTS degusta: Picnic Nocturno', 'seccion': 'Eventos especiales', 'event_kind': 'experiencia',
-                    'acceso': 'Entrada con invitación', 'texto': 'picnic'}),
-    ('Ganadores', {'seccion': 'Eventos especiales', 'event_kind': 'awards'}),
-    ('Ceremonia de Clausura', {'titulo': 'Ceremonia de premiación y clausura - Noche de Santa Lucía', 'seccion': 'Eventos especiales',
-                               'event_kind': 'awards', 'acceso': 'Entrada con invitación'}),
-]
+# lo que la leyenda no trae (programas y actividades): bogoshorts-2026-actividades.json
 KORINCO = {'titulo': 'La primera estampilla de Korinco', 'pais': 'Colombia, Indonesia, Corea del Sur', 'anio': 2026, 'duracion_min': 5,
            'sinopsis': 'Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y '
                        'BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.',
            '_src': {'url': 'https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11', 'date': '2026-11-23'}}
 TEXTOS = json.load(open(f'{REPO}/festivals/staging/bogoshorts-2026-textos.json', encoding='utf-8'))
 DEF_FONTANAR = 'Entrada libre'   # catálogo, aviso de la sala: «fontanar del río … viernes, sábados y domingos 2:00 p.m. y 4:00 p.m. entrada libre»
+_act = json.load(open(f'{REPO}/festivals/staging/bogoshorts-2026-actividades.json', encoding='utf-8'))
 HORA = re.compile(r'^(\d{1,2}):(\d\d)$')
 
 
@@ -218,6 +186,16 @@ def main():
     # cada programa; «CI-VC/CN-VC» es una sola función con los dos videoclips
     progs = json.load(open(PROG, encoding='utf-8'))['programas']
     progs.update(json.load(open(CORTOS, encoding='utf-8'))['programas'])
+    progs = {c: [{k: v for k, v in o.items() if k != '_duracion'} for o in os_] for c, os_ in progs.items()}
+    # un título sin letras latinas (环岛) normaliza a '' y el ensamblador no puede cruzarlo con el
+    # enriquecido: su ficha verificada viaja con la obra
+    _e = f'{REPO}/festivals/staging/bogoshorts-2026-enriquecido.json'
+    for e in (json.load(open(_e, encoding='utf-8'))['obras'] if os.path.exists(_e) else []):
+        if not re.search(r'[A-Za-z0-9]', e['titulo']) and e.get('tmdb_id'):
+            for o in (o for os_ in progs.values() for o in os_ if o['titulo'] == e['titulo']):
+                o.update({k: e[k] for k in ('tmdb_id', 'lbSlug', 'poster') if e.get(k)})
+                if e.get('poster'):
+                    o['posterSource'] = 'tmdb'
     progs['CI-VC/CN-VC'] = progs['CI-VC'] + progs['CN-VC']
     funciones, descartadas = [], []
     for e, col, ws_ in sorted(celdas, key=lambda k: (k[1], k[0][0], k[2][0][1])):
@@ -275,7 +253,7 @@ def main():
                       'titulo': 'Noche Frankenstein Vol 10', 'has_qa': False,
                       '_nota': "la celda trae «Aliens (52')»: el programa F3-ALIENS (IG DehCoz4kZkM)"})
         elif cod and cod[1] in ('HOM-CESAR', 'HUMOR', 'CI-VC/CN-VC'):
-            sec_, tit_ = FUERA_LEYENDA[cod[1]]
+            sec_, tit_ = _act['programas'][cod[1]]
             f.update({'codigo': cod[1], 'titulo': tit_, 'seccion': sec_, 'has_qa': cod[2] == '**',
                       '_nota': 'el código no está en la leyenda de la grilla: sección y título del catálogo'})
         else:
@@ -284,7 +262,7 @@ def main():
             if e[3].startswith('Lounge') and hora == '16:30':
                 f.update({'titulo': 'Encuentros Cercanos: ' + f['titulo'], 'seccion': 'Franja Encuentros Cercanos',
                           'event_kind': 'encuentro'})
-            act = next((d for k, d in ACTIVIDADES if txt.startswith(k)), None)
+            act = next((d for k, d in _act['actividades'] if txt.startswith(k)), None)
             if act:
                 f['titulo'] = act.get('titulo', f['titulo'])
                 f['seccion'] = act.get('seccion', 'BOGOSHORTS al tablero')
@@ -335,11 +313,10 @@ def main():
                       'duracion_min': 420 if f['hora'] == '11:00' else 240})
         if f.get('codigo') == 'BFM-IV':
             f['obras'] = [{'titulo': 'Furia', 'director': 'Daniela Córdoba', 'pais': 'Colombia', 'anio': 2026,
-                           'duracion_min': 14, '_src': {'url': b['pagina'], 'date': '2026-11-23'}}]
+                           'duracion_min': 14, 'sinopsis': TEXTOS['textos']['furia']['es'], '_src': {'url': b['pagina'], 'date': '2026-11-23'}}]
         # UN programa de UNA obra no es un programa: la función es esa obra (FI-LARGO, Furia)
         if len(f.get('obras') or []) == 1:
             u = f.pop('obras')[0]
-            f['_programa'] = f['titulo']
             f.update({k: v for k, v in u.items() if k != '_src'})
         funciones.append(f)
     # La Entrega clave IMAGINATÓN no tiene celda: la grilla dice «IMAGINATÓN 2:00 - 8:00 p.m.».
@@ -348,7 +325,7 @@ def main():
     funciones.append({'dia': '2026-12-04', 'hora': '19:00', 'sede': 'Teatro El Parque', 'sala': '', 'ciudad': 'Bogotá',
                       'texto_grilla': 'IMAGINATÓN', 'titulo': 'Entrega clave IMAGINATÓN', 'seccion': 'IMAGINATÓN',
                       'tipo': 'evento', 'type': 'event', 'event_kind': 'evento', 'has_qa': False,
-                      'acceso': DESCONOCIDO, '_src': {'url': CAT, 'date': '2026-11-18'}})
+                      'acceso': DESCONOCIDO, '_src': {'url': 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf', 'date': '2026-11-18'}})
     import unicodedata
     def _nfc(x):
         if isinstance(x, str): return unicodedata.normalize('NFC', x)

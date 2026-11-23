@@ -86,6 +86,7 @@ deliberada existe la etiqueta `frontera-ok`.
 
 | ID | Nombre | Ciudad | Fechas | Estado |
 |---|---|---|---|---|
+| `bogoshorts2026` | BOGOSHORTS | Bogotá | 1–8 DIC | **Próximo / activo** |
 | `cajica2026` | Festival de Cine de Cajicá | Cajicá | 21–23 NOV | **Próximo / activo** |
 | `ficci65` | FICCI 65 | Cartagena | 14–19 ABR | Archivado |
 | `aff2026` | AFF 2026 | Medellín | 21–29 ABR | Archivado |
@@ -117,9 +118,9 @@ deliberada existe la etiqueta `frontera-ok`.
 | `fecibac2026` | FECIBAC | Caucasia | 10–14 NOV | Recién terminado |
 | `aleste2026` | Al Este | Medellín y Bogotá | 18–29 NOV | **Próximo / activo** |
 | `villadeleyvaiff2026` | Festcinevilla | Villa de Leyva | 13–15 NOV | Recién terminado |
-| `cineparalapaz2026` | Cine para la Paz | Bogotá | 18–21 NOV | **Próximo / activo** |
+| `cineparalapaz2026` | Cine para la Paz | Bogotá | 18–21 NOV | Recién terminado |
 | `under2026` | Under Medellín | Medellín | 25 NOV–3 DIC | **Próximo / activo** |
-| `cuaff2026` | CUAFF | Bogotá | 20–22 NOV | **Próximo / activo** |
+| `cuaff2026` | CUAFF | Bogotá | 20–22 NOV | Recién terminado |
 | `cinetoro2026` | CINETORO | Toro | 10–15 NOV | Recién terminado |
 | `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | Archivado |
@@ -134,7 +135,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | Recién terminado |
 | `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | Recién terminado |
 | `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | Recién terminado |
-| `funza2026` | Festival de Cine Funza | Funza | 18–21 NOV | **Próximo / activo** |
+| `funza2026` | Festival de Cine Funza | Funza | 18–21 NOV | Recién terminado |
 | `semanacine2026` | Semana del Cine Colombiano | Cali | 3–9 NOV | Recién terminado |
 | `miradas2026` | Miradas Medellín | Medellín | 3–8 NOV | Recién terminado |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Archivado |

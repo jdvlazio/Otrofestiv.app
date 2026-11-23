@@ -27,16 +27,16 @@
       "que": "triple lectura: el crudo contra dos lecturas a ojo de la grilla (B por celdas, C por días) + contraste con IG"
     },
     {
+      "cmd": "python3 pipeline/bogoshorts-2026-fichas-web.py",
+      "que": "índice de las fichas de cada corto en la web del festival (--bajar para refrescar)"
+    },
+    {
       "cmd": "python3 pipeline/bogoshorts-2026-afiches.py",
       "que": "afiches oficiales (web del festival + registro de altas) donde TMDB no tiene"
     },
     {
       "cmd": "python3 pipeline/enriquecer.py bogoshorts-2026 --posters",
       "que": "TMDB + cascada + afiches de las obras ya publicadas"
-    },
-    {
-      "cmd": "python3 pipeline/geocodificar.py bogoshorts-2026 --centro 4.6031,-74.0677 --ciudad \"Bogotá\"",
-      "que": "pines: los 11 a mano desde Google Maps (3 a confirmar)"
     },
     {
       "cmd": "python3 pipeline/ensamblar.py bogoshorts-2026",
@@ -81,7 +81,8 @@
     "festivals/staging/bogoshorts-2026-fichas-web.json": "la página de cada corto en festival.bogoshorts.com",
     "festivals/staging/bogoshorts-2026-correcciones.json": "fichas TMDB verificadas",
     "festivals/staging/bogoshorts-2026-afiches.json": "afiches oficiales que TMDB no tiene",
-    "festivals/staging/bogoshorts-2026-sinopsis.json": "sinopsis declaradas con su fuente"
+    "festivals/staging/bogoshorts-2026-sinopsis.json": "sinopsis declaradas con su fuente",
+    "festivals/staging/bogoshorts-2026-actividades.json": "actividades y programas fuera de la leyenda, del catálogo; lo lee el crudo"
   },
   "festival": {
     "radar": 575,
@@ -89,7 +90,7 @@
     "geo": "festivals/staging/bogoshorts-2026-venues-geo.json",
     "enriquecido": "festivals/staging/bogoshorts-2026-enriquecido.json",
     "_por_que_secciones": "Los grupos de la leyenda de la grilla, tal cual; para lo que la leyenda no trae, el rótulo del catálogo 2026 (Noche de Humor, Eventos especiales, BOGOSHORTS al tablero, BOGOSHORTS Expone, IMAGINATÓN, BFM - BOGOSHORTS Film Market). El inglés es el del propio catálogo cuando lo da. Emoji y arquetipo: propuesta, a confirmar con Juan. «Ganadores 24BOGOSHORTS» no tiene rótulo de sección en ninguna fuente: va en Eventos especiales como propuesta. Al Tablero, Expone, Imaginatón y BFM: el nombre del menú de la web y de la grilla, en la caja de la app (sin mayúscula sostenida).",
-    "_por_que_sedes": "La sede como la nombra la grilla; la sala viaja por función. CEFE = Centro Felicidad Chapinero, Alianza Francesa = Sede Centro y Sala Gaitán = Carrera 7 # 22-47, las tres confirmadas en el catálogo 2026. Retina Latina (en línea) no es sede.",
+    "_por_que_sedes": "La sede como la nombra la grilla; la sala viaja por función. CEFE = Centro Felicidad Chapinero, Alianza Francesa = Sede Centro y Sala Gaitán = Carrera 7 # 22-47, las tres confirmadas en el catálogo 2026. Retina Latina (en línea) no es sede. Los 11 pines están puestos (almacén de sedes + Google Maps), por eso no hay paso de geocodificación.",
     "secciones": {
       "Competencia Nacional": {
         "emoji": "🇨🇴",

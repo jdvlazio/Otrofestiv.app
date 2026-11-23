@@ -5727,8 +5727,10 @@
    "fechas_2026": "1–8 DIC 2026 (24ª)",
    "web": "https://festival.bogoshorts.com/",
    "ig": "@bogoshorts",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "bogoshorts2026"
+   ],
    "issue": [
     575
    ],
