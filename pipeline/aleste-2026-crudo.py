@@ -189,6 +189,14 @@ n_bog = sum(1 for f in funciones if f['sede'].startswith('Cinemateca'))
 if n_bog != 26:
     sys.exit(f'✗ Bogotá: {n_bog} funciones, se contaron 26 en la web (33 líneas; los 2 bloques juntan 11)')
 
+# Sinopsis en inglés impresa en el catálogo oficial de BOGOSHORTS 2026 (misma obra, tmdb 1668904; 23 nov)
+for _f in funciones:
+    for _o in _f.get('obras', []):
+        if _o['titulo'] == 'Lejanía':
+            _o['sinopsis_en'] = ('A traveler heads toward Lejanía, a beach on an island hidden in the vastness of the Pacific Ocean, '
+                                 'where visitors are said to experience supernatural visions. Amid fragmented landscapes and '
+                                 'clandestine presences lurking in the shadows, reality blurs and time unravels.')
+
 io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
     '_provenance': provenance('MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)',
                               metodo='transcripción a ojo; láminas cruzadas con ig-lecturas.py',
