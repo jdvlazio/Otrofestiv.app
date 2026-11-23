@@ -6460,7 +6460,9 @@
      },
      "synopsis": "Jack se enfrenta a los excesos de su vida nocturna. La resaca da paso a un viaje interior en el que empieza a verse de otra manera.",
      "genre": "Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/jazzed.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Miles Davis – What’s Love Got to Do With it",
@@ -16313,7 +16315,9 @@
      },
      "synopsis": "Jack se enfrenta a los excesos de su vida nocturna. La resaca da paso a un viaje interior en el que empieza a verse de otra manera.",
      "genre": "Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/jazzed.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Miles Davis – What’s Love Got to Do With it",
@@ -16952,7 +16956,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-23T16:38:15",
+  "fecha": "2026-11-23T17:33:39",
   "plan_sha": "51eddc3380a249f7",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"
