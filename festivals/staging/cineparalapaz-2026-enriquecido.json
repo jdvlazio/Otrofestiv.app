@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-16"
+  "capturado": "2026-11-19"
  },
  "obras": [
   {
@@ -148,7 +148,9 @@
    "lbSlug": "lez-ama-vivir-filmando",
    "_verificado": "declarada a mano: altas.py --ficha: «Lez-Ama: Vivir Filmando» (Colombia, 52 min), dir. Mónica Moya; IMDb tt36577296 y Letterboxd la enlazan; la web del productor Emmanuel Jaramillo (que la lámina nombra) la lista",
    "_director": "Mónica Moya",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-19",
+   "sinopsis": "Familiares, amistades y colegas recuerdan a Mauricio Lezama: cineasta, maestro y gestor cultural que encontró en las imágenes una forma de transformar su territorio.",
+   "_sinopsis": "https://www.instagram.com/p/Dfurx9DFL5i/",
    "poster": "/assets/cineparalapaz-2026/lezama-vivir-filmando.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -170,7 +172,7 @@
    "lbSlug": "manos-que-dan-vida",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_director": "Juan Sebastián Arias Carvajal",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cineparalapaz-2026/manos-que-dan-vida.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -325,6 +327,11 @@
    "poster": "/assets/cineparalapaz-2026/cajamarca-el-viaje-del-desengano.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial (Universidad de La Sabana, dir. Ernesto Ciurlizza), de su ficha de IMDb tt8386644"
+  },
+  {
+   "titulo": "Mindalae – Viajero Kichwa",
+   "sinopsis": "Un documental que recupera la memoria oral del pueblo kichwa otavalo y sus caminos como artesanos, comerciantes y viajeros universales.",
+   "_sinopsis": "https://www.instagram.com/p/Dfce_2wO3YO/"
   }
  ],
  "verificadas": {
@@ -439,7 +446,9 @@
    "lbSlug": "lez-ama-vivir-filmando",
    "_verificado": "declarada a mano: altas.py --ficha: «Lez-Ama: Vivir Filmando» (Colombia, 52 min), dir. Mónica Moya; IMDb tt36577296 y Letterboxd la enlazan; la web del productor Emmanuel Jaramillo (que la lámina nombra) la lista",
    "_director": "Mónica Moya",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-19",
+   "sinopsis": "Familiares, amistades y colegas recuerdan a Mauricio Lezama: cineasta, maestro y gestor cultural que encontró en las imágenes una forma de transformar su territorio.",
+   "_sinopsis": "https://www.instagram.com/p/Dfurx9DFL5i/",
    "poster": "/assets/cineparalapaz-2026/lezama-vivir-filmando.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",
@@ -460,7 +469,7 @@
    "lbSlug": "manos-que-dan-vida",
    "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
    "_director": "Juan Sebastián Arias Carvajal",
-   "_sondeado": "2026-11-16",
+   "_sondeado": "2026-11-19",
    "poster": "/assets/cineparalapaz-2026/manos-que-dan-vida.jpg",
    "posterSource": "tmdb",
    "pais_heredado": "Colombia",

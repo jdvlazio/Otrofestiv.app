@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
-  "capturado": "2026-11-18",
+  "capturado": "2026-11-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Sección = el «Componente» de la agenda, verbatim y en caja de Título (pedido de Juan, 25 oct).",
@@ -178,7 +178,8 @@
    "lng": -74.2124986,
    "address": "Calle 13 #12-21, Funza",
    "_prec": "manual",
-   "_match": "Google Maps «Institución educativa ágora» (18 nov 2026); dirección de la lámina del Bacatá"
+   "_match": "Google Maps «Institución educativa ágora» (18 nov 2026); dirección de la lámina del Bacatá",
+   "_matriz": "s_cd218eeb"
   },
   "Colegio de Valores Humanos Sathya Sai - Funza": {
    "short": "Colegio de Valores Humanos Sathya Sai",
@@ -187,7 +188,8 @@
    "lng": -74.1971832,
    "address": "Carrera 2b #25-15, Funza",
    "_prec": "manual",
-   "_match": "Google Maps «Colegio De Valores Humanos Sathya Sai» (18 nov 2026); dirección de la lámina del Bacatá"
+   "_match": "Google Maps «Colegio De Valores Humanos Sathya Sai» (18 nov 2026); dirección de la lámina del Bacatá",
+   "_matriz": "s_fd497563"
   },
   "CITI - Funza": {
    "short": "CITI",
@@ -196,7 +198,8 @@
    "lng": -74.2121741,
    "address": "Parque principal Capitán Ernesto Esguerra Cubides, Funza",
    "_prec": "manual",
-   "_match": "Google Maps no tiene ficha del CITI; la lámina lo ubica en el parque principal: pin de «Parque Principal de Funza - Parque Capitán Ernesto Esguerra Cubides» (18 nov 2026)"
+   "_match": "Google Maps no tiene ficha del CITI; la lámina lo ubica en el parque principal: pin de «Parque Principal de Funza - Parque Capitán Ernesto Esguerra Cubides» (18 nov 2026)",
+   "_matriz": "s_8b3ca384"
   },
   "Biblioteca de Ciudad Universitaria - Funza": {
    "short": "Biblioteca de Ciudad Universitaria",
@@ -834,6 +837,8 @@
     "fila": "8:30 a. m. – 9:00 a. m. · Apertura institucional"
    },
    "requires_registration": true,
+   "description": "Instalación del 1.er Encuentro Departamental de Cine y Comunicaciones.",
+   "description_lang": "es",
    "_fid": "f_69cc45b59e",
    "id": "f_69cc45b59e",
    "is_free": true,
@@ -888,7 +893,7 @@
    }
   },
   {
-   "title": "Panel: Comunicación y nuevas narrativas",
+   "title": "Panel de comunicaciones",
    "type": "event",
    "section": "📡 Comunicaciones",
    "duration": "90 min",
@@ -910,7 +915,7 @@
     "fila": "9:00 a. m. – 10:30 a. m. · Panel comunicación nuevas narrativas"
    },
    "requires_registration": true,
-   "description": "Nuevas narrativas, comunicación cultural, ecosistemas digitales e identidad territorial.",
+   "description": "Nuevas narrativas, comunicación cultural, ecosistemas digitales e identidad territorial. Invitados: José Valerio, Nicolás León y Rubén Santa Rubio.",
    "description_lang": "es",
    "_fid": "f_15d4067239",
    "id": "f_15d4067239",
@@ -953,8 +958,8 @@
     },
     "title": {
      "tipo": "juan",
-     "fecha": "2026-11-11",
-     "frase": "en el desktop algo que envió Funza para cargar en la app"
+     "fecha": "2026-11-19",
+     "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos."
     },
     "type": {
      "tipo": "festival-web",
@@ -964,10 +969,13 @@
      "tipo": "festival-web",
      "fecha": "2026-10-25"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "Panel: Comunicación y nuevas narrativas"
+   ]
   },
   {
-   "title": "Panel: Cine desde región",
+   "title": "Panel audiovisuales",
    "type": "event",
    "section": "🎥 Audiovisuales / Cine",
    "duration": "90 min",
@@ -977,7 +985,7 @@
     "10:45"
    ],
    "day": "2026-11-20",
-   "time": "10:45",
+   "time": "14:00",
    "day_order": 2,
    "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "evento",
@@ -989,7 +997,7 @@
     "fila": "10:45 a. m. – 12:15 p. m. · Panel cine desde región"
    },
    "requires_registration": true,
-   "description": "Producción independiente, financiación, convocatorias, circulación y territorio.",
+   "description": "Producción independiente, financiación, convocatorias, circulación y territorio. Invitados: Édgar Medina, Felipe Suárez y Juan Esteban Rengifo.",
    "description_lang": "es",
    "_fid": "f_d9a7e52bb9",
    "id": "f_d9a7e52bb9",
@@ -1001,8 +1009,9 @@
      "fecha": "2026-10-25"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-19",
+     "url": "https://www.instagram.com/p/Df7huLiG9SO/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -1032,8 +1041,8 @@
     },
     "title": {
      "tipo": "juan",
-     "fecha": "2026-11-11",
-     "frase": "en el desktop algo que envió Funza para cargar en la app"
+     "fecha": "2026-11-19",
+     "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos."
     },
     "type": {
      "tipo": "festival-web",
@@ -1043,10 +1052,13 @@
      "tipo": "festival-web",
      "fecha": "2026-10-25"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "Panel: Cine desde región"
+   ]
   },
   {
-   "title": "Conferencia: Fotografía y territorio",
+   "title": "Conferencia: El arte de la fotografía narrativa",
    "type": "event",
    "section": "📷 Fotografía / Narrativas",
    "duration": "75 min",
@@ -1056,7 +1068,7 @@
     "13:30"
    ],
    "day": "2026-11-20",
-   "time": "13:30",
+   "time": "11:00",
    "day_order": 2,
    "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "evento",
@@ -1068,7 +1080,7 @@
     "fila": "1:30 p. m. – 2:45 p. m. · Conferencia fotografía y territorio"
    },
    "requires_registration": true,
-   "description": "Conferencia sobre imagen, memoria, paisaje, identidad y territorio.",
+   "description": "Conferencia sobre imagen, memoria, paisaje, identidad y territorio. Invitado: Mauricio Beltrán.",
    "description_lang": "es",
    "_fid": "f_31e336c377",
    "id": "f_31e336c377",
@@ -1080,8 +1092,9 @@
      "fecha": "2026-10-25"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-19",
+     "url": "https://www.instagram.com/p/Df7huLiG9SO/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -1111,8 +1124,8 @@
     },
     "title": {
      "tipo": "juan",
-     "fecha": "2026-11-11",
-     "frase": "en el desktop algo que envió Funza para cargar en la app"
+     "fecha": "2026-11-19",
+     "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos."
     },
     "type": {
      "tipo": "festival-web",
@@ -1122,10 +1135,13 @@
      "tipo": "festival-web",
      "fecha": "2026-10-25"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "Conferencia: Fotografía y territorio"
+   ]
   },
   {
-   "title": "Charla: App de festivales de cine",
+   "title": "Charla sobre aplicaciones y plataformas para festivales de cine",
    "type": "event",
    "section": "📱 Circulación / Industria",
    "duration": "45 min",
@@ -1135,7 +1151,7 @@
     "14:45"
    ],
    "day": "2026-11-20",
-   "time": "14:45",
+   "time": "16:30",
    "day_order": 2,
    "venue": "Biblioteca de Ciudad Universitaria - Funza",
    "event_kind": "charla",
@@ -1147,7 +1163,7 @@
     "fila": "2:45 p. m. – 3:30 p. m. · Charla app de festivales de cine"
    },
    "requires_registration": true,
-   "description": "Herramientas y plataformas para circulación, convocatorias e inscripción de obras en festivales.",
+   "description": "Herramientas y plataformas para circulación, convocatorias e inscripción de obras en festivales. Invitado: Juan David Villa.",
    "description_lang": "es",
    "_fid": "f_6f19c59638",
    "id": "f_6f19c59638",
@@ -1159,8 +1175,9 @@
      "fecha": "2026-10-25"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-19",
+     "url": "https://www.instagram.com/p/Df7huLiG9SO/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -1190,8 +1207,8 @@
     },
     "title": {
      "tipo": "juan",
-     "fecha": "2026-11-11",
-     "frase": "en el desktop algo que envió Funza para cargar en la app"
+     "fecha": "2026-11-19",
+     "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos."
     },
     "type": {
      "tipo": "festival-web",
@@ -1201,7 +1218,10 @@
      "tipo": "festival-web",
      "fecha": "2026-10-25"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "Charla: App de festivales de cine"
+   ]
   },
   {
    "title": "Rueda de negocios audiovisual",
@@ -1368,7 +1388,7 @@
    "year": 2026,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "125 min",
+   "duration": "77 min",
    "genre": "Comedia",
    "_ancla": [
     "Centro Cultural Bacatá - Funza",
@@ -1379,7 +1399,7 @@
    "time": "18:30",
    "day_order": 2,
    "venue": "Centro Cultural Bacatá - Funza",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "Fernando, un hombre de 45 años que aún vive con su sobreprotectora madre, intenta ocultarle ese secreto a su moderna novia, quien además es su jefa. Lo que comienza como una pequeña mentira durante una cena de cumpleaños se convierte en un enredo de secretos, choques generacionales y divertidas situaciones que lo obligarán a elegir entre la comodidad de mamá y el amor de su vida.",
    "synopsis_lang": "es",
    "poster": "/assets/funza-2026/basta-mama.jpg",
@@ -1418,8 +1438,9 @@
      "fecha": "2026-10-25"
     },
     "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-25"
+     "tipo": "juan",
+     "fecha": "2026-11-20",
+     "frase": "Sí, es porque es con conversatorio. Arréglalo por favor"
     },
     "title": {
      "tipo": "festival-web",
@@ -1700,14 +1721,80 @@
    "is_free": true,
    "id": "f_dcb0a78bb0",
    "day_order": 0
+  },
+  {
+   "title": "Las chinas no hablamos chino",
+   "type": "event",
+   "event_kind": "evento",
+   "section": "🛠️ Formación Especializada",
+   "day": "2026-11-19",
+   "time": "16:30",
+   "venue": "Centro Cultural Bacatá - Funza",
+   "sala": "Auditorio alterno",
+   "description": "Laboratorio de lenguaje, cultura pop y equidad de género de Left & Right, inspirado en el EP musical \"V Acts of Love\". Una conversación sobre las veces que hemos limitado nuestro talento, trabajado el doble o esperado en la fila por el momento para brillar. Nacimos para ser protagonistas, no espectadoras del éxito.",
+   "description_lang": "es",
+   "_src": {
+    "url": "pieza enviada por el festival a Juan (19 nov)",
+    "date": "2026-11-19"
+   },
+   "_ancla": [
+    "Centro Cultural Bacatá - Funza",
+    "2026-11-19",
+    "16:30"
+   ],
+   "_fid": "f_aa38c583a4",
+   "_procedencia": {
+    "existe": {
+     "tipo": "juan",
+     "fecha": "2026-11-19",
+     "frase": "Y escribieron: Este evento es hoy a las 4:30 auditorío alterno complejo cultural Bacatá"
+    },
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "is_free": true,
+   "id": "f_aa38c583a4",
+   "day_order": 1,
+   "duration": "90 min"
   }
- ],
- "_avisos_duracion": [
-  "«Basta Mamá»: 125 min en el festival, 77 en TMDB"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-18T17:52:46",
+  "fecha": "2026-11-20T20:20:18",
   "plan_sha": "1e679e89c8d991cf",
   "paso": 6,
   "cmd": "python3 pipeline/funza-2026-verificar.py"

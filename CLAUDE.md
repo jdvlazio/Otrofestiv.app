@@ -86,6 +86,7 @@ deliberada existe la etiqueta `frontera-ok`.
 
 | ID | Nombre | Ciudad | Fechas | Estado |
 |---|---|---|---|---|
+| `cajica2026` | Festival de Cine de Cajicá | Cajicá | 21–23 NOV | **Próximo / activo** |
 | `ficci65` | FICCI 65 | Cartagena | 14–19 ABR | Archivado |
 | `aff2026` | AFF 2026 | Medellín | 21–29 ABR | Archivado |
 | `tribeca2026` | Tribeca Festival |  |  | desconocido |
@@ -117,6 +118,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `aleste2026` | Al Este | Medellín y Bogotá | 18–29 NOV | **Próximo / activo** |
 | `villadeleyvaiff2026` | Festcinevilla | Villa de Leyva | 13–15 NOV | Recién terminado |
 | `cineparalapaz2026` | Cine para la Paz | Bogotá | 18–21 NOV | **Próximo / activo** |
+| `under2026` | Under Medellín | Medellín | 25 NOV–3 DIC | **Próximo / activo** |
 | `cuaff2026` | CUAFF | Bogotá | 20–22 NOV | **Próximo / activo** |
 | `cinetoro2026` | CINETORO | Toro | 10–15 NOV | Recién terminado |
 | `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |

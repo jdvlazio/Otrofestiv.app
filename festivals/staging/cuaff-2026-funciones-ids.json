@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-11-17"
+  "capturado": "2026-11-19"
  },
  "funciones": {
   "f_f4bdfa8168": {
@@ -18,6 +18,13 @@
    "sala": "Laboratorio 1",
    "titulo": "graffiti y camara documentar la calle"
   },
+  "f_c11c5e1b57": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-22",
+   "hora": "10:00",
+   "sala": "",
+   "titulo": "taller stop motion y graffiti"
+  },
   "f_97112ba5c6": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-11-21",
@@ -31,6 +38,13 @@
    "hora": "17:00",
    "sala": "Sala 3",
    "titulo": "hip hop y comunidad"
+  },
+  "f_bd66c8a701": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-11-21",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "titulo": "graffiti trenes"
   },
   "f_db1a7e214a": {
    "sede": "Cinemateca de Bogotá - Bogotá",

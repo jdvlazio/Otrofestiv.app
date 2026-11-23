@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-18",
+  "capturado": "2026-11-20",
   "metodo": "transcripción a ojo; láminas cruzadas con ig-lecturas.py",
   "que_aporta": "día, hora, sede, acceso"
  },
@@ -496,18 +496,6 @@
    "tipo": "evento",
    "obras": [
     {
-     "titulo": "Desde acá veo la tormenta",
-     "pais": "Colombia",
-     "duracion_min": 11,
-     "seccion": "Competencia Hecho en Colombia",
-     "tipo": "corto",
-     "_src": {
-      "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
-      "date": "2026-11-16"
-     },
-     "director": "Juan Felipe Restrepo"
-    },
-    {
      "titulo": "Junio 25. Andréi Tarkovski, visita a su tumba",
      "pais": "Colombia",
      "duracion_min": 5,
@@ -568,7 +556,7 @@
      "director": "María José Ibarra, Florentino Vargas"
     }
    ],
-   "duracion_min": 66,
+   "duracion_min": 55,
    "has_qa": true,
    "qa_type": "team"
   },
@@ -684,7 +672,8 @@
    "director": "Kiyoshi Kurosawa",
    "pais": "Japón",
    "anio": 2001,
-   "duracion_min": 118
+   "duracion_min": 118,
+   "has_qa": true
   },
   {
    "dia": "2026-11-29",
@@ -717,6 +706,18 @@
    "seccion": "Competencia Hecho en Colombia",
    "tipo": "evento",
    "obras": [
+    {
+     "titulo": "Desde acá veo la tormenta",
+     "pais": "Colombia",
+     "duracion_min": 11,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
+      "date": "2026-11-16"
+     },
+     "director": "Juan Felipe Restrepo"
+    },
     {
      "titulo": "Las piedras del río",
      "pais": "Colombia",
@@ -754,7 +755,7 @@
      "director": "Santiago Calle García"
     }
    ],
-   "duracion_min": 51,
+   "duracion_min": 62,
    "has_qa": true,
    "qa_type": "team"
   },

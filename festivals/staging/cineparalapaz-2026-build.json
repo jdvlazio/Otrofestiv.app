@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "https://www.instagram.com/p/DfzeOb2lq6q/",
-  "capturado": "2026-11-16",
+  "capturado": "2026-11-21",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las 3 secciones de la Selección (aprobadas por Juan, 11 nov) viven en cada obra; las funciones de la programación (16 nov) mezclan obras de varias, así que la función va en «Selección Oficial» (título del carrusel Dfk4smulKBB). «Proyecciones especiales» (LezAma, Horizonte, Mindalae) y «Encuentros y actividades»: PROPUESTA para Juan.",
@@ -178,6 +178,8 @@
     "tipo": "festival-ig"
    },
    "is_free": true,
+   "description": "En la IV edición de Cine para la Paz nos reencontramos con Boris Guevara, director, documentalista y firmante del Acuerdo de Paz, para recorrer su experiencia detrás de la cámara: de la montaña al proceso de paz de La Habana y a las narrativas que sigue construyendo hoy. A diez años del Acuerdo, abrimos un diálogo sobre las historias que cuentan estos archivos y lo que podemos descubrir en ellos desde el presente. Modera el crítico de cine Pedro Adrián Zuluaga.",
+   "description_lang": "es",
    "_fid": "f_83f863abce",
    "id": "f_83f863abce"
   },
@@ -410,6 +412,8 @@
    "sala": "Caja de Colores",
    "has_qa": true,
    "qa_type": "team",
+   "synopsis": "Proyección y conversatorio con Emmanuel Jaramillo, productor general. Modera: Diego Pachón.",
+   "synopsis_lang": "es",
    "poster": "/assets/cineparalapaz-2026/lezama-vivir-filmando.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -558,6 +562,8 @@
     "tipo": "festival-ig"
    },
    "is_free": true,
+   "description": "Las películas nos acercan a otras vidas y nos dejan pensando en nuestras propias historias. En el IV Festival Cine para la Paz, La Propia Inopia nos invita a llevar esas inquietudes a la palabra compartida. Conoceremos su proyecto de lectura, escritura y escucha para pensar, a diez años del Acuerdo de Paz, cómo narramos lo vivido y qué futuros queremos construir.",
+   "description_lang": "es",
    "_fid": "f_61a0b7012e",
    "id": "f_61a0b7012e"
   },
@@ -729,6 +735,8 @@
    "day_order": 3,
    "venue": "Centro Cultural La Tullpa - Bogotá",
    "has_qa": false,
+   "synopsis": "Proyección internacional.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfzeOb2lq6q/",
     "lamina": "04.jpg",
@@ -761,6 +769,8 @@
     "tipo": "festival-ig"
    },
    "is_free": true,
+   "description": "Encuentro sagrado entre los vivos y las almas. Cabildo Indígena Kichwa de Bogotá. Música: Pakarimuk, Runapak, Kapary, Ukamau, Walka. Danzas: Tumarina.",
+   "description_lang": "es",
    "_fid": "f_451900788a",
    "id": "f_451900788a"
   }
@@ -770,8 +780,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-16T13:53:43",
-  "plan_sha": "7cae1b496832ad02",
+  "fecha": "2026-11-21T13:21:09",
+  "plan_sha": "7d88043063d11589",
   "paso": 6,
   "cmd": "python3 pipeline/cineparalapaz-2026-verificar.py"
  }

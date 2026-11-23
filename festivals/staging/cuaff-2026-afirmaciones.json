@@ -1,0 +1,168 @@
+{
+ "_provenance": {
+  "fuente": "afirmaciones de CUAFF 2026",
+  "capturado": "2026-11-20"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-20",
+    "hora": "19:00"
+   },
+   "funcion": "f_f4bdfa8168",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://tuboleta.com/es/eventos/wholetrain",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "boletería oficial de la Cinemateca en TuBoleta (https://tuboleta.com/es/eventos/wholetrain, leída 20 nov): «GENERAL · TARIFA PLENA $7.000 + $700 · $7.700», fecha 2026-11-20"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-20",
+    "hora": "19:00"
+   },
+   "funcion": "f_f4bdfa8168",
+   "casilla": "ticket_url",
+   "valor": "https://tuboleta.com/es/eventos/wholetrain",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://tuboleta.com/es/eventos/wholetrain",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "boletería oficial de la Cinemateca en TuBoleta (https://tuboleta.com/es/eventos/wholetrain, leída 20 nov): «GENERAL · TARIFA PLENA $7.000 + $700 · $7.700», fecha 2026-11-20"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-21",
+    "hora": "14:30"
+   },
+   "funcion": "f_97112ba5c6",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://tuboleta.com/es/eventos/breaking-la-vida",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "boletería oficial de la Cinemateca en TuBoleta (https://tuboleta.com/es/eventos/breaking-la-vida, leída 20 nov): «GENERAL · TARIFA PLENA $7.000 + $700 · $7.700», fecha 2026-11-21"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-21",
+    "hora": "14:30"
+   },
+   "funcion": "f_97112ba5c6",
+   "casilla": "ticket_url",
+   "valor": "https://tuboleta.com/es/eventos/breaking-la-vida",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://tuboleta.com/es/eventos/breaking-la-vida",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "boletería oficial de la Cinemateca en TuBoleta (https://tuboleta.com/es/eventos/breaking-la-vida, leída 20 nov): «GENERAL · TARIFA PLENA $7.000 + $700 · $7.700», fecha 2026-11-21"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-21",
+    "hora": "17:00"
+   },
+   "funcion": "f_af9f2d1125",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://tuboleta.com/es/eventos/hip-hop-y-comunidad-0",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "boletería oficial de la Cinemateca en TuBoleta (https://tuboleta.com/es/eventos/hip-hop-y-comunidad-0, leída 20 nov): «GENERAL · TARIFA PLENA $7.000 + $700 · $7.700», fecha 2026-11-21"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-21",
+    "hora": "17:00"
+   },
+   "funcion": "f_af9f2d1125",
+   "casilla": "ticket_url",
+   "valor": "https://tuboleta.com/es/eventos/hip-hop-y-comunidad-0",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://tuboleta.com/es/eventos/hip-hop-y-comunidad-0",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "boletería oficial de la Cinemateca en TuBoleta (https://tuboleta.com/es/eventos/hip-hop-y-comunidad-0, leída 20 nov): «GENERAL · TARIFA PLENA $7.000 + $700 · $7.700», fecha 2026-11-21"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-21",
+    "hora": "19:30"
+   },
+   "funcion": "f_bd66c8a701",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://tuboleta.com/es/eventos/graffiti-trenes-0",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "boletería oficial de la Cinemateca en TuBoleta (https://tuboleta.com/es/eventos/graffiti-trenes-0, leída 20 nov): «GENERAL · TARIFA PLENA $7.000 + $700 · $7.700», fecha 2026-11-21"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-21",
+    "hora": "19:30"
+   },
+   "funcion": "f_bd66c8a701",
+   "casilla": "ticket_url",
+   "valor": "https://tuboleta.com/es/eventos/graffiti-trenes-0",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://tuboleta.com/es/eventos/graffiti-trenes-0",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "boletería oficial de la Cinemateca en TuBoleta (https://tuboleta.com/es/eventos/graffiti-trenes-0, leída 20 nov): «GENERAL · TARIFA PLENA $7.000 + $700 · $7.700», fecha 2026-11-21"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-22",
+    "hora": "16:00"
+   },
+   "funcion": "f_c5065e87d1",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://tuboleta.com/es/eventos/graffiti-trenes-y-street",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "boletería oficial de la Cinemateca en TuBoleta (https://tuboleta.com/es/eventos/graffiti-trenes-y-street, leída 20 nov): «GENERAL · TARIFA PLENA $7.000 + $700 · $7.700», fecha 2026-11-22"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-22",
+    "hora": "16:00"
+   },
+   "funcion": "f_c5065e87d1",
+   "casilla": "ticket_url",
+   "valor": "https://tuboleta.com/es/eventos/graffiti-trenes-y-street",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://tuboleta.com/es/eventos/graffiti-trenes-y-street",
+    "fecha": "2026-11-20"
+   },
+   "evidencia": "boletería oficial de la Cinemateca en TuBoleta (https://tuboleta.com/es/eventos/graffiti-trenes-y-street, leída 20 nov): «GENERAL · TARIFA PLENA $7.000 + $700 · $7.700», fecha 2026-11-22"
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
-  "capturado": "2026-11-18",
+  "capturado": "2026-11-20",
   "metodo": "transcripción a ojo fila por fila; cruzada con la capa de texto y el OCR en funza-2026-verificar.py",
   "que_aporta": "la programación entera: día, hora, componente, actividad, duración"
  },
@@ -231,7 +231,8 @@
    },
    "titulo": "Apertura institucional",
    "tipo": "evento",
-   "event_kind": "apertura"
+   "event_kind": "apertura",
+   "sinopsis": "Instalación del 1.er Encuentro Departamental de Cine y Comunicaciones."
   },
   {
    "dia": "2026-11-20",
@@ -249,7 +250,7 @@
    "titulo": "Panel comunicación nuevas narrativas",
    "tipo": "evento",
    "event_kind": "evento",
-   "sinopsis": "Nuevas narrativas, comunicación cultural, ecosistemas digitales e identidad territorial."
+   "sinopsis": "Nuevas narrativas, comunicación cultural, ecosistemas digitales e identidad territorial. Invitados: José Valerio, Nicolás León y Rubén Santa Rubio."
   },
   {
    "dia": "2026-11-20",
@@ -267,7 +268,7 @@
    "titulo": "Panel cine desde región",
    "tipo": "evento",
    "event_kind": "evento",
-   "sinopsis": "Producción independiente, financiación, convocatorias, circulación y territorio."
+   "sinopsis": "Producción independiente, financiación, convocatorias, circulación y territorio. Invitados: Édgar Medina, Felipe Suárez y Juan Esteban Rengifo."
   },
   {
    "dia": "2026-11-20",
@@ -285,7 +286,7 @@
    "titulo": "Conferencia fotografía y territorio",
    "tipo": "evento",
    "event_kind": "evento",
-   "sinopsis": "Conferencia sobre imagen, memoria, paisaje, identidad y territorio."
+   "sinopsis": "Conferencia sobre imagen, memoria, paisaje, identidad y territorio. Invitado: Mauricio Beltrán."
   },
   {
    "dia": "2026-11-20",
@@ -303,7 +304,7 @@
    "titulo": "Charla app de festivales de cine",
    "tipo": "evento",
    "event_kind": "charla",
-   "sinopsis": "Herramientas y plataformas para circulación, convocatorias e inscripción de obras en festivales."
+   "sinopsis": "Herramientas y plataformas para circulación, convocatorias e inscripción de obras en festivales. Invitado: Juan David Villa."
   },
   {
    "dia": "2026-11-20",
@@ -346,7 +347,7 @@
    "hora": "18:30",
    "sede": "Centro Cultural Bacatá",
    "acceso": "Entrada libre (no se anuncia pago)",
-   "duracion_min": 125,
+   "duracion_min": 77,
    "seccion": "Exhibición Cinematográfica",
    "_src": {
     "url": "fuentes/funza-2026/agenda-2026.pdf",

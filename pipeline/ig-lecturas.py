@@ -300,6 +300,9 @@ def main():
     todo = {}
     for sc in args:
         rutas = ig.bajar_laminas(sc, ig.urls_laminas(sc))
+        if not rutas:   # un reel: los cuadros se sacan a mano y se guardan aquí (el mensaje de abajo lo pide)
+            rutas = sorted(os.path.join(ig.CACHE, sc, f) for f in os.listdir(os.path.join(ig.CACHE, sc))
+                           if f.endswith('.jpg')) if os.path.isdir(os.path.join(ig.CACHE, sc)) else []
         if not rutas:
             sys.exit(f'✗ {sc}: sin láminas. Instagram a veces no sirve el embed; '
                      f'abrilo en el NAVEGADOR y guardalas en fuentes/ig/{sc}/.')

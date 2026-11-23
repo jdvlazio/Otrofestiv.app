@@ -1,0 +1,187 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/altas.py --sondar sobre el crudo (reel IG Df0rYtRxmgp)",
+  "capturado": "2026-11-17"
+ },
+ "fichas": {
+  "Duelo": {
+   "tmdb": 1313242,
+   "_fuente": "https://www.themoviedb.org/movie/1313242",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1313242 «Duelo» — director ✓ y año/duración ✓",
+   "_registro": "under-2026-altas.json"
+  },
+  "Fata Morgana": {
+   "tmdb": 1829503,
+   "_fuente": "https://www.themoviedb.org/movie/1829503",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_registro": "under-2026-altas.json"
+  },
+  "Cosmopoética: el ciclo de vida de una estrella masiva": {
+   "tmdb": 1829504,
+   "_fuente": "https://www.themoviedb.org/movie/1829504",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_registro": "under-2026-altas.json"
+  },
+  "Comb story": {
+   "tmdb": 1829663,
+   "_fuente": "https://www.themoviedb.org/movie/1829663",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_registro": "under-2026-altas.json"
+  },
+  "The Shapeshifter's lament": {
+   "tmdb": 1829671,
+   "_fuente": "https://www.themoviedb.org/movie/1829671",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_registro": "under-2026-altas.json"
+  },
+  "Esas ruinas": {
+   "tmdb": 1584751,
+   "_fuente": "https://www.themoviedb.org/movie/1584751",
+   "_por_que": "altas.py --ficha: TMDB 1584751: dir. Gabriel Alberto Piñeiro, AR, 21 min; FIDBA 2025 la lista igual (Gabriel Piñeiro, 21 min)",
+   "_registro": "under-2026-altas.json"
+  },
+  "8 metros: La palabra subterránea": {
+   "tmdb": 1688830,
+   "_fuente": "https://www.themoviedb.org/movie/1688830",
+   "_por_que": "altas.py --ficha: TMDB 1688830 «8 Metros»: dir. Pablo Fernández Alberti, 60 min; El Delirio Cine y el tráiler de Vimeo la presentan como «8 metros: La palabra subterránea», mismo director",
+   "_registro": "under-2026-altas.json"
+  },
+  "Atombombenabend": {
+   "tmdb": 1829843,
+   "_fuente": "https://www.themoviedb.org/movie/1829843",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-18 (registro under-2026-altas.json)",
+   "_registro": "under-2026-altas.json"
+  },
+  "1 paseo por la ciudad": {
+   "tmdb": 1832923,
+   "_fuente": "https://www.themoviedb.org/movie/1832923",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-20 (registro under-2026-altas.json)",
+   "_registro": "under-2026-altas.json"
+  },
+  "A Perfect Maryam": {
+   "tmdb": 1832927,
+   "_fuente": "https://www.themoviedb.org/movie/1832927",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-20 (registro under-2026-altas.json)",
+   "_registro": "under-2026-altas.json"
+  },
+  "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra": {
+   "tmdb": 1832931,
+   "_fuente": "https://www.themoviedb.org/movie/1832931",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-20 (registro under-2026-altas.json)",
+   "_registro": "under-2026-altas.json"
+  }
+ },
+ "sin_sinopsis": {
+  "Teatime": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): ni en la web ni en los archivos del festival (zip del 18 nov: solo fotogramas). Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  },
+  "Rattling": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): ni en la web ni en el zip del festival (solo afiche, fotos y retrato). Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  },
+  "Antifragility": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): nada en inglés ni en ruso; el zip del festival solo trae fotogramas. Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  },
+  "Una persona distinta": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): de Sergio Quatraro solo aparece «Papá» (2011): el corto no está indexado. Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  },
+  "Binary": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): ninguna página relaciona a Padrick Ritch con un «Binary»; los homónimos son de otros autores. Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  },
+  "Cut your wings and fly": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): solo el IMDb de la directora (nm12257026), sin la obra. Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  },
+  "Mall": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): solo el lema del afiche, que es una frase, no una sinopsis; nada en la web. Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  },
+  "Shell Shock O'K": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): nada con ese título; solo un homónimo de 2009 sin relación. Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  },
+  "Quisiera volverme río": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): nada con ese título; de Susana Parejas aparece otro corto («Línea de flotación»). Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  },
+  "Lo que aún queda de mí": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): nada del corto; solo contexto del poema de Ana María Ponce. Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  },
+  "Mamma": {
+   "_por_que": "no se encontró sinopsis en ninguna fuente de la cascada (20 nov 2026): solo una frase de prensa (cinemaitaliano.info/news/87414), no una sinopsis. Pedirla al festival.",
+   "fuentes": [
+    "programa oficial del festival (PDF, correo 18 nov 2026): no trae sinopsis",
+    "IG @cineundermedellin (Bright Data, 20 nov 2026): solo 2 posts, ninguno de la obra",
+    "TMDB es/en: sin ficha o ficha sin sinopsis",
+    "búsqueda web (FilmFreeway/Festhome/Vimeo/director) 20 nov 2026"
+   ]
+  }
+ },
+ "sin_afiche": {
+  "Binary": {
+   "_por_que": "el festival no lo mandó (pedido 18 nov; el correo del 20 nov trajo 11 de 13); sin afiche en TMDB ni en la web (20 nov 2026). Pedirlo al festival"
+  },
+  "Una persona distinta": {
+   "_por_que": "el festival no lo mandó (pedido 18 nov; el correo del 20 nov trajo 11 de 13); sin afiche en TMDB ni en la web (20 nov 2026). Pedirlo al festival"
+  },
+  "Mamma": {
+   "_por_que": "el único afiche hallado (cinemaitaliano.info, locandina 37447) mide 207×300: demasiado chico (altas: afiche_chico); el festival no lo mandó. Pedirlo al festival o a Panoramic Studio"
+  }
+ },
+ "sin_duracion": {}
+}

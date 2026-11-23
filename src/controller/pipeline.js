@@ -6,7 +6,7 @@
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { ICONS, _secLabelFull } from '../view/components.js';
-import { venueSelLabel } from '../view/helpers.js';
+import { venueSelLabel, diasDeCiudad } from '../view/helpers.js';
 import { _renderProgramaContent, renderProgramaChips, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
@@ -188,7 +188,74 @@ function _seccionPillLabel(sec){
   return _secLabelFull(sec);
 }
 
+// ── DÍAS DE LA CIUDAD ELEGIDA (19 nov 2026, aprobado por Juan) ──────────────
+// En un festival multiciudad no simultáneo (Al Este: Medellín 18–22, Bogotá
+// 25–29) la tira de días se recorta a los días de la ciudad elegida. Tres
+// piezas, y todo lo que elige un día pasa por ellas:
+//   diasVisibles()      → los días de la tira (los de la ciudad, o todos)
+//   primerDiaVigente()  → el primer día visible que no pasó (o null)
+//   _hoyManana()        → el par Hoy/Mañana sobre los días visibles
+// La lista sale de diasDeCiudad (helpers.js, dueño único).
+export function diasVisibles(){
+  const dias=diasDeCiudad(activeVenue, FILMS);
+  return dias ? DAY_KEYS.filter(d=>dias.includes(d)) : DAY_KEYS.slice();
+}
+export function primerDiaVigente(){
+  return diasVisibles().find(d=>!dayFullyPassed(d))||null;
+}
+// Hoy/Mañana — UN cálculo para la píldora (_syncPmodeTabs) y para el botón
+// (setProgramaMode): si se calculan por separado, la píldora encendida y el día
+// al que lleva dejan de coincidir. Reglas (las de setProgramaMode, 24 ago 2026):
+// hoy fuera de los días → el próximo vigente; sin vigentes → el último.
+// Mañana: el día visible siguiente a hoy; sin hoy, el próximo vigente; en el
+// último día, el último.
+export function _hoyManana(){
+  const dias=diasVisibles();
+  const ultimo=dias.length-1;
+  const pti=dias.findIndex(d=>FESTIVAL_DATES[d]===simTodayStr());
+  const vivo=dias.findIndex(d=>!dayFullyPassed(d));
+  const hoy=pti>=0?dias[pti]:(vivo>=0?dias[vivo]:dias[ultimo]);
+  const base=pti>=0?pti+1:vivo;
+  const manana=(base>=0&&base<=ultimo)?dias[base]:dias[ultimo];
+  // enCurso: hoy ES un día de la tira. Si no (Bogotá elegida el 19, o un día
+  // hueco), los botones llevan al próximo día igual, pero la píldora no se
+  // enciende: «Hoy» o «Mañana» encendidos sobre el 25 dicen algo falso.
+  return {hoy, manana, enCurso:pti>=0};
+}
+// Aplica la ciudad a la tira: oculta los días ajenos y, si el día activo quedó
+// fuera, lo lleva al primer día vigente de la ciudad, o a «Todo» si la ciudad
+// ya terminó. Corre desde _updateProgramaActiveFilter, por donde ya pasan TODOS
+// los cambios de lugar antes de pintar (filtro de Lugar, sheet de ciudad, quitar
+// el chip, filterByVenue, carga del festival).
+// El botón de vista (cuadrícula/lista) refleja programaViewMode. Varias rutas
+// cambian el modo sin pasar por setProgramaView (elegir una ciudad que ya
+// terminó lleva a «Todo» en cuadrícula, filterByVenue, la carga): sin esto el
+// ícono quedaba en el modo anterior. Dueño único; setProgramaView también lo usa.
+export function _syncVistaIconos(){
+  const v=programaViewMode;
+  document.getElementById('pmode-grid')?.classList.toggle('on',v==='grid');
+  document.getElementById('pmode-list')?.classList.toggle('on',v==='list');
+  const icoG=document.getElementById('view-toggle-ico-grid');
+  const icoL=document.getElementById('view-toggle-ico-list');
+  if(icoG) icoG.style.display=v==='grid'?'':'none';
+  if(icoL) icoL.style.display=v==='list'?'':'none';
+}
+export function _syncDiasCiudad(){
+  const dias=new Set(diasVisibles());
+  document.querySelectorAll('.dtab').forEach(t=>{
+    if(t.dataset.day&&t.dataset.day!=='all') t.classList.toggle('fuera-ciudad', !dias.has(t.dataset.day));
+  });
+  if(activeDay!=='all'&&!dias.has(activeDay)){
+    activeDay=primerDiaVigente()||'all';
+    programaViewMode=activeDay==='all'?'grid':'list';
+    _syncVistaIconos();
+    document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on', t.dataset.day===activeDay));
+    _syncPmodeTabs();
+  }
+}
+
 export function _updateProgramaActiveFilter(){
+  _syncDiasCiudad();
   const af=document.getElementById('programa-active-filter');
   if(!af) return;
   const hasSec=activeSec!=='all';
@@ -224,16 +291,11 @@ export function _updateProgramaActiveFilter(){
 // chip). El destino de cada píldora se calcula con las MISMAS fórmulas del
 // atajo (setProgramaMode) para que indicador y botón nunca diverjan.
 export function _syncPmodeTabs(){
-  const _pts=simTodayStr();
-  const _pti=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_pts);
-  const _keys={
-    hoy: _pti>=0?DAY_KEYS[_pti]:DAY_KEYS[0],
-    manana: _pti>=0&&_pti<DAY_KEYS.length-1?DAY_KEYS[_pti+1]:DAY_KEYS[DAY_KEYS.length-1],
-  };
+  const _keys=_hoyManana();   // el mismo cálculo que setProgramaMode
   ['hoy','manana'].forEach(m=>{
     const el=document.getElementById('pmode-'+m);
     if(!el) return;
-    el.classList.toggle('on', activeDay===_keys[m]);
+    el.classList.toggle('on', _keys.enCurso && activeDay===_keys[m]);
     el.classList.toggle('past', dayFullyPassed(_keys[m]));
   });
   // Y los chips se refrescan con el MISMO cálculo: al cruzar la medianoche o
@@ -259,6 +321,7 @@ export function initProgramaModeBar(){
   }
   // Tab activo/atenuado: derivado del día, no de programaSubMode (el espejo).
   _syncPmodeTabs();
+  _syncVistaIconos();
   // Mostrar/ocultar chips
   const chipsEl=document.getElementById('programa-chips');
   if(chipsEl){

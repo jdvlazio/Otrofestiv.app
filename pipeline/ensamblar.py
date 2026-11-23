@@ -118,6 +118,7 @@ def _compone_invitados(dst):
 # imprime al final: «El deshielo» decía 88 en el BIFF y 108 en Cannes, CineChile,
 # TMDB y Wikipedia, y con 88 la app no avisa de choques en los últimos 20 min.
 AVISOS_DURACION = []
+AVISOS_FRANJA = []
 
 
 def _min(v):
@@ -195,6 +196,17 @@ def _enriquece(dst, it):
     # suma del programa no se puede contrastar con su franja). Si las dos
     # existen y difieren mucho, se avisa: la del festival puede ser un error.
     _d, _t = _min(dst.get('duration')), it.get('duracion_tmdb')
+    _fr = dst.pop('_franja_min', None)
+    if _fr and _t and _fr >= _t:
+        # la fuente dio la FRANJA: la obra dura lo que dice TMDB, salvo que el
+        # crudo traiga además la duración de la obra (duracion_min manda)
+        if _d == _fr:
+            dst['duration'] = f'{_t} min'
+            _d = _t
+        # 15 min o más de sobra en la franja = conversatorio / Q&A
+        if _fr - _d >= 15 and not dst.get('has_qa'):
+            dst['has_qa'] = True
+            AVISOS_FRANJA.append(f'«{dst.get("title")}»: franja de {_fr} min, obra de {_d} → con conversatorio')
     if not _d and _t:
         dst['duration'] = f'{_t} min'
     elif _d and _t and abs(_d - _t) > max(5, 0.1 * _t):
@@ -451,7 +463,14 @@ def ensamblar(fid, escribir=True):
             'year': f.get('anio') or None,
             'country': f.get('pais') or None,
             'flags': lib.banderas(f.get('pais') or '') or None,
-            'duration': f"{f['duracion_min']} min" if f.get('duracion_min') else None,
+            # LA FRANJA NO ES LA OBRA (20 nov 2026, Funza: «Basta Mamá» de 77 min
+            # publicada con 125, la franja con su conversatorio). Cuando la fuente
+            # da hora de inicio y de fin, el parser escribe `franja_min`; la obra
+            # se queda con su runtime en _enriquece() y el sobrante va como Q&A.
+            # Sin runtime con qué comparar, la franja es lo único que hay.
+            'duration': (f"{f['duracion_min']} min" if f.get('duracion_min')
+                         else f"{f['franja_min']} min" if f.get('franja_min') else None),
+            '_franja_min': f.get('franja_min') or None,
             'language': f.get('idioma') or None,
             'genre': f.get('genero') or None,
             'rating': f.get('clasificacion') or None,
@@ -475,8 +494,12 @@ def ensamblar(fid, escribir=True):
             'is_recurring': True if f.get('is_recurring') else None,
             'has_qa': bool(f.get('has_qa')),
             'qa_type': f.get('qa_type') or None,
-            'synopsis': f.get('sinopsis') or None,
-            'synopsis_lang': 'es' if f.get('sinopsis') else None,
+            # `descripcion` es como el crudo nombra el texto de una ACTIVIDAD o un
+            # programa (19 nov 2026): no se leía y ese texto nunca llegaba al JSON
+            # (CUAFF, Cine para la Paz, Cinemancia). Entra como synopsis y
+            # lib.separar_descripcion lo pasa a description, que es su lugar.
+            'synopsis': f.get('sinopsis') or f.get('descripcion') or None,
+            'synopsis_lang': 'es' if (f.get('sinopsis') or f.get('descripcion')) else None,
             # se consume en _enriquece(), que lo añade a la sinopsis elegida
             'invitados': f.get('invitados') or None,
             'poster': f.get('poster') or None,
@@ -781,6 +804,8 @@ def ensamblar(fid, escribir=True):
           f'· {len(dias)} días')
     if rep:
         print('  contrato aplicado:', dict(rep))
+    for a in AVISOS_FRANJA:
+        print(f'  · franja ≠ obra: {a}')
     if AVISOS_DURACION:
         print(f'  ⚠ duraciones que no cuadran entre fuentes ({len(AVISOS_DURACION)}):')
         for a in AVISOS_DURACION:

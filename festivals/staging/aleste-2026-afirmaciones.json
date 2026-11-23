@@ -12,23 +12,6 @@
     "hora": "14:00"
    },
    "funcion": "f_0ba6ba1a3a",
-   "casilla": "time",
-   "valor": "19:00",
-   "contra": "14:00",
-   "fuente": {
-    "tipo": "festival-ig",
-    "url": "https://www.instagram.com/p/Df3D47hlulW/",
-    "fecha": "2026-11-17"
-   },
-   "evidencia": "lámina 01.jpg de Df3D47hlulW (17 nov): «PUCALLPA LA EUROPEA 105' 19h00», fila CENTRO COLOMBO AMERICANO - SALA 1, columna 21 SÁBADO; la web (alestfestival.com/programa2026/pucallpa-la-europea, HTML y texto renderizado) dice «Medellín · Sábado 21 nov · 19:00 · Centro Colombo Americano – Sala 1». Tres caminos coinciden (ig-lecturas no lee el formato «19h00»)"
-  },
-  {
-   "ancla": {
-    "sede": "Centro Colombo Americano - Medellín",
-    "dia": "2026-11-21",
-    "hora": "14:00"
-   },
-   "funcion": "f_0ba6ba1a3a",
    "casilla": "sala",
    "valor": "Sala 1",
    "fuente": {
@@ -37,23 +20,6 @@
     "fecha": "2026-11-17"
    },
    "evidencia": "lámina 01.jpg de Df3D47hlulW (17 nov): «PUCALLPA LA EUROPEA 105' 19h00», fila CENTRO COLOMBO AMERICANO - SALA 1, columna 21 SÁBADO; la web (alestfestival.com/programa2026/pucallpa-la-europea, HTML y texto renderizado) dice «Medellín · Sábado 21 nov · 19:00 · Centro Colombo Americano – Sala 1». Tres caminos coinciden (ig-lecturas no lee el formato «19h00»)"
-  },
-  {
-   "ancla": {
-    "sede": "Centro Colombo Americano - Medellín",
-    "dia": "2026-11-22",
-    "hora": "14:00"
-   },
-   "funcion": "f_516f75f820",
-   "casilla": "time",
-   "valor": "14:30",
-   "contra": "14:00",
-   "fuente": {
-    "tipo": "festival-ig",
-    "url": "https://www.instagram.com/p/Df3D47hlulW/",
-    "fecha": "2026-11-17"
-   },
-   "evidencia": "lámina 01.jpg de Df3D47hlulW (17 nov): «GIOIA MIA 14h30», fila CENTRO COLOMBO AMERICANO - SALA 1, columna 22 DOMINGO; la web (alestfestival.com/programa2026/gioia-mia, HTML y texto renderizado) dice «Medellín · Domingo 22 nov · 14:30 · Centro Colombo Americano – Sala 1». Tres caminos coinciden (ig-lecturas no lee el formato «14h30»)"
   },
   {
    "ancla": {
@@ -86,6 +52,74 @@
     "fecha": "2026-11-18"
    },
    "evidencia": "web oficial, tres caminos: HTML de la ficha de «La última ronda en Venecia» y HTML de la ficha de «Latido.» dicen «Medellín · Miércoles 18 nov · 19:00 · Centro Colombo Americano – Sala 1»; el texto renderizado de la ficha de «Latido.» (navegador) dice lo mismo; la lámina 00.jpg de Df3D47hlulW (17 nov) pone «INAUGURACIÓN / LA ÚLTIMA RONDA EN VENECIA 19h00» en la primera fila, que en la lámina 01.jpg es CENTRO COLOMBO AMERICANO - SALA 1"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "16:30"
+   },
+   "funcion": "f_5378451bd6",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf",
+    "fecha": "2026-11-18"
+   },
+   "evidencia": "catálogo oficial Al Este 2026 (PDF, 18 nov): «LOS GOLFOS · SALA CAPITAL | 29.11 | 16:30 · CONVERSATORIO TRAS LA PROYECCIÓN»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "16:30"
+   },
+   "funcion": "f_8b4e1bc31e",
+   "casilla": "title",
+   "valor": "En la ciudad blanca",
+   "contra": "La ciudad blanca",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf",
+    "fecha": "2026-11-18"
+   },
+   "evidencia": "catálogo oficial p. 20: «EN LA CIUDAD BLANCA · SALA 3»; lo confirma la producción del festival por correo a hola@ (Ada Quintana, 19 nov 2026): «fe de erratas: En la ciudad Blanca, el 29 de noviembre a las 4:30 p. m.»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "17:00"
+   },
+   "funcion": "f_61974e3c92",
+   "casilla": "time",
+   "valor": "16:30",
+   "contra": "17:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df8iF1QFpzk/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "grilla oficial «Programación Bogotá» de @aleste.colombia (19 nov 21:00), lámina 2, Sala 2: «LICENSE TO LIVE 109' Cineforo 16h30»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-28",
+    "hora": "20:00"
+   },
+   "funcion": "f_aeab88b02c",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df8iF1QFpzk/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "grilla oficial «Programación Bogotá» de @aleste.colombia (19 nov 21:00), lámina 2, Sala 2: «PULSE 118' Conversatorio 20h00»"
   }
  ]
 }

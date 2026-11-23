@@ -1,0 +1,28 @@
+{
+ "obras": {
+  "La Sangre de Dios": {
+   "titulo": "La Sangre de Dios",
+   "afiche": {
+    "url": "/private/tmp/claude-501/-Users-d-Developer-Otrofestiv/ddec6f4c-ec8e-4373-bca0-e84a18b42f0a/scratchpad/sangre2/afiche.jpg",
+    "fuente": "afiche oficial (Proimágenes, id_pelicula=3251)",
+    "archivo": "fuentes/cajica-2026/altas/la-sangre-de-dios.jpg",
+    "px": [
+     1000,
+     1429
+    ],
+    "ratio": 0.6998,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1834002,
+   "alta_fecha": "2026-11-20"
+  }
+ },
+ "_provenance": {
+  "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
+  "capturado": "2026-11-20"
+ },
+ "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano."
+}

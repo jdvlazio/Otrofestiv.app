@@ -1,0 +1,861 @@
+{
+ "obras": {
+  "1 paseo por la ciudad": {
+   "titulo": "1 paseo por la ciudad",
+   "director": "Alejandro Acuña Sevilla, Sara Coello Coello",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=1%20paseo%20por%20la%20ciudad%20y%3A2025",
+     "fecha": "2026-11-18",
+     "resultado": "«1 paseo por la ciudad»: 0 resultado(s); «1 paseo por la ciudad» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "na": true,
+     "por_que": "el título no tiene variantes (sin acentos, subtítulo ni título original)",
+     "fecha": "2026-11-18"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/5171700 https://www.themoviedb.org/person/5459972",
+     "fecha": "2026-11-18",
+     "resultado": "Alejandro Acuña Sevilla (5171700): dirige 0; Sara Coello (5459972): dirige 1"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.labocine.com/films/un-paseo-por-la-ciudad-one-journey-through-the-city",
+     "fecha": "2026-11-17",
+     "resultado": "LaBoCine: «Un Paseo por la Ciudad / One Journey through the City», México 2025, 8 min, dir. Acuña Sevilla y Coello Coello, prod. Salvador Butes; sin afiche"
+    },
+    "festivales_previos": {
+     "url": "https://villadelcine.com/festival-2024-2/un-paseo-por-la-ciudad/",
+     "fecha": "2026-11-17",
+     "resultado": "Villa del Cine 2026 (villadelcine-2026), Mejor Cortometraje Apasionado; la imagen de la ficha es un STILL, no afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://filmfreeway.com/festival/FestivaldeCineUnderground",
+     "fecha": "2026-11-17",
+     "resultado": "",
+     "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
+    }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/1-paseo.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/1-paseo-por-la-ciudad.jpg",
+    "px": [
+     640,
+     960
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      640,
+      800
+     ],
+     "estirado": [
+      640,
+      960
+     ],
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1832923,
+   "alta_fecha": "2026-11-20"
+  },
+  "Antifragility": {
+   "titulo": "Antifragility",
+   "director": "Serafim Chikhladze",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Antifragility%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«Antifragility»: 1 resultado(s); «Antifragility» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=antifragility%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«antifragility»: 1 resultado(s); «antifragility» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/4796726",
+     "fecha": "2026-11-18",
+     "resultado": "Serafim Chikhladze (4796726): dirige 1"
+    },
+    "pagina_del_festival": {
+     "url": "https://filmfreeway.com/festival/FestivaldeCineUnderground",
+     "fecha": "2026-11-17",
+     "resultado": "",
+     "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
+    }
+   }
+  },
+  "Comb story": {
+   "titulo": "Comb story",
+   "director": "Ernesto Rodriguez Cruz",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Comb%20story%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«Comb story»: 0 resultado(s); «Comb story» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=comb%20story%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«comb story»: 0 resultado(s); «comb story» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Ernesto%20Rodriguez%20Cruz",
+     "fecha": "2026-11-17",
+     "resultado": "Ernesto Rodriguez Cruz: sin perfil en TMDB"
+    },
+    "pagina_del_festival": {
+     "url": "https://filmfreeway.com/festival/FestivaldeCineUnderground",
+     "fecha": "2026-11-17",
+     "resultado": "",
+     "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
+    }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-18/unz/Combstory/Poster e413cdeacc-poster.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/comb-story.jpg",
+    "px": [
+     533,
+     800
+    ],
+    "ratio": 0.6663,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1829663,
+   "alta_fecha": "2026-11-18"
+  },
+  "Cosmopoética: el ciclo de vida de una estrella masiva": {
+   "titulo": "Cosmopoética: el ciclo de vida de una estrella masiva",
+   "director": "Sofía Orozco Payares",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Cosmopo%C3%A9tica%3A%20el%20ciclo%20de%20vida%20de%20una%20estrella%20masiva%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«Cosmopoética: el ciclo de vida de una estrella masiva»: 0 resultado(s); «Cosmopoética: el ciclo de vida de una estrella masiva» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=cosmopoetica%20el%20ciclo%20de%20vida%20de%20una%20estrella%20masiva%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«cosmopoetica el ciclo de vida de una estrella masiva»: 0 resultado(s); «cosmopoetica el ciclo de vida de una estrella masiva» 2026: 0 resultado(s); «Cosmopoética»: 0 resultado(s); «Cosmopoética» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Sof%C3%ADa%20Orozco%20Payares",
+     "fecha": "2026-11-17",
+     "resultado": "Sofía Orozco Payares: sin perfil en TMDB"
+    },
+    "festivales_previos": {
+     "url": "https://github.com/jdvlazio/Otrofestiv.app/blob/main/festivals/staging/vartex-2026-crudo.json",
+     "fecha": "2026-11-17",
+     "resultado": "Vartex 2026 (hoja Seleccionados de su convocatoria): Cosmopoética, Sofía Orozco Payares, prod. Laura María Zapata Blanquicet, Colombia 2025, 10 min; sin afiche"
+    },
+    "pagina_del_festival": {
+     "url": "https://filmfreeway.com/festival/FestivaldeCineUnderground",
+     "fecha": "2026-11-17",
+     "resultado": "",
+     "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
+    }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-18/IMG-20261117-WA0014.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/cosmopoetica-el-ciclo-de-vida-de-una-estrella-masiva.jpg",
+    "px": [
+     1080,
+     1620
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1080,
+      1350
+     ],
+     "estirado": [
+      1080,
+      1620
+     ],
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1829504,
+   "alta_fecha": "2026-11-18"
+  },
+  "Duelo": {
+   "titulo": "Duelo",
+   "director": "Sebastian Barnes",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Duelo%20y%3A2025",
+     "fecha": "2026-11-17",
+     "resultado": "«Duelo»: 20 resultado(s); «Duelo» 2025: 2 resultado(s) → tmdb_titulo: TMDB 1313242 «Duelo» — director ✓ y año/duración ✓"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=duelo%20y%3A2025",
+     "fecha": "2026-11-17",
+     "resultado": "«duelo»: 20 resultado(s); «duelo» 2025: 2 resultado(s) → tmdb_titulo: TMDB 1313242 «Duelo» — director ✓ y año/duración ✓"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/4812793",
+     "fecha": "2026-11-17",
+     "resultado": "Sebastián Barnes (4812793): dirige 1 → tmdb_titulo: TMDB 1313242 «Duelo» — director ✓ y año/duración ✓"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1313242
+  },
+  "Fata Morgana": {
+   "titulo": "Fata Morgana",
+   "director": "Hannu Nieminen",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Fata%20Morgana%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«Fata Morgana»: 20 resultado(s); «Fata Morgana» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=fata%20morgana%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«fata morgana»: 20 resultado(s); «fata morgana» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/4596383 https://www.themoviedb.org/person/5820297",
+     "fecha": "2026-11-17",
+     "resultado": "Hannu Nieminen (4596383): dirige 2; Hannu Nieminen (5820297): dirige 1"
+    },
+    "pagina_del_festival": {
+     "url": "https://filmfreeway.com/festival/FestivaldeCineUnderground",
+     "fecha": "2026-11-17",
+     "resultado": "",
+     "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
+    }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-18/unz/fata morgana/Poster 53463d2ae0-poster.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/fata-morgana.jpg",
+    "px": [
+     540,
+     800
+    ],
+    "ratio": 0.675,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1829503,
+   "alta_fecha": "2026-11-18"
+  },
+  "Rattling": {
+   "titulo": "Rattling",
+   "director": "Nguyen Thao Nguyen",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Rattling%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«Rattling»: 6 resultado(s); «Rattling» 2026: 1 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=rattling%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«rattling»: 6 resultado(s); «rattling» 2026: 1 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/5753485 https://www.themoviedb.org/person/4426207 https://www.themoviedb.org/person/4237668",
+     "fecha": "2026-11-18",
+     "resultado": "Thao Nguyen (5753485): dirige 0; Thao Nguyen (4426207): dirige 0; Thao Nguyen (4237668): dirige 0"
+    },
+    "pagina_del_festival": {
+     "url": "https://filmfreeway.com/festival/FestivaldeCineUnderground",
+     "fecha": "2026-11-17",
+     "resultado": "",
+     "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
+    }
+   }
+  },
+  "Teatime": {
+   "titulo": "Teatime",
+   "director": "David Mathews",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Teatime%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«Teatime»: 4 resultado(s); «Teatime» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=teatime%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«teatime»: 4 resultado(s); «teatime» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/1139051 https://www.themoviedb.org/person/2257267 https://www.themoviedb.org/person/2448365",
+     "fecha": "2026-11-18",
+     "resultado": "David Mathews (1139051): dirige 0; David Mathews (2257267): dirige 0; David Mathews (2448365): dirige 0"
+    },
+    "pagina_del_festival": {
+     "url": "https://filmfreeway.com/festival/FestivaldeCineUnderground",
+     "fecha": "2026-11-17",
+     "resultado": "",
+     "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
+    }
+   }
+  },
+  "The Shapeshifter's lament": {
+   "titulo": "The Shapeshifter's lament",
+   "director": "Gaele Sobott",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=The%20Shapeshifter%27s%20lament%20y%3A2025",
+     "fecha": "2026-11-17",
+     "resultado": "«The Shapeshifter's lament»: 0 resultado(s); «The Shapeshifter's lament» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=the%20shapeshifter%20s%20lament%20y%3A2025",
+     "fecha": "2026-11-17",
+     "resultado": "«the shapeshifter s lament»: 0 resultado(s); «the shapeshifter s lament» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Gaele%20Sobott",
+     "fecha": "2026-11-17",
+     "resultado": "Gaele Sobott: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://pro.imdb.com/title/tt38866516",
+     "fecha": "2026-11-17",
+     "resultado": "tt38866516: corto animado 2025, dir. Gaele Sobott, prod. Robert Grieves; estreno 20 ago 2025 Australia. TMDB /find tt38866516: sin ficha"
+    },
+    "pagina_del_festival": {
+     "url": "https://filmfreeway.com/festival/FestivaldeCineUnderground",
+     "fecha": "2026-11-17",
+     "resultado": "",
+     "parcial": "solo la convocatoria (FilmFreeway, Festhome 3476), sin ficha por obra; Instagram del festival no revisado"
+    }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-18/unz/The Shapeshifter's Lament/Poster 11160ca52e-poster.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 18 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/the-shapeshifter-s-lament.jpg",
+    "px": [
+     533,
+     800
+    ],
+    "ratio": 0.6663,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1829671,
+   "alta_fecha": "2026-11-18"
+  },
+  "8 metros: La palabra subterránea": {
+   "titulo": "8 metros: La palabra subterránea",
+   "director": "Pablo Fernández Alberti",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=8%20metros%3A%20La%20palabra%20subterr%C3%A1nea%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«8 metros: La palabra subterránea»: 0 resultado(s); «8 metros: La palabra subterránea» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=8%20metros%20la%20palabra%20subterranea%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«8 metros la palabra subterranea»: 0 resultado(s); «8 metros la palabra subterranea» 2026: 0 resultado(s); «8 metros»: 2 resultado(s); «8 metros» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/6192273",
+     "fecha": "2026-11-18",
+     "resultado": "Pablo Fernández Alberti (6192273): dirige 1"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://www.eldeliriocine.com/8metros",
+     "fecha": "2026-11-18",
+     "resultado": "El Delirio Cine: afiche original 1920x2715, 63 min"
+    },
+    "web_director_o_productora": {
+     "url": "https://vimeo.com/1154050700",
+     "fecha": "2026-11-18",
+     "resultado": "tráiler oficial (El Delirio Cine): sinopsis, créditos, 63 min"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/8-metros/",
+     "fecha": "2026-11-18",
+     "resultado": "Letterboxd /tmdb/1688830 → 8-metros"
+    }
+   },
+   "afiche": {
+    "url": "https://static.wixstatic.com/media/d75f85_df4461b659954cc9b26295216de735e7~mv2.jpg",
+    "fuente": "El Delirio Cine (distribuidora), eldeliriocine.com/8metros",
+    "archivo": "fuentes/under-2026/altas/8-metros-la-palabra-subterranea.jpg",
+    "px": [
+     1920,
+     2715
+    ],
+    "ratio": 0.7072,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1688830,
+   "evidencia": "TMDB 1688830 «8 Metros»: dir. Pablo Fernández Alberti, 60 min; El Delirio Cine y el tráiler de Vimeo la presentan como «8 metros: La palabra subterránea», mismo director",
+   "respaldo": [
+    "distribuidora_o_agencia",
+    "web_director_o_productora"
+   ],
+   "ficha_fecha": "2026-11-18"
+  },
+  "A Perfect Maryam": {
+   "titulo": "A Perfect Maryam",
+   "director": "Solmaz Etemadzadeh, Ara Torosian",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=A%20Perfect%20Maryam%20y%3A2025",
+     "fecha": "2026-11-18",
+     "resultado": "«A Perfect Maryam»: 1 resultado(s); «A Perfect Maryam» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=a%20perfect%20maryam%20y%3A2025",
+     "fecha": "2026-11-18",
+     "resultado": "«a perfect maryam»: 1 resultado(s); «a perfect maryam» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Solmaz%20Etemadzadeh https://www.themoviedb.org/search/person?query=Ara%20Torosian",
+     "fecha": "2026-11-18",
+     "resultado": "Solmaz Etemadzadeh: sin perfil en TMDB; Ara Torosian: sin perfil en TMDB"
+    }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/a-perfect-maryam.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/a-perfect-maryam.jpg",
+    "px": [
+     640,
+     960
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      640,
+      800
+     ],
+     "estirado": [
+      640,
+      960
+     ],
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1832927,
+   "alta_fecha": "2026-11-20"
+  },
+  "Atombombenabend": {
+   "titulo": "Atombombenabend",
+   "director": "Thorsten Fleisch",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Atombombenabend%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«Atombombenabend»: 0 resultado(s); «Atombombenabend» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=atombombenabend%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«atombombenabend»: 0 resultado(s); «atombombenabend» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/1276728",
+     "fecha": "2026-11-18",
+     "resultado": "Thorsten Fleisch (1276728): dirige 26"
+    },
+    "festivales_previos": {
+     "url": "https://tiranafilmfest.org/?p=37163",
+     "fecha": "2026-11-18",
+     "resultado": "Tirana FF 2026 «Atom Bomb Soirée», 14 min, mockumentary; afiche original"
+    }
+   },
+   "afiche": {
+    "url": "https://tiranafilmfest.org/wp-content/uploads/2026/08/Atom-Bomb-Soiree_Poster.jpg",
+    "fuente": "Tirana Film Fest 2026, ficha «Atom Bomb Soirée»",
+    "archivo": "fuentes/under-2026/altas/atombombenabend.jpg",
+    "px": [
+     538,
+     800
+    ],
+    "ratio": 0.6725,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1829843,
+   "alta_fecha": "2026-11-18"
+  },
+  "Binary": {
+   "titulo": "Binary",
+   "director": "Padrick Ritch",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Binary%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«Binary»: 20 resultado(s); «Binary» 2026: 1 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=binary%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«binary»: 20 resultado(s); «binary» 2026: 1 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/1859770 https://www.themoviedb.org/person/5084729",
+     "fecha": "2026-11-18",
+     "resultado": "Padrick Ritch (1859770): dirige 5; Padrick Sean Ritch (5084729): dirige 1"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "el festival no lo mandó (correo 20 nov 2026: llegaron 11 de los 13 pedidos el 18 nov); sin afiche en TMDB ni en la web (búsqueda 20 nov 2026)"
+  },
+  "Cut your wings and fly": {
+   "titulo": "Cut your wings and fly",
+   "director": "Meryem Lahlou",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Cut%20your%20wings%20and%20fly%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«Cut your wings and fly»: 0 resultado(s); «Cut your wings and fly» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=cut%20your%20wings%20and%20fly%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«cut your wings and fly»: 0 resultado(s); «cut your wings and fly» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/2933796",
+     "fecha": "2026-11-18",
+     "resultado": "Meryem Lahlou (2933796): dirige 2"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/es/title/tt21440924/",
+     "fecha": "2026-11-18",
+     "resultado": "",
+     "parcial": "existe ficha IMDb (corto 2024); página 403 al bot, afiche no visto"
+    }
+   }
+  },
+  "Esas ruinas": {
+   "titulo": "Esas ruinas",
+   "director": "Gabriel Piñeiro",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Esas%20ruinas%20y%3A2023",
+     "fecha": "2026-11-18",
+     "resultado": "«Esas ruinas»: 1 resultado(s); «Esas ruinas» 2023: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=esas%20ruinas%20y%3A2023",
+     "fecha": "2026-11-18",
+     "resultado": "«esas ruinas»: 1 resultado(s); «esas ruinas» 2023: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/5829638 https://www.themoviedb.org/person/5774353",
+     "fecha": "2026-11-18",
+     "resultado": "Gabriel Alberto Piñeiro (5829638): dirige 1; Marvin Gabriel Piñeiro (5774353): dirige 0"
+    },
+    "festivales_previos": {
+     "url": "https://fidba.org/2025/?p=2863",
+     "fecha": "2026-11-18",
+     "resultado": "FIDBA 2025: doc 21 min, 2023; afiche original"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/those-ruins/",
+     "fecha": "2026-11-18",
+     "resultado": "Letterboxd /tmdb/1584751 → those-ruins: la ficha TMDB existe y Letterboxd la importó"
+    }
+   },
+   "afiche": {
+    "url": "https://fidba.org/2025/wp-content/uploads/sites/2/2025/11/ESAS-RUINAS-Gabriel-Pineiro-1.jpg",
+    "fuente": "FIDBA 2025, ficha de la obra",
+    "archivo": "fuentes/under-2026/altas/esas-ruinas.jpg",
+    "px": [
+     810,
+     1215
+    ],
+    "ratio": 0.6667,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1584751,
+   "evidencia": "TMDB 1584751: dir. Gabriel Alberto Piñeiro, AR, 21 min; FIDBA 2025 la lista igual (Gabriel Piñeiro, 21 min)",
+   "respaldo": [
+    "festivales_previos",
+    "letterboxd"
+   ],
+   "ficha_fecha": "2026-11-18"
+  },
+  "Lo que aún queda de mí": {
+   "titulo": "Lo que aún queda de mí",
+   "director": "Elena Bursztein",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Lo%20que%20a%C3%BAn%20queda%20de%20m%C3%AD%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«Lo que aún queda de mí»: 0 resultado(s); «Lo que aún queda de mí» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=lo%20que%20aun%20queda%20de%20mi%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«lo que aun queda de mi»: 0 resultado(s); «lo que aun queda de mi» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/4013896",
+     "fecha": "2026-11-18",
+     "resultado": "Elena Bursztein (4013896): dirige 2"
+    }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/lo-que-aun-queda-de-mi.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/lo-que-aun-queda-de-mi.jpg",
+    "px": [
+     566,
+     800
+    ],
+    "ratio": 0.7075,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_posible"
+  },
+  "Mall": {
+   "titulo": "Mall",
+   "director": "Frida Balca",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Mall%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«Mall»: 20 resultado(s); «Mall» 2026: 18 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=mall%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«mall»: 20 resultado(s); «mall» 2026: 18 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Frida%20Balca",
+     "fecha": "2026-11-18",
+     "resultado": "Frida Balca: sin perfil en TMDB"
+    }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/mall.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/mall.jpg",
+    "px": [
+     450,
+     675
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      450,
+      800
+     ],
+     "caja": [
+      0,
+      62,
+      450,
+      737
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "afiche_chico"
+  },
+  "Mamma": {
+   "titulo": "Mamma",
+   "director": "Mike Montagna",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Mamma%20y%3A2025",
+     "fecha": "2026-11-18",
+     "resultado": "«Mamma»: 20 resultado(s); «Mamma» 2025: 10 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=mamma%20y%3A2025",
+     "fecha": "2026-11-18",
+     "resultado": "«mamma»: 20 resultado(s); «mamma» 2025: 10 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/4579714",
+     "fecha": "2026-11-18",
+     "resultado": "Mike Montagna (4579714): dirige 2"
+    },
+    "festivales_previos": {
+     "url": "https://www.cinemaitaliano.info/news/87414/",
+     "fecha": "2026-11-18",
+     "resultado": "nota 13 sep 2025 con locandina oficial (207x300)"
+    }
+   },
+   "afiche": {
+    "url": "/private/tmp/claude-501/-Users-d-Developer-Otrofestiv/ddec6f4c-ec8e-4373-bca0-e84a18b42f0a/scratchpad/dl/mamma.jpg",
+    "fuente": "cinemaitaliano.info locandina id 37447 (show_img.php?type=locandine&id=37447)",
+    "archivo": "fuentes/under-2026/altas/mamma.jpg",
+    "px": [
+     207,
+     300
+    ],
+    "ratio": 0.69,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "afiche_chico"
+  },
+  "Quisiera volverme río": {
+   "titulo": "Quisiera volverme río",
+   "director": "Susana Parejas",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Quisiera%20volverme%20r%C3%ADo%20y%3A2024",
+     "fecha": "2026-11-18",
+     "resultado": "«Quisiera volverme río»: 0 resultado(s); «Quisiera volverme río» 2024: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=quisiera%20volverme%20rio%20y%3A2024",
+     "fecha": "2026-11-18",
+     "resultado": "«quisiera volverme rio»: 0 resultado(s); «quisiera volverme rio» 2024: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/5830686",
+     "fecha": "2026-11-18",
+     "resultado": "Susana Parejas (5830686): dirige 1"
+    }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/quisiera-volverme-rio.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/quisiera-volverme-rio.jpg",
+    "px": [
+     540,
+     800
+    ],
+    "ratio": 0.675,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_posible"
+  },
+  "Shell Shock O'K": {
+   "titulo": "Shell Shock O'K",
+   "director": "Dmytro Grynov",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Shell%20Shock%20O%27K%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«Shell Shock O'K»: 0 resultado(s); «Shell Shock O'K» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=shell%20shock%20o%20k%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«shell shock o k»: 0 resultado(s); «shell shock o k» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Dmytro%20Grynov",
+     "fecha": "2026-11-18",
+     "resultado": "Dmytro Grynov: sin perfil en TMDB"
+    }
+   }
+  },
+  "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra": {
+   "titulo": "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra",
+   "director": "Nelson Varas-Díaz",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=To%20the%20rhythm%20of%20love%20and%20hate%3A%20A%20punkumentary%20on%20salsa%20with%20the%20Macabeo%20Orchestra%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra»: 0 resultado(s); «To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=to%20the%20rhythm%20of%20love%20and%20hate%20a%20punkumentary%20on%20salsa%20with%20the%20macabeo%20orchestra%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«to the rhythm of love and hate a punkumentary on salsa with the macabeo orchestra»: 0 resultado(s); «to the rhythm of love and hate a punkumentary on salsa with the macabeo orchestra» 2026: 0 resultado(s); «To the rhythm of love and hate»: 0 resultado(s); «To the rhythm of love and hate» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/1612362",
+     "fecha": "2026-11-18",
+     "resultado": "Nelson Varas-Díaz (1612362): dirige 5"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmfreeway.com/AlSondeAmoryOdioTotheRhymthofLoveandHate",
+     "fecha": "2026-11-18",
+     "resultado": "",
+     "parcial": "FilmFreeway Private Project; 403 al bot, imagen no vista"
+    }
+   },
+   "afiche": {
+    "url": "/Users/d/Developer/Otrofestiv-fuentes/under-2026/correo-2026-11-20/to-the-rhythm.jpg",
+    "fuente": "afiche oficial enviado por el festival (correo 20 nov 2026)",
+    "archivo": "fuentes/under-2026/altas/to-the-rhythm-of-love-and-hate-a-punkumentary-on-salsa-with-.jpg",
+    "px": [
+     536,
+     800
+    ],
+    "ratio": 0.67,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-20"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1832931,
+   "alta_fecha": "2026-11-20"
+  },
+  "Una persona distinta": {
+   "titulo": "Una persona distinta",
+   "director": "Sergio Quatraro",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Una%20persona%20distinta%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«Una persona distinta»: 0 resultado(s); «Una persona distinta» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=una%20persona%20distinta%20y%3A2026",
+     "fecha": "2026-11-18",
+     "resultado": "«una persona distinta»: 0 resultado(s); «una persona distinta» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/2653521",
+     "fecha": "2026-11-18",
+     "resultado": "Sergio Quatraro (2653521): dirige 1"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "el festival no lo mandó (correo 20 nov 2026: llegaron 11 de los 13 pedidos el 18 nov); sin afiche en TMDB ni en la web (búsqueda 20 nov 2026)"
+  }
+ },
+ "_provenance": {
+  "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
+  "capturado": "2026-11-20"
+ },
+ "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano."
+}

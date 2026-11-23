@@ -511,6 +511,14 @@ def main():
                   ' (declarada a mano)', flush=True)
             continue
         c = prev_ok.get(t)
+        # …salvo un acierto SIN sinopsis en español (19 nov 2026, CUAFF): la
+        # ficha es la misma, pero su traducción al español puede llegar después
+        # —se lee TMDB justo tras el alta, antes de cargarle el español—, y como
+        # el acierto no caducaba, la sinopsis nunca entraba. Se vuelve a sondear,
+        # una vez por día (guardián: pipeline/sinopsis.py).
+        if c and c.get('tmdb_id') and not str(c.get('synopsis_es') or '').strip() \
+                and c.get('_sondeado') != _hoy:
+            c = None
         if c and c.get('_director') == _dir:
             # el afiche PRESTADO (de lo publicado o declarado) no se cachea: se
             # recalcula abajo cada vez, que la regla puede haber cambiado —el
@@ -641,8 +649,14 @@ def main():
     _sdec = f'{ST}/{fid}-sinopsis.json'
     if os.path.exists(_sdec):
         n_s = 0
+        # También el texto de un PROGRAMA o una ACTIVIDAD (19 nov 2026, «Noche
+        # Inaugural» de Al Este): no son obras, pero sí funciones del programa.
+        # Su entrada lleva solo el texto, sin ficha, y el ensamblador ya deja
+        # pasar a un programa lo declarado sin tmdb_id (ficha_de_la_funcion).
+        _funcs = {tit_of.get(f['titulo'], f['titulo']) for f in crudo['funciones']
+                  if f.get('titulo') and f.get('en_app', True)}
         for t, d in (json.load(open(_sdec, encoding='utf-8')).get('sinopsis') or {}).items():
-            if t not in obras:
+            if t not in obras and t not in _funcs:
                 sys.exit(f'sinopsis declarada para un título que no está en el programa: {t}')
             e = ok.get(t) or {}
             # `idioma: en`: la única sinopsis que existe está en inglés; va a

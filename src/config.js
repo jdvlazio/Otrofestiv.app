@@ -141,6 +141,25 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
+  '🛠️ Taller / Eventos': 'Workshop / Events',
+  '🚂 Conversatorio / Historia y Patrimonio': 'Talk / History and Heritage',
+  '📺 Conversatorio / Series y Producción': 'Talk / Series and Production',
+  '🎞️ Cortometrajes / Exhibición': 'Short Films / Showcase',
+  '🎬 Largometraje / Ficción': 'Feature Film / Fiction',
+  '🎨 Largometraje Animado': 'Animated Feature Film',
+  '🌱 Cortometrajes / Talento Local y Nacional': 'Short Films / Local and National Talent',
+  '🎙️ Conversatorio sobre Producción y Narrativa Audiovisual': 'Talk on Audiovisual Production and Storytelling',
+  '🎤 Taller Especializado': 'Specialized Workshop',
+  '🍿 Largometraje': 'Feature Film',
+  // Under Medellín 2026 (20 nov): secciones del reel y del PDF del festival
+  '✊ Documental Activismo Social': 'Documentary · Social Activism',
+  '🌀 Cine Experimental': 'Experimental Film',
+  '🎨 Animación': 'Animation',
+  '🎬 Muestra Oficial': 'Official Showcase',
+  '🏳️‍🌈 Feminismos y Disidencias Sexuales': 'Feminisms and Sexual Dissidence',
+  '💬 Actividad Académica': 'Academic Activity',
+  '🛠️ Actividad Creativa': 'Creative Activity',
   // CUAFF 2026 (propuesta, 17 nov)
   '🎨 CUAFF 2026': 'CUAFF 2026',
   '📷 Taller': 'Workshop',
@@ -348,6 +367,24 @@ export const NOTICES=[
 //
 // Al agregar festival: también actualizar FESTIVALS en tools/enricher.html
 export const FESTIVAL_CONFIG={
+  'cajica2026': {
+    // Alta con pipeline/alta-festival.py (2026-11-20): lo editorial sale de
+    // pipeline/cajica-2026.plan.json; los días, de festivalStartStr/festivalEndStr.
+    name:'Festival de Cine de Cajicá',displayName:'Festival de Cine de Cajicá',fullName:'Festival de Cine de Cajicá 2026',shortName:'CAJICÁ',
+    city:'Cajicá',country:'CO',
+    dates:'21–23 NOV',dates_en:'NOV 21–23',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/cajica2026.jpg',
+    tagline:'Cultura Audiovisual, Memoria y Territorio',
+    storageKey:'cajica2026_',festivalStartStr:'2026-11-21T00:00:00',festivalEndStr:'2026-11-23T23:59:00',
+    festivalDates:{'2026-11-21':'2026-11-21','2026-11-22':'2026-11-22','2026-11-23':'2026-11-23'},
+    days:[{k:'2026-11-21',d:21,lbl:'SÁB'},{k:'2026-11-22',d:22,lbl:'DOM'},{k:'2026-11-23',d:23,lbl:'LUN'}],
+    dayKeys:['2026-11-21','2026-11-22','2026-11-23'],
+    dayShort:{'2026-11-21':'SÁB 21','2026-11-22':'DOM 22','2026-11-23':'LUN 23'},
+    dayShort_en:{'2026-11-21':'SAT 21','2026-11-22':'SUN 22','2026-11-23':'MON 23'},
+    dayLong:{'2026-11-21':'Sábado 21 de noviembre','2026-11-22':'Domingo 22 de noviembre','2026-11-23':'Lunes 23 de noviembre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   // ── Bootstrap mínimo por festival ────────────────────────────────────────
   // Campos requeridos ANTES del fetch (usados por splash y _DEFAULT_FEST_ID):
   //   name, city, dates, dates_en, year, keyArt → _renderSplashRail()
@@ -1022,6 +1059,24 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'under2026': {
+  // Nombre y subtítulo: el logo del afiche oficial («Festival Transterritorial de Cine
+    // Underground Medellín») y el IG @cineundermedellin («Under Medellín 2026», «XXII edición»).
+    name:'Under Medellín',displayName:'Under Medellín',fullName:'XXII Festival Transterritorial de Cine Underground',shortName:'UNDER',
+  city:'Medellín',country:'CO',
+  dates:'25 NOV–3 DIC',dates_en:'NOV 25–DEC 3',year:2026,timezoneOffset:'-05:00',
+  keyArt:'/assets/keyart/under2026.jpg',
+  tagline:'Festival Transterritorial de Cine Underground',
+  instagram:'cineundermedellin', storageKey:'under2026_',festivalStartStr:'2026-11-25T00:00:00',festivalEndStr:'2026-12-03T23:00:00',
+  festivalDates:{'2026-11-25':'2026-11-25','2026-11-26':'2026-11-26','2026-11-27':'2026-11-27','2026-11-28':'2026-11-28','2026-11-29':'2026-11-29','2026-11-30':'2026-11-30','2026-12-01':'2026-12-01','2026-12-02':'2026-12-02','2026-12-03':'2026-12-03'},
+  days:[{k:'2026-11-25',d:25,lbl:'MIÉ'},{k:'2026-11-26',d:26,lbl:'JUE'},{k:'2026-11-27',d:27,lbl:'VIE'},{k:'2026-11-28',d:28,lbl:'SÁB'},{k:'2026-11-29',d:29,lbl:'DOM'},{k:'2026-11-30',d:30,lbl:'LUN'},{k:'2026-12-01',d:1,lbl:'MAR'},{k:'2026-12-02',d:2,lbl:'MIÉ'},{k:'2026-12-03',d:3,lbl:'JUE'}],
+  dayKeys:['2026-11-25','2026-11-26','2026-11-27','2026-11-28','2026-11-29','2026-11-30','2026-12-01','2026-12-02','2026-12-03'],
+  dayShort:{'2026-11-25':'MIÉ 25','2026-11-26':'JUE 26','2026-11-27':'VIE 27','2026-11-28':'SÁB 28','2026-11-29':'DOM 29','2026-11-30':'LUN 30','2026-12-01':'MAR 1','2026-12-02':'MIÉ 2','2026-12-03':'JUE 3'},
+  dayShort_en:{'2026-11-25':'WED 25','2026-11-26':'THU 26','2026-11-27':'FRI 27','2026-11-28':'SAT 28','2026-11-29':'SUN 29','2026-11-30':'MON 30','2026-12-01':'TUE 1','2026-12-02':'WED 2','2026-12-03':'THU 3'},
+  dayLong:{'2026-11-25':'Miércoles 25 de noviembre','2026-11-26':'Jueves 26 de noviembre','2026-11-27':'Viernes 27 de noviembre','2026-11-28':'Sábado 28 de noviembre','2026-11-29':'Domingo 29 de noviembre','2026-11-30':'Lunes 30 de noviembre','2026-12-01':'Martes 1 de diciembre','2026-12-02':'Miércoles 2 de diciembre','2026-12-03':'Jueves 3 de diciembre'},
+  prioLimit:5,eventPosterLabel:['EVENTO',''],
+  films:null,posters:null,lbSlugs:{}
+},
   'cuaff2026': {
     // EL NOMBRE es la sigla del festival (@colombianurbanfilm); el subtítulo la expande.
     // 3.ª edición, Cinemateca de Bogotá. Festhome dice 27–29 nov: desactualizado (vigía, 17 nov).
@@ -1448,6 +1503,25 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
+  '🛠️ Taller / Eventos': 'Charlas / Industria',
+  '🚂 Conversatorio / Historia y Patrimonio': 'Charlas / Industria',
+  '📺 Conversatorio / Series y Producción': 'Charlas / Industria',
+  '🎞️ Cortometrajes / Exhibición': 'Cortos / Programas',
+  '🎬 Largometraje / Ficción': 'Muestra / País',
+  '🎨 Largometraje Animado': 'Muestra / País',
+  '🌱 Cortometrajes / Talento Local y Nacional': 'Cortos / Programas',
+  '🎙️ Conversatorio sobre Producción y Narrativa Audiovisual': 'Charlas / Industria',
+  '🎤 Taller Especializado': 'Charlas / Industria',
+  '🍿 Largometraje': 'Muestra / País',
+  // Under Medellín 2026 (20 nov): secciones del reel y del PDF del festival
+  '✊ Documental Activismo Social': 'Muestra / País',
+  '🌀 Cine Experimental': 'Cortos / Programas',
+  '🎨 Animación': 'Cortos / Programas',
+  '🎬 Muestra Oficial': 'Muestra / País',
+  '🏳️‍🌈 Feminismos y Disidencias Sexuales': 'Perspectivas / Miradas',
+  '💬 Actividad Académica': 'Charlas / Industria',
+  '🛠️ Actividad Creativa': 'Charlas / Industria',
   // ── CUAFF 2026 · Bogotá (propuesta a Juan, 17 nov) ─────────
   '🎨 CUAFF 2026': 'Muestra / País',
   '📷 Taller': 'Charlas / Industria',

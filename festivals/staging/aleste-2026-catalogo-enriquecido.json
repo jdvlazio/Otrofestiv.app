@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-18"
+  "capturado": "2026-11-20"
  },
  "_origen": "aleste-2026-catalogo.json",
  "obras": [
@@ -91,7 +91,7 @@
    "synopsis_en": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 122,
+   "duracion_tmdb": 120,
    "pais_tmdb": "Austria",
    "lbSlug": "london-2026",
    "_verificado": "declarada a mano: «London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año"
@@ -421,6 +421,21 @@
    "lbSlug": "the-salamander-1971",
    "_verificado": "el catálogo ya la tiene (w_JET7AWMJQ4J4, aleste-2026)",
    "work_id": "w_JET7AWMJQ4J4"
+  },
+  {
+   "titulo": "Labriego",
+   "tmdb_id": 1828585,
+   "titulo_original": "Labriego",
+   "poster_path": "/zpmUpADcVjHzfKiUVSUgFf7Jo18.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the early 1990s, Colombian artist Rosemberg Sandoval created a mural that, like many of his other works, was transgressive, and ultimately destroyed. Today, the only evidence of its existence lies in the photographic record made by an anonymous person from Tijuana who was traveling through Colombia at the time. The documentary traces these images through the photographer's footsteps, in a journey across time of one of Latin America's most incisive artists.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 84,
+   "pais_tmdb": "",
+   "lbSlug": "labriego",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Labriego"
   },
   {
    "titulo": "Laguna",
@@ -926,12 +941,13 @@
    "titulo_original": "Todo lo que pasará mañana",
    "poster_path": "/ctWD62FLoDTGgzGlewT05RJqS4R.jpg",
    "synopsis_es": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
-   "synopsis_en": "A hybrid queer short film that follows three friends during a weekend at a cabin in the rural area of Medellín. After spending time at a nearby river, the group arrives at their retreat in the middle of the forest, immersing themselves in a deep psychotropic ritual of love and desire. This experience alters their reality and ends up fracturing their relationship, evoking fragments and scraps of their shared memories. In this trance, a radical transformation is unleashed when they summon, together, a mysterious creature born from within themselves. Through their bodies and visual memory, a mutation occurs that pushes them to escape into the forest during the night. The next morning, each one leaves the cabin on their own, now living in a world where their friendship no longer exists.",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
-   "lbSlug": "todo-lo-que-pasara-manana",
+   "synopsis_en": "In a cabin in the middle of the woods, three friends immerse themselves in a psychotropic ritual of love and desire that ends up fracturing their relationship and shared memories, together they end up summoning a being that emerges from within.",
+   "genero": "Misterio",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "Everything that will happen tomorrow",
+   "lbSlug": "everything-that-will-happen-tomorrow",
    "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, aleste-2026, festicinerio-2026, ficidi-2026)",
    "work_id": "w_4RPT53V0H8F6",
    "_ya_publicada": [
@@ -1043,7 +1059,7 @@
    "synopsis_en": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 122,
+   "duracion_tmdb": 120,
    "pais_tmdb": "Austria",
    "lbSlug": "london-2026",
    "_verificado": "declarada a mano: «London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año"
@@ -1339,6 +1355,20 @@
    "lbSlug": "the-salamander-1971",
    "_verificado": "el catálogo ya la tiene (w_JET7AWMJQ4J4, aleste-2026)",
    "work_id": "w_JET7AWMJQ4J4"
+  },
+  "Labriego": {
+   "tmdb_id": 1828585,
+   "titulo_original": "Labriego",
+   "poster_path": "/zpmUpADcVjHzfKiUVSUgFf7Jo18.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the early 1990s, Colombian artist Rosemberg Sandoval created a mural that, like many of his other works, was transgressive, and ultimately destroyed. Today, the only evidence of its existence lies in the photographic record made by an anonymous person from Tijuana who was traveling through Colombia at the time. The documentary traces these images through the photographer's footsteps, in a journey across time of one of Latin America's most incisive artists.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 84,
+   "pais_tmdb": "",
+   "lbSlug": "labriego",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Labriego"
   },
   "Laguna": {
    "tmdb_id": 1520513,
@@ -1830,12 +1860,13 @@
    "titulo_original": "Todo lo que pasará mañana",
    "poster_path": "/ctWD62FLoDTGgzGlewT05RJqS4R.jpg",
    "synopsis_es": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
-   "synopsis_en": "A hybrid queer short film that follows three friends during a weekend at a cabin in the rural area of Medellín. After spending time at a nearby river, the group arrives at their retreat in the middle of the forest, immersing themselves in a deep psychotropic ritual of love and desire. This experience alters their reality and ends up fracturing their relationship, evoking fragments and scraps of their shared memories. In this trance, a radical transformation is unleashed when they summon, together, a mysterious creature born from within themselves. Through their bodies and visual memory, a mutation occurs that pushes them to escape into the forest during the night. The next morning, each one leaves the cabin on their own, now living in a world where their friendship no longer exists.",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
-   "lbSlug": "todo-lo-que-pasara-manana",
+   "synopsis_en": "In a cabin in the middle of the woods, three friends immerse themselves in a psychotropic ritual of love and desire that ends up fracturing their relationship and shared memories, together they end up summoning a being that emerges from within.",
+   "genero": "Misterio",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "Everything that will happen tomorrow",
+   "lbSlug": "everything-that-will-happen-tomorrow",
    "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, aleste-2026, festicinerio-2026, ficidi-2026)",
    "work_id": "w_4RPT53V0H8F6",
    "_ya_publicada": [
@@ -1867,7 +1898,6 @@
  "sin_ficha": [
   "Cortometrajes de Altura",
   "Desde acá veo la tormenta",
-  "Labriego",
   "Latido. El grafiti como arte, el grafiti como forma de vida."
  ]
 }

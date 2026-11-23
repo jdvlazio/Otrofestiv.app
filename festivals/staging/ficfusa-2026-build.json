@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "FICFUSA: web /programacion/ + posts de IG del 6, 7, 8, 10 y 11 nov 2026",
-  "capturado": "2026-11-18",
+  "capturado": "2026-11-22",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1032,
@@ -3678,7 +3678,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-18T17:12:20",
+  "fecha": "2026-11-22T13:18:33",
   "plan_sha": "c64afe4535979dac",
   "paso": 7,
   "cmd": "python3 pipeline/ficfusa-2026-verificar.py"

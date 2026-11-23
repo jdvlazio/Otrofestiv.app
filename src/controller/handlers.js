@@ -15,9 +15,9 @@ import { keepCityOnly, planCityVenues } from '../view/helpers.js';
 import { runCalc, _planCityVenues } from './calc.js';
 import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched, saveNotWatched, saveWatchedMeta, saveTicketed } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
-import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs } from './pipeline.js';
+import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs, primerDiaVigente, _hoyManana, _syncVistaIconos } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
-import { dayFullyPassed, festivalEnded, simNow, simTodayStr, toMin } from '../domain/time.js';
+import { dayFullyPassed, festivalEnded, simNow, toMin } from '../domain/time.js';
 import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount, effectiveWatched, seCalifica, screeningEndDate, abiertaFase } from '../domain/film.js';
 import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable, sameEntry } from '../domain/schedule.js';
 import { state } from '../state/state.js';
@@ -911,10 +911,12 @@ export function filterByVenue(venue){
   programaChip='all';_programaChipMatchFn=null;
   // Si el día activo ya pasó, ir al primer día vigente
   if(dayFullyPassed(activeDay)){
-    const _ff=DAY_KEYS.find(d=>!dayFullyPassed(d));
+    const _ff=primerDiaVigente();   // de la ciudad elegida, si la hay
     if(_ff) activeDay=_ff;
   }
   // Regla global: navegación por día → lista por defecto
+  // La ciudad nueva puede dejar el día fuera de la tira: corregir ANTES de pintar.
+  _updateProgramaActiveFilter();
   programaViewMode=activeDay==='all'?'grid':'list';
   switchMainNav('mnav-cartelera');
   showDayView();
@@ -943,7 +945,7 @@ export function filterBySection(section){
   _programaChipMatchFn=null;
   // Si el día activo ya pasó, ir al primer día vigente
   if(dayFullyPassed(activeDay)){
-    const _ff=DAY_KEYS.find(d=>!dayFullyPassed(d));
+    const _ff=primerDiaVigente();   // de la ciudad elegida, si la hay
     if(_ff) activeDay=_ff;
   }
   // Regla global: navegación por día → lista por defecto
@@ -976,21 +978,11 @@ export function setProgramaMode(mode){
   // El fallback correcto es el primer día que NO pasó, que es exactamente lo que
   // ya hacen filterByVenue y filterBySection en este mismo archivo. La respuesta
   // estaba escrita dos veces al lado; esta función no la usaba.
-  const _pts=simTodayStr();
-  const _pti=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_pts);
-  const _proximoVivo=DAY_KEYS.findIndex(d=>!dayFullyPassed(d));
-  const _ultimo=DAY_KEYS.length-1;
-  if(mode==='hoy'){
-    // Hoy no está en el calendario → el próximo día con función. Si TODOS
-    // pasaron (festival terminado) queda el último, que es lo que había.
-    activeDay=_pti>=0?DAY_KEYS[_pti]:(_proximoVivo>=0?DAY_KEYS[_proximoVivo]:DAY_KEYS[_ultimo]);
-  } else if(mode==='manana'){
-    // Con hoy en el calendario, mañana es el siguiente. Sin hoy, «mañana» es
-    // igualmente el próximo día vivo: en un hueco, el siguiente día programado
-    // ES el mañana del usuario.
-    const _base=_pti>=0?_pti+1:_proximoVivo;
-    activeDay=(_base>=0&&_base<=_ultimo)?DAY_KEYS[_base]:DAY_KEYS[_ultimo];
-  }
+  // El cálculo vive en _hoyManana (pipeline.js), el mismo que enciende la
+  // píldora, y corre sobre los días de la ciudad elegida.
+  const _hm=_hoyManana();
+  if(mode==='hoy') activeDay=_hm.hoy;
+  else if(mode==='manana') activeDay=_hm.manana;
   // filter-row visibility handled by initProgramaModeBar() below
   // filter updates handled by lugarOpen()
   _updateProgramaActiveFilter();
@@ -1004,13 +996,7 @@ export function toggleProgramaView(){
 
 export function setProgramaView(view){
   programaViewMode=view;
-  document.getElementById('pmode-grid').classList.toggle('on',view==='grid');
-  document.getElementById('pmode-list').classList.toggle('on',view==='list');
-  // Sync single toggle icon
-  const icoG=document.getElementById('view-toggle-ico-grid');
-  const icoL=document.getElementById('view-toggle-ico-list');
-  if(icoG) icoG.style.display=view==='grid'?'':'none';
-  if(icoL) icoL.style.display=view==='list'?'':'none';
+  _syncVistaIconos();
   _renderProgramaContent(true); // toggle grid/list → scroll al tope
 }
 

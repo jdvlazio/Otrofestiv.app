@@ -6636,6 +6636,91 @@
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
    }
+  },
+  {
+   "clave": "under-medellin",
+   "nombre": "Under Medellín — Festival Transterritorial de Cine Underground",
+   "sigla": null,
+   "ciudad": "Medellín",
+   "departamento": "Antioquia",
+   "region": "Andina",
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "25 NOV–3 DIC 2026 (XXII edición, programa en PDF enviado por el festival a hola@, 18 nov)",
+   "web": null,
+   "ig": "@cineundermedellin",
+   "estado": "en_app",
+   "id_config": [
+    "under2026"
+   ],
+   "issue": [],
+   "apoyo": null,
+   "fuente": [
+    "https://www.instagram.com/cineundermedellin/"
+   ],
+   "nota": null,
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": null,
+   "origen": null,
+   "copias": null
+  },
+  {
+   "clave": "zafic",
+   "nombre": "ZAFIC Festival",
+   "sigla": null,
+   "ciudad": "Mosquera",
+   "departamento": "Cundinamarca",
+   "region": "Andina",
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "17–20 NOV 2026 (30 cortos, 15 países, 3 categorías; IG @zafic_festival)",
+   "web": null,
+   "ig": "@zafic_festival",
+   "estado": "pasado_2026",
+   "id_config": [],
+   "issue": [
+    1570
+   ],
+   "apoyo": null,
+   "fuente": [
+    "https://www.instagram.com/zafic_festival/"
+   ],
+   "nota": "Juan, 20 nov 2026: montarlo en 2027",
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": null,
+   "origen": null,
+   "copias": null
+  },
+  {
+   "clave": "festival-de-cine-de-cajica",
+   "nombre": "Festival de Cine de Cajicá — Cultura audiovisual, memoria y territorio",
+   "sigla": null,
+   "ciudad": "Cajicá",
+   "departamento": null,
+   "region": null,
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "21–23 NOV",
+   "web": null,
+   "ig": null,
+   "estado": "en_app",
+   "id_config": [
+    "cajica2026"
+   ],
+   "issue": [],
+   "apoyo": null,
+   "fuente": [],
+   "nota": null,
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": null,
+   "origen": null,
+   "copias": null
   }
  ]
 }
