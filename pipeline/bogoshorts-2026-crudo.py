@@ -338,7 +338,7 @@ def main():
         if f['acceso'] == DESCONOCIDO:
             f['acceso'] = 'Entrada libre (no se anuncia pago)'
         for o in f.get('obras') or []:
-            if o.get('pais') == 'Escocia':     # sin bandera propia en la app; el país en TMDB es Reino Unido
+            if o.get('pais') == 'Escocia':     # sin bandera propia en la app: Escocia es parte del Reino Unido
                 o['pais'] = 'Reino Unido'
     import unicodedata
     def _nfc(x):
