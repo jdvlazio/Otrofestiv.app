@@ -24,6 +24,7 @@ Lo elegido a mano por Juan nunca se reemplaza solo. Lo ya comparado queda en
 
     python3 pipeline/sinopsis_unicas.py --revisar [<festival>]   # no escribe
     python3 pipeline/sinopsis_unicas.py --registrar <archivo>
+    python3 pipeline/sinopsis_unicas.py --aplicar [<festival>] [--escribir]   # lo elegido, a lo publicado
 """
 import hashlib
 import json
@@ -124,6 +125,44 @@ def revisar(solo=None):
     return out
 
 
+def aplicar(d, obs=None, decs=None):
+    """La sinopsis elegida de cada obra, en el JSON del festival `d` (en el lugar).
+    La usa publicar.py, y --aplicar sobre lo ya publicado: la misma función, para
+    que un re-armado dé lo mismo. Una elegida vacía QUITA el texto (no había nada
+    que contara la obra: lista de actores). → [(título, antes, después)]"""
+    if decs is None:
+        decs = _almacen().decisiones()
+    eleg = {x['work_id']: x['valor'] for x in decs if x['campo'] == 'sinopsis.es'}
+    out = []
+    for f in d.get('films', []):
+        for o in (f.get('film_list') or [f]):
+            w = o.get('work_id')
+            if w not in eleg or o.get('type') == 'event':
+                continue
+            s, v = o.get('synopsis') or '', eleg[w]
+            if s == v:
+                continue
+            out.append((o.get('title'), s, v))
+            if v:
+                o['synopsis'], o['synopsis_lang'] = v, 'es'
+            else:
+                o.pop('synopsis', None)
+                o.pop('synopsis_lang', None)
+    return out
+
+
+def _guardar(p, d):
+    """Respeta la forma del archivo (una línea o indentado)."""
+    crudo = open(p, encoding='utf-8').read()
+    if '\n' in crudo.strip():
+        l = crudo.split('\n')[1]
+        txt = json.dumps(d, ensure_ascii=False, indent=(len(l) - len(l.lstrip(' '))) or 1)
+    else:
+        txt = json.dumps(d, ensure_ascii=False, separators=(',', ':'))
+    with open(p, 'w', encoding='utf-8') as fh:
+        fh.write(txt + ('\n' if crudo.endswith('\n') else ''))
+
+
 def registrar(ruta):
     cat = _almacen()
     decs = cat.decisiones()
@@ -143,6 +182,21 @@ if __name__ == '__main__':
     from collections import Counter
     if '--registrar' in sys.argv:
         print(registrar(sys.argv[sys.argv.index('--registrar') + 1]), 'sinopsis registradas')
+    elif '--aplicar' in sys.argv:
+        import glob
+        solo = next((a for a in sys.argv[1:] if not a.startswith('--')), None)
+        tot = 0
+        for p in sorted(glob.glob(f'{REPO}/festivals/*.json')):
+            if solo and os.path.basename(p) != f'{solo}.json':
+                continue
+            d = json.load(open(p, encoding='utf-8'))
+            c = aplicar(d) if isinstance(d, dict) else []
+            if c:
+                print(f'{os.path.basename(p)[:-5]:22} {len(c)}')
+                tot += len(c)
+                if '--escribir' in sys.argv:
+                    _guardar(p, d)
+        print(tot, 'sinopsis' + ('' if '--escribir' in sys.argv else ' (solo muestra; --escribir para guardarlo)'))
     elif '--revisar' in sys.argv:
         xs = revisar(next((a for a in sys.argv[1:] if not a.startswith('--')), None))
         for a, t, fid, s in xs:
