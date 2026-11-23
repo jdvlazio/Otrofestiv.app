@@ -189,6 +189,12 @@ n_bog = sum(1 for f in funciones if f['sede'].startswith('Cinemateca'))
 if n_bog != 26:
     sys.exit(f'✗ Bogotá: {n_bog} funciones, se contaron 26 en la web (33 líneas; los 2 bloques juntan 11)')
 
+# La de TMDB trae el crédito «(FILMAFFINITY)»: va la de la ficha oficial de la obra (23 nov)
+_TP = next(x for x in json.load(io.open(os.path.join(REPO, 'festivals/staging/aleste-2026-programa.json'), encoding='utf-8'))['obras']
+           if x['titulo'] == 'La tierra prometida')['sinopsis']
+for _f in funciones:
+    if _f['titulo'] == 'La tierra prometida':
+        _f['sinopsis'] = _TP
 # Sinopsis en inglés impresa en el catálogo oficial de BOGOSHORTS 2026 (misma obra, tmdb 1668904; 23 nov)
 for _f in funciones:
     for _o in _f.get('obras', []):
