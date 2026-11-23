@@ -987,6 +987,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Rodado a lo largo de una semana intensa en Cali, Colombia, Barra Brava propone una inmersión de estilo vérité en el mundo de las hinchadas más apasionadas y controvertidas de Sudamérica. La película deja que sus integrantes hablen por sí mismos. Filmado íntegramente en 16mm y acompañado por una partitura original de sintetizadores, este cortometraje documental es a la vez una experiencia cinematográfica y un documento cultural.",
+     "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/barra-brava.jpg",
      "posterSource": "tmdb",
@@ -1335,6 +1336,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Dos mujeres cuidan a una niña que despierta gritando cada noche. Agotadas por el insomnio y la creciente ansiedad, realizan un ritual para librarla de sus pesadillas. Aunque funciona, lo que provoca los gritos permanece: en lugar de desaparecer, pasa a una de las mujeres, obligándola a enfrentarse a sus propios miedos.",
+     "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/szepty.jpg",
      "posterSource": "oficial"
@@ -1742,6 +1744,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "En una pequeña ciudad de Hunan, tras el colapso del auge inmobiliario, el Tío 3 decidió abandonar este mundo. Un documental familiar filmado durante siete años recorre los edificios inacabados de nuestra ciudad y reconstruye fragmentos de su vida. Su alma se funde con esas estructuras incompletas, suspendida en un tiempo detenido, como si nada hubiera ocurrido.",
+     "genre": "Documental",
      "synopsis_lang": "es"
     },
     {
@@ -1874,6 +1877,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno.",
+     "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/raj-in.jpg",
      "posterSource": "oficial",
@@ -1896,7 +1900,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/paraiso.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "A Long Goodbye",
@@ -2314,6 +2320,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Retrato de una familia china corriente de hijo único en su hábitat: un apartamento corriente. A lo largo de cinco noches, sus vidas oscilan entre lo anodino y lo completamente banal, mientras los personajes entran y salen de sus respectivos papeles.",
+     "genre": "Drama",
      "synopsis_lang": "es"
     },
     {
@@ -3182,9 +3189,12 @@
       "date": "2026-11-13"
      },
      "synopsis": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
+     "genre": "Drama",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "tropic-of-cancer-1",
+     "tmdb_id": 1826831
     },
     {
      "title": "See You in the Morning",
@@ -4600,6 +4610,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Ibrahim vuelve a la aldea que dejó atrás con la intención de proyectar películas. Entre trámites y resistencias, el estallido de la guerra en Sudán convierte su búsqueda de una pantalla en una lucha por sobrevivir.",
+     "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/nothing-happens-after-your-absence.jpg",
      "posterSource": "tmdb",
@@ -5136,6 +5147,8 @@
      },
      "synopsis": "La víspera de su primera comunión, Rocío acompaña a su padre a recoger el vestido de la ceremonia. Allí descubre que él engaña a su madre con la modista. Al día siguiente la ceremonia sigue en pie, aunque Rocío ya no mira a su padre de la misma forma.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/manana.jpg",
+     "posterSource": "oficial",
      "lbSlug": "tomorrow-2024-3",
      "tmdb_id": 1445035,
      "title_en": "Tomorrow",
@@ -6404,6 +6417,8 @@
      },
      "synopsis": "Líneas y colores trabajados directamente sobre la película traducen al movimiento los ritmos de Take Five.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/cameras-take-five.jpg",
+     "posterSource": "oficial",
      "lbSlug": "cameras-take-five",
      "tmdb_id": 299661,
      "genre": "Animación"
@@ -6424,6 +6439,8 @@
      },
      "synopsis": "En los años sesenta, la llegada tardía de un músico a una sesión de jazz pone al descubierto tensiones dentro del grupo.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/sunrise-meets-sunset.jpg",
+     "posterSource": "oficial",
      "lbSlug": "sunrise-meets-sunset",
      "tmdb_id": 1264445
     },
@@ -6442,6 +6459,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Jack se enfrenta a los excesos de su vida nocturna. La resaca da paso a un viaje interior en el que empieza a verse de otra manera.",
+     "genre": "Animación",
      "synopsis_lang": "es"
     },
     {
@@ -7036,6 +7054,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Después de años viviendo en los Estados Unidos, una cineasta regresa a su pueblo natal para documentar el vínculo entre su familia y el maguey, la planta que los ha sustentado por generaciones. A medida que reconstruye esta historia, enfrenta el duelo de la migración y las dudas sobre la decisión de haber dejado atrás su hogar.",
+     "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/meyolotl.jpg",
      "posterSource": "oficial"
@@ -7077,6 +7096,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Una adolescente colombiana en Los Ángeles comienza a desmoronarse cuando la amenaza de deportación ensombrece su mundo. Criada para sentirse siempre fuerte, una incomodidad silenciosa crece en su interior, mientras el miedo la aleja de todo lo que antes la hacía sentir a salvo. Al reconstruir recuerdos que irrumpen en el presente, fragmentos de infancia y de un amor seguro, enfrenta el ritmo de las olas y la marea que lleva dentro, en un mundo que amenaza con borrarla.",
+     "genre": "Drama",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/the-tide-inside.jpg",
      "posterSource": "tmdb",
@@ -7463,6 +7483,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Una exploración animada del transastralismo como práctica personal para orientarse en tiempos inciertos y abrirse a lo efímero.",
+     "genre": "Animación",
      "synopsis_lang": "es"
     }
    ],
@@ -8282,6 +8303,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Dos mujeres cuidan a una niña que despierta gritando cada noche. Agotadas por el insomnio y la creciente ansiedad, realizan un ritual para librarla de sus pesadillas. Aunque funciona, lo que provoca los gritos permanece: en lugar de desaparecer, pasa a una de las mujeres, obligándola a enfrentarse a sus propios miedos.",
+     "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/szepty.jpg",
      "posterSource": "oficial"
@@ -8399,6 +8421,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Ibrahim vuelve a la aldea que dejó atrás con la intención de proyectar películas. Entre trámites y resistencias, el estallido de la guerra en Sudán convierte su búsqueda de una pantalla en una lucha por sobrevivir.",
+     "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/nothing-happens-after-your-absence.jpg",
      "posterSource": "tmdb",
@@ -8561,6 +8584,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Retrato de una familia china corriente de hijo único en su hábitat: un apartamento corriente. A lo largo de cinco noches, sus vidas oscilan entre lo anodino y lo completamente banal, mientras los personajes entran y salen de sus respectivos papeles.",
+     "genre": "Drama",
      "synopsis_lang": "es"
     },
     {
@@ -9368,6 +9392,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno.",
+     "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/raj-in.jpg",
      "posterSource": "oficial",
@@ -9390,7 +9415,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/paraiso.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "A Long Goodbye",
@@ -9879,6 +9906,7 @@
       "date": "2026-11-23"
      },
      "synopsis": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.",
+     "genre": "Animación",
      "synopsis_lang": "es"
     }
    ],
@@ -10454,9 +10482,12 @@
       "date": "2026-11-13"
      },
      "synopsis": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
+     "genre": "Drama",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
-     "posterSource": "oficial"
+     "posterSource": "tmdb",
+     "lbSlug": "tropic-of-cancer-1",
+     "tmdb_id": 1826831
     },
     {
      "title": "See You in the Morning",
@@ -10975,6 +11006,7 @@
       "date": "2026-11-23"
      },
      "synopsis": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.",
+     "genre": "Animación",
      "synopsis_lang": "es"
     }
    ],
@@ -12057,6 +12089,8 @@
    "has_qa": true,
    "synopsis": "Felipe se cuela a un toque y descubre que su novio Eduardo lo oculta por miedo a aceptar su homosexualidad. Entre un primer trance químico y un pogo, se liberan y desinhiben, hasta que un intento de beso amenaza con desatar violencia y sus peores miedos.",
    "synopsis_lang": "es",
+   "poster": "/assets/bogoshorts-2026/furia.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
@@ -12806,6 +12840,7 @@
       "date": "2026-11-23"
      },
      "synopsis": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.",
+     "genre": "Animación",
      "synopsis_lang": "es"
     }
    ],
@@ -13314,6 +13349,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Rodado a lo largo de una semana intensa en Cali, Colombia, Barra Brava propone una inmersión de estilo vérité en el mundo de las hinchadas más apasionadas y controvertidas de Sudamérica. La película deja que sus integrantes hablen por sí mismos. Filmado íntegramente en 16mm y acompañado por una partitura original de sintetizadores, este cortometraje documental es a la vez una experiencia cinematográfica y un documento cultural.",
+     "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/barra-brava.jpg",
      "posterSource": "tmdb",
@@ -14206,6 +14242,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "En una pequeña ciudad de Hunan, tras el colapso del auge inmobiliario, el Tío 3 decidió abandonar este mundo. Un documental familiar filmado durante siete años recorre los edificios inacabados de nuestra ciudad y reconstruye fragmentos de su vida. Su alma se funde con esas estructuras incompletas, suspendida en un tiempo detenido, como si nada hubiera ocurrido.",
+     "genre": "Documental",
      "synopsis_lang": "es"
     },
     {
@@ -15342,6 +15379,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Después de años viviendo en los Estados Unidos, una cineasta regresa a su pueblo natal para documentar el vínculo entre su familia y el maguey, la planta que los ha sustentado por generaciones. A medida que reconstruye esta historia, enfrenta el duelo de la migración y las dudas sobre la decisión de haber dejado atrás su hogar.",
+     "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/meyolotl.jpg",
      "posterSource": "oficial"
@@ -15383,6 +15421,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Una adolescente colombiana en Los Ángeles comienza a desmoronarse cuando la amenaza de deportación ensombrece su mundo. Criada para sentirse siempre fuerte, una incomodidad silenciosa crece en su interior, mientras el miedo la aleja de todo lo que antes la hacía sentir a salvo. Al reconstruir recuerdos que irrumpen en el presente, fragmentos de infancia y de un amor seguro, enfrenta el ritmo de las olas y la marea que lleva dentro, en un mundo que amenaza con borrarla.",
+     "genre": "Drama",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/the-tide-inside.jpg",
      "posterSource": "tmdb",
@@ -15684,6 +15723,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Una exploración animada del transastralismo como práctica personal para orientarse en tiempos inciertos y abrirse a lo efímero.",
+     "genre": "Animación",
      "synopsis_lang": "es"
     }
    ],
@@ -16069,6 +16109,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno.",
+     "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/raj-in.jpg",
      "posterSource": "oficial",
@@ -16091,7 +16132,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/paraiso.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "A Long Goodbye",
@@ -16227,6 +16270,8 @@
      },
      "synopsis": "Líneas y colores trabajados directamente sobre la película traducen al movimiento los ritmos de Take Five.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/cameras-take-five.jpg",
+     "posterSource": "oficial",
      "lbSlug": "cameras-take-five",
      "tmdb_id": 299661,
      "genre": "Animación"
@@ -16247,6 +16292,8 @@
      },
      "synopsis": "En los años sesenta, la llegada tardía de un músico a una sesión de jazz pone al descubierto tensiones dentro del grupo.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/sunrise-meets-sunset.jpg",
+     "posterSource": "oficial",
      "lbSlug": "sunrise-meets-sunset",
      "tmdb_id": 1264445
     },
@@ -16265,6 +16312,7 @@
       "date": "2026-11-13"
      },
      "synopsis": "Jack se enfrenta a los excesos de su vida nocturna. La resaca da paso a un viaje interior en el que empieza a verse de otra manera.",
+     "genre": "Animación",
      "synopsis_lang": "es"
     },
     {
@@ -16904,7 +16952,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-23T15:34:05",
+  "fecha": "2026-11-23T16:38:15",
   "plan_sha": "51eddc3380a249f7",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"

@@ -528,7 +528,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 147,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Documental"
     },
     {
      "titulo": "Le miracle",
@@ -787,7 +788,8 @@
       "pagina": 120,
       "date": "2026-11-13"
      },
-     "title_en": "Whispers"
+     "title_en": "Whispers",
+     "genero": "Animación"
     },
     {
      "titulo": "Risorsero dalla tomba e fu... l’Apocalisse!",
@@ -1095,7 +1097,8 @@
      "tmdb_id": 1736821,
      "lbSlug": "3-lost-in-towers",
      "poster": "/assets/bogoshorts-2026/tmdb-1736821.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "genero": "Documental"
     },
     {
      "titulo": "El final de los tiempos",
@@ -1198,7 +1201,8 @@
       "pagina": 114,
       "date": "2026-11-13"
      },
-     "title_en": "We Shall Return"
+     "title_en": "We Shall Return",
+     "genero": "Documental"
     },
     {
      "titulo": "Paraíso",
@@ -1560,7 +1564,8 @@
      "tmdb_id": 1599912,
      "lbSlug": "the-apple-doesnt-fall",
      "poster": "/assets/bogoshorts-2026/tmdb-1599912.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "genero": "Drama"
     },
     {
      "titulo": "Ovu sobu ostavite zakopanu",
@@ -2258,7 +2263,8 @@
       "pagina": 144,
       "date": "2026-11-13"
      },
-     "title_en": "Tropic of Cancer"
+     "title_en": "Tropic of Cancer",
+     "genero": "Drama"
     },
     {
      "titulo": "See You in the Morning",
@@ -3330,7 +3336,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 142,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Documental"
     },
     {
      "titulo": "Fiction",
@@ -4790,7 +4797,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 160,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Animación"
     },
     {
      "titulo": "Miles Davis – What’s Love Got to Do With it",
@@ -5235,7 +5243,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 135,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Documental"
     },
     {
      "titulo": "La selva",
@@ -5268,7 +5277,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 135,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Drama"
     }
    ]
   },
@@ -5543,7 +5553,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 159,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Animación"
     }
    ]
   },
@@ -6186,7 +6197,8 @@
       "pagina": 120,
       "date": "2026-11-13"
      },
-     "title_en": "Whispers"
+     "title_en": "Whispers",
+     "genero": "Animación"
     },
     {
      "titulo": "Risorsero dalla tomba e fu... l’Apocalisse!",
@@ -6274,7 +6286,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 142,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Documental"
     },
     {
      "titulo": "Fiction",
@@ -6408,7 +6421,8 @@
      "tmdb_id": 1599912,
      "lbSlug": "the-apple-doesnt-fall",
      "poster": "/assets/bogoshorts-2026/tmdb-1599912.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "genero": "Drama"
     },
     {
      "titulo": "Ovu sobu ostavite zakopanu",
@@ -7026,7 +7040,8 @@
       "pagina": 114,
       "date": "2026-11-13"
      },
-     "title_en": "We Shall Return"
+     "title_en": "We Shall Return",
+     "genero": "Documental"
     },
     {
      "titulo": "Paraíso",
@@ -7447,6 +7462,7 @@
      }
     },
     {
+     "genero": "Animación",
      "titulo": "La primera estampilla de Korinco",
      "pais": "Colombia, Indonesia, Corea del Sur",
      "anio": 2026,
@@ -7886,7 +7902,8 @@
       "pagina": 144,
       "date": "2026-11-13"
      },
-     "title_en": "Tropic of Cancer"
+     "title_en": "Tropic of Cancer",
+     "genero": "Drama"
     },
     {
      "titulo": "See You in the Morning",
@@ -8273,6 +8290,7 @@
      }
     },
     {
+     "genero": "Animación",
      "titulo": "La primera estampilla de Korinco",
      "pais": "Colombia, Indonesia, Corea del Sur",
      "anio": 2026,
@@ -9728,6 +9746,7 @@
      }
     },
     {
+     "genero": "Animación",
      "titulo": "La primera estampilla de Korinco",
      "pais": "Colombia, Indonesia, Corea del Sur",
      "anio": 2026,
@@ -10149,7 +10168,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 147,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Documental"
     },
     {
      "titulo": "Le miracle",
@@ -10844,7 +10864,8 @@
      "tmdb_id": 1736821,
      "lbSlug": "3-lost-in-towers",
      "poster": "/assets/bogoshorts-2026/tmdb-1736821.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "genero": "Documental"
     },
     {
      "titulo": "El final de los tiempos",
@@ -11757,7 +11778,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 135,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Documental"
     },
     {
      "titulo": "La selva",
@@ -11790,7 +11812,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 135,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Drama"
     }
    ]
   },
@@ -12003,7 +12026,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 159,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Animación"
     }
    ]
   },
@@ -12300,7 +12324,8 @@
       "pagina": 114,
       "date": "2026-11-13"
      },
-     "title_en": "We Shall Return"
+     "title_en": "We Shall Return",
+     "genero": "Documental"
     },
     {
      "titulo": "Paraíso",
@@ -12452,7 +12477,8 @@
       "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
       "pagina": 160,
       "date": "2026-11-13"
-     }
+     },
+     "genero": "Animación"
     },
     {
      "titulo": "Miles Davis – What’s Love Got to Do With it",

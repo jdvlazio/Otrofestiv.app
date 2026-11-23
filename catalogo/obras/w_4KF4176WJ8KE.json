@@ -20,11 +20,17 @@
   "es": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
   "en": "In a small-town lingerie factory, a young man’s monotonous life is upended by an unexpected bond and his awakening queerness."
  },
+ "generos": [
+  "Drama"
+ ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1826831,
+  "letterboxd": "tropic-of-cancer-1"
+ },
  "versiones": [
   {
    "etiqueta": "13 min",

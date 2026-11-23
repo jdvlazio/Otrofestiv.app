@@ -219,6 +219,12 @@
    "_fuente": "https://www.themoviedb.org/movie/1841401",
    "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Běi Huí Gu− Xiàn": {
+   "tmdb": 1826831,
+   "_fuente": "https://www.themoviedb.org/movie/1826831",
+   "_por_que": "altas.py --ficha: TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
+   "_registro": "bogoshorts-2026-altas.json"
   }
  },
  "duracion_distinta": {
@@ -242,9 +248,6 @@
   "Cada día paso por aquí": {
    "_por_que": "su ficha de TMDB (438251) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026); Annecy, Hamaca y búsqueda web sin afiche"
   },
-  "Cameras Take Five": {
-   "_por_que": "su ficha de TMDB (299661) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026); Wikipedia y búsqueda web sin afiche"
-  },
   "Carta a un joven ladrón": {
    "_por_que": "sin afiche tras catálogo, web/redes del director, plataformas y Bing Imágenes"
   },
@@ -256,9 +259,6 @@
   },
   "El gusano solitario": {
    "_por_que": "su ficha de TMDB (1058527) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026)"
-  },
-  "Furia": {
-   "_por_que": "estreno de In Vitro BFM 2025: ni la agenda de la Cinemateca ni el catálogo del BFM traen afiche; búsqueda web sin resultados (23 nov 2026)"
   },
   "Has estado aquí": {
    "_por_que": "Ni D'A, ni CCCB, ni lamidanoimporta.cat, ni Bing Imágenes tienen afiche: solo fotogramas 16:9 y foto de la directora. Existe en IMDb tt27164701 pero no en TMDB"
@@ -278,9 +278,6 @@
   "Lucha": {
    "_por_que": "Corto de 2019 de un director fallecido sin web, distribuidora ni perfil en plataformas; ni IMDb ni buscadores de imágenes tienen afiche."
   },
-  "Mañana": {
-   "_por_que": "su ficha de TMDB (1445035) no tiene afiche y la web del festival no tiene fichas del programa HOM-CES (revisado 23 nov 2026); Berlinale Talents, BUFF y búsqueda web sin afiche"
-  },
   "Métae": {
    "_por_que": "su ficha de TMDB (1558794) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026); Unifrance (film/62960) y búsqueda web sin afiche"
   },
@@ -296,14 +293,8 @@
   "Para Dani": {
    "_por_que": "Obra póstuma del homenaje a César Heredia (fallecido dic 2025); sin presencia web ni imagen"
   },
-  "Paraíso": {
-   "_por_que": "Experiencia VR sin afiche publicado: ficha BOGOSHORTS 4423 solo trae foto del director; Bing Imágenes sin resultado."
-  },
   "Robo macabro": {
    "_por_que": "su ficha de TMDB (939823) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026); la única imagen de TMDB es un fotograma ya rechazado en el catálogo; búsqueda web sin afiche"
-  },
-  "Sunrise Meets Sunset": {
-   "_por_que": "su ficha de TMDB (1264445) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026); búsqueda web sin afiche"
   },
   "The Beat (Matías Aguayo)": {
    "_por_que": "Videoclip sin afiche: la web del festival no trae póster y solo hay miniatura de YouTube y portada del sencillo"

@@ -29,7 +29,7 @@ Lee   fuentes/bogoshorts-2026/programacion2026.pdf
       festivals/staging/bogoshorts-2026-programas.json  (boletines e IG: solo si el catálogo no trae el código)
 Esc.  festivals/staging/bogoshorts-2026-crudo.json
 """
-import html, io, json, os, re, subprocess, sys
+import html, io, unicodedata, json, os, re, subprocess, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
@@ -126,7 +126,19 @@ GENERO = {f'{a}-{b}': g for a in ('CN', 'CI', 'PAC') for b, g in
 
 
 # el género que declara una fuente de la propia obra
-GENERO_OBRA = {'Métae': 'Experimental',          # shortfilmwire.com/en/embedded/film/200142909 «Fiction, Experimental»
+GENERO_OBRA = {
+    '跳房子': 'Documental',  # https://www.themoviedb.org/movie/1736821
+    '环岛': 'Drama',  # https://www.themoviedb.org/movie/1599912
+    'Běi Huí Gu− Xiàn': 'Drama',  # https://www.themoviedb.org/movie/1826831
+    'Barra brava': 'Documental',  # https://www.labocine.com/films/barra-brava
+    'Raj’in': 'Documental',  # https://www.btselem.org/we-shall-return/index.html
+    'Nothing Happens After Your Absence': 'Documental',  # https://tiranafilmfest.org/?p=30711
+    'The Tide Inside': 'Drama',  # https://www.phlaff.org/2026-film-guide/the-tide-inside
+    'Meyolotl': 'Documental',  # https://www.nywift.org/?p=56218
+    'Jazzed': 'Animación',  # https://www.annecyfestival.com/about/archives/2009/official-selection/film-index:film-20091336
+    'Transastralisme': 'Animación',  # https://cccb.org/en/participants/file/eva-ortega-puig/247682
+    'Szepty': 'Animación',  # https://filmpolski.pl/fp/index.php?film=1274634
+    'Métae': 'Experimental',          # shortfilmwire.com/en/embedded/film/200142909 «Fiction, Experimental»
                'I Carry Them': 'Experimental'}   # web del director, «Experimental Narrative» (registro de altas)
 
 
@@ -134,7 +146,8 @@ def _hu(t):
     return re.sub(r'[^a-z0-9]', '', (t or '').lower())
 
 
-KORINCO = {'titulo': 'La primera estampilla de Korinco', 'pais': 'Colombia, Indonesia, Corea del Sur', 'anio': 2026, 'duracion_min': 5,
+KORINCO = {'genero': 'Animación',  # minikino.org/en/korinco-2026-en: «stop-motion animated short film»
+           'titulo': 'La primera estampilla de Korinco', 'pais': 'Colombia, Indonesia, Corea del Sur', 'anio': 2026, 'duracion_min': 5,
            'sinopsis': 'Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y '
                        'BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.',
            # el inglés del mismo párrafo del catálogo (chiquiSHORTS) y el título inglés de festival.bogoshorts.com/corto/4335
@@ -220,8 +233,9 @@ def main():
     for c, os_ in progs.items():
         for o in os_:
             x = _enr.get(o['titulo'], {})
-            g = GENERO.get(re.sub(r'\d$', '', c)) or GENERO_OBRA.get(o['titulo'])
-            if g and (not x.get('genero') or 'genero' in (x.get('_heredado') or {})):
+            g = (not _hu(o['titulo']) and x.get('genero')) or GENERO.get(re.sub(r'\d$', '', c)) or GENERO_OBRA.get(unicodedata.normalize('NFC', o['titulo']))
+            # un título sin letras latinas (跳房子) no casa al ensamblar: su género va en el crudo
+            if g and (not x.get('genero') or not _hu(o['titulo']) or 'genero' in (x.get('_heredado') or {})):
                 o['genero'] = g
             if x.get('title_en') and 'title_en' not in (x.get('_heredado') or {}) \
                     and _hu(x['title_en']) == _hu(o.get('title_en')):
@@ -374,7 +388,6 @@ def main():
         for o in f.get('obras') or []:
             if o.get('pais') == 'Escocia':     # sin bandera propia en la app: Escocia es parte del Reino Unido
                 o['pais'] = 'Reino Unido'
-    import unicodedata
     def _nfc(x):
         if isinstance(x, str): return unicodedata.normalize('NFC', x)
         if isinstance(x, list): return [_nfc(y) for y in x]

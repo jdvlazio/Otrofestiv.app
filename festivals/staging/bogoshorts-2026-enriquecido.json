@@ -659,6 +659,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Běi Huí Gu− Xiàn",
+   "tmdb_id": 1826831,
+   "titulo_original": "北回歸線",
+   "poster_path": "/hyz7xasmzm8Lcgfk2IK0uo3nzPv.jpg",
+   "synopsis_es": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
+   "synopsis_en": "In a small-town lingerie factory, a young man's monotonous life is upended by an unexpected bond and his awakening queerness.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "title_en": "Tropic of Cancer",
+   "lbSlug": "tropic-of-cancer-1",
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
+   "_director": "Alex Jiang",
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Cada día paso por aquí",
    "tmdb_id": 438251,
    "titulo_original": "Cada día paso por aquí",
@@ -680,7 +699,6 @@
    "titulo": "Cameras Take Five",
    "tmdb_id": 299661,
    "titulo_original": "Cameras Take Five",
-   "poster_path": null,
    "synopsis_es": "",
    "synopsis_en": "The enduring romance of the lines. A visual exploration of Dave Brubeck's jazz classic \"Take Five\".",
    "genero": "Animación",
@@ -691,7 +709,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KH2FHZGP1WS, bogoshorts-2026)",
    "work_id": "w_4KH2FHZGP1WS",
    "_director": "Steven Woloshen",
-   "_sondeado": "2026-11-23"
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/cameras-take-five.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra (https://www.imdb.com/title/tt0377583/)"
   },
   {
    "titulo": "Cat Me If You Can",
@@ -2831,7 +2852,6 @@
    "titulo": "Mañana",
    "tmdb_id": 1445035,
    "titulo_original": "Mañana",
-   "poster_path": null,
    "synopsis_es": "",
    "synopsis_en": "On the eve of her First Communion, Rocío finally gets to pick up her dress. While her mother disapproves of the girl's flighty impatience, her father gives her a knowing glance. One fleeting moment and the child's world is turned upside down.",
    "genero": "Drama",
@@ -2843,7 +2863,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KGH18WFAAA5, bogoshorts-2026)",
    "work_id": "w_4KGH18WFAAA5",
    "_director": "Ingrid Pérez López",
-   "_sondeado": "2026-11-23"
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/manana.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra (https://shortfilmwire.com/en/embedded/film/200122884/toto)"
   },
   {
    "titulo": "Medo u šparugama",
@@ -4393,7 +4416,6 @@
    "titulo": "Sunrise Meets Sunset",
    "tmdb_id": 1264445,
    "titulo_original": "Sunrise meets sunset",
-   "poster_path": null,
    "synopsis_es": "",
    "synopsis_en": "Ray arrives late to his band practice, beaten to a bloody mess as tension rises between him and his band mates.",
    "genero": "",
@@ -4404,7 +4426,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KH3SG7X0W0G, bogoshorts-2026)",
    "work_id": "w_4KH3SG7X0W0G",
    "_director": "Aram Atkinson",
-   "_sondeado": "2026-11-23"
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/sunrise-meets-sunset.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra (https://www.imdb.com/title/tt20515956/)"
   },
   {
    "titulo": "Tenéis que verlo",
@@ -5093,6 +5118,18 @@
    "_sondeado": "2026-11-23",
    "poster": "/assets/bogoshorts-2026/tmdb-1736821.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Paraíso",
+   "poster": "/assets/bogoshorts-2026/paraiso.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra (https://festival.bogoshorts.com/corto/4423)"
+  },
+  {
+   "titulo": "Furia",
+   "poster": "/assets/bogoshorts-2026/furia.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra (https://festival.bogoshorts.com/corto/4436)"
   },
   {
    "titulo": "Escritorio",
@@ -5936,6 +5973,24 @@
    "poster": "/assets/bogoshorts-2026/bus.jpg",
    "posterSource": "tmdb"
   },
+  "Běi Huí Gu− Xiàn": {
+   "tmdb_id": 1826831,
+   "titulo_original": "北回歸線",
+   "poster_path": "/hyz7xasmzm8Lcgfk2IK0uo3nzPv.jpg",
+   "synopsis_es": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
+   "synopsis_en": "In a small-town lingerie factory, a young man's monotonous life is upended by an unexpected bond and his awakening queerness.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "",
+   "title_en": "Tropic of Cancer",
+   "lbSlug": "tropic-of-cancer-1",
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
+   "_director": "Alex Jiang",
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+   "posterSource": "tmdb"
+  },
   "Cada día paso por aquí": {
    "tmdb_id": 438251,
    "titulo_original": "Cada día paso por aquí",
@@ -5956,7 +6011,6 @@
   "Cameras Take Five": {
    "tmdb_id": 299661,
    "titulo_original": "Cameras Take Five",
-   "poster_path": null,
    "synopsis_es": "",
    "synopsis_en": "The enduring romance of the lines. A visual exploration of Dave Brubeck's jazz classic \"Take Five\".",
    "genero": "Animación",
@@ -5967,7 +6021,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KH2FHZGP1WS, bogoshorts-2026)",
    "work_id": "w_4KH2FHZGP1WS",
    "_director": "Steven Woloshen",
-   "_sondeado": "2026-11-23"
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/cameras-take-five.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra (https://www.imdb.com/title/tt0377583/)"
   },
   "Cat Me If You Can": {
    "tmdb_id": 1817624,
@@ -8011,7 +8068,6 @@
   "Mañana": {
    "tmdb_id": 1445035,
    "titulo_original": "Mañana",
-   "poster_path": null,
    "synopsis_es": "",
    "synopsis_en": "On the eve of her First Communion, Rocío finally gets to pick up her dress. While her mother disapproves of the girl's flighty impatience, her father gives her a knowing glance. One fleeting moment and the child's world is turned upside down.",
    "genero": "Drama",
@@ -8023,7 +8079,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KGH18WFAAA5, bogoshorts-2026)",
    "work_id": "w_4KGH18WFAAA5",
    "_director": "Ingrid Pérez López",
-   "_sondeado": "2026-11-23"
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/manana.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra (https://shortfilmwire.com/en/embedded/film/200122884/toto)"
   },
   "Medo u šparugama": {
    "tmdb_id": 1529384,
@@ -9479,7 +9538,6 @@
   "Sunrise Meets Sunset": {
    "tmdb_id": 1264445,
    "titulo_original": "Sunrise meets sunset",
-   "poster_path": null,
    "synopsis_es": "",
    "synopsis_en": "Ray arrives late to his band practice, beaten to a bloody mess as tension rises between him and his band mates.",
    "genero": "",
@@ -9490,7 +9548,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KH3SG7X0W0G, bogoshorts-2026)",
    "work_id": "w_4KH3SG7X0W0G",
    "_director": "Aram Atkinson",
-   "_sondeado": "2026-11-23"
+   "_sondeado": "2026-11-23",
+   "poster": "/assets/bogoshorts-2026/sunrise-meets-sunset.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra (https://www.imdb.com/title/tt20515956/)"
   },
   "Tenéis que verlo": {
    "tmdb_id": 1576604,
@@ -10163,7 +10224,6 @@
   "Argentina Is Daing (Marttein)",
   "Berzingue (Crache)",
   "Bu",
-  "Běi Huí Gu− Xiàn",
   "Carta a un joven ladrón",
   "Cartas a Daniel Apóstol",
   "Cassandra",
@@ -10238,10 +10298,6 @@
   },
   "Bu": {
    "director": "Daniel Alemán Montero",
-   "fecha": "2026-11-23"
-  },
-  "Běi Huí Gu− Xiàn": {
-   "director": "Alex Jiang",
    "fecha": "2026-11-23"
   },
   "Carta a un joven ladrón": {

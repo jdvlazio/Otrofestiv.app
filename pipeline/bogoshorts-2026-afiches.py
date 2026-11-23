@@ -48,6 +48,9 @@ def main():
     if os.path.exists(f'{REPO}/{p}'):
         out['Fantasy Land'] = {'archivo': p, 'sobre_tmdb': True, 'url': 'https://image.tmdb.org/t/p/w780/5bCC7cYdBmm9gTkyx6QqxZA6t6T.jpg',
                                'fuente': 'afiche oficial de la ficha de TMDB 1840640 (acredita a Aitana Ahrens), sin el recorte del encuadre'}
+    for t, x in json.load(open(f'{REPO}/festivals/staging/bogoshorts-2026-afiches-hallados.json', encoding='utf-8'))['afiches'].items():
+        if os.path.exists(f"{REPO}/{x['archivo']}"):
+            out[t] = {'archivo': x['archivo'], 'sobre_tmdb': True, 'url': x['url'], 'fuente': f"afiche oficial de la obra ({x['pagina']})"}
     for obras in cortos.values():
         for o in obras:
             t = o['titulo']

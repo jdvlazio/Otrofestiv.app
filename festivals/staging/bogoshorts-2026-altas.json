@@ -5972,8 +5972,15 @@
      "resultado": "ficha de la obra en la web del festival: trae póster: https://festival.bogoshorts.com/images/peliculas/6ae368174d310__Bei_Hui_Gui_Xian_CLC-DIVX02_Poster_24BSFF.jpg"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "Shortfilmwire y NYU Tisch solo publican fotogramas (revisado: joven acostado, 2362x1624, no afiche)"
+   "estado": "ficha_existente",
+   "por_que_sin_afiche": "Shortfilmwire y NYU Tisch solo publican fotogramas (revisado: joven acostado, 2362x1624, no afiche)",
+   "tmdb_id": 1826831,
+   "evidencia": "TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
+   "respaldo": [
+    "imdb",
+    "letterboxd"
+   ],
+   "ficha_fecha": "2026-11-23"
   },
   "2000": {
    "titulo": "2000",
