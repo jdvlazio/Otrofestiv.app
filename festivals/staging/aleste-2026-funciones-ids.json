@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-11-16"
+  "capturado": "2026-11-23"
  },
  "funciones": {
   "f_6c856cce71": {
@@ -126,7 +126,7 @@
   "f_7eb873bf13": {
    "sede": "Cinemateca de Bogotá - Bogotá",
    "dia": "2026-11-26",
-   "hora": "19:30",
+   "hora": "19:00",
    "sala": "Sala 3",
    "titulo": "la retirada"
   },
@@ -171,6 +171,13 @@
    "hora": "19:30",
    "sala": "Sala 3",
    "titulo": "padre"
+  },
+  "f_caf13da1b1": {
+   "sede": "Cinemateca Fontanar del Río - Bogotá",
+   "dia": "2026-11-28",
+   "hora": "14:00",
+   "sala": "",
+   "titulo": "cortometrajes de altura"
   },
   "f_1cbb3fe13a": {
    "sede": "Cinemateca de Bogotá - Bogotá",
@@ -220,13 +227,6 @@
    "hora": "20:00",
    "sala": "Sala 2",
    "titulo": "pulse"
-  },
-  "f_caf13da1b1": {
-   "sede": "Cinemateca Fontanar del Río - Bogotá",
-   "dia": "2026-11-29",
-   "hora": "14:00",
-   "sala": "",
-   "titulo": "cortometrajes de altura"
   },
   "f_cb55e388f2": {
    "sede": "Cinemateca de Bogotá - Bogotá",
