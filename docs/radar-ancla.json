@@ -6721,6 +6721,36 @@
    "verificado_el": null,
    "origen": null,
    "copias": null
+  },
+  {
+   "clave": "cine-chino-bogota",
+   "nombre": "Festival de Cine Chino",
+   "sigla": null,
+   "ciudad": "Bogotá",
+   "departamento": "Bogotá D.C.",
+   "region": "Andina",
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "20 NOV–2 DIC 2026 (Embajada de China; 6 obras)",
+   "web": null,
+   "ig": null,
+   "estado": "pasado_2026",
+   "id_config": [],
+   "issue": [
+    1579
+   ],
+   "apoyo": null,
+   "fuente": [
+    "https://x.com/china_embajada/status/2120885782831354174",
+    "http://spanish.peopledaily.com.cn/n3/2026/1122/c92122-20521900.html"
+   ],
+   "nota": "Juan, 23 nov 2026: anotarlo para 2027. Conocido con el festival en curso; la edición 2025 fue en julio: vigilar desde mayo.",
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": null,
+   "origen": null,
+   "copias": null
   }
  ]
 }
