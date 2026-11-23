@@ -285,7 +285,7 @@ def main():
         # «* Entrada con invitación»: un asterisco solo (** es Q&A, *** Encuentros)
         f.setdefault('acceso', 'Entrada con invitación' if re.search(r'(?<!\*)\*(?!\*)', txt) else DESCONOCIDO)
         if f.get('codigo') == 'F3-ALIENS':   # catálogo, escenarios y eventos especiales
-            f['acceso'] = 'Entrada con manilla'   # la grilla pone * (invitación); el catálogo y la web, más nuevos, manilla
+            f['acceso'] = 'Entrada con invitación (manilla)'   # la grilla pone * (invitación); el catálogo y la web, más nuevos, manilla
         if e[2] == 'Cinemateca de Bogotá Sede Fontanar del Río':
             f['acceso'] = DEF_FONTANAR
         if e[2] == 'Alianza Francesa' and not f['sala']:
