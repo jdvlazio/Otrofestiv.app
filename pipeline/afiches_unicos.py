@@ -24,6 +24,7 @@ EL CRITERIO PARA REEMPLAZAR el afiche del almacén cuando llega uno nuevo:
   · misma imagen y nada mejora                          → se MANTIENE;
   · otra versión u otro diseño                          → se REVISA: la campaña
     de una obra cambia con su distribución, y eso lo mira una persona.
+Lo ya comparado queda en `vistas` de la decisión y no se vuelve a preguntar.
 Una elección hecha a mano por Juan nunca se reemplaza sola: se revisa.
 
     python3 pipeline/afiches_unicos.py --revisar [<festival>]   # no escribe
@@ -135,7 +136,7 @@ def revisar(solo=None):
             for o in (f.get('film_list') or [f]):
                 w, u = o.get('work_id'), o.get('poster')
                 e = dec.get(w)
-                if not e or not u or u == e['valor']['archivo'] or (w, u) in vistos:
+                if not e or not u or u == e['valor']['archivo'] or u in (e.get('vistas') or []) or (w, u) in vistos:
                     continue
                 vistos.add((w, u))
                 a = lado(e['valor']['archivo'], 'editorial' if e['valor']['veredicto'] == 'fotograma' else '')
@@ -159,7 +160,7 @@ def registrar(ruta):
         if e['work_id'] in ya:
             continue
         decs.append({'work_id': e['work_id'], 'campo': 'afiche', 'valor': e['valor'], 'motivo': e['motivo'],
-                     'fecha': e['fecha'], 'quien': e['quien']})
+                     'fecha': e['fecha'], 'quien': e['quien'], 'vistas': e.get('vistas') or []})
         n += 1
     io.open(os.path.join(catalogo.DIR, 'decisiones.json'), 'w', encoding='utf-8').write(
         json.dumps(decs, ensure_ascii=False, indent=1))
