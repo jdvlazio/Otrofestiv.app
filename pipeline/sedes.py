@@ -299,14 +299,35 @@ def construir(raiz=REPO):
     redir = dict(previa.get('redirecciones') or {})
     sedes, div, usados = {}, {}, set(viejas) | set(redir)
     ctx = _contexto(raiz)
-    for g in agrupar(pines(raiz), dec):
+    # UN PIN YA ENLAZADO (`_matriz`) VA CON SU LUGAR, esté donde esté (16 nov):
+    # cuando Maps movió «Antimateria» 6,4 km, el pin viejo del festival quedó
+    # lejos y la reconstrucción armaba un lugar duplicado. El enlace manda
+    # sobre la distancia; solo los pines sin enlace se agrupan por nombre.
+    enlazados, sueltos = {}, []
+    for x in pines(raiz):
+        sid0 = x[3].get('_matriz')
+        while sid0 in redir:
+            sid0 = redir[sid0]
+        if sid0 and sid0 in viejas:
+            enlazados.setdefault(sid0, []).append(x)
+        else:
+            sueltos.append(x)
+    grupos = [(s0, g0) for s0, g0 in enlazados.items()] + [(None, g0) for g0 in agrupar(sueltos, dec)]
+    for fijo, g in grupos:
         alias = {x[2] for x in g} | {x[1] for x in g}
         planos = {plano(a) for a in alias}
         pt0 = (g[0][3]['lat'], g[0][3]['lng'])
         # ¿es un lugar que ya tiene id? por alias y cercanía
+        if fijo:   # el lugar del enlace; su pin (quizá corregido en Maps) es el que cuenta
+            pt0 = (viejas[fijo]['lat'], viejas[fijo]['lng'])
+            planos |= {plano(a) for a in [viejas[fijo]['nombre']] + viejas[fijo].get('alias', [])}
+        canon = _uf_mismo(dec)
+        cplanos = {canon(p_) for p_ in planos}
         hits = sorted(s for s, e in viejas.items() if s not in sedes and s not in redir and
-                      planos & {plano(a) for a in [e['nombre']] + e.get('alias', [])} and
+                      cplanos & {canon(plano(a)) for a in [e['nombre']] + e.get('alias', [])} and
                       metros(pt0, (e['lat'], e['lng'])) < MISMO_LUGAR_M)
+        if fijo and fijo not in hits:
+            hits.append(fijo)
         # dos ids viejos que ahora son el mismo lugar (--mismo): sobrevive uno,
         # el otro redirige — el id no se pierde, como en el almacén de obras
         sid = hits[0] if hits else None
@@ -339,6 +360,31 @@ def construir(raiz=REPO):
                          'nivel': nivel_de(x[3].get('_prec')),
                          'a_m': round(metros((e['lat'], e['lng']), (x[3]['lat'], x[3]['lng'])))} for x in g]
         sedes[sid] = e
+    # FUSIÓN TARDÍA: dos lugares ya armados que una persona declaró `mismo` y que
+    # quedan a <MISMO_LUGAR_M se juntan aquí (el orden de los grupos no decide)
+    canon = _uf_mismo(dec)
+    ids = sorted(sedes, key=lambda h: (bool(sedes[h].get('_elegido_de')) is False,
+                                        NIVELES.index((sedes[h].get('evidencia') or {}).get('nivel', 'aproximado')), h))
+    for i, a_ in enumerate(ids):
+        if a_ not in sedes:
+            continue
+        ca = {canon(plano(n)) for n in [sedes[a_]['nombre']] + sedes[a_].get('alias', [])}
+        for b_ in ids[i + 1:]:
+            if b_ not in sedes:
+                continue
+            eb = sedes[b_]
+            if ca & {canon(plano(n)) for n in [eb['nombre']] + eb.get('alias', [])} and \
+                    metros((sedes[a_]['lat'], sedes[a_]['lng']), (eb['lat'], eb['lng'])) < MISMO_LUGAR_M:
+                ea = sedes[a_]
+                ea['alias'] = sorted((set(ea.get('alias', [])) | set(eb.get('alias', [])) | {eb['nombre']}) - {ea['nombre']})
+                ea['festivales'] = sorted(set(ea['festivales']) | set(eb['festivales']))
+                for k in ('salas',):
+                    if eb.get(k):
+                        ea[k] = sorted(set(ea.get(k, [])) | set(eb[k]))
+                redir[b_] = a_
+                div.pop(b_, None)
+                del sedes[b_]
+                ca |= {canon(plano(n)) for n in [eb['nombre']] + eb.get('alias', [])}
     # lugares del almacén que ningún festival usa hoy se conservan (son datos)
     for s, e in viejas.items():
         if s not in redir:

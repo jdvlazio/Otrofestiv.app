@@ -40,6 +40,18 @@
    "Biblioteca de Ciudad Universitaria": [
     "Biblioteca de Ciudad Universitaria - Funza",
     ""
+   ],
+   "Institución Educativa Ágora": [
+    "Institución Educativa Ágora - Funza",
+    ""
+   ],
+   "Colegio de Valores Humanos Sathya Sai": [
+    "Colegio de Valores Humanos Sathya Sai - Funza",
+    ""
+   ],
+   "CITI": [
+    "CITI - Funza",
+    ""
    ]
   },
   "_por_que_secciones": "Sección = el «Componente» de la agenda, verbatim y en caja de Título (pedido de Juan, 25 oct).",
@@ -125,6 +137,9 @@
   "_por_que_acceso": "Sin `ticketing_model`: ninguna función dice que se pague. El acceso va declarado en `_acceso` del crudo.",
   "_fuentes_versionadas": {
    "festivals/staging/funza-2026-radar.json": "el volcado del radar #1261"
+  },
+  "radar_salas_ok": {
+   "Auditorio Complejo Cultural": "lámina del evento inaugural del 18 nov (FB del Bacatá): ya pasó; en la app queda como la agenda, en el Centro Cultural Bacatá"
   }
  },
  "fuentes_vivas": [

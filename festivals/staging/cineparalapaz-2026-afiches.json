@@ -1,0 +1,17 @@
+{
+ "_provenance": {
+  "fuente": "afiches oficiales hallados en la búsqueda rigurosa (registro cineparalapaz-2026-altas.json), mirados uno por uno",
+  "capturado": "2026-11-16",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche"
+ },
+ "afiches": {
+  "LA": {
+   "archivo": "assets/cineparalapaz-2026/la.jpg",
+   "fuente": "afiche oficial de la web de la obra (lapeliculamenstrual.com), 600×857"
+  },
+  "Cajamarca: El viaje del desengaño": {
+   "archivo": "assets/cineparalapaz-2026/cajamarca-el-viaje-del-desengano.jpg",
+   "fuente": "afiche oficial (Universidad de La Sabana, dir. Ernesto Ciurlizza), de su ficha de IMDb tt8386644"
+  }
+ }
+}

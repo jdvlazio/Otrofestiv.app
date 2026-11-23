@@ -1,0 +1,124 @@
+{
+ "_nota": "PRE-ONBOARDING (20 nov 2026). Festival de Cine de Cajicá 2026, 21–23 nov, Centro Cultural y de Convenciones Fernando Botero (Calle 1A #040, Cajicá). Organiza el Instituto Municipal de Cultura y Turismo de Cajicá (IG @insculturacajica). Fuente única de la parrilla: la web oficial (const programacion + enlaces). La web trae 10 tarjetas.",
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/cajica-2026/festival-de-cine-2026.html",
+   "url": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+   "como": "pagina",
+   "debe_contener": "const programacion",
+   "que": "la parrilla (día, hora, lugar, categoría, cortos, inscripciones)"
+  }
+ ],
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/cajica-2026-crudo.py",
+   "que": "la web → crudo (10 funciones)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py cajica-2026 --posters",
+   "que": "TMDB verificado + afiches a assets/"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py cajica-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py cajica-2026 --aplicar --desde festivals/staging/cajica-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/cajica-2026-verificar.py",
+   "que": "2.ª lectura independiente: las tarjetas HTML renderizables contra el build"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/cajica-2026-venues-geo.json": "el pin, Google Maps 20 nov",
+  "festivals/staging/cajica-2026-correcciones.json": "sin_afiche / sin_sinopsis / sin_duracion con su porqué"
+ },
+ "festival": {
+  "crudo": "festivals/staging/cajica-2026-crudo.json",
+  "enriquecido": "festivals/staging/cajica-2026-enriquecido.json",
+  "geo": "festivals/staging/cajica-2026-venues-geo.json",
+  "_por_que_sedes": "Todo ocurre en el Centro Cultural y de Convenciones Fernando Botero; la sala (Auditorio Múltiple, Auditorio Principal, 3.er piso, Biblioteca) va en `sala`.",
+  "sedes": {
+   "Centro Cultural y de Convenciones Fernando Botero": [
+    "Centro Cultural y de Convenciones Fernando Botero - Cajicá",
+    ""
+   ]
+  },
+  "_por_que_secciones": "La `categoria` de cada tarjeta de la web, tal cual. Emoji, inglés y arquetipo: propuesta para Juan.",
+  "secciones": {
+   "Taller / Eventos": {
+    "emoji": "🛠️",
+    "en": "Workshop / Events",
+    "archetype": "Charlas / Industria"
+   },
+   "Conversatorio / Historia y Patrimonio": {
+    "emoji": "🚂",
+    "en": "Talk / History and Heritage",
+    "archetype": "Charlas / Industria"
+   },
+   "Conversatorio / Series y Producción": {
+    "emoji": "📺",
+    "en": "Talk / Series and Production",
+    "archetype": "Charlas / Industria"
+   },
+   "Cortometrajes / Exhibición": {
+    "emoji": "🎞️",
+    "en": "Short Films / Showcase",
+    "archetype": "Cortos / Programas"
+   },
+   "Largometraje / Ficción": {
+    "emoji": "🎬",
+    "en": "Feature Film / Fiction",
+    "archetype": "Muestra / País"
+   },
+   "Largometraje animado": {
+    "emoji": "🎨",
+    "en": "Animated Feature Film",
+    "archetype": "Muestra / País"
+   },
+   "Cortometrajes / Talento Local y Nacional": {
+    "emoji": "🌱",
+    "en": "Short Films / Local and National Talent",
+    "archetype": "Cortos / Programas"
+   },
+   "Conversatorio sobre producción y narrativa audiovisual": {
+    "emoji": "🎙️",
+    "en": "Talk on Audiovisual Production and Storytelling",
+    "archetype": "Charlas / Industria"
+   },
+   "Taller Especializado": {
+    "emoji": "🎤",
+    "en": "Specialized Workshop",
+    "archetype": "Charlas / Industria"
+   },
+   "Largometraje": {
+    "emoji": "🍿",
+    "en": "Feature film",
+    "archetype": "Muestra / País"
+   }
+  },
+  "name": "Festival de Cine de Cajicá",
+  "displayName": "Festival de Cine de Cajicá",
+  "fullName": "Festival de Cine de Cajicá 2026",
+  "shortName": "CAJICÁ",
+  "tagline": "Cultura Audiovisual, Memoria y Territorio",
+  "_por_que_copy": "name/fullName: <title> y <h1> de la web «Festival de Cine de Cajicá 2026»; tagline: el <h2> de la web «Cultura audiovisual, memoria y territorio» (es lema: Juan decide, como en Jardín/Funza)",
+  "city": "Cajicá",
+  "country": "CO",
+  "dates": "21–23 NOV",
+  "dates_en": "NOV 21–23",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "cajica2026_",
+  "festivalStartStr": "2026-11-21T00:00:00",
+  "festivalEndStr": "2026-11-23T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre",
+  "dias_vacios": [],
+  "instagram": "insculturacajica"
+ },
+ "radar": null,
+ "radar_nota": "sin issue de radar: el festival se conoció el 20 nov 2026, un día antes de empezar (búsqueda gh label:radar «Cajicá»: 0)"
+}

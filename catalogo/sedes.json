@@ -118,8 +118,10 @@
    "lat": 4.3291611,
    "lng": -74.3796067,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficfusa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/HACIENDA+TIERRA+GRATA/@4.3291611,-74.3796067,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Fusagasugá, Cundinamarca",
    "alias": [
@@ -217,11 +219,13 @@
   },
   "s_11519c26": {
    "nombre": "Parque Fundadores",
-   "lat": 5.0675654,
-   "lng": -75.5104371,
+   "lat": 5.0677356,
+   "lng": -75.5109384,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Parque+Fundadores/@5.0677356,-75.5109384,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -304,11 +308,13 @@
   },
   "s_12ebb5ae": {
    "nombre": "Centro Cultural y Educativo Fundación Diego Echavarría Misas",
-   "lat": 6.1724038,
-   "lng": -75.6115791,
+   "lat": 6.1724116,
+   "lng": -75.6116231,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "cinemancia-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Fundación+Diego+Echavarría+Misas+Centro+Cultural+Educativo/@6.1724116,-75.6116231,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 48 # 51–34, Itagüí, Antioquia",
    "alias": [
@@ -416,8 +422,10 @@
    "lat": 4.6031614,
    "lng": -74.0676717,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "aleste-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cinemateca+de+Bogotá/@4.6031614,-74.0676717,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 3 #19-10, Bogotá",
    "alias": [
@@ -428,12 +436,14 @@
     "anibia-2026",
     "bhff-2026",
     "biff-2026",
+    "cuaff-2026",
     "midbo-2026",
     "narrarelfuturo-2026"
    ],
    "salas": [
     "Calle Museo",
     "Lab 1",
+    "Laboratorio 1",
     "Sala 2",
     "Sala 3",
     "Sala Capital",
@@ -538,24 +548,6 @@
    ],
    "ciudad": "Bogotá",
    "corto": "Cámara de Comercio de Bogotá"
-  },
-  "s_1bbd676f": {
-   "nombre": "Biblioteca Comfama Bello",
-   "lat": 6.3323907,
-   "lng": -75.5568958,
-   "evidencia": {
-    "nivel": "manual",
-    "fuente": "miradas-2026-venues-geo.json"
-   },
-   "address": "Cra. 49 #46-57, Prado, Bello",
-   "alias": [
-    "Biblioteca Comfama Bello - Medellín"
-   ],
-   "festivales": [
-    "miradas-2026"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Biblioteca Comfama Bello"
   },
   "s_1be38f20": {
    "nombre": "Alianza Francesa",
@@ -688,11 +680,13 @@
   },
   "s_20a122a7": {
    "nombre": "Terko",
-   "lat": 6.34726,
-   "lng": -75.506,
+   "lat": 6.3473919,
+   "lng": -75.5060442,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Terko+Bar/@6.3473919,-75.5060442,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 50 # 47–21, Copacabana, Antioquia",
    "alias": [
@@ -920,11 +914,13 @@
   },
   "s_2c759e7a": {
    "nombre": "La Enea Cisco",
-   "lat": 5.0325643,
-   "lng": -75.46605,
+   "lat": 5.0326256,
+   "lng": -75.4658771,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cisco+La+Enea/@5.0326256,-75.4658771,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -969,6 +965,26 @@
    ],
    "ciudad": "Medellín",
    "corto": "ITM"
+  },
+  "s_2f9c41f8": {
+   "nombre": "Donde Robin",
+   "lat": 6.2496084,
+   "lng": -75.5619183,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cra.+43+%2353-51/@6.2496084,-75.5619183,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 43 #53-51, Parque del Periodista",
+   "alias": [
+    "Donde Robin - Medellín"
+   ],
+   "festivales": [
+    "under-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Donde Robin"
   },
   "s_30a5d6b9": {
    "nombre": "Potocine",
@@ -1055,11 +1071,13 @@
   },
   "s_34d4a9cf": {
    "nombre": "Teatro los Fundadores",
-   "lat": 5.0684238,
-   "lng": -75.5103558,
+   "lat": 5.0680516,
+   "lng": -75.5103473,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+Cultural+y+de+Convenciones+Teatro+los+Fundadores/@5.0680516,-75.5103473,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -1085,6 +1103,26 @@
    ],
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 1957 m"
+  },
+  "s_3704da4c": {
+   "nombre": "Lubianka",
+   "lat": 4.627756,
+   "lng": -74.0763821,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Lubianka+D.C+Laboratorio+de+memoria+y+paz+viva./@4.627756,-74.0763821,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cl. 39 #25-13",
+   "alias": [
+    "Lubianka - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Lubianka"
   },
   "s_384e68d5": {
    "nombre": "Universidad de Caldas",
@@ -1127,8 +1165,10 @@
    "lat": 4.3404799,
    "lng": -74.3609009,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficfusa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cinema+Los+Ángeles/@4.3404799,-74.3609009,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 5 #11-25, Fusagasugá, Cundinamarca",
    "alias": [
@@ -1308,11 +1348,13 @@
   },
   "s_46c0ae50": {
    "nombre": "Rogelio Salmona",
-   "lat": 5.0545465,
-   "lng": -75.4916559,
+   "lat": 5.0546641,
+   "lng": -75.491575,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+Cultural+Universitario+Rogelio+Salmona/@5.0546641,-75.491575,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -1354,11 +1396,13 @@
   },
   "s_4a79ccdf": {
    "nombre": "Teatro Comfama Alfonso Restrepo Moreno",
-   "lat": 6.24575,
-   "lng": -75.56372,
+   "lat": 6.2456661,
+   "lng": -75.5644862,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Teatro+Comfama+Alfonso+Restrepo+Moreno/@6.2456661,-75.5644862,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 48 # 43–87, Medellín, Antioquia",
    "alias": [
@@ -1565,6 +1609,26 @@
    "ciudad": "Manizales",
    "corto": "Clandestino Records"
   },
+  "s_59792218": {
+   "nombre": "Alpamanda Peña Cultural",
+   "lat": 4.6037739,
+   "lng": -74.0684617,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Pe%C3%B1a+Alpamanda+Bar/@4.6037739,-74.0684617,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 4 #19-56, piso 3",
+   "alias": [
+    "Alpamanda Peña Cultural - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Alpamanda Peña Cultural"
+  },
   "s_5c62c6c3": {
    "nombre": "Teatro Caribe",
    "lat": 6.1728223,
@@ -1765,11 +1829,13 @@
   },
   "s_66915e12": {
    "nombre": "Casa Municipal de la Cultura",
-   "lat": 6.0924079,
-   "lng": -75.6351796,
+   "lat": 6.0925082,
+   "lng": -75.6352338,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "cinemancia-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casa+de+la+Cultura/@6.0925082,-75.6352338,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Carrera 49 # 128 Sur–40, Caldas, Antioquia",
    "alias": [
@@ -1801,13 +1867,35 @@
    "ciudad": "Medellín",
    "corto": "Comfama Otraparte"
   },
+  "s_67e7a9bd": {
+   "nombre": "Bebop Bar",
+   "lat": 6.264047,
+   "lng": -75.567918,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/bebop+bar/@6.264047,-75.567918,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 55 #65-87, piso 3",
+   "alias": [
+    "Bebop Bar - Medellín"
+   ],
+   "festivales": [
+    "under-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Bebop Bar"
+  },
   "s_67f4ce21": {
    "nombre": "Quinta Balmoral",
    "lat": 4.3342262,
    "lng": -74.3682666,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficfusa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casona,+Quinta+de+Balmoral/@4.3342262,-74.3682666,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Transversal 12 #18b-54, Fusagasugá",
    "alias": [
@@ -1897,11 +1985,13 @@
   },
   "s_6badfe99": {
    "nombre": "Colombo",
-   "lat": 5.058704,
-   "lng": -75.4896552,
+   "lat": 5.0587768,
+   "lng": -75.4895553,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+Colombo+Americano/@5.0587768,-75.4895553,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -2235,8 +2325,10 @@
    "lat": 4.3281048,
    "lng": -74.3629276,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficfusa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Escuela+Superior+De+Administración+Pública+-+ESAP/@4.3281048,-74.3629276,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Escuela Superior de Administración Pública, Fusagasugá",
    "alias": [
@@ -2434,11 +2526,13 @@
   },
   "s_826e6831": {
    "nombre": "Teatro Municipal de Jardín",
-   "lat": 5.6002845,
-   "lng": -75.818951,
+   "lat": 5.6002973,
+   "lng": -75.8187937,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "jardin-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Teatro+Municipal+de+Jardín/@5.6002973,-75.8187937,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -2449,6 +2543,26 @@
    ],
    "ciudad": "Jardín",
    "corto": "Teatro Municipal de Jardín"
+  },
+  "s_829df039": {
+   "nombre": "Centro Cultural La Tullpa",
+   "lat": 4.7007378,
+   "lng": -74.100381,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/LA+TULLPA+-+Centro+Cultural/@4.7007378,-74.100381,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 84 #77A-26, La Granja",
+   "alias": [
+    "Centro Cultural La Tullpa - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Centro Cultural La Tullpa"
   },
   "s_830a426d": {
    "nombre": "Universidad del Norte",
@@ -2613,11 +2727,13 @@
   },
   "s_895d2add": {
    "nombre": "Plaza de Bolivar",
-   "lat": 5.0680769,
-   "lng": -75.5173616,
+   "lat": 5.0681291,
+   "lng": -75.5173554,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Plaza+de+Bolívar/@5.0681291,-75.5173554,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -2625,6 +2741,24 @@
    ],
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 246 m"
+  },
+  "s_8b3ca384": {
+   "nombre": "CITI",
+   "lat": 4.7164543,
+   "lng": -74.2121741,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/Parque+principal+Capit%C3%A1n+Ernesto+Esguerra+Cubides+Funza/@4.7163769,-74.2121763,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Parque principal Capitán Ernesto Esguerra Cubides, Funza",
+   "alias": [],
+   "festivales": [
+    "funza-2026"
+   ],
+   "ciudad": "Funza",
+   "corto": "CITI"
   },
   "s_8cc7eb0e": {
    "nombre": "Canterbury Café",
@@ -2658,6 +2792,26 @@
    ],
    "ciudad": "Guatapé",
    "corto": "Comfama"
+  },
+  "s_8d5d66e1": {
+   "nombre": "Perpetua Lab",
+   "lat": 6.2346133,
+   "lng": -75.5714725,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Perpetua+LAB/@6.2346133,-75.5714725,17z",
+    "fecha": "2026-11-17",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cl. 34 #45-07, segundo piso",
+   "alias": [
+    "Perpetua Lab - Medellín"
+   ],
+   "festivales": [
+    "under-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Perpetua Lab"
   },
   "s_8d94ab1d": {
    "nombre": "Mambo House",
@@ -2813,13 +2967,35 @@
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 1051 m"
   },
+  "s_98bbb7e0": {
+   "nombre": "La Trocha · Casa de la Paz",
+   "lat": 4.6248165,
+   "lng": -74.0679005,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/La+Trocha,+La+Casa+de+la+Paz/@4.6248165,-74.0679005,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 13 #36-37",
+   "alias": [
+    "La Trocha · Casa de la Paz - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "La Trocha · Casa de la Paz"
+  },
   "s_98cccf58": {
    "nombre": "Casa Museo Otraparte",
-   "lat": 6.17918,
-   "lng": -75.58388,
+   "lat": 6.1792522,
+   "lng": -75.5839678,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "cinemancia-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casa+Museo+Otraparte/@6.1792522,-75.5839678,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Carrera 43A # 27A Sur–11, Envigado, Antioquia",
    "alias": [
@@ -2837,8 +3013,10 @@
    "lat": 6.2237797,
    "lng": -75.57384,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "aleste-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Museo+de+Arte+Moderno+de+Medellín/@6.2237797,-75.57384,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 44 #19A-100",
    "alias": [
@@ -2902,11 +3080,13 @@
   },
   "s_9bf6896c": {
    "nombre": "Casa Occio",
-   "lat": 3.4369511,
-   "lng": -76.5403896,
+   "lat": 3.4369865,
+   "lng": -76.5403178,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "semanacine-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casa+OCCIO/@3.4369865,-76.5403178,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -2976,9 +3156,12 @@
     "fuente": "verificado en Google Maps"
    },
    "address": "Cl. 22 #5-91",
-   "alias": [],
+   "alias": [
+    "Universidad Central - Bogotá"
+   ],
    "festivales": [
     "biff-2026",
+    "cineparalapaz-2026",
     "midbo-2026"
    ],
    "_elegido_de": "maps",
@@ -2987,7 +3170,8 @@
     "por_que": "sede centro: cada festival pone el pin en su edificio (BIFF: Sala Fundadores, Cl. 22 # 5-91; MIDBO: Auditorio Caldas); los dos verificados en Maps"
    },
    "salas": [
-    "Auditorio Fundadores"
+    "Auditorio Fundadores",
+    "Caja de Colores"
    ],
    "ciudad": "Bogotá",
    "corto": "Universidad Central"
@@ -3196,8 +3380,10 @@
    "lat": 4.346874,
    "lng": -74.3960117,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficfusa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Hotel+Hacienda+El+Novillero/@4.346874,-74.3960117,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Fusagasugá, Cundinamarca",
    "alias": [
@@ -3355,8 +3541,10 @@
    "lat": 6.2499694,
    "lng": -75.5626063,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "aleste-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+Colombo+Americano+de+Medellín/@6.2499694,-75.5626063,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 45 (El Palo) #53-38",
    "alias": [
@@ -3517,8 +3705,10 @@
    "lat": 4.7158665,
    "lng": -74.2129375,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "funza-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Instituto+Centro+Cultural+Bacatá/@4.7158665,-74.2129375,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 13 #12-55, Funza",
    "alias": [],
@@ -3526,7 +3716,10 @@
     "funza-2026"
    ],
    "ciudad": "Funza",
-   "corto": "Centro Cultural Bacatá"
+   "corto": "Centro Cultural Bacatá",
+   "salas": [
+    "Auditorio alterno"
+   ]
   },
   "s_bab68d8b": {
    "nombre": "Estación Metrocable Andalucía",
@@ -3582,11 +3775,13 @@
   },
   "s_be408f33": {
    "nombre": "Fonda Hotel Hacienda Balandú Comfenalco",
-   "lat": 5.5910773,
-   "lng": -75.8133935,
+   "lat": 5.5907473,
+   "lng": -75.8136762,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "jardin-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Hotel+Hacienda+Balandú/@5.5907473,-75.8136762,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -3666,11 +3861,13 @@
   },
   "s_bfd4ab42": {
    "nombre": "Batuta",
-   "lat": 5.0510059,
-   "lng": -75.4826798,
+   "lat": 5.0508329,
+   "lng": -75.4828074,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Fundación+Batuta+Caldas+-+Sede+Principal/@5.0508329,-75.4828074,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -3782,33 +3979,15 @@
    "ciudad": "Medellín",
    "corto": "La Pascasia"
   },
-  "s_c5c17b27": {
-   "nombre": "Librería Antimateria",
-   "lat": 6.2514371,
-   "lng": -75.5911408,
-   "evidencia": {
-    "nivel": "manual",
-    "fuente": "fantasmagoria-2026-venues-geo.json"
-   },
-   "address": "Cl. 45E #72-09",
-   "alias": [
-    "Librería Antimateria - Medellín",
-    "Librería y Espacio Cultural Antimateria (calle 45E # 72-09, Laureles)"
-   ],
-   "festivales": [
-    "fantasmagoria-2026",
-    "miradas-2026"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Librería Antimateria"
-  },
   "s_c82c47d7": {
    "nombre": "Cinemateca Fontanar del Río",
    "lat": 4.7561244,
    "lng": -74.1110572,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "aleste-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/CEFE+Fontanar+del+río/@4.7561244,-74.1110572,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 146 # 138A-99",
    "alias": [
@@ -3856,13 +4035,33 @@
    "ciudad": "Toro",
    "corto": "Rosalia's Garden"
   },
+  "s_cd218eeb": {
+   "nombre": "Institución Educativa Ágora",
+   "lat": 4.7152567,
+   "lng": -74.2124986,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Instituci%C3%B3n+educativa+%C3%A1gora/@4.7152567,-74.2124986,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 13 #12-21, Funza",
+   "alias": [],
+   "festivales": [
+    "funza-2026"
+   ],
+   "ciudad": "Funza",
+   "corto": "Institución Educativa Ágora"
+  },
   "s_ce9371b5": {
    "nombre": "Universidad Nacional · Palogrande",
-   "lat": 5.0568793,
-   "lng": -75.4913791,
+   "lat": 5.0560227,
+   "lng": -75.4912019,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Universidad+Nacional+de+Colombia+Sede+Manizales+-+Campus+Palogrande/@5.0560227,-75.4912019,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [],
    "festivales": [
@@ -3876,8 +4075,10 @@
    "lat": 4.308508,
    "lng": -74.299334,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficfusa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Museo+arqueológico+y+natural+de+PASCA/@4.308508,-74.299334,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cl. 1 #4-22, Pasca, Cundinamarca",
    "alias": [
@@ -4098,8 +4299,10 @@
    "lat": 4.3456139,
    "lng": -74.3630839,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficfusa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+de+Integración+e+Inovación+Social/@4.3456139,-74.3630839,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Fusagasugá, Cundinamarca",
    "alias": [
@@ -4299,19 +4502,27 @@
   },
   "s_e1907155": {
    "nombre": "Antimateria Libros y Café",
-   "lat": 6.20062,
-   "lng": -75.56368,
+   "lat": 6.2514371,
+   "lng": -75.5911408,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Antimateria/@6.2514371,-75.5911408,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 45E # 72–09, Medellín, Antioquia",
    "alias": [
     "Antimateria Libros y Café - Medellín",
-    "Antimateria Libros y Café Medellín"
+    "Antimateria Libros y Café Medellín",
+    "Librería Antimateria",
+    "Librería Antimateria - Medellín",
+    "Librería y Espacio Cultural Antimateria (calle 45E # 72-09, Laureles)"
    ],
    "festivales": [
-    "cinemancia-2026"
+    "cinemancia-2026",
+    "fantasmagoria-2026",
+    "miradas-2026",
+    "under-2026"
    ],
    "ciudad": "Medellín",
    "corto": "Antimateria Libros y Café"
@@ -4536,6 +4747,25 @@
     "Salón principal · 2do piso": "Salón principal · 1er piso"
    }
   },
+  "s_ee37319b": {
+   "nombre": "Centro Cultural y de Convenciones Fernando Botero",
+   "lat": 4.9155402,
+   "lng": -74.0229576,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/Centro+Cultural+y+de+Convenciones+Fernando+Botero+Cajic%C3%A1/@4.9155402,-74.0229576,18z",
+    "fecha": "2026-11-20",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 1A #040, Cajicá, Cundinamarca",
+   "alias": [
+    "Centro Cultural y de Convenciones Fernando Botero - Cajicá"
+   ],
+   "festivales": [
+    "cajica-2026"
+   ],
+   "ciudad": "Cajicá"
+  },
   "s_ee9c7bec": {
    "nombre": "CineQuanon",
    "lat": 3.4558323,
@@ -4699,22 +4929,31 @@
   },
   "s_f7766586": {
    "nombre": "Biblioteca Comfama Bello Centro",
-   "lat": 6.3361,
-   "lng": -75.56653,
+   "lat": 6.3323907,
+   "lng": -75.5568958,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Comfama+Bello+Sede+Centro/@6.3323907,-75.5568958,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Carrera 49 # 46–57, Bello, Antioquia",
    "alias": [
+    "Biblioteca Comfama Bello",
+    "Biblioteca Comfama Bello - Medellín",
     "Biblioteca Comfama Bello Centro - Bello",
     "Biblioteca Comfama Bello Centro Bello"
    ],
    "festivales": [
-    "cinemancia-2026"
+    "cinemancia-2026",
+    "miradas-2026"
    ],
    "ciudad": "Bello",
-   "corto": "Biblioteca Comfama Bello Centro"
+   "corto": "Biblioteca Comfama Bello Centro",
+   "_ciudades_vistas": [
+    "Bello",
+    "Medellín"
+   ]
   },
   "s_f95d634b": {
    "nombre": "Universidad Católica Luis Amigó",
@@ -4791,8 +5030,10 @@
    "lat": 4.337234,
    "lng": -74.3637005,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficfusa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casona+La+Tulipana/@4.337234,-74.3637005,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Casona La Tulipana, Fusagasugá",
    "alias": [
@@ -4853,6 +5094,24 @@
    ],
    "ciudad": "Cali"
   },
+  "s_fd497563": {
+   "nombre": "Colegio de Valores Humanos Sathya Sai",
+   "lat": 4.7097183,
+   "lng": -74.1971832,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Colegio+De+Valores+Humanos+Sathya+Sai/@4.7097183,-74.1971832,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 2b #25-15, Funza",
+   "alias": [],
+   "festivales": [
+    "funza-2026"
+   ],
+   "ciudad": "Funza",
+   "corto": "Colegio de Valores Humanos Sathya Sai"
+  },
   "s_fe8d7da8": {
    "nombre": "Auditorio Roberto Vélez Correa",
    "lat": 5.0559375,
@@ -4892,11 +5151,13 @@
   },
   "s_ff62cf6a": {
    "nombre": "Teatro Otraparte",
-   "lat": 6.17918,
-   "lng": -75.58388,
+   "lat": 6.1792522,
+   "lng": -75.5839678,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casa+Museo+Otraparte/@6.1792522,-75.5839678,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Carrera 43A # 27A Sur–11, Envigado, Antioquia",
    "alias": [
@@ -4927,12 +5188,16 @@
   }
  },
  "redirecciones": {
+  "s_1bbd676f": "s_f7766586",
   "s_5bb05c96": "s_25caf24a",
   "s_75f70e3f": "s_99915661",
   "s_a06daf52": "s_99915661",
   "s_b3ecb108": "s_25caf24a",
+  "s_c1adc674": "s_e1907155",
   "s_c3221991": "s_11667bea",
-  "s_dc769578": "s_b3c7c07a"
+  "s_c5c17b27": "s_e1907155",
+  "s_dc769578": "s_b3c7c07a",
+  "s_e4896ea4": "s_e1907155"
  },
  "decisiones": {
   "mismo": [
@@ -4965,6 +5230,16 @@
     "Cineprox Las Américas",
     "Las Américas",
     "el multiplex Cineprox del C.C. Las Américas (Medellín), mismo pin"
+   ],
+   [
+    "Biblioteca Comfama Bello",
+    "Biblioteca Comfama Bello Centro",
+    "Maps: «Comfama Bello Sede Centro», una sola biblioteca en el centro de Bello"
+   ],
+   [
+    "Antimateria Libros y Café",
+    "Librería Antimateria",
+    "Maps: «Antimateria», Calle 45E #72-09; librería y café son el mismo local"
    ]
   ],
   "distintos": [
@@ -5089,30 +5364,25 @@
    "s_0a4d1410",
    "s_0b6dd1ff",
    "s_0bdf6316",
-   "s_0c358c4c",
    "s_0ecc197a",
    "s_104736cc",
    "s_1071539b",
    "s_10f3578c",
    "s_11433c3f",
-   "s_11519c26",
    "s_11667bea",
    "s_11d2cb61",
    "s_12238873",
    "s_125e80c3",
-   "s_12ebb5ae",
    "s_1311c9f4",
    "s_1347d668",
    "s_148dd95b",
    "s_15ec15df",
    "s_16c02a2e",
-   "s_17a71d8b",
    "s_180f653f",
    "s_18443fd2",
    "s_19daa131",
    "s_1b1244a2",
    "s_1b7d9bf0",
-   "s_1bbd676f",
    "s_1be38f20",
    "s_1d891113",
    "s_1e0b7f79",
@@ -5120,7 +5390,6 @@
    "s_1ee22222",
    "s_1f206eab",
    "s_1f59d368",
-   "s_20a122a7",
    "s_20babab4",
    "s_20f5d939",
    "s_213dce05",
@@ -5133,7 +5402,6 @@
    "s_274fbe5a",
    "s_298b07a2",
    "s_2b8a4bc3",
-   "s_2c759e7a",
    "s_2e88d79d",
    "s_2f75a36e",
    "s_30a5d6b9",
@@ -5141,11 +5409,9 @@
    "s_3327940f",
    "s_33ad881a",
    "s_34124cb5",
-   "s_34d4a9cf",
    "s_36b34e66",
    "s_384e68d5",
    "s_39a0cbb2",
-   "s_39dd7973",
    "s_3aba7a01",
    "s_3c28b8d0",
    "s_3d933a6f",
@@ -5156,10 +5422,8 @@
    "s_42f35085",
    "s_439272df",
    "s_46bfcf2a",
-   "s_46c0ae50",
    "s_49d684d9",
    "s_49da25fa",
-   "s_4a79ccdf",
    "s_4bf2bfa4",
    "s_4cb9c1c2",
    "s_4ea5f87b",
@@ -5182,14 +5446,11 @@
    "s_63acec57",
    "s_643e6771",
    "s_65941893",
-   "s_66915e12",
    "s_67c78bba",
-   "s_67f4ce21",
    "s_68138fbc",
    "s_68a263f4",
    "s_6a28357a",
    "s_6a3d6ea4",
-   "s_6badfe99",
    "s_6bb19ae3",
    "s_6bdaa2bc",
    "s_6c6c37df",
@@ -5209,7 +5470,6 @@
    "s_7826af67",
    "s_78a3e599",
    "s_797f44ee",
-   "s_7a47fbd2",
    "s_7a6a2db7",
    "s_7aa97950",
    "s_7b8b1c0e",
@@ -5219,7 +5479,6 @@
    "s_80902cf9",
    "s_80974dfb",
    "s_81709587",
-   "s_826e6831",
    "s_830a426d",
    "s_85744479",
    "s_859077b8",
@@ -5229,7 +5488,6 @@
    "s_882ae757",
    "s_8858d894",
    "s_891e8481",
-   "s_895d2add",
    "s_8cc7eb0e",
    "s_8d191328",
    "s_8d94ab1d",
@@ -5239,11 +5497,8 @@
    "s_964bfd80",
    "s_985165e3",
    "s_987cd558",
-   "s_98cccf58",
-   "s_99915661",
    "s_99a993f3",
    "s_9b2fec9a",
-   "s_9bf6896c",
    "s_9c038cff",
    "s_9c38c3bf",
    "s_9c496716",
@@ -5259,7 +5514,6 @@
    "s_a7d462a5",
    "s_a8672cd3",
    "s_aafb86e6",
-   "s_ab39611a",
    "s_ab91ad2b",
    "s_ac49afea",
    "s_acff4c50",
@@ -5268,7 +5522,6 @@
    "s_b14cf4f4",
    "s_b320c2e3",
    "s_b3c7c07a",
-   "s_b5d25cab",
    "s_b655ef88",
    "s_b705c40c",
    "s_b7930658",
@@ -5276,28 +5529,21 @@
    "s_b862f340",
    "s_b9e0404b",
    "s_b9fca4a4",
-   "s_ba748121",
    "s_bab68d8b",
    "s_bb5ec19d",
    "s_bc531678",
-   "s_be408f33",
    "s_bf32b45a",
    "s_bf5c6a6a",
    "s_bf8a2fa2",
    "s_bfb2e06b",
-   "s_bfd4ab42",
    "s_bfe8eb92",
    "s_c0e88ef0",
    "s_c160e346",
    "s_c2f59f7f",
    "s_c4b65a07",
    "s_c564ed7b",
-   "s_c5c17b27",
-   "s_c82c47d7",
    "s_c85c8e31",
    "s_cc00aafb",
-   "s_ce9371b5",
-   "s_cf6efa76",
    "s_cf7584fa",
    "s_d1996183",
    "s_d1aeb7dc",
@@ -5310,7 +5556,6 @@
    "s_d883ae77",
    "s_d89af029",
    "s_d9b4f1c1",
-   "s_da9dd614",
    "s_dbb94309",
    "s_dd71de11",
    "s_dd9fc38c",
@@ -5321,7 +5566,6 @@
    "s_dfb79418",
    "s_e046a622",
    "s_e1521829",
-   "s_e1907155",
    "s_e2717fd7",
    "s_e4f61235",
    "s_e605777d",
@@ -5343,18 +5587,15 @@
    "s_f689bcee",
    "s_f6cc0705",
    "s_f6ec1bbd",
-   "s_f7766586",
    "s_f95d634b",
    "s_f9e78567",
    "s_f9f4208c",
    "s_fb44dd3d",
-   "s_fb486b4f",
    "s_fba24cd3",
    "s_fce87735",
    "s_fd423d59",
    "s_fe8d7da8",
    "s_febabd56",
-   "s_ff62cf6a",
    "s_ffcf8a2c"
   ]
  }

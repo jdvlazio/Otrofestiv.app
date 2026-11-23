@@ -1,0 +1,684 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-11-19"
+ },
+ "obras": [
+  {
+   "titulo": "Horizonte",
+   "tmdb_id": 1265716,
+   "titulo_original": "Horizonte",
+   "poster_path": "/99eXFsGBtH0MH2YEOLihmEuyt0z.jpg",
+   "synopsis_es": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "Chile, Colombia, France, Germany, Luxembourg",
+   "title_en": "Horizon",
+   "lbSlug": "horizon-2024-4",
+   "_verificado": "el catálogo ya la tiene (w_8GJ7B5KCEQ78, funza-2026, guatape-2026, mambe-2026)",
+   "work_id": "w_8GJ7B5KCEQ78",
+   "_director": "César Acevedo",
+   "_sondeado": "2026-11-16",
+   "_ya_publicada": [
+    {
+     "festival": "funza-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/funza-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "125 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    },
+    {
+     "festival": "guatape-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/guatape-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "125 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    },
+    {
+     "festival": "mambe-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/mambe-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "180 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en funza-2026",
+   "poster": "/assets/cineparalapaz-2026/horizonte.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Chile, Colombia, Francia, Alemania, Luxemburgo",
+   "_heredado": {
+    "pais_heredado": "catálogo w_8GJ7B5KCEQ78 (cineparalapaz-2026, funza-2026, guatape-2026, mambe-2026)"
+   }
+  },
+  {
+   "titulo": "LA",
+   "_ya_publicada": [
+    {
+     "festival": "fecibac-2026",
+     "titulo": "La Canoa Dorada (Tanda 2)",
+     "duration": "60 min"
+    },
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "La",
+     "country": "Colombia, Argentina"
+    },
+    {
+     "festival": "guatape-2026",
+     "titulo": "La fuente",
+     "duration": "60 min"
+    }
+   ],
+   "_verificado": "ya publicada en fecibac-2026: se reusan sus datos",
+   "pais": "Colombia, Argentina",
+   "duracion_tmdb": 60,
+   "poster": "/assets/cineparalapaz-2026/la.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la web de la obra (lapeliculamenstrual.com), 600×857",
+   "pais_heredado": "Colombia, Argentina",
+   "_heredado": {
+    "pais_heredado": "catálogo w_5HEQQCKASZSS (ficfusa-2026)"
+   }
+  },
+  {
+   "titulo": "La pandemia del feminicidio en Colombia",
+   "tmdb_id": 1796536,
+   "titulo_original": "La Pandemia del Feminicidio",
+   "poster_path": "/w56jCb50TzLdhKBu4UzhfxFeAVf.jpg",
+   "synopsis_es": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 29,
+   "pais_tmdb": "",
+   "lbSlug": "la-pandemia-del-feminicidio",
+   "_verificado": "el tmdb_id con que ya la publicamos en ficpa-2026, y TMDB confirma la dirección",
+   "_director": "Yesika Alejandra Calderón Hernández",
+   "_sondeado": "2026-11-16",
+   "_ya_publicada": [
+    {
+     "festival": "ficpa-2026",
+     "titulo": "La Pandemia del Feminicidio",
+     "tmdb_id": 1796536,
+     "poster": "/assets/ficpa-2026/la-pandemia-del-feminicidio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-pandemia-del-feminicidio",
+     "year": 2025,
+     "duration": "29 min",
+     "sinopsis": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia."
+    }
+   ],
+   "poster": "/assets/cineparalapaz-2026/la-pandemia-del-feminicidio-en-colombia.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "LezAma. Vivir filmando",
+   "tmdb_id": 1049488,
+   "titulo_original": "Lez-Ama: Vivir Filmando",
+   "poster_path": "/z0IjhbIrOT9lehYfBR8ZQEFvGt5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mauricio Lezama was murdered in May 2019 while casting in Arauca. In a country where a social leader is murdered every three days, his death unites the industry around a reflection on what filmmaking is, why make it and the difference between storytelling in the city and the periphery.",
+   "genero": "Documental",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 52,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lez-ama-vivir-filmando",
+   "_verificado": "declarada a mano: altas.py --ficha: «Lez-Ama: Vivir Filmando» (Colombia, 52 min), dir. Mónica Moya; IMDb tt36577296 y Letterboxd la enlazan; la web del productor Emmanuel Jaramillo (que la lámina nombra) la lista",
+   "_director": "Mónica Moya",
+   "_sondeado": "2026-11-19",
+   "sinopsis": "Familiares, amistades y colegas recuerdan a Mauricio Lezama: cineasta, maestro y gestor cultural que encontró en las imágenes una forma de transformar su territorio.",
+   "_sinopsis": "https://www.instagram.com/p/Dfurx9DFL5i/",
+   "poster": "/assets/cineparalapaz-2026/lezama-vivir-filmando.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_JTT3WWYXVT0Q (cineparalapaz-2026)"
+   }
+  },
+  {
+   "titulo": "Manos que dan vida",
+   "tmdb_id": 1537059,
+   "titulo_original": "Manos que Dan Vida",
+   "poster_path": "/9Ld2zbxQ2StfscQMKNCceXMBZFH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A story set in Calamar, a village in the middle of the Colombian jungle, where Blanca, a midwife by vocation, continues to bring life into this world. Her hands, the legacy of decades of service to the community, make her a guardian of life in a territory where violence, glyphosate, and neglect have left an indelible mark on the deep memory of its inhabitants. Together with Margarita, her friend and accomplice, we explore the profound relationship that destiny has bestowed upon them in relation to a birth.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "manos-que-dan-vida",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Juan Sebastián Arias Carvajal",
+   "_sondeado": "2026-11-19",
+   "poster": "/assets/cineparalapaz-2026/manos-que-dan-vida.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_JTT3HCM9C35R (cineparalapaz-2026)"
+   }
+  },
+  {
+   "titulo": "Medellín, yo te saludo",
+   "tmdb_id": 1740554,
+   "titulo_original": "Medellín, yo te saludo",
+   "poster_path": "/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+   "synopsis_es": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 4,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "medellin-yo-te-saludo",
+   "_verificado": "el catálogo ya la tiene (w_R4F7ST1C6JNH, cinemancia-2026)",
+   "work_id": "w_R4F7ST1C6JNH",
+   "_director": "Lucas Muñoz Cataño",
+   "_sondeado": "2026-11-16",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Medellín, yo te saludo",
+     "tmdb_id": 1740554,
+     "poster": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "medellin-yo-te-saludo",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "3 min",
+     "sinopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo."
+    }
+   ],
+   "poster": "/assets/cineparalapaz-2026/medellin-yo-te-saludo.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4F7ST1C6JNH (cinemancia-2026, cineparalapaz-2026)"
+   }
+  },
+  {
+   "titulo": "Por una gota de leche",
+   "tmdb_id": 1738896,
+   "titulo_original": "Por una gota de leche",
+   "poster_path": "/i8xbtaZeFkaVvWcAvBVcJ0f7KwC.jpg",
+   "synopsis_es": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 59,
+   "pais_tmdb": "",
+   "lbSlug": "por-una-gota-de-leche",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Por una gota de leche",
+   "_director": "Esteban J. Corzo",
+   "_sondeado": "2026-11-16",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Por una gota de leche",
+     "poster": "/assets/ficdeh/por-una-gota-de-leche.jpg",
+     "posterSource": "custom",
+     "lbSlug": "por-una-gota-de-leche",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "59 min",
+     "synopsis_en": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story.",
+     "sinopsis": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia."
+    }
+   ],
+   "poster": "/assets/cineparalapaz-2026/por-una-gota-de-leche.jpg",
+   "posterSource": "tmdb",
+   "synopsis_en": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story.",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4HG7VSG2RV4 (cineparalapaz-2026, ficdeh-2026)",
+    "pais_heredado": "catálogo w_R4HG7VSG2RV4 (cineparalapaz-2026, ficdeh-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  {
+   "titulo": "Refugiar el Gesto",
+   "tmdb_id": 1713804,
+   "titulo_original": "Refugiar el gesto",
+   "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+   "synopsis_es": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
+   "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Sheltering Gestures",
+   "lbSlug": "sheltering-gestures",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Refugiar el Gesto",
+   "_director": "Adrián Villa Dávila, Andrés Prado Rojas",
+   "_sondeado": "2026-11-16",
+   "_ya_publicada": [
+    {
+     "festival": "fecibac-2026",
+     "titulo": "Refugiar el gesto",
+     "poster": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Documental",
+     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras."
+    },
+    {
+     "festival": "qaff-2026",
+     "titulo": "Refugiar el Gesto",
+     "poster": "/assets/qaff/sheltering-gestures.jpg",
+     "posterSource": "custom",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "10 min",
+     "genre": "Documental",
+     "sinopsis": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar. Tragaluz es un colectivo colombiano centrado en el cine documental y las artes audiovisuales comunitarias. Está liderado por Adrián Villa-Dávila (Quito, 1982) , cineasta y artista visual formado en Colombia y Alemania, y Andrés Prado Rojas (Bogotá, 1988) , cineasta y director de fotografía con amplia experiencia en cine documental. Su obra profundiza en la memoria, el territorio y los procesos sociales desde una mirada poética y colaborativa."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Refugiar el gesto",
+     "poster": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Documental",
+     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en fecibac-2026",
+   "poster": "/assets/cineparalapaz-2026/refugiar-el-gesto.jpg",
+   "posterSource": "tmdb",
+   "anio": 2026,
+   "_heredado": {
+    "anio": "catálogo w_R4N5JQDH0WFG (cineparalapaz-2026, fecibac-2026, qaff-2026, siembrafest-2026, villadelcine-2026)",
+    "pais_heredado": "catálogo w_R4N5JQDH0WFG (cineparalapaz-2026, fecibac-2026, qaff-2026, siembrafest-2026, villadelcine-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  {
+   "titulo": "Cajamarca: El viaje del desengaño",
+   "poster": "/assets/cineparalapaz-2026/cajamarca-el-viaje-del-desengano.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial (Universidad de La Sabana, dir. Ernesto Ciurlizza), de su ficha de IMDb tt8386644"
+  },
+  {
+   "titulo": "Mindalae – Viajero Kichwa",
+   "sinopsis": "Un documental que recupera la memoria oral del pueblo kichwa otavalo y sus caminos como artesanos, comerciantes y viajeros universales.",
+   "_sinopsis": "https://www.instagram.com/p/Dfce_2wO3YO/"
+  }
+ ],
+ "verificadas": {
+  "Horizonte": {
+   "tmdb_id": 1265716,
+   "titulo_original": "Horizonte",
+   "poster_path": "/99eXFsGBtH0MH2YEOLihmEuyt0z.jpg",
+   "synopsis_es": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "Chile, Colombia, France, Germany, Luxembourg",
+   "title_en": "Horizon",
+   "lbSlug": "horizon-2024-4",
+   "_verificado": "el catálogo ya la tiene (w_8GJ7B5KCEQ78, funza-2026, guatape-2026, mambe-2026)",
+   "work_id": "w_8GJ7B5KCEQ78",
+   "_director": "César Acevedo",
+   "_sondeado": "2026-11-16",
+   "_ya_publicada": [
+    {
+     "festival": "funza-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/funza-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "125 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    },
+    {
+     "festival": "guatape-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/guatape-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "125 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    },
+    {
+     "festival": "mambe-2026",
+     "titulo": "Horizonte",
+     "tmdb_id": 1265716,
+     "poster": "/assets/mambe-2026/horizonte.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "horizon-2024-4",
+     "country": "Chile, Colombia, France, Germany, Luxembourg",
+     "year": 2025,
+     "duration": "180 min",
+     "genre": "Drama",
+     "synopsis_en": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+     "sinopsis": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en funza-2026",
+   "poster": "/assets/cineparalapaz-2026/horizonte.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Chile, Colombia, Francia, Alemania, Luxemburgo",
+   "_heredado": {
+    "pais_heredado": "catálogo w_8GJ7B5KCEQ78 (cineparalapaz-2026, funza-2026, guatape-2026, mambe-2026)"
+   }
+  },
+  "La pandemia del feminicidio en Colombia": {
+   "tmdb_id": 1796536,
+   "titulo_original": "La Pandemia del Feminicidio",
+   "poster_path": "/w56jCb50TzLdhKBu4UzhfxFeAVf.jpg",
+   "synopsis_es": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 29,
+   "pais_tmdb": "",
+   "lbSlug": "la-pandemia-del-feminicidio",
+   "_verificado": "el tmdb_id con que ya la publicamos en ficpa-2026, y TMDB confirma la dirección",
+   "_director": "Yesika Alejandra Calderón Hernández",
+   "_sondeado": "2026-11-16",
+   "_ya_publicada": [
+    {
+     "festival": "ficpa-2026",
+     "titulo": "La Pandemia del Feminicidio",
+     "tmdb_id": 1796536,
+     "poster": "/assets/ficpa-2026/la-pandemia-del-feminicidio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-pandemia-del-feminicidio",
+     "year": 2025,
+     "duration": "29 min",
+     "sinopsis": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia."
+    }
+   ],
+   "poster": "/assets/cineparalapaz-2026/la-pandemia-del-feminicidio-en-colombia.jpg",
+   "posterSource": "tmdb"
+  },
+  "LezAma. Vivir filmando": {
+   "tmdb_id": 1049488,
+   "titulo_original": "Lez-Ama: Vivir Filmando",
+   "poster_path": "/z0IjhbIrOT9lehYfBR8ZQEFvGt5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mauricio Lezama was murdered in May 2019 while casting in Arauca. In a country where a social leader is murdered every three days, his death unites the industry around a reflection on what filmmaking is, why make it and the difference between storytelling in the city and the periphery.",
+   "genero": "Documental",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 52,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lez-ama-vivir-filmando",
+   "_verificado": "declarada a mano: altas.py --ficha: «Lez-Ama: Vivir Filmando» (Colombia, 52 min), dir. Mónica Moya; IMDb tt36577296 y Letterboxd la enlazan; la web del productor Emmanuel Jaramillo (que la lámina nombra) la lista",
+   "_director": "Mónica Moya",
+   "_sondeado": "2026-11-19",
+   "sinopsis": "Familiares, amistades y colegas recuerdan a Mauricio Lezama: cineasta, maestro y gestor cultural que encontró en las imágenes una forma de transformar su territorio.",
+   "_sinopsis": "https://www.instagram.com/p/Dfurx9DFL5i/",
+   "poster": "/assets/cineparalapaz-2026/lezama-vivir-filmando.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_JTT3WWYXVT0Q (cineparalapaz-2026)"
+   }
+  },
+  "Manos que dan vida": {
+   "tmdb_id": 1537059,
+   "titulo_original": "Manos que Dan Vida",
+   "poster_path": "/9Ld2zbxQ2StfscQMKNCceXMBZFH.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A story set in Calamar, a village in the middle of the Colombian jungle, where Blanca, a midwife by vocation, continues to bring life into this world. Her hands, the legacy of decades of service to the community, make her a guardian of life in a territory where violence, glyphosate, and neglect have left an indelible mark on the deep memory of its inhabitants. Together with Margarita, her friend and accomplice, we explore the profound relationship that destiny has bestowed upon them in relation to a birth.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "manos-que-dan-vida",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Juan Sebastián Arias Carvajal",
+   "_sondeado": "2026-11-19",
+   "poster": "/assets/cineparalapaz-2026/manos-que-dan-vida.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_JTT3HCM9C35R (cineparalapaz-2026)"
+   }
+  },
+  "Medellín, yo te saludo": {
+   "tmdb_id": 1740554,
+   "titulo_original": "Medellín, yo te saludo",
+   "poster_path": "/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+   "synopsis_es": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 4,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "medellin-yo-te-saludo",
+   "_verificado": "el catálogo ya la tiene (w_R4F7ST1C6JNH, cinemancia-2026)",
+   "work_id": "w_R4F7ST1C6JNH",
+   "_director": "Lucas Muñoz Cataño",
+   "_sondeado": "2026-11-16",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Medellín, yo te saludo",
+     "tmdb_id": 1740554,
+     "poster": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "medellin-yo-te-saludo",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "3 min",
+     "sinopsis": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo."
+    }
+   ],
+   "poster": "/assets/cineparalapaz-2026/medellin-yo-te-saludo.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4F7ST1C6JNH (cinemancia-2026, cineparalapaz-2026)"
+   }
+  },
+  "Por una gota de leche": {
+   "tmdb_id": 1738896,
+   "titulo_original": "Por una gota de leche",
+   "poster_path": "/i8xbtaZeFkaVvWcAvBVcJ0f7KwC.jpg",
+   "synopsis_es": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 59,
+   "pais_tmdb": "",
+   "lbSlug": "por-una-gota-de-leche",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Por una gota de leche",
+   "_director": "Esteban J. Corzo",
+   "_sondeado": "2026-11-16",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Por una gota de leche",
+     "poster": "/assets/ficdeh/por-una-gota-de-leche.jpg",
+     "posterSource": "custom",
+     "lbSlug": "por-una-gota-de-leche",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "59 min",
+     "synopsis_en": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story.",
+     "sinopsis": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia."
+    }
+   ],
+   "poster": "/assets/cineparalapaz-2026/por-una-gota-de-leche.jpg",
+   "posterSource": "tmdb",
+   "synopsis_en": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story.",
+   "_heredado": {
+    "synopsis_en": "catálogo w_R4HG7VSG2RV4 (cineparalapaz-2026, ficdeh-2026)",
+    "pais_heredado": "catálogo w_R4HG7VSG2RV4 (cineparalapaz-2026, ficdeh-2026)"
+   },
+   "pais_heredado": "Colombia"
+  },
+  "Refugiar el Gesto": {
+   "tmdb_id": 1713804,
+   "titulo_original": "Refugiar el gesto",
+   "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+   "synopsis_es": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
+   "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Sheltering Gestures",
+   "lbSlug": "sheltering-gestures",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Refugiar el Gesto",
+   "_director": "Adrián Villa Dávila, Andrés Prado Rojas",
+   "_sondeado": "2026-11-16",
+   "_ya_publicada": [
+    {
+     "festival": "fecibac-2026",
+     "titulo": "Refugiar el gesto",
+     "poster": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Documental",
+     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras."
+    },
+    {
+     "festival": "qaff-2026",
+     "titulo": "Refugiar el Gesto",
+     "poster": "/assets/qaff/sheltering-gestures.jpg",
+     "posterSource": "custom",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "10 min",
+     "genre": "Documental",
+     "sinopsis": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar. Tragaluz es un colectivo colombiano centrado en el cine documental y las artes audiovisuales comunitarias. Está liderado por Adrián Villa-Dávila (Quito, 1982) , cineasta y artista visual formado en Colombia y Alemania, y Andrés Prado Rojas (Bogotá, 1988) , cineasta y director de fotografía con amplia experiencia en cine documental. Su obra profundiza en la memoria, el territorio y los procesos sociales desde una mirada poética y colaborativa."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Refugiar el gesto",
+     "poster": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sheltering-gestures",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "11 min",
+     "genre": "Documental",
+     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "sinopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en fecibac-2026",
+   "poster": "/assets/cineparalapaz-2026/refugiar-el-gesto.jpg",
+   "posterSource": "tmdb",
+   "anio": 2026,
+   "_heredado": {
+    "anio": "catálogo w_R4N5JQDH0WFG (cineparalapaz-2026, fecibac-2026, qaff-2026, siembrafest-2026, villadelcine-2026)",
+    "pais_heredado": "catálogo w_R4N5JQDH0WFG (cineparalapaz-2026, fecibac-2026, qaff-2026, siembrafest-2026, villadelcine-2026)"
+   },
+   "pais_heredado": "Colombia"
+  }
+ },
+ "sin_ficha": [
+  "Cajamarca: El viaje del desengaño",
+  "De la misma Tierra",
+  "Hecho a mano",
+  "Kinesis",
+  "LA",
+  "La coca: Buen vivir del pueblo Nasa",
+  "Mindalae – Viajero Kichwa",
+  "Nueve jueves en Riachuelo",
+  "Paseando Te Cuento",
+  "Un Milagro Cada Día",
+  "Un berraco Partido",
+  "¿Una pola o qué?"
+ ],
+ "_sin_ficha_sondeo": {
+  "Cajamarca: El viaje del desengaño": {
+   "director": "Ernesto Ciurlizza",
+   "fecha": "2026-11-16"
+  },
+  "De la misma Tierra": {
+   "director": "Diego Pachón Castro",
+   "fecha": "2026-11-16"
+  },
+  "Hecho a mano": {
+   "director": "Carolina Miy",
+   "fecha": "2026-11-16"
+  },
+  "Kinesis": {
+   "director": "Yuliana Puentes",
+   "fecha": "2026-11-16"
+  },
+  "LA": {
+   "director": "Tephy Piedrahita Avellaneda",
+   "fecha": "2026-11-16"
+  },
+  "La coca: Buen vivir del pueblo Nasa": {
+   "director": "Dubier Baicue, Ignacio Ramos, Sonica Cifuentes, Darinson Amaya",
+   "fecha": "2026-11-16"
+  },
+  "Mindalae – Viajero Kichwa": {
+   "director": "Samia Maldonado",
+   "fecha": "2026-11-16"
+  },
+  "Nueve jueves en Riachuelo": {
+   "director": "Nelson Silva",
+   "fecha": "2026-11-16"
+  },
+  "Paseando Te Cuento": {
+   "director": "Diego Alejandro Camargo Ardila",
+   "fecha": "2026-11-16"
+  },
+  "Un Milagro Cada Día": {
+   "director": "Lorena Forero",
+   "fecha": "2026-11-16"
+  },
+  "Un berraco Partido": {
+   "director": "Andrea Ortiz Ardila",
+   "fecha": "2026-11-16"
+  },
+  "¿Una pola o qué?": {
+   "director": "Mateo Ramirez",
+   "fecha": "2026-11-16"
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "_provenance": {
+  "fuente": "issue de radar #1269 — https://github.com/jdvlazio/Otrofestiv.app/issues/1269",
+  "capturado": "2026-11-17",
+  "titulo": "RADAR: CUAFF — Colombian Urban Art Film Festival, Bogotá, 27–29 NOV 2026 (2ª)",
+  "estado": "OPEN",
+  "comentarios": 1
+ },
+ "issue": 1269,
+ "titulo": "RADAR: CUAFF — Colombian Urban Art Film Festival, Bogotá, 27–29 NOV 2026 (2ª)",
+ "estado": "OPEN",
+ "cuerpo": "Sin web propia (Festhome: https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival) · IG: @colombianurbanfilm\nFechas: Festhome. En IG: convocatoria 2026 (may), cierre (ago), lanzamiento (sep). Seleccionados se anuncian el 21 nov; en 2025 publicaron la programación por bloques en IG.\nPequeño (cine urbano/skate), una sala.\nDecisión (Juan, 25 oct): al radar para tenerlo; se decide al ver tamaño y programación.",
+ "comentarios": [
+  {
+   "fecha": "2026-11-17",
+   "cuerpo": "Vigía 17 nov 09:30 — **CUAFF publicó su programación y las fechas son 20–22 nov, no 27–29.** 11 posts de @colombianurbanfilm (10–16 nov, leídos por embed sin sesión; el dato sale del pie, las láminas que alcancé a ver son fotos sin fecha), todo en la Cinemateca de Bogotá:\n- Vie 20 nov 7:00 p. m. · Sala Capital · Wholetrain (Florian Gaag, 2006, versión 4K), $6.000 en taquilla — https://www.instagram.com/p/Dfj4c_vlcMO/\n- Sáb 21 nov 9:00–11:00 a. m. · Laboratorio 1 · taller de registro de graffiti y muralismo — https://www.instagram.com/p/Dfz5iWUlVID/\n- Sáb 21 nov 2:30 p. m. · Sala 3 · Breaking la vida (México, 2022) — https://www.instagram.com/p/DfkAU_slfaS/\n- Sáb 21 nov 5:00 p. m. · Sala 3 · Programa «Hip Hop y Comunidad» (65 min), con Uniendo plazas: los padres del under — https://www.instagram.com/p/DfkCq1vlXAe/\n- Dom 22 nov 1:30 p. m. · Sala 3 · Programa «Hip Hop, Comunidad y Graffiti» (60 min): El lejano sur, Instrucciones para interpretar graffiti: el beso de los invisibles, Diario de los nuevos 20s — DfkEI-ZFSa2, DfkFGHmlZnr, DfkVdFolQHW\n- Dom 22 nov 4:00 p. m. · Sala 2 · Programa «Graffiti, Trenes y Street» (64 min): Still Free, Morbo x Noches Aires, VSK en metal — DfkG3folR3w, DfvPV3zDP5z, DfzaftWlRzG\n- Dom 22 nov 7:00 p. m. · Sala Capital · Sanber: vivencias de un bajo mundo — https://www.instagram.com/p/DfkahZulbIz/\n\nFesthome sigue diciendo 27–29. Corregí las fechas en pipeline/ig-vigia-cuentas.json (PR #1520) para que Apify la consulte. **Toca pre-onboarding: empieza en 3 días.**"
+  }
+ ]
+}

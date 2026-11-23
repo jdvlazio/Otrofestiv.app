@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Agenda general actualizada del IV Festival de Cine (PDF del festival a Juan, 25 oct 2026)",
-  "capturado": "2026-11-11",
+  "capturado": "2026-11-20",
   "metodo": "transcripción a ojo fila por fila; cruzada con la capa de texto y el OCR en funza-2026-verificar.py",
   "que_aporta": "la programación entera: día, hora, componente, actividad, duración"
  },
@@ -19,13 +19,19 @@
    "dia": "2026-11-19",
    "hora": "9:00 a. m. – 11:00 a. m.",
    "actividad": "Taller audiovisual escolar",
-   "por_que": "el festival confirma (25 oct) que es ABIERTO, pero es Formación descentralizada y la agenda no da sede: no se publica hasta saber dónde es (duda con Juan)"
+   "por_que": "provisional de la agenda: el Bacatá publicó los talleres reales (FB, 18 nov) → FB_TALLERES"
   },
   {
    "dia": "2026-11-19",
    "hora": "10:00 a. m. – 12:00 m.",
    "actividad": "Taller audiovisual escolar",
-   "por_que": "el festival confirma (25 oct) que es ABIERTO, pero es Formación descentralizada y la agenda no da sede: no se publica hasta saber dónde es (duda con Juan)"
+   "por_que": "provisional de la agenda: el Bacatá publicó los talleres reales (FB, 18 nov) → FB_TALLERES"
+  },
+  {
+   "dia": "2026-11-20",
+   "hora": "10:00 a. m. – 12:00 m.",
+   "actividad": "Taller efectos especiales o stop motion",
+   "por_que": "provisional de la agenda (Juan, 18 nov): lo reemplazan los talleres del FB del Bacatá → FB_TALLERES"
   },
   {
    "dia": "2026-11-20",
@@ -121,6 +127,60 @@
   },
   {
    "dia": "2026-11-19",
+   "hora": "08:00",
+   "sede": "Institución Educativa Ágora",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 120,
+   "seccion": "Formación Especializada",
+   "titulo": "Taller: Stop motion",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "sinopsis": "Con Hellsy Piraguata.",
+   "_src": {
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid027eBYyM9iqPAX24HW8mLWyp8zyVTzZJPpm9vHUoLjdwm6Tdsb6HAhZmmVuvqfPj6Nl",
+    "date": "2026-11-18",
+    "tipo": "festival-redes",
+    "lamina": "02"
+   }
+  },
+  {
+   "dia": "2026-11-19",
+   "hora": "09:00",
+   "sede": "Colegio de Valores Humanos Sathya Sai",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 120,
+   "seccion": "Formación Especializada",
+   "titulo": "Taller: Maquillaje para efectos especiales",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "sinopsis": "Con Marcela Moreno.",
+   "_src": {
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid027eBYyM9iqPAX24HW8mLWyp8zyVTzZJPpm9vHUoLjdwm6Tdsb6HAhZmmVuvqfPj6Nl",
+    "date": "2026-11-18",
+    "tipo": "festival-redes",
+    "lamina": "03"
+   }
+  },
+  {
+   "dia": "2026-11-19",
+   "hora": "09:00",
+   "sede": "CITI",
+   "acceso": "Entrada libre (no se anuncia pago)",
+   "duracion_min": 120,
+   "seccion": "Formación Especializada",
+   "titulo": "Taller: Realidad virtual",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "sinopsis": "Con Édgar Medina.",
+   "_src": {
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid027eBYyM9iqPAX24HW8mLWyp8zyVTzZJPpm9vHUoLjdwm6Tdsb6HAhZmmVuvqfPj6Nl",
+    "date": "2026-11-18",
+    "tipo": "festival-redes",
+    "lamina": "04"
+   }
+  },
+  {
+   "dia": "2026-11-19",
    "hora": "18:30",
    "sede": "Centro Cultural Bacatá",
    "acceso": "Entrada libre (no se anuncia pago)",
@@ -171,7 +231,8 @@
    },
    "titulo": "Apertura institucional",
    "tipo": "evento",
-   "event_kind": "apertura"
+   "event_kind": "apertura",
+   "sinopsis": "Instalación del 1.er Encuentro Departamental de Cine y Comunicaciones."
   },
   {
    "dia": "2026-11-20",
@@ -189,25 +250,7 @@
    "titulo": "Panel comunicación nuevas narrativas",
    "tipo": "evento",
    "event_kind": "evento",
-   "sinopsis": "Nuevas narrativas, comunicación cultural, ecosistemas digitales e identidad territorial."
-  },
-  {
-   "dia": "2026-11-20",
-   "hora": "10:00",
-   "sede": "Centro Cultural Bacatá",
-   "acceso": "Entrada libre (no se anuncia pago)",
-   "duracion_min": 120,
-   "seccion": "Formación Especializada",
-   "_src": {
-    "url": "fuentes/funza-2026/agenda-2026.pdf",
-    "date": "2026-10-25",
-    "tipo": "festival-mensaje",
-    "fila": "10:00 a. m. – 12:00 m. · Taller efectos especiales o stop motion"
-   },
-   "titulo": "Taller efectos especiales o stop motion",
-   "tipo": "evento",
-   "event_kind": "taller",
-   "sinopsis": "Taller práctico con artista independiente."
+   "sinopsis": "Nuevas narrativas, comunicación cultural, ecosistemas digitales e identidad territorial. Invitados: José Valerio, Nicolás León y Rubén Santa Rubio."
   },
   {
    "dia": "2026-11-20",
@@ -225,7 +268,7 @@
    "titulo": "Panel cine desde región",
    "tipo": "evento",
    "event_kind": "evento",
-   "sinopsis": "Producción independiente, financiación, convocatorias, circulación y territorio."
+   "sinopsis": "Producción independiente, financiación, convocatorias, circulación y territorio. Invitados: Édgar Medina, Felipe Suárez y Juan Esteban Rengifo."
   },
   {
    "dia": "2026-11-20",
@@ -243,7 +286,7 @@
    "titulo": "Conferencia fotografía y territorio",
    "tipo": "evento",
    "event_kind": "evento",
-   "sinopsis": "Conferencia sobre imagen, memoria, paisaje, identidad y territorio."
+   "sinopsis": "Conferencia sobre imagen, memoria, paisaje, identidad y territorio. Invitado: Mauricio Beltrán."
   },
   {
    "dia": "2026-11-20",
@@ -261,7 +304,7 @@
    "titulo": "Charla app de festivales de cine",
    "tipo": "evento",
    "event_kind": "charla",
-   "sinopsis": "Herramientas y plataformas para circulación, convocatorias e inscripción de obras en festivales."
+   "sinopsis": "Herramientas y plataformas para circulación, convocatorias e inscripción de obras en festivales. Invitado: Juan David Villa."
   },
   {
    "dia": "2026-11-20",
@@ -304,7 +347,7 @@
    "hora": "18:30",
    "sede": "Centro Cultural Bacatá",
    "acceso": "Entrada libre (no se anuncia pago)",
-   "duracion_min": 125,
+   "duracion_min": 77,
    "seccion": "Exhibición Cinematográfica",
    "_src": {
     "url": "fuentes/funza-2026/agenda-2026.pdf",

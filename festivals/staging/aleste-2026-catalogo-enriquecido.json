@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-16"
+  "capturado": "2026-11-23"
  },
  "_origen": "aleste-2026-catalogo.json",
  "obras": [
@@ -60,7 +60,7 @@
    "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 84,
-   "pais_tmdb": "Peru, Canada",
+   "pais_tmdb": "Peru",
    "lbSlug": "1982-2025",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "1982",
@@ -91,7 +91,7 @@
    "synopsis_en": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 122,
+   "duracion_tmdb": 120,
    "pais_tmdb": "Austria",
    "lbSlug": "london-2026",
    "_verificado": "declarada a mano: «London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año"
@@ -102,15 +102,15 @@
    "titulo_original": "Le città di pianura",
    "poster_path": "/7NgIv89s4NwYgZRm7QQ5mHp42KF.jpg",
    "synopsis_es": "Primera película de Francesco Sossai en Cannes 2025.  Carlobianchi y Doriano, dos cincuentones sin blanca con la filosofía de 'nunca te saltes la última copa', conocen a Giulio, un tímido estudiante de arquitectura a la deriva en la vida. Lo que empieza como un encuentro casual se convierte en un caótico viaje por carretera por las llanuras venecianas, donde los malos consejos, las resacas y una amistad inesperada redefinen los planes de vida y amor de Giulio.",
-   "synopsis_en": "A couple of jovial life-long drunkards run into a shy architecture undergrad, whose way of seeing things will be transformed as the trio wanders from pub to pub in search of a buried treasure.",
-   "genero": "Comedia",
+   "synopsis_en": "Two broke, bar-hopping fiftysomethings meet a shy and aimless architecture student. Together, the three men embark on a chaotic road trip through the Venetian plains where bad advice, hangovers, and unexpected friendship shake up the young man's future plans for life and love.",
+   "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 98,
    "pais_tmdb": "Italy, Germany",
    "title_en": "The Last One for the Road",
    "lbSlug": "the-last-one-for-the-road",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La última ronda en Venecia"
+   "_verificado": "el catálogo ya la tiene (w_JETKX5ESK1DZ, aleste-2026)",
+   "work_id": "w_JETKX5ESK1DZ"
   },
   {
    "titulo": "Gioia mia",
@@ -218,8 +218,8 @@
    "duracion_tmdb": 129,
    "pais_tmdb": "Kosovo, Germany, Slovenia, Macedonia, Albania, Belgium",
    "lbSlug": "shame-and-money",
-   "_verificado": "el catálogo ya la tiene (w_B2TQ0X0MG8PK, aleste-2026)",
-   "work_id": "w_B2TQ0X0MG8PK"
+   "_verificado": "el catálogo ya la tiene (w_JF6HTWSRS6KF, aleste-2026)",
+   "work_id": "w_JF6HTWSRS6KF"
   },
   {
    "titulo": "Todas las canciones del mundo",
@@ -283,8 +283,7 @@
    "pais_tmdb": "Belgium, Armenia",
    "title_en": "Here, Elsewhere",
    "lbSlug": "here-elsewhere-2026",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Ici, ailleurs"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓"
   },
   {
    "titulo": "Bright Future",
@@ -298,8 +297,8 @@
    "duracion_tmdb": 115,
    "pais_tmdb": "Japan",
    "lbSlug": "bright-future",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Bright Future"
+   "_verificado": "el catálogo ya la tiene (w_JETBVFBSYK7M, aleste-2026)",
+   "work_id": "w_JETBVFBSYK7M"
   },
   {
    "titulo": "Ciudadano Havel",
@@ -314,8 +313,7 @@
    "pais_tmdb": "Czech Republic",
    "title_en": "Citizen Havel",
    "lbSlug": "citizen-havel",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Občan Havel"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓"
   },
   {
    "titulo": "Desde acá veo la tormenta",
@@ -345,8 +343,7 @@
    "pais_tmdb": "Greece, France",
    "title_en": "Stories of a Lie",
    "lbSlug": "stories-of-a-lie",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Stories of a Lie"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓"
   },
   {
    "titulo": "Ino Moxo: El sueño del brujo",
@@ -360,8 +357,8 @@
    "duracion_tmdb": 82,
    "pais_tmdb": "Peru",
    "lbSlug": "ino-moxo-el-sueno-del-brujo",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Ino Moxo: El sueño del brujo"
+   "_verificado": "el catálogo ya la tiene (w_JET3NQQJ12X5, aleste-2026)",
+   "work_id": "w_JET3NQQJ12X5"
   },
   {
    "titulo": "Junio 25. Andréi Tarkovski, visita a su tumba",
@@ -375,8 +372,8 @@
    "duracion_tmdb": 5,
    "pais_tmdb": "",
    "lbSlug": "junio-25-andrei-tarkovski-visita-a-su-tumba",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Junio 25. Andréi Tarkovski, visita a su tumba"
+   "_verificado": "el catálogo ya la tiene (w_JET7S5Q0VAEA, aleste-2026)",
+   "work_id": "w_JET7S5Q0VAEA"
   },
   {
    "titulo": "La ciudad blanca",
@@ -391,8 +388,8 @@
    "pais_tmdb": "Portugal, Switzerland",
    "title_en": "In the White City",
    "lbSlug": "in-the-white-city",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La ciudad blanca"
+   "_verificado": "el catálogo ya la tiene (w_JETFBZMAW32J, aleste-2026)",
+   "work_id": "w_JETFBZMAW32J"
   },
   {
    "titulo": "La retirada",
@@ -407,8 +404,7 @@
    "pais_tmdb": "Czech Republic",
    "title_en": "Leaving",
    "lbSlug": "leaving-2011",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Odcházení"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓"
   },
   {
    "titulo": "La salamandra",
@@ -423,8 +419,23 @@
    "pais_tmdb": "Switzerland, France",
    "title_en": "The Salamander",
    "lbSlug": "the-salamander-1971",
+   "_verificado": "el catálogo ya la tiene (w_JET7AWMJQ4J4, aleste-2026)",
+   "work_id": "w_JET7AWMJQ4J4"
+  },
+  {
+   "titulo": "Labriego",
+   "tmdb_id": 1828585,
+   "titulo_original": "Labriego",
+   "poster_path": "/zpmUpADcVjHzfKiUVSUgFf7Jo18.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the early 1990s, Colombian artist Rosemberg Sandoval created a mural that, like many of his other works, was transgressive, and ultimately destroyed. Today, the only evidence of its existence lies in the photographic record made by an anonymous person from Tijuana who was traveling through Colombia at the time. The documentary traces these images through the photographer's footsteps, in a journey across time of one of Latin America's most incisive artists.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 84,
+   "pais_tmdb": "",
+   "lbSlug": "labriego",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "La salamandra"
+   "_busqueda": "Labriego"
   },
   {
    "titulo": "Laguna",
@@ -438,8 +449,8 @@
    "duracion_tmdb": 102,
    "pais_tmdb": "Lithuania, France",
    "lbSlug": "laguna-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Laguna"
+   "_verificado": "el catálogo ya la tiene (w_JETAWV8S9EP5, aleste-2026)",
+   "work_id": "w_JETAWV8S9EP5"
   },
   {
    "titulo": "Las piedras del río",
@@ -493,7 +504,7 @@
    "duracion_tmdb": 17,
    "pais_tmdb": "",
    "lbSlug": "lejania-2026",
-   "_verificado": "el catálogo ya la tiene (w_R4HCND964DS3, ficci-65, jardin-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HCND964DS3, aleste-2026, ficci-65, jardin-2026)",
    "work_id": "w_R4HCND964DS3",
    "_ya_publicada": [
     {
@@ -536,8 +547,8 @@
    "duracion_tmdb": 110,
    "pais_tmdb": "Japan",
    "lbSlug": "license-to-live",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "License to Live"
+   "_verificado": "el catálogo ya la tiene (w_JETH4AN7CW78, aleste-2026)",
+   "work_id": "w_JETH4AN7CW78"
   },
   {
    "titulo": "Liminal",
@@ -551,7 +562,7 @@
    "duracion_tmdb": 16,
    "pais_tmdb": "",
    "lbSlug": "liminal-6",
-   "_verificado": "el catálogo ya la tiene (w_R4F84MW9WTH9, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F84MW9WTH9, aleste-2026, cinemancia-2026)",
    "work_id": "w_R4F84MW9WTH9",
    "_ya_publicada": [
     {
@@ -581,7 +592,7 @@
    "pais_tmdb": "Spain",
    "title_en": "The Delinquents",
    "lbSlug": "the-delinquents-1960",
-   "_verificado": "el catálogo ya la tiene (w_R4FBYJM4E9CV, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FBYJM4E9CV, aleste-2026, cinemancia-2026)",
    "work_id": "w_R4FBYJM4E9CV",
    "_ya_publicada": [
     {
@@ -612,7 +623,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Thanks so, so much",
    "lbSlug": "thanks-so-so-much",
-   "_verificado": "el catálogo ya la tiene (w_R4GZR74RXREK, cinetoro-2026, ficcali-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GZR74RXREK, aleste-2026, cinetoro-2026, ficcali-2026)",
    "work_id": "w_R4GZR74RXREK",
    "_ya_publicada": [
     {
@@ -646,8 +657,7 @@
    "pais_tmdb": "",
    "title_en": "Nobody In Sight",
    "lbSlug": "nobody-in-sight",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "არავინ არ ჩანს"
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 1594652 «Nobody In Sight» / original არავინ არ ჩანს, dir. Kote Kalandadze, 2025-12-05, 76 min — coincide título original, director, año y duración (75)"
   },
   {
    "titulo": "Pulse",
@@ -661,8 +671,8 @@
    "duracion_tmdb": 118,
    "pais_tmdb": "Japan",
    "lbSlug": "pulse-2001",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Pulse"
+   "_verificado": "el catálogo ya la tiene (w_JETDDR1A4XA4, aleste-2026)",
+   "work_id": "w_JETDDR1A4XA4"
   },
   {
    "titulo": "Refracción",
@@ -676,7 +686,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026, villadeleyvaiff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, aleste-2026, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
@@ -819,8 +829,7 @@
    "pais_tmdb": "France",
    "title_en": "Back Before 3 P.M.",
    "lbSlug": "back-before-3-pm",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Retour avant 3 p.m."
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓"
   },
   {
    "titulo": "Sol de niebla",
@@ -834,7 +843,7 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "",
    "lbSlug": "sol-de-niebla",
-   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, aleste-2026, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
    "work_id": "w_R4JMKBFQW5V3",
    "_ya_publicada": [
     {
@@ -923,8 +932,8 @@
    "duracion_tmdb": 105,
    "pais_tmdb": "Greece, Cyprus, Colombia",
    "lbSlug": "the-megalomaniacs",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "The Megalomaniacs"
+   "_verificado": "el catálogo ya la tiene (w_JETCAD2VVTFW, aleste-2026)",
+   "work_id": "w_JETCAD2VVTFW"
   },
   {
    "titulo": "Todo lo que pasará mañana",
@@ -932,13 +941,14 @@
    "titulo_original": "Todo lo que pasará mañana",
    "poster_path": "/ctWD62FLoDTGgzGlewT05RJqS4R.jpg",
    "synopsis_es": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
-   "synopsis_en": "A hybrid queer short film that follows three friends during a weekend at a cabin in the rural area of Medellín. After spending time at a nearby river, the group arrives at their retreat in the middle of the forest, immersing themselves in a deep psychotropic ritual of love and desire. This experience alters their reality and ends up fracturing their relationship, evoking fragments and scraps of their shared memories. In this trance, a radical transformation is unleashed when they summon, together, a mysterious creature born from within themselves. Through their bodies and visual memory, a mutation occurs that pushes them to escape into the forest during the night. The next morning, each one leaves the cabin on their own, now living in a world where their friendship no longer exists.",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
-   "lbSlug": "todo-lo-que-pasara-manana",
-   "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, festicinerio-2026, ficidi-2026)",
+   "synopsis_en": "In a cabin in the middle of the woods, three friends immerse themselves in a psychotropic ritual of love and desire that ends up fracturing their relationship and shared memories, together they end up summoning a being that emerges from within.",
+   "genero": "Misterio",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "Everything that will happen tomorrow",
+   "lbSlug": "everything-that-will-happen-tomorrow",
+   "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, aleste-2026, festicinerio-2026, ficidi-2026)",
    "work_id": "w_4RPT53V0H8F6",
    "_ya_publicada": [
     {
@@ -964,6 +974,96 @@
      "sinopsis": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones."
     }
    ]
+  },
+  {
+   "titulo": "Futuros luminosos",
+   "tmdb_id": 1603950,
+   "titulo_original": "Futuros luminosos",
+   "poster_path": "/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "A Brighter Future",
+   "lbSlug": "a-brighter-future",
+   "_verificado": "el catálogo ya la tiene (w_R4FBMPTV0JG2, cinemancia-2026, cinetoro-2026, ficci-65, jardin-2026)",
+   "work_id": "w_R4FBMPTV0JG2",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "https://image.tmdb.org/t/p/w500/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro."
+    },
+    {
+     "festival": "cinetoro-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "/assets/cinetoro-2026/futuros-luminosos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, donde pasa una última noche con su hermana Sol (18), quien se va a trabajar a la ciudad. Junto con un grupo de amigos, recorren los senderos oscuros del lugar donde crecieron, iluminando las ruinas, que cobran vida con la luz de sus linternas."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b",
+     "posterSource": "custom",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "/assets/jardin-2026/futuros-luminosos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+    }
+   ],
+   "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
+  },
+  {
+   "titulo": "Transversal30FF",
+   "tmdb_id": 1525925,
+   "titulo_original": "Transversal 30ff",
+   "poster_path": "/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg",
+   "synopsis_es": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "transversal-30ff",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Transversal30FF"
   }
  ],
  "verificadas": {
@@ -1019,7 +1119,7 @@
    "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 84,
-   "pais_tmdb": "Peru, Canada",
+   "pais_tmdb": "Peru",
    "lbSlug": "1982-2025",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "1982",
@@ -1049,7 +1149,7 @@
    "synopsis_en": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 122,
+   "duracion_tmdb": 120,
    "pais_tmdb": "Austria",
    "lbSlug": "london-2026",
    "_verificado": "declarada a mano: «London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año"
@@ -1059,15 +1159,15 @@
    "titulo_original": "Le città di pianura",
    "poster_path": "/7NgIv89s4NwYgZRm7QQ5mHp42KF.jpg",
    "synopsis_es": "Primera película de Francesco Sossai en Cannes 2025.  Carlobianchi y Doriano, dos cincuentones sin blanca con la filosofía de 'nunca te saltes la última copa', conocen a Giulio, un tímido estudiante de arquitectura a la deriva en la vida. Lo que empieza como un encuentro casual se convierte en un caótico viaje por carretera por las llanuras venecianas, donde los malos consejos, las resacas y una amistad inesperada redefinen los planes de vida y amor de Giulio.",
-   "synopsis_en": "A couple of jovial life-long drunkards run into a shy architecture undergrad, whose way of seeing things will be transformed as the trio wanders from pub to pub in search of a buried treasure.",
-   "genero": "Comedia",
+   "synopsis_en": "Two broke, bar-hopping fiftysomethings meet a shy and aimless architecture student. Together, the three men embark on a chaotic road trip through the Venetian plains where bad advice, hangovers, and unexpected friendship shake up the young man's future plans for life and love.",
+   "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 98,
    "pais_tmdb": "Italy, Germany",
    "title_en": "The Last One for the Road",
    "lbSlug": "the-last-one-for-the-road",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La última ronda en Venecia"
+   "_verificado": "el catálogo ya la tiene (w_JETKX5ESK1DZ, aleste-2026)",
+   "work_id": "w_JETKX5ESK1DZ"
   },
   "Gioia mia": {
    "tmdb_id": 1510325,
@@ -1168,8 +1268,8 @@
    "duracion_tmdb": 129,
    "pais_tmdb": "Kosovo, Germany, Slovenia, Macedonia, Albania, Belgium",
    "lbSlug": "shame-and-money",
-   "_verificado": "el catálogo ya la tiene (w_B2TQ0X0MG8PK, aleste-2026)",
-   "work_id": "w_B2TQ0X0MG8PK"
+   "_verificado": "el catálogo ya la tiene (w_JF6HTWSRS6KF, aleste-2026)",
+   "work_id": "w_JF6HTWSRS6KF"
   },
   "Todas las canciones del mundo": {
    "tmdb_id": 1744092,
@@ -1230,8 +1330,7 @@
    "pais_tmdb": "Belgium, Armenia",
    "title_en": "Here, Elsewhere",
    "lbSlug": "here-elsewhere-2026",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Ici, ailleurs"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓"
   },
   "Bright Future": {
    "tmdb_id": 26886,
@@ -1244,8 +1343,8 @@
    "duracion_tmdb": 115,
    "pais_tmdb": "Japan",
    "lbSlug": "bright-future",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Bright Future"
+   "_verificado": "el catálogo ya la tiene (w_JETBVFBSYK7M, aleste-2026)",
+   "work_id": "w_JETBVFBSYK7M"
   },
   "Ciudadano Havel": {
    "tmdb_id": 54346,
@@ -1259,8 +1358,7 @@
    "pais_tmdb": "Czech Republic",
    "title_en": "Citizen Havel",
    "lbSlug": "citizen-havel",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Občan Havel"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓"
   },
   "Historias de una mentira": {
    "tmdb_id": 1568190,
@@ -1274,8 +1372,7 @@
    "pais_tmdb": "Greece, France",
    "title_en": "Stories of a Lie",
    "lbSlug": "stories-of-a-lie",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Stories of a Lie"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓"
   },
   "Ino Moxo: El sueño del brujo": {
    "tmdb_id": 1374972,
@@ -1288,8 +1385,8 @@
    "duracion_tmdb": 82,
    "pais_tmdb": "Peru",
    "lbSlug": "ino-moxo-el-sueno-del-brujo",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Ino Moxo: El sueño del brujo"
+   "_verificado": "el catálogo ya la tiene (w_JET3NQQJ12X5, aleste-2026)",
+   "work_id": "w_JET3NQQJ12X5"
   },
   "Junio 25. Andréi Tarkovski, visita a su tumba": {
    "tmdb_id": 1193850,
@@ -1302,8 +1399,8 @@
    "duracion_tmdb": 5,
    "pais_tmdb": "",
    "lbSlug": "junio-25-andrei-tarkovski-visita-a-su-tumba",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Junio 25. Andréi Tarkovski, visita a su tumba"
+   "_verificado": "el catálogo ya la tiene (w_JET7S5Q0VAEA, aleste-2026)",
+   "work_id": "w_JET7S5Q0VAEA"
   },
   "La ciudad blanca": {
    "tmdb_id": 33802,
@@ -1317,8 +1414,8 @@
    "pais_tmdb": "Portugal, Switzerland",
    "title_en": "In the White City",
    "lbSlug": "in-the-white-city",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La ciudad blanca"
+   "_verificado": "el catálogo ya la tiene (w_JETFBZMAW32J, aleste-2026)",
+   "work_id": "w_JETFBZMAW32J"
   },
   "La retirada": {
    "tmdb_id": 76598,
@@ -1332,8 +1429,7 @@
    "pais_tmdb": "Czech Republic",
    "title_en": "Leaving",
    "lbSlug": "leaving-2011",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Odcházení"
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓"
   },
   "La salamandra": {
    "tmdb_id": 62978,
@@ -1347,8 +1443,22 @@
    "pais_tmdb": "Switzerland, France",
    "title_en": "The Salamander",
    "lbSlug": "the-salamander-1971",
+   "_verificado": "el catálogo ya la tiene (w_JET7AWMJQ4J4, aleste-2026)",
+   "work_id": "w_JET7AWMJQ4J4"
+  },
+  "Labriego": {
+   "tmdb_id": 1828585,
+   "titulo_original": "Labriego",
+   "poster_path": "/zpmUpADcVjHzfKiUVSUgFf7Jo18.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the early 1990s, Colombian artist Rosemberg Sandoval created a mural that, like many of his other works, was transgressive, and ultimately destroyed. Today, the only evidence of its existence lies in the photographic record made by an anonymous person from Tijuana who was traveling through Colombia at the time. The documentary traces these images through the photographer's footsteps, in a journey across time of one of Latin America's most incisive artists.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 84,
+   "pais_tmdb": "",
+   "lbSlug": "labriego",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "La salamandra"
+   "_busqueda": "Labriego"
   },
   "Laguna": {
    "tmdb_id": 1520513,
@@ -1361,8 +1471,8 @@
    "duracion_tmdb": 102,
    "pais_tmdb": "Lithuania, France",
    "lbSlug": "laguna-2025",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Laguna"
+   "_verificado": "el catálogo ya la tiene (w_JETAWV8S9EP5, aleste-2026)",
+   "work_id": "w_JETAWV8S9EP5"
   },
   "Las piedras del río": {
    "_fuente": "cinecorto",
@@ -1414,7 +1524,7 @@
    "duracion_tmdb": 17,
    "pais_tmdb": "",
    "lbSlug": "lejania-2026",
-   "_verificado": "el catálogo ya la tiene (w_R4HCND964DS3, ficci-65, jardin-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HCND964DS3, aleste-2026, ficci-65, jardin-2026)",
    "work_id": "w_R4HCND964DS3",
    "_ya_publicada": [
     {
@@ -1456,8 +1566,8 @@
    "duracion_tmdb": 110,
    "pais_tmdb": "Japan",
    "lbSlug": "license-to-live",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "License to Live"
+   "_verificado": "el catálogo ya la tiene (w_JETH4AN7CW78, aleste-2026)",
+   "work_id": "w_JETH4AN7CW78"
   },
   "Liminal": {
    "tmdb_id": 1743116,
@@ -1470,7 +1580,7 @@
    "duracion_tmdb": 16,
    "pais_tmdb": "",
    "lbSlug": "liminal-6",
-   "_verificado": "el catálogo ya la tiene (w_R4F84MW9WTH9, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F84MW9WTH9, aleste-2026, cinemancia-2026)",
    "work_id": "w_R4F84MW9WTH9",
    "_ya_publicada": [
     {
@@ -1499,7 +1609,7 @@
    "pais_tmdb": "Spain",
    "title_en": "The Delinquents",
    "lbSlug": "the-delinquents-1960",
-   "_verificado": "el catálogo ya la tiene (w_R4FBYJM4E9CV, cinemancia-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FBYJM4E9CV, aleste-2026, cinemancia-2026)",
    "work_id": "w_R4FBYJM4E9CV",
    "_ya_publicada": [
     {
@@ -1529,7 +1639,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "Thanks so, so much",
    "lbSlug": "thanks-so-so-much",
-   "_verificado": "el catálogo ya la tiene (w_R4GZR74RXREK, cinetoro-2026, ficcali-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4GZR74RXREK, aleste-2026, cinetoro-2026, ficcali-2026)",
    "work_id": "w_R4GZR74RXREK",
    "_ya_publicada": [
     {
@@ -1562,8 +1672,7 @@
    "pais_tmdb": "",
    "title_en": "Nobody In Sight",
    "lbSlug": "nobody-in-sight",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "არავინ არ ჩანს"
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 1594652 «Nobody In Sight» / original არავინ არ ჩანს, dir. Kote Kalandadze, 2025-12-05, 76 min — coincide título original, director, año y duración (75)"
   },
   "Pulse": {
    "tmdb_id": 27324,
@@ -1576,8 +1685,8 @@
    "duracion_tmdb": 118,
    "pais_tmdb": "Japan",
    "lbSlug": "pulse-2001",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Pulse"
+   "_verificado": "el catálogo ya la tiene (w_JETDDR1A4XA4, aleste-2026)",
+   "work_id": "w_JETDDR1A4XA4"
   },
   "Refracción": {
    "tmdb_id": 1584776,
@@ -1590,7 +1699,7 @@
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
    "lbSlug": "refraccion",
-   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026, villadeleyvaiff-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4F8T5DKXC9W, aleste-2026, cinemancia-2026, ficica-2026, ficidi-2026, ficmontanas-2026, girardota-2026, jardin-2026, miradas-2026, narrarelfuturo-2026, villadeleyvaiff-2026)",
    "work_id": "w_R4F8T5DKXC9W",
    "_ya_publicada": [
     {
@@ -1732,8 +1841,7 @@
    "pais_tmdb": "France",
    "title_en": "Back Before 3 P.M.",
    "lbSlug": "back-before-3-pm",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Retour avant 3 p.m."
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓"
   },
   "Sol de niebla": {
    "tmdb_id": 1791609,
@@ -1746,7 +1854,7 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "",
    "lbSlug": "sol-de-niebla",
-   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4JMKBFQW5V3, aleste-2026, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
    "work_id": "w_R4JMKBFQW5V3",
    "_ya_publicada": [
     {
@@ -1834,21 +1942,22 @@
    "duracion_tmdb": 105,
    "pais_tmdb": "Greece, Cyprus, Colombia",
    "lbSlug": "the-megalomaniacs",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "The Megalomaniacs"
+   "_verificado": "el catálogo ya la tiene (w_JETCAD2VVTFW, aleste-2026)",
+   "work_id": "w_JETCAD2VVTFW"
   },
   "Todo lo que pasará mañana": {
    "tmdb_id": 1812504,
    "titulo_original": "Todo lo que pasará mañana",
    "poster_path": "/ctWD62FLoDTGgzGlewT05RJqS4R.jpg",
    "synopsis_es": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
-   "synopsis_en": "A hybrid queer short film that follows three friends during a weekend at a cabin in the rural area of Medellín. After spending time at a nearby river, the group arrives at their retreat in the middle of the forest, immersing themselves in a deep psychotropic ritual of love and desire. This experience alters their reality and ends up fracturing their relationship, evoking fragments and scraps of their shared memories. In this trance, a radical transformation is unleashed when they summon, together, a mysterious creature born from within themselves. Through their bodies and visual memory, a mutation occurs that pushes them to escape into the forest during the night. The next morning, each one leaves the cabin on their own, now living in a world where their friendship no longer exists.",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
-   "lbSlug": "todo-lo-que-pasara-manana",
-   "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, festicinerio-2026, ficidi-2026)",
+   "synopsis_en": "In a cabin in the middle of the woods, three friends immerse themselves in a psychotropic ritual of love and desire that ends up fracturing their relationship and shared memories, together they end up summoning a being that emerges from within.",
+   "genero": "Misterio",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "Everything that will happen tomorrow",
+   "lbSlug": "everything-that-will-happen-tomorrow",
+   "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, aleste-2026, festicinerio-2026, ficidi-2026)",
    "work_id": "w_4RPT53V0H8F6",
    "_ya_publicada": [
     {
@@ -1874,12 +1983,99 @@
      "sinopsis": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones."
     }
    ]
+  },
+  "Futuros luminosos": {
+   "tmdb_id": 1603950,
+   "titulo_original": "Futuros luminosos",
+   "poster_path": "/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "A Brighter Future",
+   "lbSlug": "a-brighter-future",
+   "_verificado": "el catálogo ya la tiene (w_R4FBMPTV0JG2, cinemancia-2026, cinetoro-2026, ficci-65, jardin-2026)",
+   "work_id": "w_R4FBMPTV0JG2",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "https://image.tmdb.org/t/p/w500/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro."
+    },
+    {
+     "festival": "cinetoro-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "/assets/cinetoro-2026/futuros-luminosos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, donde pasa una última noche con su hermana Sol (18), quien se va a trabajar a la ciudad. Junto con un grupo de amigos, recorren los senderos oscuros del lugar donde crecieron, iluminando las ruinas, que cobran vida con la luz de sus linternas."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b",
+     "posterSource": "custom",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "/assets/jardin-2026/futuros-luminosos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+    }
+   ],
+   "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
+  },
+  "Transversal30FF": {
+   "tmdb_id": 1525925,
+   "titulo_original": "Transversal 30ff",
+   "poster_path": "/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg",
+   "synopsis_es": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "transversal-30ff",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Transversal30FF"
   }
  },
  "sin_ficha": [
   "Cortometrajes de Altura",
   "Desde acá veo la tormenta",
-  "Labriego",
-  "Latidos: el grafiti como arte, el grafiti como forma de vida"
+  "Latido. El grafiti como arte, el grafiti como forma de vida."
  ]
 }

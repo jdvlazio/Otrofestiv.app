@@ -4864,11 +4864,13 @@
    "region": "Andina",
    "mes": 11,
    "mes_texto": null,
-   "fechas_2026": "27–29 NOV 2026 (2ª, Festhome)",
+   "fechas_2026": "20–22 NOV 2026 (3.ª edición, IG @colombianurbanfilm; Festhome decía 27–29)",
    "web": null,
    "ig": "@colombianurbanfilm",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "cuaff2026"
+   ],
    "issue": [
     1269
    ],
@@ -6600,6 +6602,155 @@
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
    }
+  },
+  {
+   "clave": "cineparalapaz",
+   "nombre": "Festival Cine para la Paz",
+   "sigla": null,
+   "ciudad": "Bogotá",
+   "departamento": "Bogotá D.C.",
+   "region": "Andina",
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "18–21 NOV 2026 (IV edición, IG DfzeOb2lq6q)",
+   "web": "https://cineparalapaz.com",
+   "ig": "@cineparalapaz",
+   "estado": "en_app",
+   "id_config": [
+    "cineparalapaz2026"
+   ],
+   "issue": null,
+   "apoyo": null,
+   "fuente": [
+    "https://www.instagram.com/p/DfzeOb2lq6q/"
+   ],
+   "nota": "Llegó por un enlace de Juan (11 nov 2026), no por el radar.",
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": "2026-11-16",
+   "origen": [
+    "enlace de Juan 11 nov"
+   ],
+   "copias": {
+    "ancla_2026-10-11": null,
+    "fuentes_lista_2026-10-20": null
+   }
+  },
+  {
+   "clave": "under-medellin",
+   "nombre": "Under Medellín — Festival Transterritorial de Cine Underground",
+   "sigla": null,
+   "ciudad": "Medellín",
+   "departamento": "Antioquia",
+   "region": "Andina",
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "25 NOV–3 DIC 2026 (XXII edición, programa en PDF enviado por el festival a hola@, 18 nov)",
+   "web": null,
+   "ig": "@cineundermedellin",
+   "estado": "en_app",
+   "id_config": [
+    "under2026"
+   ],
+   "issue": [],
+   "apoyo": null,
+   "fuente": [
+    "https://www.instagram.com/cineundermedellin/"
+   ],
+   "nota": null,
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": null,
+   "origen": null,
+   "copias": null
+  },
+  {
+   "clave": "zafic",
+   "nombre": "ZAFIC Festival",
+   "sigla": null,
+   "ciudad": "Mosquera",
+   "departamento": "Cundinamarca",
+   "region": "Andina",
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "17–20 NOV 2026 (30 cortos, 15 países, 3 categorías; IG @zafic_festival)",
+   "web": null,
+   "ig": "@zafic_festival",
+   "estado": "pasado_2026",
+   "id_config": [],
+   "issue": [
+    1570
+   ],
+   "apoyo": null,
+   "fuente": [
+    "https://www.instagram.com/zafic_festival/"
+   ],
+   "nota": "Juan, 20 nov 2026: montarlo en 2027",
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": null,
+   "origen": null,
+   "copias": null
+  },
+  {
+   "clave": "festival-de-cine-de-cajica",
+   "nombre": "Festival de Cine de Cajicá — Cultura audiovisual, memoria y territorio",
+   "sigla": null,
+   "ciudad": "Cajicá",
+   "departamento": null,
+   "region": null,
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "21–23 NOV",
+   "web": null,
+   "ig": null,
+   "estado": "en_app",
+   "id_config": [
+    "cajica2026"
+   ],
+   "issue": [],
+   "apoyo": null,
+   "fuente": [],
+   "nota": null,
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": null,
+   "origen": null,
+   "copias": null
+  },
+  {
+   "clave": "cine-chino-bogota",
+   "nombre": "Festival de Cine Chino",
+   "sigla": null,
+   "ciudad": "Bogotá",
+   "departamento": "Bogotá D.C.",
+   "region": "Andina",
+   "mes": 11,
+   "mes_texto": null,
+   "fechas_2026": "20 NOV–2 DIC 2026 (Embajada de China; 6 obras)",
+   "web": null,
+   "ig": null,
+   "estado": "pasado_2026",
+   "id_config": [],
+   "issue": [
+    1579
+   ],
+   "apoyo": null,
+   "fuente": [
+    "https://x.com/china_embajada/status/2120885782831354174",
+    "http://spanish.peopledaily.com.cn/n3/2026/1122/c92122-20521900.html"
+   ],
+   "nota": "Juan, 23 nov 2026: anotarlo para 2027. Conocido con el festival en curso; la edición 2025 fue en julio: vigilar desde mayo.",
+   "discrepancias": null,
+   "motivo_descarte": null,
+   "importancia": null,
+   "verificado_el": null,
+   "origen": null,
+   "copias": null
   }
  ]
 }

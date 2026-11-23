@@ -1,0 +1,229 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-11-21"
+ },
+ "obras": [
+  {
+   "titulo": "Buscando a papá",
+   "_ya_publicada": [
+    {
+     "festival": "ficpa-2026",
+     "titulo": "Buscando a papá",
+     "country": "Colombia",
+     "duration": "5 min"
+    }
+   ],
+   "_verificado": "ya publicada en ficpa-2026: se reusan sus datos",
+   "pais": "Colombia",
+   "duracion_tmdb": 5,
+   "director_heredado": "Mauro Andrade",
+   "_heredado": {
+    "director_heredado": "catálogo w_R4JE5BTF8EKJ (cajica-2026, ficpa-2026)"
+   }
+  },
+  {
+   "titulo": "Itzia Tango y Cacao",
+   "tmdb_id": 1170350,
+   "titulo_original": "Itzia, Tango & Cacao",
+   "poster_path": "/f9iGgWVI8kig4k81ccDrbFt1Baf.jpg",
+   "synopsis_es": "Itzia es una mujer sorda que asegura haber comenzado a escuchar una música peculiar que siempre proviene del mismo punto cardinal. En el pueblo donde vive la gente cree que está enloqueciendo y la intentan convencer para que vaya al médico. Pero Itzia está segura que esas melodías no son producto de su imaginación. Para demostrar que no está loca, deberá emprender un viaje para encontrar la fuente de la música.",
+   "synopsis_en": "Itzia is a deaf woman who claims to have started hearing a peculiar music that always comes from the same cardinal point. In the village where she lives, people believe she is going crazy and try to convince her to see a doctor. But Itzia is certain that these melodies are not a product of her imagination. To prove she is not insane, she will have to embark on a journey to find the source of the music.",
+   "genero": "Drama",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 88,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "itzia-tango-cacao",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Itzia, Tango & Cacao",
+   "_director": "Flora Martínez",
+   "_sondeado": "2026-11-21",
+   "poster": "/assets/cajica-2026/itzia-tango-y-cacao.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La Sangre de Dios",
+   "tmdb_id": 1834002,
+   "titulo_original": "La Sangre de Dios",
+   "poster_path": "/wWIRM7cCSrhLrz5BG2ujbhEfCnF.jpg",
+   "synopsis_es": "Gabriel, un excapitán del Ejército que ve cómo su hija mayor muere día a día por una enfermedad terminal, se entera de uno de los secretos mejor guardados de la historia: una cura milagrosa llamada «la sangre de Dios», que resguarda una tribu que conoce el lugar exacto donde se obtiene. Decide ir por ella como último recurso, pero un empresario farmacéutico corrupto también se entera y está dispuesto a exterminar a quien se le atraviese. El infierno comienza cuando los tres grupos se encuentran en la selva.",
+   "synopsis_en": "Gabriel, a former army captain watching his eldest daughter slowly die of a terminal illness, learns of one of history’s best-kept secrets: a miraculous cure known as the blood of God, guarded by a tribe that knows exactly where to find it. He sets out for it as a last resort, but a corrupt pharmaceutical businessman also hears of it and is willing to wipe out anyone in his way. Hell breaks loose when the three groups meet in the jungle.",
+   "genero": "Acción",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "",
+   "lbSlug": "la-sangre-de-dios",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro cajica-2026-altas.json)",
+   "_director": "Lucho Velasco",
+   "_sondeado": "2026-11-21",
+   "poster": "/assets/cajica-2026/la-sangre-de-dios.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Tundama",
+   "tmdb_id": 764925,
+   "titulo_original": "Tundama",
+   "poster_path": "/51j6bhTHhpT3CrEnalvc58A4ahj.jpg",
+   "synopsis_es": "A comienzos del siglo XVI un cacique valeroso enfrenta la devastadora llegada de los españoles a sus territorios; dos niños que buscan a su hermana raptada quedan en medio de este conflicto de culturas, que desencadena batallas en las que se descubren sentimientos y actos de valentía, traición, amor y codicia.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2020,
+   "duracion_tmdb": 71,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "tundama",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Diego Yaya, Edison Yaya",
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/cajica-2026/tundama.jpg",
+   "posterSource": "tmdb"
+  }
+ ],
+ "verificadas": {
+  "Itzia Tango y Cacao": {
+   "tmdb_id": 1170350,
+   "titulo_original": "Itzia, Tango & Cacao",
+   "poster_path": "/f9iGgWVI8kig4k81ccDrbFt1Baf.jpg",
+   "synopsis_es": "Itzia es una mujer sorda que asegura haber comenzado a escuchar una música peculiar que siempre proviene del mismo punto cardinal. En el pueblo donde vive la gente cree que está enloqueciendo y la intentan convencer para que vaya al médico. Pero Itzia está segura que esas melodías no son producto de su imaginación. Para demostrar que no está loca, deberá emprender un viaje para encontrar la fuente de la música.",
+   "synopsis_en": "Itzia is a deaf woman who claims to have started hearing a peculiar music that always comes from the same cardinal point. In the village where she lives, people believe she is going crazy and try to convince her to see a doctor. But Itzia is certain that these melodies are not a product of her imagination. To prove she is not insane, she will have to embark on a journey to find the source of the music.",
+   "genero": "Drama",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 88,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "itzia-tango-cacao",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Itzia, Tango & Cacao",
+   "_director": "Flora Martínez",
+   "_sondeado": "2026-11-21",
+   "poster": "/assets/cajica-2026/itzia-tango-y-cacao.jpg",
+   "posterSource": "tmdb"
+  },
+  "La Sangre de Dios": {
+   "tmdb_id": 1834002,
+   "titulo_original": "La Sangre de Dios",
+   "poster_path": "/wWIRM7cCSrhLrz5BG2ujbhEfCnF.jpg",
+   "synopsis_es": "Gabriel, un excapitán del Ejército que ve cómo su hija mayor muere día a día por una enfermedad terminal, se entera de uno de los secretos mejor guardados de la historia: una cura milagrosa llamada «la sangre de Dios», que resguarda una tribu que conoce el lugar exacto donde se obtiene. Decide ir por ella como último recurso, pero un empresario farmacéutico corrupto también se entera y está dispuesto a exterminar a quien se le atraviese. El infierno comienza cuando los tres grupos se encuentran en la selva.",
+   "synopsis_en": "Gabriel, a former army captain watching his eldest daughter slowly die of a terminal illness, learns of one of history’s best-kept secrets: a miraculous cure known as the blood of God, guarded by a tribe that knows exactly where to find it. He sets out for it as a last resort, but a corrupt pharmaceutical businessman also hears of it and is willing to wipe out anyone in his way. Hell breaks loose when the three groups meet in the jungle.",
+   "genero": "Acción",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "",
+   "lbSlug": "la-sangre-de-dios",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-20 (registro cajica-2026-altas.json)",
+   "_director": "Lucho Velasco",
+   "_sondeado": "2026-11-21",
+   "poster": "/assets/cajica-2026/la-sangre-de-dios.jpg",
+   "posterSource": "tmdb"
+  },
+  "Tundama": {
+   "tmdb_id": 764925,
+   "titulo_original": "Tundama",
+   "poster_path": "/51j6bhTHhpT3CrEnalvc58A4ahj.jpg",
+   "synopsis_es": "A comienzos del siglo XVI un cacique valeroso enfrenta la devastadora llegada de los españoles a sus territorios; dos niños que buscan a su hermana raptada quedan en medio de este conflicto de culturas, que desencadena batallas en las que se descubren sentimientos y actos de valentía, traición, amor y codicia.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2020,
+   "duracion_tmdb": 71,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "tundama",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Diego Yaya, Edison Yaya",
+   "_sondeado": "2026-11-20",
+   "poster": "/assets/cajica-2026/tundama.jpg",
+   "posterSource": "tmdb"
+  }
+ },
+ "sin_ficha": [
+  "Amparo",
+  "Brillaba",
+  "Buscando a papá",
+  "Che bacano",
+  "Chucha la Zarigüeya y los guardianes del Palmar",
+  "Dulce silencio",
+  "El horror del Bosque",
+  "El juicio de Toby",
+  "El tesoro de Lu",
+  "La última trenza",
+  "Los amores de Juanita",
+  "Mi Tierrita",
+  "Nicolás Bello",
+  "Pozo Hondo",
+  "Red eyes",
+  "Sara Valentina",
+  "Teaser cortos Taller de actuación para cámara IMCTC",
+  "Un trasteo para el alma"
+ ],
+ "_sin_ficha_sondeo": {
+  "Amparo": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Brillaba": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Buscando a papá": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Che bacano": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Chucha la Zarigüeya y los guardianes del Palmar": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Dulce silencio": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "El horror del Bosque": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "El juicio de Toby": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "El tesoro de Lu": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "La última trenza": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Los amores de Juanita": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Mi Tierrita": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Nicolás Bello": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Pozo Hondo": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Red eyes": {
+   "director": "Jhojan Fetecua",
+   "fecha": "2026-11-20"
+  },
+  "Sara Valentina": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Teaser cortos Taller de actuación para cámara IMCTC": {
+   "director": "",
+   "fecha": "2026-11-20"
+  },
+  "Un trasteo para el alma": {
+   "director": "",
+   "fecha": "2026-11-20"
+  }
+ }
+}

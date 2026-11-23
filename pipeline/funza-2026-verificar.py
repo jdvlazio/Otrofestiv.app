@@ -56,6 +56,8 @@ por_ancla = {(f['dia'], f['hora']): f for f in crudo['funciones']}
 # la agenda, 11 nov): no tienen fila en la agenda; se verifican contra su afirmación
 agregadas = {(a['valor']['day'], a['valor']['time'], a['valor']['title']) for a in afs
              if a['casilla'] == 'existe' and isinstance(a['valor'], dict)}
+# los talleres del FB del Bacatá (18 nov) tampoco están en la agenda: su fuente es la lámina
+agregadas |= {(c['dia'], c['hora'], c['titulo']) for c in crudo['funciones'] if 'facebook.com' in c['_src'].get('url', '')}
 fallos, franjas_pub = [], set()
 for f in build['films']:
     if (f['day'], f['time'], f['title']) in agregadas:

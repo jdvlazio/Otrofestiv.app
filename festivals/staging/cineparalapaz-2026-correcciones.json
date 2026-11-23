@@ -1,0 +1,106 @@
+{
+ "_provenance": {
+  "fuente": "pre-onboarding: lectura de las láminas y búsqueda web",
+  "capturado": "2026-11-11"
+ },
+ "_nota": "IV Festival Cine para la Paz 2026 — correcciones del pre-onboarding (11 nov 2026).",
+ "sin_afiche": {
+  "De la misma Tierra": {
+   "_por_que": "la lámina del festival es un FOTOGRAMA, no un afiche; sin ficha TMDB (cascada del 11 nov 2026); búsqueda web de las 11 sin hallar afiche ni ficha (solo LA aparece en Cinando, 2021, sin imagen). Pedir los afiches al festival."
+  },
+  "Hecho a mano": {
+   "_por_que": "la lámina del festival es un FOTOGRAMA, no un afiche; sin ficha TMDB (cascada del 11 nov 2026); búsqueda web de las 11 sin hallar afiche ni ficha (solo LA aparece en Cinando, 2021, sin imagen). Pedir los afiches al festival."
+  },
+  "Kinesis": {
+   "_por_que": "la lámina del festival es un FOTOGRAMA, no un afiche; sin ficha TMDB (cascada del 11 nov 2026); búsqueda web de las 11 sin hallar afiche ni ficha (solo LA aparece en Cinando, 2021, sin imagen). Pedir los afiches al festival."
+  },
+  "La coca: Buen vivir del pueblo Nasa": {
+   "_por_que": "la lámina del festival es un FOTOGRAMA, no un afiche; sin ficha TMDB (cascada del 11 nov 2026); búsqueda web de las 11 sin hallar afiche ni ficha (solo LA aparece en Cinando, 2021, sin imagen). Pedir los afiches al festival."
+  },
+  "Nueve jueves en Riachuelo": {
+   "_por_que": "la lámina del festival es un FOTOGRAMA, no un afiche; sin ficha TMDB (cascada del 11 nov 2026); búsqueda web de las 11 sin hallar afiche ni ficha (solo LA aparece en Cinando, 2021, sin imagen). Pedir los afiches al festival."
+  },
+  "Paseando Te Cuento": {
+   "_por_que": "la lámina del festival es un FOTOGRAMA, no un afiche; sin ficha TMDB (cascada del 11 nov 2026); búsqueda web de las 11 sin hallar afiche ni ficha (solo LA aparece en Cinando, 2021, sin imagen). Pedir los afiches al festival."
+  },
+  "Un Milagro Cada Día": {
+   "_por_que": "la lámina del festival es un FOTOGRAMA, no un afiche; sin ficha TMDB (cascada del 11 nov 2026); búsqueda web de las 11 sin hallar afiche ni ficha (solo LA aparece en Cinando, 2021, sin imagen). Pedir los afiches al festival."
+  },
+  "Un berraco Partido": {
+   "_por_que": "la lámina del festival es un FOTOGRAMA, no un afiche; sin ficha TMDB (cascada del 11 nov 2026); búsqueda web de las 11 sin hallar afiche ni ficha (solo LA aparece en Cinando, 2021, sin imagen). Pedir los afiches al festival."
+  },
+  "¿Una pola o qué?": {
+   "_por_que": "la lámina del festival es un FOTOGRAMA, no un afiche; sin ficha TMDB (cascada del 11 nov 2026); búsqueda web de las 11 sin hallar afiche ni ficha (solo LA aparece en Cinando, 2021, sin imagen). Pedir los afiches al festival."
+  },
+  "La niebla de la paz": {
+   "_por_que": "está en la Selección Oficial (10 nov) pero NO en la programación del 16 nov (DfzeOb2lq6q): no tiene función; sin afiche hallado en el pre-onboarding (11 nov)"
+  },
+  "Mindalae – Viajero Kichwa": {
+   "_por_que": "largo ecuatoriano de Samia Maldonado sin afiche publicado (16 nov): la imagen que el cine Grütli llama «affiche» es un fotograma horizontal; búsqueda en el registro de altas"
+  }
+ },
+ "fichas": {
+  "LezAma. Vivir filmando": {
+   "tmdb": 1049488,
+   "_fuente": "https://www.themoviedb.org/movie/1049488",
+   "_por_que": "altas.py --ficha: «Lez-Ama: Vivir Filmando» (Colombia, 52 min), dir. Mónica Moya; IMDb tt36577296 y Letterboxd la enlazan; la web del productor Emmanuel Jaramillo (que la lámina nombra) la lista",
+   "_registro": "cineparalapaz-2026-altas.json"
+  }
+ },
+ "sin_pais": {
+  "De la misma Tierra": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "Kinesis": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "La coca: Buen vivir del pueblo Nasa": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "La pandemia del feminicidio en Colombia": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "Manos que dan vida": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "Medellín, yo te saludo": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "Nueve jueves en Riachuelo": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "Paseando Te Cuento": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "Refugiar el Gesto": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "Un Milagro Cada Día": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "Un berraco Partido": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "¿Una pola o qué?": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  },
+  "LA": {
+   "_por_que": "ni la lámina de la Selección ni la programación dicen país, y la obra no tiene ficha (TMDB/IMDb) que lo diga; búsqueda en el registro de altas (16 nov)"
+  }
+ },
+ "sin_sinopsis": {
+  "¿Una pola o qué?": {
+   "_por_que": "ninguna fuente pública trae sinopsis de este corto",
+   "fuentes": [
+    "los 17 posts de @cineparalapaz desde el 1 oct (Bright Data, 19 nov), incluido el carrusel de la Selección Oficial Dfk4smulKBB: solo título",
+    "cineparalapaz.com (sitemap completo, 19 nov): sin programación 2026",
+    "búsqueda web por título y director Mateo Ramirez (19 nov): sin resultados"
+   ]
+  }
+ },
+ "duracion_distinta": {
+  "La pandemia del feminicidio en Colombia": {
+   "_por_que": "el catálogo oficial del festival da 22:45 (versión que se proyecta en Cine para la Paz); TMDB 1796536 da 29 min (otra versión)"
+  }
+ }
+}

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-16",
+  "capturado": "2026-11-23",
   "metodo": "transcripción a ojo; láminas cruzadas con ig-lecturas.py",
   "que_aporta": "día, hora, sede, acceso"
  },
@@ -12,17 +12,18 @@
    "hora": "19:00",
    "sede": "Centro Colombo Americano",
    "seccion": "Al Este Especial",
-   "acceso": "Con boleta",
+   "acceso": "Entrada libre con inscripción previa",
    "_src": {
     "url": "https://www.instagram.com/p/DfkttriN6pD/",
     "date": "2026-11-12",
     "tipo": "festival-ig"
    },
    "event_kind": "apertura",
+   "registration_url": "https://forms.gle/d6aSy5hBEQr3R2m98",
    "tipo": "evento",
    "obras": [
     {
-     "titulo": "Latidos: el grafiti como arte, el grafiti como forma de vida",
+     "titulo": "Latido. El grafiti como arte, el grafiti como forma de vida.",
      "director": "Juan Zapata",
      "anio": 2026,
      "pais": "Colombia",
@@ -30,7 +31,10 @@
      "_src": {
       "url": "https://www.instagram.com/p/DfkttriN6pD/",
       "date": "2026-11-12"
-     }
+     },
+     "titulos_anteriores": [
+      "Latidos: el grafiti como arte, el grafiti como forma de vida"
+     ]
     },
     {
      "titulo": "La última ronda en Venecia",
@@ -346,13 +350,13 @@
   },
   {
    "dia": "2026-11-26",
-   "hora": "19:30",
+   "hora": "19:00",
    "sede": "Cinemateca de Bogotá",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://www.alestfestival.com/programa2026/la-retirada",
-    "date": "2026-11-16",
-    "tipo": "festival-web"
+    "url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313356",
+    "date": "2026-11-23",
+    "tipo": "sala"
    },
    "sala": "Sala 3",
    "titulo": "La retirada",
@@ -478,55 +482,35 @@
   },
   {
    "dia": "2026-11-28",
+   "hora": "14:00",
+   "sede": "Cinemateca Fontanar del Río",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4015?sede=80",
+    "date": "2026-11-23",
+    "tipo": "sala"
+   },
+   "titulo": "Cortometrajes de Altura",
+   "seccion": "Kluk - Cine familiar",
+   "pais": "Bolivia",
+   "anio": 2008,
+   "duracion_min": 41
+  },
+  {
+   "dia": "2026-11-28",
    "hora": "14:30",
    "sede": "Cinemateca de Bogotá",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://www.alestfestival.com/programa2026",
-    "date": "2026-11-16",
-    "tipo": "festival-web"
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4080?sede=11",
+    "date": "2026-11-23",
+    "tipo": "sala"
    },
    "sala": "Sala 3",
    "titulo": "Hecho en Colombia – Bloque 1",
    "seccion": "Competencia Hecho en Colombia",
    "tipo": "evento",
    "obras": [
-    {
-     "titulo": "Desde acá veo la tormenta",
-     "pais": "Colombia",
-     "duracion_min": 11,
-     "seccion": "Competencia Hecho en Colombia",
-     "tipo": "corto",
-     "_src": {
-      "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
-      "date": "2026-11-16"
-     },
-     "director": "Juan Felipe Restrepo"
-    },
-    {
-     "titulo": "Junio 25. Andréi Tarkovski, visita a su tumba",
-     "pais": "Colombia",
-     "duracion_min": 5,
-     "seccion": "Competencia Hecho en Colombia",
-     "tipo": "corto",
-     "_src": {
-      "url": "https://www.alestfestival.com/programa2026/junio-25.-andréi-tarkovski-visita-a-su-tumba",
-      "date": "2026-11-16"
-     },
-     "director": "Juan Camilo Moreno"
-    },
-    {
-     "titulo": "Lejanía",
-     "pais": "Colombia",
-     "duracion_min": 17,
-     "seccion": "Competencia Hecho en Colombia",
-     "tipo": "corto",
-     "_src": {
-      "url": "https://www.alestfestival.com/programa2026/lejanía",
-      "date": "2026-11-16"
-     },
-     "director": "Daniel Velásquez Patarroyo"
-    },
     {
      "titulo": "Liminal",
      "pais": "Colombia",
@@ -552,19 +536,45 @@
      "director": "Isabella Palacio Mesa"
     },
     {
-     "titulo": "Sol de niebla",
+     "titulo": "Las piedras del río",
      "pais": "Colombia",
-     "duracion_min": 6,
+     "duracion_min": 16,
      "seccion": "Competencia Hecho en Colombia",
      "tipo": "corto",
      "_src": {
-      "url": "https://www.alestfestival.com/programa2026/sol-de-niebla",
+      "url": "https://www.alestfestival.com/programa2026/las-piedras-del-río",
       "date": "2026-11-16"
      },
-     "director": "María José Ibarra, Florentino Vargas"
+     "director": "Edna Sierra"
+    },
+    {
+     "titulo": "Junio 25. Andréi Tarkovski, visita a su tumba",
+     "pais": "Colombia",
+     "duracion_min": 5,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/junio-25.-andréi-tarkovski-visita-a-su-tumba",
+      "date": "2026-11-16"
+     },
+     "director": "Juan Camilo Moreno"
+    },
+    {
+     "titulo": "Futuros luminosos",
+     "director": "Ismael García Ramírez",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 25,
+     "tipo": "corto",
+     "seccion": "Competencia Hecho en Colombia",
+     "sinopsis": "En un lugar extraño y oscuro, un grupo variopinto de jóvenes imagina su futuro.",
+     "_src": {
+      "url": "https://cinematecadebogota.gov.co/node/peliculas/4080?sede=11",
+      "date": "2026-11-23"
+     }
     }
    ],
-   "duracion_min": 66,
+   "duracion_min": 73,
    "has_qa": true,
    "qa_type": "team"
   },
@@ -680,23 +690,8 @@
    "director": "Kiyoshi Kurosawa",
    "pais": "Japón",
    "anio": 2001,
-   "duracion_min": 118
-  },
-  {
-   "dia": "2026-11-29",
-   "hora": "14:00",
-   "sede": "Cinemateca Fontanar del Río",
-   "acceso": "Con boleta",
-   "_src": {
-    "url": "https://www.alestfestival.com/programa2026/cortometrajes-de-altura",
-    "date": "2026-11-16",
-    "tipo": "festival-web"
-   },
-   "titulo": "Cortometrajes de Altura",
-   "seccion": "Kluk - Cine familiar",
-   "pais": "Bolivia",
-   "anio": 2008,
-   "duracion_min": 41
+   "duracion_min": 118,
+   "has_qa": true
   },
   {
    "dia": "2026-11-29",
@@ -704,9 +699,9 @@
    "sede": "Cinemateca de Bogotá",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://www.alestfestival.com/programa2026",
-    "date": "2026-11-16",
-    "tipo": "festival-web"
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4087?sede=11",
+    "date": "2026-11-23",
+    "tipo": "sala"
    },
    "sala": "Sala 3",
    "titulo": "Hecho en Colombia – Bloque 2",
@@ -714,16 +709,52 @@
    "tipo": "evento",
    "obras": [
     {
-     "titulo": "Las piedras del río",
+     "titulo": "Todo lo que pasará mañana",
      "pais": "Colombia",
-     "duracion_min": 16,
+     "duracion_min": 15,
      "seccion": "Competencia Hecho en Colombia",
      "tipo": "corto",
      "_src": {
-      "url": "https://www.alestfestival.com/programa2026/las-piedras-del-río",
+      "url": "https://www.alestfestival.com/programa2026/todo-lo-que-pasará-mañana",
       "date": "2026-11-16"
      },
-     "director": "Edna Sierra"
+     "director": "Santiago Calle García"
+    },
+    {
+     "titulo": "Lejanía",
+     "pais": "Colombia",
+     "duracion_min": 17,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/lejanía",
+      "date": "2026-11-16"
+     },
+     "director": "Daniel Velásquez Patarroyo"
+    },
+    {
+     "titulo": "Sol de niebla",
+     "pais": "Colombia",
+     "duracion_min": 6,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/sol-de-niebla",
+      "date": "2026-11-16"
+     },
+     "director": "María José Ibarra, Florentino Vargas"
+    },
+    {
+     "titulo": "Desde acá veo la tormenta",
+     "pais": "Colombia",
+     "duracion_min": 11,
+     "seccion": "Competencia Hecho en Colombia",
+     "tipo": "corto",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
+      "date": "2026-11-16"
+     },
+     "director": "Juan Felipe Restrepo"
     },
     {
      "titulo": "Muchas, muchas gracias",
@@ -738,19 +769,21 @@
      "director": "Oiyi Kan"
     },
     {
-     "titulo": "Todo lo que pasará mañana",
+     "titulo": "Transversal30FF",
+     "director": "Sergio Mejía",
+     "anio": 2025,
      "pais": "Colombia",
-     "duracion_min": 15,
-     "seccion": "Competencia Hecho en Colombia",
+     "duracion_min": 6,
      "tipo": "corto",
+     "seccion": "Competencia Hecho en Colombia",
+     "sinopsis": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.",
      "_src": {
-      "url": "https://www.alestfestival.com/programa2026/todo-lo-que-pasará-mañana",
-      "date": "2026-11-16"
-     },
-     "director": "Santiago Calle García"
+      "url": "https://cinematecadebogota.gov.co/node/peliculas/4087?sede=11",
+      "date": "2026-11-23"
+     }
     }
    ],
-   "duracion_min": 51,
+   "duracion_min": 75,
    "has_qa": true,
    "qa_type": "team"
   },

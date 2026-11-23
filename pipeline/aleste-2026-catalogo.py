@@ -54,7 +54,7 @@ OBRAS = [
     ('Regreso de África', 'Alain Tanner', 1973, 'Suiza, Francia', 108, FOKUS, (IG + 'DfYe-5Slr8E/', '03.jpg')),
     ('La tierra prometida', 'Andrzej Wajda', 1974, 'Polonia', 162, FOKUS, (IG + 'DfYe-5Slr8E/', '04.jpg')),
     ('Los inocentes encantadores', 'Andrzej Wajda', 1960, 'Polonia', 83, FOKUS, (IG + 'DfYe-5Slr8E/', '05.jpg')),
-    ('Latidos: el grafiti como arte, el grafiti como forma de vida', 'Juan Zapata', 2026, 'Colombia', None, None,
+    ('Latido. El grafiti como arte, el grafiti como forma de vida.', 'Juan Zapata', 2026, 'Colombia', None, None,
      (IG + 'DfkttriN6pD/', None)),
     # Bogotá, Cinemateca (IG p/DfsHqtAlpmC, 13 nov, «Programación Bogotá», leídas a ojo).
     # La lámina 1 dice «SHAME AND MONEYV»: errata, el título es «Shame and Money».
@@ -77,8 +77,10 @@ def main():
     web = {plano(o['titulo']): o for o in json.load(io.open(PROGRAMA, encoding='utf-8'))['obras']}
     obras = []
     for t, d, a, p, m, sec, (url, lam) in OBRAS:
-        o = {'titulo': t, 'director': d, 'anio': a, 'pais': p, 'tipo': 'corto' if t.startswith('Latidos') else 'largo',
+        o = {'titulo': t, 'director': d, 'anio': a, 'pais': p, 'tipo': 'corto' if t.startswith('Latido') else 'largo',
              '_src': {'url': url, 'date': '2026-11-12'}}
+        if t == 'Latido. El grafiti como arte, el grafiti como forma de vida.':
+            o['titulos_anteriores'] = ['Latidos: el grafiti como arte, el grafiti como forma de vida']
         if m:
             o['duracion_min'] = m
         if sec:
@@ -101,8 +103,16 @@ def main():
         if w['titulo_original'] and w['titulo_original'] not in (w['titulo'], 'Varios'):
             o['titulo_original'] = w['titulo_original']
         obras.append(o)
-    if len(obras) != 41:
-        sys.exit(f'✗ {len(obras)} obras, se contaron 41 (15 de MAMM/IG + 26 nuevas de la web)')
+    # Las que la web no trae: Cinemateca (fichas 4080 y 4087) y catálogo PDF (23 nov)
+    for t, d, a, m, n, s in (('Futuros luminosos', 'Ismael García Ramírez', 2026, 25, 4080,
+                                'En un lugar extraño y oscuro, un grupo variopinto de jóvenes imagina su futuro.'),
+                          ('Transversal30FF', 'Sergio Mejía', 2025, 6, 4087,
+                                'La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.')):
+        obras.append({'titulo': t, 'director': d, 'anio': a, 'pais': 'Colombia', 'duracion_min': m, 'tipo': 'corto',
+                      'seccion': 'Competencia Hecho en Colombia', 'sinopsis': s,
+                      '_src': {'url': f'https://cinematecadebogota.gov.co/node/peliculas/{n}?sede=11', 'date': '2026-11-23'}})
+    if len(obras) != 43:
+        sys.exit(f'✗ {len(obras)} obras, se contaron 43 (15 de MAMM/IG + 26 de la web + 2 de la sala)')
     with io.open(DESTINO, 'w', encoding='utf-8') as f:
         json.dump({'_provenance': provenance(
             fuente='MAMM (ciclo 9º Festival Al Este) + IG @aleste.colombia (3, 5 y 10 nov 2026)',

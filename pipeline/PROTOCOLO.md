@@ -424,8 +424,10 @@ código**: qué superficie manda y por qué. Sin esa nota, el siguiente que pase
 lee el renombre como el bug de arriba y lo «arregla» al revés.
 
 La config va en `FESTIVAL_CONFIG` de **`src/config.js`** (registrarla ahí es
-parte legítima de un PR de datos). `node scripts/generate-config.js --help`
-genera el bloque; `lib.dias_config()` los objetos de días. **El JSON del
+parte legítima de un PR de datos). **Desde el 20 nov 2026 la escribe
+`python3 pipeline/alta-festival.py <id>`** desde el plan, junto con todo lo
+demás que la app necesita (ver Paso 7). `generate-config.js` queda para casos
+sin plan. **El JSON del
 festival NUNCA lleva bloque `config{}`** — `validate-festivals.js` lo bloquea.
 
 ### Paso 6 · El plan del festival + runner
@@ -440,7 +442,38 @@ python3 pipeline/correr.py <id> --lista  # ver pasos e inventario con edades
 El runner muestra la EDAD de cada sidecar (`capturado`): un sidecar viejo
 junto a uno recién escrito es la señal de circuito roto que faltó el 8 ago.
 
-### Paso 7 · Validar, QA visual, publicar
+### Paso 7 · Alta en la app, ensayo, QA visual, publicar
+
+**Lección del Under (20 nov 2026): los requisitos de publicar aparecían de a
+uno, al final.** Cada guardián cortaba en el primer fallo y lo de la app se
+hacía a mano en seis lugares. Ahora son dos comandos, y el segundo se corre
+DESDE EL PRIMER DÍA del montaje, no al final:
+
+```bash
+python3 pipeline/alta-festival.py <id>            # la app lista para el festival, desde el plan
+python3 pipeline/alta-festival.py <id> --ensayo   # + TODOS los guardianes, una sola lista
+```
+
+`alta-festival.py` escribe, solo si falta: la entrada de `FESTIVAL_CONFIG`
+(días y rótulos derivados de las fechas; nombre, subtítulo y sigla copiados del
+plan), `SECTION_EN` y `SECTION_ARCHETYPES` (de `festival.secciones` del plan,
+con `en` y `archetype`), la entrada de `docs/radar-ancla.json`, y regenera las
+huellas y fechas del afiche de portada y `CLAUDE.md`. **No inventa nada
+editorial**: si al plan le falta el subtítulo, el inglés de una sección o el
+afiche en `assets/keyart/<id-app>.jpg`, lo lista como pendiente y no escribe esa
+pieza. Correrlo dos veces no cambia nada.
+
+`--ensayo` corre `publicar-datos.py --ensayo`: catálogo, validate-festivals,
+cada chequeo rojo de validate.py por su nombre, todas las compuertas de
+`publicar.py` (sello, contrato, afiches, sinopsis, cruce, catálogo, pérdida),
+igualdad con el pipeline, tests de navegador y afiches en la web. No sube nada.
+Se publica cuando el ensayo pasa.
+
+**Excepciones como dato, no como código** (20 nov 2026): una actividad sin
+duración publicada o un título que dice «instalación» sin ser exposición se
+declaran en `festivals/staging/<id>-correcciones.json` —`sin_duracion` y
+`no_es_abierta`, `{"<título>": {"_por_que": "..."}}`—, sin pedir un PR de
+código. Sin porqué no cuentan.
 
 ```bash
 python3 validate.py                      # guardianes — incluye los del pipeline
@@ -612,7 +645,9 @@ una hipótesis sobre la fuente, y se comprueba contra ella.
 - [ ] Enriquecimiento verificado · sin-ficha resueltos o declarados
 - [ ] Sedes: verificadas o `_prec:"manual"`; pendientes DECLARADAS
 - [ ] `_etapa` dice la verdad (se actualiza al publicar)
-- [ ] validate.py + validate-festivals + tests + QA visual
+- [ ] `alta-festival.py <id>` sin pendientes
+- [ ] `alta-festival.py <id> --ensayo` pasa (validate.py, validate-festivals, publicar.py, tests)
+- [ ] QA visual
 - [ ] Gate humano de Juan: revisión film-por-film (`tools/audit.html?fest=<id>`)
 - [ ] Después de publicar: `python3 pipeline/matriz.py` y republicar la **Matriz de obras** (Artifact, `pipeline/matriz.html` + el `matriz.json` generado) en su misma URL: https://claude.ai/artifact/MXLnqMqR2iT4J3MXQMGEh6
 

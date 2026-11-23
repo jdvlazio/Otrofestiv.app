@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "cinetoro.org — programacion-2026-2 (parrilla) + programas-2 (obras de cada programa) + el catálogo del pre-onboarding (fichas)",
-  "capturado": "2026-11-14",
+  "capturado": "2026-11-18",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Los lugares de la parrilla con su ciudad. «POR DEFINIR» es un rótulo del festival y se publica tal cual, con pin aproximado declarado. «Mambo House / Polideportivo (San Antonio)» (el intermedio musical) se publica en el Polideportivo, donde van los programas 3 y 4 que lo rodean: inferido.",
@@ -133,7 +133,8 @@
    "lng": -76.1539664,
    "address": "Cl. 8 #8-53, Roldanillo, Valle del Cauca",
    "_prec": "manual",
-   "_match": "Google Maps: «Museo Rayo»"
+   "_match": "Google Maps: «Museo Rayo»",
+   "_matriz": "s_b705c40c"
   },
   "Coliseo Corregimiento de San Francisco - Toro": {
    "short": "Coliseo Corregimiento de San Francisco",
@@ -142,7 +143,8 @@
    "lng": -76.0345245,
    "_prec": "manual",
    "_match": "Google Maps: «San Francisco, Toro, Valle del Cauca» (el corregimiento)",
-   "_nota": "PIN APROXIMADO: Maps no tiene el coliseo; el pin es el centro del corregimiento. Preguntar al festival."
+   "_nota": "PIN APROXIMADO: Maps no tiene el coliseo; el pin es el centro del corregimiento. Preguntar al festival.",
+   "_matriz": "s_80974dfb"
   },
   "Mambo House - Toro": {
    "short": "Mambo House",
@@ -150,7 +152,8 @@
    "lat": 4.5926679,
    "lng": -76.0611898,
    "_prec": "manual",
-   "_match": "Google Maps: «Mambo's House» (en el corregimiento San Antonio, Toro)"
+   "_match": "Google Maps: «Mambo's House» (en el corregimiento San Antonio, Toro)",
+   "_matriz": "s_8d94ab1d"
   },
   "Hotel Miracruz - Toro": {
    "short": "Hotel Miracruz",
@@ -158,7 +161,8 @@
    "lat": 4.6117939,
    "lng": -76.0793798,
    "_prec": "manual",
-   "_match": "Google Maps: «Hotel Mira Cruz Toro Valle»"
+   "_match": "Google Maps: «Hotel Mira Cruz Toro Valle»",
+   "_matriz": "s_125e80c3"
   },
   "Polideportivo San Antonio - Toro": {
    "short": "Polideportivo San Antonio",
@@ -167,7 +171,8 @@
    "lng": -76.0609688,
    "_prec": "manual",
    "_match": "Google Maps: «San Antonio, Toro, Valle del Cauca» (el corregimiento)",
-   "_nota": "PIN APROXIMADO: Maps no tiene el polideportivo de San Antonio (el «Polideportivo» que da está en el casco urbano de Toro); el pin es el centro del corregimiento, a ~30 m de Mambo's House: son dos sedes distintas del mismo corregimiento. Preguntar al festival."
+   "_nota": "PIN APROXIMADO: Maps no tiene el polideportivo de San Antonio (el «Polideportivo» que da está en el casco urbano de Toro); el pin es el centro del corregimiento, a ~30 m de Mambo's House: son dos sedes distintas del mismo corregimiento. Preguntar al festival.",
+   "_matriz": "s_e4f61235"
   },
   "Colegio agrícola - Toro": {
    "short": "Colegio agrícola",
@@ -177,7 +182,8 @@
    "address": "Cl. 18 #1-123, Toro, Valle del Cauca",
    "_prec": "manual",
    "_match": "Google Maps: Institución Educativa Técnica Agropecuaria, Toro",
-   "_nota": "PIN APROXIMADO: la parrilla dice solo «Colegio agrícola»; que sea esta institución es inferencia."
+   "_nota": "PIN APROXIMADO: la parrilla dice solo «Colegio agrícola»; que sea esta institución es inferencia.",
+   "_matriz": "s_ec96d903"
   },
   "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro": {
    "short": "Coliseo Institución Educativa Fray José Joaquín Escobar",
@@ -186,7 +192,8 @@
    "lng": -76.0773237,
    "_prec": "manual",
    "_match": "Google Maps: «Institución Educativa Fray José Joaquín \"J.J.\" Escobar»",
-   "_nota": "el pin es el colegio; el coliseo está en él"
+   "_nota": "el pin es el colegio; el coliseo está en él",
+   "_matriz": "s_a4fd24e0"
   },
   "Por definir - Toro": {
    "short": "Por definir",
@@ -195,7 +202,8 @@
    "lng": -76.0823845,
    "_prec": "manual",
    "_match": "Google Maps: «Parque Principal de Toro»",
-   "_nota": "PIN APROXIMADO: la parrilla dice «Lugar: POR DEFINIR» (Cinetoro Expandido, sáb 14); el pin es el parque principal de Toro. Misma coordenada que «Por confirmar - Toro»."
+   "_nota": "PIN APROXIMADO: la parrilla dice «Lugar: POR DEFINIR» (Cinetoro Expandido, sáb 14); el pin es el parque principal de Toro. Misma coordenada que «Por confirmar - Toro».",
+   "_matriz": "s_54536669"
   },
   "Rosalia's Garden - Toro": {
    "short": "Rosalia's Garden",
@@ -203,7 +211,8 @@
    "lat": 4.6091797,
    "lng": -76.0785289,
    "_prec": "manual",
-   "_match": "Google Maps: «Rosalia’s Garden»"
+   "_match": "Google Maps: «Rosalia’s Garden»",
+   "_matriz": "s_cc00aafb"
   },
   "Cine Teatro - Toro": {
    "short": "Cine Teatro",
@@ -212,7 +221,8 @@
    "lng": -76.0829082,
    "address": "Toro, Valle del Cauca",
    "_prec": "manual",
-   "_match": "Google Maps: «CineTeatro \"Wilson Jaramillo Tobón\"», Toro (14 nov 2026)"
+   "_match": "Google Maps: «CineTeatro \"Wilson Jaramillo Tobón\"», Toro (14 nov 2026)",
+   "_matriz": "s_9c038cff"
   }
  },
  "_avisos_id": [],
@@ -2542,7 +2552,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-14T18:10:39",
+  "fecha": "2026-11-18T13:20:48",
   "plan_sha": "84b6e08d3d7ee761",
   "paso": 8,
   "cmd": "python3 pipeline/cinetoro-2026-verificar.py"
