@@ -101,6 +101,12 @@ def valor(w, campo, fid, titulo, tmdb_id=None, key=None, obra=None):
     v = _VALOR[campo](w)
     if not v:
         return None
+    # NI SE HEREDA UNA DEFECTUOSA (23 nov 2026): los enlaces de compra de la web de
+    # Ficcali llegaron así a Cortos Cali, FICFUSA y AFF
+    if campo == 'synopsis_es':
+        from sinopsis_unicas import defectos
+        if defectos(v):
+            return None
     # LA FICHA se hereda solo si la obra se corrobora por dirección o año
     # (`obra`: {director, anio} de la presentación); sin con qué, no
     if campo == 'tmdb_id' and not ficha_corroborada(w, obra):
