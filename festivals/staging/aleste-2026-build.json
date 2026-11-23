@@ -952,7 +952,7 @@
    "venue": "Centro Colombo Americano - Medellín",
    "sala": "Sala 2",
    "has_qa": false,
-   "synopsis": "A finales del siglo XIX, la ciudad de Lodz se ha convertido en el epicentro de la industria textil, con la consiguiente necesidad de mano de obra inmigrante. Tres jóvenes estudiantes de Riga: un polaco católico, hijo de nobles terratenientes, un ambicioso judío y un alemán luterano deciden abrir una fábrica en esa ciudad para hacer fortuna y, sin escrúpulos ni prejuicios, se lanzan a acumular dinero y poder. (FILMAFFINITY)",
+   "synopsis": "En Łódź, a fines del siglo XIX, tres socios se juegan todo para levantar su propia fábrica textil en una ciudad de capitalismo salvaje: un polaco, un alemán y un judío. Fue nominada al Óscar a mejor película extranjera.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/la-tierra-prometida.jpg",
    "posterSource": "tmdb",
@@ -3527,7 +3527,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-23T15:40:14",
+  "fecha": "2026-11-23T16:19:34",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
