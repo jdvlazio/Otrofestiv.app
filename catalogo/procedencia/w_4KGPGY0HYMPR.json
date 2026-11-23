@@ -1,0 +1,18 @@
+{
+ "titulo_original": {
+  "fuente": "festival:bogoshorts-2026,bogoshorts-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1825082",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "único"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ }
+}

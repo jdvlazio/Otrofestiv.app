@@ -1,0 +1,35 @@
+{
+ "id": "w_4KJDCVHWYNPX",
+ "titulo_original": "Bus",
+ "anio": 2025,
+ "paises": [
+  "PE"
+ ],
+ "directores": [
+  "André Balbuena"
+ ],
+ "sinopsis": {
+  "es": "En un bus de Lima, un estudiante se niega a levantarse para darle el asiento a una pasajera mayor. El resto de los viajeros acaba tomando partido.",
+  "en": "In the middle of rush hour traffic in Lima, a young student refuses to give up his seat to an elderly woman, sparking unexpected chaos among the passengers."
+ },
+ "generos": [
+  "Comedia"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/bus.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1274419,
+  "letterboxd": "bus"
+ },
+ "versiones": [
+  {
+   "etiqueta": "9 min",
+   "duracion_min": 9
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

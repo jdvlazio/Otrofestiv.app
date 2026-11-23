@@ -235,13 +235,6 @@
    "sala": "Sala 3",
    "titulo": "competencia internacional animacion 2"
   },
-  "f_59ae83b792": {
-   "sede": "Cinemateca de Bogotá - Bogotá",
-   "dia": "2026-12-03",
-   "hora": "14:00",
-   "sala": "Taller de la imagen",
-   "titulo": "competencia vr realidad virtual"
-  },
   "f_40c580a270": {
    "sede": "Alianza Francesa - Bogotá",
    "dia": "2026-12-03",
@@ -381,13 +374,6 @@
    "hora": "19:00",
    "sala": "Sala 3",
    "titulo": "competencia internacional ficcion 3"
-  },
-  "f_e1a8800997": {
-   "sede": "Cinemateca de Bogotá - Bogotá",
-   "dia": "2026-12-04",
-   "hora": "14:00",
-   "sala": "Taller de la imagen",
-   "titulo": "competencia vr realidad virtual"
   },
   "f_cb826e0a30": {
    "sede": "Cinemateca Fontanar del Río - Bogotá",
@@ -669,13 +655,6 @@
    "sala": "Sala 3",
    "titulo": "competencia internacional animacion 2"
   },
-  "f_d5854c3e28": {
-   "sede": "Cinemateca de Bogotá - Bogotá",
-   "dia": "2026-12-06",
-   "hora": "11:00",
-   "sala": "Taller de la imagen",
-   "titulo": "competencia vr realidad virtual"
-  },
   "f_aa5209911c": {
    "sede": "Cinemateca Fontanar del Río - Bogotá",
    "dia": "2026-12-06",
@@ -913,6 +892,30 @@
    "hora": "19:00",
    "sala": "",
    "titulo": "entrega clave imaginaton"
+  },
+  "f_59ae83b792": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-03",
+   "hora": "14:00",
+   "sala": "Taller de la imagen",
+   "titulo": "competencia vr realidad virtual",
+   "ausente": true
+  },
+  "f_e1a8800997": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-04",
+   "hora": "14:00",
+   "sala": "Taller de la imagen",
+   "titulo": "competencia vr realidad virtual",
+   "ausente": true
+  },
+  "f_d5854c3e28": {
+   "sede": "Cinemateca de Bogotá - Bogotá",
+   "dia": "2026-12-06",
+   "hora": "11:00",
+   "sala": "Taller de la imagen",
+   "titulo": "competencia vr realidad virtual",
+   "ausente": true
   }
  }
 }

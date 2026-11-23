@@ -41,7 +41,7 @@
    "type": "event",
    "has_qa": false,
    "event_kind": "encuentro",
-   "acceso": "desconocido"
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-02",
@@ -74,7 +74,7 @@
     "date": "2026-11-13"
    },
    "titulo": "¿Qué género es tu corto? Un viaje por lo extraordinario",
-   "seccion": "BOGOSHORTS al tablero",
+   "seccion": "Al Tablero",
    "tipo": "evento",
    "type": "event",
    "has_qa": false,
@@ -95,7 +95,7 @@
     "date": "2026-11-13"
    },
    "titulo": "De la viñeta a la pantalla. Novela gráfica que se vuelve cine",
-   "seccion": "BOGOSHORTS al tablero",
+   "seccion": "Al Tablero",
    "tipo": "evento",
    "type": "event",
    "has_qa": false,
@@ -1161,7 +1161,8 @@
    "type": "event",
    "info": true,
    "event_kind": "experiencia",
-   "duracion_min": 240
+   "duracion_min": 240,
+   "hasta": "2026-12-04"
   },
   {
    "dia": "2026-12-02",
@@ -1179,7 +1180,7 @@
    "seccion": "Viva la ciudad",
    "titulo": "Sinfonías femeninas desde Barcelona",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Esa fugaz esencia que dejaron los sucesos",
@@ -1321,7 +1322,7 @@
    "seccion": "Competencia Nacional",
    "titulo": "Competencia Nacional Ficción 1",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Jülapüin Yonna",
@@ -1421,7 +1422,7 @@
    "seccion": "Competencia Internacional",
    "titulo": "Competencia Internacional Experimental 2",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Liebe Caro",
@@ -1544,7 +1545,7 @@
    "seccion": "Colecciones",
    "titulo": "El amor es corto",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "El idioma de los infieles",
@@ -1648,7 +1649,7 @@
    "seccion": "Cortofilia",
    "titulo": "Yndige mennesker",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "director": "Anders Jon, Kasper Juhl, Michael Kunov y Michael Panduro",
    "pais": "Dinamarca",
    "anio": 2025,
@@ -1675,7 +1676,7 @@
    "type": "event",
    "has_qa": false,
    "event_kind": "encuentro",
-   "acceso": "desconocido"
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-03",
@@ -1689,7 +1690,7 @@
     "date": "2026-11-13"
    },
    "titulo": "¿El futuro es vertical? Cambian los formatos, cambia la mirada",
-   "seccion": "BOGOSHORTS al tablero",
+   "seccion": "Al Tablero",
    "tipo": "evento",
    "type": "event",
    "has_qa": false,
@@ -1710,7 +1711,7 @@
     "date": "2026-11-13"
    },
    "titulo": "Croacia: una cinematografía que crece desde el corto",
-   "seccion": "BOGOSHORTS al tablero",
+   "seccion": "Al Tablero",
    "tipo": "evento",
    "type": "event",
    "has_qa": false,
@@ -2880,106 +2881,6 @@
   },
   {
    "dia": "2026-12-03",
-   "hora": "14:00",
-   "sede": "Cinemateca de Bogotá",
-   "sala": "Taller de la imagen",
-   "ciudad": "Bogotá",
-   "texto_grilla": "CVR",
-   "_src": {
-    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-    "date": "2026-11-13"
-   },
-   "codigo": "CVR",
-   "seccion": "Competencia VR (Realidad virtual)",
-   "titulo": "Competencia VR - Realidad Virtual",
-   "has_qa": false,
-   "acceso": "Entrada libre (no se anuncia pago)",
-   "obras": [
-    {
-     "titulo": "Mirage",
-     "director": "Naima Karim",
-     "pais": "Países Bajos, Bangladés, Arabia Saudita",
-     "anio": 2025,
-     "duracion_min": 8,
-     "language": "Inglés",
-     "sinopsis": "Mirage es una historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, recibe la invitación a apoyarla en sus desafíos. La obra busca generar empatía hacia realidades frecuentemente incomprendidas.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "When the Flowers Bloom",
-     "director": "Shiue-Ying Wei, Chia-Wen Ko",
-     "pais": "Taiwán",
-     "anio": 2026,
-     "_nota": "título original en escritura no latina, ilegible como texto en el PDF; va la traducción",
-     "duracion_min": 25,
-     "language": "Chino mandarín, inglés",
-     "sinopsis": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "Raj’in",
-     "director": "Faiz Abu Rmeleh, Keren Manor",
-     "pais": "Alemania, Palestina",
-     "anio": 2026,
-     "titulos_alt": [
-      "We Shall Return"
-     ],
-     "duracion_min": 25,
-     "language": "Árabe, Inglés",
-     "sinopsis": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "Paraíso",
-     "director": "Jairo Arcos",
-     "pais": "Colombia",
-     "anio": 2026,
-     "titulos_alt": [
-      "Paradise"
-     ],
-     "duracion_min": 6,
-     "language": "Sin diálogos",
-     "sinopsis": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "A Long Goodbye",
-     "director": "Kate Voet, Victor Maes",
-     "pais": "Bélgica, Luxemburgo, Países Bajos",
-     "anio": 2025,
-     "duracion_min": 30,
-     "language": "Inglés, Francés, Neerlandés, Español, Chino, Lituano",
-     "sinopsis": "En esta experiencia de realidad virtual animada e interactiva nos ponemos en la piel de Ida, una pianista de 72 años que vive con demencia. A Long Goodbye es una experiencia poética sobre la larga despedida de dos amantes que compartieron una vida.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     }
-    }
-   ],
-   "type": "event",
-   "info": true,
-   "event_kind": "experiencia",
-   "duracion_min": 240
-  },
-  {
-   "dia": "2026-12-03",
    "hora": "13:30",
    "sede": "Alianza Francesa",
    "sala": "Sala Jules Verne",
@@ -2994,7 +2895,7 @@
    "seccion": "Conexión",
    "titulo": "Conexión Latinoamérica",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "No hay camino",
@@ -3079,7 +2980,7 @@
    "seccion": "Competencia Nacional",
    "titulo": "Competencia Nacional Ficción 2",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Pelotón Trueno",
@@ -3177,13 +3078,13 @@
     "date": "2026-11-13"
    },
    "titulo": "Andrósfera: Hombres de verdad. Lectura dramatizada",
-   "seccion": "BOGOSHORTS Expone",
+   "seccion": "Expone",
    "tipo": "evento",
    "type": "event",
    "has_qa": false,
    "event_kind": "experiencia",
    "descripcion": "Como extensión de esta experiencia, la lectura dramatizada propone una adaptación escénica y audiovisual del manga. A través de viñetas interpretadas en vivo, piezas audiovisuales que dan vida a los personajes y breves secuencias de animación, Pato León Conejo, David Vargas y Gabriela Pedraza transportarán al público al universo inquietante de la Andrósfera. La experiencia contará, además, con música en vivo y un intermedio a cargo de Tragedia Travesti, que presentará un espectáculo de horror drag. De esta manera, la narrativa gráfica trasciende sus páginas para convertirse en una experiencia escénica que articula teatro, cine, performance y música.",
-   "acceso": "desconocido"
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-03",
@@ -3201,7 +3102,7 @@
    "seccion": "Colecciones",
    "titulo": "Cine dentro del cine",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Nothing Happens After Your Absence",
@@ -3300,7 +3201,7 @@
    "seccion": "Competencia Internacional",
    "titulo": "Competencia Internacional Ficción 2",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Ningú Borda",
@@ -3419,7 +3320,7 @@
    "seccion": "Especiales",
    "titulo": "Volviendo a Persépolis sin Marjane Satrapi",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Our Uniform",
@@ -3544,7 +3445,7 @@
    "seccion": "Especiales",
    "has_qa": false,
    "_nota": "el código no está en la leyenda de la grilla: sección y título del catálogo",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Elefante",
@@ -3644,7 +3545,7 @@
    "type": "event",
    "has_qa": false,
    "event_kind": "encuentro",
-   "acceso": "desconocido"
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-04",
@@ -3658,7 +3559,7 @@
     "date": "2026-11-13"
    },
    "titulo": "Los festivales frente a la IA. Aprobar, rechazar, sobrevivir",
-   "seccion": "BOGOSHORTS al tablero",
+   "seccion": "Al Tablero",
    "tipo": "evento",
    "type": "event",
    "has_qa": false,
@@ -3679,7 +3580,7 @@
     "date": "2026-11-13"
    },
    "titulo": "Cine y Jazz. La hermandad improvisada",
-   "seccion": "BOGOSHORTS al tablero",
+   "seccion": "Al Tablero",
    "tipo": "evento",
    "type": "event",
    "has_qa": false,
@@ -4793,106 +4694,6 @@
   },
   {
    "dia": "2026-12-04",
-   "hora": "14:00",
-   "sede": "Cinemateca de Bogotá",
-   "sala": "Taller de la imagen",
-   "ciudad": "Bogotá",
-   "texto_grilla": "CVR",
-   "_src": {
-    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-    "date": "2026-11-13"
-   },
-   "codigo": "CVR",
-   "seccion": "Competencia VR (Realidad virtual)",
-   "titulo": "Competencia VR - Realidad Virtual",
-   "has_qa": false,
-   "acceso": "Entrada libre (no se anuncia pago)",
-   "obras": [
-    {
-     "titulo": "Mirage",
-     "director": "Naima Karim",
-     "pais": "Países Bajos, Bangladés, Arabia Saudita",
-     "anio": 2025,
-     "duracion_min": 8,
-     "language": "Inglés",
-     "sinopsis": "Mirage es una historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, recibe la invitación a apoyarla en sus desafíos. La obra busca generar empatía hacia realidades frecuentemente incomprendidas.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "When the Flowers Bloom",
-     "director": "Shiue-Ying Wei, Chia-Wen Ko",
-     "pais": "Taiwán",
-     "anio": 2026,
-     "_nota": "título original en escritura no latina, ilegible como texto en el PDF; va la traducción",
-     "duracion_min": 25,
-     "language": "Chino mandarín, inglés",
-     "sinopsis": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "Raj’in",
-     "director": "Faiz Abu Rmeleh, Keren Manor",
-     "pais": "Alemania, Palestina",
-     "anio": 2026,
-     "titulos_alt": [
-      "We Shall Return"
-     ],
-     "duracion_min": 25,
-     "language": "Árabe, Inglés",
-     "sinopsis": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "Paraíso",
-     "director": "Jairo Arcos",
-     "pais": "Colombia",
-     "anio": 2026,
-     "titulos_alt": [
-      "Paradise"
-     ],
-     "duracion_min": 6,
-     "language": "Sin diálogos",
-     "sinopsis": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "A Long Goodbye",
-     "director": "Kate Voet, Victor Maes",
-     "pais": "Bélgica, Luxemburgo, Países Bajos",
-     "anio": 2025,
-     "duracion_min": 30,
-     "language": "Inglés, Francés, Neerlandés, Español, Chino, Lituano",
-     "sinopsis": "En esta experiencia de realidad virtual animada e interactiva nos ponemos en la piel de Ida, una pianista de 72 años que vive con demencia. A Long Goodbye es una experiencia poética sobre la larga despedida de dos amantes que compartieron una vida.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     }
-    }
-   ],
-   "type": "event",
-   "info": true,
-   "event_kind": "experiencia",
-   "duracion_min": 240
-  },
-  {
-   "dia": "2026-12-04",
    "hora": "16:00",
    "sede": "Cinemateca de Bogotá Sede Fontanar del Río",
    "sala": "",
@@ -5010,7 +4811,7 @@
    "event_kind": "evento",
    "duracion_min": 240,
    "descripcion": "El viernes 4 de diciembre, todos los participantes en Bogotá deberán reunirse en el Teatro El Parque para grabar sus claquetas oficiales y recibir, a las 7:00 p. m., la clave que dará inicio a la maratón. Desde este emblemático espacio del Parque Nacional se dará la partida para que los realizadores salgan a conquistar la ciudad con sus cámaras. Quienes participen desde otras regiones del país podrán acceder a la claqueta y la clave a través de los canales virtuales del festival, conectando distintas geografías en una misma experiencia de creación.",
-   "acceso": "desconocido"
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-04",
@@ -5028,7 +4829,7 @@
    "seccion": "Conexión",
    "titulo": "Conexión Latinxs en Norteamérica",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "The Birthday Gift",
@@ -5141,7 +4942,7 @@
    "seccion": "Viva la ciudad",
    "titulo": "Año Gaudí, la ciudad animada",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Barcelona",
@@ -5290,7 +5091,7 @@
    "seccion": "Especiales",
    "titulo": "Especial astrológico: presagios del cielo",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Nuestra sombra",
@@ -5400,7 +5201,7 @@
    "seccion": "Colecciones",
    "titulo": "Crecer",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "El dia de l’ós",
@@ -5526,7 +5327,7 @@
    "seccion": "Panorama",
    "titulo": "Panorama Colombia Experimental",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Prueba de cámara",
@@ -5646,7 +5447,7 @@
    "type": "event",
    "has_qa": false,
    "event_kind": "encuentro",
-   "acceso": "desconocido"
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-05",
@@ -5660,7 +5461,7 @@
     "date": "2026-11-13"
    },
    "titulo": "Robert Valley: dibujar lo que todavía no existe",
-   "seccion": "BOGOSHORTS al tablero",
+   "seccion": "Al Tablero",
    "tipo": "evento",
    "type": "event",
    "has_qa": false,
@@ -6802,7 +6603,8 @@
    "type": "event",
    "info": true,
    "event_kind": "experiencia",
-   "duracion_min": 420
+   "duracion_min": 420,
+   "hasta": "2026-12-06"
   },
   {
    "dia": "2026-12-05",
@@ -7062,7 +6864,7 @@
    "seccion": "chiquiSHORTS",
    "titulo": "BOGOSHORTS Kids",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Bu",
@@ -7175,7 +6977,7 @@
    "seccion": "Especiales",
    "titulo": "Especial 40 años Caballeros del Zodiaco",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "X-Story",
@@ -7236,7 +7038,7 @@
     {
      "titulo": "Aster",
      "director": "Chloe Hebert",
-     "pais": "Escocia",
+     "pais": "Reino Unido",
      "anio": 2025,
      "duracion_min": 5,
      "language": "Sin diálogos",
@@ -7265,7 +7067,7 @@
    "seccion": "Conexión",
    "titulo": "Conexión Brasil",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "O Lago Cinza e Cego",
@@ -7355,7 +7157,7 @@
    "seccion": "Fanático Freak Fantástico F3",
    "titulo": "Jairo Pinilla, el origen de una obsesión",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Minuto fatal",
@@ -7431,7 +7233,7 @@
    "seccion": "Competencia Internacional",
    "titulo": "Corto Periodístico",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "El píxel y la parcela",
@@ -7530,7 +7332,7 @@
    "seccion": "Colecciones",
    "titulo": "Diversidades",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Pupa",
@@ -7647,7 +7449,7 @@
    "seccion": "Panorama",
    "titulo": "Panorama Colombia Ficción",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Mi amigo, el arquitecto",
@@ -7824,7 +7626,7 @@
    "type": "event",
    "has_qa": false,
    "event_kind": "encuentro",
-   "acceso": "desconocido"
+   "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
    "dia": "2026-12-06",
@@ -8724,7 +8526,7 @@
     "date": "2026-11-13"
    },
    "titulo": "Furia",
-   "seccion": "BFM - BOGOSHORTS Film Market",
+   "seccion": "BFM",
    "has_qa": true,
    "codigo": "BFM-IV",
    "acceso": "Entrada libre",
@@ -8912,106 +8714,6 @@
   },
   {
    "dia": "2026-12-06",
-   "hora": "11:00",
-   "sede": "Cinemateca de Bogotá",
-   "sala": "Taller de la imagen",
-   "ciudad": "Bogotá",
-   "texto_grilla": "CVR",
-   "_src": {
-    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-    "date": "2026-11-13"
-   },
-   "codigo": "CVR",
-   "seccion": "Competencia VR (Realidad virtual)",
-   "titulo": "Competencia VR - Realidad Virtual",
-   "has_qa": false,
-   "acceso": "Entrada libre (no se anuncia pago)",
-   "obras": [
-    {
-     "titulo": "Mirage",
-     "director": "Naima Karim",
-     "pais": "Países Bajos, Bangladés, Arabia Saudita",
-     "anio": 2025,
-     "duracion_min": 8,
-     "language": "Inglés",
-     "sinopsis": "Mirage es una historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, recibe la invitación a apoyarla en sus desafíos. La obra busca generar empatía hacia realidades frecuentemente incomprendidas.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "When the Flowers Bloom",
-     "director": "Shiue-Ying Wei, Chia-Wen Ko",
-     "pais": "Taiwán",
-     "anio": 2026,
-     "_nota": "título original en escritura no latina, ilegible como texto en el PDF; va la traducción",
-     "duracion_min": 25,
-     "language": "Chino mandarín, inglés",
-     "sinopsis": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "Raj’in",
-     "director": "Faiz Abu Rmeleh, Keren Manor",
-     "pais": "Alemania, Palestina",
-     "anio": 2026,
-     "titulos_alt": [
-      "We Shall Return"
-     ],
-     "duracion_min": 25,
-     "language": "Árabe, Inglés",
-     "sinopsis": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "Paraíso",
-     "director": "Jairo Arcos",
-     "pais": "Colombia",
-     "anio": 2026,
-     "titulos_alt": [
-      "Paradise"
-     ],
-     "duracion_min": 6,
-     "language": "Sin diálogos",
-     "sinopsis": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     }
-    },
-    {
-     "titulo": "A Long Goodbye",
-     "director": "Kate Voet, Victor Maes",
-     "pais": "Bélgica, Luxemburgo, Países Bajos",
-     "anio": 2025,
-     "duracion_min": 30,
-     "language": "Inglés, Francés, Neerlandés, Español, Chino, Lituano",
-     "sinopsis": "En esta experiencia de realidad virtual animada e interactiva nos ponemos en la piel de Ida, una pianista de 72 años que vive con demencia. A Long Goodbye es una experiencia poética sobre la larga despedida de dos amantes que compartieron una vida.",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     }
-    }
-   ],
-   "type": "event",
-   "info": true,
-   "event_kind": "experiencia",
-   "duracion_min": 420
-  },
-  {
-   "dia": "2026-12-06",
    "hora": "14:00",
    "sede": "Cinemateca de Bogotá Sede Fontanar del Río",
    "sala": "",
@@ -9148,7 +8850,7 @@
    "seccion": "Competencia Nacional",
    "titulo": "Competencia Nacional Animación",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "A Body that Hurts",
@@ -9288,7 +8990,7 @@
    "seccion": "chiquiSHORTS",
    "titulo": "BOGOSHORTS Kids",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Bu",
@@ -9401,7 +9103,7 @@
    "seccion": "Conexión",
    "titulo": "Conexión España",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "The Getaway",
@@ -9507,7 +9209,7 @@
    "seccion": "Competencia Nacional",
    "titulo": "Competencia Nacional Documental",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Anatomía de un retrato",
@@ -9609,7 +9311,7 @@
    "seccion": "World Tour",
    "titulo": "World Tour: Croacia 1",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "U plavetnilo",
@@ -9698,7 +9400,7 @@
    "seccion": "Colecciones",
    "titulo": "El mundo es un balón",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Stadionul Dragostei",
@@ -9814,7 +9516,7 @@
    "seccion": "Panorama",
    "titulo": "Panorama Colombia Documental",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Todas las manos que solté",
@@ -9903,7 +9605,7 @@
    "seccion": "Noche de Humor",
    "has_qa": false,
    "_nota": "el código no está en la leyenda de la grilla: sección y título del catálogo",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Bus",
@@ -10030,7 +9732,7 @@
    "seccion": "Festivaleando",
    "titulo": "El perro que ladra",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Cassandra",
@@ -10120,7 +9822,7 @@
    "seccion": "Competencia Internacional",
    "titulo": "Competencia Internacional Experimental 1",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "An Impossible Word of Praise",
@@ -10247,7 +9949,7 @@
    "seccion": "Competencia Nacional",
    "titulo": "Competencia Nacional Experimental",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "O sigilo",
@@ -10369,7 +10071,7 @@
    "seccion": "Competencia Internacional",
    "titulo": "Competencia Internacional Documental 2",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Miriam",
@@ -10455,7 +10157,7 @@
    "seccion": "Competencia Internacional",
    "titulo": "Competencia Internacional Ficción 3",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Los mentirosos",
@@ -11821,7 +11523,7 @@
    "seccion": "Especiales",
    "titulo": "Miles Davis, 100 años de jazz",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Jazz infernal",
@@ -11956,7 +11658,7 @@
    "seccion": "World Tour",
    "titulo": "World Tour: Croacia 2",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Žuti mjesec",
@@ -12041,7 +11743,7 @@
    "seccion": "Fuera de Competencia",
    "titulo": "Selección Oficial",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "Plan contraplan",
@@ -12130,7 +11832,7 @@
    "seccion": "Competencia Internacional",
    "titulo": "Competencia Internacional Ficción 1",
    "has_qa": true,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "La hora de irse",
@@ -12250,7 +11952,7 @@
    "seccion": "Especiales",
    "titulo": "Especial 40 años Caballeros del Zodiaco",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "obras": [
     {
      "titulo": "X-Story",
@@ -12311,7 +12013,7 @@
     {
      "titulo": "Aster",
      "director": "Chloe Hebert",
-     "pais": "Escocia",
+     "pais": "Reino Unido",
      "anio": 2025,
      "duracion_min": 5,
      "language": "Sin diálogos",
@@ -12356,7 +12058,7 @@
    "type": "event",
    "event_kind": "evento",
    "has_qa": false,
-   "acceso": "desconocido",
+   "acceso": "Entrada libre (no se anuncia pago)",
    "_src": {
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
     "date": "2026-11-18"
@@ -12386,7 +12088,7 @@
    "texto": "BFM",
    "dia": "2026-12-04",
    "sede": "City U",
-   "por_que": "la fila de City U es la franja del BFM - BOGOSHORTS Film Market (industria, varios días)"
+   "por_que": "franja de industria de varios días, no una función"
   },
   {
    "texto": "FI-ENA1 /",

@@ -1,0 +1,42 @@
+{
+ "id": "w_4KHZ2FS82F03",
+ "titulo_original": "Vers la forêt",
+ "anio": 2026,
+ "paises": [
+  "CH"
+ ],
+ "directores": [
+  "Antonin Niclass"
+ ],
+ "aliases": [
+  {
+   "titulo": "Into the Forest",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un monito despierta en un estudio donde todo parece inmóvil. Una selva que ve a lo lejos inspira al mono y a sus amigos a construir su propio bosque.",
+  "en": "In a quiet stop-motion studio, a small monkey opens its eyes. Everything around it feels frozen. On a computer screen, a luminous jungle appears, distant, almost alive. With two companions, he sets out to create one of their own, using whatever they can find. A forest shaped by imagination, their only way out."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/vers-la-foret.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1717093,
+  "letterboxd": "into-the-forest-2026"
+ },
+ "versiones": [
+  {
+   "etiqueta": "10 min",
+   "duracion_min": 10
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

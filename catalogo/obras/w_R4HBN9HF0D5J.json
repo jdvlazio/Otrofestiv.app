@@ -1,17 +1,33 @@
 {
  "id": "w_R4HBN9HF0D5J",
  "titulo_original": "Todas las manos que solté",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "CO",
   "FR"
  ],
- "directores": [],
- "afiche": {
-  "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0",
-  "veredicto": "oficial-festival"
+ "directores": [
+  "Laura Chará"
+ ],
+ "aliases": [
+  {
+   "titulo": "All the Hands I’ve Let Go",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Veinte años después de la muerte de su madre, Laura regresa a la casa familiar del Cauca, en Colombia. Nacida de una ausencia, la película atraviesa voces de mujeres, silencios y ecos del pasado. Un gesto para recordar, entre la luz persistente y la oscuridad del olvido.",
+  "en": "Twenty years after her mother’s death, Laura returns to the family home in Cauca, Colombia. Born from an absence, the film moves through women’s voices, silences, and echoes of the past. A gesture of remembrance, between lingering light and the darkness of oblivion."
  },
- "xref": {},
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/todas-las-manos-que-solte.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1645142,
+  "letterboxd": "all-the-hands-ive-let-go"
+ },
  "versiones": [
   {
    "etiqueta": "23 min",
@@ -19,6 +35,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "ficci-65"
  ]
 }

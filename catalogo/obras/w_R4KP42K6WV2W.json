@@ -9,13 +9,14 @@
   "Jairo Pinilla"
  ],
  "sinopsis": {
+  "es": "Una familia adinerada espera su cuarto hijo. El padre, ginecólogo, pretende practicarle un aborto a su esposa y esterilizarla, pero una serie de sucesos hace que los hijos vayan muriendo uno a uno. Pinilla lo hizo casi solo, como ensayo antes de su primer largometraje. La enorme sombra del protagonista encarna la idea de que su dinero le permite todo y se encoge a medida que él pierde poder.",
   "en": "An abortion doctor confronts his family problems."
  },
  "generos": [
   "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/mamut-2026/minuto-fatal.jpg",
+  "archivo": "/assets/bogoshorts-2026/minuto-fatal.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -26,9 +27,14 @@
   {
    "etiqueta": "38 min",
    "duracion_min": 38
+  },
+  {
+   "etiqueta": "40 min",
+   "duracion_min": 40
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "mamut-2026"
  ]
 }

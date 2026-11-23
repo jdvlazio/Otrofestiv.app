@@ -394,6 +394,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "_fid": "f_e6f3f8303a",
    "id": "f_e6f3f8303a"
   },
@@ -1771,6 +1772,7 @@
    "sala": "Taller de la imagen",
    "event_kind": "experiencia",
    "info": true,
+   "hasta": "2026-12-04",
    "has_qa": false,
    "_src": {
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
@@ -1899,6 +1901,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2070,6 +2073,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2206,6 +2210,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2357,6 +2362,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2501,6 +2507,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "lbSlug": "adorable-humans",
    "tmdb_id": 1368172,
    "synopsis_en": "As supernatural forces slip through the cracks, four destinies are intertwined, and four souls are forced to confront their demons. A young woman’s hope for a fresh start is derailed by a mysterious enchanted mirror, while her psychiatrist is struck by visions of a terrifying accident. In the nearby city, a care worker uncovers dark and perverted secrets as he tends to a dying man, and writer’s block turns demonic for an ambitious musician.",
@@ -2528,6 +2535,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "_fid": "f_a699e4a664",
    "id": "f_a699e4a664"
   },
@@ -4140,131 +4148,6 @@
    "id": "f_c9639bf24b"
   },
   {
-   "title": "Competencia VR - Realidad Virtual",
-   "type": "event",
-   "section": "🥽 Competencia VR (Realidad Virtual)",
-   "country": "Países Bajos, Bangladés, Arabia Saudita, Taiwán, Alemania, Palestina, Colombia, Bélgica, Luxemburgo",
-   "flags": "🇳🇱🇧🇩🇸🇦🇹🇼🇩🇪🇵🇸🇨🇴🇧🇪🇱🇺",
-   "duration": "240 min",
-   "_ancla": [
-    "Cinemateca de Bogotá - Bogotá",
-    "2026-12-03",
-    "14:00"
-   ],
-   "day": "2026-12-03",
-   "time": "14:00",
-   "day_order": 2,
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Taller de la imagen",
-   "event_kind": "experiencia",
-   "info": true,
-   "has_qa": false,
-   "_src": {
-    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-    "date": "2026-11-13"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Mirage",
-     "director": "Naima Karim",
-     "country": "Países Bajos, Bangladés, Arabia Saudita",
-     "flags": "🇳🇱🇧🇩🇸🇦",
-     "year": 2025,
-     "duration": "8 min",
-     "language": "Inglés",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     },
-     "synopsis": "Mirage es una historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, recibe la invitación a apoyarla en sus desafíos. La obra busca generar empatía hacia realidades frecuentemente incomprendidas.",
-     "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/mirage.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "mirage-2025-1",
-     "tmdb_id": 1705630,
-     "synopsis_en": "'Mirage' is an interactive Virtual Reality experience of a young girl who is battling depression and anxiety. Set in a desert landscape, it is a metaphorical and stylized adaptation with visuals created by the artist Naima Karim and her lived experience with her daughter’s depression and anxiety.",
-     "genre": "Animación"
-    },
-    {
-     "title": "When the Flowers Bloom",
-     "director": "Shiue-Ying Wei, Chia-Wen Ko",
-     "country": "Taiwán",
-     "flags": "🇹🇼",
-     "year": 2026,
-     "duration": "25 min",
-     "language": "Chino mandarín, inglés",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     },
-     "synopsis": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie.",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "Raj’in",
-     "director": "Faiz Abu Rmeleh, Keren Manor",
-     "country": "Alemania, Palestina",
-     "flags": "🇩🇪🇵🇸",
-     "year": 2026,
-     "duration": "25 min",
-     "language": "Árabe, Inglés",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     },
-     "synopsis": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno.",
-     "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/raj-in.jpg",
-     "posterSource": "oficial"
-    },
-    {
-     "title": "Paraíso",
-     "director": "Jairo Arcos",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "year": 2026,
-     "duration": "6 min",
-     "language": "Sin diálogos",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     },
-     "synopsis": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "A Long Goodbye",
-     "director": "Kate Voet, Victor Maes",
-     "country": "Bélgica, Luxemburgo, Países Bajos",
-     "flags": "🇧🇪🇱🇺🇳🇱",
-     "year": 2025,
-     "duration": "30 min",
-     "language": "Inglés, Francés, Neerlandés, Español, Chino, Lituano",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     },
-     "synopsis": "En esta experiencia de realidad virtual animada e interactiva nos ponemos en la piel de Ida, una pianista de 72 años que vive con demencia. A Long Goodbye es una experiencia poética sobre la larga despedida de dos amantes que compartieron una vida.",
-     "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/a-long-goodbye.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "a-long-goodbye-2025",
-     "tmdb_id": 1547253,
-     "synopsis_en": "A Long Goodbye tells the story of Ida, a 72-year-old pianist living with dementia. In this animated, interactive VR experience, we walk in Ida’s shoes. We experience a day in her life, as her reality is fading.",
-     "genre": "Animación"
-    }
-   ],
-   "_fid": "f_59ae83b792",
-   "id": "f_59ae83b792"
-  },
-  {
    "title": "Conexión Latinoamérica",
    "type": "film",
    "section": "🔗 Conexión",
@@ -4286,6 +4169,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4404,6 +4288,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4535,6 +4420,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "description": "Como extensión de esta experiencia, la lectura dramatizada propone una adaptación escénica y audiovisual del manga. A través de viñetas interpretadas en vivo, piezas audiovisuales que dan vida a los personajes y breves secuencias de animación, Pato León Conejo, David Vargas y Gabriela Pedraza transportarán al público al universo inquietante de la Andrósfera. La experiencia contará, además, con música en vivo y un intermedio a cargo de Tragedia Travesti, que presentará un espectáculo de horror drag. De esta manera, la narrativa gráfica trasciende sus páginas para convertirse en una experiencia escénica que articula teatro, cine, performance y música.",
    "description_lang": "es",
    "_fid": "f_3587c9ac67",
@@ -4561,6 +4447,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4687,6 +4574,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4841,6 +4729,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -5024,6 +4913,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -5141,6 +5031,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "_fid": "f_77495e683e",
    "id": "f_77495e683e"
   },
@@ -6659,131 +6550,6 @@
    "id": "f_820f4ddd19"
   },
   {
-   "title": "Competencia VR - Realidad Virtual",
-   "type": "event",
-   "section": "🥽 Competencia VR (Realidad Virtual)",
-   "country": "Países Bajos, Bangladés, Arabia Saudita, Taiwán, Alemania, Palestina, Colombia, Bélgica, Luxemburgo",
-   "flags": "🇳🇱🇧🇩🇸🇦🇹🇼🇩🇪🇵🇸🇨🇴🇧🇪🇱🇺",
-   "duration": "240 min",
-   "_ancla": [
-    "Cinemateca de Bogotá - Bogotá",
-    "2026-12-04",
-    "14:00"
-   ],
-   "day": "2026-12-04",
-   "time": "14:00",
-   "day_order": 3,
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Taller de la imagen",
-   "event_kind": "experiencia",
-   "info": true,
-   "has_qa": false,
-   "_src": {
-    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-    "date": "2026-11-13"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Mirage",
-     "director": "Naima Karim",
-     "country": "Países Bajos, Bangladés, Arabia Saudita",
-     "flags": "🇳🇱🇧🇩🇸🇦",
-     "year": 2025,
-     "duration": "8 min",
-     "language": "Inglés",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     },
-     "synopsis": "Mirage es una historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, recibe la invitación a apoyarla en sus desafíos. La obra busca generar empatía hacia realidades frecuentemente incomprendidas.",
-     "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/mirage.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "mirage-2025-1",
-     "tmdb_id": 1705630,
-     "synopsis_en": "'Mirage' is an interactive Virtual Reality experience of a young girl who is battling depression and anxiety. Set in a desert landscape, it is a metaphorical and stylized adaptation with visuals created by the artist Naima Karim and her lived experience with her daughter’s depression and anxiety.",
-     "genre": "Animación"
-    },
-    {
-     "title": "When the Flowers Bloom",
-     "director": "Shiue-Ying Wei, Chia-Wen Ko",
-     "country": "Taiwán",
-     "flags": "🇹🇼",
-     "year": 2026,
-     "duration": "25 min",
-     "language": "Chino mandarín, inglés",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     },
-     "synopsis": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie.",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "Raj’in",
-     "director": "Faiz Abu Rmeleh, Keren Manor",
-     "country": "Alemania, Palestina",
-     "flags": "🇩🇪🇵🇸",
-     "year": 2026,
-     "duration": "25 min",
-     "language": "Árabe, Inglés",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     },
-     "synopsis": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno.",
-     "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/raj-in.jpg",
-     "posterSource": "oficial"
-    },
-    {
-     "title": "Paraíso",
-     "director": "Jairo Arcos",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "year": 2026,
-     "duration": "6 min",
-     "language": "Sin diálogos",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     },
-     "synopsis": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "A Long Goodbye",
-     "director": "Kate Voet, Victor Maes",
-     "country": "Bélgica, Luxemburgo, Países Bajos",
-     "flags": "🇧🇪🇱🇺🇳🇱",
-     "year": 2025,
-     "duration": "30 min",
-     "language": "Inglés, Francés, Neerlandés, Español, Chino, Lituano",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     },
-     "synopsis": "En esta experiencia de realidad virtual animada e interactiva nos ponemos en la piel de Ida, una pianista de 72 años que vive con demencia. A Long Goodbye es una experiencia poética sobre la larga despedida de dos amantes que compartieron una vida.",
-     "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/a-long-goodbye.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "a-long-goodbye-2025",
-     "tmdb_id": 1547253,
-     "synopsis_en": "A Long Goodbye tells the story of Ida, a 72-year-old pianist living with dementia. In this animated, interactive VR experience, we walk in Ida’s shoes. We experience a day in her life, as her reality is fading.",
-     "genre": "Animación"
-    }
-   ],
-   "_fid": "f_e1a8800997",
-   "id": "f_e1a8800997"
-  },
-  {
    "title": "Competencia Nacional Ficción 1",
    "type": "film",
    "section": "🇨🇴 Competencia Nacional",
@@ -6939,6 +6705,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "description": "El viernes 4 de diciembre, todos los participantes en Bogotá deberán reunirse en el Teatro El Parque para grabar sus claquetas oficiales y recibir, a las 7:00 p. m., la clave que dará inicio a la maratón. Desde este emblemático espacio del Parque Nacional se dará la partida para que los realizadores salgan a conquistar la ciudad con sus cámaras. Quienes participen desde otras regiones del país podrán acceder a la claqueta y la clave a través de los canales virtuales del festival, conectando distintas geografías en una misma experiencia de creación.",
    "description_lang": "es",
    "_fid": "f_0f47ae4440",
@@ -6966,6 +6733,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -7116,6 +6884,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -7337,6 +7106,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -7491,6 +7261,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -7650,6 +7421,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -7793,6 +7565,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "_fid": "f_282f343638",
    "id": "f_282f343638"
   },
@@ -9249,6 +9022,7 @@
    "sala": "Taller de la imagen",
    "event_kind": "experiencia",
    "info": true,
+   "hasta": "2026-12-06",
    "has_qa": false,
    "_src": {
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
@@ -9661,6 +9435,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -9785,8 +9560,8 @@
    "title": "Especial 40 Años Caballeros del Zodiaco",
    "type": "film",
    "section": "✨ Especiales",
-   "country": "Rusia, Dinamarca, Japón, Escocia",
-   "flags": "🇷🇺🇩🇰🇯🇵",
+   "country": "Rusia, Dinamarca, Japón, Reino Unido",
+   "flags": "🇷🇺🇩🇰🇯🇵🇬🇧",
    "duration": "54 min",
    "_ancla": [
     "Teatro El Parque - Bogotá",
@@ -9802,6 +9577,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -9896,7 +9672,8 @@
     {
      "title": "Aster",
      "director": "Chloe Hebert",
-     "country": "Escocia",
+     "country": "Reino Unido",
+     "flags": "🇬🇧",
      "year": 2025,
      "duration": "5 min",
      "language": "Sin diálogos",
@@ -9940,6 +9717,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10059,6 +9837,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10166,6 +9945,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10301,6 +10081,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10451,6 +10232,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10703,6 +10485,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "_fid": "f_de14a03024",
    "id": "f_de14a03024"
   },
@@ -12143,131 +11926,6 @@
    "id": "f_10400977f8"
   },
   {
-   "title": "Competencia VR - Realidad Virtual",
-   "type": "event",
-   "section": "🥽 Competencia VR (Realidad Virtual)",
-   "country": "Países Bajos, Bangladés, Arabia Saudita, Taiwán, Alemania, Palestina, Colombia, Bélgica, Luxemburgo",
-   "flags": "🇳🇱🇧🇩🇸🇦🇹🇼🇩🇪🇵🇸🇨🇴🇧🇪🇱🇺",
-   "duration": "420 min",
-   "_ancla": [
-    "Cinemateca de Bogotá - Bogotá",
-    "2026-12-06",
-    "11:00"
-   ],
-   "day": "2026-12-06",
-   "time": "11:00",
-   "day_order": 5,
-   "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Taller de la imagen",
-   "event_kind": "experiencia",
-   "info": true,
-   "has_qa": false,
-   "_src": {
-    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-    "date": "2026-11-13"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Mirage",
-     "director": "Naima Karim",
-     "country": "Países Bajos, Bangladés, Arabia Saudita",
-     "flags": "🇳🇱🇧🇩🇸🇦",
-     "year": 2025,
-     "duration": "8 min",
-     "language": "Inglés",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     },
-     "synopsis": "Mirage es una historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, recibe la invitación a apoyarla en sus desafíos. La obra busca generar empatía hacia realidades frecuentemente incomprendidas.",
-     "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/mirage.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "mirage-2025-1",
-     "tmdb_id": 1705630,
-     "synopsis_en": "'Mirage' is an interactive Virtual Reality experience of a young girl who is battling depression and anxiety. Set in a desert landscape, it is a metaphorical and stylized adaptation with visuals created by the artist Naima Karim and her lived experience with her daughter’s depression and anxiety.",
-     "genre": "Animación"
-    },
-    {
-     "title": "When the Flowers Bloom",
-     "director": "Shiue-Ying Wei, Chia-Wen Ko",
-     "country": "Taiwán",
-     "flags": "🇹🇼",
-     "year": 2026,
-     "duration": "25 min",
-     "language": "Chino mandarín, inglés",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     },
-     "synopsis": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie.",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "Raj’in",
-     "director": "Faiz Abu Rmeleh, Keren Manor",
-     "country": "Alemania, Palestina",
-     "flags": "🇩🇪🇵🇸",
-     "year": 2026,
-     "duration": "25 min",
-     "language": "Árabe, Inglés",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 114,
-      "date": "2026-11-13"
-     },
-     "synopsis": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno.",
-     "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/raj-in.jpg",
-     "posterSource": "oficial"
-    },
-    {
-     "title": "Paraíso",
-     "director": "Jairo Arcos",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "year": 2026,
-     "duration": "6 min",
-     "language": "Sin diálogos",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     },
-     "synopsis": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "A Long Goodbye",
-     "director": "Kate Voet, Victor Maes",
-     "country": "Bélgica, Luxemburgo, Países Bajos",
-     "flags": "🇧🇪🇱🇺🇳🇱",
-     "year": 2025,
-     "duration": "30 min",
-     "language": "Inglés, Francés, Neerlandés, Español, Chino, Lituano",
-     "_src": {
-      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
-      "pagina": 115,
-      "date": "2026-11-13"
-     },
-     "synopsis": "En esta experiencia de realidad virtual animada e interactiva nos ponemos en la piel de Ida, una pianista de 72 años que vive con demencia. A Long Goodbye es una experiencia poética sobre la larga despedida de dos amantes que compartieron una vida.",
-     "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/a-long-goodbye.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "a-long-goodbye-2025",
-     "tmdb_id": 1547253,
-     "synopsis_en": "A Long Goodbye tells the story of Ida, a 72-year-old pianist living with dementia. In this animated, interactive VR experience, we walk in Ida’s shoes. We experience a day in her life, as her reality is fading.",
-     "genre": "Animación"
-    }
-   ],
-   "_fid": "f_d5854c3e28",
-   "id": "f_d5854c3e28"
-  },
-  {
    "title": "Annecy Kids",
    "type": "film",
    "section": "🧒 chiquiSHORTS",
@@ -12450,6 +12108,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -12601,6 +12260,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -12743,6 +12403,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -12875,6 +12536,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13004,6 +12666,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13123,6 +12786,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13270,6 +12934,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13384,6 +13049,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13567,6 +13233,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13699,6 +13366,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13876,6 +13544,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -14003,6 +13672,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -14113,6 +13783,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -15913,6 +15584,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16100,6 +15772,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16218,6 +15891,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16336,6 +16010,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16475,8 +16150,8 @@
    "title": "Especial 40 Años Caballeros del Zodiaco",
    "type": "film",
    "section": "✨ Especiales",
-   "country": "Rusia, Dinamarca, Japón, Escocia",
-   "flags": "🇷🇺🇩🇰🇯🇵",
+   "country": "Rusia, Dinamarca, Japón, Reino Unido",
+   "flags": "🇷🇺🇩🇰🇯🇵🇬🇧",
    "duration": "54 min",
    "_ancla": [
     "Centro Ático - Bogotá",
@@ -16492,6 +16167,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16586,7 +16262,8 @@
     {
      "title": "Aster",
      "director": "Chloe Hebert",
-     "country": "Escocia",
+     "country": "Reino Unido",
+     "flags": "🇬🇧",
      "year": 2025,
      "duration": "5 min",
      "language": "Sin diálogos",
@@ -16650,6 +16327,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
     "date": "2026-11-18"
    },
+   "is_free": true,
    "_fid": "f_5ade8fa1d3",
    "id": "f_5ade8fa1d3"
   }
@@ -16660,8 +16338,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-23T11:14:03",
-  "plan_sha": "ad74bc16627e6e5c",
+  "fecha": "2026-11-23T11:33:00",
+  "plan_sha": "51eddc3380a249f7",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"
  }

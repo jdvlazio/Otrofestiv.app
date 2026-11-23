@@ -1,7 +1,7 @@
 {
  "id": "w_R4QPXCK0DZRA",
  "titulo_original": "Grounded",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "NZ"
  ],
@@ -9,14 +9,20 @@
   "Chris Callus"
  ],
  "sinopsis": {
-  "es": "Henry, joven mochilero, se hace cargo inadvertidamente de la maleta de un desconocido en el aeropuerto y de inmediato se ve rodeado de policías que lo acusan de terrorismo.",
-  "en": "Young backpacker Henry inadvertently takes charge of a stranger's suitcase at the airport — and is immediately surrounded by police who accuse him of terrorism."
+  "es": "Todas las mariquitas emprenden el vuelo menos una. Una araña la acompaña mientras intenta descubrir qué le impide despegar.",
+  "en": "As dawn breaks, a loveliness of ladybirds take to the sky... all except Bug. Left behind and unable to fly, Bug and a sympathetic Spider wrestle against an invisible weight that feels heavier than gravity alone."
  },
+ "generos": [
+  "Animación"
+ ],
  "afiche": {
-  "archivo": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/7017/large_Grounded-Clean-16x9-01.jpg",
-  "veredicto": "fotograma"
+  "archivo": "/assets/bogoshorts-2026/grounded.jpg",
+  "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1700763,
+  "letterboxd": "grounded-2026-1"
+ },
  "versiones": [
   {
    "etiqueta": "4 min",
@@ -24,6 +30,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "tribeca-2026"
  ]
 }

@@ -41,6 +41,11 @@ def toks_crudo():
     for f in d['funciones']:
         if 'catalogo2026' in f['_src']['url']:
             continue                                  # no es celda de la grilla (Entrega clave IMAGINATÓN, del catálogo)
+        import datetime as _dt
+        dia, fin = f['dia'], f.get('hasta') or f['dia']
+        while dia < fin:        # la VR va en un tramo (`hasta`): se abre día por día para comparar
+            dia = (_dt.date.fromisoformat(dia) + _dt.timedelta(1)).isoformat()
+            out.add((dia, f['hora'], esp(f['sede'] + ' ' + f['sala']), cod(f['texto_grilla'])))
         out.add((f['dia'], f['hora'], esp(f['sede'] + ' ' + f['sala']), cod(f['texto_grilla'])))
     return out, d
 

@@ -1,0 +1,40 @@
+{
+ "id": "w_4KJA35RRG18G",
+ "titulo_original": "Asteria",
+ "anio": 2016,
+ "paises": [
+  "FR"
+ ],
+ "directores": [
+  "Alexandre Arpentinier",
+  "Tristan Lamarca",
+  "Thomas Lemaille",
+  "Mathieu Blanchys",
+  "Jean-Charles Lusseau",
+  "Lola Grand"
+ ],
+ "sinopsis": {
+  "es": "Dos astronautas llegan a un planeta desconocido para conquistarlo, pero un encuentro inesperado pone a prueba su misión y su profesionalismo.",
+  "en": "Two astronauts attempt to plant their flag on a newly discovered planet. But first, they need to get rid of some pesky aliens whose business there is unknown."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/asteria.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 441043,
+  "letterboxd": "asteria"
+ },
+ "versiones": [
+  {
+   "etiqueta": "5 min",
+   "duracion_min": 5
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

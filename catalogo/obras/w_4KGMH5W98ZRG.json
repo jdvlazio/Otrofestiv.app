@@ -1,0 +1,43 @@
+{
+ "id": "w_4KGMH5W98ZRG",
+ "titulo_original": "Halayon",
+ "anio": 2026,
+ "paises": [
+  "PT",
+  "FR"
+ ],
+ "directores": [
+  "Avi Mograbi"
+ ],
+ "aliases": [
+  {
+   "titulo": "Wild Asparagus",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "El cineasta Avi Mograbi y su profesor de árabe y amigo, Ali Al Azhari, emprenden la búsqueda de las ruinas de Saffuriya, el pueblo de Ali, del cual fue expulsado durante la Nakba palestina de 1948 y, en su lugar, encuentran una vida que nunca se detuvo.",
+  "en": "Filmmaker Avi Mograbi and his Arabic teacher and friend Ali Al Azhari go looking for the ruins of Ali’s village Saffuriya from which he was displaced during the 1948 Palestinian Nakba. Instead, they find a life that never ceased."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/halayon.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1736524,
+  "letterboxd": "wild-asparagus"
+ },
+ "versiones": [
+  {
+   "etiqueta": "24 min",
+   "duracion_min": 24
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

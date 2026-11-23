@@ -1,22 +1,26 @@
 {
  "id": "w_R4QPXCZFY0PN",
  "titulo_original": "Dear Upstairs Neighbors",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "US"
  ],
  "directores": [
-  "Connie Qin He"
+  "Connie He"
  ],
  "sinopsis": {
-  "es": "Un cortometraje en competencia en Tribeca 2026.",
+  "es": "Una joven desesperada por dormir bien no puede conciliar el sueño por culpa de sus vecinos extremadamente ruidosos. Mientras imagina qué provoca el estruendo del piso superior, la realidad deriva hacia la fantasía y comienza una batalla épica por la paz y la cordura.",
   "en": "A short film in competition at Tribeca 2026."
  },
+ "generos": [
+  "Animación"
+ ],
  "afiche": {
-  "archivo": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/7019/large_Dear_Upstairs_Neighbors-Clean-16x9-01.jpg",
-  "veredicto": "fotograma"
+  "archivo": "/assets/bogoshorts-2026/dear-upstairs-neighbors.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1639520,
   "letterboxd": "dear-upstairs-neighbors"
  },
  "versiones": [
@@ -26,6 +30,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "tribeca-2026"
  ]
 }

@@ -177,17 +177,15 @@
         "en": "Special Events",
         "archetype": "Especiales / Eventos"
       },
-      "BOGOSHORTS al tablero": {
+      "Al Tablero": {
         "emoji": "🧑‍🏫",
         "en": "To the Board",
-        "archetype": "Charlas / Industria",
-        "nombre": "Al Tablero"
+        "archetype": "Charlas / Industria"
       },
-      "BOGOSHORTS Expone": {
+      "Expone": {
         "emoji": "🖼️",
         "en": "Exhibits",
-        "archetype": "Especiales / Eventos",
-        "nombre": "Expone"
+        "archetype": "Especiales / Eventos"
       },
       "IMAGINATÓN": {
         "emoji": "🎥",
@@ -195,11 +193,10 @@
         "archetype": "Especiales / Eventos",
         "nombre": "Imaginatón"
       },
-      "BFM - BOGOSHORTS Film Market": {
+      "BFM": {
         "emoji": "🤝",
         "en": "BFM",
-        "archetype": "Charlas / Industria",
-        "nombre": "BFM"
+        "archetype": "Charlas / Industria"
       }
     },
     "sedes": {

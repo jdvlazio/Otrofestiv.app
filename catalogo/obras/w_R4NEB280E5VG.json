@@ -8,11 +8,14 @@
  "directores": [
   "Julián Gómez Reyes"
  ],
+ "sinopsis": {
+  "es": "Raquelita, una torcaza herida tras un accidente en la ciudad de Bogotá, encuentra refugio en la ventana de Tomás, un niño que la acompaña mientras sana. A partir de ese encuentro, Raquelita inicia un viaje poético por la ciudad, descubriendo personajes, vidas, detalles invisibles para los demás y su lugar en el mundo."
+ },
  "generos": [
   "Animación"
  ],
  "afiche": {
-  "archivo": "/assets/siembrafest/un-pajaro-mas.jpg",
+  "archivo": "/assets/bogoshorts-2026/un-pajaro-mas.jpg",
   "veredicto": "oficial"
  },
  "xref": {},
@@ -23,6 +26,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "siembrafest-2026"
  ]
 }

@@ -20,10 +20,10 @@
   }
  ],
  "sinopsis": {
-  "es": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera."
+  "es": "Según el mito indígena muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera."
  },
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/3xkU5BM4aLULnvBZu0mVntXbHrA.jpg",
+  "archivo": "/assets/bogoshorts-2026/el-salto.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -37,6 +37,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "cinemancia-2026",
   "cinetoro-2026",
   "midbo-2026"

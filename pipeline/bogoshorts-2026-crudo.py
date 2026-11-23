@@ -104,7 +104,7 @@ LEYENDA = {
     'CLC-FUT': ('Colecciones', 'El mundo es un balón'),
 }
 DESCARTES = {'Fiestas': 'fila «Fiestas» (13 nov): la grilla no dice dónde son',
-             'BFM - BOGOSHORTS Film Market': 'franja de industria de varios días, no una función',
+             'BFM': 'franja de industria de varios días, no una función',
              'Acreditaciones': 'punto de acreditación, no una función',
              'City U': 'la fila de City U es la franja del BFM - BOGOSHORTS Film Market (industria, varios días)',
              'Alianza Francesa Sótano 1': 'Acreditaciones, 10:00 a.m. - 6:00 p.m.: no es una función',
@@ -265,7 +265,7 @@ def main():
             act = next((d for k, d in _act['actividades'] if txt.startswith(k)), None)
             if act:
                 f['titulo'] = act.get('titulo', f['titulo'])
-                f['seccion'] = act.get('seccion', 'BOGOSHORTS al tablero')
+                f['seccion'] = act.get('seccion', 'Al Tablero')
                 f['event_kind'] = act.get('event_kind', 'charla')
                 if act.get('min'):
                     f['duracion_min'] = act['min']
@@ -326,6 +326,20 @@ def main():
                       'texto_grilla': 'IMAGINATÓN', 'titulo': 'Entrega clave IMAGINATÓN', 'seccion': 'IMAGINATÓN',
                       'tipo': 'evento', 'type': 'event', 'event_kind': 'evento', 'has_qa': False,
                       'acceso': DESCONOCIDO, '_src': {'url': 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf', 'date': '2026-11-18'}})
+    # VR abierta varios días: UNA función info por tramo continuo del mismo horario ([abierta-varios-dias])
+    vr = [f for f in funciones if f.get('codigo') == 'CVR']
+    for desde, hasta in (('2026-12-02', '2026-12-04'), ('2026-12-05', '2026-12-06')):
+        tramo = [f for f in vr if desde <= f['dia'] <= hasta]
+        tramo[0]['hasta'] = hasta
+        for f in tramo[1:]:
+            funciones.remove(f)
+    for f in funciones:
+        # regla de Juan (13 y 16 oct 2026): sin aviso de pago es entrada libre
+        if f['acceso'] == DESCONOCIDO:
+            f['acceso'] = 'Entrada libre (no se anuncia pago)'
+        for o in f.get('obras') or []:
+            if o.get('pais') == 'Escocia':     # sin bandera propia en la app; el país en TMDB es Reino Unido
+                o['pais'] = 'Reino Unido'
     import unicodedata
     def _nfc(x):
         if isinstance(x, str): return unicodedata.normalize('NFC', x)

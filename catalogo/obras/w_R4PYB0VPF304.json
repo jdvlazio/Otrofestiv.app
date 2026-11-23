@@ -3,29 +3,39 @@
  "titulo_original": "Madrugada",
  "anio": 2026,
  "paises": [
-  "GT"
+  "GT",
+  "TR"
  ],
  "directores": [
   "Sebastián Lojo"
  ],
  "sinopsis": {
-  "es": "Cuando su hijo pequeño empieza a sentir deseos destructivos, un padre vampírico y una madre humana intentan protegerlo de correrías nocturnas empapadas de sangre, en esta reflexión de fuego lento de Sebastián Lojo sobre el malestar generacional.",
-  "en": "When their young son begins to experience destructive desires, a vampiric father and human mother try to shield him from blood-soaked nocturnal exploits in Sebastián Lojo’s slow-burn rumination on generational malaise."
+  "es": "Koki, jardinero en Ciudad de Guatemala, esconde un secreto: es un vampiro. De día vive con su esposa y su hijo pequeño; de noche se alimenta en las sombras. Los padres intentan proteger al niño de la maldición. Pero cuando el hambre despierta en él, ocurre algo irreversible que sella una herencia trágica.",
+  "en": "Koki, a gardener in Guatemala City, hides a secret: he is a vampire. By day he lives with his wife, and young son; by night he feeds in the shadows. Together, the parents try to shield the boy from the curse. But when the hunger awakens in him, something irreversible occurs, sealing a tragic inheritance."
  },
+ "generos": [
+  "Suspense"
+ ],
  "afiche": {
-  "archivo": "https://images.ctfassets.net/22n7d68fswlw/7cOKcUxq4gcTzMcYswv70p/c28dfb5d4d60805d6adc73b452b19169/Madrugada_Still_02.jpg",
-  "veredicto": "fotograma"
+  "archivo": "/assets/bogoshorts-2026/madrugada.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1686584,
   "letterboxd": "madrugada-2026"
  },
  "versiones": [
   {
    "etiqueta": "20 min",
    "duracion_min": 20
+  },
+  {
+   "etiqueta": "21 min",
+   "duracion_min": 21
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "tiff-2026"
  ]
 }

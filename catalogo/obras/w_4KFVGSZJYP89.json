@@ -1,0 +1,43 @@
+{
+ "id": "w_4KFVGSZJYP89",
+ "titulo_original": "No hay camino",
+ "anio": 2026,
+ "paises": [
+  "PE",
+  "ES"
+ ],
+ "directores": [
+  "Luciana Espinoza Hoempler"
+ ],
+ "aliases": [
+  {
+   "titulo": "There Is No Path",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En el Tapón del Darién, la selva sin carreteras entre Colombia y Panamá, miles de migrantes graban con sus celulares el cruce que emprenden rumbo a Estados Unidos. No hay camino recompone esos videos fragmentados en un relato en primera persona sobre el riesgo, la supervivencia y la urgencia de seguir avanzando.",
+  "en": "Through videos shared on social media, migrants document their journey across the Darién Gap between Colombia and Panama on their way towards the United States. Their recordings confront viewers with both the experience of migration and the distance from which they watch it."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/no-hay-camino.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1770030,
+  "letterboxd": "there-is-no-path"
+ },
+ "versiones": [
+  {
+   "etiqueta": "19 min",
+   "duracion_min": 19
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

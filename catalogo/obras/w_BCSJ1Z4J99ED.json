@@ -1,6 +1,6 @@
 {
  "id": "w_BCSJ1Z4J99ED",
- "titulo_original": "Robo Macabro",
+ "titulo_original": "Robo macabro",
  "anio": 1982,
  "paises": [
   "CO"
@@ -8,7 +8,14 @@
  "directores": [
   "Jairo Pinilla"
  ],
+ "aliases": [
+  {
+   "titulo": "Robo Macabro",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
+  "es": "Durante el velorio de una mujer joven, dos ladrones descubren que el cadáver lleva un anillo valioso. Esperan a la noche para abrir el mausoleo, pero la joven abre los ojos, se levanta del ataúd y les pide ayuda para salir del cementerio. Pinilla lo filmó con latas sobrantes tras perder en un robo el material de La isla fantasma. Su asistente, Ana Cecilia Mejía, coescribió el guion y protagoniza el corto.",
   "en": "Two grave robbers are ready to commit their misdeeds without expecting the little surprise that awaits them."
  },
  "generos": [
@@ -22,9 +29,14 @@
   {
    "etiqueta": "10 min",
    "duracion_min": 10
+  },
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "fantasmagoria-2026"
  ],
  "afiche": {

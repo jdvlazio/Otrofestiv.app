@@ -16,6 +16,7 @@
   }
  ],
  "sinopsis": {
+  "es": "Un viaje al interior que escudriña en la identidad femenina, fragmentando y resignificando sus representaciones, interviniendo las imágenes a través del collage en stop motion en búsqueda de libertad.",
   "en": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom."
  },
  "generos": [
@@ -31,11 +32,16 @@
  },
  "versiones": [
   {
+   "etiqueta": "9 min",
+   "duracion_min": 9
+  },
+  {
    "etiqueta": "10 min",
    "duracion_min": 10
   }
  ],
  "presentaciones": [
-  "anibia-2026"
+  "anibia-2026",
+  "bogoshorts-2026"
  ]
 }

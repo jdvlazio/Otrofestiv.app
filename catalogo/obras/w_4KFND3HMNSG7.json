@@ -1,0 +1,42 @@
+{
+ "id": "w_4KFND3HMNSG7",
+ "titulo_original": "Vagabundo",
+ "anio": 2026,
+ "paises": [
+  "PT"
+ ],
+ "directores": [
+  "Susa Monteiro"
+ ],
+ "aliases": [
+  {
+   "titulo": "Vagabond",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un hombre solitario atraviesa paisajes. No sabemos si huye de algo o regresa a algún lugar. Es absolutamente libre. Viaja, contempla y sueña.",
+  "en": "A solitary man traverses landscapes. He travels, contemplates, and dreams. He seems to possess nothing except the backpack that accompanies him and interacts almost without any interaction with other human beings during his journey. Without him seeming to notice, a dog crosses his path at every step. Perhaps it is looking for an owner."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/vagabundo.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1729975,
+  "letterboxd": "vagabond-2026"
+ },
+ "versiones": [
+  {
+   "etiqueta": "10 min",
+   "duracion_min": 10
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

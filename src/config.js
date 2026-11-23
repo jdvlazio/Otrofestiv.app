@@ -141,6 +141,28 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // BOGOSHORTS (2026-11-23, alta-festival.py): del plan
+  '🧑‍🏫 Al Tablero': 'To the Board',
+  '🖼️ Expone': 'Exhibits',
+  '🤝 BFM': 'BFM',
+  // BOGOSHORTS (2026-11-23, alta-festival.py): del plan
+  '🎙️ Franja Encuentros Cercanos': 'Close Encounters',
+  '🇨🇴 Competencia Nacional': 'National Competition',
+  '🌎 Competencia Internacional': 'International Competition',
+  '🌀 Panorama': 'Panorama',
+  '📚 Colecciones': 'Collections Competition',
+  '👽 Fanático Freak Fantástico F3': 'Fan Freak Fantastic F3',
+  '🗺️ World Tour': 'World Tour',
+  '🥽 Competencia VR (Realidad Virtual)': 'Virtual Reality Competition',
+  '🏙️ Viva la Ciudad': 'Long Live the City',
+  '🎞️ Cortofilia': 'Cortofilia',
+  '🔗 Conexión': 'Connection',
+  '✨ Especiales': 'Specials',
+  '⭐ Fuera de Competencia': 'Out of Competition',
+  '🎪 Festivaleando': 'Festivaleando',
+  '🎥 Imaginatón': 'One-Minute Marathon',
+  '🧒 chiquiSHORTS': 'chiquiSHORTS',
+  '😂 Noche de Humor': 'Comedy Night',
   // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
   '🛠️ Taller / Eventos': 'Workshop / Events',
   '🚂 Conversatorio / Historia y Patrimonio': 'Talk / History and Heritage',
@@ -1521,6 +1543,26 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // BOGOSHORTS (2026-11-23, alta-festival.py): del plan
+  '🧑‍🏫 Al Tablero': 'Charlas / Industria',
+  '🖼️ Expone': 'Especiales / Eventos',
+  '🤝 BFM': 'Charlas / Industria',
+  // BOGOSHORTS (2026-11-23, alta-festival.py): del plan
+  '🎙️ Franja Encuentros Cercanos': 'Charlas / Industria',
+  '🇨🇴 Competencia Nacional': 'Competencia',
+  '🌎 Competencia Internacional': 'Competencia',
+  '📚 Colecciones': 'Cortos / Programas',
+  '👽 Fanático Freak Fantástico F3': 'Competencia',
+  '🗺️ World Tour': 'Muestra / País',
+  '🥽 Competencia VR (Realidad Virtual)': 'Competencia',
+  '🏙️ Viva la Ciudad': 'Muestra / País',
+  '🎞️ Cortofilia': 'Cortos / Programas',
+  '✨ Especiales': 'Retrospectiva / Tributo',
+  '⭐ Fuera de Competencia': 'Especiales / Eventos',
+  '🎪 Festivaleando': 'Muestra / País',
+  '🎥 Imaginatón': 'Especiales / Eventos',
+  '🧒 chiquiSHORTS': 'Cortos / Programas',
+  '😂 Noche de Humor': 'Especiales / Eventos',
   // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
   '🛠️ Taller / Eventos': 'Charlas / Industria',
   '🚂 Conversatorio / Historia y Patrimonio': 'Charlas / Industria',

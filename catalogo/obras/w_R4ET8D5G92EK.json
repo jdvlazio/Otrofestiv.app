@@ -1,16 +1,19 @@
 {
  "id": "w_R4ET8D5G92EK",
  "titulo_original": "Espaciar",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "CO"
  ],
  "directores": [
   "Daniela Giraldo Suárez"
  ],
+ "sinopsis": {
+  "es": "Una aproximación científica a las posibilidades de SER. Paisajes, objetos y palabras retratan la naturaleza fluida y cambiante para reflexionar acerca de la distancia, la separación y cuestionar cómo ocupamos y elegimos nuestro lugar en el mundo."
+ },
  "afiche": {
   "archivo": "https://cinemanciafestival.com/wp-content/uploads/2025/08/ESPACIAR-AFICHE.jpg",
-  "veredicto": "oficial-festival"
+  "veredicto": "oficial"
  },
  "xref": {},
  "versiones": [
@@ -20,6 +23,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "cinemancia-2025"
  ]
 }
