@@ -74,5 +74,33 @@ class Deuda(unittest.TestCase):
         self.assertIn('sinopsis.excede', src)
 
 
+class Calidad(unittest.TestCase):
+    """23 nov 2026: un texto que no es sinopsis cuenta como si no estuviera."""
+    LISTA = 'Alejandra Castaño Arias, Wildier Tascón Tascón, Roxana Panchí Gutierrez, Alexa Yagarí Panchí, Laura Giraldo Mira'
+
+    def test_la_lista_de_actores_queda_pendiente(self):
+        p = sinopsis.pendientes('x-2026', [{'title': 'A', 'synopsis': self.LISTA}], _raiz())
+        self.assertEqual((p[0]['accion'], p[0]['defectos']), ('corregir', ['parece una lista de nombres']))
+        self.assertIn('corregir', sinopsis.linea(p[0]))
+
+    def test_sin_sinopsis_no_excusa_publicar_un_texto_malo(self):
+        r = _raiz({'A': {'_por_que': 'x', 'fuentes': ['y']}})
+        self.assertEqual(len(sinopsis.pendientes('x-2026', [{'title': 'A', 'synopsis': self.LISTA}], r)), 1)
+
+    def test_falso_positivo_declarado_con_porque(self):
+        r = _raiz()
+        for pq, n in (('la leyó Juan', 0), ('', 1)):
+            json.dump({'sinopsis_revisada': {'A': {'_por_que': pq}}}, open(os.path.join(r, 'festivals', 'staging', 'x-2026-correcciones.json'), 'w'))
+            self.assertEqual(len(sinopsis.pendientes('x-2026', [{'title': 'A', 'synopsis': self.LISTA}], r)), n)
+
+
+class Herencia(unittest.TestCase):
+    def test_una_defectuosa_no_viaja_a_otro_festival(self):
+        import herencia
+        w = lambda s: {'sinopsis': {'es': s}, 'presentaciones': ['otro-2026']}
+        self.assertIsNone(herencia.valor(w(ES + ' Enlace para comprar entrada para la función'), 'synopsis_es', 'x-2026', 'A'))
+        self.assertEqual(herencia.valor(w(ES), 'synopsis_es', 'x-2026', 'A'), ES)
+
+
 if __name__ == '__main__':
     unittest.main()
