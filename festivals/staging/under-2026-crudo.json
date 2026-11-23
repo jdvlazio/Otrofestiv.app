@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
-  "capturado": "2026-11-20",
+  "capturado": "2026-11-23",
   "metodo": "PDF oficial (correo 18 nov): capa de texto + OCR + a ojo; duraciones y rótulos de sección del reel https://www.instagram.com/p/Df0rYtRxmgp/",
   "que_aporta": "día, hora, sede, obras de cada función, director/país/año, acceso"
  },
@@ -38,7 +38,8 @@
     }
    ],
    "tipo": "programa",
-   "duracion_min": 28
+   "duracion_min": 28,
+   "has_qa": true
   },
   {
    "titulo": "Las muertes más bellas del mundo",

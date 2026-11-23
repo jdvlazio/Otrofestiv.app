@@ -55,7 +55,10 @@ ACA = 'Actividad académica'
 F = [
     ('11-25', '18:30', PL, 'Apertura', DOC, 2,
      [('Borrachos mientras escuchamos las gotas caer', 'Santiago Gómez Ramírez', 'Colombia', 2026, 21),
-      ('The sight is a wound', 'Parham Ghalamdar', 'Irán', 2025, 7)], {}),
+      ('The sight is a wound', 'Parham Ghalamdar', 'Irán', 2025, 7)],
+     # Reel de @cineundermedellin, 22 nov (https://www.instagram.com/p/DgDZtCwP9sY/): portada «con presencia
+     # del realizador»; pie «un encuentro y diálogo alrededor de la película». El PDF no lo dice ni lo niega.
+     dict(has_qa=True)),
     ('11-25', '20:00', PL, 'Las muertes más bellas del mundo', DOC, 2,
      [('Las muertes más bellas del mundo', 'Quique Avilés, Ellie Walton', 'Estados Unidos', 2024, 71)], {}),
     ('11-25', '18:30', BB, 'Bisou ACAB + Memoria colectiva + 8 metros: La palabra subterránea', None, 2,
