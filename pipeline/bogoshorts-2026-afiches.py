@@ -42,6 +42,12 @@ def main():
     for k, v in web.items():
         ix.setdefault(n(v['titulo']), []).append((k, v))
     out, notas = {}, []
+    # el afiche de TMDB, entero: su fondo negro liso se tomaba por marco y el encuadre cortaba el título por los lados
+    # (mirado a ojo, 23 nov 2026). Declarado = no se recorta
+    p = 'fuentes/bogoshorts-2026/afiches-web/fantasy-land-tmdb.jpg'
+    if os.path.exists(f'{REPO}/{p}'):
+        out['Fantasy Land'] = {'archivo': p, 'sobre_tmdb': True, 'url': 'https://image.tmdb.org/t/p/w780/5bCC7cYdBmm9gTkyx6QqxZA6t6T.jpg',
+                               'fuente': 'afiche oficial de la ficha de TMDB 1840640 (acredita a Aitana Ahrens), sin el recorte del encuadre'}
     for obras in cortos.values():
         for o in obras:
             t = o['titulo']

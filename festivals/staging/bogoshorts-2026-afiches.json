@@ -5,6 +5,12 @@
   "metodo": "póster de la ficha de la obra en la web del festival y afiches del registro de altas; solo donde TMDB no tiene"
  },
  "afiches": {
+  "Fantasy Land": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/fantasy-land-tmdb.jpg",
+   "sobre_tmdb": true,
+   "url": "https://image.tmdb.org/t/p/w780/5bCC7cYdBmm9gTkyx6QqxZA6t6T.jpg",
+   "fuente": "afiche oficial de la ficha de TMDB 1840640 (acredita a Aitana Ahrens), sin el recorte del encuadre"
+  },
   "Lo entrañable": {
    "archivo": "fuentes/bogoshorts-2026/altas/lo-entranable.jpg",
    "fuente": "Cinespécimen (distribuidora), ficha de la obra: afiche oficial LO ENTRAÑABLE, dirigido por Valentina Laverde Castillo",
@@ -129,11 +135,6 @@
    "archivo": "fuentes/bogoshorts-2026/altas/perjalanan-menuju-surga.jpg",
    "fuente": "Afiche oficial (Film Indo Source en X), con laurel Doha",
    "url": "https://pbs.twimg.com/media/HVEWo1VbgAAVSom.jpg?name=orig"
-  },
-  "Para los contrincantes": {
-   "archivo": "fuentes/bogoshorts-2026/afiches-web/4230.jpg",
-   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4230), 318×450",
-   "url": "https://festival.bogoshorts.com/images/peliculas/6ae2a0558ce0d__Para_los_contrincantes_CI-DOC01_P__ster_24BSFF__1_.jpg"
   },
   "The Waiting Palm": {
    "archivo": "fuentes/bogoshorts-2026/altas/the-waiting-palm.jpg",

@@ -8,9 +8,20 @@
  "directores": [
   "Mar Triana García"
  ],
+ "aliases": [
+  {
+   "titulo": "Complementary",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "El azul y el naranja se miran de frente en la rueda cromática, son colores COMPLEMENTARIOS. Al tocarse, se anulan. Desarrollado en un espacio abstracto, ambiguo y enrarecido, el extrañamiento de alguien se aproxima al síndrome de abstinencia. El amor es una droga dura. El amor y el recuerdo."
+  "es": "El azul y el naranja se miran de frente en la rueda cromática, son colores COMPLEMENTARIOS. Al tocarse, se anulan. Desarrollado en un espacio abstracto, ambiguo y enrarecido, el extrañamiento de alguien se aproxima al síndrome de abstinencia. El amor es una droga dura. El amor y el recuerdo.",
+  "en": "Blue and orange face one another on the color wheel; they are COMPLEMENTARY colors. When they touch, they cancel each other out. Set within an abstract, ambiguous, and rarefied space, one person’s estrangement begins to resemble withdrawal. Love is a hard drug. Love, and memory."
  },
+ "generos": [
+  "Experimental"
+ ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/complementarios.jpg",
   "veredicto": "oficial"

@@ -9,9 +9,20 @@
  "directores": [
   "Luna Martin"
  ],
+ "aliases": [
+  {
+   "titulo": "We are Born Alone, We Die Alone",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Tras partir hacia Colombia con mis cuadernos de dibujos, mis ojos se maravillan, pero ¿hasta dónde llegarán mis emociones?"
+  "es": "Tras partir hacia Colombia con mis cuadernos de dibujos, mis ojos se maravillan, pero ¿hasta dónde llegarán mis emociones?",
+  "en": "Having left for Colombia with my sketchbooks, my eyes are amazed by the new continent, but how far will my emotion go?"
  },
+ "generos": [
+  "Animación"
+ ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/on-nait-seul-on-meurt-seul.jpg",
   "veredicto": "oficial"

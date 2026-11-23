@@ -8,8 +8,16 @@
  "directores": [
   "Hannah Meszaros Martin"
  ],
+ "aliases": [
+  {
+   "titulo": "The Pixel and the Plot",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Los datos producen narrativas, políticas y leyes. Le dan forma a la tierra. El píxel y la parcela investiga el rol de los datos en la violencia de la erradicación de la coca en la Amazonía colombiana. Desde el momento en que la coca fue prohibida, su existencia y destrucción han sido cuantificadas y documentadas. Las imágenes de la coca son capturadas por satélites, fotografías y mapas, creando un complejo de información que convierte a la planta en un ser clandestino a ser eliminado."
+  "es": "Los datos producen narrativas, políticas y leyes. Le dan forma a la tierra. El píxel y la parcela investiga el rol de los datos en la violencia de la erradicación de la coca en la Amazonía colombiana. Desde el momento en que la coca fue prohibida, su existencia y destrucción han sido cuantificadas y documentadas. Las imágenes de la coca son capturadas por satélites, fotografías y mapas, creando un complejo de información que convierte a la planta en un ser clandestino a ser eliminado.",
+  "en": "Data creates narratives, policies and laws. Data shapes the earth. The Pixel and the Plot is about the role of data in the violence produced through the forced eradication of coca in the Colombian Amazon. From the moment that coca was outlawed its presence and destruction began to be quantified and documented. Images of coca are captured by satellites, photographs, and maps. Together they create an informational complex that constructs the plant as a clandestine being that must be eliminated."
  },
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/el-pixel-y-la-parcela.jpg",

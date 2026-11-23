@@ -8,9 +8,20 @@
  "directores": [
   "Sofía Uzcátegui León"
  ],
+ "aliases": [
+  {
+   "titulo": "Little Fish",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Una niña atraviesa la frontera entre el sueño y la realidad, la infancia se derrama y el futuro toma forma de pez."
+  "es": "Una niña atraviesa la frontera entre el sueño y la realidad, la infancia se derrama y el futuro toma forma de pez.",
+  "en": "A girl crosses the threshold between dream and reality, childhood spills over and the future takes the form of a fish."
  },
+ "generos": [
+  "Animación"
+ ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/pececin.jpg",
   "veredicto": "oficial"

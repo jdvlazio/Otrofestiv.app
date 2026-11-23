@@ -8,10 +8,20 @@
  "directores": [
   "Tania de León Yong"
  ],
+ "aliases": [
+  {
+   "titulo": "I Dreamt of Zapata",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
   "es": "Soñé con Zapata explora la experiencia migrante. Entre fragmentos oníricos y voz en off se articula la memoria, la identidad y el desplazamiento; es una mirada personal sobre los caminos que transforman a quienes habitan entre distintos lugares.",
-  "en": "Soñé con Zapata (I Dreamed of Zapata) – “Soñé con Zapata” is an experimental short film that explores the migrant experience from a poetic and sensory perspective, articulating the concepts of memory, identity, and displacement through moving images and sound design.  The work is set within the context of Mexico’s complex relationship with migration—as a country of origin, transit, and destination—and proposes an intimate reflection that seeks to build empathy. Based on a fragmented narrative, the short film constructs an emotional journey where the personal sphere intertwines with the collective.  “Soñé con Zapata” is conceived as an act of poetic and cultural resistance that re-signifies a fundamental icon of Mexican history, drawing inspiration from the choreography “Zapata” (1953) by Guillermo Arriaga. The work invites reflection on the links between body, territory, and freedom, offering no closed answers but rather opening a space for interpretation and dialogue."
+  "en": "Soñé con Zapata explores the migrant experience. Through dreamlike fragments and voice-over, it weaves together memory, identity, and displacement, offering a personal view of the paths that transform those who migrate."
  },
+ "generos": [
+  "Experimental"
+ ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/sone-con-zapata.jpg",
   "veredicto": "oficial"

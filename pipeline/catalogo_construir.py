@@ -89,6 +89,16 @@ def _anio_ok(a, b):
     return a is None or b is None or abs(a - b) <= 1
 
 
+def _separadas():
+    """Los pares del MISMO festival y título declarados distintos por su dirección."""
+    p = os.path.join(REPO, 'catalogo', 'revision-fase2.json')
+    if not os.path.exists(p):
+        return set()
+    return {frozenset((x[0], x[1], apellido(x[2])) for x in (d['a'], d['b']))
+            for d in json.load(io.open(p, encoding='utf-8')).get('identidad', [])
+            if not d['misma'] and len(d['a']) == 3 and len(d['b']) == 3}
+
+
 def construir(R):
     U = Uniones(len(R))
     for r in R:
@@ -115,6 +125,10 @@ def construir(R):
     for i, r in enumerate(R):
         if r['_h']:
             por_h[r['_h']].append(i)
+    # DOS OBRAS CON EL MISMO TÍTULO EN UN MISMO FESTIVAL (23 nov 2026): «The End» de Pelechian (1992) y la de Lindroth
+    # von Bahr (2026), las dos en TIFF. Se declaran en revision-fase2.json con la dirección como tercer dato
+    # ([festival, título, dirección]) y `misma: false`; sin declaración, vale la regla de siempre
+    separadas = _separadas()
     candidatos = []
     for h, ids in por_h.items():
         for x in range(len(ids)):
@@ -122,6 +136,8 @@ def construir(R):
                 a, b = R[ids[x]], R[ids[y]]
                 if a['tmdb'] and b['tmdb'] and a['tmdb'] != b['tmdb']:
                     continue                      # dos fichas distintas: no es la misma
+                if a['fest'] == b['fest'] and frozenset(((a['fest'], a['titulo'], a['_ap']), (b['fest'], b['titulo'], b['_ap']))) in separadas:
+                    continue
                 if a['fest'] == b['fest']:
                     U.une(ids[x], ids[y])         # un festival no repite título para dos obras
                     continue
@@ -159,6 +175,7 @@ def construir(R):
         idx = defaultdict(list)
         for i, r in enumerate(R):
             idx[(r['fest'], r['titulo'])].append(i)
+            idx[(r['fest'], r['titulo'], r['director'])].append(i)
         for d in json.load(io.open(rev_p, encoding='utf-8')).get('identidad', []):
             ia, ib = idx.get(tuple(d['a'])), idx.get(tuple(d['b']))
             if not ia or not ib:
@@ -254,7 +271,7 @@ def materializar(R, grupos, key, cache):
     for g in grupos:
         regs = [R[i] for i in g]
         # con sus títulos anteriores: un renombre conserva el id (FICPA, 13 oct)
-        viejos = sorted({w for w in (catalogo.obra_de(obs_viejas, r['fest'], t, r['tmdb'])
+        viejos = sorted({w for w in (catalogo.obra_de(obs_viejas, r['fest'], t, r['tmdb'], director=r['director'])
                                      for r in regs for t in [r['titulo']] + r['anteriores']) if w})
         wid = viejos[0] if viejos else None
         for w in viejos[1:]:            # dos obras de ayer son hoy la misma: un id nunca se borra, se redirige
@@ -350,7 +367,7 @@ def materializar(R, grupos, key, cache):
                          'fecha': hoy, 'quien': rev['quien']})
     for d in rev['identidad']:
         if not d['misma']:
-            a = catalogo.obra_de(nuevas, *d['a']); b = catalogo.obra_de(nuevas, *d['b'])
+            a, b = (catalogo.obra_de(nuevas, *x[:2], director=x[2] if len(x) > 2 else '') for x in (d['a'], d['b']))
             if (a, 'no-es') not in ya:
                 decs.append({'work_id': a, 'campo': 'no-es', 'valor': b, 'motivo': d['motivo'], 'fecha': hoy, 'quien': rev['quien']})
     # prioridad máxima: la decisión humana

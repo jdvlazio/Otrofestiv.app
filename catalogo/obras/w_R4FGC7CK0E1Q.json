@@ -17,11 +17,20 @@
    "titulo": "El Salto",
    "idioma": "en",
    "tipo": "traduccion"
+  },
+  {
+   "titulo": "The Fall",
+   "idioma": "en",
+   "tipo": "traduccion"
   }
  ],
  "sinopsis": {
-  "es": "Según el mito indígena muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera."
+  "es": "Según el mito indígena muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
+  "en": "According to the indigenous Muisca myth, the Bogotá plain was once flooded by streams that threatened to sweep everything away. The god Bochica appeared, and with his cane, he struck the mountain range, opening a passage for the dammed waters and forming the Tequendama Falls. At the edge of the precipice, the Bogotá River plunges over a bank of rocks. There it crashes and plunges in mist and foam into the abyss that awaits."
  },
+ "generos": [
+  "Experimental"
+ ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/el-salto.jpg",
   "veredicto": "oficial"

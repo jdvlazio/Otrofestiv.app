@@ -133,6 +133,8 @@ sin artículos iniciales, tokens ordenados. Bloqueo por año y por director: con
 | **Candidato** | título parecido (≥ 0,85) + año ±1; **o** título igual y una fuente sin director; **o** mismo director y año con otro título (traducción/aka) | va a tu revisión, con los dos lados a la vista; nunca se enlaza sola |
 | **No coincide** | director distinto y año distinto, aunque el título sea igual (homónimos, remakes) | obra nueva |
 
+Dos obras con el mismo título en el MISMO festival (los dos «The End» de TIFF) se declaran en `catalogo/revision-fase2.json` con la dirección como tercer dato (`[festival, título, dirección]`, `misma: false`); sin declararlas, el constructor las une.
+
 Los pares revisados se guardan (`catalogo/revisiones.json`) para recalibrar el
 umbral con datos reales, no a ojo.
 

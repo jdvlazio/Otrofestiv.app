@@ -121,9 +121,26 @@ NOMBRE = {'CI-CP': 'Corto Periodístico', 'CVR': 'Competencia VR - Realidad Virt
           'F3-03': 'Fanático Freak Fantástico 3',
           'WT-CRO1': 'World Tour: Croacia 1', 'WT-CRO2': 'World Tour: Croacia 2'}
 # lo que la leyenda no trae (programas y actividades): bogoshorts-2026-actividades.json
+GENERO = {f'{a}-{b}': g for a in ('CN', 'CI', 'PAC') for b, g in
+          (('DOC', 'Documental'), ('ANI', 'Animación'), ('EXP', 'Experimental'))}
+
+
+# el género que declara una fuente de la propia obra
+GENERO_OBRA = {'Métae': 'Experimental',          # shortfilmwire.com/en/embedded/film/200142909 «Fiction, Experimental»
+               'I Carry Them': 'Experimental'}   # web del director, «Experimental Narrative» (registro de altas)
+
+
+def _hu(t):
+    return re.sub(r'[^a-z0-9]', '', (t or '').lower())
+
+
 KORINCO = {'titulo': 'La primera estampilla de Korinco', 'pais': 'Colombia, Indonesia, Corea del Sur', 'anio': 2026, 'duracion_min': 5,
            'sinopsis': 'Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y '
                        'BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.',
+           # el inglés del mismo párrafo del catálogo (chiquiSHORTS) y el título inglés de festival.bogoshorts.com/corto/4335
+           'synopsis_en': 'A new production born from the creative partnership between the MINIKINO (Indonesia), SESIFF (South Korea), and '
+                          'BOGOSHORTS (Colombia) festivals, which continues to promote cinematic exchange among the three countries.',
+           'title_en': 'KORINCO’s first stamp',
            '_src': {'url': 'https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11', 'date': '2026-11-23'}}
 TEXTOS = json.load(open(f'{REPO}/festivals/staging/bogoshorts-2026-textos.json', encoding='utf-8'))
 DEF_FONTANAR = 'Entrada libre'   # catálogo, aviso de la sala: «fontanar del río … viernes, sábados y domingos 2:00 p.m. y 4:00 p.m. entrada libre»
@@ -196,6 +213,19 @@ def main():
                 o.update({k: e[k] for k in ('tmdb_id', 'lbSlug', 'poster') if e.get(k)})
                 if e.get('poster'):
                     o['posterSource'] = 'tmdb'
+    # el GÉNERO que el festival declara al programar (Competencia/Panorama Documental, Animación, Experimental), solo
+    # donde TMDB no da uno; «Ficción» y «Videoclip» no son géneros y no se traducen a ninguno. Y el título inglés del
+    # catálogo no pisa al de TMDB cuando solo cambia la caja o la puntuación.
+    _enr = {o['titulo']: o for o in (json.load(open(_e, encoding='utf-8'))['obras'] if os.path.exists(_e) else [])}
+    for c, os_ in progs.items():
+        for o in os_:
+            x = _enr.get(o['titulo'], {})
+            g = GENERO.get(re.sub(r'\d$', '', c)) or GENERO_OBRA.get(o['titulo'])
+            if g and (not x.get('genero') or 'genero' in (x.get('_heredado') or {})):
+                o['genero'] = g
+            if x.get('title_en') and 'title_en' not in (x.get('_heredado') or {}) \
+                    and _hu(x['title_en']) == _hu(o.get('title_en')):
+                o.pop('title_en')
     progs['CI-VC/CN-VC'] = progs['CI-VC'] + progs['CN-VC']
     funciones, descartadas = [], []
     for e, col, ws_ in sorted(celdas, key=lambda k: (k[1], k[0][0], k[2][0][1])):
@@ -313,7 +343,11 @@ def main():
                       'duracion_min': 420 if f['hora'] == '11:00' else 240})
         if f.get('codigo') == 'BFM-IV':
             f['obras'] = [{'titulo': 'Furia', 'director': 'Daniela Córdoba', 'pais': 'Colombia', 'anio': 2026,
-                           'duracion_min': 14, 'sinopsis': TEXTOS['textos']['furia']['es'], '_src': {'url': b['pagina'], 'date': '2026-11-23'}}]
+                           'duracion_min': 14, 'sinopsis': TEXTOS['textos']['furia']['es'], 'title_en': 'Rage',
+                           # catálogo del BFM 2026, «Furia / Rage»
+                           'synopsis_en': 'Felipe sneaks into a gig and discovers that his boyfriend Eduardo is hiding him out of fear of accepting his own '
+                                          'homosexuality. Amid a first chemical trip and a mosh pit, they let go and lose their inhibitions, until an '
+                                          'attempted kiss threatens to unleash violence and their deepest fears.', '_src': {'url': b['pagina'], 'date': '2026-11-23'}}]
         # UN programa de UNA obra no es un programa: la función es esa obra (FI-LARGO, Furia)
         if len(f.get('obras') or []) == 1:
             u = f.pop('obras')[0]

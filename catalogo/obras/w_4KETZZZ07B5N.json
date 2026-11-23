@@ -8,8 +8,16 @@
  "directores": [
   "Patrícia Saramago"
  ],
+ "aliases": [
+  {
+   "titulo": "Two and a Cat",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Una joven pareja y su gato, al que esconden, comparten una habitación que apenas pueden pagar. Entre las dificultades cotidianas encuentran maneras de cuidarse."
+  "es": "Una joven pareja y su gato, al que esconden, comparten una habitación que apenas pueden pagar. Entre las dificultades cotidianas encuentran maneras de cuidarse.",
+  "en": "The messy life of a young couple and their clandestine cat in a room whose rent they cannot afford. A story of love, sharing, and hope — unshakable and resilient in its innocence in the face of the unstable and disordered life of our times."
  },
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/dois-e-um-gato.jpg",

@@ -8,9 +8,20 @@
  "directores": [
   "David Correa"
  ],
+ "aliases": [
+  {
+   "titulo": "Camera Test",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Un padre canta tangos mientras una cámara antigua lo retrata en una serie de puestas en escena aparentemente inconexas, ruidos y fotos familiares. Su hijo, desde el otro lado del lente, escucha fragmentos de una cotidianeidad que no volverá. En ese breve instante convertido en película, la familia se vuelve memoria."
+  "es": "Un padre canta tangos mientras una cámara antigua lo retrata en una serie de puestas en escena aparentemente inconexas, ruidos y fotos familiares. Su hijo, desde el otro lado del lente, escucha fragmentos de una cotidianeidad que no volverá. En ese breve instante convertido en película, la familia se vuelve memoria.",
+  "en": "A father sings tangos while an old camera portrays him in a series of seemingly disconnected stagings, noises, and family photos. His son, from the other side of the lens, listens to fragments of an everyday life that will not return. In that brief instant turned into film, the family becomes memory."
  },
+ "generos": [
+  "Experimental"
+ ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/prueba-de-camara.jpg",
   "veredicto": "oficial"

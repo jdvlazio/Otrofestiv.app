@@ -8,9 +8,20 @@
  "directores": [
   "Megumi Cardona"
  ],
+ "aliases": [
+  {
+   "titulo": "A Supposed Letter",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Una mujer se dirige al padre que nunca conoció y cuya existencia desconoció durante años. Reconstruye su imagen a través de las fotografías que su madre mantuvo ocultas durante años. A partir de esas imágenes surgen preguntas sobre su abandono, sus decisiones y el parecido que aún la conecta con ese fantasma. En su búsqueda, encuentra pistas que la hacen preguntarse si, quizás, él nunca la olvidó del todo."
+  "es": "Una mujer se dirige al padre que nunca conoció y cuya existencia desconoció durante años. Reconstruye su imagen a través de las fotografías que su madre mantuvo ocultas durante años. A partir de esas imágenes surgen preguntas sobre su abandono, sus decisiones y el parecido que aún la conecta con ese fantasma. En su búsqueda, encuentra pistas que la hacen preguntarse si, quizás, él nunca la olvidó del todo.",
+  "en": "A woman addresses the father she never knew and whose existence she was unaware of. She pieces him together through photographs her mother kept hidden for years. From those images arise questions about his abandonment, his choices, and the resemblance that still connects her to that ghost. In her search, she finds clues that make her wonder if, perhaps, he never truly forgot about her."
  },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/una-carta-supuesta.jpg",
   "veredicto": "oficial"

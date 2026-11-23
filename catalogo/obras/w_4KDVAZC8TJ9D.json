@@ -8,8 +8,16 @@
  "directores": [
   "José Andrés Canales"
  ],
+ "aliases": [
+  {
+   "titulo": "The Stadium of Love",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Un equipo de fútbol llega al “Estadio del Amor”, un campo situado en un remoto pueblo de Transilvania, para disputar un partido amistoso. Lo que comienza como un típico desplazamiento se convierte en un viaje en el tiempo, lleno de historias y encanto local de lo que alguna vez fue un próspero pueblo minero que mantiene viva su memoria a través del fútbol."
+  "es": "Un equipo de fútbol llega al “Estadio del Amor”, un campo situado en un remoto pueblo de Transilvania, para disputar un partido amistoso. Lo que comienza como un típico desplazamiento se convierte en un viaje en el tiempo, lleno de historias y encanto local de lo que alguna vez fue un próspero pueblo minero que mantiene viva su memoria a través del fútbol.",
+  "en": "A football team arrives at the “Stadium of Love,” a pitch located in a remote village in Transylvania, to play a friendly match. What begins as a typical away game turns into a journey through time, filled with stories and the local charm of a once-thriving mining town that keeps its memory alive through football."
  },
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/stadionul-dragostei.jpg",

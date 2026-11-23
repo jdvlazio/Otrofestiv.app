@@ -8,9 +8,20 @@
  "directores": [
   "Marta Hincapié Uribe"
  ],
+ "aliases": [
+  {
+   "titulo": "Whispers",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Con imágenes que un director descartó de su película y la ayuda de una lupa digital, una cineasta las transforma y revela los secretos que guardan. Bajo la superficie visible, una imagen liberada."
+  "es": "Con imágenes que un director descartó de su película y la ayuda de una lupa digital, una cineasta las transforma y revela los secretos que guardan. Bajo la superficie visible, una imagen liberada.",
+  "en": "Using images that a director discarded from his film and with the help of a digital magnifying glass, a filmmaker recasts them and reveals the untold secrets they hold. Beneath the visible surface, an image is liberated."
  },
+ "generos": [
+  "Experimental"
+ ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/susurros.jpg",
   "veredicto": "oficial"

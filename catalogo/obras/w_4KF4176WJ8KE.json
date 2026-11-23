@@ -9,8 +9,16 @@
  "directores": [
   "Alex Jiang"
  ],
+ "aliases": [
+  {
+   "titulo": "Tropic of Cancer",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo."
+  "es": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
+  "en": "In a small-town lingerie factory, a young man’s monotonous life is upended by an unexpected bond and his awakening queerness."
  },
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",

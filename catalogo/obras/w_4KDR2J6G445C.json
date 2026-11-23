@@ -8,9 +8,20 @@
  "directores": [
   "Juan Pablo Melo"
  ],
+ "aliases": [
+  {
+   "titulo": "Long Lost Personals",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "En algún momento del siglo XX suena la radio. Por los cables de luz de Bogotá viajan anhelos perdidos y cartas sin destino."
+  "es": "En algún momento del siglo XX suena la radio. Por los cables de luz de Bogotá viajan anhelos perdidos y cartas sin destino.",
+  "en": "At some point in the twentieth century, the radio plays. Lost desires and undelivered letters travel through Bogotá’s electricity cables."
  },
+ "generos": [
+  "Experimental"
+ ],
  "xref": {},
  "versiones": [
   {

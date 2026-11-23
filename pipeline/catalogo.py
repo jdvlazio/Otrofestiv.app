@@ -116,7 +116,7 @@ def indice(obs):
     return por_h, por_t
 
 
-def obra_de(obs, fid, titulo, tmdb=None, ix=None):
+def obra_de(obs, fid, titulo, tmdb=None, ix=None, director=''):
     """El work_id de una obra de un festival: la que lo lista en sus
     presentaciones y cuyo título (original o alias) tiene la misma huella; o la
     que lleva su tmdb. Ninguna o más de una → None (no se adivina)."""
@@ -126,6 +126,9 @@ def obra_de(obs, fid, titulo, tmdb=None, ix=None):
     # Anibia 2026: el artículo inicial no cuenta): desempata su tmdb, si lo hay
     if len(hits) > 1 and tmdb:
         hits = hits & (por_t.get(tmdb) or set())
+    # o su dirección: dos «The End» en TIFF (Pelechian y Lindroth von Bahr, 23 nov 2026)
+    elif len(hits) > 1 and apellido(director):
+        hits = {w for w in hits if apellido(director) in {apellido(d) for d in obs[w].get('directores') or []}}
     return next(iter(hits)) if len(hits) == 1 else None
 
 
@@ -172,7 +175,7 @@ def enlazar(d, fid, obs, ix=None):
                 continue
             # un renombre (`titulos_anteriores`, PR #1040) sigue siendo la misma
             # obra: «También nuestra» → «También nosotras» (FICPA, 13 oct)
-            w = next((x for x in (obra_de(obs, fid, t, o.get('tmdb_id'), ix)
+            w = next((x for x in (obra_de(obs, fid, t, o.get('tmdb_id'), ix, o.get('director') or '')
                                   for t in [o['title']] + list(o.get('titulos_anteriores') or [])) if x), None)
             if w:
                 o['work_id'] = w

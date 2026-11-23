@@ -90,7 +90,7 @@ def huella(t):
     return re.sub(r'[^a-z0-9]', '', ''.join(c for c in t if not unicodedata.combining(c)))
 
 
-EN = re.compile(r"\b(the|and|of|his|her|with|is|a|to|that|their|from|who|an)\b", re.I)
+EN = re.compile(r"\b(the|and|of|his|her|with|is|a|to|that|their|from|who|an|in|every|other)\b", re.I)
 ES = re.compile(r"\b(el|la|los|las|de|que|y|en|un|una|su|con|por|se|del|al)\b", re.I)
 # dos columnas impresas en las mismas líneas: pdftotext las mezcla (leída a ojo, catálogo pág. 88)
 MEZCLADAS = {'Red Elephant': (
@@ -98,6 +98,22 @@ MEZCLADAS = {'Red Elephant': (
     'comparte su recorrido por la violencia silenciosa de la burocracia, donde lo queer debe traducirse en pruebas y el trauma '
     'en testimonio. En el sistema de asilo belga, a solicitantes LGBTQ+, muchos provenientes de lugares donde callar era '
     'sobrevivir, se les exige narrar lo indecible y contar sus heridas más íntimas a desconocidos.')}
+
+
+MEZCLADAS_EN = {'Red Elephant': (
+    'What does queerness look like when you’ve spent a lifetime erasing every trace of it to stay alive? In Red Elephant, the '
+    'director shares his journey through the quiet violence of bureaucracy, where queerness must be translated into evidence, '
+    'and trauma into testimony. In Belgium’s asylum system, LGBTQ+ seekers, many from worlds where silence meant survival, are '
+    'asked to speak the unspeakable, recounting their most intimate wounds to strangers they’ve only just met.')}
+
+# «Título / traducción / traducción»: cuál de los títulos alternos del catálogo es el INGLÉS. Es el primero, salvo
+# aquí: el original ya está en inglés o el alterno es español/otra lengua → sin title_en (leídos uno por uno, 23 nov 2026)
+SIN_INGLES = {'They’re Here', 'A Body that Hurts', 'O sigilo', 'Nothing Here is Lost', 'To the North', 'Virgin Fandango',
+              'If Only', 'Night Feeds', 'I Wanna Go Home', 'The Getaway', 'The Birthday Gift', 'The Tide Inside', 'See You in the Morning',
+              'Fiction', 'Transastralisme', 'Grounded', 'Cat Me If You Can', 'Au-dessus du vacarme'}
+INGLES = {'L’uomo meccanico': 'The Mechanical Man',
+          # el PDF imprime el artista en el título inglés también; el título es lo de antes
+          'La ciudad de las flores (Maleza y Los Floripondios)': 'City of Flowers'}
 
 
 def solo_es(t):
@@ -108,6 +124,28 @@ def solo_es(t):
             break
         out.append(fr)
     return ' '.join(out)
+
+
+def es_ingles(t):
+    return len(EN.findall(t)) > len(ES.findall(t)) and len(t) > 25
+
+
+def sinopsis_en(bs, caja, sin, lim):
+    """La versión inglesa que el catálogo imprime de la MISMA sinopsis: al lado (misma altura),
+    debajo en la misma columna (páginas de 4–6 cortos) o apilada tras la española (Cortofilia).
+    Tiene que leerse como inglés; si no, vacío."""
+    cola = unir(sin)[len(solo_es(unir(sin))):].strip()
+    if es_ingles(cola):
+        return cola
+    x, y, yf = caja[0], caja[1], caja[3]
+    lado = [c for c in bs if 60 < c[0] - x < 330 and abs(c[1] - y) < 12]
+    abajo = [c for c in bs if abs(c[0] - x) < 4 and yf - 1 <= c[1] < min(lim, yf + 40)
+             and not NO_SINOPSIS.match(c[4][0]) and not any(META.match(z) for z in c[4])]
+    for c in sorted(abajo, key=lambda c: c[1]) + sorted(lado, key=lambda c: c[0]):
+        t = unir(c[4])
+        if es_ingles(t) and not any(META.match(z) for z in c[4]) and not re.search(r'\w / (music|cast|sound|editing|screenplay)\b', t):
+            return t
+    return ''
 
 
 def leer():
@@ -151,12 +189,14 @@ def leer():
                 cont = ''
                 while tras and tras[0][:1].islower() and len(tras[0]) < 40:
                     cont, tras = (cont + ' ' + tras[0]).strip(), tras[1:]
+                caja = b
                 if tras:
                     sin = tras
                 else:
                     deb = [c for c in bs if col(c) and c[1] >= b[3] - 1 and c[1] - b[3] < 30
                            and not NO_SINOPSIS.match(c[4][0])]
                     sin = min(deb, key=lambda c: c[1])[4] if deb else []
+                    caja = min(deb, key=lambda c: c[1]) if deb else b
                 # dirección: la primera «dirección / direction» de la columna antes de la próxima ficha
                 prox = [c[1] for c in bs if col(c) and c[1] > b[3] + 1 and any(META.match(z) for z in c[4])]
                 lim = min(prox) if prox else 1e9
@@ -186,7 +226,13 @@ def leer():
                         obra['language'] = resto[-1]
                 if sin:
                     obra['sinopsis'] = MEZCLADAS.get(obra['titulo']) or solo_es(unir(sin))
+                en = MEZCLADAS_EN[obra['titulo']] if obra['titulo'] in MEZCLADAS_EN else sinopsis_en(bs, caja, sin, lim) if sin else ''
+                if en:
+                    obra['synopsis_en'] = en
                 obra['_src'] = {'url': URL, 'pagina': p, 'date': '2026-11-13'}
+                t = INGLES.get(obra['titulo']) or (obra.get('titulos_alt') or [''])[0]
+                if t and obra['titulo'] not in SIN_INGLES and huella(t) != huella(obra['titulo']):
+                    obra['title_en'] = t
                 c = CODIGO_GRILLA.get(cod, cod)
                 if c not in progs:
                     orden.append(c)

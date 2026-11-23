@@ -8,9 +8,20 @@
  "directores": [
   "Hans Chispas"
  ],
+ "aliases": [
+  {
+   "titulo": "Balcony’s Sorrows",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Lamentos de un balcón es una película experimental que indaga sobre la arquitectura de la zona del Rodadero (Santa Marta, Colombia) en su relación con el turismo de masas."
+  "es": "Lamentos de un balcón es una película experimental que indaga sobre la arquitectura de la zona del Rodadero (Santa Marta, Colombia) en su relación con el turismo de masas.",
+  "en": "Lamentos de un balcón is an experimental film that explores the architecture of the Rodadero area (Santa Marta, Colombia) and its relationship to mass tourism."
  },
+ "generos": [
+  "Experimental"
+ ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/lamentos-de-un-balcon.jpg",
   "veredicto": "oficial"
