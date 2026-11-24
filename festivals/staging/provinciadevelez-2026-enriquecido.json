@@ -5,24 +5,6 @@
  },
  "obras": [
   {
-   "titulo": "Ecos del cañaveral",
-   "tmdb_id": 1753875,
-   "titulo_original": "Ecos del cañaveral",
-   "poster_path": "/cmer33AvAocyiYdipbffmKckg02.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "Five sugarcane farmers tell the story of an ancestral trade that resists being forgotten and faces an uncertain future in the Colombian countryside.",
-   "genero": "Documental",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 7,
-   "pais_tmdb": "Colombia",
-   "lbSlug": "ecos-del-canaveral",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Juan Sebastián Parra",
-   "_sondeado": "2026-11-24",
-   "poster": "/assets/provinciadevelez-2026/ecos-del-canaveral.jpg",
-   "posterSource": "tmdb"
-  },
-  {
    "titulo": "El fantástico Sr. Fox",
    "tmdb_id": 10315,
    "titulo_original": "Fantastic Mr. Fox",
@@ -188,12 +170,6 @@
    }
   },
   {
-   "titulo": "Gualí",
-   "poster": "/assets/provinciadevelez-2026/guali.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/13 (afiche recortado de la lámina del festival)"
-  },
-  {
    "titulo": "De la tradición a la prohibición",
    "poster": "/assets/provinciadevelez-2026/de-la-tradicion-a-la-prohibicion.jpg",
    "posterSource": "oficial",
@@ -264,46 +240,9 @@
    "_heredado": {
     "duracion_tmdb": "catálogo w_7JCX3G2FWFFG (provinciadevelez-2026)"
    }
-  },
-  {
-   "titulo": "Uma Uñjirinaka · Puchucollo Alto",
-   "poster": "/assets/provinciadevelez-2026/uma-unjirinaka-puchucollo-alto.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: lámina https://www.instagram.com/p/Df-DlZyERf2/02 (afiche recortado de la lámina del festival)",
-   "duracion_tmdb": 16,
-   "_heredado": {
-    "duracion_tmdb": "catálogo w_7JCVD5K40YQV (provinciadevelez-2026)"
-   }
-  },
-  {
-   "titulo": "Una mala chicha es un guarapo",
-   "poster": "/assets/provinciadevelez-2026/una-mala-chicha-es-un-guarapo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: lámina https://www.instagram.com/p/Df-DlZyERf2/04 (afiche recortado de la lámina del festival)",
-   "duracion_tmdb": 5,
-   "_heredado": {
-    "duracion_tmdb": "catálogo w_7JCVRJ902T1F (provinciadevelez-2026)"
-   }
   }
  ],
  "verificadas": {
-  "Ecos del cañaveral": {
-   "tmdb_id": 1753875,
-   "titulo_original": "Ecos del cañaveral",
-   "poster_path": "/cmer33AvAocyiYdipbffmKckg02.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "Five sugarcane farmers tell the story of an ancestral trade that resists being forgotten and faces an uncertain future in the Colombian countryside.",
-   "genero": "Documental",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 7,
-   "pais_tmdb": "Colombia",
-   "lbSlug": "ecos-del-canaveral",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
-   "_director": "Juan Sebastián Parra",
-   "_sondeado": "2026-11-24",
-   "poster": "/assets/provinciadevelez-2026/ecos-del-canaveral.jpg",
-   "posterSource": "tmdb"
-  },
   "El fantástico Sr. Fox": {
    "tmdb_id": 10315,
    "titulo_original": "Fantastic Mr. Fox",
@@ -417,9 +356,7 @@
   "El dolor del vientre",
   "El latir de la memoria",
   "El pescador (videoclip)",
-  "Entre Ríos. Todos somos hermanos",
   "Entre amigos",
-  "Gualí",
   "La imaginada",
   "Limones",
   "Llantos del monte",
@@ -428,9 +365,7 @@
   "Saint Juanito",
   "Salvemos el agua",
   "Uma Uñjirinaka · Alto Milluni",
-  "Uma Uñjirinaka · Puchucollo Alto",
-  "Un diálogo para sanar la Tierra",
-  "Una mala chicha es un guarapo"
+  "Un diálogo para sanar la Tierra"
  ],
  "_sin_ficha_sondeo": {
   "Anima Sola": {
@@ -469,16 +404,8 @@
    "director": "Juan Cruz",
    "fecha": "2026-11-24"
   },
-  "Entre Ríos. Todos somos hermanos": {
-   "director": "",
-   "fecha": "2026-11-24"
-  },
   "Entre amigos": {
    "director": "Edward Llanos, Simón Muñoz",
-   "fecha": "2026-11-24"
-  },
-  "Gualí": {
-   "director": "",
    "fecha": "2026-11-24"
   },
   "La imaginada": {
@@ -513,16 +440,8 @@
    "director": "Left Hand Rotation",
    "fecha": "2026-11-24"
   },
-  "Uma Uñjirinaka · Puchucollo Alto": {
-   "director": "Left Hand Rotation",
-   "fecha": "2026-11-24"
-  },
   "Un diálogo para sanar la Tierra": {
    "director": "",
-   "fecha": "2026-11-24"
-  },
-  "Una mala chicha es un guarapo": {
-   "director": "Wilson Beltrán, Wilson Valderrama",
    "fecha": "2026-11-24"
   }
  }

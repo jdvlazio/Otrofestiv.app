@@ -12,23 +12,23 @@
  "shortName": "PROVINCIA DE VÉLEZ",
  "tagline": "Festival de Cine",
  "_por_que_copy": "nombre: <title> de la web «9.º Festival de Cine Provincia de Vélez». Nombre corto de portada «Provincia de Vélez» y subtítulo «Festival de Cine»: las dos líneas del logo del afiche, sin repetirse. PROPUESTA para Juan.",
- "city": "Barbosa y Vélez",
+ "city": "Barbosa",
  "country": "CO",
- "dates": "30 NOV–6 DIC",
- "dates_en": "NOV 30–DEC 6",
+ "dates": "1–6 DIC",
+ "dates_en": "DEC 1–6",
  "year": 2026,
  "timezoneOffset": "-05:00",
  "storageKey": "provinciadevelez2026_",
- "festivalStartStr": "2026-11-30T00:00:00",
+ "festivalStartStr": "2026-12-01T00:00:00",
  "festivalEndStr": "2026-12-06T23:59:00",
  "sharedSlotIsOneScreening": false,
  "dias_vacios": [
   "2026-12-06"
  ],
  "instagram": "9_festcineprovinciadevelez",
- "prioLimit": 4,
+ "_por_que_fechas": "El afiche oficial (IG DfihtPIRt2g) dice 1 al 6 de diciembre: el 30 nov en el SENA de Vélez no va (Juan, 24 nov 2026).",
+ "prioLimit": 3,
  "dias": [
-  "2026-11-30",
   "2026-12-01",
   "2026-12-02",
   "2026-12-03",
@@ -37,7 +37,6 @@
   "2026-12-06"
  ],
  "festivalDates": {
-  "2026-11-30": "2026-11-30",
   "2026-12-01": "2026-12-01",
   "2026-12-02": "2026-12-02",
   "2026-12-03": "2026-12-03",
@@ -46,11 +45,6 @@
   "2026-12-06": "2026-12-06"
  },
  "days": [
-  {
-   "k": "2026-11-30",
-   "d": 30,
-   "lbl": "LUN"
-  },
   {
    "k": "2026-12-01",
    "d": 1,
@@ -83,7 +77,6 @@
   }
  ],
  "dayKeys": [
-  "2026-11-30",
   "2026-12-01",
   "2026-12-02",
   "2026-12-03",
@@ -92,7 +85,6 @@
   "2026-12-06"
  ],
  "dayShort": {
-  "2026-11-30": "LUN 30",
   "2026-12-01": "MAR 1",
   "2026-12-02": "MIÉ 2",
   "2026-12-03": "JUE 3",
@@ -101,7 +93,6 @@
   "2026-12-06": "DOM 6"
  },
  "dayShort_en": {
-  "2026-11-30": "MON 30",
   "2026-12-01": "TUE 1",
   "2026-12-02": "WED 2",
   "2026-12-03": "THU 3",
@@ -110,7 +101,6 @@
   "2026-12-06": "SUN 6"
  },
  "dayLong": {
-  "2026-11-30": "Lunes 30 de noviembre",
   "2026-12-01": "Martes 1 de diciembre",
   "2026-12-02": "Miércoles 2 de diciembre",
   "2026-12-03": "Jueves 3 de diciembre",
@@ -119,33 +109,23 @@
   "2026-12-06": "Domingo 6 de diciembre"
  },
  "sections": {
-  "🏆 Selección Oficial": {
-   "en": "Official Selection",
-   "archetype": "Competencia",
-   "order": 1
-  },
   "🧒 Franja Infantil": {
    "en": "Children's Program",
    "archetype": "Muestra / País",
-   "order": 2
+   "order": 1
   },
   "⭐ Muestra Especial": {
    "en": "Special Showcase",
    "archetype": "Especiales / Eventos",
+   "order": 2
+  },
+  "🏆 Selección Oficial": {
+   "en": "Official Selection",
+   "archetype": "Competencia",
    "order": 3
   }
  },
  "venues": {
-  "Auditorio SENA - Vélez": {
-   "short": "Auditorio SENA",
-   "city": "Vélez",
-   "lat": 6.0098388,
-   "lng": -73.6678772,
-   "_prec": "manual",
-   "_match": "Google Maps (24 nov 2026): «SENA», Vélez — único resultado para «auditorio SENA Vélez Santander» y para «SENA Centro de Gestión Agroempresarial del Oriente Vélez»; la lámina: «SENA Centro de Gestión Agroempresarial del Oriente · Vélez · Auditorio SENA»",
-   "_maps": "https://www.google.com/maps/place/SENA/@6.0098388,-73.6678772,17z",
-   "_matriz": "s_df4ef395"
-  },
   "Casa Escuela Formación Musical Leo Olarte - Barbosa": {
    "short": "Casa Escuela Formación Musical Leo Olarte",
    "city": "Barbosa",
@@ -204,119 +184,6 @@
  "_avisos_id": [],
  "films": [
   {
-   "title": "Categorías Documental y Cortometraje",
-   "type": "film",
-   "section": "🏆 Selección Oficial",
-   "country": "Bolivia, Colombia",
-   "flags": "🇧🇴🇨🇴",
-   "duration": "41 min",
-   "_ancla": [
-    "Auditorio SENA - Vélez",
-    "2026-11-30",
-    "16:00"
-   ],
-   "day": "2026-11-30",
-   "time": "16:00",
-   "day_order": 0,
-   "venue": "Auditorio SENA - Vélez",
-   "has_qa": false,
-   "_src": {
-    "url": "https://www.instagram.com/p/Df-DlZyERf2/",
-    "date": "2026-11-20",
-    "tipo": "festival-ig"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Uma Uñjirinaka · Puchucollo Alto",
-     "director": "Left Hand Rotation",
-     "country": "Bolivia",
-     "flags": "🇧🇴",
-     "genre": "Documental",
-     "synopsis_en": "It shows the testimony and struggle of the urban and rural Indigenous communities affected by water pollution in the Katari - Lake Titicaca basin in Bolivia. In Puchukollo Alto, on the outskirts of the megacity of El Alto, the families of the community defend the aquifer located there against the seizure and pollution of its waters.",
-     "synopsis": "Muestra el testimonio y lucha de las comunidades indígenas urbanas y rurales afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Puchukollo Alto, periferia de la mega-urbe El Alto, las familias de la comunidad defienden el acuífero allí situado contra la usurpación y contaminación de sus aguas.",
-     "synopsis_lang": "es",
-     "poster": "/assets/provinciadevelez-2026/uma-unjirinaka-puchucollo-alto.jpg",
-     "posterSource": "oficial",
-     "duration": "16 min",
-     "_duracion_corregida": "https://www.youtube.com/watch?v=mwU1w1HS9XM"
-    },
-    {
-     "title": "Ecos del cañaveral",
-     "director": "Juan Sebastián Parra",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "genre": "Documental",
-     "synopsis": "En el corazón del trapiche, donde el sonido de la caña molida acompaña las jornadas de trabajo, Ecos del cañaveral retrata la vida de cinco campesinos hacedores de panela que han dedicado su existencia a un oficio ancestral.",
-     "synopsis_lang": "es",
-     "poster": "/assets/provinciadevelez-2026/ecos-del-canaveral.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "ecos-del-canaveral",
-     "tmdb_id": 1753875,
-     "synopsis_en": "Five sugarcane farmers tell the story of an ancestral trade that resists being forgotten and faces an uncertain future in the Colombian countryside.",
-     "year": 2026,
-     "duration": "7 min"
-    },
-    {
-     "title": "Una mala chicha es un guarapo",
-     "director": "Wilson Beltrán, Wilson Valderrama",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "synopsis_en": "Eulalio is tempted to sell the land that has been in his family for generations. A little chicha will help him make the best decision.",
-     "synopsis": "A Eulalio se le presenta la tentación de vender las tierras que han pasado de generación en generación en su familia. Un poco de chicha le ayudará a tomar la mejor decisión.",
-     "synopsis_lang": "es",
-     "poster": "/assets/provinciadevelez-2026/una-mala-chicha-es-un-guarapo.jpg",
-     "posterSource": "oficial",
-     "duration": "5 min",
-     "_duracion_corregida": "https://www.youtube.com/watch?v=-Li5tJPY98A"
-    },
-    {
-     "title": "Uma Uñjirinaka · Alto Milluni",
-     "director": "Left Hand Rotation",
-     "country": "Bolivia",
-     "flags": "🇧🇴",
-     "genre": "Documental",
-     "synopsis_en": "It shows the testimony and struggle of the Indigenous communities affected by water pollution in the Katari - Lake Titicaca basin in Bolivia. In Alto Milluni, whose spring water is stolen daily to be taken to the megacity of El Alto, the women propose a local community tourism project in order to survive.",
-     "synopsis": "Muestra el testimonio y lucha de las comunidades indígenas afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Alto Milluni, cuya agua naciente es robada a diario para ser llevada a la mega-urbe El Alto, las mujeres proponen un proyecto de turismo comunitario local para la supervivencia.",
-     "synopsis_lang": "es",
-     "poster": "/assets/provinciadevelez-2026/uma-unjirinaka-alto-milluni.jpg",
-     "posterSource": "oficial",
-     "duration": "13 min",
-     "_duracion_corregida": "https://www.youtube.com/watch?v=WR8JaGW0p-8"
-    },
-    {
-     "title": "Gualí",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "year": 2025,
-     "genre": "Documental",
-     "synopsis_en": "In the heart of the Bogotá savanna, the Gualí wetland is a sanctuary of biodiversity. The documentary immerses itself in its natural wealth through a poetic visual narrative.",
-     "synopsis": "En el corazón de la sabana de Bogotá, el humedal Gualí es un santuario de biodiversidad. El documental se sumerge en su riqueza natural a través de una narrativa visual poética.",
-     "synopsis_lang": "es",
-     "poster": "/assets/provinciadevelez-2026/guali.jpg",
-     "posterSource": "oficial"
-    },
-    {
-     "title": "Un diálogo para sanar la Tierra",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "genre": "Documental",
-     "synopsis_en": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Güindiva Villafaña Mejía.",
-     "synopsis": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Güindiva Villafaña Mejía.",
-     "synopsis_lang": "es",
-     "poster": "/assets/provinciadevelez-2026/un-dialogo-para-sanar-la-tierra.jpg",
-     "posterSource": "oficial"
-    },
-    {
-     "title": "Entre Ríos. Todos somos hermanos"
-    }
-   ],
-   "_fid": "f_bfa3472366",
-   "id": "f_bfa3472366",
-   "_duracion_corregida": "suma de sus obras con duración verificada"
-  },
-  {
    "title": "La familia Bélier + El pescador (videoclip)",
    "type": "film",
    "section": "🧒 Franja Infantil",
@@ -330,7 +197,7 @@
    ],
    "day": "2026-12-01",
    "time": "18:00",
-   "day_order": 1,
+   "day_order": 0,
    "venue": "Casa Escuela Formación Musical Leo Olarte - Barbosa",
    "has_qa": false,
    "_src": {
@@ -387,7 +254,7 @@
    ],
    "day": "2026-12-02",
    "time": "19:00",
-   "day_order": 2,
+   "day_order": 1,
    "venue": "Grupo Central AA - Barbosa",
    "has_qa": false,
    "_src": {
@@ -441,7 +308,7 @@
    ],
    "day": "2026-12-03",
    "time": "18:00",
-   "day_order": 3,
+   "day_order": 2,
    "venue": "Casa Taller Palo de Mango - Barbosa",
    "has_qa": false,
    "_src": {
@@ -497,7 +364,7 @@
    ],
    "day": "2026-12-04",
    "time": "18:00",
-   "day_order": 4,
+   "day_order": 3,
    "venue": "La Tante Boutique - Barbosa",
    "has_qa": false,
    "synopsis": "A través de un diálogo íntimo entre el documental y la ficción, La imaginada recorre la memoria colectiva y los relatos orales de Barbosa, Santander, para revelar cómo sus habitantes han construido su identidad a lo largo del tiempo. Con la presencia de la escritora y directora Carolina Muñoz.",
@@ -529,7 +396,7 @@
    ],
    "day": "2026-12-04",
    "time": "19:00",
-   "day_order": 4,
+   "day_order": 3,
    "venue": "La Tante Boutique - Barbosa",
    "has_qa": false,
    "_src": {
@@ -673,7 +540,7 @@
    ],
    "day": "2026-12-05",
    "time": "18:00",
-   "day_order": 5,
+   "day_order": 4,
    "venue": "Parque Emilio Ulloa - Barbosa",
    "has_qa": false,
    "_src": {
@@ -767,8 +634,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T15:21:31",
-  "plan_sha": "2a5e7249ae8789dd",
+  "fecha": "2026-11-24T15:43:26",
+  "plan_sha": "000e0785312106ef",
   "paso": 7,
   "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"
  }
