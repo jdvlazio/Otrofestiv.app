@@ -81,6 +81,8 @@ class Decidir(unittest.TestCase):
             self._d([], 'afiche', '/a')                    # nuevo, sin veredicto
         with self.assertRaises(SystemExit):
             self._d([], 'afiche', '/assets/no-existe.jpg')
+        with self.assertRaises(SystemExit):
+            ou.decidir([], self.V, 'w_1', 'afiche', '/a', 'm', 'q', 'f', veredicto='ofical')
         ya = [{'work_id': 'w_1', 'campo': 'afiche', 'valor': {'archivo': '/a', 'veredicto': 'fotograma'}}]
         d = self._d(ya, 'afiche', '/a')                    # ratificar conserva el veredicto
         self.assertEqual((d['valor'], d['vistas'], 'a_mano' in d), ({'archivo': '/a', 'veredicto': 'fotograma'}, ['/b'], False))

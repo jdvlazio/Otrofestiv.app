@@ -123,7 +123,7 @@ def que_hacer(xs):
     out = []
     if any(x[3] is not None for x in xs):
         out.append('decidido y publicado distinto → ficha_unica.py, sinopsis_unicas.py y afiches_unicos.py, cada uno con --aplicar --escribir; '
-                   'un afiche o una sinopsis NUEVOS se comparan antes (--revisar) y, si se queda el de siempre, --decidir con el mismo valor')
+                   'un afiche NUEVO se compara antes (afiches_unicos.py --revisar) y, si se queda el de siempre, --decidir con el mismo valor')
     if any(x[3] is None for x in xs):
         out.append('sin decidir → python3 pipeline/obra_unica.py --decidir <work_id> <campo> <valor> --motivo "…" --quien "…", y después lo anterior')
     return (out + ['al final, catalogo_construir.py --escribir']) if out else []
@@ -149,6 +149,9 @@ def decidir(decs, vals, w, campo, valor, motivo, quien, fecha, veredicto=None):
     if campo == 'afiche':
         if valor.startswith('/assets/') and not os.path.exists(REPO + valor):
             raise SystemExit(f'✗ no existe {valor}')
+        import afiches_unicos
+        if veredicto and veredicto not in afiches_unicos._FUENTE:
+            raise SystemExit(f'✗ veredicto desconocido: {veredicto}')
         v = dict(d['valor']) if d and d['valor']['archivo'] == valor else {'archivo': valor, 'veredicto': veredicto or sys.exit('✗ falta --veredicto oficial|oficial-festival|fotograma')}
     if campo == 'paises':
         from herencia import _pais_es
