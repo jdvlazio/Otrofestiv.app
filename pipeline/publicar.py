@@ -377,6 +377,12 @@ def publicar(fid, forzar=False, ensayo=False):
             print('    → ' + _h)
         if _div and _ENSAYO is not None:
             _ENSAYO.append(f'datos de obra que difieren de otro festival ({len(_div)})')
+        import sello_obra
+        _sin = [x for x in sello_obra.faltan(_fs) if x[0] in sello_obra.publicadas({fid: out})]
+        if _sin:
+            print(f'  ⚠ {len(_sin)} obra(s) sin sello — otro agente las lee y sello_obra.py --sellar: ' + ' · '.join(x[1] for x in _sin[:6]))
+            if _ENSAYO is not None:
+                _ENSAYO.append(f'obras sin sello de verificación ({len(_sin)})')
         if _nuevas:
             print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
             for t in _nuevas[:10]:
