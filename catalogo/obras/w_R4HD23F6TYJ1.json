@@ -1,12 +1,18 @@
 {
  "id": "w_R4HD23F6TYJ1",
  "titulo_original": "Winter Blumen Garten",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "AT",
   "CO"
  ],
- "directores": [],
+ "directores": [
+  "Sara Piñeros Cortés"
+ ],
+ "sinopsis": {
+  "es": "Una correspondencia imaginaria con amigas de otros tiempos. La cineasta teje imágenes encontradas y filmadas entre épocas y territorios, donde los sinsabores de la migración, el trabajo material del cine y la cotidianidad crean puentes secretos entre Austria y Colombia, con preguntas sobre el desarraigo y las políticas del archivo.",
+  "en": "An imaginary correspondence with friends from other times. The filmmaker weaves found and filmed images across eras and territories, where the hardships of migration, the material work of filmmaking and everyday life create secret bridges between Austria and Colombia, with questions about uprooting and the politics of the archive."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_WINTER_BLUMEN_GARTEN_POSTER_ESP_1%20-%20EXPERIMENTA.jpg?itok=dZG03ssO",
   "veredicto": "oficial-festival"

@@ -1,6 +1,6 @@
 {
  "id": "w_R4JP5M44WJ2P",
- "titulo_original": "Everything Else is Noise",
+ "titulo_original": "Lo demás es ruido",
  "anio": 2026,
  "paises": [
   "MX",
@@ -12,11 +12,16 @@
  ],
  "aliases": [
   {
-   "titulo": "Lo demás es ruido",
+   "titulo": "Everything Else is Noise",
    "tipo": "festival"
   },
   {
    "titulo": "Everything Else Is Noise",
+   "idioma": "en",
+   "tipo": "traduccion"
+  },
+  {
+   "titulo": "Everything Else is Noise",
    "idioma": "en",
    "tipo": "traduccion"
   }
@@ -47,6 +52,7 @@
   }
  ],
  "presentaciones": [
+  "ficci-65",
   "filcmar-2026",
   "tiff-2026"
  ]

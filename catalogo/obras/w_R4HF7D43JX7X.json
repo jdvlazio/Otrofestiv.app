@@ -1,11 +1,17 @@
 {
  "id": "w_R4HF7D43JX7X",
  "titulo_original": "Ah, Liberty!",
- "anio": null,
+ "anio": 2008,
  "paises": [
   "GB"
  ],
- "directores": [],
+ "directores": [
+  "Ben Rivers"
+ ],
+ "sinopsis": {
+  "es": "El hogar de una familia en plena naturaleza: vivir, trabajar y divertirse en una granja a lo largo de las estaciones. Animales y niños en libertad, objetos cotidianos y un paisaje sublime, en formato Scope revelado a mano. Sin una historia concreta, ni principio, ni nudo, ni desenlace: solo fragmentos de vidas siendo vividas.",
+  "en": "A family’s home in the wilderness: living, working, and playing on a farm through the seasons. Free-roaming animals and children, everyday objects, and a sublime landscape, in hand-processed Scope. No particular story, no beginning, middle, or end: just fragments of lives being lived."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Ah%252C%2BLiberty%2521%2B3%2Bcopy.jpg?itok=ZTE4aLZH",
   "veredicto": "oficial-festival"

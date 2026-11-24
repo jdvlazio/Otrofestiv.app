@@ -171,6 +171,13 @@
     "ficcali-2026"
    ]
   },
+  "/assets/anibia-2026/como-nace-un-rio.jpg": {
+   "sha1": "923efdc132bbc70b4497e92dcd9cec549848df94",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
   "/assets/anibia-2026/decaer.jpg": {
    "sha1": "bc33ea60755421c023080a40e5ed2928104b7336",
    "veredicto": "afiche",
@@ -1322,6 +1329,13 @@
     "popayan-2026"
    ]
   },
+  "/assets/ficfusa-2026/puntos-de-fuga.jpg": {
+   "sha1": "5fcf94b656a5b65b5743200d8096d1e13d51bf6a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
   "/assets/ficfusa-2026/sobre-las-olas.jpg": {
    "sha1": "d46ae09e0c643f8d39e62135db44061b0c194a73",
    "veredicto": "afiche",
@@ -1608,6 +1622,7 @@
    "sha1": "0fda95d988a98876a7a5faf62fe70ba6d647132c",
    "veredicto": "afiche",
    "usado_en": [
+    "ficci-65",
     "tiff-2026"
    ]
   },
@@ -1703,7 +1718,8 @@
    "sha1": "76bd8a2ab1ff2fe31161feba57a6c22f00456639",
    "veredicto": "afiche",
    "usado_en": [
-    "aff-2026"
+    "aff-2026",
+    "ficci-65"
    ]
   },
   "/assets/jardin-2026/de-saul.jpg": {
@@ -1733,6 +1749,13 @@
    "veredicto": "afiche",
    "usado_en": [
     "mamut-2026"
+   ]
+  },
+  "/assets/mamut-2026/frio-metal.jpg": {
+   "sha1": "3c9dc0eeae5fd74351eea81863b6ce0934797472",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
    ]
   },
   "/assets/mamut-2026/lolita-en-honda.jpg": {
@@ -1883,6 +1906,7 @@
    "sha1": "0836a059da8c52c598ddc7397e9ec5444df5b767",
    "veredicto": "afiche",
    "usado_en": [
+    "ficci-65",
     "qaff-2026",
     "under-2026"
    ]

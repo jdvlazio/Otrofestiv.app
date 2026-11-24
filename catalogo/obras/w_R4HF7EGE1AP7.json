@@ -1,11 +1,17 @@
 {
  "id": "w_R4HF7EGE1AP7",
  "titulo_original": "Urth",
- "anio": null,
+ "anio": 2016,
  "paises": [
   "GB"
  ],
- "directores": [],
+ "directores": [
+  "Ben Rivers"
+ ],
+ "sinopsis": {
+  "es": "La última mujer en la Tierra. Filmada en el interior de Biosfera 2, en Arizona, y con un texto que se lee como las últimas entradas del diario de una mujer recluida en un entorno implacable, la película reflexiona sobre experimentos ambiciosos, entornos artificiales y la relación de la humanidad con el mundo natural.",
+  "en": "The last woman on Earth. Shot inside Biosphere 2 in Arizona, with a text that reads like the final diary entries of a woman confined within an unforgiving environment, the film reflects on ambitious experiments, artificial environments, and humanity's relationship with the natural world."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Urth%2B3.jpg?itok=8EYylnMd",
   "veredicto": "oficial-festival"

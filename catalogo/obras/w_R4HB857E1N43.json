@@ -1,13 +1,19 @@
 {
  "id": "w_R4HB857E1N43",
  "titulo_original": "Daria's Night Flowers",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "IR",
   "GB",
   "FR"
  ],
- "directores": [],
+ "directores": [
+  "Maryam Tafakory"
+ ],
+ "sinopsis": {
+  "es": "¿Cómo imaginar un relato de venganza y liberación a través del cine? Entre imágenes del cine iraní de la posrevolución, intervenidas y retejidas, afloran los secretos de las plantas, el control del cuerpo y el amor entre mujeres. Remedio y veneno a la vez, una poética de la venganza como huida y antídoto frente a la opresión.",
+  "en": "How can we imagine a story of revenge and liberation through cinema? Amid manipulated, re-woven images from post-revolutionary Iranian cinema, the secrets of plants, control over the body, and love between women surface. At once remedy and poison, a poetics of revenge as escape and antidote to oppression."
+ },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w92/hNuuQciHXD7VqBPHgNVKSHh4yLB.jpg",
   "veredicto": "oficial"

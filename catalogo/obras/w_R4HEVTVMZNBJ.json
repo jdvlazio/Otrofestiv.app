@@ -1,11 +1,17 @@
 {
  "id": "w_R4HEVTVMZNBJ",
  "titulo_original": "Fuego en el mar",
- "anio": null,
+ "anio": 2022,
  "paises": [
   "AR"
  ],
- "directores": [],
+ "directores": [
+  "Sebastián Zanzoterra"
+ ],
+ "sinopsis": {
+  "es": "Una imagen vuelve una y otra vez: el 2 de julio de 2021, un gasoducto submarino explota en el Golfo de México y el agua parece quemarse. Entre la alucinación y el desvelo, este corto experimental persigue el rastro del padre del cineasta en los gestos de los trabajadores de Gas del Estado y ensaya una historia material del hidrocarburo.",
+  "en": "An image keeps coming back: on July 2, 2021, an underwater gas pipeline explodes in the Gulf of Mexico and the water seems to burn. Between hallucination and sleeplessness, this experimental short follows the trace of the filmmaker's father in the gestures of the Gas del Estado workers and explores a material history of the hydrocarbon."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Afiche%20Fuego%20en%20el%20mar%20%281%29.jpg?itok=scGRKes4",
   "veredicto": "oficial-festival"

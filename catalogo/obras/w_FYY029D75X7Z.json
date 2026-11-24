@@ -10,6 +10,10 @@
  ],
  "aliases": [
   {
+   "titulo": "Como Nasce um Rio",
+   "tipo": "festival"
+  },
+  {
    "titulo": "How a River Is Born",
    "idioma": "en",
    "tipo": "traduccion"
@@ -32,11 +36,16 @@
  },
  "versiones": [
   {
+   "etiqueta": "8 min",
+   "duracion_min": 8
+  },
+  {
    "etiqueta": "9 min",
    "duracion_min": 9
   }
  ],
  "presentaciones": [
-  "anibia-2026"
+  "anibia-2026",
+  "ficci-65"
  ]
 }

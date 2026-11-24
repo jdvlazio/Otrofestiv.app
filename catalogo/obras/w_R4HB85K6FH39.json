@@ -1,12 +1,19 @@
 {
  "id": "w_R4HB85K6FH39",
  "titulo_original": "Cul-De-Sac!",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "BE",
   "FR"
  ],
- "directores": [],
+ "directores": [
+  "Clyde Gates",
+  "Gabriel Sanson"
+ ],
+ "sinopsis": {
+  "es": "La cámara recorre la ciudad en primera persona y con desconcierto, a través de los sentidos de un fantasma que parece estar en el purgatorio: oficinas, carruseles, pasadizos subterráneos, podredumbres industriales, geriátricos, la salida de un estadio. Allí se conoce la corporalidad de los ángeles: una mitología de la muerte y el nacimiento.",
+  "en": "The camera wanders the city in first person, disoriented, through the senses of a ghost who seems to be in purgatory: offices, carousels, underground passageways, industrial wastelands, nursing homes, the exit of a stadium. There we experience the physicality of angels, in a mythology of death and birth."
+ },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w92/lpcPZ6dfJFLjpeDAuvsMi11amOR.jpg",
   "veredicto": "oficial"
