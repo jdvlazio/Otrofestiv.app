@@ -24,5 +24,11 @@
   "regla": "decisión",
   "motivo": "se quita lo que no es sinopsis; nada se escribe",
   "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "traducida de su sinopsis en inglés; verificada por otro agente",
+  "fecha": "2026-11-24"
  }
 }

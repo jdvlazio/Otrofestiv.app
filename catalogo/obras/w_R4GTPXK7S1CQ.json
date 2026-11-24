@@ -2,10 +2,16 @@
  "id": "w_R4GTPXK7S1CQ",
  "titulo_original": "El Chucur",
  "anio": 2024,
- "paises": [],
+ "paises": [
+  "CO"
+ ],
  "directores": [
   "Jairo Tarapuez Jaramillo"
  ],
+ "sinopsis": {
+  "es": "El Chucur, una intrépida comadreja andina, se prepara para participar en la fiesta de la cosecha. Tendrá que llenarse de valor y enfrentar el rechazo de los humanos, que lo consideran un roedor desagradable, para sorprenderlos con sus habilidades como danzante.",
+  "en": "An intrepid Andean weasel prepares to participate in the harvest festival. However, he will have to muster up his courage and face rejection from humans who consider him an unpleasant rodent in order to surprise them with his dancing skills."
+ },
  "generos": [
   "Animación"
  ],
@@ -14,6 +20,7 @@
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 1486078,
   "letterboxd": "el-chucur"
  },
  "presentaciones": [

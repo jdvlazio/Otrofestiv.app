@@ -8,12 +8,12 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "tmdb:1688887",
+  "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "tmdb:1688887",
+  "regla": "tmdb-manda"
  },
  "generos": {
   "fuente": "festival",
@@ -23,6 +23,12 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
   "fecha": "2026-11-24"
  }
 }

@@ -13,7 +13,8 @@ También el GÉNERO (`generos`) y la SINOPSIS EN INGLÉS (`sinopsis.en`), desde 
 mismo día. El género publicado va en español (la app lo traduce): TIFF lo
 traía en inglés, y así se leía en la app en español.
 
-Solo reemplaza un dato publicado; donde no hay dato no lo pone (eso es herencia).
+Solo reemplaza un dato publicado; donde no hay dato no lo pone (eso es herencia),
+salvo la ficha de TMDB (identidad) y la sinopsis en inglés (va con la española).
 
     python3 pipeline/ficha_unica.py --aplicar [<festival>] [--escribir]
 """
@@ -64,7 +65,12 @@ def aplicar(d, decs=None):
             if o.get('type') == 'event':
                 continue
             for k, v in eleg.get(o.get('work_id'), {}).items():
-                if o.get(k) in (None, '') or str(o[k]) == str(v):
+                if o.get(k) in (None, ''):
+                    if k in ('tmdb_id', 'synopsis_en') and v:   # de la obra: se completan (español e inglés van juntos)
+                        out.append((o.get('title'), k, None, v))
+                        o[k] = v
+                    continue
+                if str(o[k]) == str(v):
                     continue
                 out.append((o.get('title'), k, o[k], v))
                 if v is None:
