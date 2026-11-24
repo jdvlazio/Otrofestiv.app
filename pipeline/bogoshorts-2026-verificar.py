@@ -60,6 +60,8 @@ def toks_lectura(n):
         elif e in ('CITYU', 'SOTANO', 'RETINA', 'FIESTAS') or c['texto'].startswith('Franja Encuentros'):
             continue                                  # los descartes declarados del crudo
         h = c.get('hora') or ''
+        # VR del mar 8: la grilla da 11:00 (nota de festivos) y así se compara; se publica 14:00 por el catálogo del
+        # 18 nov (pág. 12) y las fichas web — bogoshorts-2026-afirmaciones.json
         out.add((c['dia'], h, e, cod(c['texto'])))
     return out
 

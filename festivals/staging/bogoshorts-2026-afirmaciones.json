@@ -16,6 +16,30 @@
     "fecha": "2026-11-24"
    },
    "evidencia": "https://cinematecadebogota.gov.co/node/peliculas/3816?sede=11 (24 nov): «Diciembre 06 5:00 PM Sala 3 Entrada libre»; la grilla PDF del 13 nov dice 4:00 p.m. (Estreno BFM-IV)"
+  },
+  {
+   "funcion": "f_337f034282",
+   "casilla": "time",
+   "valor": "14:00",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
+    "fecha": "2026-11-24",
+    "publicado": "2026-11-18"
+   },
+   "evidencia": "catálogo (modificado el 18 nov), pág. 12, Competencia VR: «Mié. 2, Jue. 3, Vie. 4 y Mar. 8 … 2:00 p.m. a 6:00 p.m. · Sab. 5 y Dom. 6 … 11:00 a.m. a 6:00 p.m.»; las 4 fichas web abiertas el 24 nov (festival.bogoshorts.com/corto/4379 a 4382) dicen «Martes 8 de Diciembre 2026 … 14:00». La grilla (13 nov) y el Facebook del 9 nov traen solo la regla general de festivos, 11:00"
+  },
+  {
+   "funcion": "f_337f034282",
+   "casilla": "duration",
+   "valor": "240 min",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
+    "fecha": "2026-11-24",
+    "publicado": "2026-11-18"
+   },
+   "evidencia": "catálogo (modificado el 18 nov), pág. 12, Competencia VR: «Mié. 2, Jue. 3, Vie. 4 y Mar. 8 … 2:00 p.m. a 6:00 p.m. · Sab. 5 y Dom. 6 … 11:00 a.m. a 6:00 p.m.»; las 4 fichas web abiertas el 24 nov (festival.bogoshorts.com/corto/4379 a 4382) dicen «Martes 8 de Diciembre 2026 … 14:00». La grilla (13 nov) y el Facebook del 9 nov traen solo la regla general de festivos, 11:00"
   }
  ]
 }

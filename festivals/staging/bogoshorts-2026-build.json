@@ -21258,14 +21258,14 @@
    "section": "🥽 Competencia VR (Realidad Virtual)",
    "country": "Países Bajos, Bangladés, Arabia Saudita, Taiwán, Alemania, Palestina, Colombia, Bélgica, Luxemburgo",
    "flags": "🇳🇱🇧🇩🇸🇦🇹🇼🇩🇪🇵🇸🇨🇴🇧🇪🇱🇺",
-   "duration": "420 min",
+   "duration": "240 min",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
     "2026-12-08",
     "11:00"
    ],
    "day": "2026-12-08",
-   "time": "11:00",
+   "time": "14:00",
    "day_order": 7,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Taller de la imagen",
@@ -21392,8 +21392,10 @@
      "fecha": "2026-11-13"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "publicado": "2026-11-18",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf"
     },
     "venue": {
      "tipo": "festival-web",
@@ -21404,8 +21406,10 @@
      "fecha": "2026-11-13"
     },
     "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "publicado": "2026-11-18",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf"
     },
     "entrada": {
      "tipo": "festival-web",
@@ -22570,7 +22574,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T18:42:08",
+  "fecha": "2026-11-24T18:47:37",
   "plan_sha": "ffb90333f9801666",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"
