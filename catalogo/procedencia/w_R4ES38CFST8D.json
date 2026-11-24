@@ -8,15 +8,43 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "estreno en Locarno, 11 ago 2024",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "tmdb:1315409",
+  "regla": "tmdb-manda"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB y Wikipedia; ninguna fuente da Experimental",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma dirección y duración",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la anterior no contaba la obra",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la anterior no contaba la obra",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "el anterior era de «The Invention» (2018)",
+  "fecha": "2026-11-24"
  }
 }

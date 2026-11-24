@@ -8,15 +8,41 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "estreno en Tribeca 2024",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "tmdb:1206695",
+  "regla": "tmdb-manda"
  },
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "dirección Tusk, 18 min, España y Estados Unidos",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la anterior era de «Ripe» (1996)",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la anterior era de «Ripe» (1996)",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "el anterior era de otra obra",
+  "fecha": "2026-11-24"
  }
 }

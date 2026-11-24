@@ -4,8 +4,10 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:644419",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "forma completa: afiche y TMDB",
+  "fecha": "2026-11-24"
  },
  "anio": {
   "fuente": "tmdb:644419",
@@ -18,5 +20,11 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la de TMDB no cuenta esta obra; traducida de la española",
+  "fecha": "2026-11-24"
  }
 }
