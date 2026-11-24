@@ -6,20 +6,26 @@
  "directores": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "TMDB y los otros festivales; BOGOSHORTS agrega el segundo apellido",
+  "motivo": "nombre completo: catálogo BOGOSHORTS y Cuadernos de Cine Colombiano n.º 8",
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:939831",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Cuadernos de Cine Colombiano n.º 8 (Cinemateca, https://idartesencasa.gov.co/sites/default/files/libros_pdf/Cuadernos%20de%20cine%20colombiano%20Primera%20epoca%20No%208%20Jairo%20Pinilla%20Tellez.pdf); Univalle (https://cvisaacs.univalle.edu.co/cine/jairo-pinilla-tellez/); catálogo BOGOSHORTS 2026. Proimágenes dice 1974",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "sinopsis.es": {
   "fuente": "humano",
@@ -37,6 +43,18 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "misma imagen: queda la publicada; es un fotograma, no un afiche",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
   "fecha": "2026-11-24"
  }
 }

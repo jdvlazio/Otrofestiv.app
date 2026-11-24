@@ -6,12 +6,9 @@
   "FR"
  ],
  "directores": [
+  "Lola Grand",
   "Alexandre Arpentinier",
-  "Tristan Lamarca",
-  "Thomas Lemaille",
-  "Mathieu Blanchys",
-  "Jean-Charles Lusseau",
-  "Lola Grand"
+  "Mathieu"
  ],
  "sinopsis": {
   "es": "Dos astronautas llegan a un planeta desconocido para conquistarlo, pero un encuentro inesperado pone a prueba su misión y su profesionalismo.",
@@ -22,7 +19,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/asteria.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 441043,

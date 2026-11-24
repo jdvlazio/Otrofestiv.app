@@ -1,7 +1,7 @@
 {
  "id": "w_4KHF4CV8JNQ8",
  "titulo_original": "Ici Azor",
- "anio": 2025,
+ "anio": 2026,
  "paises": [
   "FR"
  ],
@@ -21,7 +21,8 @@
  },
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/ici-azor.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1561305,

@@ -6,8 +6,7 @@
   "ES"
  ],
  "directores": [
-  "Avelina Prat",
-  "Diego Opazo"
+  "Avelina Prat"
  ],
  "sinopsis": {
   "es": "Un hombre muere al caer por una ventana. La mujer que se queda en la casa intenta entender qué ocurrió.",
@@ -15,7 +14,8 @@
  },
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/principio-de-incendio-sobre-paisaje-desierto.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1637473,

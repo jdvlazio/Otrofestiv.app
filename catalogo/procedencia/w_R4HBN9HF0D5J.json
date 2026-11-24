@@ -22,8 +22,10 @@
   "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "sinopsis.es": {
   "fuente": "humano",
@@ -47,6 +49,12 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "mismo afiche, a mayor tamaño (780 contra 250)",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
   "fecha": "2026-11-24"
  }
 }

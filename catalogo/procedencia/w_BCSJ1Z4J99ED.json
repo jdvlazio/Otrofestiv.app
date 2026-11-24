@@ -6,20 +6,26 @@
  "directores": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "TMDB y los otros festivales; BOGOSHORTS agrega el segundo apellido",
+  "motivo": "nombre completo: catálogo BOGOSHORTS y Cuadernos de Cine Colombiano n.º 8",
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:939823",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
@@ -37,6 +43,18 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "la que corresponde a la española decidida",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
   "fecha": "2026-11-24"
  }
 }

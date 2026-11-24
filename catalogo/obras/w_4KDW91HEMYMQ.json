@@ -1,7 +1,7 @@
 {
  "id": "w_4KDW91HEMYMQ",
  "titulo_original": "Barra brava",
- "anio": 2025,
+ "anio": 2026,
  "paises": [
   "CO",
   "MX",
@@ -21,7 +21,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/barra-brava.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1768378,

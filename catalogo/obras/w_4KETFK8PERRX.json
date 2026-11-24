@@ -1,7 +1,7 @@
 {
  "id": "w_4KETFK8PERRX",
  "titulo_original": "La mémoire des poissons",
- "anio": 2025,
+ "anio": 2026,
  "paises": [
   "FR",
   "US"
@@ -26,7 +26,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/la-memoire-des-poissons.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1764849,

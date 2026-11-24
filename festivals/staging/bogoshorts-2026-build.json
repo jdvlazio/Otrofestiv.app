@@ -4692,8 +4692,8 @@
    "title": "Fanático Freak Fantástico 3",
    "type": "film",
    "section": "👽 Fanático Freak Fantástico F3",
-   "country": "Estados Unidos, Corea del Sur, Japón, Reino Unido, Colombia, Francia, Guatemala, Turquía",
-   "flags": "🇺🇸🇰🇷🇯🇵🇬🇧🇨🇴🇫🇷🇬🇹🇹🇷",
+   "country": "Estados Unidos, Corea del Sur, Japón, Reino Unido, Colombia, Francia, Guatemala",
+   "flags": "🇺🇸🇰🇷🇯🇵🇬🇧🇨🇴🇫🇷🇬🇹",
    "duration": "86 min",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
@@ -4800,8 +4800,8 @@
     {
      "title": "Madrugada",
      "director": "Sebastián Lojo",
-     "country": "Guatemala, Turquía",
-     "flags": "🇬🇹🇹🇷",
+     "country": "Guatemala",
+     "flags": "🇬🇹",
      "year": 2026,
      "duration": "21 min",
      "language": "Español",
@@ -15125,8 +15125,8 @@
    "title": "Fanático Freak Fantástico 3",
    "type": "film",
    "section": "👽 Fanático Freak Fantástico F3",
-   "country": "Estados Unidos, Corea del Sur, Japón, Reino Unido, Colombia, Francia, Guatemala, Turquía",
-   "flags": "🇺🇸🇰🇷🇯🇵🇬🇧🇨🇴🇫🇷🇬🇹🇹🇷",
+   "country": "Estados Unidos, Corea del Sur, Japón, Reino Unido, Colombia, Francia, Guatemala",
+   "flags": "🇺🇸🇰🇷🇯🇵🇬🇧🇨🇴🇫🇷🇬🇹",
    "duration": "86 min",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
@@ -15233,8 +15233,8 @@
     {
      "title": "Madrugada",
      "director": "Sebastián Lojo",
-     "country": "Guatemala, Turquía",
-     "flags": "🇬🇹🇹🇷",
+     "country": "Guatemala",
+     "flags": "🇬🇹",
      "year": 2026,
      "duration": "21 min",
      "language": "Español",
@@ -22574,7 +22574,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T18:47:37",
+  "fecha": "2026-11-24T18:51:19",
   "plan_sha": "ffb90333f9801666",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"

@@ -1,10 +1,10 @@
 {
  "id": "w_4KFGVF4MR8N4",
  "titulo_original": "Solos",
- "anio": 2019,
+ "anio": 2020,
  "paises": [
-  "ES",
-  "GB"
+  "GB",
+  "ES"
  ],
  "directores": [
   "Gabriella Marsh"
@@ -18,7 +18,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/solos.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 758792,

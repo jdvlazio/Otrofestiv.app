@@ -6,7 +6,7 @@
   "DK"
  ],
  "directores": [
-  "Mikkel Mainz Elkjær",
+  "Mikkel Mainz",
   "Kenneth Ladekjær"
  ],
  "sinopsis": {
@@ -18,7 +18,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/the-reward.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 163705,

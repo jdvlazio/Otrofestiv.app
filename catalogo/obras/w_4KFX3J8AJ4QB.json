@@ -4,7 +4,8 @@
  "anio": 2026,
  "paises": [
   "MX",
-  "US"
+  "US",
+  "DO"
  ],
  "directores": [
   "Gabriela Ortega"
@@ -25,7 +26,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/marga-en-el-df.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1598955,

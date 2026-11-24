@@ -6,7 +6,8 @@
   "DK"
  ],
  "directores": [
-  "Thorvaldur Gunnarsson"
+  "Thorvaldur S. Gunnarsson",
+  "Jonatan Brüsch"
  ],
  "sinopsis": {
   "es": "La oscuridad se extiende por el multiverso. Guiados por Mother Mustang, los Space Stallions se enfrentan a Destructo en una aventura que homenajea las series animadas de los años ochenta.",
@@ -17,7 +18,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/space-stallions.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 381744,

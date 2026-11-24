@@ -3,8 +3,8 @@
  "titulo_original": "Para los contrincantes",
  "anio": 2026,
  "paises": [
-  "CL",
   "MX",
+  "CL",
   "FR",
   "GB"
  ],
@@ -27,7 +27,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/para-los-contrincantes.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1455661,

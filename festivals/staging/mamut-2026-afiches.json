@@ -17,6 +17,13 @@
   "No menguará el fuego de esta luna": {
    "archivo": "fuentes/afiches/mamut-2026/no-menguara-el-fuego-de-esta-luna.png",
    "fuente": "https://www.cinecorto.co/no-menguara-el-fuego-de-esta-luna/"
+  },
+  "Minuto fatal": {
+   "archivo": "assets/mamut-2026/minuto-fatal.jpg",
+   "asset": "minuto-fatal.jpg",
+   "sobre_tmdb": true,
+   "editorial": true,
+   "fuente": "la imagen de TMDB es un fotograma sin título, no un afiche (App, 24 nov 2026)"
   }
  }
 }

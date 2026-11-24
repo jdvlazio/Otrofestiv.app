@@ -3,8 +3,8 @@
  "titulo_original": "Barcelona",
  "anio": 1912,
  "paises": [
-  "FR",
-  "ES"
+  "ES",
+  "FR"
  ],
  "directores": [
   "Segundo de Chomón"
@@ -25,7 +25,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/barcelona.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 356487,

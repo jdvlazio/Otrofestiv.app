@@ -3,8 +3,7 @@
  "titulo_original": "Los poderes",
  "anio": 2026,
  "paises": [
-  "CO",
-  "FR"
+  "CO"
  ],
  "directores": [
   "Salim Jaller"
@@ -18,7 +17,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/los-poderes.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1729253,

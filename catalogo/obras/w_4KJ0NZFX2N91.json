@@ -1,7 +1,7 @@
 {
  "id": "w_4KJ0NZFX2N91",
  "titulo_original": "La Grande Rêvasion",
- "anio": 2026,
+ "anio": 2025,
  "paises": [
   "BE",
   "FR"
@@ -25,7 +25,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/la-grande-revasion.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1597412,

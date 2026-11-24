@@ -1,7 +1,7 @@
 {
  "id": "w_4KFKDE46JK0D",
  "titulo_original": "Braço Forte",
- "anio": 2026,
+ "anio": 2025,
  "paises": [
   "BR"
  ],
@@ -22,7 +22,8 @@
  },
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/braco-forte.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1580205,

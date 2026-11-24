@@ -3,8 +3,9 @@
  "titulo_original": "Mirage",
  "anio": 2025,
  "paises": [
-  "SA",
-  "NL"
+  "NL",
+  "BD",
+  "SA"
  ],
  "directores": [
   "Naima Karim"
@@ -18,7 +19,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/mirage.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1705630,

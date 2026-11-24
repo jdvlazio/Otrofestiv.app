@@ -9,8 +9,7 @@
   "MX"
  ],
  "directores": [
-  "Roddy Dextre",
-  "Julián Estrada"
+  "Roddy Dextre"
  ],
  "aliases": [
   {
@@ -28,7 +27,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/alla-en-el-cielo.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1616197,

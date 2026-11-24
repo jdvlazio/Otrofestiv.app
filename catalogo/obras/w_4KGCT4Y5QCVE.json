@@ -6,11 +6,8 @@
   "FR"
  ],
  "directores": [
-  "Mehrnaz Abdollahina",
-  "Yi Liu",
-  "Feben Elias Woldehawariat",
-  "Celeste Jamneck",
-  "Razahk Issaka"
+  "Mehrnaz Abdollahinia",
+  "Feben Elias"
  ],
  "sinopsis": {
   "es": "En un pueblo sometido a normas absurdas, tres hermanas cantantes preparan su actuación para el festival de otoño junto a su perro. Un imprevisto amenaza con impedirles participar.",
@@ -21,7 +18,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/the-soloists.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 884553,

@@ -3,8 +3,9 @@
  "titulo_original": "City of Owls",
  "anio": 2026,
  "paises": [
+  "FR",
   "DE",
-  "RU"
+  "IT"
  ],
  "directores": [
   "Zhenia Kazankina"
@@ -18,7 +19,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/city-of-owls.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1673938,

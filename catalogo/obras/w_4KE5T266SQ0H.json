@@ -3,8 +3,8 @@
  "titulo_original": "Like a Beast",
  "anio": 2026,
  "paises": [
-  "FR",
   "BE",
+  "FR",
   "NL"
  ],
  "directores": [
@@ -19,7 +19,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/like-a-beast.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1725079,

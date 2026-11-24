@@ -406,6 +406,8 @@ def main():
         for o in f.get('obras') or []:
             if o.get('pais') == 'Escocia':     # sin bandera propia en la app: Escocia es parte del Reino Unido
                 o['pais'] = 'Reino Unido'
+            if o.get('titulo') == 'Madrugada':   # el país de la obra es el del almacén (el del programa se arma aquí)
+                o['pais'] = 'Guatemala'
     def _nfc(x):
         if isinstance(x, str): return unicodedata.normalize('NFC', x)
         if isinstance(x, list): return [_nfc(y) for y in x]

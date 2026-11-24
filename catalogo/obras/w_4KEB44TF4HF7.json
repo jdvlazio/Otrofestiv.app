@@ -4,8 +4,8 @@
  "anio": 2025,
  "paises": [
   "BE",
-  "BR",
-  "CH"
+  "CH",
+  "BR"
  ],
  "directores": [
   "Felipe Casanova"
@@ -26,7 +26,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/o-rio-de-janeiro-continua-lindo.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1522351,

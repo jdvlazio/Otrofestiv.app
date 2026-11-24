@@ -3,8 +3,7 @@
  "titulo_original": "El dia de l’ós",
  "anio": 2026,
  "paises": [
-  "ES",
-  "FR"
+  "ES"
  ],
  "directores": [
   "Pau Peidro Vancells"
@@ -25,7 +24,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/el-dia-de-l-os.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1808023,

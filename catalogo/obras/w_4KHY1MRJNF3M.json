@@ -1,7 +1,7 @@
 {
  "id": "w_4KHY1MRJNF3M",
  "titulo_original": "Piccolo Piccolo",
- "anio": 2026,
+ "anio": 2025,
  "paises": [
   "FR",
   "CH"
@@ -18,7 +18,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/piccolo-piccolo.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1647567,

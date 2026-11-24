@@ -6,7 +6,7 @@
   "CA"
  ],
  "directores": [
-  "Zoé Pelchat-Ouellet"
+  "Zoé Pelchat"
  ],
  "aliases": [
   {
@@ -24,7 +24,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/c-est-ma-s-ur.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1616193,

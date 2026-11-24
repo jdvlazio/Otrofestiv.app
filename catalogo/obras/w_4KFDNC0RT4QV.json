@@ -6,9 +6,9 @@
   "ES"
  ],
  "directores": [
-  "Arturo Lacal Ruiz",
-  "Jordi Jiménez Xibertaas",
-  "Alejandro Salueña García"
+  "Álex Salu",
+  "Arturo Lacal",
+  "Jordi Jiménez"
  ],
  "sinopsis": {
   "es": "En un archipiélago de casas flotantes, Gilbert reparte paquetes en su góndola y Sullivan toca la trompeta. Un día, Gilbert decide quedarse con uno de los envíos.",
@@ -19,7 +19,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/gilbert.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1364216,

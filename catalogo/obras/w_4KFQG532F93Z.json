@@ -6,7 +6,7 @@
   "GB"
  ],
  "directores": [
-  "Leto S. Meade",
+  "Leto Meade",
   "Jonathan Rockefeller"
  ],
  "sinopsis": {
@@ -18,7 +18,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/a-little-death.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1716965,

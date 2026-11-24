@@ -3,6 +3,7 @@
  "titulo_original": "Poster Boy",
  "anio": 2025,
  "paises": [
+  "CA",
   "US"
  ],
  "directores": [
@@ -17,7 +18,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/poster-boy.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1530007,

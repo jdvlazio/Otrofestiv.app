@@ -8,7 +8,7 @@
  ],
  "directores": [
   "Mavie Beisheim",
-  "Felipe Cuartas Moreno"
+  "Felipe Cuartas"
  ],
  "aliases": [
   {
@@ -26,7 +26,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/raices.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1784652,

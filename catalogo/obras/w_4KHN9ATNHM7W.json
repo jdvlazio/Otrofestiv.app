@@ -3,6 +3,7 @@
  "titulo_original": "Sonnenstube",
  "anio": 2022,
  "paises": [
+  "IT",
   "CH"
  ],
  "directores": [
@@ -17,7 +18,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/sonnenstube.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 990591,

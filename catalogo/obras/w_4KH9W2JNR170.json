@@ -3,9 +3,7 @@
  "titulo_original": "Los mentirosos",
  "anio": 2026,
  "paises": [
-  "AR",
-  "BR",
-  "FR"
+  "AR"
  ],
  "directores": [
   "Eduardo Braun Costa"
@@ -26,7 +24,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/los-mentirosos.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1611789,

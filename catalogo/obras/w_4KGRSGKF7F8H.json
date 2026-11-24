@@ -1,7 +1,7 @@
 {
  "id": "w_4KGRSGKF7F8H",
  "titulo_original": "Computadora",
- "anio": 2025,
+ "anio": 2026,
  "paises": [
   "PT"
  ],
@@ -24,7 +24,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/computadora.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1504269,

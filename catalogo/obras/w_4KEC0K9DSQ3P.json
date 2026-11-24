@@ -1,7 +1,7 @@
 {
  "id": "w_4KEC0K9DSQ3P",
  "titulo_original": "Triangle",
- "anio": 2025,
+ "anio": 2026,
  "paises": [
   "FR"
  ],
@@ -17,7 +17,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/triangle.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1567979,

@@ -3,8 +3,7 @@
  "titulo_original": "Jazz infernal",
  "anio": 2025,
  "paises": [
-  "CA",
-  "FR"
+  "CA"
  ],
  "directores": [
   "Will Niava"
@@ -18,7 +17,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/jazz-infernal.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1529981,

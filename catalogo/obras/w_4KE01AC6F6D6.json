@@ -1,7 +1,7 @@
 {
  "id": "w_4KE01AC6F6D6",
  "titulo_original": "Pinchu es así",
- "anio": 2026,
+ "anio": 2025,
  "paises": [
   "ES"
  ],
@@ -24,7 +24,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/pinchu-es-asi.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1676480,

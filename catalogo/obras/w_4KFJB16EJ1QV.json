@@ -3,8 +3,8 @@
  "titulo_original": "O Lago Cinza e Cego",
  "anio": 2026,
  "paises": [
-  "BR",
-  "FR"
+  "FR",
+  "BR"
  ],
  "directores": [
   "Pedro Geraldo"
@@ -25,7 +25,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/o-lago-cinza-e-cego.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1584486,

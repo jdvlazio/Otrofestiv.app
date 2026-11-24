@@ -3,9 +3,9 @@
  "titulo_original": "Like Moths to Light",
  "anio": 2026,
  "paises": [
-  "FR",
+  "ES",
   "IT",
-  "ES"
+  "FR"
  ],
  "directores": [
   "Gala Hernández López"
@@ -19,7 +19,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/like-moths-to-light.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1599278,

@@ -1,9 +1,11 @@
 {
  "id": "w_4KDRP7E1EVR5",
  "titulo_original": "Living Despite Them",
- "anio": 2025,
+ "anio": 2026,
  "paises": [
-  "PS"
+  "PS",
+  "CL",
+  "US"
  ],
  "directores": [
   "Antonia Colodro",
@@ -18,7 +20,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/living-despite-them.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1589944,

@@ -3,8 +3,7 @@
  "titulo_original": "Beach Flags",
  "anio": 2014,
  "paises": [
-  "FR",
-  "IR"
+  "FR"
  ],
  "directores": [
   "Sarah Saidan"
@@ -18,7 +17,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bogoshorts-2026/beach-flags.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 344653,
