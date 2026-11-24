@@ -320,7 +320,8 @@ _CACHE_V = 2
 
 
 def _tmdb(tid, key, cache):
-    if tid not in cache or cache[tid].get('v') != _CACHE_V:
+    # sin dirección en la caché no hay con qué comprobar: se vuelve a pedir (si hay clave)
+    if tid not in cache or cache[tid].get('v') != _CACHE_V or (key and not cache[tid].get('directores')):
         # por id: una ficha vacía por la red escribía año, país y director de
         # festival como si TMDB no los tuviera (lib.tmdb_ficha, 14 oct 2026)
         m = tmdb_ficha(tid, key, append_to_response='credits,release_dates') if key else {}
@@ -344,7 +345,8 @@ def materializar(R, grupos, key, cache):
     hoy = rev['fecha']
     nuevas, proc, usados = {}, {}, set()
     fus = catalogo.fusiones()
-    dados = {r['wid'] for r in R if r.get('wid')}
+    dados, otras = {r['wid'] for r in R if r.get('wid')}, []
+    ficha_ok = {d['valor'] for d in catalogo.decisiones() if d['campo'] == 'ficha-ok'}
     # un id que quedó en dos grupos (se separó la obra) es del que comparte su ficha,
     # después del de más funciones: las decisiones van con la obra de siempre
     dueno = {}
@@ -380,6 +382,15 @@ def materializar(R, grupos, key, cache):
         pr['titulo_original'] = {'fuente': 'festival:' + ','.join(sorted(titulos[titulo])), 'regla': 'el título que más festivales imprimen'}
         tm = sorted({r['tmdb'] for r in regs if r['tmdb']})
         t = _tmdb(tm[0], key, cache) if len(tm) == 1 else None
+        # ¿LA FICHA ES DE ESTA OBRA? (24 nov 2026): tres apuntaban a otra película y nadie lo
+        # vio. Si ninguna dirección acreditada comparte un nombre con la de TMDB, se para;
+        # un colectivo o un seudónimo se declara POR FICHA (decisión `ficha-ok`, valor = el
+        # tmdb, con su motivo): una obra nueva no tiene id todavía, y si cambia de ficha se vuelve a mirar
+        if t and t['directores'] and tm[0] not in ficha_ok:
+            _pal = lambda xs: {w for x in xs for w in _dir(x).split() if len(w) > 2}
+            nuestras = _pal(r['director'] for r in regs)
+            if nuestras and not nuestras & _pal(t['directores']):
+                otras.append(f'«{titulo}» {wid} ({", ".join(sorted({r["director"] for r in regs if r["director"]}))}) tiene la ficha {tm[0]}, de {", ".join(t["directores"])}')
         dirs = max((_directores(r['director']) for r in regs), key=lambda d: (len(d) > 0, _tildes(' '.join(d)), len(' '.join(d))))
         pr['directores'] = {'fuente': 'festival', 'regla': 'la grafía más completa que acreditan los festivales'}
         if t and t['directores'] and [_dir(x) for x in t['directores']] != [_dir(x) for x in dirs]:
@@ -444,6 +455,8 @@ def materializar(R, grupos, key, cache):
             o['versiones'] = [{'etiqueta': f'{d} min', 'duracion_min': d} for d in durs]
         o['presentaciones'] = sorted({r['fest'] for r in regs})
         nuevas[wid], proc[wid] = o, pr
+    if otras:
+        sys.exit('✗ fichas de TMDB de otra obra (corregir el tmdb_id —en lo ya publicado, decisión `xref.tmdb` y ficha_unica.py --aplicar --escribir—, o declarar en decisiones.json {"campo": "ficha-ok", "valor": <tmdb>, "work_id": "", "motivo": …}):\n  ' + '\n  '.join(otras))
     # las decisiones de la revisión, por título → por work_id
     decs = [d for d in catalogo.decisiones()]
     ya = {(d['work_id'], d['campo']) for d in decs}
@@ -464,7 +477,7 @@ def materializar(R, grupos, key, cache):
     # prioridad máxima: la decisión humana
     reemplazadas = {d.get('reemplaza') for d in decs}
     for i, d in enumerate(decs):
-        if i in reemplazadas or d['campo'] in ('no-es', 'no-alta-tmdb') or d['work_id'] not in nuevas:
+        if i in reemplazadas or d['campo'] in catalogo.SIN_VALOR or d['work_id'] not in nuevas:
             continue
         o = nuevas[d['work_id']]
         partes = d['campo'].split('.')

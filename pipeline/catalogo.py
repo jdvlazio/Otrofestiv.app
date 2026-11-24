@@ -98,6 +98,10 @@ def _lista(raiz, nombre):
     return json.load(io.open(p, encoding='utf-8')) if os.path.exists(p) else []
 
 
+# decisiones que no son un valor de la obra
+SIN_VALOR = ('no-es', 'no-alta-tmdb', 'ficha-ok')
+
+
 def decisiones(raiz=DIR):
     return _lista(raiz, 'decisiones.json')
 
@@ -283,7 +287,7 @@ def decision_pisada(obs, decs):
     reemplazadas = {d.get('reemplaza') for d in decs if d.get('reemplaza') is not None}
     prob = []
     for i, d in enumerate(decs):
-        if i in reemplazadas or d['campo'] in ('no-es', 'no-alta-tmdb') or 'valor' not in d:
+        if i in reemplazadas or d['campo'] in SIN_VALOR or 'valor' not in d:
             continue
         o = obs.get(d['work_id'])
         if o is None:
