@@ -12,7 +12,9 @@
   "regla": "único"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  }
 }

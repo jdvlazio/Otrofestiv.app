@@ -4,12 +4,16 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1368500",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1368500)",
+  "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1368500",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1368500)",
+  "fecha": "2026-11-24"
  },
  "paises": {
   "fuente": "tmdb:1368500",

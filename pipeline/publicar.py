@@ -380,6 +380,10 @@ def publicar(fid, forzar=False, ensayo=False):
         import afiches_unicos
         for _t, _a, _b in afiches_unicos.aplicar(out):
             print(f'  · afiche del almacén: «{_t[:50]}»')
+        # …Y UN DIRECTOR, UN AÑO Y UN PAÍS
+        import ficha_unica
+        for _t, _k, _a, _b in ficha_unica.aplicar(out):
+            print(f'  · {_k} del almacén: «{_t[:40]}» {_a} → {_b}')
         if _nuevas:
             print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
             for t in _nuevas[:10]:
