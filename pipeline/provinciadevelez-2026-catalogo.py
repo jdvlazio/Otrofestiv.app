@@ -195,6 +195,28 @@ SINOPSIS = {
     'Ayuno y cenizas': (WEB,'Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy.'),
 }
 
+# Sinopsis en inglés: traducción nuestra de la española publicada (24 nov 2026)
+SINOPSIS_EN = {
+    "De la tradición a la prohibición": "A documentary exploring the evolution of sacred plants of power, from ancestral rituals to their stigmatization and prohibition. In a Latin American context, it questions the official narratives that have criminalized this knowledge and reveals processes of cultural dispossession and the rupture of collective memory.",
+    "El arte de inmortalizar mortales": "Don Antonio: the sculpted memory that bids welcome or the last farewell.",
+    "El dolor del vientre": "Amid loves and drums, a mother remembers a son's departure and the nostalgic moments lived with his drum.",
+    "El latir de la memoria": "After 15 years of absence, the Inmaculada clock beats again in Barichara.",
+    "El pescador (videoclip)": "This music video links fishing in the Caribbean of Puerto Rico and La Guajira, following Neymar, a boy from La Guajira who learns to fish from an early age.",
+    "Entre amigos": "Seeking to escape the routine of the city, a group of young people visit a friend who lives alone in the mountains. Surrounded by the vastness of the landscape and the silence of the countryside, they listen to the stories she knows about the region.",
+    "Gualí": "In the heart of the Bogotá savanna, the Gualí wetland is a sanctuary of biodiversity. The documentary immerses itself in its natural wealth through a poetic visual narrative.",
+    "La imaginada": "Through an intimate dialogue between documentary and fiction, La imaginada travels through the collective memory and oral stories of Barbosa, Santander, to reveal how its inhabitants have built their identity over time.",
+    "Limones": "Cristian and Andrés, two nine-year-old Wayuu boys, roam the streets of Palomino selling limes. As they work, they hear and comment on, in the background, the disappearance of Bartolo, which occurred during the recent armed clashes in the Sierra Nevada. At nightfall, they return home and hand over their earnings to their mother.",
+    "Llantos del monte": "A young man walks through the woods with friends, but when he is left alone, solitude and strange noises fill him with terror. After losing consciousness, he wakes in a mysterious room where a spiritual being reveals to him realities about the world and the imbalance that governs the universe.",
+    "Olvidar a Miriam": "This one-minute film travels through the sadness of old age and, through tango, conveys the feeling of a tear shed out of nostalgia.",
+    "Paisaje / Niebla": "This short film, shot in the Sumapaz páramo, is a poetic approach to life in this territory, looking at its vastness but also its darkest side: the violence it suffered years ago.",
+    "Saint Juanito": "From the depths of the Peruvian jungle, where extraordinary natural beauty coexists with harsh realities, Saint Juanito invites us on a journey through the lights and shadows of our Amazon.",
+    "Salvemos el agua": "The short film offers an adventure in which ancestral wisdom and children's creativity come together to reflect on caring for rivers, biodiversity and life.",
+    "Uma Uñjirinaka · Alto Milluni": "It shows the testimony and struggle of the Indigenous communities affected by water pollution in the Katari - Lake Titicaca basin in Bolivia. In Alto Milluni, whose spring water is stolen daily to be taken to the megacity of El Alto, the women propose a local community tourism project in order to survive.",
+    "Uma Uñjirinaka · Puchucollo Alto": "It shows the testimony and struggle of the urban and rural Indigenous communities affected by water pollution in the Katari - Lake Titicaca basin in Bolivia. In Puchukollo Alto, on the outskirts of the megacity of El Alto, the families of the community defend the aquifer located there against the seizure and pollution of its waters.",
+    "Un diálogo para sanar la Tierra": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Güindiva Villafaña Mejía.",
+    "Una mala chicha es un guarapo": "Eulalio is tempted to sell the land that has been in his family for generations. A little chicha will help him make the best decision.",
+}
+
 # Fuera de la selección: (título, director, tipo, rótulo del festival, función, evidencia)
 OTRAS = [
     ('La familia Bélier', 'Éric Lartigau', 'largo', 'Franja infantil', F1,
@@ -286,6 +308,9 @@ def main():
             o['afiche'] = _a
             o['_afiche_de'] = LAMINA_DE.get(tit, 'cartelera de la web del festival')
         obras.append(o)
+    for o in obras:
+        if o['titulo'] in SINOPSIS_EN:
+            o['synopsis_en'] = SINOPSIS_EN[o['titulo']]
     d = {'_provenance': {'fuente': f'{WEB} (landing.js: 29 obras) + IG @9_festcineprovinciadevelez (Bright Data)',
                          'capturado': FECHA,
                          'metodo': 'arreglo de landing.js + OCR del sistema (pipeline/ocr.py) de 29+29 láminas + a ojo'},

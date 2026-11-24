@@ -40,7 +40,7 @@ FUNCIONES = {
         'El dolor del vientre', 'Llantos del monte', 'Uma Uñjirinaka · Alto Milluni',
         'Un diálogo para sanar la Tierra', 'Escisión de la cigarra', 'El arte de inmortalizar mortales']),
 }
-CAMPOS = ('director', 'pais', 'anio', 'duracion_min', 'sinopsis')
+CAMPOS = ('director', 'pais', 'anio', 'duracion_min', 'sinopsis', 'synopsis_en')
 
 
 def obra(o):
