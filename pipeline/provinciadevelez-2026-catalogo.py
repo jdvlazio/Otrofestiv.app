@@ -27,7 +27,7 @@ dos posts del 7 nov + Saint Juanito y El pescador (videoclip) del post del 9 nov
 (assert abajo). El post del afiche dice «más de 35 películas»: 29 + Bélier +
 Sr. Fox + Bill W. + La imaginada + las dos de Dimaté = 35. El 20 nov suma tres que la
 web no trae: Puchucollo Alto (Saravita), Una mala chicha es un guarapo y Entre Ríos = 38.
-Una obra puede ir en dos funciones (Alto Milluni y Un diálogo: 30 nov y 5 dic).
+
 
 DOS OBRAS «El pescador» (corto y videoclip, mismo equipo): el videoclip se nombra con
 su categoría, «El pescador (videoclip)», para no heredar la ficha del corto (TMDB 1558138).
@@ -46,10 +46,9 @@ WEB = 'https://festivaldecineprovinciadevelez.com/'
 IG = 'https://www.instagram.com/p/'
 SO = 'Selección oficial'   # web: «Selección oficial» / «Convocatoria Saravita para nuevos realizadores»
 
-F0 = ('2026-11-30', '16:00', 'Auditorio SENA',
-      f'{IG}Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión '
-      'Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las '
-      'láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas')
+# La función del 30 nov (SENA, Vélez; IG Df-DlZyERf2) NO se monta: el afiche oficial dice
+# «DEL 1 AL 6 DE DICIEMBRE» y solo van los días oficiales (Juan, 24 nov 2026). Sus obras
+# quedan en el catálogo; Alto Milluni y Un diálogo conservan la del 5 dic.
 F5 = ('2026-12-05', '18:00', 'Parque Emilio Ulloa',
       f'{IG}DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA '
       'TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6')
@@ -97,17 +96,17 @@ SEL = [
      'lámina: «DIRECTED BY DANIELA HERRERA · FESTIVAL CINE PALOMINO»'),
     ('la-belleza', 'La Belleza', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/12', None,
      'lámina: «UN DOCUMENTAL DE NELSON SILVA»'),
-    ('dialogo-tierra', 'Un diálogo para sanar la Tierra', 'Documental', None, 'Colombia', None, 'DfcqutroV1z/08', (F0, F5),
+    ('dialogo-tierra', 'Un diálogo para sanar la Tierra', 'Documental', None, 'Colombia', None, 'DfcqutroV1z/08', F5,
      'lámina: «(Incluye el visionado del documental Tanuzanamu: Principio del Equilibrio - Dir. Ati Güindiva '
      'Villafaña Mejia)» · Palomino, La Guajira; el director de la obra no se nombra'),
-    ('uma-unjirinaka', 'Uma Uñjirinaka · Alto Milluni', 'Documental', 'Left Hand Rotation', 'Bolivia', None, 'DfcqutroV1z/07', (F0, F5),
+    ('uma-unjirinaka', 'Uma Uñjirinaka · Alto Milluni', 'Documental', 'Left Hand Rotation', 'Bolivia', None, 'DfcqutroV1z/07', F5,
      'lámina: «Una serie documental de Left Hand Rotation · UMA UÑJIRINAKA · Alto Milluni (CUIDADORXS DEL '
      'AGUA)»; la web escribe «Unjirinaka» (sin ñ)'),
     ('nueve-jueves', 'Nueve jueves en Riachuelo', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/06', None,
      'lámina: «DIRIGIDO POR NELSON SILVA · Producción Edson Velandia»'),
-    ('ecos-canaveral', 'Ecos del cañaveral', 'Documental', 'Juan Sebastián Parra', 'Colombia', None, 'DfcqutroV1z/05', F0,
+    ('ecos-canaveral', 'Ecos del cañaveral', 'Documental', 'Juan Sebastián Parra', 'Colombia', None, 'DfcqutroV1z/05', None,
      'web: «Juan Sebastián Parra»; lámina: «DIRECCIÓN JUAN SEBASTIÁN PARRA»'),
-    ('guali', 'Gualí', 'Documental', None, 'Colombia', 2025, 'DfcpGHfoWWI/13', F0,
+    ('guali', 'Gualí', 'Documental', None, 'Colombia', 2025, 'DfcpGHfoWWI/13', None,
      'lámina: «Una producción de Los Pinos Films · 2025»; sin director nombrado'),
     ('oficios-fonce', 'Sinfonía incompleta de oficios del Fonce', 'Documental', 'Nelson Silva', 'Colombia', 2024, 'DfcpGHfoWWI/05', None,
      'lámina: «DIRECTOR Y PRODUCTOR EJECUTIVO NELSON SILVA»; web: «Nelson Silva · 2024»'),
@@ -229,14 +228,14 @@ OTRAS = [
     ('La imaginada', 'Carolina Muñoz', 'corto', 'Muestra especial', F4_IMAG,
      'pie Df7ZYXrEaXh: «película de 20 minutos inspirada en Barbosa, nominada a la India Catalina, que se presentó en '
      'el 2016 … presencia de la escritora y directora Carolina Muñoz»; lámina Df71yg2P6hF (y FB 19 nov): «MUESTRA ESPECIAL LA IMAGINADA 2016 – 2026 · DIRECTORA CAROLINA MUÑOZ · VIERNES 4 DE DICIEMBRE · DESDE LAS 6:00 P. M. · LA TANTE · BARBOSA»'),
-    ('Uma Uñjirinaka · Puchucollo Alto', 'Left Hand Rotation', 'corto', SO, F0,
+    ('Uma Uñjirinaka · Puchucollo Alto', 'Left Hand Rotation', 'corto', SO, None,
      'lámina Df-DlZyERf2/02: «CONVOCATORIA SARAVITA · DOCUMENTAL · Una serie documental de Left Hand Rotation · UMA '
      'UÑJIRINAKA · Puchucollo Alto (CUIDADORXS DEL AGUA) · SELECCIÓN OFICIAL 2026»; no está en las 29 de la web; '
      'el pie escribe «Puchukollo Alto»'),
-    ('Una mala chicha es un guarapo', 'Wilson Beltrán, Wilson Valderrama', 'corto', 'Muestra especial', F0,
+    ('Una mala chicha es un guarapo', 'Wilson Beltrán, Wilson Valderrama', 'corto', 'Muestra especial', None,
      'lámina Df-DlZyERf2/04: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Un Film De Cine Club Barbosa & '
      'Celuloide · Realizado Por Wilson Beltran, Wilson Valderrama»'),
-    ('Entre Ríos. Todos somos hermanos', None, 'corto', 'Muestra especial', F0,
+    ('Entre Ríos. Todos somos hermanos', None, 'corto', 'Muestra especial', None,
      'lámina Df-DlZyERf2/08: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Entre Ríos · Todos somos '
      'hermanos»; sin créditos; tipo supuesto por la portada (documental y cortometraje), sin duración'),
     ('Tres lunas nuevas', 'Rodrigo Dimaté', 'largo', 'Muestra central', None,
@@ -277,7 +276,7 @@ def main():
             if isinstance(fun[0], tuple):
                 o['funciones'] = [funcion(x) for x in fun]
         else:
-            o['franja'] = 'sin día ni hora publicados (24 nov)'
+            o['franja'] = 'sin función en los días oficiales (1–6 dic)'
         s = SINOPSIS.get(tit)
         if s:
             o['sinopsis'], o['_sinopsis_de'] = s[1], s[0]
@@ -300,7 +299,7 @@ def main():
         if fun:
             o['funcion'] = funcion(fun)
         else:
-            o['franja'] = 'sin día ni hora publicados (24 nov)'
+            o['franja'] = 'sin función en los días oficiales (1–6 dic)'
         if tit in SINOPSIS:
             o['sinopsis'], o['_sinopsis_de'] = SINOPSIS[tit][1], SINOPSIS[tit][0]
         _a = f'assets/provinciadevelez-2026/{slug(tit)}.jpg'

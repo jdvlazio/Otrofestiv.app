@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""provinciadevelez-2026-crudo.py — el catálogo → crudo: 7 funciones (24 nov 2026).
+"""provinciadevelez-2026-crudo.py — el catálogo → crudo: 6 funciones (24 nov 2026).
 
 Cada obra del catálogo trae su(s) función(es) con la lámina que lo dice; acá se
 agrupan por día, hora y sede, en el orden de las láminas. Una función con una obra
 es esa obra; con varias, un programa.
 
-TÍTULOS: el 30 nov lo nombra la portada («CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE»).
-Los demás el festival no los nombra: «A + B» / «A + N Obras» (precedente Under).
+30 NOV (SENA, Vélez) FUERA: el afiche dice 1–6 dic; solo días oficiales (Juan, 24 nov).
+TÍTULOS: el festival no nombra los programas: «A + B» / «A + N Obras» (precedente Under).
 ACCESO: «¡Entrada libre a todos los escenarios!» (Df4hzKXkYiP, 18 nov; Df2AcYNEbXC, 17 nov).
 DURACIÓN: ninguna franja; la del programa es la suma de las obras con duración conocida.
 Las obras sin función se quedan en el catálogo (no se inventan).
@@ -22,10 +22,6 @@ OUT = f'{REPO}/festivals/staging/provinciadevelez-2026-crudo.json'
 IG = 'https://www.instagram.com/p/'
 # (día, hora) → título, sección, post, fecha del post, obras en el orden de las láminas
 FUNCIONES = {
-    ('2026-11-30', '16:00'): ('Categorías Documental y Cortometraje', 'Selección Oficial', 'Df-DlZyERf2', '2026-11-20', [
-        'Uma Uñjirinaka · Puchucollo Alto', 'Ecos del cañaveral', 'Una mala chicha es un guarapo',
-        'Uma Uñjirinaka · Alto Milluni', 'Gualí', 'Un diálogo para sanar la Tierra',
-        'Entre Ríos. Todos somos hermanos']),
     ('2026-12-01', '18:00'): ('La familia Bélier + El pescador (videoclip)', 'Franja Infantil', 'DfxyKI-S9LA', '2026-11-15', [
         'La familia Bélier', 'El pescador (videoclip)']),
     ('2026-12-02', '19:00'): ('My Name Is Bill W. + De la tradición a la prohibición', 'Muestra Especial', 'Df2AcYNEbXC', '2026-11-17', [
@@ -40,6 +36,8 @@ FUNCIONES = {
         'El dolor del vientre', 'Llantos del monte', 'Uma Uñjirinaka · Alto Milluni',
         'Un diálogo para sanar la Tierra', 'Escisión de la cigarra', 'El arte de inmortalizar mortales']),
 }
+INICIO, FIN = '2026-12-01', '2026-12-06'   # el afiche oficial
+assert all(INICIO <= d <= FIN for d, _ in FUNCIONES), 'función fuera de los días oficiales'
 CAMPOS = ('director', 'pais', 'anio', 'duracion_min', 'sinopsis', 'synopsis_en')
 
 

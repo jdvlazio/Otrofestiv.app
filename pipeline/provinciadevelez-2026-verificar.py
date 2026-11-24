@@ -21,6 +21,9 @@ def n(s):
 
 b = json.load(open(f'{REPO}/festivals/staging/provinciadevelez-2026-build.json', encoding='utf-8'))['films']
 err, ojo = [], []
+for f in b:   # solo días oficiales: el afiche dice 1 al 6 de diciembre (Juan, 24 nov)
+    if not '2026-12-01' <= f['day'] <= '2026-12-06':
+        err.append(f'{f["title"]}: {f["day"]} fuera de los días oficiales')
 for f in b:
     sc = f['_src']['url'].rstrip('/').split('/')[-1]
     txt = ''
