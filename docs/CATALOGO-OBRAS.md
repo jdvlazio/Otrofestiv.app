@@ -155,6 +155,10 @@ claramente más grande reemplaza; otra versión (idioma, laureles) u otro diseñ
 **se revisa**, no se decide solo. Lo elegido a mano por Juan nunca se reemplaza
 solo. La sinopsis sigue el mismo principio: si falta, entra; si es el mismo texto
 o uno contenido en el otro, queda el completo; si es distinta, se revisa.
+**La que se lee es corta** (Juan, 23 nov 2026): máximo 350 caracteres, reescrita y
+no recortada. La decisión `sinopsis.es` guarda la síntesis en `valor` y el texto
+completo en `original`; la redacta uno y la verifica otro (`pipeline/SINOPSIS-CORTA.md`,
+`pipeline/sinopsis_cortas.py`, guardián `[sinopsis-larga]`).
 **La duración no es de la obra:** es de la copia que proyecta cada festival.
 
 Restricción dura: `titulo_original`, `directores` y `anio` no pueden quedar vacíos
