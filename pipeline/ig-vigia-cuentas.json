@@ -97,7 +97,7 @@
     },
     {
       "id": "provinciadevelez2026",
-      "cuenta": "festcineprovinciadevelez",
+      "cuenta": "9_festcineprovinciadevelez",
       "inicio": "2026-11-30",
       "fin": "2026-12-06"
     },
@@ -204,7 +204,7 @@
     "_nota": "Por dónde comunica cada festival por montar; lo exige pipeline/canales.py. null en redes = se buscó y no tiene. Las fechas salen del propio festival, no de Festhome/FilmFreeway.",
     "provinciadevelez2026": {
       "redes": {
-        "instagram": "https://www.instagram.com/festcineprovinciadevelez",
+        "instagram": "https://www.instagram.com/9_festcineprovinciadevelez",
         "facebook": "https://www.facebook.com/festivaldecinebarbosa",
         "web": "https://festivaldecineprovinciadevelez.com/"
       },
