@@ -27,6 +27,10 @@ Dueño: `pipeline/ficha_obra.py`; guardián `[ficha-obra]`.
 | Letterboxd / TMDB | forma del slug / número |
 | Afiche | archivo que existe |
 
+**Tres sinopsis por obra:** la original (`catalogo/originales.json`: texto, idioma y
+fuente; no se edita), la corta en español y la corta en inglés. Que sean de ESA
+película: `[sello-obra]`.
+
 Que sea el **mismo** en todos los festivales: `[obra-unica]`. Que sea **verdad**:
 la identidad contra su fuente (en construcción, paso 2 y 3 del plan).
 

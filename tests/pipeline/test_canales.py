@@ -36,6 +36,13 @@ class Canales(unittest.TestCase):
                      'fechas': {**BIEN['fechas'], 'inicio': '2026-11-26'}}}}, HOY)
         self.assertEqual(f[0][1], 2)
 
+    def test_funcion_fuera_del_afiche(self):
+        cu = {'canales': {'x2026': BIEN}}
+        f = {'festivalStartStr': '2026-12-04T00:00:00', 'festivalEndStr': '2026-12-07T23:59:00', 'films': [{'day': '2026-12-04'}]}
+        self.assertEqual(c.fuera_de_fechas(cu, 'x-2026', f), [])
+        f['films'].append({'day': '2026-12-03'})
+        self.assertEqual(c.fuera_de_fechas(cu, 'x-2026', f), ['2026-12-03'])
+
     def test_a_siete_dias_mudo_se_desecha(self):
         self.assertNotIn('DESECHAR', m(ultimo_post='2026-09-01'))
         self.assertIn('DESECHAR', m(ultimo_post='2026-09-01', fechas={**BIEN['fechas'], 'inicio': '2026-12-01'}))

@@ -25072,7 +25072,7 @@
   "valor": "A year after finishing You Burn Me, Piñeiro presents the preface he could not include in the final cut. Following Pavese, who wrote a preface for each chapter of Dialogues with Leucò, here, at last, is our preface.",
   "motivo": "la que publicaba era de otra obra; traducida de su española",
   "fecha": "2026-11-24",
-  "quien": "plan del almacén (Juan)",
+  "quien": "Juan («Aprobadas, sigue»)",
   "antes": {
    "cinemancia-2025": "Rafael is a poet who lives with his best friend, holds a sad job in a gray office, and has a worn-out relationship. The city is collapsing under a heat wave."
   }
@@ -26306,6 +26306,7 @@
   "quien": "plan del almacén (revisión)"
  },
  {
+<<<<<<< HEAD
   "work_id": "w_8GJ9R398114H",
   "campo": "no-es",
   "valor": "w_7JCXNE70VBK6",
@@ -26427,5 +26428,419 @@
    "fecha": "2026-11-24",
    "huella": "8ea99493d099"
   }
+=======
+  "work_id": "w_R4GTPXMQN3CW",
+  "campo": "xref.tmdb",
+  "valor": 981698,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/el-gato-cosmico-al-final/"
+ },
+ {
+  "work_id": "w_R4NEB1T5EMBG",
+  "campo": "xref.tmdb",
+  "valor": 1355190,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/elipsis-2021/"
+ },
+ {
+  "work_id": "w_R4NEB1T5EMBG",
+  "campo": "sinopsis.es",
+  "valor": "Un hombre cae en un bucle temporal y vive un encierro tormentoso todos los días.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/1355190"
+ },
+ {
+  "work_id": "w_R4GTPXMQN3CW",
+  "campo": "sinopsis.es",
+  "valor": "Un matrimonio descubre que la puerta del pasillo ha desaparecido y la encuentra en lo alto del comedor. La puerta no será lo único en desaparecer.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/981698"
+ },
+ {
+  "work_id": "w_R4N0XYA9F83D",
+  "campo": "sinopsis.es",
+  "valor": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "aleste-2026": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+   "cortoscali-2026": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+   "popayan-2026": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte."
+  }
+ },
+ {
+  "work_id": "w_R4NEB0N00RB8",
+  "campo": "sinopsis.es",
+  "valor": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "aleste-2026": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo."
+  }
+ },
+ {
+  "work_id": "w_R4NEB1TRDBS1",
+  "campo": "sinopsis.es",
+  "valor": "Dos gatos persas y un dibujante tratan de hacer películas en medio de una guerra, desafortunadamente nadie las entiende.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "anibia-2026": "Dos gatos persas y un dibujante tratan de hacer películas en medio de una guerra, desafortunadamente nadie las entiende.",
+   "cinetoro-2026": "Dos gatos persas y un dibujante tratan de hacer películas en medio de una guerra, desafortunadamente nadie las entiende."
+  }
+ },
+ {
+  "work_id": "w_6XS3502PFKFB",
+  "campo": "sinopsis.es",
+  "valor": "Tras la muerte de su padre ausente, la cineasta Dominique Jeanneret sigue el rastro de los objetos y las imágenes que él dejó grabadas para reconstruir su mirada y preguntarse si es posible conectar con alguien a quien no conoció.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "cinetoro-2026": "Tras la muerte de su padre ausente, la cineasta Dominique Jeanneret sigue el rastro de los objetos y las imágenes que él dejó grabadas para reconstruir su mirada y preguntarse si es posible conectar con alguien a quien no conoció."
+  }
+ },
+ {
+  "work_id": "w_R4NEB2HBPEKG",
+  "campo": "sinopsis.es",
+  "valor": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "siembrafest-2026": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo."
+  }
+ },
+ {
+  "work_id": "w_R4NEB3HZ8WTB",
+  "campo": "sinopsis.es",
+  "valor": "Cada noche, los relámpagos iluminan el Catatumbo, una tierra donde la belleza natural convive con las marcas del conflicto. Entre guerrillas, desplazamientos y cultivos convertidos en sustento y estigma, esta animación recorre la memoria de una región que, bajo un cielo que nunca se apaga, continúa defendiendo su dignidad y su esperanza.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "villadelcine-2026": "Cada noche, los relámpagos iluminan el Catatumbo, una tierra donde la belleza natural convive con las marcas del conflicto. Entre guerrillas, desplazamientos y cultivos convertidos en sustento y estigma, esta animación recorre la memoria de una región que, bajo un cielo que nunca se apaga, continúa defendiendo su dignidad y su esperanza."
+  }
+ },
+ {
+  "work_id": "w_ZR5J46WM80RV",
+  "campo": "sinopsis.es",
+  "valor": "Roberto guarda un secreto que no puede compartir: un caracol de mar que les susurra verdades a quienes se atreven a escucharlas. En medio de una celebración íntima, el deseo de revelar ese misterio desata una ruptura sin vuelta atrás.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "villadeleyvaiff-2026": "Roberto guarda un secreto que no puede compartir: un caracol de mar que les susurra verdades a quienes se atreven a escucharlas. En medio de una celebración íntima, el deseo de revelar ese misterio desata una ruptura sin vuelta atrás."
+  }
+ },
+ {
+  "work_id": "w_6TA3KN43XEQ6",
+  "campo": "sinopsis.en",
+  "valor": "Each artist captures their vision and feelings on the walls, thanks to a story that has been written from the 1980s to the present, in a Medellín that has always been in the process of transformation.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4F84MW9WTH9",
+  "campo": "sinopsis.en",
+  "valor": "What remains in a place when we leave? A journey through liminal spaces, places of transit, ambiguity and silent waiting, explores the relationship between human beings and the places they have lived in and live in, and the sensations, memories and emotions those places awaken.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4N0XYA9F83D",
+  "campo": "sinopsis.en",
+  "valor": "On the banks of the Magdalena River, Esther guides the spirits of the disappeared, victims of violence, as they try to rebuild their interrupted stories and find their place between life and death.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4EVBDPJHAXG",
+  "campo": "sinopsis.en",
+  "valor": "A narrative or documentary journey into the collective and emotional memory that songs build in people’s lives. It weaves together different stories around the creation, loss or preservation of music, showing how melodies define historical, geographical and personal moments in Colombia.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4JMKBFQW5V3",
+  "campo": "sinopsis.en",
+  "valor": "A fragmented vision of frailejones that juxtaposes close-ups of the plant, like a morphological study, with scientific illustrations, official representations and discourses about it. Shot on photosensitive film, it shows the plant as a territory inhabited by diverse forms of life.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4NEB0N00RB8",
+  "campo": "sinopsis.en",
+  "valor": "Julia is going through a decisive moment in her life. What should bring her happiness is disturbed by painful memories and the presence of death. Faced with a life that insists on making its way, she will have to confront her deepest fears before crossing a threshold that will change everything.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4ET8FVT5MKJ",
+  "campo": "sinopsis.en",
+  "valor": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_X28JN2JHRDP4",
+  "campo": "sinopsis.en",
+  "valor": "Pierre is going to meet Renaud for a day of protests in Marseille, but hears nothing from his friend. Forced to wander alone through a city paralyzed by blockades, he is gradually swept into the whirlwind of the clashes.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_X290P5QEQWPJ",
+  "campo": "sinopsis.en",
+  "valor": "Every Wednesday, for more than two years, retirees have marched to Congress against the destruction of their income. Insults, barricades and repression do not stop them. Through the testimony of Zulema, Eduardo and Carlos, the march recognizes its roots in workers’ struggles and shines as a beacon toward the future.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_X293QQJHCY32",
+  "campo": "sinopsis.en",
+  "valor": "A glimpse and a breath of Antiquity.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4EP71550W43",
+  "campo": "sinopsis.en",
+  "valor": "Valentina, a 76-year-old Russian cosmonaut, arrives in a hazy, uchronic Cuba after receiving, thirty years late, an invitation to an agricultural expedition to Mars. Among blurred landscapes and promises of the past, she searches for the ruins of a future that never came.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_X295E4ENARDV",
+  "campo": "sinopsis.en",
+  "valor": "In a rural setting marked by tradition, Nerea, a farmer by inheritance, not by choice, lives with a rigid father and a conciliatory mother, trapped in a routine that leaves no room for decisions. Between interviews and everyday moments, silent tensions surface, until the rain brings her only emotional respite.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_Y3FKT4581WF3",
+  "campo": "sinopsis.en",
+  "valor": "In the early 16th century, a courageous cacique confronts the devastating arrival of the Spanish in his lands. Two children searching for their abducted sister are caught in this conflict of cultures, which unleashes battles that reveal feelings and acts of courage, betrayal, love and greed.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT3EMPVQN7D",
+  "campo": "sinopsis.en",
+  "valor": "In Maimará, the artist Nicolás Anún and his community paint a mural inspired by All Souls’ Day. Each brushstroke brings those who are gone back into the present.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT3GF65GCA2",
+  "campo": "sinopsis.en",
+  "valor": "In the Kiwnas Cxhab resguardo, a collectively owned Indigenous territory, the Nasa people share what the coca leaf means to their life. In the face of forced eradication, they defend their knowledge and their right to decide over their territory.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4JD0Z8HBW6B",
+  "campo": "sinopsis.en",
+  "valor": "Behind every figure there is a name. Organized women raise their voices against femicide in Colombia and stand with a collective struggle against impunity.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT3H5EQAZB6",
+  "campo": "sinopsis.en",
+  "valor": "Between rehearsals and performances, the Choreographic Department prepares two works. Its dancers explore how movement changes when they learn to listen to the bodies of others.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT3WEQ2W9XW",
+  "campo": "sinopsis.en",
+  "valor": "In Cajamarca, a farmer defends the town’s agricultural future against the La Colosa mining project. A local referendum puts a decision that would change the territory in the community’s hands.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT48AERT4AR",
+  "campo": "sinopsis.en",
+  "valor": "At the Casa de la Paz in Bogotá live Doris, a peace signatory, and Virgelina, a human rights defender. Two lives marked by the war share a place to build peace every day.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4F7ST1C6JNH",
+  "campo": "sinopsis.en",
+  "valor": "Archival images of distant wars intersect with the faces and ruins of Medellín. The editing makes acts of violence separated by time and territory resonate with one another.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT48PGTVTVJ",
+  "campo": "sinopsis.en",
+  "valor": "Sixty-two years after losing her father, María Irma Trigueros once again tells what happened. Her memory opens a window onto the violence between Liberals and Conservatives in Yaguará, Huila.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT492SYWMRD",
+  "campo": "sinopsis.en",
+  "valor": "In El Buen Pastor prison, women from Courtyard 3 stage the life of Milagros. Through the telling, five stories emerge that reveal the complexity of living behind bars.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT49B2JV3A9",
+  "campo": "sinopsis.en",
+  "valor": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT49MFNCBHN",
+  "campo": "sinopsis.en",
+  "valor": "Jairo López Achury, a peace signatory and chronicler, turns the streets of La Candelaria into a classroom. Each stop opens a conversation about conflict, resistance and memory.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT4QH7R8HYM",
+  "campo": "sinopsis.en",
+  "valor": "A documentary that recovers the oral memory of the Otavalo Kichwa people and their paths as artisans, merchants and universal travelers.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_T2P0CN3BR544",
+  "campo": "sinopsis.en",
+  "valor": "From the streets of Bogotá comes Roofianes 2, a documentary made by the TSK Crew that plunges us into the most underground side of Bogotá graffiti. It records the crew’s actions, routes, interventions and experiences within the city’s graffiti scene.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_N2MKS2E76TV4",
+  "campo": "sinopsis.en",
+  "valor": "An independent audiovisual project that seeks to open spaces for women rappers in the underground. A piece with its own identity and force, created to connect, give visibility and keep building bonds through music.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4NEB1T5EMBG",
+  "campo": "sinopsis.en",
+  "valor": "A man falls into a time loop and lives through a tormenting confinement every day.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4GTPXMQN3CW",
+  "campo": "sinopsis.en",
+  "valor": "A married couple discovers that the hallway door has disappeared and finds it high up in the dining room. The door will not be the only thing to disappear.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4NEB1TRDBS1",
+  "campo": "sinopsis.en",
+  "valor": "Two Persian cats and a cartoonist try to make films in the middle of a war; unfortunately, nobody understands them.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_6XS3502PFKFB",
+  "campo": "sinopsis.en",
+  "valor": "After the death of her absent father, filmmaker Dominique Jeanneret follows the traces he left behind—cameras and images he recorded—to reconstruct his gaze and question whether it is possible to connect with someone she barely knew.",
+  "motivo": "oficial (Bogoshorts)",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4NEB2HBPEKG",
+  "campo": "sinopsis.en",
+  "valor": "The story of Lucila Rodríguez and her career in cycling, brought back to light.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4NEB3HZ8WTB",
+  "campo": "sinopsis.en",
+  "valor": "Every night, lightning illuminates Catatumbo, a land where natural beauty coexists with the marks of conflict. Amid guerrillas, displacement and crops turned into sustenance and stigma, this animation travels through the memory of a region that, under a sky that never goes dark, keeps defending its dignity and its hope.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_ZR5J46WM80RV",
+  "campo": "sinopsis.en",
+  "valor": "Roberto keeps a secret that cannot be shared: a seashell that whispers truths to those who dare to listen. In the middle of an intimate celebration, the desire to reveal that mystery unleashes a rupture with no way back.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4GTPXMQN3CW",
+  "campo": "anio",
+  "valor": 2013,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4NEB1T5EMBG",
+  "campo": "directores",
+  "valor": [
+   "Dayana González Fajardo"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4NEB1T5EMBG",
+  "campo": "anio",
+  "valor": 2020,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+>>>>>>> origin/main
  }
 ]

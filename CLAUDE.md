@@ -82,63 +82,10 @@ deliberada existe la etiqueta `frontera-ok`.
 
 ## Estado del proyecto
 
-### Festivales (desde `FESTIVAL_CONFIG` en `src/config.js`)
+### Festivales
 
-| ID | Nombre | Ciudad | Fechas | Estado |
-|---|---|---|---|---|
-| `provinciadevelez2026` | Provincia de Vélez | Barbosa y Vélez | 30 NOV–6 DIC | **Próximo / activo** |
-| `cajica2026` | Festival de Cine de Cajicá | Cajicá | 21–23 NOV | Recién terminado |
-| `ficci65` | FICCI 65 | Cartagena | 14–19 ABR | Archivado |
-| `aff2026` | AFF 2026 | Medellín | 21–29 ABR | Archivado |
-| `tribeca2026` | Tribeca Festival |  |  | desconocido |
-| `cinemancia2025` | Cinemancia 2025 | Valle de Aburrá | 11–20 SEP | Archivado |
-| `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Archivado |
-| `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
-| `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Archivado |
-| `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Archivado |
-| `ficpa2026` | FICPA | Pasto | 13–17 OCT | Archivado |
-| `villadelcine2026` | Villa del Cine | Villa de Leyva | 14–17 OCT | Archivado |
-| `ficma2026` | FICMA | Manizales | 19–26 SEP | Archivado |
-| `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Archivado |
-| `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Archivado |
-| `cinemancia2026` | Cinemancia | Valle de Aburrá | 3–12 SEP | Archivado |
-| `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | Archivado |
-| `vartex2026` | Vartex | Medellín | 19–22 AGO | Archivado |
-| `qaff2026` |  |  |  | desconocido |
-| `tiff2026` | TIFF | Toronto | 10–20 SEP | Archivado |
-| `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
-| `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | Archivado |
-| `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | Archivado |
-| `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | Archivado |
-| `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Archivado |
-| `anibia2026` | Anibia | Bogotá | 20 OCT–1 NOV | Recién terminado |
-| `guatape2026` | Guatapé Film Fest | Guatapé | 21–25 OCT | Recién terminado |
-| `festicinerio2026` | FESTICINERIO | Riosucio | 8–13 NOV | Recién terminado |
-| `ficfusa2026` | FICFUSA | Fusagasugá | 11–16 NOV | Recién terminado |
-| `fecibac2026` | FECIBAC | Caucasia | 10–14 NOV | Recién terminado |
-| `aleste2026` | Al Este | Medellín y Bogotá | 18–29 NOV | **Próximo / activo** |
-| `villadeleyvaiff2026` | Festcinevilla | Villa de Leyva | 13–15 NOV | Recién terminado |
-| `cineparalapaz2026` | Cine para la Paz | Bogotá | 18–21 NOV | Recién terminado |
-| `under2026` | Under Medellín | Medellín | 25 NOV–3 DIC | **Próximo / activo** |
-| `cuaff2026` | CUAFF | Bogotá | 20–22 NOV | Recién terminado |
-| `cinetoro2026` | CINETORO | Toro | 10–15 NOV | Recién terminado |
-| `cortoscali2026` | Cortos Cali | Cali | 27–30 OCT | Recién terminado |
-| `biff2026` | BIFF | Bogotá | 8–14 OCT | Archivado |
-| `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | Archivado |
-| `mamut2026` | Mamut | Medellín | 5–11 OCT | Archivado |
-| `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | Archivado |
-| `ficcali2026` | FICCALI | Cali | 16–25 OCT | Recién terminado |
-| `bhff2026` | Bogotá Horror | Bogotá | 22–31 OCT | Recién terminado |
-| `ficica2026` | FICICA | Barranquilla | 20–24 OCT | Archivado |
-| `ficidi2026` | FICIDI | Barranquilla | 3–7 NOV | Recién terminado |
-| `mambe2026` | MAMBE | Florencia | 3–7 NOV | Recién terminado |
-| `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | Recién terminado |
-| `midbo2026` | MIDBO | Bogotá | 27 OCT–4 NOV | Recién terminado |
-| `mubibogota2026` | MUBI Fest | Bogotá | 24–25 OCT | Recién terminado |
-| `funza2026` | Festival de Cine Funza | Funza | 18–21 NOV | Recién terminado |
-| `semanacine2026` | Semana del Cine Colombiano | Cali | 3–9 NOV | Recién terminado |
-| `miradas2026` | Miradas Medellín | Medellín | 3–8 NOV | Recién terminado |
-| `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Archivado |
+La lista y su estado NO se copian acá: cambian a diario. Se consultan en vivo con
+`node scripts/generate-claude-md.js --festivales` (lee `src/config.js`).
 
 ### Features activas (desde `.specify/features/`)
 
