@@ -1,5 +1,5 @@
 {
- "_nota": "9.º Festival de Cine Provincia de Vélez (Barbosa, Santander, 30 nov–6 dic 2026). PRE-ONBOARDING, SIN PUBLICAR. Fuente: festivaldecineprovinciadevelez.com (landing.js: 29 obras de la selección oficial, convocatoria Saravita; franja infantil; muestra central de Rodrigo Dimaté) + IG @9_festcineprovinciadevelez por Bright Data (láminas con día, hora y sede: 30 nov, 1, 2, 3, 4 y 5 dic; faltan las dos de la muestra central). Acceso: «¡Entrada libre a todos los escenarios!» (IG Df4hzKXkYiP, 18 nov). Sin bloque `festival`: se escribe al montar. Nombre, subtítulo y secciones: PROPUESTA para Juan.",
+ "_nota": "9.º Festival de Cine Provincia de Vélez (Barbosa, Santander, 30 nov–6 dic 2026). PRE-ONBOARDING, SIN PUBLICAR. Fuente: festivaldecineprovinciadevelez.com (landing.js: 29 obras de la selección oficial, convocatoria Saravita; franja infantil; muestra central de Rodrigo Dimaté) + IG @9_festcineprovinciadevelez por Bright Data (láminas con día, hora y sede: 30 nov, 1, 2, 3, 4 y 5 dic; faltan las dos de la muestra central). Acceso: «¡Entrada libre a todos los escenarios!» (IG Df4hzKXkYiP, 18 nov). MONTADO 24 nov con las 7 funciones publicadas. Nombre, subtítulo y secciones: PROPUESTA para Juan.",
  "pasos": [
   {
    "cmd": "python3 pipeline/provinciadevelez-2026-catalogo.py",
@@ -8,16 +8,116 @@
   {
    "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/provinciadevelez-2026-catalogo.json",
    "que": "la cascada de TMDB y lo ya publicado → catálogo enriquecido"
+  },
+  {
+   "cmd": "python3 pipeline/provinciadevelez-2026-crudo.py",
+   "que": "catálogo → crudo (7 funciones)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py provinciadevelez-2026 --posters",
+   "que": "TMDB + cascada + afiches declarados"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py provinciadevelez-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py provinciadevelez-2026 --aplicar --desde festivals/staging/provinciadevelez-2026-build.json",
+   "que": "afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py",
+   "que": "2.ª lectura: OCR de las láminas contra el build"
   }
  ],
- "fuentes_vivas": [],
- "_nota_fuentes_vivas": "Pre-onboarding sin parrilla completa. Al montar se declaran festivaldecineprovinciadevelez.com (assets/landing-*.js) y el IG.",
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/provinciadevelez-2026/web/home-vivo.html",
+   "url": "https://festivaldecineprovinciadevelez.com/",
+   "como": "pagina",
+   "debe_contener": "Franja infantil",
+   "que": "la web oficial (franja infantil, muestra central)"
+  }
+ ],
+ "_nota_fuentes_vivas": "Además el IG y el Facebook del festival, por el vigía.",
  "radar": 1444,
  "_fuentes_versionadas": {
   "festivals/staging/provinciadevelez-2026-catalogo.json": "29 obras de la selección + 9 más, con las funciones publicadas",
   "festivals/staging/provinciadevelez-2026-catalogo-enriquecido.json": "fichas TMDB del catálogo",
   "festivals/staging/provinciadevelez-2026-correcciones.json": "fichas, sin_afiche, sin_sinopsis",
   "festivals/staging/provinciadevelez-2026-altas.json": "registro de altas (pipeline/altas.py)",
-  "festivals/staging/provinciadevelez-2026-venues-geo.json": "sedes con pin de Google Maps"
+  "festivals/staging/provinciadevelez-2026-venues-geo.json": "sedes con pin de Google Maps",
+  "festivals/staging/provinciadevelez-2026-afiches.json": "afiches recortados de las láminas",
+  "festivals/staging/provinciadevelez-2026-crudo.json": "las 7 funciones"
+ },
+ "festival": {
+  "crudo": "festivals/staging/provinciadevelez-2026-crudo.json",
+  "enriquecido": "festivals/staging/provinciadevelez-2026-enriquecido.json",
+  "geo": "festivals/staging/provinciadevelez-2026-venues-geo.json",
+  "_por_que_secciones": "Rótulos de las láminas y la web: «SELECCIÓN OFICIAL 2026», «FRANJA INFANTIL», «MUESTRA ESPECIAL». PROPUESTA para Juan. «Muestra Central» se suma cuando tenga función.",
+  "secciones": {
+   "Selección Oficial": {
+    "emoji": "🏆",
+    "en": "Official Selection",
+    "archetype": "Competencia"
+   },
+   "Franja Infantil": {
+    "emoji": "🧒",
+    "en": "Children's Program",
+    "archetype": "Muestra / País"
+   },
+   "Muestra Especial": {
+    "emoji": "⭐",
+    "en": "Special Showcase",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "sedes": {
+   "Casa Escuela Formación Musical Leo Olarte": [
+    "Casa Escuela Formación Musical Leo Olarte - Barbosa",
+    ""
+   ],
+   "Grupo Central AA": [
+    "Grupo Central AA - Barbosa",
+    ""
+   ],
+   "La Tante Boutique": [
+    "La Tante Boutique - Barbosa",
+    ""
+   ],
+   "Parque Emilio Ulloa": [
+    "Parque Emilio Ulloa - Barbosa",
+    ""
+   ],
+   "Casa Taller Palo de Mango": [
+    "Casa Taller Palo de Mango - Barbosa",
+    ""
+   ],
+   "Auditorio SENA": [
+    "Auditorio SENA - Vélez",
+    ""
+   ]
+  },
+  "name": "Provincia de Vélez",
+  "displayName": "Provincia de Vélez",
+  "fullName": "9.º Festival de Cine Provincia de Vélez",
+  "shortName": "PROVINCIA DE VÉLEZ",
+  "tagline": "Festival de Cine",
+  "_por_que_copy": "nombre: <title> de la web «9.º Festival de Cine Provincia de Vélez». Nombre corto de portada «Provincia de Vélez» y subtítulo «Festival de Cine»: las dos líneas del logo del afiche, sin repetirse. PROPUESTA para Juan.",
+  "city": "Barbosa y Vélez",
+  "country": "CO",
+  "dates": "30 NOV–6 DIC",
+  "dates_en": "NOV 30–DEC 6",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "provinciadevelez2026_",
+  "festivalStartStr": "2026-11-30T00:00:00",
+  "festivalEndStr": "2026-12-06T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "diciembre",
+  "dias_vacios": [
+   "2026-12-06"
+  ],
+  "instagram": "9_festcineprovinciadevelez"
  }
 }

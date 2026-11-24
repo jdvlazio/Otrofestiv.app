@@ -21861,5 +21861,128 @@
    "756cf08828ac"
   ],
   "fuente": "https://sgiff.com/film/four-seasons-in-java/"
+ },
+ {
+  "work_id": "w_8GJ9R398114H",
+  "campo": "no-es",
+  "valor": "w_7JCXNE70VBK6",
+  "motivo": "la de Guatapé (30 min) no trae dirección; la de Vélez es de Jhon Amado, Filipinas (Arauca) 2026, cine comunitario: no hay con qué casarlas (no_heredar, 24 nov 2026)",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)"
+ },
+ {
+  "work_id": "w_7JCVTGAAS5A4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Claude",
+  "vistas": [
+   "1f9d604c9493"
+  ],
+  "original_de": [
+   "provinciadevelez-2026"
+  ],
+  "titulo": "La familia Bélier",
+  "valor": "Todos en la familia Bélier son sordomudos, excepto Paula, de 16 años, intérprete de sus padres, sobre todo en la granja. Alentada por su profesor de música, que descubre su talento para el canto, decide prepararse para la audición del Coro de Radio France: una elección que la obligará a distanciarse de su familia.",
+  "original": "Todos los miembros de la familia Bélier son sordomudos, excepto Paula, de 16 años. Ella hace de intérprete para sus padres, especialmente en lo que respecta al funcionamiento de la granja de la familia. Un día, alentada por su profesor de música, que ha descubierto su talento para el canto, decide prepararse para la audición del Coro de Radio France, pero se trata de una elección que la obligará a distanciarse de su familia.",
+  "sintesis": {
+   "redacta": "Claude (montaje provinciadevelez)",
+   "verifica": "agente verificador independiente (Sonnet)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "eeaaa1e29b09"
+  }
+ },
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Claude",
+  "vistas": [
+   "987739cd3119"
+  ],
+  "original_de": [
+   "provinciadevelez-2026"
+  ],
+  "titulo": "My Name Is Bill W.",
+  "valor": "La historia verdadera de Bill Wilson, fundador de Alcohólicos Anónimos: un hombre explosivo e impredecible, incapaz de controlar su deseo por el alcohol. Su sufrida esposa Louis está separada de él, incapaz de ayudarlo. Bill intenta dejar de beber, no lo logra y recurre a su amigo el Dr. Bob Smith. Una historia de esperanza, coraje y amor.",
+  "original": "\"Mi nombre es Bill W.\" es la poderosa historia de Bill Wilson, acerca de su papel como fundador de uno de los más exitosos movimientos de auto ayuda en la historia, de \"Alcohólicos Anónimos\". James Woods estelariza al explosivo e impredecible Bill Wilson, incapaz de controlar su deseo por el alcohol. Jo Beth Williams estelariza a la sufrida esposa Louis, quién está separada de su esposo por su propia incapacidad para ayudarlo. Louis, desesperada, considera meterlo a un sanatorio, cuando Bill descubre ésto le da un ataque de alcoholismo y termina atado a una cama de hospital. Bill intenta dejar de beber pero le es imposible, así, que recurre a un amigo el Dr. Bob Smith con quien comparte la dependencia del vino. Es una historia verdadera que trata de la esperanza, coraje y amor.",
+  "sintesis": {
+   "redacta": "Claude (montaje provinciadevelez)",
+   "verifica": "agente verificador independiente (Sonnet)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "56da34dfe155"
+  }
+ },
+ {
+  "work_id": "w_7JCWMS77BPSJ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Claude",
+  "vistas": [
+   "75cdf70f278b"
+  ],
+  "original_de": [
+   "provinciadevelez-2026"
+  ],
+  "titulo": "De la tradición a la prohibición",
+  "valor": "Documental que explora la evolución de las plantas sagradas de poder, desde los rituales ancestrales hasta su estigmatización y prohibición. En un contexto latinoamericano, cuestiona los discursos oficiales que han criminalizado estos saberes y revela procesos de despojo cultural y ruptura de la memoria colectiva.",
+  "original": "Es un documental que explora la evolución de las plantas sagradas de poder desde los rituales ancestrales hasta su estigmatización y prohibición en la sociedad contemporánea. La película se sitúa en un contexto latinoamericano para cuestionar los discursos oficiales que han criminalizado estos saberes, revelando procesos de despojo cultural y ruptura de la memoria colectiva.",
+  "sintesis": {
+   "redacta": "Claude (montaje provinciadevelez)",
+   "verifica": "agente verificador independiente (Sonnet)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b1f0aaade1e4"
+  }
+ },
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Claude",
+  "vistas": [
+   "4b8db26dff5e"
+  ],
+  "original_de": [
+   "provinciadevelez-2026"
+  ],
+  "titulo": "El fantástico Sr. Fox",
+  "valor": "Un astuto zorro, el señor Fox, parece llevar una vida idílica con su esposa y su hijo Ash. Pero, por las noches, se dedica a robar gallinas, patos y pavos en las granjas vecinas. Los granjeros deciden acabar con la situación cazándolo. Basada en el famoso libro para niños de Roald Dahl.",
+  "original": "Un astuto zorro llamado Fox (voz original de George Clooney) parece llevar una vida idílica con su esposa (Meryl Streep) y con su hijo Ash (Jason Schwartzman). Pero, por las noches, el señor Fox se dedica a robar gallinas, patos y pavos en las granjas vecinas. Los granjeros deciden acabar con la situación cazando a Mr. Fox. Basada en el famoso libro para niños de Roald Dahl.",
+  "sintesis": {
+   "redacta": "Claude (montaje provinciadevelez)",
+   "verifica": "agente verificador independiente (Sonnet)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "18683a7cca1d"
+  }
+ },
+ {
+  "work_id": "w_7JCX65BM88M0",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Claude",
+  "vistas": [
+   "4bdb775dcc3d"
+  ],
+  "original_de": [
+   "provinciadevelez-2026"
+  ],
+  "titulo": "El pescador",
+  "valor": "Un retrato íntimo del Caribe a través de la vida de quienes se dedican al mar. De la voz de un pescador puertorriqueño al vínculo entre un padre y su hijo en Colombia, la película muestra cómo la pesca une y distingue, y retrata un legado hecho de tradición, lucha y esperanza.",
+  "original": "Un retrato íntimo del Caribe a través de la vida de quienes se dedican al mar. De la voz de un pescador puertorriqueño al vínculo entre un padre y su hijo en Colombia, la película muestra cómo la pesca une y distingue, y retrata un legado hecho de tradición, lucha y esperanza. Filmada en La Parguera (Lajas, Puerto Rico) y en Palomino (La Guajira, Colombia).",
+  "sintesis": {
+   "redacta": "Claude (montaje provinciadevelez)",
+   "verifica": "agente verificador independiente (Sonnet)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "8ea99493d099"
+  }
  }
 ]

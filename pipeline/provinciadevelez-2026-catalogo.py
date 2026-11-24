@@ -29,7 +29,9 @@ Sr. Fox + Bill W. + La imaginada + las dos de Dimaté = 35. El 20 nov suma tres 
 web no trae: Puchucollo Alto (Saravita), Una mala chicha es un guarapo y Entre Ríos = 38.
 Una obra puede ir en dos funciones (Alto Milluni y Un diálogo: 30 nov y 5 dic).
 
-NINGUNA fuente trae duración; año solo algunos pósteres.
+DOS OBRAS «El pescador» (corto y videoclip, mismo equipo): el videoclip se nombra con
+su categoría, «El pescador (videoclip)», para no heredar la ficha del corto (TMDB 1558138).
+Las duraciones halladas fuera van en festivals/staging/<fid>-duraciones.json.
 Escribe festivals/staging/provinciadevelez-2026-catalogo.json
 """
 import io, json, os, sys
@@ -98,7 +100,7 @@ SEL = [
     ('dialogo-tierra', 'Un diálogo para sanar la Tierra', 'Documental', None, 'Colombia', None, 'DfcqutroV1z/08', (F0, F5),
      'lámina: «(Incluye el visionado del documental Tanuzanamu: Principio del Equilibrio - Dir. Ati Güindiva '
      'Villafaña Mejia)» · Palomino, La Guajira; el director de la obra no se nombra'),
-    ('uma-unjirinaka', 'Uma Unjirinaka · Alto Milluni', 'Documental', 'Left Hand Rotation', 'Bolivia', None, 'DfcqutroV1z/07', (F0, F5),
+    ('uma-unjirinaka', 'Uma Uñjirinaka · Alto Milluni', 'Documental', 'Left Hand Rotation', 'Bolivia', None, 'DfcqutroV1z/07', (F0, F5),
      'lámina: «Una serie documental de Left Hand Rotation · UMA UÑJIRINAKA · Alto Milluni (CUIDADORXS DEL '
      'AGUA)»; la web escribe «Unjirinaka» (sin ñ)'),
     ('nueve-jueves', 'Nueve jueves en Riachuelo', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/06', None,
@@ -117,7 +119,7 @@ SEL = [
      'lámina: «Oberá - Misiones - Argentina · Cine Joven Comunitario»; sin director nombrado'),
     ('coming-from-hell', 'Coming from Hell', 'Videoclip', 'Klonazepan & Mafa', None, None, 'DfcqutroV1z/10', None,
      'lámina: «KLONAZEPAN & MAFA» — artistas, no dirección'),
-    ('el-pescador-clip', 'El pescador', 'Videoclip', 'Juan Cruz', 'Puerto Rico, Colombia', None, 'DfhmCGsEZ84/03', F1,
+    ('el-pescador-clip', 'El pescador (videoclip)', 'Videoclip', 'Juan Cruz', 'Puerto Rico, Colombia', None, 'DfhmCGsEZ84/03', F1,
      f'pie de {IG}DfzhWP2x_sy/: «Dirección Juan Cruz, Puerto Rico»; lámina: «(PUERTO RICO FT COL) · TALLER TOCA PLENA x CASA DEL SOL»'),
     ('el-empiezo', 'El empiezo', 'Videoclip', None, None, None, 'DfcpGHfoWWI/06', None,
      'lámina y web: solo el título'),
@@ -139,9 +141,9 @@ SINOPSIS = {
     'Entre amigos': (f'{IG}Df7ZYXrEaXh/', 'Buscando escapar de la rutina de la ciudad, un grupo de jóvenes visita a una amiga que vive sola en las montañas. Rodeados por la inmensidad del paisaje y el silencio del campo, escuchan los relatos que ella conoce sobre la región.'),
     'Limones': (f'{IG}Df7ZYXrEaXh/', 'Cristian y Andrés, dos niños wayuu de nueve años, recorren las calles de Palomino vendiendo limones. Mientras trabajan, escuchan y comentan en segundo plano la desaparición de Bartolo, ocurrida durante los recientes enfrentamientos armados en la Sierra Nevada. Al caer la noche, regresan a casa y entregan el producido a su madre.'),
     'Una mala chicha es un guarapo': (f'{IG}Df-DlZyERf2/', 'A Eulalio se le presenta la tentación de vender las tierras que han pasado de generación en generación en su familia. Un poco de chicha le ayudará a tomar la mejor decisión.'),
-    'Uma Unjirinaka · Alto Milluni': (f'{IG}DgFiVrTEbh0/', 'Muestra el testimonio y lucha de las comunidades indígenas afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Alto Milluni, cuya agua naciente es robada a diario para ser llevada a la mega-urbe El Alto, las mujeres proponen un proyecto de turismo comunitario local para la supervivencia.'),
+    'Uma Uñjirinaka · Alto Milluni': (f'{IG}DgFiVrTEbh0/', 'Muestra el testimonio y lucha de las comunidades indígenas afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Alto Milluni, cuya agua naciente es robada a diario para ser llevada a la mega-urbe El Alto, las mujeres proponen un proyecto de turismo comunitario local para la supervivencia.'),
     'Uma Uñjirinaka · Puchucollo Alto': (f'{IG}Df-DlZyERf2/', 'Muestra el testimonio y lucha de las comunidades indígenas urbanas y rurales afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Puchukollo Alto, periferia de la mega-urbe El Alto, las familias de la comunidad defienden el acuífero allí situado contra la usurpación y contaminación de sus aguas.'),
-    'El pescador|Videoclip': (f'{IG}DfzhWP2x_sy/', 'Este videoclip relaciona la pesca del Caribe de Puerto Rico y '
+    'El pescador (videoclip)': (f'{IG}DfzhWP2x_sy/', 'Este videoclip relaciona la pesca del Caribe de Puerto Rico y '
         'La Guajira, y persigue los pasos de Neymar, un niño de La Guajira que aprende la pesca desde temprana edad.'),
     'Salvemos el agua': (f'{IG}Df4hzKXkYiP/', 'El cortometraje propone una aventura en la que la sabiduría ancestral '
         'y la creatividad infantil se encuentran para reflexionar sobre el cuidado de los ríos, la biodiversidad y la vida.'),
@@ -164,7 +166,7 @@ SINOPSIS = {
         'quien siembra vientos cosecha tempestades.'),
     # Traducidas por nosotros del inglés de TMDB (única sinopsis hallada), con el contexto de la lámina
     'Escisión de la cigarra': (f'{IG}DgFiVrTEbh0/', 'Estiven, un joven aprendiz de carpintero, trabaja con dedicación en un taller donde conviven el eco de las herramientas y las advertencias de su maestro Orlando. Una noche, entre el polvo de la madera y ruidos inexplicables, un accidente lo sumerge en un tránsito incierto entre la vida y la muerte.'),
-    'El pescador|Cortometraje': ('https://www.themoviedb.org/movie/1558138 (traducida del inglés)', 'Un retrato '
+    'El pescador': ('https://www.themoviedb.org/movie/1558138 (traducida del inglés)', 'Un retrato '
         'íntimo del Caribe a través de la vida de quienes se dedican al mar. De la voz de un pescador puertorriqueño al '
         'vínculo entre un padre y su hijo en Colombia, la película muestra cómo la pesca une y distingue, y retrata un '
         'legado hecho de tradición, lucha y esperanza. Filmada en La Parguera (Lajas, Puerto Rico) y en Palomino '
@@ -189,6 +191,7 @@ SINOPSIS = {
     'Un diálogo para sanar la Tierra': ('https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 8)', 'Entendiendo la labor de los Mamos '
         'para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de '
         'Ati Güindiva Villafaña Mejía.'),
+    'Gualí': ('https://www.facebook.com/festivaldecinebarbosa (20 nov; el final del pie viene cortado)', 'En el corazón de la sabana de Bogotá, el humedal Gualí es un santuario de biodiversidad. El documental se sumerge en su riqueza natural a través de una narrativa visual poética.'),
     'Ayuno y cenizas': (WEB,'Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy.'),
 }
 
@@ -253,10 +256,10 @@ def main():
                 o['funciones'] = [funcion(x) for x in fun]
         else:
             o['franja'] = 'sin día ni hora publicados (24 nov)'
-        s = SINOPSIS.get(f'{tit}|{cat}') or (SINOPSIS.get(tit) if (tit, cat) != ('El pescador', 'Cortometraje') else None)
+        s = SINOPSIS.get(tit)
         if s:
             o['sinopsis'], o['_sinopsis_de'] = s[1], s[0]
-        _a = f'assets/provinciadevelez-2026/{slug(tit)}{"-videoclip" if wid == "el-pescador-clip" else ""}.jpg'
+        _a = f'assets/provinciadevelez-2026/{"clip-el-pescador" if wid == "el-pescador-clip" else slug(tit)}.jpg'
         if os.path.exists(f'{REPO}/{_a}'):
             o['afiche'] = _a
             o['_afiche_de'] = f'lámina {IG}{lam} (afiche recortado de la lámina del festival)'
@@ -268,6 +271,8 @@ def main():
             o['pais'], o['categoria'] = 'Bolivia', 'Documental'
         if o['director'] is None:
             del o['director']
+        if tit in ('La imaginada', 'Una mala chicha es un guarapo'):
+            o['pais'] = 'Colombia'   # «hecha en Barbosa por una barboseña» (web); Cine Club Barbosa (lámina)
         if sec:
             o['seccion'] = sec
         if fun:
