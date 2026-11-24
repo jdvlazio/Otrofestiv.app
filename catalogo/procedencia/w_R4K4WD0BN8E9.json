@@ -8,12 +8,16 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "tmdb:1289382",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "estreno en cines, 8 oct 2026",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "tmdb:1289382",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "coproducción",
+  "fecha": "2026-11-24"
  },
  "generos": {
   "fuente": "festival",

@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "tmdb:1645704",
   "regla": "tmdb-manda"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24"
  }
 }
