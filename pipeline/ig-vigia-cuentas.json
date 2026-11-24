@@ -98,14 +98,8 @@
     {
       "id": "provinciadevelez2026",
       "cuenta": "festcineprovinciadevelez",
-      "inicio": "2026-12-01",
+      "inicio": "2026-11-30",
       "fin": "2026-12-06"
-    },
-    {
-      "id": "fecili2026",
-      "cuenta": "cinelibrefest",
-      "inicio": "2026-12-04",
-      "fin": "2026-12-07"
     },
     {
       "id": "ficgo2026",
@@ -168,6 +162,158 @@
       "url": "https://www.facebook.com/festivaldecinefunza/",
       "inicio": "2026-11-18",
       "fin": "2026-11-21"
+    },
+    {
+      "id": "provinciadevelez2026",
+      "url": "https://www.facebook.com/festivaldecinebarbosa",
+      "inicio": "2026-11-30",
+      "fin": "2026-12-06"
+    },
+    {
+      "id": "bogoshorts2026",
+      "url": "https://www.facebook.com/festivalbogoshorts",
+      "inicio": "2026-12-01",
+      "fin": "2026-12-08"
+    },
+    {
+      "id": "festicineantioquia2026",
+      "url": "https://www.facebook.com/FesticineSantaFeDeAntioquia",
+      "inicio": "2026-12-04",
+      "fin": "2026-12-08"
+    },
+    {
+      "id": "cinechicu2026",
+      "url": "https://www.facebook.com/Tenjoculturayturismo",
+      "inicio": "2026-12-07",
+      "fin": "2026-12-12"
+    },
+    {
+      "id": "tengofe2026",
+      "url": "https://www.facebook.com/tengofefilms",
+      "inicio": "2026-12-08",
+      "fin": "2026-12-13"
+    },
+    {
+      "id": "ficgo2026",
+      "url": "https://www.facebook.com/FestivaldeCineGolfodeMorrosquillo",
+      "inicio": "2026-12-09",
+      "fin": "2026-12-12"
     }
-  ]
+  ],
+  "canales": {
+    "_nota": "Por dónde comunica cada festival por montar; lo exige pipeline/canales.py. null en redes = se buscó y no tiene. Las fechas salen del propio festival, no de Festhome/FilmFreeway.",
+    "provinciadevelez2026": {
+      "redes": {
+        "instagram": "https://www.instagram.com/festcineprovinciadevelez",
+        "facebook": "https://www.facebook.com/festivaldecinebarbosa",
+        "web": "https://festivaldecineprovinciadevelez.com/"
+      },
+      "activo": "facebook",
+      "ultimo_post": "2026-11-24",
+      "fechas": {
+        "inicio": "2026-11-30",
+        "fin": "2026-12-06",
+        "fuente": "https://www.facebook.com/festivaldecinebarbosa (función en el SENA de Vélez el 30 nov) + web (1–6 dic)",
+        "publicado": "2026-11-20"
+      },
+      "revisado": "2026-11-24"
+    },
+    "bogoshorts2026": {
+      "redes": {
+        "instagram": "https://www.instagram.com/bogoshorts",
+        "facebook": "https://www.facebook.com/festivalbogoshorts",
+        "web": "https://www.bogoshorts.com"
+      },
+      "activo": "instagram",
+      "ultimo_post": "2026-11-24",
+      "fechas": {
+        "inicio": "2026-12-01",
+        "fin": "2026-12-08",
+        "fuente": "https://www.facebook.com/festivalbogoshorts",
+        "publicado": "2026-11-24"
+      },
+      "revisado": "2026-11-24"
+    },
+    "festicineantioquia2026": {
+      "redes": {
+        "instagram": "https://www.instagram.com/festicineantioquia",
+        "facebook": "https://www.facebook.com/FesticineSantaFeDeAntioquia",
+        "web": "https://festicineantioquia.org"
+      },
+      "activo": "instagram",
+      "ultimo_post": "2026-11-24",
+      "fechas": {
+        "inicio": "2026-12-04",
+        "fin": "2026-12-08",
+        "fuente": "https://www.instagram.com/p/DgISGJ7ESMG/",
+        "publicado": "2026-11-24"
+      },
+      "revisado": "2026-11-24"
+    },
+    "cinechicu2026": {
+      "redes": {
+        "instagram": "https://www.instagram.com/imct.tenjo",
+        "facebook": "https://www.facebook.com/Tenjoculturayturismo",
+        "web": "https://tenjoculturayturismo.gov.co"
+      },
+      "activo": "instagram",
+      "ultimo_post": "2026-11-24",
+      "fechas": {
+        "inicio": "2026-12-07",
+        "fin": "2026-12-12",
+        "fuente": "https://www.instagram.com/p/DfTI7bhqpD2/",
+        "publicado": "2026-11-04"
+      },
+      "revisado": "2026-11-24"
+    },
+    "tengofe2026": {
+      "redes": {
+        "instagram": "https://www.instagram.com/tengofefilmfestival",
+        "facebook": "https://www.facebook.com/tengofefilms",
+        "web": "https://www.tengofefilms.com"
+      },
+      "activo": "instagram",
+      "ultimo_post": "2026-10-25",
+      "fechas": null,
+      "revisado": "2026-11-24"
+    },
+    "ficgo2026": {
+      "redes": {
+        "instagram": "https://www.instagram.com/ficgo_oficial",
+        "facebook": "https://www.facebook.com/FestivaldeCineGolfodeMorrosquillo",
+        "web": "https://www.ficgofestival.com"
+      },
+      "activo": "instagram",
+      "ultimo_post": "2026-11-18",
+      "fechas": null,
+      "revisado": "2026-11-24"
+    },
+    "changuito2026": {
+      "redes": {
+        "instagram": "https://www.instagram.com/changuitofilmfestival",
+        "facebook": null,
+        "web": "https://changuitovisual.wixsite.com/changuitovisual"
+      },
+      "activo": null,
+      "ultimo_post": null,
+      "fechas": null,
+      "revisado": "2026-11-24"
+    },
+    "medellinhorror2026": {
+      "redes": {
+        "instagram": "https://www.instagram.com/medellinhorrorfest",
+        "facebook": "https://www.facebook.com/MedellinHorrorFest",
+        "web": "https://medellinhorrorfest.com"
+      },
+      "activo": "web",
+      "ultimo_post": "2026-11-13",
+      "fechas": {
+        "inicio": "2026-11-27",
+        "fin": "2026-11-29",
+        "fuente": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+        "publicado": "2026-11-13"
+      },
+      "revisado": "2026-11-24"
+    }
+  }
 }
