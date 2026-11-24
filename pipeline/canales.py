@@ -68,6 +68,18 @@ def faltas(cuentas, hoy, publicados=()):
     return out
 
 
+def fuera_de_fechas(cuentas, fid, festival):
+    """Funciones del JSON de un festival fuera de las fechas oficiales de su ficha
+    (afiche o anuncio). Regla de Juan, 8 oct 2026; la violó Vélez el 24 nov con una
+    función previa del 30 nov y afiche 1–6 dic. Van fuera aunque el festival las anuncie."""
+    fe = (cuentas.get('canales', {}).get(fid.replace('-', '')) or {}).get('fechas')
+    if not fe:
+        return []
+    dias = {d for f in festival.get('films', []) for d in [f.get('day')] + [s.get('day') for s in f.get('screenings') or []]}
+    dias |= {(festival.get('festivalStartStr') or '')[:10], (festival.get('festivalEndStr') or '')[:10]}
+    return sorted(d for d in dias if d and not fe['inicio'] <= d <= fe['fin'])
+
+
 def main():
     hoy = date.fromisoformat(sys.argv[sys.argv.index('--hoy') + 1]) if '--hoy' in sys.argv else date.today()
     import ig_vigia   # los que ya están en config los vigila ig_vigia.py
