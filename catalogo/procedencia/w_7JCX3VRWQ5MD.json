@@ -14,7 +14,27 @@
   "regla": "único"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
  }
 }
