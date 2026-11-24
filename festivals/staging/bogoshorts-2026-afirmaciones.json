@@ -1,0 +1,21 @@
+{
+ "_provenance": {
+  "fuente": "agenda de la Cinemateca de Bogotá y grilla PDF de BOGOSHORTS",
+  "capturado": "2026-11-24",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "funcion": "f_2a7aeada73",
+   "casilla": "time",
+   "valor": "17:00",
+   "contra": "16:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "deberíamos usar lo que dice la Cinemateca, ellos no venden horarios truncados, ni cometen errores logísticos",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "https://cinematecadebogota.gov.co/node/peliculas/3816?sede=11 (24 nov): «Diciembre 06 5:00 PM Sala 3 Entrada libre»; la grilla PDF del 13 nov dice 4:00 p.m. (Estreno BFM-IV)"
+  }
+ ]
+}

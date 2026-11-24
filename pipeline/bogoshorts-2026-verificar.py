@@ -60,8 +60,6 @@ def toks_lectura(n):
         elif e in ('CITYU', 'SOTANO', 'RETINA', 'FIESTAS') or c['texto'].startswith('Franja Encuentros'):
             continue                                  # los descartes declarados del crudo
         h = c.get('hora') or ''
-        if (c['dia'], h, e) == ('2026-12-08', '11:00', 'IMAGEN'):
-            h = '14:00'      # la lectura aplicó la nota «S, d y f»; el catálogo y la web dicen mar. 8, 2:00 p. m.
         out.add((c['dia'], h, e, cod(c['texto'])))
     return out
 

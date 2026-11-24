@@ -380,9 +380,48 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "by_invitation": true,
    "_fid": "f_659948e13a",
-   "id": "f_659948e13a"
+   "id": "f_659948e13a",
+   "by_invitation": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "Encuentros Cercanos: Competencia Nacional Experimental",
@@ -404,9 +443,52 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "_fid": "f_e6f3f8303a",
-   "id": "f_e6f3f8303a"
+   "id": "f_e6f3f8303a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "90 min"
   },
   {
    "title": "Apertura BFM REFRESH Vol. 8",
@@ -429,9 +511,56 @@
     "date": "2026-11-13"
    },
    "requires_registration": true,
-   "by_invitation": true,
    "_fid": "f_d61a8a9696",
-   "id": "f_d61a8a9696"
+   "id": "f_d61a8a9696",
+   "by_invitation": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "¿Qué género es tu corto? Un viaje por lo extraordinario",
@@ -455,12 +584,62 @@
     "date": "2026-11-24"
    },
    "registration_url": "https://forms.gle/giFuNnas3qdxSzVP7",
-   "is_free": true,
    "requires_registration": true,
    "description": "En esta charla exploraremos los códigos, convenciones, transformaciones y cruces de los géneros y subgéneros del cine de terror, fantasía y ciencia ficción. Recorreremos algunas de sus expresiones más importantes para descubrir cómo reconocerlas, apropiarnos de sus lenguajes y expandir sus posibilidades narrativas y estéticas en la creación de cortometrajes. Porque sí es posible construir pesadillas en pocos minutos y hacer creíble lo imposible en formato corto. La tallerista será Alejandra Rocas, montajista y curadora audiovisual con más de 10 años de experiencia que actualmente selecciona los cortometrajes de la competencia F3: Fanático Freak Fantástico. Esta sección, sumada a la Noche Frankenstein y al componente de industria Freak BFM, configuran el ecosistema Freak de BOGOSHORTS.",
    "description_lang": "es",
    "_fid": "f_d3910462ed",
-   "id": "f_d3910462ed"
+   "id": "f_d3910462ed",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    }
+   }
   },
   {
    "title": "De la viñeta a la pantalla: Novela gráfica que se vuelve cine",
@@ -484,12 +663,62 @@
     "date": "2026-11-24"
    },
    "registration_url": "https://forms.gle/iFk4NYpHsnYCdeiQ7",
-   "is_free": true,
    "requires_registration": true,
    "description": "¿Qué sucede cuando una historia dibujada adquiere movimiento, sonido y una duración que ya no decide el lector? A propósito del homenaje a Marjane Satrapi y del programa de cortometrajes que dialogan con su obra, BOGOSHORTS propone una conversación sobre los encuentros y las transformaciones entre la novela gráfica y el cine. Persépolis será el punto de partida para explorar un territorio más amplio: cómo se traducen las viñetas en planos, qué ocurre con los silencios y las elipsis entre imágenes y cómo conservar una voz propia al cambiar de lenguaje. Desde la animación hasta la imagen real, el diálogo abordará las decisiones narrativas y visuales que implica adaptar una obra y las posibilidades de reinterpretarla. Un encuentro para pensar cómo el trazo, el encuadre y el montaje construyen relatos, y cómo una misma historia puede encontrar distintas formas de conmovernos en el papel y en la pantalla. Modera: Juan David Quintero (Ilustrador e Historietista). Con Santiago Caicedo (Director de Cine - Virus tropical), Cindy Elefante (Ilustradora e Historietista) y Natalia Rojas Noy (Ilustradora y Animadora).",
    "description_lang": "es",
    "_fid": "f_1b1bc3f308",
-   "id": "f_1b1bc3f308"
+   "id": "f_1b1bc3f308",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Experimental",
@@ -514,7 +743,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313379",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -639,7 +867,54 @@
     }
    ],
    "_fid": "f_0caff94a2e",
-   "id": "f_0caff94a2e"
+   "id": "f_0caff94a2e",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Corto Periodístico",
@@ -664,7 +939,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313380",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -779,7 +1053,54 @@
     }
    ],
    "_fid": "f_12a23fb4ac",
-   "id": "f_12a23fb4ac"
+   "id": "f_12a23fb4ac",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Panorama Colombia Ficción",
@@ -804,7 +1125,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313381",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -898,7 +1218,54 @@
     }
    ],
    "_fid": "f_f2aaf2e896",
-   "id": "f_f2aaf2e896"
+   "id": "f_f2aaf2e896",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "El Mundo es un Balón",
@@ -923,7 +1290,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313382",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1054,7 +1420,54 @@
     }
    ],
    "_fid": "f_751d6b8509",
-   "id": "f_751d6b8509"
+   "id": "f_751d6b8509",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Animación 1",
@@ -1079,7 +1492,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313383",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1285,7 +1697,54 @@
     }
    ],
    "_fid": "f_480b1e756b",
-   "id": "f_480b1e756b"
+   "id": "f_480b1e756b",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Fanático Freak Fantástico 2",
@@ -1310,7 +1769,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313384",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1425,7 +1883,54 @@
     }
    ],
    "_fid": "f_8faec1315d",
-   "id": "f_8faec1315d"
+   "id": "f_8faec1315d",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "World Tour: Croacia 1",
@@ -1450,7 +1955,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313385",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1547,7 +2051,54 @@
     }
    ],
    "_fid": "f_f9d87c1926",
-   "id": "f_f9d87c1926"
+   "id": "f_f9d87c1926",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Documental 1",
@@ -1572,7 +2123,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313386",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1689,7 +2239,54 @@
     }
    ],
    "_fid": "f_ba300b918f",
-   "id": "f_ba300b918f"
+   "id": "f_ba300b918f",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Documental 2",
@@ -1714,7 +2311,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313396",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -1806,7 +2402,54 @@
     }
    ],
    "_fid": "f_a26ec56d32",
-   "id": "f_a26ec56d32"
+   "id": "f_a26ec56d32",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia VR - Realidad Virtual",
@@ -1833,7 +2476,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1942,7 +2584,54 @@
     }
    ],
    "_fid": "f_b6b7b90bd7",
-   "id": "f_b6b7b90bd7"
+   "id": "f_b6b7b90bd7",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Sinfonías Femeninas desde Barcelona",
@@ -1966,7 +2655,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2128,7 +2816,50 @@
     }
    ],
    "_fid": "f_1cce389f20",
-   "id": "f_1cce389f20"
+   "id": "f_1cce389f20",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Ficción 1",
@@ -2152,7 +2883,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2269,7 +2999,50 @@
     }
    ],
    "_fid": "f_661e5e5f34",
-   "id": "f_661e5e5f34"
+   "id": "f_661e5e5f34",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Experimental 2",
@@ -2293,7 +3066,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2430,7 +3202,50 @@
     }
    ],
    "_fid": "f_cd6a9dff40",
-   "id": "f_cd6a9dff40"
+   "id": "f_cd6a9dff40",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "El Amor es Corto",
@@ -2453,7 +3268,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -2571,7 +3385,46 @@
     }
    ],
    "_fid": "f_10979b2923",
-   "id": "f_10979b2923"
+   "id": "f_10979b2923",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Yndige mennesker",
@@ -2603,12 +3456,46 @@
     "date": "2026-11-13"
    },
    "synopsis_en": "Four Danish filmmakers bring the darker side of Hans Christian Andersen into contemporary horror. A young caregiver discovers that the dying man in his care is hiding secrets; a mother tries to prevent her son’s death after seeing it in a dream; a couple move to the countryside and find a mirror that upends their lives; and a musician struggling to write is haunted by his own muse. Each short film was written and directed by a different filmmaker, but all four were developed together and are linked by loss, desire and the urge to change what seems inevitable.",
-   "is_free": true,
    "lbSlug": "adorable-humans",
    "tmdb_id": 1368172,
    "title_en": "Adorable Humans",
    "_fid": "f_00e9cfb024",
-   "id": "f_00e9cfb024"
+   "id": "f_00e9cfb024",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Encuentros Cercanos: Competencia Nacional Animación",
@@ -2630,9 +3517,52 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "_fid": "f_a699e4a664",
-   "id": "f_a699e4a664"
+   "id": "f_a699e4a664",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "¿El futuro es vertical? Cambian los formatos, cambia la mirada",
@@ -2656,12 +3586,62 @@
     "date": "2026-11-24"
    },
    "registration_url": "https://forms.gle/wwM7ajZHD2QeTQHa8",
-   "is_free": true,
    "requires_registration": true,
    "description": "¿Qué implica concebir una historia para una pantalla vertical? El protagonismo de los cortometrajes y las microseries en este formato invita a revisar cómo contamos, encuadramos y nos relacionamos con las imágenes. Abriremos una conversación sobre los desafíos de crear para un espacio que transforma la composición, la puesta en escena, el movimiento y la relación entre los cuerpos y su entorno. Pensar en vertical exige decisiones desde la escritura: qué mostramos, qué queda fuera de campo, cómo construimos el ritmo y cómo sostenemos una historia a través de episodios breves. El diálogo abordará también las condiciones de circulación y consumo en dispositivos móviles, la disputa por la atención y las tensiones entre la búsqueda de una voz propia y las exigencias de las plataformas. Una invitación a explorar qué posibilidades narrativas abre el formato vertical y a preguntarnos cuánto cambia nuestra mirada cuando cambia la pantalla. Modera: Carolina Cardona (Productora KARMA Cine). Con William Barragán (Dos Que Tres), Diego Arbeláe (Idilio TV) y Juan Páez (Director independiente).",
    "description_lang": "es",
    "_fid": "f_ed92fe4f4c",
-   "id": "f_ed92fe4f4c"
+   "id": "f_ed92fe4f4c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    }
+   }
   },
   {
    "title": "Croacia: Una cinematografía que crece desde el corto",
@@ -2685,12 +3665,62 @@
     "date": "2026-11-24"
    },
    "registration_url": "https://forms.gle/eNYFkiyFPp38k1WJA",
-   "is_free": true,
    "requires_registration": true,
    "description": "¿Qué lugar ocupa el cortometraje en la construcción y el reconocimiento internacional de una cinematografía? La presencia de Croacia en esta edición de BOGOSHORTS, con doce películas en distintas secciones del festival, abre una oportunidad para explorar esta pregunta junto a los realizadores invitados e Irena Jelić, directora del Departamento de Promoción y Festivales del Croatian Audiovisual Centre (HAVC). A partir de sus experiencias, la conversación abordará las relaciones entre la búsqueda de una voz propia, las condiciones para crear y los caminos para llegar a públicos internacionales. Un encuentro para conocer cómo dialogan el trabajo de los cineastas y el acompañamiento institucional, qué lugar conserva el formato corto en sus trayectorias y qué aprendizajes pueden compartirse con Colombia. Más allá de descubrir las historias detrás de las películas, este diálogo busca acercar a dos comunidades cinematográficas y explorar posibilidades de intercambio y colaboración.",
    "description_lang": "es",
    "_fid": "f_63bab8d055",
-   "id": "f_63bab8d055"
+   "id": "f_63bab8d055",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Animación",
@@ -2715,7 +3745,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313395",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -2870,7 +3899,54 @@
     }
    ],
    "_fid": "f_eb5cc66862",
-   "id": "f_eb5cc66862"
+   "id": "f_eb5cc66862",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Ficción 1",
@@ -2895,7 +3971,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313397",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -3033,7 +4108,54 @@
     }
    ],
    "_fid": "f_7027f65b7a",
-   "id": "f_7027f65b7a"
+   "id": "f_7027f65b7a",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Jairo Pinilla, el Origen de una Obsesión",
@@ -3058,7 +4180,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313398",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -3144,7 +4265,54 @@
     }
    ],
    "_fid": "f_1a93f9d3e0",
-   "id": "f_1a93f9d3e0"
+   "id": "f_1a93f9d3e0",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Diversidades",
@@ -3169,7 +4337,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313399",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -3305,7 +4472,54 @@
     }
    ],
    "_fid": "f_2323d4a7bd",
-   "id": "f_2323d4a7bd"
+   "id": "f_2323d4a7bd",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "World Tour: Croacia 2",
@@ -3330,7 +4544,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313400",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -3426,7 +4639,54 @@
     }
    ],
    "_fid": "f_6ab66d9184",
-   "id": "f_6ab66d9184"
+   "id": "f_6ab66d9184",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Fanático Freak Fantástico 3",
@@ -3451,7 +4711,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313401",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -3562,7 +4821,54 @@
     }
    ],
    "_fid": "f_2cf182245c",
-   "id": "f_2cf182245c"
+   "id": "f_2cf182245c",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Documental",
@@ -3587,7 +4893,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313405",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -3704,7 +5009,54 @@
     }
    ],
    "_fid": "f_c7ee9ac9d8",
-   "id": "f_c7ee9ac9d8"
+   "id": "f_c7ee9ac9d8",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Año Gaudí, la Ciudad Animada",
@@ -3729,7 +5081,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313402",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -3930,7 +5281,54 @@
     }
    ],
    "_fid": "f_c4c3e4099a",
-   "id": "f_c4c3e4099a"
+   "id": "f_c4c3e4099a",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Conexión Brasil",
@@ -3955,7 +5353,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313403",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -4051,7 +5448,54 @@
     }
    ],
    "_fid": "f_b85571e9ad",
-   "id": "f_b85571e9ad"
+   "id": "f_b85571e9ad",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Animación 2",
@@ -4076,7 +5520,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313404",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -4304,7 +5747,54 @@
     }
    ],
    "_fid": "f_c9639bf24b",
-   "id": "f_c9639bf24b"
+   "id": "f_c9639bf24b",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Conexión Latinoamérica",
@@ -4328,7 +5818,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4424,7 +5913,50 @@
     }
    ],
    "_fid": "f_40c580a270",
-   "id": "f_40c580a270"
+   "id": "f_40c580a270",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Ficción 2",
@@ -4448,7 +5980,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4563,7 +6094,50 @@
     }
    ],
    "_fid": "f_3b49438af0",
-   "id": "f_3b49438af0"
+   "id": "f_3b49438af0",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Andrósfera: Hombres de verdad. Lectura dramatizada",
@@ -4585,11 +6159,54 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "description": "Como extensión de esta experiencia, la lectura dramatizada propone una adaptación escénica y audiovisual del manga. A través de viñetas interpretadas en vivo, piezas audiovisuales que dan vida a los personajes y breves secuencias de animación, Pato León Conejo, David Vargas y Gabriela Pedraza transportarán al público al universo inquietante de la Andrósfera. La experiencia contará, además, con música en vivo y un intermedio a cargo de Tragedia Travesti, que presentará un espectáculo de horror drag. De esta manera, la narrativa gráfica trasciende sus páginas para convertirse en una experiencia escénica que articula teatro, cine, performance y música.",
    "description_lang": "es",
    "_fid": "f_3587c9ac67",
-   "id": "f_3587c9ac67"
+   "id": "f_3587c9ac67",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "Cine Dentro del Cine",
@@ -4612,7 +6229,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4725,7 +6341,46 @@
     }
    ],
    "_fid": "f_e45b0de929",
-   "id": "f_e45b0de929"
+   "id": "f_e45b0de929",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Ficción 2",
@@ -4748,7 +6403,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -4884,7 +6538,46 @@
     }
    ],
    "_fid": "f_3cc8328112",
-   "id": "f_3cc8328112"
+   "id": "f_3cc8328112",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Volviendo a Persépolis sin Marjane Satrapi",
@@ -4907,7 +6600,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -5068,7 +6760,46 @@
     }
    ],
    "_fid": "f_abb270357c",
-   "id": "f_abb270357c"
+   "id": "f_abb270357c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Estrella Fugaz: Un Homenaje a César Heredia",
@@ -5091,7 +6822,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -5194,7 +6924,46 @@
     }
    ],
    "_fid": "f_6e17a91f7c",
-   "id": "f_6e17a91f7c"
+   "id": "f_6e17a91f7c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Encuentros Cercanos: Competencia Nacional Documental",
@@ -5216,9 +6985,52 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "_fid": "f_77495e683e",
-   "id": "f_77495e683e"
+   "id": "f_77495e683e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "Los festivales frente a la IA: Aceptar, rechazar, sobrevivir",
@@ -5242,12 +7054,62 @@
     "date": "2026-11-24"
    },
    "registration_url": "https://forms.gle/AiRzKvKJRTKPUUkq5",
-   "is_free": true,
    "requires_registration": true,
    "description": "BOGOSHORTS reúne a tres de sus jurados —Joseba Lopezortega Aguirre, del Festival Internacional de Cine Documental y Cortometraje de Bilbao – ZINEBI; Wiebke Johanna Jung, del Festival Internacional de Cortometrajes de Oberhausen; y Pablo Guisa Koestinger, de Mórbido Film Fest— para conversar sobre cómo se posicionan frente a estos retos y dónde consideran necesario establecer límites. ¿Es suficiente que una obra declare el uso de IA? ¿Cómo distinguir entre una herramienta dentro del proceso creativo y la generación de una película? ¿Qué lugar ocupan los derechos de los artistas y las condiciones de trabajo en estas decisiones? Desde sus distintas perspectivas, el diálogo explorará qué implica abrir o cerrar las puertas a estas obras, cómo evaluarlas y qué responsabilidad tienen los festivales al legitimar nuevas formas de hacer cine.",
    "description_lang": "es",
    "_fid": "f_38bbdbc21b",
-   "id": "f_38bbdbc21b"
+   "id": "f_38bbdbc21b",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    }
+   }
   },
   {
    "title": "Cine y Jazz: La hermandad improvisada",
@@ -5271,12 +7133,62 @@
     "date": "2026-11-24"
    },
    "registration_url": "https://forms.gle/s6ef97jB6xyGtx82A",
-   "is_free": true,
    "requires_registration": true,
    "description": "Una trompeta puede cambiar la manera en que vemos un rostro; una imagen, la forma en que escuchamos una melodía. A propósito del programa Miles Davis: 100 años de jazz, este Al Tablero celebra la complicidad entre dos artes que hacen del tiempo, el ritmo y el silencio su materia creativa. El encuentro de Davis con las imágenes de Ascensor para el cadalso, de Louis Malle, será el punto de partida para explorar una relación en la que la música puede sugerir lo que un personaje calla, transformar una atmósfera o llevar el relato hacia un lugar inesperado. ¿Qué puede aprender el cine de la improvisación? ¿Cómo dialogan un solo y un plano, una síncopa y un corte de montaje? Entre bandas sonoras, películas sobre músicos e imágenes que parecen tocar sus propias notas, esta charla será una declaración de amor al jazz y al cine: a su capacidad de escucharse, desafiarse y encontrar juntos algo que ninguno había imaginado por separado. Modera: Santiago Parra (Jefe de Programación de BOGOSHORTS). Con Sandro Romero (Escritor y dramaturgo) y Maria Fernanda Narvaez (Compositora de bandas sonoras).",
    "description_lang": "es",
    "_fid": "f_5fbe1ac640",
-   "id": "f_5fbe1ac640"
+   "id": "f_5fbe1ac640",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Documental",
@@ -5301,7 +7213,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313405",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -5418,7 +7329,54 @@
     }
    ],
    "_fid": "f_3fe017db2f",
-   "id": "f_3fe017db2f"
+   "id": "f_3fe017db2f",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Selección Oficial",
@@ -5443,7 +7401,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313406",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -5539,7 +7496,54 @@
     }
    ],
    "_fid": "f_ac4228af66",
-   "id": "f_ac4228af66"
+   "id": "f_ac4228af66",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Fanático Freak Fantástico 1",
@@ -5564,7 +7568,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313407",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -5680,7 +7683,54 @@
     }
    ],
    "_fid": "f_d7be29c93d",
-   "id": "f_d7be29c93d"
+   "id": "f_d7be29c93d",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "El Amor es Corto",
@@ -5705,7 +7755,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313408",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -5823,7 +7872,54 @@
     }
    ],
    "_fid": "f_87f9200a8a",
-   "id": "f_87f9200a8a"
+   "id": "f_87f9200a8a",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Experimental 1",
@@ -5848,7 +7944,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313409",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -6008,7 +8103,54 @@
     }
    ],
    "_fid": "f_ee507f414f",
-   "id": "f_ee507f414f"
+   "id": "f_ee507f414f",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Conexión España",
@@ -6033,7 +8175,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313410",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -6150,7 +8291,54 @@
     }
    ],
    "_fid": "f_292e374d27",
-   "id": "f_292e374d27"
+   "id": "f_292e374d27",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Animación",
@@ -6175,7 +8363,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313395",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -6330,7 +8517,54 @@
     }
    ],
    "_fid": "f_31cc62b47e",
-   "id": "f_31cc62b47e"
+   "id": "f_31cc62b47e",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Miles Davis, 100 Años de Jazz",
@@ -6355,7 +8589,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313411",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -6530,7 +8763,54 @@
     }
    ],
    "_fid": "f_7c90331d4d",
-   "id": "f_7c90331d4d"
+   "id": "f_7c90331d4d",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "El Perro que Ladra",
@@ -6555,7 +8835,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313412",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -6666,7 +8945,54 @@
     }
    ],
    "_fid": "f_d80d7f70b1",
-   "id": "f_d80d7f70b1"
+   "id": "f_d80d7f70b1",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Ficción 3",
@@ -6691,7 +9017,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313413",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -6807,7 +9132,54 @@
     }
    ],
    "_fid": "f_820f4ddd19",
-   "id": "f_820f4ddd19"
+   "id": "f_820f4ddd19",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Ficción 1",
@@ -6830,7 +9202,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -6947,7 +9318,46 @@
     }
    ],
    "_fid": "f_cb826e0a30",
-   "id": "f_cb826e0a30"
+   "id": "f_cb826e0a30",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Claqueteo XVII IMAGINATÓN",
@@ -6969,11 +9379,49 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "description": "El viernes 4 de diciembre, todos los participantes en Bogotá deberán reunirse en el Teatro El Parque para grabar sus claquetas oficiales y recibir, a las 7:00 p. m., la clave que dará inicio a la maratón. Desde este emblemático espacio del Parque Nacional se dará la partida para que los realizadores salgan a conquistar la ciudad con sus cámaras. Quienes participen desde otras regiones del país podrán acceder a la claqueta y la clave a través de los canales virtuales del festival, conectando distintas geografías en una misma experiencia de creación.",
    "description_lang": "es",
    "_fid": "f_0f47ae4440",
-   "id": "f_0f47ae4440"
+   "id": "f_0f47ae4440",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Conexión Latinxs en Norteamérica",
@@ -6997,7 +9445,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -7134,7 +9581,50 @@
     }
    ],
    "_fid": "f_767ead9c37",
-   "id": "f_767ead9c37"
+   "id": "f_767ead9c37",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Año Gaudí, la Ciudad Animada",
@@ -7158,7 +9648,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -7359,7 +9848,50 @@
     }
    ],
    "_fid": "f_e25297cb6a",
-   "id": "f_e25297cb6a"
+   "id": "f_e25297cb6a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Especial Astrológico: Presagios del Cielo",
@@ -7383,7 +9915,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -7517,7 +10048,50 @@
     }
    ],
    "_fid": "f_f58604503e",
-   "id": "f_f58604503e"
+   "id": "f_f58604503e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Crecer",
@@ -7540,7 +10114,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -7680,7 +10253,46 @@
     }
    ],
    "_fid": "f_c51e8db23d",
-   "id": "f_c51e8db23d"
+   "id": "f_c51e8db23d",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Panorama Colombia Experimental",
@@ -7703,7 +10315,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -7843,7 +10454,46 @@
     }
    ],
    "_fid": "f_522a341f7a",
-   "id": "f_522a341f7a"
+   "id": "f_522a341f7a",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Encuentros Cercanos: Competencia Nacional Ficción 1",
@@ -7865,9 +10515,52 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "_fid": "f_282f343638",
-   "id": "f_282f343638"
+   "id": "f_282f343638",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "Robert Valley: Dibujar lo que todavía no existe. La creación de sus universos visuales",
@@ -7891,12 +10584,62 @@
     "date": "2026-11-24"
    },
    "registration_url": "https://forms.gle/9AY1AT11fPHamZPf6",
-   "is_free": true,
    "requires_registration": true,
    "description": "Antes del movimiento, una línea puede contener toda una película. Robert Valley, director de Zima Blue y otros episodios de Love, Death & Robots de Netflix, nominado al Óscar y ganador de tres premios Emmy, llega a BOGOSHORTS para acercarnos al momento en que una idea comienza a encontrar su identidad visual. Conocido también por su trabajo con Gorillaz, el director, animador y diseñador canadiense abordará el concept art y el desarrollo visual como herramientas para construir personajes, atmósferas y mundos capaces de contar historias desde el primer trazo. ¿Cómo funciona su intuición y que hace su universo tan reconocible? Una oportunidad para explorar las decisiones que dan fuerza narrativa a las imágenes junto a un creador de inconfundible personalidad gráfica. Este encuentro se realiza en alianza con NonStop Barcelona, organizador del Visual Development Seminar, y celebra el dibujo como origen de nuevas posibilidades cinematográficas.",
    "description_lang": "es",
    "_fid": "f_e1ba726641",
-   "id": "f_e1ba726641"
+   "id": "f_e1ba726641",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-24"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Ficción 1",
@@ -7921,7 +10664,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313414",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -8038,7 +10780,54 @@
     }
    ],
    "_fid": "f_e6d3834562",
-   "id": "f_e6d3834562"
+   "id": "f_e6d3834562",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Animación 1",
@@ -8063,7 +10852,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313415",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -8269,7 +11057,54 @@
     }
    ],
    "_fid": "f_5f25add140",
-   "id": "f_5f25add140"
+   "id": "f_5f25add140",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Fanático Freak Fantástico 2",
@@ -8294,7 +11129,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313416",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -8409,7 +11243,54 @@
     }
    ],
    "_fid": "f_f1369a9ddf",
-   "id": "f_f1369a9ddf"
+   "id": "f_f1369a9ddf",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Cine Dentro del Cine",
@@ -8434,7 +11315,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054052",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -8547,7 +11427,54 @@
     }
    ],
    "_fid": "f_c1227c7280",
-   "id": "f_c1227c7280"
+   "id": "f_c1227c7280",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Experimental 2",
@@ -8572,7 +11499,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054053",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -8709,7 +11635,54 @@
     }
    ],
    "_fid": "f_cdcb7924a9",
-   "id": "f_cdcb7924a9"
+   "id": "f_cdcb7924a9",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Volviendo a Persépolis sin Marjane Satrapi",
@@ -8734,7 +11707,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054054",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -8895,7 +11867,54 @@
     }
    ],
    "_fid": "f_d2080d6058",
-   "id": "f_d2080d6058"
+   "id": "f_d2080d6058",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Annecy Kids",
@@ -8919,7 +11938,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -9059,7 +12077,50 @@
     }
    ],
    "_fid": "f_704aa401d8",
-   "id": "f_704aa401d8"
+   "id": "f_704aa401d8",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Metrópolis: Cuerpos del Futuro",
@@ -9084,7 +12145,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054056",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -9177,7 +12237,54 @@
     }
    ],
    "_fid": "f_0f123b0d2e",
-   "id": "f_0f123b0d2e"
+   "id": "f_0f123b0d2e",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Ficción 2",
@@ -9202,7 +12309,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054057",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -9338,7 +12444,54 @@
     }
    ],
    "_fid": "f_594c63cf84",
-   "id": "f_594c63cf84"
+   "id": "f_594c63cf84",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia VR - Realidad Virtual",
@@ -9365,7 +12518,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -9474,7 +12626,54 @@
     }
    ],
    "_fid": "f_be5e5b4bdb",
-   "id": "f_be5e5b4bdb"
+   "id": "f_be5e5b4bdb",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Animación",
@@ -9497,7 +12696,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -9652,7 +12850,46 @@
     }
    ],
    "_fid": "f_0f453d05e3",
-   "id": "f_0f453d05e3"
+   "id": "f_0f453d05e3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Ficción 2",
@@ -9675,7 +12912,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -9790,7 +13026,46 @@
     }
    ],
    "_fid": "f_057429d276",
-   "id": "f_057429d276"
+   "id": "f_057429d276",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "BOGOSHORTS Kids",
@@ -9813,7 +13088,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -9942,7 +13216,46 @@
     }
    ],
    "_fid": "f_482722604c",
-   "id": "f_482722604c"
+   "id": "f_482722604c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Especial 40 Años Caballeros del Zodiaco",
@@ -9965,7 +13278,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10081,7 +13393,46 @@
     }
    ],
    "_fid": "f_64f45d4433",
-   "id": "f_64f45d4433"
+   "id": "f_64f45d4433",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Conexión Brasil",
@@ -10105,7 +13456,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10201,7 +13551,50 @@
     }
    ],
    "_fid": "f_83a9049f6c",
-   "id": "f_83a9049f6c"
+   "id": "f_83a9049f6c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Jairo Pinilla, el Origen de una Obsesión",
@@ -10225,7 +13618,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10311,7 +13703,50 @@
     }
    ],
    "_fid": "f_59c96c2dc8",
-   "id": "f_59c96c2dc8"
+   "id": "f_59c96c2dc8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Corto Periodístico",
@@ -10335,7 +13770,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10450,7 +13884,50 @@
     }
    ],
    "_fid": "f_45df56b5d3",
-   "id": "f_45df56b5d3"
+   "id": "f_45df56b5d3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Diversidades",
@@ -10473,7 +13950,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10609,7 +14085,46 @@
     }
    ],
    "_fid": "f_85c6681f2c",
-   "id": "f_85c6681f2c"
+   "id": "f_85c6681f2c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Panorama Colombia Ficción",
@@ -10632,7 +14147,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10726,7 +14240,46 @@
     }
    ],
    "_fid": "f_6f3bdb31d4",
-   "id": "f_6f3bdb31d4"
+   "id": "f_6f3bdb31d4",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Noche Frankenstein Vol 10",
@@ -10749,7 +14302,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "by_invitation": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -10864,7 +14416,46 @@
     }
    ],
    "_fid": "f_cd2bb0c567",
-   "id": "f_cd2bb0c567"
+   "id": "f_cd2bb0c567",
+   "by_invitation": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Encuentros Cercanos: Competencia Nacional Ficción 2",
@@ -10886,9 +14477,52 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "_fid": "f_de14a03024",
-   "id": "f_de14a03024"
+   "id": "f_de14a03024",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "BOGOSHORTS Kids",
@@ -10913,7 +14547,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054058",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -11042,7 +14675,54 @@
     }
    ],
    "_fid": "f_262de95bb6",
-   "id": "f_262de95bb6"
+   "id": "f_262de95bb6",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Ficción 2",
@@ -11067,7 +14747,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054059",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -11182,7 +14861,54 @@
     }
    ],
    "_fid": "f_78af8e953b",
-   "id": "f_78af8e953b"
+   "id": "f_78af8e953b",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Panorama Colombia Experimental",
@@ -11207,7 +14933,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054060",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -11347,7 +15072,54 @@
     }
    ],
    "_fid": "f_7ebc528639",
-   "id": "f_7ebc528639"
+   "id": "f_7ebc528639",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Fanático Freak Fantástico 3",
@@ -11372,7 +15144,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054061",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -11483,7 +15254,54 @@
     }
    ],
    "_fid": "f_e686116f2b",
-   "id": "f_e686116f2b"
+   "id": "f_e686116f2b",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Crecer",
@@ -11508,7 +15326,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054066",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -11648,7 +15465,54 @@
     }
    ],
    "_fid": "f_b7cb144e4e",
-   "id": "f_b7cb144e4e"
+   "id": "f_b7cb144e4e",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Documental 1",
@@ -11673,7 +15537,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054067",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -11790,7 +15653,54 @@
     }
    ],
    "_fid": "f_120d632f5b",
-   "id": "f_120d632f5b"
+   "id": "f_120d632f5b",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Sinfonías Femeninas desde Barcelona",
@@ -11815,7 +15725,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054068",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -11977,7 +15886,54 @@
     }
    ],
    "_fid": "f_8f59b17826",
-   "id": "f_8f59b17826"
+   "id": "f_8f59b17826",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Conexión Latinoamérica",
@@ -12002,7 +15958,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054069",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -12098,7 +16053,54 @@
     }
    ],
    "_fid": "f_6cca14c8d6",
-   "id": "f_6cca14c8d6"
+   "id": "f_6cca14c8d6",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Furia",
@@ -12115,7 +16117,7 @@
     "16:00"
    ],
    "day": "2026-12-06",
-   "time": "16:00",
+   "time": "17:00",
    "day_order": 5,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
@@ -12130,9 +16132,48 @@
    },
    "title_en": "Rage",
    "synopsis_en": "Felipe sneaks into a gig and discovers that his boyfriend Eduardo is hiding him out of fear of accepting his own homosexuality. Amid a first chemical trip and a mosh pit, they let go and lose their inhibitions, until an attempted kiss threatens to unleash violence and their deepest fears.",
-   "is_free": true,
    "_fid": "f_2a7aeada73",
-   "id": "f_2a7aeada73"
+   "id": "f_2a7aeada73",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "juan",
+     "fecha": "2026-11-24",
+     "frase": "deberíamos usar lo que dice la Cinemateca, ellos no venden horarios truncados, ni cometen errores logísticos"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Animación 2",
@@ -12157,7 +16198,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054070",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -12385,7 +16425,54 @@
     }
    ],
    "_fid": "f_10400977f8",
-   "id": "f_10400977f8"
+   "id": "f_10400977f8",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Annecy Kids",
@@ -12408,7 +16495,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -12548,7 +16634,46 @@
     }
    ],
    "_fid": "f_aa5209911c",
-   "id": "f_aa5209911c"
+   "id": "f_aa5209911c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Animación",
@@ -12571,7 +16696,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -12726,7 +16850,46 @@
     }
    ],
    "_fid": "f_e33dd31f50",
-   "id": "f_e33dd31f50"
+   "id": "f_e33dd31f50",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "BOGOSHORTS Kids",
@@ -12749,7 +16912,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -12878,7 +17040,46 @@
     }
    ],
    "_fid": "f_58509ed531",
-   "id": "f_58509ed531"
+   "id": "f_58509ed531",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Conexión España",
@@ -12902,7 +17103,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13019,7 +17219,50 @@
     }
    ],
    "_fid": "f_49b80a8e41",
-   "id": "f_49b80a8e41"
+   "id": "f_49b80a8e41",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Documental",
@@ -13043,7 +17286,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13160,7 +17402,50 @@
     }
    ],
    "_fid": "f_461086bc4e",
-   "id": "f_461086bc4e"
+   "id": "f_461086bc4e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "World Tour: Croacia 1",
@@ -13184,7 +17469,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13281,7 +17565,50 @@
     }
    ],
    "_fid": "f_a621b3b272",
-   "id": "f_a621b3b272"
+   "id": "f_a621b3b272",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "El Mundo es un Balón",
@@ -13304,7 +17631,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13435,7 +17761,46 @@
     }
    ],
    "_fid": "f_a23f2842ab",
-   "id": "f_a23f2842ab"
+   "id": "f_a23f2842ab",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Panorama Colombia Documental",
@@ -13458,7 +17823,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13555,7 +17919,46 @@
     }
    ],
    "_fid": "f_9adbaf188e",
-   "id": "f_9adbaf188e"
+   "id": "f_9adbaf188e",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Humor en Corto",
@@ -13578,7 +17981,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13715,7 +18117,46 @@
     }
    ],
    "_fid": "f_2067536081",
-   "id": "f_2067536081"
+   "id": "f_2067536081",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "BOGOSHORTS degusta: Picnic Nocturno",
@@ -13737,11 +18178,54 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "by_invitation": true,
    "description": "Bajo el cielo estrellado de la plazoleta CityU, el 10° Picnic Nocturno de Corto Europeo realizado con el apoyo del Instituto Goethe, propone una experiencia de sinestesia: ver un corto, sentirlo y luego probarlo. Cinco cortometrajes europeos inspiran a cinco aprendices de cocina del Servicio Nacional de Aprendizaje – SENA, quienes asumen el reto de traducir atmósferas, ritmos y gestos en sabores, texturas y aromas que despiertan la memoria y los sentidos. El lunes 7 de diciembre, en el Lounge BFM – Plazoleta CityU, el cine se comerá y el gusto proyectará imágenes invisibles: una noche donde cada sabor se vuelve emoción, y cada bocado, una escena más de esta proyección multisensorial.",
    "description_lang": "es",
    "_fid": "f_b1cd76e398",
-   "id": "f_b1cd76e398"
+   "id": "f_b1cd76e398",
+   "by_invitation": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "El Perro que Ladra",
@@ -13765,7 +18249,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -13876,7 +18359,50 @@
     }
    ],
    "_fid": "f_c5eaf42bea",
-   "id": "f_c5eaf42bea"
+   "id": "f_c5eaf42bea",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Experimental 1",
@@ -13900,7 +18426,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -14060,7 +18585,50 @@
     }
    ],
    "_fid": "f_e15df51f84",
-   "id": "f_e15df51f84"
+   "id": "f_e15df51f84",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Experimental",
@@ -14084,7 +18652,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -14209,7 +18776,50 @@
     }
    ],
    "_fid": "f_1d38a3191d",
-   "id": "f_1d38a3191d"
+   "id": "f_1d38a3191d",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Documental 2",
@@ -14232,7 +18842,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -14324,7 +18933,46 @@
     }
    ],
    "_fid": "f_4f94fb5564",
-   "id": "f_4f94fb5564"
+   "id": "f_4f94fb5564",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Ficción 3",
@@ -14347,7 +18995,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -14463,7 +19110,46 @@
     }
    ],
    "_fid": "f_4b8aac68ec",
-   "id": "f_4b8aac68ec"
+   "id": "f_4b8aac68ec",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional y Nacional Videoclip",
@@ -14488,7 +19174,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054071",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -14874,7 +19559,54 @@
     }
    ],
    "_fid": "f_976b82b80f",
-   "id": "f_976b82b80f"
+   "id": "f_976b82b80f",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Panorama Colombia Documental",
@@ -14899,7 +19631,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054072",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -14996,7 +19727,54 @@
     }
    ],
    "_fid": "f_188f44059d",
-   "id": "f_188f44059d"
+   "id": "f_188f44059d",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Ganadores 24BOGOSHORTS",
@@ -15019,9 +19797,56 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054073",
-   "is_free": false,
    "_fid": "f_b070327e09",
-   "id": "f_b070327e09"
+   "id": "f_b070327e09",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "Competencia Nacional Ficción 1",
@@ -15046,7 +19871,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313414",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -15163,7 +19987,54 @@
     }
    ],
    "_fid": "f_ee9e828d24",
-   "id": "f_ee9e828d24"
+   "id": "f_ee9e828d24",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Fanático Freak Fantástico 1",
@@ -15188,7 +20059,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054074",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -15304,7 +20174,54 @@
     }
    ],
    "_fid": "f_0f4ff25435",
-   "id": "f_0f4ff25435"
+   "id": "f_0f4ff25435",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Conexión Latinxs en Norteamérica",
@@ -15329,7 +20246,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054075",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -15466,7 +20382,54 @@
     }
    ],
    "_fid": "f_5a5b7f4141",
-   "id": "f_5a5b7f4141"
+   "id": "f_5a5b7f4141",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Nexos Femeninos",
@@ -15491,7 +20454,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054076",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -15605,7 +20567,54 @@
     }
    ],
    "_fid": "f_70ebe22c82",
-   "id": "f_70ebe22c82"
+   "id": "f_70ebe22c82",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Especial Astrológico: Presagios del Cielo",
@@ -15630,7 +20639,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054077",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -15764,7 +20772,54 @@
     }
    ],
    "_fid": "f_a2159d119f",
-   "id": "f_a2159d119f"
+   "id": "f_a2159d119f",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Nacional Ficción 2",
@@ -15789,7 +20844,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054059",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -15904,7 +20958,54 @@
     }
    ],
    "_fid": "f_ece9a40cff",
-   "id": "f_ece9a40cff"
+   "id": "f_ece9a40cff",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Metrópolis: Cuerpos del Futuro",
@@ -15929,7 +21030,6 @@
     "date": "2026-11-13"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054078",
-   "is_free": false,
    "is_cortos": true,
    "film_list": [
     {
@@ -16022,7 +21122,54 @@
     }
    ],
    "_fid": "f_e93e701b58",
-   "id": "f_e93e701b58"
+   "id": "f_e93e701b58",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Yndige mennesker",
@@ -16056,12 +21203,54 @@
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054079",
    "synopsis_en": "Four Danish filmmakers bring the darker side of Hans Christian Andersen into contemporary horror. A young caregiver discovers that the dying man in his care is hiding secrets; a mother tries to prevent her son’s death after seeing it in a dream; a couple move to the countryside and find a mirror that upends their lives; and a musician struggling to write is haunted by his own muse. Each short film was written and directed by a different filmmaker, but all four were developed together and are linked by loss, desire and the urge to change what seems inevitable.",
-   "is_free": false,
    "lbSlug": "adorable-humans",
    "tmdb_id": 1368172,
    "title_en": "Adorable Humans",
    "_fid": "f_ec2d2aa6b1",
-   "id": "f_ec2d2aa6b1"
+   "id": "f_ec2d2aa6b1",
+   "is_free": false,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia VR - Realidad Virtual",
@@ -16069,14 +21258,14 @@
    "section": "🥽 Competencia VR (Realidad Virtual)",
    "country": "Países Bajos, Bangladés, Arabia Saudita, Taiwán, Alemania, Palestina, Colombia, Bélgica, Luxemburgo",
    "flags": "🇳🇱🇧🇩🇸🇦🇹🇼🇩🇪🇵🇸🇨🇴🇧🇪🇱🇺",
-   "duration": "240 min",
+   "duration": "420 min",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
     "2026-12-08",
-    "14:00"
+    "11:00"
    ],
    "day": "2026-12-08",
-   "time": "14:00",
+   "time": "11:00",
    "day_order": 7,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Taller de la imagen",
@@ -16087,7 +21276,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16196,7 +21384,54 @@
     }
    ],
    "_fid": "f_337f034282",
-   "id": "f_337f034282"
+   "id": "f_337f034282",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Miles Davis, 100 Años de Jazz",
@@ -16220,7 +21455,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16395,7 +21629,50 @@
     }
    ],
    "_fid": "f_50249df760",
-   "id": "f_50249df760"
+   "id": "f_50249df760",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "World Tour: Croacia 2",
@@ -16419,7 +21696,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16515,7 +21791,50 @@
     }
    ],
    "_fid": "f_fdd4020249",
-   "id": "f_fdd4020249"
+   "id": "f_fdd4020249",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Selección Oficial",
@@ -16539,7 +21858,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16635,7 +21953,50 @@
     }
    ],
    "_fid": "f_1bcb1f9e13",
-   "id": "f_1bcb1f9e13"
+   "id": "f_1bcb1f9e13",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "sala": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Competencia Internacional Ficción 1",
@@ -16658,7 +22019,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16796,7 +22156,46 @@
     }
    ],
    "_fid": "f_5b1ba5fe8c",
-   "id": "f_5b1ba5fe8c"
+   "id": "f_5b1ba5fe8c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Especial 40 Años Caballeros del Zodiaco",
@@ -16819,7 +22218,6 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -16935,7 +22333,46 @@
     }
    ],
    "_fid": "f_c78486af98",
-   "id": "f_c78486af98"
+   "id": "f_c78486af98",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    }
+   }
   },
   {
    "title": "Ceremonia de premiación y clausura - Noche de Santa Lucía",
@@ -16956,9 +22393,48 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "by_invitation": true,
    "_fid": "f_3113445ec2",
-   "id": "f_3113445ec2"
+   "id": "f_3113445ec2",
+   "by_invitation": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "Entrega clave IMAGINATÓN",
@@ -16979,9 +22455,48 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
     "date": "2026-11-18"
    },
-   "is_free": true,
    "_fid": "f_5ade8fa1d3",
-   "id": "f_5ade8fa1d3"
+   "id": "f_5ade8fa1d3",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   },
   {
    "title": "Noche Sagitario",
@@ -17003,11 +22518,50 @@
     "date": "2026-11-23",
     "tipo": "festival-ig"
    },
-   "by_invitation": true,
    "description": "Acceso exclusivo para acreditados de las categorías: Aliado, Industria BFM y Participante.",
    "description_lang": "es",
    "_fid": "f_7c09194342",
-   "id": "f_7c09194342"
+   "id": "f_7c09194342",
+   "by_invitation": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "60 min"
   }
  ],
  "_avisos_duracion": [
@@ -17016,7 +22570,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T17:34:13",
+  "fecha": "2026-11-24T18:42:08",
   "plan_sha": "ffb90333f9801666",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"

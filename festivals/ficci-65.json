@@ -1775,7 +1775,15 @@
      "work_id": "w_R4HBN9AY1HWQ",
      "synopsis": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención.",
      "synopsis_lang": "es",
-     "synopsis_en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption."
+     "synopsis_en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption.",
+     "genre": "Drama",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HBN9AY1HWQ (bogoshorts-2026, cinetoro-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4HBN9AY1HWQ (bogoshorts-2026, cinetoro-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "the-devils-throat"
     },
     {
      "title": "Las formas de la magia",
@@ -1844,7 +1852,15 @@
      "director": "Laura Chará",
      "year": 2026,
      "synopsis_en": "Following her mother's death, Laura Chará goes to her grandmother's and aunt's house to try to piece together a narrative that gives meaning to the loss. Faced with her grandmother's reticence, the granddaughter's inquiry shifts toward a more attentive contemplation of the space and of a meaningful silence.",
-     "tmdb_id": 1645142
+     "tmdb_id": 1645142,
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HBN9HF0D5J (bogoshorts-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4HBN9HF0D5J (bogoshorts-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "all-the-hands-ive-let-go"
     },
     {
      "title": "Ya se ven los tigres en la lluvia",
@@ -4752,7 +4768,15 @@
      "work_id": "w_R4HBN9AY1HWQ",
      "synopsis": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención.",
      "synopsis_lang": "es",
-     "synopsis_en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption."
+     "synopsis_en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption.",
+     "genre": "Drama",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HBN9AY1HWQ (bogoshorts-2026, cinetoro-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4HBN9AY1HWQ (bogoshorts-2026, cinetoro-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "the-devils-throat"
     },
     {
      "title": "Las formas de la magia",
@@ -4821,7 +4845,15 @@
      "director": "Laura Chará",
      "year": 2026,
      "synopsis_en": "Following her mother's death, Laura Chará goes to her grandmother's and aunt's house to try to piece together a narrative that gives meaning to the loss. Faced with her grandmother's reticence, the granddaughter's inquiry shifts toward a more attentive contemplation of the space and of a meaningful silence.",
-     "tmdb_id": 1645142
+     "tmdb_id": 1645142,
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HBN9HF0D5J (bogoshorts-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4HBN9HF0D5J (bogoshorts-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "all-the-hands-ive-let-go"
     },
     {
      "title": "Ya se ven los tigres en la lluvia",

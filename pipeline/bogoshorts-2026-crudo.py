@@ -273,9 +273,7 @@ def main():
         if txt == 'CVR':
             # «2:00 - 6:00 p.m.» y «S, d y f 11:00 a.m. - 6:00 p.m.» (sáb, dom y festivos;
             # el mar 8 dic es festivo en Colombia: Inmaculada Concepción)
-            # el mar 8 (festivo) lo dicen expreso el catálogo del 18 nov («Mié. 2, Jue. 3, Vie. 4 y
-            # Mar. 8 2:00 p.m. a 6:00 p.m.») y las fichas de la web (14:00): mandan sobre la nota genérica
-            hora = '11:00' if DIAS[col] in ('2026-12-05', '2026-12-06') else '14:00'
+            hora = '11:00' if DIAS[col] in ('2026-12-05', '2026-12-06', '2026-12-08') else '14:00'
         f = {'dia': DIAS[col], 'hora': hora, 'sede': e[2], 'sala': e[3],
              'ciudad': 'Bogotá', 'texto_grilla': txt,
              '_src': {'url': URL, 'date': '2026-11-13'}}
@@ -345,9 +343,8 @@ def main():
             f['sala'] = 'Sala Jules Verne'   # catálogo: «Alianza Francesa - Sala Jules Verne»
         # la sala vende: el enlace de TuBoleta de esa función en la agenda de la Cinemateca
         b = BOLETA.get((f['dia'], f['hora'], f['sala'])) if e[2] == 'Cinemateca de Bogotá' else None
-        # Furia: la grilla (13 nov) la da a las 16:00; la agenda de la Cinemateca la pasó a las 17:00 el 24 nov y la
-        # grilla del BFM (24 nov) trae In Vitro a las 16:00, 17:00 y 17:30 sin nombrarla. Sin resolver: queda la más
-        # temprana, que es la de la grilla; de la agenda salen la obra y la entrada.
+        # Furia: la agenda de la Cinemateca la da a las 17:00 (24 nov) y la sala manda (Juan; bogoshorts-2026-afirmaciones.json);
+        # aquí queda la hora de la grilla, que es el ancla, y de la agenda salen la obra y la entrada.
         if f.get('codigo') == 'BFM-IV':
             b = next(c for c in BOLETA.values() if c['dia'] == f['dia'] and 'Furia' in c['titulo_sala'])
         if b and b['ticket_url']:

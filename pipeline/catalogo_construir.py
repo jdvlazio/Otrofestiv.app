@@ -234,6 +234,10 @@ def construir(R):
                     continue
                 if a['_ap'] and b['_ap']:
                     if a['_ap'] != b['_ap']:
+                        # «Isabella Cárdenas» / «Isabella Cárdenas Marín»: una obra que NACE no se
+                        # duplica en silencio (24 nov 2026). Entre dos con identidad, son homónimos.
+                        if (not a.get('wid') or not b.get('wid')) and _anio_ok(a['anio'], b['anio']) and catalogo.misma_persona_larga(a['director'], re.split(r',|;|/|&|\s(?:y|e|and)\s', b['director'] or '')):
+                            candidatos.append((ids[x], ids[y], 'mismo título y la misma persona con nombre más largo'))
                         continue                  # homónimos
                     if _anio_ok(a['anio'], b['anio']):
                         une(ids[x], ids[y], 'mismo título, director y año')
