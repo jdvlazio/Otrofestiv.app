@@ -4487,7 +4487,8 @@ except Exception as _e:
 # doc de contexto no produce una duda: produce una conclusión falsa, con seguridad.
 #
 # Este check regenera el archivo en un temporal y compara SOLO lo que el script
-# DERIVA del repo (la tabla de festivales y el bloque de features). El resto del
+# DERIVA del repo (el bloque de features) y exige que la lista de festivales NO
+# esté copiada ahí (24 nov 2026). El resto del
 # documento es prosa del template y no caduca sola. Si difieren: correr el script.
 check = 'claude-md-fresco'
 try:
@@ -4511,28 +4512,19 @@ try:
         else:
             # Solo las secciones DERIVADAS. La línea del último commit cambia con
             # cada commit por definición: compararla haría fallar el check siempre.
-            # La columna «Estado» sale del RELOJ (festivalStatus: próximo/recién
-            # terminado/archivado), no del repo: entre el commit y el CI un
-            # festival cruza un umbral y CLAUDE.md queda «desactualizado» sin que
-            # nadie tocara nada, bloqueando PRs ajenos (pasó en el #682, 18 ago).
-            # Se compara la lista de festivales y features — que sí es del repo —
-            # ignorando esa última celda.
-            def _sin_estado(_linea):
-                if not _linea.startswith('|'):
-                    return _linea
-                _cells = _linea.rstrip().rstrip('|').split('|')
-                return '|'.join(_cells[:-1]) + '|' if len(_cells) > 2 else _linea
             def _derivado(txt):
                 out = []
-                for _sec in ('### Festivales', '### Features activas'):
+                for _sec in ('### Features activas',):
                     if _sec in txt:
                         _t = txt[txt.index(_sec):]
                         _fin = _t.find('\n---')
                         _t = _t[:_fin if _fin > 0 else 1200]
-                        out.append('\n'.join(_sin_estado(_l) for _l in _t.split('\n')))
+                        out.append(_t)
                 return '\n'.join(out)
-            if _derivado(_viejo).strip() != _derivado(_nuevo).strip():
-                fail(check, 'CLAUDE.md desactualizado respecto al repo (festivales o features) '
+            if 'node scripts/generate-claude-md.js --festivales' not in _viejo or re.search(r'^\| `[a-z]+20\d\d` \|', _viejo, re.M):
+                fail(check, 'CLAUDE.md lleva una copia de la lista de festivales: se consulta en vivo (--festivales)')
+            elif _derivado(_viejo).strip() != _derivado(_nuevo).strip():
+                fail(check, 'CLAUDE.md desactualizado respecto al repo (features) '
                             '— correr: node scripts/generate-claude-md.js')
             else:
                 ok(check, 'CLAUDE.md al día con el estado derivado del repo')
