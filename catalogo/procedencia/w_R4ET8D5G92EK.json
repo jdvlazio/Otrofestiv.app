@@ -18,5 +18,11 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "mismo afiche, a mayor tamaño (780 contra 345)",
+  "fecha": "2026-11-24"
  }
 }

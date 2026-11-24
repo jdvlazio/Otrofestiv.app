@@ -163,6 +163,8 @@ export const SECTION_EN = {
   '🎥 Imaginatón': 'One-Minute Marathon',
   '🧒 chiquiSHORTS': 'chiquiSHORTS',
   '😂 Noche de Humor': 'Comedy Night',
+  // Provincia de Vélez (2026-11-24, alta-festival.py): del plan
+  '🧒 Franja Infantil': 'Children\'s Program',
   // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
   '🛠️ Taller / Eventos': 'Workshop / Events',
   '🚂 Conversatorio / Historia y Patrimonio': 'Talk / History and Heritage',
@@ -404,6 +406,24 @@ export const FESTIVAL_CONFIG={
     dayShort:{'2026-12-01':'MAR 1','2026-12-02':'MIÉ 2','2026-12-03':'JUE 3','2026-12-04':'VIE 4','2026-12-05':'SÁB 5','2026-12-06':'DOM 6','2026-12-07':'LUN 7','2026-12-08':'MAR 8'},
     dayShort_en:{'2026-12-01':'TUE 1','2026-12-02':'WED 2','2026-12-03':'THU 3','2026-12-04':'FRI 4','2026-12-05':'SAT 5','2026-12-06':'SUN 6','2026-12-07':'MON 7','2026-12-08':'TUE 8'},
     dayLong:{'2026-12-01':'Martes 1 de diciembre','2026-12-02':'Miércoles 2 de diciembre','2026-12-03':'Jueves 3 de diciembre','2026-12-04':'Viernes 4 de diciembre','2026-12-05':'Sábado 5 de diciembre','2026-12-06':'Domingo 6 de diciembre','2026-12-07':'Lunes 7 de diciembre','2026-12-08':'Martes 8 de diciembre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
+  'provinciadevelez2026': {
+    // Alta con pipeline/alta-festival.py (2026-11-24): lo editorial sale de
+    // pipeline/provinciadevelez-2026.plan.json; los días, de festivalStartStr/festivalEndStr.
+    name:'Provincia de Vélez',displayName:'Provincia de Vélez',fullName:'9.º Festival de Cine Provincia de Vélez',shortName:'PROVINCIA DE VÉLEZ',
+    city:'Barbosa',country:'CO',
+    dates:'1–6 DIC',dates_en:'DEC 1–6',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/provinciadevelez2026.jpg',
+    tagline:'Festival de Cine',
+    instagram:'9_festcineprovinciadevelez', storageKey:'provinciadevelez2026_',festivalStartStr:'2026-12-01T00:00:00',festivalEndStr:'2026-12-06T23:59:00',
+    festivalDates:{'2026-12-01':'2026-12-01','2026-12-02':'2026-12-02','2026-12-03':'2026-12-03','2026-12-04':'2026-12-04','2026-12-05':'2026-12-05','2026-12-06':'2026-12-06'},
+    days:[{k:'2026-12-01',d:1,lbl:'MAR'},{k:'2026-12-02',d:2,lbl:'MIÉ'},{k:'2026-12-03',d:3,lbl:'JUE'},{k:'2026-12-04',d:4,lbl:'VIE'},{k:'2026-12-05',d:5,lbl:'SÁB'},{k:'2026-12-06',d:6,lbl:'DOM'}],
+    dayKeys:['2026-12-01','2026-12-02','2026-12-03','2026-12-04','2026-12-05','2026-12-06'],
+    dayShort:{'2026-12-01':'MAR 1','2026-12-02':'MIÉ 2','2026-12-03':'JUE 3','2026-12-04':'VIE 4','2026-12-05':'SÁB 5','2026-12-06':'DOM 6'},
+    dayShort_en:{'2026-12-01':'TUE 1','2026-12-02':'WED 2','2026-12-03':'THU 3','2026-12-04':'FRI 4','2026-12-05':'SAT 5','2026-12-06':'SUN 6'},
+    dayLong:{'2026-12-01':'Martes 1 de diciembre','2026-12-02':'Miércoles 2 de diciembre','2026-12-03':'Jueves 3 de diciembre','2026-12-04':'Viernes 4 de diciembre','2026-12-05':'Sábado 5 de diciembre','2026-12-06':'Domingo 6 de diciembre'},
     prioLimit:5,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
@@ -1563,6 +1583,8 @@ export const SECTION_ARCHETYPES = {
   '🎥 Imaginatón': 'Especiales / Eventos',
   '🧒 chiquiSHORTS': 'Cortos / Programas',
   '😂 Noche de Humor': 'Especiales / Eventos',
+  // Provincia de Vélez (2026-11-24, alta-festival.py): del plan
+  '🧒 Franja Infantil': 'Muestra / País',
   // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
   '🛠️ Taller / Eventos': 'Charlas / Industria',
   '🚂 Conversatorio / Historia y Patrimonio': 'Charlas / Industria',

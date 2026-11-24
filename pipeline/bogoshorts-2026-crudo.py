@@ -322,8 +322,14 @@ def main():
                     f['sala'] = act['sala']
                 if act.get('texto'):
                     f['descripcion'] = TEXTOS['textos'][act['texto']]['es']
+                if act.get('participantes'):     # boletín 027, 24 nov
+                    f['descripcion'] += ' ' + act['participantes']
                 if act.get('acceso'):
                     f['acceso'] = act['acceso']
+                if act.get('registration_url'):
+                    f['registration_url'] = act['registration_url']
+                if act.get('src'):
+                    f['_src'] = act['src']
             elif f['seccion'] == '':
                 sys.exit(f'✗ actividad sin sección: {txt}')
             if txt.startswith('Estreno BFM-IV'):     # la agenda de la sala da la obra
@@ -339,6 +345,11 @@ def main():
             f['sala'] = 'Sala Jules Verne'   # catálogo: «Alianza Francesa - Sala Jules Verne»
         # la sala vende: el enlace de TuBoleta de esa función en la agenda de la Cinemateca
         b = BOLETA.get((f['dia'], f['hora'], f['sala'])) if e[2] == 'Cinemateca de Bogotá' else None
+        # Furia: la grilla (13 nov) la da a las 16:00; la agenda de la Cinemateca la pasó a las 17:00 el 24 nov y la
+        # grilla del BFM (24 nov) trae In Vitro a las 16:00, 17:00 y 17:30 sin nombrarla. Sin resolver: queda la más
+        # temprana, que es la de la grilla; de la agenda salen la obra y la entrada.
+        if f.get('codigo') == 'BFM-IV':
+            b = next(c for c in BOLETA.values() if c['dia'] == f['dia'] and 'Furia' in c['titulo_sala'])
         if b and b['ticket_url']:
             f['acceso'], f['ticket_url'] = 'Con boleta', b['ticket_url']
         elif b and b.get('entrada_libre'):

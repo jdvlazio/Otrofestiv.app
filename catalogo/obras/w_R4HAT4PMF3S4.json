@@ -1,16 +1,25 @@
 {
  "id": "w_R4HAT4PMF3S4",
  "titulo_original": "Wolkenschatten",
- "anio": null,
+ "anio": 2014,
  "paises": [
   "DE"
  ],
- "directores": [],
+ "directores": [
+  "Anja Dornieden",
+  "Juan David González Monroy"
+ ],
+ "sinopsis": {
+  "es": "En 1984, una nube gigantesca sume en la oscuridad la localidad de Hüllen-Hüllen. Un mes después, queda abandonada. En una cueva de las afueras, los investigadores hallan una máquina que proyecta imágenes sobre todas las superficies y una hoja manuscrita titulada Wolkenschatten: «Tesoros en las nubes».",
+  "en": "In 1984, a giant cloud plunges the town of Hüllen-Hüllen into darkness. A month later, it is abandoned. In a cave on the outskirts, investigators find a machine projecting images onto every surface and a handwritten sheet titled Wolkenschatten: “Cloud Treasures.”"
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20170542.png?itok=zXreDt0y",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 639730
+ },
  "versiones": [
   {
    "etiqueta": "17 min",

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-24"
+  "capturado": "2026-10-31"
  },
  "obras": [
   {
@@ -149,10 +149,10 @@
    "duracion_tmdb": 5,
    "pais_tmdb": "Canada, United Kingdom",
    "lbSlug": "ball-face",
-   "_verificado": "el catálogo ya la tiene (w_FYYT15QCGE1C, anibia-2026)",
-   "work_id": "w_FYYT15QCGE1C",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Ball Face",
    "_director": "Laurence Thérien",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/ball-face.jpg",
    "posterSource": "tmdb"
   },
@@ -286,7 +286,7 @@
    "lbSlug": "ceu-inferno-e-outras-partes-do-corpo",
    "_verificado": "declarada a mano: «Céu, Inferno e Outras Partes do Corpo» (2011, 8 min), dir. Rodrigo John: el título español no está en TMDB",
    "_director": "Rodrigo John",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/cielo-infierno-y-otras-partes-del-cuerpo.jpg",
    "posterSource": "tmdb"
   },
@@ -361,10 +361,10 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "Germany",
    "lbSlug": "core-dump",
-   "_verificado": "el catálogo ya la tiene (w_FYYQAZAR8NGD, anibia-2026)",
-   "work_id": "w_FYYQAZAR8NGD",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Core Dump",
    "_director": "Alona Rodeh",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/core-dump.jpg",
    "posterSource": "tmdb"
   },
@@ -381,10 +381,10 @@
    "pais_tmdb": "Brazil",
    "title_en": "How a River Is Born",
    "lbSlug": "how-a-river-is-born",
-   "_verificado": "el catálogo ya la tiene (w_FYY029D75X7Z, anibia-2026)",
-   "work_id": "w_FYY029D75X7Z",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cómo Nace un Río",
    "_director": "Luma Flôres",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/como-nace-un-rio.jpg",
    "posterSource": "tmdb"
   },
@@ -556,10 +556,10 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Dominican Republic",
    "lbSlug": "eclosion-2026-1",
-   "_verificado": "el catálogo ya la tiene (w_FYYSJJFBZQRQ, anibia-2026)",
-   "work_id": "w_FYYSJJFBZQRQ",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Eclosión",
    "_director": "Luis Morillo",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/eclosion.jpg",
    "posterSource": "tmdb"
   },
@@ -567,7 +567,7 @@
    "titulo": "El hijo de puta (O filho da puta)",
    "tmdb_id": 1263313,
    "titulo_original": "O Filho da Puta",
-   "poster_path": "/uHC5TChRqMcJyCz7D3rorImQsZS.jpg",
+   "poster_path": "/pFfpxHWCgYzAhXbom2zzhrtryzt.jpg",
    "synopsis_es": "",
    "synopsis_en": "The quiet city of Veredas is home to Casa Rosa, a famous brothel in the backlands of Minas Gerais managed by Ismael's mother, known to everyone as O Filho da Puta. Tired of his life, the young man leaves with his dog towards the coast in search of the father he never knew. Along the way, he finds himself faced with situations that, at the same time as they transform him, insist on reminding him of the fate he is fleeing.",
    "genero": "Animación",
@@ -576,10 +576,10 @@
    "pais_tmdb": "Brazil",
    "title_en": "Son of a Bitch",
    "lbSlug": "son-of-a-bitch",
-   "_verificado": "el catálogo ya la tiene (w_FYXXHXPW2Y9G, anibia-2026)",
-   "work_id": "w_FYXXHXPW2Y9G",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "O filho da puta",
    "_director": "Tânia Anaya, Otto Guerra, Sávio Leite, Erica Rocha",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/el-hijo-de-puta-o-filho-da-puta.jpg",
    "posterSource": "tmdb"
   },
@@ -698,10 +698,10 @@
    "duracion_tmdb": 9,
    "pais_tmdb": "Germany, Colombia",
    "lbSlug": "epifania-2025-1",
-   "_verificado": "el catálogo ya la tiene (w_FYY90RBVBN6S, anibia-2026)",
-   "work_id": "w_FYY90RBVBN6S",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Epifanía",
    "_director": "Mila Useche",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/epifania.jpg",
    "posterSource": "tmdb"
   },
@@ -753,10 +753,10 @@
    "duracion_tmdb": 14,
    "pais_tmdb": "Brazil, France",
    "lbSlug": "guaxuma",
-   "_verificado": "el catálogo ya la tiene (w_FYXZ1EPA0GNZ, anibia-2026)",
-   "work_id": "w_FYXZ1EPA0GNZ",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Guaxuma",
    "_director": "Nara Normande",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/guaxuma.jpg",
    "posterSource": "tmdb"
   },
@@ -772,10 +772,10 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Brazil",
    "lbSlug": "guida",
-   "_verificado": "el catálogo ya la tiene (w_FYXYHGHK3J4E, anibia-2026)",
-   "work_id": "w_FYXYHGHK3J4E",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Guida",
    "_director": "Rosana Urbes",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/guida.jpg",
    "posterSource": "tmdb"
   },
@@ -834,25 +834,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Ir hacia adentro",
-   "_ya_publicada": [
-    {
-     "festival": "ficfusa-2026",
-     "titulo": "Ir hacia adentro",
-     "country": "Colombia",
-     "year": 2025,
-     "duration": "6 min",
-     "sinopsis": "Guiada por la intuición y el símbolo de la espiral, me sumerjo en silencio en las profundidades de mi inconsciente."
-    }
-   ],
-   "_sinopsis_de": "ya publicada en ficfusa-2026",
-   "_verificado": "ya publicada en ficfusa-2026: se reusa su sinopsis",
-   "sinopsis": "Guiada por la intuición y el símbolo de la espiral, me sumerjo en silencio en las profundidades de mi inconsciente.",
-   "pais": "Colombia",
-   "anio": 2025,
-   "duracion_tmdb": 6
-  },
-  {
    "titulo": "Karten der Wildnis",
    "tmdb_id": 1704468,
    "titulo_original": "Karten der Wildnis",
@@ -862,13 +843,13 @@
    "genero": "Animación",
    "anio_tmdb": 2026,
    "duracion_tmdb": 14,
-   "pais_tmdb": "Germany",
+   "pais_tmdb": "",
    "title_en": "Maps of Wilderness",
    "lbSlug": "maps-of-wilderness",
-   "_verificado": "el catálogo ya la tiene (w_FYY7ZBQQR162, anibia-2026, cinetoro-2026)",
-   "work_id": "w_FYY7ZBQQR162",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Karten der Wildnis",
    "_director": "Aline Helmcke, Sandra Reyes, Juliane Franke, Franka Sachse, Catalina Giraldo, Ana Vallejo",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/karten-der-wildnis.jpg",
    "posterSource": "tmdb"
   },
@@ -885,10 +866,10 @@
    "pais_tmdb": "Estonia, Ukraine",
    "title_en": "Kyiv Cake",
    "lbSlug": "kyiv-cake-2025",
-   "_verificado": "el catálogo ya la tiene (w_FYYWD61AK78P, anibia-2026)",
-   "work_id": "w_FYYWD61AK78P",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Kiievi tort (Kyiv Cake)",
    "_director": "Mykyta Lyskov",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/kiievi-tort-kyiv-cake.jpg",
    "posterSource": "tmdb"
   },
@@ -923,25 +904,24 @@
      "year": 2025,
      "duration": "8 min",
      "genre": "Animación",
-     "sinopsis": "En una ciudad abarrotada, un robot mecánico vive su vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot se embarca en un viaje, solo para darse cuenta poco a poco de que lo que el cristal ocultaba podría no ser algo a lo que temer después de todo."
+     "sinopsis": "En una ciudad bulliciosa, un robot mecánico lleva una vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot emprende un viaje, solo para darse cuenta poco a poco de que lo que ocultaba el cristal tal vez no sea tan temible después de todo."
     },
     {
      "festival": "siembrafest-2026",
      "titulo": "La pecera",
-     "poster": "/assets/filcmar-2026/la-pecera.jpg",
+     "poster": "/assets/siembrafest/la-pecera.jpg",
      "posterSource": "oficial",
      "country": "Colombia",
      "year": 2025,
      "duration": "8 min",
-     "genre": "Animación",
-     "sinopsis": "En una ciudad abarrotada, un robot mecánico vive su vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot se embarca en un viaje, solo para darse cuenta poco a poco de que lo que el cristal ocultaba podría no ser algo a lo que temer después de todo."
+     "genre": "Animación"
     }
    ],
    "_afiche_de": "ya publicada en filcmar-2026",
    "_sinopsis_de": "ya publicada en filcmar-2026",
    "poster": "/assets/filcmar-2026/la-pecera.jpg",
    "_verificado": "ya publicada en filcmar-2026: se reusa su afiche",
-   "sinopsis": "En una ciudad abarrotada, un robot mecánico vive su vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot se embarca en un viaje, solo para darse cuenta poco a poco de que lo que el cristal ocultaba podría no ser algo a lo que temer después de todo.",
+   "sinopsis": "En una ciudad bulliciosa, un robot mecánico lleva una vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot emprende un viaje, solo para darse cuenta poco a poco de que lo que ocultaba el cristal tal vez no sea tan temible después de todo.",
    "pais": "Colombia",
    "anio": 2025,
    "duracion_tmdb": 8,
@@ -951,18 +931,18 @@
    "titulo": "La chambre aux coccinelles",
    "tmdb_id": 1762990,
    "titulo_original": "La Chambre Aux Coccinelles",
-   "poster_path": "/jTbHyWeSvhY63UlCpbI32yaC6k7.jpg",
+   "poster_path": "/545grGV9HhyKX573OdWF4ZqKg4I.jpg",
    "synopsis_es": "",
    "synopsis_en": "A child moves from world to world, each representing a film genre,  and grows up through her discoveries.",
-   "genero": "Animación",
+   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 1,
    "pais_tmdb": "France",
    "lbSlug": "la-chambre-aux-coccinelles",
-   "_verificado": "el catálogo ya la tiene (w_FYYGXD88SF8N, anibia-2026)",
-   "work_id": "w_FYYGXD88SF8N",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La chambre aux coccinelles",
    "_director": "Léana Courtois, Rachel Marazano, Adrienne Mourier, Elio Nicoletti, Paola Pitassi, Capucine Villar",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/la-chambre-aux-coccinelles.jpg",
    "posterSource": "tmdb"
   },
@@ -981,7 +961,7 @@
    "lbSlug": "the-devil-room",
    "_verificado": "declarada a mano: «La Habitación del Macho Cabrío» (2025, 12 min), dir. Duban Pinzón (la Cinemateca escribe «Pizon»); tilde distinta en el título",
    "_director": "Duban Pizon",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/la-habitacion-del-macho-cabrio.jpg",
    "posterSource": "tmdb"
   },
@@ -998,10 +978,10 @@
    "pais_tmdb": "France",
    "title_en": "Dying Embers",
    "lbSlug": "dying-embers-2025",
-   "_verificado": "el catálogo ya la tiene (w_FYYKGW3GKBKN, anibia-2026)",
-   "work_id": "w_FYYKGW3GKBKN",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Les Dernières Braises",
    "_director": "Léa Pulini",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/les-dernieres-braises.jpg",
    "posterSource": "tmdb"
   },
@@ -1017,10 +997,10 @@
    "duracion_tmdb": 9,
    "pais_tmdb": "Colombia, France",
    "lbSlug": "lupus",
-   "_verificado": "el catálogo ya la tiene (w_FYYB17JJCENN, anibia-2026)",
-   "work_id": "w_FYYB17JJCENN",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Lupus",
    "_director": "Carlos Gómez Salamanca",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/lupus.jpg",
    "posterSource": "tmdb"
   },
@@ -1137,10 +1117,10 @@
    "duracion_tmdb": 82,
    "pais_tmdb": "Colombia, Spain",
    "lbSlug": "mu-ki-ra",
-   "_verificado": "el catálogo ya la tiene (w_R4G1R6GM6QWF, anibia-2026, fantasmagoria-2026, ficcali-2026, ficci-65, ficfusa-2026, ficmontanas-2026, filcmar-2026, miradas-2026, villadeleyvaiff-2026)",
-   "work_id": "w_R4G1R6GM6QWF",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mukira",
    "_director": "Estefanía Piñeres",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/mukira.jpg",
    "posterSource": "tmdb"
   },
@@ -1176,10 +1156,10 @@
    "pais_tmdb": "France",
    "title_en": "My Bellyaching Skin",
    "lbSlug": "my-bellyaching-skin",
-   "_verificado": "el catálogo ya la tiene (w_FYYJJNJDVYRM, anibia-2026)",
-   "work_id": "w_FYYJJNJDVYRM",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Pelures d´estomac",
    "_director": "Étienne Bonnet",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/pelures-d-estomac.jpg",
    "posterSource": "tmdb"
   },
@@ -1417,17 +1397,17 @@
    "tmdb_id": 1677190,
    "titulo_original": "Replay",
    "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
-   "synopsis_es": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
+   "synopsis_es": "",
    "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
    "genero": "Animación",
    "anio_tmdb": 2026,
    "duracion_tmdb": 6,
    "pais_tmdb": "Colombia",
    "lbSlug": "replay-2026",
-   "_verificado": "el catálogo ya la tiene (w_ZR5FE4J5AM6C, anibia-2026, bhff-2026, ficica-2026)",
+   "_verificado": "el catálogo ya la tiene (w_ZR5FE4J5AM6C, bhff-2026, ficica-2026)",
    "work_id": "w_ZR5FE4J5AM6C",
    "_director": "Simón Matallana Nossa",
-   "_sondeado": "2026-11-23",
+   "_sondeado": "2026-10-21",
    "_ya_publicada": [
     {
      "festival": "bhff-2026",
@@ -1440,8 +1420,7 @@
      "year": 2026,
      "duration": "6 min",
      "genre": "Animación",
-     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
-     "sinopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
+     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device."
     },
     {
      "festival": "ficica-2026",
@@ -1454,11 +1433,9 @@
      "year": 2026,
      "duration": "6 min",
      "genre": "Animación",
-     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
-     "sinopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
+     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device."
     }
    ],
-   "_sinopsis_de": "ya publicada en bhff-2026",
    "poster": "/assets/anibia-2026/replay.jpg",
    "posterSource": "tmdb"
   },
@@ -1474,10 +1451,10 @@
    "duracion_tmdb": 8,
    "pais_tmdb": "Estonia",
    "lbSlug": "robot-leo",
-   "_verificado": "el catálogo ya la tiene (w_FYYTDE2BHJG1, anibia-2026)",
-   "work_id": "w_FYYTDE2BHJG1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Robot Leo",
    "_director": "Piret Sigus and Silja Saarepuu",
-   "_sondeado": "2026-11-24"
+   "_sondeado": "2026-10-21"
   },
   {
    "titulo": "Tenebras",
@@ -1491,10 +1468,10 @@
    "duracion_tmdb": 7,
    "pais_tmdb": "Dominican Republic",
    "lbSlug": "tenebras",
-   "_verificado": "el catálogo ya la tiene (w_FYY1181JK5WD, anibia-2026)",
-   "work_id": "w_FYY1181JK5WD",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Tenebras",
    "_director": "Francisco Rojas",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/tenebras.jpg",
    "posterSource": "tmdb"
   },
@@ -1581,7 +1558,7 @@
    "lbSlug": "umassuma-lascas-de-memoria",
    "_verificado": "declarada a mano: «UMASSUMA - Lascas de Memória» (2025, 8 min), dir. Guaracy Britto Jr. y Andrei Miralha: el título español no está en TMDB",
    "_director": "Guaracy Britto Jr. e Andrei Miralha",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/umassuma-lascas-de-memorias.jpg",
    "posterSource": "tmdb"
   },
@@ -1590,7 +1567,7 @@
    "tmdb_id": 1602532,
    "titulo_original": "Una parvada de estruendo",
    "poster_path": "/qswsDPxtCqK9R8REu79x8P05D3X.jpg",
-   "synopsis_es": "Un viaje al interior que escudriña en la identidad femenina, fragmentando y resignificando sus representaciones, interviniendo las imágenes a través del collage en stop motion en búsqueda de libertad.",
+   "synopsis_es": "",
    "synopsis_en": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom.",
    "genero": "Animación",
    "anio_tmdb": 2025,
@@ -1598,27 +1575,10 @@
    "pais_tmdb": "Mexico",
    "title_en": "A Flock of Thunder",
    "lbSlug": "a-flock-of-thunder",
-   "_verificado": "el catálogo ya la tiene (w_9K5ZAA4ZNBV7, anibia-2026, bogoshorts-2026)",
-   "work_id": "w_9K5ZAA4ZNBV7",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una parvada de estruendo",
    "_director": "Mariana Mendivil",
-   "_sondeado": "2026-11-23",
-   "_ya_publicada": [
-    {
-     "festival": "bogoshorts-2026",
-     "titulo": "Una parvada de estruendo",
-     "tmdb_id": 1602532,
-     "poster": "/assets/bogoshorts-2026/una-parvada-de-estruendo.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "a-flock-of-thunder",
-     "country": "México",
-     "year": 2025,
-     "duration": "9 min",
-     "genre": "Animación",
-     "synopsis_en": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom.",
-     "sinopsis": "Un viaje al interior que escudriña en la identidad femenina, fragmentando y resignificando sus representaciones, interviniendo las imágenes a través del collage en stop motion en búsqueda de libertad."
-    }
-   ],
-   "_sinopsis_de": "ya publicada en bogoshorts-2026",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/una-parvada-de-estruendo.jpg",
    "posterSource": "tmdb"
   },
@@ -1775,7 +1735,7 @@
    "lbSlug": "viagem-na-chuva",
    "_verificado": "declarada a mano: «Viagem na Chuva» (2014, 12 min), dir. Wesley Rodrigues en TMDB; el candado no abrió porque la ficha 3591 de la Cinemateca dice 2024 (la 3579 de Fontanar dice 2014: errata)",
    "_director": "Wesley Rodrigues",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/viaje-bajo-la-lluvia.jpg",
    "posterSource": "tmdb"
   },
@@ -1786,15 +1746,15 @@
    "poster_path": "/jBrIfaOQ2w9FZBEDWka1s6Yrix3.jpg",
    "synopsis_es": "",
    "synopsis_en": "Señora Concha is determined to get through the Tijuana airport alone, but when her stubbornness clashes with an eager wheelchair attendant named Jorge, chaos ensues for both of them! Will they learn to see eye to eye, or will Concha’s flight leave her stranded?",
-   "genero": "Animación",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 9,
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
    "pais_tmdb": "",
    "lbSlug": "necesitas-ayuda",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "¿Necesitas Ayuda?",
    "_director": "Angel Ruvalcaba",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/necesitas-ayuda.jpg",
    "posterSource": "tmdb"
   },
@@ -1934,10 +1894,10 @@
    "duracion_tmdb": 5,
    "pais_tmdb": "Canada, United Kingdom",
    "lbSlug": "ball-face",
-   "_verificado": "el catálogo ya la tiene (w_FYYT15QCGE1C, anibia-2026)",
-   "work_id": "w_FYYT15QCGE1C",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Ball Face",
    "_director": "Laurence Thérien",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/ball-face.jpg",
    "posterSource": "tmdb"
   },
@@ -2067,7 +2027,7 @@
    "lbSlug": "ceu-inferno-e-outras-partes-do-corpo",
    "_verificado": "declarada a mano: «Céu, Inferno e Outras Partes do Corpo» (2011, 8 min), dir. Rodrigo John: el título español no está en TMDB",
    "_director": "Rodrigo John",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/cielo-infierno-y-otras-partes-del-cuerpo.jpg",
    "posterSource": "tmdb"
   },
@@ -2139,10 +2099,10 @@
    "duracion_tmdb": 6,
    "pais_tmdb": "Germany",
    "lbSlug": "core-dump",
-   "_verificado": "el catálogo ya la tiene (w_FYYQAZAR8NGD, anibia-2026)",
-   "work_id": "w_FYYQAZAR8NGD",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Core Dump",
    "_director": "Alona Rodeh",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/core-dump.jpg",
    "posterSource": "tmdb"
   },
@@ -2158,10 +2118,10 @@
    "pais_tmdb": "Brazil",
    "title_en": "How a River Is Born",
    "lbSlug": "how-a-river-is-born",
-   "_verificado": "el catálogo ya la tiene (w_FYY029D75X7Z, anibia-2026)",
-   "work_id": "w_FYY029D75X7Z",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cómo Nace un Río",
    "_director": "Luma Flôres",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/como-nace-un-rio.jpg",
    "posterSource": "tmdb"
   },
@@ -2329,17 +2289,17 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Dominican Republic",
    "lbSlug": "eclosion-2026-1",
-   "_verificado": "el catálogo ya la tiene (w_FYYSJJFBZQRQ, anibia-2026)",
-   "work_id": "w_FYYSJJFBZQRQ",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Eclosión",
    "_director": "Luis Morillo",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/eclosion.jpg",
    "posterSource": "tmdb"
   },
   "El hijo de puta (O filho da puta)": {
    "tmdb_id": 1263313,
    "titulo_original": "O Filho da Puta",
-   "poster_path": "/uHC5TChRqMcJyCz7D3rorImQsZS.jpg",
+   "poster_path": "/pFfpxHWCgYzAhXbom2zzhrtryzt.jpg",
    "synopsis_es": "",
    "synopsis_en": "The quiet city of Veredas is home to Casa Rosa, a famous brothel in the backlands of Minas Gerais managed by Ismael's mother, known to everyone as O Filho da Puta. Tired of his life, the young man leaves with his dog towards the coast in search of the father he never knew. Along the way, he finds himself faced with situations that, at the same time as they transform him, insist on reminding him of the fate he is fleeing.",
    "genero": "Animación",
@@ -2348,10 +2308,10 @@
    "pais_tmdb": "Brazil",
    "title_en": "Son of a Bitch",
    "lbSlug": "son-of-a-bitch",
-   "_verificado": "el catálogo ya la tiene (w_FYXXHXPW2Y9G, anibia-2026)",
-   "work_id": "w_FYXXHXPW2Y9G",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "O filho da puta",
    "_director": "Tânia Anaya, Otto Guerra, Sávio Leite, Erica Rocha",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/el-hijo-de-puta-o-filho-da-puta.jpg",
    "posterSource": "tmdb"
   },
@@ -2467,10 +2427,10 @@
    "duracion_tmdb": 9,
    "pais_tmdb": "Germany, Colombia",
    "lbSlug": "epifania-2025-1",
-   "_verificado": "el catálogo ya la tiene (w_FYY90RBVBN6S, anibia-2026)",
-   "work_id": "w_FYY90RBVBN6S",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Epifanía",
    "_director": "Mila Useche",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/epifania.jpg",
    "posterSource": "tmdb"
   },
@@ -2520,10 +2480,10 @@
    "duracion_tmdb": 14,
    "pais_tmdb": "Brazil, France",
    "lbSlug": "guaxuma",
-   "_verificado": "el catálogo ya la tiene (w_FYXZ1EPA0GNZ, anibia-2026)",
-   "work_id": "w_FYXZ1EPA0GNZ",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Guaxuma",
    "_director": "Nara Normande",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/guaxuma.jpg",
    "posterSource": "tmdb"
   },
@@ -2538,10 +2498,10 @@
    "duracion_tmdb": 12,
    "pais_tmdb": "Brazil",
    "lbSlug": "guida",
-   "_verificado": "el catálogo ya la tiene (w_FYXYHGHK3J4E, anibia-2026)",
-   "work_id": "w_FYXYHGHK3J4E",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Guida",
    "_director": "Rosana Urbes",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/guida.jpg",
    "posterSource": "tmdb"
   },
@@ -2606,13 +2566,13 @@
    "genero": "Animación",
    "anio_tmdb": 2026,
    "duracion_tmdb": 14,
-   "pais_tmdb": "Germany",
+   "pais_tmdb": "",
    "title_en": "Maps of Wilderness",
    "lbSlug": "maps-of-wilderness",
-   "_verificado": "el catálogo ya la tiene (w_FYY7ZBQQR162, anibia-2026, cinetoro-2026)",
-   "work_id": "w_FYY7ZBQQR162",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Karten der Wildnis",
    "_director": "Aline Helmcke, Sandra Reyes, Juliane Franke, Franka Sachse, Catalina Giraldo, Ana Vallejo",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/karten-der-wildnis.jpg",
    "posterSource": "tmdb"
   },
@@ -2628,10 +2588,10 @@
    "pais_tmdb": "Estonia, Ukraine",
    "title_en": "Kyiv Cake",
    "lbSlug": "kyiv-cake-2025",
-   "_verificado": "el catálogo ya la tiene (w_FYYWD61AK78P, anibia-2026)",
-   "work_id": "w_FYYWD61AK78P",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Kiievi tort (Kyiv Cake)",
    "_director": "Mykyta Lyskov",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/kiievi-tort-kyiv-cake.jpg",
    "posterSource": "tmdb"
   },
@@ -2657,18 +2617,18 @@
   "La chambre aux coccinelles": {
    "tmdb_id": 1762990,
    "titulo_original": "La Chambre Aux Coccinelles",
-   "poster_path": "/jTbHyWeSvhY63UlCpbI32yaC6k7.jpg",
+   "poster_path": "/545grGV9HhyKX573OdWF4ZqKg4I.jpg",
    "synopsis_es": "",
    "synopsis_en": "A child moves from world to world, each representing a film genre,  and grows up through her discoveries.",
-   "genero": "Animación",
+   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 1,
    "pais_tmdb": "France",
    "lbSlug": "la-chambre-aux-coccinelles",
-   "_verificado": "el catálogo ya la tiene (w_FYYGXD88SF8N, anibia-2026)",
-   "work_id": "w_FYYGXD88SF8N",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La chambre aux coccinelles",
    "_director": "Léana Courtois, Rachel Marazano, Adrienne Mourier, Elio Nicoletti, Paola Pitassi, Capucine Villar",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/la-chambre-aux-coccinelles.jpg",
    "posterSource": "tmdb"
   },
@@ -2686,7 +2646,7 @@
    "lbSlug": "the-devil-room",
    "_verificado": "declarada a mano: «La Habitación del Macho Cabrío» (2025, 12 min), dir. Duban Pinzón (la Cinemateca escribe «Pizon»); tilde distinta en el título",
    "_director": "Duban Pizon",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/la-habitacion-del-macho-cabrio.jpg",
    "posterSource": "tmdb"
   },
@@ -2702,10 +2662,10 @@
    "pais_tmdb": "France",
    "title_en": "Dying Embers",
    "lbSlug": "dying-embers-2025",
-   "_verificado": "el catálogo ya la tiene (w_FYYKGW3GKBKN, anibia-2026)",
-   "work_id": "w_FYYKGW3GKBKN",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Les Dernières Braises",
    "_director": "Léa Pulini",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/les-dernieres-braises.jpg",
    "posterSource": "tmdb"
   },
@@ -2720,10 +2680,10 @@
    "duracion_tmdb": 9,
    "pais_tmdb": "Colombia, France",
    "lbSlug": "lupus",
-   "_verificado": "el catálogo ya la tiene (w_FYYB17JJCENN, anibia-2026)",
-   "work_id": "w_FYYB17JJCENN",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Lupus",
    "_director": "Carlos Gómez Salamanca",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/lupus.jpg",
    "posterSource": "tmdb"
   },
@@ -2836,10 +2796,10 @@
    "duracion_tmdb": 82,
    "pais_tmdb": "Colombia, Spain",
    "lbSlug": "mu-ki-ra",
-   "_verificado": "el catálogo ya la tiene (w_R4G1R6GM6QWF, anibia-2026, fantasmagoria-2026, ficcali-2026, ficci-65, ficfusa-2026, ficmontanas-2026, filcmar-2026, miradas-2026, villadeleyvaiff-2026)",
-   "work_id": "w_R4G1R6GM6QWF",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mukira",
    "_director": "Estefanía Piñeres",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/mukira.jpg",
    "posterSource": "tmdb"
   },
@@ -2855,10 +2815,10 @@
    "pais_tmdb": "France",
    "title_en": "My Bellyaching Skin",
    "lbSlug": "my-bellyaching-skin",
-   "_verificado": "el catálogo ya la tiene (w_FYYJJNJDVYRM, anibia-2026)",
-   "work_id": "w_FYYJJNJDVYRM",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Pelures d´estomac",
    "_director": "Étienne Bonnet",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/pelures-d-estomac.jpg",
    "posterSource": "tmdb"
   },
@@ -3090,17 +3050,17 @@
    "tmdb_id": 1677190,
    "titulo_original": "Replay",
    "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
-   "synopsis_es": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
+   "synopsis_es": "",
    "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
    "genero": "Animación",
    "anio_tmdb": 2026,
    "duracion_tmdb": 6,
    "pais_tmdb": "Colombia",
    "lbSlug": "replay-2026",
-   "_verificado": "el catálogo ya la tiene (w_ZR5FE4J5AM6C, anibia-2026, bhff-2026, ficica-2026)",
+   "_verificado": "el catálogo ya la tiene (w_ZR5FE4J5AM6C, bhff-2026, ficica-2026)",
    "work_id": "w_ZR5FE4J5AM6C",
    "_director": "Simón Matallana Nossa",
-   "_sondeado": "2026-11-23",
+   "_sondeado": "2026-10-21",
    "_ya_publicada": [
     {
      "festival": "bhff-2026",
@@ -3113,8 +3073,7 @@
      "year": 2026,
      "duration": "6 min",
      "genre": "Animación",
-     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
-     "sinopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
+     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device."
     },
     {
      "festival": "ficica-2026",
@@ -3127,11 +3086,9 @@
      "year": 2026,
      "duration": "6 min",
      "genre": "Animación",
-     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
-     "sinopsis": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
+     "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device."
     }
    ],
-   "_sinopsis_de": "ya publicada en bhff-2026",
    "poster": "/assets/anibia-2026/replay.jpg",
    "posterSource": "tmdb"
   },
@@ -3146,10 +3103,10 @@
    "duracion_tmdb": 8,
    "pais_tmdb": "Estonia",
    "lbSlug": "robot-leo",
-   "_verificado": "el catálogo ya la tiene (w_FYYTDE2BHJG1, anibia-2026)",
-   "work_id": "w_FYYTDE2BHJG1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Robot Leo",
    "_director": "Piret Sigus and Silja Saarepuu",
-   "_sondeado": "2026-11-24"
+   "_sondeado": "2026-10-21"
   },
   "Tenebras": {
    "tmdb_id": 1723534,
@@ -3162,10 +3119,10 @@
    "duracion_tmdb": 7,
    "pais_tmdb": "Dominican Republic",
    "lbSlug": "tenebras",
-   "_verificado": "el catálogo ya la tiene (w_FYY1181JK5WD, anibia-2026)",
-   "work_id": "w_FYY1181JK5WD",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Tenebras",
    "_director": "Francisco Rojas",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/tenebras.jpg",
    "posterSource": "tmdb"
   },
@@ -3217,7 +3174,7 @@
    "lbSlug": "umassuma-lascas-de-memoria",
    "_verificado": "declarada a mano: «UMASSUMA - Lascas de Memória» (2025, 8 min), dir. Guaracy Britto Jr. y Andrei Miralha: el título español no está en TMDB",
    "_director": "Guaracy Britto Jr. e Andrei Miralha",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/umassuma-lascas-de-memorias.jpg",
    "posterSource": "tmdb"
   },
@@ -3225,7 +3182,7 @@
    "tmdb_id": 1602532,
    "titulo_original": "Una parvada de estruendo",
    "poster_path": "/qswsDPxtCqK9R8REu79x8P05D3X.jpg",
-   "synopsis_es": "Un viaje al interior que escudriña en la identidad femenina, fragmentando y resignificando sus representaciones, interviniendo las imágenes a través del collage en stop motion en búsqueda de libertad.",
+   "synopsis_es": "",
    "synopsis_en": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom.",
    "genero": "Animación",
    "anio_tmdb": 2025,
@@ -3233,27 +3190,10 @@
    "pais_tmdb": "Mexico",
    "title_en": "A Flock of Thunder",
    "lbSlug": "a-flock-of-thunder",
-   "_verificado": "el catálogo ya la tiene (w_9K5ZAA4ZNBV7, anibia-2026, bogoshorts-2026)",
-   "work_id": "w_9K5ZAA4ZNBV7",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una parvada de estruendo",
    "_director": "Mariana Mendivil",
-   "_sondeado": "2026-11-23",
-   "_ya_publicada": [
-    {
-     "festival": "bogoshorts-2026",
-     "titulo": "Una parvada de estruendo",
-     "tmdb_id": 1602532,
-     "poster": "/assets/bogoshorts-2026/una-parvada-de-estruendo.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "a-flock-of-thunder",
-     "country": "México",
-     "year": 2025,
-     "duration": "9 min",
-     "genre": "Animación",
-     "synopsis_en": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom.",
-     "sinopsis": "Un viaje al interior que escudriña en la identidad femenina, fragmentando y resignificando sus representaciones, interviniendo las imágenes a través del collage en stop motion en búsqueda de libertad."
-    }
-   ],
-   "_sinopsis_de": "ya publicada en bogoshorts-2026",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/una-parvada-de-estruendo.jpg",
    "posterSource": "tmdb"
   },
@@ -3407,7 +3347,7 @@
    "lbSlug": "viagem-na-chuva",
    "_verificado": "declarada a mano: «Viagem na Chuva» (2014, 12 min), dir. Wesley Rodrigues en TMDB; el candado no abrió porque la ficha 3591 de la Cinemateca dice 2024 (la 3579 de Fontanar dice 2014: errata)",
    "_director": "Wesley Rodrigues",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-31",
    "poster": "/assets/anibia-2026/viaje-bajo-la-lluvia.jpg",
    "posterSource": "tmdb"
   },
@@ -3417,15 +3357,15 @@
    "poster_path": "/jBrIfaOQ2w9FZBEDWka1s6Yrix3.jpg",
    "synopsis_es": "",
    "synopsis_en": "Señora Concha is determined to get through the Tijuana airport alone, but when her stubbornness clashes with an eager wheelchair attendant named Jorge, chaos ensues for both of them! Will they learn to see eye to eye, or will Concha’s flight leave her stranded?",
-   "genero": "Animación",
-   "anio_tmdb": 2026,
-   "duracion_tmdb": 9,
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
    "pais_tmdb": "",
    "lbSlug": "necesitas-ayuda",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "¿Necesitas Ayuda?",
    "_director": "Angel Ruvalcaba",
-   "_sondeado": "2026-11-24",
+   "_sondeado": "2026-10-21",
    "poster": "/assets/anibia-2026/necesitas-ayuda.jpg",
    "posterSource": "tmdb"
   }
@@ -3470,143 +3410,143 @@
  "_sin_ficha_sondeo": {
   "APPOL-O": {
    "director": "Juan José Calvo Lozano",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Afrotoscopia Breaking": {
    "director": "Wilson Borja",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Aguacero": {
    "director": "Emily Calderon Paloma/ Mariana Jaramillo",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Aún recuerdo la lluvia": {
    "director": "Juan Francisco Reyes Orduz",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Contratiempo": {
    "director": "Sofía León González",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Cosechando Valor- Una lucha por el hogar": {
    "director": "Daniel Gonzalez , Maria Jose Cabratt, Ana Bernal",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Cruda": {
    "director": "Valeria Zapata Uribe",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "El Palo de Ofunfó": {
    "director": "Camilo López Mondragón",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "El corazón no olvida… Lucha": {
    "director": "Sharon García, Luisa Pinzón y Joel Vásquez",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "El personaje Animado": {
    "director": "Varixs directorxs",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Entre orillas": {
    "director": "Gustavo Ramos, Juan Acuña, Andrés Agredo",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Entre paredes y flores": {
    "director": "Valentina Molano Muñoz",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Esta piel se habita": {
    "director": "Valeria Aguirre",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Flux": {
    "director": "Laura Moncada",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Frenezy": {
    "director": "Angela Gabriela Macías Álvarez",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Galgo": {
    "director": "Alexandra Wild",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Germinator": {
    "director": "Nicol Dayana Ortiz Yara",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Inbox": {
    "director": "Wilson Borja",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Ir hacia adentro": {
    "director": "Laura Alejandra Jiménez Ruiz",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Kafei": {
    "director": "Valentina Becerra",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "La Pecera": {
    "director": "Angela Tatiana Fonseca Galvez",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "La última pieza": {
    "director": "Juan Felipe Vargas Tejada",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Love & Strife": {
    "director": "Jay Mehta and Isha Jambhalea",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Mind Scratcher": {
    "director": "Daniel Corredor Rincón",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Negro - 01": {
    "director": "Sebastian Peña",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Noche con el demonio": {
    "director": "Santiago Montes Pardo",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Piko 3 (<3)": {
    "director": "Nicolás Mesa y Laura Valencia",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Precipitación de los deseos": {
    "director": "Johan Sebastian Casallas Orjuela",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Q´ij Tikal: Teaser Oficial": {
    "director": "Jesús Alejandro Guzmán Ramírez",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Seven Years In Twitter": {
    "director": "David Graham",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Sueño Cítrico": {
    "director": "Nicol Barrero",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Tapaito": {
    "director": "Sofía Baptiste González",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Trace écrite": {
    "director": "Don Hertzfeldt",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Tres gatos parias": {
    "director": "Iván Sierra",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   },
   "Vagón de Medianoche": {
    "director": "Fátima Montserrat Castillo Gutiérrez",
-   "fecha": "2026-11-23"
+   "fecha": "2026-10-31"
   }
  }
 }

@@ -18,8 +18,10 @@
   "regla": "tmdb-manda"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24"
  },
  "xref.tmdb": {
   "fuente": "humano",
@@ -38,5 +40,11 @@
   "regla": "decisión",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (villadelcine-2026)",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24"
  }
 }

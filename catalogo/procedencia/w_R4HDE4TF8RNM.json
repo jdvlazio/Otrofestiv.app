@@ -12,14 +12,16 @@
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "coproducción: catálogo oficial de BOGOSHORTS 2026; los otros daban solo Colombia",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
-  "fecha": "2026-11-23"
+  "fecha": "2026-11-24"
  },
  "sinopsis.es": {
   "fuente": "humano",

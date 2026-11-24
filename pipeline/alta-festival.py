@@ -5,7 +5,7 @@ POR QUÉ EXISTE (20 nov 2026, lección del Under). Los datos de un festival sale
 del pipeline, pero lo que la app necesita para mostrarlo se hacía a mano en seis
 lugares, y cada uno aparecía recién cuando un guardián frenaba al final: la
 entrada de FESTIVAL_CONFIG, el inglés y el arquetipo de cada sección, el ancla
-del radar, las huellas y las fechas del afiche de portada, y CLAUDE.md.
+del radar, las huellas y las fechas del afiche de portada.
 
 QUÉ HACE, con el plan (`pipeline/<id>.plan.json`) como única fuente:
   1. FESTIVAL_CONFIG (src/config.js): la entrada del festival. Los días, sus
@@ -15,8 +15,7 @@ QUÉ HACE, con el plan (`pipeline/<id>.plan.json`) como única fuente:
      `en` y el `archetype` que el plan declara en `festival.secciones`.
   3. docs/radar-ancla.json: el festival pasa a `en_app` con su id (si ya estaba
      en el radar por su issue o su nombre, se actualiza esa entrada).
-  4. scripts/keyart-huellas.py, scripts/keyart-fechas.py y
-     scripts/generate-claude-md.js: las tablas generadas que leen los guardianes.
+  4. scripts/keyart-huellas.py y scripts/keyart-fechas.py: las tablas generadas que leen los guardianes.
 
 QUÉ NO HACE. No decide nada editorial. Si al plan le falta el subtítulo, el
 inglés de una sección o el afiche de portada, no escribe esa pieza: la lista
@@ -230,8 +229,7 @@ def alta(fid, escribir=True):
         # 4. las tablas generadas que leen los guardianes (solo con config y afiche)
         if not faltan and os.path.exists(os.path.join(REPO, 'assets', 'keyart', f'{i}.jpg')):
             for nombre, cmd in (('huellas del afiche', ['python3', 'scripts/keyart-huellas.py']),
-                                ('fechas del afiche', ['python3', 'scripts/keyart-fechas.py']),
-                                ('CLAUDE.md', ['node', 'scripts/generate-claude-md.js'])):
+                                ('fechas del afiche', ['python3', 'scripts/keyart-fechas.py'])):
                 r = subprocess.run(cmd, cwd=REPO, capture_output=True, text=True, timeout=600)
                 if r.returncode == 0:
                     hecho.append(f'{nombre}: regenerado')

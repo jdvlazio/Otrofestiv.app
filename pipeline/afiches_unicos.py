@@ -147,22 +147,28 @@ def revisar(solo=None):
     return out
 
 
-_FUENTE = {'oficial': 'oficial', 'oficial-festival': 'custom'}
+_FUENTE = {'oficial': 'oficial', 'oficial-festival': 'custom', 'fotograma': 'editorial'}
+
+
+def elegidos(decs):
+    """{work_id: decisión} de los afiches que viajan (un fotograma remoto no)."""
+    return {x['work_id']: x for x in decs if x['campo'] == 'afiche'
+            and (x['valor']['veredicto'] != 'fotograma' or x['valor']['archivo'].startswith('/assets/'))}
 
 
 def aplicar(d, decs=None):
     """El afiche elegido de cada obra, en el JSON del festival `d` (en el lugar).
     La usan publicar.py y --aplicar: la misma función, para que un re-armado dé lo
     mismo. Solo lo YA COMPARADO: una imagen que no está en `vistas` es nueva y la
-    resuelve --revisar antes. Un «fotograma» elegido no viaja (esa decisión dice
-    que no hay afiche). Donde no hay póster no se pone: eso es herencia, no unidad.
+    resuelve --revisar antes. Un «fotograma» remoto no viaja (esa decisión solo dice
+    que la imagen de TMDB no es afiche); uno nuestro sí, como editorial. Donde no hay póster no se pone: eso es herencia, no unidad.
     → [(título, antes, después)]"""
     if decs is None:
         import sys
         sys.path.insert(0, os.path.join(REPO, 'pipeline'))
         import catalogo
         decs = catalogo.decisiones()
-    eleg = {x['work_id']: x for x in decs if x['campo'] == 'afiche' and x['valor']['veredicto'] in _FUENTE}
+    eleg = elegidos(decs)
     out = []
     for f in d.get('films', []):
         for o in (f.get('film_list') or [f]):

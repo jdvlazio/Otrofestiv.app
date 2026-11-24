@@ -4,8 +4,10 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1744098",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  },
  "anio": {
   "fuente": "festival",
@@ -23,7 +25,7 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
-  "fecha": "2026-11-23"
+  "fecha": "2026-11-24"
  },
  "sinopsis.es": {
   "fuente": "humano",

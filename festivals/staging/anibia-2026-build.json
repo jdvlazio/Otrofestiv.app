@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "programación oficial de Anibia 2026 (PDF del Linktree = carrusel IG DeQG0NPGy2f)",
-  "capturado": "2026-11-24",
+  "capturado": "2026-10-31",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Tabla canónica en el crudo: una sede por edificio, la sala aparte. La Cinemateca Sala Alterna UNAL es el Auditorio 422 del 303C (UNAL): misma sede que la charla del Bloque C. Pines de Google Maps, a mano (venues-geo). Corrección 25 oct: la Sala Alterna proyecta en el Auditorio 105 del Edificio 301 (la sala misma, IG De2wLBxDY-Q), sede propia; el 303 queda para el Reel/WIP Day y la charla del Bloque C.",
@@ -247,8 +247,7 @@
    "_nota": "Google Maps «Auditorio Fabio Lozano - Universidad Jorge Tadeo Lozano»",
    "lat": 4.6063616,
    "lng": -74.0673857,
-   "address": "Cra. 4 # 22-40",
-   "_matriz": "s_86f5f95f"
+   "address": "Cra. 4 # 22-40"
   },
   "Cinemateca de Bogotá - Bogotá": {
    "short": "Cinemateca de Bogotá",
@@ -257,8 +256,7 @@
    "_nota": "Google Maps «Cinemateca de Bogotá»; coincide al decimal con BHFF, BIFF y QAFF. Salas de la agenda.",
    "lat": 4.6031614,
    "lng": -74.0676717,
-   "address": "Cra. 3 #19-10, Bogotá",
-   "_matriz": "s_17a71d8b"
+   "address": "Cra. 3 # 19-10"
   },
   "CEFE Chapinero - Bogotá": {
    "short": "CEFE Chapinero",
@@ -267,8 +265,7 @@
    "_nota": "Google Maps «Cefe Chapinero»; el PDF da Calle 82 #10-69",
    "lat": 4.6654518,
    "lng": -74.0527949,
-   "address": "Calle 82 # 10-69",
-   "_matriz": "s_11667bea"
+   "address": "Calle 82 # 10-69"
   },
   "Universidad Jorge Tadeo Lozano, Módulo 4 - Bogotá": {
    "short": "Universidad Jorge Tadeo Lozano, Módulo 4",
@@ -277,8 +274,7 @@
    "_nota": "APROXIMADO: el Módulo 4 (Aula Máxima Luís Córdoba Mariño, entrada calle 23) no tiene pin propio en Google Maps; va el del campus, «Universidad de Bogotá Jorge Tadeo Lozano», a ~25 m del Ed. Biblioteca: dos edificios del mismo campus",
    "lat": 4.606567,
    "lng": -74.067801,
-   "address": "Cra. 4 # 22-40 (entrada calle 23)",
-   "_matriz": "s_bf5c6a6a"
+   "address": "Cra. 4 # 22-40 (entrada calle 23)"
   },
   "Universidad Nacional, Edificio 301 - Bogotá": {
    "short": "Universidad Nacional, Edificio 301",
@@ -287,8 +283,7 @@
    "_nota": "Google Maps «301 - Artes Plásticas» (UNAL Bogotá). La Cinemateca Sala Alterna proyecta en su Auditorio 105 (@cinematecasalalterna, 23 oct 2026)",
    "lat": 4.6363087,
    "lng": -74.0822067,
-   "address": "Av. Cra. 30 # 45-03",
-   "_matriz": "s_b7930658"
+   "address": "Av. Cra. 30 # 45-03"
   },
   "Universidad Nacional, Edificio 303 (NEA) - Bogotá": {
    "short": "Universidad Nacional, Edificio 303 (NEA)",
@@ -297,8 +292,7 @@
    "_nota": "Google Maps «303C - Espacios para las Artes». La Cinemateca Sala Alterna UNAL ES el Auditorio 422 del 303C (Facultad de Artes, UNAL); el Bloque C Auditorio 422 del PDF es la misma sala",
    "lat": 4.6370447,
    "lng": -74.0816443,
-   "address": "Av. Cra. 30 # 45-03",
-   "_matriz": "s_11433c3f"
+   "address": "Av. Cra. 30 # 45-03"
   },
   "Pontificia Universidad Javeriana - Bogotá": {
    "short": "Pontificia Universidad Javeriana",
@@ -307,8 +301,7 @@
    "_nota": "Pin del Ed. Gerardo Arango (Google Maps «Edificio Gerardo Arango S,J. - Facultad de Artes», Calle 40B # 5-37): la exposición, sala «Ed. Gerardo Arango» = Hall entrada admin. Facultad de Artes. Las charlas, sala «Ed. Ático» = Auditorio piso 5 del Edificio Ático (Calle 40B # 6-23), a ~60 m",
    "lat": 4.626481,
    "lng": -74.0644571,
-   "address": "Calle 40B # 5-37",
-   "_matriz": "s_0655bb7b"
+   "address": "Calle 40B # 5-37"
   },
   "Cinemateca Fontanar del Río - Bogotá": {
    "short": "Cinemateca Fontanar del Río",
@@ -317,8 +310,7 @@
    "_nota": "Google Maps «CEFE Fontanar del río»; el mismo pin con que la publicamos en FICDEH y Narrar el Futuro",
    "lat": 4.7561244,
    "lng": -74.1110572,
-   "address": "Calle 146 # 138A-99",
-   "_matriz": "s_c82c47d7"
+   "address": "Calle 146 # 138A-99"
   }
  },
  "_avisos_id": [],
@@ -1975,7 +1967,6 @@
      "lbSlug": "la-chambre-aux-coccinelles",
      "tmdb_id": 1762990,
      "synopsis_en": "A child moves from world to world, each representing a film genre,  and grows up through her discoveries.",
-     "genre": "Animación",
      "year": 2026
     },
     {
@@ -2233,8 +2224,7 @@
      "posterSource": "tmdb",
      "lbSlug": "necesitas-ayuda",
      "tmdb_id": 1706258,
-     "synopsis_en": "Señora Concha is determined to get through the Tijuana airport alone, but when her stubbornness clashes with an eager wheelchair attendant named Jorge, chaos ensues for both of them! Will they learn to see eye to eye, or will Concha’s flight leave her stranded?",
-     "genre": "Animación"
+     "synopsis_en": "Señora Concha is determined to get through the Tijuana airport alone, but when her stubbornness clashes with an eager wheelchair attendant named Jorge, chaos ensues for both of them! Will they learn to see eye to eye, or will Concha’s flight leave her stranded?"
     },
     {
      "title": "Kiievi tort (Kyiv Cake)",
@@ -2854,8 +2844,7 @@
      "posterSource": "tmdb",
      "lbSlug": "necesitas-ayuda",
      "tmdb_id": 1706258,
-     "synopsis_en": "Señora Concha is determined to get through the Tijuana airport alone, but when her stubbornness clashes with an eager wheelchair attendant named Jorge, chaos ensues for both of them! Will they learn to see eye to eye, or will Concha’s flight leave her stranded?",
-     "genre": "Animación"
+     "synopsis_en": "Señora Concha is determined to get through the Tijuana airport alone, but when her stubbornness clashes with an eager wheelchair attendant named Jorge, chaos ensues for both of them! Will they learn to see eye to eye, or will Concha’s flight leave her stranded?"
     },
     {
      "title": "Kiievi tort (Kyiv Cake)",
@@ -3370,7 +3359,6 @@
      "lbSlug": "la-chambre-aux-coccinelles",
      "tmdb_id": 1762990,
      "synopsis_en": "A child moves from world to world, each representing a film genre,  and grows up through her discoveries.",
-     "genre": "Animación",
      "year": 2026
     },
     {
@@ -4875,11 +4863,9 @@
      "posterSource": "tmdb",
      "lbSlug": "a-flock-of-thunder",
      "tmdb_id": 1602532,
-     "synopsis": "Un viaje al interior que escudriña en la identidad femenina, fragmentando y resignificando sus representaciones, interviniendo las imágenes a través del collage en stop motion en búsqueda de libertad.",
      "synopsis_en": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom.",
      "title_en": "A Flock of Thunder",
-     "genre": "Animación",
-     "synopsis_lang": "es"
+     "genre": "Animación"
     },
     {
      "title": "Hacker Leonilia",
@@ -5093,7 +5079,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T08:16:51",
+  "fecha": "2026-10-31T13:58:13",
   "plan_sha": "17ea9621d1a0e533",
   "paso": 7,
   "cmd": "python3 pipeline/anibia-2026-verificar.py"

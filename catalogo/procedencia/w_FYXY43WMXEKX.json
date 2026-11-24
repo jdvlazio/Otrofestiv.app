@@ -8,8 +8,10 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "tmdb:717468",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "primer estreno, 9 jun 2014 (TMDB 717468)",
+  "fecha": "2026-11-24"
  },
  "paises": {
   "fuente": "tmdb:717468",

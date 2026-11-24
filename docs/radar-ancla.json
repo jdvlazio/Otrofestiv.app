@@ -6587,8 +6587,10 @@
    "fechas_2026": "1–6 DIC 2026 (9.ª, IG del festival)",
    "web": "https://festivaldecineprovinciadevelez.com/",
    "ig": "@festcineprovinciadevelez",
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "provinciadevelez2026"
+   ],
    "issue": [
     1444
    ],

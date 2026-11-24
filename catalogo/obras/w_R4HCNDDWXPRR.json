@@ -1,11 +1,17 @@
 {
  "id": "w_R4HCNDDWXPRR",
  "titulo_original": "Things",
- "anio": null,
+ "anio": 2014,
  "paises": [
   "GB"
  ],
- "directores": [],
+ "directores": [
+  "Ben Rivers"
+ ],
+ "sinopsis": {
+  "es": "Un reto: filmar en la propia casa a lo largo del año, según el ánimo de cada estación. El invierno es introspectivo y mira los detalles y las cosas coleccionadas; en primavera aparecen personas, manos, un ojo que lee; el verano mezcla alegría e inquietud; el otoño se vuelve incierto: ¿se están desmoronando las paredes a mi alrededor?",
+  "en": "A challenge: to film in one's own home over the course of a year, following each season's mood. Winter is introspective, looking at details and collected things; in spring there are people, hands, an eye reading; summer mixes joy and unease; autumn turns uncertain: are the walls crumbling around me?"
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Things%2B9%2Ba%252C%2Bb%2Bbook.jpg?itok=dA3ARMJ6",
   "veredicto": "oficial-festival"

@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficica-2026",
+  "fuente": "festival:ficica-2026,ficica-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -18,5 +18,11 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "traducida de su sinopsis en inglés; verificada por otro agente",
+  "fecha": "2026-11-24"
  }
 }

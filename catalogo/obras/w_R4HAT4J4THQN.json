@@ -1,11 +1,18 @@
 {
  "id": "w_R4HAT4J4THQN",
  "titulo_original": "A Running Woman (1, 2, 3)",
- "anio": null,
+ "anio": 2023,
  "paises": [
   "DE"
  ],
- "directores": [],
+ "directores": [
+  "Anja Dornieden",
+  "Juan David González Monroy"
+ ],
+ "sinopsis": {
+  "es": "Hollis Frampton contó que una de sus primeras películas se titulaba A Running Man: «una película paisajística que se mantenía unida como una picaresca gracias a un hombre no identificado que corría a través de los planos», a toda velocidad. Inspirados por este concepto, decidimos crear nuestra propia versión.",
+  "en": "Hollis Frampton said that one of his early films was titled A Running Man: “a landscape film held together like a picaresque by an unidentified man running through the shots,” at full speed. Inspired by this concept, we decided to create our own version."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20152313.png?itok=Z-p9Vizo",
   "veredicto": "oficial-festival"

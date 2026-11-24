@@ -1,14 +1,14 @@
 {
  "id": "w_R4HEVTJK2YRN",
  "titulo_original": "Los nadadores",
- "anio": 2022,
+ "anio": 2026,
  "paises": [
   "AR",
   "MX",
   "US"
  ],
  "directores": [
-  "Sally El Hosaini"
+  "Sol Iglesias SK"
  ],
  "aliases": [
   {
@@ -18,14 +18,16 @@
   }
  ],
  "sinopsis": {
-  "es": "En las grietas de una ciudad civilizada (esa que desde un inicio nació muerta) respira el colapso.",
-  "en": "In the cracks of a civilized city — one that was born dead from the start — collapse breathes."
+  "es": "En una Buenos Aires apocalíptica, con extensas olas de calor y días en los que no llega la noche, un grupo de amigos se refugia en mansiones buscando agua y atrapando lo que queda del placer y lo cotidiano. La troupe fugitiva traspasa la propiedad privada casi como si jugara al escondite, en una ciudad vacía y fantasmal.",
+  "en": "In an apocalyptic Buenos Aires, with long heat waves and days when night never falls, a group of friends takes refuge in mansions, searching for water and seizing what remains of pleasure and the everyday. The fugitive troupe trespasses on private property almost as if playing hide-and-seek, in an empty, ghostly city."
  },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w185/4WLYa1B4Uba8sb0wVkUzD9uZIz1.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1523304
+ },
  "versiones": [
   {
    "etiqueta": "76 min",

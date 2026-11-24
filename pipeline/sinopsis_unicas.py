@@ -114,7 +114,7 @@ def revisar(solo=None):
             continue
         for f in d.get('films', []):
             for o in (f.get('film_list') or [f]):
-                e, s = dec.get(o.get('work_id')), o.get('synopsis')
+                e, s = dec.get(o.get('work_id')), o.get('synopsis_es') or o.get('synopsis')
                 if not e or not s:
                     continue
                 h = huella(s)
@@ -139,8 +139,11 @@ def aplicar(d, obs=None, decs=None):
             w = o.get('work_id')
             if w not in eleg or o.get('type') == 'event':
                 continue
-            s, v = o.get('synopsis') or '', eleg[w]
-            if s == v:
+            # la app lee `synopsis_es` ANTES que `synopsis` (locSynopsis): si queda, tapa
+            # la elegida. Olhar y Tribeca la traían (24 nov 2026: 67 sin cambiar a la vista)
+            s, v = o.get('synopsis_es') or o.get('synopsis') or '', eleg[w]
+            sobra = o.pop('synopsis_es', None) is not None
+            if s == v and not sobra:
                 continue
             out.append((o.get('title'), s, v))
             if v:

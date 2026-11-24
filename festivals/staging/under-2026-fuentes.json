@@ -1,13 +1,23 @@
 {
  "_provenance": {
   "fuente": "pipeline/fuentes_descubrir.py",
-  "capturado": "2026-11-23T09:38",
-  "paginas_leidas": 0,
+  "capturado": "2026-11-24T09:38",
+  "paginas_leidas": 1,
   "errores": []
  },
  "raices": {
   "_sin_web": "el festival no tiene web; programa oficial por correo (18 nov)",
-  "_sin_bio": "el IG @cineundermedellin no trae link en la bio (vigía)"
+  "bio": "https://drive.google.com/file/d/1s1sWC1d7qJwKCufKUZpCppDtkQuJSsXj/view"
  },
- "items": {}
+ "items": {
+  "https://drive.google.com/file/d/1s1sWC1d7qJwKCufKUZpCppDtkQuJSsXj/view": {
+   "tipo": "drive",
+   "visto_en": "raíz bio",
+   "primera_vez": "2026-11-24T09:38",
+   "ultima_vez": "2026-11-24T09:38",
+   "estado": "usada",
+   "_por_que": "idéntico (md5) al PDF del correo del 18 nov, ya leído (vigía 24 nov)",
+   "revisado": "2026-11-24T09:38"
+  }
+ }
 }

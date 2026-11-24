@@ -12,8 +12,10 @@
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "tmdb:808224",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (tmdb:808224)",
+  "fecha": "2026-11-24"
  },
  "generos": {
   "fuente": "festival",
@@ -30,5 +32,11 @@
   "regla": "decisión",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficma-2026)",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24"
  }
 }

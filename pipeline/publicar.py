@@ -319,25 +319,6 @@ def publicar(fid, forzar=False, ensayo=False):
     if mudas:
         print(f'⚠ --forzar: se publican {len(mudas)} obra(s) sin afiche y sin porqué')
 
-    # ── ni sin sinopsis en español en silencio (pipeline/sinopsis.py, 19 nov) ──
-    # Frena solo lo que SUPERA la deuda congelada del festival: republicar un
-    # festival vivo con su deuda vieja sigue funcionando; empeorarla, no.
-    import sinopsis
-    _exc = sinopsis.excede(fid, out['films'])
-    if _exc and not forzar:
-        _pend, _techo = _exc
-        print(f'✗ NO se publica {fid}: {len(_pend)} obra(s) sin sinopsis en español '
-              f'(su deuda congelada es {_techo}). Cada una se traduce, se busca '
-              f'o lleva `sin_sinopsis` con su porqué y sus fuentes en '
-              f'festivals/staging/{fid}-correcciones.json:')
-        for x in _pend[:12]:
-            print('   ·', sinopsis.linea(x))
-        if len(_pend) > 12:
-            print(f'   … y {len(_pend) - 12} más   (python3 pipeline/sinopsis.py {fid})')
-        _frena(f'sinopsis en español ({len(_pend)}, techo {_techo})')
-    if _exc:
-        print(f'⚠ --forzar: se publican {len(_exc[0])} obra(s) sin sinopsis (techo {_exc[1]})')
-
     # ── ni con una duración que contradice a TMDB en silencio (20 nov 2026) ──
     # Funza, «Basta Mamá»: la franja de 125 min (película + conversatorio) entró
     # como duración de una obra de 77. El ensamblador lo avisaba y nadie lo leía.
@@ -371,6 +352,8 @@ def publicar(fid, forzar=False, ensayo=False):
     import catalogo
     _obs = catalogo.obras()
     if _obs:
+        if os.path.exists(out_p):
+            catalogo.heredar_ids(out, json.load(open(out_p, encoding='utf-8')))   # un rearmado no pierde la identidad
         _nuevas = catalogo.enlazar(out, fid, _obs)
         # UNA SINOPSIS POR OBRA (Juan, 23 nov 2026): la elegida del almacén manda
         import sinopsis_unicas
@@ -380,6 +363,26 @@ def publicar(fid, forzar=False, ensayo=False):
         import afiches_unicos
         for _t, _a, _b in afiches_unicos.aplicar(out):
             print(f'  · afiche del almacén: «{_t[:50]}»')
+        # …Y UN DIRECTOR, UN AÑO Y UN PAÍS
+        import ficha_unica
+        for _t, _k, _a, _b in ficha_unica.aplicar(out):
+            print(f'  · {_k} del almacén: «{_t[:40]}» {_a} → {_b}')
+        # [obra-unica]: lo que quedó distinto de otro festival frena el push; se dice acá
+        import obra_unica
+        _fs = {**obra_unica._festivales(), fid: out}
+        _div = [x for x in obra_unica.divergencias(_fs, catalogo.decisiones()) if any(fid in v for v in x[4].values())]
+        for _x in _div:
+            print('  ⚠ ' + obra_unica.texto(_x))
+        for _h in obra_unica.que_hacer(_div):
+            print('    → ' + _h)
+        if _div and _ENSAYO is not None:
+            _ENSAYO.append(f'datos de obra que difieren de otro festival ({len(_div)})')
+        import sello_obra
+        _sin = [x for x in sello_obra.faltan(_fs) if x[0] in sello_obra.publicadas({fid: out})]
+        if _sin:
+            print(f'  ⚠ {len(_sin)} obra(s) sin sello — otro agente las lee y sello_obra.py --sellar: ' + ' · '.join(x[1] for x in _sin[:6]))
+            if _ENSAYO is not None:
+                _ENSAYO.append(f'obras sin sello de verificación ({len(_sin)})')
         if _nuevas:
             print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
             for t in _nuevas[:10]:
@@ -387,6 +390,27 @@ def publicar(fid, forzar=False, ensayo=False):
             print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir  (re-arma TODO el catálogo: se commitea todo lo que cambie)')
             if _ENSAYO is not None:   # no corta acá, pero frena el push: en el ensayo cuenta
                 _ENSAYO.append(f'obras nuevas para el catálogo ({len(_nuevas)})')
+    # ── ni sin sinopsis en español en silencio (pipeline/sinopsis.py, 19 nov) ──
+    # Va DESPUÉS de traer la sinopsis del almacén: se mide lo que se va a publicar
+    # (FICFUSA, 24 nov: contaba 20 por frenar, con 14 reales). Frena solo lo que
+    # SUPERA la deuda congelada del festival: republicar un festival vivo con su
+    # deuda vieja sigue funcionando; empeorarla, no.
+    import sinopsis
+    _exc = sinopsis.excede(fid, out['films'])
+    if _exc and not forzar:
+        _pend, _techo = _exc
+        print(f'✗ NO se publica {fid}: {len(_pend)} obra(s) sin sinopsis en español '
+              f'(su deuda congelada es {_techo}). Cada una se traduce, se busca '
+              f'o lleva `sin_sinopsis` con su porqué y sus fuentes en '
+              f'festivals/staging/{fid}-correcciones.json:')
+        for x in _pend[:12]:
+            print('   ·', sinopsis.linea(x))
+        if len(_pend) > 12:
+            print(f'   … y {len(_pend) - 12} más   (python3 pipeline/sinopsis.py {fid})')
+        _frena(f'sinopsis en español ({len(_pend)}, techo {_techo})')
+    if _exc:
+        print(f'⚠ --forzar: se publican {len(_exc[0])} obra(s) sin sinopsis (techo {_exc[1]})')
+
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):
         viejo = json.load(open(out_p, encoding='utf-8'))

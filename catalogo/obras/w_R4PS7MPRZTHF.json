@@ -3,16 +3,22 @@
  "titulo_original": "The Beginning",
  "anio": 1967,
  "paises": [
-  "AM"
+  "AM",
+  "SU"
  ],
  "directores": [
   "Artavazd Pelechian"
  ],
+ "sinopsis": {
+  "es": "Ensayo filosófico sobre la Revolución de Octubre de 1917 en Rusia y su influencia sobre el destino del mundo en el siglo XX.",
+  "en": "Philosophical essay about the October Revolution of 1917 in Russia, its influence on the destiny of the world in the 20th century."
+ },
  "afiche": {
   "archivo": "https://images.ctfassets.net/22n7d68fswlw/7oiMaeypuuqB7mBGQJs1Bz/f84b5630041d0f6ce176a35e0b21db2e/The-Beginning-_Pelechian-Project__Still_02.jpg",
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 183718,
   "letterboxd": "beginning"
  },
  "versiones": [

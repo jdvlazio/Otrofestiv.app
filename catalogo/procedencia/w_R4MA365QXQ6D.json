@@ -24,5 +24,17 @@
   "regla": "decisión",
   "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
   "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "catálogo BOGOSHORTS: la que corresponde a la española decidida",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "mismo afiche: queda el publicado",
+  "fecha": "2026-11-24"
  }
 }

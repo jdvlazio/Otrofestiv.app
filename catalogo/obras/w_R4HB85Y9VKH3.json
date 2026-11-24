@@ -1,17 +1,25 @@
 {
  "id": "w_R4HB85Y9VKH3",
  "titulo_original": "Taxi Moto",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "CH",
   "FR"
  ],
- "directores": [],
+ "directores": [
+  "Gaël Kamilindi"
+ ],
+ "sinopsis": {
+  "es": "Una conversación de trabajo se convierte en una aventura y desemboca en el enamoramiento entre Soli y Moh, ¿o sería Joe? Con sencillez, la película habla de amor, migración y duelo frente a la censura de lo homoafectivo, y juega con sus niveles: quizá nunca sepamos qué es la película, qué es la película dentro de la película y qué es la realidad.",
+  "en": "A work conversation turns into an adventure and leads to Soli and Moh, or is it Joe?, falling in love. With simplicity, the film speaks of love, migration, and grief in the face of censorship of homo-affective themes, and plays with its levels: we may never know what is the film, what is the film within the film, and what is reality."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_affiche_MOTOTAXI_GB_1500x2000%20-%20Festivals%20Sudu.jpg?itok=7LEPmRue",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1614698
+ },
  "versiones": [
   {
    "etiqueta": "21 min",

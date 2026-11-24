@@ -4,8 +4,10 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1668889",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24"
  },
  "anio": {
   "fuente": "tmdb:1668889",
@@ -28,7 +30,13 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, ficci-65, miradas-2026, villadeleyvaiff-2026)",
-  "fecha": "2026-11-23"
+  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 45",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "catálogo oficial de FICCI 65, p. 45",
+  "fecha": "2026-11-24"
  }
 }

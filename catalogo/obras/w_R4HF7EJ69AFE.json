@@ -1,16 +1,24 @@
 {
  "id": "w_R4HF7EJ69AFE",
  "titulo_original": "Look Then Below",
- "anio": null,
+ "anio": 2019,
  "paises": [
   "GB"
  ],
- "directores": [],
+ "directores": [
+  "Ben Rivers"
+ ],
+ "sinopsis": {
+  "es": "Seres futuristas surgen de un inquietante paisaje lleno de humo y de las profundidades de la tierra. Rodada en los vastos y oscuros pasadizos de las cuevas de Wookey Hole, donde hubo vestigios de civilizaciones perdidas, presagia un mundo subterráneo habitado por una especie evolucionada a partir del nuestro, amenazado por problemas ambientales.",
+  "en": "Futuristic beings emerge from an eerie, smoke-filled landscape and the depths of the earth. Shot in the vast, dark passages of Wookey Hole Caves, which once held remnants of lost civilizations, it foretells a subterranean world occupied by a species evolved from our own world, threatened by environmental problems."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Look%20Then%20Below%208.jpeg?itok=GvGZteEc",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 662049
+ },
  "versiones": [
   {
    "etiqueta": "21 min",

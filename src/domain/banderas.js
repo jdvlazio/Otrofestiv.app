@@ -37,3 +37,17 @@ export function countryToFlags(countryStr) {
   const flags = [...new Set(out)];
   return flags.length ? flags.join('') : '🌍';
 }
+
+// paisesEn(country, lang) — el país como se lee en el idioma de la app. El dato va
+// SIEMPRE en español (docs/OBRA.md: un nombre de la lista); el inglés sale del
+// código ISO que ya lleva la bandera. Lo que no se reconoce se deja igual.
+export function paisesEn(countryStr, lang) {
+  if (!countryStr || lang !== 'en' || typeof Intl === 'undefined' || !Intl.DisplayNames) return countryStr || '';
+  const dn = new Intl.DisplayNames(['en'], { type: 'region' });
+  return String(countryStr).split(', ').map(p => {
+    const f = PAISES[_k(p)];
+    if (!f) return p;
+    const iso = [...f].map(c => String.fromCharCode(c.codePointAt(0) - 127397)).join('');
+    try { return /^[A-Z]{2}$/.test(iso) ? dn.of(iso) : p; } catch { return p; }
+  }).join(', ');
+}

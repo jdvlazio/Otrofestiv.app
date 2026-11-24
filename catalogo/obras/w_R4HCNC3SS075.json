@@ -6,7 +6,8 @@
   "CO"
  ],
  "directores": [
-  "Ken Jacobs"
+  "Marta Rodríguez",
+  "Jorge Silva"
  ],
  "aliases": [
   {
@@ -16,14 +17,16 @@
   }
  ],
  "sinopsis": {
-  "es": "A partir de la denuncia por la brecha de posesión de tierra en el país, y con un retrato y seguimiento a los movimientos sociales anti-latifundistas, Martha Rodríguez y Jorge Silva elaboran un complejo manifiesto tejido con voces, datos, registros y…",
-  "en": "Drawing from the denunciation of the land ownership gap in the country, and through a portrait and follow-up of anti-latifundist social movements, Martha Rodríguez and Jorge Silva weave a complex manifesto of voices, data, and records."
+  "es": "Una denuncia: el mayor porcentaje de tierra de Colombia está en manos de una cantidad mínima de personas. A partir de ahí, el documental retrata y sigue a los movimientos campesinos antilatifundistas, en un manifiesto tejido con voces, datos y registros, dialéctico en su montaje y marxista en su teoría.",
+  "en": "An indictment: the largest share of Colombia's land is in the hands of a tiny number of people. From there, the documentary portrays and follows the peasant movements against large landowners, in a manifesto woven from voices, data and records, dialectical in its editing and Marxist in its theory."
  },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w185/xZ9SVHYItbcj8J8F05Mu4A0YuDM.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 713067
+ },
  "versiones": [
   {
    "etiqueta": "51 min",

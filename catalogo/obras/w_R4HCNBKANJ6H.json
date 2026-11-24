@@ -17,14 +17,16 @@
   }
  ],
  "sinopsis": {
-  "es": "Mustafa Uzuner sigue a un grupo de músicos que recorren Turquía y Canadá preservando tradiciones sonoras que corren el riesgo de desaparecer.",
-  "en": "Mustafa Uzuner follows a group of musicians traveling through Turkey and Canada, preserving sonic traditions at risk of disappearing."
+  "es": "Ensayo íntimo y poético en tres movimientos sobre la historia reciente de Turquía: de los intentos por ingresar a la Unión Europea al periodo de Erdoğan, pasando por el eclipse solar de 1999. Las capas de tiempo se filtran unas en otras, la memoria personal se entrelaza con la colectiva y surge una sinfonía urbana de la Estambul contemporánea.",
+  "en": "An intimate, poetic essay in three movements on Turkey's recent history: from its attempts to join the European Union to the Erdoğan period, by way of the 1999 solar eclipse. Layers of time filter into one another, personal memory intertwines with collective memory, and an urban symphony of contemporary Istanbul emerges."
  },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w185/mzgf48SoQl7vci4UVycbHEDke1A.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1572192
+ },
  "versiones": [
   {
    "etiqueta": "65 min",

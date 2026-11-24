@@ -1,12 +1,13 @@
 {
  "id": "w_R4HB83AP7807",
  "titulo_original": "Puntos de fuga",
- "anio": 2005,
+ "anio": 2025,
  "paises": [
-  "CO"
+  "CO",
+  "CA"
  ],
  "directores": [
-  "Leo Schatzl"
+  "Lina Rodríguez"
  ],
  "aliases": [
   {
@@ -16,14 +17,20 @@
   }
  ],
  "sinopsis": {
-  "es": "Lina Rodriguez entreteje la historia de su madre con la suya propia, entrelazándolas con episodios de la historia de Colombia.",
-  "en": "Lina Rodriguez interweaves her mother's story with her own, interlacing them with episodes from Colombia's history."
+  "es": "A lo largo de más de 70 años, dos mujeres cuentan cómo crecieron en Colombia y emigraron a Canadá. Entrelazada con momentos clave de la historia colombiana, Puntos de fuga es una composición polifónica de espejos, laberintos, sueños y pesadillas que cuestiona la idea de perspectiva y la linealidad de la historia y del tiempo.",
+  "en": "Spanning over 70 years, two women recount their experiences growing up in Colombia and immigrating to Canada. Intersecting with key moments in Colombian history, Vanishing Points is a polyphonic composition of mirrors, labyrinths, dreams, and nightmares that question the idea of perspective and the linearity of history and time."
  },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w185/uu4faKnq2i8ds8JoSrL110XTXT5.jpg",
+  "archivo": "/assets/ficfusa-2026/puntos-de-fuga.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1525164,
+  "letterboxd": "vanishing-points-2025"
+ },
  "versiones": [
   {
    "etiqueta": "72 min",
@@ -31,6 +38,7 @@
   }
  ],
  "presentaciones": [
-  "ficci-65"
+  "ficci-65",
+  "ficfusa-2026"
  ]
 }

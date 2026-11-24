@@ -3,8 +3,8 @@
  "titulo_original": "Mango",
  "anio": 2025,
  "paises": [
-  "FR",
-  "GB"
+  "GB",
+  "FR"
  ],
  "directores": [
   "Joan Iyiola"
@@ -12,14 +12,12 @@
  "sinopsis": {
   "es": "Zadie es una florista independiente que sufre en privado de fibromas, pero está decidida a llevar su carrera al siguiente nivel. Cuando llega un trabajo de ensueño, Zadie busca ayuda para controlar su cuerpo cambiante, pero los crecimientos no deseados amenazan con apoderarse de ella."
  },
- "generos": [
-  "Ficción"
- ],
  "afiche": {
   "archivo": "/assets/qaff/mango.jpg",
   "veredicto": "oficial-festival"
  },
  "xref": {
+  "tmdb": 1429453,
   "letterboxd": "mango-2025"
  },
  "versiones": [

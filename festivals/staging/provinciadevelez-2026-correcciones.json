@@ -1,0 +1,89 @@
+{
+ "_provenance": {
+  "fuente": "pre-onboarding de provinciadevelez-2026 (altas.py + decisiones con su porqué)",
+  "capturado": "2026-11-19",
+  "metodo": "correcciones con su porqué"
+ },
+ "fichas": {
+  "El fantástico Sr. Fox": {
+   "tmdb": 10315,
+   "_fuente": "https://www.themoviedb.org/movie/10315",
+   "_por_que": "altas.py --ficha: TMDB 10315 «Fantastic Mr. Fox» (2009) de Wes Anderson: la web la presenta como «El fantástico Sr. Fox · Wes Anderson · stop motion» y la lámina del 18 nov pinta el afiche francés «Fantastic Mr. Fox · un film de Wes Anderson» (Amalric, Huppert). Título en español de la obra",
+   "_registro": "provinciadevelez-2026-altas.json"
+  }
+ },
+ "misma_obra": {
+  "Sinfonía incompleta de oficios del Fonce": {
+   "festival": "ficfusa-2026",
+   "titulo": "Sinfonía incompleta de oficios del fonce",
+   "_por_que": "mismo título; TMDB 1817245 (Nelson Silva) es la ficha de las dos; la lámina de Vélez: «DIRECTOR Y PRODUCTOR EJECUTIVO NELSON SILVA», web «2024»"
+  }
+ },
+ "no_heredar": {
+  "Cicatrices": {
+   "festival": "guatape-2026",
+   "_por_que": "la de Guatapé no trae dirección (30 min); la de Vélez es de Jhon Amado, Filipinas (Arauca), 2026, escuela de cine comunitario: no hay con qué casarlas"
+  },
+  "Entre amigos": {
+   "festival": "anibia-2026",
+   "_por_que": "«Entre paredes y flores» de Valentina Molano Muñoz es otra obra; la de Vélez es de Edward Llanos y Simón Muñoz"
+  },
+  "El pescador (videoclip)": {
+   "festival": "provinciadevelez-2026",
+   "_por_que": "el videoclip (Taller Toca Plena ft. Casa del Sol, lámina DfzhWP2x_sy) no es el corto documental «El pescador» de la lámina DfcqutroV1z/03, TMDB 1558138: no hereda su ficha"
+  }
+ },
+ "sin_afiche": {
+  "Entre Ríos. Todos somos hermanos": "sin afiche: la lámina del festival (Df-DlZyERf2/08) trae solo un still horizontal sin créditos; la web no incluye la obra; sin director no hay con qué verificar un homónimo en TMDB (24 nov 2026)"
+ },
+ "sin_sinopsis": {
+  "El cuarto": {
+   "_por_que": "ninguna fuente hallada publica sinopsis.",
+   "fuentes": [
+    "https://festivaldecineprovinciadevelez.com/",
+    "https://www.instagram.com/p/Df7ZYXrEaXh/",
+    "https://www.facebook.com/festivaldecinebarbosa",
+    "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
+    "YouTube, búsqueda por título y autoría (24 nov 2026)"
+   ]
+  },
+  "Creation of a Unicorn": {
+   "_por_que": "sin créditos en ninguna fuente.",
+   "fuentes": [
+    "https://festivaldecineprovinciadevelez.com/",
+    "https://www.instagram.com/p/Df7ZYXrEaXh/",
+    "https://www.facebook.com/festivaldecinebarbosa",
+    "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
+    "YouTube, búsqueda por título y autoría (24 nov 2026)"
+   ]
+  },
+  "Anima Sola": {
+   "_por_que": "la página de Nils Jacobsen solo acredita dirección y productora.",
+   "fuentes": [
+    "https://festivaldecineprovinciadevelez.com/",
+    "https://www.instagram.com/p/Df7ZYXrEaXh/",
+    "https://www.facebook.com/festivaldecinebarbosa",
+    "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
+    "YouTube, búsqueda por título y autoría (24 nov 2026)"
+   ]
+  },
+  "Cicatrices": {
+   "_por_que": "la lámina solo trae créditos.",
+   "fuentes": [
+    "https://festivaldecineprovinciadevelez.com/",
+    "https://www.instagram.com/p/Df7ZYXrEaXh/",
+    "https://www.facebook.com/festivaldecinebarbosa",
+    "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
+    "YouTube, búsqueda por título y autoría (24 nov 2026)"
+   ]
+  }
+ },
+ "sin_pais": {
+  "Creation of a Unicorn": {
+   "_por_que": "ninguna fuente lo dice; sin créditos (24 nov 2026)"
+  },
+  "De la tradición a la prohibición": {
+   "_por_que": "ni la lámina ni la web dicen el país; sin ficha (24 nov 2026)"
+  }
+ }
+}

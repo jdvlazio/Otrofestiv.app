@@ -147,6 +147,14 @@
     "olhar-2026"
    ]
   },
+  "/assets/anibia-2026/caida-libre.jpg": {
+   "sha1": "073e52339ae8c3f248605c7a2892ed35e4d8b398",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026",
+    "qaff-2026"
+   ]
+  },
   "/assets/anibia-2026/chicha-la-chicharra.jpg": {
    "sha1": "9f01d5449f58b7ae199dd65085f8926af27801bd",
    "veredicto": "afiche",
@@ -161,6 +169,13 @@
    "veredicto": "afiche",
    "usado_en": [
     "ficcali-2026"
+   ]
+  },
+  "/assets/anibia-2026/como-nace-un-rio.jpg": {
+   "sha1": "923efdc132bbc70b4497e92dcd9cec549848df94",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
    ]
   },
   "/assets/anibia-2026/decaer.jpg": {
@@ -651,6 +666,13 @@
     "ficfusa-2026"
    ]
   },
+  "/assets/cinemancia/un-aparato-para-detectar-fantasmas.jpg": {
+   "sha1": "df6ea1687c5d73d3681dd0d93e4ba4c6a315599d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "jardin-2026"
+   ]
+  },
   "/assets/cineparalapaz-2026/la-pandemia-del-feminicidio-en-colombia.jpg": {
    "sha1": "9bd74c91f68493852b1a06c8efc6dcc517c40807",
    "veredicto": "afiche",
@@ -732,6 +754,13 @@
    "veredicto": "afiche",
    "usado_en": [
     "cinemancia-2026"
+   ]
+  },
+  "/assets/cinetoro-2026/tres-gatos-parias-v2.jpg": {
+   "sha1": "e7b767dea25aa15eba68d7e03157dff90a5a7ab5",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
    ]
   },
   "/assets/cinetoro-2026/um-corpo-sem-cavalo.jpg": {
@@ -1270,18 +1299,6 @@
     "qaff-2026"
    ]
   },
-  "/assets/ficfusa-2026/la-mona.jpg": {
-   "sha1": "321913573123c0e7aa81a066b5dba8c338ead471",
-   "veredicto": "afiche",
-   "usado_en": [
-    "ficmontanas-2026",
-    "jardin-2026",
-    "miradas-2026",
-    "popayan-2026",
-    "siembrafest-2026",
-    "villadelcine-2026"
-   ]
-  },
   "/assets/ficfusa-2026/madres-de-nacimiento.jpg": {
    "sha1": "933038a987ed199af1f01e008281f47b050068ce",
    "veredicto": "afiche",
@@ -1310,6 +1327,13 @@
     "cinemancia-2025",
     "ficica-2026",
     "popayan-2026"
+   ]
+  },
+  "/assets/ficfusa-2026/puntos-de-fuga.jpg": {
+   "sha1": "5fcf94b656a5b65b5743200d8096d1e13d51bf6a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
    ]
   },
   "/assets/ficfusa-2026/sobre-las-olas.jpg": {
@@ -1367,6 +1391,19 @@
    "veredicto": "afiche",
    "usado_en": [
     "cinemancia-2026"
+   ]
+  },
+  "/assets/ficica-2026/la-mona.jpg": {
+   "sha1": "6a9ebbecc1e67544220e08b7fe54dd2df75845d9",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026",
+    "ficmontanas-2026",
+    "jardin-2026",
+    "miradas-2026",
+    "popayan-2026",
+    "siembrafest-2026",
+    "villadelcine-2026"
    ]
   },
   "/assets/ficica-2026/los-pliegues-de-la-falda.jpg": {
@@ -1585,6 +1622,7 @@
    "sha1": "0fda95d988a98876a7a5faf62fe70ba6d647132c",
    "veredicto": "afiche",
    "usado_en": [
+    "ficci-65",
     "tiff-2026"
    ]
   },
@@ -1680,7 +1718,15 @@
    "sha1": "76bd8a2ab1ff2fe31161feba57a6c22f00456639",
    "veredicto": "afiche",
    "usado_en": [
-    "aff-2026"
+    "aff-2026",
+    "ficci-65"
+   ]
+  },
+  "/assets/jardin-2026/de-saul.jpg": {
+   "sha1": "e930ddc74cd36d5619cdd5d0a3571be5c06c2ff0",
+   "veredicto": "afiche",
+   "usado_en": [
+    "miradas-2026"
    ]
   },
   "/assets/jardin-2026/la-reserva.jpg": {
@@ -1703,6 +1749,13 @@
    "veredicto": "afiche",
    "usado_en": [
     "mamut-2026"
+   ]
+  },
+  "/assets/mamut-2026/frio-metal.jpg": {
+   "sha1": "3c9dc0eeae5fd74351eea81863b6ce0934797472",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
    ]
   },
   "/assets/mamut-2026/lolita-en-honda.jpg": {
@@ -1853,6 +1906,7 @@
    "sha1": "0836a059da8c52c598ddc7397e9ec5444df5b767",
    "veredicto": "afiche",
    "usado_en": [
+    "ficci-65",
     "qaff-2026",
     "under-2026"
    ]
@@ -1923,6 +1977,13 @@
    "usado_en": [
     "ficma-2026",
     "itagui-2026"
+   ]
+  },
+  "/assets/narrarelfuturo-2026/protegiendo-nuestro-territorio-v2.jpg": {
+   "sha1": "6ca9d70c5974b321d8daccfd756ba0c1a01bab47",
+   "veredicto": "afiche",
+   "usado_en": [
+    "villadelcine-2026"
    ]
   },
   "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg": {
@@ -2050,6 +2111,13 @@
    "usado_en": [
     "biff-2026",
     "ficcali-2026"
+   ]
+  },
+  "/assets/siembrafest/elementales-v2.jpg": {
+   "sha1": "f2d2880210c2d764e60c4087d78bdbfeae296bc2",
+   "veredicto": "afiche",
+   "usado_en": [
+    "jardin-2026"
    ]
   },
   "/assets/tercertiempo/cantos-al-juego-de-bolar.jpg": {

@@ -1,17 +1,25 @@
 {
  "id": "w_R4HEVRVAR1RQ",
  "titulo_original": "Fim de Rodovia",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "BR",
   "US"
  ],
- "directores": [],
+ "directores": [
+  "Valentina Rosset"
+ ],
+ "sinopsis": {
+  "es": "Una mujer recorre una ciudad ajena como si entre sueños hubiese naufragado en ella. Intenta encontrar a un hombre difuso sin más herramientas que su dispersa atención, pero la vaga imagen de él se difumina entre los autos, las calles mudas y un canto desconsolado. La envuelve la tragedia de la extrañeza.",
+  "en": "A woman wanders through a foreign city as if she had washed up there in a dream. She tries to find a vague man with nothing but her scattered attention, yet his faint image fades amid the cars, the silent streets and a heart-wrenching song. The tragedy of strangeness envelops her."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/FimdeRodovia_Poster%20-%20Valentina%20Rosset.jpeg?itok=T6gk5I3T",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1649745
+ },
  "versiones": [
   {
    "etiqueta": "13 min",

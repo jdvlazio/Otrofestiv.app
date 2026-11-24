@@ -15,8 +15,10 @@
   "fuente": "tmdb:1762990",
   "regla": "tmdb-manda"
  },
- "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24"
  }
 }

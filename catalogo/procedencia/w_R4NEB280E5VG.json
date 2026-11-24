@@ -18,5 +18,11 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "afiche de la obra; lo otro es tarjeta de sección",
+  "fecha": "2026-11-24"
  }
 }

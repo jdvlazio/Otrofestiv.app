@@ -14,7 +14,7 @@ import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel,
 // literal escrito a mano y en pipeline/lib.py otro: divergieron en contenido y
 // en criterio de comparación, y «Koki, Ciao» mostró un globo teniendo su 🇳🇱 en
 // el dato. Se re-exporta para no mover a sus llamadores.
-import { countryToFlags } from '../domain/banderas.js';
+import { countryToFlags, paisesEn } from '../domain/banderas.js';
 export { countryToFlags };
 import { closeAvSheet, closePVRating, closePrioLimit, openAuthSheet } from '../view/sheets.js';
 import { showActionModal, showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
@@ -51,7 +51,7 @@ const _GENRE_EN = {
   // Nombres canónicos TMDB es-ES (también usados por festivales legacy)
   'Ciencia ficción':'Science Fiction','Música':'Music','Crimen':'Crime',
   'Historia':'History','Suspense':'Thriller','Bélica':'War','Familia':'Family',
-  'Película de TV':'TV Movie','Western':'Western',
+  'Película de TV':'TV Movie','Western':'Western','Suspenso':'Thriller','Documental híbrido':'Hybrid documentary',
 };
 let _toastActionFn=null;
 let _pvTitle='', _pvRating=0;
@@ -1195,7 +1195,7 @@ function _pvShowCurrent(){
   if(ctx){
     const parts=[t('pv_paso',{n:_pvQueueIdx+1,total})];
     if(item.duration) parts.push(durFmt(item.duration));
-    if(item.country) parts.push(item.country);
+    if(item.country) parts.push(paisesEn(item.country,_lang));
     ctx.textContent=parts.join(' · ');
   }
   _pvMountAndOpen();

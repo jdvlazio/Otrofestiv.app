@@ -96,3 +96,12 @@ test('todo país de los festivales publicados produce bandera', async () => {
   });
   assert.deepStrictEqual(esperados, [], 'países que saldrían con globo en pantalla');
 });
+
+test('paisesEn: el dato en español se lee en inglés solo con la app en inglés', async () => {
+  const { paisesEn } = await mod();
+  assert.equal(paisesEn('Estados Unidos, República Checa', 'en'), 'United States, Czechia');
+  assert.equal(paisesEn('Estados Unidos, Francia', 'es'), 'Estados Unidos, Francia');
+  assert.equal(paisesEn('Colombia, URSS', 'en'), 'Colombia, URSS');   // sin código vigente: igual
+  assert.equal(paisesEn('Palestina', 'en') !== 'Palestina', true);
+  assert.equal(paisesEn('', 'en'), '');
+});

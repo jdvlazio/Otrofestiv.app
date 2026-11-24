@@ -6,7 +6,7 @@
   "CL"
  ],
  "directores": [
-  "Teresa Arredondo"
+  "Teresa Arredondo Lugon"
  ],
  "aliases": [
   {
@@ -16,8 +16,8 @@
   }
  ],
  "sinopsis": {
-  "es": "Las mariposas son bioindicadores de la salud de un ecosistema: su aparición tras un incendio permite medir cuánto tarda un bosque en recuperarse.",
-  "en": "Butterflies are bioindicators of ecosystem health: their appearance after a fire allows us to measure how long it takes a forest to recover."
+  "es": "Tras la muerte de su padre, la cineasta regresa a los objetos, imágenes y sonidos de una vida entregada a la entomología. A partir de esas colecciones dispersas, este ensayo documental recorre la genealogía familiar, los recuerdos de infancia y la maternidad, mientras describe el mundo que Simón, su hijo, empieza a nombrar.",
+  "en": "Following her father's death, the filmmaker returns to the objects, images, and sounds of a life devoted to entomology. Drawing on those scattered collections, this documentary essay traces family genealogy, childhood memories, and motherhood, while describing the world that Simón, her son, is beginning to name."
  },
  "generos": [
   "Documental"
@@ -26,7 +26,9 @@
   "archivo": "https://image.tmdb.org/t/p/w500/uV83oiGDsgRWnNNWdTpxvXdGpuK.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1493050
+ },
  "versiones": [
   {
    "etiqueta": "67 min",

@@ -133,8 +133,6 @@ sin artículos iniciales, tokens ordenados. Bloqueo por año y por director: con
 | **Candidato** | título parecido (≥ 0,85) + año ±1; **o** título igual y una fuente sin director; **o** mismo director y año con otro título (traducción/aka) | va a tu revisión, con los dos lados a la vista; nunca se enlaza sola |
 | **No coincide** | director distinto y año distinto, aunque el título sea igual (homónimos, remakes) | obra nueva |
 
-Dos obras con el mismo título en el MISMO festival (los dos «The End» de TIFF) se declaran en `catalogo/revision-fase2.json` con la dirección como tercer dato (`[festival, título, dirección]`, `misma: false`); sin declararlas, el constructor las une.
-
 Los pares revisados se guardan (`catalogo/revisiones.json`) para recalibrar el
 umbral con datos reales, no a ojo.
 
@@ -179,6 +177,8 @@ silencio (es la regla de «sin ficha no se publica», llevada a la obra).
 - `[tmdb-ficha-ruidosa]`: `lib.tmdb_ficha` (toda ficha pedida por id) distingue «llegó», «no existe» (34) y «no respondió»; la última para la corrida antes de escribir. Corre su autoprueba.
 - `[dato-que-no-viaja]`: por campo de obra (género, EN, sinopsis, año, país, duración, director, afiche, Letterboxd), las presentaciones vacías de una obra que otro festival nuestro sí publicó. Trinquete **por festival** sobre `catalogo/techo.json` (15 oct 2026; antes un techo global que un montaje nuevo con huecos obligaba a subir, y al subir tapaba los retrocesos de los demás): falla si un festival pasa SU techo —el de otro no lo cubre—, y uno que no está tiene techo 0. Entrar con huecos se declara midiendo: `python3 pipeline/catalogo.py --medir <fest>`; sin festival, el comando solo baja techos.
 - **Festivales sin pipeline** (montados a mano antes de la v2): `python3 pipeline/heredar.py <fest>` muestra lo que heredarían del catálogo sobre su JSON publicado, y `--escribir` lo guarda (anotado en `_src.heredado`; después `catalogo.py --medir`). Las reglas son las de `enriquecer.py`, no una copia: las dos llaman a `pipeline/herencia.py` (15 oct 2026). Lo publicado manda; un fotograma ya publicado no se pisa. Un festival CON pipeline se re-arma, no se hereda.
+- `[obra-unica]` (24 nov 2026): lo publicado de una obra —director, año, país, género, sinopsis ES y EN, afiche— es lo decidido, en todos los festivales; sin decisión, todos coinciden. Vacío no cuenta y la duración no entra. Qué diverge: `python3 pipeline/obra_unica.py`; decidirlo: `--decidir` (guarda en `antes` qué publicaba cada festival).
+- `[ficha-obra]` (24 nov 2026): cada campo entra por lista o por forma (`docs/OBRA.md`, `pipeline/ficha_obra.py`). Deuda por festival y regla en `pipeline/ficha-deuda.json`, que solo baja.
 - `[catalogo-autoprueba]`: cada uno de los anteriores tiene que atrapar un cebo en memoria; si alguno queda ciego, el push se bloquea.
 
 ## 5. Cómo encaja con el pipeline de hoy

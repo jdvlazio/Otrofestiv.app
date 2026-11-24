@@ -4487,7 +4487,8 @@ except Exception as _e:
 # doc de contexto no produce una duda: produce una conclusión falsa, con seguridad.
 #
 # Este check regenera el archivo en un temporal y compara SOLO lo que el script
-# DERIVA del repo (la tabla de festivales y el bloque de features). El resto del
+# DERIVA del repo (el bloque de features) y exige que la lista de festivales NO
+# esté copiada ahí (24 nov 2026). El resto del
 # documento es prosa del template y no caduca sola. Si difieren: correr el script.
 check = 'claude-md-fresco'
 try:
@@ -4511,28 +4512,19 @@ try:
         else:
             # Solo las secciones DERIVADAS. La línea del último commit cambia con
             # cada commit por definición: compararla haría fallar el check siempre.
-            # La columna «Estado» sale del RELOJ (festivalStatus: próximo/recién
-            # terminado/archivado), no del repo: entre el commit y el CI un
-            # festival cruza un umbral y CLAUDE.md queda «desactualizado» sin que
-            # nadie tocara nada, bloqueando PRs ajenos (pasó en el #682, 18 ago).
-            # Se compara la lista de festivales y features — que sí es del repo —
-            # ignorando esa última celda.
-            def _sin_estado(_linea):
-                if not _linea.startswith('|'):
-                    return _linea
-                _cells = _linea.rstrip().rstrip('|').split('|')
-                return '|'.join(_cells[:-1]) + '|' if len(_cells) > 2 else _linea
             def _derivado(txt):
                 out = []
-                for _sec in ('### Festivales', '### Features activas'):
+                for _sec in ('### Features activas',):
                     if _sec in txt:
                         _t = txt[txt.index(_sec):]
                         _fin = _t.find('\n---')
                         _t = _t[:_fin if _fin > 0 else 1200]
-                        out.append('\n'.join(_sin_estado(_l) for _l in _t.split('\n')))
+                        out.append(_t)
                 return '\n'.join(out)
-            if _derivado(_viejo).strip() != _derivado(_nuevo).strip():
-                fail(check, 'CLAUDE.md desactualizado respecto al repo (festivales o features) '
+            if 'node scripts/generate-claude-md.js --festivales' not in _viejo or re.search(r'^\| `[a-z]+20\d\d` \|', _viejo, re.M):
+                fail(check, 'CLAUDE.md lleva una copia de la lista de festivales: se consulta en vivo (--festivales)')
+            elif _derivado(_viejo).strip() != _derivado(_nuevo).strip():
+                fail(check, 'CLAUDE.md desactualizado respecto al repo (features) '
                             '— correr: node scripts/generate-claude-md.js')
             else:
                 ok(check, 'CLAUDE.md al día con el estado derivado del repo')
@@ -5631,6 +5623,27 @@ try:
         ok(check, 'ningún sidecar escrito-sin-lector convive con su gemelo leído-sin-escritor')
 except Exception as _e:
     warn(check, f'no se pudo verificar pipeline-circuito: {_e}')
+
+# ── [solo-dias-oficiales] nada fuera de las fechas del afiche ──────────────────
+# Regla de Juan (8 oct 2026); el 24 nov Vélez se armó desde el 30 nov con afiche
+# «1–6 dic». Las fechas oficiales viven en `canales` de ig-vigia-cuentas.json.
+check = 'solo-dias-oficiales'
+try:
+    import glob, sys as _sysd
+    _sysd.path.insert(0, 'pipeline')
+    import canales as _cn
+    _cu = json.load(open('pipeline/ig-vigia-cuentas.json', encoding='utf-8'))
+    _fu = {}
+    for _p in sorted(glob.glob('festivals/*.json')):
+        _d = _cn.fuera_de_fechas(_cu, os.path.basename(_p)[:-5], json.load(open(_p, encoding='utf-8')))
+        if _d:
+            _fu[os.path.basename(_p)[:-5]] = _d
+    if _fu:
+        fail(check, 'función o fecha fuera de las fechas oficiales del festival: ' + ' · '.join(f'{k} {", ".join(x)}' for k, x in _fu.items()))
+    else:
+        ok(check, 'ninguna función fuera de las fechas oficiales declaradas')
+except Exception as _e:
+    fail(check, f'no se pudo medir: {_e}')
 
 # ── [sede-matriz] un lugar, un pin: la matriz de sedes ─────────────────────────
 # 16 nov 2026 (Juan: «así como hay una de películas, las sedes deberían vivir en
@@ -7288,6 +7301,84 @@ try:
         warn(check, 'bajó el hueco — correr python3 pipeline/catalogo.py --medir: ' + ', '.join(_baja[:8]))
 except Exception:
     pass
+
+# ── [obra-unica] lo publicado de una obra es lo decidido, en todos los festivales ──
+# 24 nov 2026 (revisión senior): pipeline/obra_unica.py. Con decisión, todos los
+# festivales publican esa; sin decisión, coinciden o hay que decidir.
+check = 'obra-unica'
+try:
+    import obra_unica as _ou
+    _ciego = _ou.autoprueba()
+    _div = _ou.divergencias(_fests, _decs)
+    _sobra = _ou.excepciones_de_mas(_fests, _decs)
+    if _ciego:
+        fail(check, 'el guardián no ve cambios en: ' + ', '.join(_ciego))
+    elif _div:
+        fail(check, f'{len(_div)} divergencia(s) — python3 pipeline/obra_unica.py: ' + ' · '.join([_ou.texto(x) for x in _div[:4]] + _ou.que_hacer(_div)))
+    elif _sobra:
+        fail(check, 'excepción que ya no hace falta, bórrala de obra_unica.EXCEPCIONES: ' + ', '.join(_sobra))
+    else:
+        ok(check, 'lo publicado de cada obra es lo decidido en todos los festivales')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [ficha-obra] cada campo de la obra, por lista o por forma ──────────────────
+# Juan, 24 nov 2026: «Qatar» se publicó como género. Dueño de la regla de cada
+# campo: pipeline/ficha_obra.py (docs/OBRA.md). Trinquete por festival y regla;
+# un festival nuevo parte de cero.
+check = 'ficha-obra'
+try:
+    import ficha_obra as _fo
+    _ciega = _fo.autoprueba()
+    _exc = _fo.excedidos(_fests)
+    if _ciega:
+        fail(check, 'reglas ciegas: ' + ' · '.join(_ciega[:4]))
+    elif _exc:
+        fail(check, f'{len(_exc)} regla(s) sobre su deuda — python3 pipeline/ficha_obra.py <festival>: '
+             + ' · '.join(f'{_f} {_r}: ' + ', '.join(_x[:3]) for _f, _r, _x in _exc[:5]))
+    else:
+        ok(check, 'ningún festival suma datos de obra fuera de regla')
+        _hol = _fo.holgura(_fests)
+        if _hol:
+            warn(check, 'bajó la deuda — python3 pipeline/ficha_obra.py --congelar: ' + ', '.join(_hol[:6]))
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [sinopsis-par] español e inglés (pipeline/sinopsis_par.py) ───────────────
+# Juan, 24 nov 2026: había obras con sinopsis en inglés y sin español, y al revés.
+check = 'sinopsis-par'
+try:
+    import sinopsis_par as _sp
+    _ciega = _sp.autoprueba()
+    _exc = _sp.excedidos(_fests)
+    if _ciega:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
+    elif _exc:
+        fail(check, 'sinopsis en un solo idioma — traducirla con la skill sinopsis-corta: '
+             + ' · '.join(f'{_f}: ' + ', '.join(_x[:4]) + (f' (+{len(_x) - 4})' if len(_x) > 4 else '') for _f, _x in _exc[:5]))
+    else:
+        ok(check, 'ninguna obra suma sinopsis en un solo idioma')
+        _hol = _sp.holgura(_fests)
+        if _hol:
+            warn(check, 'bajó la deuda — python3 pipeline/sinopsis_par.py --congelar: ' + ', '.join(_hol[:6]))
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [sello-obra] la sinopsis y la dirección son de ESA película (pipeline/sello_obra.py) ──
+# Juan, 24 nov 2026: 31 obras publicaban datos de otra película, bien escritos.
+check = 'sello-obra'
+try:
+    import sello_obra as _se
+    _ciega, _fal, _gem = _se.autoprueba(), _se.faltan(_fests), _se.gemelas(_fests)
+    if _ciega:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
+    elif _fal or _gem:
+        fail(check, f'{len(_fal)} obra(s) sin verificar y {len(_gem)} texto(s) en dos obras — otro agente las lee contra su fuente y sello_obra.py --sellar: '
+             + ' · '.join(f'«{_t}» {_w}: {_q}' for _w, _t, _q in _fal[:5]) + ' ' + ' · '.join(sorted(_gem)[:3]))
+    else:
+        ok(check, f'{len(_se.sellos())} de {len(_se.publicadas(_fests))} obras selladas; el resto, en deuda y sin cambios')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 # ── [caja-titulo] programas y secciones en Título (regla de Juan, 15 oct 2026) ──
 # «Muestra de Cortos», «Colombia Viva»: las palabras son del festival y la caja

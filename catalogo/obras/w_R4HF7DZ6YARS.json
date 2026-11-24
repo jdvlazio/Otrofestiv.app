@@ -5,7 +5,9 @@
  "paises": [
   "CO"
  ],
- "directores": [],
+ "directores": [
+  "Carlos Palau"
+ ],
  "aliases": [
   {
    "titulo": "See You Outside",
@@ -14,8 +16,8 @@
   }
  ],
  "sinopsis": {
-  "es": "Mojicones con gaseosa en el recreo, faldas por debajo de la rodilla, duchas heladas, pasodobles en el solar, veinte muchachitos en catequesis.",
-  "en": "Sweet biscuits with soda at recess, skirts below the knee, cold showers, pasodobles in the courtyard, twenty boys in catechism."
+  "es": "José Miguel y sus amigos rompen la calma sacra de su internado en Tuluá: hacen pilatunas, sacan de quicio a los profesores y persiguen faldas de noche. En el colegio de al lado, las niñas intentan hablar de amor con la madre superiora y se dan besos de práctica. Viven en mundos separados y esperan encontrarse, con permiso o a escondidas.",
+  "en": "José Miguel and his friends disrupt the sacred calm of their Tuluá boarding school: they pull pranks, drive teachers crazy, and chase girls at night. At the school next door, the girls try to talk about love with the Mother Superior and practice kissing. They live in separate worlds, waiting to meet, with permission or in secret."
  },
  "generos": [
   "Drama"
@@ -24,7 +26,9 @@
   "archivo": "https://image.tmdb.org/t/p/w500/oHII8IiMWS7mokLNebo7Lod3xmD.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 721261
+ },
  "versiones": [
   {
    "etiqueta": "105 min",

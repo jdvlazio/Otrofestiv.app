@@ -229,6 +229,10 @@ def leer():
                 en = MEZCLADAS_EN[obra['titulo']] if obra['titulo'] in MEZCLADAS_EN else sinopsis_en(bs, caja, sin, lim) if sin else ''
                 if en:
                     obra['synopsis_en'] = en
+                # el catálogo no cierra algunas con punto ([ficha-obra] sinopsis:cierre); el texto está completo
+                for k in ('sinopsis', 'synopsis_en'):
+                    if obra.get(k) and re.search(r'\w$', obra[k]):
+                        obra[k] += '.'
                 obra['_src'] = {'url': URL, 'pagina': p, 'date': '2026-11-13'}
                 t = INGLES.get(obra['titulo']) or (obra.get('titulos_alt') or [''])[0]
                 if t and obra['titulo'] not in SIN_INGLES and huella(t) != huella(obra['titulo']):

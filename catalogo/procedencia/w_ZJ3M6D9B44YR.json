@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:miradas-2026,miradas-2026",
+  "fuente": "festival:miradas-2026,miradas-2026,miradas-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -16,7 +16,9 @@
   "regla": "tmdb-manda"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1515175",
+  "fecha": "2026-11-24"
  }
 }

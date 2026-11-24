@@ -1,16 +1,25 @@
 {
  "id": "w_R4HF7DVWSB9J",
  "titulo_original": "Ali au pays des merveilles",
- "anio": null,
+ "anio": 1976,
  "paises": [
   "FR"
  ],
- "directores": [],
+ "directores": [
+  "Djouhra Abouda",
+  "Alain Bonnamy"
+ ],
+ "sinopsis": {
+  "es": "Una lista demasiado larga de inmigrantes argelinos asesinados en Francia en 1975 abre este ensayo de vanguardia sobre los trabajadores invisibles que sostienen París y las estructuras que los explotan. Imágenes repetidas al ritmo del trabajo manual, hogares precarios frente a los de sus empleadores, el metro abarrotado al amanecer.",
+  "en": "A list, far too long, of Algerian immigrants murdered in France in 1975 opens this avant-garde essay on the invisible workers who keep Paris running and the structures that exploit them. Images repeated to the rhythm of manual labor, precarious homes set against their employers' residences, the crowded subway at dawn."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/images-original%20%281%29.jpg?itok=ldu9nBqc",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 752481
+ },
  "versiones": [
   {
    "etiqueta": "59 min",

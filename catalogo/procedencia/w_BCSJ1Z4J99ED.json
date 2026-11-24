@@ -4,8 +4,10 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:939823",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB y los otros festivales; BOGOSHORTS agrega el segundo apellido",
+  "fecha": "2026-11-24"
  },
  "anio": {
   "fuente": "tmdb:939823",
@@ -28,7 +30,13 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "motivo": "traducida de su sinopsis en inglés; verificada por otro agente",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la que corresponde a la española decidida",
   "fecha": "2026-11-24"
  }
 }

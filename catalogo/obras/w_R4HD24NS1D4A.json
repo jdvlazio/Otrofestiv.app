@@ -1,7 +1,7 @@
 {
  "id": "w_R4HD24NS1D4A",
  "titulo_original": "Nuestra tierra",
- "anio": 1997,
+ "anio": 2025,
  "paises": [
   "AR",
   "US",
@@ -10,7 +10,9 @@
   "NL",
   "DK"
  ],
- "directores": [],
+ "directores": [
+  "Lucrecia Martel"
+ ],
  "aliases": [
   {
    "titulo": "Landmarks",
@@ -19,14 +21,16 @@
   }
  ],
  "sinopsis": {
-  "es": "La directora argentina Lucrecia Martel es una de las maestras del cine contemporáneo y su capacidad de juntar imágenes y sonidos para lograr efectos inesperados, a menudo perturbadores, brilla en su primer largometraje documental.",
-  "en": "Argentine director Lucrecia Martel is one of the masters of contemporary cinema, and her capacity to bring together images and sounds to achieve unexpected, often unsettling effects shines in her first feature-length documentary."
+  "es": "En 2009, un terrateniente y dos expolicías asesinan al indígena Javier Chocobar; el caso tarda nueve años en llegar a juicio. El documental entreteje el video del crimen, la puesta en escena de la justicia, el territorio en disputa visto por drones, charlas con los chuschagasta y sus fotografías, e interroga con indignación los mitos de la nación.",
+  "en": "In 2009, a landowner and two former police officers murder the Indigenous man Javier Chocobar; the case takes nine years to reach court. The documentary interweaves video of the crime, the staging of justice, the disputed land seen by drones, talks with the Chuschagasta, and their photographs, questioning the nation's myths with indignation."
  },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w185/9k3dwIITeBE1Myo9KQmLeQtfIVX.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 661603
+ },
  "versiones": [
   {
    "etiqueta": "122 min",

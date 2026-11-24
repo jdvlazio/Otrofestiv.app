@@ -1,16 +1,24 @@
 {
  "id": "w_R4HCNDRAAVPF",
  "titulo_original": "The Shape of Things",
- "anio": null,
+ "anio": 2016,
  "paises": [
   "GB"
  ],
- "directores": [],
+ "directores": [
+  "Ben Rivers"
+ ],
+ "sinopsis": {
+  "es": "Un texto de William Bronk acompaña este cortometraje experimental de dos minutos: la dificultad de no tener un mundo e imaginar uno, de ir hasta el borde más lejano, de amurallar y construir una especie de jaula con tal de sentir los barrotes alrededor. Dar forma a un mundo, que nunca es el mundo.",
+  "en": "A text by William Bronk accompanies this two-minute experimental short: the difficulty of not having a world and imagining one, of going to the farthest edge, of walling off and building some kind of cage just to feel the bars around us. Shaping a world, which is never the world."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/stateofthings%2B1.jpeg?itok=DIUYu98C",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 771140
+ },
  "versiones": [
   {
    "etiqueta": "2 min",

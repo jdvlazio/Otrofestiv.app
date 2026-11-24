@@ -1,0 +1,50 @@
+{
+ "_provenance": {
+  "fuente": "Google Maps desde el navegador integrado (19 y 24 nov 2026); nombres y direcciones de las láminas de IG @9_festcineprovinciadevelez",
+  "capturado": "2026-11-24"
+ },
+ "Casa Escuela Formación Musical Leo Olarte - Barbosa": {
+  "lat": 5.9359462,
+  "lng": -73.6155809,
+  "address": "Al frente de la cancha del Marsella",
+  "_prec": "manual",
+  "_match": "Google Maps (19 nov 2026): «Leo Olarte Escuela de Formación Musical» — a 30 m de «Cancha el marsella» (5.9361995,-73.6157191), como dice la lámina",
+  "_maps": "https://www.google.com/maps/place/Leo+Olarte+Escuela+de+Formaci%C3%B3n+Musical/@5.9359462,-73.6155809,17z",
+  "_matriz": "s_c760d1fd"
+ },
+ "Grupo Central AA - Barbosa": {
+  "lat": 5.9283095,
+  "lng": -73.6178401,
+  "address": "Carrera 7 # 6-46, sótano",
+  "_prec": "manual",
+  "_match": "Google Maps (19 nov 2026): «Alcohólicos anónimos» a 3 m del pin de la dirección «Cra. 7 # 6-46, Barbosa, Santander» (5.9282983,-73.617872)",
+  "_maps": "https://www.google.com/maps/place/Cra.+7+%23+6-46,+Barbosa,+Santander/@5.9282983,-73.617872,17z",
+  "_matriz": "s_ad3086b0"
+ },
+ "La Tante Boutique - Barbosa": {
+  "lat": 5.9327826,
+  "lng": -73.6159099,
+  "_prec": "manual",
+  "_match": "Google Maps (19 nov 2026): «La Tante Boutique Pastelera» — la lámina de Cicatrices dice «La Tante Boutique Barbosa»; el lanzamiento del festival (radar #1444) fue en La Tante",
+  "_maps": "https://www.google.com/maps/place/La+Tante+Boutique+Pastelera/@5.9327826,-73.6159099,17z",
+  "_matriz": "s_d7c9ee58"
+ },
+ "Parque Emilio Ulloa - Barbosa": {
+  "lat": 5.9305215,
+  "lng": -73.6163535,
+  "_prec": "manual",
+  "_match": "Google Maps (24 nov 2026): «Parque Emilio Ulloa», Barbosa, nombre exacto",
+  "_maps": "https://www.google.com/maps/place/Parque+Emilio+Ulloa/@5.9305215,-73.6163535,17z",
+  "_matriz": "s_928647f0"
+ },
+ "Casa Taller Palo de Mango - Barbosa": {
+  "lat": 5.9366303,
+  "lng": -73.6137388,
+  "address": "Pasos arriba del Moncada, barrio Marsella",
+  "_prec": "manual",
+  "_nota": "PIN APROXIMADO: Google Maps no tiene la casa taller; el pin es el «Hotel Moncada Barbosa Santander», la referencia que da la lámina («pasos arriba del Moncada»). Preguntar al festival",
+  "_match": "Google Maps (24 nov 2026): «Hotel Moncada Barbosa Santander», referencia de la lámina",
+  "_maps": "https://www.google.com/maps/place/Hotel+Moncada+Barbosa+Santander/@5.9366303,-73.6137388,17z",
+  "_matriz": "s_ab15d573"
+ }
+}

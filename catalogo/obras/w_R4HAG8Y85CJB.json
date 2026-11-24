@@ -19,8 +19,8 @@
   }
  ],
  "sinopsis": {
-  "es": "Pedro Filipe Marques construye un retrato íntimo de una familia portuguesa en Lisboa, observando con delicadeza las tensiones generacionales y los silencios que definen sus vínculos.",
-  "en": "Pedro Filipe Marques builds an intimate portrait of a Portuguese family in Lisbon, observing with delicacy the generational tensions and silences that define their bonds."
+  "es": "Sérgio, un ingeniero ambiental portugués, viaja a Guinea-Bissau para trabajar en la construcción de una carretera. Allí entabla con Diára y Gui una relación íntima y algo tormentosa. Cándido y a la deriva en un país que no logra comprender, se confronta con su posición de hombre blanco en la antigua colonia.",
+  "en": "Sérgio, a Portuguese environmental engineer, travels to Guinea-Bissau to work on building a road. There he begins an intimate, somewhat stormy relationship with Diára and Gui. Naive and adrift in a country he cannot understand, he is confronted with his position as a white man in the former colony."
  },
  "generos": [
   "Drama"
@@ -29,7 +29,9 @@
   "archivo": "https://image.tmdb.org/t/p/w500/z07ldMMncBpgIdSF87kFReaCBRG.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1103551
+ },
  "versiones": [
   {
    "etiqueta": "217 min",

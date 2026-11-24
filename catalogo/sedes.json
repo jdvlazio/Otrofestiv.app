@@ -2887,6 +2887,25 @@
    "ciudad": "Villa de Leyva",
    "corto": "Plaza Mayor"
   },
+  "s_928647f0": {
+   "nombre": "Parque Emilio Ulloa",
+   "lat": 5.9305215,
+   "lng": -73.6163535,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Parque+Emilio+Ulloa/@5.9305215,-73.6163535,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [
+    "Parque Emilio Ulloa - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "Parque Emilio Ulloa"
+  },
   "s_936e7c22": {
    "nombre": "Silencio",
    "lat": 6.2456401,
@@ -3474,6 +3493,26 @@
    "ciudad": "Yacuanquer",
    "corto": "Parque Principal de Yacuanquer"
   },
+  "s_ab15d573": {
+   "nombre": "Casa Taller Palo de Mango",
+   "lat": 5.9366303,
+   "lng": -73.6137388,
+   "evidencia": {
+    "nivel": "aproximado",
+    "url": "https://www.google.com/maps/place/Hotel+Moncada+Barbosa+Santander/@5.9366303,-73.6137388,17z",
+    "fecha": "2026-11-24",
+    "fuente": "PIN APROXIMADO: el Hotel Moncada, referencia de la lámina; Google Maps no tiene la casa taller"
+   },
+   "address": "Pasos arriba del Moncada, barrio Marsella",
+   "alias": [
+    "Casa Taller Palo de Mango - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "Casa Taller Palo de Mango"
+  },
   "s_ab39611a": {
    "nombre": "Hacienda El Novillero",
    "lat": 4.346874,
@@ -3541,6 +3580,26 @@
    ],
    "ciudad": "Manizales",
    "corto": "Aranjuez"
+  },
+  "s_ad3086b0": {
+   "nombre": "Grupo Central AA",
+   "lat": 5.9283095,
+   "lng": -73.6178401,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cra.+7+%23+6-46,+Barbosa,+Santander/@5.9282983,-73.617872,17z",
+    "fecha": "2026-11-19",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 7 # 6-46, sótano",
+   "alias": [
+    "Grupo Central AA - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "Grupo Central AA"
   },
   "s_ad9e5f5a": {
    "nombre": "Casa Páramo",
@@ -4098,6 +4157,26 @@
    "ciudad": "Medellín",
    "corto": "La Pascasia"
   },
+  "s_c760d1fd": {
+   "nombre": "Casa Escuela Formación Musical Leo Olarte",
+   "lat": 5.9359462,
+   "lng": -73.6155809,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Leo+Olarte+Escuela+de+Formaci%C3%B3n+Musical/@5.9359462,-73.6155809,17z",
+    "fecha": "2026-11-19",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Al frente de la cancha del Marsella",
+   "alias": [
+    "Casa Escuela Formación Musical Leo Olarte - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "Casa Escuela Formación Musical Leo Olarte"
+  },
   "s_c82c47d7": {
    "nombre": "Cinemateca Fontanar del Río",
    "lat": 4.7561244,
@@ -4323,6 +4402,25 @@
    ],
    "ciudad": "Cali",
    "corto": "Teatro al Aire Libre Los Cristales"
+  },
+  "s_d7c9ee58": {
+   "nombre": "La Tante Boutique",
+   "lat": 5.9327826,
+   "lng": -73.6159099,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/La+Tante+Boutique+Pastelera/@5.9327826,-73.6159099,17z",
+    "fecha": "2026-11-19",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [
+    "La Tante Boutique - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "La Tante Boutique"
   },
   "s_d8147483": {
    "nombre": "Parque de los Periodistas",

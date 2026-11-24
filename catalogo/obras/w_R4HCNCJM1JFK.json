@@ -6,6 +6,7 @@
   "CO"
  ],
  "directores": [
+  "Jorge Silva",
   "Marta Rodríguez"
  ],
  "aliases": [
@@ -16,8 +17,8 @@
   }
  ],
  "sinopsis": {
-  "es": "Marta Rodríguez y Jorge Silva documentan la violencia ejercida contra las comunidades indígenas del Llano colombiano en los años 70, en una de las obras fundacionales del cine político latinoamericano.",
-  "en": "Marta Rodríguez and Jorge Silva document the violence inflicted upon indigenous communities in the Colombian Llano in the 1970s, in one of Latin American political cinema's foundational works."
+  "es": "Tras siglos de explotación por colonos y terratenientes, la comunidad Guahibo en el Vichada se organizó en una cooperativa indígena. En respuesta, los terratenientes, haciendo uso del aparato estatal, desataron una violencia brutal contra la comunidad de Planas. Un documental de denuncia sobre la persecución histórica a los pueblos indígenas.",
+  "en": "After centuries of exploitation by settlers and landowners, the Guahibo community in Vichada organized itself into an Indigenous cooperative. In response, the landowners, making use of the state apparatus, unleashed brutal violence against the community of Planas. A documentary denouncing the historical persecution of Indigenous peoples."
  },
  "generos": [
   "Documental"
@@ -26,7 +27,9 @@
   "archivo": "https://image.tmdb.org/t/p/w500/h6fSykoiMy9YWShIpvDKQRw0qrP.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 270364
+ },
  "versiones": [
   {
    "etiqueta": "37 min",

@@ -1,12 +1,20 @@
 {
  "id": "w_R4HEGBP3B4BG",
  "titulo_original": "A donde nos lleva la fe de José Gerónimo",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "DO"
  ],
- "directores": [],
- "xref": {},
+ "directores": [
+  "Juliano Kunert"
+ ],
+ "sinopsis": {
+  "es": "Un viaje inicia en el cielo y, poco a poco, atraviesa el brumoso paisaje de la religión, el territorio y la identidad de las Antillas. Entre luz y oscuridad, los límites se vuelven borrosos y las capas de la imagen dejan entrever el misterio de la fe. Experimentación etnográfica que guía hacia un estado interior a través de lo visible y lo aural.",
+  "en": "A journey begins in the sky and, little by little, traverses the misty landscape of religion, territory, and identity in the Antilles. Between light and darkness, boundaries blur and the layers of the image offer a glimpse of the mystery of faith. An ethnographic experiment that guides toward an inner state through the visible and the aural."
+ },
+ "xref": {
+  "tmdb": 1599934
+ },
  "versiones": [
   {
    "etiqueta": "11 min",

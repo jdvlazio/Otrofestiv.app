@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
-  "capturado": "2026-11-23",
+  "capturado": "2026-11-24",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "Under Medellín",
@@ -263,6 +263,7 @@
      "lbSlug": "borrachos-mientras-escuchamos-las-gotas-caer",
      "tmdb_id": 1743109,
      "synopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
+     "genre": "Documental híbrido",
      "synopsis_lang": "es"
     },
     {
@@ -648,7 +649,7 @@
    "time": "17:00",
    "day_order": 2,
    "venue": "Perpetua Lab - Medellín",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
     "lamina": "p. 3",
@@ -1463,7 +1464,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-23T15:39:31",
+  "fecha": "2026-11-24T09:37:49",
   "plan_sha": "de4c503917909c23",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"

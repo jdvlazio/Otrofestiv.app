@@ -20,8 +20,10 @@
   "regla": "tmdb-manda"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24"
  },
  "xref.tmdb": {
   "fuente": "humano",
@@ -40,5 +42,11 @@
   "regla": "decisión",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cortoscali-2026, festicinerio-2026, ficdeh-2026, ficica-2026 +2)",
   "fecha": "2026-11-23"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "comprobado en Letterboxd por su ficha de TMDB",
+  "fecha": "2026-11-24"
  }
 }

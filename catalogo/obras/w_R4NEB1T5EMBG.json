@@ -8,6 +8,10 @@
  "directores": [
   "Dayana González Fajardo"
  ],
+ "sinopsis": {
+  "es": "Un hombre cae en un bucle temporal y vive un encierro tormentoso todos los días.",
+  "en": "A man falls into a time loop and lives through a tormenting confinement every day."
+ },
  "generos": [
   "Ciencia ficción"
  ],
@@ -16,6 +20,7 @@
   "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1355190,
   "letterboxd": "elipsis-2021"
  },
  "versiones": [
