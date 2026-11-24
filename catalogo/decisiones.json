@@ -4799,7 +4799,7 @@
  {
   "work_id": "w_R4DS8H9CNRMB",
   "campo": "sinopsis.es",
-  "valor": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
+  "valor": "León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años, atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026, cinemancia-2026, under-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -4807,7 +4807,23 @@
    "1300524bd0d5",
    "64b43b8a2ae0",
    "d3e78c584bff"
-  ]
+  ],
+  "original_de": [
+   "biff-2026",
+   "cinemancia-2026",
+   "cinetoro-2026",
+   "under-2026",
+   "villadelcine-2026"
+  ],
+  "titulo": "Borrachos mientras escuchamos las gotas caer",
+  "original": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "475af16413e4"
+  }
  },
  {
   "work_id": "w_R4HAT5A0J0QY",
@@ -5108,14 +5124,27 @@
  {
   "work_id": "w_R4MMFQPBNEZM",
   "campo": "sinopsis.es",
-  "valor": "Un buen día, no amaneció más. En ese reino de oscuridad que inevitablemente atrajo plagas, persecución, devastación y muerte, un grupo de viejos anarco-poetas se ve obligado a vivir en la clandestinidad y, durante sus aquelarres y secretas reuniones, buscan adoptar identidades no humanas. En esta fábula documental, que utiliza como alegoría el mito sufí del mismo nombre, la poesía, la danza y la amistad se erigen como armas de insubordinación al orden actual de las cosas.",
+  "valor": "Un buen día, no amaneció más. En ese reino de oscuridad, un grupo de viejos anarco-poetas se ve obligado a vivir en la clandestinidad y busca, en aquelarres y reuniones secretas, adoptar identidades no humanas. Una fábula documental en la que la poesía, la danza y la amistad son armas de insubordinación.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
   "vistas": [
    "41361a687f7e",
    "b50816570461"
-  ]
+  ],
+  "original_de": [
+   "midbo-2026",
+   "under-2026"
+  ],
+  "titulo": "El coloquio de los pájaros",
+  "original": "Un buen día, no amaneció más. En ese reino de oscuridad que inevitablemente atrajo plagas, persecución, devastación y muerte, un grupo de viejos anarco-poetas se ve obligado a vivir en la clandestinidad y, durante sus aquelarres y secretas reuniones, buscan adoptar identidades no humanas. En esta fábula documental, que utiliza como alegoría el mito sufí del mismo nombre, la poesía, la danza y la amistad se erigen como armas de insubordinación al orden actual de las cosas.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "084cf06233a2"
+  }
  },
  {
   "work_id": "w_R4PA4FJ1YYX6",
@@ -6274,14 +6303,27 @@
  {
   "work_id": "w_4RPVXBR5XHJY",
   "campo": "sinopsis.es",
-  "valor": "Iván llega a una isla desierta para reencontrarse con su novio, sin saber que ese viaje marcará una pérdida irreversible. Destruido por el duelo y obsesionado con entender lo ocurrido, accede a participar de un antiguo ritual guiado por una chamana. Lo que comienza como una búsqueda de consuelo se transforma en una experiencia oscura: Fuerzas desconocidas atraviesan el límite entre la vida y la muerte. Iván deberá enfrentarse a aquello que regresó… y al precio de haberlo invocado.",
+  "valor": "Iván llega a una isla desierta para reencontrarse con su novio, sin saber que el viaje marcará una pérdida irreversible. Destruido por el duelo, accede a un antiguo ritual guiado por una chamana. La búsqueda de consuelo se transforma en una experiencia oscura: fuerzas desconocidas atraviesan el límite entre la vida y la muerte.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (under-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
   "vistas": [
    "12e04658a3b1",
    "efd0cc08e285"
-  ]
+  ],
+  "original_de": [
+   "ficidi-2026",
+   "under-2026"
+  ],
+  "titulo": "Perros",
+  "original": "Iván llega a una isla desierta para reencontrarse con su novio, sin saber que ese viaje marcará una pérdida irreversible. Destruido por el duelo y obsesionado con entender lo ocurrido, accede a participar de un antiguo ritual guiado por una chamana. Lo que comienza como una búsqueda de consuelo se transforma en una experiencia oscura: Fuerzas desconocidas atraviesan el límite entre la vida y la muerte. Iván deberá enfrentarse a aquello que regresó… y al precio de haberlo invocado.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "4a3e27279845"
+  }
  },
  {
   "work_id": "w_R4PYB45P41ES",
@@ -6705,7 +6747,7 @@
  {
   "work_id": "w_R4HJFE6HF274",
   "campo": "sinopsis.es",
-  "valor": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer.",
+  "valor": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cortoscali-2026, ficdeh-2026, ficfusa-2026, ficica-2026 +2)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -6714,7 +6756,27 @@
    "90b6bce339ea",
    "bb1356bf14e2",
    "cccfe2faadee"
-  ]
+  ],
+  "original_de": [
+   "cortoscali-2026",
+   "ficdeh-2026",
+   "ficfusa-2026",
+   "ficica-2026",
+   "ficmontanas-2026",
+   "ficpa-2026",
+   "popayan-2026",
+   "under-2026",
+   "villadelcine-2026"
+  ],
+  "titulo": "Tuktu, padre maíz",
+  "original": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "72d02702cc5e"
+  }
  },
  {
   "work_id": "w_R4KF7XH4C28M",
@@ -8214,6 +8276,399 @@
    "veredicto": "fiel",
    "fecha": "2026-11-23",
    "huella": "288ee167a19d"
+  }
+ },
+ {
+  "work_id": "w_X28H1T7D9C4G",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "2e86039f1557"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "The sight is a wound",
+  "valor": "Una meditación inquietante sobre el colapso de la imagen ante las atrocidades contemporáneas. Frente al genocidio en curso en Gaza, transmitido en vivo por sus perpetradores, Parham Ghalamdar quema más de 50 de sus propias pinturas. ¿Qué puede ofrecer el artista cuando las imágenes desbordan los encuadres?",
+  "original": "Una meditación inquietante sobre el colapso de la imagen ante las atrocidades contemporáneas. La obra parte de una pregunta simple: ¿qué puede ofrecer el artista cuando las imágenes de nuestro tiempo desbordan la capacidad de los encuadres para contenerlas? Ante el genocidio en curso en Gaza —transmitido en vivo por sus perpetradores, insoportable en su nitidez—, Parham Ghalamdar quema más de 50 de sus propias pinturas, obras expuestas en muestras individuales y colectivas en instituciones de todo el mundo.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "aba4266e4ca9"
+  }
+ },
+ {
+  "work_id": "w_X28HTRBK8KV2",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "80e1240f2493"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Las muertes más bellas del mundo",
+  "valor": "En los años ochenta, mientras arreciaba una guerra mortal respaldada por Estados Unidos, decenas de miles de salvadoreños hicieron de la región de Washington D. C. su nuevo hogar. De esa migración nació un movimiento artístico: los artistas dieron sentido a una identidad salvadoreño-washingtoniana y moldearon la escena cultural de la ciudad.",
+  "original": "Mientras en los años ochenta arreciaba una guerra mortal respaldada por Estados Unidos, decenas de miles de salvadoreños hicieron de la región de Washington D. C. su nuevo hogar. Esa migración masiva dio origen a un nuevo movimiento artístico. Columbia Road, en Adams Morgan, se volvió un foco del reasentamiento salvadoreño, donde los artistas dieron sentido a una identidad salvadoreño-washingtoniana única y, en el camino, moldearon la escena cultural vibrante y duradera de la ciudad.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "539974d0e547"
+  }
+ },
+ {
+  "work_id": "w_X28KBGZVS71X",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "fe0c60465681"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "8 metros: La palabra subterránea",
+  "valor": "En una casa del barrio Observatorio, en Córdoba, detrás de una herrería y de la vida cotidiana de una familia, se escondía un secreto: a ocho metros bajo tierra funcionaba una imprenta clandestina del PRT-ERP. Sus publicaciones circulaban por una red organizada para burlar la persecución de la dictadura.",
+  "original": "En una casa del barrio Observatorio, en Córdoba, detrás de la fachada de una herrería y de la vida cotidiana de una familia, se escondía un secreto: a ocho metros bajo tierra funcionaba una imprenta clandestina del PRT-ERP (Ejército Revolucionario del Pueblo). Allí se imprimían El Combatiente y Estrella Roja, publicaciones que circulaban por una red organizada para burlar la persecución de la dictadura.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "be3c20d40c09"
+  }
+ },
+ {
+  "work_id": "w_X28MMN6HYY9P",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "6f2a89e79916"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Comb story",
+  "valor": "Elena sostiene un peine de madera y los recuerdos la devuelven a la infancia: su madre la peinaba despacio, todos los días, incluso cuando Elena ya era una mujer joven. Cuando la vida la llevó a la ciudad, se cortó el pelo y, con él, el camino de regreso a casa. Nunca había entendido por qué su madre la peinaba.",
+  "original": "Elena sostiene un peine de madera y los recuerdos la devuelven a la infancia: su madre peinándola despacio, todos los días, incluso cuando Elena ya era una mujer joven. Cuando la vida la llevó a la ciudad, Elena se cortó el pelo y, con él, el camino de regreso a casa. Los años se llenaron de razones para no volver. Elena nunca entendió por qué su madre la peinaba, hasta el día en que por fin estuvo frente a ella, sacó el peine y le peinó el cabello por primera vez.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "4312f54dea3d"
+  }
+ },
+ {
+  "work_id": "w_X28RV6F31EQA",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "09a0a0371b39"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "The Shapeshifter's lament",
+  "valor": "Una fantasía poética sobre las especies introducidas, un relato de parentesco, metamorfosis y la frágil persistencia de la memoria. Queda una pregunta: ¿cómo responderían los habitantes originarios a los recién llegados, invitados por nadie, que rompen la armonía de la tierra y de sus formas de vida?",
+  "original": "The Shapeshifter's Lament es una fantasía poética sobre las especies introducidas. Sitúa la supervivencia en las fronteras cambiantes entre distintas formas de vida y teje un relato de parentesco, metamorfosis y la frágil persistencia de la memoria. Queda una pregunta: ¿cómo responderían los habitantes originarios a los recién llegados, invitados por nadie, que rompen la armonía de la tierra y de sus formas de vida?",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "31af43c26d28"
+  }
+ },
+ {
+  "work_id": "w_X28T3EG0Y681",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "448c353af941"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Amor trava",
+  "valor": "Retrato de Aurora, adolescente en transición: sus proyectos a futuro, sus miedos y la relación con su mamá. Su vida está atravesada estéticamente por la cultura del Movimiento Ballroom, un espacio LGBTIQ+ de liberación y expresión. La película está tamizada por la obra de Morena García, escritora y militante travesti/trans.",
+  "original": "Amor Trava es el retrato de Aurora, adolescente en transición. Son parte de este documental sus proyectos a futuro, sus miedos y la relación con su mamá. Su vida está atravesada estéticamente por la cultura del Movimiento Ballroom, un espacio LGBTIQ+ de liberación y expresión a través del cual se busca dejar de esconder el cuerpo y reivindicar los derechos de la diversidad. La película está tamizada por la obra de Morena García, escritora y militante travesti/trans.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "5ef3e5c83ed4"
+  }
+ },
+ {
+  "work_id": "w_X28V6A18P6GQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "62c09c79d942"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Elegy for the Lost",
+  "valor": "Entre archivos, metraje encontrado e imágenes generadas con inteligencia artificial, una joven que dejó China recuerda su vida y los vínculos que tuvo allí. Su voz en off, íntima y nostálgica, es el fondo de las luchas queer: teatro clandestino, festivales a escondidas, represión. La obra yuxtapone amor, resistencia y exilio.",
+  "original": "A través de un caleidoscopio de archivos, metraje encontrado e incluso imágenes generadas con inteligencia artificial, una joven que dejó China recuerda su vida y los vínculos que tuvo en su país. Su voz en off, íntima y nostálgica, es el fondo de las luchas queer: una compañía de teatro clandestina, la euforia de los festivales a escondidas, la represión y la presión social para vivir en silencio. Entre la memoria personal y la historia colectiva, la obra yuxtapone amor, resistencia y exilio.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "5309862a8174"
+  }
+ },
+ {
+  "work_id": "w_R4EH71BTZQSD",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "bf500cf2fd91"
+  ],
+  "original_de": [
+   "cineautopsia-2026",
+   "under-2026"
+  ],
+  "titulo": "Objectionable Fruit",
+  "valor": "Documental experimental que examina el árbol de Ginkgo: un fósil viviente celebrado por su resiliencia y su capacidad única para cambiar de sexo. Con él como metáfora de fluidez y resistencia, la película entrelaza identidad de género, interconexión ecológica y las matizadas complejidades de la existencia trans.",
+  "original": "Objectionable Fruit es un documental experimental que examina el árbol de Ginkgo: un fósil viviente celebrado por su resiliencia y su capacidad única para cambiar de sexo, desafiando las binariedades impuestas por el ser humano. Utilizando al Ginkgo como metáfora de fluidez y resistencia, la película entrelaza temas de identidad de género, interconexión ecológica y las matizadas complejidades de la existencia trans.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "89db450534d4"
+  }
+ },
+ {
+  "work_id": "w_X28YBRFWBYFE",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "00ffccbf2e57"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Ghost Noon",
+  "valor": "Volverse fantasma al mediodía y abrir una deriva espectral sin término (fuga, deserción, exilio, nomadismo) en la que nadie puede quedar fijado en una identidad, un tiempo o un lugar. Bajo la sombra de la máquina del Estado, la hauntología surge como método de supervivencia frente a una decadencia espiritual.",
+  "original": "¡Del espíritu de la pesadez! Volverse fantasma al mediodía y abrir una deriva espectral sin término —fuga, deserción, exilio, nomadismo—: desde ese punto ya nadie puede quedar fijado en una identidad exacta e inmóvil, ni en el tiempo ni en unas coordenadas. Bajo la sombra de la máquina del Estado en funcionamiento perpetuo, la hauntología surge como método de supervivencia frente a una decadencia espiritual que todo lo invade, aunque al final todo esté destinado a fracasar.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9ced2c6c5523"
+  }
+ },
+ {
+  "work_id": "w_X28YYS6EHZ1Q",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "8a4dbd8ad911"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Spheres",
+  "valor": "Un ensayo poético que recorre esferas en expansión, de lo microscópico a lo mítico, y explora cómo las vibraciones más pequeñas de la existencia resuenan en la vasta arquitectura del cosmos. Un homenaje a la vida, vista no como una escalera sino como una constelación de esferas interdependientes, frágiles y asombrosas.",
+  "original": "Spheres es un homenaje a la vida, un ensayo poético que recorre una serie de esferas en expansión, cada una de las cuales revela una capa distinta de nuestra realidad compartida, de lo microscópico a lo mítico. Explora cómo las vibraciones más pequeñas de la existencia resuenan hacia la vasta arquitectura del ser y del cosmos: una meditación que respira, pensada para recordarnos las maravillas de un mundo de una belleza incomprensible. Invita a ver la vida no como una escalera sino como una constelación de esferas: interdependientes, frágiles y asombrosas.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "7669ef730d98"
+  }
+ },
+ {
+  "work_id": "w_X28ZZWKEKJRH",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "b39e00c41884"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Hansel and Gretel Get Kicked Out",
+  "valor": "Un desvío de metraje encontrado de videos de vigilancia de robos en tiendas: subvierte su mirada criminalizadora al presentar el capitalismo como un padre abusivo y carcelario. Frases de creadores de YouTube a quienes echaron de casa en la adolescencia sirven para «responder», en un solo coro de rabia desamparada.",
+  "original": "Un desvío de metraje encontrado de videos de vigilancia de robos en tiendas: la mirada criminalizadora de esas cámaras se subvierte al presentar el capitalismo como un padre abusivo y carcelario. Frases de creadores de YouTube a quienes echaron de casa en la adolescencia se reutilizan para «responder», sostenidas por videos «pobres», de baja resolución, de robos. La obra convierte en alegoría el capitalismo —y la mercantilización del yo— al reunir clips dispersos de internet en un solo coro de rabia desamparada. Música de Flowers of Romance, de Michel Henritzi.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "55231f634026"
+  }
+ },
+ {
+  "work_id": "w_X290P5QEQWPJ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "19dfb5ef2d22"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Jubiladxs le enseñan",
+  "valor": "Cada miércoles, desde hace más de dos años, lxs jubiladxs marchan al Congreso contra la destrucción de sus ingresos. No los frenan los agravios, las vallas ni la represión. Con el testimonio de Zulema, Eduardo y Carlos, la marcha reconoce sus raíces en las luchas obreras y se proyecta como un faro hacia el futuro.",
+  "original": "Ni los agravios del presidente y los ministros ni las vallas policiales ni la represión sistemática. No hay nada que frene la marcha que, cada semana desde hace más de dos años, realizan los jubiladxs al Congreso contra la destrucción de sus ingresos. Allí están cada miércoles Zulema, Eduardo y Carlos. A través de su testimonio y su organización, la movilización de lxs jubilados reconoce sus raíces en una larga tradición de luchas obreras, y se proyecta hacia el futuro, como un faro para las peleas en defensa de las conquistas populares.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "d52934f7dc8c"
+  }
+ },
+ {
+  "work_id": "w_X291BJ5QA9TE",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "8bc29ec91657"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Norma también",
+  "valor": "Solve, una estudiante feminista de Ciencias Sociales, investiga a Norma Pla, la figura desafiante que lideró la lucha por los derechos de jubiladas y jubilados en los años 90 frente a reformas neoliberales. Entre encuentros, entrevistas y archivo, el documental revive sus protestas y traza paralelismos con el presente.",
+  "original": "Norma También es un retrato de Norma Pla a través del viaje de investigación de Solve, una estudiante feminista de Ciencias Sociales. Fascinada por la figura desafiante de Norma, quien lideró la lucha por los derechos de jubiladas y jubilados en los años 90 frente a reformas neoliberales, Solve explora su legado mediante encuentros, entrevistas y material de archivo. ¿Quién fue esta mujer que, desafiando el individualismo de la época, impulsó las primeras protestas durante los años de espejismo neoliberal? A la manera de bitácora, la estudiante va tejiendo lazos entre generaciones que hablan de un feminismo popular. La imagen de Norma se va construyendo de a poco, a través de conversaciones con la generación que la conoció, otra más joven que encuentra en ella una fuente de inspiración y el material de archivo. El documental revive sus protestas y revaloriza su compromiso, subrayando su importancia en el contexto actual y trazando paralelismos entre los 90 y el presente.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "e243d45a75a0"
+  }
+ },
+ {
+  "work_id": "w_X291X7ETZ8HV",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "dd7098e3c868"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra",
+  "valor": "Once músicos, dos cámaras y una sola sala, sin guion ni resultado previsto. Un retrato crudo de la Orquesta El Macabeo mientras graba la última canción de su nuevo disco de salsa. La música se vuelve archivo de «la brega»: las estrategias cotidianas de supervivencia que forja la condición de Puerto Rico bajo el dominio colonial de Estados Unidos.",
+  "original": "Once músicos, dos cámaras y una sola sala se reúnen sin guion ni resultado previsto. Lo que surge es un retrato crudo y observacional de la Orquesta El Macabeo mientras graba la última canción de su nuevo disco de salsa: el proceso, la tensión, el humor, el cansancio y la creatividad tal como aparecen. En este punkumentary etnográfico, la música se vuelve archivo de «la brega», las estrategias cotidianas de supervivencia, aguante y resistencia que forja la condición de Puerto Rico bajo el dominio colonial de Estados Unidos. El resultado es una canción hecha a ritmo de amor y odio.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "498e82b73afc"
+  }
+ },
+ {
+  "work_id": "w_X296PDSGZHVQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "002f3daf2636"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Salman Wants to Go",
+  "valor": "Salmane, un refugiado senegalés en Turquía, sueña con llegar a Europa, terminar la universidad y ayudar a su familia. Intenta varias veces cruzar por Grecia, pero cada vez lo golpean y lo devuelven. Desapareció el día en que se rodaba su documental. Siguiendo su propio texto, la obra desentierra los recuerdos que dejó.",
+  "original": "Salmane es un refugiado senegalés que vive en Turquía. Sueña con llegar a Europa, terminar sus estudios universitarios y ayudar económicamente a su familia. En Turquía trabaja en distintos oficios y ahorra para el viaje. Intenta varias veces cruzar a Europa por Grecia, pero cada vez lo golpean y lo devuelven a Turquía. Salmane desapareció el día en que se rodaba su documental y nunca se volvió a saber de él. Siguiendo su propio texto, la obra desentierra los recuerdos que dejó, con la ayuda de los que guardaba en su teléfono.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "e8d8916315c2"
+  }
+ },
+ {
+  "work_id": "w_R4EK8N69YAQN",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "01784583fcf1"
+  ],
+  "original_de": [
+   "cineautopsia-2026",
+   "under-2026"
+  ],
+  "titulo": "Analogue natives",
+  "valor": "Cuatro veteranos del cine analógico de Bombay, que perdieron negocios y empleos con la transición digital, reflexionan sobre la pérdida de su oficio. El filme experimental deriva por las calles, mira el arte de vivir y trabajar en la precariedad y acaba en un fútil collage de nostalgia y basura absurda generada por inteligencia artificial.",
+  "original": "Este documental experimental gira en torno a entrevistas con cuatro veteranos que trabajaron toda su vida en estudios de animación y laboratorios de cine analógico (celuloide) en Bombay, y que perdieron sus negocios y empleos entre 2012 y 2014, cuando la industria cinematográfica en hindi sufrió una drástica transición hacia la producción digital. Ellos reflexionan sobre la pérdida de su oficio, pero también sobre las filosofías detrás de su práctica cinematográfica artesanal frente a las soluciones digitales prefabricadas. Mientras el filme deriva hacia diversos escenarios conexos y ajenos, rodados en las calles de Bombay, nos adentramos en el arte de vivir y trabajar bajo condiciones precarias en la India, así como en las estrategias de supervivencia en una de las ciudades más masificadas y comerciales del mundo. Finalmente, todo deriva en un fútil collage de nostalgia y recuerdos, mezclado con la estética absurda de la basura (slop) generada por inteligencia artificial. Un documental expandido de múltiples géneros concebido bajo las limitaciones de la llamada Fórmula Masala, popularmente conocida dentro del cine indio.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "305fecf125f1"
+  }
+ },
+ {
+  "work_id": "w_X297YDXW9N76",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "d0adf71a0ddc"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Vlasta, el recuerdo no es eterno",
+  "valor": "En 1960, al realizar su primer film, Vlasta Lah era la única mujer directora de un largometraje sonoro en Argentina. Formada en Roma, había llegado huyendo de una guerra para convertirse en la más importante asistente de dirección de los Estudios San Miguel. Su correspondencia y una investigación detectivesca recuperan su nombre del olvido.",
+  "original": "Al momento de realizar su primer film en 1960, Vlasta Lah era la única mujer directora de un largometraje sonoro en Argentina. Su camino fue arduo y extenso: de su infancia en un país desmembrado por la guerra a su formación en el Centro Sperimentale di Cinematografia de Roma, hasta arribar a Argentina huyendo de otra guerra para convertirse en la más importante asistente de dirección de los Estudios San Miguel. A partir de su correspondencia personal y a través una investigación detectivesca, su nombre será recuperado del olvido.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "67c724852a1e"
   }
  }
 ]
