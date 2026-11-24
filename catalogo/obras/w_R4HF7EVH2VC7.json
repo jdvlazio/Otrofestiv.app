@@ -14,6 +14,10 @@
    "tipo": "festival"
   },
   {
+   "titulo": "Independencia",
+   "tipo": "festival"
+  },
+  {
    "titulo": "La Independencia",
    "tipo": "festival"
   },
@@ -28,12 +32,11 @@
   "en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence."
  },
  "generos": [
-  "Drama",
-  "Ficción"
+  "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/ficdeh/la-independencia.jpg",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/festicinerio-2026/independencia.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1595081,
@@ -50,6 +53,8 @@
   }
  ],
  "presentaciones": [
+  "cortoscali-2026",
+  "festicinerio-2026",
   "ficdeh-2026",
   "ficica-2026",
   "leviza-2026",

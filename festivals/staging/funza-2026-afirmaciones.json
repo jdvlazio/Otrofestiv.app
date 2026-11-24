@@ -1,0 +1,478 @@
+{
+ "_provenance": {
+  "fuente": "afirmaciones sobre la agenda PDF del festival (25 oct 2026)",
+  "capturado": "2026-10-25"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-21",
+    "hora": "22:30"
+   },
+   "casilla": "time",
+   "valor": "10:30",
+   "por_que": "CONFIRMADO por el festival (mensaje a Juan, 25 oct 2026): Horizonte es el sábado 21 nov a las 10:30 a. m. La agenda decía «10:30 p. m. – 11:30 p. m.», errata.",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "el festival le confirmó a Juan por mensaje (25 oct 2026, sin URL pública): Horizonte, sáb 21 nov, 10:30 a. m.",
+    "fecha": "2026-10-25"
+   },
+   "evidencia": "agenda p. 2: «21 de noviembre de 2026 · 10:30 p. m. – 11:30 p. m. · Exhibición cinematográfica · Proyección HORIZONTES · 125 min»",
+   "contra": "22:30"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "15:30"
+   },
+   "funcion": "f_b268a9ede5",
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-11",
+    "frase": "en el desktop algo que envió Funza para cargar en la app",
+    "archivo": "fuentes/funza-2026/pieza-agenda-encuentro-departamental.png"
+   },
+   "casilla": "duration",
+   "valor": "90 min",
+   "evidencia": "pieza del Encuentro (11 nov): «3:30 p. m. – 5:00 p. m. Rueda de negocios audiovisual»; «Rueda de negocios audiovisual: 3:30 p. m. – 5:00 p. m.»",
+   "contra": "60 min"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-18",
+    "hora": "16:00"
+   },
+   "casilla": "existe",
+   "valor": {
+    "title": "Feria de Experiencias Sociales 2026",
+    "type": "event",
+    "event_kind": "evento",
+    "section": "🎬 Inauguración",
+    "day": "2026-11-18",
+    "time": "16:00",
+    "venue": "Centro Cultural Bacatá - Funza",
+    "duration": "120 min",
+    "is_free": true,
+    "description": "Organiza UNIMINUTO, Práctica en Responsabilidad Social.",
+    "description_lang": "es",
+    "_src": {
+     "url": "fuentes/funza-2026/pieza-feria-experiencias-sociales.jpg",
+     "date": "2026-11-11"
+    }
+   },
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-11",
+    "frase": "En el desktop te dejé otro par de imágenes que me los enviaron ellos para añadir a la programación de Funza.",
+    "archivo": "fuentes/funza-2026/pieza-feria-experiencias-sociales.jpg"
+   },
+   "evidencia": "pieza (enviada por el festival, 11 nov): «Feria de Experiencias Sociales 2026 · Noviembre 18 Miércoles 04:00 a 6:00 PM · Complejo Cultural Funza» con los logos del 4.º Festival de Cine Funza y del Centro Cultural Bacatá",
+   "funcion": "f_dcb0a78bb0"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "08:30"
+   },
+   "funcion": "f_69cc45b59e",
+   "casilla": "registration_url",
+   "valor": "https://forms.gle/c61vUuPhjwTAbZM9A",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "08:30"
+   },
+   "funcion": "f_69cc45b59e",
+   "casilla": "venue",
+   "valor": "Biblioteca de Ciudad Universitaria - Funza",
+   "contra": "Centro Cultural Bacatá - Funza",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "09:00"
+   },
+   "funcion": "f_15d4067239",
+   "casilla": "registration_url",
+   "valor": "https://forms.gle/c61vUuPhjwTAbZM9A",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "09:00"
+   },
+   "funcion": "f_15d4067239",
+   "casilla": "venue",
+   "valor": "Biblioteca de Ciudad Universitaria - Funza",
+   "contra": "Centro Cultural Bacatá - Funza",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "10:45"
+   },
+   "funcion": "f_d9a7e52bb9",
+   "casilla": "registration_url",
+   "valor": "https://forms.gle/c61vUuPhjwTAbZM9A",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "10:45"
+   },
+   "funcion": "f_d9a7e52bb9",
+   "casilla": "venue",
+   "valor": "Biblioteca de Ciudad Universitaria - Funza",
+   "contra": "Centro Cultural Bacatá - Funza",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "13:30"
+   },
+   "funcion": "f_31e336c377",
+   "casilla": "registration_url",
+   "valor": "https://forms.gle/c61vUuPhjwTAbZM9A",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "13:30"
+   },
+   "funcion": "f_31e336c377",
+   "casilla": "venue",
+   "valor": "Biblioteca de Ciudad Universitaria - Funza",
+   "contra": "Centro Cultural Bacatá - Funza",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "14:45"
+   },
+   "funcion": "f_6f19c59638",
+   "casilla": "registration_url",
+   "valor": "https://forms.gle/c61vUuPhjwTAbZM9A",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "14:45"
+   },
+   "funcion": "f_6f19c59638",
+   "casilla": "venue",
+   "valor": "Biblioteca de Ciudad Universitaria - Funza",
+   "contra": "Centro Cultural Bacatá - Funza",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "15:30"
+   },
+   "funcion": "f_b268a9ede5",
+   "casilla": "registration_url",
+   "valor": "https://forms.gle/c61vUuPhjwTAbZM9A",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "15:30"
+   },
+   "funcion": "f_b268a9ede5",
+   "casilla": "venue",
+   "valor": "Biblioteca de Ciudad Universitaria - Funza",
+   "contra": "Centro Cultural Bacatá - Funza",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "17:00"
+   },
+   "funcion": "f_cbe3d41709",
+   "casilla": "registration_url",
+   "valor": "https://forms.gle/c61vUuPhjwTAbZM9A",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "17:00"
+   },
+   "funcion": "f_cbe3d41709",
+   "casilla": "venue",
+   "valor": "Biblioteca de Ciudad Universitaria - Funza",
+   "contra": "Centro Cultural Bacatá - Funza",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.facebook.com/centroculturalbacatadefunza/posts/pfbid02i5rN4NZhNY4a63LEa1HsyycnVzMSn8n915xguSr8gxu5Saug6hvCXYqDGs6WSoBtl",
+    "fecha": "2026-11-14"
+   },
+   "evidencia": "post de FB del Centro Cultural Bacatá (14 nov 12:14), más nuevo que la agenda del 25 oct: «1.er Encuentro Departamental de Cine y Comunicaciones · Fecha: 20 de noviembre · Lugar: Biblioteca de Ciudad Universitaria, Funza · Cupos limitados: 60 · Inscripciones gratuitas del 14 al 17 de noviembre · Inscríbete aquí: https://forms.gle/c61vUuPhjwTAbZM9A»"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "13:30"
+   },
+   "funcion": "f_31e336c377",
+   "casilla": "time",
+   "valor": "11:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df7huLiG9SO/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "lámina 02 («CONFERENCIA: EL ARTE DE LA FOTOGRAFÍA NARRATIVA · Invitado: Mauricio Beltrán · 11:00 a.m») del post de @ccbacata (19 nov 11:37), leída a ojo",
+   "contra": "13:30"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "10:45"
+   },
+   "funcion": "f_d9a7e52bb9",
+   "casilla": "time",
+   "valor": "14:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df7huLiG9SO/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "lámina 05 («PANEL AUDIOVISUALES · 2:00 p.m.») del post de @ccbacata (19 nov 11:37), leída a ojo",
+   "contra": "10:45"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "14:45"
+   },
+   "funcion": "f_6f19c59638",
+   "casilla": "time",
+   "valor": "16:30",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df7huLiG9SO/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "lámina 03 («CHARLA SOBRE APLICACIONES Y PLATAFORMAS PARA FESTIVALES DE CINE · Invitado: Juan David Villa · 4:30 p.m.») del post de @ccbacata (19 nov 11:37), leída a ojo",
+   "contra": "14:45"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-19",
+    "hora": "16:30"
+   },
+   "casilla": "existe",
+   "valor": {
+    "title": "Las chinas no hablamos chino",
+    "type": "event",
+    "event_kind": "evento",
+    "section": "🛠️ Formación Especializada",
+    "day": "2026-11-19",
+    "time": "16:30",
+    "venue": "Centro Cultural Bacatá - Funza",
+    "sala": "Auditorio alterno",
+    "is_free": true,
+    "description": "Laboratorio de lenguaje, cultura pop y equidad de género de Left & Right, inspirado en el EP musical \"V Acts of Love\". Una conversación sobre las veces que hemos limitado nuestro talento, trabajado el doble o esperado en la fila por el momento para brillar. Nacimos para ser protagonistas, no espectadoras del éxito.",
+    "description_lang": "es",
+    "_src": {
+     "url": "pieza enviada por el festival a Juan (19 nov)",
+     "date": "2026-11-19"
+    }
+   },
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-19",
+    "frase": "Y escribieron: Este evento es hoy a las 4:30 auditorío alterno complejo cultural Bacatá"
+   },
+   "evidencia": "pieza «Las chinas no hablamos chino · Laboratorio de Lenguaje, Cultura Pop y Equidad de Género · Left & Right · 2026» que Juan pasó en el chat con el mensaje del festival"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "09:00"
+   },
+   "funcion": "f_15d4067239",
+   "casilla": "title",
+   "valor": "Panel de comunicaciones",
+   "contra": "Panel comunicación nuevas narrativas",
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-19",
+    "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos.",
+    "archivo": "fuentes/ig/Df7huLiG9SO/"
+   },
+   "evidencia": "título de la lámina del Bacatá (IG Df7huLiG9SO, 19 nov), más reciente que la pieza del 11 nov"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "13:30"
+   },
+   "funcion": "f_31e336c377",
+   "casilla": "title",
+   "valor": "Conferencia: El arte de la fotografía narrativa",
+   "contra": "Conferencia fotografía y territorio",
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-19",
+    "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos.",
+    "archivo": "fuentes/ig/Df7huLiG9SO/"
+   },
+   "evidencia": "título de la lámina del Bacatá (IG Df7huLiG9SO, 19 nov), más reciente que la pieza del 11 nov"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "10:45"
+   },
+   "funcion": "f_d9a7e52bb9",
+   "casilla": "title",
+   "valor": "Panel audiovisuales",
+   "contra": "Panel cine desde región",
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-19",
+    "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos.",
+    "archivo": "fuentes/ig/Df7huLiG9SO/"
+   },
+   "evidencia": "título de la lámina del Bacatá (IG Df7huLiG9SO, 19 nov), más reciente que la pieza del 11 nov"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "14:45"
+   },
+   "funcion": "f_6f19c59638",
+   "casilla": "title",
+   "valor": "Charla sobre aplicaciones y plataformas para festivales de cine",
+   "contra": "Charla app de festivales de cine",
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-19",
+    "frase": "Claro, los títulos son lo reciente. No sé por qué me estás preguntando por estas cosas. Estos cambios hay que hacerlos.",
+    "archivo": "fuentes/ig/Df7huLiG9SO/"
+   },
+   "evidencia": "título de la lámina del Bacatá (IG Df7huLiG9SO, 19 nov), más reciente que la pieza del 11 nov"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Cultural Bacatá - Funza",
+    "dia": "2026-11-20",
+    "hora": "18:30"
+   },
+   "funcion": "f_f499b071f9",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "fecha": "2026-11-20",
+    "frase": "Sí, es porque es con conversatorio. Arréglalo por favor"
+   },
+   "evidencia": "la agenda reserva 125 min (6:30–8:35 p. m.) para una película de 77 min: el bloque incluye el conversatorio (Juan)"
+  }
+ ]
+}

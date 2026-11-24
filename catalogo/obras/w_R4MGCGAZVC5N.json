@@ -1,6 +1,6 @@
 {
  "id": "w_R4MGCGAZVC5N",
- "titulo_original": "Para mí, ya no es cualquier baño",
+ "titulo_original": "Para mí ya no es cualquier baño",
  "anio": 2026,
  "paises": [
   "CL"
@@ -9,6 +9,10 @@
   "Micaela Moreno Barril"
  ],
  "aliases": [
+  {
+   "titulo": "Para mí, ya no es cualquier baño",
+   "tipo": "festival"
+  },
   {
    "titulo": "For me, it's no longer just any bathroom",
    "idioma": "en",
@@ -23,7 +27,7 @@
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/midbo-2026/para-mi-ya-no-es-cualquier-bano.jpg",
+  "archivo": "/assets/cinetoro-2026/para-mi-ya-no-es-cualquier-bano.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -37,6 +41,7 @@
   }
  ],
  "presentaciones": [
+  "cinetoro-2026",
   "midbo-2026"
  ]
 }

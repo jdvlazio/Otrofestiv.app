@@ -1,0 +1,43 @@
+{
+ "id": "w_FBZA6DCNBRHR",
+ "titulo_original": "Todo es culpa de la sal",
+ "anio": 2020,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "María Cristina Pérez"
+ ],
+ "aliases": [
+  {
+   "titulo": "It's all the Salt's Fault",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "La hija menor de una familia de osos perezosos, reconstruye los recuerdos con sus padres y sus tres hermanos. Tras lo humano de una familia normal, el espíritu salvaje se asoma en los detalles de la cotidianidad que se vuelven indomables en la memoria.",
+  "en": "The youngest daughter of a family of sloths reconstructs their story. A metaphor about the sometimes wild nature that inhabits family environments."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/anibia-2026/todo-es-culpa-de-la-sal.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 711868,
+  "letterboxd": "its-all-the-salts-fault"
+ },
+ "versiones": [
+  {
+   "etiqueta": "10 min",
+   "duracion_min": 10
+  }
+ ],
+ "presentaciones": [
+  "anibia-2026",
+  "ficcali-2026"
+ ]
+}

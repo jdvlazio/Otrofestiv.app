@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:tribeca-2026",
+  "fuente": "festival:tribeca-2026,villadeleyvaiff-2026,villadeleyvaiff-2026,villadeleyvaiff-2026,villadeleyvaiff-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -8,11 +8,23 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "tmdb:1700766",
+  "regla": "tmdb-manda"
  },
  "paises": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1700766)",
+  "fecha": "2026-11-24"
+ },
+ "generos": {
   "fuente": "festival",
-  "regla": "pais-union"
+  "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24"
  }
 }

@@ -13,14 +13,18 @@
  ],
  "aliases": [
   {
+   "titulo": "El deshielo",
+   "tipo": "festival"
+  },
+  {
    "titulo": "The Meltdown",
    "idioma": "en",
    "tipo": "traduccion"
   }
  ],
  "sinopsis": {
-  "es": "Chile, 1992. Durante su estancia en el apartado hotel de sus abuelos, cerca de una estación de esquí andina, Inès (9 años) entabla amistad con Hanna (15), una esquiadora alemana. Cuando Hanna desaparece sin dejar rastro, la búsqueda de la joven desvela verdades ocultas.",
-  "en": "1992, Chile. Inés parents are away on business and she is left in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations."
+  "es": "Chile, 1992. Los padres de Inés, una niña de nueve años, están de viaje de negocios y la dejan al cuidado de sus abuelos, dueños de un hotel a los pies de una estación de esquí. Inés entabla amistad con Hanna, una joven esquiadora europea que ha llegado a Chile para entrenar. Una noche, Hanna desaparece. La búsqueda sacará a la luz una serie de situaciones ocultas.",
+  "en": "1992, Chile. Nine-year-old Inés' parents are away on business, leaving her in the care of her grandparents, who own a hotel at the foot of a ski resort. Inés befriends Hanna, a teenage European skier who has come to train in Chile. One night, Hanna disappears. The process of her search will unveil a series of hidden situations."
  },
  "generos": [
   "Drama"
@@ -40,6 +44,7 @@
   }
  ],
  "presentaciones": [
-  "biff-2026"
+  "biff-2026",
+  "miradas-2026"
  ]
 }

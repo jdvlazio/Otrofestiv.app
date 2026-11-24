@@ -1,0 +1,24 @@
+{
+ "titulo_original": {
+  "fuente": "festival:miradas-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
+ },
+ "anio": {
+  "fuente": "tmdb:213983",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "tmdb:213983",
+  "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 213983",
+  "fecha": "2026-11-24"
+ }
+}

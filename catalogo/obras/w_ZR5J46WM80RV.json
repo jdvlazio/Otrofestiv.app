@@ -8,6 +8,15 @@
  "directores": [
   "Alejandro Sánchez"
  ],
+ "aliases": [
+  {
+   "titulo": "Esquirlas de caracol",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "Roberto guarda un secreto que no puede compartir: un caracol de mar que les susurra verdades a quienes se atreven a escucharlas. En medio de una celebración íntima, el deseo de revelar ese misterio desata una ruptura sin vuelta atrás."
+ },
  "afiche": {
   "archivo": "/assets/bhff-2026/esquirlas-de-caracol.jpg",
   "veredicto": "oficial"
@@ -23,6 +32,7 @@
   }
  ],
  "presentaciones": [
-  "bhff-2026"
+  "bhff-2026",
+  "villadeleyvaiff-2026"
  ]
 }

@@ -194,7 +194,7 @@
    "film_list": [
     {
      "title": "La Ceremonia",
-     "director": "Deimer Vergara / Julián García",
+     "director": "Deimer Vergara, Julián García",
      "country": "Colombia",
      "flags": "🇨🇴",
      "lbSlug": "⚠️ LB PENDIENTE",
@@ -212,26 +212,27 @@
     },
     {
      "title": "Pawa",
-     "director": "Marbel Vanegas Jusayu",
+     "director": "Marbel Ina Vanegas Jusayu",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "poster": "/assets/leviza/Pawa.jpeg",
-     "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom",
+     "poster": "/assets/ficica-2026/pawa.jpg",
+     "lbSlug": "pawa",
+     "posterSource": "oficial",
      "work_id": "w_R4HCNBABG3FG",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
        "year": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
        "synopsis": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
-       "synopsis_en": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)"
+       "synopsis_en": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
+       "tmdb_id": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, ficica-2026, leviza-2026)"
       }
      },
      "year": 2026,
      "synopsis": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
      "synopsis_lang": "es",
-     "synopsis_en": "On a quiet morning in a ranchería in La Guajira, Indira feeds the turkeys and hens. With the drought and the school year about to start, her grandmother Josefa sets out with her through the neighboring communities, hoping to sell Taata, the largest turkey, and buy school supplies and food."
+     "synopsis_en": "On a quiet morning in a ranchería in La Guajira, Indira feeds the turkeys and hens. With the drought and the school year about to start, her grandmother Josefa sets out with her through the neighboring communities, hoping to sell Taata, the largest turkey, and buy school supplies and food.",
+     "tmdb_id": 1668893
     },
     {
      "title": "Refracción",
@@ -335,12 +336,12 @@
    "film_list": [
     {
      "title": "La Independencia",
-     "director": "Jhon Agudelo Suárez",
+     "director": "John Agudelo Suárez",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "poster": "/assets/leviza/LaIndependencia.webp",
-     "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom",
+     "poster": "/assets/festicinerio-2026/independencia.jpg",
+     "lbSlug": "independence-2025",
+     "posterSource": "oficial",
      "work_id": "w_R4HF7EVH2VC7",
      "title_en": "Independence",
      "_src": {
@@ -348,13 +349,15 @@
        "title_en": "catálogo w_R4HF7EVH2VC7 (ficdeh-2026, leviza-2026, siembrafest-2026, villadelcine-2026)",
        "year": "catálogo w_R4HF7EVH2VC7 (ficdeh-2026, leviza-2026, siembrafest-2026, villadelcine-2026)",
        "synopsis": "catálogo w_R4HF7EVH2VC7 (ficdeh-2026, leviza-2026, siembrafest-2026, villadelcine-2026)",
-       "synopsis_en": "catálogo w_R4HF7EVH2VC7 (ficdeh-2026, leviza-2026, siembrafest-2026, villadelcine-2026)"
+       "synopsis_en": "catálogo w_R4HF7EVH2VC7 (ficdeh-2026, leviza-2026, siembrafest-2026, villadelcine-2026)",
+       "tmdb_id": "catálogo w_R4HF7EVH2VC7 (cortoscali-2026, ficdeh-2026, ficica-2026, leviza-2026, siembrafest-2026, villadelcine-2026)"
       }
      },
      "year": 2025,
      "synopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
      "synopsis_lang": "es",
-     "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence."
+     "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+     "tmdb_id": 1595081
     },
     {
      "title": "Luz Blanca",
@@ -394,7 +397,7 @@
     },
     {
      "title": "Tiempos Revelados",
-     "director": "Paola Nova / Fredy Roldán",
+     "director": "Paola Nova, Fredy Roldán",
      "country": "Colombia",
      "flags": "🇨🇴",
      "lbSlug": "⚠️ LB PENDIENTE",
@@ -440,10 +443,9 @@
    "time": "16:00",
    "venue": "Auditorio Polideportivo - Zapatoca",
    "day_order": 1,
-   "tmdb_id": 1222695,
+   "tmdb_id": 947507,
    "year": 2022,
    "genre": "Animación",
-   "lbSlug": "⚠️ LB PENDIENTE",
    "synopsis": "No hace falta ser un superhéroe para ser súper. Hedvig, de 11 años, encoge accidentalmente el traje de su padre, el superhéroe del pueblo, y tendrá que encontrar su propio superpoder.",
    "poster": "/buCip15i0a0PlT77oC7OwQD0HAC.jpg",
    "duration": "76 min",
@@ -451,7 +453,8 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "work_id": "w_R4KHT2KBD0K7",
-   "id": "f_aa6ba25865"
+   "id": "f_aa6ba25865",
+   "lbSlug": "just-super"
   },
   {
    "title": "Clausura — Filminutos Movimiento Audiovisual LEVIZA",
@@ -667,7 +670,7 @@
     {
      "title": "Chist",
      "director": "Elkin Díaz",
-     "year": "2022",
+     "year": 2022,
      "duration": "11 min",
      "country": "Colombia",
      "flags": "🇨🇴",
@@ -681,7 +684,7 @@
     {
      "title": "Sin la Luz Perpetua",
      "director": "Raúl Gutiérrez",
-     "year": "2022",
+     "year": 2022,
      "duration": "25 min",
      "country": "Colombia",
      "flags": "🇨🇴",
@@ -712,7 +715,7 @@
     {
      "title": "Filminutos Semillero YarimaFICS — Barrancabermeja",
      "director": "",
-     "year": "2025",
+     "year": 2025,
      "duration": "~15 min",
      "country": "Colombia",
      "flags": "🇨🇴",
@@ -723,9 +726,9 @@
     {
      "title": "Candelaria",
      "director": "Jhonny Hendrix Hinestroza",
-     "year": "2017",
+     "year": 2017,
      "duration": "87 min",
-     "country": "Colombia / Cuba",
+     "country": "Colombia, Cuba",
      "flags": "🇨🇴🇨🇺",
      "synopsis": "Dos pensionistas, una cámara de video y una propuesta indecente.",
      "lbSlug": "candelaria-2017",

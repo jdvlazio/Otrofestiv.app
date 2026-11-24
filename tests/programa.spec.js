@@ -2599,21 +2599,32 @@ test('T106 — la LISTA sirve la mini: una voz por chip, y el grid queda intacto
   // póster entero era ruido de 3px que repetía la fila. La mini responde con UNA
   // voz — ordinal de serie o la marca de la obra. El GRID no cambia (Juan: la
   // marca en grande era «demasiado ruidosa»).
-  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00');
-  // Lista de un día: los chips generativos NO llevan rótulo de sección
-  await page.evaluate(() => { activeDay = DAY_KEYS[0]; programaViewMode = 'list'; _renderProgramaContent(); });
+  // Jardín y no CineAutopsia (31 oct): con la Mesa de luz todos los programas de
+  // CineAutopsia pasaron a la mesa y ahí ya no queda ningún chip generativo.
+  await enterFestival(page, 'jardin2026', '2026-09-26T10:00:00-05:00');
+  // Lista: los chips generativos NO llevan rótulo de sección
+  // Se recorre el festival entero, no el día 1: con la Mesa de luz (31 oct) los
+  // programas de ese día pasaron a la mesa y ya no son chips generativos. Lo que
+  // se prueba es la regla del chip, no qué día la trae.
   const lista = await page.evaluate(() => {
     const out = [];
-    document.querySelectorAll('.plist-item').forEach(li => {
-      const img = li.querySelector('.plist-poster img');
-      if (!img || !img.src.startsWith('data:image/svg')) return;
-      const svg = decodeURIComponent(img.src.split(',')[1] || '');
-      out.push({ t: li.dataset.title, textos: (svg.match(/<text/g) || []).length,
-        conMarca: /circle|<path d=/.test(svg) });
-    });
+    for (const d of DAY_KEYS) {
+      activeDay = d; programaViewMode = 'list'; _renderProgramaContent();
+      document.querySelectorAll('.plist-item').forEach(li => {
+        const img = li.querySelector('.plist-poster img');
+        if (!img || !img.src.startsWith('data:image/svg')) return;
+        // el evento conserva su escarapela entera (getFilmPosterMini lo deja pasar)
+        if ((FILMS.find(f => f.title === li.dataset.title) || {}).type === 'event') return;
+        const svg = decodeURIComponent(img.src.split(',')[1] || '');
+        out.push({ t: li.dataset.title, textos: (svg.match(/<text/g) || []).length,
+          // la marca son 2-3 formas: círculo, cuarto de círculo, triángulo o
+          // franja (un <rect> más allá de los 3 del fondo, luz y filete)
+          conMarca: /circle|<path d=/.test(svg) || (svg.match(/<rect/g) || []).length > 3 });
+      });
+    }
     return out;
   });
-  expect(lista.length, 'el día 1 de CineAutopsia tiene chips generativos').toBeGreaterThan(0);
+  expect(lista.length, 'Jardín tiene chips generativos en la lista').toBeGreaterThan(0);
   for (const c of lista) {
     expect(c.textos, `${c.t}: la mini lleva a lo sumo UNA voz (ordinal) — el póster entero eran 4+`)
       .toBeLessThanOrEqual(1);
@@ -2808,18 +2819,25 @@ test('T131 — el día vacío por ciudad nombra la ciudad, no filtros ajenos', a
     await w(700);
     switchMainNav('mnav-cartelera');
     await w(700);
-    const out = { venue: String(activeVenue), sec: String(activeSec), txt: null };
-    for (let i = 0; i < DAY_KEYS.length; i++) {
-      globalThis.selectedIdx = i;
-      if (typeof render === 'function') render();
-      await w(240);
-      const es = document.querySelector('.empty-state');
-      if (es) { out.txt = es.innerText.replace(/\s+/g, ' ').trim(); break; }
-    }
+    const out = { venue: String(activeVenue), sec: String(activeSec), txt: null, oculto: null };
+    // Desde el 19 nov 2026 la tira OCULTA los días sin funciones en la ciudad
+    // (dias-por-ciudad.spec.js), así que desde la tira ya no se llega a ese
+    // vacío. El mensaje sigue existiendo para cualquier otra entrada: se fuerza
+    // el día directamente y se mide el texto pintado, igual que antes.
+    const H = await import('/src/view/helpers.js');
+    const vacio = DAY_KEYS.find(d => !FILMS.some(f => f.day === d && H.venueMatches(f.venue, activeVenue)));
+    const tab = document.querySelector(`#dtabs .dtab[data-day="${vacio}"]`);
+    out.oculto = !!tab && getComputedStyle(tab).display === 'none';
+    globalThis.activeDay = vacio;
+    if (typeof render === 'function') render();
+    await w(400);
+    const es = document.querySelector('.empty-state');
+    if (es) out.txt = es.innerText.replace(/\s+/g, ' ').trim();
     return out;
   });
   expect(r.venue, 'la ciudad quedó puesta como selección de lugar').toContain('city:');
   expect(r.sec, 'y ninguna sección está filtrando').toBe('all');
+  expect(r.oculto, 'ese día no aparece en la tira de Medellín').toBe(true);
   expect(r.txt, 'algún día de FICDEH queda vacío en esa ciudad').not.toBe(null);
   expect(r.txt, 'el vacío nombra la ciudad').toContain('Medell\u00edn');
   expect(r.txt, 'y NO manda a ajustar sección o sede').not.toMatch(/secci\u00f3n o sede/);

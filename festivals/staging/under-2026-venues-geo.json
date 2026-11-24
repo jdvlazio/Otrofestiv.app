@@ -1,0 +1,42 @@
+{
+ "_provenance": {
+  "fuente": "Google Maps + direcciones del PDF oficial (correo 18 nov 2026)",
+  "capturado": "2026-11-18"
+ },
+ "Perpetua Lab - Medellín": {
+  "lat": 6.2346133,
+  "lng": -75.5714725,
+  "address": "Cl. 34 #45-07, segundo piso",
+  "_prec": "manual",
+  "_match": "Google Maps (17 nov 2026), ficha «Perpetua LAB»: https://www.google.com/maps/place/Perpetua+LAB/@6.2346133,-75.5714725,17z; dirección de los cuadros: Calle 34 # 45-07, segundo piso, Distrito Creativo Perpetuo Socorro",
+  "_maps": "https://www.google.com/maps/place/Perpetua+LAB/@6.2346133,-75.5714725,17z",
+  "_matriz": "s_8d5d66e1"
+ },
+ "Bebop Bar - Medellín": {
+  "lat": 6.264047,
+  "lng": -75.567918,
+  "address": "Cra. 55 #65-87, piso 3",
+  "_prec": "manual",
+  "_maps": "https://www.google.com/maps/place/bebop+bar/@6.264047,-75.567918,17z",
+  "_match": "Google Maps (18 nov 2026), ficha «bebop bar», dirección «Cra. 55 #65-87 Piso 3»; PDF: Carrera 55 # 65-87, piso 3, Estación Ruta N Metroplús",
+  "_matriz": "s_67e7a9bd"
+ },
+ "Donde Robin - Medellín": {
+  "lat": 6.2496084,
+  "lng": -75.5619183,
+  "address": "Cra. 43 #53-51, Parque del Periodista",
+  "_prec": "direccion",
+  "_maps": "https://www.google.com/maps/place/Cra.+43+%2353-51/@6.2496084,-75.5619183,17z",
+  "_match": "Google Maps (18 nov 2026): sin ficha de «Donde Robin»; pin de la dirección del PDF, Cra. 43 #53-51 (Parque del Periodista)",
+  "_matriz": "s_2f9c41f8"
+ },
+ "Librería Antimateria - Medellín": {
+  "lat": 6.2514371,
+  "lng": -75.5911408,
+  "address": "Cra. 45E #72-09, Laureles",
+  "_prec": "manual",
+  "_maps": "https://www.google.com/maps/place/Antimateria/@6.2514371,-75.5911408,17z",
+  "_match": "Google Maps (18 nov 2026), ficha «Antimateria»; coincide (<1 m) con el pin de la dirección «Cl. 45E #72-09» (el PDF dice Carrera 45E)",
+  "_matriz": "s_e1907155"
+ }
+}

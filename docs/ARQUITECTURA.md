@@ -527,6 +527,14 @@ Formato de nombre: `"[Nombre sala] - [Ciudad]"` — siempre igual.
 
 ## 15. REGLAS TÉCNICAS
 
+**Scripts de terceros (25 oct 2026).** Todo `<script>` de un CDN va con versión exacta (`@2.118.0`, nunca `@2`) y `integrity="sha384-…"` + `crossorigin="anonymous"`: si el archivo del CDN cambia, el navegador no lo ejecuta. Para subir de versión se cambian la URL y el hash juntos (`curl -s <url> | openssl dgst -sha384 -binary | openssl base64 -A`). Lo vigila `[script-externo-fijo]` en validate.py; la única excepción es el loader de Sentry, que su proveedor genera por clave y no admite hash.
+
+**Sin handlers en el HTML (26 oct 2026).** Nada de `onclick=`/`onerror=`/`onkeydown=` en el markup: impiden quitar `'unsafe-inline'` de la CSP. El comportamiento va como atributo de datos —`data-action` (clic), `data-enter` (Enter), `data-err="ocultar"`, `data-buscar`— que leen listeners delegados (`main.js` y `controller/sin-inline.js`). `[sin-handler-inline]`: index.html en 0 y src/ con un techo que solo baja.
+
+**Sin eval (26 oct 2026).** Nada de `eval(`, `new Function(` ni `setTimeout('código')` en src/: la CSP no lleva `'unsafe-eval'`. El worker del planeador recibe las funciones puras por referencia (`_SCHED_PURE_FNS` en calc.js, `fn.toString()`). Lo vigila `[sin-eval]`.
+
+**CSP estricta (26 oct 2026).** `script-src` no lleva `'unsafe-inline'` ni `'unsafe-eval'`: los `<script>` inline de index.html van autorizados por hash sha256, que escribe `scripts/csp.js` (dueño único; lo corre bump-version.js en cada deploy, porque estampar el `?v=` del gate cambia su hash). Cambiar un script inline = correr `node scripts/csp.js`. `[csp-hashes]` frena un hash viejo (dejaría la app en blanco) y la vuelta de unsafe-*.
+
 ### Columnas tiempo/día en listas
 Todo label de día/hora que ancle una columna flex debe tener `width` o `min-width` fijo. Validar con `MIÉ` (el día más ancho en Plus Jakarta Sans).
 
@@ -1096,6 +1104,7 @@ guardián que nadie sabe qué protege es uno que el próximo que toque
 | `[title-normalization]` | Ningún título con comillas tipográficas (`‘’“”«»`). |
 | `[activity-duration]` | Toda actividad de un festival vivo tiene duración; las que la organización no publicó viven en `_PENDING` con su razón y se borran de ahí al llegar el dato. |
 | `[pais-conocido]` | Todo `country` de `FESTIVAL_CONFIG` tiene entrada en `COUNTRY_NAMES`: FINCA salió con `'AR'` sin la suya y el splash dijo «BUENOS AIRES» sin Argentina. `country:''` es legítimo. |
+| `[sede-matriz]` | El almacén de sedes `catalogo/sedes.json` (`pipeline/sedes.py`): cada lugar con id estable `s_…`, alias y evidencia. Frena si un pin de festival no está en el almacén o se aparta de su lugar, si hay pines divergentes sin resolver, si dos lugares a <40 m no están declarados `--mismo`/`--distintos`, o si un lugar NUEVO no trae enlace de Google Maps (`--evidencia`). Los viejos sin enlace son deuda que solo baja. | Para un festival nuevo: `sedes.py --resolver <fid>` clasifica cada sede del crudo (ya / conocida / parecida / nueva) y con `--escribir` pone las conocidas en el plan y el venues-geo con el pin del almacén; `--tablero` resume lo que falta en los festivales vivos. Todo lugar lleva ciudad válida (`--completar-ciudades`: vecino del almacén a <3 km o Nominatim reverso) y sus salas normalizadas (las compuestas fuera; las variantes en `salas_alias`). Cada pin de un festival vivo apunta a su lugar (`_matriz: s_…`, `--enlazar`) y `ensamblar.py` toma el pin y la dirección del almacén, no de la copia (salvo en un campus, donde cada festival va en su edificio).
 | `[sedes-apiladas]` | Dos sedes de un festival vivo a <60 m casi siempre son la misma (se declara con `_nota`), y la sala no va dentro del nombre de la sede. Warning; los archivados no se reescriben. |
 | `[day-order-indice]` (validate-festivals.js) | `day_order` es el índice del día en `dayKeys`, no un contador: ordena ficha, Mi Plan, Programa y el plan. Deuda por festival en `DAY_ORDER_DEUDA`, que solo baja. |
 | `[synopsis-length]` (validate-festivals.js) | Warning generoso: sinopsis > 600 caracteres, para cazar un dump sin condensar sin spamear. |

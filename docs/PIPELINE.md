@@ -1451,4 +1451,37 @@ vocabulario → **warning**, porque puede ser una etiqueta colada… o un géner
 legítimo que falte en `_GENRE_EN`, y esa decisión es de quien monta.
 
 
+`[cruce-sin-decidir]` (5 nov 2026): un festival que todavía no salió no pasa con cruces dudosos contra lo publicado (título parecido, u otra dirección con el mismo título) sin decidir en `misma_obra` o `no_heredar` de `<fid>-correcciones.json`.
+
 `[preonboarding-completo]` (18 oct 2026): un festival que todavía no salió y ya tiene `<fid>-catalogo.json` no pasa si alguna obra no tiene afiche ni su porqué (`sin_afiche`). `python3 pipeline/preonboarding.py`; deuda en `pipeline/preonboarding-deuda.json`, solo baja. Lo publicado lo vigila `[afiche-cobertura]`.
+
+`[obra-sin-pais]` (11 nov 2026): toda obra de un festival vivo lleva `country` (la bandera) o su porqué en `sin_pais` de `<fid>-correcciones.json`, por título de la obra o de su programa. Nació de Basta Mamá, sin bandera en Guatapé y Funza; había 21 obras así y nada lo frenaba. Un programa sin obras nombradas también se declara. País solo con fuente: TMDB puede equivocarse (Basta Mamá figura como US).
+
+`[inventario-fuentes]` (12 nov 2026): todo festival vivo tiene `festivals/staging/<fid>-fuentes.json` (pipeline/fuentes_descubrir.py) con la web y el link de la bio de IG como raíces (o `_sin_web`/`_sin_bio` con su porqué) y NINGUNA fuente `sin-revisar`; publicar.py además exige que el recorrido tenga ≤ 24 h. Nació de Villa de Leyva (programa completo en un PDF nuevo de la home que nadie vio) y FICFUSA (nueve formularios en el Linktree de la bio): mirábamos lo conocido, no lo publicado. El vigía corre `--vivos` en cada pasada.
+
+## Registro de altas — `<fid>-altas.json` (15 nov 2026)
+
+Toda obra en `sin_ficha` del enriquecido tiene una entrada en
+`festivals/staging/<fid>-altas.json`, escrita por `pipeline/altas.py`:
+
+```json
+{"obras": {"<título NFC>": {
+  "titulo": "…", "director": "…",
+  "estado": "ficha_existente | alta_posible | afiche_chico | sin_afiche | alta_hecha",
+  "tmdb_id": 123,
+  "afiche": {"url": "…", "fuente": "…", "archivo": "fuentes/<fid>/altas/<slug>.jpg",
+             "px": [w, h], "ratio": 0.667, "recorte": null, "veredicto_criterio": null},
+  "fuentes": {"<clave>": {"url": "…", "fecha": "AAAA-MM-DD", "resultado": "…"}
+                       | {"na": true, "por_que": "…", "fecha": "…"}}}}}
+```
+
+Las claves obligatorias son `FUENTES_OBLIGATORIAS` de `pipeline/altas.py` (única
+lista); un videoclip suma `canal_oficial_artista`. Toda ficha de
+`<fid>-correcciones.json` `fichas` nueva sale de este registro (`_registro`).
+Proceso completo: `pipeline/PROTOCOLO.md` § Paso 2·bis.
+
+`[sinopsis-cobertura]` (19 nov 2026, pedido de Juan tras CUAFF; desde el 23 nov también la CALIDAD: lista de actores, enlaces, créditos ajenos, ficha técnica, evento, otro idioma o texto roto cuentan como sinopsis ausente, acción `corregir`; falso positivo en `sinopsis_revisada` con `_por_que`): toda OBRA publicada (película u obra de un programa; las actividades no) lleva `synopsis` en español, o `sin_sinopsis` en `<fid>-correcciones.json` con `_por_que` y `fuentes` revisadas. Si solo hay sinopsis en inglés, se traduce con el contexto de la obra. Cascada de búsqueda: ficha de la sala o del festival → TMDB es → TMDB en → FilmFreeway/Festhome → web del director. Dueño único `pipeline/sinopsis.py` (`python3 pipeline/sinopsis.py <id>` lista pendientes con su acción); lo exigen `publicar.py` al publicar y este guardián sobre lo publicado. Deuda del 19 nov en `pipeline/sinopsis-deuda.json`, solo baja (`--congelar`).
+
+`[excepcion-sin-porque]` (20 nov 2026, lección del Under): las excepciones de `[activity-duration]` y `[abierta-sin-info]` se declaran en el dato, no en `validate.py`: `sin_duracion` y `no_es_abierta` en `festivals/staging/<id>-correcciones.json`, `{"<título>": {"_por_que": "..."}}`. Así Onboarding las declara sin un PR de código. Una sin `_por_que` no cuenta y pone rojo este guardián. Las listas viejas dentro de `validate.py` (`_PENDING`, `_ABIERTA_NO`) siguen valiendo para los casos anteriores.
+
+`[duracion-vs-tmdb]` (20 nov 2026, Funza: «Basta Mamá» publicada con 125 min —la franja con su conversatorio— y dura 77): en los festivales vivos, toda obra cuya duración difiere del runtime de TMDB (del enriquecido) en más de 5 min y más del 10 % se corrige o se declara en `duracion_distinta` de `<fid>-correcciones.json` con su `_por_que`. La duración del festival sigue mandando; el guardián solo obliga a mirar. Dueño único `pipeline/duraciones.py` (`python3 pipeline/duraciones.py <id>`); también frena `publicar.py` y aparece en el ensayo. Cuando la fuente da una FRANJA, el parser la escribe como `franja_min`, nunca como `duracion_min`: el ensamblador le da a la obra su runtime y marca el sobrante como conversatorio.

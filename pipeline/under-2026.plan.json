@@ -1,0 +1,113 @@
+{
+ "_nota": "XXII Festival Transterritorial de Cine Underground, sede Medellín (25 nov – 3 dic 2026). PRE-ONBOARDING SIN PUBLICAR. Fuente que manda: PDF oficial (correo de José Fernando Duque a hola@, 18 nov), triple lectura texto+OCR+ojo. El reel IG Df0rYtRxmgp (16 nov) aporta duraciones y rótulos de sección de 25–29 nov. 30 nov sin programación. PROPUESTAS PARA JUAN (copy, sin aprobar): name/displayName/fullName/shortName/tagline, nombres en inglés/emoji/arquetipo de las secciones, seccion_default «Programación» para las funciones nuevas sin rótulo, y los títulos de los programas sin nombre impreso («A + B + …», «X + N obras»).",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/under-2026-crudo.py",
+   "que": "PDF oficial del correo del 18 nov → crudo (17 funciones, 4 sedes); el reel queda como fuente de duraciones y secciones"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py under-2026 --posters",
+   "que": "TMDB + cascada + afiches"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py under-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/under-2026-verificar.py",
+   "que": "triple lectura (texto del PDF, Vision, Tesseract) por página + cobertura inversa de títulos y horas"
+  }
+ ],
+ "fuentes_vivas": [],
+ "radar": null,
+ "radar_nota": "Sin issue de radar: lo pidió Juan el 17 nov 2026 desde el reel de @cineundermedellin.",
+ "_fuentes_versionadas": {
+  "festivals/staging/under-2026-crudo.json": "la programación 25 nov – 3 dic (PDF oficial, correo 18 nov)",
+  "festivals/staging/under-2026-venues-geo.json": "4 sedes (Google Maps)",
+  "festivals/staging/under-2026-enriquecido.json": "fichas TMDB/Letterboxd",
+  "festivals/staging/under-2026-correcciones.json": "fichas (altas.py --sondar)",
+  "festivals/staging/under-2026-altas.json": "registro de altas (pipeline/altas.py)",
+  "festivals/staging/under-2026-afiches.json": "afiches originales que mandó el festival (correo 18 nov)"
+ },
+ "festival": {
+  "crudo": "festivals/staging/under-2026-crudo.json",
+  "enriquecido": "festivals/staging/under-2026-enriquecido.json",
+  "geo": "festivals/staging/under-2026-venues-geo.json",
+  "secciones": {
+   "Documental Activismo Social": {
+    "emoji": "✊",
+    "en": "Documentary · Social Activism",
+    "archetype": "Muestra / País"
+   },
+   "Animación": {
+    "emoji": "🎨",
+    "en": "Animation",
+    "archetype": "Cortos / Programas"
+   },
+   "Feminismos y disidencias sexuales": {
+    "emoji": "🏳️‍🌈",
+    "en": "Feminisms and Sexual Dissidence",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Actividad creativa": {
+    "emoji": "🛠️",
+    "en": "Creative Activity",
+    "archetype": "Charlas / Industria"
+   },
+   "Cine experimental": {
+    "emoji": "🌀",
+    "en": "Experimental Film",
+    "archetype": "Cortos / Programas"
+   },
+   "Actividad académica": {
+    "emoji": "💬",
+    "en": "Academic Activity",
+    "archetype": "Charlas / Industria"
+   },
+   "Muestra Oficial": {
+    "emoji": "🎬",
+    "en": "Official Showcase",
+    "archetype": "Muestra / País"
+   }
+  },
+  "sedes": {
+   "Perpetua Lab": [
+    "Perpetua Lab - Medellín",
+    ""
+   ],
+   "Bebop Bar": [
+    "Bebop Bar - Medellín",
+    ""
+   ],
+   "Donde Robin": [
+    "Donde Robin - Medellín",
+    ""
+   ],
+   "Librería Antimateria": [
+    "Librería Antimateria - Medellín",
+    ""
+   ]
+  },
+  "name": "Under Medellín",
+  "displayName": "Under Medellín",
+  "fullName": "XXII Festival Transterritorial de Cine Underground",
+  "shortName": "UNDER",
+  "tagline": "Festival Transterritorial de Cine Underground",
+  "city": "Medellín",
+  "country": "CO",
+  "dates": "25 NOV–3 DIC",
+  "dates_en": "NOV 25–DEC 3",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "under2026_",
+  "festivalStartStr": "2026-11-25T00:00:00",
+  "festivalEndStr": "2026-12-03T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre",
+  "dias_vacios": [
+   "2026-11-30"
+  ],
+  "seccion_default": "Muestra Oficial",
+  "_por_que_seccion_default": "Decisión de Juan (18 nov 2026): las funciones que el PDF y el reel no rotulan van en «Muestra Oficial». El festival no les da nombre; precedentes: Vartex «Muestra Local», Cinemancia «Proyecciones especiales». Nunca «Programación»."
+ }
+}

@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:cineautopsia-2026",
+  "fuente": "festival:cineautopsia-2026,under-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24"
  }
 }

@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:jardin-2026,vartex-2026",
+  "fuente": "festival:jardin-2026,miradas-2026,miradas-2026,vartex-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -18,7 +18,21 @@
   "regla": "pais-union"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (jardin-2026, miradas-2026)",
+  "fecha": "2026-11-23"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "el mismo still en los dos festivales",
+  "fecha": "2026-11-24"
  }
 }

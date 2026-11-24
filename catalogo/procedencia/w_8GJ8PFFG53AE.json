@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:guatape-2026",
+  "fuente": "festival:ficfusa-2026,guatape-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -12,11 +12,19 @@
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "tmdb:1478001",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1478001)",
+  "fecha": "2026-11-24"
  },
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23"
  }
 }

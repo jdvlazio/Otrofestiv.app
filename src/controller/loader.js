@@ -18,11 +18,11 @@ import { report } from '../telemetry.js';
 import { cargarDatosFestival } from './datos-fuente.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
 import { renderFestBar } from './festival.js';
-import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, _syncPmodeTabs } from './pipeline.js';
+import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, _syncPmodeTabs, diasVisibles, _syncDiasCiudad } from './pipeline.js';
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
-import { _djb2, explodeScreenings, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
+import { _djb2, explodeScreenings, expandVentanas, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
 import { state } from '../state/state.js';
 import { deriveClear, migrarTitulosAnteriores } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
@@ -114,7 +114,7 @@ export function _ingerirDatosFestival(id, cfg, data){
   // ── Explosión de screenings[] → objetos planos por función ──
   // Dueño: explodeScreenings (domain/film.js) — compartido con el oráculo
   // del planeador, que necesita ejercer el MISMO catálogo que producción.
-  const exploded=explodeScreenings(data.films);
+  const exploded=expandVentanas(explodeScreenings(data.films), data.dayKeys, data.dias_vacios); // dueño: domain/film.js
   // Duración automática para is_programa
   exploded.forEach(f=>{
     if(f.is_programa&&f.film_list&&f.film_list.length&&!f.duration){
@@ -167,7 +167,7 @@ export function _ingerirDatosFestival(id, cfg, data){
       // ese helper OCULTA la ciudad cuando coincide con la del festival — es
       // para mostrar, no para identificar.
       const _city=((data.venues||{})[f.venue]||{}).city||'';
-      const n=cfg.avisos.find(x=>
+      const n=cfg.avisos.find(x=>x.type==='info'?false: // informativo: no sella funciones (ni la Ficha)
         Array.isArray(x.cities)
           ? (!!_city && x.cities.includes(_city))
           : (x.title===f.title&&(!x.date||x.date===f.day)));
@@ -509,8 +509,7 @@ export async function loadFestival(id){
       // Separador visual entre TODO y días de fecha
       const todoSep=document.createElement('div');
       todoSep.style.cssText='width:1px;background:var(--bdr);margin:6px 0;flex-shrink:0';
-      _dt.appendChild(todoBtn);
-      _dt.appendChild(todoSep);
+      _dt.appendChild(todoBtn);_dt.appendChild(todoSep);
 
       cfg.days.forEach(day=>{
       const btn=document.createElement('button');
@@ -590,6 +589,7 @@ export async function loadFestival(id){
     activeDay=DAY_KEYS[_ni];
     programaSubMode='hoy'; // Durante el festival → ir directo a Hoy
   }
+  _syncDiasCiudad();   // ciudad recordada: la tira se recorta a sus días
   // Regla global inamovible: navegación por día específico → lista por defecto
   programaViewMode=activeDay==='all'?'grid':'list';
   // Update fest-bar
@@ -755,7 +755,7 @@ export function togglePressScreenings(){
     const _conPrensa = new Set(_vis.filter(f=>f.audience==='press').map(f=>f.day));
     if(_conPrensa.size && (programaViewMode!=='list' || activeDay==='all')){
       if(activeDay==='all' || !_conPrensa.has(activeDay)){
-        const _d = (cfg.dayKeys||[]).find(d=>_conPrensa.has(d));
+        const _d = diasVisibles().find(d=>_conPrensa.has(d));   // dentro de la ciudad elegida
         if(_d){
           activeDay = _d;
           document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on', t.dataset.day===_d));

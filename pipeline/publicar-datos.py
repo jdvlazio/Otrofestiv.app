@@ -4,10 +4,12 @@
 Uso:
   python3 pipeline/publicar-datos.py <festival>            # p. ej. bhff-2026
   python3 pipeline/publicar-datos.py <festival> --probar   # valida y muestra; no sube nada
+  python3 pipeline/publicar-datos.py <festival> --ensayo   # TODOS los guardianes hasta el final; lista todo lo que falta
   (--desde-main: solo lo usa el job «Datos al almacén» de GitHub, tras un merge a main)
 
 Qué hace, en orden (si un paso falla, no sigue). Los GUARDIANES son los mismos
 que protegen hoy un PR de datos — publicar aparte no se salta ninguno (Juan, 18 oct):
+  0. el catálogo de obras al día con los festivales (catalogo_construir.py --comprobar)
   1. guardianes (los tests de navegador leen el archivo LOCAL: en el servidor de
      pruebas la app no usa el almacén — datos-fuente.js, 19 oct 2026):
      a. scripts/validate-festivals.js <festival>   (forma del festival, segundos)
@@ -53,15 +55,31 @@ def git(*a, entrada=None):
     return r.stdout.decode().strip()
 
 
+# ── ENSAYO (20 nov 2026, lección del Under) ─────────────────────────────────
+# Con --ensayo cada guardián anota lo que falta y sigue, y al final se lista TODO
+# junto; no se sube nada. Sin --ensayo, el primero que falla corta, como siempre.
+# Los guardianes son los mismos: _parar solo decide cortar o anotar.
+_ENS = None
+
+
+def _parar(que, msg):
+    if _ENS is None:
+        sys.exit(msg)
+    print(msg)
+    _ENS.append(que)
+
+
 def _correr(nombre, cmd, tiempo=TIEMPO, cwd=None):
     t = time.time()
     try:
         r = subprocess.run(cmd, cwd=cwd or REPO, capture_output=True, text=True, timeout=tiempo)
     except subprocess.TimeoutExpired:
-        sys.exit(f'✗ {nombre}: pasó el tope de {tiempo} s — no se publica')
+        _parar(f'{nombre}: pasó el tope de {tiempo} s', f'✗ {nombre}: pasó el tope de {tiempo} s — no se publica')
+        return subprocess.CompletedProcess(cmd, 1, '', '')
     if r.returncode != 0:
         print((r.stdout or '')[-2500:], (r.stderr or '')[-1500:])
-        sys.exit(f'✗ {nombre} falló — no se publica')
+        _parar(nombre, f'✗ {nombre} falló — no se publica')
+        return r
     print(f'  ✓ {nombre} ({time.time() - t:.0f} s)')
     return r
 
@@ -78,13 +96,37 @@ def guardianes(fest, ruta, contenido):
     import fuentes_vivas
     _v = fuentes_vivas.frenar_si_vencidas(fest, f'python3 pipeline/correr.py {fest} --bajar')
     if _v:
-        sys.exit(_v)
+        _parar('fuentes vencidas', _v)
+    # 0·b2. lo cerrado y lo dejado fuera no entran (también si el JSON se tocó a mano)
+    import no_entra
+    _no = no_entra.revisar_festival(fest, json.loads(contenido).get('films', []))
+    if _no:
+        _parar('lo que no entra a la app', f'✗ esto no entra a la app ({fest}):\n  · ' + '\n  · '.join(_no))
+    # 0·c. el catálogo al día: es DERIVADO de todos los festivales. Si un cambio no
+    #      lo re-arma, el próximo --escribir arrastra 30 archivos ajenos (FICCALI
+    #      #1218/#1219, 21 oct 2026). Con la caché de TMDB no usa la red (~60 s)
+    r = _correr('catálogo al día', ['python3', 'pipeline/catalogo_construir.py', '--comprobar'], tiempo=300)
     # a. forma del festival
     _correr('validate-festivals', ['node', 'scripts/validate-festivals.js', fest])
     # b. validate.py completo: imprime «PUSH BLOQUEADO» y sale distinto de 0
-    r = _correr('validate.py', ['python3', 'validate.py'], tiempo=300)
-    if 'BLOQUEADO' in r.stdout:
-        print(r.stdout[-2500:]); sys.exit('✗ validate.py bloquea — no se publica')
+    if _ENS is None:
+        r = _correr('validate.py', ['python3', 'validate.py'], tiempo=300)
+        if 'BLOQUEADO' in r.stdout:
+            print(r.stdout[-2500:]); sys.exit('✗ validate.py bloquea — no se publica')
+    else:
+        # en el ensayo, cada chequeo rojo por su nombre: la lista completa de una vez
+        r = subprocess.run(['python3', 'validate.py'], cwd=REPO, capture_output=True, text=True, timeout=300)
+        rojos = [l.strip()[2:] for l in r.stdout.splitlines() if l.strip().startswith('✗ [')]
+        for x in rojos:
+            _ENS.append('validate.py ' + x[:220])
+        print(f'  {"✗" if rojos else "✓"} validate.py ({len(rojos)} rojo(s))')
+    # c'. en el ensayo, TODAS las compuertas de publicar.py (no solo la primera)
+    if _ENS is not None and os.path.exists(os.path.join(REPO, 'pipeline', f'{fest}.plan.json')):
+        sys.path.insert(0, os.path.join(REPO, 'pipeline'))
+        import importlib
+        _pub = importlib.import_module('publicar')
+        for x in _pub.publicar(fest, ensayo=True) or []:
+            _ENS.append('publicar.py: ' + x)
     # c. con pipeline: el archivo == lo que genera publicar.py (en una copia aparte)
     if os.path.exists(os.path.join(REPO, 'pipeline', f'{fest}.plan.json')):
         tmp = tempfile.mkdtemp(prefix='publicar-datos-')
@@ -113,12 +155,14 @@ def guardianes(fest, ruta, contenido):
             if regen == contenido:
                 print('  ✓ igual a lo que genera el pipeline')
             elif sucio:
-                sys.exit(f'✗ el pipeline tiene código SIN COMMITEAR ({", ".join(sucio[:4])}): la copia arma\n'
-                         f'  desde el último commit y no lo ve. Commiteá ese cambio y volvé a correr.')
+                _parar('código del pipeline sin commitear',
+                       f'✗ el pipeline tiene código SIN COMMITEAR ({", ".join(sucio[:4])}): la copia arma\n'
+                       f'  desde el último commit y no lo ve. Commiteá ese cambio y volvé a correr.')
             elif regen is not None and regen == en_main:
                 # el pipeline SÍ reproduce lo publicado y lo tuyo es distinto: edición a mano
-                sys.exit(f'✗ {ruta} NO es lo que genera el pipeline (¿editado a mano?).\n'
-                         f'  Corregilo aguas arriba y re-armá: python3 pipeline/correr.py {fest}')
+                _parar(f'{ruta} no es lo que genera el pipeline',
+                       f'✗ {ruta} NO es lo que genera el pipeline (¿editado a mano?).\n'
+                       f'  Corregilo aguas arriba y re-armá: python3 pipeline/correr.py {fest}')
             else:
                 # el pipeline YA no reproducía lo publicado en main antes de este cambio
                 # (13 festivales al 18 oct, hallazgo de Onboarding): se trata como legado.
@@ -147,6 +191,8 @@ def guardianes(fest, ruta, contenido):
         # Festival NUEVO, todavía sin config: la app no lo muestra. Sus tests corren
         # en el PR que suma su config (CI completo), con este mismo JSON.
         print(f'  ⚠ {cfg} todavía no está en la app (sin FESTIVAL_CONFIG): sus tests corren en el PR de su config')
+        if _ENS is not None:   # para un festival nuevo, eso es lo primero que falta
+            _ENS.append(f'falta {cfg} en FESTIVAL_CONFIG (python3 pipeline/alta-festival.py {fest})')
         return
     if re.search(r"group:\s*'test'", re.sub(r'//[^\n]*', '', m.group(1))):
         print(f'  ⚠ {cfg} es un festival oculto (group:\'test\'): sin tests de navegador, se omiten')
@@ -185,7 +231,9 @@ def _afiches_en_la_web(fest, d, esperar=0):
         return
     faltan_repo = [x for x in rutas if not os.path.isfile(os.path.join(REPO, x.lstrip('/')))]
     if faltan_repo:
-        sys.exit(f'✗ el JSON nombra {len(faltan_repo)} afiche(s) que no están en el repo: ' + ', '.join(faltan_repo[:5]))
+        _parar(f'afiches que no están en el repo ({len(faltan_repo)})',
+               f'✗ el JSON nombra {len(faltan_repo)} afiche(s) que no están en el repo: ' + ', '.join(faltan_repo[:5]))
+        return
     from concurrent.futures import ThreadPoolExecutor
     from urllib.parse import quote
     def _mal(x):
@@ -207,9 +255,35 @@ def _afiches_en_la_web(fest, d, esperar=0):
             break
         print(f'  · {len(malos)} afiche(s) todavía no están en la web; espero el deploy…'); time.sleep(30)
     if malos:
-        sys.exit(f'✗ {len(malos)} de {len(rutas)} afiche(s) que nombra el JSON NO están en la web todavía:\n    '
+        _parar(f'afiches que no están en la web ({len(malos)} de {len(rutas)})',
+               f'✗ {len(malos)} de {len(rutas)} afiche(s) que nombra el JSON NO están en la web todavía:\n    '
                  + '\n    '.join(malos[:6]) + '\n  Mergeá el PR de los afiches, esperá que la web se publique y volvé a correr.')
+        return
     print(f'  ✓ afiches en la web ({len(rutas)})')
+
+
+class Choque(Exception):
+    """Otra publicación movió la punta de `datos` entre nuestro commit y la
+    función (409) o durante el push. Se rehace el commit sobre la punta nueva."""
+
+
+REINTENTOS = 4
+
+
+def _publicar(archivos, mensaje, cuerpo):
+    """Commit a `datos` + llamada a la función, rehecho sobre la punta nueva si
+    otra corrida (el job de main o un publicar a mano) se cruzó. Cada intento
+    vuelve a bajar la punta, así que nunca pisa lo que publicó la otra."""
+    for intento in range(1, REINTENTOS + 1):
+        try:
+            sha = _commit_en_datos(archivos, mensaje)
+            return sha, _llamar({**cuerpo, 'sha': sha})
+        except Choque as e:
+            if intento == REINTENTOS:
+                sys.exit(f'✗ {e}: {REINTENTOS} intentos sin lograrlo')
+            espera = 10 * intento
+            print(f'· {e}; reintento {intento + 1}/{REINTENTOS} en {espera} s')
+            time.sleep(espera)
 
 
 def _commit_en_datos(archivos, mensaje):
@@ -243,7 +317,13 @@ def _commit_en_datos(archivos, mensaje):
         if os.path.exists(idx):
             os.remove(idx)
     sha = git('commit-tree', arbol, '-p', base, '-m', mensaje)
-    git('push', '-q', 'origin', f'{sha}:refs/heads/{RAMA}')
+    r = subprocess.run(['git', '-C', REPO, 'push', '-q', 'origin', f'{sha}:refs/heads/{RAMA}'],
+                       capture_output=True, timeout=TIEMPO)
+    if r.returncode != 0:
+        err = r.stderr.decode(errors='replace')
+        if re.search(r'non-fast-forward|fetch first|rejected', err):
+            raise Choque(f'la punta de {RAMA} se movió mientras empujaba')
+        sys.exit(f'✗ git push: {err.strip()[:300]}')
     print(f'✓ rama {RAMA} → {sha[:7]}')
     return sha
 
@@ -286,13 +366,17 @@ def _llamar(cuerpo):
         with urllib.request.urlopen(req, timeout=TIEMPO) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
-        sys.exit(f'✗ publicar-datos {e.code}: {e.read().decode()[:300]}')
+        cuerpo_err = e.read().decode(errors='replace')[:300]
+        if e.code in (409, 429, 502, 503, 504):   # la punta se movió, o un fallo pasajero del otro lado
+            raise Choque(f'la función respondió {e.code} ({cuerpo_err})')
+        sys.exit(f'✗ publicar-datos {e.code}: {cuerpo_err}')
+    except OSError as e:   # sin red, conexión cortada, tiempo agotado
+        raise Choque(f'la función no respondió ({e})')
 
 
 def interruptor(apagado):
-    sha = _commit_en_datos({'datos-control.json': json.dumps({'apagado': apagado}).encode()},
-                           f'datos: {"apagar" if apagado else "encender"} el almacén')
-    res = _llamar({'festival': '_control', 'sha': sha})
+    sha, res = _publicar({'datos-control.json': json.dumps({'apagado': apagado}).encode()},
+                         f'datos: {"apagar" if apagado else "encender"} el almacén', {'festival': '_control'})
     if not res.get('ok'):
         sys.exit(f'✗ {res}')
     print(f'✓ almacén {"APAGADO: la app lee la web" if res["apagado"] else "encendido"}')
@@ -317,6 +401,20 @@ def main():
     if not d.get('films'):
         sys.exit(f'✗ {ruta} no tiene films: no se publica un festival vacío')
 
+    if '--ensayo' in sys.argv:
+        global _ENS
+        _ENS = []
+        print(f'ENSAYO de {fest}: todos los guardianes, hasta el final; no se sube nada')
+        guardianes(fest, ruta, contenido)
+        _afiches_en_la_web(fest, d)
+        if _ENS:
+            print(f'\n✗ {fest}: {len(_ENS)} cosa(s) que frenarían la publicación:')
+            for x in _ENS:
+                print('   ·', x)
+            sys.exit(1)
+        print(f'\n✓ {fest}: el ensayo pasa, se puede publicar')
+        return
+
     # 1. GUARDIANES — los mismos de un PR de datos; si uno falla, no se publica.
     # --desde-main: solo el job «Datos al almacén» de GitHub, sobre lo que ya entró
     # a main con su CI requerido (los guardianes ya corrieron en el PR).
@@ -328,7 +426,7 @@ def main():
         guardianes(fest, ruta, contenido)
     # e. los afiches que nombra el JSON ya están en la web (en los dos modos: desde
     #    main se espera hasta 10 min al deploy de Pages del mismo merge)
-    _afiches_en_la_web(fest, d, esperar=600 if '--desde-main' in sys.argv else 0)
+    _afiches_en_la_web(fest, d, esperar=int(os.environ.get('OTF_ESPERA_AFICHES', 600)) if '--desde-main' in sys.argv else 0)
     huella = hashlib.sha256(contenido).hexdigest()
     print(f'✓ guardianes OK · {len(d["films"])} obras · {len(contenido):,} bytes · {huella[:12]}')
     if '--probar' in sys.argv:
@@ -340,17 +438,9 @@ def main():
     ficha = _ficha(fest)
     if '--desde-main' in sys.argv and ficha and not _tiene_ficha(fest):
         print('  · sin ficha en el almacén: entra a propósito con publicar-datos.py, no desde main'); ficha = {}
-    sha = _commit_en_datos({ruta: contenido, **ficha}, f'datos({fest}): publicar {huella[:12]}')
-
-    # 3. publicar
-    req = urllib.request.Request(FUNCION, data=json.dumps({'festival': fest, 'sha': sha,
-                                 'por': os.environ.get('OTF_POR') or git('config', 'user.name') or 'comando'}).encode(),
-                                 headers={'Content-Type': 'application/json'}, method='POST')
-    try:
-        with urllib.request.urlopen(req, timeout=TIEMPO) as r:
-            res = json.loads(r.read())
-    except urllib.error.HTTPError as e:
-        sys.exit(f'✗ publicar-datos {e.code}: {e.read().decode()[:300]}')
+    # 3. publicar (commit + función; si otra corrida se cruza, se rehace sobre la punta nueva)
+    sha, res = _publicar({ruta: contenido, **ficha}, f'datos({fest}): publicar {huella[:12]}',
+                         {'festival': fest, 'por': os.environ.get('OTF_POR') or git('config', 'user.name') or 'comando'})
     if not res.get('ok'):
         sys.exit(f'✗ publicar-datos: {res}')
 

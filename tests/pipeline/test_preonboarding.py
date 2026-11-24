@@ -43,6 +43,15 @@ class Pre(unittest.TestCase):
         self.assertEqual(P.comparar({'x': ['A']}, {}), ({'x': 1}, {}))
         self.assertEqual(P.comparar({'x': []}, {'x': 2}), ({}, {'x': 0}))
 
+    def test_cruce_dudoso_bloquea_hasta_decidirlo(self):
+        os.makedirs(os.path.join(self.r, 'festivals'), exist_ok=True)
+        self.w('festivals/y.json', {'films': [{'title': 'Co Madres', 'director': 'Ingryd Ríos Tamayo'}]})
+        self.w('festivals/staging/x-catalogo.json', {'obras': [{'titulo': 'Comadres', 'director': 'Ingryd Ríos T.'}]})
+        self.assertEqual([m[0] for m in P.medir_posibles(self.r)['x']], ['Comadres'])
+        self.w('festivals/staging/x-correcciones.json',
+               {'misma_obra': {'Comadres': {'festival': 'y', 'titulo': 'Co Madres', '_por_que': 'misma dirección'}}})
+        self.assertEqual(P.medir_posibles(self.r), {})
+
 
 if __name__ == '__main__':
     unittest.main()

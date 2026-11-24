@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-09-29"
+  "capturado": "2026-10-27"
  },
  "Comfama": {
   "n": 0,
@@ -10,7 +10,8 @@
   "_prec": "manual",
   "_match": "Google Maps «Comfama Girardota», Cra. 18 #5A-65",
   "_nota": "Un único resultado con el nombre del festival.",
-  "address": "Cra. 18 #5A-65"
+  "address": "Cra. 18 #5A-65",
+  "_matriz": "s_e8c35b78"
  },
  "Parque Principal": {
   "n": 0,
@@ -19,7 +20,8 @@
   "_prec": "manual",
   "_match": "Google Maps «Parque Principal Girardota», Cl. 6 #12-7",
   "_nota": "Un único resultado.",
-  "address": "Cl. 6 #12-7"
+  "address": "Cl. 6 #12-7",
+  "_matriz": "s_d831483f"
  },
  "Punto de Turismo": {
   "n": 0,
@@ -28,7 +30,8 @@
   "_prec": "manual",
   "_match": "Google Maps «Punto del café y turismo \"del campo Girardota\"», Cra. 16 #5-55",
   "_nota": "La lámina dice «Punto de Turismo». Es el «Punto de Turismo y Café» que el municipio inauguró el 7 nov 2025 con la renovación del Parque Principal (girardotainforma.com, 12 nov 2024; video de la inauguración). Queda a 15 m del pin del parque, que es donde debe estar.",
-  "address": "Cra. 16 #5-55"
+  "address": "Cra. 16 #5-55",
+  "_matriz": "s_55f3a489"
  },
  "Biblioteca Municipal Alberto Aguirre Ceballos": {
   "n": 0,
@@ -37,7 +40,8 @@
   "_prec": "manual",
   "_match": "Google Maps «Biblioteca Pública Municipal Girardota», Cra. 14 #9-16",
   "_nota": "Buscada por su nombre completo, Google devuelve una sola: la Biblioteca Pública Municipal. «Alberto Aguirre Ceballos» es el nombre propio de la biblioteca municipal de Girardota.",
-  "address": "Cra. 14 #9-16"
+  "address": "Cra. 14 #9-16",
+  "_matriz": "s_3eb4048f"
  },
  "I.E. San Andrés": {
   "n": 0,
@@ -46,7 +50,8 @@
   "_prec": "manual",
   "_match": "Google Maps «Institución Educativa San Andrés», Girardota",
   "_nota": "Un único resultado. Queda al norte del casco urbano, a unos 2,5 km del parque.",
-  "address": "Institución Educativa San Andrés"
+  "address": "Institución Educativa San Andrés",
+  "_matriz": "s_180f653f"
  },
  "Morning": {
   "n": 0,
@@ -55,7 +60,8 @@
   "_prec": "manual",
   "_match": "Google Maps «Morning Reggae Bar», Cra. 14 #5B-54",
   "_nota": "Un único resultado, a dos cuadras del parque; «Morning» aparece además entre los aliados en la lámina 5.",
-  "address": "Cra. 14 #5B-54"
+  "address": "Cra. 14 #5B-54",
+  "_matriz": "s_eb2718df"
  },
  "Escuela de Encenillos": {
   "n": 0,
@@ -64,7 +70,8 @@
   "_prec": "manual",
   "_match": "Google Maps «Escuela Encenillos», Girardota",
   "_nota": "Un único resultado: escuela rural de la vereda Encenillos, unos 3 km al oriente del casco urbano.",
-  "address": "Vereda Encenillos"
+  "address": "Vereda Encenillos",
+  "_matriz": "s_3aba7a01"
  },
  "Parque de la Poesía": {
   "n": 0,
@@ -73,7 +80,8 @@
   "_prec": "manual",
   "_match": "Google Maps «Parque de la Poesía», Calle 10C con Cra. 9A",
   "_nota": "Un único resultado.",
-  "address": "Cl. 10C con Cra. 9A"
+  "address": "Cl. 10C con Cra. 9A",
+  "_matriz": "s_20babab4"
  },
  "Palmas del Llano": {
   "n": 1,
@@ -81,6 +89,7 @@
   "lng": -75.4492673,
   "_prec": "manual",
   "address": "Calle Mall Palmas del Llano, Cl. 10A #16A",
-  "_nota": "El festival (a Juan, 29 sep): «Calle Mall Palmas del Llano, Calle 10A 16A, 051030»; el reel de @girardotaescultura (Dd4Nvlyo4ca) dice «¡El cine se toma el barrio Palmas del Llano!». Pin: Google Maps «Cl. 10a & Cra. 16a», Girardota; OSM tiene las dos calles ahí (junto a la Cra. 17, sector occidental del casco urbano). El pasaje no figura con nombre en ningún mapa."
+  "_nota": "El festival (a Juan, 29 sep): «Calle Mall Palmas del Llano, Calle 10A 16A, 051030»; el reel de @girardotaescultura (Dd4Nvlyo4ca) dice «¡El cine se toma el barrio Palmas del Llano!». Pin: Google Maps «Cl. 10a & Cra. 16a», Girardota; OSM tiene las dos calles ahí (junto a la Cra. 17, sector occidental del casco urbano). El pasaje no figura con nombre en ningún mapa.",
+  "_matriz": "s_756703ef"
  }
 }

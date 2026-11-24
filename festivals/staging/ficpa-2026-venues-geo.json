@@ -4,7 +4,8 @@
   "lng": -77.2766571,
   "_prec": "manual",
   "_match": "Google Maps: Biblioteca del Banco de la República (Pasto) (10 oct 2026)",
-  "n": 15
+  "n": 15,
+  "_matriz": "s_bc531678"
  },
  "Casa Páramo": {
   "n": 1,
@@ -13,7 +14,8 @@
   "lat": 1.2131613,
   "lng": -77.2784112,
   "_match": "Google Maps: Casa Páramo (10 oct 2026)",
-  "address": "Cra. 23 #17-85"
+  "address": "Cra. 23 #17-85",
+  "_matriz": "s_ad9e5f5a"
  },
  "Casa de la Cultura": {
   "n": 4,
@@ -21,7 +23,8 @@
   "_todo": "buscar a mano (sedes-html.py genera la página)",
   "lat": 1.2160418,
   "lng": -77.2786615,
-  "_match": "Google Maps: Casa de la Cultura (Pasto) (10 oct 2026)"
+  "_match": "Google Maps: Casa de la Cultura (Pasto) (10 oct 2026)",
+  "_matriz": "s_e605777d"
  },
  "Cinemas Valle de Atriz": {
   "n": 1,
@@ -30,7 +33,8 @@
   "lat": 1.2276955,
   "lng": -77.2859232,
   "_match": "Google Maps: Cinemas Valle De Atriz (10 oct 2026)",
-  "address": "C.C. Valle de Atriz, Av. Panamericana"
+  "address": "C.C. Valle de Atriz, Av. Panamericana",
+  "_matriz": "s_859077b8"
  },
  "Fundación Universitaria San Martín, Sede Mijitayo": {
   "n": 1,
@@ -38,7 +42,8 @@
   "_todo": "buscar a mano (sedes-html.py genera la página)",
   "lat": 1.2270611,
   "lng": -77.286592,
-  "_match": "Google Maps: Fundación Universitaria San Martín (Pasto) (10 oct 2026)"
+  "_match": "Google Maps: Fundación Universitaria San Martín (Pasto) (10 oct 2026)",
+  "_matriz": "s_6f96b935"
  },
  "Parque Principal de La Florida": {
   "n": 1,
@@ -47,7 +52,8 @@
   "lat": 1.2992226,
   "lng": -77.4064299,
   "_match": "Google Maps: Parque de Florida (10 oct 2026)",
-  "address": "Cra. 4 #3, La Florida"
+  "address": "Cra. 4 #3, La Florida",
+  "_matriz": "s_9edb6fc4"
  },
  "Parque Principal de Yacuanquer": {
   "n": 1,
@@ -55,14 +61,16 @@
   "_todo": "buscar a mano (sedes-html.py genera la página)",
   "lat": 1.114646,
   "lng": -77.4013722,
-  "_match": "Google Maps: parque principal de Yacuanquer (10 oct 2026)"
+  "_match": "Google Maps: parque principal de Yacuanquer (10 oct 2026)",
+  "_matriz": "s_aafb86e6"
  },
  "Salón Comunal El Rosario, Jamondino": {
   "lat": 1.1885147,
   "lng": -77.2622224,
   "_prec": "manual",
   "_match": "Nominatim «Salón comunal El Rosario, Carrera 14B Este», mismo barrio que Google Maps «Barrio el rosario» (10 oct 2026)",
-  "n": 1
+  "n": 1,
+  "_matriz": "s_68a263f4"
  },
  "Teatro Colombia": {
   "n": 11,
@@ -71,14 +79,16 @@
   "lat": 1.2115349,
   "lng": -77.278292,
   "_match": "Google Maps: Teatro Colombia (10 oct 2026)",
-  "address": "Cl. 17 #21A-51"
+  "address": "Cl. 17 #21A-51",
+  "_matriz": "s_76882a90"
  },
  "Universidad CESMAG": {
   "lat": 1.2090585,
   "lng": -77.2785053,
   "_prec": "manual",
   "_match": "Google Maps: Universidad CESMAG (10 oct 2026)",
-  "n": 4
+  "n": 4,
+  "_matriz": "s_55abdd71"
  },
  "Universidad Cooperativa de Colombia, Torobajo": {
   "n": 3,
@@ -87,7 +97,8 @@
   "lat": 1.2295096,
   "lng": -77.2899877,
   "_match": "Google Maps: UCC Campus Pasto (10 oct 2026)",
-  "address": "Calle 18 #47-150, Torobajo"
+  "address": "Calle 18 #47-150, Torobajo",
+  "_matriz": "s_d9b4f1c1"
  },
  "Universidad Mariana": {
   "lat": 1.2238916,
@@ -95,7 +106,8 @@
   "_prec": "manual",
   "_match": "Google Maps: Universidad Mariana (10 oct 2026)",
   "n": 4,
-  "address": "Cl 18 #34-104"
+  "address": "Cl 18 #34-104",
+  "_matriz": "s_dd9fc38c"
  },
  "Universidad de Nariño, Sede Torobajo": {
   "n": 3,
@@ -104,7 +116,8 @@
   "lat": 1.2310572,
   "lng": -77.2932987,
   "_match": "Google Maps: Universidad de Nariño - Sede Torobajo (10 oct 2026)",
-  "address": "Cl. 18 #47-154"
+  "address": "Cl. 18 #47-154",
+  "_matriz": "s_882ae757"
  },
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
@@ -115,7 +128,8 @@
   "lat": 1.358433,
   "lng": -77.2829544,
   "_prec": "manual",
-  "_match": "Google Maps (11 oct 2026): «Eco Parque Nuestra Señora de Fátima», la plaza frente a la Parroquia Nuestra Señora de Fátima (1.3588168,-77.2830696), centro de Chachagüí. La tarjeta de Animación (mié 14, 7:00 p. m.) dice «Chachagüí - Parque Central»."
+  "_match": "Google Maps (11 oct 2026): «Eco Parque Nuestra Señora de Fátima», la plaza frente a la Parroquia Nuestra Señora de Fátima (1.3588168,-77.2830696), centro de Chachagüí. La tarjeta de Animación (mié 14, 7:00 p. m.) dice «Chachagüí - Parque Central».",
+  "_matriz": "s_f52bd37d"
  },
  "Chachagüí": {
   "n": 0,

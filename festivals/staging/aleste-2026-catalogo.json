@@ -1,0 +1,585 @@
+{
+ "_provenance": {
+  "fuente": "MAMM (ciclo 9º Festival Al Este) + IG @aleste.colombia (3, 5 y 10 nov 2026)",
+  "capturado": "2026-11-24",
+  "url": "https://www.elmamm.org/cine/9o-festival-al-este/",
+  "metodo": "fichas del MAMM y láminas de IG leídas a ojo y por OCR"
+ },
+ "obras": [
+  {
+   "titulo": "The Souffleur",
+   "director": "Gastón Solnicki",
+   "anio": 2025,
+   "pais": "Argentina, Austria",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/the-souffleur/",
+    "date": "2026-11-12"
+   },
+   "duracion_min": 78,
+   "seccion": "Competencia Al Este"
+  },
+  {
+   "titulo": "Padre",
+   "director": "Tereza Nvotová",
+   "anio": 2025,
+   "pais": "Eslovaquia, República Checa, Polonia",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/padre/",
+    "date": "2026-11-12"
+   },
+   "duracion_min": 103,
+   "seccion": "Competencia Al Este"
+  },
+  {
+   "titulo": "1982",
+   "director": "Juan Carlos García",
+   "anio": 2025,
+   "pais": "Perú",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/1982/",
+    "date": "2026-11-12"
+   },
+   "duracion_min": 84,
+   "seccion": "Competencia Al Este"
+  },
+  {
+   "titulo": "Londres",
+   "director": "Sebastian Brameshuber",
+   "anio": 2026,
+   "pais": "Austria",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.elmamm.org/producto/londres/",
+    "date": "2026-11-12"
+   },
+   "duracion_min": 122,
+   "seccion": "Competencia Vidas Cruzadas"
+  },
+  {
+   "titulo": "La última ronda en Venecia",
+   "director": "Francesco Sossai",
+   "anio": 2025,
+   "pais": "Italia",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+    "date": "2026-11-12",
+    "lamina": "01.jpg"
+   },
+   "seccion": "Al Este Especial"
+  },
+  {
+   "titulo": "Gioia mia",
+   "director": "Margherita Spampinato",
+   "anio": 2025,
+   "pais": "Italia",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+    "date": "2026-11-12",
+    "lamina": "03.jpg"
+   },
+   "duracion_min": 90,
+   "seccion": "Al Este Especial"
+  },
+  {
+   "titulo": "Pucallpa la Europea",
+   "director": "Santi Zegarra",
+   "anio": 2025,
+   "pais": "Perú",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfSV6Z3lpE1/",
+    "date": "2026-11-12",
+    "lamina": "04.jpg"
+   },
+   "duracion_min": 105,
+   "seccion": "Al Este Especial"
+  },
+  {
+   "titulo": "Cenizas y diamantes",
+   "director": "Andrzej Wajda",
+   "anio": 1958,
+   "pais": "Polonia",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "lamina": "02.jpg"
+   },
+   "duracion_min": 97,
+   "seccion": "Fokus: Las grietas del muro"
+  },
+  {
+   "titulo": "Regreso de África",
+   "director": "Alain Tanner",
+   "anio": 1973,
+   "pais": "Suiza, Francia",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "lamina": "03.jpg"
+   },
+   "duracion_min": 108,
+   "seccion": "Fokus: Las grietas del muro"
+  },
+  {
+   "titulo": "La tierra prometida",
+   "director": "Andrzej Wajda",
+   "anio": 1974,
+   "pais": "Polonia",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "lamina": "04.jpg"
+   },
+   "duracion_min": 162,
+   "seccion": "Fokus: Las grietas del muro"
+  },
+  {
+   "titulo": "Los inocentes encantadores",
+   "director": "Andrzej Wajda",
+   "anio": 1960,
+   "pais": "Polonia",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfYe-5Slr8E/",
+    "date": "2026-11-12",
+    "lamina": "05.jpg"
+   },
+   "duracion_min": 83,
+   "seccion": "Fokus: Las grietas del muro"
+  },
+  {
+   "titulo": "Latido. El grafiti como arte, el grafiti como forma de vida.",
+   "director": "Juan Zapata",
+   "anio": 2026,
+   "pais": "Colombia",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfkttriN6pD/",
+    "date": "2026-11-12"
+   },
+   "titulos_anteriores": [
+    "Latidos: el grafiti como arte, el grafiti como forma de vida"
+   ],
+   "seccion": "Al Este Especial"
+  },
+  {
+   "titulo": "Shame and Money",
+   "director": "Visar Morina",
+   "anio": 2026,
+   "pais": "Alemania, Kosovo, Eslovenia, Albania, Macedonia del Norte, Bélgica",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "lamina": "01.jpg"
+   },
+   "duracion_min": 130,
+   "seccion": "Inauguración Bogotá"
+  },
+  {
+   "titulo": "Todas las canciones del mundo",
+   "director": "Santiago Flórez Rincón",
+   "anio": 2026,
+   "pais": "Colombia",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "lamina": "02.jpg"
+   },
+   "duracion_min": 85,
+   "seccion": "Competencia Al Este"
+  },
+  {
+   "titulo": "Histeria",
+   "director": "Mehmet Akif Büyükatalay",
+   "anio": 2025,
+   "pais": "Alemania",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.instagram.com/p/DfsHqtAlpmC/",
+    "date": "2026-11-12",
+    "lamina": "04.jpg"
+   },
+   "duracion_min": 104,
+   "seccion": "Competencia Al Este"
+  },
+  {
+   "titulo": "Aquí, en otros lugares",
+   "pais": "Bélgica, Armenia",
+   "duracion_min": 67,
+   "seccion": "Competencia Vidas Cruzadas",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/aquí-en-otros-lugares",
+    "date": "2026-11-16"
+   },
+   "director": "Comes Chahbazian",
+   "anio": 2026,
+   "titulo_original": "Ici, ailleurs"
+  },
+  {
+   "titulo": "Bright Future",
+   "pais": "Japón",
+   "duracion_min": 92,
+   "seccion": "Far East",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/bright-future",
+    "date": "2026-11-16"
+   },
+   "director": "Kiyoshi Kurosawa",
+   "anio": 2003,
+   "titulo_original": "Akarui mirai"
+  },
+  {
+   "titulo": "Ciudadano Havel",
+   "pais": "República Checa",
+   "duracion_min": 119,
+   "seccion": "Fokus: Las grietas del muro",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/ciudadano-havel",
+    "date": "2026-11-16"
+   },
+   "director": "Miroslav Janek, Pavel Koutecký",
+   "anio": 2008,
+   "titulo_original": "Občan Havel"
+  },
+  {
+   "titulo": "Cortometrajes de Altura",
+   "pais": "Bolivia",
+   "duracion_min": 41,
+   "seccion": "Kluk - Cine familiar",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/cortometrajes-de-altura",
+    "date": "2026-11-16"
+   },
+   "anio": 2008
+  },
+  {
+   "titulo": "Desde acá veo la tormenta",
+   "pais": "Colombia",
+   "duracion_min": 11,
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
+    "date": "2026-11-16"
+   },
+   "director": "Juan Felipe Restrepo"
+  },
+  {
+   "titulo": "Historias de una mentira",
+   "pais": "Grecia, Francia",
+   "duracion_min": 76,
+   "seccion": "Competencia Vidas Cruzadas",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/historias-de-una-mentira",
+    "date": "2026-11-16"
+   },
+   "director": "Olia Verriopoulou",
+   "anio": 2025,
+   "titulo_original": "Stories of a Lie"
+  },
+  {
+   "titulo": "Ino Moxo: El sueño del brujo",
+   "pais": "Perú, Colombia",
+   "duracion_min": 80,
+   "seccion": "Competencia Vidas Cruzadas",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/ino-moxo-el-sueño-del-brujo",
+    "date": "2026-11-16"
+   },
+   "director": "Rodolfo Arrascue",
+   "anio": 2024
+  },
+  {
+   "titulo": "Junio 25. Andréi Tarkovski, visita a su tumba",
+   "pais": "Colombia",
+   "duracion_min": 5,
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/junio-25.-andréi-tarkovski-visita-a-su-tumba",
+    "date": "2026-11-16"
+   },
+   "director": "Juan Camilo Moreno"
+  },
+  {
+   "titulo": "En la ciudad blanca",
+   "pais": "Suiza, Portugal",
+   "duracion_min": 108,
+   "seccion": "Fokus: Las grietas del muro",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/la-ciudad-blanca",
+    "date": "2026-11-16"
+   },
+   "director": "Alain Tanner",
+   "anio": 1983,
+   "titulo_original": "Dans la ville blanche"
+  },
+  {
+   "titulo": "La retirada",
+   "pais": "República Checa",
+   "duracion_min": 94,
+   "seccion": "Fokus: Las grietas del muro",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/la-retirada",
+    "date": "2026-11-16"
+   },
+   "director": "Václav Havel",
+   "anio": 2011,
+   "titulo_original": "Odcházení"
+  },
+  {
+   "titulo": "La salamandra",
+   "pais": "Suiza, Francia",
+   "duracion_min": 123,
+   "seccion": "Fokus: Las grietas del muro",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/la-salamandra",
+    "date": "2026-11-16"
+   },
+   "director": "Alain Tanner",
+   "anio": 1971,
+   "titulo_original": "La salamandre"
+  },
+  {
+   "titulo": "Labriego",
+   "pais": "Colombia, México",
+   "duracion_min": 85,
+   "seccion": "Competencia Vidas Cruzadas",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/labriego",
+    "date": "2026-11-16"
+   },
+   "director": "Carlos Matsuo",
+   "anio": 2026
+  },
+  {
+   "titulo": "Laguna",
+   "pais": "Lituania, Francia",
+   "duracion_min": 102,
+   "seccion": "Al Este Especial",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/laguna",
+    "date": "2026-11-16"
+   },
+   "director": "Šarūnas Bartas",
+   "anio": 2025,
+   "titulo_original": "Lagūna"
+  },
+  {
+   "titulo": "Las piedras del río",
+   "pais": "Colombia",
+   "duracion_min": 16,
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/las-piedras-del-río",
+    "date": "2026-11-16"
+   },
+   "director": "Edna Sierra"
+  },
+  {
+   "titulo": "Lejanía",
+   "pais": "Colombia",
+   "duracion_min": 17,
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/lejanía",
+    "date": "2026-11-16"
+   },
+   "director": "Daniel Velásquez Patarroyo"
+  },
+  {
+   "titulo": "License to Live",
+   "pais": "Japón",
+   "duracion_min": 109,
+   "seccion": "Far East",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/license-to-live",
+    "date": "2026-11-16"
+   },
+   "director": "Kiyoshi Kurosawa",
+   "anio": 1998,
+   "titulo_original": "Ningen gokaku"
+  },
+  {
+   "titulo": "Liminal",
+   "pais": "Colombia",
+   "duracion_min": 16,
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/liminal",
+    "date": "2026-11-16"
+   },
+   "director": "Gabriella Castelblanco"
+  },
+  {
+   "titulo": "Los golfos",
+   "pais": "España",
+   "duracion_min": 88,
+   "seccion": "Al Este Especial",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/los-golfos",
+    "date": "2026-11-16"
+   },
+   "director": "Carlos Saura",
+   "anio": 1960
+  },
+  {
+   "titulo": "Muchas, muchas gracias",
+   "pais": "Colombia",
+   "duracion_min": 20,
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/muchas-muchas-gracias",
+    "date": "2026-11-16"
+   },
+   "director": "Oiyi Kan"
+  },
+  {
+   "titulo": "Nadie a la vista",
+   "pais": "Georgia",
+   "duracion_min": 75,
+   "seccion": "Competencia Vidas Cruzadas",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/nadie-a-la-vista",
+    "date": "2026-11-16"
+   },
+   "director": "Kote Kalandadze",
+   "anio": 2025,
+   "titulo_original": "არავინ არ ჩანს (Aravin ar chans)"
+  },
+  {
+   "titulo": "Pulse",
+   "pais": "Japón",
+   "duracion_min": 118,
+   "seccion": "Far East",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/pulse",
+    "date": "2026-11-16"
+   },
+   "director": "Kiyoshi Kurosawa",
+   "anio": 2001,
+   "titulo_original": "Kairo"
+  },
+  {
+   "titulo": "Refracción",
+   "pais": "Colombia",
+   "duracion_min": 11,
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/refracción",
+    "date": "2026-11-16"
+   },
+   "director": "Isabella Palacio Mesa"
+  },
+  {
+   "titulo": "Retorno antes de las 3 p. m.",
+   "pais": "Francia",
+   "duracion_min": 74,
+   "seccion": "Clausura",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/retorno-antes-de-las-3-p.-m.",
+    "date": "2026-11-16"
+   },
+   "director": "Gaël Lepingle",
+   "anio": 2026,
+   "titulo_original": "Retour avant 3 p.m."
+  },
+  {
+   "titulo": "Sol de niebla",
+   "pais": "Colombia",
+   "duracion_min": 6,
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/sol-de-niebla",
+    "date": "2026-11-16"
+   },
+   "director": "María José Ibarra, Florentino Vargas"
+  },
+  {
+   "titulo": "The Megalomaniacs",
+   "pais": "Grecia, Chipre, Colombia",
+   "duracion_min": 105,
+   "seccion": "Al Este Especial",
+   "tipo": "largo",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/the-megalomaniacs",
+    "date": "2026-11-16"
+   },
+   "director": "Spiros Stathoulopoulos",
+   "anio": 2025,
+   "titulo_original": "Megalomani"
+  },
+  {
+   "titulo": "Todo lo que pasará mañana",
+   "pais": "Colombia",
+   "duracion_min": 15,
+   "seccion": "Competencia Hecho en Colombia",
+   "tipo": "corto",
+   "_src": {
+    "url": "https://www.alestfestival.com/programa2026/todo-lo-que-pasará-mañana",
+    "date": "2026-11-16"
+   },
+   "director": "Santiago Calle García"
+  },
+  {
+   "titulo": "Futuros luminosos",
+   "director": "Ismael García Ramírez",
+   "anio": 2026,
+   "pais": "Colombia",
+   "duracion_min": 25,
+   "tipo": "corto",
+   "seccion": "Competencia Hecho en Colombia",
+   "sinopsis": "En un lugar extraño y oscuro, un grupo variopinto de jóvenes imagina su futuro.",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4080?sede=11",
+    "date": "2026-11-23"
+   }
+  },
+  {
+   "titulo": "Transversal30FF",
+   "director": "Sergio Mejía",
+   "anio": 2025,
+   "pais": "Colombia",
+   "duracion_min": 6,
+   "tipo": "corto",
+   "seccion": "Competencia Hecho en Colombia",
+   "sinopsis": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4087?sede=11",
+    "date": "2026-11-23"
+   }
+  }
+ ]
+}

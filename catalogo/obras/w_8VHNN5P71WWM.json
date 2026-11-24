@@ -1,0 +1,43 @@
+{
+ "id": "w_8VHNN5P71WWM",
+ "titulo_original": "Regreso de África",
+ "anio": 1973,
+ "paises": [
+  "CH",
+  "FR"
+ ],
+ "directores": [
+  "Alain Tanner"
+ ],
+ "aliases": [
+  {
+   "titulo": "Return from Africa",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Una joven pareja suiza, Vincent y Françoise, planea abandonar Ginebra e instalarse en África: un amigo suyo que vive en Argelia les promete darles trabajo allí.",
+  "en": "A young Swiss couple, Vincent and Françoise, plan to leave Geneva and settle in Africa: a friend of theirs living in Algeria promises to give them a job there."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/aleste-2026/regreso-de-africa.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 134252,
+  "letterboxd": "return-from-africa"
+ },
+ "versiones": [
+  {
+   "etiqueta": "108 min",
+   "duracion_min": 108
+  }
+ ],
+ "presentaciones": [
+  "aleste-2026"
+ ]
+}

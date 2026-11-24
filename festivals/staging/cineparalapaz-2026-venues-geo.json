@@ -1,0 +1,50 @@
+{
+ "Universidad Central - Bogotá": {
+  "lat": 4.6059549,
+  "lng": -74.068697,
+  "_prec": "matriz",
+  "_matriz": "s_9d2019dc",
+  "_match": "almacén de sedes (maps)",
+  "address": "Cl. 22 #5-91"
+ },
+ "La Trocha · Casa de la Paz - Bogotá": {
+  "lat": 4.6248165,
+  "lng": -74.0679005,
+  "address": "Cra. 13 #36-37",
+  "_prec": "manual",
+  "_match": "Google Maps (16 nov 2026): https://www.google.com/maps/place/La+Trocha,+La+Casa+de+la+Paz/@4.6248165,-74.0679005,17z",
+  "_maps": "https://www.google.com/maps/place/La+Trocha,+La+Casa+de+la+Paz/@4.6248165,-74.0679005,17z",
+  "_matriz": "s_98bbb7e0"
+ },
+ "Lubianka - Bogotá": {
+  "lat": 4.627756,
+  "lng": -74.0763821,
+  "address": "Cl. 39 #25-13",
+  "_prec": "manual",
+  "_match": "Google Maps (16 nov 2026): https://www.google.com/maps/place/Lubianka+D.C+Laboratorio+de+memoria+y+paz+viva./@4.627756,-74.0763821,17z",
+  "_maps": "https://www.google.com/maps/place/Lubianka+D.C+Laboratorio+de+memoria+y+paz+viva./@4.627756,-74.0763821,17z",
+  "_matriz": "s_3704da4c"
+ },
+ "Centro Cultural La Tullpa - Bogotá": {
+  "lat": 4.7007378,
+  "lng": -74.100381,
+  "address": "Cra. 84 #77A-26, La Granja",
+  "_prec": "manual",
+  "_match": "Google Maps (16 nov 2026): https://www.google.com/maps/place/LA+TULLPA+-+Centro+Cultural/@4.7007378,-74.100381,17z",
+  "_maps": "https://www.google.com/maps/place/LA+TULLPA+-+Centro+Cultural/@4.7007378,-74.100381,17z",
+  "_matriz": "s_829df039"
+ },
+ "Alpamanda Peña Cultural - Bogotá": {
+  "lat": 4.6037739,
+  "lng": -74.0684617,
+  "address": "Cra. 4 #19-56, piso 3",
+  "_prec": "manual",
+  "_match": "Google Maps (16 nov 2026): https://www.google.com/maps/place/Pe%C3%B1a+Alpamanda+Bar/@4.6037739,-74.0684617,17z",
+  "_maps": "https://www.google.com/maps/place/Pe%C3%B1a+Alpamanda+Bar/@4.6037739,-74.0684617,17z",
+  "_matriz": "s_59792218"
+ },
+ "_provenance": {
+  "fuente": "almacén de sedes (sedes.py --resolver) + Google Maps, dirección de las láminas de DfzeOb2lq6q",
+  "capturado": "2026-11-16"
+ }
+}

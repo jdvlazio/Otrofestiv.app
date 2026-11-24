@@ -8,14 +8,18 @@
  "directores": [
   "Zacarías Flores del Campo"
  ],
- "generos": [
-  "Ficción"
- ],
+ "sinopsis": {
+  "es": "Un cortometraje sobre una llamada entre dos suicidas que detiene, por un instante, el salto al vacío.",
+  "en": "A short film about a phone call between two people on the verge of suicide that holds back, for an instant, the leap into the void."
+ },
  "afiche": {
-  "archivo": "/assets/siembrafest/noche-de-vuelo.jpg",
+  "archivo": "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1817231,
+  "letterboxd": "noche-de-vuelo"
+ },
  "versiones": [
   {
    "etiqueta": "19 min",
@@ -23,6 +27,7 @@
   }
  ],
  "presentaciones": [
-  "siembrafest-2026"
+  "siembrafest-2026",
+  "villadeleyvaiff-2026"
  ]
 }

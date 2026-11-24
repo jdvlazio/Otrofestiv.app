@@ -1,0 +1,5602 @@
+{
+ "_provenance": {
+  "fuente": "festivals/staging/*-venues-geo.json + decisiones humanas",
+  "construido_por": "pipeline/sedes.py --construir",
+  "regla": "mismo lugar: mismo nombre (o declarado) a <2000 m; divergencia: pines a >120 m; cerca: lugares a <40 m sin declarar"
+ },
+ "sedes": {
+  "s_03bcfa6f": {
+   "nombre": "Universidad Nacional · El Cable",
+   "lat": 5.0555625,
+   "lng": -75.4861875,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "salas": [
+    "Aula 007"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Universidad Nacional · El Cable"
+  },
+  "s_05f4d981": {
+   "nombre": "Madame Blue",
+   "lat": 3.4597979,
+   "lng": -76.5340988,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Avenida 9 Norte #15N-39, Granada",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Madame Blue"
+  },
+  "s_0655bb7b": {
+   "nombre": "Pontificia Universidad Javeriana",
+   "lat": 4.626481,
+   "lng": -74.0644571,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "anibia-2026-venues-geo.json"
+   },
+   "address": "Calle 40B # 5-37",
+   "alias": [],
+   "festivales": [
+    "anibia-2026",
+    "biff-2026"
+   ],
+   "salas": [
+    "Aula Múltiple",
+    "Ed. Gerardo Arango",
+    "Ed. Ático"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Pontificia Universidad Javeriana"
+  },
+  "s_0a4d1410": {
+   "nombre": "Bar Yenyeré",
+   "lat": 7.9884252,
+   "lng": -75.1950155,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fecibac-2026-venues-geo.json"
+   },
+   "alias": [
+    "Bar Yenyeré - Caucasia"
+   ],
+   "festivales": [
+    "fecibac-2026"
+   ],
+   "ciudad": "Caucasia",
+   "corto": "Bar Yenyeré"
+  },
+  "s_0b6dd1ff": {
+   "nombre": "Teatro Bolívar",
+   "lat": 2.4386267,
+   "lng": -76.6041451,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "popayan-2026-venues-geo.json"
+   },
+   "address": "Cl. 7 #3-105, Centro, Popayán",
+   "alias": [],
+   "festivales": [
+    "popayan-2026"
+   ],
+   "ciudad": "Popayán",
+   "corto": "Teatro Bolívar"
+  },
+  "s_0bdf6316": {
+   "nombre": "Hotel Plaza Mayor",
+   "lat": 5.634093,
+   "lng": -73.524086,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "villadelcine-2026-venues-geo.json"
+   },
+   "alias": [
+    "Hotel Plaza Mayor - Villa de Leyva"
+   ],
+   "festivales": [
+    "villadelcine-2026",
+    "villadeleyvaiff-2026"
+   ],
+   "ciudad": "Villa de Leyva",
+   "corto": "Hotel Plaza Mayor",
+   "address": "Villa de Leyva, Boyacá"
+  },
+  "s_0c358c4c": {
+   "nombre": "Casona Tierra Grata",
+   "lat": 4.3291611,
+   "lng": -74.3796067,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/HACIENDA+TIERRA+GRATA/@4.3291611,-74.3796067,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Fusagasugá, Cundinamarca",
+   "alias": [
+    "Casona Tierra Grata - Fusagasugá"
+   ],
+   "festivales": [
+    "ficfusa-2026"
+   ],
+   "ciudad": "Fusagasugá",
+   "corto": "Casona Tierra Grata"
+  },
+  "s_0ecc197a": {
+   "nombre": "Estación Trece de Noviembre",
+   "lat": 6.2454624,
+   "lng": -75.5441638,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Línea M Metrocable, Medellín",
+   "alias": [
+    "Estación Trece de Noviembre - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Estación Trece de Noviembre"
+  },
+  "s_104736cc": {
+   "nombre": "Expoferias",
+   "lat": 5.0416875,
+   "lng": -75.4753125,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 1957 m"
+  },
+  "s_1071539b": {
+   "nombre": "Alto Meléndez",
+   "lat": 3.3738372,
+   "lng": -76.5518993,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Sede comunal JAC Alto Meléndez, Carrera 94D #2-23, Comuna 18",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali"
+  },
+  "s_10f3578c": {
+   "nombre": "Hotel Obelisco",
+   "lat": 3.4506674,
+   "lng": -76.5442123,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Avenida Colombia #4 Oeste-49",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Hotel Obelisco"
+  },
+  "s_11433c3f": {
+   "nombre": "Universidad Nacional, Edificio 303 (NEA)",
+   "lat": 4.6370447,
+   "lng": -74.0816443,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "anibia-2026-venues-geo.json"
+   },
+   "address": "Av. Cra. 30 # 45-03",
+   "alias": [],
+   "festivales": [
+    "anibia-2026"
+   ],
+   "salas": [
+    "Bloque A, Aula Múltiple 105",
+    "Bloque C, Auditorio 422"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad Nacional, Edificio 303 (NEA)"
+  },
+  "s_11519c26": {
+   "nombre": "Parque Fundadores",
+   "lat": 5.0677356,
+   "lng": -75.5109384,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Parque+Fundadores/@5.0677356,-75.5109384,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Parque Fundadores"
+  },
+  "s_11667bea": {
+   "nombre": "CEFE Chapinero",
+   "lat": 4.6654518,
+   "lng": -74.0527949,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "anibia-2026-venues-geo.json"
+   },
+   "address": "Calle 82 # 10-69",
+   "alias": [
+    "Centro Felicidad Chapinero"
+   ],
+   "festivales": [
+    "anibia-2026",
+    "bhff-2026",
+    "biff-2026"
+   ],
+   "salas": [
+    "Teatro",
+    "Teatro Urbano, Piso -1"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Centro Felicidad Chapinero"
+  },
+  "s_11d2cb61": {
+   "nombre": "Teatro La Unión",
+   "lat": 3.4124011,
+   "lng": -76.5124279,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 41H #38-80, Unión de Vivienda Popular (Comuna 16)",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Teatro La Unión"
+  },
+  "s_12238873": {
+   "nombre": "Parque Principal de Marinilla",
+   "lat": 6.1736597,
+   "lng": -75.334636,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "filcmar-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "filcmar-2026"
+   ],
+   "ciudad": "Marinilla",
+   "corto": "Parque Principal de Marinilla"
+  },
+  "s_125e80c3": {
+   "nombre": "Hotel Miracruz",
+   "lat": 4.6117939,
+   "lng": -76.0793798,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinetoro-2026-venues-geo.json"
+   },
+   "alias": [
+    "Hotel Miracruz - Toro"
+   ],
+   "festivales": [
+    "cinetoro-2026"
+   ],
+   "ciudad": "Toro",
+   "corto": "Hotel Miracruz"
+  },
+  "s_12ebb5ae": {
+   "nombre": "Centro Cultural y Educativo Fundación Diego Echavarría Misas",
+   "lat": 6.1724116,
+   "lng": -75.6116231,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Fundación+Diego+Echavarría+Misas+Centro+Cultural+Educativo/@6.1724116,-75.6116231,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 48 # 51–34, Itagüí, Antioquia",
+   "alias": [
+    "Centro Cultural y Educativo Fundación Diego Echavarría Misas - Itagüí",
+    "Centro Cultural y Educativo Fundación Diego Echavarría Misas Itagüí"
+   ],
+   "festivales": [
+    "cinemancia-2026"
+   ],
+   "ciudad": "Itagüí"
+  },
+  "s_1311c9f4": {
+   "nombre": "Centro de Memoria, Paz y Reconciliación",
+   "lat": 4.6193117,
+   "lng": -74.0761362,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Cra. 19B #24-86",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "salas": [
+    "Auditorio"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Centro de Memoria, Paz y Reconciliación"
+  },
+  "s_1347d668": {
+   "nombre": "Comfama San Ignacio",
+   "lat": 6.2458698,
+   "lng": -75.5639884,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Claustro Comfama San Ignacio, Cra. 44 #48-18",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "salas": [
+    "La Capilla",
+    "Mediateca"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Comfama San Ignacio"
+  },
+  "s_148dd95b": {
+   "nombre": "Calimateca",
+   "lat": 3.4866219,
+   "lng": -76.5036238,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Bosque Urbano El Sendero Calima, Carrera 9 Norte #67-03, Calima (Comuna 4)",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali"
+  },
+  "s_15ec15df": {
+   "nombre": "SENA Salomia",
+   "lat": 3.4678756,
+   "lng": -76.4998164,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 2 #52-396 / Calle 52, El Sena (Comuna 5)",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "SENA Salomia"
+  },
+  "s_16c02a2e": {
+   "nombre": "La Fábrica de Cultura",
+   "lat": 10.988688,
+   "lng": -74.7806353,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficica-2026-venues-geo.json"
+   },
+   "address": "Calle 40 con Carrera 50",
+   "alias": [],
+   "festivales": [
+    "ficica-2026",
+    "ficidi-2026"
+   ],
+   "salas": [
+    "Auditorio Luis G. Henao",
+    "Auditorio Luis Guillermo Henao"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "La Fábrica de Cultura"
+  },
+  "s_17a71d8b": {
+   "nombre": "Cinemateca de Bogotá",
+   "lat": 4.6031614,
+   "lng": -74.0676717,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cinemateca+de+Bogotá/@4.6031614,-74.0676717,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 3 #19-10, Bogotá",
+   "alias": [
+    "Cinemateca de Bogotá - Bogotá"
+   ],
+   "festivales": [
+    "aleste-2026",
+    "anibia-2026",
+    "bhff-2026",
+    "biff-2026",
+    "cuaff-2026",
+    "midbo-2026",
+    "narrarelfuturo-2026"
+   ],
+   "salas": [
+    "Calle Museo",
+    "Lab 1",
+    "Laboratorio 1",
+    "Sala 2",
+    "Sala 3",
+    "Sala Capital",
+    "Sala E",
+    "Taller de Creación Audiovisual",
+    "Taller de la Imagen"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Cinemateca de Bogotá"
+  },
+  "s_180f653f": {
+   "nombre": "I.E. San Andrés",
+   "lat": 6.3992839,
+   "lng": -75.440165,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "girardota-2026-venues-geo.json"
+   },
+   "address": "Institución Educativa San Andrés",
+   "alias": [],
+   "festivales": [
+    "girardota-2026"
+   ],
+   "ciudad": "Girardota",
+   "corto": "I.E. San Andrés"
+  },
+  "s_18443fd2": {
+   "nombre": "Curador",
+   "lat": 3.4533284,
+   "lng": -76.5325066,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Calle 12 #1-18, San Pedro",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Curador"
+  },
+  "s_19daa131": {
+   "nombre": "Uniamazonia Sede Centro",
+   "lat": 1.6068188,
+   "lng": -75.6062179,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mambe-2026-venues-geo.json"
+   },
+   "alias": [
+    "Uniamazonia (Centro Idema) · Edificio Yapura - Sala 17, piso 7",
+    "Uniamazonia (Centro Idema) · Juan XXIII - Auditorio Callicebus",
+    "Uniamazonia (Centro Idema) · Juan XXIII - Edificio Yapura - Sala 17 Piso 7",
+    "Uniamazonia (Centro Idema) · Juan XXIII-Edificio Yapura Aula 15, piso 2",
+    "Uniamazonia Sede Centro - Florencia"
+   ],
+   "festivales": [
+    "mambe-2026"
+   ],
+   "salas": [
+    "Auditorio Callicebus",
+    "Edificio Yapura - Aula 15, piso 2",
+    "Edificio Yapura - Sala 17, piso 7"
+   ],
+   "ciudad": "Florencia",
+   "corto": "Uniamazonia Sede Centro"
+  },
+  "s_1b1244a2": {
+   "nombre": "I.E San Antonio",
+   "lat": 5.6004441,
+   "lng": -75.8197326,
+   "evidencia": {
+    "nivel": "nominatim",
+    "fuente": "jardin-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "jardin-2026"
+   ],
+   "ciudad": "Jardín"
+  },
+  "s_1b7d9bf0": {
+   "nombre": "Cámara de Comercio de Bogotá",
+   "lat": 4.6516095,
+   "lng": -74.0594602,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "biff-2026-venues-geo.json"
+   },
+   "address": "Cl. 67 #8-32",
+   "alias": [
+    "Cámara de Comercio de Bogotá - Sede Chapinero"
+   ],
+   "festivales": [
+    "biff-2026"
+   ],
+   "salas": [
+    "Auditorio principal",
+    "Salón 303",
+    "Salón 307/308"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Cámara de Comercio de Bogotá"
+  },
+  "s_1be38f20": {
+   "nombre": "Alianza Francesa",
+   "lat": 4.6026422,
+   "lng": -74.0686512,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Cra. 3 #18-45",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "salas": [
+    "Sede Centro"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Alianza Francesa"
+  },
+  "s_1d891113": {
+   "nombre": "I.E. Sede La Piedra",
+   "lat": 6.2230449,
+   "lng": -75.1769317,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "I.E. Sede La Piedra - Guatapé",
+    "IE Sede la Piedra"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "I.E. Sede La Piedra"
+  },
+  "s_1e0b7f79": {
+   "nombre": "BlackGround",
+   "lat": 3.4359135,
+   "lng": -76.5432882,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Calle 3 #26-112, Miraflores",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "BlackGround"
+  },
+  "s_1e670050": {
+   "nombre": "Centro de Desarrollo Cultural de Moravia",
+   "lat": 6.2764212,
+   "lng": -75.5645804,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cl. 82A #52-25",
+   "alias": [
+    "Centro de Desarrollo Cultural de Moravia - Medellín"
+   ],
+   "festivales": [
+    "fantasmagoria-2026",
+    "miradas-2026"
+   ],
+   "salas": [
+    "Auditorio"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Centro de Desarrollo Cultural de Moravia"
+  },
+  "s_1ee22222": {
+   "nombre": "Bosques del Norte",
+   "lat": 5.0829919,
+   "lng": -75.4892998,
+   "evidencia": {
+    "nivel": "nominatim",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 112 m"
+  },
+  "s_1f206eab": {
+   "nombre": "Parque de Cristo Rey",
+   "lat": 6.2072961,
+   "lng": -75.5864532,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Cra. 52 #16a-33, Cristo Rey (Guayabal), Medellín",
+   "alias": [
+    "Parque de Cristo Rey - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Parque de Cristo Rey"
+  },
+  "s_1f59d368": {
+   "nombre": "Bulevar del Río",
+   "lat": 3.4526661,
+   "lng": -76.5347844,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Bulevar de la Avenida Colombia, centro",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "salas": [
+    "Auditorio Celsia",
+    "Carpa GEUP",
+    "Carpa de la Red de Bibliotecas Públicas de Cali"
+   ],
+   "ciudad": "Cali",
+   "corto": "Bulevar del Río"
+  },
+  "s_20a122a7": {
+   "nombre": "Terko",
+   "lat": 6.3473919,
+   "lng": -75.5060442,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Terko+Bar/@6.3473919,-75.5060442,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 50 # 47–21, Copacabana, Antioquia",
+   "alias": [
+    "Terko - Copacabana",
+    "Terko Copacabana"
+   ],
+   "festivales": [
+    "cinemancia-2026"
+   ],
+   "ciudad": "Copacabana",
+   "corto": "Terko"
+  },
+  "s_20babab4": {
+   "nombre": "Parque de la Poesía",
+   "lat": 6.3705599,
+   "lng": -75.444781,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "girardota-2026-venues-geo.json"
+   },
+   "address": "Cl. 10C con Cra. 9A",
+   "alias": [],
+   "festivales": [
+    "girardota-2026"
+   ],
+   "ciudad": "Girardota",
+   "corto": "Parque de la Poesía"
+  },
+  "s_20f5d939": {
+   "nombre": "Teatrino Proyecto Oriente",
+   "lat": 3.450566,
+   "lng": -76.510646,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Calle 34 #10-115, piso 2, El Troncal (Comuna 8)",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026",
+    "semanacine-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Teatrino Proyecto Oriente"
+  },
+  "s_213dce05": {
+   "nombre": "El Carmen",
+   "lat": 5.0601441,
+   "lng": -75.5191322,
+   "evidencia": {
+    "nivel": "nominatim",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "El Carmen"
+  },
+  "s_2263f2e4": {
+   "nombre": "Instituto Cultural Alexander von Humboldt",
+   "lat": 6.2281458,
+   "lng": -75.6022406,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Calle 27 # 81-17, Belén",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Instituto Cultural Alexander von Humboldt"
+  },
+  "s_23554cca": {
+   "nombre": "Museo del Zócalo",
+   "lat": 6.2331095,
+   "lng": -75.1618162,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Museo del Zócalo - Guatapé"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Museo del Zócalo"
+  },
+  "s_23e9dece": {
+   "nombre": "La Grieta",
+   "lat": 6.2556968,
+   "lng": -75.5985767,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "ciudad": "Medellín"
+  },
+  "s_25caf24a": {
+   "nombre": "Comfama La Capilla",
+   "lat": 6.2458698,
+   "lng": -75.5639884,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Claustro Comfama San Ignacio, Cra. 44 #48-18 (2.º piso)",
+   "alias": [
+    "Capilla, Comfama",
+    "Comfama La Capilla - Medellín",
+    "La Capilla del Claustro Comfama",
+    "La Capilla del Claustro Comfama - Medellín",
+    "La Capilla del Claustro Comfama Medellín"
+   ],
+   "festivales": [
+    "cinemancia-2026",
+    "mamut-2026",
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Capilla, Comfama"
+  },
+  "s_2635c36c": {
+   "nombre": "Universidad Nacional",
+   "lat": 6.2615936,
+   "lng": -75.577683,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Universidad Nacional, sede Medellín (Cra. 65 #59A-110)",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "salas": [
+    "Auditorio Gerardo Molina",
+    "Jardín Bloque 41",
+    "Plazoleta de la Luz"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Universidad Nacional"
+  },
+  "s_26861d1b": {
+   "nombre": "Real Fábrica",
+   "lat": 5.6332892,
+   "lng": -73.5222502,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "villadeleyvaiff-2026-venues-geo.json"
+   },
+   "address": "Cl. 13 #8-51, Villa de Leyva, Boyacá",
+   "alias": [
+    "Real Fábrica - Villa de Leyva"
+   ],
+   "festivales": [
+    "villadeleyvaiff-2026"
+   ],
+   "salas": [
+    "Sala Blanca",
+    "Sala Rosada"
+   ],
+   "ciudad": "Villa de Leyva",
+   "corto": "Real Fábrica"
+  },
+  "s_274fbe5a": {
+   "nombre": "Universidad del Magdalena",
+   "lat": 11.2262461,
+   "lng": -74.1873608,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Carrera 32 #22-08",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "ciudad": "Santa Marta",
+   "_ciudad_fijada": "Nominatim reverso"
+  },
+  "s_298b07a2": {
+   "nombre": "Co.Laboratorio",
+   "lat": 4.6215012,
+   "lng": -74.0724229,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "bhff-2026-venues-geo.json"
+   },
+   "address": "Cra. 17 #32A-34, Teusaquillo",
+   "alias": [],
+   "festivales": [
+    "bhff-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Co.Laboratorio"
+  },
+  "s_2b8a4bc3": {
+   "nombre": "Teatro Mayor Julio Mario Santo Domingo",
+   "lat": 4.756718,
+   "lng": -74.0626669,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "biff-2026-venues-geo.json"
+   },
+   "address": "Cl. 170 #67-51",
+   "alias": [],
+   "festivales": [
+    "biff-2026"
+   ],
+   "salas": [
+    "Teatro Estudio"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Teatro Mayor Julio Mario Santo Domingo"
+  },
+  "s_2c759e7a": {
+   "nombre": "La Enea Cisco",
+   "lat": 5.0326256,
+   "lng": -75.4658771,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cisco+La+Enea/@5.0326256,-75.4658771,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "Nominatim reverso"
+  },
+  "s_2e88d79d": {
+   "nombre": "Parque Ernesto Gutiérrez",
+   "lat": 5.0683125,
+   "lng": -75.5121875,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Parque Ernesto Gutiérrez"
+  },
+  "s_2f75a36e": {
+   "nombre": "ITM",
+   "lat": 6.2575625,
+   "lng": -75.6019375,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinemancia-2026-venues-geo.json"
+   },
+   "address": "Calle 47A # 85–20, Medellín, Antioquia",
+   "alias": [
+    "ITM - Facultad de Artes y Humanidades - Medellín",
+    "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín"
+   ],
+   "festivales": [
+    "cinemancia-2026"
+   ],
+   "salas": [
+    "Sede La Floresta"
+   ],
+   "ciudad": "Medellín",
+   "corto": "ITM"
+  },
+  "s_2f9c41f8": {
+   "nombre": "Donde Robin",
+   "lat": 6.2496084,
+   "lng": -75.5619183,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cra.+43+%2353-51/@6.2496084,-75.5619183,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 43 #53-51, Parque del Periodista",
+   "alias": [
+    "Donde Robin - Medellín"
+   ],
+   "festivales": [
+    "under-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Donde Robin"
+  },
+  "s_30a5d6b9": {
+   "nombre": "Potocine",
+   "lat": 4.5687992,
+   "lng": -74.1710843,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Cl. 81 Sur #42A-81",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Potocine"
+  },
+  "s_324d7230": {
+   "nombre": "La Mecánica",
+   "lat": 4.6559406,
+   "lng": -74.0722361,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Cra. 25 #63f-21",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "La Mecánica"
+  },
+  "s_3327940f": {
+   "nombre": "Biblioteca Pública La Paz",
+   "lat": 3.5202094,
+   "lng": -76.5698722,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Corregimiento La Paz, junto a la Caseta Comunal",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali"
+  },
+  "s_33ad881a": {
+   "nombre": "Teatro Cuesta",
+   "lat": 5.4203371,
+   "lng": -75.7035394,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "festicinerio-2026-venues-geo.json"
+   },
+   "address": "Cra. 7 #6-13 a 6-101, Riosucio, Caldas",
+   "alias": [
+    "Teatro Cuesta - Riosucio"
+   ],
+   "festivales": [
+    "festicinerio-2026"
+   ],
+   "ciudad": "Riosucio",
+   "corto": "Teatro Cuesta"
+  },
+  "s_34124cb5": {
+   "nombre": "Casa de la Música",
+   "lat": 6.2677102,
+   "lng": -75.5662198,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Calle 71 # 52-30, Aranjuez, Medellín",
+   "alias": [
+    "Casa de la Música - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Casa de la Música"
+  },
+  "s_34d4a9cf": {
+   "nombre": "Teatro los Fundadores",
+   "lat": 5.0680516,
+   "lng": -75.5103473,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+Cultural+y+de+Convenciones+Teatro+los+Fundadores/@5.0680516,-75.5103473,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "salas": [
+    "Sala Olimpia"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Teatro los Fundadores"
+  },
+  "s_36b34e66": {
+   "nombre": "Cine fest",
+   "lat": 5.0416875,
+   "lng": -75.4753125,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 1957 m"
+  },
+  "s_3704da4c": {
+   "nombre": "Lubianka",
+   "lat": 4.627756,
+   "lng": -74.0763821,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Lubianka+D.C+Laboratorio+de+memoria+y+paz+viva./@4.627756,-74.0763821,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cl. 39 #25-13",
+   "alias": [
+    "Lubianka - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Lubianka"
+  },
+  "s_384e68d5": {
+   "nombre": "Universidad de Caldas",
+   "lat": 5.0559375,
+   "lng": -75.4929375,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "salas": [
+    "Sala Roberto Vélez Correa"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Universidad de Caldas"
+  },
+  "s_39a0cbb2": {
+   "nombre": "Escuela Vereda El Placer",
+   "lat": 6.2253627,
+   "lng": -75.490772,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Vereda El Placer, Corregimiento Santa Elena, Medellín",
+   "alias": [
+    "Escuela Vereda El Placer - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Escuela Vereda El Placer"
+  },
+  "s_39dd7973": {
+   "nombre": "Cinema Los Ángeles",
+   "lat": 4.3404799,
+   "lng": -74.3609009,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cinema+Los+Ángeles/@4.3404799,-74.3609009,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 5 #11-25, Fusagasugá, Cundinamarca",
+   "alias": [
+    "Cinema Los Ángeles - Fusagasugá"
+   ],
+   "festivales": [
+    "ficfusa-2026"
+   ],
+   "ciudad": "Fusagasugá",
+   "corto": "Cinema Los Ángeles"
+  },
+  "s_3aba7a01": {
+   "nombre": "Escuela de Encenillos",
+   "lat": 6.3769207,
+   "lng": -75.4178509,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "girardota-2026-venues-geo.json"
+   },
+   "address": "Vereda Encenillos",
+   "alias": [],
+   "festivales": [
+    "girardota-2026"
+   ],
+   "ciudad": "Girardota",
+   "corto": "Escuela de Encenillos"
+  },
+  "s_3c28b8d0": {
+   "nombre": "Secretaría de la Mujer y Equidad de Género",
+   "lat": 5.0678125,
+   "lng": -75.5199375,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 446 m"
+  },
+  "s_3d933a6f": {
+   "nombre": "Escuela Jahel Peláez Montoya",
+   "lat": 5.5980302,
+   "lng": -75.8171352,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "jardin-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "jardin-2026"
+   ],
+   "ciudad": "Jardín",
+   "corto": "Escuela Jahel Peláez Montoya"
+  },
+  "s_3e183821": {
+   "nombre": "Lab UNAL",
+   "lat": 6.260449,
+   "lng": -75.5794182,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mamut-2026-venues-geo.json"
+   },
+   "address": "Universidad Nacional de Colombia, sede Medellín",
+   "alias": [],
+   "festivales": [
+    "mamut-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Lab UNAL"
+  },
+  "s_3eb4048f": {
+   "nombre": "Biblioteca Municipal Alberto Aguirre Ceballos",
+   "lat": 6.3761472,
+   "lng": -75.4460794,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "girardota-2026-venues-geo.json"
+   },
+   "address": "Cra. 14 #9-16",
+   "alias": [],
+   "festivales": [
+    "girardota-2026"
+   ],
+   "ciudad": "Girardota",
+   "corto": "Biblioteca Municipal Alberto Aguirre Ceballos"
+  },
+  "s_3f4bf26a": {
+   "nombre": "Tecnocentro Cultural Somos Pacífico",
+   "lat": 3.4100014,
+   "lng": -76.4710246,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 28B #121B-55, Manuela Beltrán (Potrero Grande)",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Tecnocentro Cultural Somos Pacífico"
+  },
+  "s_401a944e": {
+   "nombre": "Institución Educativa La Independencia",
+   "lat": 6.253025,
+   "lng": -75.624726,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Calle 39D # 112-81, San Javier, Medellín",
+   "alias": [
+    "Institución Educativa La Independencia (calle 39D # 112-81, San Javier)",
+    "Institución Educativa La Independencia - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Institución Educativa La Independencia"
+  },
+  "s_42f35085": {
+   "nombre": "Teatro Pablo Tobón Uribe",
+   "lat": 6.2475553,
+   "lng": -75.5593819,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Cra. 40 #51-24, La Candelaria, Medellín",
+   "alias": [
+    "Teatro Pablo Tobón Uribe - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Teatro Pablo Tobón Uribe"
+  },
+  "s_439272df": {
+   "nombre": "1811 Gelatería",
+   "lat": 6.2327157,
+   "lng": -75.1610147,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "1811 Gelatería - Guatapé",
+    "Casa 18 Gastro Bar"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "1811 Gelatería"
+  },
+  "s_46bfcf2a": {
+   "nombre": "Auditorio principal Campus El Cable",
+   "lat": 5.0555625,
+   "lng": -75.4861875,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [
+    "Auditorio principal Campus El Cable - Universidad Nacional de Colombia"
+   ],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 0 m"
+  },
+  "s_46c0ae50": {
+   "nombre": "Rogelio Salmona",
+   "lat": 5.0546641,
+   "lng": -75.491575,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+Cultural+Universitario+Rogelio+Salmona/@5.0546641,-75.491575,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 210 m"
+  },
+  "s_49d684d9": {
+   "nombre": "Placa deportiva Simón Bolívar",
+   "lat": 5.6016033,
+   "lng": -75.8220115,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "jardin-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "jardin-2026"
+   ],
+   "ciudad": "Jardín",
+   "corto": "Placa deportiva Simón Bolívar"
+  },
+  "s_49da25fa": {
+   "nombre": "Persona",
+   "lat": 6.2433426,
+   "lng": -75.5633771,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mamut-2026-venues-geo.json"
+   },
+   "address": "Cra. 42 #46-46",
+   "alias": [],
+   "festivales": [
+    "mamut-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Persona"
+  },
+  "s_4a79ccdf": {
+   "nombre": "Teatro Comfama Alfonso Restrepo Moreno",
+   "lat": 6.2456661,
+   "lng": -75.5644862,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Teatro+Comfama+Alfonso+Restrepo+Moreno/@6.2456661,-75.5644862,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 48 # 43–87, Medellín, Antioquia",
+   "alias": [
+    "Teatro Comfama Alfonso Restrepo Moreno - Medellín",
+    "Teatro Comfama Alfonso Restrepo Moreno Medellín"
+   ],
+   "festivales": [
+    "cinemancia-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Teatro Comfama Alfonso Restrepo Moreno"
+  },
+  "s_4bf2bfa4": {
+   "nombre": "Teatro UVA Tricentenario",
+   "lat": 6.2935852,
+   "lng": -75.5666907,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Tricentenario, Medellín",
+   "alias": [
+    "Teatro UVA Tricentenario - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Teatro UVA Tricentenario"
+  },
+  "s_4cb9c1c2": {
+   "nombre": "I.E. Juan Bautista La Salle",
+   "lat": 1.6134841,
+   "lng": -75.6157586,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mambe-2026-venues-geo.json"
+   },
+   "alias": [
+    "Filmemoria · I.E Juan Bautisya La Salle",
+    "I.E. Juan Bautista La Salle - Florencia"
+   ],
+   "festivales": [
+    "mambe-2026"
+   ],
+   "ciudad": "Florencia",
+   "corto": "I.E. Juan Bautista La Salle"
+  },
+  "s_4ea5f87b": {
+   "nombre": "Casa de la Juventud",
+   "lat": 6.2344925,
+   "lng": -75.1613676,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "address": "Cl. 31 #30-08",
+   "alias": [
+    "Casa de la Juventud - Guatapé"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Casa de la Juventud"
+  },
+  "s_4f01e23d": {
+   "nombre": "Comfama Aranjuez",
+   "lat": 6.2832593,
+   "lng": -75.5620435,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Carrera 51A # 91-95, Aranjuez, Medellín",
+   "alias": [
+    "Comfama Aranjuez - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "salas": [
+    "Auditorio"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Comfama Aranjuez"
+  },
+  "s_526f7636": {
+   "nombre": "Universidad de Antioquia",
+   "lat": 6.2464191,
+   "lng": -75.564178,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Cra. 44 #48-72",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "ciudad": "Medellín",
+   "_ciudad_fijada": "lugar vecino del almacén a 0 m"
+  },
+  "s_54536669": {
+   "nombre": "Por definir",
+   "lat": 4.6089432,
+   "lng": -76.0823845,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinetoro-2026-venues-geo.json"
+   },
+   "alias": [
+    "Por definir - Toro"
+   ],
+   "festivales": [
+    "cinetoro-2026"
+   ],
+   "ciudad": "Toro",
+   "corto": "Por definir"
+  },
+  "s_54dc6bb5": {
+   "nombre": "City U",
+   "lat": 4.6032278,
+   "lng": -74.0672082,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "biff-2026-venues-geo.json"
+   },
+   "address": "Cl. 19 #2A-10",
+   "alias": [],
+   "festivales": [
+    "biff-2026"
+   ],
+   "salas": [
+    "Plazoleta principal"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "City U"
+  },
+  "s_554ab71f": {
+   "nombre": "Plaza de mercado",
+   "lat": 7.9886985,
+   "lng": -75.1936034,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fecibac-2026-venues-geo.json"
+   },
+   "alias": [
+    "Plaza de mercado - Caucasia"
+   ],
+   "festivales": [
+    "fecibac-2026"
+   ],
+   "ciudad": "Caucasia",
+   "corto": "Plaza de mercado"
+  },
+  "s_55abdd71": {
+   "nombre": "Universidad CESMAG",
+   "lat": 1.2090585,
+   "lng": -77.2785053,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "salas": [
+    "Auditorio Santa Clara",
+    "Salón de Teatro"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Universidad CESMAG"
+  },
+  "s_55f3a489": {
+   "nombre": "Punto de Turismo",
+   "lat": 6.3777171,
+   "lng": -75.4462385,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "girardota-2026-venues-geo.json"
+   },
+   "address": "Cra. 16 #5-55",
+   "alias": [],
+   "festivales": [
+    "girardota-2026"
+   ],
+   "ciudad": "Girardota",
+   "corto": "Punto de Turismo"
+  },
+  "s_57b40373": {
+   "nombre": "Clandestino Records",
+   "lat": 5.0701875,
+   "lng": -75.5166875,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Clandestino Records"
+  },
+  "s_59792218": {
+   "nombre": "Alpamanda Peña Cultural",
+   "lat": 4.6037739,
+   "lng": -74.0684617,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Pe%C3%B1a+Alpamanda+Bar/@4.6037739,-74.0684617,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 4 #19-56, piso 3",
+   "alias": [
+    "Alpamanda Peña Cultural - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Alpamanda Peña Cultural"
+  },
+  "s_5c62c6c3": {
+   "nombre": "Teatro Caribe",
+   "lat": 6.1728223,
+   "lng": -75.6074503,
+   "evidencia": {
+    "nivel": "maps",
+    "fuente": "itagui-2026-venues-geo.json"
+   },
+   "alias": [
+    "Teatro Caribe - Itagüí",
+    "Teatro Caribe Itagüí"
+   ],
+   "festivales": [
+    "cinemancia-2026",
+    "itagui-2026"
+   ],
+   "ciudad": "Itagüí",
+   "corto": "Teatro Caribe",
+   "address": "Carrera 50 # 52–77, Itagüí, Antioquia"
+  },
+  "s_5ce71f2b": {
+   "nombre": "Centro Ático, Universidad Javeriana",
+   "lat": 4.6269751,
+   "lng": -74.0650621,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Cl. 40b #6-23",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Centro Ático, Universidad Javeriana"
+  },
+  "s_5d1ff362": {
+   "nombre": "Universidad del Atlántico, sede Norte",
+   "lat": 11.0191881,
+   "lng": -74.8731999,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficica-2026-venues-geo.json"
+   },
+   "address": "Ciudadela Universitaria, Puerto Colombia",
+   "alias": [],
+   "festivales": [
+    "ficica-2026"
+   ],
+   "salas": [
+    "Teatrino 2"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Universidad del Atlántico, sede Norte"
+  },
+  "s_5f0c609d": {
+   "nombre": "Auditorio Cultural Diego Echavarría Misas",
+   "lat": 6.1722992,
+   "lng": -75.6109414,
+   "evidencia": {
+    "nivel": "maps",
+    "fuente": "itagui-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "itagui-2026"
+   ],
+   "ciudad": "Itagüí",
+   "corto": "Auditorio Cultural Diego Echavarría Misas"
+  },
+  "s_5f50f1dc": {
+   "nombre": "Universidad Simón Bolívar, sede 1",
+   "lat": 10.9944069,
+   "lng": -74.7919365,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficidi-2026-venues-geo.json"
+   },
+   "address": "Carrera 59 #59-132",
+   "alias": [],
+   "festivales": [
+    "ficidi-2026"
+   ],
+   "salas": [
+    "Salón del Mirador de la Bandera (azotea)"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Universidad Simón Bolívar, sede 1"
+  },
+  "s_61310bc4": {
+   "nombre": "Universidad Autónoma de Occidente",
+   "lat": 3.3537129,
+   "lng": -76.5227039,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cortoscali-2026-venues-geo.json"
+   },
+   "alias": [
+    "Auditorio Xepia UAO",
+    "Universidad Autónoma de Occidente - Cali"
+   ],
+   "festivales": [
+    "cortoscali-2026",
+    "ficcali-2026"
+   ],
+   "salas": [
+    "Auditorio Xepia"
+   ],
+   "ciudad": "Cali",
+   "corto": "Universidad Autónoma de Occidente",
+   "address": "Calle 25 #115-85, km 2 vía Cali–Jamundí"
+  },
+  "s_6183659b": {
+   "nombre": "Aduana de Barranquilla",
+   "lat": 10.9883467,
+   "lng": -74.7789565,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficidi-2026-venues-geo.json"
+   },
+   "address": "Vía 40 #36-135",
+   "alias": [],
+   "festivales": [
+    "ficidi-2026"
+   ],
+   "salas": [
+    "Sala CIMU"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Aduana de Barranquilla"
+  },
+  "s_626a169c": {
+   "nombre": "Café Pletórico",
+   "lat": 6.2935942,
+   "lng": -75.5750755,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Castilla, Medellín",
+   "alias": [
+    "Café Pletórico - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Café Pletórico"
+  },
+  "s_63acec57": {
+   "nombre": "Inspección de Policía Santuario",
+   "lat": 1.654916,
+   "lng": -75.6145,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mambe-2026-venues-geo.json"
+   },
+   "alias": [
+    "Inspección de Policía Santuario - Florencia",
+    "Santuario (inspección de policía)"
+   ],
+   "festivales": [
+    "mambe-2026"
+   ],
+   "ciudad": "Florencia",
+   "corto": "Inspección de Policía Santuario"
+  },
+  "s_643e6771": {
+   "nombre": "Cineprox Mayorca",
+   "lat": 6.1605495,
+   "lng": -75.6041269,
+   "evidencia": {
+    "nivel": "maps",
+    "fuente": "itagui-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "itagui-2026"
+   ],
+   "ciudad": "Itagüí",
+   "corto": "Cineprox Mayorca"
+  },
+  "s_65941893": {
+   "nombre": "Casa Libre",
+   "lat": 6.2429133,
+   "lng": -75.5951382,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cra. 78A #38-74, Laureles",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Casa Libre"
+  },
+  "s_66915e12": {
+   "nombre": "Casa Municipal de la Cultura",
+   "lat": 6.0925082,
+   "lng": -75.6352338,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casa+de+la+Cultura/@6.0925082,-75.6352338,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 49 # 128 Sur–40, Caldas, Antioquia",
+   "alias": [
+    "Casa Municipal de la Cultura - Caldas",
+    "Casa Municipal de la Cultura de Caldas Caldas"
+   ],
+   "festivales": [
+    "cinemancia-2026"
+   ],
+   "ciudad": "Caldas",
+   "corto": "Casa Municipal de la Cultura"
+  },
+  "s_67c78bba": {
+   "nombre": "Comfama Otraparte",
+   "lat": 6.1795206,
+   "lng": -75.5836212,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cl. 27 Sur #43A-51, Envigado",
+   "alias": [
+    "Comfama Otraparte - Medellín"
+   ],
+   "festivales": [
+    "fantasmagoria-2026",
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Comfama Otraparte"
+  },
+  "s_67e7a9bd": {
+   "nombre": "Bebop Bar",
+   "lat": 6.264047,
+   "lng": -75.567918,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/bebop+bar/@6.264047,-75.567918,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 55 #65-87, piso 3",
+   "alias": [
+    "Bebop Bar - Medellín"
+   ],
+   "festivales": [
+    "under-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Bebop Bar"
+  },
+  "s_67f4ce21": {
+   "nombre": "Quinta Balmoral",
+   "lat": 4.3342262,
+   "lng": -74.3682666,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casona,+Quinta+de+Balmoral/@4.3342262,-74.3682666,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Transversal 12 #18b-54, Fusagasugá",
+   "alias": [
+    "Quinta Balmoral - Fusagasugá"
+   ],
+   "festivales": [
+    "ficfusa-2026"
+   ],
+   "ciudad": "Fusagasugá",
+   "corto": "Quinta Balmoral"
+  },
+  "s_68138fbc": {
+   "nombre": "Cancha de Bengala",
+   "lat": 5.0820625,
+   "lng": -75.4896875,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Cancha de Bengala"
+  },
+  "s_68a263f4": {
+   "nombre": "Salón Comunal El Rosario, Jamondino",
+   "lat": 1.1885147,
+   "lng": -77.2622224,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Salón Comunal El Rosario, Jamondino"
+  },
+  "s_6a28357a": {
+   "nombre": "Biblioteca SENA",
+   "lat": 1.6211754,
+   "lng": -75.6120795,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mambe-2026-venues-geo.json"
+   },
+   "alias": [
+    "Biblioteca SENA - Florencia"
+   ],
+   "festivales": [
+    "mambe-2026"
+   ],
+   "ciudad": "Florencia",
+   "corto": "Biblioteca SENA"
+  },
+  "s_6a3d6ea4": {
+   "nombre": "Parque de los Deseos",
+   "lat": 6.2684353,
+   "lng": -75.5660855,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cl. 71, Aranjuez",
+   "alias": [
+    "Parque de los Deseos - Medellín"
+   ],
+   "festivales": [
+    "fantasmagoria-2026",
+    "miradas-2026"
+   ],
+   "salas": [
+    "Cinemateca móvil",
+    "Cinemateca móvil, galería",
+    "Cinemateca móvil, laboratorio",
+    "Cinemateca móvil, sala de cine",
+    "Plazoleta"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Parque de los Deseos",
+   "salas_alias": {
+    "Cinemateca móvil, Laboratorio": "Cinemateca móvil, laboratorio"
+   }
+  },
+  "s_6badfe99": {
+   "nombre": "Colombo",
+   "lat": 5.0587768,
+   "lng": -75.4895553,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+Colombo+Americano/@5.0587768,-75.4895553,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 135 m"
+  },
+  "s_6bb19ae3": {
+   "nombre": "Casa San Pedro Campestre",
+   "lat": 5.630645,
+   "lng": -73.5367607,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "villadelcine-2026-venues-geo.json"
+   },
+   "alias": [
+    "Casa San Pedro Campestre - Villa de Leyva",
+    "San Pedro Campestre"
+   ],
+   "festivales": [
+    "villadelcine-2026"
+   ],
+   "ciudad": "Villa de Leyva",
+   "corto": "Casa San Pedro Campestre"
+  },
+  "s_6bdaa2bc": {
+   "nombre": "Parque Educativo El Zócalo",
+   "lat": 6.232024,
+   "lng": -75.1580099,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Parque Educativo El Zócalo - Guatapé",
+    "Parque Educativo el zócalo"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Parque Educativo El Zócalo"
+  },
+  "s_6c6c37df": {
+   "nombre": "Nueva Villa de Aburrá",
+   "lat": 6.2353651,
+   "lng": -75.6018571,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cra. 80A #32B-26, Belén, Medellín",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Nueva Villa de Aburrá"
+  },
+  "s_6cbcf2c5": {
+   "nombre": "JAC Santa Cruz parte alta",
+   "lat": 6.2925953,
+   "lng": -75.5500455,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Barrio Santa Cruz, comuna 2, Medellín",
+   "alias": [
+    "JAC Santa Cruz parte alta - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "JAC Santa Cruz parte alta"
+  },
+  "s_6ee94d4a": {
+   "nombre": "Casa 32",
+   "lat": 4.6203473,
+   "lng": -74.0734075,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "bhff-2026-venues-geo.json"
+   },
+   "address": "Av. Calle 32 #17-61, Teusaquillo",
+   "alias": [],
+   "festivales": [
+    "bhff-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa 32"
+  },
+  "s_6f855f0a": {
+   "nombre": "Camping La Espacial",
+   "lat": 6.2088875,
+   "lng": -75.163474,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Camping La Espacial - Guatapé",
+    "Zona de camping La Espacial"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Camping La Espacial"
+  },
+  "s_6f96b935": {
+   "nombre": "Fundación Universitaria San Martín, Sede Mijitayo",
+   "lat": 1.2270611,
+   "lng": -77.286592,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Fundación Universitaria San Martín, Sede Mijitayo"
+  },
+  "s_7050e38f": {
+   "nombre": "Teatro Municipal Enrique Buenaventura",
+   "lat": 3.4494433,
+   "lng": -76.5359075,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 5 #6-64, centro",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "salas": [
+    "Teatrino"
+   ],
+   "ciudad": "Cali",
+   "corto": "Teatro Municipal Enrique Buenaventura"
+  },
+  "s_71565dd9": {
+   "nombre": "Casa Campesina",
+   "lat": 1.6497377,
+   "lng": -75.611525,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mambe-2026-venues-geo.json"
+   },
+   "alias": [
+    "Casa Campesina - Florencia"
+   ],
+   "festivales": [
+    "mambe-2026"
+   ],
+   "ciudad": "Florencia",
+   "corto": "Casa Campesina"
+  },
+  "s_72770c6f": {
+   "nombre": "Biblioteca Comfama Caldas",
+   "lat": 6.0923196,
+   "lng": -75.6355277,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Calle 129 Sur # 49-24, Caldas, Antioquia",
+   "alias": [
+    "Biblioteca Comfama Caldas - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Biblioteca Comfama Caldas"
+  },
+  "s_72e761e5": {
+   "nombre": "Finca La Manuela",
+   "lat": 6.2351704,
+   "lng": -75.2215165,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Finca La Manuela - Guatapé"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Finca La Manuela"
+  },
+  "s_74e18f6b": {
+   "nombre": "I.E. Luis Carlos Galán",
+   "lat": 6.1739842,
+   "lng": -75.6288117,
+   "evidencia": {
+    "nivel": "maps",
+    "fuente": "itagui-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "itagui-2026"
+   ],
+   "ciudad": "Itagüí",
+   "corto": "I.E. Luis Carlos Galán"
+  },
+  "s_756703ef": {
+   "nombre": "Palmas del Llano",
+   "lat": 6.3756709,
+   "lng": -75.4492673,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "girardota-2026-venues-geo.json"
+   },
+   "address": "Calle Mall Palmas del Llano, Cl. 10A #16A",
+   "alias": [],
+   "festivales": [
+    "girardota-2026"
+   ],
+   "ciudad": "Girardota",
+   "corto": "Palmas del Llano"
+  },
+  "s_7585ad81": {
+   "nombre": "Auditorio Juan Hurtado",
+   "lat": 5.0568793,
+   "lng": -75.4913791,
+   "evidencia": {
+    "nivel": "nominatim",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [
+    "Auditorio Juan Hurtado - Universidad Nacional"
+   ],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 202 m"
+  },
+  "s_76882a90": {
+   "nombre": "Teatro Colombia",
+   "lat": 1.2115349,
+   "lng": -77.278292,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "address": "Cl. 17 #21A-51",
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Teatro Colombia"
+  },
+  "s_7715f7c0": {
+   "nombre": "Casa Taller Sirirí",
+   "lat": 2.4869714,
+   "lng": -76.5677516,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "popayan-2026-venues-geo.json"
+   },
+   "address": "Cra. 16 #67N-65, Popayán",
+   "alias": [],
+   "festivales": [
+    "popayan-2026"
+   ],
+   "ciudad": "Popayán",
+   "corto": "Casa Taller Sirirí"
+  },
+  "s_7826af67": {
+   "nombre": "Parque Las Flores",
+   "lat": 11.0386208,
+   "lng": -74.8284037,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficica-2026-venues-geo.json"
+   },
+   "address": "Barrio Las Flores",
+   "alias": [],
+   "festivales": [
+    "ficica-2026"
+   ],
+   "salas": [
+    "Cancha de básquet"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Parque Las Flores"
+  },
+  "s_78a3e599": {
+   "nombre": "Espectra",
+   "lat": 3.4483475,
+   "lng": -76.5400415,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Calle 2 #4-66, San Antonio",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Espectra"
+  },
+  "s_797f44ee": {
+   "nombre": "Samaria",
+   "lat": 5.078985,
+   "lng": -75.486459,
+   "evidencia": {
+    "nivel": "nominatim",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Samaria"
+  },
+  "s_7a47fbd2": {
+   "nombre": "ESAP",
+   "lat": 4.3281048,
+   "lng": -74.3629276,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Escuela+Superior+De+Administración+Pública+-+ESAP/@4.3281048,-74.3629276,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Escuela Superior de Administración Pública, Fusagasugá",
+   "alias": [
+    "ESAP - Fusagasugá"
+   ],
+   "festivales": [
+    "ficfusa-2026"
+   ],
+   "ciudad": "Fusagasugá",
+   "corto": "ESAP"
+  },
+  "s_7a6a2db7": {
+   "nombre": "Cámara de Comercio",
+   "lat": 7.9888277,
+   "lng": -75.2001708,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fecibac-2026-venues-geo.json"
+   },
+   "alias": [
+    "Cámara de Comercio - Caucasia"
+   ],
+   "festivales": [
+    "fecibac-2026"
+   ],
+   "salas": [
+    "Auditorio"
+   ],
+   "ciudad": "Caucasia",
+   "corto": "Cámara de Comercio"
+  },
+  "s_7aa97950": {
+   "nombre": "Planetario de Medellín",
+   "lat": 6.269143,
+   "lng": -75.5659499,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cra. 52 #71-117",
+   "alias": [
+    "Planetario de Medellín - Medellín"
+   ],
+   "festivales": [
+    "fantasmagoria-2026",
+    "miradas-2026"
+   ],
+   "salas": [
+    "Auditorio",
+    "Domo"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Planetario de Medellín"
+  },
+  "s_7b8b1c0e": {
+   "nombre": "Ciudad Pacífica",
+   "lat": 3.3452691,
+   "lng": -76.5210844,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Ciudad Pacífica, El Hormiguero (sur de Cali)",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali"
+  },
+  "s_7dac69ba": {
+   "nombre": "UdeA Campus Caucasia",
+   "lat": 7.9918236,
+   "lng": -75.2014378,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fecibac-2026-venues-geo.json"
+   },
+   "address": "Cl. 28 #201, Caucasia",
+   "alias": [
+    "Plazoleta UdeA",
+    "UdeA Campus Caucasia - Caucasia"
+   ],
+   "festivales": [
+    "fecibac-2026"
+   ],
+   "salas": [
+    "Plazoleta central"
+   ],
+   "ciudad": "Caucasia",
+   "corto": "UdeA Campus Caucasia"
+  },
+  "s_7ecef455": {
+   "nombre": "Facultad de Artes Unicauca",
+   "lat": 2.4429541,
+   "lng": -76.6055212,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "popayan-2026-venues-geo.json"
+   },
+   "address": "Cra. 6 #3-14, Centro, Popayán",
+   "alias": [],
+   "festivales": [
+    "popayan-2026"
+   ],
+   "salas": [
+    "Auditorio Maya"
+   ],
+   "ciudad": "Popayán",
+   "corto": "Facultad de Artes Unicauca"
+  },
+  "s_808cba64": {
+   "nombre": "Universidad Jorge Tadeo Lozano",
+   "lat": 4.606567,
+   "lng": -74.067801,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "biff-2026-venues-geo.json"
+   },
+   "address": "Cra. 4 #22-61",
+   "alias": [
+    "Universidad Jorge Tadeo Lozano - Bogotá"
+   ],
+   "festivales": [
+    "biff-2026",
+    "midbo-2026",
+    "narrarelfuturo-2026"
+   ],
+   "campus": {
+    "radio_m": 250,
+    "por_que": "campus de la Cra. 4 con Cl. 22: BIFF Aula Máxima, MIDBO Edificio de Posgrados (M16), Narrar el Futuro Salón Oval; cada uno verificado en su festival"
+   },
+   "salas": [
+    "Aula Magistral 703 - M16 (piso 7), Edificio de Posgrados",
+    "Aula Magistral 704-M16",
+    "Aula Máxima",
+    "Hemiciclo",
+    "Sala Oval"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad Jorge Tadeo Lozano"
+  },
+  "s_80902cf9": {
+   "nombre": "Candela Café Bar",
+   "lat": 1.6313624,
+   "lng": -75.6038036,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mambe-2026-venues-geo.json"
+   },
+   "alias": [
+    "Candela Café Bar - Florencia"
+   ],
+   "festivales": [
+    "mambe-2026"
+   ],
+   "ciudad": "Florencia",
+   "corto": "Candela Café Bar"
+  },
+  "s_80974dfb": {
+   "nombre": "Coliseo Corregimiento de San Francisco",
+   "lat": 4.681899,
+   "lng": -76.0345245,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinetoro-2026-venues-geo.json"
+   },
+   "alias": [
+    "Coliseo Corregimiento de San Francisco - Toro"
+   ],
+   "festivales": [
+    "cinetoro-2026"
+   ],
+   "ciudad": "Toro",
+   "corto": "Coliseo Corregimiento de San Francisco"
+  },
+  "s_81709587": {
+   "nombre": "Gimnasio Moderno",
+   "lat": 4.6589052,
+   "lng": -74.0554918,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mubibogota-2026-venues-geo.json"
+   },
+   "address": "Cra. 9 #74-99, Bogotá",
+   "alias": [],
+   "festivales": [
+    "mubibogota-2026"
+   ],
+   "salas": [
+    "Al aire libre",
+    "Auditorio"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Gimnasio Moderno"
+  },
+  "s_826e6831": {
+   "nombre": "Teatro Municipal de Jardín",
+   "lat": 5.6002973,
+   "lng": -75.8187937,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Teatro+Municipal+de+Jardín/@5.6002973,-75.8187937,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "jardin-2026"
+   ],
+   "salas": [
+    "Café Tinta y Tinto, piso 2"
+   ],
+   "ciudad": "Jardín",
+   "corto": "Teatro Municipal de Jardín"
+  },
+  "s_829df039": {
+   "nombre": "Centro Cultural La Tullpa",
+   "lat": 4.7007378,
+   "lng": -74.100381,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/LA+TULLPA+-+Centro+Cultural/@4.7007378,-74.100381,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 84 #77A-26, La Granja",
+   "alias": [
+    "Centro Cultural La Tullpa - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Centro Cultural La Tullpa"
+  },
+  "s_830a426d": {
+   "nombre": "Universidad del Norte",
+   "lat": 11.0193206,
+   "lng": -74.8504426,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficica-2026-venues-geo.json"
+   },
+   "address": "Km 5, vía Puerto Colombia",
+   "alias": [],
+   "festivales": [
+    "ficica-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Universidad del Norte"
+  },
+  "s_85744479": {
+   "nombre": "Teatro La Concha",
+   "lat": 3.4457545,
+   "lng": -76.537896,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Calle 4 #10-48, San Antonio",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Teatro La Concha"
+  },
+  "s_859077b8": {
+   "nombre": "Cinemas Valle de Atriz",
+   "lat": 1.2276955,
+   "lng": -77.2859232,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "address": "C.C. Valle de Atriz, Av. Panamericana",
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "salas": [
+    "Sala 2"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Cinemas Valle de Atriz"
+  },
+  "s_85e5255e": {
+   "nombre": "Claustro de San Francisco",
+   "lat": 5.6305425,
+   "lng": -73.5241643,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "villadeleyvaiff-2026-venues-geo.json"
+   },
+   "address": "Villa de Leyva, Boyacá",
+   "alias": [
+    "Claustro de San Francisco - Villa de Leyva"
+   ],
+   "festivales": [
+    "villadeleyvaiff-2026"
+   ],
+   "ciudad": "Villa de Leyva"
+  },
+  "s_86bebcba": {
+   "nombre": "Barrio la estrella",
+   "lat": 5.0773125,
+   "lng": -75.4873125,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Barrio La Estrella"
+  },
+  "s_86f5f95f": {
+   "nombre": "Universidad Jorge Tadeo Lozano, Ed. Biblioteca",
+   "lat": 4.6063616,
+   "lng": -74.0673857,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "anibia-2026-venues-geo.json"
+   },
+   "address": "Cra. 4 # 22-40",
+   "alias": [],
+   "festivales": [
+    "anibia-2026"
+   ],
+   "salas": [
+    "Auditorio Fabio Lozano"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad Jorge Tadeo Lozano, Ed. Biblioteca"
+  },
+  "s_882ae757": {
+   "nombre": "Universidad de Nariño, Sede Torobajo",
+   "lat": 1.2310572,
+   "lng": -77.2932987,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "address": "Cl. 18 #47-154",
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "salas": [
+    "Sala de Proyecciones Biblioteca"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Universidad de Nariño, Sede Torobajo"
+  },
+  "s_8858d894": {
+   "nombre": "Parque Biblioteca Belén",
+   "lat": 6.223695,
+   "lng": -75.5983286,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cra. 76 #18A-19",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "salas": [
+    "Auditorio"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Parque Biblioteca Belén"
+  },
+  "s_891e8481": {
+   "nombre": "Universidad Nacional de Colombia",
+   "lat": 4.6342839,
+   "lng": -74.0865589,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "salas": [
+    "Auditorio 313, edificio 303C (NEA)",
+    "Auditorio 422, edificio 303C (NEA)",
+    "Auditorio Virginia Gutiérrez",
+    "Cinemateca Sala Alterna, Auditorio 105, edificio 301"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad Nacional de Colombia"
+  },
+  "s_895d2add": {
+   "nombre": "Plaza de Bolivar",
+   "lat": 5.0681291,
+   "lng": -75.5173554,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Plaza+de+Bolívar/@5.0681291,-75.5173554,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 246 m"
+  },
+  "s_8b3ca384": {
+   "nombre": "CITI",
+   "lat": 4.7164543,
+   "lng": -74.2121741,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/Parque+principal+Capit%C3%A1n+Ernesto+Esguerra+Cubides+Funza/@4.7163769,-74.2121763,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Parque principal Capitán Ernesto Esguerra Cubides, Funza",
+   "alias": [],
+   "festivales": [
+    "funza-2026"
+   ],
+   "ciudad": "Funza",
+   "corto": "CITI"
+  },
+  "s_8cc7eb0e": {
+   "nombre": "Canterbury Café",
+   "lat": 4.6197817,
+   "lng": -74.1374424,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Canterbury Café"
+  },
+  "s_8d191328": {
+   "nombre": "Comfama",
+   "lat": 6.234552,
+   "lng": -75.162125,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "COMFAMA sede Parque primcipal",
+    "Comfama - Guatapé"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Comfama"
+  },
+  "s_8d5d66e1": {
+   "nombre": "Perpetua Lab",
+   "lat": 6.2346133,
+   "lng": -75.5714725,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Perpetua+LAB/@6.2346133,-75.5714725,17z",
+    "fecha": "2026-11-17",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cl. 34 #45-07, segundo piso",
+   "alias": [
+    "Perpetua Lab - Medellín"
+   ],
+   "festivales": [
+    "under-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Perpetua Lab"
+  },
+  "s_8d94ab1d": {
+   "nombre": "Mambo House",
+   "lat": 4.5926679,
+   "lng": -76.0611898,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinetoro-2026-venues-geo.json"
+   },
+   "alias": [
+    "Mambo House - Toro"
+   ],
+   "festivales": [
+    "cinetoro-2026"
+   ],
+   "ciudad": "Toro",
+   "corto": "Mambo House"
+  },
+  "s_92850ca4": {
+   "nombre": "Plaza Mayor",
+   "lat": 5.6338197,
+   "lng": -73.5236226,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "villadeleyvaiff-2026-venues-geo.json"
+   },
+   "address": "Plaza Mayor, Villa de Leyva, Boyacá",
+   "alias": [
+    "Plaza Mayor - Villa de Leyva"
+   ],
+   "festivales": [
+    "villadeleyvaiff-2026"
+   ],
+   "ciudad": "Villa de Leyva",
+   "corto": "Plaza Mayor"
+  },
+  "s_936e7c22": {
+   "nombre": "Silencio",
+   "lat": 6.2456401,
+   "lng": -75.5630864,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cra. 42A #48-53, La Candelaria",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Silencio"
+  },
+  "s_94b49a61": {
+   "nombre": "Hotel Mesón de los Virreyes",
+   "lat": 5.6347096,
+   "lng": -73.5217695,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "villadelcine-2026-venues-geo.json"
+   },
+   "alias": [
+    "Auditorio del Hotel Mesón de los Virreyes",
+    "Biblioteca del Hotel Mesón de los Virreyes",
+    "Hotel Mesón de los Virreyes - Villa de Leyva",
+    "Hotel Mesón de los Virreyes: Auditorio",
+    "Hotel Mesón de los Virreyes: Biblioteca"
+   ],
+   "festivales": [
+    "villadelcine-2026"
+   ],
+   "salas": [
+    "Auditorio",
+    "Biblioteca"
+   ],
+   "ciudad": "Villa de Leyva",
+   "corto": "Hotel Mesón de los Virreyes"
+  },
+  "s_964bfd80": {
+   "nombre": "Malecón",
+   "lat": 6.2356097,
+   "lng": -75.1626319,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Malecón - Guatapé",
+    "Pantalla CORNARE",
+    "Pantalla CORNARE - Malecón",
+    "Pantalla CORNARE Malecón"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "salas": [
+    "Pantalla CORNARE"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Malecón"
+  },
+  "s_98028200": {
+   "nombre": "Centro Cultural Brisas de Mayo",
+   "lat": 3.4169915,
+   "lng": -76.5677396,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+Cultural+Brisas+De+Mayo/@3.4169915,-76.5677396,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 54 Oeste #10-28, Brisas de Mayo (Comuna 20)",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026",
+    "semanacine-2026"
+   ],
+   "_elegido_de": "maps",
+   "ciudad": "Cali",
+   "corto": "Centro Cultural Brisas de Mayo"
+  },
+  "s_985165e3": {
+   "nombre": "Universidad Autónoma",
+   "lat": 5.0674375,
+   "lng": -75.5031875,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [
+    "Universidad Autónoma - Aula Torreón F-101"
+   ],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "salas": [
+    "Aula Torreón F-101"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Universidad Autónoma"
+  },
+  "s_987cd558": {
+   "nombre": "Media Torta de Chipre",
+   "lat": 5.0723125,
+   "lng": -75.5259375,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 1051 m"
+  },
+  "s_98bbb7e0": {
+   "nombre": "La Trocha · Casa de la Paz",
+   "lat": 4.6248165,
+   "lng": -74.0679005,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/La+Trocha,+La+Casa+de+la+Paz/@4.6248165,-74.0679005,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 13 #36-37",
+   "alias": [
+    "La Trocha · Casa de la Paz - Bogotá"
+   ],
+   "festivales": [
+    "cineparalapaz-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "La Trocha · Casa de la Paz"
+  },
+  "s_98cccf58": {
+   "nombre": "Casa Museo Otraparte",
+   "lat": 6.1792522,
+   "lng": -75.5839678,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casa+Museo+Otraparte/@6.1792522,-75.5839678,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 43A # 27A Sur–11, Envigado, Antioquia",
+   "alias": [
+    "Casa Museo Otraparte - Envigado",
+    "Casa Museo Otraparte Envigado"
+   ],
+   "festivales": [
+    "cinemancia-2026"
+   ],
+   "ciudad": "Envigado",
+   "corto": "Casa Museo Otraparte"
+  },
+  "s_99915661": {
+   "nombre": "MAMM",
+   "lat": 6.2237797,
+   "lng": -75.57384,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Museo+de+Arte+Moderno+de+Medellín/@6.2237797,-75.57384,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 44 #19A-100",
+   "alias": [
+    "Cine MAMM",
+    "Cine MAMM - Medellín",
+    "Cine MAMM Medellín",
+    "MAMM - Medellín",
+    "Museo de Arte Moderno de Medellín",
+    "Museo de Arte Moderno de Medellín - MAMM",
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín"
+   ],
+   "festivales": [
+    "aleste-2026",
+    "cinemancia-2026",
+    "fantasmagoria-2026",
+    "mamut-2026",
+    "miradas-2026"
+   ],
+   "salas": [
+    "Quinto piso",
+    "Teatro"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Museo de Arte Moderno de Medellín",
+   "salas_alias": {
+    "Teatro MAMM": "Teatro"
+   }
+  },
+  "s_99a993f3": {
+   "nombre": "Galería San José",
+   "lat": 6.1745466,
+   "lng": -75.3342677,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "filcmar-2026-venues-geo.json"
+   },
+   "alias": [
+    "Galería San José - CBA Marinilla"
+   ],
+   "festivales": [
+    "filcmar-2026"
+   ],
+   "ciudad": "Marinilla",
+   "corto": "Galería San José"
+  },
+  "s_9b2fec9a": {
+   "nombre": "Mikuna Casa Cultural",
+   "lat": 2.4285559,
+   "lng": -76.6175557,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "popayan-2026-venues-geo.json"
+   },
+   "address": "Túnel bajo, Popayán",
+   "alias": [],
+   "festivales": [
+    "popayan-2026"
+   ],
+   "ciudad": "Popayán",
+   "corto": "Mikuna Casa Cultural"
+  },
+  "s_9bf6896c": {
+   "nombre": "Casa Occio",
+   "lat": 3.4369865,
+   "lng": -76.5403178,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casa+OCCIO/@3.4369865,-76.5403178,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "semanacine-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Casa Occio"
+  },
+  "s_9c038cff": {
+   "nombre": "Cine Teatro",
+   "lat": 4.6085973,
+   "lng": -76.0829082,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinetoro-2026-venues-geo.json"
+   },
+   "address": "Toro, Valle del Cauca",
+   "alias": [
+    "Cine Teatro - Toro"
+   ],
+   "festivales": [
+    "cinetoro-2026"
+   ],
+   "ciudad": "Toro",
+   "corto": "Cine Teatro"
+  },
+  "s_9c38c3bf": {
+   "nombre": "Sendero del Bosque",
+   "lat": 3.440236,
+   "lng": -76.508267,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 18 #33F-80, Santa Fe (Comuna 8)",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali"
+  },
+  "s_9c496716": {
+   "nombre": "Museo Comunitario",
+   "lat": 6.2331638,
+   "lng": -75.1608265,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Museo Comunitario - Guatapé"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Museo Comunitario"
+  },
+  "s_9d2019dc": {
+   "nombre": "Universidad Central",
+   "lat": 4.6059549,
+   "lng": -74.068697,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Universidad+Central/@4.6059549,-74.068697,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cl. 22 #5-91",
+   "alias": [
+    "Universidad Central - Bogotá"
+   ],
+   "festivales": [
+    "biff-2026",
+    "cineparalapaz-2026",
+    "midbo-2026"
+   ],
+   "_elegido_de": "maps",
+   "campus": {
+    "radio_m": 300,
+    "por_que": "sede centro: cada festival pone el pin en su edificio (BIFF: Sala Fundadores, Cl. 22 # 5-91; MIDBO: Auditorio Caldas); los dos verificados en Maps"
+   },
+   "salas": [
+    "Auditorio Fundadores",
+    "Caja de Colores"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad Central"
+  },
+  "s_9daa0da4": {
+   "nombre": "Cine Centro",
+   "lat": 6.2549874,
+   "lng": -75.5628949,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mamut-2026-venues-geo.json"
+   },
+   "address": "Av. Oriental (Cra. 46) con Ecuador (Cra. 48)",
+   "alias": [],
+   "festivales": [
+    "mamut-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Cine Centro"
+  },
+  "s_9eb51c8b": {
+   "nombre": "Centro Cultural Comfandi",
+   "lat": 3.4482429,
+   "lng": -76.5343592,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Calle 8 #6-23, centro (San Pedro/La Merced)",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Centro Cultural Comfandi"
+  },
+  "s_9edb6fc4": {
+   "nombre": "Parque Principal de La Florida",
+   "lat": 1.2992226,
+   "lng": -77.4064299,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "address": "Cra. 4 #3, La Florida",
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "ciudad": "La Florida",
+   "corto": "Parque Principal de La Florida"
+  },
+  "s_a140e4f3": {
+   "nombre": "Finca Agroturística El Encanto de Mis Abuelos",
+   "lat": 6.2985309,
+   "lng": -75.6469058,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Vereda El Llano, Corregimiento San Cristóbal, Medellín",
+   "alias": [
+    "Finca Agroturística El Encanto de Mis Abuelos - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Finca Agroturística El Encanto de Mis Abuelos"
+  },
+  "s_a4fd24e0": {
+   "nombre": "Coliseo Institución Educativa Fray José Joaquín Escobar",
+   "lat": 4.6092418,
+   "lng": -76.0773237,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinetoro-2026-venues-geo.json"
+   },
+   "alias": [
+    "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro"
+   ],
+   "festivales": [
+    "cinetoro-2026"
+   ],
+   "ciudad": "Toro",
+   "corto": "Coliseo Institución Educativa Fray José Joaquín Escobar"
+  },
+  "s_a6e0e0b3": {
+   "nombre": "Cine Colombia Multiplex Avenida Chile",
+   "lat": 4.6571677,
+   "lng": -74.0575171,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "biff-2026-venues-geo.json"
+   },
+   "address": "Cl. 72 #10-34",
+   "alias": [],
+   "festivales": [
+    "biff-2026"
+   ],
+   "salas": [
+    "Sala 1",
+    "Sala 2",
+    "Sala 3",
+    "Sala 4"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Cine Colombia Multiplex Avenida Chile"
+  },
+  "s_a7342bf5": {
+   "nombre": "Parque Sagrado Corazón",
+   "lat": 10.9933967,
+   "lng": -74.8183852,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficica-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficica-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Parque Sagrado Corazón"
+  },
+  "s_a752daa6": {
+   "nombre": "Casa Ethel",
+   "lat": 3.4389718,
+   "lng": -76.5455675,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 25 #4-53, Miraflores",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Casa Ethel"
+  },
+  "s_a788828f": {
+   "nombre": "Acajel",
+   "lat": 3.448634,
+   "lng": -76.534318,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "semanacine-2026-venues-geo.json"
+   },
+   "address": "Cra. 8 #8-17, piso 4, barrio Santa Rosa, Cali",
+   "alias": [],
+   "festivales": [
+    "semanacine-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Acajel"
+  },
+  "s_a7d462a5": {
+   "nombre": "Parque Santander",
+   "lat": 4.6019381,
+   "lng": -74.0725862,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "biff-2026-venues-geo.json"
+   },
+   "address": "Cra. 7 con Cl. 16",
+   "alias": [],
+   "festivales": [
+    "biff-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Parque Santander"
+  },
+  "s_a8672cd3": {
+   "nombre": "Teatro El Ensueño",
+   "lat": 4.585959,
+   "lng": -74.1586544,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "biff-2026-venues-geo.json"
+   },
+   "address": "Tv. 70D #60-90 Sur",
+   "alias": [],
+   "festivales": [
+    "biff-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Teatro El Ensueño"
+  },
+  "s_aafb86e6": {
+   "nombre": "Parque Principal de Yacuanquer",
+   "lat": 1.114646,
+   "lng": -77.4013722,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "ciudad": "Yacuanquer",
+   "corto": "Parque Principal de Yacuanquer"
+  },
+  "s_ab39611a": {
+   "nombre": "Hacienda El Novillero",
+   "lat": 4.346874,
+   "lng": -74.3960117,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Hotel+Hacienda+El+Novillero/@4.346874,-74.3960117,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Fusagasugá, Cundinamarca",
+   "alias": [
+    "Hacienda El Novillero - Fusagasugá"
+   ],
+   "festivales": [
+    "ficfusa-2026"
+   ],
+   "ciudad": "Fusagasugá",
+   "corto": "Hacienda El Novillero"
+  },
+  "s_ab91ad2b": {
+   "nombre": "Bahía Plus",
+   "lat": 6.2356097,
+   "lng": -75.1626319,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Bahía Plus - Guatapé",
+    "Bahía Plus -Muelle"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Bahía Plus"
+  },
+  "s_ac49afea": {
+   "nombre": "Teatro Municipal Simona Duque",
+   "lat": 6.173035,
+   "lng": -75.3347087,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "filcmar-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "filcmar-2026"
+   ],
+   "ciudad": "Marinilla",
+   "corto": "Teatro Municipal Simona Duque"
+  },
+  "s_acff4c50": {
+   "nombre": "Aranjuez",
+   "lat": 5.0425408,
+   "lng": -75.4997759,
+   "evidencia": {
+    "nivel": "nominatim",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Aranjuez"
+  },
+  "s_ad9e5f5a": {
+   "nombre": "Casa Páramo",
+   "lat": 1.2131613,
+   "lng": -77.2784112,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "address": "Cra. 23 #17-85",
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Casa Páramo"
+  },
+  "s_ae7f3b59": {
+   "nombre": "Biblioteca Municipal",
+   "lat": 6.2323086,
+   "lng": -75.1580168,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Biblioteca Municipal - Guatapé"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Biblioteca Municipal"
+  },
+  "s_b14cf4f4": {
+   "nombre": "Teatro Regional Valerio Antonio Jiménez",
+   "lat": 6.1720347,
+   "lng": -75.3326927,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "filcmar-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "filcmar-2026"
+   ],
+   "salas": [
+    "Foso"
+   ],
+   "ciudad": "Marinilla",
+   "corto": "Teatro Regional Valerio Antonio Jiménez"
+  },
+  "s_b320c2e3": {
+   "nombre": "Bodega Insurgesta",
+   "lat": 4.5682746,
+   "lng": -74.1701952,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Cl. 79b Sur #42-39",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Bodega Insurgesta"
+  },
+  "s_b3c7c07a": {
+   "nombre": "Las Américas",
+   "lat": 6.2145832,
+   "lng": -75.5963458,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mamut-2026-venues-geo.json"
+   },
+   "address": "Dg. 75B #2A-120",
+   "alias": [
+    "Cineprox Las Américas",
+    "Cineprox Las Américas - Medellín",
+    "Cineprox Las Américas Medellín"
+   ],
+   "festivales": [
+    "cinemancia-2026",
+    "fantasmagoria-2026",
+    "mamut-2026",
+    "miradas-2026"
+   ],
+   "salas": [
+    "Sala 3"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Cineprox Las Américas"
+  },
+  "s_b5d25cab": {
+   "nombre": "Centro Colombo Americano",
+   "lat": 6.2499694,
+   "lng": -75.5626063,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+Colombo+Americano+de+Medellín/@6.2499694,-75.5626063,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 45 (El Palo) #53-38",
+   "alias": [
+    "Centro Colombo Americano - Medellín",
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "Centro Colombo Americano Sede centro sala 1 Medellín",
+    "Centro Colombo Americano Sede centro sala 2 Medellín",
+    "Centro Colombo Americano, Aula Múltiple."
+   ],
+   "festivales": [
+    "aleste-2026",
+    "cinemancia-2026",
+    "fantasmagoria-2026",
+    "mamut-2026",
+    "miradas-2026"
+   ],
+   "salas": [
+    "Aula Múltiple",
+    "Sala 1",
+    "Sala 2"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Centro Colombo Americano"
+  },
+  "s_b655ef88": {
+   "nombre": "Teatro del Norte",
+   "lat": 6.1854609,
+   "lng": -75.5987763,
+   "evidencia": {
+    "nivel": "maps",
+    "fuente": "itagui-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "itagui-2026"
+   ],
+   "ciudad": "Itagüí",
+   "corto": "Teatro del Norte"
+  },
+  "s_b705c40c": {
+   "nombre": "Museo Rayo",
+   "lat": 4.4096964,
+   "lng": -76.1539664,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinetoro-2026-venues-geo.json"
+   },
+   "address": "Cl. 8 #8-53, Roldanillo, Valle del Cauca",
+   "alias": [
+    "Museo Rayo - Roldanillo"
+   ],
+   "festivales": [
+    "cinetoro-2026"
+   ],
+   "ciudad": "Roldanillo",
+   "corto": "Museo Rayo"
+  },
+  "s_b7930658": {
+   "nombre": "Universidad Nacional, Edificio 301",
+   "lat": 4.6363087,
+   "lng": -74.0822067,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "anibia-2026-venues-geo.json"
+   },
+   "address": "Av. Cra. 30 # 45-03",
+   "alias": [],
+   "festivales": [
+    "anibia-2026"
+   ],
+   "salas": [
+    "Cinemateca Sala Alterna UNAL - Auditorio 105"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad Nacional, Edificio 301"
+  },
+  "s_b7e0f2f4": {
+   "nombre": "Torre del Cable",
+   "lat": 5.0572695,
+   "lng": -75.4860656,
+   "evidencia": {
+    "nivel": "nominatim",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Torre del Cable"
+  },
+  "s_b862f340": {
+   "nombre": "Casa de la Secretaría de Cultura",
+   "lat": 5.0678125,
+   "lng": -75.5199375,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 446 m"
+  },
+  "s_b9e0404b": {
+   "nombre": "Uniamazonia Sede Porvenir",
+   "lat": 1.620127,
+   "lng": -75.6042556,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mambe-2026-venues-geo.json"
+   },
+   "alias": [
+    "Lugar: Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
+    "Uniamazonia (Porvenir)",
+    "Uniamazonia (Porvenir) · Auditorio Angel Cuniberti",
+    "Uniamazonia Sede Porvenir - Florencia"
+   ],
+   "festivales": [
+    "mambe-2026"
+   ],
+   "salas": [
+    "Auditorio Angel Cuniberti"
+   ],
+   "ciudad": "Florencia",
+   "corto": "Uniamazonia Sede Porvenir"
+  },
+  "s_b9fca4a4": {
+   "nombre": "Parque Principal",
+   "lat": 6.2342773,
+   "lng": -75.1617247,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Domo Parque Principal",
+    "Domo Parque primcipal",
+    "Domo parque principal",
+    "Parque Principal - Guatapé",
+    "Parque principal",
+    "Tarima Principal"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "salas": [
+    "Domo",
+    "Tarima Principal"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Parque Principal"
+  },
+  "s_ba748121": {
+   "nombre": "Centro Cultural Bacatá",
+   "lat": 4.7158665,
+   "lng": -74.2129375,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Instituto+Centro+Cultural+Bacatá/@4.7158665,-74.2129375,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cra. 13 #12-55, Funza",
+   "alias": [],
+   "festivales": [
+    "funza-2026"
+   ],
+   "ciudad": "Funza",
+   "corto": "Centro Cultural Bacatá",
+   "salas": [
+    "Auditorio alterno"
+   ]
+  },
+  "s_bab68d8b": {
+   "nombre": "Estación Metrocable Andalucía",
+   "lat": 6.2960781,
+   "lng": -75.5518993,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Estación Andalucía, Metrocable línea K",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Estación Metrocable Andalucía"
+  },
+  "s_bb5ec19d": {
+   "nombre": "La Comarca",
+   "lat": 6.2344921,
+   "lng": -75.6023711,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Av. 80 #32-31",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "La Comarca"
+  },
+  "s_bc531678": {
+   "nombre": "Banco de la República",
+   "lat": 1.2115002,
+   "lng": -77.2766571,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "salas": [
+    "Sala Emi",
+    "Sala Múltiple",
+    "Sala de Apoyo"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Banco de la República"
+  },
+  "s_be408f33": {
+   "nombre": "Fonda Hotel Hacienda Balandú Comfenalco",
+   "lat": 5.5907473,
+   "lng": -75.8136762,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Hotel+Hacienda+Balandú/@5.5907473,-75.8136762,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "jardin-2026"
+   ],
+   "ciudad": "Jardín"
+  },
+  "s_bf32b45a": {
+   "nombre": "Fábrica de la Cultura 2",
+   "lat": 10.9603756,
+   "lng": -74.857826,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficica-2026-venues-geo.json"
+   },
+   "address": "Carrera 9C con Calle 136, Villas de San Pablo",
+   "alias": [],
+   "festivales": [
+    "ficica-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Fábrica de la Cultura 2"
+  },
+  "s_bf5c6a6a": {
+   "nombre": "Universidad Jorge Tadeo Lozano, Módulo 4",
+   "lat": 4.606567,
+   "lng": -74.067801,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "anibia-2026-venues-geo.json"
+   },
+   "address": "Cra. 4 # 22-40 (entrada calle 23)",
+   "alias": [],
+   "festivales": [
+    "anibia-2026"
+   ],
+   "salas": [
+    "Aula Máxima Luís Cordoba Mariño"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad Jorge Tadeo Lozano, Módulo 4"
+  },
+  "s_bf8a2fa2": {
+   "nombre": "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano",
+   "lat": 4.6063616,
+   "lng": -74.0673857,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Cra. 4 #22-40",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "salas": [
+    "Auditorio Fabio Lozano"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano"
+  },
+  "s_bfb2e06b": {
+   "nombre": "Cine Club El Ventanal",
+   "lat": 3.4018453,
+   "lng": -76.5511452,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Cra. 63A #2A-89, Cuarto de Legua",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Cine Club El Ventanal"
+  },
+  "s_bfd4ab42": {
+   "nombre": "Batuta",
+   "lat": 5.0508329,
+   "lng": -75.4828074,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Fundación+Batuta+Caldas+-+Sede+Principal/@5.0508329,-75.4828074,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 638 m"
+  },
+  "s_bfe8eb92": {
+   "nombre": "Cámara de Comercio de Medellín",
+   "lat": 6.2501303,
+   "lng": -75.5637803,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cl. 53 #45-77, Centro, Medellín",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "salas": [
+    "Auditorio"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Cámara de Comercio de Medellín"
+  },
+  "s_c0e88ef0": {
+   "nombre": "Institución Educativa Pío XII",
+   "lat": 6.2564364,
+   "lng": -75.6138201,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Cra. 98 #44-38, Medellín",
+   "alias": [
+    "Institución Educativa Pío XII - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Institución Educativa Pío XII"
+  },
+  "s_c160e346": {
+   "nombre": "Junta de Acción Comunal El Faro",
+   "lat": 6.2545467,
+   "lng": -75.5379079,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Barrio El Faro, comuna 8, Medellín",
+   "alias": [
+    "Junta de Acción Comunal El Faro - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Junta de Acción Comunal El Faro"
+  },
+  "s_c2f59f7f": {
+   "nombre": "Cinemateca La Tertulia",
+   "lat": 3.4502809,
+   "lng": -76.5453033,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 1 Oeste #5-105, El Peñón",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Cinemateca La Tertulia"
+  },
+  "s_c4b65a07": {
+   "nombre": "Casa de la Cultura",
+   "lat": 5.598525,
+   "lng": -75.819492,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "jardin-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "jardin-2026"
+   ],
+   "ciudad": "Jardín",
+   "corto": "Casa de la Cultura"
+  },
+  "s_c564ed7b": {
+   "nombre": "La Pascasia",
+   "lat": 6.2449131,
+   "lng": -75.5649531,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cl. 47 #43-88",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026",
+    "mamut-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "La Pascasia"
+  },
+  "s_c82c47d7": {
+   "nombre": "Cinemateca Fontanar del Río",
+   "lat": 4.7561244,
+   "lng": -74.1110572,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/CEFE+Fontanar+del+río/@4.7561244,-74.1110572,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 146 # 138A-99",
+   "alias": [
+    "Cinemateca Fontanar del Río - Bogotá"
+   ],
+   "festivales": [
+    "aleste-2026",
+    "anibia-2026",
+    "bhff-2026",
+    "narrarelfuturo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Cinemateca Fontanar del Río"
+  },
+  "s_c85c8e31": {
+   "nombre": "Cine Colombia Unicentro",
+   "lat": 3.3728466,
+   "lng": -76.5388725,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Centro Comercial Unicentro, Carrera 100 #5-169",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Cine Colombia Unicentro"
+  },
+  "s_cc00aafb": {
+   "nombre": "Rosalia's Garden",
+   "lat": 4.6091797,
+   "lng": -76.0785289,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinetoro-2026-venues-geo.json"
+   },
+   "alias": [
+    "Rosalia's Garden - Toro"
+   ],
+   "festivales": [
+    "cinetoro-2026"
+   ],
+   "ciudad": "Toro",
+   "corto": "Rosalia's Garden"
+  },
+  "s_cd218eeb": {
+   "nombre": "Institución Educativa Ágora",
+   "lat": 4.7152567,
+   "lng": -74.2124986,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Instituci%C3%B3n+educativa+%C3%A1gora/@4.7152567,-74.2124986,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 13 #12-21, Funza",
+   "alias": [],
+   "festivales": [
+    "funza-2026"
+   ],
+   "ciudad": "Funza",
+   "corto": "Institución Educativa Ágora"
+  },
+  "s_ce9371b5": {
+   "nombre": "Universidad Nacional · Palogrande",
+   "lat": 5.0560227,
+   "lng": -75.4912019,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Universidad+Nacional+de+Colombia+Sede+Manizales+-+Campus+Palogrande/@5.0560227,-75.4912019,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 202 m"
+  },
+  "s_cf6efa76": {
+   "nombre": "Museo Arqueológico Jaime Hincapié Santa María",
+   "lat": 4.308508,
+   "lng": -74.299334,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Museo+arqueológico+y+natural+de+PASCA/@4.308508,-74.299334,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Cl. 1 #4-22, Pasca, Cundinamarca",
+   "alias": [
+    "Museo Arqueológico Jaime Hincapié Santa María - Pasca"
+   ],
+   "festivales": [
+    "ficfusa-2026"
+   ],
+   "ciudad": "Pasca",
+   "corto": "Museo Arqueológico Jaime Hincapié Santa María"
+  },
+  "s_cf7584fa": {
+   "nombre": "Plaza Distrital de Mercado La Concordia",
+   "lat": 4.5983576,
+   "lng": -74.0686397,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "biff-2026-venues-geo.json"
+   },
+   "address": "Cl. 12C #1-40",
+   "alias": [],
+   "festivales": [
+    "biff-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Plaza Distrital de Mercado La Concordia"
+  },
+  "s_d1996183": {
+   "nombre": "All Cine",
+   "lat": 5.0563125,
+   "lng": -75.4854375,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 118 m"
+  },
+  "s_d1aeb7dc": {
+   "nombre": "Yawa",
+   "lat": 3.4292722,
+   "lng": -76.5438465,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 37A #5-27, Nuevo San Fernando",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "salas": [
+    "Domo"
+   ],
+   "ciudad": "Cali",
+   "corto": "Yawa"
+  },
+  "s_d278bee5": {
+   "nombre": "Plazoleta La Maceta",
+   "lat": 3.4470002,
+   "lng": -76.5405434,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Calle 1 #6-90, Colina de San Antonio",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Plazoleta La Maceta"
+  },
+  "s_d478c93a": {
+   "nombre": "Biblioteca Pública San Luis I",
+   "lat": 3.481656,
+   "lng": -76.4877616,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Calle 71 #1A-10, San Luis I (Comuna 6)",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali"
+  },
+  "s_d6693f43": {
+   "nombre": "Biblioteca Comfenalco Castilla",
+   "lat": 6.2898424,
+   "lng": -75.5702767,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cra. 65 #95-57, Castilla",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Biblioteca Comfenalco Castilla"
+  },
+  "s_d686ed25": {
+   "nombre": "Teatro al Aire Libre Los Cristales",
+   "lat": 3.4447028,
+   "lng": -76.5464776,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 14A Oeste #6-00",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Teatro al Aire Libre Los Cristales"
+  },
+  "s_d8147483": {
+   "nombre": "Parque de los Periodistas",
+   "lat": 4.6012192,
+   "lng": -74.0694809,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Eje Ambiental y Av. Jiménez",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Parque de los Periodistas"
+  },
+  "s_d831483f": {
+   "nombre": "Parque Principal",
+   "lat": 6.3775808,
+   "lng": -75.4461999,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "girardota-2026-venues-geo.json"
+   },
+   "address": "Cl. 6 #12-7",
+   "alias": [],
+   "festivales": [
+    "girardota-2026"
+   ],
+   "ciudad": "Girardota",
+   "corto": "Parque Principal"
+  },
+  "s_d883ae77": {
+   "nombre": "Centro Cultural Gabriel García Márquez",
+   "lat": 4.5978757,
+   "lng": -74.0742633,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Cl. 11 #5-60",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "salas": [
+    "Auditorio Salmona"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Centro Cultural Gabriel García Márquez"
+  },
+  "s_d89af029": {
+   "nombre": "Parque Explora",
+   "lat": 6.2708025,
+   "lng": -75.5656966,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Cl. 73 #52-100, Aranjuez, Medellín",
+   "alias": [
+    "Parque Explora - Medellín"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "salas": [
+    "Exploratorio"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Parque Explora"
+  },
+  "s_d9b4f1c1": {
+   "nombre": "Universidad Cooperativa de Colombia, Torobajo",
+   "lat": 1.2295096,
+   "lng": -77.2899877,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "address": "Calle 18 #47-150, Torobajo",
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "salas": [
+    "Sala de Audiencias"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Universidad Cooperativa de Colombia, Torobajo"
+  },
+  "s_da9dd614": {
+   "nombre": "Centro de Integración e Innovación Social",
+   "lat": 4.3456139,
+   "lng": -74.3630839,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+de+Integración+e+Inovación+Social/@4.3456139,-74.3630839,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Fusagasugá, Cundinamarca",
+   "alias": [
+    "CIIS",
+    "Centro de Integración e Innovación Social - Fusagasugá"
+   ],
+   "festivales": [
+    "ficfusa-2026"
+   ],
+   "ciudad": "Fusagasugá",
+   "corto": "Centro de Integración e Innovación Social"
+  },
+  "s_dbb94309": {
+   "nombre": "Cine club Cine 40",
+   "lat": 11.1426579,
+   "lng": -74.1165712,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "ciudad": "Santa Marta",
+   "_ciudad_fijada": "Nominatim reverso"
+  },
+  "s_dd71de11": {
+   "nombre": "Universidad Santiago de Cali",
+   "lat": 3.4033961,
+   "lng": -76.5470651,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "semanacine-2026-venues-geo.json"
+   },
+   "address": "Calle 5 #62-00, Pampalinda, Cali",
+   "alias": [],
+   "festivales": [
+    "semanacine-2026"
+   ],
+   "salas": [
+    "Auditorio 1101",
+    "Auditorio T-Usaca",
+    "Plazoleta de Los Sabios"
+   ],
+   "ciudad": "Cali",
+   "corto": "Universidad Santiago de Cali"
+  },
+  "s_dd9fc38c": {
+   "nombre": "Universidad Mariana",
+   "lat": 1.2238916,
+   "lng": -77.2830765,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "address": "Cl 18 #34-104",
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "salas": [
+    "Auditorio Jesús de Nazareth",
+    "Auditorio San José",
+    "Sala Audiovisual Pedro Schumacher"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Universidad Mariana"
+  },
+  "s_df30b46a": {
+   "nombre": "Universidad de la Costa – CUC",
+   "lat": 10.9953387,
+   "lng": -74.78881,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficica-2026-venues-geo.json"
+   },
+   "address": "Entrada #2, Calle 52 #56A-75",
+   "alias": [],
+   "festivales": [
+    "ficica-2026",
+    "ficidi-2026"
+   ],
+   "salas": [
+    "Auditorio Sala de Conferencias 1, bloque 11, piso 3",
+    "Auditorio Sala de Conferencias 2, bloque 11, piso 5",
+    "Bloque 11, piso 3 · Sala de Conferencias",
+    "Salón Fundadores, bloque 11, piso 8"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Universidad de la Costa – CUC"
+  },
+  "s_dfa5ca4b": {
+   "nombre": "Coliseo Municipal",
+   "lat": 5.59612,
+   "lng": -75.8143,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "jardin-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "jardin-2026"
+   ],
+   "ciudad": "Jardín",
+   "corto": "Coliseo Municipal"
+  },
+  "s_dfa5f4a5": {
+   "nombre": "Cinemateca del Caribe",
+   "lat": 11.0055967,
+   "lng": -74.8022166,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficica-2026-venues-geo.json"
+   },
+   "address": "Cl. 76 #57-61",
+   "alias": [],
+   "festivales": [
+    "ficica-2026"
+   ],
+   "salas": [
+    "Sede Combarranquilla Country",
+    "Sede Combarranquilla Country, primer piso"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Cinemateca del Caribe"
+  },
+  "s_dfae17a9": {
+   "nombre": "Alianza Francesa",
+   "lat": 5.0588125,
+   "lng": -75.4884375,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Alianza Francesa"
+  },
+  "s_dfb79418": {
+   "nombre": "Galería Pérez Rojas",
+   "lat": 5.6334099,
+   "lng": -73.5231699,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "villadelcine-2026-venues-geo.json"
+   },
+   "alias": [
+    "Galería Pérez Rojas - Villa de Leyva"
+   ],
+   "festivales": [
+    "villadelcine-2026"
+   ],
+   "ciudad": "Villa de Leyva",
+   "corto": "Galería Pérez Rojas"
+  },
+  "s_e046a622": {
+   "nombre": "La Maloca Cultural",
+   "lat": 10.9984824,
+   "lng": -74.8126315,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficidi-2026-venues-geo.json"
+   },
+   "address": "Carrera 46 #79-82",
+   "alias": [],
+   "festivales": [
+    "ficidi-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "La Maloca Cultural"
+  },
+  "s_e1521829": {
+   "nombre": "Coocine",
+   "lat": 6.2063889,
+   "lng": -75.528,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mamut-2026-venues-geo.json"
+   },
+   "address": "Corregimiento de Santa Elena",
+   "alias": [
+    "Coocine - Medellín"
+   ],
+   "festivales": [
+    "mamut-2026",
+    "miradas-2026"
+   ],
+   "salas": [
+    "Sala 0"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Coocine"
+  },
+  "s_e1907155": {
+   "nombre": "Antimateria Libros y Café",
+   "lat": 6.2514371,
+   "lng": -75.5911408,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Antimateria/@6.2514371,-75.5911408,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 45E # 72–09, Medellín, Antioquia",
+   "alias": [
+    "Antimateria Libros y Café - Medellín",
+    "Antimateria Libros y Café Medellín",
+    "Librería Antimateria",
+    "Librería Antimateria - Medellín",
+    "Librería y Espacio Cultural Antimateria (calle 45E # 72-09, Laureles)"
+   ],
+   "festivales": [
+    "cinemancia-2026",
+    "fantasmagoria-2026",
+    "miradas-2026",
+    "under-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Antimateria Libros y Café"
+  },
+  "s_e2717fd7": {
+   "nombre": "Casa TEA",
+   "lat": 6.2514575,
+   "lng": -75.5650598,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "miradas-2026-venues-geo.json"
+   },
+   "address": "Calle 53 # 47-44, La Candelaria, Medellín",
+   "alias": [
+    "Casa TEA - Medellín",
+    "Sede cultural Casa TEA (calle 53 # 47-44, La Candelaria)"
+   ],
+   "festivales": [
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Casa TEA"
+  },
+  "s_e4f61235": {
+   "nombre": "Polideportivo San Antonio",
+   "lat": 4.5925149,
+   "lng": -76.0609688,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinetoro-2026-venues-geo.json"
+   },
+   "alias": [
+    "Polideportivo San Antonio - Toro"
+   ],
+   "festivales": [
+    "cinetoro-2026"
+   ],
+   "ciudad": "Toro",
+   "corto": "Polideportivo San Antonio"
+  },
+  "s_e605777d": {
+   "nombre": "Casa de la Cultura",
+   "lat": 1.2160418,
+   "lng": -77.2786615,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "ciudad": "Pasto",
+   "corto": "Casa de la Cultura"
+  },
+  "s_e6b32b7f": {
+   "nombre": "Centro Día Gerontológico",
+   "lat": 6.2342773,
+   "lng": -75.1617247,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Auditorio Centro día Gerontológico",
+    "Centro Día Gerontológico - Guatapé"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "salas": [
+    "Auditorio"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Centro Día Gerontológico"
+  },
+  "s_e8c35b78": {
+   "nombre": "Comfama",
+   "lat": 6.3799362,
+   "lng": -75.4461132,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "girardota-2026-venues-geo.json"
+   },
+   "address": "Cra. 18 #5A-65",
+   "alias": [],
+   "festivales": [
+    "girardota-2026"
+   ],
+   "ciudad": "Girardota",
+   "corto": "Comfama"
+  },
+  "s_e94299cf": {
+   "nombre": "SES Hospital Universitario de Caldas",
+   "lat": 5.0629375,
+   "lng": -75.5009375,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 559 m"
+  },
+  "s_ea18aa85": {
+   "nombre": "Casa Cultural Valerio Antonio Jiménez",
+   "lat": 6.171947,
+   "lng": -75.3325301,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "filcmar-2026-venues-geo.json"
+   },
+   "address": "Cl. 30 #25-102",
+   "alias": [],
+   "festivales": [
+    "filcmar-2026"
+   ],
+   "salas": [
+    "Hall"
+   ],
+   "ciudad": "Marinilla",
+   "corto": "Casa Cultural Valerio Antonio Jiménez"
+  },
+  "s_eb2718df": {
+   "nombre": "Morning",
+   "lat": 6.3772694,
+   "lng": -75.4448023,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "girardota-2026-venues-geo.json"
+   },
+   "address": "Cra. 14 #5B-54",
+   "alias": [],
+   "festivales": [
+    "girardota-2026"
+   ],
+   "ciudad": "Girardota",
+   "corto": "Morning"
+  },
+  "s_ec14401a": {
+   "nombre": "Centro de Eventos Guatapé Plaza",
+   "lat": 6.2332747,
+   "lng": -75.1621119,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Centro de Eventos Guatapé Plaza - Guatapé"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Centro de Eventos Guatapé Plaza"
+  },
+  "s_ec2796d0": {
+   "nombre": "Playa Río Cauca, Barrio Las Vegas",
+   "lat": 7.9831804,
+   "lng": -75.1941958,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fecibac-2026-venues-geo.json"
+   },
+   "alias": [
+    "Playa Río Cauca",
+    "Playa Río Cauca, Barrio Las Vegas - Caucasia"
+   ],
+   "festivales": [
+    "fecibac-2026"
+   ],
+   "ciudad": "Caucasia",
+   "corto": "Playa Río Cauca, Barrio Las Vegas"
+  },
+  "s_ec96d903": {
+   "nombre": "Colegio agrícola",
+   "lat": 4.6078384,
+   "lng": -76.0724431,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "cinetoro-2026-venues-geo.json"
+   },
+   "address": "Cl. 18 #1-123, Toro, Valle del Cauca",
+   "alias": [
+    "Colegio agrícola - Toro"
+   ],
+   "festivales": [
+    "cinetoro-2026"
+   ],
+   "salas": [
+    "Salón audiovisuales"
+   ],
+   "ciudad": "Toro",
+   "corto": "Colegio agrícola"
+  },
+  "s_ed5a19ae": {
+   "nombre": "Museo Casa Antonio Nariño",
+   "lat": 5.6321598,
+   "lng": -73.5248406,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "villadelcine-2026-venues-geo.json"
+   },
+   "alias": [
+    "Casa Museo Antonio Nariño",
+    "Museo Casa Antonio Nariño - Villa de Leyva",
+    "Museo Casa Antonio Nariño Salón principal 1er piso",
+    "Museo Casa Antonio Nariño Salón principal 2do piso"
+   ],
+   "festivales": [
+    "villadelcine-2026"
+   ],
+   "salas": [
+    "Salón principal · 1er piso"
+   ],
+   "ciudad": "Villa de Leyva",
+   "corto": "Museo Casa Antonio Nariño",
+   "salas_alias": {
+    "Salón principal · 2do piso": "Salón principal · 1er piso"
+   }
+  },
+  "s_ee37319b": {
+   "nombre": "Centro Cultural y de Convenciones Fernando Botero",
+   "lat": 4.9155402,
+   "lng": -74.0229576,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/Centro+Cultural+y+de+Convenciones+Fernando+Botero+Cajic%C3%A1/@4.9155402,-74.0229576,18z",
+    "fecha": "2026-11-20",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 1A #040, Cajicá, Cundinamarca",
+   "alias": [
+    "Centro Cultural y de Convenciones Fernando Botero - Cajicá"
+   ],
+   "festivales": [
+    "cajica-2026"
+   ],
+   "ciudad": "Cajicá"
+  },
+  "s_ee9c7bec": {
+   "nombre": "CineQuanon",
+   "lat": 3.4558323,
+   "lng": -76.5231237,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 5 #22-59, Comuna 3",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "CineQuanon"
+  },
+  "s_f21094a3": {
+   "nombre": "Auditorio Juan Carlos Escobar",
+   "lat": 6.1733762,
+   "lng": -75.608795,
+   "evidencia": {
+    "nivel": "maps",
+    "fuente": "itagui-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "itagui-2026"
+   ],
+   "ciudad": "Itagüí",
+   "corto": "Auditorio Juan Carlos Escobar"
+  },
+  "s_f24df433": {
+   "nombre": "Barrio Villas de la Cordialidad",
+   "lat": 10.9280767,
+   "lng": -74.8070963,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficica-2026-venues-geo.json"
+   },
+   "address": "Carrera 4 Sur #144, sobre la vía Cordialidad",
+   "alias": [],
+   "festivales": [
+    "ficica-2026"
+   ],
+   "salas": [
+    "Cancha de baloncesto"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Barrio Villas de la Cordialidad"
+  },
+  "s_f4246a34": {
+   "nombre": "Centro Comercial Terra Plaza",
+   "lat": 2.4875749,
+   "lng": -76.5606068,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "popayan-2026-venues-geo.json"
+   },
+   "address": "Cra. 9 #73AN-200, Norte, Popayán",
+   "alias": [],
+   "festivales": [
+    "popayan-2026"
+   ],
+   "salas": [
+    "Pantalla gigante"
+   ],
+   "ciudad": "Popayán",
+   "corto": "Centro Comercial Terra Plaza"
+  },
+  "s_f49eeca2": {
+   "nombre": "Curiplaya",
+   "lat": 1.61352,
+   "lng": -75.6126315,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mambe-2026-venues-geo.json"
+   },
+   "alias": [
+    "Curiplaya - Florencia"
+   ],
+   "festivales": [
+    "mambe-2026"
+   ],
+   "salas": [
+    "Edificio Curiplaya"
+   ],
+   "ciudad": "Florencia",
+   "corto": "Curiplaya"
+  },
+  "s_f52bd37d": {
+   "nombre": "Parque Central de Chachagüí",
+   "lat": 1.358433,
+   "lng": -77.2829544,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficpa-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "ficpa-2026"
+   ],
+   "ciudad": "Chachagüí",
+   "corto": "Parque Central de Chachagüí"
+  },
+  "s_f689bcee": {
+   "nombre": "Alianza Francesa de Barranquilla",
+   "lat": 10.9934124,
+   "lng": -74.7890175,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficica-2026-venues-geo.json"
+   },
+   "address": "Calle 52 #54-75",
+   "alias": [],
+   "festivales": [
+    "ficica-2026",
+    "ficidi-2026"
+   ],
+   "salas": [
+    "Café Terraza",
+    "Salón Montreal, 3.er piso"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Alianza Francesa de Barranquilla",
+   "salas_alias": {
+    "Salón Montreal": "Salón Montreal, 3.er piso"
+   }
+  },
+  "s_f6cc0705": {
+   "nombre": "Maloca Huitoto",
+   "lat": 1.6344962,
+   "lng": -75.5841374,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "mambe-2026-venues-geo.json"
+   },
+   "alias": [
+    "Maloca Huitoto - Florencia",
+    "Maloca Huitoto · (Maloka Uitoto vereda el Manantial)"
+   ],
+   "festivales": [
+    "mambe-2026"
+   ],
+   "ciudad": "Florencia",
+   "corto": "Maloca Huitoto"
+  },
+  "s_f6ec1bbd": {
+   "nombre": "Royal Films Plaza Arrayanes",
+   "lat": 6.16722,
+   "lng": -75.61923,
+   "evidencia": {
+    "nivel": "maps",
+    "fuente": "itagui-2026-venues-geo.json"
+   },
+   "alias": [],
+   "festivales": [
+    "itagui-2026"
+   ],
+   "ciudad": "Itagüí",
+   "corto": "Royal Films Plaza Arrayanes"
+  },
+  "s_f7766586": {
+   "nombre": "Biblioteca Comfama Bello Centro",
+   "lat": 6.3323907,
+   "lng": -75.5568958,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Comfama+Bello+Sede+Centro/@6.3323907,-75.5568958,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 49 # 46–57, Bello, Antioquia",
+   "alias": [
+    "Biblioteca Comfama Bello",
+    "Biblioteca Comfama Bello - Medellín",
+    "Biblioteca Comfama Bello Centro - Bello",
+    "Biblioteca Comfama Bello Centro Bello"
+   ],
+   "festivales": [
+    "cinemancia-2026",
+    "miradas-2026"
+   ],
+   "ciudad": "Bello",
+   "corto": "Biblioteca Comfama Bello Centro",
+   "_ciudades_vistas": [
+    "Bello",
+    "Medellín"
+   ]
+  },
+  "s_f95d634b": {
+   "nombre": "Universidad Católica Luis Amigó",
+   "lat": 6.258973,
+   "lng": -75.5841253,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Tv. 51A #67B-90",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "salas": [
+    "Auditorio Santa Rita",
+    "Sala de tecnología"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Universidad Católica Luis Amigó"
+  },
+  "s_f9e78567": {
+   "nombre": "Draco Hobby",
+   "lat": 6.2315525,
+   "lng": -75.601953,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Av. 80 #30-18",
+   "alias": [],
+   "festivales": [
+    "fantasmagoria-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Draco Hobby"
+  },
+  "s_f9f4208c": {
+   "nombre": "Biblioteca de Ciudad Universitaria",
+   "lat": 4.7087717,
+   "lng": -74.2062933,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "funza-2026-venues-geo.json"
+   },
+   "address": "Ciudad Universitaria, Funza",
+   "alias": [],
+   "festivales": [
+    "funza-2026"
+   ],
+   "ciudad": "Funza",
+   "corto": "Biblioteca de Ciudad Universitaria"
+  },
+  "s_fb44dd3d": {
+   "nombre": "Muelle Corona",
+   "lat": 6.2356097,
+   "lng": -75.1626319,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "Muelle Corona - Guatapé",
+    "Muelle Corona - Malecón"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "Muelle Corona"
+  },
+  "s_fb486b4f": {
+   "nombre": "Casona La Tulipana",
+   "lat": 4.337234,
+   "lng": -74.3637005,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casona+La+Tulipana/@4.337234,-74.3637005,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Casona La Tulipana, Fusagasugá",
+   "alias": [
+    "Casona La Tulipana - Fusagasugá"
+   ],
+   "festivales": [
+    "ficfusa-2026"
+   ],
+   "ciudad": "Fusagasugá",
+   "corto": "Casona La Tulipana"
+  },
+  "s_fba24cd3": {
+   "nombre": "Café Macondo",
+   "lat": 3.4478189,
+   "lng": -76.5387144,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 6 #3-03, San Antonio",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Café Macondo"
+  },
+  "s_fce87735": {
+   "nombre": "El Majagual",
+   "lat": 6.2407531,
+   "lng": -75.1541429,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "guatape-2026-venues-geo.json"
+   },
+   "alias": [
+    "El Majagual - Guatapé",
+    "Pizzeria Majagual"
+   ],
+   "festivales": [
+    "guatape-2026"
+   ],
+   "ciudad": "Guatapé",
+   "corto": "El Majagual"
+  },
+  "s_fd423d59": {
+   "nombre": "Casa Yurtas",
+   "lat": 3.443104,
+   "lng": -76.487205,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficcali-2026-venues-geo.json"
+   },
+   "address": "Carrera 22 #72B-64, Ulpiano Lloreda",
+   "alias": [],
+   "festivales": [
+    "ficcali-2026"
+   ],
+   "ciudad": "Cali"
+  },
+  "s_fd497563": {
+   "nombre": "Colegio de Valores Humanos Sathya Sai",
+   "lat": 4.7097183,
+   "lng": -74.1971832,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Colegio+De+Valores+Humanos+Sathya+Sai/@4.7097183,-74.1971832,17z",
+    "fecha": "2026-11-18",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 2b #25-15, Funza",
+   "alias": [],
+   "festivales": [
+    "funza-2026"
+   ],
+   "ciudad": "Funza",
+   "corto": "Colegio de Valores Humanos Sathya Sai"
+  },
+  "s_fe8d7da8": {
+   "nombre": "Auditorio Roberto Vélez Correa",
+   "lat": 5.0559375,
+   "lng": -75.4929375,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "ficma-2026-venues-geo.json"
+   },
+   "alias": [
+    "Auditorio Roberto Vélez Correa - Universidad de Caldas"
+   ],
+   "festivales": [
+    "ficma-2026"
+   ],
+   "ciudad": "Manizales",
+   "_ciudad_fijada": "lugar vecino del almacén a 0 m"
+  },
+  "s_febabd56": {
+   "nombre": "Paraninfo Universidad de Antioquia",
+   "lat": 6.2464191,
+   "lng": -75.564178,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "fantasmagoria-2026-venues-geo.json"
+   },
+   "address": "Cra. 44 #48-72 (Plazuela San Ignacio)",
+   "alias": [
+    "Edificio Paraninfo Universidad de Antioquia (carrera 44 # 48-72, La Candelaria)",
+    "Paraninfo Universidad de Antioquia - Medellín"
+   ],
+   "festivales": [
+    "fantasmagoria-2026",
+    "miradas-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Paraninfo Universidad de Antioquia"
+  },
+  "s_ff62cf6a": {
+   "nombre": "Teatro Otraparte",
+   "lat": 6.1792522,
+   "lng": -75.5839678,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Casa+Museo+Otraparte/@6.1792522,-75.5839678,17z",
+    "fecha": "2026-11-16",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 43A # 27A Sur–11, Envigado, Antioquia",
+   "alias": [
+    "Teatro Otraparte - Envigado",
+    "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado"
+   ],
+   "festivales": [
+    "cinemancia-2026"
+   ],
+   "ciudad": "Envigado",
+   "corto": "Teatro Otraparte"
+  },
+  "s_ffcf8a2c": {
+   "nombre": "Servicio Forjar Restaurativo Arborizadora Baja",
+   "lat": 4.5749445,
+   "lng": -74.1512321,
+   "evidencia": {
+    "nivel": "manual",
+    "fuente": "midbo-2026-venues-geo.json"
+   },
+   "address": "Cl. 58c Sur",
+   "alias": [],
+   "festivales": [
+    "midbo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Servicio Forjar Restaurativo Arborizadora Baja"
+  }
+ },
+ "redirecciones": {
+  "s_1bbd676f": "s_f7766586",
+  "s_5bb05c96": "s_25caf24a",
+  "s_75f70e3f": "s_99915661",
+  "s_a06daf52": "s_99915661",
+  "s_b3ecb108": "s_25caf24a",
+  "s_c1adc674": "s_e1907155",
+  "s_c3221991": "s_11667bea",
+  "s_c5c17b27": "s_e1907155",
+  "s_dc769578": "s_b3c7c07a",
+  "s_e4896ea4": "s_e1907155"
+ },
+ "decisiones": {
+  "mismo": [
+   [
+    "CEFE Chapinero",
+    "Centro Felicidad Chapinero",
+    "CEFE es la sigla de Centro Felicidad: mismo edificio, 13 m"
+   ],
+   [
+    "Capilla, Comfama",
+    "Comfama La Capilla",
+    "la capilla del Claustro Comfama San Ignacio, dos grafías"
+   ],
+   [
+    "Comfama La Capilla",
+    "La Capilla del Claustro Comfama",
+    "la capilla del Claustro Comfama San Ignacio, otra grafía (33 m)"
+   ],
+   [
+    "MAMM",
+    "Museo de Arte Moderno de Medellín",
+    "sigla"
+   ],
+   [
+    "Cine MAMM",
+    "MAMM",
+    "la sala de cine del MAMM: misma sede; la sala va en el campo sala"
+   ],
+   [
+    "Cineprox Las Américas",
+    "Las Américas",
+    "el multiplex Cineprox del C.C. Las Américas (Medellín), mismo pin"
+   ],
+   [
+    "Biblioteca Comfama Bello",
+    "Biblioteca Comfama Bello Centro",
+    "Maps: «Comfama Bello Sede Centro», una sola biblioteca en el centro de Bello"
+   ],
+   [
+    "Antimateria Libros y Café",
+    "Librería Antimateria",
+    "Maps: «Antimateria», Calle 45E #72-09; librería y café son el mismo local"
+   ]
+  ],
+  "distintos": [
+   [
+    "Comfama La Capilla",
+    "Comfama San Ignacio",
+    "el Claustro (conjunto) y su capilla son espacios distintos del mismo edificio"
+   ],
+   [
+    "Comfama San Ignacio",
+    "Teatro Comfama Alfonso Restrepo Moreno",
+    "el Claustro y su teatro son espacios distintos"
+   ],
+   [
+    "Comfama La Capilla",
+    "Teatro Comfama Alfonso Restrepo Moreno",
+    "teatro y capilla del Claustro: salas distintas"
+   ],
+   [
+    "Auditorio principal Campus El Cable",
+    "Universidad Nacional · El Cable",
+    "campus y auditorio dentro del campus"
+   ],
+   [
+    "Auditorio Juan Hurtado",
+    "Universidad Nacional · Palogrande",
+    "campus y auditorio dentro del campus"
+   ],
+   [
+    "Auditorio Roberto Vélez Correa",
+    "Universidad de Caldas",
+    "campus y auditorio dentro del campus"
+   ],
+   [
+    "Paraninfo Universidad de Antioquia",
+    "Universidad de Antioquia",
+    "el Paraninfo (centro) no es la Ciudad Universitaria; el pin de midbo cae en el Paraninfo: revisar con Maps"
+   ],
+   [
+    "Universidad Jorge Tadeo Lozano",
+    "Universidad Jorge Tadeo Lozano, Módulo 4",
+    "campus y edificio dentro del campus"
+   ],
+   [
+    "Universidad Jorge Tadeo Lozano, Ed. Biblioteca",
+    "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano",
+    "dos edificios del campus con el mismo pin aproximado: revisar con Maps"
+   ],
+   [
+    "Cine fest",
+    "Expoferias",
+    "mismo pin aproximado en el mismo festival: revisar con Maps"
+   ],
+   [
+    "Centro de Eventos Guatapé Plaza",
+    "Museo del Zócalo",
+    "dos lugares de la plaza de Guatapé a 37 m"
+   ],
+   [
+    "Casa de la Secretaría de Cultura",
+    "Secretaría de la Mujer y Equidad de Género",
+    "dos dependencias, mismo pin aproximado: revisar con Maps"
+   ],
+   [
+    "Parque Principal",
+    "Punto de Turismo",
+    "el punto de turismo está en el parque principal: lugares distintos"
+   ],
+   [
+    "Biblioteca Comfama Caldas",
+    "Casa Municipal de la Cultura",
+    "edificios vecinos (40 m)"
+   ],
+   [
+    "Biblioteca Municipal",
+    "Parque Educativo El Zócalo",
+    "edificios vecinos (32 m)"
+   ],
+   [
+    "Mambo House",
+    "Polideportivo San Antonio",
+    "lugares vecinos (30 m)"
+   ],
+   [
+    "Bahía Plus",
+    "Malecón",
+    "mismo pin aproximado en el malecón: revisar con Maps"
+   ],
+   [
+    "Malecón",
+    "Muelle Corona",
+    "mismo pin aproximado en el malecón: revisar con Maps"
+   ],
+   [
+    "Casa Museo Otraparte",
+    "Teatro Otraparte",
+    "la casa museo y su teatro son espacios distintos"
+   ],
+   [
+    "Bahía Plus",
+    "Muelle Corona",
+    "dos puntos del malecón con el mismo pin aproximado: revisar con Maps"
+   ],
+   [
+    "Casa Cultural Valerio Antonio Jiménez",
+    "Teatro Regional Valerio Antonio Jiménez",
+    "teatro y casa cultural con el mismo nombre, edificios vecinos (20 m)"
+   ],
+   [
+    "Centro Día Gerontológico",
+    "Parque Principal",
+    "mismo pin aproximado en el parque: revisar con Maps"
+   ]
+  ]
+ },
+ "_divergentes": {},
+ "_deuda": {
+  "sin_url": [
+   "s_03bcfa6f",
+   "s_05f4d981",
+   "s_0655bb7b",
+   "s_0a4d1410",
+   "s_0b6dd1ff",
+   "s_0bdf6316",
+   "s_0ecc197a",
+   "s_104736cc",
+   "s_1071539b",
+   "s_10f3578c",
+   "s_11433c3f",
+   "s_11667bea",
+   "s_11d2cb61",
+   "s_12238873",
+   "s_125e80c3",
+   "s_1311c9f4",
+   "s_1347d668",
+   "s_148dd95b",
+   "s_15ec15df",
+   "s_16c02a2e",
+   "s_180f653f",
+   "s_18443fd2",
+   "s_19daa131",
+   "s_1b1244a2",
+   "s_1b7d9bf0",
+   "s_1be38f20",
+   "s_1d891113",
+   "s_1e0b7f79",
+   "s_1e670050",
+   "s_1ee22222",
+   "s_1f206eab",
+   "s_1f59d368",
+   "s_20babab4",
+   "s_20f5d939",
+   "s_213dce05",
+   "s_2263f2e4",
+   "s_23554cca",
+   "s_23e9dece",
+   "s_25caf24a",
+   "s_2635c36c",
+   "s_26861d1b",
+   "s_274fbe5a",
+   "s_298b07a2",
+   "s_2b8a4bc3",
+   "s_2e88d79d",
+   "s_2f75a36e",
+   "s_30a5d6b9",
+   "s_324d7230",
+   "s_3327940f",
+   "s_33ad881a",
+   "s_34124cb5",
+   "s_36b34e66",
+   "s_384e68d5",
+   "s_39a0cbb2",
+   "s_3aba7a01",
+   "s_3c28b8d0",
+   "s_3d933a6f",
+   "s_3e183821",
+   "s_3eb4048f",
+   "s_3f4bf26a",
+   "s_401a944e",
+   "s_42f35085",
+   "s_439272df",
+   "s_46bfcf2a",
+   "s_49d684d9",
+   "s_49da25fa",
+   "s_4bf2bfa4",
+   "s_4cb9c1c2",
+   "s_4ea5f87b",
+   "s_4f01e23d",
+   "s_526f7636",
+   "s_54536669",
+   "s_54dc6bb5",
+   "s_554ab71f",
+   "s_55abdd71",
+   "s_55f3a489",
+   "s_57b40373",
+   "s_5c62c6c3",
+   "s_5ce71f2b",
+   "s_5d1ff362",
+   "s_5f0c609d",
+   "s_5f50f1dc",
+   "s_61310bc4",
+   "s_6183659b",
+   "s_626a169c",
+   "s_63acec57",
+   "s_643e6771",
+   "s_65941893",
+   "s_67c78bba",
+   "s_68138fbc",
+   "s_68a263f4",
+   "s_6a28357a",
+   "s_6a3d6ea4",
+   "s_6bb19ae3",
+   "s_6bdaa2bc",
+   "s_6c6c37df",
+   "s_6cbcf2c5",
+   "s_6ee94d4a",
+   "s_6f855f0a",
+   "s_6f96b935",
+   "s_7050e38f",
+   "s_71565dd9",
+   "s_72770c6f",
+   "s_72e761e5",
+   "s_74e18f6b",
+   "s_756703ef",
+   "s_7585ad81",
+   "s_76882a90",
+   "s_7715f7c0",
+   "s_7826af67",
+   "s_78a3e599",
+   "s_797f44ee",
+   "s_7a6a2db7",
+   "s_7aa97950",
+   "s_7b8b1c0e",
+   "s_7dac69ba",
+   "s_7ecef455",
+   "s_808cba64",
+   "s_80902cf9",
+   "s_80974dfb",
+   "s_81709587",
+   "s_830a426d",
+   "s_85744479",
+   "s_859077b8",
+   "s_85e5255e",
+   "s_86bebcba",
+   "s_86f5f95f",
+   "s_882ae757",
+   "s_8858d894",
+   "s_891e8481",
+   "s_8cc7eb0e",
+   "s_8d191328",
+   "s_8d94ab1d",
+   "s_92850ca4",
+   "s_936e7c22",
+   "s_94b49a61",
+   "s_964bfd80",
+   "s_985165e3",
+   "s_987cd558",
+   "s_99a993f3",
+   "s_9b2fec9a",
+   "s_9c038cff",
+   "s_9c38c3bf",
+   "s_9c496716",
+   "s_9daa0da4",
+   "s_9eb51c8b",
+   "s_9edb6fc4",
+   "s_a140e4f3",
+   "s_a4fd24e0",
+   "s_a6e0e0b3",
+   "s_a7342bf5",
+   "s_a752daa6",
+   "s_a788828f",
+   "s_a7d462a5",
+   "s_a8672cd3",
+   "s_aafb86e6",
+   "s_ab91ad2b",
+   "s_ac49afea",
+   "s_acff4c50",
+   "s_ad9e5f5a",
+   "s_ae7f3b59",
+   "s_b14cf4f4",
+   "s_b320c2e3",
+   "s_b3c7c07a",
+   "s_b655ef88",
+   "s_b705c40c",
+   "s_b7930658",
+   "s_b7e0f2f4",
+   "s_b862f340",
+   "s_b9e0404b",
+   "s_b9fca4a4",
+   "s_bab68d8b",
+   "s_bb5ec19d",
+   "s_bc531678",
+   "s_bf32b45a",
+   "s_bf5c6a6a",
+   "s_bf8a2fa2",
+   "s_bfb2e06b",
+   "s_bfe8eb92",
+   "s_c0e88ef0",
+   "s_c160e346",
+   "s_c2f59f7f",
+   "s_c4b65a07",
+   "s_c564ed7b",
+   "s_c85c8e31",
+   "s_cc00aafb",
+   "s_cf7584fa",
+   "s_d1996183",
+   "s_d1aeb7dc",
+   "s_d278bee5",
+   "s_d478c93a",
+   "s_d6693f43",
+   "s_d686ed25",
+   "s_d8147483",
+   "s_d831483f",
+   "s_d883ae77",
+   "s_d89af029",
+   "s_d9b4f1c1",
+   "s_dbb94309",
+   "s_dd71de11",
+   "s_dd9fc38c",
+   "s_df30b46a",
+   "s_dfa5ca4b",
+   "s_dfa5f4a5",
+   "s_dfae17a9",
+   "s_dfb79418",
+   "s_e046a622",
+   "s_e1521829",
+   "s_e2717fd7",
+   "s_e4f61235",
+   "s_e605777d",
+   "s_e6b32b7f",
+   "s_e8c35b78",
+   "s_e94299cf",
+   "s_ea18aa85",
+   "s_eb2718df",
+   "s_ec14401a",
+   "s_ec2796d0",
+   "s_ec96d903",
+   "s_ed5a19ae",
+   "s_ee9c7bec",
+   "s_f21094a3",
+   "s_f24df433",
+   "s_f4246a34",
+   "s_f49eeca2",
+   "s_f52bd37d",
+   "s_f689bcee",
+   "s_f6cc0705",
+   "s_f6ec1bbd",
+   "s_f95d634b",
+   "s_f9e78567",
+   "s_f9f4208c",
+   "s_fb44dd3d",
+   "s_fba24cd3",
+   "s_fce87735",
+   "s_fd423d59",
+   "s_fe8d7da8",
+   "s_febabd56",
+   "s_ffcf8a2c"
+  ]
+ }
+}

@@ -23,6 +23,7 @@ Uso:
     python3 pipeline/correr.py <fest-id> --lista    # ver pasos e inventario
     python3 pipeline/correr.py <fest-id> --paso 3   # solo el paso 3
     python3 pipeline/correr.py <fest-id> --bajar    # baja las fuentes vivas y corre el plan
+    python3 pipeline/correr.py <fest-id> --desde 6  # del paso 6 al final (lo usa corto.py)
 
 Fuentes vivas (20 oct 2026, pipeline/fuentes_vivas.py): si el plan declara
 `fuentes_vivas` y el festival está vigente, una fuente sin bajar en 24 h FRENA
@@ -85,7 +86,9 @@ def main():
             fuentes_vivas.bajar(fid)
         except fuentes_vivas.FuenteMala as e:
             sys.exit(f'✗ {e}')
-    _v = fuentes_vivas.frenar_si_vencidas(fid, f'python3 pipeline/correr.py {fid} --bajar')
+    desde = int(sys.argv[sys.argv.index('--desde') + 1]) if '--desde' in sys.argv else None
+    # --desde no vuelve a leer las fuentes (eso es el camino largo): no las exige frescas
+    _v = None if desde else fuentes_vivas.frenar_si_vencidas(fid, f'python3 pipeline/correr.py {fid} --bajar')
     if _v and '--fuentes-viejas' not in sys.argv:
         sys.exit(_v + f'\n  (o --fuentes-viejas, a mano, si de verdad querés armar con lo que hay)')
     if _v:
@@ -93,7 +96,7 @@ def main():
 
     solo = int(sys.argv[sys.argv.index('--paso') + 1]) if '--paso' in sys.argv else None
     for i, p in enumerate(pasos, 1):
-        if solo and i != solo:
+        if (solo and i != solo) or (desde and i < desde):
             continue
         print(f'\n─── paso {i}/{len(pasos)}: {p["cmd"]}')
         _b = f'{REPO}/festivals/staging/{fid}-build.json'
@@ -108,6 +111,19 @@ def main():
         if os.path.exists(_b) and os.path.getmtime(_b) > _antes:
             _c = lib.sellar_build(fid, i, p['cmd'])
             print(f'    sello: {_c["por"]} · plan {_c["plan_sha"]} · {_c["fecha"]}')
+
+    # EL REGISTRO DE ALTAS (15 nov 2026): tras enriquecer, las obras sin ficha se
+    # sondean en TMDB y quedan con su evidencia en <fid>-altas.json. Por defecto en
+    # pre-onboarding (festival por salir); en otro caso, si el plan declara
+    # `"altas": true`. `"altas": false` lo apaga.
+    import altas
+    _q = plan.get('altas')
+    if not solo and _q is not False and (_q or fid in altas.por_salir()):
+        print(f'\n─── registro de altas: python3 pipeline/altas.py {fid} --sondar')
+        if not os.environ.get('TMDB_API_KEY'):
+            print('⚠ sin TMDB_API_KEY: no se sondea; correr a mano con la llave')
+        elif subprocess.run(['python3', 'pipeline/altas.py', fid, '--sondar', '--pendientes'], cwd=REPO).returncode:
+            sys.exit('✗ altas.py --sondar falló')
 
     print(f'\n═══ sidecars después:')
     print('\n'.join(inventario(fid)))

@@ -1,0 +1,25 @@
+{
+ "_provenance": {
+  "fuente": "afiches oficiales de la web del festival (programa2026), mirados uno por uno",
+  "capturado": "2026-11-16",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche; registrados en aleste-2026-altas.json (--preparar)"
+ },
+ "afiches": {
+  "Desde acá veo la tormenta": {
+   "archivo": "assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
+   "fuente": "afiche oficial de la ficha del festival (https://www.alestfestival.com/programa2026/desde-ac%C3%A1-veo-la-tormenta), 1080x1350, estirado a 2:3 sin recorte; más grande que el de SiembraFest (500x750)"
+  },
+  "Las piedras del río": {
+   "archivo": "assets/aleste-2026/las-piedras-del-rio.jpg",
+   "fuente": "afiche oficial de la ficha del festival (https://www.alestfestival.com/programa2026/las-piedras-del-r%C3%ADo), 3175x4490; más grande que el de Cortos Cali (780x1170)"
+  },
+  "Futuros luminosos": {
+   "archivo": "assets/aleste-2026/futuros-luminosos.jpg",
+   "fuente": "afiche oficial con título, TMDB 1603950 (https://image.tmdb.org/t/p/original/91XpU39h8oqkjUi3YxFHJyvAjQm.jpg), 600x900; el que hereda el catálogo no lleva título"
+  },
+  "Transversal30FF": {
+   "archivo": "assets/aleste-2026/transversal30ff.jpg",
+   "fuente": "afiche oficial, TMDB 1525925 (https://image.tmdb.org/t/p/original/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg), 2000x2829, estirado a 2:3 sin recorte: el marco crema es diseño"
+  }
+ }
+}

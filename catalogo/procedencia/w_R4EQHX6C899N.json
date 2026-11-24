@@ -1,11 +1,13 @@
 {
  "titulo_original": {
-  "fuente": "festival:cineautopsia-2026",
+  "fuente": "festival:cineautopsia-2026,ficfusa-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1572828",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1572828)",
+  "fecha": "2026-11-24"
  },
  "anio": {
   "fuente": "tmdb:1572828",

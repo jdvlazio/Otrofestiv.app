@@ -8,6 +8,12 @@
  "directores": [
   "Simón Sánchez Plazas"
  ],
+ "aliases": [
+  {
+   "titulo": "El Espejo de la Vida",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
   "es": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación."
  },
@@ -26,6 +32,8 @@
   }
  ],
  "presentaciones": [
+  "festicinerio-2026",
+  "ficfusa-2026",
   "filcmar-2026"
  ]
 }

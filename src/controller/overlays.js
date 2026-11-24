@@ -12,6 +12,7 @@ import { _renderProgramaContent, lugarClose, lugarOutside, render } from '../vie
 import { t } from '../i18n/i18n.js';
 import { _updateProgramaActiveFilter } from './pipeline.js';
 import { countryToFlags } from './sheets-controller.js';
+import { paisesEn } from '../domain/banderas.js';
 
 // _dropRight — posición horizontal de un panel de filtro, ACOTADA al viewport.
 // Bug (FICDEH, 6 ago 2026): el panel se anclaba al borde derecho de su botón sin
@@ -322,7 +323,7 @@ export function _searchAll(q){
     const rAlt=[f.title_en,f.title_es].filter(Boolean)
       .reduce((mej,alt)=>{const r=fuzzyMatch(q,alt);return r.score>mej.score?r:mej;},{match:false,score:0});
     const secScore=(f.section||'').toLowerCase().includes(ql)?0.3:0;
-    const cntScore=(f.country||'').toLowerCase().includes(ql)?0.2:0;
+    const cntScore=`${f.country||''} ${paisesEn(f.country,_lang)}`.toLowerCase().includes(ql)?0.2:0;
     const score=Math.max(r1.score,rAlt.score)+secScore+cntScore;
     if((r1.match||rAlt.match||secScore||cntScore)&&!seen.has(f.title)){
       seen.add(f.title);
@@ -385,7 +386,7 @@ export function searchQuery(){
         ?`data-action="searchOpenCorto" data-title="${_q(f.title)}" data-country="${_q(f.country||'')}" data-dur="${_q(_dur)}" data-section="${_q(f.section||'')}" data-flags="${_q(f.flags||'🌍')}"`
         :`data-action="searchOpenFilm" data-title="${_q(f.title)}"`;
       return '<div class="search-item" '+_siAttrs+'>'
-        +(poster?'<img class="search-item-poster" src="'+poster+'" onerror="this.remove()" alt="" loading="lazy">'
+        +(poster?'<img class="search-item-poster" src="'+poster+'" data-err="quitar" alt="" loading="lazy">'
                 :'<div class="search-item-poster"></div>')
         +'<div class="search-item-info">'
         +'<div class="search-item-title">'+displayTitle

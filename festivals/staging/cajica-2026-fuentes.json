@@ -1,0 +1,1312 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/fuentes_descubrir.py",
+  "capturado": "2026-11-20T22:45",
+  "paginas_leidas": 60,
+  "errores": [
+   "https://www.culturacajica.gov.co/wp-content/plugins/elementor/assets: HTTP Error 403: Forbidden"
+  ]
+ },
+ "raices": {
+  "web": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+  "_sin_bio": "festival del Instituto Municipal de Cultura de Cajicá; se publica en @insculturacajica, sin link propio del festival"
+ },
+ "items": {
+  "https://culturacajica.gov.co/programa-gestion-documental-pgd": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://www.culturacajica.gov.co/gestion-documental/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/01/Manual-de-conviviencia-2024.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/01/Plan-Anual-de-Adquisiciones.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/transparencia-y-acceso-a-la-informacion-publica/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/01/Resolucion-117-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/politicas/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/01/Resolucion-118-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/politicas/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/01/Resolucion-120-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/politicas/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/01/Resolucion-123-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/01/Resolucion-No-119-de-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/politicas/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://forms.gle/94W3iXiEPL5TG8199": {
+   "tipo": "formulario",
+   "visto_en": "https://www.culturacajica.gov.co/encuestas-de-satisfaccion/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://forms.gle/Pv23Nm5Fb9rw4Q6c9": {
+   "tipo": "formulario",
+   "visto_en": "https://www.culturacajica.gov.co/encuestas-de-satisfaccion/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://forms.gle/biDMTYkkZAQtbzfG9": {
+   "tipo": "formulario",
+   "visto_en": "https://www.culturacajica.gov.co/encuestas-de-satisfaccion/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://forms.gle/gFyJEGoWb6qV4TK38": {
+   "tipo": "formulario",
+   "visto_en": "https://www.culturacajica.gov.co/encuestas-de-satisfaccion/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://forms.gle/t1dAvo1vGqJ7JaSLA": {
+   "tipo": "formulario",
+   "visto_en": "https://www.culturacajica.gov.co/encuestas-de-satisfaccion/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://forms.gle/vuGQHyAm7LX4CNZV9": {
+   "tipo": "formulario",
+   "visto_en": "https://www.culturacajica.gov.co/encuestas-de-satisfaccion/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/agenda-festival-sinfonico": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://www.culturacajica.gov.co/mapa-del-sitio/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/calendario-imctc": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://www.culturacajica.gov.co/mapa-del-sitio/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/plan-decenal-agenda-publica": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://www.culturacajica.gov.co/mapa-del-sitio/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/programa-gestion-documental-pgd": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://www.culturacajica.gov.co/mapa-del-sitio/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/programa_mano": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://www.culturacajica.gov.co/mapa-del-sitio/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/programacion-folleto-digital": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://www.culturacajica.gov.co/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/02/Certificado-ISO-9001-2015-IMCTC.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/02/Estados-financieros-4-T-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes-contables/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/02/Manual-de-funciones-y-competencias.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/transparencia-y-acceso-a-la-informacion-publica/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/02/PA-Programa-Anual-de-Auditoria-CI-2026_.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/plan-de-auditoria/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/02/Resolucion-020-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/concurso-nacional-de-duetos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/05-Activa-Mayo-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/05-Pasiva-Mayo-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/06-Activa-Junio-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/06-Pasiva-Junio-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/07-Activa-Julio-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/07-Pasiva-Julio-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/08-Activa-Agosto-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/08-Pasiva-Agosto-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/09-Activa-Septiembre-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/09-Pasiva-Septiembre-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/10-Activa-Octubre-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/10-Pasiva-Octubre-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/11-Activa-Noviembre-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/11-Pasiva-Noviembre-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/12-Activa-Diciembre-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/12-Pasiva-Diciembre-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/Agenda-cultural.webp": {
+   "tipo": "imagen-programa",
+   "visto_en": "https://www.culturacajica.gov.co/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/Resolucion-022-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/Resolucion-027-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/Resolucion-031-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/beps/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/01-Ejecucion-Activa-Enero-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/01-Ejecucion-Pasiva-Enero-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/02-Ejecucion-Activa-Febrero-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/02-Ejecucion-Pasiva-Febrero-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/03-Ejecucion-Activa-Marzo-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/03-Ejecucion-Pasiva-Marzo-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Condiciones-especificas-de-participacion-–-XV-Festival-Fortaleza-Rock-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/fortaleza-rock-2/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Manual-de-Contratacion-Resolucion-023-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/transparencia-y-acceso-a-la-informacion-publica/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Politica-de-Prevencion-del-Dano-Antijuridico-2026-2027.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/transparencia-y-acceso-a-la-informacion-publica/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Propuestas-Habilitadas-No-Cumplen-y-por-Subsanar-de-Duetos-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/concurso-nacional-de-duetos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Propuestas-seleccionadas-para-participar-en-la-Convocatoria-Publica-XXIII-Concurso-Nacional-de-Duetos-y-Musica-Andina-Colombiana-Ciudad-de-Cajica.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/concurso-nacional-de-duetos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Resolucion-035-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Resolucion-036-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/fortaleza-rock-2/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Resolucion-120-de-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/politicas/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Accion-de-Tutela-Diego-Felipe-Blanco-Velasquez.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/concurso-nacional-de-duetos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Estados-Finacieros-I-trimestre-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes-contables/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Informe-de-Gestion-Sobre-la-Correspondencia-y-Pqrs-Primer-Trimestre-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes-pqrs/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Listado-de-Seleccionados-Duetos-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/concurso-nacional-de-duetos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Peticiones-quejas-reclamos-y-sugerencias-Primer-Semestre-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes-pqrs/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Resolucion-045-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Resolucion-049-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Resolucion-054-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/concurso-nacional-de-duetos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Resolucion-No.038-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/concurso-nacional-de-duetos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Resolucion-No.046-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/concurso-nacional-de-duetos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Decreto-No.-088-2016.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/nuestros-patrimonios/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Folleto-de-divulgacion-–-Arqueologia-preventiva-Bosques-de-Cajica.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/nuestros-patrimonios/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Folleto-de-divulgacion-–-Arqueologia-preventiva-Parques-de-Hato-Grande.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/nuestros-patrimonios/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Listado-de-propuestas-habilitadas-para-evaluacion-por-medio-de-los-enlaces-de-video.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/fortaleza-rock-2/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Oficio-Convocatoria-de-renovacion.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/nuestros-patrimonios/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Oficio-de-designacion-miembros-junta-de-patrimonio.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/nuestros-patrimonios/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Propuestas-Habilitadas-que-no-cumplen-Rock-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/fortaleza-rock-2/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Resolucion-056-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Resolucion-062-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/beps/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Resultados-de-preseleccion-Ronda-1-–-XV-Fortaleza-Rock.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/fortaleza-rock-2/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/1.5-Directorio-de-servidores-publicos-empleados-o-contratistas.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/transparencia-y-acceso-a-la-informacion-publica/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/3.3.-Publicacion-de-la-ejecucion-de-los-contratos.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/transparencia-y-acceso-a-la-informacion-publica/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/3.5-Formatos-o-modelos-de-contratos-o-pliegos-tipo.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/transparencia-y-acceso-a-la-informacion-publica/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/4-Ejecucion-Activa-Abril-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/4-Ejecucion-Pasiva-Abril-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/5-Ejecucion-Activa-Mayo-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/5-Ejecucion-Pasiva-Mayo-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/6-Ejecucion-Activa-Junio-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/6-Ejecucion-Pasiva-Junio-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/presupuestos/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/Aviso-Modificatorio-XV-Festival-Fortaleza-Rock.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/fortaleza-rock-2/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/Certificado-de-accesibilidad-Cultura.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/accesibilidad-web/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/Directorio-de-agremiaciones-asociaciones-y-otros-grupos-de-interes.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/transparencia-y-acceso-a-la-informacion-publica/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/Resolucion-073-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/fortaleza-rock-2/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/V1.-Politica-de-Proteccion-de-Derechos-de-Autor-y-Propiedad-Intelectual-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/08/ITA-informacion-abril-a-julio-2026-1.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes-pqrs/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/08/Resolucion-083-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/portafolio-cajicarte-2026/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/09/Cumplimiento-Ita-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/festival-de-cine-2026/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/09/Propuestas-Habilitadas-que-no-cumplen-y-por-Subsanar-Cajicarte-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/portafolio-cajicarte-2026/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/09/Propuestas-Habilitadas-tras-subsanacion-de-documentos-que-pasan-a-evaluacion.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/portafolio-cajicarte-2026/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/10/Estados-Financieros-–-2°-Trimestre-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes-contables/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/10/Resolucion-099-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/portafolio-cajicarte-2026/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/11/Avance-y-Cierre-Plan-de-Mejoramiento-Auditoria-Contraloria-Vigencia-2024.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/planes-de-mejoramiento/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/11/Informe-2-Semestre-PQRS-2024.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes-pqrs/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/11/Informe-del-segundo-semestre-de-PQRS-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes-pqrs/",
+   "primera_vez": "2026-11-20T22:39",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/plan-decenal-agenda-publica": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://www.culturacajica.gov.co/participa/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/02/Informe-de-Control-Interno-–-Segundo-semestre-corte-al-31122025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/02/Informe-del-cuarto-trimestre-–-Austeridad-en-el-gasto-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/02/Resolucion-016-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/expomujer/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/02/Informe-Evaluacion-Insitucional-de-Gestion-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/02/Propuestas-Habilitadas-que-no-cumplen-y-por-Subsanar-VI-Independientes.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/festival-independientes/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/02/Propuestas-habilitadas-que-no-cumplen-y-que-pasan-a-evaluacion-por-parte-del-jurado-calificador-de-EXPOMUJER-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/expomujer/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/02/Resolucion-018-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/festival-independientes/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/02/Seguimiento-mapa-de-riesgos-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/Propuestas-habilitadas-para-exponer-en-Expomujer-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/expomujer/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/R-Subsanacion-Listado-Propuestas-Seleccionadas-Evaluacion.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/festival-independientes/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/Resolucion-028-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/expomujer/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/03/Resolucion-032-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/festival-independientes/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Condiciones-de-participacion-de-la-convocatoria-Primavera-en-Cajica-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/primavera/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Festival-Busongote-2026-Condiciones-de-Participacion.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/busongote/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Informe-del-Primer-Trimestre-–-Austeridad-en-el-Gasto-2026-IMCTC.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/Primer-Seguimiento-Programa-de-Transparencia-y-Etica-Publica-2026-IMCTC.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/04/V-Concurso-de-Cuento-Cajica-cuenta-diferente-Condiciones-de-participacion.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/v-concurso-cajica-cuenta-diferente/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Aviso-Modificatorio-No-1-2026-BUSONGOTE.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/busongote/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Condiciones-de-Participacion-III-Festival-de-Amasijos-y-Dulces-Busongote-Kids.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/busongote/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Propuestas-Habilitadas-tras-subsanacion-Busongote-2026-.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/busongote/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Propuestas-Habilitadas-–-F-Busongote-Kids-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/busongote/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/05/Propuestas-No-Cumplen-Por-Subsanar-Busongote.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/busongote/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/06/Resolucion-066-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/busongote/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/Aviso-modificatorio-No.-1-–-2026-de-la-Exposicion-Colectiva-Primavera.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/primavera/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/Informe-de-Control-Interno-Primer-Semestre-corte-al-30062026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/Informe-de-PQRS-del-Primer-Semestre-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/Propuestas-habilitadas-para-evaluacion-de-jurados-–-Primavera-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/primavera/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/07/Propuestas-habilitadas-que-no-cumplen-y-por-subsanar-–-Primavera-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/primavera/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/08/Informe-del-Segundo-Trimestre-Austeridad-en-el-Gasto-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/08/Propuestas-habilitadas-no-cumplen-y-por-subsanar-–-V-Concurso-de-Cuento-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/v-concurso-cajica-cuenta-diferente/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/08/Resolucion-090-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/primavera/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/08/Segundo-Seguimiento-Programa-de-Tranparencia-y-Etica-Publica.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/08/Seleccionados-a-exponer-en-la-galeria-–-Primavera-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/primavera/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/09/Catalogo-Primavera-2026_.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/primavera/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/09/Listado-de-propuestas-que-tras-la-subsanacion-de-documentos-Cajica-cuenta-diferente.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/v-concurso-cajica-cuenta-diferente/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/10/Condiciones-especificas-de-participacion-–-Pesebres-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/iv-concurso-de-pesebres-de-cajica/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/10/Resolucion-105-de-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/v-concurso-cajica-cuenta-diferente/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/11/Informe-del-Tercer-Trimestre-Austeridad-en-el-Gasto-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://www.culturacajica.gov.co/wp-content/uploads/2026/11/Tercer-Seguimiento-Programa-de-Tranparencia-y-Etica-Publica.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/informes_control_interno/",
+   "primera_vez": "2026-11-20T22:41",
+   "ultima_vez": "2026-11-20T22:43",
+   "estado": "descartada",
+   "_por_que": "web del Instituto de Cultura de Cajicá: documento administrativo, encuesta o página de otra área; la del festival es /festival-de-cine-2026/ (revisado 20 nov)",
+   "revisado": "2026-11-20T22:42"
+  },
+  "https://culturacajica.gov.co/wp-content/uploads/2026/01/Informe-de-Gestion-2025.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.culturacajica.gov.co/rendicion-de-cuentas/",
+   "primera_vez": "2026-11-20T22:43",
+   "ultima_vez": "2026-11-20T22:45",
+   "estado": "descartada",
+   "_por_que": "informe de gestión 2025 del instituto, no del festival",
+   "revisado": "2026-11-20T22:45"
+  }
+ }
+}

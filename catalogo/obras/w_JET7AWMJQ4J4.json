@@ -1,0 +1,43 @@
+{
+ "id": "w_JET7AWMJQ4J4",
+ "titulo_original": "La salamandra",
+ "anio": 1971,
+ "paises": [
+  "CH",
+  "FR"
+ ],
+ "directores": [
+  "Alain Tanner"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Salamander",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Dos jóvenes escritores noveles aparecen en la vida de Rosemonde mientras escriben un drama sobre un pequeño incidente en el que su tío resultó herido, quizás al limpiar su rifle o, peor, por un disparo a propósito. Pierre, periodista, recibe el encargo del guion y pide ayuda a su amigo Paul, un poeta bohemio.",
+  "en": "Pierre and Paul, journalist and writer respectively, team up to write a screenplay based on the real story of a young woman accused by her uncle of trying to kill him. They decide to meet her."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/aleste-2026/la-salamandra.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 62978,
+  "letterboxd": "the-salamander-1971"
+ },
+ "versiones": [
+  {
+   "etiqueta": "123 min",
+   "duracion_min": 123
+  }
+ ],
+ "presentaciones": [
+  "aleste-2026"
+ ]
+}

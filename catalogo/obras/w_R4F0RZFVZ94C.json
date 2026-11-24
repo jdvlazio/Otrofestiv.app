@@ -17,11 +17,14 @@
   }
  ],
  "sinopsis": {
-  "es": "La artista y cineasta boliviana Luciana Decker Orozco indaga en actos ancestrales y esenciales: comer, masticar y digerir. Su sugerente celuloide se cuela por bocas, intestinos y entrañas, así como por experimentos en las catacumbas del ser humano y la Tierra. (Miquel Martí Freixas)",
+  "es": "Un viaje al inframundo comienza en nuestras propias entrañas, formadas por la carne que consumimos y las bolitas de migajas ablandadas por la saliva de las madres. Esta película explora el devenir de distintos tiempos, desde el ritmo íntimo de la digestión hasta la vasta extensión de las eras geológicas: estalagmitas que se forman en milenios, huellas fosilizadas de dinosaurios y los ecos de movimientos primigenios, similares a los gruñidos. Inspirada en el capítulo “Puro Andar” de El Pez de Oro de Gamaliel Churata, donde dice que “todos llevamos vivos a los muertos, que los muertos viven”.",
   "en": "Bolivian artist and filmmaker Luciana Decker Orozco delves into ancient and essential acts: eating, masticating and digesting. Her suggestive celluloid slips through mouths, intestines and entrails, as well as experiments in the catacombs of the human being and the Earth. Inspired by the avant-gardist and indigenist Peruvian writer Gamaliel Chumata, the surface and the underground, the real and the extraordinary, mysteriously merge together."
  },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/m12YlFzvHMciYQCnIz0ChnFC4Se.jpg",
+  "archivo": "/assets/cinetoro-2026/puro-andar.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -32,9 +35,14 @@
   {
    "etiqueta": "12 min",
    "duracion_min": 12
+  },
+  {
+   "etiqueta": "13 min",
+   "duracion_min": 13
   }
  ],
  "presentaciones": [
-  "cinemancia-2026"
+  "cinemancia-2026",
+  "cinetoro-2026"
  ]
 }

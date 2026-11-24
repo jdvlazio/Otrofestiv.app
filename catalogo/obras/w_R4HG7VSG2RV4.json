@@ -13,19 +13,25 @@
   "en": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story."
  },
  "afiche": {
-  "archivo": "/assets/ficdeh/por-una-gota-de-leche.jpg",
-  "veredicto": "oficial-festival"
+  "archivo": "/assets/cineparalapaz-2026/por-una-gota-de-leche.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1738896,
   "letterboxd": "por-una-gota-de-leche"
  },
  "versiones": [
   {
    "etiqueta": "59 min",
    "duracion_min": 59
+  },
+  {
+   "etiqueta": "60 min",
+   "duracion_min": 60
   }
  ],
  "presentaciones": [
+  "cineparalapaz-2026",
   "ficdeh-2026"
  ]
 }

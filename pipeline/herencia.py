@@ -14,7 +14,7 @@ o dos títulos en inglés, heredar uno sería elegir por los festivales.
 """
 import os
 
-from lib import norm, tmdb_get
+from lib import norm, tmdb_get, director_coincide
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,14 +25,20 @@ CAMPOS = {'genero': 'genre', 'title_en': 'title_en', 'lbSlug': 'lbSlug', 'anio':
           # que una decisión de identidad unió a la obra de Ficcali, que sí lo tiene
           'director_heredado': 'director', 'duracion_tmdb': 'duration',
           # el PAÍS, del ISO del catálogo al nombre en español (pipeline/paises.json)
-          'pais_heredado': 'country'}
+          'pais_heredado': 'country',
+          # LA FICHA (27 oct 2026): el catálogo sabía el tmdb_id («Caída libre»,
+          # Anibia → FICCALI) y no viajaba. Solo con la obra corroborada: ver
+          # `ficha_corroborada`
+          'tmdb_id': 'tmdb_id'}
 
 
 def _pais_es(codigos):
-    """['CO', 'AR'] → 'Colombia, Argentina'; un código que la tabla no tiene → None."""
+    """['CO', 'AR'] → 'Colombia, Argentina'; un código que la tabla no tiene → None.
+    El nombre es el de ficha_obra.NOMBRE donde lo haya (Rumania, Palestina…)."""
     import json
+    from ficha_obra import NOMBRE
     iso = json.load(open(os.path.join(REPO, 'pipeline', 'paises.json'), encoding='utf-8'))['iso']
-    nombres = [(iso.get(c) or {}).get('es') for c in codigos]
+    nombres = [NOMBRE.get(c) or (iso.get(c) or {}).get('es') for c in codigos]
     return ', '.join(nombres) if nombres and all(nombres) else None
 
 
@@ -55,6 +61,7 @@ _VALOR = {
     # una sola duración entre sus versiones; con dos (corte del director…) no se elige
     'duracion_tmdb': lambda w: _uno(v.get('duracion_min') for v in w.get('versiones') or []),
     # EL AFICHE: nunca un fotograma (veredicto del catálogo)
+    'tmdb_id': lambda w: (w.get('xref') or {}).get('tmdb'),
     'poster': lambda w: (w.get('afiche') or {}).get('archivo')
               if (w.get('afiche') or {}).get('veredicto') != 'fotograma' else None,
 }
@@ -69,7 +76,21 @@ def afiche_ajeno_vale(ruta_web):
     return veredicto(r, ' '.join(leer([r]).get(r, [])), ajena=True) is None
 
 
-def valor(w, campo, fid, titulo, tmdb_id=None, key=None):
+def ficha_corroborada(w, obra):
+    """¿La obra `obra` ({director, anio}) es la `w` del catálogo, por algo más
+    que el título? Dirección que coincide, o —sin dirección de un lado— año ±1.
+    Un homónimo no hereda la ficha de otro."""
+    obra = obra or {}
+    d, ds = obra.get('director'), w.get('directores') or []
+    if d and ds:
+        return bool(director_coincide(d, ds))
+    try:
+        return abs(int(obra.get('anio')) - int(w.get('anio'))) <= 1
+    except (TypeError, ValueError):
+        return False
+
+
+def valor(w, campo, fid, titulo, tmdb_id=None, key=None, obra=None):
     """Lo que el catálogo da para `campo` de la obra `w` en el festival `fid`,
     o None si no hay un valor único que valga. No mira lo que la presentación
     ya tiene: eso lo decide cada camino (la fuente manda, lo publicado manda)."""
@@ -81,6 +102,16 @@ def valor(w, campo, fid, titulo, tmdb_id=None, key=None):
         return None
     v = _VALOR[campo](w)
     if not v:
+        return None
+    # NI SE HEREDA UNA DEFECTUOSA (23 nov 2026): los enlaces de compra de la web de
+    # Ficcali llegaron así a Cortos Cali, FICFUSA y AFF
+    if campo == 'synopsis_es':
+        from sinopsis_unicas import defectos
+        if defectos(v):
+            return None
+    # LA FICHA se hereda solo si la obra se corrobora por dirección o año
+    # (`obra`: {director, anio} de la presentación); sin con qué, no
+    if campo == 'tmdb_id' and not ficha_corroborada(w, obra):
         return None
     # EL AFICHE AJENO: que no sea el de este festival de vuelta, que exista en
     # disco, y que SEA un afiche (afiche_criterio)

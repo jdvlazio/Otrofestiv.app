@@ -39,6 +39,7 @@ DOS TRABAJOS, Y EL SEGUNDO ES EL QUE DUELE.
 
     python3 pipeline/publicar.py <id>
     python3 pipeline/publicar.py <id> --forzar   # sí, quiero perder esos datos / publicar sin sello
+    python3 pipeline/publicar.py <id> --ensayo   # corre TODAS las compuertas, no escribe nada
 """
 import json, os, sys, collections
 
@@ -141,6 +142,34 @@ def _n_cob(s):
     return ''.join(c for c in s if c.isalnum())
 
 
+def _cruce_con_lo_publicado(fid, films):
+    """Trabajo 5 (27 oct 2026): lo que otro festival nuestro YA publicó de una
+    obra no se publica vacío, y un porqué que dice «no está en otro festival
+    nuestro» se contrasta con el cruce. «Lolita en Honda» (Mamut, 28 sep) y
+    cuatro cortos de Miradas (27 oct) pasaron porque el cruce existía y nadie
+    lo miraba al publicar. FALLA CERRADO: si no puede leer los otros
+    festivales, no se publica (eso no lo salta --forzar).
+
+    Escape por obra: `no_heredar` de -correcciones.json {título: {"_por_que"}}
+    (un homónimo, un afiche ajeno que la hoja de contacto rechazó)."""
+    try:
+        idx = lib.obras_publicadas_estricto(REPO, excluir=(fid,))
+    except lib.CruceIlegible as e:
+        sys.exit(f'✗ NO se publica {fid}: no se pudo cruzar con los otros festivales — {e}')
+    corr = {}
+    cp = f'{REPO}/festivals/staging/{fid}-correcciones.json'
+    if os.path.exists(cp):
+        corr = json.load(open(cp, encoding='utf-8'))
+    no_her = {lib.norm(k) for k, v in (corr.get('no_heredar') or {}).items()
+              if str((v.get('_por_que') if isinstance(v, dict) else v) or '').strip()}
+    out = [f'«{t[:50]}» sin {k}: {", ".join(de)} lo tiene(n)'
+           for t, k, de in lib.cruce_faltantes(fid, films, idx, no_her)]
+    out += [f'«{t[:50]}»: su `sin_afiche` dice que no está en otro festival nuestro, '
+            f'y está en {", ".join(de)}'
+            for t, de in lib.razones_que_mienten(fid, films, corr.get('sin_afiche'), idx)]
+    return out
+
+
 def _sin_afiche_mudas(fid, films):
     """Las obras publicadas sin `poster` que ninguna declaración cubre.
 
@@ -176,7 +205,29 @@ def _sin_afiche_mudas(fid, films):
     return mudas
 
 
-def publicar(fid, forzar=False):
+# ── ENSAYO (20 nov 2026, lección del Under) ─────────────────────────────────
+# Cada compuerta de abajo cortaba en el primer fallo, y los requisitos de un
+# festival nuevo aparecían de a uno: cada arreglo destapaba el siguiente. Con
+# `ensayo=True` cada compuerta anota lo suyo y sigue, y al final no se escribe
+# nada. La regla de cada compuerta es la misma en los dos modos: _frena solo
+# decide si cortar o anotar.
+_ENSAYO = None
+
+
+def _frena(que, msg=1):
+    """Una compuerta no pasa: corta (publicación) o anota y sigue (ensayo)."""
+    if _ENSAYO is None:
+        sys.exit(msg)
+    if isinstance(msg, str):
+        print(msg)
+    _ENSAYO.append(que)
+
+
+def publicar(fid, forzar=False, ensayo=False):
+    global _ENSAYO
+    _ENSAYO = [] if ensayo else None
+    if ensayo:
+        forzar = False   # el ensayo mide lo que frenaría de verdad
     build = f'{REPO}/festivals/staging/{fid}-build.json'
     out_p = f'{REPO}/festivals/{fid}.json'
     if not os.path.exists(build):
@@ -186,13 +237,30 @@ def publicar(fid, forzar=False):
     # ── ¿este build lo produjo el runner, con este plan? ────────────────────
     ok_sello, motivo = lib.sello_valido(fid, b)
     if not ok_sello and not forzar:
-        sys.exit(f'✗ NO se publica {fid}: {motivo}.\n'
+        _frena('sello del runner', f'✗ NO se publica {fid}: {motivo}.\n'
                  f'  El camino es: python3 pipeline/correr.py {fid}\n'
                  f'  (o --forzar, a mano, si de verdad querés publicar un build sin correr)')
     if not ok_sello:
         print(f'⚠ --forzar: se publica SIN sello del runner — {motivo}')
     else:
         print(f'  sello: {motivo}')
+
+    # ── lo cerrado y lo dejado fuera no entran, ni con --forzar ─────────────
+    import no_entra
+    _no = no_entra.revisar_festival(fid, b.get('films', []))
+    if _no:
+        _frena('lo que no entra a la app', f'✗ NO se publica {fid}: esto no entra a la app:\n  · ' + '\n  · '.join(_no))
+
+    # ── ¿se buscó TODO lo que el festival publicó? (inventario de fuentes, ≤ 24 h) ──
+    import fuentes_descubrir
+    _fin = (b.get('festivalEndStr') or '9999')[:10]
+    if _fin >= fuentes_descubrir.ahora()[:10]:
+        _ip = fuentes_descubrir.ruta(fid)
+        _pf = (['sin inventario de fuentes'] if not os.path.exists(_ip)
+               else fuentes_descubrir.problemas(json.load(open(_ip, encoding='utf-8')), horas=24))
+        if _pf and not forzar:
+            _frena('inventario de fuentes', f'✗ NO se publica {fid}: la obtención de fuentes no está completa:\n  · ' + '\n  · '.join(_pf)
+                     + f'\n  python3 pipeline/fuentes_descubrir.py {fid}  (y --marcar cada fuente nueva)')
 
     rep = collections.Counter()
     out = {k: v for k, v in b.items() if k not in ('films', 'venues', 'sections')}
@@ -235,7 +303,7 @@ def publicar(fid, forzar=False):
         print(f'✗ {len(fallos)} incumplimiento(s) del contrato — NO se publica:')
         for x in fallos[:8]:
             print('   ', x)
-        sys.exit(1)
+        _frena(f'contrato ({len(fallos)})')
 
     # ── ninguna obra sin afiche EN SILENCIO (trabajo 4 del docstring) ───────
     mudas = _sin_afiche_mudas(fid, out['films'])
@@ -247,9 +315,36 @@ def publicar(fid, forzar=False):
             print('   ·', x)
         if len(mudas) > 12:
             print(f'   … y {len(mudas) - 12} más')
-        sys.exit(1)
+        _frena(f'obras sin afiche ni porqué ({len(mudas)})')
     if mudas:
         print(f'⚠ --forzar: se publican {len(mudas)} obra(s) sin afiche y sin porqué')
+
+    # ── ni con una duración que contradice a TMDB en silencio (20 nov 2026) ──
+    # Funza, «Basta Mamá»: la franja de 125 min (película + conversatorio) entró
+    # como duración de una obra de 77. El ensamblador lo avisaba y nadie lo leía.
+    import duraciones
+    _dur = duraciones.distintas(fid, out['films'])
+    if _dur and not forzar:
+        print(f'✗ NO se publica {fid}: {len(_dur)} obra(s) con una duración que contradice a TMDB:')
+        for x in _dur[:12]:
+            print('   ·', duraciones.linea(x))
+        _frena(f'duración distinta de TMDB ({len(_dur)})')
+    if _dur and forzar:
+        print(f'⚠ --forzar: se publican {len(_dur)} duración(es) que contradicen a TMDB')
+
+    # ── ni sin lo que OTRO festival nuestro ya publicó (trabajo 5) ──────────
+    cruce = _cruce_con_lo_publicado(fid, out['films'])
+    if cruce and not forzar:
+        print(f'✗ NO se publica {fid}: el cruce con nuestros festivales publicados lo contradice:')
+        for x in cruce[:15]:
+            print('   ·', x)
+        if len(cruce) > 15:
+            print(f'   … y {len(cruce) - 15} más')
+        print(f'  → re-correr el enriquecido (hereda afiche, ficha y sinopsis con su procedencia), '
+              f'o declarar el porqué en `no_heredar` de festivals/staging/{fid}-correcciones.json')
+        _frena(f'cruce con lo publicado ({len(cruce)})')
+    if cruce:
+        print(f'⚠ --forzar: se publican {len(cruce)} contradicción(es) con el cruce')
 
     # cada obra apunta a la suya del catálogo (docs/CATALOGO-OBRAS.md, fase 3b);
     # ANTES de la compuerta de pérdida, que cuenta campos: puestos después, la
@@ -257,12 +352,59 @@ def publicar(fid, forzar=False):
     import catalogo
     _obs = catalogo.obras()
     if _obs:
+        if os.path.exists(out_p):
+            catalogo.heredar_ids(out, json.load(open(out_p, encoding='utf-8')))   # un rearmado no pierde la identidad
         _nuevas = catalogo.enlazar(out, fid, _obs)
+        # UNA SINOPSIS POR OBRA (Juan, 23 nov 2026): la elegida del almacén manda
+        import sinopsis_unicas
+        for _t, _a, _b in sinopsis_unicas.aplicar(out):
+            print(f'  · sinopsis del almacén: «{_t[:50]}»')
+        # …Y UN AFICHE POR OBRA
+        import afiches_unicos
+        for _t, _a, _b in afiches_unicos.aplicar(out):
+            print(f'  · afiche del almacén: «{_t[:50]}»')
+        # …Y UN DIRECTOR, UN AÑO Y UN PAÍS
+        import ficha_unica
+        for _t, _k, _a, _b in ficha_unica.aplicar(out):
+            print(f'  · {_k} del almacén: «{_t[:40]}» {_a} → {_b}')
+        # [obra-unica]: lo que quedó distinto de otro festival frena el push; se dice acá
+        import obra_unica
+        _fs = {**obra_unica._festivales(), fid: out}
+        _div = [x for x in obra_unica.divergencias(_fs, catalogo.decisiones()) if any(fid in v for v in x[4].values())]
+        for _x in _div:
+            print('  ⚠ ' + obra_unica.texto(_x))
+        for _h in obra_unica.que_hacer(_div):
+            print('    → ' + _h)
+        if _div and _ENSAYO is not None:
+            _ENSAYO.append(f'datos de obra que difieren de otro festival ({len(_div)})')
         if _nuevas:
             print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
             for t in _nuevas[:10]:
                 print(f'    · {t}')
-            print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir')
+            print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir  (re-arma TODO el catálogo: se commitea todo lo que cambie)')
+            if _ENSAYO is not None:   # no corta acá, pero frena el push: en el ensayo cuenta
+                _ENSAYO.append(f'obras nuevas para el catálogo ({len(_nuevas)})')
+    # ── ni sin sinopsis en español en silencio (pipeline/sinopsis.py, 19 nov) ──
+    # Va DESPUÉS de traer la sinopsis del almacén: se mide lo que se va a publicar
+    # (FICFUSA, 24 nov: contaba 20 por frenar, con 14 reales). Frena solo lo que
+    # SUPERA la deuda congelada del festival: republicar un festival vivo con su
+    # deuda vieja sigue funcionando; empeorarla, no.
+    import sinopsis
+    _exc = sinopsis.excede(fid, out['films'])
+    if _exc and not forzar:
+        _pend, _techo = _exc
+        print(f'✗ NO se publica {fid}: {len(_pend)} obra(s) sin sinopsis en español '
+              f'(su deuda congelada es {_techo}). Cada una se traduce, se busca '
+              f'o lleva `sin_sinopsis` con su porqué y sus fuentes en '
+              f'festivals/staging/{fid}-correcciones.json:')
+        for x in _pend[:12]:
+            print('   ·', sinopsis.linea(x))
+        if len(_pend) > 12:
+            print(f'   … y {len(_pend) - 12} más   (python3 pipeline/sinopsis.py {fid})')
+        _frena(f'sinopsis en español ({len(_pend)}, techo {_techo})')
+    if _exc:
+        print(f'⚠ --forzar: se publican {len(_exc[0])} obra(s) sin sinopsis (techo {_exc[1]})')
+
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):
         viejo = json.load(open(out_p, encoding='utf-8'))
@@ -270,6 +412,9 @@ def publicar(fid, forzar=False):
         # `synopsis`: se le aplica la misma regla, o la migración parecería pérdida
         for f in (viejo.get('films') or []):
             lib.separar_descripcion(f)
+        # lo que el almacén quita a propósito no es pérdida (misma función en los dos lados)
+        import sinopsis_unicas
+        sinopsis_unicas.aplicar(viejo)
         _alt, _baj, _mov = diff_contra_produccion(viejo, out)
         if _alt or _baj or _mov:
             print(f'· cambios contra lo publicado: +{len(_alt)} obra(s), '
@@ -358,10 +503,18 @@ def publicar(fid, forzar=False):
             print('  El build está ATRASADO respecto a producción: alguien arregló el JSON\n'
                   '  publicado y no volvió aguas arriba. Arreglá el build, o --forzar si de\n'
                   '  verdad querés perder eso.')
-            sys.exit(1)
+            _frena('pérdida contra producción')
         if perdidos and forzar:
             print('⚠ --forzar: se publican MENOS datos de los que había:', dict(perdidos))
 
+    if ensayo:
+        if _ENSAYO:
+            print(f'✗ ensayo de {fid}: {len(_ENSAYO)} compuerta(s) frenarían la publicación:')
+            for x in _ENSAYO:
+                print('   ·', x)
+        else:
+            print(f'✓ ensayo de {fid}: publicar.py pasaría')
+        return _ENSAYO
     json.dump(out, open(out_p, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     kb = os.path.getsize(out_p) // 1024
     print(f'✓ {out_p}  {kb} KB · {len(out["films"])} funciones · {len(out["venues"])} sedes')
@@ -379,4 +532,6 @@ def publicar(fid, forzar=False):
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         sys.exit(__doc__)
+    if '--ensayo' in sys.argv:
+        sys.exit(1 if publicar(sys.argv[1], ensayo=True) else 0)
     publicar(sys.argv[1], forzar='--forzar' in sys.argv)

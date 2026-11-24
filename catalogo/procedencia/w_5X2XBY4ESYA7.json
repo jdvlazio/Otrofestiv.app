@@ -1,0 +1,28 @@
+{
+ "titulo_original": {
+  "fuente": "festival:ficfusa-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1531982",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "tmdb:1531982",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "tmdb:1531982",
+  "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "corrección de «habla del evento»: texto del festival sin lo que no era sinopsis",
+  "fecha": "2026-11-23"
+ }
+}

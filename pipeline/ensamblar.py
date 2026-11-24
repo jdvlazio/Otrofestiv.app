@@ -30,6 +30,25 @@ import lib
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+
+def _desde_almacen(g):
+    """EL PIN LO DA EL ALMACÉN (16 nov 2026, catalogo/sedes.json): un venue-geo
+    con `_matriz` toma lat, lng y dirección del lugar, no de su copia. Corregir
+    un lugar una vez lo corrige en todo festival que se vuelva a armar (FICCALI
+    tenía Brisas de Mayo a 549 m de donde la pone Google Maps)."""
+    if not g.get('_matriz'):
+        return g
+    import sedes
+    e = sedes.lugar(g['_matriz'])
+    if not e:
+        sys.exit(f'✗ venue-geo apunta a {g["_matriz"]}, que no está en catalogo/sedes.json')
+    if e.get('campus'):   # un campus: cada festival en SU edificio, con su pin
+        return g
+    out = {**g, 'lat': e['lat'], 'lng': e['lng']}
+    if e.get('address'):
+        out['address'] = e['address']
+    return out
+
 def _plan(fid):
     """El plan pasa por su contrato ANTES de tocar nada (lib.cargar_plan): lo
     que falte sale aquí, junto y con remedio, no una vuelta más tarde en un
@@ -99,6 +118,7 @@ def _compone_invitados(dst):
 # imprime al final: «El deshielo» decía 88 en el BIFF y 108 en Cannes, CineChile,
 # TMDB y Wikipedia, y con 88 la app no avisa de choques en los últimos 20 min.
 AVISOS_DURACION = []
+AVISOS_FRANJA = []
 
 
 def _min(v):
@@ -176,6 +196,17 @@ def _enriquece(dst, it):
     # suma del programa no se puede contrastar con su franja). Si las dos
     # existen y difieren mucho, se avisa: la del festival puede ser un error.
     _d, _t = _min(dst.get('duration')), it.get('duracion_tmdb')
+    _fr = dst.pop('_franja_min', None)
+    if _fr and _t and _fr >= _t:
+        # la fuente dio la FRANJA: la obra dura lo que dice TMDB, salvo que el
+        # crudo traiga además la duración de la obra (duracion_min manda)
+        if _d == _fr:
+            dst['duration'] = f'{_t} min'
+            _d = _t
+        # 15 min o más de sobra en la franja = conversatorio / Q&A
+        if _fr - _d >= 15 and not dst.get('has_qa'):
+            dst['has_qa'] = True
+            AVISOS_FRANJA.append(f'«{dst.get("title")}»: franja de {_fr} min, obra de {_d} → con conversatorio')
     if not _d and _t:
         dst['duration'] = f'{_t} min'
     elif _d and _t and abs(_d - _t) > max(5, 0.1 * _t):
@@ -432,7 +463,14 @@ def ensamblar(fid, escribir=True):
             'year': f.get('anio') or None,
             'country': f.get('pais') or None,
             'flags': lib.banderas(f.get('pais') or '') or None,
-            'duration': f"{f['duracion_min']} min" if f.get('duracion_min') else None,
+            # LA FRANJA NO ES LA OBRA (20 nov 2026, Funza: «Basta Mamá» de 77 min
+            # publicada con 125, la franja con su conversatorio). Cuando la fuente
+            # da hora de inicio y de fin, el parser escribe `franja_min`; la obra
+            # se queda con su runtime en _enriquece() y el sobrante va como Q&A.
+            # Sin runtime con qué comparar, la franja es lo único que hay.
+            'duration': (f"{f['duracion_min']} min" if f.get('duracion_min')
+                         else f"{f['franja_min']} min" if f.get('franja_min') else None),
+            '_franja_min': f.get('franja_min') or None,
             'language': f.get('idioma') or None,
             'genre': f.get('genero') or None,
             'rating': f.get('clasificacion') or None,
@@ -445,6 +483,10 @@ def ensamblar(fid, escribir=True):
             'event_kind': f.get('event_kind') or None,
             # `info`: drop-in sin hora de fin — se muestra y NO se planifica.
             'info': True if f.get('info') else None,
+            # ABIERTA DE VARIOS DÍAS (21 oct 2026): UNA función `info` con `hasta`
+            # (el último día) en vez de N funciones; la app la abre por día
+            # (domain/film.js expandVentanas). Sin copiarla acá, no llega al JSON.
+            'hasta': (f.get('hasta') or None) if f.get('info') else None,
             # UN TALLER DE VARIAS SESIONES es un bloque: `is_recurring` en cada
             # sesión, y la app ofrece «Añadir las N sesiones» (PROTOCOLO §4).
             # El crudo lo escribía y acá no se copiaba: el campo del protocolo
@@ -452,8 +494,12 @@ def ensamblar(fid, escribir=True):
             'is_recurring': True if f.get('is_recurring') else None,
             'has_qa': bool(f.get('has_qa')),
             'qa_type': f.get('qa_type') or None,
-            'synopsis': f.get('sinopsis') or None,
-            'synopsis_lang': 'es' if f.get('sinopsis') else None,
+            # `descripcion` es como el crudo nombra el texto de una ACTIVIDAD o un
+            # programa (19 nov 2026): no se leía y ese texto nunca llegaba al JSON
+            # (CUAFF, Cine para la Paz, Cinemancia). Entra como synopsis y
+            # lib.separar_descripcion lo pasa a description, que es su lugar.
+            'synopsis': f.get('sinopsis') or f.get('descripcion') or None,
+            'synopsis_lang': 'es' if (f.get('sinopsis') or f.get('descripcion')) else None,
             # se consume en _enriquece(), que lo añade a la sinopsis elegida
             'invitados': f.get('invitados') or None,
             'poster': f.get('poster') or None,
@@ -626,7 +672,7 @@ def ensamblar(fid, escribir=True):
         # a producción con sus SIETE sedes sin coordenadas teniendo el sidecar
         # completo al lado. Lo destapó Itagüí, que hizo exactamente lo mismo.
         _v = {'short': sede.split(' - ')[0], 'city': sede.split(' - ')[-1]}
-        _v.update(geo.get(sede) or geo.get(f['sede']) or {})
+        _v.update(_desde_almacen(geo.get(sede) or geo.get(f['sede']) or {}))
         venues[sede] = _v
 
     out = {'_etapa': plan.get('_etapa', 'build generado por pipeline/ensamblar.py'),
@@ -713,9 +759,19 @@ def ensamblar(fid, escribir=True):
         for _f in films:
             if _f.get('_fid') and not _f.get('id'):
                 _f['id'] = _f['_fid']
-            # …y su day_order, del mismo calendario que las demás
-            if _f.get('day_order') is None and _f.get('day') in orden:
+            # …y su day_order, del mismo calendario que las demás. También la
+            # que una afirmación de `day` MOVIÓ: el day_order venía del día base
+            # (FICCALI 22 oct 2026: «Agujero» al 25 quedaba con el orden del 23)
+            if _f.get('day') in orden:
                 _f['day_order'] = orden[_f['day']]
+            # …y su sede, si una afirmación de `venue` la llevó a una que el
+            # crudo no tiene: `venues` se arma del crudo, antes del resolver, y
+            # la sede nueva quedaba sin entrada ni pin (FICCALI 25 oct 2026:
+            # «Las pesadillas del siervo» al Cine Club El Ventanal)
+            _s = _f.get('venue')
+            if _s and _s not in venues:
+                venues[_s] = {'short': _s.split(' - ')[0], 'city': _s.split(' - ')[-1],
+                              **_desde_almacen(geo.get(_s) or geo.get(_s.split(' - ')[0]) or {})}
         print(f'  modelo de la función: {len(_afs)} afirmaciones · {len(films)} funciones')
     # L7: el registro se reescribe solo si cambió lo que guarda (sin ruido diario),
     # y solo después de que el modelo no frenó
@@ -748,6 +804,8 @@ def ensamblar(fid, escribir=True):
           f'· {len(dias)} días')
     if rep:
         print('  contrato aplicado:', dict(rep))
+    for a in AVISOS_FRANJA:
+        print(f'  · franja ≠ obra: {a}')
     if AVISOS_DURACION:
         print(f'  ⚠ duraciones que no cuadran entre fuentes ({len(AVISOS_DURACION)}):')
         for a in AVISOS_DURACION:

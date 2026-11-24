@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficica-2026",
+  "fuente": "festival:ficica-2026,miradas-2026,miradas-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -8,11 +8,23 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "tmdb:1469673",
+  "regla": "tmdb-manda"
  },
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "generos": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23"
  }
 }

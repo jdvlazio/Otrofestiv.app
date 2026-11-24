@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-20",
+  "capturado": "2026-10-27",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -29,6 +29,7 @@
   "festivals/staging/ficcali-2026-radar.json": "el volcado del radar #1024, que escribe y relee pipeline/radar.py"
  },
  "_por_que_slot_compartido": "8 oct: la edición de la programación pone «Guapi: ritmo y balsada» (30 min) y «La fabulosa máquina del tiempo» (70 min) a las 6:00 p. m. del 21 en Comfandi — la misma franja; se publica como UNA función (anclaje). Es el único slot compartido de Ficcali. Preguntado al festival.",
+ "_por_que_secciones_21oct": "«Clásicos» y «Plano General» (subpáginas nuevas de la Selección, 21 oct): nombre verbatim, decisión de Juan. Clásicos = 🏛️ «Classics», Retrospectiva / Tributo: Olhar de Cinema usa 🎞️ para Clásicos, pero en Ficcali 🎞️ ya es Muestras de Muestras (un emoji por sección); 🏛️ es el de Retrospectiva en Olhar, y sus obras son Metrópolis (1927) y Guapi (1963), patrimonio. Plano General = 🌀 «Wide Shot», Muestra / País: estrenos de autor internacionales fuera de competencia (Zvyagintsev, Alonso, Ambrossi/Calvo), como los «Panorama» de otros festivales (🌀 Panorama).",
  "prioLimit": 5,
  "dias": [
   "2026-10-16",
@@ -199,35 +200,45 @@
    "archetype": "Perspectivas / Miradas",
    "order": 7
   },
+  "🏛️ Clásicos": {
+   "en": "Classics",
+   "archetype": "Retrospectiva / Tributo",
+   "order": 8
+  },
+  "🌀 Plano General": {
+   "en": "Wide Shot",
+   "archetype": "Muestra / País",
+   "order": 9
+  },
   "🏙️ Cali Ciudad Abierta": {
    "en": "Cali, Open City",
    "archetype": "Muestra / País",
-   "order": 8
+   "order": 10
   },
   "🔦 Foco Claire Simon": {
    "en": "Claire Simon Focus",
    "archetype": "Retrospectiva / Tributo",
-   "order": 9
-  },
-  "🎞️ Muestras de Muestras": {
-   "en": "Showcase of Showcases",
-   "archetype": "Cortos / Programas",
-   "order": 10
+   "order": 11
   },
   "🔍 Zoom": {
    "en": "Zoom",
    "archetype": "Perspectivas / Miradas",
-   "order": 11
+   "order": 12
   },
   "🎵 Plano Sonoro": {
    "en": "Sound Frame",
    "archetype": "Cortos / Programas",
-   "order": 12
+   "order": 13
+  },
+  "🎞️ Muestras de Muestras": {
+   "en": "Showcase of Showcases",
+   "archetype": "Cortos / Programas",
+   "order": 14
   },
   "🎶 ¡Que Viva la Música!": {
    "en": "Long Live Music!",
    "archetype": "Especiales / Eventos",
-   "order": 13
+   "order": 15
   }
  },
  "venues": {
@@ -358,6 +369,15 @@
    "lng": -76.5359075,
    "address": "Carrera 5 #6-64, centro"
   },
+  "Teatro La Concha - Cali": {
+   "short": "Teatro La Concha",
+   "city": "Cali",
+   "_prec": "manual",
+   "lat": 3.4457545,
+   "lng": -76.537896,
+   "address": "Calle 4 #10-48, San Antonio",
+   "_nota": "Google Maps «TEATRO LA CONCHA» 3.4457545,-76.537896, Cl. 4 #10-48, Comuna 3, Cali (21 oct 2026). Sede de la charla de Pablo Solarz (tarjeta 14576), que la web pasó desde Madame Blue el 20 oct."
+  },
   "CineQuanon - Cali": {
    "short": "CineQuanon",
    "city": "Cali",
@@ -413,6 +433,24 @@
    "lng": -76.5347844,
    "address": "Bulevar de la Avenida Colombia, centro",
    "_pregunta": "Para los lanzamientos de libros en el Bulevar del Río: ¿en qué carpa/auditorio de CaliLee es cada uno (las tarjetas solo lo dicen en dos)?"
+  },
+  "Cine Club El Ventanal - Cali": {
+   "short": "Cine Club El Ventanal",
+   "city": "Cali",
+   "_prec": "manual",
+   "_nota": "Google Maps 3.4018453,-76.5511452 («Cra. 63a #2A-89, Cuarto de Legua, Cali») · OSM/Nominatim solo da el tramo de Carrera 63A (Pampalinda) 3.4013836,-76.5468378. Dirección del post de briosafilms + @festivaldecinecali (De4w_O_mYax, 24 oct 2026): «Cine Club El Ventanal (Cra 63A #2A -89)».",
+   "lat": 3.4018453,
+   "lng": -76.5511452,
+   "address": "Cra. 63A #2A-89, Cuarto de Legua"
+  },
+  "Hotel Obelisco - Cali": {
+   "short": "Hotel Obelisco",
+   "city": "Cali",
+   "_prec": "manual",
+   "_nota": "Google Maps 3.4506674,-76.5442123 · OSM/Nominatim 3.4506906,-76.5441629 · distancia 6 m. Google: «Hotel Obelisco Cali», Av. Colombia #4 Oeste-49. OSM: tourism=hotel «Obelisco», El Peñón, Comuna 3. Punto de partida del City Tour.",
+   "lat": 3.4506674,
+   "lng": -76.5442123,
+   "address": "Avenida Colombia #4 Oeste-49"
   }
  },
  "_avisos_id": [],
@@ -674,12 +712,16 @@
    "venue": "Yawa - Cali",
    "sala": "Domo",
    "event_kind": "experiencia",
+   "info": true,
+   "hasta": "2026-10-25",
    "has_qa": false,
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14841
+    "tarjeta": 14841,
+    "ventana": "https://www.instagram.com/p/DezVbZHRunB/"
    },
+   "requires_registration": true,
    "_fid": "f_930ac1e01c",
    "id": "f_930ac1e01c",
    "is_free": true,
@@ -705,6 +747,11 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "requires_registration": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
@@ -2522,11 +2569,12 @@
   {
    "title": "Guapi: ritmo y balsada",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🏛️ Clásicos",
+   "director": "Juan B. Ocampo",
    "year": 1963,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "30 min",
+   "duration": "33 min",
    "_ancla": [
     "Centro Cultural Comfandi - Cali",
     "2026-10-21",
@@ -2537,6 +2585,8 @@
    "day_order": 5,
    "venue": "Centro Cultural Comfandi - Cali",
    "has_qa": false,
+   "synopsis": "Documenta las expresiones culturales y espirituales de Guapi, al capturar la danza ancestral de los hojarasquines del monte, la vida al pie del río y la procesión fluvial nocturna; allí, la marimba de chonta y los arrullos le rinden culto a la Inmaculada Concepción. Es un trabajo de campo del Departamento de Investigaciones Folklóricas del IPC (diciembre de 1963 a enero de 1964). Recoge las interacciones entre los guapireños y los investigadores que indagaban sobre las celebraciones de la época, repertorios musicales y dancísticos, y fabricación de instrumentos. Forma parte de un archivo de cintas de 16 mm, cintas magnetofónicas de carrete abierto, fotografías y textos sobre fuerza creativa, fiesta y ritual en Guapi. Está disponible en el IPC.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
@@ -2670,11 +2720,11 @@
   {
    "title": "La libertad doble",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🌀 Plano General",
    "director": "Lisandro Alonso",
    "year": 2026,
-   "country": "Argentina",
-   "flags": "🇦🇷",
+   "country": "Chile, Argentina, Luxemburgo, Alemania, Reino Unido",
+   "flags": "🇨🇱🇦🇷🇱🇺🇩🇪🇬🇧",
    "duration": "100 min",
    "genre": "Drama",
    "_ancla": [
@@ -2688,7 +2738,7 @@
    "venue": "Teatro Municipal Enrique Buenaventura - Cali",
    "sala": "Teatrino",
    "has_qa": false,
-   "synopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
+   "synopsis": "Misael trabaja solo con su hacha, cortando árboles en el monte. Una responsabilidad inesperada altera su vida y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido. Lisandro Alonso retoma el personaje, las acciones y la forma minuciosa y delicada de observarlos de su película La libertad (2001), con la que se estableció como parte de una nueva generación de cine argentino. Esta novedosa mirada plantea un giro reflexivo sobre el personaje, su tiempo, nuestro tiempo y la forma de asumir el cine de director.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
    "posterSource": "tmdb",
@@ -2758,14 +2808,14 @@
    "section": "🎓 Académico",
    "duration": "60 min",
    "_ancla": [
-    "Madame Blue - Cali",
+    "Teatro La Concha - Cali",
     "2026-10-21",
     "19:00"
    ],
    "day": "2026-10-21",
    "time": "19:00",
    "day_order": 5,
-   "venue": "Madame Blue - Cali",
+   "venue": "Teatro La Concha - Cali",
    "event_kind": "charla",
    "has_qa": false,
    "_src": {
@@ -2984,9 +3034,14 @@
   },
   {
    "title": "Cineconcierto: Metrópolis",
-   "type": "event",
-   "section": "📽️ Proyecciones",
-   "duration": "60 min",
+   "type": "film",
+   "section": "🏛️ Clásicos",
+   "director": "Fritz Lang",
+   "year": 1927,
+   "country": "Alemania",
+   "flags": "🇩🇪",
+   "duration": "120 min",
+   "genre": "Ciencia ficción",
    "_ancla": [
     "Casa Ethel - Cali",
     "2026-10-21",
@@ -2996,15 +3051,19 @@
    "time": "20:00",
    "day_order": 5,
    "venue": "Casa Ethel - Cali",
-   "event_kind": "evento",
    "has_qa": false,
+   "synopsis": "Metrópolis es una película de ciencia ficción ambientada en una ciudad futurista profundamente dividida entre clases sociales. En la superficie viven los poderosos y privilegiados, mientras que, bajo tierra, miles de trabajadores realizan duras labores para mantener la ciudad en funcionamiento. Freder, hijo de Joh Fredersen, el gobernante de Metrópolis, lleva una vida cómoda hasta que conoce a María, una joven que defiende la unión y el entendimiento entre ricos y pobres. Con una poderosa crítica a la desigualdad social y a la deshumanización industrial, Metrópolis transmite su famoso mensaje: el corazón debe ser el mediador entre la cabeza y las manos.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/cineconcierto-metropolis.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14006
    },
-   "description": "Alemania | 120 min",
-   "description_lang": "es",
+   "lbSlug": "metropolis",
+   "tmdb_id": 19,
+   "synopsis_en": "In a futuristic city sharply divided between the rich and the poor, the son of the city's mastermind meets a prophet who predicts the coming of a savior to mediate their differences.",
    "_fid": "f_ccede7bd0f",
    "id": "f_ccede7bd0f",
    "is_free": true,
@@ -3044,11 +3103,6 @@
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
-    "event_kind": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
     "entrada": {
      "tipo": "regla",
      "marca": "supuesto",
@@ -3083,7 +3137,7 @@
    "film_list": [
     {
      "title": "Afilando memoria",
-     "director": "Eugenio Gómez",
+     "director": "Eugenio Gómez Borrero",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
@@ -3830,7 +3884,7 @@
   {
    "title": "Runa simi",
    "type": "film",
-   "section": "🎞️ Muestras de Muestras",
+   "section": "🔍 Zoom",
    "director": "Augusto Zegarra",
    "year": 2025,
    "country": "Perú",
@@ -4544,6 +4598,8 @@
      "flags": "🇨🇴",
      "year": 2024,
      "duration": "13 min",
+     "poster": "/assets/ficcali-2026/liebres.jpg",
+     "posterSource": "oficial",
      "lbSlug": "hare",
      "tmdb_id": 1392101,
      "synopsis": "Valentina y Pilar, dos adolescentes de mundos sociales distintos, viven un hecho violento que las cambia para siempre: rompe las barreras que las separaban y las hace habitar un mismo cuerpo herido.",
@@ -5166,15 +5222,15 @@
    "title": "Agujero",
    "type": "event",
    "section": "🎓 Académico",
-   "duration": "45 min",
+   "duration": "60 min",
    "_ancla": [
     "Bulevar del Río - Cali",
     "2026-10-23",
     "15:00"
    ],
-   "day": "2026-10-23",
-   "time": "15:00",
-   "day_order": 7,
+   "day": "2026-10-25",
+   "time": "11:00",
+   "day_order": 9,
    "venue": "Bulevar del Río - Cali",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
@@ -5190,14 +5246,14 @@
    "is_free": true,
    "_procedencia": {
     "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-22",
+     "url": "https://www.instagram.com/p/DezOJbQkf6x/"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-22",
+     "url": "https://www.instagram.com/p/DezOJbQkf6x/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -5205,9 +5261,9 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-22",
+     "url": "https://www.instagram.com/p/DezOJbQkf6x/"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -5562,6 +5618,7 @@
    "time": "16:00",
    "day_order": 7,
    "venue": "Bulevar del Río - Cali",
+   "sala": "Carpa GEUP",
    "event_kind": "evento",
    "has_qa": false,
    "_src": {
@@ -5586,6 +5643,11 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "sala": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
@@ -5636,6 +5698,7 @@
    "time": "16:30",
    "day_order": 7,
    "venue": "Bulevar del Río - Cali",
+   "sala": "Auditorio Celsia",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
    "_src": {
@@ -5660,6 +5723,11 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "sala": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
@@ -5856,10 +5924,11 @@
     "2026-10-23",
     "17:30"
    ],
-   "day": "2026-10-23",
+   "day": "2026-10-24",
    "time": "17:30",
-   "day_order": 7,
+   "day_order": 8,
    "venue": "Bulevar del Río - Cali",
+   "sala": "Auditorio Celsia",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
    "_src": {
@@ -5874,9 +5943,9 @@
    "is_free": true,
    "_procedencia": {
     "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-22",
+     "url": "https://www.instagram.com/p/DezOJbQkf6x/"
     },
     "time": {
      "tipo": "festival-web",
@@ -5884,6 +5953,11 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "sala": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
@@ -5924,6 +5998,8 @@
    "title": "Animá Ve – Retrospectiva de Maria Cristina Pérez",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "country": "Colombia, Estados Unidos",
+   "flags": "🇨🇴🇺🇸",
    "duration": "90 min",
    "_ancla": [
     "Centro Cultural Comfandi - Cali",
@@ -5938,8 +6014,77 @@
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14604
+    "tarjeta": 14604,
+    "obras": "https://ficcali.com/anima-ve-2026/"
    },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez",
+     "country": "Colombia, Estados Unidos",
+     "flags": "🇨🇴🇺🇸",
+     "year": 2025,
+     "duration": "10 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "tmdb_id": 1522316,
+     "synopsis": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado.",
+     "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+     "title_en": "Once in a Body",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Todo es culpa de la sal",
+     "director": "María Cristina Pérez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2020,
+     "duration": "10 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/todo-es-culpa-de-la-sal.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "its-all-the-salts-fault",
+     "tmdb_id": 711868,
+     "synopsis": "El más joven de una familia perezosa reconstruye su historia. Detrás de la normalidad de la vida cotidiana, la extravagancia se oculta en los pequeños detalles de la vida y crea recuerdos duraderos.",
+     "synopsis_en": "The youngest daughter of a family of sloths reconstructs their story. A metaphor about the sometimes wild nature that inhabits family environments.",
+     "title_en": "It's all the Salt's Fault",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Coffee Break",
+     "director": "María Cristina Pérez, Mauricio Cuervo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2018,
+     "duration": "9 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/coffee-break.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "coffee-break-2018",
+     "tmdb_id": 784163,
+     "synopsis": "Cada día hábil, durante décadas, exactamente a las cuatro de la tarde, Pepe, un ciervo que trabaja como oficinista, se toma un café. A partir de ese momento, la implacable rutina devora su existencia.",
+     "synopsis_en": "Every working day for decades, at four in the afternoon, Pepe drinks coffee. The life of a deer clerk happens in the coffee room of his office. The routine fixed in his life. Fridays of expectations followed by disenchanted Mondays, while Pepe wins gray hair and loses enthusiasm.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Añejo",
+     "director": "María Cristina Pérez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2014,
+     "duration": "9 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/anejo.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 535612,
+     "synopsis": "La llegada a un bar en el que nada funciona. La dueña dormida, el perro a su lado atiende el lugar. Un viejo roba los últimos sorbos de trago de las mesas. Al final todo se pierde, hasta la razón… un último trago los volverá humanos.",
+     "synopsis_en": "Añejo is a story of old men and the links that gather us in a selfish world.",
+     "synopsis_lang": "es"
+    }
+   ],
    "_fid": "f_ec05af8d70",
    "id": "f_ec05af8d70",
    "is_free": true,
@@ -5974,6 +6119,11 @@
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
     "type": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
@@ -5992,11 +6142,11 @@
   {
    "title": "En construcción",
    "type": "film",
-   "section": "🎞️ Muestras de Muestras",
+   "section": "📽️ Proyecciones",
    "director": "José Luis Guerín",
    "year": 2001,
-   "country": "Spain, France",
-   "flags": "🇪🇸🇫🇷",
+   "country": "España",
+   "flags": "🇪🇸",
    "duration": "124 min",
    "genre": "Documental",
    "_ancla": [
@@ -6101,84 +6251,6 @@
    "tmdb_id": 1774071,
    "_fid": "f_ba5422e306",
    "id": "f_ba5422e306",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "libre"
-    }
-   }
-  },
-  {
-   "title": "An Incomplete Calendar",
-   "type": "film",
-   "section": "🌍 Competencia Largometrajes Internacionales",
-   "director": "Sanaz Sohrabi",
-   "year": 2026,
-   "country": "Canadá, Irán, Turquía, Venezuela",
-   "flags": "🇨🇦🇮🇷🇹🇷🇻🇪",
-   "duration": "90 min",
-   "genre": "Documental",
-   "_ancla": [
-    "Cine Colombia Unicentro - Cali",
-    "2026-10-23",
-    "18:30"
-   ],
-   "day": "2026-10-23",
-   "time": "18:30",
-   "day_order": 7,
-   "venue": "Cine Colombia Unicentro - Cali",
-   "has_qa": false,
-   "synopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficcali-2026/an-incomplete-calendar.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14027
-   },
-   "lbSlug": "an-incomplete-calendar",
-   "tmdb_id": 1633334,
-   "synopsis_en": "A forgotten musical record connects Caracas to Tehran, revealing untold stories of oil, not as a commodity, but as a political leverage for the liberation struggles in Palestine and building Pan-Arab solidarity between 1960-1970.",
-   "_fid": "f_7c5c854376",
-   "id": "f_7c5c854376",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -6594,82 +6666,6 @@
    "titulos_anteriores": [
     "Plano sonoro: muestra de videoclips"
    ]
-  },
-  {
-   "title": "Las pesadillas del siervo",
-   "type": "film",
-   "section": "🇨🇴 Competencia Largometrajes Nacionales",
-   "director": "Manuel Villa",
-   "year": 2025,
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "90 min",
-   "_ancla": [
-    "Cine Colombia Unicentro - Cali",
-    "2026-10-23",
-    "20:30"
-   ],
-   "day": "2026-10-23",
-   "time": "20:30",
-   "day_order": 7,
-   "venue": "Cine Colombia Unicentro - Cali",
-   "has_qa": false,
-   "synopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14030
-   },
-   "lbSlug": "las-pesadillas-del-siervo",
-   "tmdb_id": 1791689,
-   "_fid": "f_80f9a567f8",
-   "id": "f_80f9a567f8",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "libre"
-    }
-   }
   },
   {
    "title": "Iluminada",
@@ -7300,7 +7296,7 @@
    "section": "🎞️ Muestras de Muestras",
    "country": "México, Venezuela, España, Colombia, Pakistán",
    "flags": "🇲🇽🇻🇪🇪🇸🇨🇴🇵🇰",
-   "duration": "115 min",
+   "duration": "133 min",
    "_ancla": [
     "Teatro Municipal Enrique Buenaventura - Cali",
     "2026-10-24",
@@ -7335,6 +7331,20 @@
      "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
      "title_en": "Reliefs",
      "genre": "Drama"
+    },
+    {
+     "title": "El bitcoin de oro",
+     "director": "Bernardo Hernández",
+     "country": "España",
+     "flags": "🇪🇸",
+     "year": 2026,
+     "duration": "18 min",
+     "synopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar.",
+     "synopsis_lang": "es",
+     "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-bitcoin-de-oro",
+     "tmdb_id": 1793999
     },
     {
      "title": "El bitcoin de oro",
@@ -7641,16 +7651,21 @@
      "title": "Caída libre",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "poster": "/assets/qaff/free-fall.jpg",
-     "posterSource": "custom",
+     "poster": "/assets/ficcali-2026/caida-libre.jpg",
+     "posterSource": "tmdb",
      "lbSlug": "caida-libre",
-     "synopsis": "En un intento desesperado por escapar del aislamiento, un personaje sin rostro se lanza desde una cornisa esperando encontrar su final, sin saber que en el fondo de la caída las leyes de la gravedad no aplican para él: rebota. Frustrado por este hecho, sigue intentándolo en diferentes escenarios, en un ciclo constante. Todo esto, enmarcado en un paisaje desolado, contaminado y sin recursos. Nació en Bogotá, Colombia, en 1980. Después de graduarse como diseñador gráfico en 2003, ha estado creando imágenes para revistas y libros durante más de diez años. En animación, ha colaborado como artista conceptual y diseñador de personajes para proyectos de televisión y cine. Se graduó de la Maestría en Bellas Artes en el programa de Studio Art de la Universidad de Arkansas después de obtener una beca Fulbright en 2011. Actualmente, enseña cursos de ilustración y animación en el programa de diseño gráfico de la Universidad Nacional de Colombia. Su cortometraje más reciente, Reparations, fue galardonado con el premio Ciudad de Annecy en la sección Perspectives del Festival Internacional de Cine de Animación de Annecy 2022. 15",
-     "title_en": "Free Fall",
+     "tmdb_id": 1487969,
+     "synopsis": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
+     "synopsis_en": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources.",
      "genre": "Animación",
      "director": "Wilson Borja",
      "year": 2024,
      "synopsis_lang": "es",
-     "duration": "9 min"
+     "duration": "9 min",
+     "title_en": "Free Fall",
+     "_conservado": [
+      "title_en"
+     ]
     },
     {
      "title": "Pájaro Cubo",
@@ -7805,11 +7820,11 @@
   {
    "title": "Minotauro",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🌀 Plano General",
    "director": "Andrey Zvyagintsev",
    "year": 2026,
-   "country": "Rusia",
-   "flags": "🇷🇺",
+   "country": "Francia, Letonia, Alemania",
+   "flags": "🇫🇷🇱🇻🇩🇪",
    "duration": "140 min",
    "genre": "Drama",
    "_ancla": [
@@ -7822,7 +7837,7 @@
    "day_order": 8,
    "venue": "Cine Colombia Unicentro - Cali",
    "has_qa": false,
-   "synopsis": "Es la contemplación del director sobre la naturaleza de las relaciones humanas, el estado del hombre moderno y la fragilidad de la vida humana.",
+   "synopsis": "Rusia, 2022. Cuando Gleb, un exitoso director de empresa, se ve asediado por las crecientes presiones corporativas y un mundo cada vez más inestable, el colapso de su vida, cuidadosamente ordenada, se precipita hacia la violencia. Cine negro que adapta La mujer infiel, de Chabrol, al contexto de los inicios de la guerra de Rusia contra Ucrania.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/minotauro.jpg",
    "posterSource": "tmdb",
@@ -7961,15 +7976,10 @@
    }
   },
   {
-   "title": "Historias del buen valle",
-   "type": "film",
-   "section": "🎞️ Muestras de Muestras",
-   "director": "José Luis Guerín",
-   "year": 2025,
-   "country": "France, Spain",
-   "flags": "🇫🇷🇪🇸",
-   "duration": "120 min",
-   "genre": "Documental",
+   "title": "Ceremonia de premiación",
+   "type": "event",
+   "section": "📽️ Proyecciones",
+   "duration": "122 min",
    "_ancla": [
     "Cinemateca La Tertulia - Cali",
     "2026-10-24",
@@ -7979,23 +7989,38 @@
    "time": "19:30",
    "day_order": 8,
    "venue": "Cinemateca La Tertulia - Cali",
+   "event_kind": "premiación",
    "has_qa": false,
-   "synopsis": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
-   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14037
    },
-   "lbSlug": "good-valley-stories",
-   "tmdb_id": 1457842,
-   "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
-   "title_en": "Good Valley Stories",
    "_fid": "f_2450b741b4",
    "id": "f_2450b741b4",
    "is_free": true,
+   "film_list": [
+    {
+     "title": "Historias del buen valle",
+     "director": "José Luis Guerín",
+     "country": "España",
+     "flags": "🇪🇸",
+     "year": 2025,
+     "genre": "Documental",
+     "synopsis": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
+     "synopsis_lang": "es",
+     "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
+     "title_en": "Good Valley Stories",
+     "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 1457842,
+     "lbSlug": "good-valley-stories",
+     "duration": "122 min",
+     "titulos_anteriores": [
+      "Historias del buen Valle"
+     ]
+    }
+   ],
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -8013,9 +8038,14 @@
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
     "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-06",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
+     "tipo": "festival-ig",
+     "fecha": "2026-10-23",
+     "url": "https://www.instagram.com/p/De0V1lFDU4D/"
+    },
+    "entrada": {
+     "tipo": "festival-ig",
+     "fecha": "2026-10-23",
+     "url": "https://www.instagram.com/p/De0V1lFDU4D/"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -8027,29 +8057,31 @@
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
+    "film_list": {
+     "tipo": "festival-ig",
+     "fecha": "2026-10-23",
+     "url": "https://www.instagram.com/p/De0V1lFDU4D/"
+    },
     "type": {
      "tipo": "festival-web",
      "fecha": "2026-10-06",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
-    "entrada": {
-     "tipo": "regla",
-     "marca": "supuesto",
-     "valor": "libre"
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
     }
-   },
-   "titulos_anteriores": [
-    "Historias del buen Valle"
-   ]
+   }
   },
   {
    "title": "La bola negra",
    "type": "film",
-   "section": "📽️ Proyecciones",
-   "director": "Javier Calvo, Javier Ambrossi",
+   "section": "🌀 Plano General",
+   "director": "Javier Ambrossi, Javier Calvo",
    "year": 2026,
-   "country": "España",
-   "flags": "🇪🇸",
+   "country": "España, Francia",
+   "flags": "🇪🇸🇫🇷",
    "duration": "155 min",
    "genre": "Drama",
    "_ancla": [
@@ -8062,7 +8094,7 @@
    "day_order": 8,
    "venue": "Cine Colombia Unicentro - Cali",
    "has_qa": false,
-   "synopsis": "Las vidas interconectadas de tres hombres en tres épocas distintas, tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia.",
+   "synopsis": "La bola negra cuenta la historia de tres hombres cuyas vidas están íntimamente conectadas por el deseo, el dolor y la herencia, a lo largo de tres épocas: 1932, 1937 y 2017. El título es el mismo de una obra de Federico García Lorca que quedó inacabada por su muerte, en 1936, y que se refiere a la bola negra que funciona como signo de rechazo a un joven en un prestigioso club por las sospechas sobre su sexualidad",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
    "posterSource": "tmdb",
@@ -8200,27 +8232,39 @@
    }
   },
   {
-   "title": "Animá Ve – Mujeres en la animación",
+   "title": "An Incomplete Calendar",
    "type": "film",
-   "section": "📽️ Proyecciones",
+   "section": "🌍 Competencia Largometrajes Internacionales",
+   "director": "Sanaz Sohrabi",
+   "year": 2026,
+   "country": "Canadá, Irán, Turquía, Venezuela",
+   "flags": "🇨🇦🇮🇷🇹🇷🇻🇪",
    "duration": "90 min",
+   "genre": "Documental",
    "_ancla": [
-    "Cinemateca La Tertulia - Cali",
+    "Cine Colombia Unicentro - Cali",
     "2026-10-25",
-    "15:00"
+    "14:30"
    ],
    "day": "2026-10-25",
-   "time": "15:00",
+   "time": "14:30",
    "day_order": 9,
-   "venue": "Cinemateca La Tertulia - Cali",
+   "venue": "Cine Colombia Unicentro - Cali",
    "has_qa": false,
+   "synopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/an-incomplete-calendar.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
-    "tarjeta": 14452
+    "tarjeta": 14027
    },
-   "_fid": "f_391c89d0d0",
-   "id": "f_391c89d0d0",
+   "lbSlug": "an-incomplete-calendar",
+   "tmdb_id": 1633334,
+   "synopsis_en": "A forgotten musical record connects Caracas to Tehran, revealing untold stories of oil, not as a commodity, but as a political leverage for the liberation struggles in Palestine and building Pan-Arab solidarity between 1960-1970.",
+   "_fid": "f_7c5c854376",
+   "id": "f_7c5c854376",
    "is_free": true,
    "_procedencia": {
     "day": {
@@ -8263,10 +8307,246 @@
      "marca": "supuesto",
      "valor": "libre"
     }
+   }
+  },
+  {
+   "title": "Animá Ve – Mujeres en la Animación",
+   "type": "film",
+   "section": "📽️ Proyecciones",
+   "country": "Colombia, Estados Unidos",
+   "flags": "🇨🇴🇺🇸",
+   "duration": "90 min",
+   "_ancla": [
+    "Cinemateca La Tertulia - Cali",
+    "2026-10-25",
+    "15:00"
+   ],
+   "day": "2026-10-25",
+   "time": "15:00",
+   "day_order": 9,
+   "venue": "Cinemateca La Tertulia - Cali",
+   "has_qa": false,
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14452,
+    "obras": "https://ficcali.com/anima-ve-2026/"
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "El fin de la sequía",
+     "director": "Raquel Páez, Mariana Rey",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2020,
+     "duration": "3 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/el-fin-de-la-sequia.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-fin-de-la-sequia",
+     "tmdb_id": 844182,
+     "synopsis": "El fin de la sequía explora texturas visuales y sonoras, recorriendo sus materialidades y transformándolas. El camino es guiado por la voz que atraviesa la materia, consolidándose poéticamente en el trayecto mientras juega con la noción de tensión que lentamente se desborona para dar paso al fluir del agua.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Un rastro de baba anuncia la lluvia",
+     "director": "Mariana Moyano",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "11 min",
+     "genre": "Animación",
+     "synopsis": "Este poema visual animado presenta a un caracol en una selva que lidia con el deseo de no ser lo que es. Inocente ante su propia vulnerabilidad, interactúa simbólicamente con las sombras de animales peligrosos mientras busca su lugar en el mundo.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "No puedo volver a casa",
+     "director": "Cecilia Traslaviña",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2015,
+     "duration": "3 min",
+     "genre": "Animación",
+     "synopsis": "Mediante fragmentos visuales erráticos, manchas y texturas en constante transformación, se teje una reflexión íntima sobre el desarraigo, la pérdida del espacio propio y la imposibilidad de retornar al hogar de la infancia. La obra utiliza la animación analógica sobre soportes físicos para representar la memoria fragmentada y el peso emocional de los recuerdos que se difuminan con el tiempo.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Bailar con la línea",
+     "director": "Antonia Bello",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2023,
+     "duration": "7 min",
+     "genre": "Animación",
+     "synopsis": "El silencio de una habitación vacía es interrumpido por una invasión de formas, líneas, círculos incompletos, garabatos y rayas danzantes. Un baile de formas retorcidas y un concierto de ruidos. Es el fruto de una mirada diferente. Coordinación ojo-mano: ojo torcido, mano torcida, bailan juntos sobre el papel. Era necesaria una corrección, un enderezamiento de la mirada.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Detrás de la puerta está el jardín",
+     "director": "Ana Sofía Navia",
+     "country": "Colombia, Estados Unidos",
+     "flags": "🇨🇴🇺🇸",
+     "year": 2025,
+     "duration": "5 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/detras-de-la-puerta-esta-el-jardin.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "behind-the-door-lies-the-garden",
+     "tmdb_id": 1750222,
+     "synopsis": "Narrada en forma de carta, es una historia de autoficción sobre la muerte, la reencarnación y la pérdida de la infancia. Inspirada en las secuelas emocionales tras el fallecimiento del padre de la directora, la obra funciona como un silencioso recuerdo del duelo y plasma la inocente creencia infantil de que él podría haber regresado transformado en el gato de la familia.",
+     "synopsis_en": "In the aftermath of her father’s death and in the middle of Colombia's political turmoil, a young girl finds solace in the belief that he has returned to her in the form of her cat.",
+     "title_en": "Behind the Door Lies the Garden",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Por ahora un cuento",
+     "director": "Carla Melo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2018,
+     "duration": "11 min",
+     "genre": "Animación",
+     "poster": "/assets/ficcali-2026/por-ahora-un-cuento.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sometimes-two-herons",
+     "tmdb_id": 644419,
+     "synopsis": "Representados por garzas, una hija viaja a un pequeño y lejano pueblo de Colombia para visitar a su padre. Durante este viaje a la montaña, ambos deberán enfrentarse cara a cara con la naturaleza. Por momentos se sentirán fuertes, pero en otros se llenarán de temor. A causa del miedo y de la falta de voz, uno de los dos terminará transformándose en un monstruo condenado a vivir en la más profunda soledad.",
+     "synopsis_en": "In Bogota's noisy and violent big city machine people carry their nature only limply in their hands, surrendering without resistance to disconcerting rituals.",
+     "title_en": "Sometimes Two Herons",
+     "synopsis_lang": "es"
+    }
+   ],
+   "_fid": "f_391c89d0d0",
+   "id": "f_391c89d0d0",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "entrada": {
+     "tipo": "regla",
+     "marca": "supuesto",
+     "valor": "libre"
+    }
    },
    "titulos_anteriores": [
+    "Animá Ve – Mujeres en la animación",
     "Animá Vé – Retrospectiva"
    ]
+  },
+  {
+   "title": "Las pesadillas del siervo",
+   "type": "film",
+   "section": "🇨🇴 Competencia Largometrajes Nacionales",
+   "director": "Manuel Villa",
+   "year": 2025,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "90 min",
+   "_ancla": [
+    "Cine Club El Ventanal - Cali",
+    "2026-10-25",
+    "15:00"
+   ],
+   "day": "2026-10-25",
+   "time": "15:00",
+   "day_order": 9,
+   "venue": "Cine Club El Ventanal - Cali",
+   "has_qa": false,
+   "synopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14030
+   },
+   "lbSlug": "las-pesadillas-del-siervo",
+   "tmdb_id": 1791689,
+   "_fid": "f_80f9a567f8",
+   "id": "f_80f9a567f8",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-06",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "entrada": {
+     "tipo": "regla",
+     "marca": "supuesto",
+     "valor": "libre"
+    }
+   }
   },
   {
    "title": "Todo comenzó por el fin",
@@ -8350,7 +8630,7 @@
   {
    "title": "Once Upon a Time in Harlem",
    "type": "film",
-   "section": "🎞️ Muestras de Muestras",
+   "section": "🪶 Vanguardias Afro e Indígenas",
    "director": "David Greaves, William Greaves",
    "year": 2026,
    "country": "Estados Unidos",
@@ -8507,11 +8787,11 @@
   {
    "title": "Historias del buen valle",
    "type": "film",
-   "section": "🎞️ Muestras de Muestras",
+   "section": "📽️ Proyecciones",
    "director": "José Luis Guerín",
    "year": 2025,
-   "country": "France, Spain",
-   "flags": "🇫🇷🇪🇸",
+   "country": "España",
+   "flags": "🇪🇸",
    "duration": "120 min",
    "genre": "Documental",
    "_ancla": [
@@ -8589,11 +8869,11 @@
   {
    "title": "La bola negra",
    "type": "film",
-   "section": "📽️ Proyecciones",
-   "director": "Javier Calvo, Javier Ambrossi",
+   "section": "🌀 Plano General",
+   "director": "Javier Ambrossi, Javier Calvo",
    "year": 2026,
-   "country": "España",
-   "flags": "🇪🇸",
+   "country": "España, Francia",
+   "flags": "🇪🇸🇫🇷",
    "duration": "155 min",
    "genre": "Drama",
    "_ancla": [
@@ -8606,7 +8886,7 @@
    "day_order": 9,
    "venue": "Cinemateca La Tertulia - Cali",
    "has_qa": false,
-   "synopsis": "Las vidas interconectadas de tres hombres en tres épocas distintas, tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia.",
+   "synopsis": "La bola negra cuenta la historia de tres hombres cuyas vidas están íntimamente conectadas por el deseo, el dolor y la herencia, a lo largo de tres épocas: 1932, 1937 y 2017. El título es el mismo de una obra de Federico García Lorca que quedó inacabada por su muerte, en 1936, y que se refiere a la bola negra que funciona como signo de rechazo a un joven en un prestigioso club por las sospechas sobre su sexualidad",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/la-bola-negra.jpg",
    "posterSource": "tmdb",
@@ -9176,10 +9456,94 @@
    }
   },
   {
-   "title": "Cineconcierto: Metrópolis",
+   "title": "City Tour",
    "type": "event",
-   "section": "📽️ Proyecciones",
-   "duration": "60 min",
+   "section": "🤝 Conexiones",
+   "duration": "150 min",
+   "_ancla": [
+    "Hotel Obelisco - Cali",
+    "2026-10-24",
+    "10:00"
+   ],
+   "day": "2026-10-24",
+   "time": "10:00",
+   "day_order": 8,
+   "venue": "Hotel Obelisco - Cali",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DezWCmQEdHT/",
+    "date": "2026-10-22"
+   },
+   "requires_registration": true,
+   "description": "Conoce Cali en un recorrido único.",
+   "description_lang": "es",
+   "_fid": "f_a58b033c64",
+   "id": "f_a58b033c64",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-10-22",
+     "url": "https://ficcali.com/programacion-ficcali-2026/"
+    },
+    "entrada": {
+     "tipo": "regla",
+     "marca": "supuesto",
+     "valor": "libre"
+    }
+   }
+  },
+  {
+   "title": "Cineconcierto: Metrópolis",
+   "type": "film",
+   "section": "🏛️ Clásicos",
+   "director": "Fritz Lang",
+   "year": 1927,
+   "country": "Alemania",
+   "flags": "🇩🇪",
+   "duration": "120 min",
+   "genre": "Ciencia ficción",
    "_ancla": [
     "Casa Ethel - Cali",
     "2026-10-24",
@@ -9189,14 +9553,18 @@
    "time": "20:00",
    "day_order": 8,
    "venue": "Casa Ethel - Cali",
-   "event_kind": "evento",
    "has_qa": false,
+   "synopsis": "Metrópolis es una película de ciencia ficción ambientada en una ciudad futurista profundamente dividida entre clases sociales. En la superficie viven los poderosos y privilegiados, mientras que, bajo tierra, miles de trabajadores realizan duras labores para mantener la ciudad en funcionamiento. Freder, hijo de Joh Fredersen, el gobernante de Metrópolis, lleva una vida cómoda hasta que conoce a María, una joven que defiende la unión y el entendimiento entre ricos y pobres. Con una poderosa crítica a la desigualdad social y a la deshumanización industrial, Metrópolis transmite su famoso mensaje: el corazón debe ser el mediador entre la cabeza y las manos.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/cineconcierto-metropolis.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/Deg4GpNHCB_/",
     "date": "2026-10-15"
    },
-   "description": "Alemania | 120 min",
-   "description_lang": "es",
+   "lbSlug": "metropolis",
+   "tmdb_id": 19,
+   "synopsis_en": "In a futuristic city sharply divided between the rich and the poor, the son of the city's mastermind meets a prophet who predicts the coming of a savior to mediate their differences.",
    "_fid": "f_359c6326a2",
    "id": "f_359c6326a2",
    "is_free": true,
@@ -9236,11 +9604,6 @@
      "fecha": "2026-10-15",
      "url": "https://ficcali.com/programacion-ficcali-2026/"
     },
-    "event_kind": {
-     "tipo": "festival-web",
-     "fecha": "2026-10-15",
-     "url": "https://ficcali.com/programacion-ficcali-2026/"
-    },
     "entrada": {
      "tipo": "regla",
      "marca": "supuesto",
@@ -9250,14 +9613,16 @@
   }
  ],
  "_avisos_duracion": [
+  "«Cineconcierto: Metrópolis»: 120 min en el festival, 153 en TMDB",
   "programa «Rodilla Negra + El Coloso» (2026-10-22 20:00): sus obras suman 84 min (2 de 2 con duración) y la función dura 60",
   "programa «Trópico interior: Todos los colores de la oscuridad» (2026-10-22 20:00): sus obras suman 96 min (7 de 7 con duración) y la función dura 60",
-  "«An Incomplete Calendar»: 90 min en el festival, 77 en TMDB"
+  "«An Incomplete Calendar»: 90 min en el festival, 77 en TMDB",
+  "«Cineconcierto: Metrópolis»: 120 min en el festival, 153 en TMDB"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-20T08:22:36",
-  "plan_sha": "159aaf2851adf3ee",
+  "fecha": "2026-10-27T17:48:47",
+  "plan_sha": "2a49eb7c19b8a830",
   "paso": 11,
   "cmd": "python3 pipeline/ficcali-2026-verificar.py"
  }

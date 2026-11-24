@@ -3,7 +3,8 @@
  "titulo_original": "La luz por primera vez",
  "anio": 2026,
  "paises": [
-  "CO"
+  "CO",
+  "ES"
  ],
  "directores": [
   "Ibeth Rey",
@@ -32,12 +33,17 @@
  },
  "versiones": [
   {
+   "etiqueta": "75 min",
+   "duracion_min": 75
+  },
+  {
    "etiqueta": "78 min",
    "duracion_min": 78
   }
  ],
  "presentaciones": [
   "ficdeh-2026",
+  "ficfusa-2026",
   "ficma-2026"
  ]
 }

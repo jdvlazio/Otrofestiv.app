@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-09-29"
+  "capturado": "2026-10-27"
  },
  "Cinemateca de Bogotá": {
   "n": 0,
@@ -9,7 +9,8 @@
   "lng": -74.0676717,
   "_prec": "manual",
   "_match": "Cra. 3 #19-10 (PDF: Cra. 3 # 19-10). La «Calle Museo» es la calle frente a su sede: va como sala.",
-  "address": "Cra. 3 #19-10"
+  "address": "Cra. 3 #19-10",
+  "_matriz": "s_17a71d8b"
  },
  "Cine Colombia Multiplex Avenida Chile": {
   "n": 0,
@@ -17,7 +18,8 @@
   "lng": -74.0575171,
   "_prec": "manual",
   "_match": "Google «Cine Colombia Avenida Chile»; PDF: Cl. 72 # 10-34",
-  "address": "Cl. 72 #10-34"
+  "address": "Cl. 72 #10-34",
+  "_matriz": "s_a6e0e0b3"
  },
  "Teatro Mayor Julio Mario Santo Domingo": {
   "n": 0,
@@ -25,7 +27,8 @@
   "lng": -74.0626669,
   "_prec": "manual",
   "_match": "Cl. 170 #67-51 (idéntica al PDF); sala: Teatro Estudio",
-  "address": "Cl. 170 #67-51"
+  "address": "Cl. 170 #67-51",
+  "_matriz": "s_2b8a4bc3"
  },
  "Teatro El Ensueño": {
   "n": 0,
@@ -33,7 +36,8 @@
   "lng": -74.1586544,
   "_prec": "manual",
   "_match": "Google «Teatro del Ensueño», Tv. 70 D #60-90 Sur (PDF: Tv. 70D # 60-90 Sur)",
-  "address": "Tv. 70D #60-90 Sur"
+  "address": "Tv. 70D #60-90 Sur",
+  "_matriz": "s_a8672cd3"
  },
  "Centro Felicidad Chapinero": {
   "n": 0,
@@ -41,7 +45,8 @@
   "lng": -74.0528448,
   "_prec": "manual",
   "_match": "Cl. 82 #10-69 (idéntica al PDF); sala: Teatro",
-  "address": "Cl. 82 #10-69"
+  "address": "Cl. 82 #10-69",
+  "_matriz": "s_11667bea"
  },
  "Pontificia Universidad Javeriana": {
   "n": 0,
@@ -49,7 +54,8 @@
   "lng": -74.0644814,
   "_prec": "manual",
   "_match": "la DIRECCIÓN del PDF, Cl. 40B # 6-23; el edificio de Artes que ofrece Google está en la 40B #5-37, a ~65 m",
-  "address": "Cl. 40B #6-23"
+  "address": "Cl. 40B #6-23",
+  "_matriz": "s_0655bb7b"
  },
  "Parque Santander": {
   "n": 0,
@@ -57,7 +63,8 @@
   "lng": -74.0725862,
   "_prec": "manual",
   "_match": "PDF: Cra. 7 con Cl. 16",
-  "address": "Cra. 7 con Cl. 16"
+  "address": "Cra. 7 con Cl. 16",
+  "_matriz": "s_a7d462a5"
  },
  "Plaza Distrital de Mercado La Concordia": {
   "n": 0,
@@ -65,7 +72,8 @@
   "lng": -74.0686397,
   "_prec": "manual",
   "_match": "Cl 12c #1-40 (idéntica al PDF)",
-  "address": "Cl. 12C #1-40"
+  "address": "Cl. 12C #1-40",
+  "_matriz": "s_cf7584fa"
  },
  "City U": {
   "n": 0,
@@ -73,7 +81,8 @@
   "lng": -74.0672082,
   "_prec": "manual",
   "_match": "Google: Av. Ciudad de Lima #2a-10 = PDF Cl. 19 # 2A-10; plazoleta principal",
-  "address": "Cl. 19 #2A-10"
+  "address": "Cl. 19 #2A-10",
+  "_matriz": "s_54dc6bb5"
  },
  "Universidad Central": {
   "n": 0,
@@ -81,7 +90,8 @@
   "lng": -74.0700002,
   "_prec": "manual",
   "_match": "Google «Sala Fundadores de la Universidad Central»; PDF: Cl. 22 # 5-91",
-  "address": "Cl. 22 #5-91"
+  "address": "Cl. 22 #5-91",
+  "_matriz": "s_9d2019dc"
  },
  "Universidad Jorge Tadeo Lozano": {
   "n": 0,
@@ -89,7 +99,8 @@
   "lng": -74.067801,
   "_prec": "manual",
   "_match": "Cra. 4 #22-61 (idéntica al PDF); sala: Aula Máxima",
-  "address": "Cra. 4 #22-61"
+  "address": "Cra. 4 #22-61",
+  "_matriz": "s_808cba64"
  },
  "Cámara de Comercio de Bogotá - Sede Chapinero": {
   "n": 0,
@@ -97,6 +108,7 @@
   "lng": -74.0594602,
   "_prec": "manual",
   "_match": "Google Maps: Cámara de Comercio de Bogotá, Cl. 67 #8-32, Chapinero (la sede del Bogotá Creative Connect, post p/DeHyVKVIJcP)",
-  "address": "Cl. 67 #8-32"
+  "address": "Cl. 67 #8-32",
+  "_matriz": "s_1b7d9bf0"
  }
 }

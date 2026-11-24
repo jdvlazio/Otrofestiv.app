@@ -16,7 +16,9 @@ LAS FUENTES, todas del festival:
 
 LO QUE NO SE INVENTA:
   · «Cinematecas locales» son DOS (El Tunal y Fontanar del Río, Canal Trece) y
-    el festival no dice cuál es cada función: quedan FUERA hasta que responda.
+    la parrilla no dice cuál es cada función: la sede la da la agenda de la
+    Cinemateca, nodo por nodo (CINEMATECA_LOCAL). Una función de la franja sin
+    nodo FRENA el script, no se cae en silencio (antes quedaban todas fuera).
 """
 import io
 import json
@@ -46,8 +48,15 @@ SEDES = {
     'CEFE Chapinero': ('Centro Felicidad Chapinero', ''),
     'Co - Laboratorio': ('Co.Laboratorio', ''),
 }
-NO_SE_SABE = {'Cinematecas locales': 'son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival '
-                                     'no dice cuál es cada función; preguntado'}
+# «Cinematecas locales» → la sede de cada función, de su nodo en la agenda de la
+# Cinemateca de Bogotá (leídos el 25 oct 2026): (día, título de la parrilla) → (sede, nodo)
+FONTANAR = 'Cinemateca Fontanar del Río'
+CINEMATECA_LOCAL = {
+    ('2026-10-23', 'El Ritual de Huasao'): (FONTANAR, 3571),  # «Vie, 23/10/2026 - 16:00 · Entrada libre · Fontanar del Río»
+    ('2026-10-24', 'Franja Nacional · El Miedo Llega a Todas Partes'): (FONTANAR, 3573),  # «Sáb, 24/10/2026 - 16:00 · Entrada libre · Fontanar del Río»
+    ('2026-10-25', 'Nico'): (FONTANAR, 3577),  # «Dom, 25/10/2026 - 16:00 · Entrada libre · Fontanar del Río»
+}
+NODO = 'https://cinematecadebogota.gov.co/node/{}'
 # EL ACCESO, por sede (prensa: Canal Trece)
 ACCESO = {'Cinemateca de Bogotá': 'Con boleta: $7.000'}
 ACCESO_COMUNITARIO = 'Entrada libre hasta completar aforo'
@@ -85,21 +94,41 @@ def directores(s):
 # (bogotahorrorfilmfest.com/talleres/): la fecha, la hora y la sala vienen del
 # post de cada uno en Instagram (embed público, sin sesión). Inscripción
 # gratuita con cupos limitados, dice la página. Sin duración publicada: va sin.
-# FUERA TODOS por ahora: ninguna fuente publica su DURACIÓN, y una actividad
-# sin duración no entra (la exige [activity-duration]: alimenta el plan).
-# Además, preguntado: «VFX para no técnicos» (Dd-WRmzutXX) y «De la idea al
-# guion» (DdzPc7iJz7i) dicen los dos 23 oct · 5:00 p. m. · Lab 1; Yei Cardozo y
-# el Encuentro de Realizadores no tienen fecha en ninguna fuente.
-TALLERES_SIN_DURACION = [
-    {'titulo': 'Arte FX', 'dia': '2026-10-22', 'hora': '17:00', 'invitados': 'Camilo Vélez FX',
-     'ig': 'Dd-KmzEOkzm'},
-    {'titulo': 'Maquillaje con las Garras', 'dia': '2026-10-24', 'hora': '15:00', 'invitados': 'Natt Martínez',
-     'ig': 'DdxZtg2u0CE'},
+# LA TABLA DEL FESTIVAL (21 oct 2026), LA QUE MANDA: BHFF le respondió a Juan
+# por mensaje con una imagen de su formulario de inscripción y la frase «Sigue
+# como está en el formulario» (fuentes/bhff-2026/festival-mensaje-talleres-
+# 20261021.jpg). La tabla, verbatim:
+#   22 DE OCTUBRE. 3 PM — La Oscuridad y sus Ecos. Un siglo de monstruos — Yeimy Cardozo
+#   22 DE OCTUBRE. 5 PM — Creando con las garras — Natt Martinez
+#   (la tabla escribe sin tildes; los nombres van con la suya: «Martínez» como en el post
+#   Deu5XIPuFHo, «Alarcón» como en Des_xjFN9gL — 21 oct 2026)
+#   23 DE OCTUBRE. 3 PM — De la idea al guion — Jhonny Ortiz Alarcon
+#   23 DE OCTUBRE. 5 PM — VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento? — Guillermo Restrepo
+#   24 DE OCTUBRE. 3 PM — Arte FX — Camilo Vélez
+# Título e invitado van con la grafía de la tabla. Las afirmaciones
+# «festival-mensaje» (bhff-2026-afirmaciones.json) llevan la frase literal.
+# Sala: Lab 1 donde un post lo dice (Des_xjFN9gL, Deu5XIPuFHo, Dd-WRmzutXX,
+# Dd-KmzEOkzm); «La Oscuridad y sus Ecos» no tiene post ni sala en ninguna
+# fuente → la sede sin sala. Duración: ninguna fuente la publica → la estima
+# el modelo (marca estimado).
+# «Creando con las garras» es la que se publicó como «Maquillaje con las
+# Garras» (f_d5b931d897): mismo id, título anterior declarado.
+# url: el formulario del festival (la imagen es de él); la imagen vive en fuentes/,
+# que no se versiona
+MENSAJE = 'https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform'
+TALLERES = [
+    {'titulo': 'La Oscuridad y sus Ecos. Un siglo de monstruos', 'dia': '2026-10-22', 'hora': '15:00',
+     'invitados': 'Yeimy Cardozo', 'sala': None},
+    {'titulo': 'Creando con las garras', 'dia': '2026-10-22', 'hora': '17:00', 'invitados': 'Natt Martínez',
+     'ig': 'Deu5XIPuFHo'},
+    {'titulo': 'De la idea al guion', 'dia': '2026-10-23', 'hora': '15:00', 'invitados': 'Jhonny Ortiz Alarcón',
+     'ig': 'Des_xjFN9gL'},
+    {'titulo': 'VFX para no técnicos: ¿Cómo hacer cine con VFX y no morir en el intento?', 'dia': '2026-10-23',
+     'hora': '17:00', 'invitados': 'Guillermo Restrepo', 'ig': 'Dd-WRmzutXX'},
+    {'titulo': 'Arte FX', 'dia': '2026-10-24', 'hora': '15:00', 'invitados': 'Camilo Vélez', 'ig': 'Dd-KmzEOkzm',
+     'registration_url': 'https://docs.google.com/forms/d/e/1FAIpQLSfYpIeJpeGTK1Co7ki-TKppGVm5ddRRy9pFZker683OKRTJtQ/viewform'},
 ]
-TALLERES = []
-TALLERES_FUERA = ['«Arte FX» (22 oct 17:00) y «Maquillaje con las Garras» (24 oct 15:00), Lab 1: sin duración publicada; preguntado',
-                  '«VFX para no técnicos» y «De la idea al guion»: los dos 23 oct 17:00 en Lab 1 (choque; preguntado)',
-                  'Taller de Yei Cardozo y Encuentro de Realizadores de Género: sin fecha publicada']
+TALLERES_FUERA = ['Encuentro de Realizadores de Género: no está en la tabla del festival (mensaje, 21 oct) ni tiene fecha publicada']
 # el tipo de función de la parrilla
 KIND = {'Inauguración': 'apertura', 'Clausura': 'clausura'}
 
@@ -189,16 +218,21 @@ def main():
         dia = f'2026-{MES[d["mes"]]:02d}-{int(d["dia"]):02d}'
         for e in d['eventos']:
             n += 1
-            if e['sala'] in NO_SE_SABE:
-                fuera.append(f'{dia} {e["titulo"]}: {NO_SE_SABE[e["sala"]]}')
-                continue
-            if e['sala'] not in SEDES:
+            local = None
+            if e['sala'] == 'Cinematecas locales':
+                local = CINEMATECA_LOCAL.get((dia, e['titulo']))
+                if not local:
+                    fallos.append(f'{dia} {e["titulo"]}: «Cinematecas locales» sin nodo de la Cinemateca que diga cuál')
+                    continue
+            elif e['sala'] not in SEDES:
                 fallos.append(f'{dia} {e["titulo"]}: sala sin entrada en la tabla: {e["sala"]!r}')
                 continue
-            sede, sala = SEDES[e['sala']]
+            sede, sala = (local[0], '') if local else SEDES[e['sala']]
             r = {'dia': dia, 'hora': hora(e['hora'], e['periodo']), 'sede': sede,
                  'acceso': ACCESO.get(sede, ACCESO_COMUNITARIO),
                  '_src': {'url': URL, 'date': '2026-09-26'}}
+            if local:
+                r['_src']['sede'] = NODO.format(local[1])
             if sala:
                 r['sala'] = sala
             act = e.get('act') or ''
@@ -254,12 +288,13 @@ def main():
                     r['duracion_min'] = sum(o.get('duracion_min') or 0 for o in obras) or None
             funciones.append({k: v for k, v in r.items() if v not in (None, '')})
     for x in TALLERES:
-        funciones.append({'dia': x['dia'], 'hora': x['hora'], 'sede': 'Cinemateca de Bogotá', 'sala': 'Lab 1',
-                          'acceso': 'Entrada libre con inscripción previa · Cupos limitados',
-                          'titulo': x['titulo'], 'tipo': 'evento', 'event_kind': 'taller', 'seccion': 'Talleres',
-                          'invitados': x['invitados'],
-                          '_src': {'url': f'https://www.instagram.com/p/{x["ig"]}/', 'date': '2026-10-07',
-                                   'acceso': 'https://bogotahorrorfilmfest.com/talleres/'}})
+        t = {'dia': x['dia'], 'hora': x['hora'], 'sede': 'Cinemateca de Bogotá', 'sala': x.get('sala', 'Lab 1'),
+             'acceso': 'Entrada libre con inscripción previa · Cupos limitados',
+             'titulo': x['titulo'], 'tipo': 'evento', 'event_kind': 'taller', 'seccion': 'Talleres',
+             'invitados': x['invitados'], 'registration_url': x.get('registration_url'),
+             '_src': {'url': MENSAJE, 'date': '2026-10-21', 'acceso': 'https://bogotahorrorfilmfest.com/talleres/',
+                      **({'ig': f'https://www.instagram.com/p/{x["ig"]}/'} if x.get('ig') else {})}}
+        funciones.append({k: v for k, v in t.items() if v not in (None, '')})
     fuera += TALLERES_FUERA
     if len(funciones) - len(TALLERES) + len(fuera) - len(TALLERES_FUERA) + len(fallos) != n:
         fallos.append(f'{n} eventos y {len(funciones)} funciones + {len(fuera)} fuera')

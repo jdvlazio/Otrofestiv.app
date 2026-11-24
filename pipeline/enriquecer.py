@@ -28,8 +28,8 @@ import datetime
 import json, os, re, subprocess, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lib import (cargar_crudo, ficha_verifica, norm, provenance, slug,
-                 tmdb_get, tmdb_ficha, UA, ficha_tmdb, director_coincide, ya_publicada,
+from lib import (asset_declarado, sin_tmdb_si_se_pide, cargar_crudo, ficha_verifica, norm, provenance, slug,
+                 tmdb_get, tmdb_ficha, UA, ficha_tmdb, director_coincide, publicadas_de,
                  obras_publicadas)
 import catalogo  # noqa: E402
 
@@ -179,10 +179,16 @@ def ficha_de_tmdb(cid, key, titulo):
         if norm(t) in _titulos or (t and len(t.split()) <= 5 and t[-1] not in '.!?…»"'):
             return ''
         return t
+    from sinopsis_unicas import defectos as _defectos
+
+    def _sana(txt):
+        return '' if txt and _defectos(txt) else txt
     out = {'tmdb_id': cid,
            'titulo_original': det.get('original_title'),
            'poster_path': det.get('poster_path'),
-           'synopsis_es': _sinopsis(det.get('overview')) or _sinopsis(_tr_es),
+           # TMDB también trae textos que no son sinopsis (23 nov 2026: créditos de
+           # FilmAffinity, fichas técnicas): pasan por el mismo detector
+           'synopsis_es': _sana(_sinopsis(det.get('overview'))) or _sana(_sinopsis(_tr_es)),
            'synopsis_en': _sinopsis(det_en.get('overview')) or _sinopsis(_tr_en),
            'genero': (det.get('genres') or [{}])[0].get('name', ''),
            'anio_tmdb': int((det.get('release_date') or '0')[:4] or 0),
@@ -361,9 +367,20 @@ def reuso_publicada(pub, fid=None):
                                 ('duracion_tmdb', _min_de(_de('duration'))),
                                 ('genero', _de('genre')), ('synopsis_en', _de('synopsis_en')),
                                 ('lbSlug', _de('lbSlug'))) if v}
+    # LA FICHA (27 oct 2026): el tmdb_id con que ya la publicamos se quedaba
+    # atrás —139 presentaciones sin ficha que otro festival nuestro tiene—.
+    # Solo si es UNO: con dos ids distintos, heredar uno sería elegir.
+    _ids = {y['tmdb_id'] for y in pub if y.get('tmdb_id')}
+    if len(_ids) == 1:
+        resto['tmdb_id'] = _ids.pop()
+        resto['_ficha_de'] = 'ya publicada en ' + next(y['festival'] for y in pub if y.get('tmdb_id'))
     if not x and not s and not resto:
         return None
     e = {'_ya_publicada': pub}
+    if x:
+        e['_afiche_de'] = f'ya publicada en {x["festival"]}'
+    if s:
+        e['_sinopsis_de'] = f'ya publicada en {s["festival"]}'
     if x:
         e['poster'] = x['poster']
         e['_verificado'] = f'ya publicada en {x["festival"]}: se reusa su afiche'
@@ -414,6 +431,7 @@ def main():
     alias = corr.get('alias', {})
     # las fichas que declaró una persona, por título del festival
     declaradas = corr.get('fichas', {})
+    misma_obra = corr.get('misma_obra', {})
 
     # TODAS las obras, no solo las de nivel superior. Hasta hoy esto recorría
     # únicamente `funciones`, así que en un festival con programas de cortos el
@@ -499,6 +517,14 @@ def main():
                   ' (declarada a mano)', flush=True)
             continue
         c = prev_ok.get(t)
+        # …salvo un acierto SIN sinopsis en español (19 nov 2026, CUAFF): la
+        # ficha es la misma, pero su traducción al español puede llegar después
+        # —se lee TMDB justo tras el alta, antes de cargarle el español—, y como
+        # el acierto no caducaba, la sinopsis nunca entraba. Se vuelve a sondear,
+        # una vez por día (guardián: pipeline/sinopsis.py).
+        if c and c.get('tmdb_id') and not str(c.get('synopsis_es') or '').strip() \
+                and c.get('_sondeado') != _hoy:
+            c = None
         if c and c.get('_director') == _dir:
             # el afiche PRESTADO (de lo publicado o declarado) no se cachea: se
             # recalcula abajo cada vez, que la regla puede haber cambiado —el
@@ -528,14 +554,14 @@ def main():
             # el reúso de lo publicado TAMBIÉN desde la caché: la primera
             # versión solo lo hacía al sondear, y la segunda corrida de
             # Girardota perdía 4 afiches (29 sep 2026, lo paró publicar.py)
-            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas), fid)
+            _r = reuso_publicada(publicadas_de({**f, 'titulo': t}, publicadas, misma_obra), fid)
             if _r:
                 ok[t] = _r
             print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} sin ficha '
                   f'(caché del {c["fecha"]})', flush=True)
             continue
 
-        pub = ya_publicada({**f, 'titulo': t}, publicadas)
+        pub = publicadas_de({**f, 'titulo': t}, publicadas, misma_obra)
         e, fuente = cascada_obra({**f, 'titulo': t}, key, alias, pub, _obs)
         if e:
             e['_director'], e['_sondeado'] = _dir, _hoy
@@ -575,7 +601,7 @@ def main():
     for t, f in obras.items():
         e = ok.get(t)
         if e and not e.get('poster_path') and not e.get('poster'):
-            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas), fid)
+            _r = reuso_publicada(publicadas_de({**f, 'titulo': t}, publicadas, misma_obra), fid)
             if _r and _r.get('poster') and not _r['poster'].startswith(f'/assets/{fid}/'):
                 e['poster'] = _r['poster']
                 e['_afiche'] = _r['_verificado']
@@ -589,11 +615,19 @@ def main():
             # anterior, o el de otro festival nuestro que a su vez apunta aquí
             # (La Rebelión de un Fantasma, en Girardota y en Popayán), no cuenta
             # si el archivo no está en disco
+            # `sobre_tmdb: true` — el afiche que mandó el festival reemplaza la
+            # imagen de TMDB que una persona ya rechazó (Trizas: fotograma según
+            # el catálogo; el formulario de MIDBO trajo el afiche, 20 oct 2026)
+            if d.get('sobre_tmdb'):
+                e, _p = sin_tmdb_si_se_pide(e, d), ''
             if e.get('poster_path') or (_p and not (_p.startswith('/assets/')
                                                      and not os.path.exists(REPO + _p))):
                 continue
             os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)
-            dest = f'{REPO}/assets/{fid}/{slug(t)}.jpg'
+            # `asset`: nombre propio cuando el de siempre ya está tomado por otra
+            # imagen publicada (los assets son write-once)
+            _nom = asset_declarado(t, d)
+            dest = f'{REPO}/assets/{fid}/{_nom}'
             origen = f'{REPO}/{d.get("lamina") or d["archivo"]}'
             # `editorial: true` — un still 16:9 OFICIAL (el que el festival manda
             # como «afiche» de una obra que no tiene uno vertical): va ENTERO, sin
@@ -608,7 +642,7 @@ def main():
                     os.remove(dest)
                     print(f'   afiche declarado RECHAZADO · {t}: {_m}')
                     continue
-            e = {**e, 'poster': f'/assets/{fid}/{slug(t)}.jpg',
+            e = {**e, 'poster': f'/assets/{fid}/{_nom}',
                  'posterSource': 'editorial' if d.get('editorial') else 'custom' if d.get('lamina') else 'oficial',
                  '_afiche': f'declarado: {d["fuente"]}'}
             ok[t] = e
@@ -621,8 +655,14 @@ def main():
     _sdec = f'{ST}/{fid}-sinopsis.json'
     if os.path.exists(_sdec):
         n_s = 0
+        # También el texto de un PROGRAMA o una ACTIVIDAD (19 nov 2026, «Noche
+        # Inaugural» de Al Este): no son obras, pero sí funciones del programa.
+        # Su entrada lleva solo el texto, sin ficha, y el ensamblador ya deja
+        # pasar a un programa lo declarado sin tmdb_id (ficha_de_la_funcion).
+        _funcs = {tit_of.get(f['titulo'], f['titulo']) for f in crudo['funciones']
+                  if f.get('titulo') and f.get('en_app', True)}
         for t, d in (json.load(open(_sdec, encoding='utf-8')).get('sinopsis') or {}).items():
-            if t not in obras:
+            if t not in obras and t not in _funcs:
                 sys.exit(f'sinopsis declarada para un título que no está en el programa: {t}')
             e = ok.get(t) or {}
             # `idioma: en`: la única sinopsis que existe está en inglés; va a
@@ -633,6 +673,11 @@ def main():
                 ok[t] = {**e, 'synopsis_en': d['texto'], '_sinopsis': d['fuente']}
                 n_s += 1
                 continue
+            # `texto_en`: la oficial en inglés junto a la española (traducción
+            # nuestra); el inglés no se pierde al declarar el español
+            if d.get('texto_en') and not e.get('synopsis_en'):
+                e = {**e, 'synopsis_en': d['texto_en']}
+                ok[t] = e
             if e.get('sinopsis') or e.get('synopsis_es'):
                 continue
             ok[t] = {**e, 'sinopsis': d['texto'], '_sinopsis': d['fuente']}
@@ -714,9 +759,13 @@ def main():
                 continue
             if campo == 'poster' and e.get('poster_path'):
                 continue
-            v = herencia.valor(w, campo, fid, t, e.get('tmdb_id'), key)
+            v = herencia.valor(w, campo, fid, t, e.get('tmdb_id'), key,
+                               obra={'director': f.get('director') or e.get('_director'),
+                                     'anio': f.get('anio') or e.get('anio_tmdb')})
             if v:
                 e[campo] = v
+                if campo == 'tmdb_id':
+                    e['_ficha_de'] = de
                 if campo == 'poster':
                     e['posterSource'] = herencia.poster_source(w, v)
                     e['_heredado']= {**e.get('_heredado', {}), 'posterSource': de}

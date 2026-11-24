@@ -105,6 +105,8 @@
  "_dias_nota": "dias — los días del festival en ISO, el mismo juego que dayKeys. dias_vacios — los que NO tienen ni una función y se pintan como tales en la grilla: van DECLARADOS, porque un día vacío por falta de dato y un día vacío porque el festival descansa se ven igual en la app y no son lo mismo. Lista vacía cuando todos los días tienen programación.",
  "dias": [],
  "dias_vacios": [],
+ "_avisos_nota": "avisos — opcional, lo escribe publicar.py desde festivals/staging/<id>-avisos.json (no a mano). type:info = aviso del festival entero (id + note + note_en), p. ej. programación pendiente (Funza, FICFUSA, Villa de Leyva IFF). Cancelaciones y reprogramaciones: docs/SCHEMA.md § Avisos y palmarés.",
+ "avisos": [],
  "sharedSlotIsOneScreening": false,
  "_sharedSlot_nota": "true SOLO si el programa oficial confirma que 2+ obras comparten UNA función (Tipo 2). El loader ancla los grupos día|hora|sede|sala: no rivalizan, la sala se ocupa por la suma, Q&A una vez. NO derivable: en multisala misma hora+sede = otra sala = otra función.",
  "sections": {
@@ -138,6 +140,8 @@
    "_id_nota": "Id estable de la función (docs/FUNCION.md §11). NO se escribe a mano: lo asigna el ensamblador desde festivals/staging/<fid>-funciones-ids.json y sobrevive a cambios de hora, sala, sede y título.",
    "title": "Título con el que se exhibe",
    "title_en": "English title (si difiere)",
+   "titulos_anteriores": [],
+   "_titulos_anteriores_nota": "NO se escribe a mano: lo pone el ensamblador desde festivals/staging/<fid>-titulos-anteriores.json cuando una obra o actividad cambia de título, para que la app migre lo guardado (domain/titulos.js).",
    "type": "film",
    "director": "Nombre Director",
    "year": 2026,
@@ -170,6 +174,7 @@
    "requires_registration": false,
    "is_free": false,
    "ticket_url": "https://… — enlace de compra de ESTA función; se omite si no hay",
+   "registration_url": "https://… — formulario de inscripción de ESTA función (entrada libre con inscripción); se omite si no hay",
    "_is_free_nota": "Solo significativo en festival de ticketing MIXTO: marca la excepción gratuita.",
    "by_invitation": false,
    "_by_invitation_nota": "Función cerrada al público, solo con invitación (la gala de BIFF): el plan no la propone.",
@@ -305,6 +310,7 @@
    "requires_registration": true,
    "is_free": true,
    "ticket_url": "https://… — enlace de compra de ESTA función; se omite si no hay",
+   "registration_url": "https://… — formulario de inscripción de ESTA función (entrada libre con inscripción); se omite si no hay",
    "day": "2026-06-07",
    "time": "09:00",
    "venue": "Sala de Cine - Ciudad",
@@ -313,7 +319,9 @@
    "is_cortos": false,
    "film_list": null,
    "event_kind": "",
-   "_event_kind_nota": "Opcional: 'ponencia' | 'masterclass' | 'encuentro' | 'cineconcierto'. Controla el poster generativo."
+   "_event_kind_nota": "Opcional: 'ponencia' | 'masterclass' | 'encuentro' | 'cineconcierto'. Controla el poster generativo.",
+   "hasta": "",
+   "_hasta_nota": "Solo con info:true (actividad abierta: exposición, instalación). Último día YYYY-MM-DD, recortado a las fechas oficiales: UNA función, la app la abre día por día (#1229)."
   }
  ],
  "displayName": "",

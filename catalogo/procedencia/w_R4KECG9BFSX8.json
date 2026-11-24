@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficica-2026,jardin-2026",
+  "fuente": "festival:ficica-2026,jardin-2026,villadeleyvaiff-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -15,8 +15,10 @@
   "fuente": "tmdb:1595060",
   "regla": "tmdb-manda"
  },
- "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23"
  }
 }

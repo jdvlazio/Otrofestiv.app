@@ -3,7 +3,10 @@
  "titulo_original": "Pasta negra",
  "anio": 2025,
  "paises": [
-  "CO"
+  "CA",
+  "CO",
+  "IT",
+  "VE"
  ],
  "directores": [
   "Jorge Thielen Armand"
@@ -20,6 +23,7 @@
   "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1403488,
   "letterboxd": "pasta-negra"
  },
  "versiones": [
@@ -29,6 +33,7 @@
   }
  ],
  "presentaciones": [
+  "cortoscali-2026",
   "siembrafest-2026"
  ]
 }

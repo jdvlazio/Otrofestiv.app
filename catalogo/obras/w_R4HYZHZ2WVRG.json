@@ -1,6 +1,6 @@
 {
  "id": "w_R4HYZHZ2WVRG",
- "titulo_original": "En Tierra",
+ "titulo_original": "En tierra",
  "anio": 2025,
  "paises": [
   "CO",
@@ -11,20 +11,24 @@
  ],
  "aliases": [
   {
+   "titulo": "En Tierra",
+   "tipo": "festival"
+  },
+  {
    "titulo": "Grounded",
    "idioma": "en",
    "tipo": "traduccion"
   }
  ],
  "sinopsis": {
-  "es": "Old DC-3s are the lifeline for residents of the Colombian Amazon. The film crew joins one of the planes on a flight to remote settlements. But this connection is under threat, and without it communities will face total isolation.",
+  "es": "Viejos aviones DC-3 son el sustento de los habitantes de la Amazonía colombiana. El equipo de la película se sube a uno de ellos en un vuelo hacia asentamientos remotos. Pero esa conexión está amenazada y, sin ella, las comunidades quedarán totalmente aisladas.",
   "en": "Old DC-3s are the lifeline for residents of the Colombian Amazon. The film crew joins one of the planes on a flight to remote settlements. But this connection is under threat, and without it communities will face total isolation."
  },
  "generos": [
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/ficma/en-tierra.jpg",
+  "archivo": "/assets/fecibac-2026/en-tierra.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -38,6 +42,7 @@
   }
  ],
  "presentaciones": [
+  "fecibac-2026",
   "ficma-2026"
  ]
 }

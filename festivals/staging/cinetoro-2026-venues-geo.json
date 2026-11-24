@@ -1,0 +1,84 @@
+{
+ "_provenance": {
+  "fuente": "Google Maps desde el navegador integrado (31 oct 2026); _prec:manual intocable",
+  "capturado": "2026-10-31"
+ },
+ "Museo Rayo - Roldanillo": {
+  "lat": 4.4096964,
+  "lng": -76.1539664,
+  "address": "Cl. 8 #8-53, Roldanillo, Valle del Cauca",
+  "_prec": "manual",
+  "_match": "Google Maps: «Museo Rayo»",
+  "_matriz": "s_b705c40c"
+ },
+ "Coliseo Corregimiento de San Francisco - Toro": {
+  "lat": 4.681899,
+  "lng": -76.0345245,
+  "_prec": "manual",
+  "_match": "Google Maps: «San Francisco, Toro, Valle del Cauca» (el corregimiento)",
+  "_nota": "PIN APROXIMADO: Maps no tiene el coliseo; el pin es el centro del corregimiento. Preguntar al festival.",
+  "_matriz": "s_80974dfb"
+ },
+ "Mambo House - Toro": {
+  "lat": 4.5926679,
+  "lng": -76.0611898,
+  "_prec": "manual",
+  "_match": "Google Maps: «Mambo's House» (en el corregimiento San Antonio, Toro)",
+  "_matriz": "s_8d94ab1d"
+ },
+ "Hotel Miracruz - Toro": {
+  "lat": 4.6117939,
+  "lng": -76.0793798,
+  "_prec": "manual",
+  "_match": "Google Maps: «Hotel Mira Cruz Toro Valle»",
+  "_matriz": "s_125e80c3"
+ },
+ "Polideportivo San Antonio - Toro": {
+  "lat": 4.5925149,
+  "lng": -76.0609688,
+  "_prec": "manual",
+  "_match": "Google Maps: «San Antonio, Toro, Valle del Cauca» (el corregimiento)",
+  "_nota": "PIN APROXIMADO: Maps no tiene el polideportivo de San Antonio (el «Polideportivo» que da está en el casco urbano de Toro); el pin es el centro del corregimiento, a ~30 m de Mambo's House: son dos sedes distintas del mismo corregimiento. Preguntar al festival.",
+  "_matriz": "s_e4f61235"
+ },
+ "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro": {
+  "lat": 4.6092418,
+  "lng": -76.0773237,
+  "_prec": "manual",
+  "_match": "Google Maps: «Institución Educativa Fray José Joaquín \"J.J.\" Escobar»",
+  "_nota": "el pin es el colegio; el coliseo está en él",
+  "_matriz": "s_a4fd24e0"
+ },
+ "Rosalia's Garden - Toro": {
+  "lat": 4.6091797,
+  "lng": -76.0785289,
+  "_prec": "manual",
+  "_match": "Google Maps: «Rosalia’s Garden»",
+  "_matriz": "s_cc00aafb"
+ },
+ "Por definir - Toro": {
+  "lat": 4.6089432,
+  "lng": -76.0823845,
+  "_prec": "manual",
+  "_match": "Google Maps: «Parque Principal de Toro»",
+  "_nota": "PIN APROXIMADO: la parrilla dice «Lugar: POR DEFINIR» (Cinetoro Expandido, sáb 14); el pin es el parque principal de Toro. Misma coordenada que «Por confirmar - Toro».",
+  "_matriz": "s_54536669"
+ },
+ "Colegio agrícola - Toro": {
+  "lat": 4.6078384,
+  "lng": -76.0724431,
+  "address": "Cl. 18 #1-123, Toro, Valle del Cauca",
+  "_prec": "manual",
+  "_match": "Google Maps: Institución Educativa Técnica Agropecuaria, Toro",
+  "_nota": "PIN APROXIMADO: la parrilla dice solo «Colegio agrícola»; que sea esta institución es inferencia.",
+  "_matriz": "s_ec96d903"
+ },
+ "Cine Teatro - Toro": {
+  "lat": 4.6085973,
+  "lng": -76.0829082,
+  "address": "Toro, Valle del Cauca",
+  "_prec": "manual",
+  "_match": "Google Maps: «CineTeatro \"Wilson Jaramillo Tobón\"», Toro (14 nov 2026)",
+  "_matriz": "s_9c038cff"
+ }
+}

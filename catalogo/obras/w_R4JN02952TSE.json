@@ -10,6 +10,10 @@
  ],
  "aliases": [
   {
+   "titulo": "El Ocaso de los Dioses",
+   "tipo": "festival"
+  },
+  {
    "titulo": "El ocaso de los dioses",
    "tipo": "festival"
   },
@@ -38,10 +42,15 @@
   {
    "etiqueta": "19 min",
    "duracion_min": 19
+  },
+  {
+   "etiqueta": "24 min",
+   "duracion_min": 24
   }
  ],
  "presentaciones": [
   "bhff-2026",
+  "festicinerio-2026",
   "filcmar-2026"
  ]
 }

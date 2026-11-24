@@ -124,6 +124,13 @@ def ficha(L):
     # entraba como sinopsis y le ganaba a la buena. El pie no es de la obra.
     if 'Síguenos' in resto:
         resto = resto[:resto.index('Síguenos')]
+    # LA FICHA CON FUNCIONES (21 oct 2026): el sitio le sumó a cada ficha, después
+    # de la sinopsis, el botón «Comprar boletas…» y la lista «Funciones» (día,
+    # hora, sala). Nada de eso es la sinopsis; entraba pegado a ella.
+    corte = next((k for k, x in enumerate(resto) if x == 'Funciones' or x.startswith('Comprar boletas')), None)
+    if corte is not None:
+        resto = resto[:corte]
+    resto = [x.replace('\ufeff', '').strip() for x in resto if x.replace('\ufeff', '').strip()]
     sinopsis = re.sub(r'\s+([,.;:)])', r'\1', re.sub(r'\s+', ' ', ' '.join(resto))).strip()
     j = j + 1 if j is not None else None
     director = L[j] if j is not None and j < len(L) else None
@@ -181,12 +188,34 @@ def main():
     previo = {}
     if os.path.exists(DESTINO):
         previo = {o['url'].rstrip('/'): o for o in json.load(io.open(DESTINO, encoding='utf-8'))['obras'] if o.get('url')}
+    _prog = f'{REPO}/festivals/staging/ficcali-2026-programacion.json'
+    _tarjetas = {x['titulo'].split('|')[0].strip().casefold()
+                 for x in json.load(io.open(_prog, encoding='utf-8'))['tarjetas']} if os.path.exists(_prog) else set()
     for o in obras.values():
         v = previo.get(o['url'].rstrip('/'))
         if not v:
             continue
         kept = [k for k in ('director', 'anio', 'duracion_min', 'sinopsis', 'pais')
                 if not o.get(k) and v.get(k)]
+        # LA NOTA DE LA FUNCIÓN (21 oct 2026): debajo de la sinopsis la ficha anuncia
+        # quién acompaña la función («X conversará sobre la película…»). Es de la
+        # función, no de la obra: si la sinopsis nueva es la anterior más una
+        # cola, se queda la anterior. Y al revés: si la nueva es la anterior
+        # cortada a media palabra (Para vivir: «…mientras at»), también.
+        _n = o.get('sinopsis') or ''
+        if v.get('sinopsis') and _n != v['sinopsis'] and (
+                _n.startswith(v['sinopsis'].rstrip('.')) or (_n and v['sinopsis'].startswith(_n))):
+            o['sinopsis'] = v['sinopsis']
+        # EL TÍTULO ORIGINAL (Juan, 7 oct) — 21 oct 2026: el sitio tradujo al
+        # español el título de cuatro fichas (An Incomplete Calendar, Notre
+        # corps…): el título nuevo es el de la TARJETA, el español. Una ficha que
+        # pasa a llamarse como su tarjeta no se retituló, se tradujo: se conserva
+        # el original publicado y el de la ficha queda anotado, para Juan.
+        _nt = o['titulo'].casefold()
+        if o['titulo'] != v['titulo'] and any(
+                t and (_nt == t or _nt.startswith(t + ':')) for t in _tarjetas):
+            o['_titulo_ficha'] = o['titulo']
+            o['titulo'] = v['titulo']
         for k in kept:
             o[k] = v[k]
         if kept or v.get('_conservado'):

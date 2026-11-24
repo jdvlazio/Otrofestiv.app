@@ -8,9 +8,6 @@
  "directores": [
   "Juan Pablo Ríos"
  ],
- "generos": [
-  "Ficción"
- ],
  "afiche": {
   "archivo": "/assets/jardin-2026/criatura.jpg",
   "veredicto": "fotograma"
@@ -23,6 +20,7 @@
   }
  ],
  "presentaciones": [
-  "jardin-2026"
+  "jardin-2026",
+  "villadeleyvaiff-2026"
  ]
 }

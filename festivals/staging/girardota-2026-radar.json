@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #968 — https://github.com/jdvlazio/Otrofestiv.app/issues/968",
-  "capturado": "2026-09-29",
+  "capturado": "2026-10-27",
   "titulo": "RADAR: Festival Audiovisual de Girardota 9 — Girardota (Antioquia), 30 SEP–4 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 1
+  "comentarios": 2
  },
  "issue": 968,
  "titulo": "RADAR: Festival Audiovisual de Girardota 9 — Girardota (Antioquia), 30 SEP–4 OCT 2026",
@@ -14,6 +14,10 @@
   {
    "fecha": "2026-09-28",
    "cuerpo": "ESTADO: 28 sep 2026 · **PUBLICADO.** Entró a `main` con [#970](https://github.com/jdvlazio/Otrofestiv.app/pull/970) (commit `037f39bf`). Producción sirve `festivals/girardota-2026.json` («Festigirardota»: 28 actividades, 9 sedes) y la entrada `girardota2026` de la configuración.\n\nPendiente del festival: le escribimos el 28 sep pidiendo la lista de cortos, sin respuesta todavía. Faltan también cómo se entra y el lugar exacto de la inauguración en Palmas del Llano (el miércoles a las 7:00 p. m.)."
+  },
+  {
+   "fecha": "2026-09-29",
+   "cuerpo": "ESTADO: 29 sep 2026 · fuente: **IG** (navegador, perfil @festigirardota + posts) — **la lista de cortos que faltaba salió, y ya está en producción.**\n\n- El festival publicó la Selección Oficial de su competencia el 28 sep, en tres carruseles de @girardotaescultura: **documental** (`p/Dd2hcuiHGOC`), **experimental o videoclip** (`p/Dd2iI6unNOM`) y **ficción** (`p/Dd2i8ZAHNDz`). Los tres ubican la función el **sábado 3 de octubre a las 6 p. m., en el Parque Principal**.\n- **Nuestro lado, medido hoy:** entró a `main` con [#984](https://github.com/jdvlazio/Otrofestiv.app/pull/984) (mergeado el 29 sep a las 11:52 UTC). En `main`, `festivals/girardota-2026.json` tiene la función «Competencia oficial de cortometrajes» (3 oct, 18:00) con **20 obras** en `film_list`. En total, 28 funciones, todas con día.\n- **Sigue pendiente del festival:** cómo se entra, y el lugar exacto de la inaugural en Palmas del Llano.\n- Bio sin cambios: «30 de septiembre al 4 de octubre - 2026». **Arranca mañana.**\n\nCambio el label `radar:en-onboarding` → `radar:publicado`, que ya correspondía desde #970.\n"
   }
  ]
 }

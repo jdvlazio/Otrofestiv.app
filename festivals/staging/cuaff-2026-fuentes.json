@@ -1,0 +1,69 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/fuentes_descubrir.py",
+  "capturado": "2026-11-20T09:24",
+  "paginas_leidas": 60,
+  "errores": []
+ },
+ "raices": {
+  "web": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+  "_sin_bio": "el perfil @colombianurbanfilm sin sesión no muestra enlace en la bio (og:description sin URL, 17 nov)",
+  "bio": "https://www.instagram.com/colombianurbanfilm/"
+ },
+ "items": {
+  "https://drive.google.com/file/d/1VUnsXelRep6ZI7iiTe0WfoGizeHRSUky/view": {
+   "tipo": "drive",
+   "visto_en": "https://filmmakers.festhome.com/festival/815",
+   "primera_vez": "2026-11-19T08:08",
+   "ultima_vez": "2026-11-20T09:24",
+   "estado": "descartada",
+   "_por_que": "no es de CUAFF: llega por Festhome (política de FICCI o convocatoria de otro festival); vigía 17-18 nov",
+   "revisado": "2026-11-19T08:09"
+  },
+  "https://linktr.ee/festivalhanancine": {
+   "tipo": "bio",
+   "visto_en": "https://filmmakers.festhome.com/festival/6690",
+   "primera_vez": "2026-11-19T08:08",
+   "ultima_vez": "2026-11-19T08:08",
+   "estado": "descartada",
+   "_por_que": "no es de CUAFF: llega por Festhome (política de FICCI o convocatoria de otro festival); vigía 17-18 nov",
+   "revisado": "2026-11-19T08:09"
+  },
+  "https://lanza.abycine.com/wp-content/uploads/2026/07/LANZA-Bases-Amnistia-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://filmmakers.festhome.com/industry_events/events/page:7/sort:IndustryEvent.open/direction:desc",
+   "primera_vez": "2026-11-19T21:26",
+   "ultima_vez": "2026-11-20T09:24",
+   "estado": "descartada",
+   "_por_que": "convocatoria de otro festival (Festhome)",
+   "revisado": "2026-11-19T21:26"
+  },
+  "https://macabro.mx/wp-content/uploads/2025/11/Convocatoria-2026-ES.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://filmmakers.festhome.com/industry_events/events/page:2/sort:IndustryEvent.open/direction:desc",
+   "primera_vez": "2026-11-19T21:26",
+   "ultima_vez": "2026-11-20T09:24",
+   "estado": "descartada",
+   "_por_que": "convocatoria de otro festival (Festhome)",
+   "revisado": "2026-11-19T21:26"
+  },
+  "https://pixelatlstoragelrs1.blob.core.windows.net/pixelatl/34e9cab46097412e9200da18ffacb4fc.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://filmmakers.festhome.com/industry_events/events/page:3/sort:IndustryEvent.open/direction:desc",
+   "primera_vez": "2026-11-19T21:26",
+   "ultima_vez": "2026-11-20T09:24",
+   "estado": "descartada",
+   "_por_que": "convocatoria de otro festival (Festhome)",
+   "revisado": "2026-11-19T21:26"
+  },
+  "https://www.bolivialab.com.bo/wp-content/uploads/2026/03/Guion-2026.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://filmmakers.festhome.com/industry_events/events/page:5/sort:IndustryEvent.open/direction:desc",
+   "primera_vez": "2026-11-19T21:26",
+   "ultima_vez": "2026-11-20T09:24",
+   "estado": "descartada",
+   "_por_que": "convocatoria de otro festival (Festhome)",
+   "revisado": "2026-11-19T21:26"
+  }
+ }
+}

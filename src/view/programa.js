@@ -12,7 +12,7 @@
 
 import { FESTIVAL_CONFIG, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _buildPosterV16, _secLabel, _secLabelFull, _sectionColor, escXML, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, secMatches, venueCity, programParts, isCitySel, venueSelLabel,
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, ventanaDias, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, secMatches, venueCity, programParts, isCitySel, venueSelLabel,
  abiertaLabel } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
@@ -82,7 +82,7 @@ export function getActiveNotices(){
     // así que vale igual para 'all', para `city:` y para una SEDE concreta — y
     // generaliza al aviso de una función suelta: si filtrás una sede donde esa
     // función no va, el aviso no aparece.
-    if(activeVenue!=='all'){
+    if(activeVenue!=='all'&&n.type!=='info'){ // info: del festival entero, se ve con cualquier lugar
       const {FILMS}=state.snapshot();
       if(!FILMS.some(f=>_noticeAfecta(n,f)&&venueMatches(f.venue,activeVenue))) return false;
     }
@@ -95,7 +95,7 @@ export function renderNoticesBannerHTML(state){
   if(!active.length) return '';
   const {_lang}=state.snapshot();
   return active.map(n=>{
-    const label=n.type==='cancelled'?t('notice_cancelada'):t('notice_reprogramada');
+    const label=n.type==='info'?t('notice_banner_label'):n.type==='cancelled'?t('notice_cancelada'):t('notice_reprogramada');
     // Aviso CON causa (note): habla el festival, con sus palabras y su enlace. Es
     // el único sitio donde se explica el porqué — las cards solo marcan CANCELADA.
     // `note` va en ES en todos los idiomas salvo que traiga note_en (mismo criterio
@@ -112,7 +112,7 @@ export function renderNoticesBannerHTML(state){
       <button class="notice-banner-close" data-action="dismissNotice" aria-label="${t('misc_cerrar')}" data-title="${noticeId(n).replace(/"/g,'&quot;')}">✕</button>
     </div>`;
     }
-    const msgCancelled=`<span>${t('plan_fecha_pendiente')}</span>`;
+    if(n.type!=='cancelled'&&n.type!=='rescheduled') return ''; const msgCancelled=`<span>${t('plan_fecha_pendiente')}</span>`;
     const msgRescheduled=n.newDay&&n.newTime?`${t('notice_nueva_funcion')} <span class="txt-white60">${n.newDay} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</span>`:'';
     const msg=n.type==='cancelled'?msgCancelled:msgRescheduled;
     const safeTitle=n.title.length>32?n.title.slice(0,30)+'…':n.title;
@@ -242,7 +242,7 @@ export function scrollDtabsToActive(){
   if(!dt) return;
   const on=dt.querySelector('.dtab.on');
   if(!on) return;
-  const tabs=[...dt.querySelectorAll('.dtab')];
+  const tabs=[...dt.querySelectorAll('.dtab:not(.fuera-ciudad)')];   // los de otra ciudad miden 0
   const next=tabs[tabs.indexOf(on)+1]||null;
   // El objetivo es el PAR (hoy + mañana); sin mañana (último día), solo hoy.
   const left=on.offsetLeft-dt.offsetLeft;
@@ -375,7 +375,7 @@ function _renderExploreListaHTML(state){
     const src=getFilmPoster(f)||'';
     const allPast=screenings.every(s=>screeningPassed(s));
     const days=[...new Set(screenings.map(s=>dayLabel(s.day)||s.day))].join(' · ');
-    const daysHtml=_dayChips(screenings);
+    const daysHtml=screenings[0]&&screenings[0]._ventana?ventanaDias(screenings[0]):_dayChips(screenings); // abierta de varios días: el rango (21 oct 2026)
     if(isEvent) return`<div class="plist-item plist-event js-open-pel" style="${allPast?'opacity:.35':''}" data-title="${escXML(f.title)}">
       <img class="plist-poster" src="${src}" alt="${dt}" loading="lazy">
       <div class="plist-info">
@@ -493,12 +493,12 @@ function renderPeliculaViewHTML(state){
       if(!_p1&&!_p2){
         // Ningún item del programa tiene poster real → poster editorial del
         // programa (evita el stack de divs vacíos / card en blanco)
-        posterImg=`<img src="${getFilmPoster(f)||''}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 250ms ease" onload="this.style.opacity='1'" onerror="_posterErr(this)" alt="">`;
+        posterImg=`<img src="${getFilmPoster(f)||''}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 250ms ease" data-load="mostrar" data-err="poster" alt="">`;
       } else {
         // Fallback unificado (como el sheet): item sin póster → generativo, no hueco.
         const _gen=()=>makeProgramPoster(state,f.title,f.duration||'',f.section||'');
-        const _ib=`<img class="pcs-back" src="${_p2||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
-        const _if=`<img class="pcs-front" src="${_p1||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
+        const _ib=`<img class="pcs-back" src="${_p2||_gen()}" loading="lazy" data-err="quitar" alt="">`;
+        const _if=`<img class="pcs-front" src="${_p1||_gen()}" loading="lazy" data-err="quitar" alt="">`;
         posterImg=`<div class="poster-card-stack">${_ib}${_if}</div>`;
       }
     } else {
@@ -517,7 +517,7 @@ function renderPeliculaViewHTML(state){
         posterImg=_pp.inner;
       } else {
         posterImg=posterSrc
-          ?`<img src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover${_opacity};display:block;opacity:0;transition:opacity 250ms ease" onload="this.style.opacity='1'" onerror="_posterErr(this)" alt="">`
+          ?`<img src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" style="width:100%;height:100%;object-fit:cover${_opacity};display:block;opacity:0;transition:opacity 250ms ease" data-load="mostrar" data-err="poster" alt="">`
           :``;
       }
     }
@@ -565,7 +565,7 @@ export function render(){
     const posterSrc=getFilmPoster(f);
     const _cardBg2='';
     const posterImg=posterSrc
-      ?`<img class="img-cover" src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="">`
+      ?`<img class="img-cover" src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" data-err="poster" alt="">`
       :``;
     const progBadge='';//REMOVED
     const nowBadge=isNow
@@ -648,7 +648,7 @@ function _palmPoster(entry, accent, _tira){
   // Sin obra en el catálogo → afiche propio. El rótulo dice QUÉ es, no de qué
   // sección: «PROYECTO» para lo de ImpulsoLab, la categoría para una obra.
   const inner=src
-    ? `<img class="img-cover" src="${src}" loading="lazy" onerror="_posterErr(this)" alt="">`
+    ? `<img class="img-cover" src="${src}" loading="lazy" data-err="poster" alt="">`
     // SIN rótulo de sección. A 76px —y peor a 52— el rótulo de la Forma A no
     // informa: ocupa media tarjeta y compite con el título. Acá además sería
     // redundante, porque la categoría ya está escrita ARRIBA de la fila, a dos

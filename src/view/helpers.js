@@ -7,8 +7,8 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _buildPosterV16, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _lineasTitulo, _posterForma, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeMesaDeLuzSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
@@ -16,7 +16,7 @@ export { _langDates };
 import { toMin, minToStr, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
 import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase, _djb2, premiereBadgeKey, screeningPassed} from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
-import { state } from '../state/state.js';
+import { paisesEn } from '../domain/banderas.js'; import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
 
 // ── Lets module-owned (D-7-3) — re-populados por loadFestival vía setters ──────
@@ -80,20 +80,10 @@ export function getFilmPoster(f){
   if(_tmdb) return _tmdb;
   // 7. f.poster directo — editorial cloudfront o formato Jardín 2026
   if(f.poster) return (f.poster.startsWith('http')||f.poster.startsWith('/assets/'))?f.poster:TMDB_IMG+f.poster;
-  // 8. Poster generativo
-  // Regla de carga (Juan, 24 ago): rótulo = primera oración; la firma de
-  // curaduría solo baja al pie con TÍTULO SIMPLE — con pila/compuesto cede y
-  // vive en la ficha. Tres voces: sección, cuerpo, pie.
-  const _partes=_seccionPartes(_secLabel(f.section||''));
-  const _compuesto=/\s\+\s/.test(f.title||'');
-  return _buildPosterV16({
-    accent: _sectionColor(f.section||''),
-    headerLabel: _partes.rotulo||'TRIBECA',
-    title: f.title,
-    num: null,
-    dato: _datoCompuesto(f.title, f.duration), // «3 obras · 99 min» si es compuesto
-    firma: _compuesto?null:_partes.firma
-  });
+  // 8. Obra sin afiche ni fotograma → BOLETA (Juan, 31 oct 2026, spec mesa-de-luz):
+  // solo el título y la duración; la sección la dice el talón y el separador.
+  return _posterForma({forma:'boleta', accent:_sectionColor(f.section||''),
+    title:f.title, dato:_datoCompuesto(f.title, f.duration)});
 }
 
 // ── LA MINI para superficies de 56px (mejora 1, auditoría Apple Music) ──────
@@ -128,12 +118,7 @@ export function getFilmPosterUntitled(f){
   if(f.title&&f.title.toLowerCase().includes('sorpresa')) return src;
   if(f.type==='event'){const _et=f.is_awards_screening?f.title.replace(/^Award Screening:\s*/i,''):f.title;return makeEventPoster(state,_et,f.duration,f.event_kind,f.section,{untitled:true});}
   if(f.is_cortos||(f.is_programa&&f.film_list&&f.film_list.length)) return makeProgramPoster(state,f.title,f.duration,f.section,{untitled:true});
-  return _buildPosterV16({
-    accent: _sectionColor(f.section||''),
-    headerLabel: _seccionPartes(_secLabel(f.section||'')).rotulo||'TRIBECA', // mismo rótulo que #8
-    title: '',
-    num: null
-  });
+  return _posterForma({forma:'boleta', accent:_sectionColor(f.section||''), title:'', dato:''});
 }
 
 export function getCortoItemPoster(item){
@@ -153,11 +138,10 @@ export function getCortoItemPoster(item){
 // poster-ed + --ed-accent). Ninguna superficie de cortos debe volver a construir
 // el <img> del still a mano — enforced por validate.py [poster-editorial-parity].
 export function itemPosterParts(item, section, imgClass, {header=false}={}){
-  // Sin póster propio: la CARD grande (header) conserva el generativo entero;
-  // el thumb de 56px recibe la mini — la marca de la obra, su título va al lado.
+  // Sin póster propio: la boleta vacía, en el thumb y en la card grande — el
+  // título va al lado (Juan, 31 oct 2026: fuera las figuras geométricas).
   const src=getCortoItemPoster(item)
-    ||(header?makeProgramPoster(state,item.title,item.duration||'',section||'')
-             :_buildPosterMini({accent:_sectionColor(section||''), title:item.title, esPrograma:false}));
+    ||_posterForma({forma:'boleta', accent:_sectionColor(section||''), title:'', dato:''});
   if(_isEditorialPoster(item)){
     // thumb pequeño → still enmarcado SIN banda de texto (precedente _posterThumb);
     // card grande (Diario) → con banda de sección, como _recapPosterCard.
@@ -169,7 +153,7 @@ export function itemPosterParts(item, section, imgClass, {header=false}={}){
       inner:editorialFrame(header?{header:_secLabel(section||''), src, title:item.title}:{src, title:item.title})};
   }
   return {ed:false, accent:'', src,
-    inner:src?`<img class="${imgClass}" src="${src}" loading="lazy" onerror="this.remove()" alt="">`:''};
+    inner:src?`<img class="${imgClass}" src="${src}" loading="lazy" data-err="quitar" alt="">`:''};
 }
 
 // ── posterAmbient — color ambiental del póster (decisión Juan 18 jul 2026) ────
@@ -248,7 +232,7 @@ export function posterAmbient(src,fallbackHex,cb){
 //     tarjeta se hacía pasar por la única obra visible. Falta un afiche → null:
 //     cada obra conserva su card, como hoy. Nada se inventa.
 //   · Delantero = primera obra en orden de catálogo (regla neutra).
-// El dibujo lo hace components.makeSharedSlotSVG — acá solo el modelo.
+// El dibujo lo hace components.makeMesaDeLuzSVG — acá solo el modelo.
 // programParts — el póster de una función que agrupa 2-3 obras, sea programa
 // legacy («A + B», is_programa) o de cortos (is_cortos, como se modelan hoy).
 // Arregla una mentira vieja: getFilmPoster (camino 5) devuelve el afiche de la
@@ -271,7 +255,7 @@ export function programParts(f){
   return slotPosterParts(f.film_list.map(it=>({
     title:it.title, poster:it.poster, posterSource:it.posterSource,
     duration:it.duration||f.duration, section:f.section,
-  })), blockDuration(f));
+  })), blockDuration(f), f.title);
 }
 
 // `blockDur` es la duración DEL BLOQUE y viaja aparte a propósito: el pie dice
@@ -280,41 +264,37 @@ export function programParts(f){
 // 42—, y el número engañaba justo donde el usuario decide si le cabe en la
 // tarde. Medido: 209 de los 225 programas del repo tenían el líder con otra
 // duración que su bloque.
-export function slotPosterParts(members, blockDur){
-  // Tope 8 (prototipo aprobado, 25 ago): la Escalera escala a cualquier N porque
-  // el paso es fracción de la lámina — ver makeSharedSlotSVG. Con 9+ la lámina
-  // baja del 23% y a 56px queda en textura, así que ahí sí cae a la forma vieja.
+export function slotPosterParts(members, blockDur, semilla){
+  // MESA DE LUZ (Juan, 31 oct 2026 — spec mesa-de-luz). Revoca el tope de 8 y
+  // la regla de «solo las que tienen afiche»: la mesa muestra TODAS las obras.
+  //   afiche real          → afiche
+  //   solo fotograma       → boleta con la foto
+  //   nada                 → boleta
+  // Aunque NINGUNA obra traiga imagen hay mesa: una boleta con su título por
+  // obra dice «función múltiple» mejor que el generativo (Juan, 31 oct 2026).
   if(!Array.isArray(members)||members.length<2) return null;
-  const clasif=members.map(f=>{
+  const modules=members.map(f=>{
     const src=getPosterSrc(f.title,true)||f.poster||null;
-    const real=!!src&&!_isEditorialPoster(f);
-    return {f, src:real?src:null};
+    if(src&&!_isEditorialPoster(f)) return {kind:'afiche', src, title:f.title};
+    if(src) return {kind:'foto', src, title:f.title};
+    return {kind:'nada', src:null, title:f.title};
   });
-  // LA PILA SE DIBUJA CON LAS OBRAS QUE TIENEN AFICHE (Juan, 16 sep 2026). Antes
-  // era «solo completa»: un still entre ocho afiches tumbaba la tarjeta entera.
-  // Con #NarrarElFuturo se vio el costo — sus diez programas caían al generativo
-  // teniendo 33 afiches propios, y a cada uno le estorbaba UNA obra—. Medido en
-  // el repo antes de cambiarlo: 112 → 143 programas con pila (+31). Lo que NO
-  // cambia es por qué el still no entra: se dibuja dentro del marco editorial,
-  // que ya es un póster, y sería un póster dentro de otro. El pie sigue diciendo
-  // la verdad del programa («10 obras · 91 min»), que es el dato con el que el
-  // usuario decide; las láminas son la muestra, no el índice.
-  const reales=clasif.filter(c=>c.src);
-  if(reales.length<2||reales.length>8) return null;
-  // atrás→delante: el 1º del catálogo queda delante
-  const modules=[...reales.slice(1).reverse().map(c=>c.src), reales[0].src];
-  const lider=reales[0].f;
+  const lider=members[0];
   const dur=blockDur||blockDuration(lider);
   const dato=`${members.length} ${t('misc_peliculas')}${dur?` · ${dur} min`:''}`;
-  return {modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato,
-    svg:makeSharedSlotSVG({modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato})};
+  const accent=_sectionColor(lider.section||'');
+  return {modules, secLabel:_secLabel(lider.section||''), accent, dato, semilla,
+    svg:makeMesaDeLuzSVG({modules, accent, dato, semilla})};
 }
 
 export function posterParts(f,{header=false,body='',loading}={}){
   const m=posterModel(f);
   if(m.kind!=='editorial') return m;                       // {kind,src,...} decidido
   return {...m, ed:true,
-    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent, firma:body?m.firma:undefined})};
+    // Con cuerpo es la tarjeta grande → boleta con fotograma: lleva la
+    // duración al pie (o «N obras · X min»), como la boleta sin imagen.
+    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent,
+      dato:body?_datoCompuesto(f.title, f.duration):undefined})};
 }
 
 export function _getItemPoster(item){
@@ -407,7 +387,7 @@ export function _posterThumb(f, cssClass, loading){
   }
 
   const _posStyle = _posterStyle(f);
-  return `<img class="${cssClass}" src="${p}" loading="${_load}"${_posStyle} onerror="this.remove()" alt="">`;
+  return `<img class="${cssClass}" src="${p}" loading="${_load}"${_posStyle} data-err="quitar" alt="">`;
 }
 
 // ── Modelo único de póster (unión discriminada) ───────────────────────────────
@@ -455,7 +435,7 @@ export function editorialFrame({header, body, src, title, loading, accent, dato,
   const _ttl=(body!=null && String(body).trim()) ? String(body) : '';
   const _dato=(dato!=null && String(dato).trim()) ? String(dato) : '';
   const img=src
-    ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
+    ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" data-load="mostrar" data-err="ed" alt="">`
     : '';
   // MINIATURA = sin sección ni título (el corto dentro de un programa). Ahí el
   // campo se centra y el pie se llena con la propia obra desenfocada (Juan, 19
@@ -471,7 +451,21 @@ export function editorialFrame({header, body, src, title, loading, accent, dato,
   // el vacío no existe, lo llenan el título y el dato») era falsa en pantalla.
   // Mismo mecanismo que la miniatura —contenido, con máscara— pero anclado al
   // borde del campo grande (66,67%, clase ed-halo-full) para no dejar costura.
-  const halo=(src)?`<div class="ed-halo${_mini?'':' ed-halo-full'}"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
+  // BOLETA CON FOTOGRAMA (Juan, 31 oct 2026 — spec mesa-de-luz, camino C3).
+  // La tarjeta con título: el fotograma ENMARCADO arriba, sin recortar, su luz
+  // derramada sobre el negro (opacidad .26), el título debajo con el mismo
+  // corte y tamaño que las boletas SVG, la duración, el troquel y el talón.
+  // Sin rótulo de sección: la boleta no lo lleva, lo dice el talón.
+  if(_ttl){
+    const tl=_lineasTitulo(_ttl);
+    return `<div class="edb">`
+      + (src?`<div class="edb-luz"><img src="${src}" loading="${_l}" aria-hidden="true" data-err="quitar" alt=""></div>`:'')
+      + `<div class="edb-foto">${img}</div>`
+      + `<div class="edb-ttl" style="font-size:${tl.cqi}cqi">${tl.lines.map(escXML).join('<br>')}</div>`
+      + (_dato?`<div class="edb-dato">${escXML(_dato)}</div>`:'')
+      + `<div class="edb-troquel"></div><div class="edb-muesca i"></div><div class="edb-muesca d"></div><div class="edb-talon"></div></div>`;
+  }
+  const halo=(src)?`<div class="ed-halo${_mini?'':' ed-halo-full'}"><img src="${src}" loading="${_l}" aria-hidden="true" data-err="quitar" alt=""></div>`:'';
   return `<div class="ed-fil"></div>`
     + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
     + halo
@@ -672,6 +666,43 @@ export function festivalCities(films){
   return Object.values(map)
     .map(c=>({...c, days:[...c.days].sort(), cancelled:c.vivas===0}))
     .sort((a,b)=>b.count-a.count);
+}
+
+// diasDeCiudad(sel, films) — DUEÑO ÚNICO de «qué días tiene programación la
+// ciudad elegida» (19 nov 2026, aprobado por Juan). Un festival multiciudad que
+// NO es simultáneo (Al Este: Medellín 18–22, Bogotá 25–29) mostraba en la tira
+// los doce días aunque la mitad estuviera vacía para quien está en una ciudad.
+//
+// La CIUDAD es contexto, así que manda también cuando se elige una SEDE: la tira
+// sigue siendo la de la ciudad de esa sede. Elegir una sede no esconde nada más
+// (que una sala no proyecte un día es información, no ruido).
+//
+// Devuelve null cuando no hay nada que recortar —sin ciudad elegida, o un
+// festival de una sola ciudad—, y los consumidores leen null como «todos».
+// Los días salen de las FUNCIONES (y actividades abiertas), no de un campo nuevo.
+export function ciudadDeSeleccion(sel){
+  if(!sel||sel==='all') return null;
+  if(sel.startsWith('city:')) return sel.slice(5);
+  if(sel.startsWith('sede:')){
+    const i=sel.indexOf(SEDE_SEP);
+    if(i>=0) return sel.slice(5,i);
+    sel=sel.slice(5);
+  }
+  // Sede por nombre corto (legado): la ciudad de su primera sede.
+  const venues=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  const k=Object.keys(venues).find(v=>vcfg(v).short===sel);
+  return k?(filterCity(k)||null):null;
+}
+export function diasDeCiudad(sel, films){
+  const c=ciudadDeSeleccion(sel);
+  if(!c) return null;
+  if(festivalCities(films).length<2) return null;
+  // Los días se cuentan aparte y no se toman de festivalCities: esa deja fuera
+  // las actividades ABIERTAS (f.info), y un día de la ciudad con solo una
+  // exposición o una maratón se escondía de la tira. Las abiertas de varios
+  // días ya llegan como una copia por día (expandVentanas).
+  const dias=new Set((films||[]).filter(f=>f.venue&&f.day&&filterCity(f.venue)===c).map(f=>f.day));
+  return dias.size?[...dias].sort():null;
 }
 
 export function venueCity(v){
@@ -1031,6 +1062,17 @@ export function abiertaRango(f){
   return t('abierta_rango',{a:_h(f.time),b:_h(minToStr(screeningBlockEndMin(f)))});
 }
 
+// ventanaDias — «22 oct – 13 nov»: los días de una actividad abierta de varios días
+// (f._ventana, domain/film.js expandVentanas). El último puede caer después del
+// festival, así que no sale de dayLabel (que solo conoce los días del festival).
+export function ventanaDias(f){
+  const v=f&&f._ventana; if(!v) return '';
+  const fmt=k=>{ const d=new Date(k+'T12:00:00'); return isNaN(d.getTime())?k
+    :new Intl.DateTimeFormat(_lang==='en'?'en-US':_lang==='pt'?'pt-BR':'es-CO',{day:'numeric',month:'short'})
+      .formatToParts(d).filter(p=>p.type!=='literal').map(p=>p.value.replace('.','')).join(' '); };   // «22 oct», sin «de»
+  return v.desde===v.hasta?fmt(v.desde):`${fmt(v.desde)} – ${fmt(v.hasta)}`;
+}
+
 // _minFmt(m) — minutos (número) → "1 h 45" / "45 min". Para los detalles del conflicto
 // por desplazamiento ("~1 h 45 de viaje · 1 h 05 de hueco"). durFmt formatea la duración
 // de una actividad (string del JSON); esto formatea un cómputo nuestro.
@@ -1049,7 +1091,7 @@ export function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ra
   const thumb=_pp.src;
   const thumbHtml=_pp.ed
     ? `<div class="c-film-thumb poster-ed" style="--ed-accent:${_pp.accent}">${_pp.inner}</div>`
-    : `<img src="${thumb}" class="c-film-thumb" loading="lazy" onerror="this.remove()" alt="">`;
+    : `<img src="${thumb}" class="c-film-thumb" loading="lazy" data-err="quitar" alt="">`;
   // data-* attrs — nunca interpolar strings con contenido variable en onclick
   const _dt=encodeURIComponent(item.title||'');
   const _dc=encodeURIComponent(item.country||'');
@@ -1066,7 +1108,7 @@ export function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ra
         <span class="mplan-prog-num">${n+1}</span>
         <span class="mplan-prog-title">${item.title}</span>
       </div>
-      <div class="indent-nested mplan-prog-dur">${item.country?item.country+' · ':''}${durFmt(item.duration)}</div>
+      <div class="indent-nested mplan-prog-dur">${item.country?paisesEn(item.country,_lang)+' · ':''}${durFmt(item.duration)}</div>
     </div>
     ${ratingEl}
   </div>`;
@@ -1212,8 +1254,8 @@ export function _programaStack(f){
   // programa (mejora 1 — el stack vive en el chip de 56px de la lista), nunca
   // un hueco vacío ni el póster entero ilegible.
   const _gen=()=>getFilmPosterMini(f);
-  const imgB=`<img class="ps-back" src="${p2||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
-  const imgF=`<img class="ps-front" src="${p1||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
+  const imgB=`<img class="ps-back" src="${p2||_gen()}" loading="lazy" data-err="quitar" alt="">`;
+  const imgF=`<img class="ps-front" src="${p1||_gen()}" loading="lazy" data-err="quitar" alt="">`;
   return`<div class="plist-poster-stack">${imgB}${imgF}</div>`;
 }
 
@@ -1226,7 +1268,7 @@ export function _plistPosterHtml(f, src){
     // Marco editorial único (lista = banda + img, sin label) vía posterParts.
     return '<div class="plist-poster poster-ed" style="--ed-accent:'+_pp.accent+'">'+_pp.inner+'</div>';
   }
-  return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" onerror="this.remove()" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';
+  return src?'<div class="plist-poster"><img src="'+src+'" loading="lazy" data-err="quitar" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"></div>':'<div class="plist-poster"></div>';
 }
 
 // ── Step 6f addendum: shared leaves (emptyState/emptyStateHero/DAYS) ───────────

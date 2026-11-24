@@ -7,14 +7,14 @@
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
 import {FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG} from '../config.js';
-import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts, abiertaLabel, abiertaRango } from '../view/helpers.js';
+import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, _posterForma, makeMesaDeLuzSVG, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, ventanaDias, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts, abiertaLabel, abiertaRango } from '../view/helpers.js';
 // countryToFlags vive en dominio (src/domain/banderas.js), junto a la tabla de
 // países GENERADA (scripts/generate-paises.js, ICU es+en). Aquí había un
 // literal escrito a mano y en pipeline/lib.py otro: divergieron en contenido y
 // en criterio de comparación, y «Koki, Ciao» mostró un globo teniendo su 🇳🇱 en
 // el dato. Se re-exporta para no mover a sus llamadores.
-import { countryToFlags } from '../domain/banderas.js';
+import { countryToFlags, paisesEn } from '../domain/banderas.js';
 export { countryToFlags };
 import { closeAvSheet, closePVRating, closePrioLimit, openAuthSheet } from '../view/sheets.js';
 import { showActionModal, showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
@@ -51,7 +51,7 @@ const _GENRE_EN = {
   // Nombres canónicos TMDB es-ES (también usados por festivales legacy)
   'Ciencia ficción':'Science Fiction','Música':'Music','Crimen':'Crime',
   'Historia':'History','Suspense':'Thriller','Bélica':'War','Familia':'Family',
-  'Película de TV':'TV Movie','Western':'Western',
+  'Película de TV':'TV Movie','Western':'Western','Suspenso':'Thriller','Documental híbrido':'Hybrid documentary',
 };
 let _toastActionFn=null;
 let _pvTitle='', _pvRating=0;
@@ -79,8 +79,16 @@ let _cortoParentHtml=null;
 const _PRESS_ICO=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 011-1h11a1 1 0 011 1v18"/><path d="M17 8h2a1 1 0 011 1v10a2 2 0 01-2 2H4"/><line x1="7" y1="7" x2="14" y2="7"/><line x1="7" y1="11" x2="14" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/></svg>`;
 
 function _screeningRows(pairs, opts){
+  // Una abierta de VARIOS días es UNA fila: «22 oct – 13 nov · 8:00 a 17:00»
+  // (Juan, 21 oct 2026). Sus copias por día (expandVentanas) se cuentan una vez.
+  const _vVista=new Set();
+  pairs=pairs.filter(({s,owner})=>{
+    if(!s._ventana) return true;
+    const k=owner.title+'|'+s._ventana.desde+'|'+s.venue;
+    if(_vVista.has(k)) return false; _vVista.add(k); return true;
+  });
   return pairs.map(({s,owner})=>{
-    const dayAbb=dayLabel(s.day)||s.day;
+    const dayAbb=s._ventana?ventanaDias(s):(dayLabel(s.day)||s.day);
     const vc=vcfg(s.venue),sl=sala(s);
     const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
     // sinCiudad: la ficha ya filtró por ciudad y la nombra arriba — acá sobra.
@@ -116,8 +124,9 @@ function _screeningRows(pairs, opts){
     }
     return`<div class="pel-sheet-screening${_planned?' in-plan':''}${s._cancelled?' scr-void':''}"${isPast?' style="opacity:.4"':''}>
       ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
-      <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
-      <span class="pelicula-time">${owner&&owner.info?abiertaRango(owner):s.time}</span>
+      ${s._ventana?`<span class="pelicula-ventana"><span class="pelicula-day">${dayAbb}</span><span class="pelicula-time">${abiertaRango(owner)}</span></span>`
+      :`<span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
+      <span class="pelicula-time">${owner&&owner.info?abiertaRango(owner):s.time}</span>`}
       <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span>${s.audience==='press'?`<span class="scr-press" aria-hidden="true">${_PRESS_ICO}</span><span class="sr-only">${t('press_badge')}</span>`:''}</span>
       ${_addCtrl}
     </div>`;
@@ -197,17 +206,17 @@ export function openPelSheet(title){
   // encabezado dice sección, duración y título, así que el póster no los repite.
   const _escF=programParts(f);
   if(_escF){
-    posterHtml=`<div class="psp-escalera">${makeSharedSlotSVG({modules:_escF.modules, secLabel:_escF.secLabel, accent:_escF.accent, dato:''})}</div>`;
+    posterHtml=`<div class="psp-escalera">${makeMesaDeLuzSVG({modules:_escF.modules, accent:_escF.accent, dato:'', semilla:_escF.semilla})}</div>`;
   } else if(f.is_programa&&f.film_list&&f.film_list.length>=2){
     const _sp1=_getItemPoster(f.film_list[0]);
     const _sp2=_getItemPoster(f.film_list[1]);
     const _fd1=JSON.stringify(f.film_list[0]).replace(/"/g,'&quot;');
     const _fd2=JSON.stringify(f.film_list[1]).replace(/"/g,'&quot;');
     const _c1=_sp1
-      ?`<img class="psp-card psp-front" src="${_sp1}" loading="lazy" onerror="this.remove()" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`
+      ?`<img class="psp-card psp-front" src="${_sp1}" loading="lazy" data-err="quitar" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`
       :`<img class="psp-card psp-front" src="${makeProgramPoster(state,f.film_list[0].title,f.film_list[0].duration||'',f.section||'')}" loading="lazy" alt="" data-action="openCombinedFilmSheet" data-film="${_fd1}">`;
     const _c2=_sp2
-      ?`<img class="psp-card psp-back" src="${_sp2}" loading="lazy" onerror="this.remove()" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`
+      ?`<img class="psp-card psp-back" src="${_sp2}" loading="lazy" data-err="quitar" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`
       :`<img class="psp-card psp-back" src="${makeProgramPoster(state,f.film_list[1].title,f.film_list[1].duration||'',f.section||'')}" loading="lazy" alt="" data-action="openCombinedFilmSheet" data-film="${_fd2}">`;
     posterHtml=`<div class="pel-sheet-poster-stage">${_c1}${_c2}</div>`;
   } else {
@@ -220,7 +229,7 @@ export function openPelSheet(title){
       // pasan tal cual (getFilmPosterUntitled solo toca data-URIs generativos).
       const _sheetSrc=posterSrc?getFilmPosterUntitled(f):null;
       posterHtml=_sheetSrc
-        ?`<img class="pel-sheet-poster"${_posterStyle(f)} src="${_sheetSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" onerror="_posterErr(this)" alt="">`
+        ?`<img class="pel-sheet-poster"${_posterStyle(f)} src="${_sheetSrc}" data-title="${f.title.replace(/"/g,'&quot;')}" loading="lazy" data-err="poster" alt="">`
         :`<div class="pel-sheet-poster-ph" aria-hidden="true">🎬</div>`;
     }
   }
@@ -681,8 +690,9 @@ export function openCortoSheet(title, country, duration, section, flags, directo
   const posterHtml=_pp3.ed
     ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_pp3.accent}">${_pp3.inner}</div>`
     :posterUrl
-      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
-      :`<img class="pel-sheet-poster" src="${makeProgramPoster(state,title,dur,section||'')||''}" alt="" loading="lazy">`;
+      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" data-err="corto" alt="">`
+      // Sin póster: la boleta vacía de itemPosterParts — el título va al lado.
+      :`<img class="pel-sheet-poster" src="${_pp3.src||''}" alt="" loading="lazy">`;
   const ps=document.getElementById('pel-sheet');
   if(ps) ps.scrollTop=0;
   _pushSheetState();
@@ -784,7 +794,7 @@ export function _openCombinedFilmSheet(filmData){
   const posterHtml=_pp4.ed
     ?`<div class="psp-editorial poster-ed" style="--ed-accent:${_pp4.accent}">${_pp4.inner}</div>`
     :posterUrl
-      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" onerror="_cortoSheetPosterErr(this)" alt="">`
+      ?`<img class="pel-sheet-poster" src="${posterUrl}" data-title="${(title||"").replace(/"/g,'&quot;')}" loading="lazy" data-err="corto" alt="">`
       :`<div class="pel-sheet-poster-ph" aria-hidden="true">🎬</div>`;
   const metaLine=[director,year].filter(Boolean).join(' · ');
   const lbHref=lbUrlForFilm({title,lbSlug}); // guard de slugs incluido (marcador ⚠ jamás llega al href)
@@ -1029,7 +1039,7 @@ export function openPrioLimit(newTitle){
       const safeSwap=_ttl.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const safeNew=newTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       return`<div class="prio-limit-item">
-        ${poster?`<img class="prio-limit-thumb" src="${poster}" onerror="this.remove()" alt="" loading="lazy">`:'<div class="prio-limit-thumb"></div>'}
+        ${poster?`<img class="prio-limit-thumb" src="${poster}" data-err="quitar" alt="" loading="lazy">`:'<div class="prio-limit-thumb"></div>'}
         <div class="prio-limit-info">
           <div class="prio-limit-name">${dt}</div>
           <div class="prio-limit-when">${when}</div>
@@ -1176,7 +1186,7 @@ function _pvShowCurrent(){
   const poster=document.getElementById('pv-poster');
   if(poster){
     poster.style.opacity='';
-    poster.src=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',_pvSection);
+    poster.src=getCortoItemPoster(item)||_posterForma({forma:'boleta', accent:_sectionColor(_pvSection||''), title:'', dato:''});
     poster.onerror=()=>{poster.style.opacity='0';};
   }
   const titleEl=document.getElementById('pv-film-title');
@@ -1185,7 +1195,7 @@ function _pvShowCurrent(){
   if(ctx){
     const parts=[t('pv_paso',{n:_pvQueueIdx+1,total})];
     if(item.duration) parts.push(durFmt(item.duration));
-    if(item.country) parts.push(item.country);
+    if(item.country) parts.push(paisesEn(item.country,_lang));
     ctx.textContent=parts.join(' · ');
   }
   _pvMountAndOpen();

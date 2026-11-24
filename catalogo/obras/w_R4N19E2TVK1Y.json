@@ -8,8 +8,18 @@
  "directores": [
   "Juan José Arias Gil"
  ],
+ "aliases": [
+  {
+   "titulo": "Luis antonio",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
   "es": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
+ },
+ "afiche": {
+  "archivo": "/assets/miradas-2026/luis-antonio.jpg",
+  "veredicto": "oficial"
  },
  "xref": {},
  "versiones": [
@@ -19,7 +29,9 @@
   }
  ],
  "presentaciones": [
+  "ficica-2026",
   "guatape-2026",
+  "miradas-2026",
   "popayan-2026"
  ]
 }

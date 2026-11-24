@@ -4,16 +4,16 @@
 // showToast) + config + i18n. Lee roster/viewstate (FILMS/watchlist/cachedResult/
 // etc.) vía STATE BRIDGE (globalThis). _activeCalcWorker es module-local.
 //
-// MECANISMO WORKER: _mkCalcWorker hace _SCHED_PURE_FNS.map(name=>eval(name)...).
-// eval(name) (direct eval) resuelve en el scope del módulo → las 15 fns puras
-// DEBEN importarse aquí aunque el AST no las vea (están en strings de eval).
+// MECANISMO WORKER: _mkCalcWorker hace _SCHED_PURE_FNS.map(fn=>fn.toString()).
+// La lista guarda REFERENCIAS a las fns puras (sin eval desde el 26 oct, CSP):
+// cada una DEBE estar importada aquí.
 
 import { FESTIVAL_CONFIG } from '../config.js';
 import { toMin, minToStr, _durMatch, parseDur, _festDate, festivalEnded } from '../domain/time.js';
 import { _resolveVenue } from '../domain/festival.js';
 import { _cutSalida, blockDuration, effectiveDuration, durationForTravel, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
-// screeningPlannable: NO lo usa este módulo directamente — lo consume el eval de
-// _mkCalcWorker (_SCHED_PURE_FNS). Sin este import el build del worker moría con
+// screeningPlannable: NO lo usa este módulo directamente — lo consume
+// _mkCalcWorker vía _SCHED_PURE_FNS. Sin este import el build del worker moría con
 // ReferenceError y TODO cálculo caía al fallback síncrono en el main thread —
 // silenciosamente, desde que la fn se extrajo al dominio (16 ago). Lo destapó el
 // traspaso de Onboarding del 17: dos siembras distintas parecían dos motores.
@@ -32,10 +32,10 @@ import { storage } from '../storage/storage.js';
 // diferente en worker scope (_simTime→SIM_TIME, FESTIVAL_END→FESTIVAL_END_TS).
 // Estas se proveen como worker-local en _mkCalcWorker._venueFns.
 const _SCHED_PURE_FNS = [
-  'toMin','minToStr','_durMatch','parseDur','_festDate','_resolveVenue',
-  '_cutSalida','blockDuration','effectiveDuration','durationForTravel','screensConflict','screeningPassed',
-  'isScreeningBlocked','screeningPlannable','plannableScreens','_djb2','_titleSeed','_mulberry32',
-  'shuffle','scoreFilm','sortScreensByStrategy','computeScenarios'
+  toMin, minToStr, _durMatch, parseDur, _festDate, _resolveVenue, _cutSalida, blockDuration,
+  effectiveDuration, durationForTravel, screensConflict, screeningPassed, isScreeningBlocked,
+  screeningPlannable, plannableScreens, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm,
+  sortScreensByStrategy, computeScenarios
 ];
 
 function _mkCalcWorker(){
@@ -74,10 +74,14 @@ function travelMins(venueA,venueB){ return venueTravelMins(venueA,venueB); }
 `;
     // Extraer funciones puras del main thread via .toString()
     // Garantía: el Worker usa EXACTAMENTE el mismo código que el main thread.
-    const _pureFns=_SCHED_PURE_FNS.map(name=>{
-      const fn=eval(name); // eslint-disable-line no-eval
-      return (typeof fn==='function')?fn.toString():'/* MISSING: '+name+' */';
-    }).join('\n');
+    // Las REFERENCIAS, no sus nombres: antes era eval(name), que obligaba a la CSP
+    // a aceptar 'unsafe-eval' (26 oct). OJO: un import que falte ya no mata solo el
+    // worker, rompe la CARGA del módulo (la lista se evalúa al importar calc.js) —
+    // lo frenan ESLint no-undef (CI) y [sched-pure-fns]. Sin comentarios DENTRO
+    // del array: los parsers de validate.py y workerParity.test.js lo leen.
+    const _pureFns=_SCHED_PURE_FNS.map(fn=>
+      (typeof fn==='function')?fn.toString():'/* MISSING */'
+    ).join('\n');
     // Handler worker-specific
     const _handler=`
 self.onmessage=function(e){

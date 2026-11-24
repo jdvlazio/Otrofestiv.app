@@ -17,10 +17,13 @@
   "Documental"
  ],
  "afiche": {
-  "archivo": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/6970/large_Matinino-Clean-16x9-01.jpg",
-  "veredicto": "fotograma"
+  "archivo": "/assets/ficfusa-2026/matinino.jpg",
+  "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1676525,
+  "letterboxd": "matinino"
+ },
  "versiones": [
   {
    "etiqueta": "88 min",
@@ -28,6 +31,7 @@
   }
  ],
  "presentaciones": [
+  "ficfusa-2026",
   "tribeca-2026"
  ]
 }

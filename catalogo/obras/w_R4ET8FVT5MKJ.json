@@ -1,18 +1,34 @@
 {
  "id": "w_R4ET8FVT5MKJ",
  "titulo_original": "Transversal 30FF",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "CO"
  ],
  "directores": [
-  "Sergio Mejía"
+  "Checho Mejía"
  ],
+ "aliases": [
+  {
+   "titulo": "Transversal 30ff",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Transversal30FF",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe."
+ },
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg",
+  "archivo": "/assets/aleste-2026/transversal30ff.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1525925,
+  "letterboxd": "transversal-30ff"
+ },
  "versiones": [
   {
    "etiqueta": "6 min",
@@ -20,6 +36,8 @@
   }
  ],
  "presentaciones": [
-  "cinemancia-2025"
+  "aleste-2026",
+  "cinemancia-2025",
+  "ficfusa-2026"
  ]
 }

@@ -4,21 +4,31 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  },
  "anio": {
   "fuente": "tmdb:1604094",
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "tmdb:1604094",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "la única imagen de la ficha de TMDB es un rostro desenfocado sin título ni créditos: un fotograma, no el afiche; no se encontró afiche oficial (IFFR 2026, búsqueda web)",
-  "fecha": "2026-10-15"
+  "motivo": "MIDBO trae el afiche con título y créditos; antes se guardaba un fotograma",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, ficci-65)",
+  "fecha": "2026-11-23"
  }
 }

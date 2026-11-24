@@ -8,11 +8,14 @@
  "directores": [
   "Juan Felipe Restrepo"
  ],
+ "sinopsis": {
+  "es": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo."
+ },
  "generos": [
   "Familia"
  ],
  "afiche": {
-  "archivo": "/assets/siembrafest/desde-aca-veo-la-tormenta.jpg",
+  "archivo": "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
   "veredicto": "oficial"
  },
  "xref": {},
@@ -20,9 +23,14 @@
   {
    "etiqueta": "10 min",
    "duracion_min": 10
+  },
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
   }
  ],
  "presentaciones": [
+  "aleste-2026",
   "siembrafest-2026"
  ]
 }

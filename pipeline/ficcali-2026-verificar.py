@@ -93,12 +93,13 @@ def main():
 
     por_tarjeta = {f['_src']['tarjeta']: f for f in crudo['funciones'] if 'tarjeta' in f['_src']}
     # LO QUE SOLO ANUNCIÓ IG (sin tarjeta en la web): se contrasta con la tabla del
-    # crudo (DEL_IG + la segunda función de Metrópolis), la misma que lo agrega
+    # crudo (DEL_IG + la segunda función de Metrópolis + el City Tour), la misma que lo agrega
     import importlib.util as _iu
     _sp = _iu.spec_from_file_location('crudo_py', f'{REPO}/pipeline/{FID}-crudo.py')
     _cm = _iu.module_from_spec(_sp); _sp.loader.exec_module(_cm)
     _esperadas = sorted([(x['dia'], x['hora'], x['titulo']) for x in _cm.DEL_IG] +
-                        [(_cm.METROPOLIS_24['dia'], '20:00', 'Cineconcierto: Metrópolis')])
+                        [(_cm.METROPOLIS_24['dia'], '20:00', 'Cineconcierto: Metrópolis'),
+                         (_cm.CITY_TOUR['dia'], _cm.CITY_TOUR['hora'], _cm.CITY_TOUR['titulo'])])
     _sin_tarjeta = sorted((f['dia'], f['hora'], f['titulo']) for f in crudo['funciones'] if 'tarjeta' not in f['_src'])
     # las que el crudo declara FUERA por su id (hoy: sede nueva sin pin, 8 oct)
     declaradas = {int(n) for n in re.findall(r'tarjeta (\d+) ·', ' '.join(crudo.get('_fuera') or []))}

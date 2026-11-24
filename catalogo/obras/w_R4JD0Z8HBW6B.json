@@ -4,13 +4,22 @@
  "anio": 2025,
  "paises": [],
  "directores": [
-  "Alejandra Calderón"
+  "Yesika Alejandra Calderón Hernández"
+ ],
+ "aliases": [
+  {
+   "titulo": "La pandemia del feminicidio en Colombia",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
-  "es": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia."
+  "es": "Detrás de cada cifra hay un nombre. Mujeres organizadas alzan la voz frente al feminicidio en Colombia y acompañan una lucha colectiva contra la impunidad."
  },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
-  "archivo": "/assets/ficpa-2026/la-pandemia-del-feminicidio.jpg",
+  "archivo": "/assets/cineparalapaz-2026/la-pandemia-del-feminicidio-en-colombia.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -19,11 +28,16 @@
  },
  "versiones": [
   {
+   "etiqueta": "23 min",
+   "duracion_min": 23
+  },
+  {
    "etiqueta": "29 min",
    "duracion_min": 29
   }
  ],
  "presentaciones": [
+  "cineparalapaz-2026",
   "ficpa-2026"
  ]
 }

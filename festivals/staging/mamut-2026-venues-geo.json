@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-10-11"
+  "capturado": "2026-10-27"
  },
  "Centro Colombo Americano": {
   "n": 0,
@@ -9,7 +9,8 @@
   "lng": -75.5626063,
   "_prec": "manual",
   "_match": "Google Maps: Centro Colombo Americano de Medellín (sede Centro), Cra 45 #53-24",
-  "address": "Cra. 45 #53-24"
+  "address": "Cra. 45 #53-24",
+  "_matriz": "s_b5d25cab"
  },
  "Persona": {
   "n": 0,
@@ -17,7 +18,8 @@
   "lng": -75.5633771,
   "_prec": "manual",
   "_match": "Google Maps: Persona, Cra. 42 #46-46, La Candelaria",
-  "address": "Cra. 42 #46-46"
+  "address": "Cra. 42 #46-46",
+  "_matriz": "s_49da25fa"
  },
  "Museo de Arte Moderno de Medellín - MAMM": {
   "n": 0,
@@ -25,7 +27,8 @@
   "lng": -75.57384,
   "_prec": "manual",
   "_match": "Google Maps: MAMM, Cra 44 #19a-100, El Poblado (el post de Frío metal dice «Teatro MAMM»)",
-  "address": "Cra. 44 #19A-100"
+  "address": "Cra. 44 #19A-100",
+  "_matriz": "s_99915661"
  },
  "La Pascasia": {
   "n": 0,
@@ -33,7 +36,8 @@
   "lng": -75.5649531,
   "_prec": "manual",
   "_match": "Google Maps: La Pascasia, Cl. 47 #43 88, La Candelaria",
-  "address": "Cl. 47 #43-88"
+  "address": "Cl. 47 #43-88",
+  "_matriz": "s_c564ed7b"
  },
  "Las Américas": {
   "n": 0,
@@ -41,7 +45,8 @@
   "lng": -75.5963458,
   "_prec": "manual",
   "_match": "Google Maps: Cineprox Las Américas, Dg. 75B #2A-120, Belén (la lámina de días dice «Las Américas»)",
-  "address": "Dg. 75B #2A-120"
+  "address": "Dg. 75B #2A-120",
+  "_matriz": "s_b3c7c07a"
  },
  "Coocine": {
   "n": 0,
@@ -49,7 +54,8 @@
   "lng": -75.528,
   "_prec": "manual",
   "_match": "Google Maps: COOCINE - Cooperativa de cine, Santa Elena. Google no trae la vereda; la lámina 10 dice vereda El Plan, sector La Morena, casa 15",
-  "address": "Corregimiento de Santa Elena"
+  "address": "Corregimiento de Santa Elena",
+  "_matriz": "s_e1521829"
  },
  "Lab UNAL": {
   "n": 4,
@@ -57,7 +63,8 @@
   "address": "Universidad Nacional de Colombia, sede Medellín",
   "_nota": "PIN APROXIMADO (30 sep, pedido de Juan: mejor una sede ubicada que sin pin). «Laboratorio Universidad Nacional» (post del taller p/Ddua0DTAVEE, con @artesunalmed) no dice qué edificio: se pone el Campus El Volador, el campus principal de la UNAL en Medellín (Google Maps «Campus El Volador», 7C6C+56).",
   "lat": 6.260449,
-  "lng": -75.5794182
+  "lng": -75.5794182,
+  "_matriz": "s_3e183821"
  },
  "Capilla, Comfama": {
   "n": 1,
@@ -65,7 +72,8 @@
   "address": "Claustro Comfama San Ignacio, Cra. 44 #48-18 (2.º piso)",
   "lat": 6.2458698,
   "lng": -75.5639884,
-  "_nota": "La Capilla: sala de cine patrimonial en el 2.º piso del Claustro Comfama San Ignacio (comfama.com, «Cineclub La Capilla»). Google Maps: Comfama Claustro San Ignacio, Cra. 44 #48-18 (29 sep)."
+  "_nota": "La Capilla: sala de cine patrimonial en el 2.º piso del Claustro Comfama San Ignacio (comfama.com, «Cineclub La Capilla»). Google Maps: Comfama Claustro San Ignacio, Cra. 44 #48-18 (29 sep).",
+  "_matriz": "s_25caf24a"
  },
  "Cine Centro": {
   "n": 1,
@@ -73,6 +81,7 @@
   "lng": -75.5628949,
   "_prec": "manual",
   "_match": "Google Maps: «Ecuador & Av. Oriental, La Candelaria, Medellín» — la esquina exacta que da la lámina del festival (Av. Oriental, Cra 46, con Ecuador, Cra 48). La sala cerró en 2008 y no figura como lugar; el cruce sí (10 oct 2026). Antes: pin aproximado 150 m al suroeste.",
-  "address": "Av. Oriental (Cra. 46) con Ecuador (Cra. 48)"
+  "address": "Av. Oriental (Cra. 46) con Ecuador (Cra. 48)",
+  "_matriz": "s_9daa0da4"
  }
 }

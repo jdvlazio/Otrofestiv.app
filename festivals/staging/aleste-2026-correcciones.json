@@ -1,0 +1,82 @@
+{
+ "_provenance": {
+  "fuente": "búsqueda TMDB por dirección y título original",
+  "capturado": "2026-11-12"
+ },
+ "fichas": {
+  "Padre": {
+   "tmdb": 1516518,
+   "_fuente": "https://www.themoviedb.org/movie/1516518",
+   "_por_que": "«Otec» (2025), dir. Tereza Nvotová: misma dirección y año. TMDB 99 min, MAMM 103; el título en español no casa con «Father»"
+  },
+  "Londres": {
+   "tmdb": 1599764,
+   "_fuente": "https://www.themoviedb.org/movie/1599764",
+   "_por_que": "«London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año"
+  },
+  "La tierra prometida": {
+   "tmdb": 511,
+   "_fuente": "https://www.themoviedb.org/movie/511",
+   "_por_que": "«Ziemia obiecana», dir. Andrzej Wajda; la lámina dice 1974 (rodaje/premier) y TMDB 1975; 162 min es el montaje corto, TMDB da 179"
+  },
+  "Los inocentes encantadores": {
+   "tmdb": 80324,
+   "_fuente": "https://www.themoviedb.org/movie/80324",
+   "_por_que": "«Niewinni czarodzieje» (1960, 83 min), dir. Andrzej Wajda: año y duración exactos"
+  },
+  "Histeria": {
+   "tmdb": 1399696,
+   "_fuente": "https://www.themoviedb.org/movie/1399696",
+   "_por_que": "«Hysteria» (2025), dir. Mehmet Akif Büyükatalay en su filmografía de TMDB; Alemania, 103 min (lámina 104)"
+  },
+  "Aquí, en otros lugares": {
+   "tmdb": 1657855,
+   "_fuente": "https://www.themoviedb.org/movie/1657855",
+   "_por_que": "altas.py --sondar: tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓",
+   "_registro": "aleste-2026-altas.json"
+  },
+  "Ciudadano Havel": {
+   "tmdb": 54346,
+   "_fuente": "https://www.themoviedb.org/movie/54346",
+   "_por_que": "altas.py --sondar: tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓",
+   "_registro": "aleste-2026-altas.json"
+  },
+  "Historias de una mentira": {
+   "tmdb": 1568190,
+   "_fuente": "https://www.themoviedb.org/movie/1568190",
+   "_por_que": "altas.py --sondar: tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓",
+   "_registro": "aleste-2026-altas.json"
+  },
+  "La retirada": {
+   "tmdb": 76598,
+   "_fuente": "https://www.themoviedb.org/movie/76598",
+   "_por_que": "altas.py --sondar: tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓",
+   "_registro": "aleste-2026-altas.json"
+  },
+  "Retorno antes de las 3 p. m.": {
+   "tmdb": 1633356,
+   "_fuente": "https://www.themoviedb.org/movie/1633356",
+   "_por_que": "altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓",
+   "_registro": "aleste-2026-altas.json"
+  },
+  "Nadie a la vista": {
+   "tmdb": 1594652,
+   "_fuente": "https://www.themoviedb.org/movie/1594652",
+   "_por_que": "altas.py --ficha: TMDB 1594652 «Nobody In Sight» / original არავინ არ ჩანს, dir. Kote Kalandadze, 2025-12-05, 76 min — coincide título original, director, año y duración (75)",
+   "_registro": "aleste-2026-altas.json"
+  }
+ },
+ "sin_afiche": {
+  "Latido. El grafiti como arte, el grafiti como forma de vida.": {
+   "_por_que": "corto colombiano 2026 de Juan Zapata sin ficha ni afiche publicado (12 nov); la lámina del 10 nov es la de la noche inaugural, no un afiche de la obra"
+  },
+  "Cortometrajes de Altura": {
+   "_por_que": "es un PROGRAMA de 5 animaciones bolivianas, no una obra; la imagen de su página es el afiche de una de ellas («Paulina y el cóndor»), no del programa"
+  }
+ },
+ "duracion_distinta": {
+  "Bright Future": {
+   "_por_que": "el festival la proyecta en su versión de 92 min: ficha web alestfestival.com/programa2026/bright-future («Japón, 2003. 92 min») y grilla oficial de Bogotá IG Df8iF1QFpzk («BRIGHT FUTURE 92'»); TMDB 26886 da 115 (otra versión)"
+  }
+ }
+}

@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficci-65,ficci-65,jardin-2026",
+  "fuente": "festival:aleste-2026,ficci-65,ficci-65,jardin-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -12,11 +12,25 @@
   "regla": "único"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  },
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "comprobado en Letterboxd por su ficha de TMDB",
+  "fecha": "2026-11-24"
  }
 }

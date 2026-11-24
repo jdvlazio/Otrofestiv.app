@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:midbo-2026",
+  "fuente": "festival:cinetoro-2026,midbo-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -12,7 +12,15 @@
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026 · corregida)",
+  "fecha": "2026-11-23"
  }
 }

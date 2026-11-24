@@ -1,0 +1,44 @@
+{
+ "id": "w_FYYANBCDQ01K",
+ "titulo_original": "La Bestia",
+ "anio": 2020,
+ "paises": [
+  "FR"
+ ],
+ "directores": [
+  "Marlijn van Nuenen",
+  "Ram Tamez",
+  "Alfredo Gerard Kuttikatt"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Beast",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un joven contrabandista mexicano y una niña viajan clandestinamente en un tren de mercancías, llamado La Bestia, en dirección a los Estados Unidos. Una lesión transformará su percepción del viaje.",
+  "en": "A young mexican smuggler and a little girl travel illegally on top of a cargo train, called La Bestia, to get to the USA. An injury transforms his perception of the journey."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/anibia-2026/la-bestia.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 756229,
+  "letterboxd": "the-beast-2020-1"
+ },
+ "versiones": [
+  {
+   "etiqueta": "8 min",
+   "duracion_min": 8
+  }
+ ],
+ "presentaciones": [
+  "anibia-2026"
+ ]
+}

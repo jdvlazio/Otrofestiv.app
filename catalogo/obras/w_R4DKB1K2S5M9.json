@@ -3,11 +3,12 @@
  "titulo_original": "Balada de peces y pájaros",
  "anio": 2025,
  "paises": [
-  "ES"
+  "ES",
+  "CO"
  ],
  "directores": [
   "Anny Uribe",
-  "Juan Arévalo"
+  "Juan José Arévalo"
  ],
  "aliases": [
   {
@@ -22,13 +23,13 @@
  ],
  "sinopsis": {
   "es": "Carlina perdió a su padre en el conflicto armado colombiano y vive sola con su madre. El dolor sigue siendo insoportable y ellas se aferran a sus recuerdos y objetos personales para sobrevivir. Todo cambia con la aparición de un pez místico que será el guía de Carlina durante su aventura.",
-  "en": "A girl caught up in the Colombian armed conflict leaves her home, guided by a mystical being. On her journey, she discovers how resentment turns her into the very thing she hates, but through forgiveness, she manages to find inner peace for herself and her family."
+  "en": "Carlina lost her father in the Colombian armed conflict and lives alone with her mother. The pain is still overwhelming, and they both hold on to their memories and personal objects in order to survive. Everything changes with the appearance of a mystical fish that will be Carlina's guide during her adventure."
  },
  "generos": [
   "Animación"
  ],
  "afiche": {
-  "archivo": "/assets/fantasmagoria-2026/balada-de-peces-y-pajaros.jpg",
+  "archivo": "/assets/anibia-2026/balada-de-peces-y-pajaros.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -47,6 +48,7 @@
  ],
  "presentaciones": [
   "aff-2026",
+  "anibia-2026",
   "fantasmagoria-2026",
   "olhar-2026"
  ]

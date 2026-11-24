@@ -1,0 +1,464 @@
+{
+ "_provenance": {
+  "fuente": "IG @aleste.colombia (grilla de Medellín del 17 nov) + web oficial alestfestival.com/programa2026",
+  "capturado": "2026-11-17",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "ancla": {
+    "sede": "Centro Colombo Americano - Medellín",
+    "dia": "2026-11-21",
+    "hora": "14:00"
+   },
+   "funcion": "f_0ba6ba1a3a",
+   "casilla": "sala",
+   "valor": "Sala 1",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df3D47hlulW/",
+    "fecha": "2026-11-17"
+   },
+   "evidencia": "lámina 01.jpg de Df3D47hlulW (17 nov): «PUCALLPA LA EUROPEA 105' 19h00», fila CENTRO COLOMBO AMERICANO - SALA 1, columna 21 SÁBADO; la web (alestfestival.com/programa2026/pucallpa-la-europea, HTML y texto renderizado) dice «Medellín · Sábado 21 nov · 19:00 · Centro Colombo Americano – Sala 1». Tres caminos coinciden (ig-lecturas no lee el formato «19h00»)"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Colombo Americano - Medellín",
+    "dia": "2026-11-22",
+    "hora": "14:00"
+   },
+   "funcion": "f_516f75f820",
+   "casilla": "sala",
+   "valor": "Sala 1",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df3D47hlulW/",
+    "fecha": "2026-11-17"
+   },
+   "evidencia": "lámina 01.jpg de Df3D47hlulW (17 nov): «GIOIA MIA 14h30», fila CENTRO COLOMBO AMERICANO - SALA 1, columna 22 DOMINGO; la web (alestfestival.com/programa2026/gioia-mia, HTML y texto renderizado) dice «Medellín · Domingo 22 nov · 14:30 · Centro Colombo Americano – Sala 1». Tres caminos coinciden (ig-lecturas no lee el formato «14h30»)"
+  },
+  {
+   "ancla": {
+    "sede": "Centro Colombo Americano - Medellín",
+    "dia": "2026-11-18",
+    "hora": "19:00"
+   },
+   "funcion": "f_6c856cce71",
+   "casilla": "sala",
+   "valor": "Sala 1",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://www.alestfestival.com/programa2026/la-%C3%BAltima-ronda-en-venecia",
+    "fecha": "2026-11-18"
+   },
+   "evidencia": "web oficial, tres caminos: HTML de la ficha de «La última ronda en Venecia» y HTML de la ficha de «Latido.» dicen «Medellín · Miércoles 18 nov · 19:00 · Centro Colombo Americano – Sala 1»; el texto renderizado de la ficha de «Latido.» (navegador) dice lo mismo; la lámina 00.jpg de Df3D47hlulW (17 nov) pone «INAUGURACIÓN / LA ÚLTIMA RONDA EN VENECIA 19h00» en la primera fila, que en la lámina 01.jpg es CENTRO COLOMBO AMERICANO - SALA 1"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "16:30"
+   },
+   "funcion": "f_5378451bd6",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf",
+    "fecha": "2026-11-18"
+   },
+   "evidencia": "catálogo oficial Al Este 2026 (PDF, 18 nov): «LOS GOLFOS · SALA CAPITAL | 29.11 | 16:30 · CONVERSATORIO TRAS LA PROYECCIÓN»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "16:30"
+   },
+   "funcion": "f_8b4e1bc31e",
+   "casilla": "title",
+   "valor": "En la ciudad blanca",
+   "contra": "La ciudad blanca",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf",
+    "fecha": "2026-11-18"
+   },
+   "evidencia": "catálogo oficial p. 20: «EN LA CIUDAD BLANCA · SALA 3»; lo confirma la producción del festival por correo a hola@ (Ada Quintana, 19 nov 2026): «fe de erratas: En la ciudad Blanca, el 29 de noviembre a las 4:30 p. m.»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "17:00"
+   },
+   "funcion": "f_61974e3c92",
+   "casilla": "time",
+   "valor": "16:30",
+   "contra": "17:00",
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df8iF1QFpzk/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "grilla oficial «Programación Bogotá» de @aleste.colombia (19 nov 21:00), lámina 2, Sala 2: «LICENSE TO LIVE 109' Cineforo 16h30»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-28",
+    "hora": "20:00"
+   },
+   "funcion": "f_aeab88b02c",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "festival-ig",
+    "url": "https://www.instagram.com/p/Df8iF1QFpzk/",
+    "fecha": "2026-11-19"
+   },
+   "evidencia": "grilla oficial «Programación Bogotá» de @aleste.colombia (19 nov 21:00), lámina 2, Sala 2: «PULSE 118' Conversatorio 20h00»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-25",
+    "hora": "18:30"
+   },
+   "funcion": "f_0372296ef6",
+   "casilla": "entrada",
+   "valor": "libre",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4037?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 25 6:30 PM · Sala Capital · Entrada libre»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "17:00"
+   },
+   "funcion": "f_ed7fe5d715",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313354",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4039?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 26 5:00 PM · Sala Capital», con ese link; TuBoleta dice «Sala Capital | 26.11.2026 - 17:00», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "17:00"
+   },
+   "funcion": "f_43f9884be2",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313355",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4040?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 26 5:00 PM · Sala 3», con ese link; TuBoleta dice «Sala 3 | 26.11.2026 - 17:00», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-27",
+    "hora": "16:30"
+   },
+   "funcion": "f_4ef959b53d",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313360",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4076?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 27 4:30 PM · Sala Capital», con ese link; TuBoleta dice «Sala Capital | 27.11.2026 - 16:30», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-27",
+    "hora": "16:30"
+   },
+   "funcion": "f_2402b739a7",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313361",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4077?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 27 4:30 PM · Sala 3», con ese link; TuBoleta dice «Sala 3 | 27.11.2026 - 16:30», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-27",
+    "hora": "19:00"
+   },
+   "funcion": "f_2fd427a663",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313362",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4078?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 27 7:00 PM · Sala 2», con ese link; TuBoleta dice «Sala 2 | 27.11.2026 - 19:00», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-27",
+    "hora": "19:30"
+   },
+   "funcion": "f_28cdee8833",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313364",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4079?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 27 7:30 PM · Sala 3», con ese link; TuBoleta dice «Sala 3 | 27.11.2026 - 19:30», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-28",
+    "hora": "14:30"
+   },
+   "funcion": "f_1cbb3fe13a",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313365",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4080?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 28 2:30 PM · Sala 3», con ese link; TuBoleta lo rotula «Hecho en Colombia 1» y ofrece sáb 28 nov 14:30, Sala 3"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-28",
+    "hora": "16:30"
+   },
+   "funcion": "f_1c1639d27e",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313367",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4082?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 28 4:30 PM · Sala Capital», con ese link; TuBoleta dice «Sala Capital | 28.11.2026 - 16:30», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "16:30"
+   },
+   "funcion": "f_8b4e1bc31e",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313368",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4083?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 29 4:30 PM · Sala 3», con ese link; TuBoleta dice «Sala 3 | 29.11.2026 - 16:30», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-28",
+    "hora": "18:00"
+   },
+   "funcion": "f_1f013248ab",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313369",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4084?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 28 6:00 PM · Sala 2», con ese link; TuBoleta dice «Sala 2 | 28.11.2026 - 18:00», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-28",
+    "hora": "19:00"
+   },
+   "funcion": "f_c121fb1b75",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313370",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4085?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 28 7:00 PM · Sala Capital», con ese link; TuBoleta dice «Sala Capital | 28.11.2026 - 19:00», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-28",
+    "hora": "20:00"
+   },
+   "funcion": "f_aeab88b02c",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313371",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4086?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 28 8:00 PM · Sala 2», con ese link; TuBoleta dice «Sala 2 | 28.11.2026 - 20:00», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "16:30"
+   },
+   "funcion": "f_5378451bd6",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313372",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4089?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 29 4:30 PM · Sala Capital», con ese link; TuBoleta dice «Sala Capital | 29.11.2026 - 16:30», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-28",
+    "hora": "17:00"
+   },
+   "funcion": "f_866ea1f464",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230624630079",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4091?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 28 5:00 PM · Sala 3», con ese link; TuBoleta dice «Sala 3 | 28.11.2026 - 17:00», misma obra"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "19:00"
+   },
+   "funcion": "f_7eb873bf13",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313356",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 26 7:00 PM» con ese link; TuBoleta dice «Sala 3 | 26.11.2026 - 19:00 | La retirada»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "14:00"
+   },
+   "funcion": "f_cb55e388f2",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313365",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4087?sede=11",
+    "fecha": "2026-11-23"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 29 2:00 PM · Sala 3» con ese link; TuBoleta, «Hecho en Colombia», Sala 3, ofrece «Sun 29 Nov 14:00» (y «Sat 28 Nov 14:30», el bloque 1)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "19:00"
+   },
+   "funcion": "f_7eb873bf13",
+   "casilla": "sala",
+   "valor": "Sala 2",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 24 nov): «Noviembre 26 7:00 PM · Sala 2»; Juan, 24 nov: manda la Cinemateca (web del festival 19:30 Sala 3, TuBoleta 19:00 Sala 3)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "19:00"
+   },
+   "funcion": "f_a89c9c3153",
+   "casilla": "time",
+   "valor": "19:30",
+   "fuente": {
+    "tipo": "juan",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11",
+    "fecha": "2026-11-24",
+    "frase": "deberíamos usar lo que dice la Cinemateca, ellos no venden horarios truncados, ni cometen errores logísticos"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 24 nov): «Noviembre 26 7:30 PM · Sala 3», y post DgGg1InlhGH del 23 nov con Al Este de coautor; Juan, 24 nov: manda la Cinemateca (web del festival 19:00 Sala 2)",
+   "contra": "19:00"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "19:00"
+   },
+   "funcion": "f_a89c9c3153",
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 24 nov): «Noviembre 26 7:30 PM · Sala 3»; Juan, 24 nov: manda la Cinemateca (web del festival 19:00 Sala 2)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "19:00"
+   },
+   "funcion": "f_4c38bc5347",
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "contra": "Sala 2",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4116?sede=11",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "tres caminos coinciden (vigía 24 nov): HTML de la ficha de la Cinemateca («Noviembre 29 7:00 PM Sala 3»), texto renderizado de la misma ficha y TuBoleta («Cinemateca de Bogotá - Centro Sala 3 | 29.11.2026 - 19:00 | Retorno antes de las 3PM», productId=10230639424954). La web del festival dice Sala 2; mismo criterio que el jueves 26 (Juan, 24 nov: manda la Cinemateca)"
+  }
+ ]
+}

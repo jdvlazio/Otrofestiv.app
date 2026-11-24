@@ -11,6 +11,10 @@
  ],
  "aliases": [
   {
+   "titulo": "Emechiche, El Renacer de los Cabeciblancos",
+   "tipo": "festival"
+  },
+  {
    "titulo": "Emechiche, El renacer de los cabeciblancos",
    "tipo": "festival"
   },
@@ -25,8 +29,7 @@
   "en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts."
  },
  "generos": [
-  "Animación",
-  "Drama"
+  "Animación"
  ],
  "afiche": {
   "archivo": "/assets/ficica-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
@@ -43,8 +46,11 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
   "ficica-2026",
+  "miradas-2026",
   "popayan-2026",
-  "siembrafest-2026"
+  "siembrafest-2026",
+  "villadeleyvaiff-2026"
  ]
 }

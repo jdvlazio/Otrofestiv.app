@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:villadelcine-2026,villadelcine-2026",
+  "fuente": "festival:narrarelfuturo-2026,narrarelfuturo-2026,narrarelfuturo-2026,narrarelfuturo-2026,narrarelfuturo-2026,narrarelfuturo-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -8,15 +8,33 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "VR 360 es formato, no género; documental, como en Villa del Cine",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "con el título completo; la otra lo traía cortado",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "cuenta la obra y es la más corta; la otra describe la instalación",
+  "fecha": "2026-11-24"
  }
 }

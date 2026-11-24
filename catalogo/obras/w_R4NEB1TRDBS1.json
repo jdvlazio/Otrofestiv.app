@@ -8,12 +8,15 @@
  "directores": [
   "Iván Sierra"
  ],
+ "sinopsis": {
+  "es": "Dos gatos persas y un dibujante tratan de hacer películas en medio de una guerra, desafortunadamente nadie las entiende."
+ },
  "generos": [
   "Animación"
  ],
  "afiche": {
-  "archivo": "/assets/siembrafest/tres-gatos-parias.jpg",
-  "veredicto": "oficial"
+  "archivo": "/assets/cinetoro-2026/tres-gatos-parias-v2.jpg",
+  "veredicto": "oficial-festival"
  },
  "xref": {},
  "versiones": [
@@ -23,6 +26,8 @@
   }
  ],
  "presentaciones": [
+  "anibia-2026",
+  "cinetoro-2026",
   "siembrafest-2026"
  ]
 }

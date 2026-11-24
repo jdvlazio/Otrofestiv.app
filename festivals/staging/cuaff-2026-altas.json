@@ -1,0 +1,1041 @@
+{
+ "obras": {
+  "Adrenaline Tour: Bella Ciao": {
+   "titulo": "Adrenaline Tour: Bella Ciao",
+   "director": "Ozono",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Adrenaline%20Tour%3A%20Bella%20Ciao%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«Adrenaline Tour: Bella Ciao»: 0 resultado(s); «Adrenaline Tour: Bella Ciao» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=adrenaline%20tour%20bella%20ciao%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«adrenaline tour bella ciao»: 0 resultado(s); «adrenaline tour bella ciao» 2026: 0 resultado(s); «Adrenaline Tour»: 0 resultado(s); «Adrenaline Tour» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/2247094 https://www.themoviedb.org/person/3371311 https://www.themoviedb.org/person/5026700",
+     "fecha": "2026-11-17",
+     "resultado": "Momoko Ozono (2247094): dirige 0; Ozono Mana (3371311): dirige 0; Yoshio Ozono (5026700): dirige 0"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/adrenaline%20tour%3A%20bella%20ciao.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22Adrenaline%20Tour%3A%20Bella%20Ciao%22+Ozono",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22Adrenaline%20Tour%3A%20Bella%20Ciao%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22Adrenaline%20Tour%3A%20Bella%20Ciao%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22Adrenaline%20Tour%3A%20Bella%20Ciao%22+cinema.cultura.gov.it",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://cinema.cultura.gov.it: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4035",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/colombianurbanfilm/",
+     "fecha": "2026-11-17",
+     "resultado": "sin post propio del festival ni afiche en la web; solo aparece en la ficha del programa"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "ni el festival (sin post propio) ni la sala (plantilla genérica) ni la web publican afiche de la obra (17 nov)"
+  },
+  "Código cypher vol1": {
+   "titulo": "Código cypher vol1",
+   "director": "Hitana, Sir Cesaro",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=C%C3%B3digo%20cypher%20vol1%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«Código cypher vol1»: 0 resultado(s); «Código cypher vol1» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=codigo%20cypher%20vol1%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«codigo cypher vol1»: 0 resultado(s); «codigo cypher vol1» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/4312143 https://www.themoviedb.org/person/5487431 https://www.themoviedb.org/person/6522214 https://www.themoviedb.org/search/person?query=Sir%20Cesaro",
+     "fecha": "2026-11-17",
+     "resultado": "HINATA (4312143): dirige 0; HINATA (5487431): dirige 0; Hinata (6522214): dirige 0; Sir Cesaro: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/c%C3%B3digo%20cypher%20vol1.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22C%C3%B3digo%20cypher%20vol1%22+Hinata%2C%20Sir%20Cesaro",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22C%C3%B3digo%20cypher%20vol1%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22C%C3%B3digo%20cypher%20vol1%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22C%C3%B3digo%20cypher%20vol1%22+www.incaa.gob.ar",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.incaa.gob.ar: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4034",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/colombianurbanfilm/",
+     "fecha": "2026-11-17",
+     "resultado": "sin post propio del festival ni afiche en la web; solo aparece en la ficha del programa"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "ni el festival (sin post propio) ni la sala (plantilla genérica) ni la web publican afiche de la obra (17 nov)"
+  },
+  "Diario de los nuevos 20s": {
+   "titulo": "Diario de los nuevos 20s",
+   "director": "Juan Pablo Huston",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Diario%20de%20los%20nuevos%2020s%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«Diario de los nuevos 20s»: 0 resultado(s); «Diario de los nuevos 20s» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=diario%20de%20los%20nuevos%2020s%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«diario de los nuevos 20s»: 0 resultado(s); «diario de los nuevos 20s» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Juan%20Pablo%20Huston",
+     "fecha": "2026-11-17",
+     "resultado": "Juan Pablo Huston: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/diario%20de%20los%20nuevos%2020s.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22Diario%20de%20los%20nuevos%2020s%22+Juan%20Pablo%20Huston",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22Diario%20de%20los%20nuevos%2020s%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22Diario%20de%20los%20nuevos%2020s%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22Diario%20de%20los%20nuevos%2020s%22+www.proimagenescolombia.com",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.proimagenescolombia.com: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4034",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/p/DfkVdFolQHW/",
+     "fecha": "2026-11-17",
+     "resultado": "el afiche original de la obra es la lámina 1 del post del festival (embed sin sesión), mirado a ojo; ninguna otra imagen en la web"
+    }
+   },
+   "afiche": {
+    "url": "file:///Users/d/Developer/Otrofestiv/.claude/worktrees/fix-ig-vigia-apify-14d19f/fuentes/ig/DfkVdFolQHW/00.jpg",
+    "fuente": "lámina 1 del post https://www.instagram.com/p/DfkVdFolQHW/ de @colombianurbanfilm (afiche de la obra)",
+    "archivo": "fuentes/cuaff-2026/altas/diario-de-los-nuevos-20s.jpg",
+    "px": [
+     960,
+     1440
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1080,
+      1440
+     ],
+     "caja": [
+      60,
+      0,
+      1020,
+      1440
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-17"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1828512,
+   "alta_fecha": "2026-11-17"
+  },
+  "El Lejano Sur": {
+   "titulo": "El Lejano Sur",
+   "director": "Isben Isaeb",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=El%20Lejano%20Sur%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«El Lejano Sur»: 0 resultado(s); «El Lejano Sur» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=el%20lejano%20sur%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«el lejano sur»: 0 resultado(s); «el lejano sur» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Isben%20Isaeb",
+     "fecha": "2026-11-17",
+     "resultado": "Isben Isaeb: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/el%20lejano%20sur.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22El%20Lejano%20Sur%22+Isben%20Isaeb",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22El%20Lejano%20Sur%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22El%20Lejano%20Sur%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22El%20Lejano%20Sur%22+www.proimagenescolombia.com",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.proimagenescolombia.com: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4034",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/p/DfkEI-ZFSa2/",
+     "fecha": "2026-11-17",
+     "resultado": "el afiche original de la obra es la lámina 1 del post del festival (embed sin sesión), mirado a ojo; ninguna otra imagen en la web"
+    }
+   },
+   "afiche": {
+    "url": "file:///Users/d/Developer/Otrofestiv/.claude/worktrees/fix-ig-vigia-apify-14d19f/fuentes/ig/DfkEI-ZFSa2/00.jpg",
+    "fuente": "lámina 1 del post https://www.instagram.com/p/DfkEI-ZFSa2/ de @colombianurbanfilm (afiche de la obra)",
+    "archivo": "fuentes/cuaff-2026/altas/el-lejano-sur.jpg",
+    "px": [
+     900,
+     1350
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1080,
+      1350
+     ],
+     "caja": [
+      90,
+      0,
+      990,
+      1350
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-17"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1828506,
+   "alta_fecha": "2026-11-17"
+  },
+  "El arte de Gravitar": {
+   "titulo": "El arte de Gravitar",
+   "director": "Camila Estupiñán",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=El%20arte%20de%20Gravitar%20y%3A2024",
+     "fecha": "2026-11-17",
+     "resultado": "«El arte de Gravitar»: 0 resultado(s); «El arte de Gravitar» 2024: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=el%20arte%20de%20gravitar%20y%3A2024",
+     "fecha": "2026-11-17",
+     "resultado": "«el arte de gravitar»: 0 resultado(s); «el arte de gravitar» 2024: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/6180488",
+     "fecha": "2026-11-17",
+     "resultado": "Camila Estupiñan Méndez (6180488): dirige 0"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/el%20arte%20de%20gravitar.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22El%20arte%20de%20Gravitar%22+Camila%20Estupi%C3%B1%C3%A1n",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22El%20arte%20de%20Gravitar%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22El%20arte%20de%20Gravitar%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22El%20arte%20de%20Gravitar%22+www.proimagenescolombia.com",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.proimagenescolombia.com: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4034",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/colombianurbanfilm/",
+     "fecha": "2026-11-17",
+     "resultado": "sin post propio del festival ni afiche en la web; solo aparece en la ficha del programa"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "ni el festival (sin post propio) ni la sala (plantilla genérica) ni la web publican afiche de la obra (17 nov)"
+  },
+  "Homenajes de memorias, del Hip hop en ciudad Bolívar": {
+   "titulo": "Homenajes de memorias, del Hip hop en ciudad Bolívar",
+   "director": "Kno Delix, Johan Duarte",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Homenajes%20de%20memorias%2C%20del%20Hip%20hop%20en%20ciudad%20Bol%C3%ADvar%20y%3A2025",
+     "fecha": "2026-11-17",
+     "resultado": "«Homenajes de memorias, del Hip hop en ciudad Bolívar»: 0 resultado(s); «Homenajes de memorias, del Hip hop en ciudad Bolívar» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=homenajes%20de%20memorias%20del%20hip%20hop%20en%20ciudad%20bolivar%20y%3A2025",
+     "fecha": "2026-11-17",
+     "resultado": "«homenajes de memorias del hip hop en ciudad bolivar»: 0 resultado(s); «homenajes de memorias del hip hop en ciudad bolivar» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Kno%20Delix https://www.themoviedb.org/search/person?query=Johan%20Duarte",
+     "fecha": "2026-11-17",
+     "resultado": "Kno Delix: sin perfil en TMDB; Johan Duarte: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/homenajes%20de%20memorias%2C%20del%20hip%20hop%20en%20ciudad%20bol%C3%ADvar.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22Homenajes%20de%20memorias%2C%20del%20Hip%20hop%20en%20ciudad%20Bol%C3%ADvar%22+Kno%20Delix%2C%20Johan%20Duarte",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22Homenajes%20de%20memorias%2C%20del%20Hip%20hop%20en%20ciudad%20Bol%C3%ADvar%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22Homenajes%20de%20memorias%2C%20del%20Hip%20hop%20en%20ciudad%20Bol%C3%ADvar%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22Homenajes%20de%20memorias%2C%20del%20Hip%20hop%20en%20ciudad%20Bol%C3%ADvar%22+www.proimagenescolombia.com",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.proimagenescolombia.com: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4032",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/colombianurbanfilm/",
+     "fecha": "2026-11-17",
+     "resultado": "sin post propio del festival ni afiche en la web; solo aparece en la ficha del programa"
+    }
+   },
+   "estado": "sin_afiche",
+   "por_que_sin_afiche": "ni el festival (sin post propio) ni la sala (plantilla genérica) ni la web publican afiche de la obra (17 nov)"
+  },
+  "Instrucciones para interpretar graffiti, el beso de los invisibles": {
+   "titulo": "Instrucciones para interpretar graffiti, el beso de los invisibles",
+   "director": "Iván Alba",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Instrucciones%20para%20interpretar%20graffiti%2C%20el%20beso%20de%20los%20invisibles%20y%3A2025",
+     "fecha": "2026-11-17",
+     "resultado": "«Instrucciones para interpretar graffiti, el beso de los invisibles»: 0 resultado(s); «Instrucciones para interpretar graffiti, el beso de los invisibles» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=instrucciones%20para%20interpretar%20graffiti%20el%20beso%20de%20los%20invisibles%20y%3A2025",
+     "fecha": "2026-11-17",
+     "resultado": "«instrucciones para interpretar graffiti el beso de los invisibles»: 0 resultado(s); «instrucciones para interpretar graffiti el beso de los invisibles» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Iv%C3%A1n%20Alba",
+     "fecha": "2026-11-17",
+     "resultado": "Iván Alba: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/instrucciones%20para%20interpretar%20graffiti%2C%20el%20beso%20de%20los%20invisibles.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22Instrucciones%20para%20interpretar%20graffiti%2C%20el%20beso%20de%20los%20invisibles%22+Iv%C3%A1n%20Alba",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22Instrucciones%20para%20interpretar%20graffiti%2C%20el%20beso%20de%20los%20invisibles%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22Instrucciones%20para%20interpretar%20graffiti%2C%20el%20beso%20de%20los%20invisibles%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22Instrucciones%20para%20interpretar%20graffiti%2C%20el%20beso%20de%20los%20invisibles%22+www.proimagenescolombia.com",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.proimagenescolombia.com: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4034",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/p/DfkFGHmlZnr/",
+     "fecha": "2026-11-17",
+     "resultado": "el afiche original de la obra es la lámina 1 del post del festival (embed sin sesión), mirado a ojo; ninguna otra imagen en la web"
+    }
+   },
+   "afiche": {
+    "url": "file:///Users/d/Developer/Otrofestiv/.claude/worktrees/fix-ig-vigia-apify-14d19f/fuentes/ig/DfkFGHmlZnr/00.jpg",
+    "fuente": "lámina 1 del post https://www.instagram.com/p/DfkFGHmlZnr/ de @colombianurbanfilm (afiche de la obra)",
+    "archivo": "fuentes/cuaff-2026/altas/instrucciones-para-interpretar-graffiti-el-beso-de-los-invis.jpg",
+    "px": [
+     900,
+     1350
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1080,
+      1350
+     ],
+     "caja": [
+      90,
+      0,
+      990,
+      1350
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-17"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1828510,
+   "alta_fecha": "2026-11-17"
+  },
+  "Morbo x Noches Aires": {
+   "titulo": "Morbo x Noches Aires",
+   "director": "Newen",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Morbo%20x%20Noches%20Aires%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«Morbo x Noches Aires»: 0 resultado(s); «Morbo x Noches Aires» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=morbo%20x%20noches%20aires%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«morbo x noches aires»: 0 resultado(s); «morbo x noches aires» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/2635720 https://www.themoviedb.org/person/3464246 https://www.themoviedb.org/person/6421222",
+     "fecha": "2026-11-17",
+     "resultado": "Anthony Newen (2635720): dirige 1; Italo Van Newen (3464246): dirige 0; Newen Ortiz R. de Castroviejo (6421222): dirige 0"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/morbo%20x%20noches%20aires.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22Morbo%20x%20Noches%20Aires%22+Newen",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22Morbo%20x%20Noches%20Aires%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22Morbo%20x%20Noches%20Aires%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22Morbo%20x%20Noches%20Aires%22+www.incaa.gob.ar",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.incaa.gob.ar: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4035",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/p/DfvPV3zDP5z/",
+     "fecha": "2026-11-17",
+     "resultado": "el afiche original de la obra es la lámina 1 del post del festival (embed sin sesión), mirado a ojo; ninguna otra imagen en la web"
+    }
+   },
+   "afiche": {
+    "url": "file:///Users/d/Developer/Otrofestiv/.claude/worktrees/fix-ig-vigia-apify-14d19f/fuentes/ig/DfvPV3zDP5z/00.jpg",
+    "fuente": "lámina 1 del post https://www.instagram.com/p/DfvPV3zDP5z/ de @colombianurbanfilm (afiche de la obra)",
+    "archivo": "fuentes/cuaff-2026/altas/morbo-x-noches-aires.jpg",
+    "px": [
+     910,
+     1365
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1080,
+      1365
+     ],
+     "caja": [
+      85,
+      0,
+      995,
+      1365
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-17"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1828517,
+   "alta_fecha": "2026-11-17"
+  },
+  "Sanber: vivencias de un bajo mundo": {
+   "titulo": "Sanber: vivencias de un bajo mundo",
+   "director": "",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Sanber%3A%20vivencias%20de%20un%20bajo%20mundo",
+     "fecha": "2026-11-17",
+     "resultado": "«Sanber: vivencias de un bajo mundo»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=sanber%20vivencias%20de%20un%20bajo%20mundo",
+     "fecha": "2026-11-17",
+     "resultado": "«sanber vivencias de un bajo mundo»: 0 resultado(s); «Sanber»: 0 resultado(s) → ninguna verifica"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/sanber%3A%20vivencias%20de%20un%20bajo%20mundo.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22Sanber%3A%20vivencias%20de%20un%20bajo%20mundo%22+",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22Sanber%3A%20vivencias%20de%20un%20bajo%20mundo%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22Sanber%3A%20vivencias%20de%20un%20bajo%20mundo%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22Sanber%3A%20vivencias%20de%20un%20bajo%20mundo%22+www.proimagenescolombia.com",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.proimagenescolombia.com: sin registro de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/p/DfkahZulbIz/",
+     "fecha": "2026-11-17",
+     "resultado": "el afiche original de la obra es la lámina 1 del post del festival (embed sin sesión), mirado a ojo; ninguna otra imagen en la web"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Luis%20Carlos%20Ayala",
+     "fecha": "2026-11-17",
+     "resultado": "API search/person «Luis Carlos Ayala»: 0 personas; search/movie «Sanber»: 0. El tráiler 8sLsxw1cbSs es el tráiler mensual de la Cinemateca (canal @CinematecaBta), no de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4036",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    }
+   },
+   "afiche": {
+    "url": "file:///Users/d/Developer/Otrofestiv/.claude/worktrees/fix-ig-vigia-apify-14d19f/fuentes/ig/DfkahZulbIz/00.jpg",
+    "fuente": "lámina 1 del post https://www.instagram.com/p/DfkahZulbIz/ de @colombianurbanfilm (afiche de la obra)",
+    "archivo": "fuentes/cuaff-2026/altas/sanber-vivencias-de-un-bajo-mundo.jpg",
+    "px": [
+     959,
+     1439
+    ],
+    "ratio": 0.6664,
+    "recorte": {
+     "de": [
+      1080,
+      1439
+     ],
+     "caja": [
+      60,
+      0,
+      1019,
+      1439
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-17"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1828501,
+   "alta_fecha": "2026-11-17"
+  },
+  "Still Free": {
+   "titulo": "Still Free",
+   "director": "Krone",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Still%20Free%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«Still Free»: 5 resultado(s); «Still Free» 2026: 1 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=still%20free%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«still free»: 5 resultado(s); «still free» 2026: 1 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/1387634 https://www.themoviedb.org/person/1787594 https://www.themoviedb.org/person/138377",
+     "fecha": "2026-11-17",
+     "resultado": "Wolfgang Krone (1387634): dirige 2; Otto Krone (1787594): dirige 0; Fred Krone (138377): dirige 0"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/still%20free.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22Still%20Free%22+Krone",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22Still%20Free%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22Still%20Free%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22Still%20Free%22+www.proimagenescolombia.com",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.proimagenescolombia.com: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4035",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/p/DfkG3folR3w/",
+     "fecha": "2026-11-17",
+     "resultado": "el afiche original de la obra es la lámina 1 del post del festival (embed sin sesión), mirado a ojo; ninguna otra imagen en la web"
+    }
+   },
+   "afiche": {
+    "url": "file:///Users/d/Developer/Otrofestiv/.claude/worktrees/fix-ig-vigia-apify-14d19f/fuentes/ig/DfkG3folR3w/00.jpg",
+    "fuente": "lámina 1 del post https://www.instagram.com/p/DfkG3folR3w/ de @colombianurbanfilm (afiche de la obra)",
+    "archivo": "fuentes/cuaff-2026/altas/still-free.jpg",
+    "px": [
+     900,
+     1350
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1080,
+      1350
+     ],
+     "caja": [
+      90,
+      0,
+      990,
+      1350
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-17"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1828516,
+   "alta_fecha": "2026-11-17"
+  },
+  "Uniendo plazas: Los padres del under": {
+   "titulo": "Uniendo plazas: Los padres del under",
+   "director": "Alberto Tolaba",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Uniendo%20plazas%3A%20Los%20padres%20del%20under%20y%3A2025",
+     "fecha": "2026-11-17",
+     "resultado": "«Uniendo plazas: Los padres del under»: 0 resultado(s); «Uniendo plazas: Los padres del under» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=uniendo%20plazas%20los%20padres%20del%20under%20y%3A2025",
+     "fecha": "2026-11-17",
+     "resultado": "«uniendo plazas los padres del under»: 0 resultado(s); «uniendo plazas los padres del under» 2025: 0 resultado(s); «Uniendo plazas»: 0 resultado(s); «Uniendo plazas» 2025: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Alberto%20Tolaba",
+     "fecha": "2026-11-17",
+     "resultado": "Alberto Tolaba: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/uniendo%20plazas%3A%20los%20padres%20del%20under.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22Uniendo%20plazas%3A%20Los%20padres%20del%20under%22+Alberto%20Tolaba",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22Uniendo%20plazas%3A%20Los%20padres%20del%20under%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22Uniendo%20plazas%3A%20Los%20padres%20del%20under%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22Uniendo%20plazas%3A%20Los%20padres%20del%20under%22+www.incaa.gob.ar",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.incaa.gob.ar: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4032",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/p/DfkCq1vlXAe/",
+     "fecha": "2026-11-17",
+     "resultado": "el afiche original de la obra es la lámina 1 del post del festival (embed sin sesión), mirado a ojo; ninguna otra imagen en la web"
+    }
+   },
+   "afiche": {
+    "url": "file:///Users/d/Developer/Otrofestiv/.claude/worktrees/fix-ig-vigia-apify-14d19f/fuentes/ig/DfkCq1vlXAe/00.jpg",
+    "fuente": "lámina 1 del post https://www.instagram.com/p/DfkCq1vlXAe/ de @colombianurbanfilm (afiche de la obra)",
+    "archivo": "fuentes/cuaff-2026/altas/uniendo-plazas-los-padres-del-under.jpg",
+    "px": [
+     961,
+     1442
+    ],
+    "ratio": 0.6664,
+    "recorte": {
+     "de": [
+      1080,
+      1442
+     ],
+     "caja": [
+      59,
+      0,
+      1020,
+      1442
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-17"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1828522,
+   "alta_fecha": "2026-11-17"
+  },
+  "VSK en metal": {
+   "titulo": "VSK en metal",
+   "director": "Peds Shaumers",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=VSK%20en%20metal%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«VSK en metal»: 0 resultado(s); «VSK en metal» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=vsk%20en%20metal%20y%3A2026",
+     "fecha": "2026-11-17",
+     "resultado": "«vsk en metal»: 0 resultado(s); «vsk en metal» 2026: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Peds%20Shaumers",
+     "fecha": "2026-11-17",
+     "resultado": "Peds Shaumers: sin perfil en TMDB"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/vsk%20en%20metal.json",
+     "fecha": "2026-11-17",
+     "resultado": "sugerencias IMDb por título: ninguna coincide (17 nov)"
+    },
+    "letterboxd": {
+     "na": true,
+     "por_que": "Letterboxd solo importa fichas desde TMDB y la obra no tiene ficha TMDB; fetch directo da 403 y búsqueda site:letterboxd.com sin resultados",
+     "fecha": "2026-11-17"
+    },
+    "web_director_o_productora": {
+     "url": "https://duckduckgo.com/?q=%22VSK%20en%20metal%22+Peds%20Shaumers",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web título+director: sin web de director/productora con la obra"
+    },
+    "distribuidora_o_agencia": {
+     "url": "https://duckduckgo.com/?q=%22VSK%20en%20metal%22+distribuci%C3%B3n",
+     "fecha": "2026-11-17",
+     "resultado": "sin distribuidora ni agencia en la búsqueda; obra independiente/comunitaria"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmmakers.festhome.com/en/festival/colombia-urban-art-film-festival",
+     "fecha": "2026-11-17",
+     "resultado": "convocatoria del festival en Festhome: no lista obras ni fichas públicas; búsquedas en Vimeo/YouTube sin resultados"
+    },
+    "festivales_previos": {
+     "url": "https://duckduckgo.com/?q=%22VSK%20en%20metal%22+festival",
+     "fecha": "2026-11-17",
+     "resultado": "sin otros festivales encontrados"
+    },
+    "organismo_nacional": {
+     "url": "https://duckduckgo.com/?q=%22VSK%20en%20metal%22+www.proimagenescolombia.com",
+     "fecha": "2026-11-17",
+     "resultado": "búsqueda web acotada a https://www.proimagenescolombia.com: sin registro de la obra"
+    },
+    "pagina_del_festival": {
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4035",
+     "fecha": "2026-11-17",
+     "resultado": "ficha del programa en la Cinemateca (bajada con curl, fuentes/cuaff-2026/): nombra la obra con director, año, país y duración; la única imagen es la plantilla genérica del mes, sin afiche de la obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://www.instagram.com/p/DfzaftWlRzG/",
+     "fecha": "2026-11-17",
+     "resultado": "el afiche original de la obra es la lámina 1 del post del festival (embed sin sesión), mirado a ojo; ninguna otra imagen en la web"
+    }
+   },
+   "afiche": {
+    "url": "file:///Users/d/Developer/Otrofestiv/.claude/worktrees/fix-ig-vigia-apify-14d19f/fuentes/ig/DfzaftWlRzG/00.jpg",
+    "fuente": "lámina 1 del post https://www.instagram.com/p/DfzaftWlRzG/ de @colombianurbanfilm (afiche de la obra)",
+    "archivo": "fuentes/cuaff-2026/altas/vsk-en-metal.jpg",
+    "px": [
+     962,
+     1443
+    ],
+    "ratio": 0.6667,
+    "recorte": {
+     "de": [
+      1080,
+      1443
+     ],
+     "caja": [
+      59,
+      0,
+      1021,
+      1443
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-17"
+   },
+   "estado": "alta_hecha",
+   "tmdb_id": 1828519,
+   "alta_fecha": "2026-11-17"
+  }
+ },
+ "_provenance": {
+  "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
+  "capturado": "2026-11-17"
+ },
+ "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano."
+}
