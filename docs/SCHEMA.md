@@ -348,7 +348,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `language` | string | — | 9 fest |  |
 | `genre` | string | — | 45 fest |  |
 | `synopsis` | string | — | 49 fest | SIEMPRE en español. La traducción no es opcional. |
-| `synopsis_en` | string | — | 46 fest |  |
+| `synopsis_en` | string | — | 47 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
 | `synopsis_lang` | string | `es` · `en` · `pt` | 49 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
 | `description` | string | — | 46 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
