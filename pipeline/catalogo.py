@@ -63,6 +63,21 @@ def apellido(director):
     return partes[-1] if partes else ''
 
 
+def misma_persona_larga(director, suyos):
+    """Un nombre está ENTERO y EN ORDEN dentro del otro, desde el mismo primer nombre:
+    «Isabella Cárdenas» en «Isabella Cárdenas Marín», «Ingrid Bonilla» en «Ingrid Paola
+    Bonilla Rodríguez». No casan hermanos, ni «Andrés Jiménez Quintero» con «Andrés
+    Quintero Campos» (24 nov 2026, dobles apellidos). Iniciales finales no cuentan."""
+    for x in re.split(r',|;|/|&|\s(?:y|e|and)\s', director or ''):
+        for y in suyos:
+            a, b = ([t for t in re.findall(r'[a-z0-9]+', sinacento(n).lower()) if len(t) > 1] for n in (x, y))
+            corto, largo = sorted((a, b), key=len)
+            resto = iter(largo)
+            if len(corto) > 1 and corto[0] == largo[0] and all(t in resto for t in corto):
+                return True
+    return False
+
+
 # ── lectura ──────────────────────────────────────────────────────────────────
 def obras(raiz=DIR):
     out = {}
@@ -152,7 +167,8 @@ def obra_de(obs, fid, titulo, tmdb=None, ix=None, director=''):
 
 def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
     """Una obra que llega de un festival NUEVO → (work_id, 'coincide') o (None, None).
-    Las mismas reglas que el constructor (§4.1): misma huella de título (original
+    Las reglas del constructor (§4.1), más el mismo nombre con más o menos apellidos
+    (`misma_persona_larga`), que el constructor todavía no aplica: misma huella de título (original
     o alias) Y mismo apellido de director Y año ±1; o, si a un lado le falta
     director, la huella corroborada por año ±1 o duración ±3. Más de una obra
     posible = no se adivina. `excluir` deja fuera un festival (para probar
@@ -160,7 +176,7 @@ def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
     h, ap = huella(titulo), apellido(director)
     if not h:
         return None, None
-    hits = set()
+    hits, largos = set(), set()   # largos: la misma persona con más o menos apellidos, si nadie casa exacto
     for wid, o in obs.items():
         pres = [p for p in o.get('presentaciones') or [] if p != excluir]
         if not pres:
@@ -170,12 +186,20 @@ def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
         a_ok = anio is None or o.get('anio') is None or abs(anio - o['anio']) <= 1
         aps = {apellido(d) for d in o.get('directores') or []}
         if ap and aps - {''}:
-            if ap in aps and a_ok:
+            if a_ok and ap in aps:
                 hits.add(wid)
+            elif a_ok and misma_persona_larga(director, o.get('directores') or []):
+                # con más o menos apellidos, la duración no puede contradecir
+                ds = [v['duracion_min'] for v in o.get('versiones') or [] if v.get('duracion_min')]
+                if not (duracion and ds) or any(abs(d - duracion) <= 3 for d in ds):
+                    largos.add(wid)
         elif (anio and o.get('anio') and abs(anio - o['anio']) <= 1) or \
                 (duracion and any(v.get('duracion_min') and abs(v['duracion_min'] - duracion) <= 3
                                   for v in o.get('versiones') or [])):
             hits.add(wid)
+    if largos and any(not misma_persona_larga(director, obs[w].get('directores') or []) for w in hits):   # no se adivina
+        return None, None
+    hits = hits or largos
     return (hits.pop(), 'coincide') if len(hits) == 1 else (None, None)
 
 
