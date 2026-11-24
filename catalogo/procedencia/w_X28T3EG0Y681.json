@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "tmdb:1583322",
   "regla": "tmdb-manda"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24"
  }
 }
