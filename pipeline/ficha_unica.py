@@ -14,7 +14,8 @@ mismo día. El género publicado va en español (la app lo traduce): TIFF lo
 traía en inglés, y así se leía en la app en español.
 
 Solo reemplaza un dato publicado; donde no hay dato no lo pone (eso es herencia),
-salvo la ficha de TMDB (identidad) y la sinopsis en inglés (va con la española).
+salvo lo que identifica la obra y está decidido: ficha de TMDB, dirección, año, país y
+sinopsis en inglés.
 
     python3 pipeline/ficha_unica.py --aplicar [<festival>] [--escribir]
 """
@@ -66,9 +67,11 @@ def aplicar(d, decs=None):
                 continue
             for k, v in eleg.get(o.get('work_id'), {}).items():
                 if o.get(k) in (None, ''):
-                    if k in ('tmdb_id', 'synopsis_en') and v:   # de la obra: se completan (español e inglés van juntos)
+                    if k in ('tmdb_id', 'synopsis_en', 'director', 'year', 'country') and v:   # de la obra: se completan
                         out.append((o.get('title'), k, None, v))
                         o[k] = v
+                        if k == 'country' and banderas(v):
+                            o['flags'] = banderas(v)
                     continue
                 if str(o[k]) == str(v):
                     continue
