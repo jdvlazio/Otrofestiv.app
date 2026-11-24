@@ -1,34 +1,6 @@
 {
  "_nota": "Obras que incumplen la regla de un campo, por festival. Solo baja (pipeline/ficha_obra.py).",
- "aff-2026": {
-  "género:fuera de lista": [
-   "w_R4DH1YW9PZS1:42ae187b",
-   "w_R4DJ5X41VK13:5c9b11df",
-   "w_R4DJ5X42B3ZW:5c9b11df",
-   "w_R4DJX8HWTYCD:5c9b11df",
-   "w_R4DMBHKZBZ4S:31f7ad24"
-  ],
-  "país:fuera de lista": [
-   "w_R4DFCSYS5WY8:f9818bb6",
-   "w_R4DGE8SBB0SV:624a6c4a",
-   "w_R4DHSY2PZEAG:3e0868d3",
-   "w_R4DHSY4ZQK91:47a410bd",
-   "w_R4DJ5W44XYKM:dc20fef1",
-   "w_R4DJ5WR9HX6A:704cfafa",
-   "w_R4DJ5X20FE5X:822cbe6c",
-   "w_R4DJ5XM4BV1W:2bcb94da",
-   "w_R4DJ5XSA060E:4940dffa",
-   "w_R4DJX852D4KD:d5aba6e8",
-   "w_R4DJX8HWTYCD:678ecfe3",
-   "w_R4DM15CRNJ0G:e426115d",
-   "w_R4DM15XCMX8J:ca202380"
-  ]
- },
  "aleste-2026": {
-  "género:fuera de lista": [
-   "w_B2TQJ9FSGSGK:6dcbd515",
-   "w_R4FBMPTV0JG2:5c9b11df"
-  ],
   "sinopsis en inglés:cierre": [
    "w_JET3NQQJ12X5:934070ea",
    "w_JET8EJHJ0VGM:655db46f"
@@ -38,17 +10,6 @@
   ]
  },
  "anibia-2026": {
-  "director:separador": [
-   "w_FYY34KBRF5YN:878c13bb",
-   "w_FYY6MG723AMD:d80f9e19",
-   "w_FYYTDE2BHJG1:163674c3",
-   "w_FYYWV5X5VB5Y:f601c7cb",
-   "w_FYYWXDTWSCY9:51234892",
-   "w_FYYXB7XMDJFY:e7cb0442"
-  ],
-  "país:fuera de lista": [
-   "w_R4PYB45P41ES:21f97734"
-  ],
   "sinopsis en inglés:espacios": [
    "w_FYYBP183FCQX:79cbd82a",
    "w_FYYGXD88SF8N:d140f83f",
@@ -61,11 +22,6 @@
   ]
  },
  "bhff-2026": {
-  "género:fuera de lista": [
-   "w_R4J76XTP6BB4:5c9b11df",
-   "w_R4K5WM3QWZ9G:6dcbd515",
-   "w_R4NEB2NAGK3C:42ae187b"
-  ],
   "sinopsis en inglés:espacios": [
    "w_SFBKHBGGSSRC:0f8fb128"
   ],
@@ -74,17 +30,6 @@
   ]
  },
  "biff-2026": {
-  "género:fuera de lista": [
-   "w_R4DP94FPQCSW:86f7384a",
-   "w_R4DWXX66Y26X:9a640843"
-  ],
-  "país:fuera de lista": [
-   "w_R4DWH8QHMT7A:93cea3e2",
-   "w_R4DY2DMZWTZ5:7c252323",
-   "w_R4DZ3F2NYHKV:0d42e392",
-   "w_R4E1B2KBVB7X:c656a1f0",
-   "w_R4E7955EWKV0:be23b050"
-  ],
   "sinopsis en inglés:cierre": [
    "w_R4E9V3FJVRNK:62ae6c06"
   ],
@@ -93,9 +38,6 @@
   ]
  },
  "cineautopsia-2026": {
-  "país:fuera de lista": [
-   "w_R4EKR39D8BFH:1040753b"
-  ],
   "sinopsis en inglés:cierre": [
    "w_R4EJNH8V76E0:01bb103c",
    "w_R4EMFRNMV1QJ:0cac2e78"
@@ -112,17 +54,6 @@
   ]
  },
  "cinemancia-2025": {
-  "director:basura": [
-   "w_R4ES38R47HX9:ef93c668",
-   "w_R4EVBBBNMB64:ef93c668"
-  ],
-  "duración:forma": [
-   "w_R4ES38R47HX9:c315a35c"
-  ],
-  "país:fuera de lista": [
-   "w_R4ES38R47HX9:ef93c668",
-   "w_R4EVBBBNMB64:ef93c668"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4ETMKK7J5T0:1df540b7"
   ]
@@ -153,32 +84,16 @@
   ]
  },
  "cineparalapaz-2026": {
-  "país:fuera de lista": [
-   "w_8GJ7B5KCEQ78:500a7cc9"
-  ],
   "sinopsis:demasiado corta": [
    "w_JTT4QH7R8HYM:9d08f55d"
   ]
  },
  "cinetoro-2026": {
-  "género:fuera de lista": [
-   "w_R4FBMPTV0JG2:5c9b11df"
-  ],
   "letterboxd:forma": [
    "w_96QNXPGV1SS8:82b03f08"
-  ],
-  "país:fuera de lista": [
-   "w_96QKBFDC6NJ4:a7924161",
-   "w_96QKBQFCX5DH:ccdaecfd"
   ]
  },
  "cortoscali-2026": {
-  "país:fuera de lista": [
-   "w_SCSASHJZ7DZX:415a93f1",
-   "w_SCSCR3ZTQ424:62020c00",
-   "w_SCSDJR6PBDFF:c7e84029",
-   "w_SCSECPEPVSTE:e1fe5139"
-  ],
   "sinopsis en inglés:cierre": [
    "w_SCS921C5AMZK:d5585b87"
   ],
@@ -187,28 +102,6 @@
   ]
  },
  "fantasmagoria-2026": {
-  "director:separador": [
-   "w_R4G2SVV61NSA:b5167eaa",
-   "w_R4G46Y3N8KNJ:294dc921",
-   "w_R4GFRTNP0YAB:f94f128c",
-   "w_R4GHSC5QG8SR:fc7ccf47",
-   "w_R4GM8PC14GY7:2dcb4f55",
-   "w_R4GNB78Y9DP6:c50e3fc7",
-   "w_R4GNQ10JSKZ4:cb11aaaf"
-  ],
-  "género:fuera de lista": [
-   "w_R4G0HH5TZZQG:42ae187b",
-   "w_R4GBJ7CQHDNP:42ae187b",
-   "w_R4GGN0ATCPTQ:42ae187b"
-  ],
-  "país:fuera de lista": [
-   "w_R4G1CB9S2EJY:b9358243",
-   "w_R4G2CR8PJ98R:1c1f6e81",
-   "w_R4G4PQHMFZBK:a8efe42f",
-   "w_R4GARB338609:1065d592",
-   "w_R4GG69HSD4H1:8f03a6fb",
-   "w_R4GNQ10JSKZ4:ced39215"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4GEK9F91A0P:3162950e"
   ],
@@ -223,29 +116,12 @@
    "w_R4GH1HX1NHZS:8afff44f"
   ]
  },
- "fantasofest-2026": {
-  "director:separador": [
-   "w_R4GTPYA4VGFX:43d557ef",
-   "w_R4GTPYN0CQNF:3b8c2923"
-  ],
-  "género:fuera de lista": [
-   "w_R4GTPXVHQZRP:42ae187b",
-   "w_R4GTPYN0CQNF:0b499e95"
-  ]
- },
  "fecibac-2026": {
-  "género:fuera de lista": [
-   "w_R4NEB3MFVH9Q:42ae187b"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4NEB3MFVH9Q:9fadaf5a"
   ]
  },
  "festicinerio-2026": {
-  "género:fuera de lista": [
-   "w_P1KW18MRSEZW:6a747060",
-   "w_R4JDE7TVVFNW:5c9b11df"
-  ],
   "sinopsis en inglés:cierre": [
    "w_R4GBJ7SNPXDQ:2fc4e6f5"
   ],
@@ -255,10 +131,6 @@
   ]
  },
  "ficcali-2026": {
-  "género:fuera de lista": [
-   "w_R4H509VY0YAJ:b819aeda",
-   "w_R4H50ADAKX17:b459906e"
-  ],
   "sinopsis en inglés:cierre": [
    "w_R4H2TAASF5WN:b6f6d2b4"
   ],
@@ -270,96 +142,13 @@
   ]
  },
  "ficci-65": {
-  "duración:forma": [
-   "w_R4HF7C1PCRX6:a904546e"
-  ],
-  "género:fuera de lista": [
-   "w_R4FBMPTV0JG2:5c9b11df",
-   "w_R4HAT4P4YQ74:5c9b11df",
-   "w_R4HCNBABG3FG:5c9b11df"
-  ],
-  "país:fuera de lista": [
-   "w_R4DM15XCMX8J:ca202380",
-   "w_R4HAG84RFFH7:1b2a59cc",
-   "w_R4HAG86WY23D:d9936b02",
-   "w_R4HAG88CEBDH:21124127",
-   "w_R4HAG8ATY6GN:9b54bf9e",
-   "w_R4HAG8K6DQSG:1286f6d6",
-   "w_R4HAG8Y85CJB:2da327d4",
-   "w_R4HAT44JAX44:626f2781",
-   "w_R4HAT4KM66Y8:e002fd2a",
-   "w_R4HAT4QAVP51:b8252a2c",
-   "w_R4HAT537Z8RQ:16614fca",
-   "w_R4HAT5CSRDJY:5f9c031a",
-   "w_R4HAT5MQ28GX:3bbd955d",
-   "w_R4HAT5TQR162:8bee388f",
-   "w_R4HAT5VM48NN:6f56a264",
-   "w_R4HB843KHEHA:b58a4bf4",
-   "w_R4HB84J5DARC:ca202380",
-   "w_R4HB84JYK50W:6dabb348",
-   "w_R4HB84QBN2Q1:0bc2fbfe",
-   "w_R4HB84VZBJEG:0ef81128",
-   "w_R4HB84WH86XK:72fdfe0e",
-   "w_R4HB857E1N43:4a4fd9ec",
-   "w_R4HB85A3V5M4:f33209a6",
-   "w_R4HB85GSEN2Y:52a7ce7c",
-   "w_R4HB85K6FH39:fb2ecbbb",
-   "w_R4HB85WKYHVK:92169ff0",
-   "w_R4HB85Y9VKH3:06ba881e",
-   "w_R4HB86JFGXF6:b03a55da",
-   "w_R4HBN9HF0D5J:1e7a7415",
-   "w_R4HC1F248GT0:a4e5ae79",
-   "w_R4HC1F4D4YSJ:447ee7b4",
-   "w_R4HCNBFVSZ6V:5268fa8f",
-   "w_R4HCNBKANJ6H:cff15067",
-   "w_R4HCNC7DFC1S:e5ea22c3",
-   "w_R4HCNCESY9A6:a2642a50",
-   "w_R4HCNCH5175J:c626568b",
-   "w_R4HCNCYYKB3K:21939860",
-   "w_R4HD23F6TYJ1:499c9029",
-   "w_R4HD23K6WE7Z:172bc6ec",
-   "w_R4HD23TKMGMT:165b5b52",
-   "w_R4HD24M9AR8Q:a4e5ae79",
-   "w_R4HD24NS1D4A:ef0d193e",
-   "w_R4HD24WJ7RFE:e002fd2a",
-   "w_R4HEGBP3B4BG:c166eeae",
-   "w_R4HEVRVAR1RQ:f5dc4485",
-   "w_R4HEVS4PM3XR:920c2dd8",
-   "w_R4HEVSEEMFVQ:91f52160",
-   "w_R4HEVSYPWE09:f7bbd966",
-   "w_R4HEVTJK2YRN:9b7b4c14",
-   "w_R4HEVTT0JWFJ:96c9188f",
-   "w_R4HEVVQ7MBP0:5d88ec0a",
-   "w_R4HF7C74072Y:029a4c70",
-   "w_R4HF7DGNVHZV:4c861884"
-  ],
   "sinopsis:espacios": [
    "w_R4HEVVW6AQR2:56620fab"
   ]
  },
  "ficdeh-2026": {
-  "director:separador": [
-   "w_R4HM7G271QYX:b4f6d85d"
-  ],
-  "género:fuera de lista": [
-   "w_R4HCNBABG3FG:5c9b11df",
-   "w_R4HFY6DFDAM6:5c9b11df",
-   "w_R4HHC37T8RDM:5c9b11df",
-   "w_R4HHC4K8GBRC:5c9b11df",
-   "w_R4HHSYKXBWCD:5c9b11df",
-   "w_R4HJ5XKTZM64:5c9b11df",
-   "w_R4HJ5YE49437:5c9b11df",
-   "w_R4HK6J8YDJZC:5c9b11df",
-   "w_R4HK6JJ0PZES:5c9b11df",
-   "w_R4HKXWHP3KFR:5c9b11df",
-   "w_R4HM7GNBCZT7:5c9b11df",
-   "w_R4HM7GT7ZW24:5c9b11df"
-  ],
   "letterboxd:forma": [
    "w_R4HK6JJ0PZES:1558b3c5"
-  ],
-  "país:fuera de lista": [
-   "w_R4HM7GGHM0YR:c65049b5"
   ],
   "sinopsis en inglés:cierre": [
    "w_R4HKXW2F1V6K:2acbee95"
@@ -369,18 +158,6 @@
   ]
  },
  "ficfusa-2026": {
-  "director:separador": [
-   "w_5HEPHMY67RR0:bb4b981c",
-   "w_R4M1E4Z3TM9E:101f2a9d",
-   "w_R4MWWNB2STM2:c4626b3e"
-  ],
-  "género:fuera de lista": [
-   "w_R4J76XVZ2FFX:5c9b11df",
-   "w_R4JDE7TVVFNW:5c9b11df"
-  ],
-  "país:fuera de lista": [
-   "w_5X2WMY98HTJN:84a41101"
-  ],
   "sinopsis en inglés:cierre": [
    "w_R4GBJ7SNPXDQ:2fc4e6f5"
   ],
@@ -394,34 +171,8 @@
   ]
  },
  "ficica-2026": {
-  "director:separador": [
-   "w_6XS2J4XWCCDC:3cea5efc",
-   "w_6XS2R2VDJ372:f40bb915",
-   "w_6XS2XYPE0CRY:861de43a",
-   "w_6XS3HQSX7MM4:bc3dc5d5"
-  ],
-  "género:fuera de lista": [
-   "w_6XS3BRDR0PG5:6dcbd515",
-   "w_R4HCNBABG3FG:5c9b11df",
-   "w_R4HHC4K8GBRC:5c9b11df",
-   "w_R4HHSYKXBWCD:5c9b11df",
-   "w_R4KECG9BFSX8:5c9b11df",
-   "w_R4N19E2TVK1Y:5c9b11df"
-  ],
   "letterboxd:forma": [
    "w_6XS2XYPE0CRY:d29e70e5"
-  ],
-  "país:fuera de lista": [
-   "w_6XS2J4XWCCDC:d4ec0d59",
-   "w_6XS2MVFSZ0CV:739c5668",
-   "w_6XS2PF0AS514:21f9e493",
-   "w_6XS2PSQBZZHV:21f9e493",
-   "w_6XS2Q4J7K3PF:21f9e493",
-   "w_6XS2RQT384V9:21f9e493",
-   "w_6XS2Y8GBSB3G:640e0c89",
-   "w_6XS2ZWMMCC9X:640e0c89",
-   "w_6XS315VR0MDA:c75f80e8",
-   "w_6XS3JD6YEGF7:640e0c89"
   ],
   "sinopsis en inglés:cierre": [
    "w_6XS3BRDR0PG5:f84f048b"
@@ -444,9 +195,6 @@
   ]
  },
  "ficma-2026": {
-  "país:fuera de lista": [
-   "w_R4HYM8GEY5W3:fece0a3a"
-  ],
   "sinopsis en inglés:texto roto": [
    "w_R4HP5AEM0C3W:0c6f482f"
   ],
@@ -457,63 +205,7 @@
    "w_R4J2W39EA0QE:9eee8229"
   ]
  },
- "ficmontanas-2026": {
-  "director:separador": [
-   "w_R4J8B2FSQHTW:fe42ec96",
-   "w_R4J8PYNB9H38:9662a5fb",
-   "w_R4J8PZ35V62R:ee407225"
-  ],
-  "género:fuera de lista": [
-   "w_95X3RSKE52KQ:5f7ce44b",
-   "w_R4J76X664SXG:5f7ce44b",
-   "w_R4J76XTP6BB4:5c9b11df",
-   "w_R4J76XVZ2FFX:5c9b11df",
-   "w_R4J7H9333P6N:7eabdb01",
-   "w_R4J7WZ1AZR2D:5c9b11df",
-   "w_R4J7WZ5FB0JC:5f7ce44b",
-   "w_R4J7WZ8EXXSH:6a747060",
-   "w_R4J7WZ9XG8WF:6a747060",
-   "w_R4J7WZAT0ZGN:7eabdb01",
-   "w_R4J7WZR5G356:6a747060",
-   "w_R4J7WZRFPZYJ:5c9b11df",
-   "w_R4J7WZV1YYXH:5c9b11df",
-   "w_R4J7WZX5XQ91:6a747060",
-   "w_R4J7WZXCPZQN:5c9b11df",
-   "w_R4J7WZZ8GGPT:5f7ce44b",
-   "w_R4J8B2E8QWM0:5c9b11df",
-   "w_R4J8PY92ZYTV:8ff6f939",
-   "w_R4J8PYEEKGQ1:8ff6f939",
-   "w_R4J8PYFWRHY0:8ff6f939",
-   "w_R4J8PYNB9H38:7eabdb01",
-   "w_R4J8PZ35V62R:5c9b11df",
-   "w_R4J8PZ3EXRTK:5f7ce44b",
-   "w_R4J8PZ6VC652:5c9b11df",
-   "w_R4J8PZDF5AX0:8ff6f939",
-   "w_R4J8PZKFMEMP:7eabdb01",
-   "w_R4J8PZMJG3VK:7eabdb01",
-   "w_R4J8PZZD7RKN:8ff6f939"
-  ],
-  "país:fuera de lista": [
-   "w_95X3RSKE52KQ:1e7a7415",
-   "w_R4J6SQ340ZKW:c07887a6",
-   "w_R4J6SQY9T2P9:bdbbf64a",
-   "w_R4J6SR5PGRMX:9addd9e7",
-   "w_R4J76W4B8EJ5:1fb5a0a9",
-   "w_R4J76XZYBDZC:37137001",
-   "w_R4J7WZCQATSK:4c037138",
-   "w_R4J8PYNB9H38:1e7a7415",
-   "w_R4J8PZ6VC652:0bef4f0f"
-  ]
- },
  "ficpa-2026": {
-  "género:fuera de lista": [
-   "w_R4JDE7TVVFNW:5c9b11df"
-  ],
-  "país:fuera de lista": [
-   "w_R4J92T4Y5M17:5d93330c",
-   "w_R4JA8MHHNJNW:9c9937b4",
-   "w_R4JAHWDSW9JF:9c9937b4"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4J9E2RBH5A2:38d621d0",
    "w_R4JA8MHHNJNW:658cc4c0",
@@ -525,33 +217,11 @@
   ]
  },
  "filcmar-2026": {
-  "director:separador": [
-   "w_R4JNR4F02N3Q:f156a1d7"
-  ],
   "sinopsis:cierre": [
    "w_R4JNA7VCPSRR:e74f0453"
   ]
  },
  "finca-2026": {
-  "director:separador": [
-   "w_R4JQP6K5EYFH:0c09c3e6",
-   "w_R4JS7F9J34H5:0abc6cbf",
-   "w_R4JVXN81BJQS:bc7cf116"
-  ],
-  "género:fuera de lista": [
-   "w_R4JV4PNSJMNF:5c9b11df"
-  ],
-  "país:fuera de lista": [
-   "w_R4JPHQK2G8V7:d6f44651",
-   "w_R4JPHQZDZNTP:09d01367",
-   "w_R4JR2EWCHD6Q:d682cfc2",
-   "w_R4JRD4X29MA4:8f27c460",
-   "w_R4JS7F9J34H5:b5b93ec2",
-   "w_R4JS7FWJCTHS:0d53f5a6",
-   "w_R4JSM9NFPKT2:fde90bd2",
-   "w_R4JW9PH0QQCW:fae7a6b9",
-   "w_R4JXK0E9H4YH:be6291b5"
-  ],
   "sinopsis en inglés:cierre": [
    "w_R4JPHQZDZNTP:9afeb4db",
    "w_R4JTBTK3SNA0:9a42aa26"
@@ -563,21 +233,7 @@
    "w_R4JVXN81BJQS:91f70430"
   ]
  },
- "funza-2026": {
-  "país:fuera de lista": [
-   "w_8GJ7B5KCEQ78:500a7cc9"
-  ]
- },
  "girardota-2026": {
-  "género:fuera de lista": [
-   "w_R4K253HAQJA6:aedf1938",
-   "w_R4K2544MAM4X:5c9b11df"
-  ],
-  "país:fuera de lista": [
-   "w_R4JYR7GAW6CP:bb1dd5ea",
-   "w_R4K0MKWYW82K:aef58afd",
-   "w_R4K2YRTDF1KJ:be15601a"
-  ],
   "sinopsis:espacios": [
    "w_R4GFC0AMPBK7:d7042e64",
    "w_R4JZ1M1N92BF:2f47ef25",
@@ -585,16 +241,6 @@
   ]
  },
  "guatape-2026": {
-  "género:fuera de lista": [
-   "w_R4JDE7TVVFNW:5c9b11df",
-   "w_R4K2544MAM4X:5c9b11df",
-   "w_R4N19E2TVK1Y:5c9b11df"
-  ],
-  "país:fuera de lista": [
-   "w_8GJ7B5KCEQ78:500a7cc9",
-   "w_8GJ86ZF5QGHA:9d71709d",
-   "w_8GJ9804N7SGR:b4e393d2"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4JAHWBVRVWG:a93698e1"
   ],
@@ -603,19 +249,6 @@
   ]
  },
  "itagui-2026": {
-  "director:separador": [
-   "w_R4K4WD0BN8E9:c7bebb64",
-   "w_R4K6T4B6EQXW:5ae46ace"
-  ],
-  "género:fuera de lista": [
-   "w_R4K5WM3QWZ9G:6dcbd515",
-   "w_R4K9MGWHTHAD:5c9b11df",
-   "w_R4KAAN1QPX02:6dcbd515"
-  ],
-  "país:fuera de lista": [
-   "w_R4K42EDVCEPA:b9358243",
-   "w_R4K7MC21AP95:eb9db345"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4K7MC21AP95:7c1cec8d",
    "w_R4KA0068YED7:902ebb16"
@@ -637,35 +270,6 @@
   ]
  },
  "jardin-2026": {
-  "director:separador": [
-   "w_R4KCNWJJ7WVM:49df4dd5",
-   "w_R4KECG7X4Y9H:682325c1"
-  ],
-  "género:fuera de lista": [
-   "w_R4DH1YW9PZS1:42ae187b",
-   "w_R4FBMPTV0JG2:5c9b11df",
-   "w_R4KB63QGM0T6:c6c91e7a",
-   "w_R4KBH39DVC2Z:6b942021",
-   "w_R4KBWGT6T0PP:f9147206",
-   "w_R4KC94G9CGC8:ccf5d37b",
-   "w_R4KCNWJJ7WVM:fb884682",
-   "w_R4KD24VTFMYD:5c985619",
-   "w_R4KDRM6PF7SX:f2797a17",
-   "w_R4KDRM79ZKK8:5c9b11df",
-   "w_R4KDRMFVCF8Y:5c9b11df",
-   "w_R4KE31BR0QVT:5c9b11df",
-   "w_R4KE31DV4KAW:90701314",
-   "w_R4KECG9BFSX8:5c9b11df",
-   "w_R4KECGNEXVAM:5c9b11df",
-   "w_R4KEVD2ME1ZC:5c9b11df",
-   "w_R4KFM0GWA35D:96795304"
-  ],
-  "país:fuera de lista": [
-   "w_R4KBH39DVC2Z:2e076cfe",
-   "w_R4KCNWJJ7WVM:05039cdc",
-   "w_R4KD24VTFMYD:1e32d013",
-   "w_R4KDRM6PF7SX:44eddbe1"
-  ],
   "sinopsis en inglés:cierre": [
    "w_R4KC94G9CGC8:87fbc7c0"
   ],
@@ -680,22 +284,6 @@
   ]
  },
  "leviza-2026": {
-  "año:no es número": [
-   "w_R4KJ60BP46E6:c19b5076",
-   "w_R4KJ60H1BVY2:c19b5076",
-   "w_R4KJ617KAF74:ca013911",
-   "w_R4KJ61C0ZKD5:924b315c"
-  ],
-  "director:separador": [
-   "w_R4KGMXSNBMBH:5604e775",
-   "w_R4KHBESJGKHE:9ac69ba3"
-  ],
-  "duración:forma": [
-   "w_R4KJ617KAF74:fba52780"
-  ],
-  "género:fuera de lista": [
-   "w_R4HCNBABG3FG:5c9b11df"
-  ],
   "letterboxd:forma": [
    "w_R4KFXWS33ACS:d29e70e5",
    "w_R4KG8QBBVRPG:d29e70e5",
@@ -724,27 +312,9 @@
    "w_R4KJ60KX3PN9:d29e70e5",
    "w_R4KJ60N4297B:d29e70e5",
    "w_R4KJ60NKC2NM:d29e70e5"
-  ],
-  "país:fuera de lista": [
-   "w_R4KJ61C0ZKD5:66b660c9"
-  ]
- },
- "mambe-2026": {
-  "género:fuera de lista": [
-   "w_95X3RSKE52KQ:5f7ce44b"
-  ],
-  "país:fuera de lista": [
-   "w_8GJ7B5KCEQ78:500a7cc9",
-   "w_95X3RSKE52KQ:1e7a7415"
   ]
  },
  "mamut-2026": {
-  "director:separador": [
-   "w_R4KKQ1Y67PSK:85cf968a"
-  ],
-  "país:fuera de lista": [
-   "w_R4KNDSN16WS2:4f1b0b65"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4KN0D6XG540:3eba47ca",
    "w_R4KNRR3BKKT2:9fd324af",
@@ -756,29 +326,6 @@
   ]
  },
  "midbo-2026": {
-  "director:cargo": [
-   "w_R4M70M3EKDZ6:df10fa8a",
-   "w_R4M7DJ7STQMR:be7e110a",
-   "w_R4M7TK74MZVD:0d2fbdfc",
-   "w_R4M87NZSQQZR:743c6f87",
-   "w_R4M8JAK7EZRF:756dc029",
-   "w_R4M8YRFMZTFY:ef39cc7d",
-   "w_R4M9BJ4MVXMH:d77a3b79",
-   "w_R4M9QNHANHAH:46b98d88"
-  ],
-  "director:separador": [
-   "w_R4KRZ8396K6F:c7a86449",
-   "w_R4KZPR1VGJNA:b6a47472",
-   "w_R4M1E4Z3TM9E:101f2a9d",
-   "w_R4MEVF0S5E1H:d1d391a1",
-   "w_R4MG068D397M:bd752d7b",
-   "w_W0RVSCPFM4KN:bd2e8174"
-  ],
-  "país:fuera de lista": [
-   "w_R4KYZJ6N1C9V:b20963a0",
-   "w_R4M1WSS5X76P:8351a698",
-   "w_R4M5467HA3Y3:b4e1bfb3"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4KN0D6XG540:3eba47ca"
   ],
@@ -794,30 +341,6 @@
   ]
  },
  "miradas-2026": {
-  "género:fuera de lista": [
-   "w_6XS3BRDR0PG5:6dcbd515",
-   "w_R4HAT4P4YQ74:5c9b11df",
-   "w_R4N19E2TVK1Y:5c9b11df",
-   "w_ZJ3GTK8J0XTJ:5c9b11df",
-   "w_ZJ3GW3Z05TE1:5c9b11df",
-   "w_ZJ3HC3JH2XKF:5c9b11df",
-   "w_ZJ3HSJCM0DS6:5c9b11df",
-   "w_ZJ3J8ZD799FE:5c9b11df",
-   "w_ZJ3JS3M80NNS:5c9b11df",
-   "w_ZJ3JSH2WQPFD:5c9b11df",
-   "w_ZJ3K7NJV43E6:5c9b11df",
-   "w_ZJ3KQNMGEK4P:5c9b11df",
-   "w_ZJ3M6D9B44YR:5c9b11df",
-   "w_ZJ3P58WHWETX:5c9b11df",
-   "w_ZJ3PHBTVGJ66:5c9b11df",
-   "w_ZJ3QHNZ1YPP3:5c9b11df",
-   "w_ZJ3YWV6FYP0Q:5c9b11df",
-   "w_ZJ3YYDJF1M12:5c9b11df",
-   "w_ZJ3ZVCWJ9J57:5c9b11df",
-   "w_ZJ3ZW5XYJZWW:5c9b11df",
-   "w_ZJ40W8TZKKHJ:5c9b11df",
-   "w_ZJ41B4VSBZ2R:5c9b11df"
-  ],
   "sinopsis en inglés:cierre": [
    "w_6XS3BRDR0PG5:f84f048b"
   ],
@@ -836,62 +359,16 @@
   ]
  },
  "mubibogota-2026": {
-  "país:fuera de lista": [
-   "w_X5FNNG4NDDVQ:9221d39f",
-   "w_X5FP3E8SCKY2:dc56a014",
-   "w_X5FPMCP658NS:26e1a72a",
-   "w_X5FQ59F8VRWZ:9221d39f",
-   "w_X5FQM0BY9JQ3:a04738cf",
-   "w_X5FR3FQ3YATN:53c8bc22",
-   "w_X5FRF5TC7K4Q:d3ef9621"
-  ],
   "sinopsis:cierre": [
    "w_X5FNNG4NDDVQ:96647f61"
   ]
  },
  "narrarelfuturo-2026": {
-  "director:cargo": [
-   "w_R4MPB6GPJMVS:2ba6b0f2"
-  ],
-  "director:separador": [
-   "w_R4MPB6GPJMVS:2ba6b0f2"
-  ],
-  "género:fuera de lista": [
-   "w_6TB4Q5KE33Y5:d7626829",
-   "w_6TB4RYP07E0M:d7626829",
-   "w_6TB58FX8GRCS:d7626829",
-   "w_6TB5ACZBK931:23ad13cf",
-   "w_6TB5BZFG837T:23ad13cf",
-   "w_6TB5DMPG4S6X:2e91e3e3",
-   "w_6TB5H86EM3SP:d7626829",
-   "w_R4MNM62H491G:44d45ab1",
-   "w_R4MP0ZMHE8MM:33e2c24e",
-   "w_R4MPB6NWPYZ1:bcecf2c8",
-   "w_R4MPB6Q82Q79:bcecf2c8",
-   "w_R4MPRDCZPVCC:7a97a88a",
-   "w_R4MQS32V0R3V:7a97a88a",
-   "w_R4MQS3ATH8F5:7a97a88a",
-   "w_R4MQS3WSNRFS:4afe5399",
-   "w_R4MQS3XM31MC:44d45ab1",
-   "w_R4MQS3XMSTEE:7a97a88a",
-   "w_R4MQS4B7P1V3:55efa8c1",
-   "w_R4MQS4X3G1HR:a3190f47",
-   "w_R4QSRPWTXWP9:2e91e3e3"
-  ],
-  "país:fuera de lista": [
-   "w_6TB5DMPG4S6X:9b7aec20"
-  ],
   "sinopsis:espacios": [
    "w_6TB4Q5KE33Y5:1a4f54b4"
   ]
  },
  "olhar-2026": {
-  "director:basura": [
-   "w_R4MQS9QNV33C:f017b94b"
-  ],
-  "director:separador": [
-   "w_R4MQS8JP13NG:f28f6a05"
-  ],
   "sinopsis en inglés:cierre": [
    "w_R4MQS5FAT0Z3:dfb28b9a",
    "w_R4MQS8JVZVRH:f6189078",
@@ -908,16 +385,6 @@
   ]
  },
  "popayan-2026": {
-  "director:separador": [
-   "w_R4MRJRXX51Z2:39bfca99",
-   "w_R4MS6GHHAEY6:c1f7fbf1",
-   "w_R4MWWNB2STM2:c4626b3e",
-   "w_R4N08JDPPWFS:0ccbee2f",
-   "w_R4N0HGFMFYEM:5a44e1e7"
-  ],
-  "país:fuera de lista": [
-   "w_R4MYV1Y7TB5B:7b5febdb"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4ETMKK7J5T0:1df540b7",
    "w_R4MSXN1DM97P:885b8892",
@@ -929,40 +396,6 @@
   ]
  },
  "qaff-2026": {
-  "director:separador": [
-   "w_R4N1K5NQHAEW:69877a2c"
-  ],
-  "género:fuera de lista": [
-   "w_R4J76XVZ2FFX:5c9b11df",
-   "w_R4N1K55QNZSN:5c9b11df",
-   "w_R4N1K580DBZD:5c9b11df",
-   "w_R4N2KY8B36DJ:5c9b11df",
-   "w_R4N2YE82W6PR:5c9b11df",
-   "w_R4N3790FJTP9:5c9b11df",
-   "w_R4N3793FGSXK:5c9b11df",
-   "w_R4N379P8T762:5c9b11df",
-   "w_R4N432K445TX:5c9b11df",
-   "w_R4N4W2HV8G6Y:5c9b11df",
-   "w_R4N4W32AVHQZ:5c9b11df",
-   "w_R4N57PNHN8H8:5c9b11df",
-   "w_R4N5X5FWXZ5A:5c9b11df",
-   "w_R4N81W3ATYV2:5c9b11df",
-   "w_R4N8ES4VAGHY:5c9b11df",
-   "w_R4NA9HX3ZWSS:5c9b11df",
-   "w_R4NBAMS03D07:5c9b11df",
-   "w_R4NC5WJJ1AHK:5c9b11df",
-   "w_R4NCHN8JG7RW:5c9b11df",
-   "w_R4NCVVXT6PQB:5c9b11df"
-  ],
-  "país:fuera de lista": [
-   "w_R4N1X3XFC7BA:dc6f50b4",
-   "w_R4N2A709C9HG:f5a08c33",
-   "w_R4N57PNHN8H8:b9fe6e0d",
-   "w_R4N6YDZGSGQ2:a3520e25",
-   "w_R4N8T0VF32RD:9517b7f2",
-   "w_R4N9VYFJP0RP:9b9f4cfc",
-   "w_R4NBRS0X1JVX:8ba4a177"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4HGZY27FP8A:79ed4271"
   ],
@@ -979,29 +412,6 @@
   ]
  },
  "siembrafest-2026": {
-  "director:separador": [
-   "w_R4NEB1MEC6Q1:46350d21"
-  ],
-  "género:fuera de lista": [
-   "w_R4JDE7TVVFNW:5c9b11df",
-   "w_R4K2544MAM4X:5c9b11df",
-   "w_R4MZH086RT3E:5c9b11df",
-   "w_R4NEB001TAJN:42ae187b",
-   "w_R4NEB0027V52:5c9b11df",
-   "w_R4NEB1289RGJ:5c9b11df",
-   "w_R4NEB18PKBV7:5c9b11df",
-   "w_R4NEB1BDR2GM:5c9b11df",
-   "w_R4NEB1HC38V8:5c9b11df",
-   "w_R4NEB1HTA1N7:5c9b11df",
-   "w_R4NEB1VD4MEN:5c9b11df",
-   "w_R4NEB23V12FW:5c9b11df",
-   "w_R4NEB2F8G3XM:5c9b11df",
-   "w_R4NEB2NAGK3C:42ae187b",
-   "w_R4NEB2Q8FGDG:5c9b11df",
-   "w_R4NEB2RNHWKD:5c9b11df",
-   "w_R4NEB3MFVH9Q:42ae187b",
-   "w_R4NEB3VXJ6PN:5c9b11df"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4MSXN1DM97P:885b8892",
    "w_R4MX6E365FH2:512218ca",
@@ -1009,17 +419,7 @@
    "w_R4NEB3MFVH9Q:9fadaf5a"
   ]
  },
- "tercertiempo-2026": {
-  "género:fuera de lista": [
-   "w_R4NEB393B02H:126de29b"
-  ]
- },
  "tiff-2026": {
-  "país:fuera de lista": [
-   "w_R4DWH8QHMT7A:93cea3e2",
-   "w_R4PYB45P41ES:21f97734",
-   "w_R4Q673DE027T:a68066c0"
-  ],
   "sinopsis en inglés:espacios": [
    "w_R4PCY91Y8X8R:63432f85",
    "w_R4PVYRFY5R7Z:3012a7ed",
@@ -1083,473 +483,18 @@
    "w_R4Q1SVK4K0DA:af17f65f"
   ]
  },
- "tribeca-2026": {
-  "director:separador": [
-   "w_R4QPX5GED3J2:7183912d",
-   "w_R4QPX5S4WR0R:6081c66d",
-   "w_R4QPX6DNSSVZ:33dcadb6",
-   "w_R4QPX700Y9CZ:6ecabd3e",
-   "w_R4QPX704DPSQ:10cb3cd5",
-   "w_R4QPX78JEZ6G:ace24d55",
-   "w_R4QPX7CQJHZW:1fcc3c4f",
-   "w_R4QPX7GTCMF4:463f15de",
-   "w_R4QPX7NNZHYS:ee8e15a3",
-   "w_R4QPX7VX869R:696fb174",
-   "w_R4QPX7XW1H1W:cf266780",
-   "w_R4QPX7YHWYZ4:44a4c8a6",
-   "w_R4QPX81GHCDQ:2979c99b",
-   "w_R4QPX85W0B9E:3df12c22",
-   "w_R4QPX8B62TDP:baca09bb",
-   "w_R4QPX8C65WH7:ac3f4c0b",
-   "w_R4QPX8D58RS9:c2a77f38",
-   "w_R4QPX8FDZA5C:eb5eedb2",
-   "w_R4QPX8VTQBCM:07906a83",
-   "w_R4QPX97XT2P8:cc54b89e",
-   "w_R4QPX9G84EZ9:d7e0ea97",
-   "w_R4QPXA033B2R:ca8500ab",
-   "w_R4QPXA1AY97C:0b17e7da",
-   "w_R4QPXAB3MB3A:e115f440",
-   "w_R4QPXAE7ZJM9:3e8c49bc",
-   "w_R4QPXAZWDCJQ:c5bbee89",
-   "w_R4QPXBPHJNVA:74e9e5b9",
-   "w_R4QPXBTZCW37:c1823cd3",
-   "w_R4QPXC5DWF02:c8718acf",
-   "w_R4QPXCXE76XN:6d6e0d87"
-  ],
-  "duración:forma": [
-   "w_R4QPX909K448:4d134bc0",
-   "w_R4QPX912QAQ8:7b52009b",
-   "w_R4QPX96JNWRT:bc33ea4e",
-   "w_R4QPX96RJ65J:da4b9237",
-   "w_R4QPX98BF1WP:1574bddb",
-   "w_R4QPX998J27N:b3f0c7f6",
-   "w_R4QPX9FC18BM:bd307a3e",
-   "w_R4QPX9GC41WM:e1822db4",
-   "w_R4QPX9JDTY28:0ade7c2c",
-   "w_R4QPX9PVF6JF:7719a1c7",
-   "w_R4QPX9ZZMM60:fa35e192",
-   "w_R4QPXA033B2R:77de68da",
-   "w_R4QPXA1AY97C:bd307a3e",
-   "w_R4QPXA1ZFV43:7b52009b",
-   "w_R4QPXA2KDS37:b1d57811",
-   "w_R4QPXA4KWZN4:fa35e192",
-   "w_R4QPXA5N30Q8:bd307a3e",
-   "w_R4QPXA6YTDBQ:bd307a3e",
-   "w_R4QPXA7ACHQT:da4b9237",
-   "w_R4QPXA8GV1ZG:472b07b9",
-   "w_R4QPXA8K983D:fa35e192",
-   "w_R4QPXAAASRN9:bd307a3e",
-   "w_R4QPXAB3MB3A:7b52009b",
-   "w_R4QPXAB6K1RJ:fa35e192",
-   "w_R4QPXACG4F3F:f1abd670",
-   "w_R4QPXAE7ZJM9:bd307a3e",
-   "w_R4QPXAEZW263:bd307a3e",
-   "w_R4QPXAFVYXJN:b3f0c7f6",
-   "w_R4QPXAGSMB6B:1b645389",
-   "w_R4QPXAJECEVB:fa35e192",
-   "w_R4QPXANJ8YQ9:bd307a3e",
-   "w_R4QPXAPANWHA:77de68da",
-   "w_R4QPXAPQDGY5:d435a6cd",
-   "w_R4QPXAPRSAMW:17ba0791",
-   "w_R4QPXAQA3EJZ:0716d970",
-   "w_R4QPXARGTBZ3:fa35e192",
-   "w_R4QPXARP0CTP:77de68da",
-   "w_R4QPXARXZV84:972a67c4",
-   "w_R4QPXAT4WQQV:b1d57811",
-   "w_R4QPXATFZKJ1:17ba0791",
-   "w_R4QPXAW77M8Y:b1d57811",
-   "w_R4QPXAWH9RS4:9e6a55b6",
-   "w_R4QPXAY8MCG7:fa35e192",
-   "w_R4QPXAZWDCJQ:f1abd670",
-   "w_R4QPXB07C3SP:77de68da",
-   "w_R4QPXB0TEY0K:fa35e192",
-   "w_R4QPXB1A18NE:fa35e192",
-   "w_R4QPXB1W6AEQ:0716d970",
-   "w_R4QPXB1X0533:77de68da",
-   "w_R4QPXB4ZZNRC:fa35e192",
-   "w_R4QPXB5FH39D:0716d970",
-   "w_R4QPXB7C04DA:b1d57811",
-   "w_R4QPXB7GF5CG:f1abd670",
-   "w_R4QPXB8B1DAY:0716d970",
-   "w_R4QPXB8PAMVZ:f6e1126c",
-   "w_R4QPXB9MC5A3:f1abd670",
-   "w_R4QPXBAN4C1Q:bd307a3e",
-   "w_R4QPXBBV7YAP:7b52009b",
-   "w_R4QPXBF98Q3G:da4b9237",
-   "w_R4QPXBJEW1T9:c1dfd96e",
-   "w_R4QPXBK6C618:902ba3cd",
-   "w_R4QPXBKJ39AV:9e6a55b6",
-   "w_R4QPXBKXC394:17ba0791",
-   "w_R4QPXBM6K6TA:0716d970",
-   "w_R4QPXBMVS4XY:f1abd670",
-   "w_R4QPXBNF9F0G:77de68da",
-   "w_R4QPXBP6TGZX:ac3478d6",
-   "w_R4QPXBPHJNVA:ac3478d6",
-   "w_R4QPXBRD03QW:bd307a3e",
-   "w_R4QPXBRGZ2Y2:9e6a55b6",
-   "w_R4QPXBTE1JKW:0ade7c2c",
-   "w_R4QPXBTZCW37:7719a1c7",
-   "w_R4QPXBV424RS:7b52009b",
-   "w_R4QPXBWHE3S8:f1abd670",
-   "w_R4QPXBWV3JVE:1b645389",
-   "w_R4QPXBX15T21:7b52009b",
-   "w_R4QPXBYMWZYA:472b07b9",
-   "w_R4QPXBYXD013:7b52009b",
-   "w_R4QPXBYXSEMH:fa35e192",
-   "w_R4QPXC5TJ60V:f1abd670",
-   "w_R4QPXC9ZY83R:1b645389",
-   "w_R4QPXCEBTZM6:fa35e192",
-   "w_R4QPXCH4GQ1Q:7b52009b",
-   "w_R4QPXCK0DZRA:1b645389",
-   "w_R4QPXCKE1ZFE:0ade7c2c",
-   "w_R4QPXCKJA2YC:fe5dbbce",
-   "w_R4QPXCMPARSX:1b645389",
-   "w_R4QPXCSFGXFE:17ba0791",
-   "w_R4QPXCWN2KBV:472b07b9",
-   "w_R4QPXCXE76XN:b1d57811",
-   "w_R4QPXCZFY0PN:c1dfd96e"
-  ],
-  "género:fuera de lista": [
-   "w_R4QPX6BW6XHK:0c7d777a",
-   "w_R4QPX91TERWV:0c7d777a",
-   "w_R4QPX965BFZK:6dcbd515",
-   "w_R4QPX9RBASHY:6dcbd515"
-  ],
-  "país:fuera de lista": [
-   "w_R4QPX51XJ9PW:11f39ca2",
-   "w_R4QPX548P8AS:11f39ca2",
-   "w_R4QPX54SME1J:11f39ca2",
-   "w_R4QPX56Z6QKW:11f39ca2",
-   "w_R4QPX5BH0927:11f39ca2",
-   "w_R4QPX5CR0ZZZ:11f39ca2",
-   "w_R4QPX5G6NJ3W:11f39ca2",
-   "w_R4QPX5GED3J2:11f39ca2",
-   "w_R4QPX5MM3V4H:11f39ca2",
-   "w_R4QPX5MW4VXQ:11f39ca2",
-   "w_R4QPX5S4WR0R:bcb8bc43",
-   "w_R4QPX5SDYEPJ:11f39ca2",
-   "w_R4QPX5V7ERMA:11f39ca2",
-   "w_R4QPX5VT3TVA:11f39ca2",
-   "w_R4QPX5YFEMC6:6f53e52f",
-   "w_R4QPX62VQ7VD:7f166714",
-   "w_R4QPX63954NH:a05a9c8a",
-   "w_R4QPX642D9D2:11f39ca2",
-   "w_R4QPX64Y6E92:11f39ca2",
-   "w_R4QPX67E8Y7E:11f39ca2",
-   "w_R4QPX68YY00P:11f39ca2",
-   "w_R4QPX697T3VV:11f39ca2",
-   "w_R4QPX6A0Z36E:0a4e0523",
-   "w_R4QPX6B16B0R:94591f1f",
-   "w_R4QPX6BSDX8D:73e5ff7a",
-   "w_R4QPX6BSVQ5D:049df686",
-   "w_R4QPX6BW6XHK:11f39ca2",
-   "w_R4QPX6CBX6EB:11f39ca2",
-   "w_R4QPX6DNSSVZ:11f39ca2",
-   "w_R4QPX6DVR9D6:11f39ca2",
-   "w_R4QPX6F5XJB2:049df686",
-   "w_R4QPX6JPHR3D:11f39ca2",
-   "w_R4QPX6MB8EHS:11f39ca2",
-   "w_R4QPX6P7K4J5:11f39ca2",
-   "w_R4QPX6QJ27SV:11f39ca2",
-   "w_R4QPX6SAC7V3:11f39ca2",
-   "w_R4QPX6SAMW84:11f39ca2",
-   "w_R4QPX6TGJAJT:11f39ca2",
-   "w_R4QPX6WHEK92:11f39ca2",
-   "w_R4QPX6X71K80:11f39ca2",
-   "w_R4QPX6XCKJ7A:11f39ca2",
-   "w_R4QPX6ZEQYEW:11f39ca2",
-   "w_R4QPX700Y9CZ:50cb4101",
-   "w_R4QPX704DPSQ:11f39ca2",
-   "w_R4QPX7241XNN:97a32fb2",
-   "w_R4QPX7374R30:11f39ca2",
-   "w_R4QPX76MNV3K:11f39ca2",
-   "w_R4QPX77Q1PKW:11f39ca2",
-   "w_R4QPX78JEZ6G:11f39ca2",
-   "w_R4QPX78RJZ7V:d7a692d5",
-   "w_R4QPX7A3R8R5:11f39ca2",
-   "w_R4QPX7C1CNF2:73e5ff7a",
-   "w_R4QPX7C6QA2S:11f39ca2",
-   "w_R4QPX7C867QB:415a93f1",
-   "w_R4QPX7CQJHZW:11f39ca2",
-   "w_R4QPX7CZ7T1Y:11f39ca2",
-   "w_R4QPX7EQAAKQ:11f39ca2",
-   "w_R4QPX7F2BECE:11f39ca2",
-   "w_R4QPX7FQEP1T:11f39ca2",
-   "w_R4QPX7FRGDDW:11f39ca2",
-   "w_R4QPX7GTCMF4:11f39ca2",
-   "w_R4QPX7KK6KEX:9e1b7f4f",
-   "w_R4QPX7NMNBN5:11f39ca2",
-   "w_R4QPX7NNZHYS:11f39ca2",
-   "w_R4QPX7NRF0TS:11f39ca2",
-   "w_R4QPX7Q3AJJD:11f39ca2",
-   "w_R4QPX7RV73XF:11f39ca2",
-   "w_R4QPX7TXESX0:11f39ca2",
-   "w_R4QPX7VX869R:11f39ca2",
-   "w_R4QPX7X78MKE:3e875e5d",
-   "w_R4QPX7XW1H1W:11f39ca2",
-   "w_R4QPX7Y70CS5:7d2a22dc",
-   "w_R4QPX7YEV6RT:11f39ca2",
-   "w_R4QPX7YHWYZ4:11f39ca2",
-   "w_R4QPX7ZR5SJ7:11f39ca2",
-   "w_R4QPX80QNGTK:e32cfb44",
-   "w_R4QPX817EYSN:11f39ca2",
-   "w_R4QPX81GHCDQ:11f39ca2",
-   "w_R4QPX841HHB2:5d760cbd",
-   "w_R4QPX85W0B9E:11f39ca2",
-   "w_R4QPX86S6Y9A:11f39ca2",
-   "w_R4QPX87J1JPA:11f39ca2",
-   "w_R4QPX87P8W9Q:11f39ca2",
-   "w_R4QPX88QF4WC:11f39ca2",
-   "w_R4QPX8957HVP:049df686",
-   "w_R4QPX8ATJSP5:11f39ca2",
-   "w_R4QPX8B62TDP:11f39ca2",
-   "w_R4QPX8C65WH7:bd834adb",
-   "w_R4QPX8C94X8A:11f39ca2",
-   "w_R4QPX8D58RS9:11f39ca2",
-   "w_R4QPX8F0PTA8:f61eb84d",
-   "w_R4QPX8FDZA5C:0730f377",
-   "w_R4QPX8FR4G58:8ec67f20",
-   "w_R4QPX8FZ640M:469de76c",
-   "w_R4QPX8G86CSM:77036408",
-   "w_R4QPX8GYGGRH:11f39ca2",
-   "w_R4QPX8J7J1Y8:11f39ca2",
-   "w_R4QPX8JVEA1R:d68ee6b5",
-   "w_R4QPX8MJFV70:11f39ca2",
-   "w_R4QPX8MT0F3B:e2dadb4e",
-   "w_R4QPX8N14Z6R:5f816d08",
-   "w_R4QPX8NHKDCN:11f39ca2",
-   "w_R4QPX8PPK13K:11f39ca2",
-   "w_R4QPX8T56XZ1:11f39ca2",
-   "w_R4QPX8VTQBCM:11f39ca2",
-   "w_R4QPX8YK5V08:11f39ca2",
-   "w_R4QPX8ZHYE57:11f39ca2",
-   "w_R4QPX909K448:11f39ca2",
-   "w_R4QPX912QAQ8:543f93fe",
-   "w_R4QPX91TERWV:11f39ca2",
-   "w_R4QPX925DGQ8:523b1421",
-   "w_R4QPX94SZAY0:9f5a8269",
-   "w_R4QPX9606635:11f39ca2",
-   "w_R4QPX965BFZK:703438b1",
-   "w_R4QPX96G4HNG:bc669d58",
-   "w_R4QPX96JNWRT:11f39ca2",
-   "w_R4QPX96RJ65J:11f39ca2",
-   "w_R4QPX97XT2P8:11f39ca2",
-   "w_R4QPX98BF1WP:11f39ca2",
-   "w_R4QPX998J27N:dd400045",
-   "w_R4QPX99G9N72:c3bf8de5",
-   "w_R4QPX99P203H:013a3165",
-   "w_R4QPX9CQ2664:11f39ca2",
-   "w_R4QPX9DM32ET:62020c00",
-   "w_R4QPX9DQRFFN:11f39ca2",
-   "w_R4QPX9FC18BM:86976ec2",
-   "w_R4QPX9G84EZ9:ef23f5f0",
-   "w_R4QPX9GC41WM:11f39ca2",
-   "w_R4QPX9GSJNK3:219c70ec",
-   "w_R4QPX9JSQ4FR:f61eb84d",
-   "w_R4QPX9PVF6JF:049df686",
-   "w_R4QPX9RBASHY:8ec67f20",
-   "w_R4QPX9TAJ7R3:049df686",
-   "w_R4QPX9TZE62C:bf7173b8",
-   "w_R4QPX9VG9XPW:e9a94231",
-   "w_R4QPX9WBPYNP:11f39ca2",
-   "w_R4QPX9WWERYT:11f39ca2",
-   "w_R4QPX9Z1FQQN:8f8dcf15",
-   "w_R4QPX9ZM2N1V:11f39ca2",
-   "w_R4QPX9ZZMM60:415a93f1",
-   "w_R4QPXA1AY97C:11f39ca2",
-   "w_R4QPXA1ZFV43:83783172",
-   "w_R4QPXA2KDS37:11f39ca2",
-   "w_R4QPXA4KWZN4:11f39ca2",
-   "w_R4QPXA5N30Q8:0e667424",
-   "w_R4QPXA6YTDBQ:049df686",
-   "w_R4QPXA7ACHQT:11f39ca2",
-   "w_R4QPXA8GV1ZG:11f39ca2",
-   "w_R4QPXA8K983D:11f39ca2",
-   "w_R4QPXAAASRN9:11f39ca2",
-   "w_R4QPXAB3MB3A:355d503a",
-   "w_R4QPXAB6K1RJ:c1ac241c",
-   "w_R4QPXACG4F3F:11f39ca2",
-   "w_R4QPXAE7ZJM9:e82fcd8c",
-   "w_R4QPXAEZW263:11f39ca2",
-   "w_R4QPXAFVYXJN:92e5d026",
-   "w_R4QPXAGSMB6B:11f39ca2",
-   "w_R4QPXAJECEVB:97a32fb2",
-   "w_R4QPXANJ8YQ9:11f39ca2",
-   "w_R4QPXAPANWHA:11f39ca2",
-   "w_R4QPXAPQDGY5:11f39ca2",
-   "w_R4QPXAPRSAMW:11f39ca2",
-   "w_R4QPXAQA3EJZ:1ef89a35",
-   "w_R4QPXARGTBZ3:9c9937b4",
-   "w_R4QPXARP0CTP:11f39ca2",
-   "w_R4QPXARXZV84:11f39ca2",
-   "w_R4QPXAT4WQQV:8ec67f20",
-   "w_R4QPXATFZKJ1:a1566afd",
-   "w_R4QPXAW77M8Y:11f39ca2",
-   "w_R4QPXAWH9RS4:141844ad",
-   "w_R4QPXAY8MCG7:8633e188",
-   "w_R4QPXAZWDCJQ:c1ac241c",
-   "w_R4QPXB07C3SP:11f39ca2",
-   "w_R4QPXB0TEY0K:11f39ca2",
-   "w_R4QPXB1A18NE:11f39ca2",
-   "w_R4QPXB1W6AEQ:11f39ca2",
-   "w_R4QPXB1X0533:11f39ca2",
-   "w_R4QPXB4ZZNRC:11f39ca2",
-   "w_R4QPXB7C04DA:11f39ca2",
-   "w_R4QPXB7GF5CG:fa196e96",
-   "w_R4QPXB8B1DAY:725e8037",
-   "w_R4QPXB8PAMVZ:2a040c58",
-   "w_R4QPXB9MC5A3:11f39ca2",
-   "w_R4QPXBAN4C1Q:11f39ca2",
-   "w_R4QPXBBV7YAP:11f39ca2",
-   "w_R4QPXBF98Q3G:11f39ca2",
-   "w_R4QPXBJEW1T9:11f39ca2",
-   "w_R4QPXBK6C618:11f39ca2",
-   "w_R4QPXBKJ39AV:11f39ca2",
-   "w_R4QPXBM6K6TA:11f39ca2",
-   "w_R4QPXBMVS4XY:334c2ab2",
-   "w_R4QPXBNF9F0G:11f39ca2",
-   "w_R4QPXBP6TGZX:11f39ca2",
-   "w_R4QPXBPHJNVA:11f39ca2",
-   "w_R4QPXBRD03QW:11f39ca2",
-   "w_R4QPXBRGZ2Y2:11f39ca2",
-   "w_R4QPXBTE1JKW:ef23f5f0",
-   "w_R4QPXBTZCW37:11f39ca2",
-   "w_R4QPXBV424RS:3e9cc070",
-   "w_R4QPXBWHE3S8:11f39ca2",
-   "w_R4QPXBWV3JVE:11f39ca2",
-   "w_R4QPXBX15T21:8ec67f20",
-   "w_R4QPXBYMWZYA:11f39ca2",
-   "w_R4QPXBYXD013:11f39ca2",
-   "w_R4QPXBYXSEMH:efe8105a",
-   "w_R4QPXC5DWF02:11f39ca2",
-   "w_R4QPXC5TJ60V:128e6b32",
-   "w_R4QPXC86G7NS:3c550165",
-   "w_R4QPXC95NWZS:11f39ca2",
-   "w_R4QPXC9ZY83R:62020c00",
-   "w_R4QPXCB2N4Z7:11f39ca2",
-   "w_R4QPXCBPRKWP:11f39ca2",
-   "w_R4QPXCEBTZM6:11f39ca2",
-   "w_R4QPXCED5C9P:f048f064",
-   "w_R4QPXCESTTJ0:11f39ca2",
-   "w_R4QPXCH4GQ1Q:3970f716",
-   "w_R4QPXCK0DZRA:3a018a96",
-   "w_R4QPXCKE1ZFE:11f39ca2",
-   "w_R4QPXCKJA2YC:9b7a2015",
-   "w_R4QPXCKJA3X3:e82fcd8c",
-   "w_R4QPXCMPARSX:11f39ca2",
-   "w_R4QPXCMW3B9R:3c550165",
-   "w_R4QPXCR93D48:11f39ca2",
-   "w_R4QPXCSFGXFE:11f39ca2",
-   "w_R4QPXCTMGVGY:11f39ca2",
-   "w_R4QPXCV3MJWC:11f39ca2",
-   "w_R4QPXCWEJPF7:c1ac241c",
-   "w_R4QPXCWN2KBV:11f39ca2",
-   "w_R4QPXCXE76XN:4c4ba7e2",
-   "w_R4QPXCYHHVCW:11f39ca2",
-   "w_R4QPXCZ1CGX7:11f39ca2",
-   "w_R4QPXCZFY0PN:11f39ca2",
-   "w_R4QPXCZYG7JP:11f39ca2"
-  ]
- },
  "under-2026": {
   "sinopsis en inglés:espacios": [
    "w_R4EK8N69YAQN:99b750b5",
    "w_X28HTRBK8KV2:6019174a"
   ]
  },
- "vartex-2026": {
-  "director:basura": [
-   "w_R4QPXDVPEA25:bd69395d"
-  ],
-  "director:separador": [
-   "w_R4KECG7X4Y9H:682325c1",
-   "w_R4QPXD3VHFC6:48424e88",
-   "w_R4QPXDHWB8AB:0b5fb335",
-   "w_R4QPXDN5M7Y3:632c40bf"
-  ]
- },
  "villadelcine-2026": {
-  "director:basura": [
-   "w_R4QQ9T4PC2TC:b5231557"
-  ],
-  "director:separador": [
-   "w_R4M1E4Z3TM9E:101f2a9d",
-   "w_R4QQMNM724H3:11dc9c8d",
-   "w_R4QR14G0DW0P:cfc7bd4a",
-   "w_R4QR14ZEMY5C:ca55d7fd",
-   "w_R4QSRPNNR39R:e21ef38f",
-   "w_R4QSRPVTKC80:e77f3fda",
-   "w_R4QT4DA4RAZN:bf933513",
-   "w_R4QY2XH9X7FG:b7fcd37e",
-   "w_R4QZG0VAB9Z1:531fc5d7",
-   "w_R4R04MAS4QKD:434fea94",
-   "w_R4R18G5DYRPN:8b359564",
-   "w_R4R2NTMHC0WX:37e77106"
-  ],
-  "género:fuera de lista": [
-   "w_R4H509VY0YAJ:b819aeda",
-   "w_R4H50ADAKX17:b459906e",
-   "w_R4K253HAQJA6:aedf1938",
-   "w_R4QPXDN09GFB:3b823924",
-   "w_R4QQ9SAEKM2V:3c0c7390",
-   "w_R4QQ9SAF3PFQ:e0e8deb1",
-   "w_R4QQ9T2YGVQ2:bc966b2e",
-   "w_R4QQ9TNEKPVY:c337427f",
-   "w_R4QQ9TSER55V:1f995580",
-   "w_R4QR14G0DW0P:f2a509c8",
-   "w_R4QRB91FF0VH:7e3e457d",
-   "w_R4QRB94SKSJP:5a775e33",
-   "w_R4QRNC3G5D84:336fbd55",
-   "w_R4QSRPM4D9SR:dcf2f4cb",
-   "w_R4QSRPVTKC80:8701e03a",
-   "w_R4QSRPWTXWP9:2e91e3e3",
-   "w_R4QT4D08F9VW:a8b20007",
-   "w_R4QT4DA4RAZN:58417789",
-   "w_R4QT4DYAAREC:71de617f",
-   "w_R4QTGA5GSJ25:6411db91",
-   "w_R4QTSD4592NC:1ed566c3",
-   "w_R4QTSD65MWVY:d81c07a2",
-   "w_R4QTSDXKT9D8:b2bed349",
-   "w_R4QTSDZ2MP84:86cc667d",
-   "w_R4QVCV1A8DVC:835780d8",
-   "w_R4QVCVYBT5ZE:d840db42",
-   "w_R4QVR2385VKK:f09545b2",
-   "w_R4QW3K93YPNQ:5a207116",
-   "w_R4QWK7N3EBTG:3ec2c3c9",
-   "w_R4QWYBP5GQ37:d9ea43ff",
-   "w_R4QX85H0WE3T:86f7384a",
-   "w_R4QXPPR7SNFK:a7d422e3",
-   "w_R4QY2XH9X7FG:8701e03a",
-   "w_R4QYC34DEVEJ:5c8d311f",
-   "w_R4QYPS928CFC:f74962d4",
-   "w_R4QZ41H4KVW6:dce9281e",
-   "w_R4QZG0VAB9Z1:4e0df554",
-   "w_R4QZG1CPDC5V:819d846f",
-   "w_R4QZS2EAF2DV:8fb94fa9",
-   "w_R4QZS3QV9CXA:2ac5dbda",
-   "w_R4R04MAS4QKD:231a46fc",
-   "w_R4R04NE5N1KP:4f61db37",
-   "w_R4R0VP6JRDW2:b2b5951a",
-   "w_R4R1HJSYVMEE:79a49289",
-   "w_R4R1W4S2HQQN:0e63b315",
-   "w_R4R2NT7M6XCR:fe329ac5",
-   "w_R4R32PPK4PZK:8a178b95"
-  ],
-  "país:fuera de lista": [
-   "w_R4QR14G0DW0P:6233a4f5",
-   "w_R4QTSDXKT9D8:0e55115e"
-  ],
   "sinopsis:cierre": [
    "w_R4QSRPSXCQ7B:6fda4340"
   ]
  },
  "villadeleyvaiff-2026": {
-  "género:fuera de lista": [
-   "w_R4HJ5XKTZM64:5c9b11df",
-   "w_R4KECG9BFSX8:5c9b11df",
-   "w_R4KECGNEXVAM:5c9b11df",
-   "w_R4NEB2RNHWKD:5c9b11df"
-  ],
   "letterboxd:forma": [
    "w_877Q2XF1018W:deeea692"
   ],

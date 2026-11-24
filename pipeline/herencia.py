@@ -33,10 +33,12 @@ CAMPOS = {'genero': 'genre', 'title_en': 'title_en', 'lbSlug': 'lbSlug', 'anio':
 
 
 def _pais_es(codigos):
-    """['CO', 'AR'] → 'Colombia, Argentina'; un código que la tabla no tiene → None."""
+    """['CO', 'AR'] → 'Colombia, Argentina'; un código que la tabla no tiene → None.
+    El nombre es el de ficha_obra.NOMBRE donde lo haya (Rumania, Palestina…)."""
     import json
+    from ficha_obra import NOMBRE
     iso = json.load(open(os.path.join(REPO, 'pipeline', 'paises.json'), encoding='utf-8'))['iso']
-    nombres = [(iso.get(c) or {}).get('es') for c in codigos]
+    nombres = [NOMBRE.get(c) or (iso.get(c) or {}).get('es') for c in codigos]
     return ', '.join(nombres) if nombres and all(nombres) else None
 
 

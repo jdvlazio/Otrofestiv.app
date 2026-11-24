@@ -194,7 +194,7 @@
    "film_list": [
     {
      "title": "La Ceremonia",
-     "director": "Deimer Vergara / Julián García",
+     "director": "Deimer Vergara, Julián García",
      "country": "Colombia",
      "flags": "🇨🇴",
      "lbSlug": "⚠️ LB PENDIENTE",
@@ -219,7 +219,6 @@
      "lbSlug": "pawa",
      "posterSource": "oficial",
      "work_id": "w_R4HCNBABG3FG",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
@@ -398,7 +397,7 @@
     },
     {
      "title": "Tiempos Revelados",
-     "director": "Paola Nova / Fredy Roldán",
+     "director": "Paola Nova, Fredy Roldán",
      "country": "Colombia",
      "flags": "🇨🇴",
      "lbSlug": "⚠️ LB PENDIENTE",
@@ -671,7 +670,7 @@
     {
      "title": "Chist",
      "director": "Elkin Díaz",
-     "year": "2022",
+     "year": 2022,
      "duration": "11 min",
      "country": "Colombia",
      "flags": "🇨🇴",
@@ -685,7 +684,7 @@
     {
      "title": "Sin la Luz Perpetua",
      "director": "Raúl Gutiérrez",
-     "year": "2022",
+     "year": 2022,
      "duration": "25 min",
      "country": "Colombia",
      "flags": "🇨🇴",
@@ -716,7 +715,7 @@
     {
      "title": "Filminutos Semillero YarimaFICS — Barrancabermeja",
      "director": "",
-     "year": "2025",
+     "year": 2025,
      "duration": "~15 min",
      "country": "Colombia",
      "flags": "🇨🇴",
@@ -727,9 +726,9 @@
     {
      "title": "Candelaria",
      "director": "Jhonny Hendrix Hinestroza",
-     "year": "2017",
+     "year": 2017,
      "duration": "87 min",
-     "country": "Colombia / Cuba",
+     "country": "Colombia, Cuba",
      "flags": "🇨🇴🇨🇺",
      "synopsis": "Dos pensionistas, una cámara de video y una propuesta indecente.",
      "lbSlug": "candelaria-2017",
