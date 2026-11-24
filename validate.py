@@ -7289,6 +7289,26 @@ try:
 except Exception:
     pass
 
+# ── [obra-unica] lo publicado de una obra es lo decidido, en todos los festivales ──
+# 24 nov 2026 (revisión senior): pipeline/obra_unica.py. Con decisión, todos los
+# festivales publican esa; sin decisión, coinciden o hay que decidir.
+check = 'obra-unica'
+try:
+    import obra_unica as _ou
+    _ciego = _ou.autoprueba()
+    _div = _ou.divergencias(_fests, _decs)
+    _sobra = _ou.excepciones_de_mas(_fests, _decs)
+    if _ciego:
+        fail(check, 'el guardián no ve cambios en: ' + ', '.join(_ciego))
+    elif _div:
+        fail(check, f'{len(_div)} divergencia(s) — python3 pipeline/obra_unica.py: ' + ' · '.join([_ou.texto(x) for x in _div[:4]] + _ou.que_hacer(_div)))
+    elif _sobra:
+        fail(check, 'excepción que ya no hace falta, bórrala de obra_unica.EXCEPCIONES: ' + ', '.join(_sobra))
+    else:
+        ok(check, 'lo publicado de cada obra es lo decidido en todos los festivales')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 # ── [caja-titulo] programas y secciones en Título (regla de Juan, 15 oct 2026) ──
 # «Muestra de Cortos», «Colombia Viva»: las palabras son del festival y la caja
 # de la app (pipeline/caja.py, el único dueño). Los títulos de obra no se miran.

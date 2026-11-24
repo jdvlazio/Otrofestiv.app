@@ -365,6 +365,16 @@ def publicar(fid, forzar=False, ensayo=False):
         import ficha_unica
         for _t, _k, _a, _b in ficha_unica.aplicar(out):
             print(f'  · {_k} del almacén: «{_t[:40]}» {_a} → {_b}')
+        # [obra-unica]: lo que quedó distinto de otro festival frena el push; se dice acá
+        import obra_unica
+        _fs = {**obra_unica._festivales(), fid: out}
+        _div = [x for x in obra_unica.divergencias(_fs, catalogo.decisiones()) if any(fid in v for v in x[4].values())]
+        for _x in _div:
+            print('  ⚠ ' + obra_unica.texto(_x))
+        for _h in obra_unica.que_hacer(_div):
+            print('    → ' + _h)
+        if _div and _ENSAYO is not None:
+            _ENSAYO.append(f'datos de obra que difieren de otro festival ({len(_div)})')
         if _nuevas:
             print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
             for t in _nuevas[:10]:

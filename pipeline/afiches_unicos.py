@@ -150,6 +150,12 @@ def revisar(solo=None):
 _FUENTE = {'oficial': 'oficial', 'oficial-festival': 'custom', 'fotograma': 'editorial'}
 
 
+def elegidos(decs):
+    """{work_id: decisión} de los afiches que viajan (un fotograma remoto no)."""
+    return {x['work_id']: x for x in decs if x['campo'] == 'afiche'
+            and (x['valor']['veredicto'] != 'fotograma' or x['valor']['archivo'].startswith('/assets/'))}
+
+
 def aplicar(d, decs=None):
     """El afiche elegido de cada obra, en el JSON del festival `d` (en el lugar).
     La usan publicar.py y --aplicar: la misma función, para que un re-armado dé lo
@@ -162,7 +168,7 @@ def aplicar(d, decs=None):
         sys.path.insert(0, os.path.join(REPO, 'pipeline'))
         import catalogo
         decs = catalogo.decisiones()
-    eleg = {x['work_id']: x for x in decs if x['campo'] == 'afiche' and (x['valor']['veredicto'] != 'fotograma' or x['valor']['archivo'].startswith('/assets/'))}
+    eleg = elegidos(decs)
     out = []
     for f in d.get('films', []):
         for o in (f.get('film_list') or [f]):

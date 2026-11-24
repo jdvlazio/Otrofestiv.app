@@ -114,7 +114,7 @@ def revisar(solo=None):
             continue
         for f in d.get('films', []):
             for o in (f.get('film_list') or [f]):
-                e, s = dec.get(o.get('work_id')), o.get('synopsis')
+                e, s = dec.get(o.get('work_id')), o.get('synopsis_es') or o.get('synopsis')
                 if not e or not s:
                     continue
                 h = huella(s)
