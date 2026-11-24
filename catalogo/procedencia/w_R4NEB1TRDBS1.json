@@ -26,5 +26,17 @@
   "regla": "decisión",
   "motivo": "la vertical, sin la marca de SiembraFest",
   "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24"
  }
 }
