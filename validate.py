@@ -5632,6 +5632,27 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar pipeline-circuito: {_e}')
 
+# ── [solo-dias-oficiales] nada fuera de las fechas del afiche ──────────────────
+# Regla de Juan (8 oct 2026); el 24 nov Vélez se armó desde el 30 nov con afiche
+# «1–6 dic». Las fechas oficiales viven en `canales` de ig-vigia-cuentas.json.
+check = 'solo-dias-oficiales'
+try:
+    import glob, sys as _sysd
+    _sysd.path.insert(0, 'pipeline')
+    import canales as _cn
+    _cu = json.load(open('pipeline/ig-vigia-cuentas.json', encoding='utf-8'))
+    _fu = {}
+    for _p in sorted(glob.glob('festivals/*.json')):
+        _d = _cn.fuera_de_fechas(_cu, os.path.basename(_p)[:-5], json.load(open(_p, encoding='utf-8')))
+        if _d:
+            _fu[os.path.basename(_p)[:-5]] = _d
+    if _fu:
+        fail(check, 'función o fecha fuera de las fechas oficiales del festival: ' + ' · '.join(f'{k} {", ".join(x)}' for k, x in _fu.items()))
+    else:
+        ok(check, 'ninguna función fuera de las fechas oficiales declaradas')
+except Exception as _e:
+    fail(check, f'no se pudo medir: {_e}')
+
 # ── [sede-matriz] un lugar, un pin: la matriz de sedes ─────────────────────────
 # 16 nov 2026 (Juan: «así como hay una de películas, las sedes deberían vivir en
 # un archivo matriz»). catalogo/sedes.json la arma pipeline/sedes.py desde los
