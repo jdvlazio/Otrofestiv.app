@@ -7331,6 +7331,26 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [sinopsis-par] español e inglés (pipeline/sinopsis_par.py) ───────────────
+# Juan, 24 nov 2026: había obras con sinopsis en inglés y sin español, y al revés.
+check = 'sinopsis-par'
+try:
+    import sinopsis_par as _sp
+    _ciega = _sp.autoprueba()
+    _exc = _sp.excedidos(_fests)
+    if _ciega:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
+    elif _exc:
+        fail(check, 'sinopsis en un solo idioma — traducirla con la skill sinopsis-corta: '
+             + ' · '.join(f'{_f}: ' + ', '.join(_x[:4]) + (f' (+{len(_x) - 4})' if len(_x) > 4 else '') for _f, _x in _exc[:5]))
+    else:
+        ok(check, 'ninguna obra suma sinopsis en un solo idioma')
+        _hol = _sp.holgura(_fests)
+        if _hol:
+            warn(check, 'bajó la deuda — python3 pipeline/sinopsis_par.py --congelar: ' + ', '.join(_hol[:6]))
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 # ── [caja-titulo] programas y secciones en Título (regla de Juan, 15 oct 2026) ──
 # «Muestra de Cortos», «Colombia Viva»: las palabras son del festival y la caja
 # de la app (pipeline/caja.py, el único dueño). Los títulos de obra no se miran.

@@ -22,6 +22,7 @@ Dueño: `pipeline/ficha_obra.py`; guardián `[ficha-obra]`.
 | Año | Número, el del primer estreno |
 | Sinopsis ES | Cuenta la obra, en español, cierra la frase; corta: `[sinopsis-larga]` |
 | Sinopsis EN | En inglés, cierra la frase, no habla del festival |
+| Sinopsis ES y EN | Si hay una, está la otra: `[sinopsis-par]` |
 | Duración | «N min» (es de la copia) |
 | Letterboxd / TMDB | forma del slug / número |
 | Afiche | archivo que existe |
