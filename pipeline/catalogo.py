@@ -21,7 +21,7 @@ import re
 import secrets
 import time
 
-from lib import sinacento
+from lib import misma_persona, sinacento
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIR = os.path.join(REPO, 'catalogo')
@@ -160,7 +160,7 @@ def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
     h, ap = huella(titulo), apellido(director)
     if not h:
         return None, None
-    hits = set()
+    hits, largos = set(), set()   # largos: la misma persona con más o menos apellidos, si nadie casa exacto
     for wid, o in obs.items():
         pres = [p for p in o.get('presentaciones') or [] if p != excluir]
         if not pres:
@@ -170,12 +170,15 @@ def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
         a_ok = anio is None or o.get('anio') is None or abs(anio - o['anio']) <= 1
         aps = {apellido(d) for d in o.get('directores') or []}
         if ap and aps - {''}:
-            if ap in aps and a_ok:
+            if a_ok and ap in aps:
                 hits.add(wid)
+            elif len((director or '').split()) > 1 and a_ok and misma_persona(director, ', '.join(o.get('directores') or [])):
+                largos.add(wid)
         elif (anio and o.get('anio') and abs(anio - o['anio']) <= 1) or \
                 (duracion and any(v.get('duracion_min') and abs(v['duracion_min'] - duracion) <= 3
                                   for v in o.get('versiones') or [])):
             hits.add(wid)
+    hits = hits or largos
     return (hits.pop(), 'coincide') if len(hits) == 1 else (None, None)
 
 
