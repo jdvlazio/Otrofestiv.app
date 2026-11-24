@@ -5112,14 +5112,30 @@
  {
   "work_id": "w_R4FS61XPY9M6",
   "campo": "sinopsis.es",
-  "valor": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revela la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+  "valor": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revela la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros, hasta las profundidades de la tierra y de sí mismo. El poder está en el significado que otorga a lo que encuentra.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, ficci-65 · corregida)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
   "vistas": [
    "83571b083639",
+   "97f4b9970378",
    "dc3724561790"
-  ]
+  ],
+  "original_de": [
+   "bogoshorts-2026",
+   "cinemancia-2026",
+   "ficci-65",
+   "filcmar-2026"
+  ],
+  "titulo": "El cazador",
+  "original": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revela la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "bc5b0ec9a5c3"
+  }
  },
  {
   "work_id": "w_R4MMFQPBNEZM",
@@ -5245,14 +5261,29 @@
  {
   "work_id": "w_R4FGC7CK0E1Q",
   "campo": "sinopsis.es",
-  "valor": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
+  "valor": "Según el mito muisca, la llanura de Bogotá fue inundada por arroyos que amenazaban con arrasarlo todo, hasta que el dios Bochica hirió la serranía con su bastón y abrió paso a las aguas: así se formó el Salto del Tequendama. Allí, el río Bogotá se estrella contra un banco de piedras y se arroja, en espumas y vapores, hacia el abismo que lo espera.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, midbo-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
   "vistas": [
    "73351c895829",
    "ffa701289c58"
-  ]
+  ],
+  "original_de": [
+   "bogoshorts-2026",
+   "cinemancia-2026",
+   "cinetoro-2026",
+   "midbo-2026"
+  ],
+  "titulo": "El salto",
+  "original": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "cbb6049f22d3"
+  }
  },
  {
   "work_id": "w_R4GTPWHY6Q7K",
@@ -7038,13 +7069,26 @@
  {
   "work_id": "w_R4GJYFY7T1RA",
   "campo": "sinopsis.es",
-  "valor": "En el Parque Nacional de Bogotá, pasean unos sujetos que se cruzan con los integrantes de un paseo, posteriormente se encuentran con una niña que desea hacer una llamada y pide a los sujetos le cambien una moneda, se dirige al teléfono y llama, entre tanto los del paseo pasan frente a unos enamorados que se besan burlándose de ellos. Los enamorados disgustados se retiran mientras los del paseo siguen su trayectoria para realizar su piquete. Entre tanto un raponero se da cuenta que la niña que llama por teléfono posee un bolso, acercándose lo rapta y sale a toda velocidad y ella detrás gritando: pasan frente a un mago que se encuentra leyendo una de sus magias y pone en práctica una de ellas deteniendo al raponero y haciéndolo retroceder, se incorpora y devuelve el bolso a la niña, en ese instante se acercan los sujetos que antes habían cambiado la moneda a la niña y felicitan al mago por su oportuna acción.",
+  "valor": "En el Parque Nacional de Bogotá, una niña pide a unos sujetos que le cambien una moneda para hacer una llamada. Entre tanto, los integrantes de un paseo se burlan de unos enamorados que se besan. Un raponero le rapta el bolso a la niña y sale a toda velocidad; ella corre detrás gritando. Ambos pasan frente a un mago que lee una de sus magias.",
   "motivo": "corrección de «texto roto»: texto del festival sin lo que no era sinopsis",
   "fecha": "2026-11-23",
   "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
   "vistas": [
    "740f7ca02656"
-  ]
+  ],
+  "original_de": [
+   "bogoshorts-2026",
+   "fantasmagoria-2026"
+  ],
+  "titulo": "Kondor, el mago",
+  "original": "En el Parque Nacional de Bogotá, pasean unos sujetos que se cruzan con los integrantes de un paseo, posteriormente se encuentran con una niña que desea hacer una llamada y pide a los sujetos le cambien una moneda, se dirige al teléfono y llama, entre tanto los del paseo pasan frente a unos enamorados que se besan burlándose de ellos. Los enamorados disgustados se retiran mientras los del paseo siguen su trayectoria para realizar su piquete. Entre tanto un raponero se da cuenta que la niña que llama por teléfono posee un bolso, acercándose lo rapta y sale a toda velocidad y ella detrás gritando: pasan frente a un mago que se encuentra leyendo una de sus magias y pone en práctica una de ellas deteniendo al raponero y haciéndolo retroceder, se incorpora y devuelve el bolso a la niña, en ese instante se acercan los sujetos que antes habían cambiado la moneda a la niña y felicitan al mago por su oportuna acción.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "d398f4886528"
+  }
  },
  {
   "work_id": "w_R4GS36P262K8",
@@ -8865,5 +8909,1708 @@
   "motivo": "dos cortos distintos con el mismo título en TIFF: Pelechian (Armenia, 1992, 8 min) y Lindroth von Bahr (2026, 17 min, TMDB 1472669)",
   "fecha": "2026-10-12",
   "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)"
+ },
+ {
+  "work_id": "w_4KDR096SGAQ9",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "d6ee22822ec9"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "No te conozcas",
+  "valor": "Narciso desciende la ciudad subterránea en busca de un amigue perdide que ha estado instalando softwares ilegales en su cerebro. En lugar de encontrarle, descubre un río atrapado dentro de su propia mente, paralizado por enzimas sintéticas que lo mantienen despierto. Para liberarlo, debe enfrentar verdades ignoradas por mucho tiempo.",
+  "original": "Narciso desciende la ciudad subterránea, en la búsqueda de un amigue perdide que ha estado instalando softwares ilegales en su cerebro. Pero en lugar de encontrarle, descubre un río atrapado dentro de su propia mente, cuyo flujo está paralizado por enzimas sintéticas que lo mantienen despierto. Para liberarlo, debe enfrentar verdades que han sido ignoradas por mucho tiempo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "5daaca3460f0"
+  }
+ },
+ {
+  "work_id": "w_4KDR20KD87DJ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "30a396975aa5"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Carta a un joven ladrón",
+  "valor": "Un cortometraje en las fronteras del autorretrato y la experimentación con el archivo personal. Explora la tensión entre la materialidad de la memoria y la construcción de identidad, con un flujo de conciencia que se pregunta por el devenir de la vida, la disincronía temporal y la posibilidad constante de la muerte.",
+  "original": "Carta a un joven ladrón, un cortometraje que se articula en las fronteras del autorretrato y la experimentación con el archivo personal. La obra explora la tensión entre la materialidad de la memoria y la construcción de identidad, proponiendo un flujo de conciencia que se pregunta por el devenir de la vida, la disincronía temporal y la posibilidad constante de la muerte.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "388c5811fef2"
+  }
+ },
+ {
+  "work_id": "w_4KDR35MQ0D5X",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "b32b41f5d1f7"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El píxel y la parcela",
+  "valor": "Los datos producen narrativas, políticas y leyes: le dan forma a la tierra. La obra investiga su rol en la violencia de la erradicación de la coca en la Amazonía colombiana. Satélites, fotografías y mapas capturan imágenes de la coca y crean un complejo de información que convierte a la planta en un ser clandestino a ser eliminado.",
+  "original": "Los datos producen narrativas, políticas y leyes. Le dan forma a la tierra. El píxel y la parcela investiga el rol de los datos en la violencia de la erradicación de la coca en la Amazonía colombiana. Desde el momento en que la coca fue prohibida, su existencia y destrucción han sido cuantificadas y documentadas. Las imágenes de la coca son capturadas por satélites, fotografías y mapas, creando un complejo de información que convierte a la planta en un ser clandestino a ser eliminado.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "d7f5b38e9487"
+  }
+ },
+ {
+  "work_id": "w_R4HDE4TF8RNM",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "36e7a48bc9d9",
+   "8f1ce893cf89"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Suite Intercontinental",
+  "valor": "Desde el piso treinta de una torre de vidrio, Margot observa una Cali agitada por la tensión. Deslumbrada por el sol tropical, recorre la ciudad ajena a lo que la rodea y sus fantasías se confunden con la realidad. En la calle cruza la mirada con un hombre de torso desnudo y ojos penetrantes. Lo sigue cada día y se acerca al objeto de su deseo.",
+  "original": "Desde el piso treinta de una torre de vidrio, Margot observa una Cali agitada por la tensión. Deslumbrada por el sol tropical, recorre la ciudad ajena a lo que la rodea y sus fantasías se confunden con la realidad. En la calle, su mirada se cruza con la de un hombre de torso desnudo y ojos penetrantes. Margot lo sigue cada día y se acerca poco a poco al objeto de su deseo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b56130bbd86b"
+  }
+ },
+ {
+  "work_id": "w_4KDTWVRM7M5S",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5c7e6271370d"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "La línea del mar",
+  "valor": "En un pequeño pueblo del Pacífico colombiano, cinco jóvenes comparten sus días junto al mar. Entre conversaciones, caminatas y silencios, su amistad se entrelaza con el paisaje. A medida que el océano avanza, su vínculo se enfrenta a una despedida inevitable, marcada por la adultez, la nostalgia y la imposibilidad de quedarse.",
+  "original": "En un pequeño pueblo del Pacífico colombiano, cinco jóvenes comparten sus días junto al mar. Entre conversaciones, caminatas y silencios, su amistad se entrelaza con el paisaje. La marea, las ruinas y los espacios que habitan revelan una transformación silenciosa. A medida que el océano avanza, su vínculo se enfrenta a una despedida inevitable marcada por la adultez, la nostalgia y la imposibilidad de quedarse.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a2fee96c2413"
+  }
+ },
+ {
+  "work_id": "w_4KDVAZC8TJ9D",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "75bf139840f7"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Stadionul Dragostei",
+  "valor": "Un equipo de fútbol llega al «Estadio del Amor», en un remoto pueblo de Transilvania, para un partido amistoso. Lo que comienza como un típico desplazamiento se convierte en un viaje en el tiempo, lleno de historias y encanto local de lo que alguna vez fue un próspero pueblo minero que mantiene viva su memoria a través del fútbol.",
+  "original": "Un equipo de fútbol llega al “Estadio del Amor”, un campo situado en un remoto pueblo de Transilvania, para disputar un partido amistoso. Lo que comienza como un típico desplazamiento se convierte en un viaje en el tiempo, lleno de historias y encanto local de lo que alguna vez fue un próspero pueblo minero que mantiene viva su memoria a través del fútbol.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "1dcc76068c1f"
+  }
+ },
+ {
+  "work_id": "w_4KDW91HEMYMQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "9f8dc750c1e2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Barra brava",
+  "valor": "Rodado a lo largo de una semana intensa en Cali, Colombia, este cortometraje documental propone una inmersión de estilo vérité en el mundo de las hinchadas más apasionadas y controvertidas de Sudamérica. Filmado íntegramente en 16mm, con una partitura original de sintetizadores, deja que sus integrantes hablen por sí mismos.",
+  "original": "Rodado a lo largo de una semana intensa en Cali, Colombia, Barra Brava propone una inmersión de estilo vérité en el mundo de las hinchadas más apasionadas y controvertidas de Sudamérica. La película deja que sus integrantes hablen por sí mismos. Filmado íntegramente en 16mm y acompañado por una partitura original de sintetizadores, este cortometraje documental es a la vez una experiencia cinematográfica y un documento cultural.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "39ccd7166a82"
+  }
+ },
+ {
+  "work_id": "w_4KDWWD07DD6X",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "dce4cb02ada1"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Le miracle",
+  "valor": "Después de que su hijo adulto, Mattia, interrumpiera su baño relajante, Angelica por fin puede dejarse llevar y se masturba delante del póster del futbolista Valenti, ídolo de su hijo. De repente, la mirada de Valenti se fija en ella. Se extiende una euforia absurda: el milagro se cristaliza en una lucha de poder e intimidad entre madre e hijo.",
+  "original": "Después de que su hijo adulto, Mattia, la interrumpiera mientras se daba un baño relajante, Angelica por fin puede dejarse llevar. Es entonces cuando empieza a masturbarse delante del póster del futbolista Valenti, el ídolo de su hijo. De repente, la mirada de Valenti se fija en ella... Se extiende una euforia absurda: el milagro se cristaliza en una lucha de poder e intimidad entre madre e hijo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "79c77f56136a"
+  }
+ },
+ {
+  "work_id": "w_4KE01AC6F6D6",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "1f3e41ed0ff2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Pinchu es así",
+  "valor": "Pinchu es un guarrete y todos y todas le ríen la gracia, incluida su novia Jimena, que monta un fiestón épico por sus 30 años. Sólo Bea es capaz de verlo tal y como es, sin filtros, aunque quizá esa experiencia traumática la obligue a plantearse si no estará justificando de la misma forma el comportamiento de un ser muy querido.",
+  "original": "Pinchu es un guarrete y todos y todas le ríen la gracia, incluida su novia Jimena, que cumple 30 años este fin de semana y está montando un fiestón épico. Sólo Bea es capaz de verlo sin filtros, tal y como es, aunque quizá esa experiencia traumática la obligue a plantearse si ella no estará justificando de la misma forma el comportamiento de un ser muy querido.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "c6b8d847e831"
+  }
+ },
+ {
+  "work_id": "w_4KE5T266SQ0H",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "742d1d1f36b2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Like a Beast",
+  "valor": "Tras otro viaje de un multimillonario al espacio y unos Juegos Olímpicos de Invierno en medio del desierto, teníamos algo claro: todos íbamos a morir. La estupidez humana había llegado a su cima: plátanos envueltos en plástico, perros homosexuales abatidos a tiros. Cambio climático. Revolución. Guerra. Y después de todo... haremos fotos.",
+  "original": "Tras otro viaje de un multimillonario al espacio y unos Juegos Olímpicos de Invierno en medio del desierto, teníamos algo claro: todos íbamos a morir. La estupidez humana había llegado a su cima: plátanos envueltos en plástico, perros homosexuales abatidos a tiros. Pérdida de poder adquisitivo. Cambio climático. Revolución. Guerra. Y después de todo... haremos fotos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "fb42196f3f8f"
+  }
+ },
+ {
+  "work_id": "w_4KE6GK8FS60T",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "9cfd7b19a068"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Pískoviště",
+  "valor": "Un niño juega en un arenero con juguetes de madera; uno está roto. El juguete lo lleva a un mundo oculto bajo la arena, donde los juguetes cobran vida. Entre la niebla llega al taller luminoso de un anciano que fabrica juguetes mágicos. El niño juega feliz, pero el anciano sabe que no pertenece allí.",
+  "original": "Un niño juega con juguetes de madera en un arenero; uno está roto. El juguete lo lleva a un mundo oculto bajo la arena, donde los juguetes cobran vida. Entre la niebla llega al taller luminoso de un anciano que fabrica juguetes mágicos. El niño juega feliz, pero el anciano sabe que no pertenece allí y lo guía de vuelta con un regalo de despedida. Ya en el arenero soleado, encuentra su juguete reparado. Al pasar junto a un taller y viejas fotos, descubre que el anciano se parecía a su abuelo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a29ca9bdc3d0"
+  }
+ },
+ {
+  "work_id": "w_4KE6VYDBH0BV",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "142d9c4bf545"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Joychair",
+  "valor": "En un futurista sistema de salud controlado por la inteligencia artificial, a Theodora, una anciana solitaria, le diagnostican depresión y le recetan un tratamiento que incluye contacto físico. Su tierno vínculo con un «abrazador profesional» pronto revela la escalofriante visión de la industria tecnológica de sustituir la conexión humana.",
+  "original": "En un futurista sistema de salud controlado por la inteligencia artificial, a Theodora, una anciana solitaria, le diagnostican depresión y le recetan un plan de tratamiento en varias fases que incluye el contacto físico. Lo que comienza como un tierno vínculo con su «abrazador profesional» pronto pone de manifiesto la escalofriante visión de la industria tecnológica de sustituir la conexión humana.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "1de811ce681d"
+  }
+ },
+ {
+  "work_id": "w_4KE7BAXSYMKW",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "6e8880860fd8"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Raíces",
+  "valor": "Después de años sin contacto, Alex visita a su padre Frank, que vive aislado en una cabaña en el bosque. El silencio y la tensión marcan el reencuentro. Mientras intenta acercarse a él, Alex descubre el vínculo de Frank con una misteriosa planta que crece en el sótano, tras la que se esconde algo mucho más inquietante.",
+  "original": "Después de años sin contacto, Alex visita a su padre Frank, que vive aislado en una cabaña en el bosque. El reencuentro está marcado por el silencio y la tensión entre ambos. Mientras intenta acercarse a su padre, Alex descubre el vínculo de Frank con una misteriosa planta que crece en el sótano de la casa, tras la que se esconde algo mucho más inquietante.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "c0bf3a801c48"
+  }
+ },
+ {
+  "work_id": "w_4KE9K3XEVDCP",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5f74a7f58b19"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Niska trava",
+  "valor": "Una tarde de principios de verano comienza con un juego. Un niño cuenta hasta tres mil y los demás se esconden entre los jardines de los suburbios. Entretanto, un padre joven pasa la tarde con el hijo de otra persona, un anciano aguarda una llamada que cambiará su vida y el futuro de una amistad se ve amenazado.",
+  "original": "Una tarde de principios de verano comienza con un juego. Mientras un niño cuenta hasta tres mil, los demás se esconden entre los jardines de las casas de los suburbios. Entretanto, un padre joven pasa la tarde con el hijo de otra persona, un anciano aguarda una llamada que cambiará su vida y el futuro de una amistad se ve amenazado. El juego termina cuando los mosquitos empiezan a surgir de la hierba.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "749724a2072a"
+  }
+ },
+ {
+  "work_id": "w_4KEBF0T14GQ6",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "96c0af0c56c9"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Red Elephant",
+  "valor": "¿Qué aspecto tiene lo queer cuando has pasado la vida borrando sus huellas para sobrevivir? El director comparte su recorrido por la violencia silenciosa de la burocracia. El sistema de asilo belga exige a solicitantes LGBTQ+ narrar lo indecible a desconocidos: lo queer debe traducirse en pruebas y el trauma, en testimonio.",
+  "original": "¿Qué aspecto tiene lo queer cuando has pasado la vida borrando sus huellas para sobrevivir? En Red Elephant, el director comparte su recorrido por la violencia silenciosa de la burocracia, donde lo queer debe traducirse en pruebas y el trauma en testimonio. En el sistema de asilo belga, a solicitantes LGBTQ+, muchos provenientes de lugares donde callar era sobrevivir, se les exige narrar lo indecible y contar sus heridas más íntimas a desconocidos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "cabaa7eab9e8"
+  }
+ },
+ {
+  "work_id": "w_4KEETH66KE63",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "a16cbe631472"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "跳房子",
+  "valor": "En una pequeña ciudad de Hunan, tras el colapso del auge inmobiliario, el Tío 3 decidió abandonar este mundo. Un documental familiar filmado durante siete años recorre los edificios inacabados de nuestra ciudad y reconstruye fragmentos de su vida. Su alma se funde con esas estructuras incompletas, suspendida en un tiempo detenido.",
+  "original": "En una pequeña ciudad de Hunan, tras el colapso del auge inmobiliario, el Tío 3 decidió abandonar este mundo. Un documental familiar filmado durante siete años recorre los edificios inacabados de nuestra ciudad y reconstruye fragmentos de su vida. Su alma se funde con esas estructuras incompletas, suspendida en un tiempo detenido, como si nada hubiera ocurrido.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "fc71e387f57d"
+  }
+ },
+ {
+  "work_id": "w_4KEFG5Q5DJY2",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "24e4928d6a0e"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El final de los tiempos",
+  "valor": "En un centro de rehabilitación psicosocial para personas con esquizofrenia, los miembros de un taller de cine crean una película sobre el fin del mundo. Mientras intentan alertar de la llegada de un asteroide, enfrentan los desafíos de la autorrepresentación y, al improvisar, reflejan sus experiencias y reflexiones sobre la vida y la muerte.",
+  "original": "Los miembros de un taller de cine en un centro de rehabilitación psicosocial para personas con esquizofrenia se reúnen para crear una película sobre el fin del mundo. Mientras intentan alertar a las autoridades sobre la inminente llegada de un asteroide, este diverso grupo enfrenta los desafíos de la autorrepresentación en el cine. A través de la improvisación, reflejan sus propias experiencias, perspectivas y reflexiones sobre la vida y la muerte.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "ded35808ba36"
+  }
+ },
+ {
+  "work_id": "w_4KEG03NDGPCW",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "abb382fac57c"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Esa fugaz esencia que dejaron los sucesos",
+  "valor": "Las calles de Barcelona están pobladas de huellas de pequeñas y grandes luchas de las mujeres. Algunas apenas se perciben; otras son placas o monumentos que intentan reconstruir el pasado que la Historia con H mayúscula quiso borrar. Busco convertir la huella que se sale del tiempo y así sentir esa fugaz esencia que dejaron los sucesos.",
+  "original": "Las calles de Barcelona están pobladas de las huellas de pequeñas y grandes luchas que realizaron las mujeres a lo largo de la historia. Algunas, apenas se perciben, centellean, se ocultan. Otras, se han convertido en huellas intencionales, placas y/o monumentos que intentan reconstruir y actualizar el pasado que la Historia con H mayúscula quiso borrar. Busco convertir la huella que se sale del tiempo y así, sentir, esa fugaz esencia que dejaron los sucesos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "e905b853315d"
+  }
+ },
+ {
+  "work_id": "w_4KEK4P061VBS",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "9d924ed9b0da"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Querida A.",
+  "valor": "En la era del control y la hiperconectividad, todo parece dejar rastro, pero hay vidas que flotan por debajo del umbral de visibilidad. Durante cinco años, A. vive en las calles de Barcelona, sin documentos, y su familia no consigue localizarla, hasta que un mensaje por Facebook lo cambia todo. Una reflexión visual sobre la ciudad contemporánea.",
+  "original": "Vivimos en la era del control y de la hiperconectividad, todos nuestros gestos y movimientos parecen dejar rastro y, sin embargo, hay vidas que flotan por debajo del umbral de visibilidad. Durante cinco años A. vive en las calles de Barcelona, sin documentos y sin domicilio fijo. Su familia no consigue localizarla, hasta que un mensaje por Facebook lo cambia todo. Una reflexión visual sobre la ciudad contemporánea y sus agujeros negros.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "c45bed24af88"
+  }
+ },
+ {
+  "work_id": "w_4KEK5ACRSM5F",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "9eedff7a4332"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Has estado aquí",
+  "valor": "Tras un camino migratorio de veinte años, la directora ve envejecer a su madre desde la distancia: su mente con demencia empieza a olvidar los pocos momentos que compartieron en Barcelona y Bogotá. Por teléfono, le brinda esos recuerdos para que los reviva y, al mismo tiempo, lucha por una reagrupación familiar y por estar presente para su hija.",
+  "original": "Después de un largo camino migratorio de veinte años, la directora se enfrenta a su época más difícil: ver envejecer a su madre desde la distancia y darse cuenta de cómo su mente con demencia empieza a olvidar esos pocos momentos que compartieron en Barcelona y Bogotá. A través de las conversaciones telefónicas que tiene con su madre le brinda esos recuerdos para que ella los reviva y al mismo tiempo lucha para intentar una reagrupación familiar y estar presente para su hija.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a2850e93842a"
+  }
+ },
+ {
+  "work_id": "w_4KEKTTFVMWNS",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "20ccc93639da"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Cementiri d’antenes",
+  "valor": "En Barcelona, la única posibilidad de horizonte es vertical y arriba solo se ven antenas. Una fábula política sobre el presente: la desmaterialización de las imágenes, la toxicidad invisible del capital tecnológico y la posibilidad de una resistencia en los márgenes. Una reflexión sensorial sobre quién puede ver el cielo... y quién vive debajo.",
+  "original": "En Barcelona, la única posibilidad de horizonte es vertical y si miras hacia arriba solo ves antenas. El cielo hace años que dejó de ser azul. Más que un futuro cerrado, esta pieza propone una fábula política sobre el presente: sobre la desmaterialización de las imágenes, la toxicidad invisible del capital tecnológico y la posibilidad de una resistencia que se organiza en los márgenes. Una reflexión sensorial sobre quién puede ver el cielo... y quién vive debajo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "7c5c32512f0c"
+  }
+ },
+ {
+  "work_id": "w_4KEMBRYPQKFT",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "70ea851688e2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Jülapüin Yonna",
+  "valor": "En la Alta Guajira, Weinshi, una joven wayuu de 15 años, descubre en sus sueños un llamado ancestral: la tierra necesita ser sanada con la Yonna, danza sagrada de su pueblo. Impulsada por visiones del desequilibrio causado por la explotación minera en su territorio, emprende un viaje hacia el sur en busca de la sabiduría y guía de sus abuelos.",
+  "original": "En el corazón de la Alta Guajira, Weinshi (15), “El tiempo” una joven del pueblo Wayuu, descubre un llamado ancestral en sus sueños, la tierra necesita ser sanada a través de la danza sagrada de su pueblo, la Yonna. Impulsada por visiones que revelan el desequilibrio causado por la explotación minera en su territorio, Weinshi emprende un viaje desde la Zona Norte Extrema hacia el sur, en busca de la sabiduría y guia de sus abuelos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a3b9bdbcc537"
+  }
+ },
+ {
+  "work_id": "w_4KEMW1R9M48Q",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "609e994c9725"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Lo entrañable",
+  "valor": "Silvia está embarazada, desea ser mamá y vive con Ana, su mejor amiga. Una noche, pasada de tragos, Ana la contagia de un peligroso virus que pondrá en riesgo la vida del bebé. Llena de ira, Silvia la echa de la casa y se enfrenta al profundo miedo de parir la muerte. Tiempo después, Ana regresa, la encuentra gravemente enferma y decide cuidarla.",
+  "original": "Silvia está embarazada y desea ser mamá, vive con Ana, su mejor amiga. Una noche, pasada de tragos, Ana contagia a Silvia de un peligroso virus que pondrá en riesgo la vida del bebé que viene en camino. Llena de ira, Silvia decide echarla de la casa y a partir de ese momento, se enfrenta al profundo miedo de parir la muerte. Tiempo después, Ana regresa y encuentra a Silvia gravemente enferma. Decide cuidarla, pero aunque Silvia logra recuperarse, el virus ha dejado consecuencias irreversibles.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "90613dbd8a39"
+  }
+ },
+ {
+  "work_id": "w_4KES6P5HD813",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "75b4adc78631"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Love in the Gaze of a Panopticon",
+  "valor": "Con frías imágenes de vigilancia y susurros íntimos de una aplicación de citas, la obra observa los espacios entre lo público y lo privado, lo físico y lo digital, lo invisible y lo inaudible. Transforma líricamente las imágenes de cámaras automáticas en una mirada que anhela la conexión en Hong Kong, ciudad natal del artista.",
+  "original": "Combinando frías imágenes de vigilancia con susurros íntimos de una aplicación de citas, Love in the Gaze of a Panopticon observa los espacios entre lo público y lo privado, lo físico y lo digital, lo invisible y lo inaudible. Transforma líricamente las imágenes de cámaras automáticas en una mirada que anhela la conexión en Hong Kong, ciudad natal del artista.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "171a1ca3fb80"
+  }
+ },
+ {
+  "work_id": "w_4KESRS4KM01W",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "eac175d4e9bc"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Kupljena sjecanja",
+  "valor": "Es finales de 2025 y muy pronto seré padre por primera vez. Ya sé que no filmaré nuestros recuerdos juntos. Pero por el módico precio de 8,13 € puedo vivirlos, mostrarlos como nuestro posible futuro o como el pasado de otra persona. En este documental del futuro, utilizo memorias adquiridas para construir mis propios recuerdos del futuro.",
+  "original": "Es finales de 2025 y muy pronto me convertiré en padre por primera vez. Ya sé que no filmaré nuestros recuerdos juntos. Pero por el módico precio de 8,13 € (y con un poco de regateo en los mercadillos), puedo vivir nuestros recuerdos, mostrarlos como nuestro posible futuro o como el pasado de otra persona; o quizá como las tres cosas a la vez. En este documental del futuro, utilizo memorias adquiridas para construir mis propios recuerdos del futuro.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "5b7d4586d0de"
+  }
+ },
+ {
+  "work_id": "w_4KEWWNRDFV6K",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "1cdb4f7ed5eb"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "A Body that Hurts",
+  "valor": "Un cortometraje que nace de la exigencia del cuerpo para vincularse por completo con la animación, un trabajo mecánico que lleva a descuidarlo y causa dolor y fatiga. Con acciones repetitivas, sonidos grotescos y técnicas tradicionales, explora cómo el cuerpo en decadencia abandona el papel de creador y se convierte en un operador.",
+  "original": "Un cuerpo que duele es un cortometraje que nace de la exigencia del cuerpo para vincularse completamente con la labor de la animación. La naturaleza mecánica del trabajo lleva a descuidar el cuerpo, causando así dolor, fatiga e incomodidad. A través de acciones repetitivas, sonidos grotescos y el uso de diferentes técnicas tradicionales, el video explora como el cuerpo en estado de decadencia abandona el papel de creador y se convierte en un operador.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "696ab70f8ca8"
+  }
+ },
+ {
+  "work_id": "w_4KEWYZ24XRFH",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "0bebc35e1ae7"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "La vida de un hilo",
+  "valor": "Un guerrillero descubre una pequeña araña refugiada en el cañón de su fusil. Al día siguiente, cuando va a limpiar el arma, encuentra una fina red que crea un efecto caleidoscópico al ser atravesada por la luz. Fascinado por la belleza del universo tejido por la araña, experimenta un nuevo impulso: preservar la vida.",
+  "original": "Un guerrillero descubre una pequeña araña que se refugia en el interior del cañón de su fusil. Al día siguiente, cuando se dispone a limpiar su arma, encuentra una fina red que crea un efecto caleidoscópico al ser atravesada por la luz. Fascinado por la belleza del universo tejido por la araña en el interior de su fusil, el combatiente experimenta un nuevo impulso: preservar la vida.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "bf463fd4ca33"
+  }
+ },
+ {
+  "work_id": "w_4KEX04Q5XST3",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "8a5ccf2a7d8a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El Alto de los Buitres",
+  "valor": "En lo alto de las montañas se esconde ‘El Alto de los Buitres’, un lugar tanto espléndido como hostil, según quién lo mire y cuántas patas tenga. Un perro callejero, atormentado por su entorno, se cruza con una joven que decide ser amable. El encuentro nos recuerda el valor de las pequeñas acciones allí donde la compasión es cada vez más escasa.",
+  "original": "Escondido en lo alto de las montañas se encuentra ‘El Alto de los Buitres’, un lugar tanto espléndido como hostil, dependiendo de quién lo mire y cuántas patas tenga. Un perro callejero, atormentado por su entorno, cruza su camino con una joven que decide -en un mundo donde se puede ser cualquier cosa- ser amable. A través de este encuentro, ‘El Alto de los Buitres’ nos recuerda el valor de las pequeñas acciones en un entorno donde la compasión es un recurso cada vez más escaso.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "c9842d9285bd"
+  }
+ },
+ {
+  "work_id": "w_4KEX181TA3KA",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "7f0f87008062"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El hombre del reloj",
+  "valor": "Eduardo vive atrapado en una asfixiante rutina: cada cinco minutos debe dar cuerda a una enorme máquina de cobre para que el tiempo no se detenga. Por sus cinco ventanas descubre mundos que le gustan más que el suyo: en uno se enamora y en otro encuentra a su único amigo. Ante el temor de que el tiempo cobre su vida, usa su ingenio para escapar.",
+  "original": "Eduardo vive atrapado en una asfixiante rutina, como un engranaje más de una enorme máquina de cobre a la que debe dar cuerda cada cinco minutos para que el tiempo no se detenga. A través de sus cinco ventanas, descubre mundos que le gustan más que el suyo: en uno se enamora y en otro encuentra a su único amigo. Ante el temor de que el tiempo cobre su vida, usa su ingenio para escapar de su encierro y alcanzar la libertad.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "6996c7587f71"
+  }
+ },
+ {
+  "work_id": "w_4KEX3MXAPVG7",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5923137517f6"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "¿El regreso pa’ cuándo?",
+  "valor": "Una mujer lee una carta a su bisabuelo y comparte la experiencia migratoria de su familia. Mientras tanto, un hipopótamo de cerámica, llevado a Colombia como especie invasora, deambula por el nuevo mundo que se ve obligado a habitar. A medida que encuentra especies y sensaciones desconocidas, las imágenes poéticas evocan recuerdos nostálgicos.",
+  "original": "Una mujer lee una carta a su bisabuelo, compartiendo la experiencia migratoria de su familia. Mientras tanto, un hipopótamo de cerámica, llevado a Colombia como una especie invasora, deambula por el nuevo mundo que se ve obligado a habitar. A medida que el animal se encuentra con nuevas especies y sensaciones desconocidas, las imágenes poéticas evocan recuerdos nostálgicos y viajes introspectivos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "6b5ac463b7ef"
+  }
+ },
+ {
+  "work_id": "w_4KEX48ECW9KM",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "54099ee717a3"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "La hora de irse",
+  "valor": "Patricio trabaja para sus hermanas y se siente atrapado en una vida que ya no le pertenece. Decidido a escapar, deambula por una noche cargada de expectativas y deseo de cambio. Una cita con un hombre misterioso parece abrir la puerta a algo nuevo, pero la atracción se vuelve inquietante y la intimidad deriva en peligro.",
+  "original": "Patricio trabaja para sus hermanas y se siente atrapado en una vida que ya no le pertenece. Decidido a escapar, deambula por una noche cargada de expectativas y deseo de cambio. Una cita con un hombre misterioso parece abrir la puerta a algo nuevo. Pero a medida que la noche avanza, la atracción se vuelve inquietante y la intimidad deriva en peligro. Regida por sus propias reglas, la noche se precipita hacia un desenlace inesperado y sangriento.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9036616351b1"
+  }
+ },
+ {
+  "work_id": "w_R4KP42K6WV2W",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "daa0ec679d66"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Minuto fatal",
+  "valor": "Una familia adinerada espera su cuarto hijo. El padre, ginecólogo, pretende practicarle un aborto a su esposa y esterilizarla, pero una serie de sucesos hace que los hijos vayan muriendo uno a uno. La enorme sombra del protagonista encarna la idea de que su dinero le permite todo y se encoge a medida que él pierde poder.",
+  "original": "Una familia adinerada espera su cuarto hijo. El padre, ginecólogo, pretende practicarle un aborto a su esposa y esterilizarla, pero una serie de sucesos hace que los hijos vayan muriendo uno a uno. Pinilla lo hizo casi solo, como ensayo antes de su primer largometraje. La enorme sombra del protagonista encarna la idea de que su dinero le permite todo y se encoge a medida que él pierde poder.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "3b6988e4bf01"
+  }
+ },
+ {
+  "work_id": "w_BCSJ1Z4J99ED",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "9eafb6bdb8a2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Robo macabro",
+  "valor": "Durante el velorio de una mujer joven, dos ladrones descubren que el cadáver lleva un anillo valioso. Esperan a la noche para abrir el mausoleo, pero la joven abre los ojos, se levanta del ataúd y les pide ayuda para salir del cementerio.",
+  "original": "Durante el velorio de una mujer joven, dos ladrones descubren que el cadáver lleva un anillo valioso. Esperan a la noche para abrir el mausoleo, pero la joven abre los ojos, se levanta del ataúd y les pide ayuda para salir del cementerio. Pinilla lo filmó con latas sobrantes tras perder en un robo el material de La isla fantasma. Su asistente, Ana Cecilia Mejía, coescribió el guion y protagoniza el corto.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "f07c9e885d01"
+  }
+ },
+ {
+  "work_id": "w_4KF3J1TYKF0J",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "a18e5529d17b"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Pupa",
+  "valor": "Ensayo fílmico de realismo mágico construido a partir de las experiencias de personas trans y no binarias, con Beta, recientemente operade en un proceso de reafirmación de género, como figura central. Su historia se abre a otras voces para tejer un espacio común donde resistencia y cuidado se entrelazan en busca de un presente-futuro habitable.",
+  "original": "Pupa es un ensayo fílmico de realismo mágico construido a partir de las experiencias de personas trans y no binarias, teniendo como figura central a Beta, recientemente operade en un proceso de reafirmación de género. Su historia se abre a otras voces, buscando tejer un espacio común donde la resistencia y el cuidado se entrelazan en la búsqueda de un presente-futuro habitable.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "d038c077ba54"
+  }
+ },
+ {
+  "work_id": "w_R4JGHQMX1DHC",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "0023943ef6aa",
+   "73183984d02f"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Pude ver un fantasma desde mi ventana",
+  "valor": "A partir del relato de una madre y una abuela sobre el asesinato de una travesti, este corto documental explora el ensueño de un recuerdo de infancia. Con found footage y archivos de la comunidad trans en Ecuador en los 90, teje un microrrelato sobre la memoria, la muerte y la ausencia: una tentativa por escapar del olvido.",
+  "original": "A partir del relato de una madre y una abuela sobre el asesinato de una travesti, lx directorx estructura este corto documental que explora el ensueño —ese territorio entre la memoria y la imaginación— de un recuerdo de infancia. Con archivos de la comunidad trans en Ecuador durante los 90 y found footage se teje un microrrelato sobre la memoria, la muerte y la ausencia. Una tentativa por escapar del olvido y volverse eterna a través del cine.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "68ff3803ef1a"
+  }
+ },
+ {
+  "work_id": "w_4KF7KQ2DGYFZ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5d998fedc789"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Idols",
+  "valor": "Kim Min-ha siempre ha soñado con la fama, pero es una aspirante a estrella del K-pop a punto de cumplir los 30. Tiene talento, pero a la gente solo le importa su parecido con la superestrella Park Hye-mi, que, según ella, vive la vida que debería ser suya. Decidida a vengarse, aprovecha ese parecido para colarse en la casa de la estrella.",
+  "original": "Kim Min-ha siempre ha soñado con las luces de la fama, pero ahora es una aspirante a estrella del K-pop a punto de cumplir los 30. Tiene talento, pero a la gente solo le importa su parecido con Park Hye-mi, la superestrella que, según ella, está viviendo la vida que debería ser suya. Decidida a vengarse, aprovecha ese parecido para colarse en la casa de la estrella. Este encuentro entre una soñadora fracasada y una celebridad intocable saca a la luz puntos en común, hasta que degenera en un sangriento allanamiento de morada que las consume a ambas.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "ca9376e35605"
+  }
+ },
+ {
+  "work_id": "w_4KF85Q7RVCNR",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "95a6574990f9"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "In Articulo Mortis",
+  "valor": "Desde que se sometió a una mastectomía, Alice ha perdido el apetito. Finge que está bien, pero en el fondo se siente como en su lecho de muerte. Va a probar todo lo que pueda, incluida una inyección de ADN con un kit de uso doméstico que encontró en Internet. Si todo sale bien, sus pechos deberían volver a crecer por sí solos...",
+  "original": "Desde que se sometió a una mastectomía, Alice ha perdido el apetito. Finge que está bien, pero, en el fondo, se siente como si estuviera en su lecho de muerte. Lo tiene claro: va a probar todo lo que pueda, incluida una inyección de ADN con un kit de uso doméstico que ha encontrado en Internet. Si todo sale bien, sus pechos deberían volver a crecer por sí solos...",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "ddfec3cf6f6d"
+  }
+ },
+ {
+  "work_id": "w_4KFBP44STWM7",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "96f1bafe28fa"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Una carta supuesta",
+  "valor": "Una mujer se dirige al padre que nunca conoció y cuya existencia desconoció durante años. Reconstruye su imagen con las fotos que su madre mantuvo ocultas. De ellas surgen preguntas sobre su abandono, sus decisiones y el parecido que aún la conecta con ese fantasma. Halla pistas que la hacen preguntarse si, quizás, él nunca la olvidó del todo.",
+  "original": "Una mujer se dirige al padre que nunca conoció y cuya existencia desconoció durante años. Reconstruye su imagen a través de las fotografías que su madre mantuvo ocultas durante años. A partir de esas imágenes surgen preguntas sobre su abandono, sus decisiones y el parecido que aún la conecta con ese fantasma. En su búsqueda, encuentra pistas que la hacen preguntarse si, quizás, él nunca la olvidó del todo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b3e17d101d26"
+  }
+ },
+ {
+  "work_id": "w_4KFBQ00Q0VJ2",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "c91fe1d87b0b"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Cartas a Daniel Apóstol",
+  "valor": "Entre fotografías, audios y videos en VHS, el director descubre pistas inconclusas sobre un viaje en carro que hizo junto a su padre. Después de recurrir a la intercesión del Apóstol Daniel, patrono de la memoria, las pistas se desvanecen y la búsqueda del viaje se transforma en una travesía para desvelar una verdad incómoda sobre sus recuerdos.",
+  "original": "Entre fotografías, audios y videos en VHS el director descubre pistas inconclusas sobre un viaje en carro que hizo junto a su padre. Después de recurrir a la intercesión del Apóstol Daniel, patrono de la memoria, las pistas del viaje se desvanecen y lo que en un inicio parecía ser la búsqueda por un viaje perdido, se transforma en una travesía para desvelar una verdad incómoda: que sus recuerdos esconden mentiras.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "5e6c6506de86"
+  }
+ },
+ {
+  "work_id": "w_4KFRHPQVH43X",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "2c9de22c06a0"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Kutyafül",
+  "valor": "Berci, de once años, pasa una tarde a solas con su perro mientras lucha con las emociones que dejó la violenta pelea de sus padres el día anterior. A medida que afloran sus sentimientos reprimidos, descarga su ira y agresividad en interacciones tensas y emotivas con el animal, que terminan ayudándolo a descubrir la fuerza transformadora del perdón.",
+  "original": "Berci, de once años, pasa una tarde a solas con su perro mientras lucha con las emociones que dejó la violenta pelea de sus padres el día anterior. A medida que afloran sus sentimientos reprimidos, descarga su ira y agresividad en interacciones tensas y emotivas con el animal. Estas expresiones terminan ayudándolo a encontrar alivio y descubrir la fuerza silenciosa y transformadora del perdón.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "1177fa9b93a1"
+  }
+ },
+ {
+  "work_id": "w_4KFWM9PZ9T9J",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "ce513145890a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Pelo lindo",
+  "valor": "En 1985, durante el conflicto armado interno en Guatemala, Joaquín Rodas fue desaparecido por el Estado. Casi 40 años después, su madre, Josefa, sigue esperándolo. En su cumpleaños 90, en diálogo con el director, reflexiona sobre la ausencia y la capilla que construyó en su honor. Una historia personal marcada por la memoria y el paso del tiempo.",
+  "original": "En 1985, durante el conflicto armado interno en Guatemala, Joaquín Rodas fue desaparecido por el Estado. Casi 40 años después, su madre, Josefa Elizabeth Andrade, continúa esperándolo. En su cumpleaños 90, reflexiona sobre la ausencia y la capilla que construyó en su honor. Por medio de un diálogo entre Josefa y el director, la película aborda una historia personal marcada por la memoria y el paso del tiempo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "02e214f4a2a2"
+  }
+ },
+ {
+  "work_id": "w_4KG3S25KGZSG",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "ad6f72ab971a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "V.O por F.P",
+  "valor": "La directora Fernanda Pessoa pasa un fin de semana con la cineasta Vivian Ostrovsky, que acaba de cumplir 80 años, en la playa de Copacabana, escenario de muchas de sus películas. Ambas graban en Super 8 mm y hablan sobre la filmografía de Ostrovsky, su proceso creativo y las mujeres en el cine, entre otros temas.",
+  "original": "La directora Fernanda Pessoa pasa un fin de semana con la cineasta Vivian Ostrovsky, que acaba de cumplir 80 años, en la emblemática playa de Copacabana, escenario de muchas de sus películas. Ambas graban en Super 8 mm Kodak Ektachrome, la película preferida de Ostrovsky, y hablan sobre su filmografía, su proceso creativo y las mujeres en el cine, entre otros temas.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "85886b014764"
+  }
+ },
+ {
+  "work_id": "w_4KG4F30BJ61Q",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "e7404dc7e6a4"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Némica",
+  "valor": "En el caótico cierre de una filmación, una reconocida directora enfrenta su escena final y el límite entre el arte y el abuso. La tensión se desborda cuando las emociones de los actores, el equipo técnico y la cineasta se mezclan con heridas abiertas y culpas. Todos deben decidir hasta dónde están dispuestos a llegar para crear una obra de arte.",
+  "original": "En el caótico cierre de una filmación, una reconocida directora enfrenta su escena final y el límite entre el arte y el abuso. En el set, la tensión se desborda cuando las emociones de los actores, el equipo técnico y la propia cineasta se mezclan con heridas abiertas, culpas compartidas y deseos de redención.Némica es un retrato íntimo del poder, la vulnerabilidad , el abuso y la creación, donde todos deben decidir hasta dónde están dispuestos a llegar para crear una obra de arte.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "d8d00ac2d26c"
+  }
+ },
+ {
+  "work_id": "w_4KGA885KHXXN",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5f2b3858bc83"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Perjalanan Menuju Surga",
+  "valor": "Atrapada por la distancia y el costo inalcanzable de la peregrinación del Hajj, Sulastri (68) participa con un grupo de aldeanos en un “Hajj local” en una cueva, dirigidos por un guía espiritual. No se da cuenta de que el viaje es hacia una ilusión y sus propias esperanzas. Pero quizás, a los ojos de Dios, ese viaje realmente alcance el cielo.",
+  "original": "Atrapada por la distancia y el costo inalcanzable de realizar la peregrinación del Hajj, Sulastri (68) y un grupo de aldeanos participan en un ritual de “Hajj local” en una cueva, dirigidos por un guía espiritual. Ella no se da cuenta de que el viaje espiritual no es hacia La Meca, sino hacia una ilusión y sus propias esperanzas. Sin embargo, ¿quién puede saberlo con certeza? Quizás, a los ojos de Dios, ese viaje realmente alcance el cielo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "022d91fb3a0d"
+  }
+ },
+ {
+  "work_id": "w_4KGA8WRY51T9",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5f368af1159d"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Sara & Fatima",
+  "valor": "Dos mujeres, una con velo y la otra sin él, se encuentran en una parada de autobús en Marruecos, junto a una carretera casi desierta. Desde el primer momento se juzgan mutuamente. El autobús no llega. Solas y desesperadas en medio de la nada, entre fricción y apoyo mutuo, se abren poco a poco y se unen ante la amenaza que se cierne sobre ellas.",
+  "original": "Dos mujeres se encuentran en una parada de autobús en Marruecos, junto a una carretera casi desierta. Una lleva velo y la otra no. Desde el primer momento se juzgan mutuamente. El tiempo pasa y el autobús no llega. Solas y desesperadas en medio de la nada, se abren poco a poco y muestran sus vulnerabilidades. Entre fricción y apoyo mutuo, Sara y Fatima dejan caer sus máscaras, revelan sus conflictos interiores y se unen ante la amenaza que se cierne sobre ellas.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "f770995b203a"
+  }
+ },
+ {
+  "work_id": "w_4KGHHBJD2TPA",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "e9f801414713"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Plan contraplan",
+  "valor": "Entre 1985 y 1987, el periodista estadounidense Edward Serotta fotografió la dura realidad de la Rumanía comunista. La policía secreta (Securitate) lo siguió y retrató en secreto mientras él tomaba sus fotografías. Cuarenta años después, reunimos ambos conjuntos de imágenes en un juego de plano y contraplano sobre el lado cómico de la Historia.",
+  "original": "Entre 1985 y 1987, el periodista estadounidense Edward Serotta visitó la Rumanía comunista y fotografió la dura realidad del país. La policía secreta (Securitate) lo siguió y retrató en secreto mientras él tomaba sus propias fotografías. Cuarenta años después, reunimos ambos conjuntos de imágenes en un juego de plano y contraplano sobre el lado cómico de la Historia.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a60c9fa11843"
+  }
+ },
+ {
+  "work_id": "w_4KGJ153QP32E",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "4e78557809ac"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "La sentinelle",
+  "valor": "14 de julio, fiesta nacional francesa. Agobiado por la cadencia del cuartel, el sargento Lafleur carga en silencio con el peso del deber. Un médico le concede una noche de libertad, siempre que regrese antes del amanecer. Comienza un deambular nocturno por un mundo que se aleja poco a poco de la realidad: una noche entre el destino y la deserción.",
+  "original": "14 de julio, fiesta nacional francesa. Agobiado por la cadencia militar del cuartel, el sargento Lafleur carga en silencio con el peso del deber. Un médico le concede una noche de libertad, con la condición de que regrese antes del amanecer. Comienza entonces un deambular nocturno por un mundo que se va alejando poco a poco de la realidad: una noche suspendida entre el destino y la deserción.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b689fb2aa416"
+  }
+ },
+ {
+  "work_id": "w_4KGK1EP1B55T",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "0fb1e30f930a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "They’re Here",
+  "valor": "Película de terror que sigue a Edén Villa (seudónimo) y a residentes anónimos de Minneapolis mientras evaden y resisten la ocupación paramilitar de su ciudad. Narrada al estilo del cine distópico, transcurre en un paisaje invernal donde ciclistas siguen los movimientos de una fuerza invasora y agentes enmascarados secuestran niños.",
+  "original": "They’re Here es una película de terror que sigue a Edén Villa (seudónimo) y a residentes anónimos de Minneapolis mientras evaden y resisten la ocupación paramilitar de su ciudad. Narrada al estilo del cine distópico, They’re Here se desarrolla en un paisaje invernal donde agentes enmascarados secuestran niños, los residentes viajan en los baúles de los carros, prisioneros encadenados son subidos a aviones a la vista de los turistas y ciclistas siguen los movimientos de una fuerza invasora.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "f07961d89ac5"
+  }
+ },
+ {
+  "work_id": "w_4KGPGY0HYMPR",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "8ad6a28d1c13"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Lo que él se lleva, no vuelve",
+  "valor": "Durante un ritual tradicional de sanación, Jonathan recibe una quena, una flauta andina como la que tocaba su padre antes de desaparecer. La hace sonar, deseoso de tocar como él, y despierta al Duende, una oscura presencia del folclore andino. Cuando este amenaza con llevarse a su madre, Jonathan deberá enfrentarse al vacío que dejó su padre.",
+  "original": "Durante un ritual tradicional de sanación, Jonathan recibe una quena, una flauta andina como la que tocaba su padre antes de desaparecer. Impulsado por el deseo de tocar como él, hace sonar la quena y despierta al Duende, una antigua y oscura presencia del folclore andino que siempre viene por alguien. Cuando el Duende amenaza con llevarse a su madre, Jonathan deberá enfrentarse al vacío que dejó la ausencia de su padre.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "59faf74cf9f4"
+  }
+ },
+ {
+  "work_id": "w_4KGRSGKF7F8H",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "b0b0da1d868d"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Computadora",
+  "valor": "Un alma espera reencarnarse mientras recuerda su vida como monja en el Observatorio Astronómico Vaticano a principios del siglo XX. Allí participó en un proyecto para cartografiar el cielo nocturno y recibió el título de “computadora” por sus cálculos repetitivos. Desencantada con esa existencia, contempla ser programadora en su próxima vida.",
+  "original": "Un alma espera reencarnarse mientras recuerda su vida como monja en el Observatorio Astronómico Vaticano a principios del siglo XX. Allí participó en Carte du Ciel, un ambicioso proyecto internacional para cartografiar el cielo nocturno, y recibió el título de “computadora” por sus cálculos repetitivos. Desencantada con su existencia anterior, contempla convertirse en programadora en su próxima vida.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "6c0f89a2d985"
+  }
+ },
+ {
+  "work_id": "w_4KGS8P404AYQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "8be4b1b5ec8a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Like Moths to Light",
+  "valor": "Una mujer nos habla desde una máquina que registra su actividad cerebral. Describe un laberinto mental que combina un antiguo parque de atracciones, fotografías de sueños del siglo XIX, descodificación mental mediante IA y una empresa que busca controlar los sueños. Una meditación sobre el futuro de lo onírico en la era del neurocapitalismo.",
+  "original": "Una mujer nos habla desde una máquina que registra su actividad cerebral. Describe un laberinto mental que combina un antiguo parque de atracciones llamado Dreamland, fotografías de sueños del siglo XIX, experimentos actuales de descodificación mental mediante IA y Prophetic, una empresa que busca controlar los sueños. Pero ¿qué ven nuestros sueños cuando nos devuelven la mirada? Una meditación sobre el futuro de nuestros mundos oníricos en la era del neurocapitalismo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9f27e3305a3d"
+  }
+ },
+ {
+  "work_id": "w_4KGWSGSWFAQQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "c4245cb78ebe"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "The Getaway",
+  "valor": "En alguna carretera de Ucrania, Ana, cooperante de una ONG española, ayuda a Yrina a huir de los bombardeos junto a su hijo Yure. Con el niño febril e Yrina agotada, Ana convence a la joven madre de subir al coche de una desconocida para salir cuanto antes. Pero dentro, Yrina no tarda en sospechar de la mujer, que actúa de manera secreta.",
+  "original": "En alguna carretera de Ucrania, Ana, cooperante de una ONG española, ayuda a Yrina a huir de los bombardeos junto a su hijo Yure. Quieren llegar cuanto antes a la frontera y ponerse a salvo. Con Yure febril e Yrina absolutamente agotada, Ana convence a la joven madre para que suba al coche de una desconocida y salgan cuanto antes de allí. Pero dentro del coche Yrina no tarda mucho en sospechar de la mujer. En cada detalle ella ve señales ya que ésta mujer actúa de manera secreta.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "5e421dafeb05"
+  }
+ },
+ {
+  "work_id": "w_4KH040RYQRDA",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "b57b09c85cfb"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Gitano",
+  "valor": "Jesús, un niño gitano, afronta con ilusión su primer día de instituto, pero pronto choca con barreras invisibles que le hacen cuestionarse si ese camino está hecho para él. Entre prejuicios, su identidad comienza a tambalearse. Rubén, su profesor de Historia, le abrirá una posibilidad: cuestionar los estereotipos y construir su propio futuro.",
+  "original": "Jesús, un niño gitano, afronta con ilusión su primer día de instituto, pero pronto choca con barreras invisibles que le hacen cuestionarse si ese camino está hecho para él. Entre expectativas sociales, prejuicios y el peso de su entorno, su identidad comienza a tambalearse. La figura de Rubén, su profesor de Historia, le abrirá una nueva mirada: la posibilidad de cuestionar los estereotipos y construir su propio futuro.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "707caea1287b"
+  }
+ },
+ {
+  "work_id": "w_4KH6F5Z6WDRQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "468dbdc1b98b"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "About Happy Hippos and Sad Peacocks",
+  "valor": "¿Cómo acabaron los pavos reales de la India en una isla de Berlín en el siglo XIX y los hipopótamos, un siglo más tarde, a orillas de un río en Colombia? Sus vidas allí parecen ser «felices y libres». Con imágenes cautivadoras, esta fábula descolonial los convierte en iconos salvajes, testigos de los caprichos de los poderosos.",
+  "original": "¿Cómo es que los pavos reales, originarios de la India, acabaron en una isla de Berlín en el siglo XIX, y los hipopótamos, un siglo más tarde, a orillas de un río en Colombia? Sus vidas allí parecen ser «felices y libres». Con unas imágenes cautivadoras, la fábula descolonial de Elkin Calderón Guevara y Johannes Förster los convierte en iconos salvajes, testigos de los caprichos de los poderosos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9f4ee1ee2a7f"
+  }
+ },
+ {
+  "work_id": "w_4KH8NK5K2DR4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "eac1c40088a2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Ekobio",
+  "valor": "«Ekobio», amigo o compañero, es la palabra que Manuel Zapata Olivella adoptó para nombrar con fraternidad a los descendientes de la diáspora africana. A partir de una adaptación libre de fragmentos de su novela Changó, el gran putas, y con los ekobios de Bocachica, en Cartagena, la película construye puestas en escena y actuaciones improvisadas.",
+  "original": "EKOBIO toma su nombre de una palabra adoptada por el escritor afrocolombiano Manuel Zapata Olivella para nombrar a los descendientes de la diáspora africana desde una noción de cercanía y fraternidad. Ekobio significa literalmente «amigo» o «compañero». A partir de una adaptación libre de fragmentos de su novela Changó, el gran putas, y en colaboración con los ekobios de Bocachica, en Cartagena de Indias, la película construye una serie de puestas en escena y actuaciones improvisadas.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "6a3988238052"
+  }
+ },
+ {
+  "work_id": "w_4KH944E3FVDN",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "fbef44189eac"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Yugo",
+  "valor": "Los testimonios de personas cercanas trazan el viaje de una pareja obligada a abandonar su pueblo natal para trabajar en la fabricación de piezas decorativas para vehículos pesados, en la periferia de Bogotá. A través de una vida, la obra cuestiona el desarrollo capitalista y liberal de América Latina y sus consecuencias para el ser humano.",
+  "original": "Los testimonios de personas cercanas trazan el viaje de una pareja obligada a abandonar el pueblo natal para trabajar en la fabricación industrial de piezas decorativas para vehículos pesados, en la periferia de Bogotá. A través de la trayectoria de una vida, YUGO cuestiona el desarrollo económico capitalista y liberal de América Latina y sus consecuencias para el ser humano.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "1de7f9c7fc54"
+  }
+ },
+ {
+  "work_id": "w_4KHKR4XXNBY1",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "261d761d56f1"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "The Tide Inside",
+  "valor": "Una adolescente colombiana en Los Ángeles comienza a desmoronarse ante la amenaza de deportación. Criada para sentirse fuerte, siente crecer una incomodidad, mientras el miedo la aleja de lo que la hacía sentir a salvo. Entre recuerdos de infancia y de un amor seguro, enfrenta la marea que lleva dentro, en un mundo que amenaza con borrarla.",
+  "original": "Una adolescente colombiana en Los Ángeles comienza a desmoronarse cuando la amenaza de deportación ensombrece su mundo. Criada para sentirse siempre fuerte, una incomodidad silenciosa crece en su interior, mientras el miedo la aleja de todo lo que antes la hacía sentir a salvo. Al reconstruir recuerdos que irrumpen en el presente, fragmentos de infancia y de un amor seguro, enfrenta el ritmo de las olas y la marea que lleva dentro, en un mundo que amenaza con borrarla.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b89fc8ee62c6"
+  }
+ },
+ {
+  "work_id": "w_4KHR0H0FQE9K",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "2d1de599a0c2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El dia de l’ós",
+  "valor": "Es el día de la fiesta del oso y el pueblo se prepara para la llegada de la bestia. Martí, sobrepasado por el bullicio de la ciudad, llega tarde a recoger a su hermano pequeño, Ángel, para quien convivir con él es un ejercicio de paciencia. Un retrato visceral y poético del vínculo masculino, hecho de golpes, silencios y, a ratos, amor salvaje.",
+  "original": "Es el día de la fiesta del oso y el pueblo se prepara para la llegada de la bestia. Martí, sobrepasado por el bullicio de la ciudad, llega tarde a recoger a su hermano pequeño, Ángel. Para Ángel, convivir con su hermano ha sido siempre un ejercicio de paciencia. Un retrato visceral y poético del vínculo masculino, hecho de empujones, golpes, silencios y, a ratos, una forma de amor salvaje.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "ad8ca7584db6"
+  }
+ },
+ {
+  "work_id": "w_4KHVB3RVTPFX",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "755053a14433"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Kevin, el niño del espacio",
+  "valor": "Junto a su grupo de amigxs, una adolescente documenta con su cámara sus días en un pequeño pueblo. Mientras todxs se preparan para un eclipse, su lente se detiene en Kevin, un chico enigmático que parece venir de otro lugar. Con el evento astronómico se revelará un suceso que cambiará la forma en que ella ve el universo.",
+  "original": "Junto a su grupo de amigxs, una adolescente documenta sus días en un pequeño pueblo a través de su cámara. Mientras todxs se preparan para un eclipse, el lente de esta joven se detiene en Kevin, un chico enigmático que parece venir de otro lugar. Con la llegada del evento astronómico se revelará un suceso que cambiará la forma en que ella ve el universo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "18757ed771d5"
+  }
+ },
+ {
+  "work_id": "w_4KJ27QNHW320",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "9a806bf0d364"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "L’uomo meccanico",
+  "valor": "La criminal Mado es arrestada por matar a un científico al que había robado el diseño de un robot. Su estancia en el presidio durará poco: tras inyectarse una droga que la sume en un aparente estado catatónico, escapará de la enfermería provocando un incendio. Una vez en libertad, utiliza el robot para llevar a cabo sus planes criminales.",
+  "original": "Una criminal llamada Mado es arrestada por matar a un científico al que previamente había robado el diseño de un robot. Sin embargo, su estancia en el presidio durará poco; tras inyectarse una droga que la sume en un aparente estado catatónico, escapará de la enfermería de la prisión tras provocar un incendio. Una vez en libertad, Mado utiliza el robot para llevar a cabo sus planes criminales.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "0f2006aaf15c"
+  }
+ },
+ {
+  "work_id": "w_4KJ3BGW3CYS3",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "0c9bc10c3400"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El mandado",
+  "valor": "Wilmar, un niño campesino tímido pero decidido, vive el primer amor mientras lucha por ser aceptado y valorado por lo que es. Con la ayuda de su mejor amigo, enfrentará malentendidos, prejuicios y burlas, y descubrirá que ser fiel a sus raíces también es valentía. Una historia que celebra la amistad, la infancia y la dignidad de la vida rural.",
+  "original": "Wilmar, un niño campesino tímido pero decidido, vive la experiencia del primer amor mientras lucha por ser aceptado en la escuela y valorado por lo que es. Con la ayuda de su mejor amigo, enfrentará malentendidos, prejuicios y burlas, descubriendo que ser fiel a sus raíces es también un acto de valentía. Una historia que celebra la amistad, algunas travesuras, la infancia y la dignidad de la vida rural.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "6e603def41e8"
+  }
+ },
+ {
+  "work_id": "w_4KJ3TGBG8RZT",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "49cec1d1cbbf"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Mudanza",
+  "valor": "En la casa que fue de su abuela, Joaquina y Leonor asisten a una despedida que no comprenden del todo. Las adultas empacan la vida en cajas, mientras ellas descubren en los objetos una forma de seguir jugando. La mudanza se vuelve una especie de ritual, donde las niñas reconstruyen, a su manera, aquello que las adultas intentan dejar atrás.",
+  "original": "En la casa que fue de su abuela, Joaquina y Leonor asisten a una despedida que no comprenden del todo. A su alrededor, las adultas empacan la vida en cajas, mientras ellas descubren en los objetos una forma de seguir jugando. La mudanza se convierte en una especie de ritual: un tránsito entre la memoria y la imaginación, donde las niñas reconstruyen, a su manera, aquello que las adultas intentan dejar atrás.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "85d631cfb63a"
+  }
+ },
+ {
+  "work_id": "w_R4MA365QXQ6D",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "7c7c14b415f9"
+  ],
+  "original_de": [
+   "bogoshorts-2026",
+   "midbo-2026"
+  ],
+  "titulo": "Geografía espectral",
+  "valor": "A orillas de una represa que sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar y cubre el río de flores para invocar a sus muertos. El espíritu de los cuerpos arrojados al río navega junto a los peces. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida.",
+  "original": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "4b671ed6d061"
+  }
+ },
+ {
+  "work_id": "w_4KJK61VM0ZB8",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "66b8e4eb6add"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Cocodrilo (Dillom)",
+  "valor": "Videoclip en stop motion construido a partir de tatuajes realizados sobre más de 250 fans de Dillom en dos jornadas, antes del lanzamiento de su disco LA NUEVA VIOLENCIA. Los participantes marcaron para siempre sus cuerpos con imágenes de un disco que nunca habían escuchado. Un acto de fe ciega, devoción y locura.",
+  "original": "Dirigido por Rocío Gastaldi y Andrés Capasso, “Cocodrilo” es un videoclip en stop motion construido a partir de tatuajes realizados sobre más de 250 fans de Dillom durante dos jornadas. Los tatuajes se hicieron antes del lanzamiento de su reciente disco LA NUEVA VIOLENCIA: los participantes marcaron para siempre sus cuerpos con imágenes de un disco que nunca habían escuchado. Un acto de fe ciega, devoción y locura.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "3a55b5975db8"
+  }
+ },
+ {
+  "work_id": "w_4KJK6B7R2GQ0",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "ff4026c368df"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "The Beat (Matías Aguayo)",
+  "valor": "Matías Aguayo, maestro de música, convierte una clase sobre el ritmo en un portal a otros mundos. Instrumento por instrumento, guía a sus alumnos títeres por la anatomía de un beat, y la lección cobra vida propia y los transporta a un mundo hecho de piñatas y un salón geométrico animado. Los alumnos se pierden en la música y él, por fin, se suelta.",
+  "original": "Matías Aguayo es un maestro de música que convierte una clase sobre el ritmo en un portal a otros mundos. Instrumento por instrumento, guía a sus alumnos títeres por la anatomía de un beat, hasta que la lección cobra vida propia. Se transportan al mundo de títeres hecho de piñatas y un salón geométrico animado. Mientras habla de los instrumentos, los alumnos se pierden en la música, hasta que sin darse cuenta el maestro, por fin suelto, se convierte en títere para entrar en el groove con todos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "28ce9c0ca847"
+  }
+ },
+ {
+  "work_id": "w_4KJK6YVWMTGQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "6b5621d96128"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Oui (Balming Tiger)",
+  "valor": "En Gongbu Korea, instituto ficticio sobre los sueños, el investigador Park Min se asoma uno a uno a los sueños de cada miembro de Balming Tiger. Con el vestuario de su concierto, los integrantes recorren paisajes oníricos que difuminan la frontera entre lo real y lo irreal. Un viaje lúdico y extraño al subconsciente, al ritmo hipnótico de «Oui».",
+  "original": "En Gongbu Korea, un instituto ficticio que estudia los sueños humanos, el investigador Park Min (interpretado por Wonjin, integrante de Balming Tiger) se asoma uno a uno a los sueños de cada miembro del colectivo. Con el vestuario escénico de su concierto, los integrantes recorren paisajes oníricos llenos de elementos que difuminan la frontera entre lo real y lo irreal. Un viaje lúdico y extraño al subconsciente, al ritmo hipnótico de “Oui”",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "261632169710"
+  }
+ },
+ {
+  "work_id": "w_4KJK77PYY5V4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "d20b38f44b91"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Chingona (Tamara Flores)",
+  "valor": "Tamara Flores avanza con determinación por las coloridas calles de Acatlán, México, pueblo natal de su madre. Su larguísima trenza es un símbolo vivo de fuerza y empoderamiento. Entre color, ritmo y baile, este himno visual sobre abrirse camino y apropiarse de cada paso celebra la identidad y la libertad de vivir según las propias reglas.",
+  "original": "Tamara Flores avanza con determinación por las coloridas calles de Acatlán, México, pueblo natal de su madre. Su larguísima trenza es un símbolo vivo de fuerza y empoderamiento. Chingona es un himno visual sobre abrirse camino y apropiarse de cada paso. Entre color, ritmo y baile, celebra la identidad y la libertad de vivir según las propias reglas.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9e9e1505750a"
+  }
+ },
+ {
+  "work_id": "w_4KJKKQ8K29RA",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "a28e7208f831"
+  ],
+  "original_de": [],
+  "titulo": "La culpa (Juliana Quédate Otro Día)",
+  "valor": "Lucía vive atrapada en su rutina: despertar, ir a la oficina, volver a casa y ver televisión, su único refugio, que empieza a invadir sus sueños con una subasta por una silla vacía y máscaras de Luis Miguel. De estética onírica, este videoclip cuestiona la cultura de la productividad y la promesa vacía de la meritocracia.",
+  "original": "Lucía vive atrapada en su rutina: despertar, ir a la oficina, trabajar, volver a casa y ver televisión, cada día se parece al anterior, y eso la consume vez tras vez, siendo su único refugio la televisión, la cual empieza a invadir sus sueños con una subasta por una silla vacía y máscaras de Luis Miguel, ella gana pero cada vez que despierta se da cuenta que nada cambió. Este videoclip en su estética onírica cuestiona la cultura de la productividad y la promesa vacía de la meritocracia.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "27ea7edd1785"
+  }
+ },
+ {
+  "work_id": "w_4KJKM85ABDBX",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5e6b8d9e736d"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)",
+  "valor": "Un campesino del Lago de Tota va a la fiesta de cumpleaños de una amistad. Allí se encuentra con su expareja y descubre que tiene un nuevo amorío. Despechado, decide ir a la playa y embriagarse. La luna, desde el cielo, toma la forma de su amada y, entre la confusión y la oscuridad, el campesino se adentra en las olas.",
+  "original": "Un campesino del Lago de Tota se dirige a la fiesta de cumpleaños de una amistad. En la celebración se encuentra con su ex pareja, descubriendo que tiene un nuevo amorío. Despechado, el hombre decide ir a la playa y embriagarse. Allí se encuentra con la luna, quién desde el cielo toma la forma de su amada. Entre la confusión y la oscuridad el campesino termina nadando en las olas y descendiendo al fondo del lago.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "14e778c0a4fc"
+  }
+ },
+ {
+  "work_id": "w_4KJKMJHZRCWS",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "66c24babcdd1"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Herir al viento (Monopop, Monstera Delizziosa)",
+  "valor": "Una mujer en sus 30s se enfrenta al difícil proceso de cambio que conlleva una ruptura. Abatida en medio de su apartamento, toma fuerza para desmantelar lo que fue un hogar. Como llevada por el viento, emprende su camino hacia un destino desconocido, que alberga la ilusión de nuevos comienzos, de continuar, de vivir otra vida.",
+  "original": "Una mujer en sus 30s se enfrenta al difícil proceso de cambio y adaptación que conlleva la ruptura con alguien que ha sido importante. Abatida en medio de su apartamento, toma fuerza para desmantelar lo que fue un hogar, quitando cuadros, plantas y muebles. Como llevada por el viento, emprende su camino hacia un destino desconocido, uno que alberga la ilusión de nuevos comienzos, de continuar, de vivir otra vida.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "3ffddab7f8f6"
+  }
+ },
+ {
+  "work_id": "w_4KJKMYYD8CDH",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "2a84b0430851"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "La luna y yo (Tabi Wav)",
+  "valor": "En una noche de luna llena, Tabi deambula por paisajes desiertos de Cali, transformando espacios de peligro en territorios de libertad. A través de la música, el baile y rituales esotéricos, se encuentra con distintas versiones de sí misma, dejando atrás el miedo y abrazando su fuerza y deseo. El límite entre ella y la luna se desvanece.",
+  "original": "En una noche de luna llena, Tabi deambula por paisajes desiertos de Cali, transformando gradualmente espacios de peligro en territorios de libertad. A través de la música, baile y rituales esotéricos, se encuentra con distintas versiones de sí misma, dejando atrás el miedo y abrazando su fuerza y deseo. A medida que avanza, el límite entre Tabi y la luna se desvanece, culminando en una comunión mística con el cosmos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "143623be3bcc"
+  }
+ },
+ {
+  "work_id": "w_4KJKN95HEYDK",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "f0ea2db37b6e"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Mi barquito (Canalón de Timbiquí)",
+  "valor": "Este videoclip es un retrato generacional de Canalón de Timbiquí y un homenaje a doña Oliva y Valle, quienes partieron sin recibir en vida el reconocimiento que merecían. A través de su memoria, celebramos la cultura timbiqueña y la herencia viva del Pacífico colombiano, que encuentra en la música de marimba una forma de permanecer y trascender.",
+  "original": "Este videoclip es un retrato generacional de quienes hacen parte de Canalón de Timbiquí, un homenaje a doña Oliva y Valle, quienes partieron sin recibir en vida el reconocimiento que merecían. A través de su memoria, celebramos la cultura timbiqueña, el encuentro entre generaciones y la herencia viva de la tradición del Pacífico colombiano, que encuentra en la música de marimba una forma de permanecer y trascender.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "0eda9e795eca"
+  }
+ },
+ {
+  "work_id": "w_4KJKNW459K1X",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "c566a1c73db6"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Marea (Lido Pimienta)",
+  "valor": "Una canción sobre la juventud caribeña que reivindica su espacio y su derecho a la alegría, a pesar de los demonios parásitos llamados gentrificación, colonialismo, desplazamiento, despojo de tierras y explotación sexual. Una cínica canción de amor para el fin de los tiempos. Resistimos a través de la danza y de la sublime belleza caribeña.",
+  "original": "Una canción sobre la juventud caribeña que existe y reivindica deliberadamente su espacio y su derecho a la alegría, a pesar de los demonios parásitos llamados gentrificación, colonialismo de asentamiento, desplazamiento, despojo de tierras y explotación sexual. Una cínica canción de amor para el fin de los tiempos. Resistimos a través de la danza y de la sublime belleza caribeña.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "aa8e4c0ee3e7"
+  }
+ },
+ {
+  "work_id": "w_4KJKP5K2XW4F",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "d4512b39047c"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Maria Lionza (Yajaira La Beyaca)",
+  "valor": "La diosa Maria Lionza se invoca como símbolo de fe, fuerza y resistencia, una reina a quien se acude para reclamar el poder sobre el propio destino. Encarna una transformación que transita de madre a malandra, de la pureza a la transgresión, entre retener y soltar, el dolor y el placer, lo sagrado y lo profano, la obsesión, el orden y el caos.",
+  "original": "Maria Lionza forma parte del álbum CARÁCTER ANAL de Yajaira La Beyaca. La figura de la diosa se invoca como símbolo de fe, fuerza y resistencia, una reina a quien se acude para reclamar el poder sobre el propio destino. Maria Lionza encarna una transformación que transita de madre a malandra, de la pureza a la transgresión, entre retener y soltar, el dolor y el placer, lo sagrado y lo profano, la obsesión, el orden y el caos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "0daa4d4fbcd1"
+  }
  }
 ]

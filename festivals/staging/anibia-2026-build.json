@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "programación oficial de Anibia 2026 (PDF del Linktree = carrusel IG DeQG0NPGy2f)",
-  "capturado": "2026-11-23",
+  "capturado": "2026-11-24",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Tabla canónica en el crudo: una sede por edificio, la sala aparte. La Cinemateca Sala Alterna UNAL es el Auditorio 422 del 303C (UNAL): misma sede que la charla del Bloque C. Pines de Google Maps, a mano (venues-geo). Corrección 25 oct: la Sala Alterna proyecta en el Auditorio 105 del Edificio 301 (la sala misma, IG De2wLBxDY-Q), sede propia; el 303 queda para el Reel/WIP Day y la charla del Bloque C.",
@@ -5093,7 +5093,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-23T11:52:42",
+  "fecha": "2026-11-24T08:16:51",
   "plan_sha": "17ea9621d1a0e533",
   "paso": 7,
   "cmd": "python3 pipeline/anibia-2026-verificar.py"

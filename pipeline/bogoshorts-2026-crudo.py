@@ -127,6 +127,9 @@ GENERO = {f'{a}-{b}': g for a in ('CN', 'CI', 'PAC') for b, g in
 
 # el género que declara una fuente de la propia obra
 GENERO_OBRA = {
+    'Ekobio': 'Experimental',  # https://www.berlinale-talents.de/bt/project/profile/293156
+    'Has estado aquí': 'Documental',  # https://dafilmfestival.com/es/movie/has-estado-aqui/
+    'Querida A.': 'Documental',  # https://dafilmfestival.com/es/movie/querida-a/
     '跳房子': 'Documental',  # https://www.themoviedb.org/movie/1736821
     '环岛': 'Drama',  # https://www.themoviedb.org/movie/1599912
     'Běi Huí Gu− Xiàn': 'Drama',  # https://www.themoviedb.org/movie/1826831
