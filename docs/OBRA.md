@@ -47,3 +47,14 @@ Cada decisión de `catalogo/decisiones.json` guarda en `antes` lo que publicaba 
 festival, tal como lo escribía (texto, número o ruta; el `valor` puede ir en otra
 forma, p. ej. ISO). Si publicaba dos valores, es una lista. Sin `antes`: la decisión
 no reemplazó ningún valor o es anterior y no se pudo recuperar.
+
+## La obra es la fuente (paso 7)
+
+En un festival nuevo, dirección, año, país, género, sinopsis, afiche, TMDB y Letterboxd
+salen de `catalogo/decisiones.json`; el festival pone la función y el lugar. El JSON que
+lee la app se publica completo, pero se arma: `pipeline/obra_fuente.py`. Guardián
+`[obra-fuente]`. Los festivales anteriores están en `catalogo/obra-fuente-legado.json`
+(solo baja); sus obras se revisan cuando vuelvan en un festival nuevo.
+
+Echar atrás una decisión: `python3 pipeline/deshacer.py <work_id> <campo> --escribir`.
+Sellar exige el original guardado (`sello_obra.py --original`).

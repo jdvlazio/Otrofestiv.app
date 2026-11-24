@@ -150,6 +150,11 @@ def revisar(solo=None):
 _FUENTE = {'oficial': 'oficial', 'oficial-festival': 'custom', 'fotograma': 'editorial'}
 
 
+def fuente(e):
+    """El posterSource de una decisión de afiche."""
+    return e['valor'].get('fuente') or _FUENTE[e['valor']['veredicto']]
+
+
 def elegidos(decs):
     """{work_id: decisión} de los afiches que viajan (un fotograma remoto no)."""
     return {x['work_id']: x for x in decs if x['campo'] == 'afiche'
@@ -176,7 +181,7 @@ def aplicar(d, decs=None):
             if not e or not u or o.get('type') == 'event' or u == e['valor']['archivo'] or u not in (e.get('vistas') or []):
                 continue
             out.append((o.get('title'), u, e['valor']['archivo']))
-            o['poster'], o['posterSource'] = e['valor']['archivo'], _FUENTE[e['valor']['veredicto']]
+            o['poster'], o['posterSource'] = e['valor']['archivo'], fuente(e)
             o.pop('posterPosition', None)   # era el encuadre de la imagen anterior
     return out
 

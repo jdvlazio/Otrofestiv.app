@@ -110,13 +110,13 @@ def problema(s):
     return None
 
 
-def faltan(festivales, sel=None, deuda=None, orig=None):
+def faltan(festivales, sel=None, deuda=None, orig=None, exentas=None):
     """→ [(obra, título, qué)]: sin sello válido ni anotada."""
     sel, deuda, orig = (sellos() if sel is None else sel), (_leer(DEUDA).get('obras', {}) if deuda is None else deuda), (originales() if orig is None else orig)
-    out = []
+    sin_orig, out = set(_leer(DEUDA).get('sin_original', [])), []
     for w, v in sorted(publicadas(festivales).items()):
         if w in sel:
-            q = problema(sel[w]) or (None if sel[w].get('huella') == huella(v, orig.get(w)) else 'cambió después del sello')
+            q = problema(sel[w]) or ('sellada sin guardar el original' if w not in orig and w not in sin_orig and w not in (exentas or ()) else None) or (None if sel[w].get('huella') == huella(v, orig.get(w)) else 'cambió después del sello')
         else:
             q = None if deuda.get(w) == huella(v) else 'cambió y nadie la releyó' if w in deuda else 'nueva, sin sello (¿es la misma que otra?: fusionar)'
         if q:
@@ -147,10 +147,10 @@ def autoprueba():
     h = huella(publicadas(f())['w_1'])
     s = {'w_1': {'huella': h, 'redacta': 'a', 'verifica': 'b', 'contra': 'https://x', 'veredicto': 'fiel', 'fecha': '2026-11-24'}}
     mal = []
-    if faltan(f(), s, {}, {}) or faltan(f(), {}, {'w_1': h}, {}):
+    if faltan(f(), s, {}, {}, {'w_1'}) or not faltan(f(), s, {}, {}) or faltan(f(), {}, {'w_1': h}, {}):
         mal.append('frena lo que está bien')
     for k in ({'director': 'B'}, {'year': 1999}, {'synopsis': 'Otra.'}, {'synopsis_en': 'Other.'}):
-        if not faltan(f(**k), s, {}, {}) or not faltan(f(**k), {}, {'w_1': h}, {}):
+        if not faltan(f(**k), s, {}, {}, {'w_1'}) or not faltan(f(**k), {}, {'w_1': h}, {}):
             mal.append(f'no ve {k}')
     if not faltan(f(), s, {}, {'w_1': {'texto': 'otro original'}}):
         mal.append('no ve el original')
@@ -173,6 +173,8 @@ def sellar(lote, festivales=None, fecha=None):
             raise SystemExit(f'✗ {w} no publica sinopsis')
         s = {'huella': huella(pub[w], orig.get(w)), **{k: e.get(k) for k in ('redacta', 'verifica', 'contra', 'veredicto')},
              'fecha': fecha or datetime.date.today().isoformat()}
+        if w not in orig and w not in set(_leer(DEUDA).get('sin_original', [])):
+            raise SystemExit(f'✗ {w}: primero el original (--original)')
         if problema(s):
             raise SystemExit(f'✗ {w}: {problema(s)}')
         sel[w] = s
@@ -208,7 +210,8 @@ if __name__ == '__main__':
             sys.exit('✗ la deuda solo baja; sin sello: ' + ', '.join(f'{t} ({q})' for _, t, q in faltan(fs)[:8]))
         sel, g = sellos(), gemelas(fs, [])
         obras = {w: huella(v) for w, v in publicadas(fs).items() if w not in sel}
-        _escribir(DEUDA, {'_nota': 'Obras publicadas sin sello de verificación (pipeline/sello_obra.py). Solo baja.', 'obras': obras, 'gemelas': sorted(g)})
+        _escribir(DEUDA, {'_nota': 'Obras publicadas sin sello de verificación (pipeline/sello_obra.py). Solo baja.', 'obras': obras, 'gemelas': sorted(g),
+                          'sin_original': sorted(set(_leer(DEUDA).get('sin_original', [])) - set(originales()))})
         print(len(obras), 'sin sello ·', len(sel), 'selladas ·', len(g), 'textos gemelos')
     else:
         n = len(publicadas(fs))

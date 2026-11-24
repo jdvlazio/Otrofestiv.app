@@ -7380,6 +7380,28 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [obra-fuente] la obra es la fuente (pipeline/obra_fuente.py, paso 7) ────────
+check = 'obra-fuente'
+try:
+    import obra_fuente as _of
+    import catalogo as _cat_of
+    _ciega, _dec = _of.autoprueba(), _cat_of.decisiones()
+    _pf = [(_f, _x) for _f in sorted(_fests) if _of.enrolado(_f) for _x in _of.problemas(_f, _fests[_f], _dec)]
+    _de_mas = sorted(_of.legado() - set(_fests))
+    if _ciega:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
+    elif _pf:
+        fail(check, f'{len(_pf)} dato(s) de obra que no salen del almacén — obra_fuente.py <festival> --sembrar o --aplicar: '
+             + ' · '.join(f'{_f} «{_x[0]}» {_x[1]}: {_x[2]}' for _f, _x in _pf[:5]))
+    elif _of.legado() - _of.LEGADO_MAX:
+        fail(check, 'al legado no entra ningún festival: ' + ', '.join(sorted(_of.legado() - _of.LEGADO_MAX)))
+    elif _de_mas:
+        fail(check, 'en el legado y sin publicar, quitar: ' + ', '.join(_de_mas[:5]))
+    else:
+        ok(check, f'{len(set(_fests) - _of.legado())} festival(es) se arman desde el almacén; {len(_of.legado())} en el legado')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 # ── [caja-titulo] programas y secciones en Título (regla de Juan, 15 oct 2026) ──
 # «Muestra de Cortos», «Colombia Viva»: las palabras son del festival y la caja
 # de la app (pipeline/caja.py, el único dueño). Los títulos de obra no se miran.

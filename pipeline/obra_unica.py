@@ -161,6 +161,9 @@ def decidir(decs, vals, w, campo, valor, motivo, quien, fecha, veredicto=None):
         decs.append(d)
     if 'original' in d:
         raise SystemExit('✗ esa sinopsis tiene síntesis verificada: se cambia con sinopsis_cortas.py')
+    import deshacer
+    if d.get('valor') != v:
+        deshacer.recordar(d)
     d.update(valor=v, motivo=motivo, fecha=fecha, quien=quien, antes={**antes, **(d.get('antes') or {})})
     if campo == 'afiche':
         if quien.startswith('Juan'):
