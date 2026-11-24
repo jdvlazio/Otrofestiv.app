@@ -8,12 +8,16 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "anio-mas-temprano"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  },
  "generos": {
   "fuente": "festival",
