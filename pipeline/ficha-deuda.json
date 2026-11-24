@@ -1,0 +1,288 @@
+{
+ "_nota": "Obras que incumplen la regla de un campo, por festival. Solo baja (pipeline/ficha_obra.py).",
+ "aff-2026": {
+  "género:fuera de lista": 5,
+  "país:fuera de lista": 13
+ },
+ "aleste-2026": {
+  "género:fuera de lista": 2,
+  "sinopsis en inglés:cierre": 2,
+  "sinopsis en inglés:espacios": 1
+ },
+ "anibia-2026": {
+  "director:separador": 6,
+  "país:fuera de lista": 1,
+  "sinopsis en inglés:espacios": 3,
+  "sinopsis:cierre": 3
+ },
+ "bhff-2026": {
+  "género:fuera de lista": 3,
+  "sinopsis en inglés:espacios": 1,
+  "sinopsis:espacios": 1
+ },
+ "biff-2026": {
+  "género:fuera de lista": 2,
+  "país:fuera de lista": 5,
+  "sinopsis en inglés:cierre": 1,
+  "sinopsis en inglés:espacios": 1
+ },
+ "cineautopsia-2026": {
+  "país:fuera de lista": 1,
+  "sinopsis en inglés:cierre": 2,
+  "sinopsis en inglés:espacios": 2,
+  "sinopsis:habla del evento": 1
+ },
+ "cinemancia-2025": {
+  "duración:forma": 1,
+  "país:fuera de lista": 2,
+  "sinopsis en inglés:espacios": 1
+ },
+ "cinemancia-2026": {
+  "sinopsis en inglés:cierre": 2,
+  "sinopsis en inglés:espacios": 5,
+  "sinopsis:cierre": 4,
+  "sinopsis:espacios": 1,
+  "sinopsis:ficha técnica": 1
+ },
+ "cineparalapaz-2026": {
+  "país:fuera de lista": 1,
+  "sinopsis:demasiado corta": 1
+ },
+ "cinetoro-2026": {
+  "género:fuera de lista": 1,
+  "letterboxd:forma": 1,
+  "país:fuera de lista": 2
+ },
+ "cortoscali-2026": {
+  "director:separador": 1,
+  "país:fuera de lista": 4,
+  "sinopsis en inglés:cierre": 1,
+  "sinopsis en inglés:espacios": 1
+ },
+ "fantasmagoria-2026": {
+  "director:separador": 7,
+  "género:fuera de lista": 3,
+  "país:fuera de lista": 6,
+  "sinopsis en inglés:espacios": 1,
+  "sinopsis:cierre": 2,
+  "sinopsis:espacios": 1,
+  "sinopsis:habla del evento": 1
+ },
+ "fantasofest-2026": {
+  "director:separador": 2,
+  "género:fuera de lista": 2
+ },
+ "fecibac-2026": {
+  "género:fuera de lista": 1,
+  "sinopsis en inglés:espacios": 1
+ },
+ "festicinerio-2026": {
+  "género:fuera de lista": 2,
+  "sinopsis en inglés:cierre": 1,
+  "sinopsis en inglés:espacios": 2
+ },
+ "ficcali-2026": {
+  "género:fuera de lista": 2,
+  "sinopsis en inglés:cierre": 1,
+  "sinopsis en inglés:espacios": 1,
+  "sinopsis:espacios": 1
+ },
+ "ficci-65": {
+  "duración:forma": 1,
+  "género:fuera de lista": 3,
+  "país:fuera de lista": 53,
+  "sinopsis:espacios": 1
+ },
+ "ficdeh-2026": {
+  "director:separador": 1,
+  "género:fuera de lista": 12,
+  "letterboxd:forma": 1,
+  "país:fuera de lista": 1,
+  "sinopsis en inglés:cierre": 1,
+  "sinopsis en inglés:espacios": 1
+ },
+ "ficfusa-2026": {
+  "director:separador": 3,
+  "género:fuera de lista": 2,
+  "país:fuera de lista": 1,
+  "sinopsis en inglés:cierre": 1,
+  "sinopsis en inglés:espacios": 3,
+  "sinopsis:espacios": 1
+ },
+ "ficica-2026": {
+  "director:separador": 4,
+  "género:fuera de lista": 6,
+  "letterboxd:forma": 1,
+  "país:fuera de lista": 10,
+  "sinopsis en inglés:cierre": 1,
+  "sinopsis en inglés:espacios": 3,
+  "sinopsis:cierre": 1
+ },
+ "ficidi-2026": {
+  "sinopsis en inglés:cierre": 1,
+  "sinopsis en inglés:espacios": 1
+ },
+ "ficma-2026": {
+  "país:fuera de lista": 1,
+  "sinopsis:espacios": 4
+ },
+ "ficmontanas-2026": {
+  "director:separador": 1,
+  "género:fuera de lista": 28,
+  "país:fuera de lista": 9
+ },
+ "ficpa-2026": {
+  "género:fuera de lista": 1,
+  "país:fuera de lista": 3,
+  "sinopsis en inglés:espacios": 3,
+  "sinopsis:cierre": 2
+ },
+ "filcmar-2026": {
+  "director:separador": 1,
+  "sinopsis:cierre": 1
+ },
+ "finca-2026": {
+  "director:separador": 3,
+  "género:fuera de lista": 1,
+  "país:fuera de lista": 9,
+  "sinopsis en inglés:cierre": 2,
+  "sinopsis en inglés:espacios": 1,
+  "sinopsis:cierre": 1
+ },
+ "funza-2026": {
+  "país:fuera de lista": 1
+ },
+ "girardota-2026": {
+  "género:fuera de lista": 2,
+  "país:fuera de lista": 3,
+  "sinopsis:espacios": 3
+ },
+ "guatape-2026": {
+  "género:fuera de lista": 3,
+  "país:fuera de lista": 3,
+  "sinopsis en inglés:espacios": 1,
+  "sinopsis:cierre": 1
+ },
+ "itagui-2026": {
+  "director:separador": 2,
+  "género:fuera de lista": 3,
+  "país:fuera de lista": 2,
+  "sinopsis en inglés:espacios": 2,
+  "sinopsis:cierre": 1,
+  "sinopsis:demasiado corta": 1,
+  "sinopsis:espacios": 1,
+  "sinopsis:habla del evento": 4
+ },
+ "jardin-2026": {
+  "director:separador": 2,
+  "género:fuera de lista": 17,
+  "país:fuera de lista": 4,
+  "sinopsis en inglés:cierre": 1,
+  "sinopsis:demasiado corta": 1,
+  "sinopsis:ficha técnica": 1
+ },
+ "leviza-2026": {
+  "año:no es número": 4,
+  "director:separador": 2,
+  "duración:forma": 1,
+  "género:fuera de lista": 1,
+  "letterboxd:forma": 30,
+  "país:fuera de lista": 1
+ },
+ "mambe-2026": {
+  "género:fuera de lista": 1,
+  "país:fuera de lista": 2
+ },
+ "mamut-2026": {
+  "director:separador": 1,
+  "país:fuera de lista": 1,
+  "sinopsis en inglés:espacios": 3,
+  "sinopsis:espacios": 2
+ },
+ "midbo-2026": {
+  "director:cargo": 8,
+  "director:separador": 6,
+  "país:fuera de lista": 3,
+  "sinopsis en inglés:espacios": 1,
+  "sinopsis:cierre": 8
+ },
+ "miradas-2026": {
+  "género:fuera de lista": 22,
+  "sinopsis en inglés:cierre": 1,
+  "sinopsis en inglés:espacios": 2,
+  "sinopsis:cierre": 1,
+  "sinopsis:espacios": 1,
+  "sinopsis:habla del evento": 1
+ },
+ "mubibogota-2026": {
+  "país:fuera de lista": 7,
+  "sinopsis:cierre": 1
+ },
+ "narrarelfuturo-2026": {
+  "director:cargo": 1,
+  "director:separador": 1,
+  "género:fuera de lista": 20,
+  "país:fuera de lista": 1,
+  "sinopsis:espacios": 1
+ },
+ "olhar-2026": {
+  "director:basura": 1,
+  "director:separador": 1,
+  "sinopsis en inglés:cierre": 4,
+  "sinopsis en inglés:espacios": 6
+ },
+ "popayan-2026": {
+  "director:separador": 5,
+  "país:fuera de lista": 1,
+  "sinopsis en inglés:espacios": 4,
+  "sinopsis:cierre": 1
+ },
+ "qaff-2026": {
+  "director:separador": 1,
+  "género:fuera de lista": 20,
+  "país:fuera de lista": 7,
+  "sinopsis en inglés:espacios": 1,
+  "sinopsis:cierre": 4
+ },
+ "semanacine-2026": {
+  "sinopsis:espacios": 1
+ },
+ "siembrafest-2026": {
+  "director:separador": 1,
+  "género:fuera de lista": 18,
+  "sinopsis en inglés:espacios": 4
+ },
+ "tercertiempo-2026": {
+  "género:fuera de lista": 1
+ },
+ "tiff-2026": {
+  "país:fuera de lista": 3,
+  "sinopsis en inglés:espacios": 4,
+  "sinopsis en inglés:habla del festival": 48,
+  "sinopsis:espacios": 4
+ },
+ "tribeca-2026": {
+  "director:separador": 31,
+  "duración:forma": 91,
+  "género:fuera de lista": 4,
+  "país:fuera de lista": 233,
+  "sinopsis en inglés:otro idioma": 9
+ },
+ "under-2026": {
+  "sinopsis en inglés:espacios": 2
+ },
+ "vartex-2026": {
+  "director:separador": 4
+ },
+ "villadelcine-2026": {
+  "director:separador": 12,
+  "género:fuera de lista": 47,
+  "país:fuera de lista": 2,
+  "sinopsis:cierre": 1
+ },
+ "villadeleyvaiff-2026": {
+  "género:fuera de lista": 4,
+  "letterboxd:forma": 1,
+  "sinopsis en inglés:espacios": 2
+ }
+}
