@@ -4,15 +4,25 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1753860",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "créditos de la lámina DfcpGHfoWWI/14: ABSALON RINCON MUÑOZ",
+  "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1753860",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la lámina del festival dice 2025 (DfcpGHfoWWI/14); TMDB fecha el 6 sep 2026",
+  "fecha": "2026-11-24"
  },
  "paises": {
   "fuente": "tmdb:1753860",
   "regla": "tmdb-manda"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "traducción de la sinopsis en español (pie del festival)",
+  "fecha": "2026-11-24"
  }
 }

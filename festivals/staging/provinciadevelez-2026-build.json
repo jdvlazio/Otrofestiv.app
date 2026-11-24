@@ -367,7 +367,7 @@
    "day_order": 3,
    "venue": "La Tante Boutique - Barbosa",
    "has_qa": false,
-   "synopsis": "A través de un diálogo íntimo entre el documental y la ficción, La imaginada recorre la memoria colectiva y los relatos orales de Barbosa, Santander, para revelar cómo sus habitantes han construido su identidad a lo largo del tiempo. Con la presencia de la escritora y directora Carolina Muñoz.",
+   "synopsis": "A través de un diálogo íntimo entre el documental y la ficción, La imaginada recorre la memoria colectiva y los relatos orales de Barbosa, Santander, para revelar cómo sus habitantes han construido su identidad a lo largo del tiempo.",
    "synopsis_lang": "es",
    "poster": "/assets/provinciadevelez-2026/la-imaginada.jpg",
    "posterSource": "oficial",
@@ -409,7 +409,7 @@
    "film_list": [
     {
      "title": "Saint Juanito",
-     "director": "Chris Andree",
+     "director": "Sebastián Tapia",
      "country": "Perú",
      "flags": "🇵🇪",
      "synopsis_en": "From the depths of the Peruvian jungle, where extraordinary natural beauty coexists with harsh realities, Saint Juanito invites us on a journey through the lights and shadows of our Amazon.",
@@ -594,8 +594,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "genre": "Documental",
-     "synopsis_en": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Güindiva Villafaña Mejía.",
-     "synopsis": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Güindiva Villafaña Mejía.",
+     "synopsis_en": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Gündiwa Villafaña Mejía.",
+     "synopsis": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Gündiwa Villafaña Mejía.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/un-dialogo-para-sanar-la-tierra.jpg",
      "posterSource": "oficial"
@@ -634,9 +634,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T16:14:00",
+  "fecha": "2026-11-24T16:22:34",
   "plan_sha": "000e0785312106ef",
-  "paso": 1,
-  "cmd": "python3 pipeline/provinciadevelez-2026-catalogo.py"
+  "paso": 7,
+  "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"
  }
 }
