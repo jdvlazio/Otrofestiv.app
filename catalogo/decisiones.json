@@ -7541,7 +7541,10 @@
   "antes": {
    "ficcali-2026": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia.",
    "ficdeh-2026": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
-   "ficfusa-2026": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia.",
+   "ficfusa-2026": [
+    "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia.",
+    "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia. Proyección con interpretación en lengua de señas. Conversatorio con Andrea Montenegro y Jorge Vela, de Cinemazul"
+   ],
    "ficica-2026": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia.",
    "ficmontanas-2026": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia.",
    "guatape-2026": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia.",
@@ -8541,7 +8544,10 @@
    "69cf1824954f"
   ],
   "antes": {
-   "cinemancia-2025": "Rafael es poeta y vive con su mejor amigo, tiene un trabajo triste en una oficina gris y un noviazgo desgastado. La ciudad está colapsando por una ola de calor."
+   "cinemancia-2025": [
+    "Rafael es poeta y vive con su mejor amigo, tiene un trabajo triste en una oficina gris y un noviazgo desgastado. La ciudad está colapsando por una ola de calor.",
+    "Un año después de terminar Tú me abrasas, Piñeiro presenta el prefacio que no pudo incluir en el montaje final. Siguiendo a Pavese, quien escribió un prefacio para cada capítulo de Diálogos con Leucó, acá presentamos, finalmente, nuestro prefacio."
+   ]
   }
  },
  {
@@ -13788,7 +13794,10 @@
   "fecha": "2026-11-24",
   "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
   "antes": {
-   "cinemancia-2025": 2024
+   "cinemancia-2025": [
+    2024,
+    2025
+   ]
   }
  },
  {
@@ -19155,7 +19164,7 @@
   "fecha": "2026-11-24",
   "quien": "Juan («voy con las cinco»)",
   "antes": {
-   "itagui-2026": "2019"
+   "itagui-2026": 2019
   },
   "fuente": "https://www.produ.com/cine/noticias/inolvidable-heidi-pelicula-colombia-argentina-estreno-marcela-citterio/"
  },
@@ -19166,7 +19175,7 @@
    "CO",
    "AR"
   ],
-  "motivo": "coproducción",
+  "motivo": "coproducción colombo-argentina según PRODU",
   "fecha": "2026-11-24",
   "quien": "Juan («voy con las cinco»)",
   "antes": {
@@ -19182,7 +19191,7 @@
   "fecha": "2026-11-24",
   "quien": "Juan («voy con las cinco»)",
   "antes": {
-   "qaff-2026": "2023"
+   "qaff-2026": 2023
   },
   "fuente": "https://afropop.org/articles/the-little-film-that-could-the-banjo-boys-makes-its-debut"
  },
@@ -19208,8 +19217,8 @@
   "fecha": "2026-11-24",
   "quien": "Juan («voy con las cinco»)",
   "antes": {
-   "biff-2026": "1651710",
-   "olhar-2026": "1651710"
+   "biff-2026": 1651710,
+   "olhar-2026": 1651710
   }
  },
  {
@@ -19689,7 +19698,10 @@
   "fecha": "2026-11-24",
   "quien": "Juan («voy con las cinco»)",
   "antes": {
-   "tiff-2026": "the-end-2026-4"
+   "tiff-2026": [
+    "end-1992",
+    "the-end-2026-4"
+   ]
   }
  },
  {
@@ -19844,6 +19856,18 @@
   "quien": "Juan («voy con las cinco»)",
   "antes": {
    "tribeca-2026": "homesick-2026"
+  }
+ },
+ {
+  "work_id": "w_R4DN2AHQDB30",
+  "campo": "xref.letterboxd",
+  "valor": "like-any-other-mortal",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "biff-2026": "como-todo-mortal",
+   "olhar-2026": "como-todo-mortal"
   }
  }
 ]

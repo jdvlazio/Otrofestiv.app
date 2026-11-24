@@ -35,3 +35,10 @@ la identidad contra su fuente (en construcción, paso 2 y 3 del plan).
 identidades dudosas. 4. Limpiar país, género, dirección, año, duración. 5. Errores
 de criterio, con hoja. 6. Sinopsis. 7. La obra como fuente. 8. Deshacer y
 originales. 9. Prueba final: rearmar un festival terminado y comparar.
+
+## Deshacer
+
+Cada decisión de `catalogo/decisiones.json` guarda en `antes` lo que publicaba cada
+festival, tal como lo escribía (texto, número o ruta; el `valor` puede ir en otra
+forma, p. ej. ISO). Si publicaba dos valores, es una lista. Sin `antes`: la decisión
+no reemplazó ningún valor o es anterior y no se pudo recuperar.
