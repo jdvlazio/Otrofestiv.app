@@ -26,15 +26,9 @@ sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 
 CAMPO = {'director': 'directores', 'year': 'anio', 'country': 'paises', 'genre': 'generos',
          'synopsis': 'sinopsis.es', 'synopsis_en': 'sinopsis.en', 'poster': 'afiche'}
-EXC_THE_END = ('director', 'year', 'country')
-# Divergencias conocidas y explicadas, con fecha. Se quitan al resolverse: el
-# guardián también falla si una excepción ya no hace falta.
-# Son por obra Y campo. La de «The End» la borra el PR que separe las dos obras
-# (pipeline/ no es «código» para la frontera: puede ir en el PR de datos).
-EXCEPCIONES = {
-    ('w_R4PS7MYC5SKG', k): '«The End» une dos obras de TIFF (Pelechian y Lindroth von Bahr); la rama data/bogoshorts-2026 las separa (24 nov 2026)'
-    for k in EXC_THE_END
-}
+# Divergencias conocidas y explicadas, por obra Y campo: {(work_id, campo): motivo}.
+# El guardián también falla si una excepción ya no hace falta.
+EXCEPCIONES = {}
 
 
 def elegidos(decs):
