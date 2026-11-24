@@ -71,6 +71,37 @@ class Tocado(unittest.TestCase):
             al.REPO = antes
 
 
+class QuienPublico(unittest.TestCase):
+    """v1 puesta por un job lento DESPUÉS del merge de v2: main manda; puesta por una persona: no."""
+    def test_autor_de_lo_publicado(self):
+        t = tempfile.mkdtemp()
+        g = lambda quien, *a: subprocess.run(['git', '-C', t, '-c', 'user.email=t@t', '-c', f'user.name={quien}', *a], check=True, capture_output=True, text=True).stdout.strip()
+        g('x', 'init', '-q', '-b', 'datos')
+        antes, al.REPO = al.REPO, t
+        try:
+            for quien, n in (('github-actions', 'a.json'), ('jdvlazio', 'b.json')):
+                open(os.path.join(t, n), 'w').write(n)
+                g(quien, 'add', n); g(quien, 'commit', '-qm', n)
+            c = g('x', 'rev-parse', 'HEAD')
+            self.assertEqual((al.lo_puso_el_job(c, 'a.json'), al.lo_puso_el_job(c, 'b.json')), (True, False))
+        finally:
+            al.REPO = antes
+
+    def test_estado_cede_ante_main_solo_si_lo_puso_el_job(self):
+        t = tempfile.mkdtemp()
+        os.mkdir(os.path.join(t, 'festivals'))
+        open(os.path.join(t, 'festivals', 'f.json'), 'w').write('v2')
+        e = {'sha256': 'v1', 'publicado': '2026-11-24T10:08:00Z', 'commit': 'c'}
+        viejo = al.REPO, al.tocado, al.lo_puso_el_job
+        al.REPO, al.tocado = t, lambda *r: 1        # main la tocó mucho antes
+        try:
+            for job, esperado in ((True, 'publicar'), (False, 'adelante')):
+                al.lo_puso_el_job = lambda *a: job
+                self.assertEqual(al.estado('f', e), esperado)
+        finally:
+            al.REPO, al.tocado, al.lo_puso_el_job = viejo
+
+
 class Pasajeros(unittest.TestCase):
     def test_502_y_cortes_de_red_se_reintentan(self):
         m = _publicar_datos()

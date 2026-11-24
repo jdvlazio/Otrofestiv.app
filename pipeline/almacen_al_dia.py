@@ -10,6 +10,10 @@ LA REGLA, para cada festival del almacén: si su JSON (o su ficha) no es el de m
 Y main lo tocó DESPUÉS de lo publicado, se publica. Lo publicado después gana
 siempre: es una publicación a mano desde una rama, o una vuelta atrás. No importa
 qué push disparó el job: lo que falló o se perdió lo retoma la corrida siguiente.
+Eso vale solo si publicó una PERSONA: lo que puso este mismo job (autor
+«github-actions» en la rama `datos`) cede siempre ante main — si no, un job lento
+que publica v1 después del merge de v2 dejaría v1 para siempre.
+Límite conocido: la ficha se fecha por el último cambio de TODO src/config.js.
 Se decide de nuevo, con el índice fresco, justo antes de publicar cada uno.
 
 Un festival que falla no detiene a los demás; se reintenta al final y, si sigue
@@ -70,6 +74,16 @@ def tocado(*rutas):
     return int(r.stdout.strip() or 0)
 
 
+def traer_datos():
+    subprocess.run(['git', '-C', REPO, 'fetch', '-q', 'origin', '+refs/heads/datos:refs/remotes/origin/datos'], check=True, timeout=120)
+
+
+def lo_puso_el_job(commit, *rutas):
+    """¿El último que cambió esas rutas en `datos`, hasta ese commit, fue este job?"""
+    r = subprocess.run(['git', '-C', REPO, 'log', '-1', '--format=%an', commit, '--', *rutas], check=True, capture_output=True, text=True)
+    return r.stdout.strip() == 'github-actions'
+
+
 def _bajar(u):
     with urllib.request.urlopen(u, timeout=60) as r:
         return r.read()
@@ -98,10 +112,14 @@ def estado(f, e):
         if local and ficha_difiere(local, e['ficha'], sha):
             fdif, tf = True, tocado('src/config.js', *([k] if sha else []))
     pub = datetime.fromisoformat(e['publicado'].replace('Z', '+00:00')).timestamp()
+    if dif or fdif:
+        if lo_puso_el_job(e['commit'], *([ruta] if dif else [f'fichas/{f}.json', *([k] if sha else [])])):
+            pub = 0
     return decidir(dif, tocado(ruta) if dif else 0, fdif, tf, pub)
 
 
 def main():
+    traer_datos()
     lista, mal = [], []
     for f, e in sorted(indice().items()):
         try:
@@ -121,6 +139,7 @@ def main():
 
     def publicar(f, vuelta):
         try:
+            traer_datos()
             if estado(f, indice()[f]) != 'publicar':   # alguien lo publicó mientras tanto
                 print(f'· {f}: ya no hace falta')
                 return True
