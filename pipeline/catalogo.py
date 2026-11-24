@@ -197,7 +197,7 @@ def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
                 (duracion and any(v.get('duracion_min') and abs(v['duracion_min'] - duracion) <= 3
                                   for v in o.get('versiones') or [])):
             hits.add(wid)
-    if hits and largos - hits:
+    if largos and any(not misma_persona_larga(director, obs[w].get('directores') or []) for w in hits):   # no se adivina
         return None, None
     hits = hits or largos
     return (hits.pop(), 'coincide') if len(hits) == 1 else (None, None)
