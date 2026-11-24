@@ -18,5 +18,11 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la vertical gana al still; sin la marca de SiembraFest",
+  "fecha": "2026-11-24"
  }
 }
