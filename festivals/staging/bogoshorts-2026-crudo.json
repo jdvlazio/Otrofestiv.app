@@ -12944,6 +12944,27 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
     "date": "2026-11-18"
    }
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "21:00",
+   "sede": "MonkeyDo",
+   "sala": "",
+   "ciudad": "Bogotá",
+   "texto_grilla": "Noche Sagitario",
+   "titulo": "Noche Sagitario",
+   "seccion": "Eventos especiales",
+   "tipo": "evento",
+   "type": "event",
+   "event_kind": "fiesta",
+   "has_qa": false,
+   "descripcion": "Acceso exclusivo para acreditados de las categorías: Aliado, Industria BFM y Participante.",
+   "acceso": "Entrada con invitación (solo acreditados Aliado, Industria BFM y Participante)",
+   "_src": {
+    "url": "https://www.instagram.com/p/DgGg1WOu3FA/",
+    "date": "2026-11-23",
+    "tipo": "festival-ig"
+   }
   }
  ],
  "_descartadas": [
@@ -12963,7 +12984,7 @@
    "texto": "Fiesta BFM by Karma Cine",
    "dia": "2026-12-02",
    "sede": "Fiestas",
-   "por_que": "fila «Fiestas» (13 nov): la grilla no dice dónde son"
+   "por_que": "fila «Fiestas» (13 nov): la grilla no dice dónde son (la Noche Sagitario entra con su sede, IG 23 nov)"
   },
   {
    "texto": "BFM",
@@ -12993,7 +13014,7 @@
    "texto": "Noche Sagitario",
    "dia": "2026-12-05",
    "sede": "Fiestas",
-   "por_que": "fila «Fiestas» (13 nov): la grilla no dice dónde son"
+   "por_que": "fila «Fiestas» (13 nov): la grilla no dice dónde son (la Noche Sagitario entra con su sede, IG 23 nov)"
   },
   {
    "texto": "FI-ENA2",
@@ -13005,7 +13026,7 @@
    "texto": "Creyentes. Fiesta de clausura 16A13 / 2.35 / Sonata",
    "dia": "2026-12-08",
    "sede": "Fiestas",
-   "por_que": "fila «Fiestas» (13 nov): la grilla no dice dónde son"
+   "por_que": "fila «Fiestas» (13 nov): la grilla no dice dónde son (la Noche Sagitario entra con su sede, IG 23 nov)"
   }
  ]
 }

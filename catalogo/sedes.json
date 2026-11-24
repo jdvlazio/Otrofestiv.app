@@ -456,7 +456,10 @@
     "Taller de la Imagen"
    ],
    "ciudad": "Bogotá",
-   "corto": "Cinemateca de Bogotá"
+   "corto": "Cinemateca de Bogotá",
+   "salas_alias": {
+    "Taller de la imagen": "Taller de la Imagen"
+   }
   },
   "s_180f653f": {
    "nombre": "I.E. San Andrés",
@@ -570,6 +573,7 @@
     "midbo-2026"
    ],
    "salas": [
+    "Sala Jules Verne",
     "Sede Centro"
    ],
    "ciudad": "Bogotá",
@@ -1547,6 +1551,7 @@
     "bogoshorts-2026"
    ],
    "salas": [
+    "Lounge BFM Plazoleta UHeart",
     "Plazoleta principal"
    ],
    "ciudad": "Bogotá",
@@ -2861,7 +2866,8 @@
    "festivales": [
     "bogoshorts-2026"
    ],
-   "ciudad": "Bogotá"
+   "ciudad": "Bogotá",
+   "corto": "Teatro al aire libre La Media Torta"
   },
   "s_92850ca4": {
    "nombre": "Plaza Mayor",
@@ -2962,7 +2968,8 @@
    "festivales": [
     "bogoshorts-2026"
    ],
-   "ciudad": "Bogotá"
+   "ciudad": "Bogotá",
+   "corto": "Teatro El Parque"
   },
   "s_98028200": {
    "nombre": "Centro Cultural Brisas de Mayo",
@@ -3311,7 +3318,8 @@
    "festivales": [
     "bogoshorts-2026"
    ],
-   "ciudad": "Bogotá"
+   "ciudad": "Bogotá",
+   "corto": "Teatro Jorge Eliécer Gaitán"
   },
   "s_a4fd24e0": {
    "nombre": "Coliseo Institución Educativa Fray José Joaquín Escobar",
@@ -3347,7 +3355,8 @@
    "festivales": [
     "bogoshorts-2026"
    ],
-   "ciudad": "Bogotá"
+   "ciudad": "Bogotá",
+   "corto": "Sala Gaitán Antigua Cinemateca"
   },
   "s_a6e0e0b3": {
    "nombre": "Cine Colombia Multiplex Avenida Chile",
@@ -4054,7 +4063,8 @@
    "festivales": [
     "bogoshorts-2026"
    ],
-   "ciudad": "Bogotá"
+   "ciudad": "Bogotá",
+   "corto": "Teatro Delia Zapata Olivella"
   },
   "s_c4b65a07": {
    "nombre": "Casa de la Cultura",
@@ -4572,6 +4582,26 @@
    ],
    "ciudad": "Villa de Leyva",
    "corto": "Galería Pérez Rojas"
+  },
+  "s_e023fd68": {
+   "nombre": "MonkeyDo",
+   "lat": 4.6147067,
+   "lng": -74.0818546,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Monkeydo+%2F+MKD/@4.6147067,-74.0818546,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f990010870ef1:0x9a6346d8d7ac6cbb!8m2!3d4.6147067!4d-74.0818546",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Diagonal 19a #19b-66",
+   "alias": [
+    "MonkeyDo - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "MonkeyDo"
   },
   "s_e046a622": {
    "nombre": "La Maloca Cultural",

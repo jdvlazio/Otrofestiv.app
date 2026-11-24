@@ -347,6 +347,16 @@
    "lng": -74.0745009,
    "address": "Calle 11 # 5-60",
    "_matriz": "s_c47407fc"
+  },
+  "MonkeyDo - Bogotá": {
+   "short": "MonkeyDo",
+   "city": "Bogotá",
+   "_prec": "manual",
+   "_nota": "Google Maps (búsqueda en el navegador, 24 nov 2026): «Monkeydo / MKD», misma dirección que el post del festival DgGg1WOu3FA.",
+   "lat": 4.6147067,
+   "lng": -74.0818546,
+   "address": "Diagonal 19a #19b-66",
+   "_matriz": "s_e023fd68"
   }
  },
  "_avisos_id": [],
@@ -16958,6 +16968,32 @@
    "is_free": true,
    "_fid": "f_5ade8fa1d3",
    "id": "f_5ade8fa1d3"
+  },
+  {
+   "title": "Noche Sagitario",
+   "type": "event",
+   "section": "🎉 Eventos Especiales",
+   "_ancla": [
+    "MonkeyDo - Bogotá",
+    "2026-12-05",
+    "21:00"
+   ],
+   "day": "2026-12-05",
+   "time": "21:00",
+   "day_order": 4,
+   "venue": "MonkeyDo - Bogotá",
+   "event_kind": "fiesta",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/DgGg1WOu3FA/",
+    "date": "2026-11-23",
+    "tipo": "festival-ig"
+   },
+   "by_invitation": true,
+   "description": "Acceso exclusivo para acreditados de las categorías: Aliado, Industria BFM y Participante.",
+   "description_lang": "es",
+   "_fid": "f_7c09194342",
+   "id": "f_7c09194342"
   }
  ],
  "_avisos_duracion": [
@@ -16966,8 +17002,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T08:46:35",
-  "plan_sha": "51eddc3380a249f7",
+  "fecha": "2026-11-24T09:48:48",
+  "plan_sha": "ffb90333f9801666",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"
  }

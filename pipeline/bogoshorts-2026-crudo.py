@@ -103,7 +103,7 @@ LEYENDA = {
     'CLC-DIVX': ('Colecciones', 'Diversidades'), 'CLC-AMO': ('Colecciones', 'El amor es corto'),
     'CLC-FUT': ('Colecciones', 'El mundo es un balón'),
 }
-DESCARTES = {'Fiestas': 'fila «Fiestas» (13 nov): la grilla no dice dónde son',
+DESCARTES = {'Fiestas': 'fila «Fiestas» (13 nov): la grilla no dice dónde son (la Noche Sagitario entra con su sede, IG 23 nov)',
              'BFM': 'franja de industria de varios días, no una función',
              'Acreditaciones': 'punto de acreditación, no una función',
              'City U': 'la fila de City U es la franja del BFM - BOGOSHORTS Film Market (industria, varios días)',
@@ -377,6 +377,13 @@ def main():
                       'texto_grilla': 'IMAGINATÓN', 'titulo': 'Entrega clave IMAGINATÓN', 'seccion': 'IMAGINATÓN',
                       'tipo': 'evento', 'type': 'event', 'event_kind': 'evento', 'has_qa': False,
                       'acceso': DESCONOCIDO, '_src': {'url': 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf', 'date': '2026-11-18'}})
+    # La Noche Sagitario: la grilla la trae en «Fiestas» sin lugar; el festival lo dio el 23 nov (IG).
+    funciones.append({'dia': '2026-12-05', 'hora': '21:00', 'sede': 'MonkeyDo', 'sala': '', 'ciudad': 'Bogotá',
+                      'texto_grilla': 'Noche Sagitario', 'titulo': 'Noche Sagitario', 'seccion': 'Eventos especiales',
+                      'tipo': 'evento', 'type': 'event', 'event_kind': 'fiesta', 'has_qa': False,
+                      'descripcion': 'Acceso exclusivo para acreditados de las categorías: Aliado, Industria BFM y Participante.',
+                      'acceso': 'Entrada con invitación (solo acreditados Aliado, Industria BFM y Participante)',
+                      '_src': {'url': 'https://www.instagram.com/p/DgGg1WOu3FA/', 'date': '2026-11-23', 'tipo': 'festival-ig'}})
     # VR abierta varios días: UNA función info por tramo continuo del mismo horario ([abierta-varios-dias])
     vr = [f for f in funciones if f.get('codigo') == 'CVR']
     for desde, hasta in (('2026-12-02', '2026-12-04'), ('2026-12-05', '2026-12-06')):

@@ -20,7 +20,7 @@ ESP = [('fontanar', 'FONTANAR'), ('sala capital', 'CAPITAL'), ('sala 2', 'SALA2'
        ('imagen', 'IMAGEN'), ('lounge', 'LOUNGE'), ('plazoleta', 'LOUNGE'), ('parque', 'PARQUE'),
        ('sótano', 'SOTANO'), ('alianza', 'ALIANZA'), ('ático', 'ATICO'), ('cefe', 'CEFE'),
        ('delia', 'DELIA'), ('media torta', 'TORTA'), ('gaitán antigua', 'GAITAN'), ('sala gaitán', 'GAITAN'),
-       ('jorge', 'JEG'), ('fiestas', 'FIESTAS'), ('retina', 'RETINA'), ('city', 'CITYU')]
+       ('jorge', 'JEG'), ('fiestas', 'FIESTAS'), ('monkeydo', 'FIESTAS'), ('retina', 'RETINA'), ('city', 'CITYU')]
 
 
 def esp(s):
@@ -55,7 +55,9 @@ def toks_lectura(n):
     out = set()
     for c in d['celdas']:
         e = esp(c['espacio'])
-        if e in ('CITYU', 'SOTANO', 'RETINA', 'FIESTAS') or c['texto'].startswith('Franja Encuentros'):
+        if e == 'FIESTAS' and c['texto'] == 'Noche Sagitario':
+            pass                                      # la única fiesta con lugar (IG 23 nov)
+        elif e in ('CITYU', 'SOTANO', 'RETINA', 'FIESTAS') or c['texto'].startswith('Franja Encuentros'):
             continue                                  # los descartes declarados del crudo
         h = c.get('hora') or ''
         if (c['dia'], h, e) == ('2026-12-08', '11:00', 'IMAGEN'):
