@@ -3392,7 +3392,7 @@
    "time": "19:00",
    "day_order": 11,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala 2",
+   "sala": "Sala 3",
    "has_qa": false,
    "synopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
    "synopsis_lang": "es",
@@ -3424,8 +3424,9 @@
      "fecha": "2026-11-16"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "sala",
+     "fecha": "2026-11-24",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4116?sede=11"
     },
     "duration": {
      "tipo": "festival-web",
@@ -3531,7 +3532,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T07:05:28",
+  "fecha": "2026-11-24T09:18:19",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"

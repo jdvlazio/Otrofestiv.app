@@ -442,6 +442,23 @@
     "fecha": "2026-11-24"
    },
    "evidencia": "ficha de la Cinemateca (leída 24 nov): «Noviembre 26 7:30 PM · Sala 3»; Juan, 24 nov: manda la Cinemateca (web del festival 19:00 Sala 2)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "19:00"
+   },
+   "funcion": "f_4c38bc5347",
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "contra": "Sala 2",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4116?sede=11",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "tres caminos coinciden (vigía 24 nov): HTML de la ficha de la Cinemateca («Noviembre 29 7:00 PM Sala 3»), texto renderizado de la misma ficha y TuBoleta («Cinemateca de Bogotá - Centro Sala 3 | 29.11.2026 - 19:00 | Retorno antes de las 3PM», productId=10230639424954). La web del festival dice Sala 2; mismo criterio que el jueves 26 (Juan, 24 nov: manda la Cinemateca)"
   }
  ]
 }
