@@ -55,6 +55,14 @@ TERMINADO = 8     # días después del fin en que se sigue mirando (palmarés)
 DIARIO_H = 20     # horas mínimas entre consultas de un festival terminado
 LIMITE = 5        # posts máximos por cuenta y corrida (26 oct: 10→5 para no pasar el plan gratis; 3 corridas al día bastan)
 PRIMERA_VEZ_D = 3  # sin historial: mirar solo los últimos N días
+# Pre-onboarding (24 nov 2026, Juan: los títulos se suman en cuanto salen, no al
+# final). Festicine Antioquia anunció su selección y nadie la leyó: la cuenta se
+# miraba desde 7 días antes y solo los últimos 3 días. Un festival por montar se
+# mira desde PRE días antes, y la primera lectura trae su HISTORIAL.
+PRE = 45
+HISTORIAL_D = 90
+HISTORIAL_LIMITE = 40
+HISTORIAL = set()  # cuentas por montar; la llena main() (solo Bright Data trae historial)
 ACTOR = 'apify~instagram-post-scraper'
 # RESPALDO (2 nov 2026): lobstr.io, plan gratis de 100 posts/mes, sin cuenta de
 # Instagram (lee solo lo público). Entra cuando a Apify le queda menos de
@@ -109,7 +117,7 @@ def vigilados(config, cuentas, ahora, cerrados=()):
         if fid in fests and not fests[fid]['cuenta']:
             fests[fid]['cuenta'] = cta
     for p in cuentas.get('preonboarding', []):
-        fests.setdefault(p['id'], {'cuenta': p['cuenta'], 'inicio': p['inicio'], 'fin': p['fin']})
+        fests.setdefault(p['id'], {'cuenta': p['cuenta'], 'inicio': p['inicio'], 'fin': p['fin'], 'pre': True})
     hoy = ahora.date()
     out = []
     for fid, f in sorted(fests.items()):
@@ -119,11 +127,11 @@ def vigilados(config, cuentas, ahora, cerrados=()):
         fin = datetime.strptime(f['fin'], '%Y-%m-%d').date()
         if ini - timedelta(days=1) <= hoy <= fin:
             out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'vivo', 'fin': f['fin']})
-        elif ini - timedelta(days=CAMINO) <= hoy < ini - timedelta(days=1):
+        elif ini - timedelta(days=PRE if f.get('pre') else CAMINO) <= hoy < ini - timedelta(days=1):
             # En camino: una vez al día. Apify cobra cada consulta aunque no haya
             # posts nuevos (~US$0,003 por cuenta): mirar 3 veces al día una cuenta
             # que publica una selección por semana era casi todo el gasto (26 oct).
-            out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'camino', 'fin': f['fin']})
+            out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'camino', 'fin': f['fin'], 'pre': bool(f.get('pre'))})
         elif fin < hoy <= fin + timedelta(days=TERMINADO) and fid not in cerrados:
             # Terminado: solo se mira por el palmarés. Si el vigía lo declaró
             # COMPLETO (todas las categorías anunciadas tienen ganadora publicada,
@@ -205,7 +213,7 @@ def toca(v, estado, ahora):
     return not ult or ahora - datetime.fromisoformat(ult) >= timedelta(hours=DIARIO_H)
 
 
-def desde(cuentas, estado, ahora):
+def desde(cuentas, estado, ahora, historial=()):
     """Fecha mínima a pedir: la consulta anterior más vieja entre las cuentas
     (menos 1 h de margen). Lo publicado antes ya se vio; lo repetido en el
     margen lo descarta `clasificar` por la fecha del último post visto."""
@@ -213,7 +221,7 @@ def desde(cuentas, estado, ahora):
     for c in cuentas:
         u = estado.get(c, {}).get('consultado')
         fechas.append(datetime.fromisoformat(u) - timedelta(hours=1) if u
-                      else ahora - timedelta(days=PRIMERA_VEZ_D))
+                      else ahora - timedelta(days=HISTORIAL_D if c in historial else PRIMERA_VEZ_D))
     return min(fechas).strftime('%Y-%m-%dT%H:%M:%S')
 
 
@@ -505,8 +513,9 @@ def brightdata_por_cuentas(cuentas, estado, ahora, clave, espera=8, intentos=100
     `clasificar`). 1 crédito por post; plan gratis 5.000/mes con freno duro al
     agotarse (devuelve error, nunca cobra). Trae TODAS las láminas."""
     try:
-        entrada = [{'url': f'https://www.instagram.com/{c}/', 'num_of_posts': LIMITE,
-                    'start_date': datetime.fromisoformat(desde([c], estado, ahora)).strftime('%m-%d-%Y')}
+        nuevas = {c for c in cuentas if c in HISTORIAL and not estado.get(c, {}).get('consultado')}
+        entrada = [{'url': f'https://www.instagram.com/{c}/', 'num_of_posts': HISTORIAL_LIMITE if c in nuevas else LIMITE,
+                    'start_date': datetime.fromisoformat(desde([c], estado, ahora, nuevas)).strftime('%m-%d-%Y')}
                    for c in cuentas]
         res = _brightdata(clave, BRIGHTDATA_DATASET, '&type=discover_new&discover_by=url', entrada, espera, intentos)
         items = [brightdata_a_apify(x) for x in res if x.get('shortcode')]
@@ -536,6 +545,7 @@ def brightdata_a_apify(x):
             'displayUrl': x.get('thumbnail') or (laminas[0] if laminas else None),
             'type': x.get('content_type'),
             'childPosts': [{'displayUrl': u} for u in laminas] if len(laminas) > 1 else [],
+            'videoUrls': [u for u in x.get('videos') or [] if isinstance(u, str)],
             '_via': 'brightdata'}
 
 
@@ -680,6 +690,7 @@ def main():
     cerrados = json.load(open(CERRADOS)) if os.path.exists(CERRADOS) else {}
     vig = vigilados(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora, cerrados)
     ahora_toca = [v for v in vig if toca(v, estado, ahora)]
+    HISTORIAL.update(v['cuenta'] for v in vig if v.get('pre'))
     faltan = sin_cuenta(festivales_config(open(CONFIG).read()), json.load(open(CUENTAS)), ahora)
     cuentas = sorted({v['cuenta'] for v in ahora_toca})
     informe = {'hora': ahora.isoformat(timespec='minutes'),
