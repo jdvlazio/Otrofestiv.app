@@ -319,25 +319,6 @@ def publicar(fid, forzar=False, ensayo=False):
     if mudas:
         print(f'⚠ --forzar: se publican {len(mudas)} obra(s) sin afiche y sin porqué')
 
-    # ── ni sin sinopsis en español en silencio (pipeline/sinopsis.py, 19 nov) ──
-    # Frena solo lo que SUPERA la deuda congelada del festival: republicar un
-    # festival vivo con su deuda vieja sigue funcionando; empeorarla, no.
-    import sinopsis
-    _exc = sinopsis.excede(fid, out['films'])
-    if _exc and not forzar:
-        _pend, _techo = _exc
-        print(f'✗ NO se publica {fid}: {len(_pend)} obra(s) sin sinopsis en español '
-              f'(su deuda congelada es {_techo}). Cada una se traduce, se busca '
-              f'o lleva `sin_sinopsis` con su porqué y sus fuentes en '
-              f'festivals/staging/{fid}-correcciones.json:')
-        for x in _pend[:12]:
-            print('   ·', sinopsis.linea(x))
-        if len(_pend) > 12:
-            print(f'   … y {len(_pend) - 12} más   (python3 pipeline/sinopsis.py {fid})')
-        _frena(f'sinopsis en español ({len(_pend)}, techo {_techo})')
-    if _exc:
-        print(f'⚠ --forzar: se publican {len(_exc[0])} obra(s) sin sinopsis (techo {_exc[1]})')
-
     # ── ni con una duración que contradice a TMDB en silencio (20 nov 2026) ──
     # Funza, «Basta Mamá»: la franja de 125 min (película + conversatorio) entró
     # como duración de una obra de 77. El ensamblador lo avisaba y nadie lo leía.
@@ -391,6 +372,27 @@ def publicar(fid, forzar=False, ensayo=False):
             print('  → TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir  (re-arma TODO el catálogo: se commitea todo lo que cambie)')
             if _ENSAYO is not None:   # no corta acá, pero frena el push: en el ensayo cuenta
                 _ENSAYO.append(f'obras nuevas para el catálogo ({len(_nuevas)})')
+    # ── ni sin sinopsis en español en silencio (pipeline/sinopsis.py, 19 nov) ──
+    # Va DESPUÉS de traer la sinopsis del almacén: se mide lo que se va a publicar
+    # (FICFUSA, 24 nov: contaba 20 por frenar, con 14 reales). Frena solo lo que
+    # SUPERA la deuda congelada del festival: republicar un festival vivo con su
+    # deuda vieja sigue funcionando; empeorarla, no.
+    import sinopsis
+    _exc = sinopsis.excede(fid, out['films'])
+    if _exc and not forzar:
+        _pend, _techo = _exc
+        print(f'✗ NO se publica {fid}: {len(_pend)} obra(s) sin sinopsis en español '
+              f'(su deuda congelada es {_techo}). Cada una se traduce, se busca '
+              f'o lleva `sin_sinopsis` con su porqué y sus fuentes en '
+              f'festivals/staging/{fid}-correcciones.json:')
+        for x in _pend[:12]:
+            print('   ·', sinopsis.linea(x))
+        if len(_pend) > 12:
+            print(f'   … y {len(_pend) - 12} más   (python3 pipeline/sinopsis.py {fid})')
+        _frena(f'sinopsis en español ({len(_pend)}, techo {_techo})')
+    if _exc:
+        print(f'⚠ --forzar: se publican {len(_exc[0])} obra(s) sin sinopsis (techo {_exc[1]})')
+
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):
         viejo = json.load(open(out_p, encoding='utf-8'))
