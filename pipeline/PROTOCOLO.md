@@ -482,6 +482,12 @@ español e inglés contra la fuente y los sella (`python3 pipeline/sello_obra.py
 lote.json`). Sin sello, o si algo cambia después, `[sello-obra]` no deja publicar. El texto
 que llegó se guarda entero en `catalogo/originales.json` y no se edita.
 
+**La obra es la fuente** (24 nov 2026): `[obra-fuente]`. Orden: publicar →
+`catalogo_construir.py --escribir` (da los ids) → `obra_fuente.py <id> --sembrar --quien X`
+→ `catalogo_construir.py --escribir` → `sello_obra.py --original` y `--sellar` → push.
+Después, un dato de la obra se cambia en el almacén (`obra_unica.py --decidir`) y se
+aplica; nunca en el festival. Se echa atrás con `deshacer.py`.
+
 **Excepciones como dato, no como código** (20 nov 2026): una actividad sin
 duración publicada o un título que dice «instalación» sin ser exposición se
 declaran en `festivals/staging/<id>-correcciones.json` —`sin_duracion` y

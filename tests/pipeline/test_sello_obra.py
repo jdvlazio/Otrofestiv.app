@@ -26,16 +26,19 @@ class Sello(unittest.TestCase):
 
     def test_sellar_exige_segundo_lector_fuente_y_veredicto(self):
         bien = {'work_id': 'w_1', 'redacta': 'a', 'verifica': 'b', 'contra': 'https://x', 'veredicto': 'fiel'}
-        viejo = s.SELLOS
-        s.SELLOS = os.path.join(tempfile.mkdtemp(), 's.json')
+        viejo, viejo_o = s.SELLOS, s.ORIGINALES
+        s.SELLOS, s.ORIGINALES = os.path.join(tempfile.mkdtemp(), 's.json'), os.path.join(tempfile.mkdtemp(), 'o.json')
         try:
             for malo in ({'verifica': 'a'}, {'contra': ''}, {'redacta': ''}, {'verifica': 'A '}, {'veredicto': 'con ajuste'}, {'work_id': 'w_9'}, {'verifica': ''}):
                 with self.assertRaises(SystemExit):
                     s.sellar([dict(bien, **malo)], {'a': {'films': [O]}})
+            with self.assertRaises(SystemExit):           # sin el original, no hay contra qué leer
+                s.sellar([bien], {'a': {'films': [O]}})
+            s.guardar_originales([{'work_id': 'w_1', 'texto': 't', 'idioma': 'es', 'fuente': 'https://x'}])
             s.sellar([bien], {'a': {'films': [O]}})
-            self.assertEqual(s.faltan({'a': {'films': [O]}}, None, {}, {}), [])
+            self.assertEqual(s.faltan({'a': {'films': [O]}}, None, {}, None), [])
         finally:
-            s.SELLOS = viejo
+            s.SELLOS, s.ORIGINALES = viejo, viejo_o
 
     def test_fusion_no_hereda_el_sello_de_la_absorbida(self):
         h = s.huella(s.publicadas({'a': {'films': [O]}})['w_1'])
