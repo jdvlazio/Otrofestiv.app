@@ -18,5 +18,11 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026)",
+  "fecha": "2026-11-23"
  }
 }

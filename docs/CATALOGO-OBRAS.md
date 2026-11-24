@@ -145,9 +145,23 @@ umbral con datos reales, no a ojo.
 | Sección, día/hora/sede, premiere, título impreso, Q&A | **Festival** | — |
 | Título original, año, director, país, idioma | **Decisión humana** > TMDB > Wikidata > festival | el festival puede *proponer* una corrección, que cae en candidatos |
 | Duración | **Versión proyectada** (festival) > TMDB | si difieren > 5 min, aviso |
-| Sinopsis ES / EN | **Oficial del festival** (verbatim) > traducción nuestra con contexto > TMDB | nunca una traducción como si fuera oficial |
-| Afiche | **Oficial de la obra** > oficial del festival > compuesto nuestro | regla ya vigente (jerarquía del póster compuesto) |
+| Sinopsis ES / EN | **Una por obra** (Juan, 23 nov 2026; antes ganaba la de cada festival): oficial de la obra > la mejor publicada por un festival > traducción nuestra con contexto > TMDB | lo del evento (invitados, charla) va en la función; nunca una traducción como si fuera oficial |
+| Afiche | **Uno por obra** (Juan, 23 nov 2026): oficial de la obra > del festival > editorial nuestro | la elección vive en `decisiones.json` (campo `afiche`); uno nuevo se compara con `pipeline/afiches_unicos.py` (abajo) |
 | Emoji, arquetipo, EN de sección | Nuestra capa | nunca pisa el nombre verbatim |
+
+**Cuándo lo nuevo reemplaza lo del almacén** (Juan, 23 nov 2026: la campaña de
+una obra mejora con su distribución). Afiche, por imagen y no por etiqueta
+(`pipeline/afiches_unicos.py --revisar <festival>`): lo que no es afiche nunca
+entra; un afiche reemplaza a un fotograma; la misma imagen más completa o
+claramente más grande reemplaza; otra versión (idioma, laureles) u otro diseño
+**se revisa**, no se decide solo. Lo elegido a mano por Juan nunca se reemplaza
+solo. La sinopsis sigue el mismo principio: si falta, entra; si es el mismo texto
+o uno contenido en el otro, queda el completo; si es distinta, se revisa.
+**La que se lee es corta** (Juan, 23 nov 2026): máximo 350 caracteres, reescrita y
+no recortada. La decisión `sinopsis.es` guarda la síntesis en `valor` y el texto
+completo en `original`; la redacta uno y la verifica otro (`pipeline/SINOPSIS-CORTA.md`,
+`pipeline/sinopsis_cortas.py`, guardián `[sinopsis-larga]`).
+**La duración no es de la obra:** es de la copia que proyecta cada festival.
 
 Restricción dura: `titulo_original`, `directores` y `anio` no pueden quedar vacíos
 en una obra publicada. Si falta, va a la cola de excepciones; no se publica en

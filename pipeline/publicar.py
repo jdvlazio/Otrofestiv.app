@@ -372,6 +372,14 @@ def publicar(fid, forzar=False, ensayo=False):
     _obs = catalogo.obras()
     if _obs:
         _nuevas = catalogo.enlazar(out, fid, _obs)
+        # UNA SINOPSIS POR OBRA (Juan, 23 nov 2026): la elegida del almacén manda
+        import sinopsis_unicas
+        for _t, _a, _b in sinopsis_unicas.aplicar(out):
+            print(f'  · sinopsis del almacén: «{_t[:50]}»')
+        # …Y UN AFICHE POR OBRA
+        import afiches_unicos
+        for _t, _a, _b in afiches_unicos.aplicar(out):
+            print(f'  · afiche del almacén: «{_t[:50]}»')
         if _nuevas:
             print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
             for t in _nuevas[:10]:
@@ -386,6 +394,9 @@ def publicar(fid, forzar=False, ensayo=False):
         # `synopsis`: se le aplica la misma regla, o la migración parecería pérdida
         for f in (viejo.get('films') or []):
             lib.separar_descripcion(f)
+        # lo que el almacén quita a propósito no es pérdida (misma función en los dos lados)
+        import sinopsis_unicas
+        sinopsis_unicas.aplicar(viejo)
         _alt, _baj, _mov = diff_contra_produccion(viejo, out)
         if _alt or _baj or _mov:
             print(f'· cambios contra lo publicado: +{len(_alt)} obra(s), '

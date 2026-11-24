@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-23",
+  "capturado": "2026-11-24",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "16 nov 2026: las secciones son las de la web oficial (alestfestival.com/programa2026), tal cual. Se retiran «Al Este en el MAMM / en la Cinemateca», que eran rótulos nuestros por sede. «Fokus: Las grietas en el muro» (lámina IG) pasa a «del muro», como dice la web, que es la fuente más nueva. Emojis y nombres en inglés: propuesta, a confirmar con Juan.",
@@ -952,7 +952,7 @@
    "venue": "Centro Colombo Americano - Medellín",
    "sala": "Sala 2",
    "has_qa": false,
-   "synopsis": "A finales del siglo XIX, la ciudad de Lodz se ha convertido en el epicentro de la industria textil, con la consiguiente necesidad de mano de obra inmigrante. Tres jóvenes estudiantes de Riga: un polaco católico, hijo de nobles terratenientes, un ambicioso judío y un alemán luterano deciden abrir una fábrica en esa ciudad para hacer fortuna y, sin escrúpulos ni prejuicios, se lanzan a acumular dinero y poder. (FILMAFFINITY)",
+   "synopsis": "En Łódź, a fines del siglo XIX, tres socios se juegan todo para levantar su propia fábrica textil en una ciudad de capitalismo salvaje: un polaco, un alemán y un judío. Fue nominada al Óscar a mejor película extranjera.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/la-tierra-prometida.jpg",
    "posterSource": "tmdb",
@@ -1566,10 +1566,10 @@
     "19:00"
    ],
    "day": "2026-11-26",
-   "time": "19:00",
+   "time": "19:30",
    "day_order": 8,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala 2",
+   "sala": "Sala 3",
    "has_qa": true,
    "qa_type": "team",
    "synopsis": "Un viaje inmersivo y de misterios a las profundidades del bosque Amazónico en busca del gran brujo Ino Moxo (Pantera Negra), retratando los saberes y conocimientos de los más grandes y últimos curanderos del bosque Amazónico. Javier va en busca de su destino mientras una pantera negra lo guía y acecha.",
@@ -1593,16 +1593,19 @@
      "fecha": "2026-11-16"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "juan",
+     "fecha": "2026-11-24",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11",
+     "frase": "deberíamos usar lo que dice la Cinemateca, ellos no venden horarios truncados, ni cometen errores logísticos"
     },
     "venue": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "sala",
+     "fecha": "2026-11-24",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11"
     },
     "duration": {
      "tipo": "festival-web",
@@ -1649,14 +1652,14 @@
    "time": "19:00",
    "day_order": 8,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala 3",
+   "sala": "Sala 2",
    "has_qa": true,
    "synopsis": "La única película dirigida por Václav Havel, basada en su última obra literaria, es una reflexión autobiográfica y una libre interpretación de «El rey Lear», de Shakespeare y «El jardín de los cerezos», de Chéjov.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/la-retirada.jpg",
    "posterSource": "tmdb",
    "_src": {
-    "url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313356",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11",
     "date": "2026-11-23",
     "tipo": "sala"
    },
@@ -1682,8 +1685,9 @@
      "fecha": "2026-11-23"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-23"
+     "tipo": "sala",
+     "fecha": "2026-11-24",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11"
     },
     "duration": {
      "tipo": "festival-web",
@@ -2983,6 +2987,7 @@
       "url": "https://www.alestfestival.com/programa2026/lejanía",
       "date": "2026-11-16"
      },
+     "synopsis_en": "A traveler heads toward Lejanía, a beach on an island hidden in the vastness of the Pacific Ocean, where visitors are said to experience supernatural visions. Amid fragmented landscapes and clandestine presences lurking in the shadows, reality blurs and time unravels.",
      "poster": "/assets/aleste-2026/lejania.jpg",
      "posterSource": "tmdb",
      "lbSlug": "lejania-2026",
@@ -3146,7 +3151,7 @@
    "has_qa": false,
    "synopsis": "Harto del mar, Paul, un mecánico suizo que trabaja en las ruidosas entrañas de un barco mercante, desembarca en Lisboa.",
    "synopsis_lang": "es",
-   "poster": "/assets/aleste-2026/la-ciudad-blanca.jpg",
+   "poster": "/assets/aleste-2026/en-la-ciudad-blanca.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.alestfestival.com/programa2026/la-ciudad-blanca",
@@ -3526,7 +3531,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-23T08:56:06",
+  "fecha": "2026-11-24T07:05:28",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"

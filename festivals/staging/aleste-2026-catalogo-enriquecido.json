@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-23"
+  "capturado": "2026-11-24"
  },
  "_origen": "aleste-2026-catalogo.json",
  "obras": [
@@ -181,7 +181,7 @@
    "tmdb_id": 511,
    "titulo_original": "Ziemia obiecana",
    "poster_path": "/uwMs9axSBS0opiO7Ih2J3AjUvMv.jpg",
-   "synopsis_es": "A finales del siglo XIX, la ciudad de Lodz se ha convertido en el epicentro de la industria textil, con la consiguiente necesidad de mano de obra inmigrante. Tres jóvenes estudiantes de Riga: un polaco católico, hijo de nobles terratenientes, un ambicioso judío y un alemán luterano deciden abrir una fábrica en esa ciudad para hacer fortuna y, sin escrúpulos ni prejuicios, se lanzan a acumular dinero y poder. (FILMAFFINITY)",
+   "synopsis_es": "",
    "synopsis_en": "At the turn of the century, Lodz, Poland, was a quick-paced manufacturing center for textiles, replete with cutthroat industrialists and unsafe working conditions. Three young friends, a Pole, a Jew, and a German, pool their money together to build a factory.",
    "genero": "Drama",
    "anio_tmdb": 1975,
@@ -376,7 +376,7 @@
    "work_id": "w_JET7S5Q0VAEA"
   },
   {
-   "titulo": "La ciudad blanca",
+   "titulo": "En la ciudad blanca",
    "tmdb_id": 33802,
    "titulo_original": "Dans la ville blanche",
    "poster_path": "/sKoDVfcxElkqbhXjjVVmv1l6IM2.jpg",
@@ -434,8 +434,8 @@
    "duracion_tmdb": 84,
    "pais_tmdb": "",
    "lbSlug": "labriego",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Labriego"
+   "_verificado": "el catálogo ya la tiene (w_JET7R8SZN1D0, aleste-2026)",
+   "work_id": "w_JET7R8SZN1D0"
   },
   {
    "titulo": "Laguna",
@@ -575,7 +575,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "16 min",
-     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas."
+     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? Una travesía por espacios liminales, lugares de tránsito, ambigüedad y espera silenciosa, explora la relación de los seres humanos con los lugares que han habitado y habitan, y las sensaciones, los recuerdos y las emociones que despiertan."
     }
    ]
   },
@@ -728,7 +728,7 @@
      "duration": "11 min",
      "genre": "Drama",
      "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
-     "sinopsis": "Una joven que mantiene dos relaciones simultáneas recorre Medellín para afrontar su confusión y encontrarse consigo misma."
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "ficmontanas-2026",
@@ -856,7 +856,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Sol de niebla aborda una visión fragmentada y poliangular de los frailejones, a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (Frailejón). El metraje, filmado en soporte fotosensible aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "cortoscali-2026",
@@ -868,7 +868,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "ficfusa-2026",
@@ -880,7 +880,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "filcmar-2026",
@@ -892,7 +892,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "mamut-2026",
@@ -904,7 +904,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "7 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "midbo-2026",
@@ -916,7 +916,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "«Sol de niebla» aborda una visión fragmentada y poliangular de los frailejones a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (frailejón), cuya denominación surge como un homenaje a un virrey de la Nueva Granada. El metraje, filmado en soporte fotosensible, aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida, lo cual nos cuestiona sobre el valor de los ecosistemas actualmente amenazados por actividades extractivistas que resuenan desde tiempos de la colonia española."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     }
    ]
   },
@@ -988,7 +988,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "A Brighter Future",
    "lbSlug": "a-brighter-future",
-   "_verificado": "el catálogo ya la tiene (w_R4FBMPTV0JG2, cinemancia-2026, cinetoro-2026, ficci-65, jardin-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FBMPTV0JG2, aleste-2026, cinemancia-2026, cinetoro-2026, ficci-65, jardin-2026)",
    "work_id": "w_R4FBMPTV0JG2",
    "_ya_publicada": [
     {
@@ -1002,7 +1002,7 @@
      "year": 2026,
      "duration": "25 min",
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
-     "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro."
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
     },
     {
      "festival": "cinetoro-2026",
@@ -1016,7 +1016,7 @@
      "duration": "25 min",
      "genre": "Ficción",
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
-     "sinopsis": "Simón (13) vive en un pueblo abandonado, donde pasa una última noche con su hermana Sol (18), quien se va a trabajar a la ciudad. Junto con un grupo de amigos, recorren los senderos oscuros del lugar donde crecieron, iluminando las ruinas, que cobran vida con la luz de sus linternas."
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
     },
     {
      "festival": "ficci-65",
@@ -1030,7 +1030,7 @@
      "duration": "25 min",
      "genre": "Ficción",
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
-     "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro."
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
     },
     {
      "festival": "jardin-2026",
@@ -1047,7 +1047,7 @@
      "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
     }
    ],
-   "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+   "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas.",
    "_sinopsis_de": "ya publicada en cinemancia-2026"
   },
   {
@@ -1062,8 +1062,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "transversal-30ff",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Transversal30FF"
+   "_verificado": "el catálogo ya la tiene (w_R4ET8FVT5MKJ, aleste-2026, cinemancia-2025, ficfusa-2026)",
+   "work_id": "w_R4ET8FVT5MKJ"
   }
  ],
  "verificadas": {
@@ -1233,7 +1233,7 @@
    "tmdb_id": 511,
    "titulo_original": "Ziemia obiecana",
    "poster_path": "/uwMs9axSBS0opiO7Ih2J3AjUvMv.jpg",
-   "synopsis_es": "A finales del siglo XIX, la ciudad de Lodz se ha convertido en el epicentro de la industria textil, con la consiguiente necesidad de mano de obra inmigrante. Tres jóvenes estudiantes de Riga: un polaco católico, hijo de nobles terratenientes, un ambicioso judío y un alemán luterano deciden abrir una fábrica en esa ciudad para hacer fortuna y, sin escrúpulos ni prejuicios, se lanzan a acumular dinero y poder. (FILMAFFINITY)",
+   "synopsis_es": "",
    "synopsis_en": "At the turn of the century, Lodz, Poland, was a quick-paced manufacturing center for textiles, replete with cutthroat industrialists and unsafe working conditions. Three young friends, a Pole, a Jew, and a German, pool their money together to build a factory.",
    "genero": "Drama",
    "anio_tmdb": 1975,
@@ -1402,7 +1402,7 @@
    "_verificado": "el catálogo ya la tiene (w_JET7S5Q0VAEA, aleste-2026)",
    "work_id": "w_JET7S5Q0VAEA"
   },
-  "La ciudad blanca": {
+  "En la ciudad blanca": {
    "tmdb_id": 33802,
    "titulo_original": "Dans la ville blanche",
    "poster_path": "/sKoDVfcxElkqbhXjjVVmv1l6IM2.jpg",
@@ -1457,8 +1457,8 @@
    "duracion_tmdb": 84,
    "pais_tmdb": "",
    "lbSlug": "labriego",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Labriego"
+   "_verificado": "el catálogo ya la tiene (w_JET7R8SZN1D0, aleste-2026)",
+   "work_id": "w_JET7R8SZN1D0"
   },
   "Laguna": {
    "tmdb_id": 1520513,
@@ -1593,7 +1593,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "16 min",
-     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas."
+     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? Una travesía por espacios liminales, lugares de tránsito, ambigüedad y espera silenciosa, explora la relación de los seres humanos con los lugares que han habitado y habitan, y las sensaciones, los recuerdos y las emociones que despiertan."
     }
    ]
   },
@@ -1741,7 +1741,7 @@
      "duration": "11 min",
      "genre": "Drama",
      "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
-     "sinopsis": "Una joven que mantiene dos relaciones simultáneas recorre Medellín para afrontar su confusión y encontrarse consigo misma."
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "ficmontanas-2026",
@@ -1867,7 +1867,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Sol de niebla aborda una visión fragmentada y poliangular de los frailejones, a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (Frailejón). El metraje, filmado en soporte fotosensible aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "cortoscali-2026",
@@ -1879,7 +1879,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "ficfusa-2026",
@@ -1891,7 +1891,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "filcmar-2026",
@@ -1903,7 +1903,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "mamut-2026",
@@ -1915,7 +1915,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "7 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "midbo-2026",
@@ -1927,7 +1927,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "«Sol de niebla» aborda una visión fragmentada y poliangular de los frailejones a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (frailejón), cuya denominación surge como un homenaje a un virrey de la Nueva Granada. El metraje, filmado en soporte fotosensible, aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida, lo cual nos cuestiona sobre el valor de los ecosistemas actualmente amenazados por actividades extractivistas que resuenan desde tiempos de la colonia española."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     }
    ]
   },
@@ -1996,7 +1996,7 @@
    "pais_tmdb": "Colombia",
    "title_en": "A Brighter Future",
    "lbSlug": "a-brighter-future",
-   "_verificado": "el catálogo ya la tiene (w_R4FBMPTV0JG2, cinemancia-2026, cinetoro-2026, ficci-65, jardin-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4FBMPTV0JG2, aleste-2026, cinemancia-2026, cinetoro-2026, ficci-65, jardin-2026)",
    "work_id": "w_R4FBMPTV0JG2",
    "_ya_publicada": [
     {
@@ -2010,7 +2010,7 @@
      "year": 2026,
      "duration": "25 min",
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
-     "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro."
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
     },
     {
      "festival": "cinetoro-2026",
@@ -2024,7 +2024,7 @@
      "duration": "25 min",
      "genre": "Ficción",
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
-     "sinopsis": "Simón (13) vive en un pueblo abandonado, donde pasa una última noche con su hermana Sol (18), quien se va a trabajar a la ciudad. Junto con un grupo de amigos, recorren los senderos oscuros del lugar donde crecieron, iluminando las ruinas, que cobran vida con la luz de sus linternas."
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
     },
     {
      "festival": "ficci-65",
@@ -2038,7 +2038,7 @@
      "duration": "25 min",
      "genre": "Ficción",
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
-     "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro."
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
     },
     {
      "festival": "jardin-2026",
@@ -2055,7 +2055,7 @@
      "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
     }
    ],
-   "sinopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+   "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas.",
    "_sinopsis_de": "ya publicada en cinemancia-2026"
   },
   "Transversal30FF": {
@@ -2069,8 +2069,8 @@
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
    "lbSlug": "transversal-30ff",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Transversal30FF"
+   "_verificado": "el catálogo ya la tiene (w_R4ET8FVT5MKJ, aleste-2026, cinemancia-2025, ficfusa-2026)",
+   "work_id": "w_R4ET8FVT5MKJ"
   }
  },
  "sin_ficha": [

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "https://www.alestfestival.com/programa2026",
-  "capturado": "2026-11-20",
+  "capturado": "2026-11-24",
   "metodo": "una página por obra (curl), texto plano: sección, ficha y «Ciudad · Día · Hora · Sede – Sala · nota»"
  },
  "obras": [
@@ -274,7 +274,7 @@
    "anio": null,
    "pais": "Colombia",
    "duracion_min": 5,
-   "sinopsis": "En diciembre de 1986, el cineasta y poeta ruso Andréi Tarkovski muere a los 54 años a causa de un cáncer, luego de haberse exiliado de la URSS.",
+   "sinopsis": "En diciembre de 1986, el cineasta y poeta ruso Andréi Tarkovski muere a los 54 años a causa de un cáncer, luego de haberse exiliado de la URSS. Una tarde de verano del siglo 21, acompañado de una cámara súper8mm, viajo a visitar su tumba. Esta película es la bitácora de este viaje.",
    "funciones": [
     {
      "ciudad": "Bogotá",
@@ -290,7 +290,7 @@
   {
    "pagina": "la-ciudad-blanca",
    "seccion": "Fokus: Las grietas del muro",
-   "titulo": "La ciudad blanca",
+   "titulo": "En la ciudad blanca",
    "titulo_original": "Dans la ville blanche",
    "director": "Alain Tanner",
    "anio": 1983,
@@ -469,6 +469,28 @@
      "sede": "Cinemateca de Bogotá",
      "sala": "Sala 3",
      "nota": "Seguida de conversatorio con los realizadores"
+    }
+   ]
+  },
+  {
+   "pagina": "latido.-el-grafiti-como-arte-el-grafiti-como-forma-de-vida.",
+   "seccion": "Al Este Especial",
+   "titulo": "Latido. El grafiti como arte, el grafiti como forma de vida.",
+   "titulo_original": "Latido. El grafiti como arte, el grafiti como forma de vida.",
+   "director": "Juan Zapata",
+   "anio": 2026,
+   "pais": "Colombia",
+   "duracion_min": 7,
+   "sinopsis": "Cada artista plasma su visión y sentir en los muros, gracias a una historia que se escribe desde los años 80 hasta hoy, en una Medellín que siempre ha estado en proceso de transformación.",
+   "funciones": [
+    {
+     "ciudad": "Medellín",
+     "dia": "2026-11-18",
+     "dia_semana": "Miércoles",
+     "hora": "19:00",
+     "sede": "Centro Colombo Americano",
+     "sala": "Sala 1",
+     "nota": null
     }
    ]
   },

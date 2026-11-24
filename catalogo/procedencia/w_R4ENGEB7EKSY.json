@@ -1,11 +1,11 @@
 {
  "titulo_original": {
-  "fuente": "festival:bogoshorts-2026,bogoshorts-2026,cineautopsia-2026,cinemancia-2026,cinetoro-2026",
+  "fuente": "festival:cineautopsia-2026,cinemancia-2026,cinetoro-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1744098",
-  "regla": "tmdb-manda"
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
   "fuente": "festival",
@@ -15,8 +15,16 @@
   "fuente": "festival",
   "regla": "pais-union"
  },
- "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la de otro festival nuestro; la otra era ficha técnica",
+  "fecha": "2026-11-23"
  }
 }

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-23",
+  "capturado": "2026-11-24",
   "metodo": "transcripción a ojo; láminas cruzadas con ig-lecturas.py",
   "que_aporta": "día, hora, sede, acceso"
  },
@@ -34,7 +34,8 @@
      },
      "titulos_anteriores": [
       "Latidos: el grafiti como arte, el grafiti como forma de vida"
-     ]
+     ],
+     "seccion": "Al Este Especial"
     },
     {
      "titulo": "La última ronda en Venecia",
@@ -199,7 +200,8 @@
    "director": "Andrzej Wajda",
    "pais": "Polonia",
    "anio": 1974,
-   "duracion_min": 162
+   "duracion_min": 162,
+   "sinopsis": "En Łódź, a fines del siglo XIX, tres socios se juegan todo para levantar su propia fábrica textil en una ciudad de capitalismo salvaje: un polaco, un alemán y un judío. Fue nominada al Óscar a mejor película extranjera."
   },
   {
    "titulo": "1982",
@@ -354,7 +356,7 @@
    "sede": "Cinemateca de Bogotá",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313356",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11",
     "date": "2026-11-23",
     "tipo": "sala"
    },
@@ -730,7 +732,8 @@
       "url": "https://www.alestfestival.com/programa2026/lejanía",
       "date": "2026-11-16"
      },
-     "director": "Daniel Velásquez Patarroyo"
+     "director": "Daniel Velásquez Patarroyo",
+     "sinopsis_en": "A traveler heads toward Lejanía, a beach on an island hidden in the vastness of the Pacific Ocean, where visitors are said to experience supernatural visions. Amid fragmented landscapes and clandestine presences lurking in the shadows, reality blurs and time unravels."
     },
     {
      "titulo": "Sol de niebla",
@@ -798,7 +801,7 @@
     "tipo": "festival-web"
    },
    "sala": "Sala 3",
-   "titulo": "La ciudad blanca",
+   "titulo": "En la ciudad blanca",
    "seccion": "Fokus: Las grietas del muro",
    "director": "Alain Tanner",
    "pais": "Suiza, Portugal",

@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "corrección de «en portugués, resto de página web»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23"
  }
 }

@@ -34,6 +34,7 @@ from collections import defaultdict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import catalogo  # noqa: E402
 from catalogo import huella, apellido  # noqa: E402
+from sinopsis_unicas import defectos as _defectos  # noqa: E402  (una defectuosa, solo si no hay otra)
 from lib import sinacento, banderas, tmdb_ficha  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -313,7 +314,7 @@ def materializar(R, grupos, key, cache):
         al += [{'titulo': x, 'idioma': 'en', 'tipo': 'traduccion'} for x in sorted({r['title_en'] for r in regs if r.get('title_en')}) if x != titulo]
         if al:
             o['aliases'] = al
-        sin = {k: v for k, v in (('es', next((r['sinopsis'] for r in regs if r['sinopsis']), None)),
+        sin = {k: v for k, v in (('es', next((r['sinopsis'] for r in sorted(regs, key=lambda r: bool(r['sinopsis'] and _defectos(r['sinopsis']))) if r['sinopsis']), None)),
                                  ('en', next((r['sinopsis_en'] for r in regs if r['sinopsis_en']), None))) if v}
         if sin:
             o['sinopsis'] = sin

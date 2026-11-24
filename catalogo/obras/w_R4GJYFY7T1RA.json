@@ -1,6 +1,6 @@
 {
  "id": "w_R4GJYFY7T1RA",
- "titulo_original": "Kondor, el mago",
+ "titulo_original": "Kondor, El Mago",
  "anio": 1975,
  "paises": [
   "CO"
@@ -8,21 +8,14 @@
  "directores": [
   "Jairo Pinilla"
  ],
- "aliases": [
-  {
-   "titulo": "Kondor, El Mago",
-   "tipo": "festival"
-  }
- ],
  "sinopsis": {
-  "es": "Una parodia de Mandrake el mago filmada en la época del sobreprecio, protagonizada por Gustavo de la Hoz y el propio Pinilla. El Ministerio de Comunicaciones le negó inicialmente la exhibición por considerar que carecía de mensaje. Una proyección de prueba ante trabajadores de Cine Colombia, que reaccionaron con sustos, le valió a Pinilla su primer contrato de distribución.",
-  "en": "A parody of Mandrake the Magician filmed during the era of price gouging, starring Gustavo de la Hoz and Pinilla himself. The Ministry of Communications initially refused to allow it to be screened, arguing that it lacked a message. A test screening for Cine Colombia employees—who reacted with shock—earned Pinilla his first distribution contract."
+  "es": "En el Parque Nacional de Bogotá, pasean unos sujetos que se cruzan con los integrantes de un paseo, posteriormente se encuentran con una niña que desea hacer una llamada y pide a los sujetos le cambien una moneda, se dirige al teléfono y llama, entre tanto los del paseo pasan frente a unos enamorados que se besan burlándose de ellos. Los enamorados disgustados se retiran mientras los del paseo siguen su trayectoria para realizar su piquete. Entre tanto un raponero se da cuenta que la niña que llama por teléfono posee un bolso, acercándose lo rapta y sale a toda velocidad y ella detrás gritando: pasan frente a un mago que se encuentra leyendo una de sus magias y pone en práctica una de ellas deteniendo al raponero y haciéndolo retroceder, se incorpora y devuelve el bolso a la niña, en ese instante se acercan los sujetos que antes habían cambiado la moneda a la niña y felicitan al mago por su oportuna acción."
  },
  "generos": [
   "Fantasía"
  ],
  "afiche": {
-  "archivo": "/assets/bogoshorts-2026/kondor-el-mago.jpg",
+  "archivo": "/assets/fantasmagoria-2026/kondor-el-mago.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -31,16 +24,11 @@
  },
  "versiones": [
   {
-   "etiqueta": "10 min",
-   "duracion_min": 10
-  },
-  {
    "etiqueta": "12 min",
    "duracion_min": 12
   }
  ],
  "presentaciones": [
-  "bogoshorts-2026",
   "fantasmagoria-2026"
  ]
 }

@@ -18,5 +18,11 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "corrección de «habla del evento»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23"
  }
 }
