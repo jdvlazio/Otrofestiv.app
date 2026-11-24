@@ -3,8 +3,8 @@
  "titulo_original": "La Bonga",
  "anio": 2023,
  "paises": [
-  "CO",
-  "US"
+  "US",
+  "CO"
  ],
  "directores": [
   "Sebastián Pinzón Silva",
@@ -22,6 +22,7 @@
   "veredicto": "oficial-festival"
  },
  "xref": {
+  "tmdb": 1084665,
   "letterboxd": "la-bonga"
  },
  "versiones": [

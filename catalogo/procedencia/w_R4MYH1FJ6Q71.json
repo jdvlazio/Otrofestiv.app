@@ -22,5 +22,11 @@
   "regla": "decisión",
   "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "traducida de su sinopsis en inglés; verificada por otro agente",
+  "fecha": "2026-11-24"
  }
 }

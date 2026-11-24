@@ -8,11 +8,16 @@
  "directores": [
   "Takehisa Kosugi"
  ],
+ "sinopsis": {
+  "es": "Primera película de Takehisa Kosugi, hecha en 1974 para un programa de películas de 100 pies organizado por Image Forum.",
+  "en": "Takehisa Kosugi’s first film, made in 1974 for a 100-feet film programme organized by Image Forum."
+ },
  "afiche": {
   "archivo": "https://images.ctfassets.net/22n7d68fswlw/1DgG9wZMmcP3Bi0CxYbvWC/d903571b167f0499afc8f034e9f05b4b/TM_Still_HERO.jpg",
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 1324877,
   "letterboxd": "tm-1974"
  },
  "versiones": [

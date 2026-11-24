@@ -2,10 +2,16 @@
  "id": "w_R4GTPXVHQZRP",
  "titulo_original": "Only Snuff",
  "anio": 2024,
- "paises": [],
+ "paises": [
+  "ES"
+ ],
  "directores": [
   "Andrea Segarra Bueno"
  ],
+ "sinopsis": {
+  "es": "Ana recibe a un cliente en su casa. Cuando él descubre que lo están grabando, se vuelve violento.",
+  "en": "Ana receives a client at her home. When he finds out that he is being recorded, he becomes violent."
+ },
  "generos": [
   "Suspenso"
  ],
@@ -14,6 +20,7 @@
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 1433905,
   "letterboxd": "only-snuff"
  },
  "presentaciones": [

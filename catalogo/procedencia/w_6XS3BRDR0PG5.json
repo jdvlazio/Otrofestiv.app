@@ -32,5 +32,11 @@
   "regla": "decisión",
   "motivo": "se quita lo que no es sinopsis; nada se escribe",
   "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "sinopsis oficial del festival o de Bogoshorts",
+  "fecha": "2026-11-24"
  }
 }

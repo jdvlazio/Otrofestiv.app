@@ -9,11 +9,16 @@
  "directores": [
   "Johann Lurf"
  ],
+ "sinopsis": {
+  "es": "El rastro de luz ininterrumpido de un año y diez meses, condensado en 20 minutos y filmado con una cámara de fabricación propia. Los ritmos diarios se aceleran, primero despacio y luego con más intensidad. Una película estructuralista sobre lo transitorio.",
+  "en": "The uninterrupted light trail of one year and ten months, condensed down to 20 minutes, filmed on a self-made camera. Daily rhythms accelerate, slowly at first, then more intensely. A structuralist film about transience."
+ },
  "afiche": {
   "archivo": "https://images.ctfassets.net/22n7d68fswlw/59qCJTqTagGk7abBp6rpXZ/af8b4ac10966ac158ae5c57f310bd0f8/Forever-Forever_Still_HERO.jpg",
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 1616842,
   "letterboxd": "foreverforever"
  },
  "versiones": [

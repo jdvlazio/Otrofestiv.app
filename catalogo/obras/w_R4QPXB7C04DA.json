@@ -1,18 +1,23 @@
 {
  "id": "w_R4QPXB7C04DA",
  "titulo_original": "Rare Birds",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "US"
  ],
  "directores": [
   "Lily Weisberg"
  ],
+ "sinopsis": {
+  "es": "Una niña revoltosa de 12 años intenta convencer a quien fue su monitor de campamento de que deje su trabajo sin futuro en la tienda de antigüedades local por un último partido de baloncesto.",
+  "en": "A trouble-making 12-year-old tries to convince her former camp counselor to ditch his dead-end job at the local antique store for one last game of basketball."
+ },
  "afiche": {
   "archivo": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/6873/large_Rare_Birds-Clean-16x9-01.jpg",
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 1596344,
   "letterboxd": "rare-birds-2026"
  },
  "versiones": [

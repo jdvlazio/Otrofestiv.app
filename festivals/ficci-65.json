@@ -102,7 +102,8 @@
     }
    },
    "lbSlug": "gugus-world",
-   "id": "f_83148bdb03"
+   "id": "f_83148bdb03",
+   "tmdb_id": 1393615
   },
   {
    "title": "Queimada",
@@ -954,7 +955,8 @@
     }
    },
    "lbSlug": "gugus-world",
-   "id": "f_dc24910db2"
+   "id": "f_dc24910db2",
+   "tmdb_id": 1393615
   },
   {
    "title": "Animación Porosa — Prog. de Cortos",
@@ -1550,7 +1552,10 @@
      "duration": "15 min",
      "posterSource": "oficial",
      "poster": "/assets/cinetoro-2026/la-garganta-del-diablo.jpg",
-     "work_id": "w_R4HBN9AY1HWQ"
+     "work_id": "w_R4HBN9AY1HWQ",
+     "synopsis": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención.",
+     "synopsis_lang": "es",
+     "synopsis_en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption."
     },
     {
      "title": "Las formas de la magia",
@@ -2842,7 +2847,8 @@
      "synopsis_lang": "es",
      "director": "Daniel Velásquez Patarroyo",
      "tmdb_id": 1668904,
-     "flags": "🇨🇴🇨🇱"
+     "flags": "🇨🇴🇨🇱",
+     "synopsis_en": "A traveler heads toward Lejanía, a beach on an island hidden in the vastness of the Pacific Ocean, where visitors are said to experience supernatural visions. Amid fragmented landscapes and clandestine presences lurking in the shadows, reality blurs and time unravels."
     },
     {
      "title": "Winter Blumen Garten",
@@ -3279,7 +3285,8 @@
      "synopsis": "La llegada de un refrigerador cambia la vida en La Raya, un pueblo abandonado en la sierra sur de Oaxaca. Sotera y su amigo Erick intentan venderlo y hacer negocio. Sin embargo, el refrigerador pronto empieza a revelar cosas misteriosas a la gente que se le acerca.",
      "synopsis_lang": "es",
      "synopsis_en": "The arrival of a refrigerator changes life in La Raya, an abandoned village in the southern mountains of Oaxaca. Sotera and her friend Erick try to sell it and make a business. However, the fridge soon begins to reveal mysterious things to the people who approach it.",
-     "director": "Yolanda Cruz"
+     "director": "Yolanda Cruz",
+     "tmdb_id": 1280701
     }
    ],
    "id": "f_b18036d059"
@@ -4212,7 +4219,10 @@
      "duration": "15 min",
      "poster": "/assets/cinetoro-2026/la-garganta-del-diablo.jpg",
      "posterSource": "oficial",
-     "work_id": "w_R4HBN9AY1HWQ"
+     "work_id": "w_R4HBN9AY1HWQ",
+     "synopsis": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención.",
+     "synopsis_lang": "es",
+     "synopsis_en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption."
     },
     {
      "title": "Las formas de la magia",
@@ -5415,7 +5425,8 @@
      "synopsis_lang": "es",
      "director": "Daniel Velásquez Patarroyo",
      "tmdb_id": 1668904,
-     "flags": "🇨🇴🇨🇱"
+     "flags": "🇨🇴🇨🇱",
+     "synopsis_en": "A traveler heads toward Lejanía, a beach on an island hidden in the vastness of the Pacific Ocean, where visitors are said to experience supernatural visions. Amid fragmented landscapes and clandestine presences lurking in the shadows, reality blurs and time unravels."
     },
     {
      "title": "Winter Blumen Garten",
@@ -5497,7 +5508,8 @@
      "synopsis": "La llegada de un refrigerador cambia la vida en La Raya, un pueblo abandonado en la sierra sur de Oaxaca. Sotera y su amigo Erick intentan venderlo y hacer negocio. Sin embargo, el refrigerador pronto empieza a revelar cosas misteriosas a la gente que se le acerca.",
      "synopsis_lang": "es",
      "synopsis_en": "The arrival of a refrigerator changes life in La Raya, an abandoned village in the southern mountains of Oaxaca. Sotera and her friend Erick try to sell it and make a business. However, the fridge soon begins to reveal mysterious things to the people who approach it.",
-     "director": "Yolanda Cruz"
+     "director": "Yolanda Cruz",
+     "tmdb_id": 1280701
     }
    ],
    "id": "f_43999b3fc9"
@@ -6282,7 +6294,8 @@
     }
    },
    "lbSlug": "gugus-world",
-   "id": "f_d00e1e6d78"
+   "id": "f_d00e1e6d78",
+   "tmdb_id": 1393615
   },
   {
    "title": "Dao",

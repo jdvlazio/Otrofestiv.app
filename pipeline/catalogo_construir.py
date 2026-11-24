@@ -472,6 +472,8 @@ def materializar(R, grupos, key, cache):
     for d in rev['identidad']:
         if not d['misma']:
             a, b = (x[0] if len(x) == 1 else catalogo.obra_de(nuevas, *x[:2], director=x[2] if len(x) > 2 else '') for x in (d['a'], d['b']))
+            if not a or not b:
+                sys.exit(f'✗ revision-fase2.json: {d["a"]} / {d["b"]} no apunta a una obra — usar su work_id')
             if (a, 'no-es') not in ya:
                 decs.append({'work_id': a, 'campo': 'no-es', 'valor': b, 'motivo': d['motivo'], 'fecha': hoy, 'quien': rev['quien']})
     # prioridad máxima: la decisión humana
