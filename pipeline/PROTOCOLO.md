@@ -473,6 +473,10 @@ Se publica cuando el ensayo pasa.
 catálogo se condensan con [SINOPSIS-CORTA.md](SINOPSIS-CORTA.md) (uno redacta, otro
 verifica; el original se guarda). Las frena `[sinopsis-larga]` en el push.
 
+**Español e inglés** (24 nov 2026): una obra con sinopsis la tiene en los dos idiomas.
+Se escriben juntas al condensar; `python3 pipeline/sinopsis_par.py <id>` dice qué
+falta y `[sinopsis-par]` lo frena. También al sumar una obra a un festival en curso.
+
 **Excepciones como dato, no como código** (20 nov 2026): una actividad sin
 duración publicada o un título que dice «instalación» sin ser exposición se
 declaran en `festivals/staging/<id>-correcciones.json` —`sin_duracion` y
