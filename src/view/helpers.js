@@ -16,7 +16,7 @@ export { _langDates };
 import { toMin, minToStr, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
 import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase, _djb2, premiereBadgeKey, screeningPassed} from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
-import { state } from '../state/state.js';
+import { paisesEn } from '../domain/banderas.js'; import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
 
 // ── Lets module-owned (D-7-3) — re-populados por loadFestival vía setters ──────
@@ -1108,7 +1108,7 @@ export function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ra
         <span class="mplan-prog-num">${n+1}</span>
         <span class="mplan-prog-title">${item.title}</span>
       </div>
-      <div class="indent-nested mplan-prog-dur">${item.country?item.country+' · ':''}${durFmt(item.duration)}</div>
+      <div class="indent-nested mplan-prog-dur">${item.country?paisesEn(item.country,_lang)+' · ':''}${durFmt(item.duration)}</div>
     </div>
     ${ratingEl}
   </div>`;
