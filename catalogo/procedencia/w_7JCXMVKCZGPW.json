@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
  }
 }

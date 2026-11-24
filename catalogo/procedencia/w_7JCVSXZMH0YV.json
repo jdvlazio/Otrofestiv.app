@@ -12,12 +12,16 @@
   "regla": "único"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
  },
  "sinopsis.es": {
   "fuente": "humano",
@@ -29,6 +33,12 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "la lámina DfcqutroV1z/08 escribe «Gündiwa»",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
   "fecha": "2026-11-24"
  }
 }

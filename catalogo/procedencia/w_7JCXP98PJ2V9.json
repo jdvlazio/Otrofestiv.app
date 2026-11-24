@@ -16,13 +16,39 @@
   "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "tmdb:1753860",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
  },
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "traducción de la sinopsis en español (pie del festival)",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
   "fecha": "2026-11-24"
  }
 }
