@@ -30,5 +30,11 @@
   "regla": "decisión",
   "motivo": "sinopsis oficial de Al Este (#1594), sin la frase del premio; reemplaza nuestra traducción",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24"
  }
 }

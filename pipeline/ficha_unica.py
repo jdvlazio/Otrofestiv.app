@@ -9,6 +9,10 @@ nombres a medias, coproducciones incompletas, países en inglés. Lo elegido viv
 en catalogo/decisiones.json (`directores`, `anio`, `paises`). La duración NO:
 es de la copia que proyecta cada festival.
 
+También el GÉNERO (`generos`) y la SINOPSIS EN INGLÉS (`sinopsis.en`), desde el
+mismo día. El género publicado va en español (la app lo traduce): TIFF lo
+traía en inglés, y así se leía en la app en español.
+
 Solo reemplaza un dato publicado; donde no hay dato no lo pone (eso es herencia).
 
     python3 pipeline/ficha_unica.py --aplicar [<festival>] [--escribir]
@@ -18,6 +22,12 @@ import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
+
+
+GENEROS = {'Documentary': 'Documental', 'documental': 'Documental', 'documentales': 'Documental', 'History': 'Historia',
+           'Comedy': 'Comedia', 'Science Fiction': 'Ciencia ficción', 'Ciencia Ficción': 'Ciencia ficción', 'Crime': 'Crimen',
+           'Action': 'Acción', 'Horror': 'Terror', 'War': 'Bélica', 'Music': 'Música', 'Animation': 'Animación',
+           'Mystery': 'Misterio', 'ficción': 'Ficción', 'Thiller': 'Thriller', 'Familiar': 'Familia'}
 
 
 def aplicar(d, decs=None):
@@ -36,11 +46,19 @@ def aplicar(d, decs=None):
             eleg.setdefault(x['work_id'], {})['year'] = x['valor']
         elif x['campo'] == 'paises' and _pais_es(x['valor']):
             eleg.setdefault(x['work_id'], {})['country'] = _pais_es(x['valor'])
+        elif x['campo'] == 'generos' and x['valor']:
+            eleg.setdefault(x['work_id'], {})['genre'] = x['valor'][0]
+        elif x['campo'] == 'sinopsis.en' and x['valor']:
+            eleg.setdefault(x['work_id'], {})['synopsis_en'] = x['valor']
     out = []
     for f in d.get('films', []):
         for o in (f.get('film_list') or [f]):
             if o.get('type') == 'event':
                 continue
+            g = o.get('genre')
+            if g in GENEROS:
+                o['genre'] = GENEROS[g]
+                out.append((o.get('title'), 'genre', g, o['genre']))
             for k, v in eleg.get(o.get('work_id'), {}).items():
                 if o.get(k) in (None, '') or str(o[k]) == str(v):
                     continue
