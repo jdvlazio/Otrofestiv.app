@@ -97,7 +97,7 @@ SEL = [
     ('la-belleza', 'La Belleza', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/12', None,
      'lámina: «UN DOCUMENTAL DE NELSON SILVA»'),
     ('dialogo-tierra', 'Un diálogo para sanar la Tierra', 'Documental', None, 'Colombia', None, 'DfcqutroV1z/08', F5,
-     'lámina: «(Incluye el visionado del documental Tanuzanamu: Principio del Equilibrio - Dir. Ati Güindiva '
+     'lámina: «(Incluye el visionado del documental Tanuzanamu: Principio del Equilibrio - Dir. Ati Gündiwa '
      'Villafaña Mejia)» · Palomino, La Guajira; el director de la obra no se nombra'),
     ('uma-unjirinaka', 'Uma Uñjirinaka · Alto Milluni', 'Documental', 'Left Hand Rotation', 'Bolivia', None, 'DfcqutroV1z/07', F5,
      'lámina: «Una serie documental de Left Hand Rotation · UMA UÑJIRINAKA · Alto Milluni (CUIDADORXS DEL '
@@ -122,8 +122,8 @@ SEL = [
      f'pie de {IG}DfzhWP2x_sy/: «Dirección Juan Cruz, Puerto Rico»; lámina: «(PUERTO RICO FT COL) · TALLER TOCA PLENA x CASA DEL SOL»'),
     ('el-empiezo', 'El empiezo', 'Videoclip', None, None, None, 'DfcpGHfoWWI/06', None,
      'lámina y web: solo el título'),
-    ('saint-juanito', 'Saint Juanito', 'Videoclip', 'Chris Andree', 'Perú', None, 'DfhmCGsEZ84/02', F4,
-     'lámina: «(PERÚ) · CHRIS ANDREE» — el artista; el pie del 19 nov: «Chris Andree explora…»'),
+    ('saint-juanito', 'Saint Juanito', 'Videoclip', 'Sebastián Tapia', 'Perú', None, 'DfhmCGsEZ84/02', F4,
+     'lámina: «(PERÚ) · CHRIS ANDREE» — el artista; dirige Sebastián Tapia (créditos del video oficial, youtube QQ1G_ps-A34); el pie del 19 nov: «Chris Andree explora…»'),
     ('el-cuarto', 'El cuarto', 'Filminuto', 'María Candelaria Aldana', 'Colombia', None, 'DfcqutroV1z/04', F4,
      'lámina: «UNA PELÍCULA DE: MARÍA CANDELARIA ALDANA»'),
     ('inmortalizar', 'El arte de inmortalizar mortales', 'Filminuto', 'Javier Jiménez Corzo', 'Colombia', None, 'DfcqutroV1z/15', F5,
@@ -189,7 +189,7 @@ SINOPSIS = {
         'regreso de un ritual antiguo musical.'),
     'Un diálogo para sanar la Tierra': ('https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 8)', 'Entendiendo la labor de los Mamos '
         'para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de '
-        'Ati Güindiva Villafaña Mejía.'),
+        'Ati Gündiwa Villafaña Mejía.'),
     'Gualí': ('https://www.facebook.com/festivaldecinebarbosa (20 nov; el final del pie viene cortado)', 'En el corazón de la sabana de Bogotá, el humedal Gualí es un santuario de biodiversidad. El documental se sumerge en su riqueza natural a través de una narrativa visual poética.'),
     'Ayuno y cenizas': (WEB,'Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy.'),
 }
@@ -212,7 +212,7 @@ SINOPSIS_EN = {
     "Salvemos el agua": "The short film offers an adventure in which ancestral wisdom and children's creativity come together to reflect on caring for rivers, biodiversity and life.",
     "Uma Uñjirinaka · Alto Milluni": "It shows the testimony and struggle of the Indigenous communities affected by water pollution in the Katari - Lake Titicaca basin in Bolivia. In Alto Milluni, whose spring water is stolen daily to be taken to the megacity of El Alto, the women propose a local community tourism project in order to survive.",
     "Uma Uñjirinaka · Puchucollo Alto": "It shows the testimony and struggle of the urban and rural Indigenous communities affected by water pollution in the Katari - Lake Titicaca basin in Bolivia. In Puchukollo Alto, on the outskirts of the megacity of El Alto, the families of the community defend the aquifer located there against the seizure and pollution of its waters.",
-    "Un diálogo para sanar la Tierra": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Güindiva Villafaña Mejía.",
+    "Un diálogo para sanar la Tierra": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Gündiwa Villafaña Mejía.",
     "Una mala chicha es un guarapo": "Eulalio is tempted to sell the land that has been in his family for generations. A little chicha will help him make the best decision.",
 }
 

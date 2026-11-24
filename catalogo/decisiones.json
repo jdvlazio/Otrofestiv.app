@@ -26757,20 +26757,24 @@
   "fecha": "2026-11-24",
   "quien": "Claude",
   "vistas": [
+   "81ac370f5f50",
    "987739cd3119"
   ],
   "original_de": [
    "provinciadevelez-2026"
   ],
   "titulo": "My Name Is Bill W.",
-  "valor": "La historia verdadera de Bill Wilson, fundador de Alcohólicos Anónimos: un hombre explosivo e impredecible, incapaz de controlar su deseo por el alcohol. Su sufrida esposa Louis está separada de él, incapaz de ayudarlo. Bill intenta dejar de beber, no lo logra y recurre a su amigo el Dr. Bob Smith. Una historia de esperanza, coraje y amor.",
+  "valor": "La historia verdadera de Bill Wilson, fundador de Alcohólicos Anónimos: un hombre explosivo e impredecible, incapaz de controlar su deseo de alcohol. Su propia incapacidad para ayudarlo separa de él a su sufrida esposa, Lois. Bill intenta dejar de beber, no lo logra y recurre a su amigo el Dr. Bob Smith. Una historia de esperanza, coraje y amor.",
   "original": "\"Mi nombre es Bill W.\" es la poderosa historia de Bill Wilson, acerca de su papel como fundador de uno de los más exitosos movimientos de auto ayuda en la historia, de \"Alcohólicos Anónimos\". James Woods estelariza al explosivo e impredecible Bill Wilson, incapaz de controlar su deseo por el alcohol. Jo Beth Williams estelariza a la sufrida esposa Louis, quién está separada de su esposo por su propia incapacidad para ayudarlo. Louis, desesperada, considera meterlo a un sanatorio, cuando Bill descubre ésto le da un ataque de alcoholismo y termina atado a una cama de hospital. Bill intenta dejar de beber pero le es imposible, así, que recurre a un amigo el Dr. Bob Smith con quien comparte la dependencia del vino. Es una historia verdadera que trata de la esperanza, coraje y amor.",
   "sintesis": {
-   "redacta": "Claude (montaje provinciadevelez)",
-   "verifica": "agente verificador independiente (Sonnet)",
+   "redacta": "subagente montaje Vélez",
+   "verifica": "subagente verificador 3 (a149ac8e4b846d881)",
    "veredicto": "fiel",
    "fecha": "2026-11-24",
-   "huella": "56da34dfe155"
+   "huella": "6ff76cc448a2",
+   "permitido": {
+    "nombre que el original no trae: Lois": "la esposa es Lois Wilson (créditos de TMDB 15727 y Wikipedia); «Louis» es errata de la sinopsis de TMDB"
+   }
   }
  },
  {
@@ -26840,6 +26844,126 @@
    "veredicto": "fiel",
    "fecha": "2026-11-24",
    "huella": "8ea99493d099"
+  }
+ },
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "sinopsis.en",
+  "valor": "The true story of Bill Wilson, founder of Alcoholics Anonymous: an explosive and unpredictable man, unable to control his craving for alcohol. Her own inability to help him separates his long-suffering wife, Lois, from him. Bill tries to quit drinking, fails, and turns to his friend Dr. Bob Smith. A story of hope, courage and love.",
+  "motivo": "traducción de la sinopsis en español; la de TMDB contaba otra parte",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "Based on the true story of Bill W. (James Woods), a successful stock broker whose life falls apart after the stock crash of the 20's and how he comes to grips with his alcoholism. Along with a fellow alcoholic (James Garner) he forms a support group that would eventually become Alcoholics Anonymous."
+  }
+ },
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "sinopsis.en",
+  "valor": "A cunning fox, Mr. Fox, seems to lead an idyllic life with his wife and his son Ash. But at night he steals chickens, ducks and turkeys from the neighboring farms. The farmers decide to put an end to it by hunting him down. Based on the famous children's book by Roald Dahl.",
+  "motivo": "traducción de la sinopsis en español",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "The Fantastic Mr. Fox, bored with his current life, plans a heist against the three local farmers. The farmers, tired of sharing their chickens with the sly fox, seek revenge against him and his family."
+  }
+ },
+ {
+  "work_id": "w_7JCX65BM88M0",
+  "campo": "sinopsis.en",
+  "valor": "An intimate portrait of the Caribbean through the lives of those who devote themselves to the sea. From the voice of a Puerto Rican fisherman to the bond between a father and his son in Colombia, the film reveals how fishing both unites and distinguishes, portraying a legacy shaped by tradition, struggle, and hope.",
+  "motivo": "la de TMDB sin la frase de locaciones, que el español no trae",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "El Pescador is an intimate portrait of the Caribbean through the lives of those who devote themselves to the sea. From the voice of a Puerto Rican fisherman to the bond between a father and his son in Colombia, the film reveals how fishing both unites and distinguishes, portraying a legacy shaped by tradition, struggle, and hope. Filmed in La Parguera, Lajas, Puerto Rico and Palomino, La Guajira, Colombia."
+  }
+ },
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "sinopsis.en",
+  "valor": "Estiven, a young carpenter's apprentice, works with dedication in a workshop where the echo of the tools coexists with the warnings of his master, Orlando. One night, amid sawdust and inexplicable noises, an accident plunges him into an uncertain passage between life and death.",
+  "motivo": "traducción de la sinopsis en español (pie del festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "In an old carpentry shop, Estiven confronts the souls and the incessant echo of the cicadas. Between life and limbo, his spirit is trapped in a spiritual plane where unfinished work, memory, and the supernatural merge in a state of confusion."
+  }
+ },
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "la lámina del festival dice 2025 (DfcpGHfoWWI/14); TMDB fecha el 6 sep 2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "directores",
+  "valor": [
+   "Absalón Rincón Muñoz"
+  ],
+  "motivo": "créditos de la lámina DfcpGHfoWWI/14: ABSALON RINCON MUÑOZ",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "Absalón Rincón Muñoz"
+  }
+ },
+ {
+  "work_id": "w_7JCX3VRWQ5MD",
+  "campo": "directores",
+  "valor": [
+   "Sebastián Tapia"
+  ],
+  "motivo": "créditos del video oficial (YouTube QQ1G_ps-A34); Chris Andree es el músico",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "Chris Andree"
+  }
+ },
+ {
+  "work_id": "w_7JCX3G2FWFFG",
+  "campo": "sinopsis.es",
+  "valor": "A través de un diálogo íntimo entre el documental y la ficción, La imaginada recorre la memoria colectiva y los relatos orales de Barbosa, Santander, para revelar cómo sus habitantes han construido su identidad a lo largo del tiempo.",
+  "motivo": "la presencia de la directora es de la función, no de la obra",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "A través de un diálogo íntimo entre el documental y la ficción, La imaginada recorre la memoria colectiva y los relatos orales de Barbosa, Santander, para revelar cómo sus habitantes han construido su identidad a lo largo del tiempo. Con la presencia de la escritora y directora Carolina Muñoz."
+  },
+  "vistas": [
+   "1fff0823b451"
+  ]
+ },
+ {
+  "work_id": "w_7JCVSXZMH0YV",
+  "campo": "sinopsis.es",
+  "valor": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Gündiwa Villafaña Mejía.",
+  "motivo": "la lámina DfcqutroV1z/08 escribe «Gündiwa»",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Güindiva Villafaña Mejía."
+  },
+  "vistas": [
+   "eea30048f0e6"
+  ]
+ },
+ {
+  "work_id": "w_7JCVSXZMH0YV",
+  "campo": "sinopsis.en",
+  "valor": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Gündiwa Villafaña Mejía.",
+  "motivo": "la lámina DfcqutroV1z/08 escribe «Gündiwa»",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Güindiva Villafaña Mejía."
   }
  }
 ]

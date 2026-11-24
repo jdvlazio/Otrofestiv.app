@@ -66,8 +66,6 @@ def main():
         os_ = [obra(cat[t]) for t in obras]
         if len(os_) == 1:
             f.update({k: v for k, v in os_[0].items() if k != 'titulo'})
-            # presencia de la directora: el pie de Df7ZYXrEaXh
-            f['invitados'] = 'Con la presencia de la escritora y directora Carolina Muñoz.'
         else:
             f['obras'] = os_
         out.append(f)
