@@ -14,8 +14,8 @@
   "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "tmdb:1461116",
+  "regla": "tmdb-manda"
  },
  "afiche": {
   "fuente": "humano",
@@ -33,6 +33,12 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "catálogo oficial de FICCI 65, p. 87",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
   "fecha": "2026-11-24"
  }
 }
