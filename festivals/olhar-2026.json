@@ -403,7 +403,7 @@
    "requires_registration": false,
    "is_cortos": false,
    "film_list": null,
-   "poster": "/87K75ja7otPHcjiqcaaHiLDsv6i.jpg",
+   "poster": "/assets/ficcali-2026/an-incomplete-calendar.jpg",
    "lbSlug": "an-incomplete-calendar",
    "screenings": [
     {
@@ -426,7 +426,7 @@
    "time": "18:15",
    "venue": "MON - Poty Lazzarotto",
    "day_order": 4,
-   "posterSource": "tmdb",
+   "posterSource": "oficial",
    "work_id": "w_R4GTPYZRA4KK",
    "id": "f_d42ba361b9",
    "tmdb_id": 1633334,
@@ -693,7 +693,7 @@
    "requires_registration": false,
    "is_cortos": false,
    "film_list": null,
-   "poster": "/6zAG96fKKqm4QmYANLmXpVLa9JQ.jpg",
+   "poster": "/assets/midbo-2026/cartas-a-mis-padres-muertos.jpg",
    "lbSlug": "letters-to-my-dead-parents",
    "screenings": [
     {
@@ -717,7 +717,7 @@
    "time": "18:15",
    "venue": "MON - Poty Lazzarotto",
    "day_order": 2,
-   "posterSource": "tmdb",
+   "posterSource": "oficial",
    "work_id": "w_R4ET8GEV16R0",
    "id": "f_f56d9938c6",
    "tmdb_id": 1493026,
@@ -747,7 +747,7 @@
    "requires_registration": false,
    "is_cortos": false,
    "film_list": null,
-   "poster": "/1u1jA1wtw1imq428fK0dajIr0eM.jpg",
+   "poster": "/assets/biff-2026/como-todo-mortal.jpg",
    "lbSlug": "como-todo-mortal",
    "screenings": [
     {
@@ -771,7 +771,7 @@
    "time": "18:00",
    "venue": "Cinemateca",
    "day_order": 4,
-   "posterSource": "tmdb",
+   "posterSource": "oficial",
    "work_id": "w_R4DN2AHQDB30",
    "id": "f_1904f1fe37",
    "tmdb_id": 1651710,
@@ -992,7 +992,7 @@
    "requires_registration": false,
    "is_cortos": false,
    "film_list": null,
-   "poster": "/7aeK8m8917SI0MFAfHtwWMnxVNG.jpg",
+   "poster": "/assets/ficcali-2026/i-built-a-rocket-imagining-your-arrival.jpg",
    "lbSlug": "i-built-a-rocket-imagining-your-arrival",
    "screenings": [
     {
@@ -1016,7 +1016,7 @@
    "time": "21:00",
    "venue": "MON - Poty Lazzarotto",
    "day_order": 8,
-   "posterSource": "tmdb",
+   "posterSource": "oficial",
    "work_id": "w_R4GXDBYW7KW7",
    "id": "f_22f0e177e2",
    "tmdb_id": 1616523,
@@ -1203,7 +1203,7 @@
    "requires_registration": false,
    "is_cortos": false,
    "film_list": null,
-   "poster": "/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
+   "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
    "lbSlug": "good-valley-stories",
    "screenings": [
     {
@@ -1227,7 +1227,7 @@
    "time": "13:45",
    "venue": "Cine Passeio Ritz",
    "day_order": 1,
-   "posterSource": "tmdb",
+   "posterSource": "oficial",
    "work_id": "w_R4H8812VN6A2",
    "id": "f_020c11af40",
    "tmdb_id": 1457842,
@@ -1453,7 +1453,7 @@
    "requires_registration": false,
    "is_cortos": false,
    "film_list": null,
-   "poster": "/39jzHk0VK2kdt9lRAb8CqNuGcGc.jpg",
+   "poster": "https://image.tmdb.org/t/p/w500/39jzHk0VK2kdt9lRAb8CqNuGcGc.jpg",
    "lbSlug": "the-night-is-fading-away",
    "screenings": [
     {
@@ -1477,7 +1477,7 @@
    "time": "18:15",
    "venue": "MON - Poty Lazzarotto",
    "day_order": 7,
-   "posterSource": "tmdb",
+   "posterSource": "oficial",
    "work_id": "w_R4HE768025KE",
    "id": "f_964f2fd4c6",
    "tmdb_id": 1554544,
@@ -1554,7 +1554,7 @@
    "requires_registration": false,
    "is_cortos": false,
    "film_list": null,
-   "poster": "/t8fadEnUuIczqDZVcWaVQECUVRh.jpg",
+   "poster": "/assets/aleste-2026/los-inocentes-encantadores.jpg",
    "lbSlug": "innocent-sorcerers",
    "screenings": [
     {
@@ -1578,7 +1578,7 @@
    "time": "18:00",
    "venue": "Cine Passeio Ritz",
    "day_order": 4,
-   "posterSource": "tmdb",
+   "posterSource": "oficial",
    "work_id": "w_R4MQS6F8FRJP",
    "id": "f_715ea5f699"
   },
@@ -1849,7 +1849,7 @@
    "requires_registration": false,
    "is_cortos": false,
    "film_list": null,
-   "poster": "/6cEj0lPl4iksYCl8gZgNwsTDrSN.jpg",
+   "poster": "/assets/biff-2026/papaya.jpg",
    "lbSlug": "papaya-2025",
    "screenings": [
     {
@@ -1881,7 +1881,7 @@
    "time": "15:45",
    "venue": "Cinemateca",
    "day_order": 1,
-   "posterSource": "tmdb",
+   "posterSource": "oficial",
    "work_id": "w_R4E4AYD6S32S",
    "id": "f_c524594a51",
    "tmdb_id": 1534205,
@@ -2451,7 +2451,7 @@
    "requires_registration": false,
    "is_cortos": false,
    "film_list": null,
-   "poster": "/pjk8K5MpQJX0XczTC2KOVWNj0lC.jpg",
+   "poster": "/assets/aleste-2026/la-tierra-prometida.jpg",
    "lbSlug": "the-promised-land-1975",
    "screenings": [
     {
@@ -2475,7 +2475,7 @@
    "time": "19:00",
    "venue": "Cine Passeio Ritz",
    "day_order": 1,
-   "posterSource": "tmdb",
+   "posterSource": "oficial",
    "work_id": "w_R4MQS7HNCYH6",
    "id": "f_26e3e11e2e"
   },
@@ -2516,10 +2516,10 @@
      "synopsis": "Carlina perdió a su padre en el conflicto armado colombiano y vive sola con su madre. El dolor sigue siendo insoportable y ellas se aferran a sus recuerdos y objetos personales para sobrevivir. Todo cambia con la aparición de un pez místico que será el guía de Carlina durante su aventura.",
      "synopsis_lang": "es",
      "synopsis_en": "Carlina lost her father in the Colombian armed conflict and lives alone with her mother. The pain is still overwhelming, and they both hold on to their memories and personal objects in order to survive. Everything changes with the appearance of a mystical fish that will be Carlina's guide during her adventure.",
-     "poster": "/4DzqfMptovKV0IHiNc2eG1hXzR5.jpg",
+     "poster": "/assets/anibia-2026/balada-de-peces-y-pajaros.jpg",
      "lbSlug": "ballad-of-fishes-and-birds",
      "synopsis_es": "Carlina perdió a su padre en el conflicto armado colombiano y vive sola con su madre. El dolor todavía es abrumador, y ambas se aferran a sus recuerdos y objetos personales para sobrevivir. Todo cambia con la aparición de un pez místico que será el guía de Carlina durante su aventura.",
-     "posterSource": "tmdb",
+     "posterSource": "oficial",
      "work_id": "w_R4DKB1K2S5M9",
      "genre": "Animación",
      "_src": {
@@ -2738,10 +2738,10 @@
      "synopsis": "Kelly, una maestra joven, empieza a trabajar en una escuela pública de las afueras de Contagem. Idealista, intenta empujar un cambio y termina yendo demasiado lejos. Durante una clase discute con Nicolas, un alumno. De la pelea sale un aprendizaje: Kelly entiende que en la periferia de Brasil la excepción es la regla, y Nicolas, que solo derribando el presente se alcanza a ver el futuro.",
      "synopsis_lang": "es",
      "synopsis_en": "Kelly, a young Portuguese language teacher, starts working at a public school. During a class, she gets into an argument with Nicolas, a young sophomore student, and the two have to resolve the conflict in front of the principal. The quarrel brings some learning: Kelly understands that on the outskirts of Brazil the exception is the rule; and Nicolas learns that is necessary to rebuild the present in order to see the future.",
-     "poster": "/8AC30I8Rg8necCjyy035O9eLZsp.jpg",
+     "poster": "https://image.tmdb.org/t/p/w500/8AC30I8Rg8necCjyy035O9eLZsp.jpg",
      "lbSlug": "disciplina-1",
      "synopsis_es": "Kelly, joven profesora de Portugués, empieza a dar clases en una escuela pública. En una clase discute con Nicolas, un joven alumno de segundo año, y ambos deben resolver el conflicto ante el director. La discusión deja enseñanzas: Kelly aprende que en la periferia de Brasil la excepción es la regla; y Nicolas aprende que hay que reconstruir el presente para ver el futuro.",
-     "posterSource": "tmdb",
+     "posterSource": "oficial",
      "work_id": "w_R4FPCCFFNW4V",
      "tmdb_id": 1639721,
      "_src": {
@@ -2883,10 +2883,10 @@
      "synopsis": "En los registros cinematográficos de Esdras Baptista, guardados durante décadas en su residencia, se puede sentir el fervor de quienes creían en un nuevo día. Filmadas en Brasil a principios de la década de 1960, en pleno auge de una política libertaria en movimiento, las imágenes del cineasta materializan la incandescencia de los deseos colectivos en el momento histórico de su eclosión. La utopía, aunque inalcanzable, nunca es una mera abstracción. Fuerza que moviliza las acciones y los sentimientos, constituye el ímpetu necesario para la existencia del ser humano.",
      "synopsis_lang": "es",
      "synopsis_en": "In Esdras Baptista's film archives, kept at his home for decades, one can feel the fervor of those who believed in a new tomorrow. Filmed in Brazil in the early 1960s, in the heat of a libertarian political movement, the filmmaker's images materialize the incandescence of collective desires at the historic moment of their emergence. Utopia, though unattainable, is never a mere abstraction. A force that mobilizes actions and feelings, it constitutes the impetus necessary for human existence.",
-     "poster": "/xQhTaZDsM97rCYur5MSdydJTlZO.jpg",
+     "poster": "/assets/midbo-2026/a-film-to-remind-us-of-utopia.jpg",
      "lbSlug": "a-film-to-remind-us-of-utopia",
      "synopsis_es": "En los registros cinematográficos de Esdras Baptista, guardados durante décadas en su casa, es posible sentir el fervor de quienes creyeron en un nuevo mañana. Filmadas en el Brasil de principios de los años 1960, al calor de una política libertaria en movimiento, las imágenes del cineasta materializan la incandescencia de los deseos colectivos en el instante de su eclosión. La utopía, aun inalcanzable, nunca es mera abstracción. Fuerza que moviliza acciones y sentimientos, constituye el ímpetu necesario para la existencia.",
-     "posterSource": "tmdb",
+     "posterSource": "oficial",
      "work_id": "w_R4MHXTCP637M",
      "tmdb_id": 1636745,
      "_src": {
@@ -3469,10 +3469,10 @@
      "synopsis": "Kelly, una maestra joven, empieza a trabajar en una escuela pública de las afueras de Contagem. Idealista, intenta empujar un cambio y termina yendo demasiado lejos. Durante una clase discute con Nicolas, un alumno. De la pelea sale un aprendizaje: Kelly entiende que en la periferia de Brasil la excepción es la regla, y Nicolas, que solo derribando el presente se alcanza a ver el futuro.",
      "synopsis_lang": "es",
      "synopsis_en": "Kelly, a young Portuguese language teacher, starts working at a public school. During a class, she gets into an argument with Nicolas, a young sophomore student, and the two have to resolve the conflict in front of the principal. The quarrel brings some learning: Kelly understands that on the outskirts of Brazil the exception is the rule; and Nicolas learns that is necessary to rebuild the present in order to see the future.",
-     "poster": "/8AC30I8Rg8necCjyy035O9eLZsp.jpg",
+     "poster": "https://image.tmdb.org/t/p/w500/8AC30I8Rg8necCjyy035O9eLZsp.jpg",
      "lbSlug": "disciplina-1",
      "synopsis_es": "Kelly, joven profesora de Portugués, empieza a dar clases en una escuela pública. En una clase discute con Nicolas, un joven alumno de segundo año, y ambos deben resolver el conflicto ante el director. La discusión deja enseñanzas: Kelly aprende que en la periferia de Brasil la excepción es la regla; y Nicolas aprende que hay que reconstruir el presente para ver el futuro.",
-     "posterSource": "tmdb",
+     "posterSource": "oficial",
      "work_id": "w_R4FPCCFFNW4V",
      "tmdb_id": 1639721,
      "_src": {
