@@ -39,8 +39,9 @@ class Vigilados(unittest.TestCase):
         self.assertEqual(self.vig['termino']['tier'], 'terminado')
         self.assertEqual(self.vig['pre']['tier'], 'camino')      # empieza en 5 días: una vez al día
         self.assertNotIn('viejo', self.vig)                      # terminó hace > 8 días
-        self.assertNotIn('lejos', self.vig)                      # faltan más de 45 días
-        self.assertTrue(self.vig['mes']['pre'])                  # por montar: se mira desde 45 días antes
+        self.assertNotIn('lejos', self.vig)
+        self.assertNotIn('mes', self.vig)                        # más de 7 días: no se gasta
+        self.assertTrue(self.vig['pre']['pre'])
 
     def test_por_montar_trae_historial(self):
         self.assertEqual(v.desde(['cuentames'], {}, AHORA, {'cuentames'})[:10], '2026-07-23')

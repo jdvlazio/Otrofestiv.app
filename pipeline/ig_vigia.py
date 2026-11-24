@@ -57,9 +57,8 @@ LIMITE = 5        # posts máximos por cuenta y corrida (26 oct: 10→5 para no 
 PRIMERA_VEZ_D = 3  # sin historial: mirar solo los últimos N días
 # Pre-onboarding (24 nov 2026, Juan: los títulos se suman en cuanto salen, no al
 # final). Festicine Antioquia anunció su selección y nadie la leyó: la cuenta se
-# miraba desde 7 días antes y solo los últimos 3 días. Un festival por montar se
-# mira desde PRE días antes, y la primera lectura trae su HISTORIAL.
-PRE = 45
+# miraba solo los últimos 3 días. La ventana sigue en CAMINO (Juan: 7 días bastan,
+# sin gastar de más); la primera lectura trae una sola vez su HISTORIAL.
 HISTORIAL_D = 90
 HISTORIAL_LIMITE = 40
 HISTORIAL = set()  # cuentas por montar; la llena main() (solo Bright Data trae historial)
@@ -127,7 +126,7 @@ def vigilados(config, cuentas, ahora, cerrados=()):
         fin = datetime.strptime(f['fin'], '%Y-%m-%d').date()
         if ini - timedelta(days=1) <= hoy <= fin:
             out.append({'id': fid, 'cuenta': f['cuenta'], 'tier': 'vivo', 'fin': f['fin']})
-        elif ini - timedelta(days=PRE if f.get('pre') else CAMINO) <= hoy < ini - timedelta(days=1):
+        elif ini - timedelta(days=CAMINO) <= hoy < ini - timedelta(days=1):
             # En camino: una vez al día. Apify cobra cada consulta aunque no haya
             # posts nuevos (~US$0,003 por cuenta): mirar 3 veces al día una cuenta
             # que publica una selección por semana era casi todo el gasto (26 oct).
