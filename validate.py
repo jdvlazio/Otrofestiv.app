@@ -7301,7 +7301,7 @@ try:
     if _ciego:
         fail(check, 'el guardián no ve cambios en: ' + ', '.join(_ciego))
     elif _div:
-        fail(check, f'{len(_div)} divergencia(s) — python3 pipeline/obra_unica.py: ' + ' · '.join(_ou.texto(x) for x in _div[:4]))
+        fail(check, f'{len(_div)} divergencia(s) — python3 pipeline/obra_unica.py: ' + ' · '.join([_ou.texto(x) for x in _div[:4]] + _ou.que_hacer(_div)))
     elif _sobra:
         fail(check, 'excepción que ya no hace falta, bórrala de obra_unica.EXCEPCIONES: ' + ', '.join(_sobra))
     else:

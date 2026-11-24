@@ -12,6 +12,7 @@ es de la copia de cada festival.
 
     python3 pipeline/obra_unica.py [<festival>]          # lo que diverge
     python3 pipeline/obra_unica.py --decidir <work_id> <campo> <valor> --motivo "…" --quien "…"
+        (afiche nuevo: además --veredicto oficial|oficial-festival|fotograma)
         campo: directores («A, B») · anio · paises («CO,FR») · generos · sinopsis.en · sinopsis.es · afiche
     y después: ficha_unica.py / sinopsis_unicas.py / afiches_unicos.py --aplicar --escribir,
     y catalogo_construir.py --escribir
@@ -25,10 +26,14 @@ sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 
 CAMPO = {'director': 'directores', 'year': 'anio', 'country': 'paises', 'genre': 'generos',
          'synopsis': 'sinopsis.es', 'synopsis_en': 'sinopsis.en', 'poster': 'afiche'}
+EXC_THE_END = ('director', 'year', 'country')
 # Divergencias conocidas y explicadas, con fecha. Se quitan al resolverse: el
 # guardián también falla si una excepción ya no hace falta.
+# Son por obra Y campo. La de «The End» la borra el PR que separe las dos obras
+# (pipeline/ no es «código» para la frontera: puede ir en el PR de datos).
 EXCEPCIONES = {
-    'w_R4PS7MYC5SKG': '«The End» une dos obras de TIFF (Pelechian y Lindroth von Bahr); la rama data/bogoshorts-2026 las separa (24 nov 2026)',
+    ('w_R4PS7MYC5SKG', k): '«The End» une dos obras de TIFF (Pelechian y Lindroth von Bahr); la rama data/bogoshorts-2026 las separa (24 nov 2026)'
+    for k in EXC_THE_END
 }
 
 
@@ -57,8 +62,9 @@ def publicado(festivales):
                     continue
                 tit.setdefault(w, o.get('title'))
                 for k in CAMPO:
-                    if o.get(k) not in (None, ''):
-                        fs = vals.setdefault(w, {}).setdefault(k, {}).setdefault(str(o[k]), [])
+                    x = (o.get('synopsis_es') or o.get(k)) if k == 'synopsis' else o.get(k)   # como la app: locSynopsis
+                    if x not in (None, ''):
+                        fs = vals.setdefault(w, {}).setdefault(k, {}).setdefault(str(x), [])
                         if fid not in fs:
                             fs.append(fid)
     return vals, tit
@@ -70,9 +76,9 @@ def divergencias(festivales, decs, excepciones=None):
     vals, tit = publicado(festivales)
     eleg, out = elegidos(decs), []
     for w, campos in sorted(vals.items()):
-        if w in exc:
-            continue
         for k, v in campos.items():
+            if (w, k) in exc:
+                continue
             if k in eleg.get(w, {}):
                 malos = {x: f for x, f in v.items() if x != str(eleg[w][k])}
                 if malos:
@@ -84,8 +90,8 @@ def divergencias(festivales, decs, excepciones=None):
 
 def excepciones_de_mas(festivales, decs):
     """Excepciones que ya no ocultan nada: hay que borrarlas."""
-    vivas = {x[0] for x in divergencias(festivales, decs, {})}
-    return [w for w in EXCEPCIONES if w not in vivas]
+    vivas = {(x[0], x[2]) for x in divergencias(festivales, decs, {})}
+    return [f'{w} {k}' for w, k in EXCEPCIONES if (w, k) not in vivas]
 
 
 def autoprueba():
@@ -112,21 +118,38 @@ def _festivales():
     return {os.path.basename(p)[:-5]: json.load(open(p, encoding='utf-8')) for p in glob.glob(f'{REPO}/festivals/*.json')}
 
 
+def que_hacer(xs):
+    """Cómo se sale, según haya decisión o no."""
+    out = []
+    if any(x[3] is not None for x in xs):
+        out.append('decidido y publicado distinto → ficha_unica.py, sinopsis_unicas.py y afiches_unicos.py, cada uno con --aplicar --escribir; '
+                   'un afiche o una sinopsis NUEVOS se comparan antes (--revisar) y, si se queda el de siempre, --decidir con el mismo valor')
+    if any(x[3] is None for x in xs):
+        out.append('sin decidir → python3 pipeline/obra_unica.py --decidir <work_id> <campo> <valor> --motivo "…" --quien "…", y después lo anterior')
+    return (out + ['al final, catalogo_construir.py --escribir']) if out else []
+
+
 def texto(x):
     w, t, k, e, v = x
     return f'«{t}» {w} {CAMPO[k]}' + (f' (decidido: {str(e)[:60]})' if e is not None else ' (sin decidir)') + ': ' + \
         ' | '.join(f'{str(a)[:60]} [{", ".join(f[:4])}]' for a, f in v.items())
 
 
-def decidir(decs, vals, w, campo, valor, motivo, quien, fecha):
+def decidir(decs, vals, w, campo, valor, motivo, quien, fecha, veredicto=None):
     """Agrega (o cambia) la decisión, guardando en `antes` qué publicaba cada festival."""
     pub = next((k for k, c in CAMPO.items() if c == campo), None)
     if not pub:
         raise SystemExit(f'✗ campo desconocido: {campo}')
-    v = {'directores': lambda s: [x.strip() for x in s.split(',')], 'paises': lambda s: [x.strip().upper() for x in s.split(',')],
+    if not valor.strip():
+        raise SystemExit('✗ valor vacío')
+    v = {'directores': lambda s: [x.strip() for x in s.split(',') if x.strip()], 'paises': lambda s: [x.strip().upper() for x in s.split(',') if x.strip()],
          'anio': int, 'generos': lambda s: [s]}.get(campo, lambda s: s)(valor)
+    # la VIGENTE: con `reemplaza`, la última manda
+    d = next((x for x in reversed(decs) if x['work_id'] == w and x['campo'] == campo), None)
     if campo == 'afiche':
-        v = {'archivo': valor, 'veredicto': 'oficial'}
+        if valor.startswith('/assets/') and not os.path.exists(REPO + valor):
+            raise SystemExit(f'✗ no existe {valor}')
+        v = dict(d['valor']) if d and d['valor']['archivo'] == valor else {'archivo': valor, 'veredicto': veredicto or sys.exit('✗ falta --veredicto oficial|oficial-festival|fotograma')}
     if campo == 'paises':
         from herencia import _pais_es
         if not _pais_es(v):
@@ -134,7 +157,6 @@ def decidir(decs, vals, w, campo, valor, motivo, quien, fecha):
     antes = {f: a for a, fs in vals.get(w, {}).get(pub, {}).items() for f in fs}
     if not antes:
         raise SystemExit(f'✗ {w} no publica {pub} en ningún festival')
-    d = next((x for x in decs if x['work_id'] == w and x['campo'] == campo), None)
     if d is None:
         d = {'work_id': w, 'campo': campo}
         decs.append(d)
@@ -142,7 +164,8 @@ def decidir(decs, vals, w, campo, valor, motivo, quien, fecha):
         raise SystemExit('✗ esa sinopsis tiene síntesis verificada: se cambia con sinopsis_cortas.py')
     d.update(valor=v, motivo=motivo, fecha=fecha, quien=quien, antes={**antes, **(d.get('antes') or {})})
     if campo == 'afiche':
-        d['a_mano'] = True
+        if quien.startswith('Juan'):
+            d['a_mano'] = True
         d['vistas'] = sorted(set(d.get('vistas') or []) | set(antes.values()) - {valor})
     if campo == 'sinopsis.es':
         import sinopsis_unicas
@@ -158,11 +181,12 @@ if __name__ == '__main__':
     fs, decs = _festivales(), catalogo.decisiones()
     if a[:1] == ['--decidir']:
         arg = lambda n: a[a.index(n) + 1] if n in a else sys.exit(f'✗ falta {n}')
-        d = decidir(decs, publicado(fs)[0], a[1], a[2], a[3], arg('--motivo'), arg('--quien'), datetime.date.today().isoformat())
+        d = decidir(decs, publicado(fs)[0], a[1], a[2], a[3], arg('--motivo'), arg('--quien'), datetime.date.today().isoformat(),
+                    veredicto=a[a.index('--veredicto') + 1] if '--veredicto' in a else None)
         with open(os.path.join(catalogo.DIR, 'decisiones.json'), 'w', encoding='utf-8') as fh:
             fh.write(json.dumps(decs, ensure_ascii=False, indent=1))
         print('✓', json.dumps(d, ensure_ascii=False))
     else:
         xs = [x for x in divergencias(fs, decs) if not a or any(a[0] in f for f in x[4].values())]
-        print('\n'.join(texto(x) for x in xs) or '✓ lo publicado es lo decidido')
+        print('\n'.join([texto(x) for x in xs] + [''] + que_hacer(xs)) if xs else '✓ lo publicado es lo decidido')
         sys.exit(1 if xs else 0)
