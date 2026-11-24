@@ -477,6 +477,11 @@ verifica; el original se guarda). Las frena `[sinopsis-larga]` en el push.
 Se escriben juntas al condensar; `python3 pipeline/sinopsis_par.py <id>` dice qué
 falta y `[sinopsis-par]` lo frena. También al sumar una obra a un festival en curso.
 
+**El sello** (24 nov 2026): otro agente, distinto del que redactó, lee dirección, año,
+español e inglés contra la fuente y los sella (`python3 pipeline/sello_obra.py --sellar
+lote.json`). Sin sello, o si algo cambia después, `[sello-obra]` no deja publicar. El texto
+que llegó se guarda entero en `catalogo/originales.json` y no se edita.
+
 **Excepciones como dato, no como código** (20 nov 2026): una actividad sin
 duración publicada o un título que dice «instalación» sin ser exposición se
 declaran en `festivals/staging/<id>-correcciones.json` —`sin_duracion` y

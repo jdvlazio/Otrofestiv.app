@@ -7351,6 +7351,22 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [sello-obra] la sinopsis y la dirección son de ESA película (pipeline/sello_obra.py) ──
+# Juan, 24 nov 2026: 31 obras publicaban datos de otra película, bien escritos.
+check = 'sello-obra'
+try:
+    import sello_obra as _se
+    _ciega, _fal, _gem = _se.autoprueba(), _se.faltan(_fests), _se.gemelas(_fests)
+    if _ciega:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
+    elif _fal or _gem:
+        fail(check, f'{len(_fal)} obra(s) sin verificar y {len(_gem)} texto(s) en dos obras — otro agente las lee contra su fuente y sello_obra.py --sellar: '
+             + ' · '.join(f'«{_t}» {_w}: {_q}' for _w, _t, _q in _fal[:5]) + ' ' + ' · '.join(sorted(_gem)[:3]))
+    else:
+        ok(check, f'{len(_se.sellos())} de {len(_se.publicadas(_fests))} obras selladas; el resto, en deuda y sin cambios')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 # ── [caja-titulo] programas y secciones en Título (regla de Juan, 15 oct 2026) ──
 # «Muestra de Cortos», «Colombia Viva»: las palabras son del festival y la caja
 # de la app (pipeline/caja.py, el único dueño). Los títulos de obra no se miran.
