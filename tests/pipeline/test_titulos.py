@@ -25,6 +25,24 @@ class Titulos(unittest.TestCase):
         for d in ('Isabella', 'Isabella Marín', 'Laura Cárdenas Marín', 'Isabella Gómez Marín', 'Muestra'):
             self.assertIsNone(c.reconocer(OBS, 'Aitana', d)[0], d)
 
+    def test_parecidos_que_son_otras_personas(self):
+        for a, b in (('Andrés Jiménez Quintero', 'Andrés Quintero Campos'), ('Pablo Fernández Alberti', 'Pablo Roldán Fernández'),
+                     ('Juan Carlos Álvarez', 'Juan Manuel Álvarez Branda'), ('Juan Camilo González Moreno', 'Juan Manuel González')):
+            self.assertFalse(c.misma_persona_larga(a, [b]), a)
+        for a, b in (('Ingrid Bonilla', 'Ingrid Paola Bonilla Rodríguez'), ('Ana Ruiz and Luis Díaz', 'Luis Díaz Mora'), ('Ana Ruiz e Luis Díaz', 'Luis Díaz Mora')):
+            self.assertTrue(c.misma_persona_larga(a, [b]), a)
+
+    def test_la_duracion_contradice(self):
+        ob = {'a': dict(OBS['a'], versiones=[{'duracion_min': 90}])}
+        self.assertIsNone(c.reconocer(ob, 'Aitana', 'Isabella Cárdenas Marín', None, 8)[0])
+
+    def test_dos_posibles_no_se_adivina(self):
+        ob = {'a': OBS['a'], 'm': o('Aitana', 'Pedro Marín')}
+        self.assertIsNone(c.reconocer(ob, 'Aitana', 'Isabella Cárdenas Marín')[0])
+
+    def test_lista_imperfecta(self):
+        self.assertEqual(len(t.clasificar(OBS, [{'titulo': 'Aitana', 'director': ['Isabella Cárdenas'], 'anio': '2025'}])['almacen']), 1)
+
     def test_el_homonimo_es_candidata_y_no_se_hereda(self):
         r = t.clasificar(OBS, [{'titulo': 'Refracción', 'director': 'Isabella Palacio Mesa'}])
         self.assertEqual(r['candidata'], [('Refracción', [('r', 'mismo título')])])

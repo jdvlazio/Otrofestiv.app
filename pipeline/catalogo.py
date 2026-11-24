@@ -21,7 +21,7 @@ import re
 import secrets
 import time
 
-from lib import misma_persona, sinacento
+from lib import sinacento
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIR = os.path.join(REPO, 'catalogo')
@@ -64,12 +64,16 @@ def apellido(director):
 
 
 def misma_persona_larga(director, suyos):
-    """lib.misma_persona Y el mismo primer nombre, persona a persona: dos hermanos
-    (un apellido común) no son la misma (24 nov 2026, dobles apellidos)."""
-    for x in re.split(r',| y | & |/', director or ''):
+    """Un nombre está ENTERO y EN ORDEN dentro del otro, desde el mismo primer nombre:
+    «Isabella Cárdenas» en «Isabella Cárdenas Marín», «Ingrid Bonilla» en «Ingrid Paola
+    Bonilla Rodríguez». No casan hermanos, ni «Andrés Jiménez Quintero» con «Andrés
+    Quintero Campos» (24 nov 2026, dobles apellidos). Iniciales finales no cuentan."""
+    for x in re.split(r',|;|/|&|\s(?:y|e|and)\s', director or ''):
         for y in suyos:
-            a, b = (sinacento(n).lower().split() for n in (x, y))
-            if len(a) > 1 and len(b) > 1 and a[0] == b[0] and misma_persona(x, y):
+            a, b = ([t for t in re.findall(r'[a-z0-9]+', sinacento(n).lower()) if len(t) > 1] for n in (x, y))
+            corto, largo = sorted((a, b), key=len)
+            resto = iter(largo)
+            if len(corto) > 1 and corto[0] == largo[0] and all(t in resto for t in corto):
                 return True
     return False
 
@@ -163,7 +167,8 @@ def obra_de(obs, fid, titulo, tmdb=None, ix=None, director=''):
 
 def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
     """Una obra que llega de un festival NUEVO → (work_id, 'coincide') o (None, None).
-    Las mismas reglas que el constructor (§4.1): misma huella de título (original
+    Las reglas del constructor (§4.1), más el mismo nombre con más o menos apellidos
+    (`misma_persona_larga`), que el constructor todavía no aplica: misma huella de título (original
     o alias) Y mismo apellido de director Y año ±1; o, si a un lado le falta
     director, la huella corroborada por año ±1 o duración ±3. Más de una obra
     posible = no se adivina. `excluir` deja fuera un festival (para probar
@@ -184,11 +189,16 @@ def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
             if a_ok and ap in aps:
                 hits.add(wid)
             elif a_ok and misma_persona_larga(director, o.get('directores') or []):
-                largos.add(wid)
+                # con más o menos apellidos, la duración no puede contradecir
+                ds = [v['duracion_min'] for v in o.get('versiones') or [] if v.get('duracion_min')]
+                if not (duracion and ds) or any(abs(d - duracion) <= 3 for d in ds):
+                    largos.add(wid)
         elif (anio and o.get('anio') and abs(anio - o['anio']) <= 1) or \
                 (duracion and any(v.get('duracion_min') and abs(v['duracion_min'] - duracion) <= 3
                                   for v in o.get('versiones') or [])):
             hits.add(wid)
+    if hits and largos - hits:
+        return None, None
     hits = hits or largos
     return (hits.pop(), 'coincide') if len(hits) == 1 else (None, None)
 

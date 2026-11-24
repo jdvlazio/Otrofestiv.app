@@ -50,7 +50,11 @@ def clasificar(obs, lista):
     r = {'almacen': [], 'candidata': [], 'nueva': []}
     for x in lista:
         t, d = x.get('titulo') or x.get('title'), x.get('director') or ''
-        wid, _ = catalogo.reconocer(obs, t, d, x.get('anio'), x.get('duracion_min'))
+        if not t:
+            sys.exit(f'✗ fila sin título: {x}')
+        d = ', '.join(d) if isinstance(d, list) else d
+        an, du = (int(v) if str(v or '').isdigit() else None for v in (x.get('anio'), x.get('duracion_min')))
+        wid, _ = catalogo.reconocer(obs, t, d, an, du)
         if wid:
             r['almacen'].append((t, wid))
             continue
