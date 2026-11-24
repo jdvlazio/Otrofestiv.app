@@ -114,6 +114,7 @@ Deno.serve(async (req) => {
   // 3·b. La ficha (opcional: un commit sin fichas/<id>.json conserva la anterior).
   let ficha: Record<string, unknown> | null = (antes?.ficha as Record<string, unknown>) ?? null;
   const fr = await fetch(`https://raw.githubusercontent.com/${REPO}/${sha}/fichas/${fest}.json`);
+  if (!fr.ok && fr.status !== 404) return json(502, { error: `GitHub raw ficha ${fr.status}` });
   if (fr.ok) {
     let crudo: Record<string, unknown>;
     try { crudo = await fr.json(); } catch { return json(422, { error: "la ficha no es JSON" }); }
