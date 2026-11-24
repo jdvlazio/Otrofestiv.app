@@ -30,14 +30,9 @@ GENEROS = {'Documentary': 'Documental', 'documental': 'Documental', 'documentale
            'Mystery': 'Misterio', 'ficción': 'Ficción', 'Thiller': 'Thriller', 'Familiar': 'Familia'}
 
 
-def aplicar(d, decs=None):
-    """Lo elegido, en el JSON del festival `d` (en el lugar). La usan publicar.py y
-    --aplicar. → [(título, campo, antes, después)]"""
-    import catalogo
+def elegidos(decs):
+    """{work_id: {campo publicado: valor}} de las decisiones de ficha."""
     from herencia import _pais_es
-    from lib import banderas
-    if decs is None:
-        decs = catalogo.decisiones()
     eleg = {}
     for x in decs:
         if x['campo'] == 'directores':
@@ -50,6 +45,17 @@ def aplicar(d, decs=None):
             eleg.setdefault(x['work_id'], {})['genre'] = x['valor'][0]
         elif x['campo'] == 'sinopsis.en' and x['valor']:
             eleg.setdefault(x['work_id'], {})['synopsis_en'] = x['valor']
+    return eleg
+
+
+def aplicar(d, decs=None):
+    """Lo elegido, en el JSON del festival `d` (en el lugar). La usan publicar.py y
+    --aplicar. → [(título, campo, antes, después)]"""
+    import catalogo
+    from lib import banderas
+    if decs is None:
+        decs = catalogo.decisiones()
+    eleg = elegidos(decs)
     out = []
     for f in d.get('films', []):
         for o in (f.get('film_list') or [f]):
