@@ -1566,7 +1566,7 @@
     "19:00"
    ],
    "day": "2026-11-26",
-   "time": "19:00",
+   "time": "19:30",
    "day_order": 8,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
@@ -1593,8 +1593,10 @@
      "fecha": "2026-11-16"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "juan",
+     "fecha": "2026-11-24",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11",
+     "frase": "deberíamos usar lo que dice la Cinemateca, ellos no venden horarios truncados, ni cometen errores logísticos"
     },
     "venue": {
      "tipo": "festival-web",
@@ -3529,7 +3531,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T06:50:44",
+  "fecha": "2026-11-24T07:00:52",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"

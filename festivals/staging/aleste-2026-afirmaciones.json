@@ -419,11 +419,13 @@
    "casilla": "time",
    "valor": "19:30",
    "fuente": {
-    "tipo": "sala",
+    "tipo": "juan",
     "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11",
-    "fecha": "2026-11-24"
+    "fecha": "2026-11-24",
+    "frase": "deberíamos usar lo que dice la Cinemateca, ellos no venden horarios truncados, ni cometen errores logísticos"
    },
-   "evidencia": "ficha de la Cinemateca (leída 24 nov): «Noviembre 26 7:30 PM · Sala 3», y post DgGg1InlhGH del 23 nov con Al Este de coautor; Juan, 24 nov: manda la Cinemateca (web del festival 19:00 Sala 2)"
+   "evidencia": "ficha de la Cinemateca (leída 24 nov): «Noviembre 26 7:30 PM · Sala 3», y post DgGg1InlhGH del 23 nov con Al Este de coautor; Juan, 24 nov: manda la Cinemateca (web del festival 19:00 Sala 2)",
+   "contra": "19:00"
   },
   {
    "ancla": {
