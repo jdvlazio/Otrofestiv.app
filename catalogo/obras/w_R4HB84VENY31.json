@@ -1,11 +1,18 @@
 {
  "id": "w_R4HB84VENY31",
  "titulo_original": "Riochiquito",
- "anio": null,
+ "anio": 1965,
  "paises": [
-  "FR"
+  "CO"
  ],
- "directores": [],
+ "directores": [
+  "Bruno Muel",
+  "Jean-Pierre Sergent"
+ ],
+ "sinopsis": {
+  "es": "En 1965, los realizadores se internan en las montañas del sur de Colombia para registrar la vida cotidiana de una comunidad campesina organizada en «zonas de autodefensa». Durante su estancia filman el ataque del Ejército Nacional en la Operación Marquetalia. Un documento sobre los orígenes de las insurgencias campesinas y la lucha por la tierra.",
+  "en": "In 1965, the filmmakers venture into the mountains of southern Colombia to record the daily life of a peasant community organized into “self-defense zones.” During their stay they film the National Army’s attack in Operation Marquetalia. A document on the origins of the peasant insurgencies and the struggle for land."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%2021.59.57.png?itok=1-wp2Q2u",
   "veredicto": "oficial-festival"

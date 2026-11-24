@@ -1,11 +1,18 @@
 {
  "id": "w_R4HF7D6AV1WJ",
  "titulo_original": "Eigenheim",
- "anio": null,
+ "anio": 2012,
  "paises": [
   "DE"
  ],
- "directores": [],
+ "directores": [
+  "Anja Dornieden",
+  "Juan David González Monroy"
+ ],
+ "sinopsis": {
+  "es": "En la República Democrática Alemana, los niños jugaban con casas de muñecas que reflejaban la vida que tendrían al crecer. Hoy muchas se venden en eBay o están en manos de coleccionistas, imágenes idealizadas de una época que ya no existe. Con las palabras de sus antiguos y nuevos dueños, un documental sobre los vestigios de un mundo perdido.",
+  "en": "In the German Democratic Republic, children played with dollhouses that mirrored the life they would have when they grew up. Today many are for sale on eBay or in collectors' hands, idealized images of a time that no longer exists. Through the words of their past and new owners, a documentary on the remnants of a lost world."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20173912.png?itok=g_7kENPD",
   "veredicto": "oficial-festival"

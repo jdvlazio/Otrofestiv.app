@@ -6,7 +6,7 @@
   "MX"
  ],
  "directores": [
-  "Clemente Castor Reyes"
+  "Clemente Castor"
  ],
  "aliases": [
   {
@@ -16,21 +16,32 @@
   }
  ],
  "sinopsis": {
-  "es": "¿Cómo escribir una historia que se desprende de la vida? Es decir, que queda colgando, como un pedazo de piel, un soporte fotosensible que lleva registrada en sus pliegues la luz.",
-  "en": "How do you write a story that detaches from life? One that hangs loose, like a piece of skin—a photosensitive surface with light recorded in its folds."
+  "es": "Mario despierta sin memoria al oriente de la Ciudad de México. A la deriva, junto a Lázaro, aprende a habitar cuerpos ajenos a través de grietas en la tierra. Un viaje hipnótico donde el territorio atraviesa la piel y el paisaje se distorsiona al ritmo de los recuerdos.",
+  "en": "Mario wakes up with no memory in eastern Mexico City. Adrift alongside Lázaro, he learns to inhabit other people’s bodies through cracks in the earth. A hypnotic journey where the territory pierces the skin and the landscape warps to the rhythm of memories."
  },
+ "generos": [
+  "Fantasía"
+ ],
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w185/hs4fAhciulkzmE9Cdqw2YXxf7pm.jpg",
+  "archivo": "/assets/mamut-2026/frio-metal.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1493018,
+  "letterboxd": "cold-metal"
+ },
  "versiones": [
   {
    "etiqueta": "102 min",
    "duracion_min": 102
+  },
+  {
+   "etiqueta": "105 min",
+   "duracion_min": 105
   }
  ],
  "presentaciones": [
-  "ficci-65"
+  "ficci-65",
+  "mamut-2026"
  ]
 }

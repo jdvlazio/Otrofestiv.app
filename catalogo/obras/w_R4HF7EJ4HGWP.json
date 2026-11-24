@@ -1,11 +1,17 @@
 {
  "id": "w_R4HF7EJ4HGWP",
  "titulo_original": "Slow Action",
- "anio": null,
+ "anio": 2010,
  "paises": [
   "GB"
  ],
- "directores": [],
+ "directores": [
+  "Ben Rivers"
+ ],
+ "sinopsis": {
+  "es": "Ciencia ficción postapocalíptica entre el documental, el estudio etnográfico y la ficción. Aplica la biogeografía insular, el estudio de cómo las especies y los ecosistemas evolucionan aislados, a una Tierra futura donde el nivel del mar se eleva a alturas absurdas y crea utopías hiperbólicas, posibles minisociedades del futuro.",
+  "en": "Post-apocalyptic science fiction between documentary, ethnographic study and fiction. It applies insular biogeography, the study of how species and ecosystems evolve in isolation, to a future Earth where the sea rises to absurd levels and creates hyperbolic utopias, possible minisocieties of the future."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/SLOW%2BACTION%2BHD%2B17.jpeg?itok=EeNxF7Dz",
   "veredicto": "oficial-festival"

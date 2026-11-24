@@ -30,7 +30,13 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, ficci-65, miradas-2026, villadeleyvaiff-2026)",
-  "fecha": "2026-11-23"
+  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 45",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "catálogo oficial de FICCI 65, p. 45",
+  "fecha": "2026-11-24"
  }
 }

@@ -1,12 +1,19 @@
 {
  "id": "w_R4HC1F248GT0",
  "titulo_original": "Gente perra",
- "anio": null,
+ "anio": 2014,
  "paises": [
   "CO",
   "DE"
  ],
- "directores": [],
+ "directores": [
+  "Anja Dornieden",
+  "Juan David González Monroy"
+ ],
+ "sinopsis": {
+  "es": "Basada en fragmentos del libro Gente perra, del escritor colombiano Gomati D. Wahn. 3000 años en el futuro, el Almirante busca la tierra de Gente perra y las riquezas que esta esconde. La historia se compone de textos existentes modificados: relatos históricos de la conquista de lo que en su día se conoció como el Nuevo Mundo.",
+  "en": "Based on fragments of the book Dog People by Colombian writer Gomati D. Wahn. 3000 years in the future, the Admiral searches for the land of the Dog People and the riches it hides. The story is assembled out of altered existing texts: historic accounts of the conquest of what was once known as the New World."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20171632_0.png?itok=sogZK08j",
   "veredicto": "oficial-festival"

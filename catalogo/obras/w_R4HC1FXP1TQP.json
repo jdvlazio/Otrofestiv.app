@@ -1,11 +1,18 @@
 {
  "id": "w_R4HC1FXP1TQP",
  "titulo_original": "The Masked Monkeys",
- "anio": null,
+ "anio": 2015,
  "paises": [
   "DE"
  ],
- "directores": [],
+ "directores": [
+  "Anja Dornieden",
+  "Juan David González Monroy"
+ ],
+ "sinopsis": {
+  "es": "Las artes de la máscara de Indonesia, o wayang topeng, tienen miles de años. En los estratos más bajos de la sociedad javanesa existe una manifestación única de estas tradiciones. Sus practicantes no buscan simplemente divertir: su ambición es ser respetados y honrados, en un camino que saben que los llevará a una posición honorable y noble.",
+  "en": "Indonesia’s masked arts, or wayang topeng, are thousands of years old. In the lowest rungs of Javanese society there is a unique manifestation of these traditions. Its practitioners do not aim simply to amuse: their ambition is to be respected and honored, on a path they know will lead to an honorable and noble position."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20165739.png?itok=lr5goUXn",
   "veredicto": "oficial-festival"

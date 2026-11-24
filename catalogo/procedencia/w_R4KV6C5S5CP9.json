@@ -1,11 +1,13 @@
 {
  "titulo_original": {
-  "fuente": "festival:qaff-2026",
+  "fuente": "festival:ficci-65,ficci-65,under-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la de midbo-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24"
  },
  "anio": {
   "fuente": "humano",
@@ -20,8 +22,22 @@
   "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la de midbo-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026, under-2026)",
+  "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 199",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
@@ -29,10 +45,16 @@
   "motivo": "misma imagen en varios festivales: la copia más completa",
   "fecha": "2026-11-23"
  },
- "sinopsis.es": {
+ "xref.letterboxd": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026, under-2026)",
-  "fecha": "2026-11-23"
+  "motivo": "la de midbo-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la de midbo-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24"
  }
 }

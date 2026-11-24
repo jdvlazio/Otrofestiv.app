@@ -1,12 +1,18 @@
 {
  "id": "w_R4HEVS4PM3XR",
  "titulo_original": "Quem se Move",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "BR",
   "PT"
  ],
- "directores": [],
+ "directores": [
+  "Stephanie Ricci"
+ ],
+ "sinopsis": {
+  "es": "La mirada de René se detiene ante un barco con contenedores en Lisboa al amanecer. Algo de lo que ve, o no alcanza a ver, la trastoca profundamente. Sus noches transcurren por la escena queer de Portugal, entre cerveza, amores a medias y charlas atravesadas por la experiencia del migrante. Una historia sobre estar extraviado en el mundo.",
+  "en": "René’s gaze lingers on a container ship in Lisbon at dawn. Something she sees, or fails to see, deeply unsettles her. Her nights unfold on Portugal’s queer scene, amid beer, unfinished love stories, and conversations shaped by the migrant experience. A story about feeling lost in the world."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_QSM-cartaz-3-PT-menor%20%281%29.png?itok=PlEjYkVF",
   "veredicto": "oficial-festival"

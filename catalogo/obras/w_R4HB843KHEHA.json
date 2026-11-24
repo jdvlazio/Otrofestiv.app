@@ -1,12 +1,19 @@
 {
  "id": "w_R4HB843KHEHA",
  "titulo_original": "Luna Rossa",
- "anio": null,
+ "anio": 2024,
  "paises": [
   "EE",
   "FR"
  ],
- "directores": [],
+ "directores": [
+  "Olga Pärn",
+  "Priit Pärn"
+ ],
+ "sinopsis": {
+  "es": "En una Nápoles romántica y nostálgica, entre despechados, terroristas y un detective, se abre un triángulo amoroso. En esta animación los personajes caminan acartonados, con gestos extraños, como si respondieran a un mundo contemporáneo, digital, vigilado y antihumano, y la emoción se desborda a pesar de los rostros inexpresivos.",
+  "en": "In a romantic, nostalgic Naples, amid the spurned, terrorists, and a detective, a love triangle unfolds. In this animation the characters walk stiffly, with strange gestures, as if responding to a contemporary, digital, surveilled, and inhuman world, and emotion overflows despite the expressionless faces."
+ },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w92/cOjnO0TenOYL2HMNmaxlGdA4NhV.jpg",
   "veredicto": "oficial"

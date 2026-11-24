@@ -1,13 +1,22 @@
 {
  "id": "w_R4HAG8ATY6GN",
  "titulo_original": "Palestina, otro Vietnam",
- "anio": null,
+ "anio": 1971,
  "paises": [
   "AR",
   "IT",
+  "LB",
   "PS"
  ],
- "directores": [],
+ "directores": [
+  "Jorge Giannoni",
+  "Jorge Denti",
+  "Manuela Generali"
+ ],
+ "sinopsis": {
+  "es": "A comienzos de los setenta, el Colectivo de Cine del Tercer Mundo viaja por tierra hasta Líbano y convive durante meses con cuadros políticos, miembros de la Unidad de Cine Palestino, fedayines y mujeres de los campamentos. Un documental filmado en Beirut, de inmersión y compromiso político, sobre el paso de refugiados a revolucionarios.",
+  "en": "In the early 1970s, the Third World Film Collective travels overland to Lebanon and lives for months alongside political cadres, members of the Palestinian Film Unit, fedayeen, and women from the camps. A documentary filmed in Beirut, of immersion and political commitment, on the passage from refugees to revolutionaries."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Portada%20-%20POV.jpg?itok=KiL9H_9L",
   "veredicto": "oficial-festival"

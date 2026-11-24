@@ -1,11 +1,17 @@
 {
  "id": "w_R4HCNCG1PCNP",
  "titulo_original": "¡Aysa!",
- "anio": null,
+ "anio": 1965,
  "paises": [
   "BO"
  ],
- "directores": [],
+ "directores": [
+  "Jorge Sanjinés"
+ ],
+ "sinopsis": {
+  "es": "Desde la ciudad minera de Huanuni, la película entra poco a poco en la oscuridad de las minas y en la precariedad de los pirquiñeros, trabajadores independientes que perforan la roca solo con cincel y martillo. En los parajes más peligrosos y abandonados, uno de ellos comienza a percibir el sonido y el movimiento de la tierra.",
+  "en": "From the mining town of Huanuni, the film gradually enters the darkness of the mines and the precarious life of the pirquiñeros, independent workers who break through rock with only a chisel and hammer. In the most dangerous and abandoned areas, one of them begins to sense the sound and movement of the earth."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%2017.12.48.png?itok=hz4I9Ged",
   "veredicto": "oficial-festival"
