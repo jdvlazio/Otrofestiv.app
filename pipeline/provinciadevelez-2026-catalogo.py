@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """provinciadevelez-2026-catalogo.py — 9.º Festival de Cine Provincia de Vélez
-(Barbosa, Santander, 1–6 dic 2026). PRE-ONBOARDING (19 nov 2026), sin publicar.
+(Barbosa y Vélez, Santander, 30 nov–6 dic 2026). PRE-ONBOARDING (19 nov; funciones al 24 nov 2026), sin publicar.
 
 LAS FUENTES (fuentes/provinciadevelez-2026/, gitignored):
   · web/home.html + web/landing.js + web/contenido.js — festivaldecineprovinciadevelez.com
@@ -14,6 +14,10 @@ LAS FUENTES (fuentes/provinciadevelez-2026/, gitignored):
       DfxyKI-S9LA / DfzhWP2x_sy / Df2AcYNEbXC / Df4hzKXkYiP / Df7ZYXrEaXh
       (15–19 nov): las láminas con día, hora y sede de cada función.
 
+  · (24 nov) IG Df-DlZyERf2 (8 láminas, 30 nov SENA) y DgFiVrTEbh0 (6, sáb 5 dic), Df71yg2P6hF
+    (La imaginada). Facebook festivaldecinebarbosa (fb/, 18 posts de Bright Data, 5 adjuntos
+    por post): mismas láminas, cortadas en 5; las completas son las de IG.
+
 TRIPLE LECTURA: (1) el arreglo de landing.js, (2) OCR del sistema
 (pipeline/ocr.py) de las 29 láminas de IG y de los 29 pósteres de la web,
 (3) las láminas a ojo (hojas de contacto). Lo que la lámina corrige va en _corrige.
@@ -21,7 +25,9 @@ TRIPLE LECTURA: (1) el arreglo de landing.js, (2) OCR del sistema
 COBERTURA INVERSA: web «29 obras» = 29 en landing.js = 13 + 14 láminas de los
 dos posts del 7 nov + Saint Juanito y El pescador (videoclip) del post del 9 nov
 (assert abajo). El post del afiche dice «más de 35 películas»: 29 + Bélier +
-Sr. Fox + Bill W. + La imaginada + las dos de Dimaté = 35.
+Sr. Fox + Bill W. + La imaginada + las dos de Dimaté = 35. El 20 nov suma tres que la
+web no trae: Puchucollo Alto (Saravita), Una mala chicha es un guarapo y Entre Ríos = 38.
+Una obra puede ir en dos funciones (Alto Milluni y Un diálogo: 30 nov y 5 dic).
 
 NINGUNA fuente trae duración; año solo algunos pósteres.
 Escribe festivals/staging/provinciadevelez-2026-catalogo.json
@@ -33,11 +39,18 @@ from lib import slug  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = f'{REPO}/festivals/staging/provinciadevelez-2026-catalogo.json'
-FECHA = '2026-11-19'
+FECHA = '2026-11-24'
 WEB = 'https://festivaldecineprovinciadevelez.com/'
 IG = 'https://www.instagram.com/p/'
 SO = 'Selección oficial'   # web: «Selección oficial» / «Convocatoria Saravita para nuevos realizadores»
 
+F0 = ('2026-11-30', '16:00', 'Auditorio SENA',
+      f'{IG}Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión '
+      'Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las '
+      'láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas')
+F5 = ('2026-12-05', '18:00', 'Parque Emilio Ulloa',
+      f'{IG}DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA '
+      'TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6')
 # Las funciones con día/hora/sede, tal cual las láminas de IG
 F1 = ('2026-12-01', '18:00', 'Casa Escuela Formación Musical Leo Olarte',
       f'{IG}DfxyKI-S9LA/ + {IG}DfzhWP2x_sy/: «1 DE DICIEMBRE · CASA ESCUELA FORMACIÓN MUSICAL LEO OLARTE · '
@@ -61,7 +74,7 @@ SEL = [
      'lámina: «LA BRIQUE FILMS PRÉSENTE · UN FILM DE FREDDY SANCHEZ»'),
     ('entre-amigos', 'Entre amigos', 'Cortometraje', 'Edward Llanos, Simón Muñoz', 'Colombia', None, 'DfcqutroV1z/02', F4,
      'lámina: «DIRECCIÓN EDWARD LLANOS Y SIMÓN MUÑOZ · SIERRA NEVADA · PALOMINO - COLOMBIA»'),
-    ('escision-cigarra', 'Escisión de la cigarra', 'Cortometraje', 'Absalón Rincón Muñoz', 'Colombia', 2025, 'DfcpGHfoWWI/14', None,
+    ('escision-cigarra', 'Escisión de la cigarra', 'Cortometraje', 'Absalón Rincón Muñoz', 'Colombia', 2025, 'DfcpGHfoWWI/14', F5,
      'lámina: «GUION Y DIRECCIÓN ABSALON RINCON MUÑOZ» (OCR «MUÑO2»), «2025»; web: «PaloSeco · 2025»'),
     ('limones', 'Limones', 'Cortometraje', 'Sergio Fernández, Nicolás Duque', 'Colombia', None, 'DfcpGHfoWWI/12', F4,
      'lámina: «ESCUELA KINÉ PRESENTA · Un cortometraje de Sergio Fernández y Nicolás Duque»'),
@@ -82,25 +95,25 @@ SEL = [
      'lámina: «DIRECTED BY DANIELA HERRERA · FESTIVAL CINE PALOMINO»'),
     ('la-belleza', 'La Belleza', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/12', None,
      'lámina: «UN DOCUMENTAL DE NELSON SILVA»'),
-    ('dialogo-tierra', 'Un diálogo para sanar la Tierra', 'Documental', None, 'Colombia', None, 'DfcqutroV1z/08', None,
+    ('dialogo-tierra', 'Un diálogo para sanar la Tierra', 'Documental', None, 'Colombia', None, 'DfcqutroV1z/08', (F0, F5),
      'lámina: «(Incluye el visionado del documental Tanuzanamu: Principio del Equilibrio - Dir. Ati Güindiva '
      'Villafaña Mejia)» · Palomino, La Guajira; el director de la obra no se nombra'),
-    ('uma-unjirinaka', 'Uma Unjirinaka · Alto Milluni', 'Documental', 'Left Hand Rotation', 'Bolivia', None, 'DfcqutroV1z/07', None,
+    ('uma-unjirinaka', 'Uma Unjirinaka · Alto Milluni', 'Documental', 'Left Hand Rotation', 'Bolivia', None, 'DfcqutroV1z/07', (F0, F5),
      'lámina: «Una serie documental de Left Hand Rotation · UMA UÑJIRINAKA · Alto Milluni (CUIDADORXS DEL '
      'AGUA)»; la web escribe «Unjirinaka» (sin ñ)'),
     ('nueve-jueves', 'Nueve jueves en Riachuelo', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/06', None,
      'lámina: «DIRIGIDO POR NELSON SILVA · Producción Edson Velandia»'),
-    ('ecos-canaveral', 'Ecos del cañaveral', 'Documental', 'Juan Sebastián Parra', 'Colombia', None, 'DfcqutroV1z/05', None,
+    ('ecos-canaveral', 'Ecos del cañaveral', 'Documental', 'Juan Sebastián Parra', 'Colombia', None, 'DfcqutroV1z/05', F0,
      'web: «Juan Sebastián Parra»; lámina: «DIRECCIÓN JUAN SEBASTIÁN PARRA»'),
-    ('guali', 'Gualí', 'Documental', None, 'Colombia', 2025, 'DfcpGHfoWWI/13', None,
+    ('guali', 'Gualí', 'Documental', None, 'Colombia', 2025, 'DfcpGHfoWWI/13', F0,
      'lámina: «Una producción de Los Pinos Films · 2025»; sin director nombrado'),
     ('oficios-fonce', 'Sinfonía incompleta de oficios del Fonce', 'Documental', 'Nelson Silva', 'Colombia', 2024, 'DfcpGHfoWWI/05', None,
      'lámina: «DIRECTOR Y PRODUCTOR EJECUTIVO NELSON SILVA»; web: «Nelson Silva · 2024»'),
     ('tradicion-prohibicion', 'De la tradición a la prohibición', 'Documental', None, None, None, 'DfcpGHfoWWI/04', F2,
      'lámina: «Producción: Charles Films / Dirección General: Lente Andino Films» — productora, no persona'),
-    ('dolor-vientre', 'El dolor del vientre', 'Documental', 'María Candelaria Aldana', 'Colombia', None, 'DfcpGHfoWWI/03', None,
+    ('dolor-vientre', 'El dolor del vientre', 'Documental', 'María Candelaria Aldana', 'Colombia', None, 'DfcpGHfoWWI/03', F5,
      'lámina: «DIRIGIDA POR: MARÍA CANDELARIA ALDANA, PRODUCIDA POR: VALENTINA SANTOS»'),
-    ('llantos-monte', 'Llantos del monte', 'Videoclip', None, 'Argentina', None, 'DfcpGHfoWWI/11', None,
+    ('llantos-monte', 'Llantos del monte', 'Videoclip', None, 'Argentina', None, 'DfcpGHfoWWI/11', F5,
      'lámina: «Oberá - Misiones - Argentina · Cine Joven Comunitario»; sin director nombrado'),
     ('coming-from-hell', 'Coming from Hell', 'Videoclip', 'Klonazepan & Mafa', None, None, 'DfcqutroV1z/10', None,
      'lámina: «KLONAZEPAN & MAFA» — artistas, no dirección'),
@@ -112,7 +125,7 @@ SEL = [
      'lámina: «(PERÚ) · CHRIS ANDREE» — el artista; el pie del 19 nov: «Chris Andree explora…»'),
     ('el-cuarto', 'El cuarto', 'Filminuto', 'María Candelaria Aldana', 'Colombia', None, 'DfcqutroV1z/04', F4,
      'lámina: «UNA PELÍCULA DE: MARÍA CANDELARIA ALDANA»'),
-    ('inmortalizar', 'El arte de inmortalizar mortales', 'Filminuto', 'Javier Jiménez Corzo', 'Colombia', None, 'DfcqutroV1z/15', None,
+    ('inmortalizar', 'El arte de inmortalizar mortales', 'Filminuto', 'Javier Jiménez Corzo', 'Colombia', None, 'DfcqutroV1z/15', F5,
      'lámina: «BARICHARA EN FOTOS · Un filminuto de Javier Jiménez Corzo»'),
     ('olvidar-a-miriam', 'Olvidar a Miriam', 'Filminuto', 'Tatiana Lobera', 'Colombia', None, 'DfcpGHfoWWI/10', F4,
      'lámina: «LA PARCA FILMS PRESENTS A TATIANA LOBERA FILM»; web: «La Parca Films»'),
@@ -122,6 +135,12 @@ SEL = [
 
 # Sinopsis publicadas por el festival (pies de IG y web), tal cual
 SINOPSIS = {
+    'Olvidar a Miriam': (f'{IG}Df7ZYXrEaXh/', 'El minuto recorre la tristeza de la vejez y a través del tango transmite el sentimiento de una lágrima por la nostalgia.'),
+    'Entre amigos': (f'{IG}Df7ZYXrEaXh/', 'Buscando escapar de la rutina de la ciudad, un grupo de jóvenes visita a una amiga que vive sola en las montañas. Rodeados por la inmensidad del paisaje y el silencio del campo, escuchan los relatos que ella conoce sobre la región.'),
+    'Limones': (f'{IG}Df7ZYXrEaXh/', 'Cristian y Andrés, dos niños wayuu de nueve años, recorren las calles de Palomino vendiendo limones. Mientras trabajan, escuchan y comentan en segundo plano la desaparición de Bartolo, ocurrida durante los recientes enfrentamientos armados en la Sierra Nevada. Al caer la noche, regresan a casa y entregan el producido a su madre.'),
+    'Una mala chicha es un guarapo': (f'{IG}Df-DlZyERf2/', 'A Eulalio se le presenta la tentación de vender las tierras que han pasado de generación en generación en su familia. Un poco de chicha le ayudará a tomar la mejor decisión.'),
+    'Uma Unjirinaka · Alto Milluni': (f'{IG}DgFiVrTEbh0/', 'Muestra el testimonio y lucha de las comunidades indígenas afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Alto Milluni, cuya agua naciente es robada a diario para ser llevada a la mega-urbe El Alto, las mujeres proponen un proyecto de turismo comunitario local para la supervivencia.'),
+    'Uma Uñjirinaka · Puchucollo Alto': (f'{IG}Df-DlZyERf2/', 'Muestra el testimonio y lucha de las comunidades indígenas urbanas y rurales afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Puchukollo Alto, periferia de la mega-urbe El Alto, las familias de la comunidad defienden el acuífero allí situado contra la usurpación y contaminación de sus aguas.'),
     'El pescador|Videoclip': (f'{IG}DfzhWP2x_sy/', 'Este videoclip relaciona la pesca del Caribe de Puerto Rico y '
         'La Guajira, y persigue los pasos de Neymar, un niño de La Guajira que aprende la pesca desde temprana edad.'),
     'Salvemos el agua': (f'{IG}Df4hzKXkYiP/', 'El cortometraje propone una aventura en la que la sabiduría ancestral '
@@ -144,18 +163,13 @@ SINOPSIS = {
     'Tres lunas nuevas': (WEB, 'Cuenta cómo abrir una pequeña puerta en la juventud puede traer problemas enormes: '
         'quien siembra vientos cosecha tempestades.'),
     # Traducidas por nosotros del inglés de TMDB (única sinopsis hallada), con el contexto de la lámina
-    'Escisión de la cigarra': ('https://www.themoviedb.org/movie/1753860 (traducida del inglés)', 'En una vieja '
-        'carpintería, Estiven se enfrenta a las almas y al eco incesante de las cigarras. Entre la vida y el limbo, su '
-        'espíritu queda atrapado en un plano espiritual donde el trabajo inconcluso, la memoria y lo sobrenatural se '
-        'funden en un estado de confusión.'),
+    'Escisión de la cigarra': (f'{IG}DgFiVrTEbh0/', 'Estiven, un joven aprendiz de carpintero, trabaja con dedicación en un taller donde conviven el eco de las herramientas y las advertencias de su maestro Orlando. Una noche, entre el polvo de la madera y ruidos inexplicables, un accidente lo sumerge en un tránsito incierto entre la vida y la muerte.'),
     'El pescador|Cortometraje': ('https://www.themoviedb.org/movie/1558138 (traducida del inglés)', 'Un retrato '
         'íntimo del Caribe a través de la vida de quienes se dedican al mar. De la voz de un pescador puertorriqueño al '
         'vínculo entre un padre y su hijo en Colombia, la película muestra cómo la pesca une y distingue, y retrata un '
         'legado hecho de tradición, lucha y esperanza. Filmada en La Parguera (Lajas, Puerto Rico) y en Palomino '
         '(La Guajira, Colombia).'),
-    'Ecos del cañaveral': ('https://www.themoviedb.org/movie/1753875 (traducida del inglés)', 'Cinco trabajadores de '
-        'la caña de azúcar cuentan la historia de un oficio ancestral que se resiste al olvido y enfrenta un futuro '
-        'incierto en el campo colombiano.'),
+    'Ecos del cañaveral': (f'{IG}Df-DlZyERf2/', 'En el corazón del trapiche, donde el sonido de la caña molida acompaña las jornadas de trabajo, Ecos del cañaveral retrata la vida de cinco campesinos hacedores de panela que han dedicado su existencia a un oficio ancestral.'),
     'Nueve jueves en Riachuelo': ('festivals/cineparalapaz-2026.json (Cine para la Paz 2026)', 'Edson Velandia tiene '
         'nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es '
         'descubrir qué quiere tocar cada estudiante.'),
@@ -167,8 +181,7 @@ SINOPSIS = {
     'La Belleza': ('https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 12)', 'Un documental dedicado a La Belleza, Santander, en su '
         'quincuagésimo aniversario de vida jurídica: un municipio de paisajes increíbles y gente tenaz, ejemplo de '
         'progreso, paz y resiliencia en la provincia veleña.'),
-    'El dolor del vientre': ('https://www.instagram.com/p/DfcpGHfoWWI/ (afiche, lámina 3)', 'De amores y tambores: cuando el canto se '
-        'envuelve en los vientres de quienes de luto visten, las gargantas se cierran y el silencio empieza a primar.'),
+    'El dolor del vientre': (f'{IG}DgFiVrTEbh0/', 'Entre amores y tambores, una madre recuerda la partida de un hijo y las vivencias nostálgicas de su tambor.'),
     'El arte de inmortalizar mortales': ('https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 15)', 'Don Antonio: la memoria esculpida '
         'que da la bienvenida o el último adiós.'),
     'Titua y oro': ('https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 14)', 'El levantamiento de un templo sagrado femenino y el '
@@ -188,9 +201,19 @@ OTRAS = [
     ('My Name Is Bill W.', 'Daniel Petrie', 'largo', 'Muestra especial', F2,
      'lámina «MUESTRA ESPECIAL BARBOSA»; el afiche dice «My Name is Bill W.» (James Woods, JoBeth Williams, '
      'James Garner); el pie del 17 nov la presenta como «La caída»'),
-    ('La imaginada', 'Carolina Muñoz', 'corto', None, F4_IMAG,
+    ('La imaginada', 'Carolina Muñoz', 'corto', 'Muestra especial', F4_IMAG,
      'pie Df7ZYXrEaXh: «película de 20 minutos inspirada en Barbosa, nominada a la India Catalina, que se presentó en '
-     'el 2016 … presencia de la escritora y directora Carolina Muñoz»; hora del pie (6.00 pm), no de las láminas'),
+     'el 2016 … presencia de la escritora y directora Carolina Muñoz»; lámina Df71yg2P6hF (y FB 19 nov): «MUESTRA ESPECIAL LA IMAGINADA 2016 – 2026 · DIRECTORA CAROLINA MUÑOZ · VIERNES 4 DE DICIEMBRE · DESDE LAS 6:00 P. M. · LA TANTE · BARBOSA»'),
+    ('Uma Uñjirinaka · Puchucollo Alto', 'Left Hand Rotation', 'corto', SO, F0,
+     'lámina Df-DlZyERf2/02: «CONVOCATORIA SARAVITA · DOCUMENTAL · Una serie documental de Left Hand Rotation · UMA '
+     'UÑJIRINAKA · Puchucollo Alto (CUIDADORXS DEL AGUA) · SELECCIÓN OFICIAL 2026»; no está en las 29 de la web; '
+     'el pie escribe «Puchukollo Alto»'),
+    ('Una mala chicha es un guarapo', 'Wilson Beltrán, Wilson Valderrama', 'corto', 'Muestra especial', F0,
+     'lámina Df-DlZyERf2/04: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Un Film De Cine Club Barbosa & '
+     'Celuloide · Realizado Por Wilson Beltran, Wilson Valderrama»'),
+    ('Entre Ríos. Todos somos hermanos', None, 'corto', 'Muestra especial', F0,
+     'lámina Df-DlZyERf2/08: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Entre Ríos · Todos somos '
+     'hermanos»; sin créditos; tipo supuesto por la portada (documental y cortometraje), sin duración'),
     ('Tres lunas nuevas', 'Rodrigo Dimaté', 'largo', 'Muestra central', None,
      'web: «es una de las películas de la muestra central, y su director nos acompaña en el festival»; sin día ni hora'),
     ('Ayuno y cenizas', 'Rodrigo Dimaté', 'largo', 'Muestra central', None,
@@ -198,7 +221,15 @@ OTRAS = [
 ]
 
 
+_LAM = 'afiche recortado de la lámina del festival'
+LAMINA_DE = {'La imaginada': f'lámina {IG}Df71yg2P6hF ({_LAM})',
+             'Uma Uñjirinaka · Puchucollo Alto': f'lámina {IG}Df-DlZyERf2/02 ({_LAM})',
+             'Una mala chicha es un guarapo': f'lámina {IG}Df-DlZyERf2/04 ({_LAM})'}
+
+
 def funcion(f):
+    if f and isinstance(f[0], tuple):
+        f = f[0]
     return None if not f else {'fecha': f[0], 'hora': f[1], 'sede': f[2], '_evidencia': f[3]}
 
 
@@ -218,8 +249,10 @@ def main():
         o = {k: v for k, v in o.items() if v is not None}
         if fun:
             o['funcion'] = funcion(fun)
+            if isinstance(fun[0], tuple):
+                o['funciones'] = [funcion(x) for x in fun]
         else:
-            o['franja'] = 'sin día ni hora publicados (19 nov)'
+            o['franja'] = 'sin día ni hora publicados (24 nov)'
         s = SINOPSIS.get(f'{tit}|{cat}') or (SINOPSIS.get(tit) if (tit, cat) != ('El pescador', 'Cortometraje') else None)
         if s:
             o['sinopsis'], o['_sinopsis_de'] = s[1], s[0]
@@ -231,18 +264,22 @@ def main():
     for tit, dire, tipo, sec, fun, ev in OTRAS:
         o = {'titulo': tit, 'director': dire, 'tipo': tipo, '_evidencia': ev,
              '_src': {'url': WEB, 'date': FECHA}}
+        if tit.startswith('Uma '):
+            o['pais'], o['categoria'] = 'Bolivia', 'Documental'
+        if o['director'] is None:
+            del o['director']
         if sec:
             o['seccion'] = sec
         if fun:
             o['funcion'] = funcion(fun)
         else:
-            o['franja'] = 'sin día ni hora publicados (19 nov)'
+            o['franja'] = 'sin día ni hora publicados (24 nov)'
         if tit in SINOPSIS:
             o['sinopsis'], o['_sinopsis_de'] = SINOPSIS[tit][1], SINOPSIS[tit][0]
         _a = f'assets/provinciadevelez-2026/{slug(tit)}.jpg'
         if os.path.exists(f'{REPO}/{_a}'):
             o['afiche'] = _a
-            o['_afiche_de'] = 'cartelera de la web del festival'
+            o['_afiche_de'] = LAMINA_DE.get(tit, 'cartelera de la web del festival')
         obras.append(o)
     d = {'_provenance': {'fuente': f'{WEB} (landing.js: 29 obras) + IG @9_festcineprovinciadevelez (Bright Data)',
                          'capturado': FECHA,

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-19"
+  "capturado": "2026-11-24"
  },
  "_origen": "provinciadevelez-2026-catalogo.json",
  "obras": [
@@ -85,6 +85,11 @@
      "year": 2024,
      "duration": "16 min",
      "genre": "Documental"
+    },
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "Sinfonía incompleta de oficios del fonce",
+     "duration": "16 min"
     }
    ]
   },
@@ -168,7 +173,7 @@
      "tmdb_id": 1756580,
      "poster": "/assets/ficma/ayuno-y-cenizas.jpg",
      "posterSource": "custom",
-     "lbSlug": "ayuno-y-cenizas",
+     "lbSlug": "hunger-and-ashes",
      "country": "Colombia",
      "year": 2026,
      "duration": "100 min",
@@ -244,6 +249,11 @@
      "year": 2024,
      "duration": "16 min",
      "genre": "Documental"
+    },
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "Sinfonía incompleta de oficios del fonce",
+     "duration": "16 min"
     }
    ]
   },
@@ -322,7 +332,7 @@
      "tmdb_id": 1756580,
      "poster": "/assets/ficma/ayuno-y-cenizas.jpg",
      "posterSource": "custom",
-     "lbSlug": "ayuno-y-cenizas",
+     "lbSlug": "hunger-and-ashes",
      "country": "Colombia",
      "year": 2026,
      "duration": "100 min",
@@ -346,6 +356,7 @@
   "El dolor del vientre",
   "El empiezo",
   "El latir de la memoria",
+  "Entre Ríos. Todos somos hermanos",
   "Entre amigos",
   "Gualí",
   "La Belleza",
@@ -360,6 +371,8 @@
   "Salvemos el agua",
   "Titua y oro",
   "Uma Unjirinaka · Alto Milluni",
-  "Un diálogo para sanar la Tierra"
+  "Uma Uñjirinaka · Puchucollo Alto",
+  "Un diálogo para sanar la Tierra",
+  "Una mala chicha es un guarapo"
  ]
 }

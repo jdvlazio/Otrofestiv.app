@@ -1,9 +1,9 @@
 {
- "_nota": "9.º Festival de Cine Provincia de Vélez (Barbosa, Santander, 1–6 dic 2026). PRE-ONBOARDING, SIN PUBLICAR. Fuente: festivaldecineprovinciadevelez.com (landing.js: 29 obras de la selección oficial, convocatoria Saravita; franja infantil; muestra central de Rodrigo Dimaté) + IG @9_festcineprovinciadevelez por Bright Data (láminas con día, hora y sede: 1, 2, 3 y 4 dic). Sin bloque `festival`: se escribe al montar. Nombre, subtítulo y secciones: PROPUESTA para Juan.",
+ "_nota": "9.º Festival de Cine Provincia de Vélez (Barbosa, Santander, 30 nov–6 dic 2026). PRE-ONBOARDING, SIN PUBLICAR. Fuente: festivaldecineprovinciadevelez.com (landing.js: 29 obras de la selección oficial, convocatoria Saravita; franja infantil; muestra central de Rodrigo Dimaté) + IG @9_festcineprovinciadevelez por Bright Data (láminas con día, hora y sede: 30 nov, 1, 2, 3, 4 y 5 dic; faltan las dos de la muestra central). Acceso: «¡Entrada libre a todos los escenarios!» (IG Df4hzKXkYiP, 18 nov). Sin bloque `festival`: se escribe al montar. Nombre, subtítulo y secciones: PROPUESTA para Juan.",
  "pasos": [
   {
    "cmd": "python3 pipeline/provinciadevelez-2026-catalogo.py",
-   "que": "landing.js de la web + láminas de IG → catálogo (35 obras)"
+   "que": "landing.js de la web + láminas de IG → catálogo (38 obras)"
   },
   {
    "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/provinciadevelez-2026-catalogo.json",
@@ -14,7 +14,7 @@
  "_nota_fuentes_vivas": "Pre-onboarding sin parrilla completa. Al montar se declaran festivaldecineprovinciadevelez.com (assets/landing-*.js) y el IG.",
  "radar": 1444,
  "_fuentes_versionadas": {
-  "festivals/staging/provinciadevelez-2026-catalogo.json": "29 obras de la selección + 6 fuera de ella, con las funciones publicadas",
+  "festivals/staging/provinciadevelez-2026-catalogo.json": "29 obras de la selección + 9 más, con las funciones publicadas",
   "festivals/staging/provinciadevelez-2026-catalogo-enriquecido.json": "fichas TMDB del catálogo",
   "festivals/staging/provinciadevelez-2026-correcciones.json": "fichas, sin_afiche, sin_sinopsis",
   "festivals/staging/provinciadevelez-2026-altas.json": "registro de altas (pipeline/altas.py)",

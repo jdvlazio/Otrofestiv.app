@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "https://festivaldecineprovinciadevelez.com/ (landing.js: 29 obras) + IG @9_festcineprovinciadevelez (Bright Data)",
-  "capturado": "2026-11-19",
+  "capturado": "2026-11-24",
   "metodo": "arreglo de landing.js + OCR del sistema (pipeline/ocr.py) de 29+29 láminas + a ojo"
  },
  "obras": [
@@ -18,7 +18,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -42,7 +42,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -50,6 +50,8 @@
     "sede": "La Tante Boutique",
     "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
    },
+   "sinopsis": "Buscando escapar de la rutina de la ciudad, un grupo de jóvenes visita a una amiga que vive sola en las montañas. Rodeados por la inmensidad del paisaje y el silencio del campo, escuchan los relatos que ella conoce sobre la región.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
    "afiche": "assets/provinciadevelez-2026/entre-amigos.jpg",
    "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/02 (afiche recortado de la lámina del festival)"
   },
@@ -67,11 +69,16 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
-   "sinopsis": "En una vieja carpintería, Estiven se enfrenta a las almas y al eco incesante de las cigarras. Entre la vida y el limbo, su espíritu queda atrapado en un plano espiritual donde el trabajo inconcluso, la memoria y lo sobrenatural se funden en un estado de confusión.",
-   "_sinopsis_de": "https://www.themoviedb.org/movie/1753860 (traducida del inglés)"
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "18:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+   },
+   "sinopsis": "Estiven, un joven aprendiz de carpintero, trabaja con dedicación en un taller donde conviven el eco de las herramientas y las advertencias de su maestro Orlando. Una noche, entre el polvo de la madera y ruidos inexplicables, un accidente lo sumerge en un tránsito incierto entre la vida y la muerte.",
+   "_sinopsis_de": "https://www.instagram.com/p/DgFiVrTEbh0/"
   },
   {
    "titulo": "Limones",
@@ -86,7 +93,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -94,6 +101,8 @@
     "sede": "La Tante Boutique",
     "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
    },
+   "sinopsis": "Cristian y Andrés, dos niños wayuu de nueve años, recorren las calles de Palomino vendiendo limones. Mientras trabajan, escuchan y comentan en segundo plano la desaparición de Bartolo, ocurrida durante los recientes enfrentamientos armados en la Sierra Nevada. Al caer la noche, regresan a casa y entregan el producido a su madre.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
    "afiche": "assets/provinciadevelez-2026/limones.jpg",
    "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/12 (afiche recortado de la lámina del festival)"
   },
@@ -110,7 +119,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -136,9 +145,9 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "franja": "sin día ni hora publicados (24 nov)",
    "afiche": "assets/provinciadevelez-2026/pez-azul.jpg",
    "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/08 (afiche recortado de la lámina del festival)"
   },
@@ -154,7 +163,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-03",
@@ -181,7 +190,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -205,7 +214,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -227,7 +236,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -251,9 +260,9 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "franja": "sin día ni hora publicados (24 nov)",
    "sinopsis": "El levantamiento de un templo sagrado femenino y el regreso de un ritual antiguo musical.",
    "_sinopsis_de": "https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 14)",
    "afiche": "assets/provinciadevelez-2026/titua-y-oro.jpg",
@@ -272,9 +281,9 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "franja": "sin día ni hora publicados (24 nov)",
    "sinopsis": "Un documental dedicado a La Belleza, Santander, en su quincuagésimo aniversario de vida jurídica: un municipio de paisajes increíbles y gente tenaz, ejemplo de progreso, paz y resiliencia en la provincia veleña.",
    "_sinopsis_de": "https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 12)",
    "afiche": "assets/provinciadevelez-2026/la-belleza.jpg",
@@ -292,9 +301,28 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA",
+    "_evidencia": "https://www.instagram.com/p/Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas"
+   },
+   "funciones": [
+    {
+     "fecha": "2026-11-30",
+     "hora": "16:00",
+     "sede": "Auditorio SENA",
+     "_evidencia": "https://www.instagram.com/p/Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas"
+    },
+    {
+     "fecha": "2026-12-05",
+     "hora": "18:00",
+     "sede": "Parque Emilio Ulloa",
+     "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+    }
+   ],
    "sinopsis": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Güindiva Villafaña Mejía.",
    "_sinopsis_de": "https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 8)",
    "afiche": "assets/provinciadevelez-2026/un-dialogo-para-sanar-la-tierra.jpg",
@@ -313,9 +341,30 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA",
+    "_evidencia": "https://www.instagram.com/p/Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas"
+   },
+   "funciones": [
+    {
+     "fecha": "2026-11-30",
+     "hora": "16:00",
+     "sede": "Auditorio SENA",
+     "_evidencia": "https://www.instagram.com/p/Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas"
+    },
+    {
+     "fecha": "2026-12-05",
+     "hora": "18:00",
+     "sede": "Parque Emilio Ulloa",
+     "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+    }
+   ],
+   "sinopsis": "Muestra el testimonio y lucha de las comunidades indígenas afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Alto Milluni, cuya agua naciente es robada a diario para ser llevada a la mega-urbe El Alto, las mujeres proponen un proyecto de turismo comunitario local para la supervivencia.",
+   "_sinopsis_de": "https://www.instagram.com/p/DgFiVrTEbh0/",
    "afiche": "assets/provinciadevelez-2026/uma-unjirinaka-alto-milluni.jpg",
    "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/07 (afiche recortado de la lámina del festival)"
   },
@@ -332,9 +381,9 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "franja": "sin día ni hora publicados (24 nov)",
    "sinopsis": "Edson Velandia tiene nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es descubrir qué quiere tocar cada estudiante.",
    "_sinopsis_de": "festivals/cineparalapaz-2026.json (Cine para la Paz 2026)",
    "afiche": "assets/provinciadevelez-2026/nueve-jueves-en-riachuelo.jpg",
@@ -353,11 +402,16 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
-   "sinopsis": "Cinco trabajadores de la caña de azúcar cuentan la historia de un oficio ancestral que se resiste al olvido y enfrenta un futuro incierto en el campo colombiano.",
-   "_sinopsis_de": "https://www.themoviedb.org/movie/1753875 (traducida del inglés)"
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA",
+    "_evidencia": "https://www.instagram.com/p/Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas"
+   },
+   "sinopsis": "En el corazón del trapiche, donde el sonido de la caña molida acompaña las jornadas de trabajo, Ecos del cañaveral retrata la vida de cinco campesinos hacedores de panela que han dedicado su existencia a un oficio ancestral.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df-DlZyERf2/"
   },
   {
    "titulo": "Gualí",
@@ -372,9 +426,14 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA",
+    "_evidencia": "https://www.instagram.com/p/Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas"
+   },
    "afiche": "assets/provinciadevelez-2026/guali.jpg",
    "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/13 (afiche recortado de la lámina del festival)"
   },
@@ -392,9 +451,9 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)"
+   "franja": "sin día ni hora publicados (24 nov)"
   },
   {
    "titulo": "De la tradición a la prohibición",
@@ -407,7 +466,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-02",
@@ -433,11 +492,16 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
-   "sinopsis": "De amores y tambores: cuando el canto se envuelve en los vientres de quienes de luto visten, las gargantas se cierran y el silencio empieza a primar.",
-   "_sinopsis_de": "https://www.instagram.com/p/DfcpGHfoWWI/ (afiche, lámina 3)",
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "18:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+   },
+   "sinopsis": "Entre amores y tambores, una madre recuerda la partida de un hijo y las vivencias nostálgicas de su tambor.",
+   "_sinopsis_de": "https://www.instagram.com/p/DgFiVrTEbh0/",
    "afiche": "assets/provinciadevelez-2026/el-dolor-del-vientre.jpg",
    "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/03 (afiche recortado de la lámina del festival)"
   },
@@ -453,9 +517,14 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "18:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+   },
    "sinopsis": "Un joven camina por el monte con amigos, pero al quedarse solo, la soledad y los ruidos extraños lo llenan de terror. Luego de perder la conciencia, despierta en una habitación misteriosa donde un ser espiritual le revela realidades sobre el mundo y el desequilibrio que gobierna el universo.",
    "_sinopsis_de": "https://www.youtube.com/watch?v=gy-JVJUkNUY (canal Cine Tiza, 19 oct 2026)",
    "afiche": "assets/provinciadevelez-2026/llantos-del-monte.jpg",
@@ -473,9 +542,9 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "franja": "sin día ni hora publicados (24 nov)",
    "afiche": "assets/provinciadevelez-2026/coming-from-hell.jpg",
    "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/10 (afiche recortado de la lámina del festival)"
   },
@@ -492,7 +561,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfhmCGsEZ84/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-01",
@@ -516,9 +585,9 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "franja": "sin día ni hora publicados (24 nov)",
    "afiche": "assets/provinciadevelez-2026/el-empiezo.jpg",
    "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/06 (afiche recortado de la lámina del festival)"
   },
@@ -535,7 +604,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfhmCGsEZ84/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -561,7 +630,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -585,9 +654,14 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
-   "franja": "sin día ni hora publicados (19 nov)",
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "18:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+   },
    "sinopsis": "Don Antonio: la memoria esculpida que da la bienvenida o el último adiós.",
    "_sinopsis_de": "https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 15)",
    "afiche": "assets/provinciadevelez-2026/el-arte-de-inmortalizar-mortales.jpg",
@@ -606,7 +680,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -614,6 +688,8 @@
     "sede": "La Tante Boutique",
     "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
    },
+   "sinopsis": "El minuto recorre la tristeza de la vejez y a través del tango transmite el sentimiento de una lágrima por la nostalgia.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
    "afiche": "assets/provinciadevelez-2026/olvidar-a-miriam.jpg",
    "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/10 (afiche recortado de la lámina del festival)"
   },
@@ -630,7 +706,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -650,7 +726,7 @@
    "_evidencia": "web «Franja infantil» + lámina «MUESTRA ESPECIAL · FRANJA INFANTIL»",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "seccion": "Franja infantil",
    "funcion": {
@@ -667,7 +743,7 @@
    "_evidencia": "web «Franja infantil · Wes Anderson · stop motion» + lámina «MUESTRA ESPECIAL · FRANJA PARA NIÑOS»",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "seccion": "Franja infantil",
    "funcion": {
@@ -684,7 +760,7 @@
    "_evidencia": "lámina «MUESTRA ESPECIAL BARBOSA»; el afiche dice «My Name is Bill W.» (James Woods, JoBeth Williams, James Garner); el pie del 17 nov la presenta como «La caída»",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "seccion": "Muestra especial",
    "funcion": {
@@ -698,11 +774,12 @@
    "titulo": "La imaginada",
    "director": "Carolina Muñoz",
    "tipo": "corto",
-   "_evidencia": "pie Df7ZYXrEaXh: «película de 20 minutos inspirada en Barbosa, nominada a la India Catalina, que se presentó en el 2016 … presencia de la escritora y directora Carolina Muñoz»; hora del pie (6.00 pm), no de las láminas",
+   "_evidencia": "pie Df7ZYXrEaXh: «película de 20 minutos inspirada en Barbosa, nominada a la India Catalina, que se presentó en el 2016 … presencia de la escritora y directora Carolina Muñoz»; lámina Df71yg2P6hF (y FB 19 nov): «MUESTRA ESPECIAL LA IMAGINADA 2016 – 2026 · DIRECTORA CAROLINA MUÑOZ · VIERNES 4 DE DICIEMBRE · DESDE LAS 6:00 P. M. · LA TANTE · BARBOSA»",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
+   "seccion": "Muestra especial",
    "funcion": {
     "fecha": "2026-12-04",
     "hora": "18:00",
@@ -710,7 +787,69 @@
     "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
    },
    "sinopsis": "A través de un diálogo íntimo entre el documental y la ficción, La imaginada recorre la memoria colectiva y los relatos orales de Barbosa, Santander, para revelar cómo sus habitantes han construido su identidad a lo largo del tiempo.",
-   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/"
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
+   "afiche": "assets/provinciadevelez-2026/la-imaginada.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/Df71yg2P6hF (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Uma Uñjirinaka · Puchucollo Alto",
+   "director": "Left Hand Rotation",
+   "tipo": "corto",
+   "_evidencia": "lámina Df-DlZyERf2/02: «CONVOCATORIA SARAVITA · DOCUMENTAL · Una serie documental de Left Hand Rotation · UMA UÑJIRINAKA · Puchucollo Alto (CUIDADORXS DEL AGUA) · SELECCIÓN OFICIAL 2026»; no está en las 29 de la web; el pie escribe «Puchukollo Alto»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-24"
+   },
+   "pais": "Bolivia",
+   "categoria": "Documental",
+   "seccion": "Selección oficial",
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA",
+    "_evidencia": "https://www.instagram.com/p/Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas"
+   },
+   "sinopsis": "Muestra el testimonio y lucha de las comunidades indígenas urbanas y rurales afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Puchukollo Alto, periferia de la mega-urbe El Alto, las familias de la comunidad defienden el acuífero allí situado contra la usurpación y contaminación de sus aguas.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df-DlZyERf2/",
+   "afiche": "assets/provinciadevelez-2026/uma-unjirinaka-puchucollo-alto.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/Df-DlZyERf2/02 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Una mala chicha es un guarapo",
+   "director": "Wilson Beltrán, Wilson Valderrama",
+   "tipo": "corto",
+   "_evidencia": "lámina Df-DlZyERf2/04: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Un Film De Cine Club Barbosa & Celuloide · Realizado Por Wilson Beltran, Wilson Valderrama»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-24"
+   },
+   "seccion": "Muestra especial",
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA",
+    "_evidencia": "https://www.instagram.com/p/Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas"
+   },
+   "sinopsis": "A Eulalio se le presenta la tentación de vender las tierras que han pasado de generación en generación en su familia. Un poco de chicha le ayudará a tomar la mejor decisión.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df-DlZyERf2/",
+   "afiche": "assets/provinciadevelez-2026/una-mala-chicha-es-un-guarapo.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/Df-DlZyERf2/04 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Entre Ríos. Todos somos hermanos",
+   "tipo": "corto",
+   "_evidencia": "lámina Df-DlZyERf2/08: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Entre Ríos · Todos somos hermanos»; sin créditos; tipo supuesto por la portada (documental y cortometraje), sin duración",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-24"
+   },
+   "seccion": "Muestra especial",
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA",
+    "_evidencia": "https://www.instagram.com/p/Df-DlZyERf2/ (8 láminas): portada «CATEGORÍAS DOCUMENTAL Y CORTOMETRAJE · SENA Centro de Gestión Agroempresarial del Oriente · FECHA ESPECIAL · 30 DE NOVIEMBRE · 4:00 P.M. · VÉLEZ · AUDITORIO SENA»; las láminas 2–8 son las obras. FB 20 nov, mismo post cortado en 5 láminas"
+   }
   },
   {
    "titulo": "Tres lunas nuevas",
@@ -719,10 +858,10 @@
    "_evidencia": "web: «es una de las películas de la muestra central, y su director nos acompaña en el festival»; sin día ni hora",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "seccion": "Muestra central",
-   "franja": "sin día ni hora publicados (19 nov)",
+   "franja": "sin día ni hora publicados (24 nov)",
    "sinopsis": "Cuenta cómo abrir una pequeña puerta en la juventud puede traer problemas enormes: quien siembra vientos cosecha tempestades.",
    "_sinopsis_de": "https://festivaldecineprovinciadevelez.com/"
   },
@@ -733,10 +872,10 @@
    "_evidencia": "web: «también de Rodrigo Dimaté y estreno nacional, es la otra película de la muestra central»; sin día ni hora",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-19"
+    "date": "2026-11-24"
    },
    "seccion": "Muestra central",
-   "franja": "sin día ni hora publicados (19 nov)",
+   "franja": "sin día ni hora publicados (24 nov)",
    "sinopsis": "Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy.",
    "_sinopsis_de": "https://festivaldecineprovinciadevelez.com/"
   }
