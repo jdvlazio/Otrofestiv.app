@@ -392,6 +392,54 @@
     "fecha": "2026-11-23"
    },
    "evidencia": "ficha de la Cinemateca (leída 23 nov): «Noviembre 29 2:00 PM · Sala 3» con ese link; TuBoleta, «Hecho en Colombia», Sala 3, ofrece «Sun 29 Nov 14:00» (y «Sat 28 Nov 14:30», el bloque 1)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "19:00"
+   },
+   "funcion": "f_7eb873bf13",
+   "casilla": "sala",
+   "valor": "Sala 2",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 24 nov): «Noviembre 26 7:00 PM · Sala 2»; Juan, 24 nov: manda la Cinemateca (web del festival 19:30 Sala 3, TuBoleta 19:00 Sala 3)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "19:00"
+   },
+   "funcion": "f_a89c9c3153",
+   "casilla": "time",
+   "valor": "19:30",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 24 nov): «Noviembre 26 7:30 PM · Sala 3», y post DgGg1InlhGH del 23 nov con Al Este de coautor; Juan, 24 nov: manda la Cinemateca (web del festival 19:00 Sala 2)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "19:00"
+   },
+   "funcion": "f_a89c9c3153",
+   "casilla": "sala",
+   "valor": "Sala 3",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 24 nov): «Noviembre 26 7:30 PM · Sala 3»; Juan, 24 nov: manda la Cinemateca (web del festival 19:00 Sala 2)"
   }
  ]
 }

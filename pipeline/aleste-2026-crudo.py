@@ -113,10 +113,10 @@ for dia, hora, tit, sede, sec, (url, lam), extra in F:
 #   post Df7JJA8x1GK. La web no trae «Futuros luminosos» ni «Transversal30FF».
 # · Cortometrajes de Altura (23 nov): la ficha 4015 y la agenda de Fontanar dicen
 #   sáb 28 nov 2:00 p. m., entrada libre; la web, dom 29 14:00. Manda la sala.
-# · La retirada (23 nov): la ficha 4041 y TuBoleta dicen 19:00; la web, 19:30.
-#   Sala 3 (TuBoleta, web y PDF; la ficha dice Sala 2, donde va «Ino Moxo»).
+# · Jueves 26 (decisión de Juan, 24 nov): hora y sala de la Cinemateca. «La
+#   retirada» 19:00 Sala 2 (ficha 4041) e «Ino Moxo» 19:30 Sala 3 (ficha 4042 y
+#   post DgGg1InlhGH, con Al Este coautor); van en aleste-2026-afirmaciones.json.
 SALA = 'https://cinematecadebogota.gov.co/node/peliculas/'
-TUBOLETA = 'https://cinemateca.checkout.tuboleta.com/selection/event/date?productId='
 B1 = ('2026-11-28', '14:30', 'Competencia Hecho en Colombia - Bloque 1')
 B2 = ('2026-11-29', '14:00', 'Competencia Hecho en Colombia – Bloque 2')
 BLOQUES = [(B1, ['Liminal', 'Refracción', 'Las piedras del río',
@@ -126,7 +126,7 @@ BLOQUES = [(B1, ['Liminal', 'Refracción', 'Las piedras del río',
 MOVIDAS = {t: b for b, ts in BLOQUES for t in ts}
 MOVIDAS['Cortometrajes de Altura'] = ('2026-11-28', '14:00', None)
 MOVIDAS['La retirada'] = ('2026-11-26', '19:00', None)
-FUENTE = {'Cortometrajes de Altura': SALA + '4015?sede=80', 'La retirada': TUBOLETA + '10230607313356',
+FUENTE = {'Cortometrajes de Altura': SALA + '4015?sede=80', 'La retirada': SALA + '4041?sede=11',
           B1[:2]: SALA + '4080?sede=11', B2[:2]: SALA + '4087?sede=11'}
 ORDEN = {t: n for n, t in enumerate(t for _, ts in BLOQUES for t in ts)}
 for t in ('Futuros luminosos', 'Transversal30FF'):
