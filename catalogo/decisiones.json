@@ -342,12 +342,16 @@
   "work_id": "w_R4F1D2Q71DK4",
   "campo": "afiche",
   "valor": {
-   "archivo": "https://image.tmdb.org/t/p/w500/6561nDr66xGl3MFVSMsVqGEKtn.jpg",
-   "veredicto": "fotograma"
+   "archivo": "/assets/midbo-2026/trizas-afiche.jpg",
+   "veredicto": "oficial"
   },
-  "motivo": "la única imagen de la ficha de TMDB es un rostro desenfocado sin título ni créditos: un fotograma, no el afiche; no se encontró afiche oficial (IFFR 2026, búsqueda web)",
-  "fecha": "2026-10-15",
-  "quien": "Juan («Sí, la a»)"
+  "motivo": "MIDBO trae el afiche con título y créditos; antes se guardaba un fotograma",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "https://image.tmdb.org/t/p/w500/6561nDr66xGl3MFVSMsVqGEKtn.jpg"
+  ]
  },
  {
   "work_id": "w_BCSJ1Z4J99ED",
@@ -3805,11 +3809,11 @@
   "work_id": "w_R4J7H92GTG6Q",
   "campo": "afiche",
   "valor": {
-   "archivo": "/assets/ficfusa-2026/la-mona.jpg",
+   "archivo": "/assets/ficica-2026/la-mona.jpg",
    "veredicto": "oficial"
   },
-  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
-  "fecha": "2026-11-23",
+  "motivo": "el mismo afiche, más completo (afiches_unicos: reemplazar)",
+  "fecha": "2026-11-24",
   "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
   "vistas": [
    "/assets/ficfusa-2026/la-mona.jpg",
@@ -8857,5 +8861,112 @@
    "fecha": "2026-11-24",
    "huella": "7b38c7e4312d"
   }
+ },
+ {
+  "work_id": "w_R4H881HQEE34",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/anibia-2026/caida-libre.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el afiche completo; el de QAFF está recortado y con laurel",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/ficcali-2026/caida-libre.jpg",
+   "/assets/qaff/free-fall.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4FSVYGMA2BD",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinemancia/un-aparato-para-detectar-fantasmas.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "solo hay dos stills: el más claro y completo",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/jardin-2026/un-aparato-para-detectar-fantasmas.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4NEB1TRDBS1",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinetoro-2026/tres-gatos-parias-v2.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "la vertical, sin la marca de SiembraFest",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/cinetoro-2026/tres-gatos-parias.jpg",
+   "/assets/siembrafest/tres-gatos-parias.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4K1F3E1D0Z4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/siembrafest/elementales-v2.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "la vertical gana al still; sin la marca de SiembraFest",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/jardin-2026/elementales.jpg",
+   "/assets/siembrafest/elementales.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4KECGPX9X48",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/jardin-2026/de-saul.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "el mismo still en los dos festivales",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/miradas-2026/de-saul.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4QSRPWTXWP9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/narrarelfuturo-2026/protegiendo-nuestro-territorio-v2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "con el título completo; la otra lo traía cortado",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/narrarelfuturo-2026/protegiendo-nuestro-territorio.jpg",
+   "/assets/villadelcine-2026/protecting-our-territory-360.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4QSRPWTXWP9",
+  "campo": "sinopsis.es",
+  "valor": "El espectador se convierte en Cachufina, la compañera imaginaria de un grupo de estudiantes peruanos que transforma su entorno en una experiencia inmersiva. Creada con celulares y una cámara 360°, la obra invita a mirar y cuidar el territorio desde sus propias perspectivas.",
+  "motivo": "cuenta la obra y es la más corta; la otra describe la instalación",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "titulo": "Protecting Our Territory 360",
+  "vistas": [
+   "30b19d5e3e8e",
+   "99c1da1d3d53"
+  ]
  }
 ]
