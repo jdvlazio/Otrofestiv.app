@@ -18,8 +18,10 @@
   "regla": "tmdb-manda"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
