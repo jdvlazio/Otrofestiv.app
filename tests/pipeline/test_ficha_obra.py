@@ -15,11 +15,11 @@ class Reglas(unittest.TestCase):
         self.assertEqual(fo.revisar({'title': 'X'}), [])
 
     def test_nombres_legitimos_no_son_basura(self):
-        for d in ('Arthur J. Bressan, Jr.', 'Cristian Camilo Camargo C.', 'Resk12', 'Colectivo Artefactum Suba', 'Óscar Ruiz Navia', "Seán O'Brien"):
+        for d in ('Arthur J. Bressan, Jr.', 'Cristian Camilo Camargo C.', 'Resk12', 'Colectivo Artefactum Suba', 'Óscar Ruiz Navia', 'Inês Pedrosa e Melo', 'Colectivo Pix & Hertz', "Seán O'Brien"):
             self.assertEqual(fo.revisar({'title': 'X', 'director': d}), [], d)
 
     def test_paises_con_y_o_guion_en_el_nombre(self):
-        for c in ('Antigua y Barbuda', 'Bosnia y Herzegovina', 'Guinea-Bisáu', 'URSS', 'Hong Kong', 'Arabia Saudita, Estados Unidos'):
+        for c in ('Antigua y Barbuda', 'Bosnia y Herzegovina', 'Guinea-Bisáu', 'URSS', 'Costa de Marfil', 'Hong Kong', 'Arabia Saudita, Estados Unidos'):
             self.assertEqual(fo.revisar({'title': 'X', 'country': c}), [], c)
 
     def test_synopsis_es_manda_sobre_la_base(self):
@@ -34,19 +34,42 @@ class Reglas(unittest.TestCase):
 
 
 class Deuda(unittest.TestCase):
-    D = {'films': [{'title': 'X', 'type': 'film', 'genre': 'Qatar'}]}
+    R = 'género:fuera de lista'
 
-    def test_el_techo_de_otro_festival_no_cubre(self):
-        r = 'género:fuera de lista'
-        self.assertEqual(fo.excedidos({'a': self.D}, {'a': {r: 1}}), [])
-        self.assertEqual([x[:4] for x in fo.excedidos({'a': self.D}, {'b': {r: 9}})], [('a', r, 1, 0)])
+    def _d(self, *gs):
+        return {'films': [{'title': f'X{i}', 'type': 'film', 'work_id': f'w_{i}', 'genre': g} for i, g in gs]}
+
+    def _techo(self, d):
+        return {'a': {r: sorted(o) for r, o in fo.incumplen(d).items()}}
+
+    def test_lo_anotado_pasa_y_el_de_otro_festival_no_cubre(self):
+        d = self._d((1, 'Qatar'))
+        self.assertEqual(fo.excedidos({'a': d}, self._techo(d)), [])
+        self.assertEqual([x[:2] for x in fo.excedidos({'b': d}, self._techo(d))], [('b', self.R)])
+
+    def test_un_malo_nuevo_no_se_tapa_arreglando_otro(self):
+        techo = self._techo(self._d((1, 'Qatar')))
+        self.assertEqual(fo.excedidos({'a': self._d((1, 'Drama'), (2, 'Italia'))}, techo), [('a', self.R, ['X2'])])
+
+    def test_ni_cambiando_un_malo_por_otro_malo(self):
+        techo = self._techo(self._d((1, 'Qatar')))
+        self.assertEqual(fo.excedidos({'a': self._d((1, 'Italia'))}, techo), [('a', self.R, ['X1'])])
+
+    def test_otra_funcion_de_una_obra_endeudada_no_bloquea(self):
+        d = self._d((1, 'Qatar'))
+        techo = self._techo(d)
+        d['films'] += [dict(d['films'][0]), {'title': 'X1', 'type': 'film', 'genre': 'Qatar'}]   # repetida, y aún sin enlazar
+        self.assertEqual(fo.excedidos({'a': d}, techo), [])
 
     def test_hoy_nadie_la_supera(self):
-        fs = fo._festivales()
-        self.assertEqual(fo.excedidos(fs), [])
+        self.assertEqual(fo.excedidos(fo._festivales()), [])
 
-    def test_la_holgura_se_ve(self):
-        self.assertEqual(fo.holgura({'a': self.D}, {'a': {'género:fuera de lista': 3}}), ['a género:fuera de lista 1<3'])
+    def test_lo_arreglado_se_ve(self):
+        self.assertEqual(fo.holgura({'a': self._d((1, 'Drama'))}, self._techo(self._d((1, 'Qatar')))), [f'a {self.R} 1'])
+
+    def test_datos_ilegibles_no_tumban(self):
+        for d in ({'films': None}, {'films': [None]}, {'films': [{'title': 'P', 'type': 'film', 'film_list': [None]}]}, None):
+            fo.incumplen(d)
 
 
 if __name__ == '__main__':

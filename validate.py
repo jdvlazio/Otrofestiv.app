@@ -7322,7 +7322,7 @@ try:
         fail(check, 'reglas ciegas: ' + ' · '.join(_ciega[:4]))
     elif _exc:
         fail(check, f'{len(_exc)} regla(s) sobre su deuda — python3 pipeline/ficha_obra.py <festival>: '
-             + ' · '.join(f'{_f} {_r} {_n}>{_t}: ' + ', '.join(_x[:3]) for _f, _r, _n, _t, _x in _exc[:5]))
+             + ' · '.join(f'{_f} {_r}: ' + ', '.join(_x[:3]) for _f, _r, _x in _exc[:5]))
     else:
         ok(check, 'ningún festival suma datos de obra fuera de regla')
         _hol = _fo.holgura(_fests)
