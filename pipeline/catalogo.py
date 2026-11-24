@@ -79,6 +79,20 @@ def no_es_obra(f):
     return f.get('type') == 'event' or (bool(f.get('is_programa')) and not f.get('film_list'))
 
 
+def obras_de(f):
+    """Las obras de una función: ella misma o las de su programa. Dentro de un
+    EVENTO (inauguración, clausura, sala de VR) también hay obras (24 nov 2026: 83
+    sin enlazar; «La última ronda en Venecia» conservaba su sinopsis larga en la
+    noche inaugural de Al Este). Ahí cuenta la que trae dirección y año, o ya está
+    enlazada: un taller o un videomapping no tienen año y no entran."""
+    if f.get('type') == 'event':
+        return [o for o in f.get('film_list') or [] if o.get('title') and o.get('type') != 'event'
+                and (o.get('work_id') or (o.get('director') and o.get('year')))]
+    if no_es_obra(f):
+        return []
+    return [o for o in (f.get('film_list') or [f]) if o.get('type') != 'event']
+
+
 def _lista(raiz, nombre):
     p = os.path.join(raiz, nombre)
     return json.load(io.open(p, encoding='utf-8')) if os.path.exists(p) else []
@@ -165,10 +179,11 @@ def enlazar(d, fid, obs, ix=None):
     ix = ix or indice(obs)
     faltan = []
     for f in d.get('films', []):
-        if no_es_obra(f):
-            continue
-        for o in (f.get('film_list') or [f]):
-            if o.get('type') == 'event' or not o.get('title'):
+        # en un evento se prueba también la que no trae año: si el festival ya la
+        # lista en otra función, es la misma; si no aparece, no falta (puede no ser obra)
+        propias = obras_de(f)
+        for o in ((f.get('film_list') or []) if f.get('type') == 'event' else propias):
+            if o.get('type') == 'event' or not o.get('title') or (f.get('type') == 'event' and not o.get('director')):
                 continue
             # un renombre (`titulos_anteriores`, PR #1040) sigue siendo la misma
             # obra: «También nuestra» → «También nosotras» (FICPA, 13 oct)
@@ -178,7 +193,8 @@ def enlazar(d, fid, obs, ix=None):
                 o['work_id'] = w
             else:
                 o.pop('work_id', None)
-                faltan.append(o['title'])
+                if any(o is x for x in propias) and (f.get('type') != 'event' or o.get('year')):
+                    faltan.append(o['title'])
     return faltan
 
 
@@ -233,9 +249,7 @@ def presentacion_sin_obra(festivales, obs, fus, exigir=False):
     prob = []
     for fid, d in festivales.items():
         for f in d.get('films', []):
-            for o in (f.get('film_list') or [f]):
-                if o.get('type') == 'event' or no_es_obra(f):
-                    continue
+            for o in obras_de(f):
                 w = o.get('work_id')
                 if w is None:
                     if exigir:
@@ -303,10 +317,8 @@ def dato_que_no_viaja(festivales):
     por_obra = {}
     for fid, d in festivales.items():
         for f in (d or {}).get('films', []):
-            if no_es_obra(f):
-                continue
-            for o in (f.get('film_list') or [f]):
-                if o.get('work_id') and o.get('type') != 'event':
+            for o in obras_de(f):
+                if o.get('work_id'):
                     por_obra.setdefault(o['work_id'], []).append((fid, o))
     huecos = {c: [] for c in CAMPOS_QUE_VIAJAN}
     for regs in por_obra.values():

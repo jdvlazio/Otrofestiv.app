@@ -1,7 +1,7 @@
 {
  "id": "w_R4QSRPWTXWP9",
- "titulo_original": "Protecting Our Territory 360",
- "anio": 2026,
+ "titulo_original": "Protegiendo nuestro territorio",
+ "anio": 2025,
  "paises": [
   "PE",
   "US"
@@ -9,14 +9,21 @@
  "directores": [
   "Christopher Boulton"
  ],
+ "aliases": [
+  {
+   "titulo": "Protecting Our Territory 360",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "El espectador se convierte en Cachufina, la compañera imaginaria de un grupo de estudiantes peruanos que transforma su entorno en una experiencia inmersiva. Creada con celulares y una cámara 360°, la obra invita a mirar y cuidar el territorio desde sus propias perspectivas."
+  "es": "Combina un video en 360 grados —que sitúa al espectador en el papel de \"Cachufina\", una compañera de clase imaginaria— con un registro del proceso de creación, mostrando cómo los estudiantes peruanos utilizaron cámaras de acción y teléfonos móviles para cocrear una experiencia inmersiva sobre sus vidas y el entorno natural."
  },
  "generos": [
+  "VR 360",
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
+  "archivo": "/assets/narrarelfuturo-2026/protegiendo-nuestro-territorio.jpg",
   "veredicto": "oficial"
  },
  "xref": {},
@@ -27,6 +34,7 @@
   }
  ],
  "presentaciones": [
+  "narrarelfuturo-2026",
   "villadelcine-2026"
  ]
 }

@@ -52,10 +52,8 @@ def registros():
         except Exception:
             continue
         for f in d.get('films', []):
-            if catalogo.no_es_obra(f):
-                continue
-            for o in (f.get('film_list') if f.get('film_list') else [f]):
-                if o.get('type') == 'event' or not o.get('title'):
+            for o in catalogo.obras_de(f):
+                if not o.get('title'):
                     continue
                 dur = re.match(r'\d+', str(o.get('duration') or ''))
                 anio = o.get('year')
