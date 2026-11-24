@@ -104,10 +104,10 @@ def revisar(o, nombres=None, anio_tope=None):
             out.append('sinopsis:no es texto')
         else:
             out += ['sinopsis:' + x for x in defectos(s) + _texto(s)]
-            if _PENDIENTE.search(s):
+            if len(s) < 120 and _PENDIENTE.search(s):
                 out.append('sinopsis:pendiente')
             ws = re.findall(r'[^\W\d_]+', s.lower())
-            fr = sum(w in _OTROS['francés'] for w in ws)
+            fr = sum(w in _OTROS['francés'] - {'le', 'les', 'son', 'sur'} for w in ws)     # también son español
             if len(ws) >= 8 and fr > sum(w in _OTROS['español'] for w in ws):
                 out.append('sinopsis:en francés')
             if o.get('synopsis_lang') not in (None, 'es') and not o.get('synopsis_es'):
@@ -235,6 +235,10 @@ def autoprueba():
              'tmdb:no es número': [{'tmdb_id': '5'}], 'afiche:no existe': [{'poster': '/assets/no/existe.jpg'}, {'poster': 'assets/no.jpg'}, {'poster': '/assets/'}], 'título:espacios': [{'title': 'Dos  espacios'}]}
     n = paises()
     mal = [f'{r} no ve {c}' for r, cs in cebos.items() for c in cs if r not in revisar({**sana, **c}, n, 2030)]
+    for s in ('Ana y Luis son hermanos. La madre le pide que le cuente qué ocurrió aquella noche.',
+              'Un preso será liberado próximamente y vuelve a pensar en la casa de su infancia, donde su hermana lo espera desde hace más de veinte años.'):
+        if revisar({**sana, 'synopsis': s}, n, 2030):
+            mal.append(f'frena una sinopsis sana: {s[:40]}')
     if revisar(sana, n, 2030):
         mal.append(f'la obra sana incumple {revisar(sana, n, 2030)}')
     if excedidos({'nuevo': {'films': [dict(sana, type='film', genre='Qatar')]}}, {})[:1] == []:
