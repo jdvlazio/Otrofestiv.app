@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "tmdb:1400371",
   "regla": "tmdb-manda"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "sinopsis oficial del festival o de Bogoshorts",
+  "fecha": "2026-11-24"
  }
 }

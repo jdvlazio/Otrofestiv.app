@@ -26,5 +26,17 @@
   "regla": "decisión",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2025)",
   "fecha": "2026-11-23"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la que publicaba era de otra obra; traducida de su española",
+  "fecha": "2026-11-24"
  }
 }

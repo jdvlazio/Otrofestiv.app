@@ -8,11 +8,16 @@
  "directores": [
   "Samuel Velasquez"
  ],
+ "sinopsis": {
+  "es": "Una joven inocente, cuidada con celo por su madre, queda en medio del conflicto entre dos pretendientes: un primo que se las da de poeta y un arriero de la finca. Su madre intenta ayudarla, pero es en vano, y la joven sufre las consecuencias injustas de la rivalidad.",
+  "en": "An innocent young girl, jealously cared for and protected by her mother, finds herself in the middle of a conflict between two suitors who seek to conquer her, the first is a cousin who poses as a poet and the other is a muleteer of the farm. Her mother tries to help her but to no avail, and the young girl suffers the unjust consequences of the rivalry."
+ },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w500/oB765L88GmwWNis8Dd4byVBsxuE.jpg",
   "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 271412,
   "letterboxd": "madre-1924"
  },
  "versiones": [

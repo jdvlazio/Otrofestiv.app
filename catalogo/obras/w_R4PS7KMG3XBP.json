@@ -3,16 +3,22 @@
  "titulo_original": "Land of the People",
  "anio": 1966,
  "paises": [
-  "AM"
+  "AM",
+  "SU"
  ],
  "directores": [
   "Artavazd Pelechian"
  ],
+ "sinopsis": {
+  "es": "El descubrimiento continuo de la belleza del mundo, que cada persona hace en su vida y en su trabajo, contado en una jornada laboral de una gran ciudad. La película empieza y termina con la imagen giratoria de El pensador de Rodin, símbolo del pensamiento humano.",
+  "en": "This is the subject of ongoing discovery of the beauty of the world, that man makes in his life and in his work, which is being developed as part of a big city, presented during a day's work. This film starts and ends with the rotating image of the sculpture of Rodin the Thinker; this famous sculpture has long since become the symbol of the unchanging expression of human thought."
+ },
  "afiche": {
   "archivo": "https://images.ctfassets.net/22n7d68fswlw/HaZJ0sMpZwzjVoso8iolC/097c17fcf404651ae275ca95095e7420/Land-of-the-People-_Pelechian-Project__Still_03-_1_.jpg",
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 183714,
   "letterboxd": "the-land-of-the-people"
  },
  "versiones": [
