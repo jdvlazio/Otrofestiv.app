@@ -24,25 +24,22 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 
 
-GENEROS = {'Documentary': 'Documental', 'documental': 'Documental', 'documentales': 'Documental', 'History': 'Historia',
-           'Comedy': 'Comedia', 'Science Fiction': 'Ciencia ficción', 'Ciencia Ficción': 'Ciencia ficción', 'Crime': 'Crimen',
-           'Action': 'Acción', 'Horror': 'Terror', 'War': 'Bélica', 'Music': 'Música', 'Animation': 'Animación',
-           'Mystery': 'Misterio', 'ficción': 'Ficción', 'Thiller': 'Thriller', 'Familiar': 'Familia'}
-
-
 def elegidos(decs):
     """{work_id: {campo publicado: valor}} de las decisiones de ficha."""
+    import normaliza
     from herencia import _pais_es
     eleg = {}
     for x in decs:
         if x['campo'] == 'directores':
-            eleg.setdefault(x['work_id'], {})['director'] = ', '.join(x['valor'])
+            eleg.setdefault(x['work_id'], {})['director'] = normaliza.director(', '.join(x['valor']))
         elif x['campo'] == 'anio':
             eleg.setdefault(x['work_id'], {})['year'] = x['valor']
         elif x['campo'] == 'paises' and _pais_es(x['valor']):
             eleg.setdefault(x['work_id'], {})['country'] = _pais_es(x['valor'])
         elif x['campo'] == 'generos' and x['valor']:
-            eleg.setdefault(x['work_id'], {})['genre'] = x['valor'][0]
+            g = normaliza.genero(x['valor'][0])
+            if g:
+                eleg.setdefault(x['work_id'], {})['genre'] = g
         elif x['campo'] == 'xref.tmdb':            # la ficha; None = la que había era de otra obra
             eleg.setdefault(x['work_id'], {})['tmdb_id'] = x['valor']
         elif x['campo'] == 'xref.letterboxd':
@@ -56,6 +53,7 @@ def aplicar(d, decs=None):
     """Lo elegido, en el JSON del festival `d` (en el lugar). La usan publicar.py y
     --aplicar. → [(título, campo, antes, después)]"""
     import catalogo
+    import normaliza
     from lib import banderas
     if decs is None:
         decs = catalogo.decisiones()
@@ -65,10 +63,6 @@ def aplicar(d, decs=None):
         for o in (f.get('film_list') or [f]):
             if o.get('type') == 'event':
                 continue
-            g = o.get('genre')
-            if g in GENEROS:
-                o['genre'] = GENEROS[g]
-                out.append((o.get('title'), 'genre', g, o['genre']))
             for k, v in eleg.get(o.get('work_id'), {}).items():
                 if o.get(k) in (None, '') or str(o[k]) == str(v):
                     continue
@@ -79,6 +73,10 @@ def aplicar(d, decs=None):
                 o[k] = str(v) if isinstance(o[k], str) else v
                 if k == 'country' and banderas(v):
                     o['flags'] = banderas(v)
+            # y lo demás, bien escrito: sin decisión también (normaliza.py)
+            out += [(o.get('title'), k, a, b) for k, a, b in normaliza.normalizar(o)]
+        if f.get('film_list') and f.get('type') != 'event':      # el programa: la app usa su país si la obra no lo trae
+            out += [(f.get('title'), k, a, b) for k, a, b in normaliza.normalizar(f)]
     return out
 
 

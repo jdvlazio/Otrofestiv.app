@@ -11970,9 +11970,9 @@
   "work_id": "w_R4QSRPWTXWP9",
   "campo": "generos",
   "valor": [
-   "VR 360"
+   "Documental"
   ],
-  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "motivo": "VR 360 es formato, no género; documental, como en Villa del Cine",
   "fecha": "2026-11-24",
   "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
  },
@@ -14093,6 +14093,254 @@
    "cinetoro-2026": "the-dance-of-chaos",
    "festicinerio-2026": "the-dance-of-chaos",
    "filcmar-2026": "la-danza-del-caos"
+  }
+ },
+ {
+  "work_id": "w_6TB4RYP07E0M",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "lo impreso no dice un género («VR Interactivo»); el de su ficha de TMDB 1569767",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "narrarelfuturo-2026": "VR Interactivo"
+  }
+ },
+ {
+  "work_id": "w_6TB5H86EM3SP",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "lo impreso no dice un género («VR Interactivo»); el de su ficha de TMDB 1759059",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "narrarelfuturo-2026": "VR Interactivo"
+  }
+ },
+ {
+  "work_id": "w_R4HAT4P4YQ74",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1514847",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "ficci-65": "Ficción",
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_R4HK6J8YDJZC",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1738917",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "ficdeh-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_R4JV4PNSJMNF",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1686266",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "finca-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_R4N2KY8B36DJ",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1337148",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "qaff-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_R4N3793FGSXK",
+  "campo": "generos",
+  "valor": [
+   "Crimen"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1628580",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "qaff-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_R4N432K445TX",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1369889",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "qaff-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ3HSJCM0DS6",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1466830",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ3J8ZD799FE",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1339367",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ3JSH2WQPFD",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 260680",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ3K7NJV43E6",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1056494",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ3KQNMGEK4P",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 34207",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ3M6D9B44YR",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1515175",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ3PHBTVGJ66",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1399253",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ3QHNZ1YPP3",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1364538",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ3ZW5XYJZWW",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1132582",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ40W8TZKKHJ",
+  "campo": "generos",
+  "valor": [
+   "Acción"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1516445",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ41B4VSBZ2R",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 213983",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
   }
  }
 ]

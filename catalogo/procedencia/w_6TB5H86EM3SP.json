@@ -16,7 +16,9 @@
   "regla": "pais-union"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "lo impreso no dice un género («VR Interactivo»); el de su ficha de TMDB 1759059",
+  "fecha": "2026-11-24"
  }
 }

@@ -131,7 +131,7 @@
   {
    "title": "O Riso e a Faca",
    "title_en": "I Only Rest in the Storm",
-   "country": "Portugal/Francia/Brasil/Rumania",
+   "country": "Portugal, Francia, Brasil, Rumania",
    "flags": "🇵🇹🇫🇷🇧🇷🇷🇴",
    "duration": "217 min",
    "day": "Miércoles",
@@ -156,7 +156,7 @@
   {
    "title": "Vetre, pričaj sa mnom",
    "title_en": "Wind, Talk to Me",
-   "country": "Serbia/Eslovenia/Croacia",
+   "country": "Serbia, Eslovenia, Croacia",
    "flags": "🇷🇸🇸🇮🇭🇷",
    "duration": "100 min",
    "day": "Miércoles",
@@ -206,7 +206,7 @@
    "title": "Costas — Prog. 4",
    "title_en": "Comunicado de Argentina · Nicaragua, semilla de soles · Palestina, otro Vietnam",
    "flags": "🇦🇷🇺🇸🇲🇽🇳🇮🇮🇹🇵🇸",
-   "country": "Argentina/EEUU/México/Nicaragua/Italia/Palestina",
+   "country": "Argentina, Estados Unidos, México, Nicaragua, Italia, Palestina",
    "duration": "119 min",
    "day": "Miércoles",
    "date": 15,
@@ -218,27 +218,30 @@
    "film_list": [
     {
      "title": "Comunicado de Argentina",
-     "country": "Argentina/EEUU",
+     "country": "Argentina, Estados Unidos",
      "duration": "40 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/comunicado1-992x744%20-%20Carolina%20Cappa.jpg?itok=4ILAHwdM",
-     "work_id": "w_R4HAG84RFFH7"
+     "work_id": "w_R4HAG84RFFH7",
+     "flags": "🇦🇷🇺🇸"
     },
     {
      "title": "Nicaragua, semilla de soles",
-     "country": "México/Nicaragua",
+     "country": "México, Nicaragua",
      "duration": "57 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%2017.58.43.png?itok=YZyn6Dtw",
-     "work_id": "w_R4HAG8K6DQSG"
+     "work_id": "w_R4HAG8K6DQSG",
+     "flags": "🇲🇽🇳🇮"
     },
     {
      "title": "Palestina, otro Vietnam",
-     "country": "Argentina/Italia/Palestina",
+     "country": "Argentina, Italia, Palestina",
      "duration": "22 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Portada%20-%20POV.jpg?itok=KiL9H_9L",
-     "work_id": "w_R4HAG8ATY6GN"
+     "work_id": "w_R4HAG8ATY6GN",
+     "flags": "🇦🇷🇮🇹🇵🇸"
     }
    ],
    "id": "f_4ca0e73952"
@@ -317,7 +320,7 @@
    "title": "Prog. Cortometrajes — Jorge Cadena",
    "title_en": "El cuento de Antonia · Flores del otro patio · Les Trois Hirondelles · Mapalé · Soeurs Jarariju · Sonali",
    "flags": "🇨🇭🇨🇴",
-   "country": "Suiza/Colombia",
+   "country": "Suiza, Colombia",
    "duration": "98 min",
    "day": "Miércoles",
    "date": 15,
@@ -337,11 +340,12 @@
     },
     {
      "title": "Flores del otro patio",
-     "country": "Suiza/Colombia",
+     "country": "Suiza, Colombia",
      "duration": "16 min",
      "posterSource": "tmdb",
      "poster": "https://image.tmdb.org/t/p/w92/icXmSR2VtpFsfeP0BHHvVwehP8g.jpg",
-     "work_id": "w_R4HAG88CEBDH"
+     "work_id": "w_R4HAG88CEBDH",
+     "flags": "🇨🇭🇨🇴"
     },
     {
      "title": "Les Trois Hirondelles",
@@ -493,7 +497,7 @@
    "poster": "/assets/miradas-2026/ivan-hadoum.jpg",
    "work_id": "w_R4HAT4P4YQ74",
    "id": "f_e32864d04a",
-   "genre": "Ficción",
+   "genre": "Drama",
    "_src": {
     "heredado": {
      "genre": "catálogo w_R4HAT4P4YQ74 (ficci-65, miradas-2026)",
@@ -508,7 +512,7 @@
    "title": "Cine Indígena — Prog. 2",
    "title_en": "Tu mañana será mi canto · Runa Simi",
    "flags": "🇨🇱🇵🇪",
-   "country": "Chile/Perú",
+   "country": "Chile, Perú",
    "duration": "99 min",
    "day": "Miércoles",
    "date": 15,
@@ -520,11 +524,12 @@
    "film_list": [
     {
      "title": "Tu mañana será mi canto",
-     "country": "Chile/EEUU",
+     "country": "Chile, Estados Unidos",
      "duration": "14 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_TuMan%CC%83anaSera%CC%81MiCanto_Poster%20-%20Fernando%20Saldivia%20Y%C3%A1%C3%B1ez.jpg?itok=O0EAsSCB",
-     "work_id": "w_R4HAT44JAX44"
+     "work_id": "w_R4HAT44JAX44",
+     "flags": "🇨🇱🇺🇸"
     },
     {
      "title": "Runa Simi",
@@ -594,7 +599,7 @@
   {
    "title": "Las corrientes",
    "title_en": "The Currents",
-   "country": "Suiza/Argentina",
+   "country": "Suiza, Argentina",
    "flags": "🇨🇭🇦🇷",
    "duration": "104 min",
    "day": "Miércoles",
@@ -619,7 +624,7 @@
    "title": "ojoboca — Prog. 1 · 16mm",
    "title_en": "A Running Woman · Instant Life · Wolkenschatten",
    "flags": "🇩🇪🇨🇴",
-   "country": "Alemania/Colombia",
+   "country": "Alemania, Colombia",
    "duration": "56 min",
    "day": "Miércoles",
    "date": 15,
@@ -639,11 +644,12 @@
     },
     {
      "title": "Instant Life",
-     "country": "EEUU/Alemania",
+     "country": "Estados Unidos, Alemania",
      "duration": "27 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20154413_0.png?itok=y69N_vUg",
-     "work_id": "w_R4HAT4QAVP51"
+     "work_id": "w_R4HAT4QAVP51",
+     "flags": "🇺🇸🇩🇪"
     },
     {
      "title": "Wolkenschatten",
@@ -682,7 +688,7 @@
    "title": "(s)paces Cortos — Prog. 1",
    "title_en": "Atado · Pequeno Jogo · Trưa Lịm · Warnungen an die ferne Zukunft · 3cm of Complexity",
    "flags": "🇪🇸🇧🇷🇫🇷🇻🇳🇩🇪🇬🇧🇦🇹🇬🇷",
-   "country": "España/Brasil/Francia/Vietnam/Alemania/Reino Unido/Austria/Grecia",
+   "country": "España, Brasil, Francia, Vietnam, Alemania, Reino Unido, Austria, Grecia",
    "duration": "~60 min",
    "day": "Miércoles",
    "date": 15,
@@ -710,27 +716,30 @@
     },
     {
      "title": "Trưa Lịm",
-     "country": "Francia/Vietnam",
+     "country": "Francia, Vietnam",
      "duration": "16 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20211541.png?itok=GbDa6pdw",
-     "work_id": "w_R4HAT537Z8RQ"
+     "work_id": "w_R4HAT537Z8RQ",
+     "flags": "🇫🇷🇻🇳"
     },
     {
      "title": "Warnungen an die ferne Zukunft",
-     "country": "Alemania/Reino Unido",
+     "country": "Alemania, Reino Unido",
      "duration": "19 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Warnungen%20an%20die%20ferne%20Zukunft%20PLAKAT%20-%20Ju%20liane_page-0001.jpg?itok=BKoBLV6t",
-     "work_id": "w_R4HAT5CSRDJY"
+     "work_id": "w_R4HAT5CSRDJY",
+     "flags": "🇩🇪🇬🇧"
     },
     {
      "title": "3cm of Complexity",
-     "country": "Austria/Grecia",
+     "country": "Austria, Grecia",
      "duration": "21 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Film%20Poster_3cm%20of%20Complexity%20-%20Fanny%20Berghofer.jpg?itok=RsFqy5mK",
-     "work_id": "w_R4HAT5VM48NN"
+     "work_id": "w_R4HAT5VM48NN",
+     "flags": "🇦🇹🇬🇷"
     }
    ],
    "id": "f_cb3908d2d6"
@@ -738,7 +747,7 @@
   {
    "title": "Kaye",
    "title_en": "",
-   "country": "Chile/Italia",
+   "country": "Chile, Italia",
    "flags": "🇨🇱🇮🇹",
    "duration": "85 min",
    "day": "Miércoles",
@@ -788,7 +797,7 @@
   {
    "title": "Chicas tristes",
    "title_en": "Sad Girlz",
-   "country": "México/España/Francia",
+   "country": "México, España, Francia",
    "flags": "🇲🇽🇪🇸🇫🇷",
    "duration": "90 min",
    "day": "Miércoles",
@@ -951,7 +960,7 @@
    "title": "Animación Porosa — Prog. de Cortos",
    "title_en": "Ako počúvať fontány · Evacuations · La baraja de Myriam · Luna Rossa · Venezia Diorama",
    "flags": "🇸🇰🇺🇸🇨🇱🇪🇪🇫🇷🇧🇪",
-   "country": "Eslovaquia/Estados Unidos/Chile/Estonia/Francia/Bélgica",
+   "country": "Eslovaquia, Estados Unidos, Chile, Estonia, Francia, Bélgica",
    "duration": "69 min",
    "day": "Miércoles",
    "date": 15,
@@ -987,11 +996,12 @@
     },
     {
      "title": "Luna Rossa",
-     "country": "Estonia/Francia",
+     "country": "Estonia, Francia",
      "duration": "32 min",
      "posterSource": "tmdb",
      "poster": "https://image.tmdb.org/t/p/w92/cOjnO0TenOYL2HMNmaxlGdA4NhV.jpg",
-     "work_id": "w_R4HB843KHEHA"
+     "work_id": "w_R4HB843KHEHA",
+     "flags": "🇪🇪🇫🇷"
     },
     {
      "title": "Venezia Diorama",
@@ -1032,7 +1042,7 @@
   {
    "title": "Isabel",
    "title_en": "",
-   "country": "Brasil/Francia",
+   "country": "Brasil, Francia",
    "flags": "🇧🇷🇫🇷",
    "duration": "85 min",
    "day": "Miércoles",
@@ -1056,7 +1066,7 @@
   {
    "title": "Tóc, Giấy và Nước…",
    "title_en": "Hair, Paper, Water…",
-   "country": "Bélgica/Francia/Vietnam",
+   "country": "Bélgica, Francia, Vietnam",
    "flags": "🇧🇪🇫🇷🇻🇳",
    "duration": "71 min",
    "day": "Miércoles",
@@ -1081,7 +1091,7 @@
   {
    "title": "Queen at Sea",
    "title_en": "",
-   "country": "Reino Unido/Estados Unidos",
+   "country": "Reino Unido, Estados Unidos",
    "flags": "🇬🇧🇺🇸",
    "duration": "121 min",
    "day": "Miércoles",
@@ -1105,7 +1115,7 @@
   {
    "title": "Piedras preciosas",
    "title_en": "Gemstones",
-   "country": "Colombia/Portugal",
+   "country": "Colombia, Portugal",
    "flags": "🇨🇴🇵🇹",
    "duration": "70 min",
    "day": "Miércoles",
@@ -1129,7 +1139,7 @@
   {
    "title": "Blue Heron",
    "title_en": "",
-   "country": "Canadá/Hungría",
+   "country": "Canadá, Hungría",
    "flags": "🇨🇦🇭🇺",
    "duration": "90 min",
    "day": "Miércoles",
@@ -1154,7 +1164,7 @@
   {
    "title": "Jóhanna af örk",
    "title_en": "Joan of Arc",
-   "country": "Islandia/Dinamarca/Francia",
+   "country": "Islandia, Dinamarca, Francia",
    "flags": "🇮🇸🇩🇰🇫🇷",
    "duration": "61 min",
    "day": "Miércoles",
@@ -1179,7 +1189,7 @@
    "title": "Internacional — Prog. de Cortos",
    "title_en": "Cul-De-Sac! · Ein Unfall · Force Times Displacement · Intersecting Memory · Daria's Night Flowers",
    "flags": "🇧🇪🇫🇷🇦🇹🇹🇼🇵🇸🇮🇷🇬🇧",
-   "country": "Bélgica/Francia/Austria/Taiwán/Palestina/Irán/UK",
+   "country": "Bélgica, Francia, Austria, Taiwán, Palestina, Irán, Reino Unido",
    "duration": "~90 min",
    "day": "Miércoles",
    "date": 15,
@@ -1191,11 +1201,12 @@
    "film_list": [
     {
      "title": "Cul-De-Sac!",
-     "country": "Bélgica/Francia",
+     "country": "Bélgica, Francia",
      "duration": "17 min",
      "posterSource": "tmdb",
      "poster": "https://image.tmdb.org/t/p/w92/lpcPZ6dfJFLjpeDAuvsMi11amOR.jpg",
-     "work_id": "w_R4HB85K6FH39"
+     "work_id": "w_R4HB85K6FH39",
+     "flags": "🇧🇪🇫🇷"
     },
     {
      "title": "Ein Unfall",
@@ -1215,19 +1226,21 @@
     },
     {
      "title": "Intersecting Memory",
-     "country": "Palestina/Francia",
+     "country": "Palestina, Francia",
      "duration": "20 min",
      "posterSource": "editorial",
      "poster": "https://ficcifestival.com/sites/default/files/styles/1920px_x_480px/public/img-catalogo/result_Intersecting%20memory%20photo%204%20-%20Association%20Grec.jpg?itok=1WX0MrRb",
-     "work_id": "w_R4HB85GSEN2Y"
+     "work_id": "w_R4HB85GSEN2Y",
+     "flags": "🇵🇸🇫🇷"
     },
     {
      "title": "Daria's Night Flowers",
-     "country": "Irán/UK/Francia",
+     "country": "Irán, Reino Unido, Francia",
      "duration": "16 min",
      "posterSource": "tmdb",
      "poster": "https://image.tmdb.org/t/p/w92/hNuuQciHXD7VqBPHgNVKSHh4yLB.jpg",
-     "work_id": "w_R4HB857E1N43"
+     "work_id": "w_R4HB857E1N43",
+     "flags": "🇮🇷🇬🇧🇫🇷"
     }
    ],
    "id": "f_7640de27e7"
@@ -1260,7 +1273,7 @@
   {
    "title": "Khmeli Potoli",
    "title_en": "Dry Leaf",
-   "country": "Alemania/Georgia",
+   "country": "Alemania, Georgia",
    "flags": "🇩🇪🇬🇪",
    "duration": "186 min",
    "day": "Jueves",
@@ -1319,7 +1332,7 @@
    "title": "Cine Afro — Prog. de Cortos",
    "title_en": "Como Nasce um Rio · Taxi Moto · Voz, Zov, Zvo",
    "flags": "🇧🇷🇨🇭🇫🇷",
-   "country": "Brasil/Suiza/Francia",
+   "country": "Brasil, Suiza, Francia",
    "duration": "81 min",
    "day": "Jueves",
    "date": 16,
@@ -1339,11 +1352,12 @@
     },
     {
      "title": "Taxi Moto",
-     "country": "Suiza/Francia",
+     "country": "Suiza, Francia",
      "duration": "21 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_affiche_MOTOTAXI_GB_1500x2000%20-%20Festivals%20Sudu.jpg?itok=7LEPmRue",
-     "work_id": "w_R4HB85Y9VKH3"
+     "work_id": "w_R4HB85Y9VKH3",
+     "flags": "🇨🇭🇫🇷"
     },
     {
      "title": "Voz, Zov, Zvo",
@@ -1407,7 +1421,7 @@
   {
    "title": "Anoche conquisté Tebas",
    "title_en": "Last Night I Conquered the City of Thebes",
-   "country": "España/Portugal",
+   "country": "España, Portugal",
    "flags": "🇪🇸🇵🇹",
    "duration": "111 min",
    "day": "Jueves",
@@ -1593,11 +1607,12 @@
     },
     {
      "title": "Todas las manos que solté",
-     "country": "Colombia/Francia",
+     "country": "Colombia, Francia",
      "duration": "23 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0",
-     "work_id": "w_R4HBN9HF0D5J"
+     "work_id": "w_R4HBN9HF0D5J",
+     "flags": "🇨🇴🇫🇷"
     },
     {
      "title": "Ya se ven los tigres en la lluvia",
@@ -1671,7 +1686,7 @@
   {
    "title": "Dao",
    "title_en": "Dao",
-   "country": "Francia/Senegal/Guinea-Bissau",
+   "country": "Francia, Senegal, Guinea-Bisáu",
    "flags": "🇫🇷🇸🇳🇬🇼",
    "duration": "185 min",
    "day": "Jueves",
@@ -1754,7 +1769,7 @@
    "title": "ojoboca — Prog. 2 · 16mm",
    "title_en": "Come and Dance with Me · Gente perra · The Masked Monkeys",
    "flags": "🇩🇪🇨🇴",
-   "country": "Alemania/Colombia",
+   "country": "Alemania, Colombia",
    "duration": "61 min",
    "day": "Jueves",
    "date": 16,
@@ -1774,11 +1789,12 @@
     },
     {
      "title": "Gente perra",
-     "country": "Colombia/Alemania",
+     "country": "Colombia, Alemania",
      "duration": "25 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20171632_0.png?itok=sogZK08j",
-     "work_id": "w_R4HC1F248GT0"
+     "work_id": "w_R4HC1F248GT0",
+     "flags": "🇨🇴🇩🇪"
     },
     {
      "title": "The Masked Monkeys",
@@ -1847,7 +1863,7 @@
    "posterSource": "oficial",
    "work_id": "w_R4HAT4P4YQ74",
    "id": "f_5e4bb31908",
-   "genre": "Ficción",
+   "genre": "Drama",
    "_src": {
     "heredado": {
      "genre": "catálogo w_R4HAT4P4YQ74 (ficci-65, miradas-2026)",
@@ -1928,7 +1944,6 @@
      "posterSource": "oficial",
      "poster": "/assets/ficica-2026/pawa.jpg",
      "work_id": "w_R4HCNBABG3FG",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
@@ -1983,7 +1998,7 @@
   {
    "title": "Duhuldeki Deney",
    "title_en": "Soul of the Foot",
-   "country": "Canadá/Turquía",
+   "country": "Canadá, Turquía",
    "flags": "🇨🇦🇹🇷",
    "duration": "65 min",
    "day": "Jueves",
@@ -2031,7 +2046,7 @@
   {
    "title": "Crocodile",
    "title_en": "",
-   "country": "Nueva Zelanda/Nigeria",
+   "country": "Nueva Zelanda, Nigeria",
    "flags": "🇳🇿🇳🇬",
    "duration": "100 min",
    "day": "Jueves",
@@ -2055,7 +2070,7 @@
   {
    "title": "Señoritas",
    "title_en": "",
-   "country": "Colombia/Canadá",
+   "country": "Colombia, Canadá",
    "flags": "🇨🇴🇨🇦",
    "duration": "87 min",
    "day": "Jueves",
@@ -2079,7 +2094,7 @@
   {
    "title": "Piedras preciosas",
    "title_en": "Gemstones",
-   "country": "Colombia/Portugal",
+   "country": "Colombia, Portugal",
    "flags": "🇨🇴🇵🇹",
    "duration": "70 min",
    "day": "Jueves",
@@ -2127,7 +2142,7 @@
   {
    "title": "Mare's Nest",
    "title_en": "",
-   "country": "Reino Unido/Francia/Canadá",
+   "country": "Reino Unido, Francia, Canadá",
    "flags": "🇬🇧🇫🇷🇨🇦",
    "duration": "98 min",
    "day": "Jueves",
@@ -2153,7 +2168,7 @@
    "title": "Cine Indígena — Prog. 2",
    "title_en": "Tu mañana será mi canto · Runa Simi",
    "flags": "🇨🇱🇵🇪",
-   "country": "Chile/Perú",
+   "country": "Chile, Perú",
    "duration": "99 min",
    "day": "Jueves",
    "date": 16,
@@ -2165,11 +2180,12 @@
    "film_list": [
     {
      "title": "Tu mañana será mi canto",
-     "country": "Chile/EEUU",
+     "country": "Chile, Estados Unidos",
      "duration": "14 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_TuMan%CC%83anaSera%CC%81MiCanto_Poster%20-%20Fernando%20Saldivia%20Y%C3%A1%C3%B1ez.jpg?itok=O0EAsSCB",
      "posterSource": "custom",
-     "work_id": "w_R4HAT44JAX44"
+     "work_id": "w_R4HAT44JAX44",
+     "flags": "🇨🇱🇺🇸"
     },
     {
      "title": "Runa Simi",
@@ -2229,7 +2245,7 @@
    "title": "Costas — Prog. 2",
    "title_en": "¡Aysa! · No les pedimos un viaje a la luna",
    "flags": "🇧🇴🇲🇽",
-   "country": "Bolivia/México",
+   "country": "Bolivia, México",
    "duration": "106 min",
    "day": "Jueves",
    "date": 16,
@@ -2310,7 +2326,7 @@
   {
    "title": "Tehran Bedoune Mojavez",
    "title_en": "Put Your Soul on Your Hand and Walk",
-   "country": "Francia/Palestina",
+   "country": "Francia, Palestina",
    "flags": "🇫🇷🇵🇸",
    "duration": "112 min",
    "day": "Jueves",
@@ -2334,7 +2350,7 @@
   {
    "title": "Dracula",
    "title_en": "Dracula",
-   "country": "Rumania/Austria/Luxemburgo",
+   "country": "Rumania, Austria, Luxemburgo",
    "flags": "🇷🇴🇦🇹🇱🇺",
    "duration": "170 min",
    "day": "Jueves",
@@ -2449,7 +2465,7 @@
    "title": "Animación Porosa — Prog. de Cortos",
    "title_en": "Ako počúvať fontány · Evacuations · La baraja de Myriam · Luna Rossa · Venezia Diorama",
    "flags": "🇸🇰🇺🇸🇨🇱🇪🇪🇫🇷🇧🇪",
-   "country": "Eslovaquia/Estados Unidos/Chile/Estonia/Francia/Bélgica",
+   "country": "Eslovaquia, Estados Unidos, Chile, Estonia, Francia, Bélgica",
    "duration": "69 min",
    "day": "Viernes",
    "date": 17,
@@ -2485,11 +2501,12 @@
     },
     {
      "title": "Luna Rossa",
-     "country": "Estonia/Francia",
+     "country": "Estonia, Francia",
      "duration": "32 min",
      "poster": "https://image.tmdb.org/t/p/w92/cOjnO0TenOYL2HMNmaxlGdA4NhV.jpg",
      "posterSource": "tmdb",
-     "work_id": "w_R4HB843KHEHA"
+     "work_id": "w_R4HB843KHEHA",
+     "flags": "🇪🇪🇫🇷"
     },
     {
      "title": "Venezia Diorama",
@@ -2555,7 +2572,7 @@
    "title": "Prog. Cortometrajes — Jorge Cadena",
    "title_en": "El cuento de Antonia · Flores del otro patio · Les Trois Hirondelles · Mapalé · Soeurs Jarariju · Sonali",
    "flags": "🇨🇭🇨🇴",
-   "country": "Suiza/Colombia",
+   "country": "Suiza, Colombia",
    "duration": "98 min",
    "day": "Viernes",
    "date": 17,
@@ -2575,11 +2592,12 @@
     },
     {
      "title": "Flores del otro patio",
-     "country": "Suiza/Colombia",
+     "country": "Suiza, Colombia",
      "duration": "16 min",
      "poster": "https://image.tmdb.org/t/p/w92/icXmSR2VtpFsfeP0BHHvVwehP8g.jpg",
      "posterSource": "tmdb",
-     "work_id": "w_R4HAG88CEBDH"
+     "work_id": "w_R4HAG88CEBDH",
+     "flags": "🇨🇭🇨🇴"
     },
     {
      "title": "Les Trois Hirondelles",
@@ -2655,7 +2673,7 @@
   {
    "title": "Chicas tristes",
    "title_en": "Sad Girlz",
-   "country": "México/España/Francia",
+   "country": "México, España, Francia",
    "flags": "🇲🇽🇪🇸🇫🇷",
    "duration": "90 min",
    "day": "Viernes",
@@ -2680,7 +2698,7 @@
   {
    "title": "Queen at Sea",
    "title_en": "",
-   "country": "Reino Unido/Estados Unidos",
+   "country": "Reino Unido, Estados Unidos",
    "flags": "🇬🇧🇺🇸",
    "duration": "121 min",
    "day": "Viernes",
@@ -2779,7 +2797,6 @@
      "posterSource": "oficial",
      "poster": "/assets/aleste-2026/futuros-luminosos.jpg",
      "work_id": "w_R4FBMPTV0JG2",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
@@ -2829,11 +2846,12 @@
     },
     {
      "title": "Winter Blumen Garten",
-     "country": "Austria/Colombia",
+     "country": "Austria, Colombia",
      "duration": "27 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_WINTER_BLUMEN_GARTEN_POSTER_ESP_1%20-%20EXPERIMENTA.jpg?itok=dZG03ssO",
-     "work_id": "w_R4HD23F6TYJ1"
+     "work_id": "w_R4HD23F6TYJ1",
+     "flags": "🇦🇹🇨🇴"
     }
    ],
    "id": "f_75f2a70bca"
@@ -2841,7 +2859,7 @@
   {
    "title": "Les Voyageurs",
    "title_en": "The Travelers",
-   "country": "España/Camerún",
+   "country": "España, Camerún",
    "flags": "🇪🇸🇨🇲",
    "duration": "61 min",
    "day": "Viernes",
@@ -2865,7 +2883,7 @@
   {
    "title": "Nuit Obscure - Ain't I a Child?",
    "title_en": "Obscure Night - Ain’t I a Child?",
-   "country": "Francia/Suiza/Portugal",
+   "country": "Francia, Suiza, Portugal",
    "flags": "🇫🇷🇨🇭🇵🇹",
    "duration": "164 min",
    "day": "Viernes",
@@ -2890,7 +2908,7 @@
   {
    "title": "Tehran Bedoune Mojavez",
    "title_en": "Put Your Soul on Your Hand and Walk",
-   "country": "Francia/Palestina",
+   "country": "Francia, Palestina",
    "flags": "🇫🇷🇵🇸",
    "duration": "112 min",
    "day": "Viernes",
@@ -2914,7 +2932,7 @@
   {
    "title": "El mundo al revés",
    "title_en": "The World Upside Down",
-   "country": "Suiza/Argentina",
+   "country": "Suiza, Argentina",
    "flags": "🇨🇭🇦🇷",
    "duration": "77 min",
    "day": "Viernes",
@@ -2938,7 +2956,7 @@
   {
    "title": "Nuestra tierra",
    "title_en": "Landmarks",
-   "country": "Argentina/EEUU/México/Francia/Países Bajos/Dinamarca",
+   "country": "Argentina, Estados Unidos, México, Francia, Países Bajos, Dinamarca",
    "flags": "🇦🇷🇺🇸🇲🇽🇫🇷🇳🇱🇩🇰",
    "duration": "122 min",
    "day": "Viernes",
@@ -2962,7 +2980,7 @@
   {
    "title": "Anoche conquisté Tebas",
    "title_en": "Last Night I Conquered the City of Thebes",
-   "country": "España/Portugal",
+   "country": "España, Portugal",
    "flags": "🇪🇸🇵🇹",
    "duration": "111 min",
    "day": "Viernes",
@@ -2988,7 +3006,7 @@
    "title": "ojoboca — Prog. 2 · 16mm",
    "title_en": "Come and Dance with Me · Gente perra · The Masked Monkeys",
    "flags": "🇩🇪🇨🇴",
-   "country": "Alemania/Colombia",
+   "country": "Alemania, Colombia",
    "duration": "61 min",
    "day": "Viernes",
    "date": 17,
@@ -3008,11 +3026,12 @@
     },
     {
      "title": "Gente perra",
-     "country": "Colombia/Alemania",
+     "country": "Colombia, Alemania",
      "duration": "25 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20171632_0.png?itok=sogZK08j",
      "posterSource": "custom",
-     "work_id": "w_R4HC1F248GT0"
+     "work_id": "w_R4HC1F248GT0",
+     "flags": "🇨🇴🇩🇪"
     },
     {
      "title": "The Masked Monkeys",
@@ -3028,7 +3047,7 @@
   {
    "title": "O Riso e a Faca",
    "title_en": "I Only Rest in the Storm",
-   "country": "Portugal/Francia/Brasil/Rumania",
+   "country": "Portugal, Francia, Brasil, Rumania",
    "flags": "🇵🇹🇫🇷🇧🇷🇷🇴",
    "duration": "217 min",
    "day": "Viernes",
@@ -3104,11 +3123,12 @@
     },
     {
      "title": "Consagración",
-     "country": "Colombia/Alemania",
+     "country": "Colombia, Alemania",
      "duration": "17 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_FICCI_xPosters_Instagram_4x5_9x162%20-%20Vanessa%20Monti.png?itok=9P9UU2BT",
-     "work_id": "w_R4HD24M9AR8Q"
+     "work_id": "w_R4HD24M9AR8Q",
+     "flags": "🇨🇴🇩🇪"
     },
     {
      "title": "Mi amigo, el arquitecto",
@@ -3195,7 +3215,7 @@
    "title": "Cine Indígena — Prog. 1",
    "title_en": "Apotnojushi La casa del viento · La Raya",
    "flags": "🇨🇴🇲🇽",
-   "country": "Colombia/México",
+   "country": "Colombia, México",
    "duration": "92 min",
    "day": "Viernes",
    "date": 17,
@@ -3358,7 +3378,7 @@
   {
    "title": "Tóc, Giấy và Nước…",
    "title_en": "Hair, Paper, Water…",
-   "country": "Bélgica/Francia/Vietnam",
+   "country": "Bélgica, Francia, Vietnam",
    "flags": "🇧🇪🇫🇷🇻🇳",
    "duration": "71 min",
    "day": "Viernes",
@@ -3384,7 +3404,7 @@
    "title": "Cortos Iberoamérica — Prog. 1",
    "title_en": "Abortion Party · A donde nos lleva la fe de José Gerónimo · Agua fría · Fim de Rodovia · Quem se Move · Samba Infinito · En otra Palestina · Fuente alemana · Los peces no se ahogan",
    "flags": "🇪🇸🇩🇴🇨🇱🇧🇷🇺🇸🇵🇹🇫🇷🇩🇪🇵🇪🇨🇺🇮🇹",
-   "country": "España/Rep. Dominicana/Chile/Brasil/EEUU/Portugal/Francia/Alemania/Perú/Cuba/Italia",
+   "country": "España, República Dominicana, Chile, Brasil, Estados Unidos, Portugal, Francia, Alemania, Perú, Cuba, Italia",
    "duration": "~90 min",
    "day": "Viernes",
    "date": 17,
@@ -3423,9 +3443,10 @@
     },
     {
      "title": "A donde nos lleva la fe de José Gerónimo",
-     "country": "Rep. Dominicana",
+     "country": "República Dominicana",
      "duration": "11 min",
-     "work_id": "w_R4HEGBP3B4BG"
+     "work_id": "w_R4HEGBP3B4BG",
+     "flags": "🇩🇴"
     },
     {
      "title": "Agua fría",
@@ -3456,23 +3477,25 @@
     },
     {
      "title": "Fim de Rodovia",
-     "country": "Brasil/EEUU",
+     "country": "Brasil, Estados Unidos",
      "duration": "13 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/FimdeRodovia_Poster%20-%20Valentina%20Rosset.jpeg?itok=T6gk5I3T",
-     "work_id": "w_R4HEVRVAR1RQ"
+     "work_id": "w_R4HEVRVAR1RQ",
+     "flags": "🇧🇷🇺🇸"
     },
     {
      "title": "Quem se Move",
-     "country": "Brasil/Portugal",
+     "country": "Brasil, Portugal",
      "duration": "20 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_QSM-cartaz-3-PT-menor%20%281%29.png?itok=PlEjYkVF",
-     "work_id": "w_R4HEVS4PM3XR"
+     "work_id": "w_R4HEVS4PM3XR",
+     "flags": "🇧🇷🇵🇹"
     },
     {
      "title": "Samba Infinito",
-     "country": "Brasil/Francia",
+     "country": "Brasil, Francia",
      "duration": "15 min",
      "posterSource": "custom",
      "poster": "https://admin.alternativa.film/uploads/SAMBA_INFINITO_POSTER_VERSION_02_LOW_Leonardo_Martinelli_f26536cccd.jpg",
@@ -3482,15 +3505,17 @@
       "heredado": {
        "director": "catálogo w_R4DM15XCMX8J (aff-2026, ficci-65)"
       }
-     }
+     },
+     "flags": "🇧🇷🇫🇷"
     },
     {
      "title": "En otra Palestina",
-     "country": "Alemania/Perú",
+     "country": "Alemania, Perú",
      "duration": "10 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_EOP_Poster_FICCI.jpg?itok=HNZnf8_-",
-     "work_id": "w_R4HEVSEEMFVQ"
+     "work_id": "w_R4HEVSEEMFVQ",
+     "flags": "🇩🇪🇵🇪"
     },
     {
      "title": "Fuente alemana",
@@ -3502,11 +3527,12 @@
     },
     {
      "title": "Los peces no se ahogan",
-     "country": "Cuba/Italia",
+     "country": "Cuba, Italia",
      "duration": "17 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Poster%20LPNSA%20-%20Le%CC%81a%20Vidotto%20%281%29.png?itok=p1sNnCoH",
-     "work_id": "w_R4HEVSYPWE09"
+     "work_id": "w_R4HEVSYPWE09",
+     "flags": "🇨🇺🇮🇹"
     }
    ],
    "id": "f_cfd2aca233"
@@ -3587,7 +3613,7 @@
    "title": "Cine Afro — Prog. de Cortos",
    "title_en": "Como Nasce um Rio · Taxi Moto · Voz, Zov, Zvo",
    "flags": "🇧🇷🇨🇭🇫🇷",
-   "country": "Brasil/Suiza/Francia",
+   "country": "Brasil, Suiza, Francia",
    "duration": "81 min",
    "day": "Viernes",
    "date": 17,
@@ -3607,11 +3633,12 @@
     },
     {
      "title": "Taxi Moto",
-     "country": "Suiza/Francia",
+     "country": "Suiza, Francia",
      "duration": "21 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_affiche_MOTOTAXI_GB_1500x2000%20-%20Festivals%20Sudu.jpg?itok=7LEPmRue",
      "posterSource": "custom",
-     "work_id": "w_R4HB85Y9VKH3"
+     "work_id": "w_R4HB85Y9VKH3",
+     "flags": "🇨🇭🇫🇷"
     },
     {
      "title": "Voz, Zov, Zvo",
@@ -3651,7 +3678,7 @@
   {
    "title": "Jóhanna af örk",
    "title_en": "Joan of Arc",
-   "country": "Islandia/Dinamarca/Francia",
+   "country": "Islandia, Dinamarca, Francia",
    "flags": "🇮🇸🇩🇰🇫🇷",
    "duration": "61 min",
    "day": "Viernes",
@@ -3676,7 +3703,7 @@
    "title": "Internacional — Prog. de Cortos",
    "title_en": "Cul-De-Sac! · Ein Unfall · Force Times Displacement · Intersecting Memory · Daria's Night Flowers",
    "flags": "🇧🇪🇫🇷🇦🇹🇹🇼🇵🇸🇮🇷🇬🇧",
-   "country": "Bélgica/Francia/Austria/Taiwán/Palestina/Irán/UK",
+   "country": "Bélgica, Francia, Austria, Taiwán, Palestina, Irán, Reino Unido",
    "duration": "~90 min",
    "day": "Viernes",
    "date": 17,
@@ -3688,11 +3715,12 @@
    "film_list": [
     {
      "title": "Cul-De-Sac!",
-     "country": "Bélgica/Francia",
+     "country": "Bélgica, Francia",
      "duration": "17 min",
      "poster": "https://image.tmdb.org/t/p/w92/lpcPZ6dfJFLjpeDAuvsMi11amOR.jpg",
      "posterSource": "tmdb",
-     "work_id": "w_R4HB85K6FH39"
+     "work_id": "w_R4HB85K6FH39",
+     "flags": "🇧🇪🇫🇷"
     },
     {
      "title": "Ein Unfall",
@@ -3712,19 +3740,21 @@
     },
     {
      "title": "Intersecting Memory",
-     "country": "Palestina/Francia",
+     "country": "Palestina, Francia",
      "duration": "20 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/1920px_x_480px/public/img-catalogo/result_Intersecting%20memory%20photo%204%20-%20Association%20Grec.jpg?itok=1WX0MrRb",
      "posterSource": "editorial",
-     "work_id": "w_R4HB85GSEN2Y"
+     "work_id": "w_R4HB85GSEN2Y",
+     "flags": "🇵🇸🇫🇷"
     },
     {
      "title": "Daria's Night Flowers",
-     "country": "Irán/UK/Francia",
+     "country": "Irán, Reino Unido, Francia",
      "duration": "16 min",
      "poster": "https://image.tmdb.org/t/p/w92/hNuuQciHXD7VqBPHgNVKSHh4yLB.jpg",
      "posterSource": "tmdb",
-     "work_id": "w_R4HB857E1N43"
+     "work_id": "w_R4HB857E1N43",
+     "flags": "🇮🇷🇬🇧🇫🇷"
     }
    ],
    "id": "f_8de8e725c1"
@@ -3732,7 +3762,7 @@
   {
    "title": "Lust",
    "title_en": "",
-   "country": "Bulgaria/Dinamarca/Suecia",
+   "country": "Bulgaria, Dinamarca, Suecia",
    "flags": "🇧🇬🇩🇰🇸🇪",
    "duration": "77 min",
    "day": "Viernes",
@@ -3904,7 +3934,6 @@
      "poster": "/assets/ficica-2026/pawa.jpg",
      "posterSource": "oficial",
      "work_id": "w_R4HCNBABG3FG",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
@@ -3996,7 +4025,7 @@
    "title": "Costas — Prog. 1",
    "title_en": "An Incomplete Calendar · Fuego en el mar · Petrolita",
    "flags": "🇨🇦🇮🇷🇻🇪🇹🇷🇦🇷",
-   "country": "Canadá/Irán/Venezuela/Turquía/Argentina",
+   "country": "Canadá, Irán, Venezuela, Turquía, Argentina",
    "duration": "94 min",
    "day": "Sábado",
    "date": 18,
@@ -4056,7 +4085,7 @@
   {
    "title": "Los nadadores",
    "title_en": "The Swimmers",
-   "country": "Argentina/México/Estados Unidos",
+   "country": "Argentina, México, Estados Unidos",
    "flags": "🇦🇷🇲🇽🇺🇸",
    "duration": "76 min",
    "day": "Sábado",
@@ -4080,7 +4109,7 @@
   {
    "title": "Crocodile",
    "title_en": "",
-   "country": "Nueva Zelanda/Nigeria",
+   "country": "Nueva Zelanda, Nigeria",
    "flags": "🇳🇿🇳🇬",
    "duration": "100 min",
    "day": "Sábado",
@@ -4240,11 +4269,12 @@
     },
     {
      "title": "Todas las manos que solté",
-     "country": "Colombia/Francia",
+     "country": "Colombia, Francia",
      "duration": "23 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0",
      "posterSource": "custom",
-     "work_id": "w_R4HBN9HF0D5J"
+     "work_id": "w_R4HBN9HF0D5J",
+     "flags": "🇨🇴🇫🇷"
     },
     {
      "title": "Ya se ven los tigres en la lluvia",
@@ -4283,7 +4313,7 @@
    "title": "Cortos Iberoamérica — Prog. 2",
    "title_en": "O Mapa em que Estão os Meus Pés · Pajuyuk · Trizas",
    "flags": "🇧🇷🇪🇨🇧🇴🇬🇧",
-   "country": "Brasil/Ecuador/Bolivia/Inglaterra",
+   "country": "Brasil, Ecuador, Bolivia, Reino Unido",
    "duration": "~90 min",
    "day": "Sábado",
    "date": 18,
@@ -4341,7 +4371,7 @@
   {
    "title": "Wax & Gold",
    "title_en": "",
-   "country": "Austria/Italia",
+   "country": "Austria, Italia",
    "flags": "🇦🇹🇮🇹",
    "duration": "97 min",
    "day": "Sábado",
@@ -4488,7 +4518,7 @@
   {
    "title": "Las corrientes",
    "title_en": "The Currents",
-   "country": "Suiza/Argentina",
+   "country": "Suiza, Argentina",
    "flags": "🇨🇭🇦🇷",
    "duration": "104 min",
    "day": "Sábado",
@@ -4512,7 +4542,7 @@
   {
    "title": "Vetre, pričaj sa mnom",
    "title_en": "Wind, Talk to Me",
-   "country": "Serbia/Eslovenia/Croacia",
+   "country": "Serbia, Eslovenia, Croacia",
    "flags": "🇷🇸🇸🇮🇭🇷",
    "duration": "100 min",
    "day": "Sábado",
@@ -4585,7 +4615,7 @@
   {
    "title": "Lo demás es ruido",
    "title_en": "Everything Else is Noise",
-   "country": "México/Alemania/Canadá",
+   "country": "México, Alemania, Canadá",
    "flags": "🇲🇽🇩🇪🇨🇦",
    "duration": "70 min",
    "day": "Sábado",
@@ -4733,7 +4763,7 @@
    "title": "Cortos Iberoamérica — Prog. 1",
    "title_en": "Abortion Party · A donde nos lleva la fe de José Gerónimo · Agua fría · Fim de Rodovia · Quem se Move · Samba Infinito · En otra Palestina · Fuente alemana · Los peces no se ahogan",
    "flags": "🇪🇸🇩🇴🇨🇱🇧🇷🇺🇸🇵🇹🇫🇷🇩🇪🇵🇪🇨🇺🇮🇹",
-   "country": "España/Rep. Dominicana/Chile/Brasil/EEUU/Portugal/Francia/Alemania/Perú/Cuba/Italia",
+   "country": "España, República Dominicana, Chile, Brasil, Estados Unidos, Portugal, Francia, Alemania, Perú, Cuba, Italia",
    "duration": "~90 min",
    "day": "Sábado",
    "date": 18,
@@ -4772,9 +4802,10 @@
     },
     {
      "title": "A donde nos lleva la fe de José Gerónimo",
-     "country": "Rep. Dominicana",
+     "country": "República Dominicana",
      "duration": "11 min",
-     "work_id": "w_R4HEGBP3B4BG"
+     "work_id": "w_R4HEGBP3B4BG",
+     "flags": "🇩🇴"
     },
     {
      "title": "Agua fría",
@@ -4805,23 +4836,25 @@
     },
     {
      "title": "Fim de Rodovia",
-     "country": "Brasil/EEUU",
+     "country": "Brasil, Estados Unidos",
      "duration": "13 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/FimdeRodovia_Poster%20-%20Valentina%20Rosset.jpeg?itok=T6gk5I3T",
      "posterSource": "custom",
-     "work_id": "w_R4HEVRVAR1RQ"
+     "work_id": "w_R4HEVRVAR1RQ",
+     "flags": "🇧🇷🇺🇸"
     },
     {
      "title": "Quem se Move",
-     "country": "Brasil/Portugal",
+     "country": "Brasil, Portugal",
      "duration": "20 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_QSM-cartaz-3-PT-menor%20%281%29.png?itok=PlEjYkVF",
      "posterSource": "custom",
-     "work_id": "w_R4HEVS4PM3XR"
+     "work_id": "w_R4HEVS4PM3XR",
+     "flags": "🇧🇷🇵🇹"
     },
     {
      "title": "Samba Infinito",
-     "country": "Brasil/Francia",
+     "country": "Brasil, Francia",
      "duration": "15 min",
      "poster": "https://admin.alternativa.film/uploads/SAMBA_INFINITO_POSTER_VERSION_02_LOW_Leonardo_Martinelli_f26536cccd.jpg",
      "posterSource": "custom",
@@ -4831,15 +4864,17 @@
       "heredado": {
        "director": "catálogo w_R4DM15XCMX8J (aff-2026, ficci-65)"
       }
-     }
+     },
+     "flags": "🇧🇷🇫🇷"
     },
     {
      "title": "En otra Palestina",
-     "country": "Alemania/Perú",
+     "country": "Alemania, Perú",
      "duration": "10 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_EOP_Poster_FICCI.jpg?itok=HNZnf8_-",
      "posterSource": "custom",
-     "work_id": "w_R4HEVSEEMFVQ"
+     "work_id": "w_R4HEVSEEMFVQ",
+     "flags": "🇩🇪🇵🇪"
     },
     {
      "title": "Fuente alemana",
@@ -4851,11 +4886,12 @@
     },
     {
      "title": "Los peces no se ahogan",
-     "country": "Cuba/Italia",
+     "country": "Cuba, Italia",
      "duration": "17 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Poster%20LPNSA%20-%20Le%CC%81a%20Vidotto%20%281%29.png?itok=p1sNnCoH",
      "posterSource": "custom",
-     "work_id": "w_R4HEVSYPWE09"
+     "work_id": "w_R4HEVSYPWE09",
+     "flags": "🇨🇺🇮🇹"
     }
    ],
    "id": "f_4120f55f56"
@@ -4863,7 +4899,7 @@
   {
    "title": "Duhuldeki Deney",
    "title_en": "Soul of the Foot",
-   "country": "Canadá/Turquía",
+   "country": "Canadá, Turquía",
    "flags": "🇨🇦🇹🇷",
    "duration": "65 min",
    "day": "Sábado",
@@ -4887,7 +4923,7 @@
   {
    "title": "Khmeli Potoli",
    "title_en": "Dry Leaf",
-   "country": "Alemania/Georgia",
+   "country": "Alemania, Georgia",
    "flags": "🇩🇪🇬🇪",
    "duration": "186 min",
    "day": "Sábado",
@@ -4979,7 +5015,7 @@
   {
    "title": "Isabel",
    "title_en": "",
-   "country": "Brasil/Francia",
+   "country": "Brasil, Francia",
    "flags": "🇧🇷🇫🇷",
    "duration": "85 min",
    "day": "Sábado",
@@ -5028,7 +5064,7 @@
   {
    "title": "El mundo al revés",
    "title_en": "The World Upside Down",
-   "country": "Suiza/Argentina",
+   "country": "Suiza, Argentina",
    "flags": "🇨🇭🇦🇷",
    "duration": "77 min",
    "day": "Sábado",
@@ -5053,7 +5089,7 @@
    "title": "(s)paces Cortos — Prog. 1",
    "title_en": "Atado · Pequeno Jogo · Trưa Lịm · Warnungen an die ferne Zukunft · 3cm of Complexity",
    "flags": "🇪🇸🇧🇷🇫🇷🇻🇳🇩🇪🇬🇧🇦🇹🇬🇷",
-   "country": "España/Brasil/Francia/Vietnam/Alemania/Reino Unido/Austria/Grecia",
+   "country": "España, Brasil, Francia, Vietnam, Alemania, Reino Unido, Austria, Grecia",
    "duration": "~60 min",
    "day": "Sábado",
    "date": 18,
@@ -5081,27 +5117,30 @@
     },
     {
      "title": "Trưa Lịm",
-     "country": "Francia/Vietnam",
+     "country": "Francia, Vietnam",
      "duration": "16 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20211541.png?itok=GbDa6pdw",
      "posterSource": "custom",
-     "work_id": "w_R4HAT537Z8RQ"
+     "work_id": "w_R4HAT537Z8RQ",
+     "flags": "🇫🇷🇻🇳"
     },
     {
      "title": "Warnungen an die ferne Zukunft",
-     "country": "Alemania/Reino Unido",
+     "country": "Alemania, Reino Unido",
      "duration": "19 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Warnungen%20an%20die%20ferne%20Zukunft%20PLAKAT%20-%20Ju%20liane_page-0001.jpg?itok=BKoBLV6t",
      "posterSource": "custom",
-     "work_id": "w_R4HAT5CSRDJY"
+     "work_id": "w_R4HAT5CSRDJY",
+     "flags": "🇩🇪🇬🇧"
     },
     {
      "title": "3cm of Complexity",
-     "country": "Austria/Grecia",
+     "country": "Austria, Grecia",
      "duration": "21 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Film%20Poster_3cm%20of%20Complexity%20-%20Fanny%20Berghofer.jpg?itok=RsFqy5mK",
      "posterSource": "custom",
-     "work_id": "w_R4HAT5VM48NN"
+     "work_id": "w_R4HAT5VM48NN",
+     "flags": "🇦🇹🇬🇷"
     }
    ],
    "id": "f_85fce29fdf"
@@ -5133,7 +5172,7 @@
   {
    "title": "The Chronology of Water",
    "title_en": "",
-   "country": "Francia/Letonia/Estados Unidos",
+   "country": "Francia, Letonia, Estados Unidos",
    "flags": "🇫🇷🇱🇻🇺🇸",
    "duration": "128 min",
    "day": "Sábado",
@@ -5158,7 +5197,7 @@
   {
    "title": "Blue Heron",
    "title_en": "",
-   "country": "Canadá/Hungría",
+   "country": "Canadá, Hungría",
    "flags": "🇨🇦🇭🇺",
    "duration": "90 min",
    "day": "Sábado",
@@ -5331,7 +5370,6 @@
      "poster": "/assets/aleste-2026/futuros-luminosos.jpg",
      "posterSource": "oficial",
      "work_id": "w_R4FBMPTV0JG2",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
@@ -5381,11 +5419,12 @@
     },
     {
      "title": "Winter Blumen Garten",
-     "country": "Austria/Colombia",
+     "country": "Austria, Colombia",
      "duration": "27 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_WINTER_BLUMEN_GARTEN_POSTER_ESP_1%20-%20EXPERIMENTA.jpg?itok=dZG03ssO",
      "posterSource": "custom",
-     "work_id": "w_R4HD23F6TYJ1"
+     "work_id": "w_R4HD23F6TYJ1",
+     "flags": "🇦🇹🇨🇴"
     }
    ],
    "id": "f_00581c4c2f"
@@ -5394,7 +5433,7 @@
    "title": "Cine Indígena — Prog. 1",
    "title_en": "Apotnojushi La casa del viento · La Raya",
    "flags": "🇨🇴🇲🇽",
-   "country": "Colombia/México",
+   "country": "Colombia, México",
    "duration": "92 min",
    "day": "Domingo",
    "date": 19,
@@ -5491,7 +5530,7 @@
    "title": "Costas — Prog. 3",
    "title_en": "Ali au pays des merveilles · Viaje a la explotación",
    "flags": "🇫🇷🇪🇸",
-   "country": "Francia/España",
+   "country": "Francia, España",
    "duration": "78 min",
    "day": "Domingo",
    "date": 19,
@@ -5523,7 +5562,7 @@
   {
    "title": "Mare's Nest",
    "title_en": "",
-   "country": "Reino Unido/Francia/Canadá",
+   "country": "Reino Unido, Francia, Canadá",
    "flags": "🇬🇧🇫🇷🇨🇦",
    "duration": "98 min",
    "day": "Domingo",
@@ -5670,7 +5709,7 @@
   {
    "title": "Lo demás es ruido",
    "title_en": "Everything Else is Noise",
-   "country": "México/Alemania/Canadá",
+   "country": "México, Alemania, Canadá",
    "flags": "🇲🇽🇩🇪🇨🇦",
    "duration": "70 min",
    "day": "Domingo",
@@ -5856,11 +5895,12 @@
     },
     {
      "title": "Consagración",
-     "country": "Colombia/Alemania",
+     "country": "Colombia, Alemania",
      "duration": "17 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_FICCI_xPosters_Instagram_4x5_9x162%20-%20Vanessa%20Monti.png?itok=9P9UU2BT",
      "posterSource": "custom",
-     "work_id": "w_R4HD24M9AR8Q"
+     "work_id": "w_R4HD24M9AR8Q",
+     "flags": "🇨🇴🇩🇪"
     },
     {
      "title": "Mi amigo, el arquitecto",
@@ -5946,7 +5986,7 @@
   {
    "title": "Lust",
    "title_en": "",
-   "country": "Bulgaria/Dinamarca/Suecia",
+   "country": "Bulgaria, Dinamarca, Suecia",
    "flags": "🇧🇬🇩🇰🇸🇪",
    "duration": "77 min",
    "day": "Domingo",
@@ -5971,7 +6011,7 @@
    "title": "Cortos Iberoamérica — Prog. 2",
    "title_en": "O Mapa em que Estão os Meus Pés · Pajuyuk · Trizas",
    "flags": "🇧🇷🇪🇨🇧🇴🇬🇧",
-   "country": "Brasil/Ecuador/Bolivia/Inglaterra",
+   "country": "Brasil, Ecuador, Bolivia, Reino Unido",
    "duration": "~90 min",
    "day": "Domingo",
    "date": 19,
@@ -6029,7 +6069,7 @@
   {
    "title": "Los nadadores",
    "title_en": "The Swimmers",
-   "country": "Argentina/México/Estados Unidos",
+   "country": "Argentina, México, Estados Unidos",
    "flags": "🇦🇷🇲🇽🇺🇸",
    "duration": "76 min",
    "day": "Domingo",
@@ -6150,7 +6190,7 @@
   {
    "title": "Les Voyageurs",
    "title_en": "The Travelers",
-   "country": "España/Camerún",
+   "country": "España, Camerún",
    "flags": "🇪🇸🇨🇲",
    "duration": "61 min",
    "day": "Domingo",
@@ -6247,7 +6287,7 @@
   {
    "title": "Dao",
    "title_en": "Dao",
-   "country": "Francia/Senegal/Guinea-Bissau",
+   "country": "Francia, Senegal, Guinea-Bisáu",
    "flags": "🇫🇷🇸🇳🇬🇼",
    "duration": "185 min",
    "day": "Domingo",
@@ -6321,7 +6361,7 @@
   {
    "title": "Nuit Obscure - Ain't I a Child?",
    "title_en": "Obscure Night - Ain’t I a Child?",
-   "country": "Francia/Suiza/Portugal",
+   "country": "Francia, Suiza, Portugal",
    "flags": "🇫🇷🇨🇭🇵🇹",
    "duration": "164 min",
    "day": "Domingo",

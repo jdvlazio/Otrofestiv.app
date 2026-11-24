@@ -36,7 +36,8 @@ NOMBRE = {'PS': 'Palestina', 'HK': 'Hong Kong', 'CZ': 'República Checa', 'RO': 
 # códigos de la tabla que no son un país (pseudoidiomas, agrupaciones, islas sin código propio)
 NO_PAIS = {'XA', 'XB', 'EU', 'EZ', 'UN', 'QO', 'EA', 'IC', 'AC', 'TA', 'DG', 'CP', 'CQ'}
 # nombres propios que llevan «e» o «&»: no separan personas
-NOMBRE_COMPUESTO = ('Inês Pedrosa e Melo', 'Colectivo Pix & Hertz')
+NOMBRE_COMPUESTO = ('Inês Pedrosa e Melo', 'Colectivo Pix & Hertz',
+                   'Taller de usos críticos de archivos sonoros y audiovisuales')
 _NO_NOMBRE = re.compile(r'(?i)^(varios|varias|n/?a|por confirmar|tba|tbd|desconocid[oa]s?|null|none|undefined)$')
 _PENDIENTE = re.compile(r'(?i)\b(sinopsis no disponible|pr[oó]ximamente|por confirmar|lorem ipsum|synopsis (not available|coming soon)|no synopsis)\b')
 _AFICHE = re.compile(r'^(https://\S+|data:image/\S+|/[A-Za-z0-9]{20,}\.(?:jpe?g|png|webp))$')
@@ -130,7 +131,7 @@ def revisar(o, nombres=None, anio_tope=None):
                 out.append('sinopsis en inglés:habla del festival')
             out += ['sinopsis en inglés:' + x for x in _texto(e)]
     u = o.get('duration')
-    if u not in (None, '') and not (isinstance(u, str) and re.fullmatch(r'[1-9]\d{0,2} min', u) and int(u.split()[0]) <= 900):
+    if u not in (None, '') and not (isinstance(u, str) and re.fullmatch(r'~?[1-9]\d{0,2} min', u) and int(u.split()[0].lstrip('~')) <= 900):
         out.append('duración:forma')
     l = o.get('lbSlug')
     if l not in (None, '') and (str(l) in ('null', 'none', 'undefined') or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', str(l))):
@@ -231,7 +232,7 @@ def autoprueba():
              'sinopsis:marcada en otro idioma': [{'synopsis_lang': 'pt'}],
              'sinopsis en inglés:otro idioma': [{'synopsis_en': sana['synopsis']}, {'synopsis_en': 'Una mujer vuelve a casa.'}, {'synopsis_en': 'En marge de Barcelone, Vallbona est une enclave entourée par une rivière et des voies ferrées.'}],
              'sinopsis en inglés:habla del festival': [{'synopsis_en': 'Winner of the Palme d’Or, this is a drama about the trial of a family in Norway.'}],
-             'duración:forma': [{'duration': 24}, {'duration': '~6 min'}, {'duration': '999 min'}], 'letterboxd:forma': [{'lbSlug': 'film:151'}, {'lbSlug': 'null'}],
+             'duración:forma': [{'duration': 24}, {'duration': '6'}, {'duration': '999 min'}], 'letterboxd:forma': [{'lbSlug': 'film:151'}, {'lbSlug': 'null'}],
              'tmdb:no es número': [{'tmdb_id': '5'}], 'afiche:no existe': [{'poster': '/assets/no/existe.jpg'}, {'poster': 'assets/no.jpg'}, {'poster': '/assets/'}], 'título:espacios': [{'title': 'Dos  espacios'}]}
     n = paises()
     mal = [f'{r} no ve {c}' for r, cs in cebos.items() for c in cs if r not in revisar({**sana, **c}, n, 2030)]
