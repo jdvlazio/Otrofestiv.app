@@ -8,8 +8,10 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "catálogo oficial de FICCI 65, p. 87",
+  "fecha": "2026-11-24"
  },
  "paises": {
   "fuente": "festival",
@@ -20,5 +22,17 @@
   "regla": "decisión",
   "motivo": "misma imagen en varios festivales: la copia más completa",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "catálogo oficial de FICCI 65, p. 87",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "catálogo oficial de FICCI 65, p. 87",
+  "fecha": "2026-11-24"
  }
 }

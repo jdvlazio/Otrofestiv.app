@@ -1,11 +1,17 @@
 {
  "id": "w_R4HAG87EJ2TE",
  "titulo_original": "El cuento de Antonia",
- "anio": null,
+ "anio": 2016,
  "paises": [
   "CH"
  ],
- "directores": [],
+ "directores": [
+  "Jorge Cadena"
+ ],
+ "sinopsis": {
+  "es": "Azotada por vientos incesantes, una comunidad recibe a Antonia con un ritual de despojo de las historias que encarna. Reacia a los órdenes establecidos y dotada de una belleza que desafía la pobreza generalizada, ella protagoniza un relato visionario para la Colombia contemporánea.",
+  "en": "Battered by incessant winds, a community welcomes Antonia with a ritual of stripping bare the stories she embodies. Resistant to established orders and endowed with a beauty that defies widespread poverty, she is the protagonist of a visionary tale for today's Colombia."
+ },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w92/sK1dtEiHts0gnyPccusSiJtsWdV.jpg",
   "veredicto": "oficial"

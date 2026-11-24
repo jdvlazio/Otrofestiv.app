@@ -1,12 +1,17 @@
 {
  "id": "w_R4HEVSEEMFVQ",
  "titulo_original": "En otra Palestina",
- "anio": null,
+ "anio": 2026,
  "paises": [
-  "DE",
   "PE"
  ],
- "directores": [],
+ "directores": [
+  "Yaela Gottlieb"
+ ],
+ "sinopsis": {
+  "es": "Llega el Año Nuevo a Palestina, un caserío al interior de Perú. Los palestinos se preparan para la celebración: visten, rellenan y luego queman los muñecos de Año Viejo. Documental hecho de dualidades, en los nombres de los pueblos y en la escucha de dos lenguajes, que deja ver otra dimensión, tan silenciosa como intensa.",
+  "en": "New Year arrives in Palestina, a small village in the Peruvian interior. The Palestinians prepare for the celebration: they dress, stuff, and then burn the Old Year dolls. A documentary made of dualities, in the villages' names and in listening to two languages, that reveals another dimension, as silent as it is intense."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_EOP_Poster_FICCI.jpg?itok=HNZnf8_-",
   "veredicto": "oficial-festival"
