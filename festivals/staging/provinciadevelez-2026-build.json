@@ -634,7 +634,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T15:43:26",
+  "fecha": "2026-11-24T16:08:36",
   "plan_sha": "000e0785312106ef",
   "paso": 7,
   "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"
