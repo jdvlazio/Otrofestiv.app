@@ -43,6 +43,10 @@ def elegidos(decs):
             eleg.setdefault(x['work_id'], {})['country'] = _pais_es(x['valor'])
         elif x['campo'] == 'generos' and x['valor']:
             eleg.setdefault(x['work_id'], {})['genre'] = x['valor'][0]
+        elif x['campo'] == 'xref.tmdb':            # la ficha; None = la que había era de otra obra
+            eleg.setdefault(x['work_id'], {})['tmdb_id'] = x['valor']
+        elif x['campo'] == 'xref.letterboxd':
+            eleg.setdefault(x['work_id'], {})['lbSlug'] = x['valor']
         elif x['campo'] == 'sinopsis.en' and x['valor']:
             eleg.setdefault(x['work_id'], {})['synopsis_en'] = x['valor']
     return eleg
@@ -69,6 +73,9 @@ def aplicar(d, decs=None):
                 if o.get(k) in (None, '') or str(o[k]) == str(v):
                     continue
                 out.append((o.get('title'), k, o[k], v))
+                if v is None:
+                    o.pop(k)
+                    continue
                 o[k] = str(v) if isinstance(o[k], str) else v
                 if k == 'country' and banderas(v):
                     o['flags'] = banderas(v)

@@ -13,7 +13,7 @@ es de la copia de cada festival.
     python3 pipeline/obra_unica.py [<festival>]          # lo que diverge
     python3 pipeline/obra_unica.py --decidir <work_id> <campo> <valor> --motivo "…" --quien "…"
         (afiche nuevo: además --veredicto oficial|oficial-festival|fotograma)
-        campo: directores («A, B») · anio · paises («CO,FR») · generos · sinopsis.en · sinopsis.es · afiche
+        campo: directores («A, B») · anio · paises («CO,FR») · generos · sinopsis.en · sinopsis.es · afiche · xref.tmdb · xref.letterboxd («-» = no tiene)
     y después: ficha_unica.py / sinopsis_unicas.py / afiches_unicos.py --aplicar --escribir,
     y catalogo_construir.py --escribir
 La decisión guarda en `antes` qué publicaba cada festival.
@@ -25,7 +25,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 
 CAMPO = {'director': 'directores', 'year': 'anio', 'country': 'paises', 'genre': 'generos',
-         'synopsis': 'sinopsis.es', 'synopsis_en': 'sinopsis.en', 'poster': 'afiche'}
+         'synopsis': 'sinopsis.es', 'synopsis_en': 'sinopsis.en', 'poster': 'afiche', 'tmdb_id': 'xref.tmdb', 'lbSlug': 'xref.letterboxd'}
 # Divergencias conocidas y explicadas, por obra Y campo: {(work_id, campo): motivo}.
 # El guardián también falla si una excepción ya no hace falta.
 EXCEPCIONES = {}
@@ -91,11 +91,13 @@ def excepciones_de_mas(festivales, decs):
 def autoprueba():
     """Cada campo, alterado en memoria, tiene que verse: con decisión y sin ella. [] = ve todo."""
     base = {'title': 'X', 'type': 'film', 'work_id': 'w_1', 'director': 'A', 'year': 2025, 'country': 'Colombia', 'genre': 'Drama',
-            'synopsis': 's', 'synopsis_en': 'e', 'poster': '/assets/a/x.jpg'}
+            'synopsis': 's', 'synopsis_en': 'e', 'poster': '/assets/a/x.jpg',
+            'tmdb_id': 7, 'lbSlug': 'x'}
     decs = [{'work_id': 'w_1', 'campo': 'directores', 'valor': ['A']}, {'work_id': 'w_1', 'campo': 'anio', 'valor': 2025},
             {'work_id': 'w_1', 'campo': 'paises', 'valor': ['CO']}, {'work_id': 'w_1', 'campo': 'generos', 'valor': ['Drama']},
             {'work_id': 'w_1', 'campo': 'sinopsis.es', 'valor': 's'}, {'work_id': 'w_1', 'campo': 'sinopsis.en', 'valor': 'e'},
-            {'work_id': 'w_1', 'campo': 'afiche', 'valor': {'archivo': '/assets/a/x.jpg', 'veredicto': 'oficial'}}]
+            {'work_id': 'w_1', 'campo': 'afiche', 'valor': {'archivo': '/assets/a/x.jpg', 'veredicto': 'oficial'}},
+            {'work_id': 'w_1', 'campo': 'xref.tmdb', 'valor': 7}, {'work_id': 'w_1', 'campo': 'xref.letterboxd', 'valor': 'x'}]
     ciego = []
     for k in CAMPO:
         for ds, que in ((decs, 'decidido'), ([], 'sin decidir')):
@@ -137,7 +139,7 @@ def decidir(decs, vals, w, campo, valor, motivo, quien, fecha, veredicto=None):
     if not valor.strip():
         raise SystemExit('✗ valor vacío')
     v = {'directores': lambda s: [x.strip() for x in s.split(',') if x.strip()], 'paises': lambda s: [x.strip().upper() for x in s.split(',') if x.strip()],
-         'anio': int, 'generos': lambda s: [s]}.get(campo, lambda s: s)(valor)
+         'anio': int, 'xref.tmdb': lambda s: None if s == '-' else int(s), 'xref.letterboxd': lambda s: None if s == '-' else s, 'generos': lambda s: [s]}.get(campo, lambda s: s)(valor)
     # la VIGENTE: con `reemplaza`, la última manda
     d = next((x for x in reversed(decs) if x['work_id'] == w and x['campo'] == campo), None)
     if campo == 'afiche':
