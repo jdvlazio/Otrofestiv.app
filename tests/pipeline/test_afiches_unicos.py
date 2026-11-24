@@ -63,5 +63,24 @@ class Criterio(unittest.TestCase):
         self.assertEqual(au.decidir(lado(dibujo(1, 300, 450)), lado(dibujo(1)), a_mano=True), 'revisar')
 
 
+class Aplicar(unittest.TestCase):
+    DEC = [{'work_id': 'w_1', 'campo': 'afiche', 'valor': {'archivo': '/assets/a/x.jpg', 'veredicto': 'oficial'}, 'vistas': ['/assets/b/x.jpg']},
+           {'work_id': 'w_2', 'campo': 'afiche', 'valor': {'archivo': 'https://t/y.jpg', 'veredicto': 'fotograma'}, 'vistas': ['/assets/b/y.jpg']}]
+
+    def _d(self, w, u, **k):
+        return {'films': [{'title': 'X', 'film_list': [{'title': 'X', 'work_id': w, 'poster': u, 'posterSource': 'editorial', **k}]}]}
+
+    def test_lleva_el_elegido_con_su_fuente_y_es_idempotente(self):
+        d = self._d('w_1', '/assets/b/x.jpg', posterPosition='top')
+        self.assertEqual(len(au.aplicar(d, self.DEC)), 1)
+        o = d['films'][0]['film_list'][0]
+        self.assertEqual((o['poster'], o['posterSource'], 'posterPosition' in o), ('/assets/a/x.jpg', 'oficial', False))
+        self.assertEqual(au.aplicar(d, self.DEC), [])
+
+    def test_lo_no_comparado_lo_vacio_y_el_fotograma_no_se_tocan(self):
+        for w, u in (('w_1', '/assets/c/nuevo.jpg'), ('w_1', None), ('w_2', '/assets/b/y.jpg'), ('w_9', '/assets/b/x.jpg')):
+            self.assertEqual(au.aplicar(self._d(w, u), self.DEC), [])
+
+
 if __name__ == '__main__':
     unittest.main()

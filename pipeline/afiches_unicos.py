@@ -29,6 +29,7 @@ Una elección hecha a mano por Juan nunca se reemplaza sola: se revisa.
 
     python3 pipeline/afiches_unicos.py --revisar [<festival>]   # no escribe
     python3 pipeline/afiches_unicos.py --registrar <clases.json>
+    python3 pipeline/afiches_unicos.py --aplicar [<festival>] [--escribir]   # lo elegido, a lo publicado
 """
 import itertools
 import os
@@ -146,6 +147,34 @@ def revisar(solo=None):
     return out
 
 
+_FUENTE = {'oficial': 'oficial', 'oficial-festival': 'custom'}
+
+
+def aplicar(d, decs=None):
+    """El afiche elegido de cada obra, en el JSON del festival `d` (en el lugar).
+    La usan publicar.py y --aplicar: la misma función, para que un re-armado dé lo
+    mismo. Solo lo YA COMPARADO: una imagen que no está en `vistas` es nueva y la
+    resuelve --revisar antes. Un «fotograma» elegido no viaja (esa decisión dice
+    que no hay afiche). Donde no hay póster no se pone: eso es herencia, no unidad.
+    → [(título, antes, después)]"""
+    if decs is None:
+        import sys
+        sys.path.insert(0, os.path.join(REPO, 'pipeline'))
+        import catalogo
+        decs = catalogo.decisiones()
+    eleg = {x['work_id']: x for x in decs if x['campo'] == 'afiche' and x['valor']['veredicto'] in _FUENTE}
+    out = []
+    for f in d.get('films', []):
+        for o in (f.get('film_list') or [f]):
+            e, u = eleg.get(o.get('work_id')), o.get('poster')
+            if not e or not u or o.get('type') == 'event' or u == e['valor']['archivo'] or u not in (e.get('vistas') or []):
+                continue
+            out.append((o.get('title'), u, e['valor']['archivo']))
+            o['poster'], o['posterSource'] = e['valor']['archivo'], _FUENTE[e['valor']['veredicto']]
+            o.pop('posterPosition', None)   # era el encuadre de la imagen anterior
+    return out
+
+
 def registrar(ruta):
     """Las elecciones aprobadas (salida de la comparación) → catalogo/decisiones.json."""
     import io
@@ -172,6 +201,23 @@ if __name__ == '__main__':
     from collections import Counter
     if '--registrar' in sys.argv:
         print(registrar(sys.argv[sys.argv.index('--registrar') + 1]), 'decisiones de afiche registradas')
+    elif '--aplicar' in sys.argv:
+        import glob
+        import json
+        from sinopsis_unicas import _guardar
+        solo = next((a for a in sys.argv[1:] if not a.startswith('--')), None)
+        tot = 0
+        for p in sorted(glob.glob(f'{REPO}/festivals/*.json')):
+            if solo and os.path.basename(p) != f'{solo}.json':
+                continue
+            d = json.load(open(p, encoding='utf-8'))
+            c = aplicar(d) if isinstance(d, dict) else []
+            if c:
+                print(f'{os.path.basename(p)[:-5]:22} {len(c)}')
+                tot += len(c)
+                if '--escribir' in sys.argv:
+                    _guardar(p, d)
+        print(tot, 'afiches' + ('' if '--escribir' in sys.argv else ' (solo muestra; --escribir para guardarlo)'))
     elif '--revisar' in sys.argv:
         xs = revisar(next((a for a in sys.argv[1:] if not a.startswith('--')), None))
         for x in xs:
