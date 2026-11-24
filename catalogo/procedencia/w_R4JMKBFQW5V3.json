@@ -28,5 +28,11 @@
   "regla": "decisión",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinetoro-2026)",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24"
  }
 }

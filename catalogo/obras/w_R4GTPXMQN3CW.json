@@ -6,6 +6,10 @@
  "directores": [
   "Francisco Pavanetto"
  ],
+ "sinopsis": {
+  "es": "Un matrimonio descubre que la puerta del pasillo ha desaparecido y la encuentra en lo alto del comedor. La puerta no será lo único en desaparecer.",
+  "en": "A married couple discovers that the hallway door has disappeared and finds it high up in the dining room. The door will not be the only thing to disappear."
+ },
  "generos": [
   "Fantasía"
  ],
@@ -14,6 +18,7 @@
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 981698,
   "letterboxd": "el-gato-cosmico-al-final"
  },
  "presentaciones": [
