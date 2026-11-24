@@ -86,7 +86,7 @@ F = [
       ('Objectionable Fruit', 'Hogan Seidel, Gabby Follett', 'Estados Unidos', 2026, 15),
       ('Ser, no ser, ser muchas', 'Silbando bembas', 'Argentina', 2025, 13),
       ('Perros', 'Ezequiel Rossi, Facundo Salomón', 'Argentina', 2026, 10)],
-     dict(descripcion='Conversatorio con el Club de lectura y escritura de ciencia ficción anarco feminista.')),
+     dict(has_qa=True, descripcion='Conversatorio con el Club de lectura y escritura de ciencia ficción anarco feminista.')),
     ('11-27', '21:00', PL, 'Fiesta Under · El Vikingo Selektor', FEM, 6, [],
      # hasta la 1:30 a. m. (dato del festival que pasó Juan, 20 nov): 270 min
      dict(tipo='evento', event_kind='fiesta', acceso='Con boleta: aporte $10.000', duracion_min=270,
