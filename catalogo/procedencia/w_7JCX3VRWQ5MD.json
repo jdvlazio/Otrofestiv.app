@@ -1,0 +1,20 @@
+{
+ "titulo_original": {
+  "fuente": "festival:provinciadevelez-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "créditos del video oficial (YouTube QQ1G_ps-A34); Chris Andree es el músico",
+  "fecha": "2026-11-24"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "único"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ }
+}

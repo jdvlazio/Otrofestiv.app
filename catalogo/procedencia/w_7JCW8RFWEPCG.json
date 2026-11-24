@@ -1,0 +1,34 @@
+{
+ "titulo_original": {
+  "fuente": "festival:provinciadevelez-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
+ },
+ "anio": {
+  "fuente": "tmdb:15727",
+  "regla": "tmdb-manda"
+ },
+ "paises": {
+  "fuente": "tmdb:15727",
+  "regla": "tmdb-manda"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "traducción de la sinopsis en español; la de TMDB contaba otra parte",
+  "fecha": "2026-11-24"
+ }
+}
