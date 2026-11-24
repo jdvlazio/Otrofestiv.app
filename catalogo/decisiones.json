@@ -6515,7 +6515,7 @@
  {
   "work_id": "w_R4JMKBFQW5V3",
   "campo": "sinopsis.es",
-  "valor": "Sol de niebla aborda una visión fragmentada y poliangular de los frailejones, a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (Frailejón). El metraje, filmado en soporte fotosensible aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida.",
+  "valor": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinetoro-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -6523,7 +6523,25 @@
    "1998abddc8bc",
    "200da90a1af9",
    "2d563ca4363c"
-  ]
+  ],
+  "original_de": [
+   "aleste-2026",
+   "cinetoro-2026",
+   "cortoscali-2026",
+   "ficfusa-2026",
+   "filcmar-2026",
+   "mamut-2026",
+   "midbo-2026"
+  ],
+  "titulo": "Sol de niebla",
+  "original": "Sol de niebla aborda una visión fragmentada y poliangular de los frailejones, a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (Frailejón). El metraje, filmado en soporte fotosensible aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "47e3bec97bba"
+  }
  },
  {
   "work_id": "w_R4FRTV2Q7YA2",
@@ -7966,5 +7984,236 @@
   "vistas": [
    "f3f678b70596"
   ]
+ },
+ {
+  "work_id": "w_8VHN5NVVYV59",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "661eb91997f5"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Cenizas y diamantes",
+  "valor": "En Polonia, concluida la Segunda Guerra Mundial, el idealismo cede el paso a formas de anarquía y extremismo. Un joven que milita en un grupo ultranacionalista recibe el encargo de asesinar a un importante comunista; pero, cuando encuentra el amor, en pocas horas sus certezas comienzan a convertirse en dudas.",
+  "original": "En Polonia, concluida la Segunda Guerra Mundial, la situación política y social es caótica. El idealismo cede el paso a diversas formas de anarquía y extremismo. El protagonista, un joven que milita en un grupo ultranacionalista, recibe el encargo de asesinar a un importante comunista; pero, cuando el joven encuentra el amor, en pocas horas sus certezas comienzan a convertirse en dudas.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "5731f8f860e6"
+  }
+ },
+ {
+  "work_id": "w_8VHP06GPWWSG",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "e1517511ea33"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Padre",
+  "valor": "La vida tranquila de un hombre exitoso se desmorona cuando su bebé desaparece de la guardería. Inspirada en hechos reales en torno al síndrome del bebé olvidado, la película acompaña a Michal y a su esposa Zuzka a través del duelo, la culpa, el escarnio público y un largo proceso judicial.",
+  "original": "La vida tranquila de un hombre exitoso se desmorona cuando su bebé desaparece de la guardería. La llamada desesperada de su esposa revela una verdad devastadora. Inspirada en hechos reales en torno al llamado síndrome del bebé olvidado, la película acompaña a Michal y a su esposa Zuzka a través del duelo, de la culpa, del escarnio público y el largo proceso judicial que sigue.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "b6d0c96ec0f2"
+  }
+ },
+ {
+  "work_id": "w_JET37WJ6QXSE",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "fe34afe9a0a0"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Ciudadano Havel",
+  "valor": "El exdisidente y escritor checo Václav Havel fue en 1993 el primer presidente electo democráticamente de la República Checa. El cineasta y amigo de la familia Pavel Koutecký lo siguió de cerca desde la campaña hasta después de sus 10 años en el cargo: mítines, visitas de Estado y asuntos privados.",
+  "original": "Tras la caída del comunismo en Europa del Este, el exdisidente y escritor checo Václav Havel se convirtió en el primer presidente electo democráticamente de la República Checa en 1993. Desde la campaña electoral hasta después de que terminaran sus 10 años en el cargo en el 2003, el cineasta y amigo de la familia, Pavel Koutecký, siguió de cerca a Havel durante los mítines de campaña, las deliberaciones del partido, las visitas de Estado y los asuntos privados.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "1228ae844451"
+  }
+ },
+ {
+  "work_id": "w_JET5WY578FZD",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "21d66336cf28"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Historias de una mentira",
+  "valor": "En Grecia, su país natal, la realizadora se entera de que una amiga está enferma. Sus médicos y familiares se lo ocultan, y ella también debe guardar el secreto. Surgen recuerdos de su infancia en un entorno médico y decide conversar con su padre, médico, e investigar las razones de las mentiras médicas.",
+  "original": "Durante una estancia en Grecia, su país natal, la realizadora se entera de que una amiga está enferma. Sus médicos y familiares se lo ocultan y ella también debe guardar el secreto. Este hecho despierta recuerdos de su infancia en un entorno médico y de cómo esta práctica afectó a personas cercanas. Decide entonces conversar con su padre, médico, e iniciar una investigación íntima para comprender las razones detrás de las mentiras médicas.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "9902b4781bff"
+  }
+ },
+ {
+  "work_id": "w_JET703J1X8Y5",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "4e3d22f46261"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Aquí, en otros lugares",
+  "valor": "Julio de 2023. Nagorno-Karabaj lleva siete meses bajo el asedio de Azerbaiyán. Ante la inminencia de la guerra, la realizadora pide a su amigo Artsiv que filme su vida cotidiana con su familia. De esas imágenes tiernas emerge la resistencia silenciosa de un pueblo al borde de abandonar su hogar para siempre.",
+  "original": "En julio de 2023, Nagorno-Karabaj lleva siete meses bajo el asedio de Azerbaiyán. Ante la inminencia de la guerra, la realizadora pide a su amigo Artsiv que filme su vida cotidiana junto a su esposa Tatev y sus cinco hijos. A través de imágenes de gran ternura emerge una forma silenciosa de resistencia: la de un pueblo que se encuentra al borde de tener que abandonar su hogar para siempre.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "d6a8b691cc6f"
+  }
+ },
+ {
+  "work_id": "w_JET7AWMJQ4J4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "ef9825711278"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "La salamandra",
+  "valor": "Dos jóvenes escritores noveles aparecen en la vida de Rosemonde mientras escriben un drama sobre un pequeño incidente en el que su tío resultó herido, quizás al limpiar su rifle o, peor, por un disparo a propósito. Pierre, periodista, recibe el encargo del guion y pide ayuda a su amigo Paul, un poeta bohemio.",
+  "original": "Dos jóvenes escritores noveles aparecen en la vida de Rosemonde, una joven de clase trabajadora a la que conocen cuando se hallan escribiendo un drama sobre un pequeño incidente en el que su tío resultó herido, quizás mientras limpiaba su rifle o, peor, quizás le disparase a posta. Pierre, un periodista free-lance, recibe el encargo de escribir el guión, pero falto de tiempo pide ayuda a un poeta bohemio amigo suyo, Paul.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "f432ddc79dbb"
+  }
+ },
+ {
+  "work_id": "w_JETF8ZEAB76S",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "207aedd6b8ac"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Cortometrajes de Altura",
+  "valor": "Selección de 5 animaciones bolivianas: «Cuentos de la Cuenca», sobre el cuidado ambiental; «Ekeko», sobre la deidad andina de la abundancia; «La muñeca de maíz», un tierno vínculo en el Chaco; «Pascay», sobre el duelo y las tradiciones del altiplano, y «Paulina y el cóndor», una emotiva travesía a la gran ciudad.",
+  "original": "Cortometrajes de Altura es una selección de 5 animaciones bolivianas con una duración total de 41 minutos, presentada en el 9º Festival AL ESTE 2026, que reúne las obras «Cuentos de la Cuenca» (sobre el cuidado ambiental), «Ekeko» (acerca de la deidad andina de la abundancia), «La muñeca de maíz» (un tierno vínculo en el Chaco boliviano), «Pascay» (un relato sobre el duelo y las tradiciones del altiplano) y «Paulina y el cóndor» (una emotiva travesía a la gran ciudad realizada con la técnica de papel rasgado).",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "90a07542ec5c"
+  }
+ },
+ {
+  "work_id": "w_R4F84MW9WTH9",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "a60d8144a0ec"
+  ],
+  "original_de": [
+   "aleste-2026",
+   "cinemancia-2026"
+  ],
+  "titulo": "Liminal",
+  "valor": "¿Qué permanece en un lugar cuando nos vamos? Una travesía por espacios liminales, lugares de tránsito, ambigüedad y espera silenciosa, explora la relación de los seres humanos con los lugares que han habitado y habitan, y las sensaciones, los recuerdos y las emociones que despiertan.",
+  "original": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "a19f5a6187e0"
+  }
+ },
+ {
+  "work_id": "w_JETDDR1A4XA4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "1e1047d8ab0d"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Pulse",
+  "valor": "Hace tiempo que Michi, Yunko y Yabe no tienen noticias de un amigo. Michi lo visita y lo nota extraño; él dice estar bien, pero al poco rato aparece colgado del techo. Por otro lado, Ryusuke prueba sin mucho éxito a conectarse a internet. De pronto su ordenador entra solo en la red y aparece un mensaje: «¿Quieres ver un fantasma?».",
+  "original": "Hace tiempo que Michi, Yunko y Yabe no tienen noticias de un amigo. Cuando Michi va a visitarlo a su casa lo encuentra un poco extraño. Aunque él dice encontrarse bien, al poco rato se encuentra colgado del techo. Por otro lado tenemos a Ryusuke, que prueba a conectarse a internet por primera vez, sin mucho éxito. De pronto su ordenador comienza a entrar solo en la red, y aparece una extraña página web, donde aparecen turbadoras imágenes de habitaciones oscuras y finalmente un inquietante mensaje: \"¿Quieres ver un fantasma?\".",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "e332de34d516"
+  }
+ },
+ {
+  "work_id": "w_JETKX5ESK1DZ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "51f31aea8389"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "La última ronda en Venecia",
+  "valor": "Carlobianchi y Doriano, dos cincuentones sin blanca con la filosofía de «nunca te saltes la última copa», conocen por casualidad a Giulio, un tímido estudiante de arquitectura a la deriva. Un caótico viaje por carretera, con malos consejos, resacas y una amistad inesperada, redefine los planes de vida y amor de Giulio.",
+  "original": "Primera película de Francesco Sossai en Cannes 2025.  Carlobianchi y Doriano, dos cincuentones sin blanca con la filosofía de 'nunca te saltes la última copa', conocen a Giulio, un tímido estudiante de arquitectura a la deriva en la vida. Lo que empieza como un encuentro casual se convierte en un caótico viaje por carretera por las llanuras venecianas, donde los malos consejos, las resacas y una amistad inesperada redefinen los planes de vida y amor de Giulio.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "288ee167a19d"
+  }
  }
 ]
