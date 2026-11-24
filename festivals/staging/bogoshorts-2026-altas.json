@@ -3015,7 +3015,15 @@
      "fecha": "2026-11-23",
      "resultado": "ficha de la obra en la web del festival: trae póster: https://festival.bogoshorts.com/images/peliculas/6ae2603ae3621__Meyolotl_CON-LTX04_Poster_24BSFF.png"
     }
-   }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1807233,
+   "evidencia": "mismo título, dirección Lorena R. Valencia en los créditos de TMDB (leídos 24 nov) y en el catálogo del festival",
+   "respaldo": [
+    "imdb",
+    "letterboxd"
+   ],
+   "ficha_fecha": "2026-11-24"
   },
   "Mi barquito (Canalón de Timbiquí)": {
    "titulo": "Mi barquito (Canalón de Timbiquí)",
@@ -6811,6 +6819,6 @@
  "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano.",
  "_provenance": {
   "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
-  "capturado": "2026-11-23"
+  "capturado": "2026-11-24"
  }
 }

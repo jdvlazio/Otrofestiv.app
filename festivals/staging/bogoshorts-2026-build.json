@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-  "capturado": "2026-11-23",
+  "capturado": "2026-11-24",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 575,
@@ -540,7 +540,7 @@
      "genre": "Experimental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/no-te-conozcas.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "no-te-conozcas",
      "tmdb_id": 1841401
     },
@@ -581,7 +581,7 @@
      "genre": "Experimental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/complementarios.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "complementarios",
      "tmdb_id": 1841384
     },
@@ -1316,7 +1316,7 @@
      "synopsis": "En un futurista sistema de salud controlado por la inteligencia artificial, a Theodora, una anciana solitaria, le diagnostican depresión y le recetan un plan de tratamiento en varias fases que incluye el contacto físico. Lo que comienza como un tierno vínculo con su «abrazador profesional» pronto pone de manifiesto la escalofriante visión de la industria tecnológica de sustituir la conexión humana.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/joychair.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "joychair",
      "tmdb_id": 1841387
     },
@@ -1880,7 +1880,7 @@
      "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/raj-in.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "rajin",
      "tmdb_id": 1841396
     },
@@ -2042,7 +2042,7 @@
      "synopsis": "Vivimos en la era del control y de la hiperconectividad, todos nuestros gestos y movimientos parecen dejar rastro y, sin embargo, hay vidas que flotan por debajo del umbral de visibilidad. Durante cinco años A. vive en las calles de Barcelona, sin documentos y sin domicilio fijo. Su familia no consigue localizarla, hasta que un mensaje por Facebook lo cambia todo. Una reflexión visual sobre la ciudad contemporánea y sus agujeros negros.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/querida-a.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "querida-a",
      "tmdb_id": 1841395
     },
@@ -2180,7 +2180,7 @@
      "synopsis": "Silvia está embarazada y desea ser mamá, vive con Ana, su mejor amiga. Una noche, pasada de tragos, Ana contagia a Silvia de un peligroso virus que pondrá en riesgo la vida del bebé que viene en camino. Llena de ira, Silvia decide echarla de la casa y a partir de ese momento, se enfrenta al profundo miedo de parir la muerte. Tiempo después, Ana regresa y encuentra a Silvia gravemente enferma. Decide cuidarla, pero aunque Silvia logra recuperarse, el virus ha dejado consecuencias irreversibles.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/lo-entranable.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "lo-entranable",
      "tmdb_id": 1841392
     },
@@ -2756,7 +2756,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/la-vida-de-un-hilo.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-vida-de-un-hilo",
      "tmdb_id": 1841390
     },
@@ -2800,7 +2800,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/el-hombre-del-reloj.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-hombre-del-reloj",
      "tmdb_id": 1841385
     },
@@ -2844,7 +2844,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/el-regreso-pa-cuando.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-regreso-pa-cuando",
      "tmdb_id": 1841400
     }
@@ -3279,7 +3279,7 @@
      "synopsis": "En un campamento guerrillero en las montañas colombianas, dos jóvenes combatientes mantienen una relación secreta que se ve amenazada por la violencia y la brutal masculinidad del grupo.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/varoncito.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "varoncito",
      "tmdb_id": 1841399
     }
@@ -3657,7 +3657,7 @@
      "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/una-carta-supuesta.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "una-carta-supuesta",
      "tmdb_id": 1841398
     },
@@ -4679,7 +4679,7 @@
      "synopsis": "En el caótico cierre de una filmación, una reconocida directora enfrenta su escena final y el límite entre el arte y el abuso. En el set, la tensión se desborda cuando las emociones de los actores, el equipo técnico y la propia cineasta se mezclan con heridas abiertas, culpas compartidas y deseos de redención.Némica es un retrato íntimo del poder, la vulnerabilidad , el abuso y la creación, donde todos deben decidir hasta dónde están dispuestos a llegar para crear una obra de arte.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/nemica.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "nemica",
      "tmdb_id": 1841394
     },
@@ -5367,7 +5367,7 @@
      "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/una-carta-supuesta.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "una-carta-supuesta",
      "tmdb_id": 1841398
     },
@@ -6051,7 +6051,7 @@
      "synopsis": "Es de noche, Laura camina agitada por una calle solitaria. La Chica la persigue, quiere darle el bolso que se le ha caído. La Chica llega a un túnel vacío y el face ID del móvil de Laura se desbloquea con su cara. La Chica comenzará a vivir la vida de Laura.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/la-suma-de-todas-las-partes.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-suma-de-todas-las-partes",
      "tmdb_id": 1841389
     },
@@ -6212,7 +6212,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/la-vida-de-un-hilo.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-vida-de-un-hilo",
      "tmdb_id": 1841390
     },
@@ -6256,7 +6256,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/el-hombre-del-reloj.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-hombre-del-reloj",
      "tmdb_id": 1841385
     },
@@ -6300,7 +6300,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/el-regreso-pa-cuando.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-regreso-pa-cuando",
      "tmdb_id": 1841400
     }
@@ -6849,7 +6849,7 @@
      "synopsis": "Silvia está embarazada y desea ser mamá, vive con Ana, su mejor amiga. Una noche, pasada de tragos, Ana contagia a Silvia de un peligroso virus que pondrá en riesgo la vida del bebé que viene en camino. Llena de ira, Silvia decide echarla de la casa y a partir de ese momento, se enfrenta al profundo miedo de parir la muerte. Tiempo después, Ana regresa y encuentra a Silvia gravemente enferma. Decide cuidarla, pero aunque Silvia logra recuperarse, el virus ha dejado consecuencias irreversibles.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/lo-entranable.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "lo-entranable",
      "tmdb_id": 1841392
     },
@@ -7037,7 +7037,7 @@
      "synopsis": "Ni aquí, ni allá es una exploración atmosférica y surrealista del malestar urbano. Sigue a Salomé, una diseñadora de interiores venezolana que vive en Nueva York y siente una atracción sobrenatural desde el núcleo de la Tierra. La sensación podría estar vinculada con la reciente muerte de su abuela en su país natal o con su creciente desconexión del entorno. Ese llamado la lleva a explorar la materialidad de su vida en Nueva York y de su propio ser.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/ni-aqui-ni-alla.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "ni-aqui-ni-alla",
      "tmdb_id": 1841393
     },
@@ -7059,7 +7059,9 @@
      "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/meyolotl.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "meyolotl",
+     "tmdb_id": 1807233
     },
     {
      "title": "La selva",
@@ -7720,10 +7722,10 @@
      "synopsis": "Una aproximación científica a las posibilidades de SER. Paisajes, objetos y palabras retratan la naturaleza fluida y cambiante para reflexionar acerca de la distancia, la separación y cuestionar cómo ocupamos y elegimos nuestro lugar en el mundo.",
      "genre": "Experimental",
      "synopsis_lang": "es",
-     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/ESPACIAR-AFICHE.jpg",
+     "poster": "/assets/bogoshorts-2026/espaciar.jpg",
+     "posterSource": "tmdb",
      "lbSlug": "espaciar",
-     "tmdb_id": 1841386,
-     "posterSource": "oficial"
+     "tmdb_id": 1841386
     },
     {
      "title": "Susurros",
@@ -7936,7 +7938,7 @@
      "synopsis": "Silvia está embarazada y desea ser mamá, vive con Ana, su mejor amiga. Una noche, pasada de tragos, Ana contagia a Silvia de un peligroso virus que pondrá en riesgo la vida del bebé que viene en camino. Llena de ira, Silvia decide echarla de la casa y a partir de ese momento, se enfrenta al profundo miedo de parir la muerte. Tiempo después, Ana regresa y encuentra a Silvia gravemente enferma. Decide cuidarla, pero aunque Silvia logra recuperarse, el virus ha dejado consecuencias irreversibles.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/lo-entranable.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "lo-entranable",
      "tmdb_id": 1841392
     },
@@ -8285,7 +8287,7 @@
      "synopsis": "En un futurista sistema de salud controlado por la inteligencia artificial, a Theodora, una anciana solitaria, le diagnostican depresión y le recetan un plan de tratamiento en varias fases que incluye el contacto físico. Lo que comienza como un tierno vínculo con su «abrazador profesional» pronto pone de manifiesto la escalofriante visión de la industria tecnológica de sustituir la conexión humana.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/joychair.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "joychair",
      "tmdb_id": 1841387
     },
@@ -8492,7 +8494,7 @@
      "synopsis": "En el caótico cierre de una filmación, una reconocida directora enfrenta su escena final y el límite entre el arte y el abuso. En el set, la tensión se desborda cuando las emociones de los actores, el equipo técnico y la propia cineasta se mezclan con heridas abiertas, culpas compartidas y deseos de redención.Némica es un retrato íntimo del poder, la vulnerabilidad , el abuso y la creación, donde todos deben decidir hasta dónde están dispuestos a llegar para crear una obra de arte.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/nemica.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "nemica",
      "tmdb_id": 1841394
     },
@@ -9397,7 +9399,7 @@
      "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/raj-in.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "rajin",
      "tmdb_id": 1841396
     },
@@ -9529,7 +9531,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/la-vida-de-un-hilo.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-vida-de-un-hilo",
      "tmdb_id": 1841390
     },
@@ -9573,7 +9575,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/el-hombre-del-reloj.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-hombre-del-reloj",
      "tmdb_id": 1841385
     },
@@ -9617,7 +9619,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/el-regreso-pa-cuando.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-regreso-pa-cuando",
      "tmdb_id": 1841400
     }
@@ -9844,7 +9846,7 @@
      "synopsis": "Raquelita, una torcaza herida tras un accidente en la ciudad de Bogotá, encuentra refugio en la ventana de Tomás, un niño que la acompaña mientras sana. A partir de ese encuentro, Raquelita inicia un viaje poético por la ciudad, descubriendo personajes, vidas, detalles invisibles para los demás y su lugar en el mundo.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/un-pajaro-mas.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "un-pajaro-mas",
      "tmdb_id": 1841397,
      "genre": "Animación"
@@ -10574,7 +10576,7 @@
      "synopsis": "En un campamento guerrillero en las montañas colombianas, dos jóvenes combatientes mantienen una relación secreta que se ve amenazada por la violencia y la brutal masculinidad del grupo.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/varoncito.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "varoncito",
      "tmdb_id": 1841399
     }
@@ -10944,7 +10946,7 @@
      "synopsis": "Raquelita, una torcaza herida tras un accidente en la ciudad de Bogotá, encuentra refugio en la ventana de Tomás, un niño que la acompaña mientras sana. A partir de ese encuentro, Raquelita inicia un viaje poético por la ciudad, descubriendo personajes, vidas, detalles invisibles para los demás y su lugar en el mundo.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/un-pajaro-mas.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "un-pajaro-mas",
      "tmdb_id": 1841397,
      "genre": "Animación"
@@ -11222,10 +11224,10 @@
      "synopsis": "Una aproximación científica a las posibilidades de SER. Paisajes, objetos y palabras retratan la naturaleza fluida y cambiante para reflexionar acerca de la distancia, la separación y cuestionar cómo ocupamos y elegimos nuestro lugar en el mundo.",
      "genre": "Experimental",
      "synopsis_lang": "es",
-     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/ESPACIAR-AFICHE.jpg",
+     "poster": "/assets/bogoshorts-2026/espaciar.jpg",
+     "posterSource": "tmdb",
      "lbSlug": "espaciar",
-     "tmdb_id": 1841386,
-     "posterSource": "oficial"
+     "tmdb_id": 1841386
     },
     {
      "title": "Susurros",
@@ -11876,7 +11878,7 @@
      "synopsis": "Vivimos en la era del control y de la hiperconectividad, todos nuestros gestos y movimientos parecen dejar rastro y, sin embargo, hay vidas que flotan por debajo del umbral de visibilidad. Durante cinco años A. vive en las calles de Barcelona, sin documentos y sin domicilio fijo. Su familia no consigue localizarla, hasta que un mensaje por Facebook lo cambia todo. Una reflexión visual sobre la ciudad contemporánea y sus agujeros negros.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/querida-a.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "querida-a",
      "tmdb_id": 1841395
     },
@@ -12601,7 +12603,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/la-vida-de-un-hilo.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-vida-de-un-hilo",
      "tmdb_id": 1841390
     },
@@ -12645,7 +12647,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/el-hombre-del-reloj.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-hombre-del-reloj",
      "tmdb_id": 1841385
     },
@@ -12689,7 +12691,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/el-regreso-pa-cuando.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-regreso-pa-cuando",
      "tmdb_id": 1841400
     }
@@ -12778,7 +12780,7 @@
      "synopsis": "Raquelita, una torcaza herida tras un accidente en la ciudad de Bogotá, encuentra refugio en la ventana de Tomás, un niño que la acompaña mientras sana. A partir de ese encuentro, Raquelita inicia un viaje poético por la ciudad, descubriendo personajes, vidas, detalles invisibles para los demás y su lugar en el mundo.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/un-pajaro-mas.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "un-pajaro-mas",
      "tmdb_id": 1841397,
      "genre": "Animación"
@@ -12913,7 +12915,7 @@
      "synopsis": "Es de noche, Laura camina agitada por una calle solitaria. La Chica la persigue, quiere darle el bolso que se le ha caído. La Chica llega a un túnel vacío y el face ID del móvil de Laura se desbloquea con su cara. La Chica comenzará a vivir la vida de Laura.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/la-suma-de-todas-las-partes.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-suma-de-todas-las-partes",
      "tmdb_id": 1841389
     },
@@ -13102,7 +13104,7 @@
      "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/una-carta-supuesta.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "una-carta-supuesta",
      "tmdb_id": 1841398
     },
@@ -14092,7 +14094,7 @@
      "genre": "Experimental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/no-te-conozcas.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "no-te-conozcas",
      "tmdb_id": 1841401
     },
@@ -14133,7 +14135,7 @@
      "genre": "Experimental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/complementarios.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "complementarios",
      "tmdb_id": 1841384
     },
@@ -15058,7 +15060,7 @@
      "synopsis": "Silvia está embarazada y desea ser mamá, vive con Ana, su mejor amiga. Una noche, pasada de tragos, Ana contagia a Silvia de un peligroso virus que pondrá en riesgo la vida del bebé que viene en camino. Llena de ira, Silvia decide echarla de la casa y a partir de ese momento, se enfrenta al profundo miedo de parir la muerte. Tiempo después, Ana regresa y encuentra a Silvia gravemente enferma. Decide cuidarla, pero aunque Silvia logra recuperarse, el virus ha dejado consecuencias irreversibles.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/lo-entranable.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "lo-entranable",
      "tmdb_id": 1841392
     },
@@ -15362,7 +15364,7 @@
      "synopsis": "Ni aquí, ni allá es una exploración atmosférica y surrealista del malestar urbano. Sigue a Salomé, una diseñadora de interiores venezolana que vive en Nueva York y siente una atracción sobrenatural desde el núcleo de la Tierra. La sensación podría estar vinculada con la reciente muerte de su abuela en su país natal o con su creciente desconexión del entorno. Ese llamado la lleva a explorar la materialidad de su vida en Nueva York y de su propio ser.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/ni-aqui-ni-alla.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "ni-aqui-ni-alla",
      "tmdb_id": 1841393
     },
@@ -15384,7 +15386,9 @@
      "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/meyolotl.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "meyolotl",
+     "tmdb_id": 1807233
     },
     {
      "title": "La selva",
@@ -15522,7 +15526,7 @@
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/fantasy-land.jpg",
      "posterSource": "oficial",
-     "lbSlug": "fantasy-land-1",
+     "lbSlug": "fantasy-land-2026",
      "tmdb_id": 1840640,
      "genre": "Misterio"
     },
@@ -16114,7 +16118,7 @@
      "genre": "Documental",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/raj-in.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "rajin",
      "tmdb_id": 1841396
     },
@@ -16956,7 +16960,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-23T17:33:39",
+  "fecha": "2026-11-24T08:06:53",
   "plan_sha": "51eddc3380a249f7",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"

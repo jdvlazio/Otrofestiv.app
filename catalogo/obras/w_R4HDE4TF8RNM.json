@@ -3,13 +3,20 @@
  "titulo_original": "Suite intercontinental",
  "anio": 2026,
  "paises": [
-  "CO"
+  "CO",
+  "FR"
  ],
  "directores": [
   "Lola Tartane"
  ],
+ "aliases": [
+  {
+   "titulo": "Suite Intercontinental",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
+  "es": "Desde el piso treinta de una torre de vidrio, Margot observa una Cali agitada por la tensión. Deslumbrada por el sol tropical, recorre la ciudad ajena a lo que la rodea y sus fantasías se confunden con la realidad. En la calle, su mirada se cruza con la de un hombre de torso desnudo y ojos penetrantes. Margot lo sigue cada día y se acerca poco a poco al objeto de su deseo.",
   "en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire."
  },
  "afiche": {
@@ -24,9 +31,14 @@
   {
    "etiqueta": "24 min",
    "duracion_min": 24
+  },
+  {
+   "etiqueta": "25 min",
+   "duracion_min": 25
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "ficci-65",
   "popayan-2026"
  ]

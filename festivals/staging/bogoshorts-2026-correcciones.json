@@ -225,6 +225,12 @@
    "_fuente": "https://www.themoviedb.org/movie/1826831",
    "_por_que": "altas.py --ficha: TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
    "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Meyolotl": {
+   "tmdb": 1807233,
+   "_fuente": "https://www.themoviedb.org/movie/1807233",
+   "_por_que": "altas.py --ficha: mismo título, dirección Lorena R. Valencia en los créditos de TMDB (leídos 24 nov) y en el catálogo del festival",
+   "_registro": "bogoshorts-2026-altas.json"
   }
  },
  "duracion_distinta": {

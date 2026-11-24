@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:cinemancia-2026,cinemancia-2026,ficica-2026",
+  "fuente": "festival:bogoshorts-2026,bogoshorts-2026,cinemancia-2026,cinemancia-2026,ficica-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -14,6 +14,10 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "generos": {
+  "fuente": "festival",
+  "regla": "todos los publicados, del más al menos frecuente"
  },
  "afiche": {
   "fuente": "humano",
