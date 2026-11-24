@@ -280,8 +280,8 @@ def _publicar(archivos, mensaje, cuerpo):
             return sha, _llamar({**cuerpo, 'sha': sha})
         except Choque as e:
             if intento == REINTENTOS:
-                sys.exit(f'✗ {e}: {REINTENTOS} intentos, todos cruzados con otra publicación')
-            espera = 5 * intento
+                sys.exit(f'✗ {e}: {REINTENTOS} intentos sin lograrlo')
+            espera = 10 * intento
             print(f'· {e}; reintento {intento + 1}/{REINTENTOS} en {espera} s')
             time.sleep(espera)
 
@@ -367,9 +367,11 @@ def _llamar(cuerpo):
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
         cuerpo_err = e.read().decode(errors='replace')[:300]
-        if e.code == 409:
-            raise Choque(f'la función respondió 409 ({cuerpo_err})')
+        if e.code in (409, 429, 502, 503, 504):   # la punta se movió, o un fallo pasajero del otro lado
+            raise Choque(f'la función respondió {e.code} ({cuerpo_err})')
         sys.exit(f'✗ publicar-datos {e.code}: {cuerpo_err}')
+    except (urllib.error.URLError, TimeoutError) as e:
+        raise Choque(f'la función no respondió ({e})')
 
 
 def interruptor(apagado):

@@ -2,7 +2,7 @@
 // Migración 0009. Los datos ya no esperan el CI ni el deploy de la app: el
 // comando pipeline/publicar-datos.py sube festivals/<id>.json a la rama `datos`
 // del repo y llama a esta función con {festival, sha}. La función:
-//   1. exige que `sha` sea la PUNTA ACTUAL de la rama `datos` (GitHub API).
+//   1. exige que `sha` sea la PUNTA ACTUAL de la rama `datos` (protocolo git).
 //      Esa es la autorización: solo quien puede pushear al repo publica, y nadie
 //      puede re-publicar una versión vieja llamando con un sha antiguo;
 //   2. baja festivals/<id>.json de ese commit, verifica que sea JSON con la forma
@@ -49,11 +49,18 @@ Deno.serve(async (req) => {
   if (!RE_SHA.test(sha)) return json(400, { error: "sha" });
 
   // 1. Autorización: el sha tiene que ser la punta de la rama `datos`.
-  const gh = await fetch(`https://api.github.com/repos/${REPO}/branches/${RAMA}`, {
-    headers: { "User-Agent": "otrofestiv-publicar-datos", Accept: "application/vnd.github+json" },
-  });
-  if (!gh.ok) return json(502, { error: `GitHub ${gh.status}` });
-  const punta = (await gh.json())?.commit?.sha;
+  // 24 nov 2026: se lee por el protocolo de git, no por api.github.com. La API
+  // anónima tiene tope por IP (403 a mitad de las tandas) y contestaba una punta
+  // vieja justo después del push (los 409). Un 502 acá es reintentable.
+  let punta = "";
+  try {
+    const gh = await fetch(`https://github.com/${REPO}.git/info/refs?service=git-upload-pack`, {
+      headers: { "User-Agent": "git/2.40" }, signal: AbortSignal.timeout(20000),
+    });
+    if (!gh.ok) return json(502, { error: `GitHub ${gh.status}` });
+    punta = (await gh.text()).match(new RegExp(`(?:^|\\n)[0-9a-f]{4}([0-9a-f]{40}) refs/heads/${RAMA}\\n`))?.[1] ?? "";
+  } catch { return json(502, { error: "GitHub no respondió" }); }
+  if (!punta) return json(502, { error: "no encontré la rama datos" });
   if (punta !== sha) return json(409, { error: "el sha no es la punta de la rama datos", punta });
 
   // Interruptor (festival = "_control"): lee datos-control.json de ESE commit y
@@ -65,9 +72,11 @@ Deno.serve(async (req) => {
     try { ctl = await c.json(); } catch { return json(422, { error: "datos-control.json no es JSON" }); }
     const sbc = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!, { auth: { persistSession: false } });
     const stc = sbc.storage.from("datos");
-    let ix: Record<string, unknown> = { version: 1, festivales: {} };
+    // sin índice legible NO se escribe: rehacerlo vacío borraría todos los festivales
+    let ix: Record<string, unknown>;
     const pv = await stc.download("indice.json");
-    if (pv.data) { try { ix = JSON.parse(await pv.data.text()); } catch { /* se rehace */ } }
+    try { ix = JSON.parse(await pv.data!.text()); } catch { return json(503, { error: "no pude leer el índice" }); }
+    if (!ix.festivales || !Object.keys(ix.festivales as object).length) return json(503, { error: "índice vacío" });
     ix.apagado = ctl.apagado === true;
     const w = await stc.upload("indice.json", new TextEncoder().encode(JSON.stringify(ix)), { contentType: "application/json", cacheControl: "30", upsert: true });
     if (w.error) return json(500, { error: "no se pudo actualizar el índice" });
@@ -76,6 +85,7 @@ Deno.serve(async (req) => {
 
   // 2. El archivo de ESE commit.
   const raw = await fetch(`https://raw.githubusercontent.com/${REPO}/${sha}/festivals/${fest}.json`);
+  if (!raw.ok && raw.status !== 404) return json(502, { error: `GitHub raw ${raw.status}` });
   if (!raw.ok) return json(404, { error: `no existe festivals/${fest}.json en ${sha.slice(0, 7)}` });
   const bytes = new Uint8Array(await raw.arrayBuffer());
   let data: Record<string, unknown>;
@@ -94,9 +104,11 @@ Deno.serve(async (req) => {
   const up = await st.upload(archivo, bytes, { contentType: "application/json", cacheControl: "31536000", upsert: false });
   if (up.error && !/exists|Duplicate/i.test(up.error.message)) { console.error("publicar-datos versión:", up.error.message); return json(500, { error: "no se pudo guardar la versión" }); }
 
-  let indice: { version: number; festivales: Record<string, Record<string, unknown>> } = { version: 1, festivales: {} };
+  // sin índice legible NO se escribe: rehacerlo vacío borraría todos los festivales (24 nov 2026)
+  let indice: { version: number; festivales: Record<string, Record<string, unknown>> };
   const prev = await st.download("indice.json");
-  if (prev.data) { try { indice = JSON.parse(await prev.data.text()); } catch { /* índice ilegible: se rehace */ } }
+  try { indice = JSON.parse(await prev.data!.text()); } catch { return json(503, { error: "no pude leer el índice" }); }
+  if (!indice.festivales || !Object.keys(indice.festivales).length) return json(503, { error: "índice vacío" });
   const antes = indice.festivales[fest];
 
   // 3·b. La ficha (opcional: un commit sin fichas/<id>.json conserva la anterior).
