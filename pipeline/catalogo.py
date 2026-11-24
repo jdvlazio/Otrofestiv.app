@@ -63,6 +63,17 @@ def apellido(director):
     return partes[-1] if partes else ''
 
 
+def misma_persona_larga(director, suyos):
+    """lib.misma_persona Y el mismo primer nombre, persona a persona: dos hermanos
+    (un apellido común) no son la misma (24 nov 2026, dobles apellidos)."""
+    for x in re.split(r',| y | & |/', director or ''):
+        for y in suyos:
+            a, b = (sinacento(n).lower().split() for n in (x, y))
+            if len(a) > 1 and len(b) > 1 and a[0] == b[0] and misma_persona(x, y):
+                return True
+    return False
+
+
 # ── lectura ──────────────────────────────────────────────────────────────────
 def obras(raiz=DIR):
     out = {}
@@ -172,7 +183,7 @@ def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
         if ap and aps - {''}:
             if a_ok and ap in aps:
                 hits.add(wid)
-            elif len((director or '').split()) > 1 and a_ok and misma_persona(director, ', '.join(o.get('directores') or [])):
+            elif a_ok and misma_persona_larga(director, o.get('directores') or []):
                 largos.add(wid)
         elif (anio and o.get('anio') and abs(anio - o['anio']) <= 1) or \
                 (duracion and any(v.get('duracion_min') and abs(v['duracion_min'] - duracion) <= 3

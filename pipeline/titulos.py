@@ -37,7 +37,7 @@ def candidatas(obs, titulo, director):
         if not o.get('presentaciones'):
             continue
         ts = [o['titulo_original']] + [a['titulo'] for a in o.get('aliases') or []]
-        persona = bool(director) and catalogo.misma_persona(director, ', '.join(o.get('directores') or []))
+        persona = catalogo.misma_persona_larga(director, o.get('directores') or [])
         if any(catalogo.huella(t) == h for t in ts):
             out.append((wid, 'mismo título' + (', misma dirección' if persona else '')))
         elif persona and any(w[:len(v)] == v or v[:len(w)] == w for v in map(_palabras, ts) if v):

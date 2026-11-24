@@ -22,7 +22,7 @@ class Titulos(unittest.TestCase):
         self.assertEqual(c.reconocer(OBS, 'Suelo', 'Eduar Yosniel Pájaro Peña')[0], 's')
 
     def test_no_basta_el_nombre_sin_apellido(self):
-        for d in ('Isabella', 'Isabella Marín', 'Muestra'):
+        for d in ('Isabella', 'Isabella Marín', 'Laura Cárdenas Marín', 'Isabella Gómez Marín', 'Muestra'):
             self.assertIsNone(c.reconocer(OBS, 'Aitana', d)[0], d)
 
     def test_el_homonimo_es_candidata_y_no_se_hereda(self):
