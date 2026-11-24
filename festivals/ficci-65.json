@@ -440,7 +440,7 @@
   {
    "title": "Si no ardemos, cómo iluminar la noche",
    "title_en": "If We Don’t Burn, How Do We Light Up the Night",
-   "country": "Costa Rica/México/Francia",
+   "country": "Costa Rica, México, Francia",
    "flags": "🇨🇷🇲🇽🇫🇷",
    "duration": "85 min",
    "day": "Miércoles",
@@ -473,7 +473,7 @@
   {
    "title": "Iván & Hadoum",
    "title_en": "",
-   "country": "España/Alemania/Bélgica",
+   "country": "España, Alemania, Bélgica",
    "flags": "🇪🇸🇩🇪🇧🇪",
    "duration": "103 min",
    "day": "Miércoles",
@@ -1432,8 +1432,8 @@
   {
    "title": "El príncipe de Nanawa",
    "title_en": "The Prince of Nanawa",
-   "country": "Argentina/Colombia/Paraguay",
-   "flags": "🇦🇷🇨🇴🇵🇾",
+   "country": "Argentina, Paraguay, Colombia, Alemania",
+   "flags": "🇦🇷🇵🇾🇨🇴🇩🇪",
    "duration": "212 min",
    "day": "Jueves",
    "date": 16,
@@ -1565,7 +1565,7 @@
     },
     {
      "title": "Madres de nacimiento",
-     "country": "Francia",
+     "country": "Colombia, Francia",
      "duration": "8 min",
      "posterSource": "oficial",
      "poster": "/assets/ficfusa-2026/madres-de-nacimiento.jpg",
@@ -1588,7 +1588,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
      "director": "Gloria Isabel Gómez Ceballos",
-     "tmdb_id": 1668902
+     "tmdb_id": 1668902,
+     "flags": "🇨🇴🇫🇷"
     },
     {
      "title": "Todas las manos que solté",
@@ -1600,7 +1601,7 @@
     },
     {
      "title": "Ya se ven los tigres en la lluvia",
-     "country": "Colombia/Canadá",
+     "country": "Colombia, Canadá",
      "duration": "15 min",
      "posterSource": "oficial",
      "poster": "https://image.tmdb.org/t/p/w500/sB4dBAGzUomRRZ0CcJdcIqqeCCf.jpg",
@@ -1625,7 +1626,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation.",
      "director": "Óscar Ruiz Navia",
-     "tmdb_id": 1526866
+     "tmdb_id": 1526866,
+     "flags": "🇨🇴🇨🇦"
     }
    ],
    "id": "f_bf35c98021"
@@ -1694,7 +1696,7 @@
   {
    "title": "Historias del buen valle",
    "title_en": "Good Valley Stories",
-   "country": "España/Francia",
+   "country": "España, Francia",
    "flags": "🇪🇸🇫🇷",
    "duration": "122 min",
    "day": "Jueves",
@@ -1804,7 +1806,7 @@
    "is_cortos": false,
    "film_list": [],
    "synopsis": "Milo, un niño carismático que baila malambo, se escapa de su casa y viaja a la ciudad de Buenos Aires en busca de una nueva vida, en esta fascinante película donde conviven, de manera armónica, lo documental y lo absurdo.",
-   "director": "Lorenzo Ferro",
+   "director": "Lorenzo Ferro, Lucas A. Vignale",
    "year": 2026,
    "synopsis_en": "Milo, a charismatic boy who dances malambo, runs away from home and travels to Buenos Aires in search of a new life, in this fascinating film where the documentary and the absurd coexist in perfect harmony.",
    "genre": "Drama",
@@ -1825,7 +1827,7 @@
   {
    "title": "Iván & Hadoum",
    "title_en": "",
-   "country": "España/Alemania/Bélgica",
+   "country": "España, Alemania, Bélgica",
    "flags": "🇪🇸🇩🇪🇧🇪",
    "duration": "103 min",
    "day": "Jueves",
@@ -1872,7 +1874,7 @@
    "film_list": [
     {
      "title": "La forma y la raíz",
-     "country": "Colombia/Cuba",
+     "country": "Colombia, Cuba",
      "duration": "14 min",
      "posterSource": "oficial",
      "poster": "/assets/midbo-2026/la-forma-y-la-raiz.jpg",
@@ -1893,7 +1895,8 @@
      "synopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo.",
      "synopsis_lang": "es",
      "director": "Nathalia Quimbay Cadena, Valeria Moraima Berríos",
-     "tmdb_id": 1660700
+     "tmdb_id": 1660700,
+     "flags": "🇨🇴🇨🇺"
     },
     {
      "title": "Montaña luminosa",
@@ -2743,7 +2746,7 @@
     },
     {
      "title": "Filme Pin",
-     "country": "Colombia/Portugal",
+     "country": "Colombia, Portugal",
      "duration": "7 min",
      "posterSource": "oficial",
      "poster": "/assets/midbo-2026/filme-pin.jpg",
@@ -2766,7 +2769,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime.",
      "director": "María Rojas Arias, Andrés Jurado",
-     "tmdb_id": 1616856
+     "tmdb_id": 1616856,
+     "flags": "🇨🇴🇵🇹"
     },
     {
      "title": "Futuros luminosos",
@@ -2799,7 +2803,7 @@
     },
     {
      "title": "Lejanía",
-     "country": "Colombia/Chile",
+     "country": "Colombia, Chile",
      "duration": "17 min",
      "posterSource": "oficial",
      "poster": "/assets/aleste-2026/lejania.jpg",
@@ -2820,7 +2824,8 @@
      "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
      "synopsis_lang": "es",
      "director": "Daniel Velásquez Patarroyo",
-     "tmdb_id": 1668904
+     "tmdb_id": 1668904,
+     "flags": "🇨🇴🇨🇱"
     },
     {
      "title": "Winter Blumen Garten",
@@ -3134,7 +3139,7 @@
     },
     {
      "title": "Sirena mecánica",
-     "country": "España/Colombia",
+     "country": "España, Colombia",
      "duration": "9 min",
      "posterSource": "oficial",
      "poster": "/assets/festicinerio-2026/sirena-mecanica.jpg",
@@ -3155,7 +3160,8 @@
      "synopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
      "synopsis_lang": "es",
      "director": "Violeta Vieytes Vivares, Damián Sato",
-     "tmdb_id": 1668871
+     "tmdb_id": 1668871,
+     "flags": "🇪🇸🇨🇴"
     },
     {
      "title": "Suite intercontinental",
@@ -3286,7 +3292,7 @@
   {
    "title": "Historias del buen valle",
    "title_en": "Good Valley Stories",
-   "country": "España/Francia",
+   "country": "España, Francia",
    "flags": "🇪🇸🇫🇷",
    "duration": "122 min",
    "day": "Viernes",
@@ -3331,7 +3337,7 @@
    "is_cortos": false,
    "film_list": [],
    "synopsis": "Pelu, de treinta y tantos, es el humilde proyeccionista de un cineclub municipal. Ante la crisis, debe convertirse en el vigilante nocturno del cine y, con el tiempo, el lugar se transforma en su nuevo hogar. Poco a poco, una pequeña comunidad empieza a formarse allí después del cierre: un grupo de cuidacarros que duermen en el cine y se vuelven sus amigos más cercanos, junto con Vale, una excompañera de colegio que usa el espacio para grabar videos para OnlyFans.",
-   "director": "Ramiro Sonzini",
+   "director": "Ramiro Sonzini, Ezequiel Salinas",
    "year": 2025,
    "synopsis_en": "This is a cinephile comedy shot through with crisis — simultaneously solitary and solidary.",
    "genre": "Drama",
@@ -3844,7 +3850,7 @@
    "film_list": [
     {
      "title": "La forma y la raíz",
-     "country": "Colombia/Cuba",
+     "country": "Colombia, Cuba",
      "duration": "14 min",
      "poster": "/assets/midbo-2026/la-forma-y-la-raiz.jpg",
      "posterSource": "oficial",
@@ -3865,7 +3871,8 @@
      "synopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo.",
      "synopsis_lang": "es",
      "director": "Nathalia Quimbay Cadena, Valeria Moraima Berríos",
-     "tmdb_id": 1660700
+     "tmdb_id": 1660700,
+     "flags": "🇨🇴🇨🇺"
     },
     {
      "title": "Montaña luminosa",
@@ -4001,7 +4008,7 @@
    "film_list": [
     {
      "title": "An Incomplete Calendar",
-     "country": "Canadá/Irán/Venezuela/Turquía",
+     "country": "Canadá, Irán, Turquía, Venezuela",
      "duration": "77 min",
      "posterSource": "oficial",
      "poster": "/assets/ficcali-2026/an-incomplete-calendar.jpg",
@@ -4024,7 +4031,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "A forgotten musical record connects Caracas to Tehran, revealing untold stories of oil, not as a commodity, but as a political leverage for the liberation struggles in Palestine and building Pan-Arab solidarity between 1960-1970.",
      "director": "Sanaz Sohrabi",
-     "tmdb_id": 1633334
+     "tmdb_id": 1633334,
+     "flags": "🇨🇦🇮🇷🇹🇷🇻🇪"
     },
     {
      "title": "Fuego en el mar",
@@ -4204,7 +4212,7 @@
     },
     {
      "title": "Madres de nacimiento",
-     "country": "Francia",
+     "country": "Colombia, Francia",
      "duration": "8 min",
      "poster": "/assets/ficfusa-2026/madres-de-nacimiento.jpg",
      "posterSource": "oficial",
@@ -4227,7 +4235,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
      "director": "Gloria Isabel Gómez Ceballos",
-     "tmdb_id": 1668902
+     "tmdb_id": 1668902,
+     "flags": "🇨🇴🇫🇷"
     },
     {
      "title": "Todas las manos que solté",
@@ -4239,7 +4248,7 @@
     },
     {
      "title": "Ya se ven los tigres en la lluvia",
-     "country": "Colombia/Canadá",
+     "country": "Colombia, Canadá",
      "duration": "15 min",
      "poster": "https://image.tmdb.org/t/p/w500/sB4dBAGzUomRRZ0CcJdcIqqeCCf.jpg",
      "posterSource": "oficial",
@@ -4264,7 +4273,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation.",
      "director": "Óscar Ruiz Navia",
-     "tmdb_id": 1526866
+     "tmdb_id": 1526866,
+     "flags": "🇨🇴🇨🇦"
     }
    ],
    "id": "f_602b145a47"
@@ -4301,7 +4311,7 @@
     },
     {
      "title": "Trizas",
-     "country": "Bolivia/Inglaterra",
+     "country": "Bolivia, Reino Unido",
      "duration": "15 min",
      "work_id": "w_R4F1D2Q71DK4",
      "title_en": "Shards",
@@ -4322,7 +4332,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
      "director": "Luciana Decker Orozco",
-     "tmdb_id": 1604094
+     "tmdb_id": 1604094,
+     "flags": "🇧🇴🇬🇧"
     }
    ],
    "id": "f_da75b4e2f2"
@@ -4434,7 +4445,7 @@
     },
     {
      "title": "La tinaja",
-     "country": "Colombia/Argentina",
+     "country": "Colombia, Argentina",
      "duration": "13 min",
      "posterSource": "oficial",
      "poster": "/assets/ficcali-2026/la-tinaja.jpg",
@@ -4457,7 +4468,8 @@
      "synopsis": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos? Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso. Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
      "synopsis_lang": "es",
      "director": "Ernestina Miranda, Mar Ajé",
-     "tmdb_id": 1668923
+     "tmdb_id": 1668923,
+     "flags": "🇨🇴🇦🇷"
     },
     {
      "title": "Piratas de La Boquilla",
@@ -4609,7 +4621,7 @@
    "is_cortos": false,
    "film_list": [],
    "synopsis": "Pelu, de treinta y tantos, es el humilde proyeccionista de un cineclub municipal. Ante la crisis, debe convertirse en el vigilante nocturno del cine y, con el tiempo, el lugar se transforma en su nuevo hogar. Poco a poco, una pequeña comunidad empieza a formarse allí después del cierre: un grupo de cuidacarros que duermen en el cine y se vuelven sus amigos más cercanos, junto con Vale, una excompañera de colegio que usa el espacio para grabar videos para OnlyFans.",
-   "director": "Ramiro Sonzini",
+   "director": "Ramiro Sonzini, Ezequiel Salinas",
    "year": 2025,
    "synopsis_en": "This is a cinephile comedy shot through with crisis — simultaneously solitary and solidary.",
    "genre": "Drama",
@@ -4630,8 +4642,8 @@
   {
    "title": "El príncipe de Nanawa",
    "title_en": "The Prince of Nanawa",
-   "country": "Argentina/Colombia/Paraguay",
-   "flags": "🇦🇷🇨🇴🇵🇾",
+   "country": "Argentina, Paraguay, Colombia, Alemania",
+   "flags": "🇦🇷🇵🇾🇨🇴🇩🇪",
    "duration": "212 min",
    "day": "Sábado",
    "date": 18,
@@ -4699,7 +4711,7 @@
    "is_cortos": false,
    "film_list": [],
    "synopsis": "Milo, un niño carismático que baila malambo, se escapa de su casa y viaja a la ciudad de Buenos Aires en busca de una nueva vida, en esta fascinante película donde conviven, de manera armónica, lo documental y lo absurdo.",
-   "director": "Lorenzo Ferro",
+   "director": "Lorenzo Ferro, Lucas A. Vignale",
    "year": 2026,
    "synopsis_en": "Milo, a charismatic boy who dances malambo, runs away from home and travels to Buenos Aires in search of a new life, in this fascinating film where the documentary and the absurd coexist in perfect harmony.",
    "genre": "Drama",
@@ -5286,7 +5298,7 @@
     },
     {
      "title": "Filme Pin",
-     "country": "Colombia/Portugal",
+     "country": "Colombia, Portugal",
      "duration": "7 min",
      "poster": "/assets/midbo-2026/filme-pin.jpg",
      "posterSource": "oficial",
@@ -5309,7 +5321,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime.",
      "director": "María Rojas Arias, Andrés Jurado",
-     "tmdb_id": 1616856
+     "tmdb_id": 1616856,
+     "flags": "🇨🇴🇵🇹"
     },
     {
      "title": "Futuros luminosos",
@@ -5342,7 +5355,7 @@
     },
     {
      "title": "Lejanía",
-     "country": "Colombia/Chile",
+     "country": "Colombia, Chile",
      "duration": "17 min",
      "poster": "/assets/aleste-2026/lejania.jpg",
      "posterSource": "oficial",
@@ -5363,7 +5376,8 @@
      "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
      "synopsis_lang": "es",
      "director": "Daniel Velásquez Patarroyo",
-     "tmdb_id": 1668904
+     "tmdb_id": 1668904,
+     "flags": "🇨🇴🇨🇱"
     },
     {
      "title": "Winter Blumen Garten",
@@ -5613,7 +5627,7 @@
     },
     {
      "title": "La tinaja",
-     "country": "Colombia/Argentina",
+     "country": "Colombia, Argentina",
      "duration": "13 min",
      "poster": "/assets/ficcali-2026/la-tinaja.jpg",
      "posterSource": "oficial",
@@ -5636,7 +5650,8 @@
      "synopsis": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos? Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso. Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
      "synopsis_lang": "es",
      "director": "Ernestina Miranda, Mar Ajé",
-     "tmdb_id": 1668923
+     "tmdb_id": 1668923,
+     "flags": "🇨🇴🇦🇷"
     },
     {
      "title": "Piratas de La Boquilla",
@@ -5703,8 +5718,8 @@
   {
    "title": "Mu-Ki-Ra",
    "title_en": "",
-   "country": "Colombia/España/Francia",
-   "flags": "🇨🇴🇪🇸🇫🇷",
+   "country": "Colombia, España",
+   "flags": "🇨🇴🇪🇸",
    "duration": "81 min",
    "day": "Domingo",
    "date": 19,
@@ -5876,7 +5891,7 @@
     },
     {
      "title": "Sirena mecánica",
-     "country": "España/Colombia",
+     "country": "España, Colombia",
      "duration": "9 min",
      "poster": "/assets/festicinerio-2026/sirena-mecanica.jpg",
      "posterSource": "oficial",
@@ -5897,7 +5912,8 @@
      "synopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
      "synopsis_lang": "es",
      "director": "Violeta Vieytes Vivares, Damián Sato",
-     "tmdb_id": 1668871
+     "tmdb_id": 1668871,
+     "flags": "🇪🇸🇨🇴"
     },
     {
      "title": "Suite intercontinental",
@@ -5983,7 +5999,7 @@
     },
     {
      "title": "Trizas",
-     "country": "Bolivia/Inglaterra",
+     "country": "Bolivia, Reino Unido",
      "duration": "15 min",
      "work_id": "w_R4F1D2Q71DK4",
      "title_en": "Shards",
@@ -6004,7 +6020,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
      "director": "Luciana Decker Orozco",
-     "tmdb_id": 1604094
+     "tmdb_id": 1604094,
+     "flags": "🇧🇴🇬🇧"
     }
    ],
    "id": "f_dc5384c337"
@@ -6432,7 +6449,7 @@
     },
     {
      "title": "La tinaja",
-     "country": "Colombia/Argentina",
+     "country": "Colombia, Argentina",
      "duration": "13 min",
      "poster": "/assets/ficcali-2026/la-tinaja.jpg",
      "posterSource": "oficial",
@@ -6455,7 +6472,8 @@
      "synopsis": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos? Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso. Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
      "synopsis_lang": "es",
      "director": "Ernestina Miranda, Mar Ajé",
-     "tmdb_id": 1668923
+     "tmdb_id": 1668923,
+     "flags": "🇨🇴🇦🇷"
     },
     {
      "title": "Piratas de La Boquilla",
