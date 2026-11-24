@@ -7309,6 +7309,28 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [ficha-obra] cada campo de la obra, por lista o por forma ──────────────────
+# Juan, 24 nov 2026: «Qatar» se publicó como género. Dueño de la regla de cada
+# campo: pipeline/ficha_obra.py (docs/OBRA.md). Trinquete por festival y regla;
+# un festival nuevo parte de cero.
+check = 'ficha-obra'
+try:
+    import ficha_obra as _fo
+    _ciega = _fo.autoprueba()
+    _exc = _fo.excedidos(_fests)
+    if _ciega:
+        fail(check, 'reglas ciegas: ' + ' · '.join(_ciega[:4]))
+    elif _exc:
+        fail(check, f'{len(_exc)} regla(s) sobre su deuda — python3 pipeline/ficha_obra.py <festival>: '
+             + ' · '.join(f'{_f} {_r}: ' + ', '.join(_x[:3]) for _f, _r, _x in _exc[:5]))
+    else:
+        ok(check, 'ningún festival suma datos de obra fuera de regla')
+        _hol = _fo.holgura(_fests)
+        if _hol:
+            warn(check, 'bajó la deuda — python3 pipeline/ficha_obra.py --congelar: ' + ', '.join(_hol[:6]))
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 # ── [caja-titulo] programas y secciones en Título (regla de Juan, 15 oct 2026) ──
 # «Muestra de Cortos», «Colombia Viva»: las palabras son del festival y la caja
 # de la app (pipeline/caja.py, el único dueño). Los títulos de obra no se miran.
