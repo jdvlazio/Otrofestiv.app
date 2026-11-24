@@ -3,13 +3,11 @@
  * generate-claude-md.js — Genera CLAUDE.md leyendo el estado real del repo.
  *
  * Fuentes de verdad:
- *   - FESTIVAL_CONFIG en index.html → lista de festivales
  *   - .specify/features/            → features activas
  *
  * Uso: node scripts/generate-claude-md.js
  *
- * Se corre A MANO, cuando cambia el estado del proyecto (un festival entra o se
- * archiva, una feature arranca). Hasta ago 2026 lo disparaba bump-version.js en
+ * Se corre A MANO, cuando cambia el estado del proyecto (una feature arranca). Hasta ago 2026 lo disparaba bump-version.js en
  * cada deploy: eso metía CLAUDE.md —y su hash de último commit— en cada rama, y
  * lo convertía en el quinto conflicto garantizado de cada PR.
  */
@@ -79,6 +77,13 @@ const festivalsTable = [
     `| \`${f.id}\` | ${f.name} | ${f.city} | ${f.dates} | ${festivalStatus(f)} |`
   )
 ].join('\n');
+
+// La tabla vivía dentro de CLAUDE.md hasta el 24 nov 2026: cada alta de festival
+// tocaba el archivo de instrucciones y su columna «Estado» mentía al día siguiente.
+if (process.argv.includes('--festivales')) {
+  console.log(festivalsTable);
+  process.exit(0);
+}
 
 // ── 2. Features desde .specify/features/ ─────────────────────────────────────
 const featuresDir = path.join(ROOT, '.specify', 'features');
@@ -187,9 +192,10 @@ deliberada existe la etiqueta \`frontera-ok\`.
 
 ## Estado del proyecto
 
-### Festivales (desde \`FESTIVAL_CONFIG\` en \`src/config.js\`)
+### Festivales
 
-${festivalsTable}
+La lista y su estado NO se copian acá: cambian a diario. Se consultan en vivo con
+\`node scripts/generate-claude-md.js --festivales\` (lee \`src/config.js\`).
 
 ### Features activas (desde \`.specify/features/\`)
 
@@ -305,4 +311,3 @@ python3 scripts/geocode-venues.py --help   # geocodificar venues
 
 fs.writeFileSync(path.join(ROOT, 'CLAUDE.md'), generated);
 console.log('✅ CLAUDE.md generado.');
-console.log(`   Festivales: ${festivals.length}`);

@@ -458,7 +458,7 @@ python3 pipeline/alta-festival.py <id> --ensayo   # + TODOS los guardianes, una 
 (días y rótulos derivados de las fechas; nombre, subtítulo y sigla copiados del
 plan), `SECTION_EN` y `SECTION_ARCHETYPES` (de `festival.secciones` del plan,
 con `en` y `archetype`), la entrada de `docs/radar-ancla.json`, y regenera las
-huellas y fechas del afiche de portada y `CLAUDE.md`. **No inventa nada
+huellas y fechas del afiche de portada. **No inventa nada
 editorial**: si al plan le falta el subtítulo, el inglés de una sección o el
 afiche en `assets/keyart/<id-app>.jpg`, lo lista como pendiente y no escribe esa
 pieza. Correrlo dos veces no cambia nada.
