@@ -130,7 +130,7 @@ def indice(obs):
     return por_h, por_t
 
 
-def obra_de(obs, fid, titulo, tmdb=None, ix=None):
+def obra_de(obs, fid, titulo, tmdb=None, ix=None, director=''):
     """El work_id de una obra de un festival: la que lo lista en sus
     presentaciones y cuyo título (original o alias) tiene la misma huella; o la
     que lleva su tmdb. Ninguna o más de una → None (no se adivina)."""
@@ -140,6 +140,9 @@ def obra_de(obs, fid, titulo, tmdb=None, ix=None):
     # Anibia 2026: el artículo inicial no cuenta): desempata su tmdb, si lo hay
     if len(hits) > 1 and tmdb:
         hits = hits & (por_t.get(tmdb) or set())
+    # o su dirección: dos «The End» en TIFF (Pelechian y Lindroth von Bahr, 23 nov 2026)
+    elif len(hits) > 1 and apellido(director):
+        hits = {w for w in hits if apellido(director) in {apellido(d) for d in obs[w].get('directores') or []}}
     return next(iter(hits)) if len(hits) == 1 else None
 
 
@@ -187,15 +190,67 @@ def enlazar(d, fid, obs, ix=None):
                 continue
             # un renombre (`titulos_anteriores`, PR #1040) sigue siendo la misma
             # obra: «También nuestra» → «También nosotras» (FICPA, 13 oct)
-            w = next((x for x in (obra_de(obs, fid, t, o.get('tmdb_id'), ix)
+            # LA IDENTIDAD YA DADA (24 nov 2026): si trae su id, es esa obra —salvo que la
+            # dirección diga otra cosa (dos obras del mismo título que se acaban de separar)
+            ya = o.get('work_id')
+            if ya in obs and fid in (obs[ya].get('presentaciones') or []):
+                aps = {apellido(x) for x in obs[ya].get('directores') or []} - {''}
+                suyos = {huella(t) for t in [obs[ya]['titulo_original']] + [x['titulo'] for x in obs[ya].get('aliases') or []]}
+                if huella(o['title']) in suyos and (not aps or not apellido(o.get('director') or '') or apellido(o['director']) in aps):
+                    continue
+            w = next((x for x in (obra_de(obs, fid, t, o.get('tmdb_id'), ix, o.get('director') or '')
                                   for t in [o['title']] + list(o.get('titulos_anteriores') or [])) if x), None)
             if w:
                 o['work_id'] = w
+            elif ya in obs and fid in (obs[ya].get('presentaciones') or []):
+                continue                          # no se pierde la identidad por no reconocer el texto
             else:
                 o.pop('work_id', None)
                 if any(o is x for x in propias) and (f.get('type') != 'event' or o.get('year')):
                     faltan.append(o['title'])
     return faltan
+
+
+def heredar_ids(nuevo, viejo):
+    """Un rearmado llega sin `work_id`: los toma de lo ya publicado cuando la función es
+    inequívocamente la misma (24 nov 2026). Si solo cambió el texto de UNA obra de esa
+    función y la dirección coincide, sigue siendo la misma. Devuelve cuántos heredó."""
+    def fn(f):
+        return (f.get('day'), f.get('time'), f.get('venue'), f.get('sala'))
+
+    def items(f):
+        return [o for o in (f.get('film_list') or [f]) if isinstance(o, dict) and o.get('title')]
+    por_id, por_fn = {}, {}
+    for f in (viejo or {}).get('films') or []:
+        if f.get('id'):
+            por_id.setdefault(f['id'], []).append(f)
+        por_fn.setdefault(fn(f), []).append(f)
+    n = 0
+    for f in (nuevo or {}).get('films') or []:
+        c = por_id.get(f.get('id')) if f.get('id') else None
+        if not c and all(fn(f)[:3]):
+            c = por_fn.get(fn(f))
+        if not c or len(c) != 1:
+            continue
+        v = [o for o in items(c[0]) if o.get('work_id')]
+        faltan = []
+        for o in items(f):
+            if o.get('work_id'):
+                continue
+            hs = [x for x in v if huella(x['title']) == huella(o['title']) and (not apellido(x.get('director') or '') or not apellido(o.get('director') or '')
+                                                                                or apellido(x['director']) == apellido(o['director']))]
+            if len({x['work_id'] for x in hs}) == 1:
+                o['work_id'] = hs[0]['work_id']
+                n += 1
+            elif not hs:
+                faltan.append(o)
+        ya = {o.get('work_id') for o in items(f)}
+        libres = [x for x in v if x['work_id'] not in ya]
+        if len(faltan) == 1 and len({x['work_id'] for x in libres}) == 1 and apellido(faltan[0].get('director') or '') \
+                and apellido(faltan[0]['director']) == apellido(libres[0].get('director') or ''):
+            faltan[0]['work_id'] = libres[0]['work_id']
+            n += 1
+    return n
 
 
 # ── los cinco invariantes (funciones puras: datos → lista de problemas) ───────

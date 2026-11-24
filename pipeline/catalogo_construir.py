@@ -44,7 +44,7 @@ UMBRAL = 0.85
 def registros():
     """Cada obra publicada, con su festival. Las de dentro de los programas de
     cortos también; las actividades no."""
-    out = []
+    out, fus = [], catalogo.fusiones()
     for p in sorted(glob.glob(f'{REPO}/festivals/*.json')):
         fid = os.path.basename(p)[:-5]
         try:
@@ -57,7 +57,8 @@ def registros():
                     continue
                 dur = re.match(r'\d+', str(o.get('duration') or ''))
                 anio = o.get('year')
-                out.append({'fest': fid, 'titulo': o['title'], 'director': (o.get('director') or '').strip(),
+                out.append({'wid': catalogo.redirige(o['work_id'], fus) if o.get('work_id') else None,
+                            'fest': fid, 'titulo': o['title'], 'director': (o.get('director') or '').strip(),
                             'anio': int(anio) if str(anio or '').isdigit() else None,
                             'duracion': int(dur.group()) if dur else None,
                             'pais': o.get('country'), 'tmdb': o.get('tmdb_id'),
@@ -71,8 +72,17 @@ def registros():
 
 
 class Uniones:
-    def __init__(self, n):
+    """Grupos de registros. Dos candados, sobre el GRUPO entero (no sobre el par, que
+    se esquiva con un tercero): los declarados aparte nunca quedan juntos, y dos
+    obras que ya tienen identidad distinta solo las junta una persona."""
+    def __init__(self, n, wids=None, aparte=()):
         self.p = list(range(n))
+        self.w = [{w} if w else set() for w in (wids or [None] * n)]
+        self.m = [{i} for i in range(n)]
+        self.x = [set() for _ in range(n)]
+        for a, b in aparte:
+            self.x[a].add(b)
+            self.x[b].add(a)
 
     def raiz(self, i):
         while self.p[i] != i:
@@ -80,18 +90,110 @@ class Uniones:
             i = self.p[i]
         return i
 
+    def vetado(self, a, b):
+        a, b = self.raiz(a), self.raiz(b)
+        return a != b and bool(self.x[a] & self.m[b])
+
+    def choca(self, a, b):
+        """¿Unirlos juntaría dos obras que ya tienen identidad distinta?"""
+        a, b = self.w[self.raiz(a)], self.w[self.raiz(b)]
+        return bool(a and b and a != b)
+
     def une(self, a, b):
-        self.p[self.raiz(a)] = self.raiz(b)
+        """→ False si está vetado."""
+        a, b = self.raiz(a), self.raiz(b)
+        if a == b:
+            return True
+        if self.vetado(a, b):
+            return False
+        self.p[a] = b
+        self.w[b] |= self.w[a]
+        self.m[b] |= self.m[a]
+        self.x[b] |= self.x[a]
+        return True
 
 
 def _anio_ok(a, b):
     return a is None or b is None or abs(a - b) <= 1
 
 
+def _identidad():
+    p = os.path.join(REPO, 'catalogo', 'revision-fase2.json')
+    return json.load(io.open(p, encoding='utf-8')).get('identidad', []) if os.path.exists(p) else []
+
+
+def _miembros(R, x):
+    """Los registros de una declaración: [work_id] · [festival, título] · [festival, título, dirección]."""
+    if len(x) == 1:
+        w = catalogo.redirige(x[0], catalogo.fusiones())     # ya fusionada: la que sobrevivió
+        return [i for i, r in enumerate(R) if r.get('wid') == w]
+    return [i for i, r in enumerate(R) if (r['fest'], r['titulo']) == (x[0], x[1])
+            and (len(x) < 3 or apellido(r['director']) == apellido(x[2]))]
+
+
 def construir(R):
-    U = Uniones(len(R))
+    """Grupos de registros que son la misma obra, y los pares que debe mirar una persona.
+
+    0. LA IDENTIDAD YA DADA (24 nov 2026, revisión senior): el work_id publicado manda.
+    Antes se reagrupaba todo por título y dirección en cada corrida: una letra cambiada
+    partía la obra en un id nuevo y su decisión dejaba de aplicarle. Separar o juntar
+    obras con identidad propia exige declararlo en catalogo/revision-fase2.json."""
     for r in R:
         r['_h'], r['_ap'] = huella(r['titulo']), apellido(r['director'])
+    decl, aparte, juntas, no_es = _identidad(), set(), [], []
+    for d in decl:
+        ia, ib = _miembros(R, d['a']), _miembros(R, d['b'])
+        if not ia or not ib:
+            sys.exit(f'✗ decisión de identidad sobre una obra que no está publicada: {d["a"]} / {d["b"]}')
+        if d['misma']:
+            juntas += [(ia[0], x) for x in ia[1:] + ib]
+        else:
+            aparte |= {(x, y) for x in ia for y in ib if x != y}
+            no_es.append((ia[0], ib[0]))
+    U, candidatos = Uniones(len(R), [r.get('wid') for r in R], aparte), []
+
+    def une(i, j, por, debil=False):
+        if U.raiz(i) == U.raiz(j):
+            return
+        # sin dirección en un lado, no puede servir de puente entre dos direcciones
+        ap = lambda k: {R[m]['_ap'] for m in U.m[U.raiz(k)]} - {''}
+        if U.vetado(i, j):
+            return                                # declarado: no se vuelve a preguntar
+        if U.choca(i, j):
+            candidatos.append((i, j, 'dos obras con identidad propia: ' + por))
+        elif debil and (not ap(i) or not ap(j)) and (U.x[U.raiz(i)] or U.x[U.raiz(j)]):
+            candidatos.append((i, j, 'sin dirección, y ese título es de dos obras declaradas distintas: ' + por))
+        elif debil and ap(i) and ap(j) and not ap(i) & ap(j):
+            candidatos.append((i, j, 'una fuente sin dirección y dos direcciones posibles: ' + por))
+        else:
+            U.une(i, j)
+
+    # 0a. lo que una persona declaró la misma
+    for i, j in juntas:
+        if not U.une(i, j):
+            sys.exit(f'✗ declaradas la misma y distintas a la vez: {R[i]["titulo"]} / {R[j]["titulo"]}')
+    # 0b. mismo work_id: primero los que además comparten dirección; después el resto, a un
+    #     único grupo posible (si una declaración lo partió en dos, no se adivina a cuál va)
+    por_wid = defaultdict(list)
+    for i, r in enumerate(R):
+        if r.get('wid'):
+            por_wid[r['wid']].append(i)
+    for ids in por_wid.values():
+        for n, j in enumerate(ids):
+            for k in ids[:n]:
+                if R[k]['_ap'] == R[j]['_ap']:
+                    U.une(k, j)
+        raices = list(dict.fromkeys(U.raiz(x) for x in ids))
+        nucleos = [x for x in raices if any(U.vetado(x, y) for y in raices)]
+        for j in raices:
+            if not nucleos:
+                U.une(raices[0], j)
+            elif j not in nucleos:
+                candidatos.append((nucleos[0], j, 'un id que se separó en dos: no se sabe a cuál pertenece'))
+        tms = {R[x]['tmdb']: x for x in ids if R[x]['tmdb']}
+        for x, y in zip(list(tms.values()), list(tms.values())[1:]):
+            if U.raiz(x) == U.raiz(y):
+                candidatos.append((x, y, 'un mismo id con dos fichas de TMDB'))
     # 1. mismo tmdb_id
     por_tmdb = defaultdict(list)
     for i, r in enumerate(R):
@@ -99,7 +201,7 @@ def construir(R):
             por_tmdb[r['tmdb']].append(i)
     for ids in por_tmdb.values():
         for j in ids[1:]:
-            U.une(ids[0], j)
+            une(ids[0], j, 'mismo tmdb')
     # 1b. mismo slug de Letterboxd: también es un xref (salvo dos tmdb distintos)
     por_lb = defaultdict(list)
     for i, r in enumerate(R):
@@ -108,32 +210,39 @@ def construir(R):
     for ids in por_lb.values():
         for j in ids[1:]:
             if not (R[ids[0]]['tmdb'] and R[j]['tmdb'] and R[ids[0]]['tmdb'] != R[j]['tmdb']):
-                U.une(ids[0], j)
+                une(ids[0], j, 'mismo Letterboxd')
     # 2. misma huella + mismo apellido + año compatible
     por_h = defaultdict(list)
     for i, r in enumerate(R):
         if r['_h']:
             por_h[r['_h']].append(i)
-    candidatos = []
     for h, ids in por_h.items():
         for x in range(len(ids)):
             for y in range(x + 1, len(ids)):
                 a, b = R[ids[x]], R[ids[y]]
                 if a['tmdb'] and b['tmdb'] and a['tmdb'] != b['tmdb']:
                     continue                      # dos fichas distintas: no es la misma
+                if U.vetado(ids[x], ids[y]) or U.raiz(ids[x]) == U.raiz(ids[y]):
+                    continue
                 if a['fest'] == b['fest']:
-                    U.une(ids[x], ids[y])         # un festival no repite título para dos obras
+                    # un festival casi nunca repite título para dos obras; si la dirección no
+                    # coincide, no se adivina («The End», TIFF 2026)
+                    if a['_ap'] and b['_ap'] and a['_ap'] != b['_ap']:
+                        candidatos.append((ids[x], ids[y], 'mismo festival y título, dirección distinta'))
+                    else:
+                        une(ids[x], ids[y], 'mismo festival y título', debil=True)
                     continue
                 if a['_ap'] and b['_ap']:
                     if a['_ap'] != b['_ap']:
                         continue                  # homónimos
                     if _anio_ok(a['anio'], b['anio']):
-                        U.une(ids[x], ids[y])
+                        une(ids[x], ids[y], 'mismo título, director y año')
                     else:
                         candidatos.append((ids[x], ids[y], f'mismo título y director, años {a["anio"]} y {b["anio"]}'))
                 elif (a['duracion'] and b['duracion'] and abs(a['duracion'] - b['duracion']) <= 3) or \
                         (a['anio'] and b['anio'] and abs(a['anio'] - b['anio']) <= 1):
-                    U.une(ids[x], ids[y])         # sin director en un lado, pero duración o año lo corroboran (regla de lib.ya_publicada)
+                    # sin director en un lado, pero duración o año lo corroboran (regla de lib.ya_publicada)
+                    une(ids[x], ids[y], 'mismo título y duración o año', debil=True)
                 else:
                     candidatos.append((ids[x], ids[y], 'mismo título; una fuente sin director'))
     # 3. mismo director + año, título parecido (traducción / aka): solo candidato
@@ -150,28 +259,13 @@ def construir(R):
                 s = difflib.SequenceMatcher(None, a['_h'], b['_h']).ratio()
                 if s >= UMBRAL:
                     candidatos.append((ids[x], ids[y], f'mismo director y año, títulos parecidos ({s:.2f})'))
-    # 4. las decisiones de identidad ya tomadas (catalogo/revision-fase2.json):
-    #    «sí» une; «no» queda registrado y el par no se vuelve a preguntar
-    rev_p = os.path.join(REPO, 'catalogo', 'revision-fase2.json')
-    no_es = set()
-    if os.path.exists(rev_p):
-        idx = defaultdict(list)
-        for i, r in enumerate(R):
-            idx[(r['fest'], r['titulo'])].append(i)
-        for d in json.load(io.open(rev_p, encoding='utf-8')).get('identidad', []):
-            ia, ib = idx.get(tuple(d['a'])), idx.get(tuple(d['b']))
-            if not ia or not ib:
-                sys.exit(f'✗ decisión de identidad sobre una obra que no está publicada: {d["a"]} / {d["b"]}')
-            if d['misma']:
-                U.une(ia[0], ib[0])
-            else:
-                no_es.add(tuple(sorted((U.raiz(ia[0]), U.raiz(ib[0])))))
     # los candidatos que ya quedaron unidos, o que ya se decidió que no son la
-    # misma obra, no se preguntan
+    # misma obra, no se preguntan (salvo «un mismo id con dos fichas»: ahí ESTÁN unidos)
+    no_es = {tuple(sorted((U.raiz(x), U.raiz(y)))) for x, y in no_es}
     vistos, cand = set(), []
     for x, y, por in candidatos:
         k = tuple(sorted((U.raiz(x), U.raiz(y))))
-        if k[0] == k[1] or k in vistos or k in no_es:
+        if (k[0] == k[1] and 'dos fichas' not in por) or k in vistos or k in no_es or U.vetado(x, y):
             continue
         vistos.add(k)
         cand.append((x, y, por))
@@ -250,11 +344,26 @@ def materializar(R, grupos, key, cache):
     hoy = rev['fecha']
     nuevas, proc, usados = {}, {}, set()
     fus = catalogo.fusiones()
+    dados = {r['wid'] for r in R if r.get('wid')}
+    # un id que quedó en dos grupos (se separó la obra) es del que comparte su ficha,
+    # después del de más funciones: las decisiones van con la obra de siempre
+    dueno = {}
+    for g in grupos:
+        for w in {R[i]['wid'] for i in g if R[i].get('wid')}:
+            x = (obs_viejas.get(w) or {}).get('xref') or {}
+            nota = lambda h: (any(R[i]['tmdb'] and R[i]['tmdb'] == x.get('tmdb') for i in h) or
+                              any(R[i]['lb'] and R[i]['lb'] == x.get('letterboxd') for i in h), sum(R[i].get('wid') == w for i in h))
+            if w not in dueno or nota(g) > nota(dueno[w]):
+                dueno[w] = g
     for g in grupos:
         regs = [R[i] for i in g]
+        suyos = [r['wid'] for r in regs if r.get('wid')]
         # con sus títulos anteriores: un renombre conserva el id (FICPA, 13 oct)
-        viejos = sorted({w for w in (catalogo.obra_de(obs_viejas, r['fest'], t, r['tmdb'])
-                                     for r in regs for t in [r['titulo']] + r['anteriores']) if w})
+        # su identidad publicada primero (la de más funciones, y solo si le toca a este
+        # grupo); si no tiene, la que el catálogo le conoce y no es ya de otra obra
+        mios = [w for w in sorted(set(suyos), key=lambda w: (-suyos.count(w), w)) if dueno[w] is g]
+        viejos = mios or ([] if suyos else sorted({w for w in (catalogo.obra_de(obs_viejas, r['fest'], t, r['tmdb'], director=r['director'])
+                                                               for r in regs for t in [r['titulo']] + r['anteriores']) if w and w not in dados}))
         wid = viejos[0] if viejos else None
         for w in viejos[1:]:            # dos obras de ayer son hoy la misma: un id nunca se borra, se redirige
             fus.append({'absorbido': w, 'superviviente': wid, 'fecha': hoy, 'motivo': 'el constructor las reconoce como la misma obra'})
@@ -349,7 +458,7 @@ def materializar(R, grupos, key, cache):
                          'fecha': hoy, 'quien': rev['quien']})
     for d in rev['identidad']:
         if not d['misma']:
-            a = catalogo.obra_de(nuevas, *d['a']); b = catalogo.obra_de(nuevas, *d['b'])
+            a, b = (x[0] if len(x) == 1 else catalogo.obra_de(nuevas, *x[:2], director=x[2] if len(x) > 2 else '') for x in (d['a'], d['b']))
             if (a, 'no-es') not in ya:
                 decs.append({'work_id': a, 'campo': 'no-es', 'valor': b, 'motivo': d['motivo'], 'fecha': hoy, 'quien': rev['quien']})
     # prioridad máxima: la decisión humana

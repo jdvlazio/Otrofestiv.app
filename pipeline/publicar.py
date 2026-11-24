@@ -352,6 +352,8 @@ def publicar(fid, forzar=False, ensayo=False):
     import catalogo
     _obs = catalogo.obras()
     if _obs:
+        if os.path.exists(out_p):
+            catalogo.heredar_ids(out, json.load(open(out_p, encoding='utf-8')))   # un rearmado no pierde la identidad
         _nuevas = catalogo.enlazar(out, fid, _obs)
         # UNA SINOPSIS POR OBRA (Juan, 23 nov 2026): la elegida del almacén manda
         import sinopsis_unicas
