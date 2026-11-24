@@ -469,6 +469,10 @@ cada chequeo rojo de validate.py por su nombre, todas las compuertas de
 igualdad con el pipeline, tests de navegador y afiches en la web. No sube nada.
 Se publica cuando el ensayo pasa.
 
+**Sinopsis de más de 350 caracteres** (23 nov 2026): después de sumar las obras al
+catálogo se condensan con [SINOPSIS-CORTA.md](SINOPSIS-CORTA.md) (uno redacta, otro
+verifica; el original se guarda). Las frena `[sinopsis-larga]` en el push.
+
 **Excepciones como dato, no como código** (20 nov 2026): una actividad sin
 duración publicada o un título que dice «instalación» sin ser exposición se
 declaran en `festivals/staging/<id>-correcciones.json` —`sin_duracion` y

@@ -6597,6 +6597,26 @@ except Exception as _e:
 
 
 
+# ── [sinopsis-larga] la sinopsis se lee en un celular: 350 caracteres ──────────
+# Decisión de Juan (23 nov 2026). Dueño: pipeline/sinopsis_cortas.py; cómo se
+# redacta y verifica: pipeline/SINOPSIS-CORTA.md. Trinquete por festival.
+check = 'sinopsis-larga'
+try:
+    import sys as _sys_sl
+    if 'pipeline' not in _sys_sl.path:
+        _sys_sl.path.insert(0, 'pipeline')
+    import sinopsis_cortas as _scor, catalogo as _cat_sl
+    _mal_sl = _scor.invalidas(_cat_sl.decisiones())
+    _exc_sl = _scor.excedidos()
+    if _mal_sl or _exc_sl:
+        fail(check, '; '.join(_mal_sl[:6] + [f'{f}: {n} de más de {_scor.MAX} caracteres (techo {t}) — condensar con la skill sinopsis-corta: ' + ', '.join(x[:4])
+                                             for f, n, t, x in _exc_sl[:6]]))
+    else:
+        ok(check, 'toda síntesis está verificada contra su original y ningún festival suma sinopsis largas')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+
 # ── [config-esm] node --check da un VERDE FALSO ─────────────────────────────
 # src/config.js es un MÓDULO ES, y `node --check` lo analiza como script: un
 # archivo con la llave de un festival sin cerrar pasa ese chequeo y revienta en
