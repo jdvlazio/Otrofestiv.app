@@ -14,9 +14,5 @@
  "paises": {
   "fuente": "tmdb:1604092",
   "regla": "tmdb-manda"
- },
- "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
  }
 }

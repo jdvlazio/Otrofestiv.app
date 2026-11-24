@@ -86,7 +86,7 @@
    "day_order": 0,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Gugu tiene 12 años y crece en una pequeña comunidad a orillas del embalse Araújo-Lima, cuyo nivel desciende gradualmente revelando las ruinas de una ciudad sumergida. Vive con su abuela Dilma, rodeado de ternura, picardía y tardes de fútbol.",
+   "synopsis": "Gugu es un niño soñador y apasionado por el fútbol que vive con su abuela Dilma, una profesora jubilada que lo cría de manera libre y afectuosa. Por el contrario, la relación del niño con su padre, Batista, es difícil, marcada por ausencias, expectativas y afectos no expresados. Abuela y nieto viven solos junto a la represa de Araújo Lima que, después de años de sequía, comienza a revelar las ruinas de una antigua ciudad sumergida, sacando a la luz recuerdos que cambiaron la vida de la familia.",
    "director": "Allan Deberton",
    "year": 2026,
    "synopsis_en": "Twelve-year-old Gugu grows up in a small community on the banks of the Araújo-Lima reservoir, whose waters are slowly receding to reveal the ruins of a submerged town. He lives with his grandmother Dilma, surrounded by tenderness, mischief, and afternoons of football.",
@@ -131,7 +131,7 @@
   {
    "title": "O Riso e a Faca",
    "title_en": "I Only Rest in the Storm",
-   "country": "Portugal/Francia/Brasil/Rumania",
+   "country": "Portugal, Francia, Brasil, Rumania",
    "flags": "🇵🇹🇫🇷🇧🇷🇷🇴",
    "duration": "217 min",
    "day": "Miércoles",
@@ -156,7 +156,7 @@
   {
    "title": "Vetre, pričaj sa mnom",
    "title_en": "Wind, Talk to Me",
-   "country": "Serbia/Eslovenia/Croacia",
+   "country": "Serbia, Eslovenia, Croacia",
    "flags": "🇷🇸🇸🇮🇭🇷",
    "duration": "100 min",
    "day": "Miércoles",
@@ -206,7 +206,7 @@
    "title": "Costas — Prog. 4",
    "title_en": "Comunicado de Argentina · Nicaragua, semilla de soles · Palestina, otro Vietnam",
    "flags": "🇦🇷🇺🇸🇲🇽🇳🇮🇮🇹🇵🇸",
-   "country": "Argentina/EEUU/México/Nicaragua/Italia/Palestina",
+   "country": "Argentina, Estados Unidos, México, Nicaragua, Italia, Palestina",
    "duration": "119 min",
    "day": "Miércoles",
    "date": 15,
@@ -218,27 +218,30 @@
    "film_list": [
     {
      "title": "Comunicado de Argentina",
-     "country": "Argentina/EEUU",
+     "country": "Argentina, Estados Unidos",
      "duration": "40 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/comunicado1-992x744%20-%20Carolina%20Cappa.jpg?itok=4ILAHwdM",
-     "work_id": "w_R4HAG84RFFH7"
+     "work_id": "w_R4HAG84RFFH7",
+     "flags": "🇦🇷🇺🇸"
     },
     {
      "title": "Nicaragua, semilla de soles",
-     "country": "México/Nicaragua",
+     "country": "México, Nicaragua",
      "duration": "57 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%2017.58.43.png?itok=YZyn6Dtw",
-     "work_id": "w_R4HAG8K6DQSG"
+     "work_id": "w_R4HAG8K6DQSG",
+     "flags": "🇲🇽🇳🇮"
     },
     {
      "title": "Palestina, otro Vietnam",
-     "country": "Argentina/Italia/Palestina",
+     "country": "Argentina, Italia, Palestina",
      "duration": "22 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Portada%20-%20POV.jpg?itok=KiL9H_9L",
-     "work_id": "w_R4HAG8ATY6GN"
+     "work_id": "w_R4HAG8ATY6GN",
+     "flags": "🇦🇷🇮🇹🇵🇸"
     }
    ],
    "id": "f_4ca0e73952"
@@ -257,11 +260,11 @@
    "day_order": 1,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Lejos de Anserma, Pacho continuó su vida escapando de la violencia. A sus 15 años, su única alternativa lo obligó a desconectarse de su origen.",
-   "synopsis_en": "Far from Anserma, Pacho continued his life fleeing violence. At 15, his only alternative forced him to sever ties with his origins.",
+   "synopsis": "Tras huir de la violencia a los 15 años, Pacho pasa cuatro décadas lejos de Anserma. Ahora una fotografía activa el deseo de regresar y, en su retorno, imaginado como viaje interestelar, busca aquello que dejó atrás. Las huellas persistentes de la muerte se entrelazan con un paisaje de expresionismo rural, memoria e historia.",
+   "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w500/k5qYkuNLpN07AtXJ9nudLIifPQ5.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/midbo-2026/las-almas-ni-los-ojos.jpg",
    "work_id": "w_R4FJFY7626WB",
    "genre": "Drama",
    "_src": {
@@ -293,11 +296,11 @@
    "day_order": 1,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Lolita en Honda es un viaje íntimo hacia la memoria familiar, donde Daniel Torres explora la infancia de su abuela para desentrañar las marcas del abandono y la violencia internalizada que moldearon su carácter.",
+   "synopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
    "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/mamut-2026/lolita-en-honda.jpg",
    "work_id": "w_R4FPSFY03SBY",
    "lbSlug": "lolita-en-honda",
    "_src": {
@@ -317,7 +320,7 @@
    "title": "Prog. Cortometrajes — Jorge Cadena",
    "title_en": "El cuento de Antonia · Flores del otro patio · Les Trois Hirondelles · Mapalé · Soeurs Jarariju · Sonali",
    "flags": "🇨🇭🇨🇴",
-   "country": "Suiza/Colombia",
+   "country": "Suiza, Colombia",
    "duration": "98 min",
    "day": "Miércoles",
    "date": 15,
@@ -337,11 +340,12 @@
     },
     {
      "title": "Flores del otro patio",
-     "country": "Suiza/Colombia",
+     "country": "Suiza, Colombia",
      "duration": "16 min",
      "posterSource": "tmdb",
      "poster": "https://image.tmdb.org/t/p/w92/icXmSR2VtpFsfeP0BHHvVwehP8g.jpg",
-     "work_id": "w_R4HAG88CEBDH"
+     "work_id": "w_R4HAG88CEBDH",
+     "flags": "🇨🇭🇨🇴"
     },
     {
      "title": "Les Trois Hirondelles",
@@ -392,13 +396,13 @@
    "day_order": 1,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "El juego constituye uno de los ejes fundamentales de este documental de Eliza Capai. Situado en la ciudad de Guaribas, en el nordeste brasileño, el filme acompaña a un grupo de niñas invitadas a imaginar cómo se ven a sí mismas en el futuro.",
+   "synopsis": "En el corazón del árido sertão brasileño, un grupo de niñas de diez años juega a inventar máquinas del tiempo imaginarias. Las pequeñas viajan al pasado para explorar la dura realidad de supervivencia que vivieron sus madres y abuelas, al mismo tiempo que se proyectan. El documental utiliza la inocencia y la imaginación infantil como un poderoso catalizador para debatir con madurez sobre la autonomía de las mujeres, el género, el ciclo de la pobreza y sus propios sueños de libertad.",
    "director": "Eliza Capai",
    "year": 2026,
-   "synopsis_en": "Play is one of the central pillars of this documentary by Eliza Capai. Set in the city of Guaribas in northeastern Brazil, the film follows a group of girls invited to imagine how they see themselves in the future.",
+   "synopsis_en": "What if it were possible to travel back in time to dream of other futures? In the hinterlands of Brazil, young girls navigate the delicate transition from childhood to adolescence while grappling with social media, religion, their dreams, and the stories of the women who came before them. By inventing a time machine, they revisit the pasts of their mothers and grandmothers and imagine a future in which they can be free, fulfilled, and in control of their own choices.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w185/1DwT5nA0yWUMNU9Po2lzwRv6XOA.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
    "work_id": "w_R4GY6YGMWCSK",
    "genre": "Documental",
    "_src": {
@@ -440,7 +444,7 @@
   {
    "title": "Si no ardemos, cómo iluminar la noche",
    "title_en": "If We Don’t Burn, How Do We Light Up the Night",
-   "country": "Costa Rica/México/Francia",
+   "country": "Costa Rica, México, Francia",
    "flags": "🇨🇷🇲🇽🇫🇷",
    "duration": "85 min",
    "day": "Miércoles",
@@ -451,14 +455,14 @@
    "day_order": 1,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Este coming of age que transita entre fábula y crónica, sigue a Laura, adolescente de 13 años que se muda a una zona rural de Costa Rica.",
+   "synopsis": "Laura, una joven introvertida de trece años, llega a un pueblo rodeado de plantaciones de palma y de un imponente bosque. Mientras se ajusta a la nueva configuración de su familia, Laura empieza a entrever un mundo oculto en donde circula la historia de una bestia que habita en el bosque y se alimenta de mujeres. Al principio, lo descarta como una fantasía infantil, pero cuando conoce a la magnética Daniela, su amistad la lleva en un viaje que revela la verdadera naturaleza de la bestia.",
    "director": "Kim Torres",
    "year": 2025,
-   "synopsis_en": "This coming-of-age story that moves between fable and chronicle follows Laura, a 13-year-old who moves to a rural area of Costa Rica.",
+   "synopsis_en": "13-year-old Laura feels adrift in her newly stitched-together family. Just as the forests and endless palm plantations begin to feel like home, she uncovers a lurking secret that threatens the women she holds close.",
    "genre": "Drama",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w500/aHIvJmr4s6gnUsdLs0t1FaCZOyz.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/filcmar-2026/si-no-ardemos-como-iluminar-la-noche.jpg",
    "work_id": "w_R4HAG9H5XRYK",
    "lbSlug": "if-we-dont-burn-how-do-we-light-up-the-night",
    "_src": {
@@ -473,7 +477,7 @@
   {
    "title": "Iván & Hadoum",
    "title_en": "",
-   "country": "España/Alemania/Bélgica",
+   "country": "España, Alemania, Bélgica",
    "flags": "🇪🇸🇩🇪🇧🇪",
    "duration": "103 min",
    "day": "Miércoles",
@@ -484,16 +488,16 @@
    "day_order": 1,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Iván trabaja en una empresa agrícola y aspira a un ascenso que le permita mejorar la situación económica de su familia.",
+   "synopsis": "Iván se enamora de Hadoum en el invernadero donde trabajan. Sin embargo, su anhelado ascenso laboral interfiere en la relación, obligándole a decidir qué tipo de hombre quiere ser.",
    "director": "Ian de la Rosa",
    "year": 2026,
-   "synopsis_en": "Iván works at an agricultural company and aspires to a promotion that would improve his family's financial situation.",
+   "synopsis_en": "Iván (33), a trans man, and Hadoum (30), a Spanish-Moroccan woman, fall in love at the industrial greenhouse they work in. While facing the opposition from their families and co-workers, Iván realizes he doesn’t need to be the man he is expected to be.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w185/gqtBos9yGlMPFulwcGjdX53CZx8.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/miradas-2026/ivan-hadoum.jpg",
    "work_id": "w_R4HAT4P4YQ74",
    "id": "f_e32864d04a",
-   "genre": "Ficción",
+   "genre": "Drama",
    "_src": {
     "heredado": {
      "genre": "catálogo w_R4HAT4P4YQ74 (ficci-65, miradas-2026)",
@@ -508,7 +512,7 @@
    "title": "Cine Indígena — Prog. 2",
    "title_en": "Tu mañana será mi canto · Runa Simi",
    "flags": "🇨🇱🇵🇪",
-   "country": "Chile/Perú",
+   "country": "Chile, Perú",
    "duration": "99 min",
    "day": "Miércoles",
    "date": 15,
@@ -520,18 +524,19 @@
    "film_list": [
     {
      "title": "Tu mañana será mi canto",
-     "country": "Chile/EEUU",
+     "country": "Chile, Estados Unidos",
      "duration": "14 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_TuMan%CC%83anaSera%CC%81MiCanto_Poster%20-%20Fernando%20Saldivia%20Y%C3%A1%C3%B1ez.jpg?itok=O0EAsSCB",
-     "work_id": "w_R4HAT44JAX44"
+     "work_id": "w_R4HAT44JAX44",
+     "flags": "🇨🇱🇺🇸"
     },
     {
      "title": "Runa Simi",
      "country": "Perú",
      "duration": "85 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/RUNA%20SIMI%20POSTER%20AF%20-%20Claudia%20chavez%20levano.jpg?itok=ObXBIPVJ",
+     "posterSource": "oficial",
+     "poster": "/assets/ficcali-2026/runa-simi.jpg",
      "work_id": "w_R4DHSYGCHRN0",
      "genre": "Documental",
      "_src": {
@@ -570,12 +575,12 @@
    "day_order": 1,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia para expandir su influencia en América Latina, amparados por la sombra de la dictadura franquista.",
-   "synopsis_en": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America, sheltered by the shadow of Franco's dictatorship.",
+   "synopsis": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia con el propósito de expandir sus dominios en América, amparados por la sombra de la dictadura franquista. En el año 2021 salió a la luz la denuncia de 43 mujeres suramericanas contra esta organización, por trata de personas y explotación. En un ejercicio de memoria imaginativa, un grupo de actrices se adentra en un internado abandonado entre las frías montañas de Antioquia, para construir una obra de teatro inspirada en las vidas de aquellas mujeres. Poco a poco los ensayos se salen de control y las actrices terminan invocando a los fantasmas de sus antepasadas, que sedientas de justicia se apoderan de la cámara, transformando el rumbo de la película.",
+   "synopsis_en": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America. In 2021, the complaint against this organization by 43 women for trafficking and exploitation reopened the historical wound. In an exercise of imaginative memory, a group of actresses enters an abandoned school to create a play inspired by those silenced lives.",
    "year": 2026,
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w500/i7xnqfBINWSDHPNXhAqpThZJ8Fw.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/fantasmagoria-2026/manual-para-invocar-fantasmas.jpg",
    "work_id": "w_R4GR2FGPV8X4",
    "genre": "Documental",
    "_src": {
@@ -594,7 +599,7 @@
   {
    "title": "Las corrientes",
    "title_en": "The Currents",
-   "country": "Suiza/Argentina",
+   "country": "Suiza, Argentina",
    "flags": "🇨🇭🇦🇷",
    "duration": "104 min",
    "day": "Miércoles",
@@ -619,7 +624,7 @@
    "title": "ojoboca — Prog. 1 · 16mm",
    "title_en": "A Running Woman · Instant Life · Wolkenschatten",
    "flags": "🇩🇪🇨🇴",
-   "country": "Alemania/Colombia",
+   "country": "Alemania, Colombia",
    "duration": "56 min",
    "day": "Miércoles",
    "date": 15,
@@ -639,11 +644,12 @@
     },
     {
      "title": "Instant Life",
-     "country": "EEUU/Alemania",
+     "country": "Estados Unidos, Alemania",
      "duration": "27 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20154413_0.png?itok=y69N_vUg",
-     "work_id": "w_R4HAT4QAVP51"
+     "work_id": "w_R4HAT4QAVP51",
+     "flags": "🇺🇸🇩🇪"
     },
     {
      "title": "Wolkenschatten",
@@ -682,7 +688,7 @@
    "title": "(s)paces Cortos — Prog. 1",
    "title_en": "Atado · Pequeno Jogo · Trưa Lịm · Warnungen an die ferne Zukunft · 3cm of Complexity",
    "flags": "🇪🇸🇧🇷🇫🇷🇻🇳🇩🇪🇬🇧🇦🇹🇬🇷",
-   "country": "España/Brasil/Francia/Vietnam/Alemania/Reino Unido/Austria/Grecia",
+   "country": "España, Brasil, Francia, Vietnam, Alemania, Reino Unido, Austria, Grecia",
    "duration": "~60 min",
    "day": "Miércoles",
    "date": 15,
@@ -710,27 +716,30 @@
     },
     {
      "title": "Trưa Lịm",
-     "country": "Francia/Vietnam",
+     "country": "Francia, Vietnam",
      "duration": "16 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20211541.png?itok=GbDa6pdw",
-     "work_id": "w_R4HAT537Z8RQ"
+     "work_id": "w_R4HAT537Z8RQ",
+     "flags": "🇫🇷🇻🇳"
     },
     {
      "title": "Warnungen an die ferne Zukunft",
-     "country": "Alemania/Reino Unido",
+     "country": "Alemania, Reino Unido",
      "duration": "19 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Warnungen%20an%20die%20ferne%20Zukunft%20PLAKAT%20-%20Ju%20liane_page-0001.jpg?itok=BKoBLV6t",
-     "work_id": "w_R4HAT5CSRDJY"
+     "work_id": "w_R4HAT5CSRDJY",
+     "flags": "🇩🇪🇬🇧"
     },
     {
      "title": "3cm of Complexity",
-     "country": "Austria/Grecia",
+     "country": "Austria, Grecia",
      "duration": "21 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Film%20Poster_3cm%20of%20Complexity%20-%20Fanny%20Berghofer.jpg?itok=RsFqy5mK",
-     "work_id": "w_R4HAT5VM48NN"
+     "work_id": "w_R4HAT5VM48NN",
+     "flags": "🇦🇹🇬🇷"
     }
    ],
    "id": "f_cb3908d2d6"
@@ -738,7 +747,7 @@
   {
    "title": "Kaye",
    "title_en": "",
-   "country": "Chile/Italia",
+   "country": "Chile, Italia",
    "flags": "🇨🇱🇮🇹",
    "duration": "85 min",
    "day": "Miércoles",
@@ -788,7 +797,7 @@
   {
    "title": "Chicas tristes",
    "title_en": "Sad Girlz",
-   "country": "México/España/Francia",
+   "country": "México, España, Francia",
    "flags": "🇲🇽🇪🇸🇫🇷",
    "duration": "90 min",
    "day": "Miércoles",
@@ -872,14 +881,14 @@
    "day_order": 1,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "En 2017, Rafael Nahuel, un joven mapuche, fue asesinado por la Prefectura Naval Argentina en el bosque andino de Villa Mascardi, en la Patagonia.",
+   "synopsis": "En 2017, fuerzas de seguridad del Estado mataron al joven mapuche Rafael Nahuel en un bosque de la Patagonia argentina. En ese mismo territorio, en la comunidad de Mirta Ñancunao, se sostiene desde hace años una lucha contra el avance de las empresas forestales. Un viaje por carretera recorre la memoria de familias desintegradas por el genocidio conocido como la «Campaña del Desierto», que a fines del siglo XIX devastó comunidades y territorios. La película también acompaña a jóvenes que reconstruyen su identidad a través de la música. Basándose en expedientes judiciales, documentos oficiales y archivos forenses, la película saca a la luz procesos de desarraigo y ruptura de identidad perpetrados a través de la violencia material y simbólica.",
    "director": "Sofía Bordenave",
    "year": 2026,
-   "synopsis_en": "In 2017, Rafael Nahuel, a young Mapuche man, was killed by the Argentine Naval Prefecture in the Andean forest of Villa Mascardi, Patagonia.",
+   "synopsis_en": "In 2017, young Mapuche Rafael Nahuel was killed by police in the Patagonian forest. Site visits, court proceedings – the film unites the elements involved in solving the crime. Meticulously observed: the struggle for civil rights and narrating history.",
    "genre": "Documental",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w500/r5brsK8rdog4ewLZPihvb0tntZh.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/midbo-2026/bosque-arriba-en-la-montana.jpg",
    "work_id": "w_R4HAT5A0J0QY",
    "lbSlug": "forest-up-in-the-mountain",
    "_src": {
@@ -929,7 +938,7 @@
    "day_order": 1,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Gugu tiene 12 años y crece en una pequeña comunidad a orillas del embalse Araújo-Lima, cuyo nivel desciende gradualmente revelando las ruinas de una ciudad sumergida. Vive con su abuela Dilma, rodeado de ternura, picardía y tardes de fútbol.",
+   "synopsis": "Gugu es un niño soñador y apasionado por el fútbol que vive con su abuela Dilma, una profesora jubilada que lo cría de manera libre y afectuosa. Por el contrario, la relación del niño con su padre, Batista, es difícil, marcada por ausencias, expectativas y afectos no expresados. Abuela y nieto viven solos junto a la represa de Araújo Lima que, después de años de sequía, comienza a revelar las ruinas de una antigua ciudad sumergida, sacando a la luz recuerdos que cambiaron la vida de la familia.",
    "director": "Allan Deberton",
    "year": 2026,
    "synopsis_en": "Twelve-year-old Gugu grows up in a small community on the banks of the Araújo-Lima reservoir, whose waters are slowly receding to reveal the ruins of a submerged town. He lives with his grandmother Dilma, surrounded by tenderness, mischief, and afternoons of football.",
@@ -951,7 +960,7 @@
    "title": "Animación Porosa — Prog. de Cortos",
    "title_en": "Ako počúvať fontány · Evacuations · La baraja de Myriam · Luna Rossa · Venezia Diorama",
    "flags": "🇸🇰🇺🇸🇨🇱🇪🇪🇫🇷🇧🇪",
-   "country": "Eslovaquia/Estados Unidos/Chile/Estonia/Francia/Bélgica",
+   "country": "Eslovaquia, Estados Unidos, Chile, Estonia, Francia, Bélgica",
    "duration": "69 min",
    "day": "Miércoles",
    "date": 15,
@@ -987,11 +996,12 @@
     },
     {
      "title": "Luna Rossa",
-     "country": "Estonia/Francia",
+     "country": "Estonia, Francia",
      "duration": "32 min",
      "posterSource": "tmdb",
      "poster": "https://image.tmdb.org/t/p/w92/cOjnO0TenOYL2HMNmaxlGdA4NhV.jpg",
-     "work_id": "w_R4HB843KHEHA"
+     "work_id": "w_R4HB843KHEHA",
+     "flags": "🇪🇪🇫🇷"
     },
     {
      "title": "Venezia Diorama",
@@ -1032,7 +1042,7 @@
   {
    "title": "Isabel",
    "title_en": "",
-   "country": "Brasil/Francia",
+   "country": "Brasil, Francia",
    "flags": "🇧🇷🇫🇷",
    "duration": "85 min",
    "day": "Miércoles",
@@ -1056,7 +1066,7 @@
   {
    "title": "Tóc, Giấy và Nước…",
    "title_en": "Hair, Paper, Water…",
-   "country": "Bélgica/Francia/Vietnam",
+   "country": "Bélgica, Francia, Vietnam",
    "flags": "🇧🇪🇫🇷🇻🇳",
    "duration": "71 min",
    "day": "Miércoles",
@@ -1081,7 +1091,7 @@
   {
    "title": "Queen at Sea",
    "title_en": "",
-   "country": "Reino Unido/Estados Unidos",
+   "country": "Reino Unido, Estados Unidos",
    "flags": "🇬🇧🇺🇸",
    "duration": "121 min",
    "day": "Miércoles",
@@ -1105,7 +1115,7 @@
   {
    "title": "Piedras preciosas",
    "title_en": "Gemstones",
-   "country": "Colombia/Portugal",
+   "country": "Colombia, Portugal",
    "flags": "🇨🇴🇵🇹",
    "duration": "70 min",
    "day": "Miércoles",
@@ -1129,7 +1139,7 @@
   {
    "title": "Blue Heron",
    "title_en": "",
-   "country": "Canadá/Hungría",
+   "country": "Canadá, Hungría",
    "flags": "🇨🇦🇭🇺",
    "duration": "90 min",
    "day": "Miércoles",
@@ -1154,7 +1164,7 @@
   {
    "title": "Jóhanna af örk",
    "title_en": "Joan of Arc",
-   "country": "Islandia/Dinamarca/Francia",
+   "country": "Islandia, Dinamarca, Francia",
    "flags": "🇮🇸🇩🇰🇫🇷",
    "duration": "61 min",
    "day": "Miércoles",
@@ -1179,7 +1189,7 @@
    "title": "Internacional — Prog. de Cortos",
    "title_en": "Cul-De-Sac! · Ein Unfall · Force Times Displacement · Intersecting Memory · Daria's Night Flowers",
    "flags": "🇧🇪🇫🇷🇦🇹🇹🇼🇵🇸🇮🇷🇬🇧",
-   "country": "Bélgica/Francia/Austria/Taiwán/Palestina/Irán/UK",
+   "country": "Bélgica, Francia, Austria, Taiwán, Palestina, Irán, Reino Unido",
    "duration": "~90 min",
    "day": "Miércoles",
    "date": 15,
@@ -1191,11 +1201,12 @@
    "film_list": [
     {
      "title": "Cul-De-Sac!",
-     "country": "Bélgica/Francia",
+     "country": "Bélgica, Francia",
      "duration": "17 min",
      "posterSource": "tmdb",
      "poster": "https://image.tmdb.org/t/p/w92/lpcPZ6dfJFLjpeDAuvsMi11amOR.jpg",
-     "work_id": "w_R4HB85K6FH39"
+     "work_id": "w_R4HB85K6FH39",
+     "flags": "🇧🇪🇫🇷"
     },
     {
      "title": "Ein Unfall",
@@ -1215,19 +1226,21 @@
     },
     {
      "title": "Intersecting Memory",
-     "country": "Palestina/Francia",
+     "country": "Palestina, Francia",
      "duration": "20 min",
      "posterSource": "editorial",
      "poster": "https://ficcifestival.com/sites/default/files/styles/1920px_x_480px/public/img-catalogo/result_Intersecting%20memory%20photo%204%20-%20Association%20Grec.jpg?itok=1WX0MrRb",
-     "work_id": "w_R4HB85GSEN2Y"
+     "work_id": "w_R4HB85GSEN2Y",
+     "flags": "🇵🇸🇫🇷"
     },
     {
      "title": "Daria's Night Flowers",
-     "country": "Irán/UK/Francia",
+     "country": "Irán, Reino Unido, Francia",
      "duration": "16 min",
      "posterSource": "tmdb",
      "poster": "https://image.tmdb.org/t/p/w92/hNuuQciHXD7VqBPHgNVKSHh4yLB.jpg",
-     "work_id": "w_R4HB857E1N43"
+     "work_id": "w_R4HB857E1N43",
+     "flags": "🇮🇷🇬🇧🇫🇷"
     }
    ],
    "id": "f_7640de27e7"
@@ -1260,7 +1273,7 @@
   {
    "title": "Khmeli Potoli",
    "title_en": "Dry Leaf",
-   "country": "Alemania/Georgia",
+   "country": "Alemania, Georgia",
    "flags": "🇩🇪🇬🇪",
    "duration": "186 min",
    "day": "Jueves",
@@ -1295,13 +1308,13 @@
    "day_order": 2,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "El juego constituye uno de los ejes fundamentales de este documental de Eliza Capai. Situado en la ciudad de Guaribas, en el nordeste brasileño, el filme acompaña a un grupo de niñas invitadas a imaginar cómo se ven a sí mismas en el futuro.",
+   "synopsis": "En el corazón del árido sertão brasileño, un grupo de niñas de diez años juega a inventar máquinas del tiempo imaginarias. Las pequeñas viajan al pasado para explorar la dura realidad de supervivencia que vivieron sus madres y abuelas, al mismo tiempo que se proyectan. El documental utiliza la inocencia y la imaginación infantil como un poderoso catalizador para debatir con madurez sobre la autonomía de las mujeres, el género, el ciclo de la pobreza y sus propios sueños de libertad.",
    "director": "Eliza Capai",
    "year": 2026,
-   "synopsis_en": "Play is one of the central pillars of this documentary by Eliza Capai. Set in the city of Guaribas in northeastern Brazil, the film follows a group of girls invited to imagine how they see themselves in the future.",
+   "synopsis_en": "What if it were possible to travel back in time to dream of other futures? In the hinterlands of Brazil, young girls navigate the delicate transition from childhood to adolescence while grappling with social media, religion, their dreams, and the stories of the women who came before them. By inventing a time machine, they revisit the pasts of their mothers and grandmothers and imagine a future in which they can be free, fulfilled, and in control of their own choices.",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w185/1DwT5nA0yWUMNU9Po2lzwRv6XOA.jpg",
-   "posterSource": "tmdb",
+   "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
+   "posterSource": "oficial",
    "work_id": "w_R4GY6YGMWCSK",
    "genre": "Documental",
    "_src": {
@@ -1319,7 +1332,7 @@
    "title": "Cine Afro — Prog. de Cortos",
    "title_en": "Como Nasce um Rio · Taxi Moto · Voz, Zov, Zvo",
    "flags": "🇧🇷🇨🇭🇫🇷",
-   "country": "Brasil/Suiza/Francia",
+   "country": "Brasil, Suiza, Francia",
    "duration": "81 min",
    "day": "Jueves",
    "date": 16,
@@ -1339,11 +1352,12 @@
     },
     {
      "title": "Taxi Moto",
-     "country": "Suiza/Francia",
+     "country": "Suiza, Francia",
      "duration": "21 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_affiche_MOTOTAXI_GB_1500x2000%20-%20Festivals%20Sudu.jpg?itok=7LEPmRue",
-     "work_id": "w_R4HB85Y9VKH3"
+     "work_id": "w_R4HB85Y9VKH3",
+     "flags": "🇨🇭🇫🇷"
     },
     {
      "title": "Voz, Zov, Zvo",
@@ -1407,7 +1421,7 @@
   {
    "title": "Anoche conquisté Tebas",
    "title_en": "Last Night I Conquered the City of Thebes",
-   "country": "España/Portugal",
+   "country": "España, Portugal",
    "flags": "🇪🇸🇵🇹",
    "duration": "111 min",
    "day": "Jueves",
@@ -1432,8 +1446,8 @@
   {
    "title": "El príncipe de Nanawa",
    "title_en": "The Prince of Nanawa",
-   "country": "Argentina/Colombia/Paraguay",
-   "flags": "🇦🇷🇨🇴🇵🇾",
+   "country": "Argentina, Paraguay, Colombia, Alemania",
+   "flags": "🇦🇷🇵🇾🇨🇴🇩🇪",
    "duration": "212 min",
    "day": "Jueves",
    "date": 16,
@@ -1443,14 +1457,14 @@
    "day_order": 2,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "El paso de la infancia a la adultez es un tema poderoso y este documental resonante de Clarisa Navas nos invita a verlo a través de un niño carismático y parlanchín en un pueblo fronterizo entre Argentina y Paraguay.",
+   "synopsis": "Con la frontera de Nanawa-Clorinda como escenario, el documental fue construido con los diarios cotidianos que Ángel filma desde los 10 años, combinados con imágenes de diferentes registros que dialogan entre sí y vienen acompañando desde hace tiempo los encuentros entre la realizadora y el protagonista.",
    "director": "Clarisa Navas",
    "year": 2025,
-   "synopsis_en": "The passage from childhood to adulthood is a powerful theme, and Clarisa Navas's resonant documentary invites us to witness it through a charismatic and talkative boy in a border town between Argentina and Paraguay.",
+   "synopsis_en": "On a bustling footbridge separating Argentina and Paraguay, where people traffic all kinds of things in a mix of Guarani and Spanish, we meet Angel. Over the course of the next ten years, Angel will have to make decisive choices for his future.",
    "genre": "Documental",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w500/usQn5xDRN7eeKmCaQDCSpXD8j8K.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/ficma/el-principe-de-nanawa.jpg",
    "work_id": "w_R4HB86VE5454",
    "lbSlug": "the-prince-of-nanawa",
    "_src": {
@@ -1505,8 +1519,8 @@
      "title": "Decaer",
      "country": "Colombia",
      "duration": "7 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj",
+     "posterSource": "oficial",
+     "poster": "/assets/anibia-2026/decaer.jpg",
      "work_id": "w_R4EPHC0WCQM5",
      "genre": "Animación",
      "_src": {
@@ -1534,16 +1548,16 @@
      "title": "La garganta del diablo",
      "country": "Colombia",
      "duration": "15 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LaGargantadeDiablo%20-%20Juanita%20Urue%C3%B1a%20Barreto.png?itok=WsH78OYf",
+     "posterSource": "oficial",
+     "poster": "/assets/cinetoro-2026/la-garganta-del-diablo.jpg",
      "work_id": "w_R4HBN9AY1HWQ"
     },
     {
      "title": "Las formas de la magia",
      "country": "Colombia",
      "duration": "16 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LFM_poster_Ficci_595x842%20-%20Maria%20Paula%20Lorgia.jpg?itok=5XCaIr83",
+     "posterSource": "oficial",
+     "poster": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
      "work_id": "w_R4FSHA335BXS",
      "lbSlug": "las-formas-de-la-magia",
      "_src": {
@@ -1559,16 +1573,16 @@
      "year": 2026,
      "synopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
      "synopsis_lang": "es",
-     "director": "María Paula Lorgia",
+     "director": "María Paula Lorgia Garnica",
      "genre": "Documental",
      "tmdb_id": 1668889
     },
     {
      "title": "Madres de nacimiento",
-     "country": "Francia",
+     "country": "Colombia, Francia",
      "duration": "8 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MDN_Poster_Blanco_WEB.jpg?itok=OR2_OCi0",
+     "posterSource": "oficial",
+     "poster": "/assets/ficfusa-2026/madres-de-nacimiento.jpg",
      "work_id": "w_R4FH541S52JK",
      "genre": "Documental",
      "_src": {
@@ -1588,22 +1602,24 @@
      "synopsis_lang": "es",
      "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
      "director": "Gloria Isabel Gómez Ceballos",
-     "tmdb_id": 1668902
+     "tmdb_id": 1668902,
+     "flags": "🇨🇴🇫🇷"
     },
     {
      "title": "Todas las manos que solté",
-     "country": "Colombia/Francia",
+     "country": "Colombia, Francia",
      "duration": "23 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0",
-     "work_id": "w_R4HBN9HF0D5J"
+     "work_id": "w_R4HBN9HF0D5J",
+     "flags": "🇨🇴🇫🇷"
     },
     {
      "title": "Ya se ven los tigres en la lluvia",
-     "country": "Colombia/Canadá",
+     "country": "Colombia, Canadá",
      "duration": "15 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20202933.png?itok=fJ60ATsd",
+     "posterSource": "oficial",
+     "poster": "https://image.tmdb.org/t/p/w500/sB4dBAGzUomRRZ0CcJdcIqqeCCf.jpg",
      "work_id": "w_R4FT5JJDASKV",
      "genre": "Documental",
      "_src": {
@@ -1625,7 +1641,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation.",
      "director": "Óscar Ruiz Navia",
-     "tmdb_id": 1526866
+     "tmdb_id": 1526866,
+     "flags": "🇨🇴🇨🇦"
     }
    ],
    "id": "f_bf35c98021"
@@ -1644,11 +1661,11 @@
    "day_order": 2,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "La larga trayectoria de la cineasta colombiana Marta Rodríguez demuestra un compromiso por documentar la historia de represión y lucha de  los pueblos originarios y marginalizados.",
-   "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
+   "synopsis": "La historia de Ángel María Torres y Napoleón Torres, líderes arhuacos de la Sierra Nevada de Santa Marta, asesinados por el ejército en 1990. A través de archivos y testimonios íntimos, el documental retrata el vacío que dejaron en sus familias y comunidad, mientras revela la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra un vínculo esencial. Más que narrar una tragedia, la película es un acto de resistencia y memoria frente a la violencia colonial persistente.",
+   "synopsis_en": "The story of Ángel María Torres and Napoleón Torres, Arhuaco leaders from Colombia’s Sierra Nevada de Santa Marta, killed by the army in 1990. Through archival footage and intimate testimonies, the documentary explores grief, memory, and resistance, while revealing an Indigenous worldview in which the land is alive and spoken word sustains life, culture, and the legacy left for future generations.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w500/Al31xYPYyul6k0XyMnmaA357CHw.jpg",
+   "posterSource": "custom",
+   "poster": "/assets/ficdeh/el-valor-de-la-palabra.jpg",
    "work_id": "w_R4HBNA1T7S2G",
    "genre": "Documental",
    "_src": {
@@ -1669,7 +1686,7 @@
   {
    "title": "Dao",
    "title_en": "Dao",
-   "country": "Francia/Senegal/Guinea-Bissau",
+   "country": "Francia, Senegal, Guinea-Bisáu",
    "flags": "🇫🇷🇸🇳🇬🇼",
    "duration": "185 min",
    "day": "Jueves",
@@ -1694,7 +1711,7 @@
   {
    "title": "Historias del buen valle",
    "title_en": "Good Valley Stories",
-   "country": "España/Francia",
+   "country": "España, Francia",
    "flags": "🇪🇸🇫🇷",
    "duration": "122 min",
    "day": "Jueves",
@@ -1705,14 +1722,14 @@
    "day_order": 2,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "De nuevo, José Luis Guerín ofrece una lección de cine documental, como lo reconoció el jurado del Festival de Cine de San Sebastián, que le otorgó su Premio Especial.",
+   "synopsis": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
    "director": "José Luis Guerín",
    "year": 2025,
-   "synopsis_en": "Once again, José Luis Guerín delivers a masterclass in documentary filmmaking, as recognized by the San Sebastián Film Festival jury, which awarded him its Special Prize.",
+   "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
    "genre": "Documental",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
    "work_id": "w_R4H8812VN6A2",
    "lbSlug": "good-valley-stories",
    "_src": {
@@ -1752,7 +1769,7 @@
    "title": "ojoboca — Prog. 2 · 16mm",
    "title_en": "Come and Dance with Me · Gente perra · The Masked Monkeys",
    "flags": "🇩🇪🇨🇴",
-   "country": "Alemania/Colombia",
+   "country": "Alemania, Colombia",
    "duration": "61 min",
    "day": "Jueves",
    "date": 16,
@@ -1772,11 +1789,12 @@
     },
     {
      "title": "Gente perra",
-     "country": "Colombia/Alemania",
+     "country": "Colombia, Alemania",
      "duration": "25 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20171632_0.png?itok=sogZK08j",
-     "work_id": "w_R4HC1F248GT0"
+     "work_id": "w_R4HC1F248GT0",
+     "flags": "🇨🇴🇩🇪"
     },
     {
      "title": "The Masked Monkeys",
@@ -1804,13 +1822,13 @@
    "is_cortos": false,
    "film_list": [],
    "synopsis": "Milo, un niño carismático que baila malambo, se escapa de su casa y viaja a la ciudad de Buenos Aires en busca de una nueva vida, en esta fascinante película donde conviven, de manera armónica, lo documental y lo absurdo.",
-   "director": "Lorenzo Ferro",
+   "director": "Lorenzo Ferro, Lucas A. Vignale",
    "year": 2026,
-   "synopsis_en": "Milo, a charismatic boy who dances malambo, runs away from home and travels to Buenos Aires in search of a new life, in this fascinating film where the documentary and the absurd coexist in perfect harmony.",
+   "synopsis_en": "Nine-year-old Milo lives in a remote Argentinian village where he studies the Malambo, a folk dance full of bravura. He is an excellent dancer, but Milo’s only desire is to escape the countryside on a train for the Buenos Aires of his dreams.",
    "genre": "Drama",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w500/wElH8qOEoF1Fl09DI0CA82AW4oe.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/miradas-2026/el-tren-fluvial.jpg",
    "work_id": "w_R4HC1FG5Y5N5",
    "id": "f_e864dbac94",
    "lbSlug": "the-river-train",
@@ -1825,7 +1843,7 @@
   {
    "title": "Iván & Hadoum",
    "title_en": "",
-   "country": "España/Alemania/Bélgica",
+   "country": "España, Alemania, Bélgica",
    "flags": "🇪🇸🇩🇪🇧🇪",
    "duration": "103 min",
    "day": "Jueves",
@@ -1836,16 +1854,16 @@
    "day_order": 2,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Iván trabaja en una empresa agrícola y aspira a un ascenso que le permita mejorar la situación económica de su familia.",
+   "synopsis": "Iván se enamora de Hadoum en el invernadero donde trabajan. Sin embargo, su anhelado ascenso laboral interfiere en la relación, obligándole a decidir qué tipo de hombre quiere ser.",
    "director": "Ian de la Rosa",
    "year": 2026,
-   "synopsis_en": "Iván works at an agricultural company and aspires to a promotion that would improve his family's financial situation.",
+   "synopsis_en": "Iván (33), a trans man, and Hadoum (30), a Spanish-Moroccan woman, fall in love at the industrial greenhouse they work in. While facing the opposition from their families and co-workers, Iván realizes he doesn’t need to be the man he is expected to be.",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w185/gqtBos9yGlMPFulwcGjdX53CZx8.jpg",
-   "posterSource": "tmdb",
+   "poster": "/assets/miradas-2026/ivan-hadoum.jpg",
+   "posterSource": "oficial",
    "work_id": "w_R4HAT4P4YQ74",
    "id": "f_5e4bb31908",
-   "genre": "Ficción",
+   "genre": "Drama",
    "_src": {
     "heredado": {
      "genre": "catálogo w_R4HAT4P4YQ74 (ficci-65, miradas-2026)",
@@ -1872,10 +1890,10 @@
    "film_list": [
     {
      "title": "La forma y la raíz",
-     "country": "Colombia/Cuba",
+     "country": "Colombia, Cuba",
      "duration": "14 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_poster%20la%20forma%20y%20la%20raiz%20-%20Nathalia%20Quimbay%20Cadena.jpg?itok=dR-4fsTr",
+     "posterSource": "oficial",
+     "poster": "/assets/midbo-2026/la-forma-y-la-raiz.jpg",
      "work_id": "w_R4HC1FD68XAQ",
      "genre": "Documental",
      "_src": {
@@ -1893,14 +1911,15 @@
      "synopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo.",
      "synopsis_lang": "es",
      "director": "Nathalia Quimbay Cadena, Valeria Moraima Berríos",
-     "tmdb_id": 1660700
+     "tmdb_id": 1660700,
+     "flags": "🇨🇴🇨🇺"
     },
     {
      "title": "Montaña luminosa",
      "country": "Colombia",
      "duration": "25 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_ML%20Poster%20FICCI%2065%20-2026%20-%20Lony%20Welter.png?itok=0KYb7rep",
+     "posterSource": "oficial",
+     "poster": "/assets/midbo-2026/montana-luminosa.jpg",
      "work_id": "w_R4HC9RW9N29F",
      "lbSlug": "montana-luminosa",
      "_src": {
@@ -1922,10 +1941,9 @@
      "title": "Pawa",
      "country": "Colombia",
      "duration": "22 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Portada%20Pawa%20png%20-%20Aguacate%20Audiovisual.jpg?itok=qWnn1F5-",
+     "posterSource": "oficial",
+     "poster": "/assets/ficica-2026/pawa.jpg",
      "work_id": "w_R4HCNBABG3FG",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
@@ -1949,8 +1967,8 @@
      "title": "Sombras en la niebla",
      "country": "Colombia",
      "duration": "25 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20SELN%20-%20Pedro%20Vega_0.jpg?itok=2FqonkaA",
+     "posterSource": "oficial",
+     "poster": "/assets/ficica-2026/sombras-en-la-niebla.jpg",
      "work_id": "w_R4FRTV2Q7YA2",
      "genre": "Documental",
      "_src": {
@@ -1971,7 +1989,7 @@
      "synopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
      "synopsis_lang": "es",
      "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
-     "director": "Pedro Pablo Vega",
+     "director": "Pedro Pablo Vega Reyes",
      "tmdb_id": 1668876
     }
    ],
@@ -1980,7 +1998,7 @@
   {
    "title": "Duhuldeki Deney",
    "title_en": "Soul of the Foot",
-   "country": "Canadá/Turquía",
+   "country": "Canadá, Turquía",
    "flags": "🇨🇦🇹🇷",
    "duration": "65 min",
    "day": "Jueves",
@@ -2028,7 +2046,7 @@
   {
    "title": "Crocodile",
    "title_en": "",
-   "country": "Nueva Zelanda/Nigeria",
+   "country": "Nueva Zelanda, Nigeria",
    "flags": "🇳🇿🇳🇬",
    "duration": "100 min",
    "day": "Jueves",
@@ -2052,7 +2070,7 @@
   {
    "title": "Señoritas",
    "title_en": "",
-   "country": "Colombia/Canadá",
+   "country": "Colombia, Canadá",
    "flags": "🇨🇴🇨🇦",
    "duration": "87 min",
    "day": "Jueves",
@@ -2076,7 +2094,7 @@
   {
    "title": "Piedras preciosas",
    "title_en": "Gemstones",
-   "country": "Colombia/Portugal",
+   "country": "Colombia, Portugal",
    "flags": "🇨🇴🇵🇹",
    "duration": "70 min",
    "day": "Jueves",
@@ -2124,7 +2142,7 @@
   {
    "title": "Mare's Nest",
    "title_en": "",
-   "country": "Reino Unido/Francia/Canadá",
+   "country": "Reino Unido, Francia, Canadá",
    "flags": "🇬🇧🇫🇷🇨🇦",
    "duration": "98 min",
    "day": "Jueves",
@@ -2150,7 +2168,7 @@
    "title": "Cine Indígena — Prog. 2",
    "title_en": "Tu mañana será mi canto · Runa Simi",
    "flags": "🇨🇱🇵🇪",
-   "country": "Chile/Perú",
+   "country": "Chile, Perú",
    "duration": "99 min",
    "day": "Jueves",
    "date": 16,
@@ -2162,18 +2180,19 @@
    "film_list": [
     {
      "title": "Tu mañana será mi canto",
-     "country": "Chile/EEUU",
+     "country": "Chile, Estados Unidos",
      "duration": "14 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_TuMan%CC%83anaSera%CC%81MiCanto_Poster%20-%20Fernando%20Saldivia%20Y%C3%A1%C3%B1ez.jpg?itok=O0EAsSCB",
      "posterSource": "custom",
-     "work_id": "w_R4HAT44JAX44"
+     "work_id": "w_R4HAT44JAX44",
+     "flags": "🇨🇱🇺🇸"
     },
     {
      "title": "Runa Simi",
      "country": "Perú",
      "duration": "85 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/RUNA%20SIMI%20POSTER%20AF%20-%20Claudia%20chavez%20levano.jpg?itok=ObXBIPVJ",
-     "posterSource": "custom",
+     "poster": "/assets/ficcali-2026/runa-simi.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4DHSYGCHRN0",
      "genre": "Documental",
      "_src": {
@@ -2226,7 +2245,7 @@
    "title": "Costas — Prog. 2",
    "title_en": "¡Aysa! · No les pedimos un viaje a la luna",
    "flags": "🇧🇴🇲🇽",
-   "country": "Bolivia/México",
+   "country": "Bolivia, México",
    "duration": "106 min",
    "day": "Jueves",
    "date": 16,
@@ -2307,7 +2326,7 @@
   {
    "title": "Tehran Bedoune Mojavez",
    "title_en": "Put Your Soul on Your Hand and Walk",
-   "country": "Francia/Palestina",
+   "country": "Francia, Palestina",
    "flags": "🇫🇷🇵🇸",
    "duration": "112 min",
    "day": "Jueves",
@@ -2331,7 +2350,7 @@
   {
    "title": "Dracula",
    "title_en": "Dracula",
-   "country": "Rumania/Austria/Luxemburgo",
+   "country": "Rumania, Austria, Luxemburgo",
    "flags": "🇷🇴🇦🇹🇱🇺",
    "duration": "170 min",
    "day": "Jueves",
@@ -2446,7 +2465,7 @@
    "title": "Animación Porosa — Prog. de Cortos",
    "title_en": "Ako počúvať fontány · Evacuations · La baraja de Myriam · Luna Rossa · Venezia Diorama",
    "flags": "🇸🇰🇺🇸🇨🇱🇪🇪🇫🇷🇧🇪",
-   "country": "Eslovaquia/Estados Unidos/Chile/Estonia/Francia/Bélgica",
+   "country": "Eslovaquia, Estados Unidos, Chile, Estonia, Francia, Bélgica",
    "duration": "69 min",
    "day": "Viernes",
    "date": 17,
@@ -2482,11 +2501,12 @@
     },
     {
      "title": "Luna Rossa",
-     "country": "Estonia/Francia",
+     "country": "Estonia, Francia",
      "duration": "32 min",
      "poster": "https://image.tmdb.org/t/p/w92/cOjnO0TenOYL2HMNmaxlGdA4NhV.jpg",
      "posterSource": "tmdb",
-     "work_id": "w_R4HB843KHEHA"
+     "work_id": "w_R4HB843KHEHA",
+     "flags": "🇪🇪🇫🇷"
     },
     {
      "title": "Venezia Diorama",
@@ -2552,7 +2572,7 @@
    "title": "Prog. Cortometrajes — Jorge Cadena",
    "title_en": "El cuento de Antonia · Flores del otro patio · Les Trois Hirondelles · Mapalé · Soeurs Jarariju · Sonali",
    "flags": "🇨🇭🇨🇴",
-   "country": "Suiza/Colombia",
+   "country": "Suiza, Colombia",
    "duration": "98 min",
    "day": "Viernes",
    "date": 17,
@@ -2572,11 +2592,12 @@
     },
     {
      "title": "Flores del otro patio",
-     "country": "Suiza/Colombia",
+     "country": "Suiza, Colombia",
      "duration": "16 min",
      "poster": "https://image.tmdb.org/t/p/w92/icXmSR2VtpFsfeP0BHHvVwehP8g.jpg",
      "posterSource": "tmdb",
-     "work_id": "w_R4HAG88CEBDH"
+     "work_id": "w_R4HAG88CEBDH",
+     "flags": "🇨🇭🇨🇴"
     },
     {
      "title": "Les Trois Hirondelles",
@@ -2627,11 +2648,11 @@
    "day_order": 3,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Lejos de Anserma, Pacho continuó su vida escapando de la violencia. A sus 15 años, su única alternativa lo obligó a desconectarse de su origen.",
-   "synopsis_en": "Far from Anserma, Pacho continued his life fleeing violence. At 15, his only alternative forced him to sever ties with his origins.",
+   "synopsis": "Tras huir de la violencia a los 15 años, Pacho pasa cuatro décadas lejos de Anserma. Ahora una fotografía activa el deseo de regresar y, en su retorno, imaginado como viaje interestelar, busca aquello que dejó atrás. Las huellas persistentes de la muerte se entrelazan con un paisaje de expresionismo rural, memoria e historia.",
+   "synopsis_en": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history.",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/k5qYkuNLpN07AtXJ9nudLIifPQ5.jpg",
-   "posterSource": "tmdb",
+   "poster": "/assets/midbo-2026/las-almas-ni-los-ojos.jpg",
+   "posterSource": "oficial",
    "work_id": "w_R4FJFY7626WB",
    "genre": "Drama",
    "_src": {
@@ -2652,7 +2673,7 @@
   {
    "title": "Chicas tristes",
    "title_en": "Sad Girlz",
-   "country": "México/España/Francia",
+   "country": "México, España, Francia",
    "flags": "🇲🇽🇪🇸🇫🇷",
    "duration": "90 min",
    "day": "Viernes",
@@ -2677,7 +2698,7 @@
   {
    "title": "Queen at Sea",
    "title_en": "",
-   "country": "Reino Unido/Estados Unidos",
+   "country": "Reino Unido, Estados Unidos",
    "flags": "🇬🇧🇺🇸",
    "duration": "121 min",
    "day": "Viernes",
@@ -2716,8 +2737,8 @@
      "title": "El cazador",
      "country": "Colombia",
      "duration": "13 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-30%20170710.png?itok=dXa68A0J",
+     "posterSource": "oficial",
+     "poster": "https://image.tmdb.org/t/p/w500/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
      "work_id": "w_R4FS61XPY9M6",
      "genre": "Drama",
      "_src": {
@@ -2735,7 +2756,7 @@
      "title_en": "The Hunter",
      "lbSlug": "the-hunter-2026-1",
      "year": 2026,
-     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revela la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
      "synopsis_lang": "es",
      "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
      "director": "Luciana Riso Soto, Manuel Villa",
@@ -2743,10 +2764,10 @@
     },
     {
      "title": "Filme Pin",
-     "country": "Colombia/Portugal",
+     "country": "Colombia, Portugal",
      "duration": "7 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER-FILME-PIN-2026%20-%20La%20Vulcanizadora.jpg?itok=qrKWWtjf",
+     "posterSource": "oficial",
+     "poster": "/assets/midbo-2026/filme-pin.jpg",
      "work_id": "w_R4EPV0KGHMRN",
      "genre": "Documental",
      "_src": {
@@ -2766,16 +2787,16 @@
      "synopsis_lang": "es",
      "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime.",
      "director": "María Rojas Arias, Andrés Jurado",
-     "tmdb_id": 1616856
+     "tmdb_id": 1616856,
+     "flags": "🇨🇴🇵🇹"
     },
     {
      "title": "Futuros luminosos",
      "country": "Colombia",
      "duration": "25 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b",
+     "posterSource": "oficial",
+     "poster": "/assets/aleste-2026/futuros-luminosos.jpg",
      "work_id": "w_R4FBMPTV0JG2",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
@@ -2791,7 +2812,7 @@
      "title_en": "A Brighter Future",
      "lbSlug": "a-brighter-future",
      "year": 2026,
-     "synopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+     "synopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas.",
      "synopsis_lang": "es",
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
      "director": "Ismael García Ramírez",
@@ -2799,10 +2820,10 @@
     },
     {
      "title": "Lejanía",
-     "country": "Colombia/Chile",
+     "country": "Colombia, Chile",
      "duration": "17 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PO%CC%81STER%20LEJANIA%20-%20Carolina%20Zarate%20Garcia.png?itok=UPHrcFZ4",
+     "posterSource": "oficial",
+     "poster": "/assets/aleste-2026/lejania.jpg",
      "work_id": "w_R4HCND964DS3",
      "genre": "Documental",
      "_src": {
@@ -2815,20 +2836,22 @@
        "tmdb_id": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
       }
      },
-     "lbSlug": "lejania-1",
+     "lbSlug": "lejania-2026",
      "year": 2026,
      "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
      "synopsis_lang": "es",
      "director": "Daniel Velásquez Patarroyo",
-     "tmdb_id": 1668904
+     "tmdb_id": 1668904,
+     "flags": "🇨🇴🇨🇱"
     },
     {
      "title": "Winter Blumen Garten",
-     "country": "Austria/Colombia",
+     "country": "Austria, Colombia",
      "duration": "27 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_WINTER_BLUMEN_GARTEN_POSTER_ESP_1%20-%20EXPERIMENTA.jpg?itok=dZG03ssO",
-     "work_id": "w_R4HD23F6TYJ1"
+     "work_id": "w_R4HD23F6TYJ1",
+     "flags": "🇦🇹🇨🇴"
     }
    ],
    "id": "f_75f2a70bca"
@@ -2836,7 +2859,7 @@
   {
    "title": "Les Voyageurs",
    "title_en": "The Travelers",
-   "country": "España/Camerún",
+   "country": "España, Camerún",
    "flags": "🇪🇸🇨🇲",
    "duration": "61 min",
    "day": "Viernes",
@@ -2860,7 +2883,7 @@
   {
    "title": "Nuit Obscure - Ain't I a Child?",
    "title_en": "Obscure Night - Ain’t I a Child?",
-   "country": "Francia/Suiza/Portugal",
+   "country": "Francia, Suiza, Portugal",
    "flags": "🇫🇷🇨🇭🇵🇹",
    "duration": "164 min",
    "day": "Viernes",
@@ -2885,7 +2908,7 @@
   {
    "title": "Tehran Bedoune Mojavez",
    "title_en": "Put Your Soul on Your Hand and Walk",
-   "country": "Francia/Palestina",
+   "country": "Francia, Palestina",
    "flags": "🇫🇷🇵🇸",
    "duration": "112 min",
    "day": "Viernes",
@@ -2909,7 +2932,7 @@
   {
    "title": "El mundo al revés",
    "title_en": "The World Upside Down",
-   "country": "Suiza/Argentina",
+   "country": "Suiza, Argentina",
    "flags": "🇨🇭🇦🇷",
    "duration": "77 min",
    "day": "Viernes",
@@ -2933,7 +2956,7 @@
   {
    "title": "Nuestra tierra",
    "title_en": "Landmarks",
-   "country": "Argentina/EEUU/México/Francia/Países Bajos/Dinamarca",
+   "country": "Argentina, Estados Unidos, México, Francia, Países Bajos, Dinamarca",
    "flags": "🇦🇷🇺🇸🇲🇽🇫🇷🇳🇱🇩🇰",
    "duration": "122 min",
    "day": "Viernes",
@@ -2957,7 +2980,7 @@
   {
    "title": "Anoche conquisté Tebas",
    "title_en": "Last Night I Conquered the City of Thebes",
-   "country": "España/Portugal",
+   "country": "España, Portugal",
    "flags": "🇪🇸🇵🇹",
    "duration": "111 min",
    "day": "Viernes",
@@ -2983,7 +3006,7 @@
    "title": "ojoboca — Prog. 2 · 16mm",
    "title_en": "Come and Dance with Me · Gente perra · The Masked Monkeys",
    "flags": "🇩🇪🇨🇴",
-   "country": "Alemania/Colombia",
+   "country": "Alemania, Colombia",
    "duration": "61 min",
    "day": "Viernes",
    "date": 17,
@@ -3003,11 +3026,12 @@
     },
     {
      "title": "Gente perra",
-     "country": "Colombia/Alemania",
+     "country": "Colombia, Alemania",
      "duration": "25 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20171632_0.png?itok=sogZK08j",
      "posterSource": "custom",
-     "work_id": "w_R4HC1F248GT0"
+     "work_id": "w_R4HC1F248GT0",
+     "flags": "🇨🇴🇩🇪"
     },
     {
      "title": "The Masked Monkeys",
@@ -3023,7 +3047,7 @@
   {
    "title": "O Riso e a Faca",
    "title_en": "I Only Rest in the Storm",
-   "country": "Portugal/Francia/Brasil/Rumania",
+   "country": "Portugal, Francia, Brasil, Rumania",
    "flags": "🇵🇹🇫🇷🇧🇷🇷🇴",
    "duration": "217 min",
    "day": "Viernes",
@@ -3095,22 +3119,23 @@
        "director": "catálogo w_R4HD24FCSZJ0 (ficci-65, ficica-2026, mamut-2026)"
       }
      },
-     "director": "Ron Márquez, Andrés Felipe Benavides, Fiama Castro, Cindy Caffroni, Juan Camilo Olmos, Valeria Rua, Felipe Moreno, Dante Hernández, Santiago Rodríguez, Laura Gabay García, Moises Busigo, Samuel Moreno Alvarez"
+     "director": "Juan Abello, Juan Olmos, Fiama Castro, Cindy Caffroni, Valeria Rua, Andrés Felipe Benavides, Felipe Moreno, Ron Márquez, Dante Hernández, Santiago Rodríguez"
     },
     {
      "title": "Consagración",
-     "country": "Colombia/Alemania",
+     "country": "Colombia, Alemania",
      "duration": "17 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_FICCI_xPosters_Instagram_4x5_9x162%20-%20Vanessa%20Monti.png?itok=9P9UU2BT",
-     "work_id": "w_R4HD24M9AR8Q"
+     "work_id": "w_R4HD24M9AR8Q",
+     "flags": "🇨🇴🇩🇪"
     },
     {
      "title": "Mi amigo, el arquitecto",
      "country": "Colombia",
      "duration": "15 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MFTA_Final_Untextured_Low-Res%20-%20MEDIOCIELO%20Cine%20%281%29.jpg?itok=MXASl-yt",
+     "posterSource": "oficial",
+     "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
      "work_id": "w_R4F45MWYW0TY",
      "title_en": "My Friend, The Architect",
      "_src": {
@@ -3134,10 +3159,10 @@
     },
     {
      "title": "Sirena mecánica",
-     "country": "España/Colombia",
+     "country": "España, Colombia",
      "duration": "9 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20205043.png?itok=BR7oyf-o",
+     "posterSource": "oficial",
+     "poster": "/assets/festicinerio-2026/sirena-mecanica.jpg",
      "work_id": "w_R4HD241JZEE7",
      "genre": "Experimental",
      "_src": {
@@ -3155,14 +3180,15 @@
      "synopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
      "synopsis_lang": "es",
      "director": "Violeta Vieytes Vivares, Damián Sato",
-     "tmdb_id": 1668871
+     "tmdb_id": 1668871,
+     "flags": "🇪🇸🇨🇴"
     },
     {
      "title": "Suite intercontinental",
      "country": "Colombia",
      "duration": "24 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz",
+     "posterSource": "oficial",
+     "poster": "/assets/popayan-2026/suite-intercontinental.jpg",
      "work_id": "w_R4HDE4TF8RNM",
      "lbSlug": "suite-intercontinental",
      "_src": {
@@ -3189,7 +3215,7 @@
    "title": "Cine Indígena — Prog. 1",
    "title_en": "Apotnojushi La casa del viento · La Raya",
    "flags": "🇨🇴🇲🇽",
-   "country": "Colombia/México",
+   "country": "Colombia, México",
    "duration": "92 min",
    "day": "Viernes",
    "date": 17,
@@ -3204,7 +3230,7 @@
      "country": "Colombia",
      "duration": "12 min",
      "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PORTADAS%20CASA%20EN%20EL%20%20aire%202-im%C3%A1genes-0%20-%20Aguacate%20Audiovisual.jpg?itok=b37CurBg",
+     "poster": "/assets/ficdeh/guerreras.jpg",
      "work_id": "w_R4HDSRY0KBZB",
      "genre": "Documental",
      "_src": {
@@ -3222,7 +3248,7 @@
      "title_en": "The House of the Wind",
      "lbSlug": "the-house-of-the-wind-2026",
      "year": 2026,
-     "synopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
+     "synopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanías del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
      "synopsis_lang": "es",
      "synopsis_en": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people.",
      "director": "Marbel Ina Vanegas Jusayu",
@@ -3233,7 +3259,7 @@
      "country": "México",
      "duration": "80 min",
      "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-29%20235923.png?itok=0Rlq5ukp",
+     "poster": "/assets/ficdeh/la-raya.jpg",
      "work_id": "w_R4HE76B833SH",
      "genre": "Drama",
      "_src": {
@@ -3286,7 +3312,7 @@
   {
    "title": "Historias del buen valle",
    "title_en": "Good Valley Stories",
-   "country": "España/Francia",
+   "country": "España, Francia",
    "flags": "🇪🇸🇫🇷",
    "duration": "122 min",
    "day": "Viernes",
@@ -3297,14 +3323,14 @@
    "day_order": 3,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "De nuevo, José Luis Guerín ofrece una lección de cine documental, como lo reconoció el jurado del Festival de Cine de San Sebastián, que le otorgó su Premio Especial.",
+   "synopsis": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
    "director": "José Luis Guerín",
    "year": 2025,
-   "synopsis_en": "Once again, José Luis Guerín delivers a masterclass in documentary filmmaking, as recognized by the San Sebastián Film Festival jury, which awarded him its Special Prize.",
+   "synopsis_en": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
    "genre": "Documental",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
-   "posterSource": "tmdb",
+   "poster": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
+   "posterSource": "oficial",
    "work_id": "w_R4H8812VN6A2",
    "lbSlug": "good-valley-stories",
    "_src": {
@@ -3330,10 +3356,10 @@
    "day_order": 3,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Esta es una comedia cinéfila atravesada por la crisis, a la vez solitaria y solidaria.",
-   "director": "Ramiro Sonzini",
+   "synopsis": "Pelu, de treinta y tantos, es el humilde proyeccionista de un cineclub municipal. Ante la crisis, debe convertirse en el vigilante nocturno del cine y, con el tiempo, el lugar se transforma en su nuevo hogar. Poco a poco, una pequeña comunidad empieza a formarse allí después del cierre: un grupo de cuidacarros que duermen en el cine y se vuelven sus amigos más cercanos, junto con Vale, una excompañera de colegio que usa el espacio para grabar videos para OnlyFans.",
+   "director": "Ramiro Sonzini, Ezequiel Salinas",
    "year": 2025,
-   "synopsis_en": "This is a cinephile comedy shot through with crisis — simultaneously solitary and solidary.",
+   "synopsis_en": "Pelu, in his thirties, is the modest projectionist of a municipal film club. Faced with the crisis, he must become the cinema’s night watchman and over time, it turns into his new home. Little by little, a small community begins to take shape inside the cinema after closing hours. It consists of a group of “naranjitas” (informal parking attendants) who sleep there and, eventually, become his closest friends, along with Vale, a former classmate who uses the space to record OnlyFans videos.",
    "genre": "Drama",
    "synopsis_lang": "es",
    "posterSource": "tmdb",
@@ -3352,7 +3378,7 @@
   {
    "title": "Tóc, Giấy và Nước…",
    "title_en": "Hair, Paper, Water…",
-   "country": "Bélgica/Francia/Vietnam",
+   "country": "Bélgica, Francia, Vietnam",
    "flags": "🇧🇪🇫🇷🇻🇳",
    "duration": "71 min",
    "day": "Viernes",
@@ -3378,7 +3404,7 @@
    "title": "Cortos Iberoamérica — Prog. 1",
    "title_en": "Abortion Party · A donde nos lleva la fe de José Gerónimo · Agua fría · Fim de Rodovia · Quem se Move · Samba Infinito · En otra Palestina · Fuente alemana · Los peces no se ahogan",
    "flags": "🇪🇸🇩🇴🇨🇱🇧🇷🇺🇸🇵🇹🇫🇷🇩🇪🇵🇪🇨🇺🇮🇹",
-   "country": "España/Rep. Dominicana/Chile/Brasil/EEUU/Portugal/Francia/Alemania/Perú/Cuba/Italia",
+   "country": "España, República Dominicana, Chile, Brasil, Estados Unidos, Portugal, Francia, Alemania, Perú, Cuba, Italia",
    "duration": "~90 min",
    "day": "Viernes",
    "date": 17,
@@ -3392,8 +3418,8 @@
      "title": "Abortion Party",
      "country": "España",
      "duration": "13 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Abortion%20Party%20-%20Poster.png?itok=Vh79cJxK",
+     "posterSource": "oficial",
+     "poster": "/assets/midbo-2026/abortion-party.jpg",
      "work_id": "w_R4HE76VVXEXH",
      "genre": "Animación",
      "_src": {
@@ -3417,16 +3443,17 @@
     },
     {
      "title": "A donde nos lleva la fe de José Gerónimo",
-     "country": "Rep. Dominicana",
+     "country": "República Dominicana",
      "duration": "11 min",
-     "work_id": "w_R4HEGBP3B4BG"
+     "work_id": "w_R4HEGBP3B4BG",
+     "flags": "🇩🇴"
     },
     {
      "title": "Agua fría",
      "country": "Chile",
      "duration": "18 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%207.42.27%20p.m..jpg?itok=Ygi-1TlW",
+     "posterSource": "oficial",
+     "poster": "/assets/cortoscali-2026/agua-fria.jpg",
      "work_id": "w_R4HEGBYCA03G",
      "genre": "Documental",
      "_src": {
@@ -3450,41 +3477,45 @@
     },
     {
      "title": "Fim de Rodovia",
-     "country": "Brasil/EEUU",
+     "country": "Brasil, Estados Unidos",
      "duration": "13 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/FimdeRodovia_Poster%20-%20Valentina%20Rosset.jpeg?itok=T6gk5I3T",
-     "work_id": "w_R4HEVRVAR1RQ"
+     "work_id": "w_R4HEVRVAR1RQ",
+     "flags": "🇧🇷🇺🇸"
     },
     {
      "title": "Quem se Move",
-     "country": "Brasil/Portugal",
+     "country": "Brasil, Portugal",
      "duration": "20 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_QSM-cartaz-3-PT-menor%20%281%29.png?itok=PlEjYkVF",
-     "work_id": "w_R4HEVS4PM3XR"
+     "work_id": "w_R4HEVS4PM3XR",
+     "flags": "🇧🇷🇵🇹"
     },
     {
      "title": "Samba Infinito",
-     "country": "Brasil/Francia",
+     "country": "Brasil, Francia",
      "duration": "15 min",
      "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/SAMBA-INFINITO-POSTER-VERSION-02_LOW%20-%20Leonardo%20Martinelli.jpg?itok=amDXZSrX",
+     "poster": "https://admin.alternativa.film/uploads/SAMBA_INFINITO_POSTER_VERSION_02_LOW_Leonardo_Martinelli_f26536cccd.jpg",
      "work_id": "w_R4DM15XCMX8J",
      "director": "Leonardo Martinelli",
      "_src": {
       "heredado": {
        "director": "catálogo w_R4DM15XCMX8J (aff-2026, ficci-65)"
       }
-     }
+     },
+     "flags": "🇧🇷🇫🇷"
     },
     {
      "title": "En otra Palestina",
-     "country": "Alemania/Perú",
+     "country": "Alemania, Perú",
      "duration": "10 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_EOP_Poster_FICCI.jpg?itok=HNZnf8_-",
-     "work_id": "w_R4HEVSEEMFVQ"
+     "work_id": "w_R4HEVSEEMFVQ",
+     "flags": "🇩🇪🇵🇪"
     },
     {
      "title": "Fuente alemana",
@@ -3496,11 +3527,12 @@
     },
     {
      "title": "Los peces no se ahogan",
-     "country": "Cuba/Italia",
+     "country": "Cuba, Italia",
      "duration": "17 min",
      "posterSource": "custom",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Poster%20LPNSA%20-%20Le%CC%81a%20Vidotto%20%281%29.png?itok=p1sNnCoH",
-     "work_id": "w_R4HEVSYPWE09"
+     "work_id": "w_R4HEVSYPWE09",
+     "flags": "🇨🇺🇮🇹"
     }
    ],
    "id": "f_cfd2aca233"
@@ -3581,7 +3613,7 @@
    "title": "Cine Afro — Prog. de Cortos",
    "title_en": "Como Nasce um Rio · Taxi Moto · Voz, Zov, Zvo",
    "flags": "🇧🇷🇨🇭🇫🇷",
-   "country": "Brasil/Suiza/Francia",
+   "country": "Brasil, Suiza, Francia",
    "duration": "81 min",
    "day": "Viernes",
    "date": 17,
@@ -3601,11 +3633,12 @@
     },
     {
      "title": "Taxi Moto",
-     "country": "Suiza/Francia",
+     "country": "Suiza, Francia",
      "duration": "21 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_affiche_MOTOTAXI_GB_1500x2000%20-%20Festivals%20Sudu.jpg?itok=7LEPmRue",
      "posterSource": "custom",
-     "work_id": "w_R4HB85Y9VKH3"
+     "work_id": "w_R4HB85Y9VKH3",
+     "flags": "🇨🇭🇫🇷"
     },
     {
      "title": "Voz, Zov, Zvo",
@@ -3645,7 +3678,7 @@
   {
    "title": "Jóhanna af örk",
    "title_en": "Joan of Arc",
-   "country": "Islandia/Dinamarca/Francia",
+   "country": "Islandia, Dinamarca, Francia",
    "flags": "🇮🇸🇩🇰🇫🇷",
    "duration": "61 min",
    "day": "Viernes",
@@ -3670,7 +3703,7 @@
    "title": "Internacional — Prog. de Cortos",
    "title_en": "Cul-De-Sac! · Ein Unfall · Force Times Displacement · Intersecting Memory · Daria's Night Flowers",
    "flags": "🇧🇪🇫🇷🇦🇹🇹🇼🇵🇸🇮🇷🇬🇧",
-   "country": "Bélgica/Francia/Austria/Taiwán/Palestina/Irán/UK",
+   "country": "Bélgica, Francia, Austria, Taiwán, Palestina, Irán, Reino Unido",
    "duration": "~90 min",
    "day": "Viernes",
    "date": 17,
@@ -3682,11 +3715,12 @@
    "film_list": [
     {
      "title": "Cul-De-Sac!",
-     "country": "Bélgica/Francia",
+     "country": "Bélgica, Francia",
      "duration": "17 min",
      "poster": "https://image.tmdb.org/t/p/w92/lpcPZ6dfJFLjpeDAuvsMi11amOR.jpg",
      "posterSource": "tmdb",
-     "work_id": "w_R4HB85K6FH39"
+     "work_id": "w_R4HB85K6FH39",
+     "flags": "🇧🇪🇫🇷"
     },
     {
      "title": "Ein Unfall",
@@ -3706,19 +3740,21 @@
     },
     {
      "title": "Intersecting Memory",
-     "country": "Palestina/Francia",
+     "country": "Palestina, Francia",
      "duration": "20 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/1920px_x_480px/public/img-catalogo/result_Intersecting%20memory%20photo%204%20-%20Association%20Grec.jpg?itok=1WX0MrRb",
      "posterSource": "editorial",
-     "work_id": "w_R4HB85GSEN2Y"
+     "work_id": "w_R4HB85GSEN2Y",
+     "flags": "🇵🇸🇫🇷"
     },
     {
      "title": "Daria's Night Flowers",
-     "country": "Irán/UK/Francia",
+     "country": "Irán, Reino Unido, Francia",
      "duration": "16 min",
      "poster": "https://image.tmdb.org/t/p/w92/hNuuQciHXD7VqBPHgNVKSHh4yLB.jpg",
      "posterSource": "tmdb",
-     "work_id": "w_R4HB857E1N43"
+     "work_id": "w_R4HB857E1N43",
+     "flags": "🇮🇷🇬🇧🇫🇷"
     }
    ],
    "id": "f_8de8e725c1"
@@ -3726,7 +3762,7 @@
   {
    "title": "Lust",
    "title_en": "",
-   "country": "Bulgaria/Dinamarca/Suecia",
+   "country": "Bulgaria, Dinamarca, Suecia",
    "flags": "🇧🇬🇩🇰🇸🇪",
    "duration": "77 min",
    "day": "Viernes",
@@ -3808,11 +3844,11 @@
    "day_order": 4,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Lolita en Honda es un viaje íntimo hacia la memoria familiar, donde Daniel Torres explora la infancia de su abuela para desentrañar las marcas del abandono y la violencia internalizada que moldearon su carácter.",
+   "synopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
    "synopsis_en": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
-   "posterSource": "tmdb",
+   "poster": "/assets/mamut-2026/lolita-en-honda.jpg",
+   "posterSource": "oficial",
    "work_id": "w_R4FPSFY03SBY",
    "lbSlug": "lolita-en-honda",
    "_src": {
@@ -3844,10 +3880,10 @@
    "film_list": [
     {
      "title": "La forma y la raíz",
-     "country": "Colombia/Cuba",
+     "country": "Colombia, Cuba",
      "duration": "14 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_poster%20la%20forma%20y%20la%20raiz%20-%20Nathalia%20Quimbay%20Cadena.jpg?itok=dR-4fsTr",
-     "posterSource": "custom",
+     "poster": "/assets/midbo-2026/la-forma-y-la-raiz.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HC1FD68XAQ",
      "genre": "Documental",
      "_src": {
@@ -3865,14 +3901,15 @@
      "synopsis": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo.",
      "synopsis_lang": "es",
      "director": "Nathalia Quimbay Cadena, Valeria Moraima Berríos",
-     "tmdb_id": 1660700
+     "tmdb_id": 1660700,
+     "flags": "🇨🇴🇨🇺"
     },
     {
      "title": "Montaña luminosa",
      "country": "Colombia",
      "duration": "25 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_ML%20Poster%20FICCI%2065%20-2026%20-%20Lony%20Welter.png?itok=0KYb7rep",
-     "posterSource": "custom",
+     "poster": "/assets/midbo-2026/montana-luminosa.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HC9RW9N29F",
      "lbSlug": "montana-luminosa",
      "_src": {
@@ -3894,10 +3931,9 @@
      "title": "Pawa",
      "country": "Colombia",
      "duration": "22 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Portada%20Pawa%20png%20-%20Aguacate%20Audiovisual.jpg?itok=qWnn1F5-",
-     "posterSource": "custom",
+     "poster": "/assets/ficica-2026/pawa.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HCNBABG3FG",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
@@ -3921,8 +3957,8 @@
      "title": "Sombras en la niebla",
      "country": "Colombia",
      "duration": "25 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20SELN%20-%20Pedro%20Vega_0.jpg?itok=2FqonkaA",
-     "posterSource": "custom",
+     "poster": "/assets/ficica-2026/sombras-en-la-niebla.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4FRTV2Q7YA2",
      "genre": "Documental",
      "_src": {
@@ -3943,7 +3979,7 @@
      "synopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
      "synopsis_lang": "es",
      "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
-     "director": "Pedro Pablo Vega",
+     "director": "Pedro Pablo Vega Reyes",
      "tmdb_id": 1668876
     }
    ],
@@ -3963,11 +3999,11 @@
    "day_order": 4,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "La larga trayectoria de la cineasta colombiana Marta Rodríguez demuestra un compromiso por documentar la historia de represión y lucha de  los pueblos originarios y marginalizados.",
-   "synopsis_en": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
+   "synopsis": "La historia de Ángel María Torres y Napoleón Torres, líderes arhuacos de la Sierra Nevada de Santa Marta, asesinados por el ejército en 1990. A través de archivos y testimonios íntimos, el documental retrata el vacío que dejaron en sus familias y comunidad, mientras revela la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra un vínculo esencial. Más que narrar una tragedia, la película es un acto de resistencia y memoria frente a la violencia colonial persistente.",
+   "synopsis_en": "The story of Ángel María Torres and Napoleón Torres, Arhuaco leaders from Colombia’s Sierra Nevada de Santa Marta, killed by the army in 1990. Through archival footage and intimate testimonies, the documentary explores grief, memory, and resistance, while revealing an Indigenous worldview in which the land is alive and spoken word sustains life, culture, and the legacy left for future generations.",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/Al31xYPYyul6k0XyMnmaA357CHw.jpg",
-   "posterSource": "tmdb",
+   "poster": "/assets/ficdeh/el-valor-de-la-palabra.jpg",
+   "posterSource": "custom",
    "work_id": "w_R4HBNA1T7S2G",
    "genre": "Documental",
    "_src": {
@@ -3989,7 +4025,7 @@
    "title": "Costas — Prog. 1",
    "title_en": "An Incomplete Calendar · Fuego en el mar · Petrolita",
    "flags": "🇨🇦🇮🇷🇻🇪🇹🇷🇦🇷",
-   "country": "Canadá/Irán/Venezuela/Turquía/Argentina",
+   "country": "Canadá, Irán, Venezuela, Turquía, Argentina",
    "duration": "94 min",
    "day": "Sábado",
    "date": 18,
@@ -4001,10 +4037,10 @@
    "film_list": [
     {
      "title": "An Incomplete Calendar",
-     "country": "Canadá/Irán/Venezuela/Turquía",
+     "country": "Canadá, Irán, Turquía, Venezuela",
      "duration": "77 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%2016.28.13.png?itok=znYWjLkI",
+     "posterSource": "oficial",
+     "poster": "/assets/ficcali-2026/an-incomplete-calendar.jpg",
      "work_id": "w_R4GTPYZRA4KK",
      "genre": "Documental",
      "_src": {
@@ -4024,7 +4060,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "A forgotten musical record connects Caracas to Tehran, revealing untold stories of oil, not as a commodity, but as a political leverage for the liberation struggles in Palestine and building Pan-Arab solidarity between 1960-1970.",
      "director": "Sanaz Sohrabi",
-     "tmdb_id": 1633334
+     "tmdb_id": 1633334,
+     "flags": "🇨🇦🇮🇷🇹🇷🇻🇪"
     },
     {
      "title": "Fuego en el mar",
@@ -4048,7 +4085,7 @@
   {
    "title": "Los nadadores",
    "title_en": "The Swimmers",
-   "country": "Argentina/México/Estados Unidos",
+   "country": "Argentina, México, Estados Unidos",
    "flags": "🇦🇷🇲🇽🇺🇸",
    "duration": "76 min",
    "day": "Sábado",
@@ -4072,7 +4109,7 @@
   {
    "title": "Crocodile",
    "title_en": "",
-   "country": "Nueva Zelanda/Nigeria",
+   "country": "Nueva Zelanda, Nigeria",
    "flags": "🇳🇿🇳🇬",
    "duration": "100 min",
    "day": "Sábado",
@@ -4107,14 +4144,14 @@
    "day_order": 4,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "En 2017, Rafael Nahuel, un joven mapuche, fue asesinado por la Prefectura Naval Argentina en el bosque andino de Villa Mascardi, en la Patagonia.",
+   "synopsis": "En 2017, fuerzas de seguridad del Estado mataron al joven mapuche Rafael Nahuel en un bosque de la Patagonia argentina. En ese mismo territorio, en la comunidad de Mirta Ñancunao, se sostiene desde hace años una lucha contra el avance de las empresas forestales. Un viaje por carretera recorre la memoria de familias desintegradas por el genocidio conocido como la «Campaña del Desierto», que a fines del siglo XIX devastó comunidades y territorios. La película también acompaña a jóvenes que reconstruyen su identidad a través de la música. Basándose en expedientes judiciales, documentos oficiales y archivos forenses, la película saca a la luz procesos de desarraigo y ruptura de identidad perpetrados a través de la violencia material y simbólica.",
    "director": "Sofía Bordenave",
    "year": 2026,
-   "synopsis_en": "In 2017, Rafael Nahuel, a young Mapuche man, was killed by the Argentine Naval Prefecture in the Andean forest of Villa Mascardi, Patagonia.",
+   "synopsis_en": "In 2017, young Mapuche Rafael Nahuel was killed by police in the Patagonian forest. Site visits, court proceedings – the film unites the elements involved in solving the crime. Meticulously observed: the struggle for civil rights and narrating history.",
    "genre": "Documental",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/r5brsK8rdog4ewLZPihvb0tntZh.jpg",
-   "posterSource": "tmdb",
+   "poster": "/assets/midbo-2026/bosque-arriba-en-la-montana.jpg",
+   "posterSource": "oficial",
    "work_id": "w_R4HAT5A0J0QY",
    "lbSlug": "forest-up-in-the-mountain",
    "_src": {
@@ -4144,8 +4181,8 @@
      "title": "Decaer",
      "country": "Colombia",
      "duration": "7 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj",
-     "posterSource": "custom",
+     "poster": "/assets/anibia-2026/decaer.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4EPHC0WCQM5",
      "genre": "Animación",
      "_src": {
@@ -4173,16 +4210,16 @@
      "title": "La garganta del diablo",
      "country": "Colombia",
      "duration": "15 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LaGargantadeDiablo%20-%20Juanita%20Urue%C3%B1a%20Barreto.png?itok=WsH78OYf",
-     "posterSource": "custom",
+     "poster": "/assets/cinetoro-2026/la-garganta-del-diablo.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HBN9AY1HWQ"
     },
     {
      "title": "Las formas de la magia",
      "country": "Colombia",
      "duration": "16 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LFM_poster_Ficci_595x842%20-%20Maria%20Paula%20Lorgia.jpg?itok=5XCaIr83",
-     "posterSource": "custom",
+     "poster": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4FSHA335BXS",
      "lbSlug": "las-formas-de-la-magia",
      "_src": {
@@ -4198,16 +4235,16 @@
      "year": 2026,
      "synopsis": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
      "synopsis_lang": "es",
-     "director": "María Paula Lorgia",
+     "director": "María Paula Lorgia Garnica",
      "genre": "Documental",
      "tmdb_id": 1668889
     },
     {
      "title": "Madres de nacimiento",
-     "country": "Francia",
+     "country": "Colombia, Francia",
      "duration": "8 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MDN_Poster_Blanco_WEB.jpg?itok=OR2_OCi0",
-     "posterSource": "custom",
+     "poster": "/assets/ficfusa-2026/madres-de-nacimiento.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4FH541S52JK",
      "genre": "Documental",
      "_src": {
@@ -4227,22 +4264,24 @@
      "synopsis_lang": "es",
      "synopsis_en": "Out of oblivion and darkness, images and sounds resurface to control the bodies of Latin American women, regarded since childhood as mothers by birth. But within these archives an interference emerges from the past, carrying a message of struggle, memory and freedom.",
      "director": "Gloria Isabel Gómez Ceballos",
-     "tmdb_id": 1668902
+     "tmdb_id": 1668902,
+     "flags": "🇨🇴🇫🇷"
     },
     {
      "title": "Todas las manos que solté",
-     "country": "Colombia/Francia",
+     "country": "Colombia, Francia",
      "duration": "23 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0",
      "posterSource": "custom",
-     "work_id": "w_R4HBN9HF0D5J"
+     "work_id": "w_R4HBN9HF0D5J",
+     "flags": "🇨🇴🇫🇷"
     },
     {
      "title": "Ya se ven los tigres en la lluvia",
-     "country": "Colombia/Canadá",
+     "country": "Colombia, Canadá",
      "duration": "15 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20202933.png?itok=fJ60ATsd",
-     "posterSource": "custom",
+     "poster": "https://image.tmdb.org/t/p/w500/sB4dBAGzUomRRZ0CcJdcIqqeCCf.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4FT5JJDASKV",
      "genre": "Documental",
      "_src": {
@@ -4264,7 +4303,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation.",
      "director": "Óscar Ruiz Navia",
-     "tmdb_id": 1526866
+     "tmdb_id": 1526866,
+     "flags": "🇨🇴🇨🇦"
     }
    ],
    "id": "f_602b145a47"
@@ -4273,7 +4313,7 @@
    "title": "Cortos Iberoamérica — Prog. 2",
    "title_en": "O Mapa em que Estão os Meus Pés · Pajuyuk · Trizas",
    "flags": "🇧🇷🇪🇨🇧🇴🇬🇧",
-   "country": "Brasil/Ecuador/Bolivia/Inglaterra",
+   "country": "Brasil, Ecuador, Bolivia, Reino Unido",
    "duration": "~90 min",
    "day": "Sábado",
    "date": 18,
@@ -4301,7 +4341,7 @@
     },
     {
      "title": "Trizas",
-     "country": "Bolivia/Inglaterra",
+     "country": "Bolivia, Reino Unido",
      "duration": "15 min",
      "work_id": "w_R4F1D2Q71DK4",
      "title_en": "Shards",
@@ -4322,7 +4362,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
      "director": "Luciana Decker Orozco",
-     "tmdb_id": 1604094
+     "tmdb_id": 1604094,
+     "flags": "🇧🇴🇬🇧"
     }
    ],
    "id": "f_da75b4e2f2"
@@ -4330,7 +4371,7 @@
   {
    "title": "Wax & Gold",
    "title_en": "",
-   "country": "Austria/Italia",
+   "country": "Austria, Italia",
    "flags": "🇦🇹🇮🇹",
    "duration": "97 min",
    "day": "Sábado",
@@ -4386,8 +4427,8 @@
      "title": "Héroes del silencio",
      "country": "Colombia",
      "duration": "13 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_4_He%CC%81roes%20del%20Silencio_Po%CC%81ster%20-%20Santiago%20Alejandro%20Mu%C3%B1oz%20Marrugo.jpg?itok=NGH1UWzS",
+     "posterSource": "oficial",
+     "poster": "/assets/ficcali-2026/heroes-del-silencio.jpg",
      "work_id": "w_R4HEVVQPTDC1",
      "lbSlug": "heroes-del-silencio",
      "_src": {
@@ -4411,8 +4452,8 @@
      "title": "Kuagro",
      "country": "Colombia",
      "duration": "12 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/poster%20KUAGRO%20FINAL_Mesa%20de%20trabajo%201%20-%20Diego%20Casseres.png?itok=qvukayHP",
+     "posterSource": "oficial",
+     "poster": "/assets/ficcali-2026/kuagro.jpg",
      "work_id": "w_R4HEVVW6AQR2",
      "lbSlug": "kuagro",
      "_src": {
@@ -4434,10 +4475,10 @@
     },
     {
      "title": "La tinaja",
-     "country": "Colombia/Argentina",
+     "country": "Colombia, Argentina",
      "duration": "13 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_SIN%20CREDITOS%20copia%20-%20Mar%20Aj%C3%A9.jpg?itok=Dhen7YE6",
+     "posterSource": "oficial",
+     "poster": "/assets/ficcali-2026/la-tinaja.jpg",
      "work_id": "w_R4HEVVDKDN9Y",
      "genre": "Experimental",
      "_src": {
@@ -4454,10 +4495,11 @@
      "title_en": "The Clay Vase",
      "lbSlug": "la-tinaja",
      "year": 2025,
-     "synopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado.",
+     "synopsis": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos? Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso. Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
      "synopsis_lang": "es",
      "director": "Ernestina Miranda, Mar Ajé",
-     "tmdb_id": 1668923
+     "tmdb_id": 1668923,
+     "flags": "🇨🇴🇦🇷"
     },
     {
      "title": "Piratas de La Boquilla",
@@ -4476,7 +4518,7 @@
   {
    "title": "Las corrientes",
    "title_en": "The Currents",
-   "country": "Suiza/Argentina",
+   "country": "Suiza, Argentina",
    "flags": "🇨🇭🇦🇷",
    "duration": "104 min",
    "day": "Sábado",
@@ -4500,7 +4542,7 @@
   {
    "title": "Vetre, pričaj sa mnom",
    "title_en": "Wind, Talk to Me",
-   "country": "Serbia/Eslovenia/Croacia",
+   "country": "Serbia, Eslovenia, Croacia",
    "flags": "🇷🇸🇸🇮🇭🇷",
    "duration": "100 min",
    "day": "Sábado",
@@ -4573,7 +4615,7 @@
   {
    "title": "Lo demás es ruido",
    "title_en": "Everything Else is Noise",
-   "country": "México/Alemania/Canadá",
+   "country": "México, Alemania, Canadá",
    "flags": "🇲🇽🇩🇪🇨🇦",
    "duration": "70 min",
    "day": "Sábado",
@@ -4608,10 +4650,10 @@
    "day_order": 4,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Esta es una comedia cinéfila atravesada por la crisis, a la vez solitaria y solidaria.",
-   "director": "Ramiro Sonzini",
+   "synopsis": "Pelu, de treinta y tantos, es el humilde proyeccionista de un cineclub municipal. Ante la crisis, debe convertirse en el vigilante nocturno del cine y, con el tiempo, el lugar se transforma en su nuevo hogar. Poco a poco, una pequeña comunidad empieza a formarse allí después del cierre: un grupo de cuidacarros que duermen en el cine y se vuelven sus amigos más cercanos, junto con Vale, una excompañera de colegio que usa el espacio para grabar videos para OnlyFans.",
+   "director": "Ramiro Sonzini, Ezequiel Salinas",
    "year": 2025,
-   "synopsis_en": "This is a cinephile comedy shot through with crisis — simultaneously solitary and solidary.",
+   "synopsis_en": "Pelu, in his thirties, is the modest projectionist of a municipal film club. Faced with the crisis, he must become the cinema’s night watchman and over time, it turns into his new home. Little by little, a small community begins to take shape inside the cinema after closing hours. It consists of a group of “naranjitas” (informal parking attendants) who sleep there and, eventually, become his closest friends, along with Vale, a former classmate who uses the space to record OnlyFans videos.",
    "genre": "Drama",
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/39jzHk0VK2kdt9lRAb8CqNuGcGc.jpg",
@@ -4630,8 +4672,8 @@
   {
    "title": "El príncipe de Nanawa",
    "title_en": "The Prince of Nanawa",
-   "country": "Argentina/Colombia/Paraguay",
-   "flags": "🇦🇷🇨🇴🇵🇾",
+   "country": "Argentina, Paraguay, Colombia, Alemania",
+   "flags": "🇦🇷🇵🇾🇨🇴🇩🇪",
    "duration": "212 min",
    "day": "Sábado",
    "date": 18,
@@ -4641,14 +4683,14 @@
    "day_order": 4,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "El paso de la infancia a la adultez es un tema poderoso y este documental resonante de Clarisa Navas nos invita a verlo a través de un niño carismático y parlanchín en un pueblo fronterizo entre Argentina y Paraguay.",
+   "synopsis": "Con la frontera de Nanawa-Clorinda como escenario, el documental fue construido con los diarios cotidianos que Ángel filma desde los 10 años, combinados con imágenes de diferentes registros que dialogan entre sí y vienen acompañando desde hace tiempo los encuentros entre la realizadora y el protagonista.",
    "director": "Clarisa Navas",
    "year": 2025,
-   "synopsis_en": "The passage from childhood to adulthood is a powerful theme, and Clarisa Navas's resonant documentary invites us to witness it through a charismatic and talkative boy in a border town between Argentina and Paraguay.",
+   "synopsis_en": "On a bustling footbridge separating Argentina and Paraguay, where people traffic all kinds of things in a mix of Guarani and Spanish, we meet Angel. Over the course of the next ten years, Angel will have to make decisive choices for his future.",
    "genre": "Documental",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/usQn5xDRN7eeKmCaQDCSpXD8j8K.jpg",
-   "posterSource": "tmdb",
+   "poster": "/assets/ficma/el-principe-de-nanawa.jpg",
+   "posterSource": "oficial",
    "work_id": "w_R4HB86VE5454",
    "lbSlug": "the-prince-of-nanawa",
    "_src": {
@@ -4699,13 +4741,13 @@
    "is_cortos": false,
    "film_list": [],
    "synopsis": "Milo, un niño carismático que baila malambo, se escapa de su casa y viaja a la ciudad de Buenos Aires en busca de una nueva vida, en esta fascinante película donde conviven, de manera armónica, lo documental y lo absurdo.",
-   "director": "Lorenzo Ferro",
+   "director": "Lorenzo Ferro, Lucas A. Vignale",
    "year": 2026,
-   "synopsis_en": "Milo, a charismatic boy who dances malambo, runs away from home and travels to Buenos Aires in search of a new life, in this fascinating film where the documentary and the absurd coexist in perfect harmony.",
+   "synopsis_en": "Nine-year-old Milo lives in a remote Argentinian village where he studies the Malambo, a folk dance full of bravura. He is an excellent dancer, but Milo’s only desire is to escape the countryside on a train for the Buenos Aires of his dreams.",
    "genre": "Drama",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/wElH8qOEoF1Fl09DI0CA82AW4oe.jpg",
-   "posterSource": "tmdb",
+   "poster": "/assets/miradas-2026/el-tren-fluvial.jpg",
+   "posterSource": "oficial",
    "work_id": "w_R4HC1FG5Y5N5",
    "id": "f_5a925bcaf4",
    "lbSlug": "the-river-train",
@@ -4721,7 +4763,7 @@
    "title": "Cortos Iberoamérica — Prog. 1",
    "title_en": "Abortion Party · A donde nos lleva la fe de José Gerónimo · Agua fría · Fim de Rodovia · Quem se Move · Samba Infinito · En otra Palestina · Fuente alemana · Los peces no se ahogan",
    "flags": "🇪🇸🇩🇴🇨🇱🇧🇷🇺🇸🇵🇹🇫🇷🇩🇪🇵🇪🇨🇺🇮🇹",
-   "country": "España/Rep. Dominicana/Chile/Brasil/EEUU/Portugal/Francia/Alemania/Perú/Cuba/Italia",
+   "country": "España, República Dominicana, Chile, Brasil, Estados Unidos, Portugal, Francia, Alemania, Perú, Cuba, Italia",
    "duration": "~90 min",
    "day": "Sábado",
    "date": 18,
@@ -4735,8 +4777,8 @@
      "title": "Abortion Party",
      "country": "España",
      "duration": "13 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Abortion%20Party%20-%20Poster.png?itok=Vh79cJxK",
-     "posterSource": "custom",
+     "poster": "/assets/midbo-2026/abortion-party.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HE76VVXEXH",
      "genre": "Animación",
      "_src": {
@@ -4760,16 +4802,17 @@
     },
     {
      "title": "A donde nos lleva la fe de José Gerónimo",
-     "country": "Rep. Dominicana",
+     "country": "República Dominicana",
      "duration": "11 min",
-     "work_id": "w_R4HEGBP3B4BG"
+     "work_id": "w_R4HEGBP3B4BG",
+     "flags": "🇩🇴"
     },
     {
      "title": "Agua fría",
      "country": "Chile",
      "duration": "18 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-01%20a%20la%28s%29%207.42.27%20p.m..jpg?itok=Ygi-1TlW",
-     "posterSource": "custom",
+     "poster": "/assets/cortoscali-2026/agua-fria.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HEGBYCA03G",
      "genre": "Documental",
      "_src": {
@@ -4793,25 +4836,27 @@
     },
     {
      "title": "Fim de Rodovia",
-     "country": "Brasil/EEUU",
+     "country": "Brasil, Estados Unidos",
      "duration": "13 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/FimdeRodovia_Poster%20-%20Valentina%20Rosset.jpeg?itok=T6gk5I3T",
      "posterSource": "custom",
-     "work_id": "w_R4HEVRVAR1RQ"
+     "work_id": "w_R4HEVRVAR1RQ",
+     "flags": "🇧🇷🇺🇸"
     },
     {
      "title": "Quem se Move",
-     "country": "Brasil/Portugal",
+     "country": "Brasil, Portugal",
      "duration": "20 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_QSM-cartaz-3-PT-menor%20%281%29.png?itok=PlEjYkVF",
      "posterSource": "custom",
-     "work_id": "w_R4HEVS4PM3XR"
+     "work_id": "w_R4HEVS4PM3XR",
+     "flags": "🇧🇷🇵🇹"
     },
     {
      "title": "Samba Infinito",
-     "country": "Brasil/Francia",
+     "country": "Brasil, Francia",
      "duration": "15 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/SAMBA-INFINITO-POSTER-VERSION-02_LOW%20-%20Leonardo%20Martinelli.jpg?itok=amDXZSrX",
+     "poster": "https://admin.alternativa.film/uploads/SAMBA_INFINITO_POSTER_VERSION_02_LOW_Leonardo_Martinelli_f26536cccd.jpg",
      "posterSource": "custom",
      "work_id": "w_R4DM15XCMX8J",
      "director": "Leonardo Martinelli",
@@ -4819,15 +4864,17 @@
       "heredado": {
        "director": "catálogo w_R4DM15XCMX8J (aff-2026, ficci-65)"
       }
-     }
+     },
+     "flags": "🇧🇷🇫🇷"
     },
     {
      "title": "En otra Palestina",
-     "country": "Alemania/Perú",
+     "country": "Alemania, Perú",
      "duration": "10 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_EOP_Poster_FICCI.jpg?itok=HNZnf8_-",
      "posterSource": "custom",
-     "work_id": "w_R4HEVSEEMFVQ"
+     "work_id": "w_R4HEVSEEMFVQ",
+     "flags": "🇩🇪🇵🇪"
     },
     {
      "title": "Fuente alemana",
@@ -4839,11 +4886,12 @@
     },
     {
      "title": "Los peces no se ahogan",
-     "country": "Cuba/Italia",
+     "country": "Cuba, Italia",
      "duration": "17 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Poster%20LPNSA%20-%20Le%CC%81a%20Vidotto%20%281%29.png?itok=p1sNnCoH",
      "posterSource": "custom",
-     "work_id": "w_R4HEVSYPWE09"
+     "work_id": "w_R4HEVSYPWE09",
+     "flags": "🇨🇺🇮🇹"
     }
    ],
    "id": "f_4120f55f56"
@@ -4851,7 +4899,7 @@
   {
    "title": "Duhuldeki Deney",
    "title_en": "Soul of the Foot",
-   "country": "Canadá/Turquía",
+   "country": "Canadá, Turquía",
    "flags": "🇨🇦🇹🇷",
    "duration": "65 min",
    "day": "Sábado",
@@ -4875,7 +4923,7 @@
   {
    "title": "Khmeli Potoli",
    "title_en": "Dry Leaf",
-   "country": "Alemania/Georgia",
+   "country": "Alemania, Georgia",
    "flags": "🇩🇪🇬🇪",
    "duration": "186 min",
    "day": "Sábado",
@@ -4943,12 +4991,12 @@
    "day_order": 4,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia para expandir su influencia en América Latina, amparados por la sombra de la dictadura franquista.",
-   "synopsis_en": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America, sheltered by the shadow of Franco's dictatorship.",
+   "synopsis": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia con el propósito de expandir sus dominios en América, amparados por la sombra de la dictadura franquista. En el año 2021 salió a la luz la denuncia de 43 mujeres suramericanas contra esta organización, por trata de personas y explotación. En un ejercicio de memoria imaginativa, un grupo de actrices se adentra en un internado abandonado entre las frías montañas de Antioquia, para construir una obra de teatro inspirada en las vidas de aquellas mujeres. Poco a poco los ensayos se salen de control y las actrices terminan invocando a los fantasmas de sus antepasadas, que sedientas de justicia se apoderan de la cámara, transformando el rumbo de la película.",
+   "synopsis_en": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America. In 2021, the complaint against this organization by 43 women for trafficking and exploitation reopened the historical wound. In an exercise of imaginative memory, a group of actresses enters an abandoned school to create a play inspired by those silenced lives.",
    "year": 2026,
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/i7xnqfBINWSDHPNXhAqpThZJ8Fw.jpg",
-   "posterSource": "tmdb",
+   "poster": "/assets/fantasmagoria-2026/manual-para-invocar-fantasmas.jpg",
+   "posterSource": "oficial",
    "work_id": "w_R4GR2FGPV8X4",
    "genre": "Documental",
    "_src": {
@@ -4967,7 +5015,7 @@
   {
    "title": "Isabel",
    "title_en": "",
-   "country": "Brasil/Francia",
+   "country": "Brasil, Francia",
    "flags": "🇧🇷🇫🇷",
    "duration": "85 min",
    "day": "Sábado",
@@ -5016,7 +5064,7 @@
   {
    "title": "El mundo al revés",
    "title_en": "The World Upside Down",
-   "country": "Suiza/Argentina",
+   "country": "Suiza, Argentina",
    "flags": "🇨🇭🇦🇷",
    "duration": "77 min",
    "day": "Sábado",
@@ -5041,7 +5089,7 @@
    "title": "(s)paces Cortos — Prog. 1",
    "title_en": "Atado · Pequeno Jogo · Trưa Lịm · Warnungen an die ferne Zukunft · 3cm of Complexity",
    "flags": "🇪🇸🇧🇷🇫🇷🇻🇳🇩🇪🇬🇧🇦🇹🇬🇷",
-   "country": "España/Brasil/Francia/Vietnam/Alemania/Reino Unido/Austria/Grecia",
+   "country": "España, Brasil, Francia, Vietnam, Alemania, Reino Unido, Austria, Grecia",
    "duration": "~60 min",
    "day": "Sábado",
    "date": 18,
@@ -5069,27 +5117,30 @@
     },
     {
      "title": "Trưa Lịm",
-     "country": "Francia/Vietnam",
+     "country": "Francia, Vietnam",
      "duration": "16 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20211541.png?itok=GbDa6pdw",
      "posterSource": "custom",
-     "work_id": "w_R4HAT537Z8RQ"
+     "work_id": "w_R4HAT537Z8RQ",
+     "flags": "🇫🇷🇻🇳"
     },
     {
      "title": "Warnungen an die ferne Zukunft",
-     "country": "Alemania/Reino Unido",
+     "country": "Alemania, Reino Unido",
      "duration": "19 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Warnungen%20an%20die%20ferne%20Zukunft%20PLAKAT%20-%20Ju%20liane_page-0001.jpg?itok=BKoBLV6t",
      "posterSource": "custom",
-     "work_id": "w_R4HAT5CSRDJY"
+     "work_id": "w_R4HAT5CSRDJY",
+     "flags": "🇩🇪🇬🇧"
     },
     {
      "title": "3cm of Complexity",
-     "country": "Austria/Grecia",
+     "country": "Austria, Grecia",
      "duration": "21 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Film%20Poster_3cm%20of%20Complexity%20-%20Fanny%20Berghofer.jpg?itok=RsFqy5mK",
      "posterSource": "custom",
-     "work_id": "w_R4HAT5VM48NN"
+     "work_id": "w_R4HAT5VM48NN",
+     "flags": "🇦🇹🇬🇷"
     }
    ],
    "id": "f_85fce29fdf"
@@ -5121,7 +5172,7 @@
   {
    "title": "The Chronology of Water",
    "title_en": "",
-   "country": "Francia/Letonia/Estados Unidos",
+   "country": "Francia, Letonia, Estados Unidos",
    "flags": "🇫🇷🇱🇻🇺🇸",
    "duration": "128 min",
    "day": "Sábado",
@@ -5146,7 +5197,7 @@
   {
    "title": "Blue Heron",
    "title_en": "",
-   "country": "Canadá/Hungría",
+   "country": "Canadá, Hungría",
    "flags": "🇨🇦🇭🇺",
    "duration": "90 min",
    "day": "Sábado",
@@ -5259,8 +5310,8 @@
      "title": "El cazador",
      "country": "Colombia",
      "duration": "13 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-30%20170710.png?itok=dXa68A0J",
-     "posterSource": "custom",
+     "poster": "https://image.tmdb.org/t/p/w500/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4FS61XPY9M6",
      "genre": "Drama",
      "_src": {
@@ -5278,7 +5329,7 @@
      "title_en": "The Hunter",
      "lbSlug": "the-hunter-2026-1",
      "year": 2026,
-     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revela la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
      "synopsis_lang": "es",
      "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
      "director": "Luciana Riso Soto, Manuel Villa",
@@ -5286,10 +5337,10 @@
     },
     {
      "title": "Filme Pin",
-     "country": "Colombia/Portugal",
+     "country": "Colombia, Portugal",
      "duration": "7 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER-FILME-PIN-2026%20-%20La%20Vulcanizadora.jpg?itok=qrKWWtjf",
-     "posterSource": "custom",
+     "poster": "/assets/midbo-2026/filme-pin.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4EPV0KGHMRN",
      "genre": "Documental",
      "_src": {
@@ -5309,16 +5360,16 @@
      "synopsis_lang": "es",
      "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime.",
      "director": "María Rojas Arias, Andrés Jurado",
-     "tmdb_id": 1616856
+     "tmdb_id": 1616856,
+     "flags": "🇨🇴🇵🇹"
     },
     {
      "title": "Futuros luminosos",
      "country": "Colombia",
      "duration": "25 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b",
-     "posterSource": "custom",
+     "poster": "/assets/aleste-2026/futuros-luminosos.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4FBMPTV0JG2",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4FBMPTV0JG2 (cinemancia-2026, ficci-65, jardin-2026)",
@@ -5334,7 +5385,7 @@
      "title_en": "A Brighter Future",
      "lbSlug": "a-brighter-future",
      "year": 2026,
-     "synopsis": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+     "synopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas.",
      "synopsis_lang": "es",
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
      "director": "Ismael García Ramírez",
@@ -5342,10 +5393,10 @@
     },
     {
      "title": "Lejanía",
-     "country": "Colombia/Chile",
+     "country": "Colombia, Chile",
      "duration": "17 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PO%CC%81STER%20LEJANIA%20-%20Carolina%20Zarate%20Garcia.png?itok=UPHrcFZ4",
-     "posterSource": "custom",
+     "poster": "/assets/aleste-2026/lejania.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HCND964DS3",
      "genre": "Documental",
      "_src": {
@@ -5358,20 +5409,22 @@
        "tmdb_id": "catálogo w_R4HCND964DS3 (ficci-65, jardin-2026)"
       }
      },
-     "lbSlug": "lejania-1",
+     "lbSlug": "lejania-2026",
      "year": 2026,
      "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
      "synopsis_lang": "es",
      "director": "Daniel Velásquez Patarroyo",
-     "tmdb_id": 1668904
+     "tmdb_id": 1668904,
+     "flags": "🇨🇴🇨🇱"
     },
     {
      "title": "Winter Blumen Garten",
-     "country": "Austria/Colombia",
+     "country": "Austria, Colombia",
      "duration": "27 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_WINTER_BLUMEN_GARTEN_POSTER_ESP_1%20-%20EXPERIMENTA.jpg?itok=dZG03ssO",
      "posterSource": "custom",
-     "work_id": "w_R4HD23F6TYJ1"
+     "work_id": "w_R4HD23F6TYJ1",
+     "flags": "🇦🇹🇨🇴"
     }
    ],
    "id": "f_00581c4c2f"
@@ -5380,7 +5433,7 @@
    "title": "Cine Indígena — Prog. 1",
    "title_en": "Apotnojushi La casa del viento · La Raya",
    "flags": "🇨🇴🇲🇽",
-   "country": "Colombia/México",
+   "country": "Colombia, México",
    "duration": "92 min",
    "day": "Domingo",
    "date": 19,
@@ -5394,7 +5447,7 @@
      "title": "Apotnojushi La casa del viento",
      "country": "Colombia",
      "duration": "12 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PORTADAS%20CASA%20EN%20EL%20%20aire%202-im%C3%A1genes-0%20-%20Aguacate%20Audiovisual.jpg?itok=b37CurBg",
+     "poster": "/assets/ficdeh/guerreras.jpg",
      "posterSource": "custom",
      "work_id": "w_R4HDSRY0KBZB",
      "genre": "Documental",
@@ -5413,7 +5466,7 @@
      "title_en": "The House of the Wind",
      "lbSlug": "the-house-of-the-wind-2026",
      "year": 2026,
-     "synopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
+     "synopsis": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanías del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
      "synopsis_lang": "es",
      "synopsis_en": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people.",
      "director": "Marbel Ina Vanegas Jusayu",
@@ -5423,7 +5476,7 @@
      "title": "La Raya",
      "country": "México",
      "duration": "80 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-29%20235923.png?itok=0Rlq5ukp",
+     "poster": "/assets/ficdeh/la-raya.jpg",
      "posterSource": "custom",
      "work_id": "w_R4HE76B833SH",
      "genre": "Drama",
@@ -5477,7 +5530,7 @@
    "title": "Costas — Prog. 3",
    "title_en": "Ali au pays des merveilles · Viaje a la explotación",
    "flags": "🇫🇷🇪🇸",
-   "country": "Francia/España",
+   "country": "Francia, España",
    "duration": "78 min",
    "day": "Domingo",
    "date": 19,
@@ -5509,7 +5562,7 @@
   {
    "title": "Mare's Nest",
    "title_en": "",
-   "country": "Reino Unido/Francia/Canadá",
+   "country": "Reino Unido, Francia, Canadá",
    "flags": "🇬🇧🇫🇷🇨🇦",
    "duration": "98 min",
    "day": "Domingo",
@@ -5565,8 +5618,8 @@
      "title": "Héroes del silencio",
      "country": "Colombia",
      "duration": "13 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_4_He%CC%81roes%20del%20Silencio_Po%CC%81ster%20-%20Santiago%20Alejandro%20Mu%C3%B1oz%20Marrugo.jpg?itok=NGH1UWzS",
-     "posterSource": "custom",
+     "poster": "/assets/ficcali-2026/heroes-del-silencio.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HEVVQPTDC1",
      "lbSlug": "heroes-del-silencio",
      "_src": {
@@ -5590,8 +5643,8 @@
      "title": "Kuagro",
      "country": "Colombia",
      "duration": "12 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/poster%20KUAGRO%20FINAL_Mesa%20de%20trabajo%201%20-%20Diego%20Casseres.png?itok=qvukayHP",
-     "posterSource": "custom",
+     "poster": "/assets/ficcali-2026/kuagro.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HEVVW6AQR2",
      "lbSlug": "kuagro",
      "_src": {
@@ -5613,10 +5666,10 @@
     },
     {
      "title": "La tinaja",
-     "country": "Colombia/Argentina",
+     "country": "Colombia, Argentina",
      "duration": "13 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_SIN%20CREDITOS%20copia%20-%20Mar%20Aj%C3%A9.jpg?itok=Dhen7YE6",
-     "posterSource": "custom",
+     "poster": "/assets/ficcali-2026/la-tinaja.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HEVVDKDN9Y",
      "genre": "Experimental",
      "_src": {
@@ -5633,10 +5686,11 @@
      "title_en": "The Clay Vase",
      "lbSlug": "la-tinaja",
      "year": 2025,
-     "synopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado.",
+     "synopsis": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos? Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso. Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
      "synopsis_lang": "es",
      "director": "Ernestina Miranda, Mar Ajé",
-     "tmdb_id": 1668923
+     "tmdb_id": 1668923,
+     "flags": "🇨🇴🇦🇷"
     },
     {
      "title": "Piratas de La Boquilla",
@@ -5655,7 +5709,7 @@
   {
    "title": "Lo demás es ruido",
    "title_en": "Everything Else is Noise",
-   "country": "México/Alemania/Canadá",
+   "country": "México, Alemania, Canadá",
    "flags": "🇲🇽🇩🇪🇨🇦",
    "duration": "70 min",
    "day": "Domingo",
@@ -5703,8 +5757,8 @@
   {
    "title": "Mu-Ki-Ra",
    "title_en": "",
-   "country": "Colombia/España/Francia",
-   "flags": "🇨🇴🇪🇸🇫🇷",
+   "country": "Colombia, España",
+   "flags": "🇨🇴🇪🇸",
    "duration": "81 min",
    "day": "Domingo",
    "date": 19,
@@ -5714,13 +5768,13 @@
    "day_order": 5,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
+   "synopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo se adentra en la selva para rescatar a su hermano Martín. Acompañada por Iolo, una anciana mágica, y una divertida osa hormiguera, deberá atrapar al monstruo que se lo llevó, pero pronto descubrirá que estas criaturas esconden un sorprendente secreto.",
    "director": "Estefanía Piñeres",
    "year": 2026,
-   "synopsis_en": "Beyond the walls that protect the village stretches a magical and mysterious jungle, inhabited by creatures considered dangerous. For years, the villagers have trained as warriors from a young age.",
+   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
    "synopsis_lang": "es",
-   "posterSource": "tmdb",
-   "poster": "https://image.tmdb.org/t/p/w500/mVX41bOzeT1hQHjK66MFTgMTuWi.jpg",
+   "posterSource": "oficial",
+   "poster": "/assets/anibia-2026/mukira.jpg",
    "work_id": "w_R4G1R6GM6QWF",
    "genre": "Animación",
    "_src": {
@@ -5837,22 +5891,23 @@
        "director": "catálogo w_R4HD24FCSZJ0 (ficci-65, ficica-2026, mamut-2026)"
       }
      },
-     "director": "Ron Márquez, Andrés Felipe Benavides, Fiama Castro, Cindy Caffroni, Juan Camilo Olmos, Valeria Rua, Felipe Moreno, Dante Hernández, Santiago Rodríguez, Laura Gabay García, Moises Busigo, Samuel Moreno Alvarez"
+     "director": "Juan Abello, Juan Olmos, Fiama Castro, Cindy Caffroni, Valeria Rua, Andrés Felipe Benavides, Felipe Moreno, Ron Márquez, Dante Hernández, Santiago Rodríguez"
     },
     {
      "title": "Consagración",
-     "country": "Colombia/Alemania",
+     "country": "Colombia, Alemania",
      "duration": "17 min",
      "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_FICCI_xPosters_Instagram_4x5_9x162%20-%20Vanessa%20Monti.png?itok=9P9UU2BT",
      "posterSource": "custom",
-     "work_id": "w_R4HD24M9AR8Q"
+     "work_id": "w_R4HD24M9AR8Q",
+     "flags": "🇨🇴🇩🇪"
     },
     {
      "title": "Mi amigo, el arquitecto",
      "country": "Colombia",
      "duration": "15 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MFTA_Final_Untextured_Low-Res%20-%20MEDIOCIELO%20Cine%20%281%29.jpg?itok=MXASl-yt",
-     "posterSource": "custom",
+     "poster": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4F45MWYW0TY",
      "title_en": "My Friend, The Architect",
      "_src": {
@@ -5876,10 +5931,10 @@
     },
     {
      "title": "Sirena mecánica",
-     "country": "España/Colombia",
+     "country": "España, Colombia",
      "duration": "9 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20205043.png?itok=BR7oyf-o",
-     "posterSource": "custom",
+     "poster": "/assets/festicinerio-2026/sirena-mecanica.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HD241JZEE7",
      "genre": "Experimental",
      "_src": {
@@ -5897,14 +5952,15 @@
      "synopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
      "synopsis_lang": "es",
      "director": "Violeta Vieytes Vivares, Damián Sato",
-     "tmdb_id": 1668871
+     "tmdb_id": 1668871,
+     "flags": "🇪🇸🇨🇴"
     },
     {
      "title": "Suite intercontinental",
      "country": "Colombia",
      "duration": "24 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz",
-     "posterSource": "custom",
+     "poster": "/assets/popayan-2026/suite-intercontinental.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HDE4TF8RNM",
      "lbSlug": "suite-intercontinental",
      "_src": {
@@ -5930,7 +5986,7 @@
   {
    "title": "Lust",
    "title_en": "",
-   "country": "Bulgaria/Dinamarca/Suecia",
+   "country": "Bulgaria, Dinamarca, Suecia",
    "flags": "🇧🇬🇩🇰🇸🇪",
    "duration": "77 min",
    "day": "Domingo",
@@ -5955,7 +6011,7 @@
    "title": "Cortos Iberoamérica — Prog. 2",
    "title_en": "O Mapa em que Estão os Meus Pés · Pajuyuk · Trizas",
    "flags": "🇧🇷🇪🇨🇧🇴🇬🇧",
-   "country": "Brasil/Ecuador/Bolivia/Inglaterra",
+   "country": "Brasil, Ecuador, Bolivia, Reino Unido",
    "duration": "~90 min",
    "day": "Domingo",
    "date": 19,
@@ -5983,7 +6039,7 @@
     },
     {
      "title": "Trizas",
-     "country": "Bolivia/Inglaterra",
+     "country": "Bolivia, Reino Unido",
      "duration": "15 min",
      "work_id": "w_R4F1D2Q71DK4",
      "title_en": "Shards",
@@ -6004,7 +6060,8 @@
      "synopsis_lang": "es",
      "synopsis_en": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
      "director": "Luciana Decker Orozco",
-     "tmdb_id": 1604094
+     "tmdb_id": 1604094,
+     "flags": "🇧🇴🇬🇧"
     }
    ],
    "id": "f_dc5384c337"
@@ -6012,7 +6069,7 @@
   {
    "title": "Los nadadores",
    "title_en": "The Swimmers",
-   "country": "Argentina/México/Estados Unidos",
+   "country": "Argentina, México, Estados Unidos",
    "flags": "🇦🇷🇲🇽🇺🇸",
    "duration": "76 min",
    "day": "Domingo",
@@ -6133,7 +6190,7 @@
   {
    "title": "Les Voyageurs",
    "title_en": "The Travelers",
-   "country": "España/Camerún",
+   "country": "España, Camerún",
    "flags": "🇪🇸🇨🇲",
    "duration": "61 min",
    "day": "Domingo",
@@ -6209,7 +6266,7 @@
    "day_order": 5,
    "is_cortos": false,
    "film_list": [],
-   "synopsis": "Gugu tiene 12 años y crece en una pequeña comunidad a orillas del embalse Araújo-Lima, cuyo nivel desciende gradualmente revelando las ruinas de una ciudad sumergida. Vive con su abuela Dilma, rodeado de ternura, picardía y tardes de fútbol.",
+   "synopsis": "Gugu es un niño soñador y apasionado por el fútbol que vive con su abuela Dilma, una profesora jubilada que lo cría de manera libre y afectuosa. Por el contrario, la relación del niño con su padre, Batista, es difícil, marcada por ausencias, expectativas y afectos no expresados. Abuela y nieto viven solos junto a la represa de Araújo Lima que, después de años de sequía, comienza a revelar las ruinas de una antigua ciudad sumergida, sacando a la luz recuerdos que cambiaron la vida de la familia.",
    "director": "Allan Deberton",
    "year": 2026,
    "synopsis_en": "Twelve-year-old Gugu grows up in a small community on the banks of the Araújo-Lima reservoir, whose waters are slowly receding to reveal the ruins of a submerged town. He lives with his grandmother Dilma, surrounded by tenderness, mischief, and afternoons of football.",
@@ -6230,7 +6287,7 @@
   {
    "title": "Dao",
    "title_en": "Dao",
-   "country": "Francia/Senegal/Guinea-Bissau",
+   "country": "Francia, Senegal, Guinea-Bisáu",
    "flags": "🇫🇷🇸🇳🇬🇼",
    "duration": "185 min",
    "day": "Domingo",
@@ -6304,7 +6361,7 @@
   {
    "title": "Nuit Obscure - Ain't I a Child?",
    "title_en": "Obscure Night - Ain’t I a Child?",
-   "country": "Francia/Suiza/Portugal",
+   "country": "Francia, Suiza, Portugal",
    "flags": "🇫🇷🇨🇭🇵🇹",
    "duration": "164 min",
    "day": "Domingo",
@@ -6384,8 +6441,8 @@
      "title": "Héroes del silencio",
      "country": "Colombia",
      "duration": "13 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_4_He%CC%81roes%20del%20Silencio_Po%CC%81ster%20-%20Santiago%20Alejandro%20Mu%C3%B1oz%20Marrugo.jpg?itok=NGH1UWzS",
-     "posterSource": "custom",
+     "poster": "/assets/ficcali-2026/heroes-del-silencio.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HEVVQPTDC1",
      "lbSlug": "heroes-del-silencio",
      "_src": {
@@ -6409,8 +6466,8 @@
      "title": "Kuagro",
      "country": "Colombia",
      "duration": "12 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/poster%20KUAGRO%20FINAL_Mesa%20de%20trabajo%201%20-%20Diego%20Casseres.png?itok=qvukayHP",
-     "posterSource": "custom",
+     "poster": "/assets/ficcali-2026/kuagro.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HEVVW6AQR2",
      "lbSlug": "kuagro",
      "_src": {
@@ -6432,10 +6489,10 @@
     },
     {
      "title": "La tinaja",
-     "country": "Colombia/Argentina",
+     "country": "Colombia, Argentina",
      "duration": "13 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_SIN%20CREDITOS%20copia%20-%20Mar%20Aj%C3%A9.jpg?itok=Dhen7YE6",
-     "posterSource": "custom",
+     "poster": "/assets/ficcali-2026/la-tinaja.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HEVVDKDN9Y",
      "genre": "Experimental",
      "_src": {
@@ -6452,10 +6509,11 @@
      "title_en": "The Clay Vase",
      "lbSlug": "la-tinaja",
      "year": 2025,
-     "synopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado.",
+     "synopsis": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos? Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso. Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
      "synopsis_lang": "es",
      "director": "Ernestina Miranda, Mar Ajé",
-     "tmdb_id": 1668923
+     "tmdb_id": 1668923,
+     "flags": "🇨🇴🇦🇷"
     },
     {
      "title": "Piratas de La Boquilla",

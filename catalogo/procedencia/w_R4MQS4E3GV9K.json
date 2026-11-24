@@ -18,5 +18,17 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24"
  }
 }

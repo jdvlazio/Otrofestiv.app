@@ -194,7 +194,7 @@
    "film_list": [
     {
      "title": "La Ceremonia",
-     "director": "Deimer Vergara / Julián García",
+     "director": "Deimer Vergara, Julián García",
      "country": "Colombia",
      "flags": "🇨🇴",
      "lbSlug": "⚠️ LB PENDIENTE",
@@ -212,14 +212,13 @@
     },
     {
      "title": "Pawa",
-     "director": "Marbel Vanegas Jusayu",
+     "director": "Marbel Ina Vanegas Jusayu",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "poster": "/assets/leviza/Pawa.jpeg",
-     "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom",
+     "poster": "/assets/ficica-2026/pawa.jpg",
+     "lbSlug": "pawa",
+     "posterSource": "oficial",
      "work_id": "w_R4HCNBABG3FG",
-     "genre": "Ficción",
      "_src": {
       "heredado": {
        "genre": "catálogo w_R4HCNBABG3FG (ficci-65, ficdeh-2026, leviza-2026)",
@@ -337,12 +336,12 @@
    "film_list": [
     {
      "title": "La Independencia",
-     "director": "Jhon Agudelo Suárez",
+     "director": "John Agudelo Suárez",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "poster": "/assets/leviza/LaIndependencia.webp",
-     "lbSlug": "⚠️ LB PENDIENTE",
-     "posterSource": "custom",
+     "poster": "/assets/festicinerio-2026/independencia.jpg",
+     "lbSlug": "independence-2025",
+     "posterSource": "oficial",
      "work_id": "w_R4HF7EVH2VC7",
      "title_en": "Independence",
      "_src": {
@@ -398,7 +397,7 @@
     },
     {
      "title": "Tiempos Revelados",
-     "director": "Paola Nova / Fredy Roldán",
+     "director": "Paola Nova, Fredy Roldán",
      "country": "Colombia",
      "flags": "🇨🇴",
      "lbSlug": "⚠️ LB PENDIENTE",
@@ -444,10 +443,9 @@
    "time": "16:00",
    "venue": "Auditorio Polideportivo - Zapatoca",
    "day_order": 1,
-   "tmdb_id": 1222695,
+   "tmdb_id": 947507,
    "year": 2022,
    "genre": "Animación",
-   "lbSlug": "⚠️ LB PENDIENTE",
    "synopsis": "No hace falta ser un superhéroe para ser súper. Hedvig, de 11 años, encoge accidentalmente el traje de su padre, el superhéroe del pueblo, y tendrá que encontrar su propio superpoder.",
    "poster": "/buCip15i0a0PlT77oC7OwQD0HAC.jpg",
    "duration": "76 min",
@@ -455,7 +453,8 @@
    "synopsis_lang": "es",
    "posterSource": "tmdb",
    "work_id": "w_R4KHT2KBD0K7",
-   "id": "f_aa6ba25865"
+   "id": "f_aa6ba25865",
+   "lbSlug": "just-super"
   },
   {
    "title": "Clausura — Filminutos Movimiento Audiovisual LEVIZA",
@@ -671,7 +670,7 @@
     {
      "title": "Chist",
      "director": "Elkin Díaz",
-     "year": "2022",
+     "year": 2022,
      "duration": "11 min",
      "country": "Colombia",
      "flags": "🇨🇴",
@@ -679,13 +678,13 @@
      "synopsis": "Un escritor que no escribe llega a su casa entrada la noche con cara de suicidio, dispuesto a torturar a los suyos debido a su estreñimiento creativo. En su despacho, una galería de grandes escritores parece burlarse de sus malos intentos.",
      "synopsis_lang": "es",
      "posterSource": "custom",
-     "lbSlug": "chist-1",
+     "lbSlug": "chist-2022",
      "work_id": "w_R4KJ60H1BVY2"
     },
     {
      "title": "Sin la Luz Perpetua",
      "director": "Raúl Gutiérrez",
-     "year": "2022",
+     "year": 2022,
      "duration": "25 min",
      "country": "Colombia",
      "flags": "🇨🇴",
@@ -716,7 +715,7 @@
     {
      "title": "Filminutos Semillero YarimaFICS — Barrancabermeja",
      "director": "",
-     "year": "2025",
+     "year": 2025,
      "duration": "~15 min",
      "country": "Colombia",
      "flags": "🇨🇴",
@@ -727,9 +726,9 @@
     {
      "title": "Candelaria",
      "director": "Jhonny Hendrix Hinestroza",
-     "year": "2017",
+     "year": 2017,
      "duration": "87 min",
-     "country": "Colombia / Cuba",
+     "country": "Colombia, Cuba",
      "flags": "🇨🇴🇨🇺",
      "synopsis": "Dos pensionistas, una cámara de video y una propuesta indecente.",
      "lbSlug": "candelaria-2017",

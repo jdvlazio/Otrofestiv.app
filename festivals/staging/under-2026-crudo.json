@@ -1,0 +1,681 @@
+{
+ "_provenance": {
+  "fuente": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+  "capturado": "2026-11-24",
+  "metodo": "PDF oficial (correo 18 nov): capa de texto + OCR + a ojo; duraciones y rótulos de sección del reel https://www.instagram.com/p/Df0rYtRxmgp/",
+  "que_aporta": "día, hora, sede, obras de cada función, director/país/año, acceso"
+ },
+ "funciones": [
+  {
+   "titulo": "Apertura",
+   "dia": "2026-11-25",
+   "hora": "18:30",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "seccion": "Documental Activismo Social",
+   "obras": [
+    {
+     "titulo": "Borrachos mientras escuchamos las gotas caer",
+     "director": "Santiago Gómez Ramírez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 21,
+     "title_en": "Drunk Hearing the Rain Drops Fall",
+     "sinopsis_en": "A hybrid documentary of denunciation and reflection about León Ramírez and Isabel Velásquez, an elderly couple worn down by the land that once gave them joy and now slowly kills them through state abuse. At nearly 90, they still run a small store to survive. Their land, ravaged by armed groups and state policies, is now a purgatory where fruit rots on the ground. Powerless, they close their shop and bury themselves alive in their land, embodying old age, abandonment, uprootedness and resistance."
+    },
+    {
+     "titulo": "The sight is a wound",
+     "director": "Parham Ghalamdar",
+     "pais": "Irán",
+     "anio": 2025,
+     "duracion_min": 7,
+     "sinopsis": "Una meditación inquietante sobre el colapso de la imagen ante las atrocidades contemporáneas. La obra parte de una pregunta simple: ¿qué puede ofrecer el artista cuando las imágenes de nuestro tiempo desbordan la capacidad de los encuadres para contenerlas? Ante el genocidio en curso en Gaza —transmitido en vivo por sus perpetradores, insoportable en su nitidez—, Parham Ghalamdar quema más de 50 de sus propias pinturas, obras expuestas en muestras individuales y colectivas en instituciones de todo el mundo.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    }
+   ],
+   "tipo": "programa",
+   "duracion_min": 28,
+   "has_qa": true
+  },
+  {
+   "titulo": "Las muertes más bellas del mundo",
+   "dia": "2026-11-25",
+   "hora": "20:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "seccion": "Documental Activismo Social",
+   "director": "Quique Avilés, Ellie Walton",
+   "pais": "Estados Unidos",
+   "anio": 2024,
+   "duracion_min": 71,
+   "sinopsis": "Mientras en los años ochenta arreciaba una guerra mortal respaldada por Estados Unidos, decenas de miles de salvadoreños hicieron de la región de Washington D. C. su nuevo hogar. Esa migración masiva dio origen a un nuevo movimiento artístico. Columbia Road, en Adams Morgan, se volvió un foco del reasentamiento salvadoreño, donde los artistas dieron sentido a una identidad salvadoreño-washingtoniana única y, en el camino, moldearon la escena cultural vibrante y duradera de la ciudad.",
+   "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+  },
+  {
+   "titulo": "Bisou ACAB + Memoria colectiva + 8 metros: La palabra subterránea",
+   "dia": "2026-11-25",
+   "hora": "18:30",
+   "sede": "Bebop Bar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "Bisou ACAB",
+     "director": "Guillermo Gallo",
+     "pais": "Francia",
+     "anio": 2026,
+     "sinopsis": "Pierre va a encontrarse con Renaud para una jornada de manifestaciones en Marsella y se queda sin noticias de su amigo. Obligado a vagar solo por una ciudad paralizada por los bloqueos, poco a poco se deja arrastrar por el torbellino de los enfrentamientos.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Memoria colectiva",
+     "director": "Cristina Colmenares",
+     "pais": "Perú",
+     "anio": 2025
+    },
+    {
+     "titulo": "8 metros: La palabra subterránea",
+     "director": "Pablo Fernández Alberti",
+     "pais": "Argentina",
+     "anio": 2026,
+     "sinopsis": "En una casa del barrio Observatorio, en Córdoba, detrás de la fachada de una herrería y de la vida cotidiana de una familia, se escondía un secreto: a ocho metros bajo tierra funcionaba una imprenta clandestina del PRT-ERP (Ejército Revolucionario del Pueblo). Allí se imprimían El Combatiente y Estrella Roja, publicaciones que circulaban por una red organizada para burlar la persecución de la dictadura.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    }
+   ],
+   "tipo": "programa"
+  },
+  {
+   "titulo": "El coloquio de los pájaros",
+   "dia": "2026-11-25",
+   "hora": "18:30",
+   "sede": "Donde Robin",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "director": "Sofía Velázquez",
+   "pais": "Perú",
+   "anio": 2026
+  },
+  {
+   "titulo": "Programa 1",
+   "dia": "2026-11-26",
+   "hora": "19:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "seccion": "Animación",
+   "obras": [
+    {
+     "titulo": "Duelo",
+     "director": "Sebastian Barnes",
+     "pais": "Argentina",
+     "anio": 2025,
+     "duracion_min": 12,
+     "sinopsis": "En un planeta cercano, un hombre vive en completa soledad protegiendo a la Tierra de los exiliados; pero para salvar a toda la humanidad tendrá que enfrentar aquello de lo que ha estado huyendo.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "1 paseo por la ciudad",
+     "director": "Alejandro Acuña Sevilla, Sara Coello Coello",
+     "pais": "México",
+     "anio": 2025,
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Comb story",
+     "director": "Ernesto Rodriguez Cruz",
+     "pais": "Estados Unidos",
+     "anio": 2026,
+     "duracion_min": 3,
+     "sinopsis": "Elena sostiene un peine de madera y los recuerdos la devuelven a la infancia: su madre peinándola despacio, todos los días, incluso cuando Elena ya era una mujer joven. Cuando la vida la llevó a la ciudad, Elena se cortó el pelo y, con él, el camino de regreso a casa. Los años se llenaron de razones para no volver. Elena nunca entendió por qué su madre la peinaba, hasta el día en que por fin estuvo frente a ella, sacó el peine y le peinó el cabello por primera vez.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Cyclotron",
+     "director": "Brian Gibson",
+     "pais": "Estados Unidos",
+     "anio": 2026,
+     "duracion_min": 4,
+     "sinopsis": "Un acelerador de partículas de cuatro minutos y medio: colores, formas y sonidos animados en bucles desfasados que chocan, se estiran y se invierten en el tiempo.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "SKRFF",
+     "director": "Corrie Francis Parks, Daniel Nuderscher",
+     "pais": "Austria",
+     "anio": 2024,
+     "duracion_min": 7,
+     "sinopsis": "Un muro de grafitis en Viena se vuelve sitio arqueológico y escultura de esgrafiado, mientras unos «skrffólogos» activan con animación stop motion las huellas del pasado. Pero ¿puede la historia recordarse con claridad en toda su complejidad?",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Tapeworm Alexis & the Opera Diva",
+     "director": "Thaïs Odermatt",
+     "pais": "Suiza",
+     "anio": 2025,
+     "duracion_min": 11,
+     "sinopsis": "La tenia Alexis ayuda a Maria Callas a convertirse en «Prima Assoluta»: una historia de éxito que termina en el mayor escándalo de la historia de la ópera. La voz de la diva falla y el equipo soñado tiene que esconderse.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "The Shapeshifter's lament",
+     "director": "Gaele Sobott",
+     "pais": "Australia",
+     "anio": 2025,
+     "duracion_min": 10,
+     "sinopsis": "The Shapeshifter's Lament es una fantasía poética sobre las especies introducidas. Sitúa la supervivencia en las fronteras cambiantes entre distintas formas de vida y teje un relato de parentesco, metamorfosis y la frágil persistencia de la memoria. Queda una pregunta: ¿cómo responderían los habitantes originarios a los recién llegados, invitados por nadie, que rompen la armonía de la tierra y de sus formas de vida?",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Teatime",
+     "director": "David Mathews",
+     "pais": "Austria",
+     "anio": 2026,
+     "duracion_min": 4
+    },
+    {
+     "titulo": "Rattling",
+     "director": "Nguyen Thao Nguyen",
+     "pais": "Vietnam",
+     "anio": 2026,
+     "duracion_min": 3
+    }
+   ],
+   "tipo": "programa",
+   "duracion_min": 62
+  },
+  {
+   "titulo": "Amor trava",
+   "dia": "2026-11-26",
+   "hora": "18:30",
+   "sede": "Donde Robin",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 2",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "director": "Lucrecia Mastrangelo",
+   "pais": "Argentina",
+   "anio": 2026
+  },
+  {
+   "titulo": "verdever",
+   "dia": "2026-11-27",
+   "hora": "17:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 3",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "seccion": "Feminismos y disidencias sexuales",
+   "obras": [
+    {
+     "titulo": "Elegy for the Lost",
+     "director": "William Hong-xiao Wei",
+     "pais": "Francia, España, Reino Unido",
+     "anio": 2025,
+     "duracion_min": 29,
+     "sinopsis": "A través de un caleidoscopio de archivos, metraje encontrado e incluso imágenes generadas con inteligencia artificial, una joven que dejó China recuerda su vida y los vínculos que tuvo en su país. Su voz en off, íntima y nostálgica, es el fondo de las luchas queer: una compañía de teatro clandestina, la euforia de los festivales a escondidas, la represión y la presión social para vivir en silencio. Entre la memoria personal y la historia colectiva, la obra yuxtapone amor, resistencia y exilio.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Objectionable Fruit",
+     "director": "Hogan Seidel, Gabby Follett",
+     "pais": "Estados Unidos",
+     "anio": 2026,
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Ser, no ser, ser muchas",
+     "director": "Silbando bembas",
+     "pais": "Argentina",
+     "anio": 2025,
+     "duracion_min": 13,
+     "sinopsis": "Tras el triple lesbicidio de Pamela, Roxana y Andrea el 6 de mayo de 2024, voces lesbianas convierten el odio en memoria y resistencia.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Perros",
+     "director": "Ezequiel Rossi, Facundo Salomón",
+     "pais": "Argentina",
+     "anio": 2026,
+     "duracion_min": 10
+    }
+   ],
+   "tipo": "programa",
+   "duracion_min": 67,
+   "has_qa": true,
+   "descripcion": "Conversatorio con el Club de lectura y escritura de ciencia ficción anarco feminista."
+  },
+  {
+   "titulo": "Fiesta Under · El Vikingo Selektor",
+   "dia": "2026-11-27",
+   "hora": "21:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Con boleta: aporte $10.000",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "seccion": "Feminismos y disidencias sexuales",
+   "tipo": "evento",
+   "event_kind": "fiesta",
+   "duracion_min": 270,
+   "descripcion": "El Vikingo Selektor: post punk, dark wave, dark techno, industrial y EBM. Aporte $10.000."
+  },
+  {
+   "titulo": "Orígenes de los lenguajes audiovisuales experimentales y laboratorio de creación",
+   "dia": "2026-11-28",
+   "hora": "15:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre con inscripción previa. Cupos limitados",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "seccion": "Actividad creativa",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "duracion_min": 240,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfPOmpRt-XqqxNssm_S76cmQb0QR35cQu81IJB9Ua3PiJplTQ/viewform",
+   "descripcion": "Un recorrido por los antecedentes y el origen de los lenguajes audiovisuales experimentales, centrado en la animación experimental de pioneros como Walter Ruttmann, Hans Richter y Viking Eggeling. Con esas referencias, los participantes hacen un ejercicio práctico de exploración colectiva en el que la imagen se aborda como materia plástica mediante técnicas manuales sobre papel, digitalización y montaje. No se requieren conocimientos previos. A cargo de Hernán D. Arango S., realizador audiovisual, editor y docente universitario con más de 20 años de experiencia en cine y televisión, magíster en Artes Digitales; ha trabajado en creación e investigación, y su obra ha sido exhibida en museos y festivales nacionales e internacionales."
+  },
+  {
+   "titulo": "Experimental",
+   "dia": "2026-11-28",
+   "hora": "19:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 3",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "seccion": "Cine experimental",
+   "obras": [
+    {
+     "titulo": "Cosmopoética: el ciclo de vida de una estrella masiva",
+     "director": "Sofía Orozco Payares",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 10,
+     "sinopsis": "Cosmopoética es un cortometraje experimental sobre la transformación y la vulnerabilidad del cambio. Traza un paralelo entre el ciclo de vida de una estrella masiva y el proceso íntimo de una actriz que se despide del teatro, y piensa los finales como origen de lo nuevo.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Antifragility",
+     "director": "Serafim Chikhladze",
+     "pais": "Rusia",
+     "anio": 2026,
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Fata Morgana",
+     "director": "Hannu Nieminen",
+     "pais": "Finlandia",
+     "anio": 2026,
+     "duracion_min": 5,
+     "sinopsis": "Un estudio experimental sobre la memoria, las imágenes y el acto de filmar, y sobre cómo los recuerdos pueden transformarse, oxidarse y desintegrarse.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Ghost Noon",
+     "director": "Ting-Kin Chan",
+     "pais": "China",
+     "anio": 2026,
+     "duracion_min": 7,
+     "sinopsis": "¡Del espíritu de la pesadez! Volverse fantasma al mediodía y abrir una deriva espectral sin término —fuga, deserción, exilio, nomadismo—: desde ese punto ya nadie puede quedar fijado en una identidad exacta e inmóvil, ni en el tiempo ni en unas coordenadas. Bajo la sombra de la máquina del Estado en funcionamiento perpetuo, la hauntología surge como método de supervivencia frente a una decadencia espiritual que todo lo invade, aunque al final todo esté destinado a fracasar.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Spheres",
+     "director": "Martin Gerigk",
+     "pais": "Alemania",
+     "anio": 2026,
+     "duracion_min": 6,
+     "sinopsis": "Spheres es un homenaje a la vida, un ensayo poético que recorre una serie de esferas en expansión, cada una de las cuales revela una capa distinta de nuestra realidad compartida, de lo microscópico a lo mítico. Explora cómo las vibraciones más pequeñas de la existencia resuenan hacia la vasta arquitectura del ser y del cosmos: una meditación que respira, pensada para recordarnos las maravillas de un mundo de una belleza incomprensible. Invita a ver la vida no como una escalera sino como una constelación de esferas: interdependientes, frágiles y asombrosas.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Und Ich behaupte",
+     "director": "Patrick Müller",
+     "pais": "Alemania",
+     "anio": 2026,
+     "duracion_min": 3,
+     "sinopsis": "Fragmentos, deseo y miedo: los límites entre la vida cotidiana y los sueños se desdibujan. Una obra sobre la veracidad de las cosas.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Hansel and Gretel Get Kicked Out",
+     "director": "MilleFeuille",
+     "pais": "Canadá",
+     "anio": 2026,
+     "duracion_min": 11,
+     "sinopsis": "Un desvío de metraje encontrado de videos de vigilancia de robos en tiendas: la mirada criminalizadora de esas cámaras se subvierte al presentar el capitalismo como un padre abusivo y carcelario. Frases de creadores de YouTube a quienes echaron de casa en la adolescencia se reutilizan para «responder», sostenidas por videos «pobres», de baja resolución, de robos. La obra convierte en alegoría el capitalismo —y la mercantilización del yo— al reunir clips dispersos de internet en un solo coro de rabia desamparada. Música de Flowers of Romance, de Michel Henritzi.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    }
+   ],
+   "tipo": "programa",
+   "duracion_min": 61
+  },
+  {
+   "titulo": "Hacerlo sin permiso. Laboratorio de apropiación",
+   "dia": "2026-11-29",
+   "hora": "15:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "seccion": "Actividad académica",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "descripcion": "A cargo de: El Gabinete Cine Club / Manifiesto / La Pola Records."
+  },
+  {
+   "titulo": "Proyección sorpresa",
+   "dia": "2026-11-29",
+   "hora": "17:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 6",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "seccion": "Actividad académica",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "descripcion": "El Gabinete Cine Club."
+  },
+  {
+   "titulo": "Jubiladxs le enseñan + Norma también + To the rhythm of love and hate",
+   "dia": "2026-12-01",
+   "hora": "18:00",
+   "sede": "Bebop Bar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "Jubiladxs le enseñan",
+     "director": "Silbando Bembas",
+     "pais": "Argentina",
+     "anio": 2025
+    },
+    {
+     "titulo": "Norma también",
+     "director": "Natalia Andrea Vinelli, Alejandra Guzzo",
+     "pais": "Argentina",
+     "anio": 2025
+    },
+    {
+     "titulo": "To the rhythm of love and hate: A punkumentary on salsa with the Macabeo Orchestra",
+     "director": "Nelson Varas-Díaz",
+     "pais": "Puerto Rico",
+     "anio": 2026,
+     "sinopsis": "Once músicos, dos cámaras y una sola sala se reúnen sin guion ni resultado previsto. Lo que surge es un retrato crudo y observacional de la Orquesta El Macabeo mientras graba la última canción de su nuevo disco de salsa: el proceso, la tensión, el humor, el cansancio y la creatividad tal como aparecen. En este punkumentary etnográfico, la música se vuelve archivo de «la brega», las estrategias cotidianas de supervivencia, aguante y resistencia que forja la condición de Puerto Rico bajo el dominio colonial de Estados Unidos. El resultado es una canción hecha a ritmo de amor y odio.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    }
+   ],
+   "tipo": "programa"
+  },
+  {
+   "titulo": "Una persona distinta + 5 obras",
+   "dia": "2026-12-01",
+   "hora": "18:30",
+   "sede": "Librería Antimateria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "Una persona distinta",
+     "director": "Sergio Quatraro",
+     "pais": "Argentina",
+     "anio": 2026
+    },
+    {
+     "titulo": "Atombombenabend",
+     "director": "Thorsten Fleisch",
+     "pais": "Alemania",
+     "anio": 2026,
+     "sinopsis": "Un falso documental febril que viaja de la inteligencia artificial a la bomba atómica, y de vuelta.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Binary",
+     "director": "Padrick Ritch",
+     "pais": "Estados Unidos",
+     "anio": 2026
+    },
+    {
+     "titulo": "Distillery Dance",
+     "director": "Elly Moghtaderi",
+     "pais": "Irán",
+     "anio": 2026,
+     "sinopsis": "La danza de la destilería es un movimiento corporativo olvidado, un ritual ocultista inventado para impedir la contracción del diario.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Echoes of a zephyr",
+     "director": "Josh Weissbach",
+     "pais": "Albania",
+     "anio": 2025,
+     "sinopsis": "Un vistazo y un soplo de la Antigüedad.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "pais": "Colombia",
+     "anio": 2025
+    }
+   ],
+   "tipo": "programa"
+  },
+  {
+   "titulo": "Cut your wings and fly + Quizás nunca + Mall + Shell Shock O'K",
+   "dia": "2026-12-02",
+   "hora": "18:30",
+   "sede": "Librería Antimateria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 5",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "Cut your wings and fly",
+     "director": "Meryem Lahlou",
+     "pais": "Estados Unidos",
+     "anio": 2026
+    },
+    {
+     "titulo": "Quizás nunca",
+     "director": "Loana Isabel Pagani",
+     "pais": "Argentina",
+     "anio": 2026,
+     "sinopsis": "Dos desconocidos se cruzan varias veces antes de conocerse en una fiesta. Allí la música los hace bailar y sus movimientos viajan a sus encuentros anteriores. Aparece un juego sutil que en la vida cotidiana pasa desapercibido.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Mall",
+     "director": "Frida Balca",
+     "pais": "España",
+     "anio": 2026
+    },
+    {
+     "titulo": "Shell Shock O'K",
+     "director": "Dmytro Grynov",
+     "pais": "Alemania, Ucrania",
+     "anio": 2026
+    }
+   ],
+   "tipo": "programa"
+  },
+  {
+   "titulo": "A Perfect Maryam + Pluvia + Sinforme sinfinal + Les Voyageurs",
+   "dia": "2026-12-02",
+   "hora": "19:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 5",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "A Perfect Maryam",
+     "director": "Solmaz Etemadzadeh, Ara Torosian",
+     "pais": "Irán, Estados Unidos",
+     "anio": 2025,
+     "sinopsis": "El control de un padre sobre su hija se vuelve en su contra cuando la hermana menor, con un inocente acto de imitación, deja al descubierto la violencia oculta en su hogar. «A Perfect Maryam» es una mirada sutil pero contundente a la identidad, la niñez femenina y la represión en una familia tradicional.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Pluvia",
+     "director": "Iñigo Floristán",
+     "pais": "España",
+     "anio": 2025
+    },
+    {
+     "titulo": "Sinforme sinfinal",
+     "director": "Patricio Lagos",
+     "pais": "Perú",
+     "anio": 2026,
+     "sinopsis": "Un documento contraficcional sobre los últimos días de un país con un mal sueño y las posibilidades que dejó atrás.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Les Voyageurs",
+     "director": "David Bingong",
+     "pais": "Camerún, España",
+     "anio": 2025
+    }
+   ],
+   "tipo": "programa"
+  },
+  {
+   "titulo": "Tuktu, padre maíz + 7 obras",
+   "dia": "2026-12-03",
+   "hora": "19:00",
+   "sede": "Perpetua Lab",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+    "lamina": "p. 5",
+    "date": "2026-11-18",
+    "tipo": "festival-mensaje"
+   },
+   "obras": [
+    {
+     "titulo": "Tuktu, padre maíz",
+     "director": "Mauricio Prieto Muriel",
+     "pais": "Colombia",
+     "anio": 2026
+    },
+    {
+     "titulo": "Salman Wants to Go",
+     "director": "Ozan Takış",
+     "pais": "Turquía",
+     "anio": 2025,
+     "sinopsis": "Salmane es un refugiado senegalés que vive en Turquía. Sueña con llegar a Europa, terminar sus estudios universitarios y ayudar económicamente a su familia. En Turquía trabaja en distintos oficios y ahorra para el viaje. Intenta varias veces cruzar a Europa por Grecia, pero cada vez lo golpean y lo devuelven a Turquía. Salmane desapareció el día en que se rodaba su documental y nunca se volvió a saber de él. Siguiendo su propio texto, la obra desentierra los recuerdos que dejó, con la ayuda de los que guardaba en su teléfono.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Esas ruinas",
+     "director": "Gabriel Piñeiro",
+     "pais": "Argentina",
+     "anio": 2023,
+     "sinopsis": "A orillas del lago del Embalse, en la provincia argentina de Córdoba, están las ruinas de tres grandes hoteles de la obra social de la Armada. Se empezaron a construir en 1940, en tierras y con fondos donados por el gobierno nacional, y en 1949 quedaron abandonados sin terminar.",
+     "_sinopsis_fuente": "traducción nuestra (20 nov 2026) de la sinopsis en inglés de su ficha TMDB"
+    },
+    {
+     "titulo": "Quisiera volverme río",
+     "director": "Susana Parejas",
+     "pais": "Argentina",
+     "anio": 2024
+    },
+    {
+     "titulo": "Lo que aún queda de mí",
+     "director": "Elena Bursztein",
+     "pais": "Argentina",
+     "anio": 2026
+    },
+    {
+     "titulo": "Mamma",
+     "director": "Mike Montagna",
+     "pais": "Italia",
+     "anio": 2025
+    },
+    {
+     "titulo": "Analogue natives",
+     "director": "Bernd Lützeler",
+     "pais": "Alemania, India",
+     "anio": 2025
+    },
+    {
+     "titulo": "Vlasta, el recuerdo no es eterno",
+     "director": "Candela Vey, Tino Pereira",
+     "pais": "Argentina",
+     "anio": 2025
+    }
+   ],
+   "tipo": "programa"
+  }
+ ],
+ "_sin_funciones": "30 nov: el PDF oficial no programa nada"
+}

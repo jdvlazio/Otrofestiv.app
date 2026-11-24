@@ -8,8 +8,10 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "tmdb:1185345",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "errata: la visita del Papa al Estadio Nacional fue en 1987 (sinopsis y TMDB 1185345)",
+  "fecha": "2026-11-24"
  },
  "paises": {
   "fuente": "tmdb:1185345",

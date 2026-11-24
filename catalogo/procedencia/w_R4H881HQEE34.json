@@ -8,8 +8,10 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "anio-mas-temprano"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  },
  "paises": {
   "fuente": "festival",
@@ -18,5 +20,17 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (anibia-2026, ficcali-2026)",
+  "fecha": "2026-11-23"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "el afiche completo; el de QAFF está recortado y con laurel",
+  "fecha": "2026-11-24"
  }
 }

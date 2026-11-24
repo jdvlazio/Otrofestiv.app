@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-18"
+  "capturado": "2026-11-24"
  },
  "_origen": "aleste-2026-catalogo.json",
  "obras": [
@@ -60,7 +60,7 @@
    "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 84,
-   "pais_tmdb": "Peru, Canada",
+   "pais_tmdb": "Peru",
    "lbSlug": "1982-2025",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "1982",
@@ -91,7 +91,7 @@
    "synopsis_en": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 122,
+   "duracion_tmdb": 120,
    "pais_tmdb": "Austria",
    "lbSlug": "london-2026",
    "_verificado": "declarada a mano: «London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año"
@@ -102,8 +102,8 @@
    "titulo_original": "Le città di pianura",
    "poster_path": "/7NgIv89s4NwYgZRm7QQ5mHp42KF.jpg",
    "synopsis_es": "Primera película de Francesco Sossai en Cannes 2025.  Carlobianchi y Doriano, dos cincuentones sin blanca con la filosofía de 'nunca te saltes la última copa', conocen a Giulio, un tímido estudiante de arquitectura a la deriva en la vida. Lo que empieza como un encuentro casual se convierte en un caótico viaje por carretera por las llanuras venecianas, donde los malos consejos, las resacas y una amistad inesperada redefinen los planes de vida y amor de Giulio.",
-   "synopsis_en": "A couple of jovial life-long drunkards run into a shy architecture undergrad, whose way of seeing things will be transformed as the trio wanders from pub to pub in search of a buried treasure.",
-   "genero": "Comedia",
+   "synopsis_en": "Two broke, bar-hopping fiftysomethings meet a shy and aimless architecture student. Together, the three men embark on a chaotic road trip through the Venetian plains where bad advice, hangovers, and unexpected friendship shake up the young man's future plans for life and love.",
+   "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 98,
    "pais_tmdb": "Italy, Germany",
@@ -181,7 +181,7 @@
    "tmdb_id": 511,
    "titulo_original": "Ziemia obiecana",
    "poster_path": "/uwMs9axSBS0opiO7Ih2J3AjUvMv.jpg",
-   "synopsis_es": "A finales del siglo XIX, la ciudad de Lodz se ha convertido en el epicentro de la industria textil, con la consiguiente necesidad de mano de obra inmigrante. Tres jóvenes estudiantes de Riga: un polaco católico, hijo de nobles terratenientes, un ambicioso judío y un alemán luterano deciden abrir una fábrica en esa ciudad para hacer fortuna y, sin escrúpulos ni prejuicios, se lanzan a acumular dinero y poder. (FILMAFFINITY)",
+   "synopsis_es": "",
    "synopsis_en": "At the turn of the century, Lodz, Poland, was a quick-paced manufacturing center for textiles, replete with cutthroat industrialists and unsafe working conditions. Three young friends, a Pole, a Jew, and a German, pool their money together to build a factory.",
    "genero": "Drama",
    "anio_tmdb": 1975,
@@ -376,7 +376,7 @@
    "work_id": "w_JET7S5Q0VAEA"
   },
   {
-   "titulo": "La ciudad blanca",
+   "titulo": "En la ciudad blanca",
    "tmdb_id": 33802,
    "titulo_original": "Dans la ville blanche",
    "poster_path": "/sKoDVfcxElkqbhXjjVVmv1l6IM2.jpg",
@@ -421,6 +421,21 @@
    "lbSlug": "the-salamander-1971",
    "_verificado": "el catálogo ya la tiene (w_JET7AWMJQ4J4, aleste-2026)",
    "work_id": "w_JET7AWMJQ4J4"
+  },
+  {
+   "titulo": "Labriego",
+   "tmdb_id": 1828585,
+   "titulo_original": "Labriego",
+   "poster_path": "/zpmUpADcVjHzfKiUVSUgFf7Jo18.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the early 1990s, Colombian artist Rosemberg Sandoval created a mural that, like many of his other works, was transgressive, and ultimately destroyed. Today, the only evidence of its existence lies in the photographic record made by an anonymous person from Tijuana who was traveling through Colombia at the time. The documentary traces these images through the photographer's footsteps, in a journey across time of one of Latin America's most incisive artists.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 84,
+   "pais_tmdb": "",
+   "lbSlug": "labriego",
+   "_verificado": "el catálogo ya la tiene (w_JET7R8SZN1D0, aleste-2026)",
+   "work_id": "w_JET7R8SZN1D0"
   },
   {
    "titulo": "Laguna",
@@ -560,7 +575,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "16 min",
-     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas."
+     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? Una travesía por espacios liminales, lugares de tránsito, ambigüedad y espera silenciosa, explora la relación de los seres humanos con los lugares que han habitado y habitan, y las sensaciones, los recuerdos y las emociones que despiertan."
     }
    ]
   },
@@ -713,7 +728,7 @@
      "duration": "11 min",
      "genre": "Drama",
      "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
-     "sinopsis": "Una joven que mantiene dos relaciones simultáneas recorre Medellín para afrontar su confusión y encontrarse consigo misma."
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "ficmontanas-2026",
@@ -841,7 +856,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Sol de niebla aborda una visión fragmentada y poliangular de los frailejones, a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (Frailejón). El metraje, filmado en soporte fotosensible aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "cortoscali-2026",
@@ -853,7 +868,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "ficfusa-2026",
@@ -865,7 +880,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "filcmar-2026",
@@ -877,7 +892,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "mamut-2026",
@@ -889,7 +904,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "7 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "midbo-2026",
@@ -901,7 +916,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "«Sol de niebla» aborda una visión fragmentada y poliangular de los frailejones a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (frailejón), cuya denominación surge como un homenaje a un virrey de la Nueva Granada. El metraje, filmado en soporte fotosensible, aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida, lo cual nos cuestiona sobre el valor de los ecosistemas actualmente amenazados por actividades extractivistas que resuenan desde tiempos de la colonia española."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     }
    ]
   },
@@ -926,12 +941,13 @@
    "titulo_original": "Todo lo que pasará mañana",
    "poster_path": "/ctWD62FLoDTGgzGlewT05RJqS4R.jpg",
    "synopsis_es": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
-   "synopsis_en": "A hybrid queer short film that follows three friends during a weekend at a cabin in the rural area of Medellín. After spending time at a nearby river, the group arrives at their retreat in the middle of the forest, immersing themselves in a deep psychotropic ritual of love and desire. This experience alters their reality and ends up fracturing their relationship, evoking fragments and scraps of their shared memories. In this trance, a radical transformation is unleashed when they summon, together, a mysterious creature born from within themselves. Through their bodies and visual memory, a mutation occurs that pushes them to escape into the forest during the night. The next morning, each one leaves the cabin on their own, now living in a world where their friendship no longer exists.",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
-   "lbSlug": "todo-lo-que-pasara-manana",
+   "synopsis_en": "In a cabin in the middle of the woods, three friends immerse themselves in a psychotropic ritual of love and desire that ends up fracturing their relationship and shared memories, together they end up summoning a being that emerges from within.",
+   "genero": "Misterio",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "Everything that will happen tomorrow",
+   "lbSlug": "everything-that-will-happen-tomorrow",
    "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, aleste-2026, festicinerio-2026, ficidi-2026)",
    "work_id": "w_4RPT53V0H8F6",
    "_ya_publicada": [
@@ -958,6 +974,96 @@
      "sinopsis": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones."
     }
    ]
+  },
+  {
+   "titulo": "Futuros luminosos",
+   "tmdb_id": 1603950,
+   "titulo_original": "Futuros luminosos",
+   "poster_path": "/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "A Brighter Future",
+   "lbSlug": "a-brighter-future",
+   "_verificado": "el catálogo ya la tiene (w_R4FBMPTV0JG2, aleste-2026, cinemancia-2026, cinetoro-2026, ficci-65, jardin-2026)",
+   "work_id": "w_R4FBMPTV0JG2",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "https://image.tmdb.org/t/p/w500/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+    },
+    {
+     "festival": "cinetoro-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "/assets/cinetoro-2026/futuros-luminosos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b",
+     "posterSource": "custom",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "/assets/jardin-2026/futuros-luminosos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+    }
+   ],
+   "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
+  },
+  {
+   "titulo": "Transversal30FF",
+   "tmdb_id": 1525925,
+   "titulo_original": "Transversal 30ff",
+   "poster_path": "/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg",
+   "synopsis_es": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "transversal-30ff",
+   "_verificado": "el catálogo ya la tiene (w_R4ET8FVT5MKJ, aleste-2026, cinemancia-2025, ficfusa-2026)",
+   "work_id": "w_R4ET8FVT5MKJ"
   }
  ],
  "verificadas": {
@@ -1013,7 +1119,7 @@
    "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 84,
-   "pais_tmdb": "Peru, Canada",
+   "pais_tmdb": "Peru",
    "lbSlug": "1982-2025",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "1982",
@@ -1043,7 +1149,7 @@
    "synopsis_en": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
    "genero": "Drama",
    "anio_tmdb": 2026,
-   "duracion_tmdb": 122,
+   "duracion_tmdb": 120,
    "pais_tmdb": "Austria",
    "lbSlug": "london-2026",
    "_verificado": "declarada a mano: «London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año"
@@ -1053,8 +1159,8 @@
    "titulo_original": "Le città di pianura",
    "poster_path": "/7NgIv89s4NwYgZRm7QQ5mHp42KF.jpg",
    "synopsis_es": "Primera película de Francesco Sossai en Cannes 2025.  Carlobianchi y Doriano, dos cincuentones sin blanca con la filosofía de 'nunca te saltes la última copa', conocen a Giulio, un tímido estudiante de arquitectura a la deriva en la vida. Lo que empieza como un encuentro casual se convierte en un caótico viaje por carretera por las llanuras venecianas, donde los malos consejos, las resacas y una amistad inesperada redefinen los planes de vida y amor de Giulio.",
-   "synopsis_en": "A couple of jovial life-long drunkards run into a shy architecture undergrad, whose way of seeing things will be transformed as the trio wanders from pub to pub in search of a buried treasure.",
-   "genero": "Comedia",
+   "synopsis_en": "Two broke, bar-hopping fiftysomethings meet a shy and aimless architecture student. Together, the three men embark on a chaotic road trip through the Venetian plains where bad advice, hangovers, and unexpected friendship shake up the young man's future plans for life and love.",
+   "genero": "Drama",
    "anio_tmdb": 2025,
    "duracion_tmdb": 98,
    "pais_tmdb": "Italy, Germany",
@@ -1127,7 +1233,7 @@
    "tmdb_id": 511,
    "titulo_original": "Ziemia obiecana",
    "poster_path": "/uwMs9axSBS0opiO7Ih2J3AjUvMv.jpg",
-   "synopsis_es": "A finales del siglo XIX, la ciudad de Lodz se ha convertido en el epicentro de la industria textil, con la consiguiente necesidad de mano de obra inmigrante. Tres jóvenes estudiantes de Riga: un polaco católico, hijo de nobles terratenientes, un ambicioso judío y un alemán luterano deciden abrir una fábrica en esa ciudad para hacer fortuna y, sin escrúpulos ni prejuicios, se lanzan a acumular dinero y poder. (FILMAFFINITY)",
+   "synopsis_es": "",
    "synopsis_en": "At the turn of the century, Lodz, Poland, was a quick-paced manufacturing center for textiles, replete with cutthroat industrialists and unsafe working conditions. Three young friends, a Pole, a Jew, and a German, pool their money together to build a factory.",
    "genero": "Drama",
    "anio_tmdb": 1975,
@@ -1296,7 +1402,7 @@
    "_verificado": "el catálogo ya la tiene (w_JET7S5Q0VAEA, aleste-2026)",
    "work_id": "w_JET7S5Q0VAEA"
   },
-  "La ciudad blanca": {
+  "En la ciudad blanca": {
    "tmdb_id": 33802,
    "titulo_original": "Dans la ville blanche",
    "poster_path": "/sKoDVfcxElkqbhXjjVVmv1l6IM2.jpg",
@@ -1339,6 +1445,20 @@
    "lbSlug": "the-salamander-1971",
    "_verificado": "el catálogo ya la tiene (w_JET7AWMJQ4J4, aleste-2026)",
    "work_id": "w_JET7AWMJQ4J4"
+  },
+  "Labriego": {
+   "tmdb_id": 1828585,
+   "titulo_original": "Labriego",
+   "poster_path": "/zpmUpADcVjHzfKiUVSUgFf7Jo18.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the early 1990s, Colombian artist Rosemberg Sandoval created a mural that, like many of his other works, was transgressive, and ultimately destroyed. Today, the only evidence of its existence lies in the photographic record made by an anonymous person from Tijuana who was traveling through Colombia at the time. The documentary traces these images through the photographer's footsteps, in a journey across time of one of Latin America's most incisive artists.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 84,
+   "pais_tmdb": "",
+   "lbSlug": "labriego",
+   "_verificado": "el catálogo ya la tiene (w_JET7R8SZN1D0, aleste-2026)",
+   "work_id": "w_JET7R8SZN1D0"
   },
   "Laguna": {
    "tmdb_id": 1520513,
@@ -1473,7 +1593,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "16 min",
-     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas."
+     "sinopsis": "¿Qué permanece en un lugar cuando nos vamos? Una travesía por espacios liminales, lugares de tránsito, ambigüedad y espera silenciosa, explora la relación de los seres humanos con los lugares que han habitado y habitan, y las sensaciones, los recuerdos y las emociones que despiertan."
     }
    ]
   },
@@ -1621,7 +1741,7 @@
      "duration": "11 min",
      "genre": "Drama",
      "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
-     "sinopsis": "Una joven que mantiene dos relaciones simultáneas recorre Medellín para afrontar su confusión y encontrarse consigo misma."
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
     },
     {
      "festival": "ficmontanas-2026",
@@ -1747,7 +1867,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Sol de niebla aborda una visión fragmentada y poliangular de los frailejones, a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (Frailejón). El metraje, filmado en soporte fotosensible aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "cortoscali-2026",
@@ -1759,7 +1879,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "ficfusa-2026",
@@ -1771,7 +1891,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "filcmar-2026",
@@ -1783,7 +1903,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "mamut-2026",
@@ -1795,7 +1915,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "7 min",
-     "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     },
     {
      "festival": "midbo-2026",
@@ -1807,7 +1927,7 @@
      "country": "Colombia",
      "year": 2026,
      "duration": "6 min",
-     "sinopsis": "«Sol de niebla» aborda una visión fragmentada y poliangular de los frailejones a través de una yuxtaposición de planos en detalle (macro) a modo de estudio morfológico de la planta, contraponiendo ilustraciones científicas, representaciones institucionales-oficiales y discursos alrededor de la Espeletia (frailejón), cuya denominación surge como un homenaje a un virrey de la Nueva Granada. El metraje, filmado en soporte fotosensible, aporta una noción de registro tangible de los frailejones y sus inflorescencias, creando un símil de la planta como territorio habitado por diversas manifestaciones de vida, lo cual nos cuestiona sobre el valor de los ecosistemas actualmente amenazados por actividades extractivistas que resuenan desde tiempos de la colonia española."
+     "sinopsis": "Una visión fragmentada de los frailejones que yuxtapone planos en detalle de la planta, a modo de estudio morfológico, con ilustraciones científicas, representaciones oficiales y discursos sobre ella. Filmada en soporte fotosensible, la muestra como un territorio habitado por diversas manifestaciones de vida."
     }
    ]
   },
@@ -1830,12 +1950,13 @@
    "titulo_original": "Todo lo que pasará mañana",
    "poster_path": "/ctWD62FLoDTGgzGlewT05RJqS4R.jpg",
    "synopsis_es": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
-   "synopsis_en": "A hybrid queer short film that follows three friends during a weekend at a cabin in the rural area of Medellín. After spending time at a nearby river, the group arrives at their retreat in the middle of the forest, immersing themselves in a deep psychotropic ritual of love and desire. This experience alters their reality and ends up fracturing their relationship, evoking fragments and scraps of their shared memories. In this trance, a radical transformation is unleashed when they summon, together, a mysterious creature born from within themselves. Through their bodies and visual memory, a mutation occurs that pushes them to escape into the forest during the night. The next morning, each one leaves the cabin on their own, now living in a world where their friendship no longer exists.",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
-   "lbSlug": "todo-lo-que-pasara-manana",
+   "synopsis_en": "In a cabin in the middle of the woods, three friends immerse themselves in a psychotropic ritual of love and desire that ends up fracturing their relationship and shared memories, together they end up summoning a being that emerges from within.",
+   "genero": "Misterio",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "title_en": "Everything that will happen tomorrow",
+   "lbSlug": "everything-that-will-happen-tomorrow",
    "_verificado": "el catálogo ya la tiene (w_4RPT53V0H8F6, aleste-2026, festicinerio-2026, ficidi-2026)",
    "work_id": "w_4RPT53V0H8F6",
    "_ya_publicada": [
@@ -1862,12 +1983,99 @@
      "sinopsis": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones."
     }
    ]
+  },
+  "Futuros luminosos": {
+   "tmdb_id": 1603950,
+   "titulo_original": "Futuros luminosos",
+   "poster_path": "/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "A Brighter Future",
+   "lbSlug": "a-brighter-future",
+   "_verificado": "el catálogo ya la tiene (w_R4FBMPTV0JG2, aleste-2026, cinemancia-2026, cinetoro-2026, ficci-65, jardin-2026)",
+   "work_id": "w_R4FBMPTV0JG2",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "https://image.tmdb.org/t/p/w500/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+    },
+    {
+     "festival": "cinetoro-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "/assets/cinetoro-2026/futuros-luminosos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2025,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_P%C3%B3ster%20Futuros%20luminosos%20-%20Ismael%20Garcia.jpg?itok=6WCvT13b",
+     "posterSource": "custom",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Futuros luminosos",
+     "tmdb_id": 1603950,
+     "poster": "/assets/jardin-2026/futuros-luminosos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "25 min",
+     "genre": "Ficción",
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+    }
+   ],
+   "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas.",
+   "_sinopsis_de": "ya publicada en cinemancia-2026"
+  },
+  "Transversal30FF": {
+   "tmdb_id": 1525925,
+   "titulo_original": "Transversal 30ff",
+   "poster_path": "/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg",
+   "synopsis_es": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "transversal-30ff",
+   "_verificado": "el catálogo ya la tiene (w_R4ET8FVT5MKJ, aleste-2026, cinemancia-2025, ficfusa-2026)",
+   "work_id": "w_R4ET8FVT5MKJ"
   }
  },
  "sin_ficha": [
   "Cortometrajes de Altura",
   "Desde acá veo la tormenta",
-  "Labriego",
   "Latido. El grafiti como arte, el grafiti como forma de vida."
  ]
 }

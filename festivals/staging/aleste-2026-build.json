@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-19",
+  "capturado": "2026-11-24",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "16 nov 2026: las secciones son las de la web oficial (alestfestival.com/programa2026), tal cual. Se retiran «Al Este en el MAMM / en la Cinemateca», que eran rótulos nuestros por sede. «Fokus: Las grietas en el muro» (lámina IG) pasa a «del muro», como dice la web, que es la fuente más nueva. Emojis y nombres en inglés: propuesta, a confirmar con Juan.",
@@ -200,19 +200,19 @@
    "archetype": "Apertura / Gala",
    "order": 5
   },
+  "🧸 Kluk - Cine Familiar": {
+   "en": "Kluk - Family Cinema",
+   "archetype": "Muestra / País",
+   "order": 6
+  },
   "🇨🇴 Competencia Hecho en Colombia": {
    "en": "Made in Colombia Competition",
    "archetype": "Competencia",
-   "order": 6
+   "order": 7
   },
   "🗾 Far East": {
    "en": "Far East",
    "archetype": "Retrospectiva / Tributo",
-   "order": 7
-  },
-  "🧸 Kluk - Cine Familiar": {
-   "en": "Kluk - Family Cinema",
-   "archetype": "Muestra / País",
    "order": 8
   },
   "🏁 Clausura": {
@@ -869,7 +869,7 @@
     "14:00"
    ],
    "day": "2026-11-21",
-   "time": "19:00",
+   "time": "14:00",
    "day_order": 3,
    "venue": "Centro Colombo Americano - Medellín",
    "has_qa": false,
@@ -897,9 +897,8 @@
      "fecha": "2026-11-12"
     },
     "time": {
-     "tipo": "festival-ig",
-     "fecha": "2026-11-17",
-     "url": "https://www.instagram.com/p/Df3D47hlulW/"
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
     },
     "venue": {
      "tipo": "festival-web",
@@ -953,7 +952,7 @@
    "venue": "Centro Colombo Americano - Medellín",
    "sala": "Sala 2",
    "has_qa": false,
-   "synopsis": "A finales del siglo XIX, la ciudad de Lodz se ha convertido en el epicentro de la industria textil, con la consiguiente necesidad de mano de obra inmigrante. Tres jóvenes estudiantes de Riga: un polaco católico, hijo de nobles terratenientes, un ambicioso judío y un alemán luterano deciden abrir una fábrica en esa ciudad para hacer fortuna y, sin escrúpulos ni prejuicios, se lanzan a acumular dinero y poder. (FILMAFFINITY)",
+   "synopsis": "En Łódź, a fines del siglo XIX, tres socios se juegan todo para levantar su propia fábrica textil en una ciudad de capitalismo salvaje: un polaco, un alemán y un judío. Fue nominada al Óscar a mejor película extranjera.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/la-tierra-prometida.jpg",
    "posterSource": "tmdb",
@@ -1100,7 +1099,7 @@
     "14:00"
    ],
    "day": "2026-11-22",
-   "time": "14:30",
+   "time": "14:00",
    "day_order": 4,
    "venue": "Centro Colombo Americano - Medellín",
    "has_qa": false,
@@ -1128,9 +1127,8 @@
      "fecha": "2026-11-12"
     },
     "time": {
-     "tipo": "festival-ig",
-     "fecha": "2026-11-17",
-     "url": "https://www.instagram.com/p/Df3D47hlulW/"
+     "tipo": "festival-web",
+     "fecha": "2026-11-12"
     },
     "venue": {
      "tipo": "festival-web",
@@ -1273,7 +1271,7 @@
    "synopsis_en": "After losing their livelihood in a village, a Kosovar family is forced to move to the capital in pursuit of a place in a hypercapitalist society.",
    "_fid": "f_0372296ef6",
    "id": "f_0372296ef6",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1296,8 +1294,9 @@
      "fecha": "2026-11-16"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4037?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1425,6 +1424,7 @@
    "_fid": "f_43f9884be2",
    "id": "f_43f9884be2",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313355",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1449,6 +1449,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4040?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1500,6 +1505,7 @@
    "_fid": "f_ed7fe5d715",
    "id": "f_ed7fe5d715",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313354",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1524,6 +1530,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4039?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1555,10 +1566,10 @@
     "19:00"
    ],
    "day": "2026-11-26",
-   "time": "19:00",
+   "time": "19:30",
    "day_order": 8,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala 2",
+   "sala": "Sala 3",
    "has_qa": true,
    "qa_type": "team",
    "synopsis": "Un viaje inmersivo y de misterios a las profundidades del bosque Amazónico en busca del gran brujo Ino Moxo (Pantera Negra), retratando los saberes y conocimientos de los más grandes y últimos curanderos del bosque Amazónico. Javier va en busca de su destino mientras una pantera negra lo guía y acecha.",
@@ -1582,16 +1593,19 @@
      "fecha": "2026-11-16"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "juan",
+     "fecha": "2026-11-24",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11",
+     "frase": "deberíamos usar lo que dice la Cinemateca, ellos no venden horarios truncados, ni cometen errores logísticos"
     },
     "venue": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "sala",
+     "fecha": "2026-11-24",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11"
     },
     "duration": {
      "tipo": "festival-web",
@@ -1632,22 +1646,22 @@
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
     "2026-11-26",
-    "19:30"
+    "19:00"
    ],
    "day": "2026-11-26",
-   "time": "19:30",
+   "time": "19:00",
    "day_order": 8,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala 3",
+   "sala": "Sala 2",
    "has_qa": true,
    "synopsis": "La única película dirigida por Václav Havel, basada en su última obra literaria, es una reflexión autobiográfica y una libre interpretación de «El rey Lear», de Shakespeare y «El jardín de los cerezos», de Chéjov.",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/la-retirada.jpg",
    "posterSource": "tmdb",
    "_src": {
-    "url": "https://www.alestfestival.com/programa2026/la-retirada",
-    "date": "2026-11-16",
-    "tipo": "festival-web"
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11",
+    "date": "2026-11-23",
+    "tipo": "sala"
    },
    "lbSlug": "leaving-2011",
    "tmdb_id": 76598,
@@ -1656,42 +1670,49 @@
    "_fid": "f_7eb873bf13",
    "id": "f_7eb873bf13",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313356",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "sala",
+     "fecha": "2026-11-24",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     }
    }
   },
@@ -1884,6 +1905,7 @@
    "_fid": "f_2402b739a7",
    "id": "f_2402b739a7",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313361",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1908,6 +1930,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4077?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1959,6 +1986,7 @@
    "_fid": "f_4ef959b53d",
    "id": "f_4ef959b53d",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313360",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1983,6 +2011,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4076?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2021,14 +2054,20 @@
    "qa_type": "team",
    "synopsis": "Una aproximación analítica al trabajo del artista Rosemberg Sandoval, cuya producción abarca desde 1980 hasta la actualidad y se caracteriza por el uso del cuerpo propio y ajeno, especialmente de habitantes de calle, como material artístico.",
    "synopsis_lang": "es",
+   "poster": "/assets/aleste-2026/labriego.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.alestfestival.com/programa2026/labriego",
     "date": "2026-11-16",
     "tipo": "festival-web"
    },
+   "lbSlug": "labriego",
+   "tmdb_id": 1828585,
+   "synopsis_en": "In the early 1990s, Colombian artist Rosemberg Sandoval created a mural that, like many of his other works, was transgressive, and ultimately destroyed. Today, the only evidence of its existence lies in the photographic record made by an anonymous person from Tijuana who was traveling through Colombia at the time. The documentary traces these images through the photographer's footsteps, in a journey across time of one of Latin America's most incisive artists.",
    "_fid": "f_2fd427a663",
    "id": "f_2fd427a663",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313362",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2053,6 +2092,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4078?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2109,6 +2153,7 @@
    "_fid": "f_28cdee8833",
    "id": "f_28cdee8833",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313364",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2134,6 +2179,11 @@
      "tipo": "festival-web",
      "fecha": "2026-11-16"
     },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4079?sede=11"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
@@ -2149,12 +2199,75 @@
    }
   },
   {
+   "title": "Cortometrajes de Altura",
+   "type": "film",
+   "section": "🧸 Kluk - Cine Familiar",
+   "year": 2008,
+   "country": "Bolivia",
+   "flags": "🇧🇴",
+   "duration": "41 min",
+   "_ancla": [
+    "Cinemateca Fontanar del Río - Bogotá",
+    "2026-11-28",
+    "14:00"
+   ],
+   "day": "2026-11-28",
+   "time": "14:00",
+   "day_order": 10,
+   "venue": "Cinemateca Fontanar del Río - Bogotá",
+   "has_qa": false,
+   "synopsis": "Cortometrajes de Altura es una selección de 5 animaciones bolivianas con una duración total de 41 minutos, presentada en el 9º Festival AL ESTE 2026, que reúne las obras «Cuentos de la Cuenca» (sobre el cuidado ambiental), «Ekeko» (acerca de la deidad andina de la abundancia), «La muñeca de maíz» (un tierno vínculo en el Chaco boliviano), «Pascay» (un relato sobre el duelo y las tradiciones del altiplano) y «Paulina y el cóndor» (una emotiva travesía a la gran ciudad realizada con la técnica de papel rasgado).",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4015?sede=80",
+    "date": "2026-11-23",
+    "tipo": "sala"
+   },
+   "_fid": "f_caf13da1b1",
+   "id": "f_caf13da1b1",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    }
+   }
+  },
+  {
    "title": "Hecho en Colombia – Bloque 1",
    "type": "film",
    "section": "🇨🇴 Competencia Hecho en Colombia",
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "66 min",
+   "duration": "73 min",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
     "2026-11-28",
@@ -2168,66 +2281,12 @@
    "has_qa": true,
    "qa_type": "team",
    "_src": {
-    "url": "https://www.alestfestival.com/programa2026",
-    "date": "2026-11-16",
-    "tipo": "festival-web"
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4080?sede=11",
+    "date": "2026-11-23",
+    "tipo": "sala"
    },
    "is_cortos": true,
    "film_list": [
-    {
-     "title": "Desde acá veo la tormenta",
-     "director": "Juan Felipe Restrepo",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "duration": "11 min",
-     "_src": {
-      "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
-      "date": "2026-11-16"
-     },
-     "poster": "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
-     "posterSource": "oficial",
-     "synopsis": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo.",
-     "genre": "Familia",
-     "year": 2026,
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "Junio 25. Andréi Tarkovski, visita a su tumba",
-     "director": "Juan Camilo Moreno",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "duration": "5 min",
-     "_src": {
-      "url": "https://www.alestfestival.com/programa2026/junio-25.-andréi-tarkovski-visita-a-su-tumba",
-      "date": "2026-11-16"
-     },
-     "poster": "/assets/aleste-2026/junio-25-andrei-tarkovski-visita-a-su-tumba.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "junio-25-andrei-tarkovski-visita-a-su-tumba",
-     "tmdb_id": 1193850,
-     "synopsis": "En diciembre de 1986, el cineasta y poeta ruso Andréi Tarkovski muere a los 54 años a causa de un cáncer, luego de haberse exiliado de la URSS. Una tarde de verano del siglo 21, acompañado de una cámara súper8mm, viajo a visitar su tumba. Esta película es la bitácora de este viaje.",
-     "synopsis_en": "Log of a trip to the cemetery where the grave of the Russian filmmaker and poet Andrei Tarkovsky lies.",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "Lejanía",
-     "director": "Daniel Velásquez Patarroyo",
-     "country": "Colombia",
-     "flags": "🇨🇴",
-     "duration": "17 min",
-     "_src": {
-      "url": "https://www.alestfestival.com/programa2026/lejanía",
-      "date": "2026-11-16"
-     },
-     "poster": "/assets/aleste-2026/lejania.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "lejania-2026",
-     "tmdb_id": 1668904,
-     "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
-     "genre": "Documental",
-     "year": 2026,
-     "synopsis_lang": "es"
-    },
     {
      "title": "Liminal",
      "director": "Gabriella Castelblanco",
@@ -2268,71 +2327,115 @@
      "synopsis_lang": "es"
     },
     {
-     "title": "Sol de niebla",
-     "director": "María José Ibarra, Florentino Vargas",
+     "title": "Las piedras del río",
+     "director": "Edna Sierra",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "duration": "6 min",
+     "duration": "16 min",
      "_src": {
-      "url": "https://www.alestfestival.com/programa2026/sol-de-niebla",
+      "url": "https://www.alestfestival.com/programa2026/las-piedras-del-río",
       "date": "2026-11-16"
      },
-     "poster": "/assets/aleste-2026/sol-de-niebla.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "sol-de-niebla",
-     "tmdb_id": 1791609,
-     "synopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
+     "poster": "/assets/aleste-2026/las-piedras-del-rio.jpg",
+     "posterSource": "oficial",
+     "synopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+     "genre": "Drama",
      "year": 2026,
      "synopsis_lang": "es"
+    },
+    {
+     "title": "Junio 25. Andréi Tarkovski, visita a su tumba",
+     "director": "Juan Camilo Moreno",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "5 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/junio-25.-andréi-tarkovski-visita-a-su-tumba",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/junio-25-andrei-tarkovski-visita-a-su-tumba.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "junio-25-andrei-tarkovski-visita-a-su-tumba",
+     "tmdb_id": 1193850,
+     "synopsis": "En diciembre de 1986, el cineasta y poeta ruso Andréi Tarkovski muere a los 54 años a causa de un cáncer, luego de haberse exiliado de la URSS. Una tarde de verano del siglo 21, acompañado de una cámara súper8mm, viajo a visitar su tumba. Esta película es la bitácora de este viaje.",
+     "synopsis_en": "Log of a trip to the cemetery where the grave of the Russian filmmaker and poet Andrei Tarkovsky lies.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Futuros luminosos",
+     "director": "Ismael García Ramírez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "25 min",
+     "_src": {
+      "url": "https://cinematecadebogota.gov.co/node/peliculas/4080?sede=11",
+      "date": "2026-11-23"
+     },
+     "synopsis": "En un lugar extraño y oscuro, un grupo variopinto de jóvenes imagina su futuro.",
+     "synopsis_lang": "es",
+     "poster": "/assets/aleste-2026/futuros-luminosos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-brighter-future",
+     "tmdb_id": 1603950,
+     "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
+     "title_en": "A Brighter Future",
+     "genre": "Ficción"
     }
    ],
    "_fid": "f_1cbb3fe13a",
    "id": "f_1cbb3fe13a",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313365",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4080?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     }
    }
   },
@@ -2447,6 +2550,7 @@
    "_fid": "f_1c1639d27e",
    "id": "f_1c1639d27e",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313367",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2471,6 +2575,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4082?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2527,6 +2636,7 @@
    "_fid": "f_866ea1f464",
    "id": "f_866ea1f464",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230624630079",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2551,6 +2661,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4091?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2606,6 +2721,7 @@
    "_fid": "f_1f013248ab",
    "id": "f_1f013248ab",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313369",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2630,6 +2746,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4084?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2682,6 +2803,7 @@
    "_fid": "f_c121fb1b75",
    "id": "f_c121fb1b75",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313370",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2706,6 +2828,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4085?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2745,7 +2872,7 @@
    "day_order": 10,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "Hace tiempo que Michi, Yunko y Yabe no tienen noticias de un amigo. Cuando Michi va a visitarlo a su casa lo encuentra un poco extraño. Aunque él dice encontrarse bien, al poco rato se encuentra colgado del techo. Por otro lado tenemos a Ryusuke, que prueba a conectarse a internet por primera vez, sin mucho éxito. De pronto su ordenador comienza a entrar solo en la red, y aparece una extraña página web, donde aparecen turbadoras imágenes de habitaciones oscuras y finalmente un inquietante mensaje: \"¿Quieres ver un fantasma?\".",
    "synopsis_lang": "es",
    "poster": "/assets/aleste-2026/pulse.jpg",
@@ -2761,6 +2888,7 @@
    "_fid": "f_aeab88b02c",
    "id": "f_aeab88b02c",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313371",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2786,68 +2914,10 @@
      "tipo": "festival-web",
      "fecha": "2026-11-16"
     },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
-    }
-   }
-  },
-  {
-   "title": "Cortometrajes de Altura",
-   "type": "film",
-   "section": "🧸 Kluk - Cine Familiar",
-   "year": 2008,
-   "country": "Bolivia",
-   "flags": "🇧🇴",
-   "duration": "41 min",
-   "_ancla": [
-    "Cinemateca Fontanar del Río - Bogotá",
-    "2026-11-29",
-    "14:00"
-   ],
-   "day": "2026-11-29",
-   "time": "14:00",
-   "day_order": 11,
-   "venue": "Cinemateca Fontanar del Río - Bogotá",
-   "has_qa": false,
-   "synopsis": "Cortometrajes de Altura es una selección de 5 animaciones bolivianas con una duración total de 41 minutos, presentada en el 9º Festival AL ESTE 2026, que reúne las obras «Cuentos de la Cuenca» (sobre el cuidado ambiental), «Ekeko» (acerca de la deidad andina de la abundancia), «La muñeca de maíz» (un tierno vínculo en el Chaco boliviano), «Pascay» (un relato sobre el duelo y las tradiciones del altiplano) y «Paulina y el cóndor» (una emotiva travesía a la gran ciudad realizada con la técnica de papel rasgado).",
-   "synopsis_lang": "es",
-   "_src": {
-    "url": "https://www.alestfestival.com/programa2026/cortometrajes-de-altura",
-    "date": "2026-11-16",
-    "tipo": "festival-web"
-   },
-   "_fid": "f_caf13da1b1",
-   "id": "f_caf13da1b1",
-   "is_free": false,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
-    },
-    "duration": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
-    },
-    "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4086?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2869,7 +2939,7 @@
    "section": "🇨🇴 Competencia Hecho en Colombia",
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "51 min",
+   "duration": "75 min",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
     "2026-11-29",
@@ -2883,26 +2953,82 @@
    "has_qa": true,
    "qa_type": "team",
    "_src": {
-    "url": "https://www.alestfestival.com/programa2026",
-    "date": "2026-11-16",
-    "tipo": "festival-web"
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4087?sede=11",
+    "date": "2026-11-23",
+    "tipo": "sala"
    },
    "is_cortos": true,
    "film_list": [
     {
-     "title": "Las piedras del río",
-     "director": "Edna Sierra",
+     "title": "Todo lo que pasará mañana",
+     "director": "Santiago Calle García",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "duration": "16 min",
+     "duration": "15 min",
      "_src": {
-      "url": "https://www.alestfestival.com/programa2026/las-piedras-del-río",
+      "url": "https://www.alestfestival.com/programa2026/todo-lo-que-pasará-mañana",
       "date": "2026-11-16"
      },
-     "poster": "/assets/aleste-2026/las-piedras-del-rio.jpg",
+     "poster": "/assets/aleste-2026/todo-lo-que-pasara-manana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "todo-lo-que-pasara-manana",
+     "tmdb_id": 1812504,
+     "synopsis": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
+     "synopsis_en": "A hybrid queer short film that follows three friends during a weekend at a cabin in the rural area of Medellín. After spending time at a nearby river, the group arrives at their retreat in the middle of the forest, immersing themselves in a deep psychotropic ritual of love and desire. This experience alters their reality and ends up fracturing their relationship, evoking fragments and scraps of their shared memories. In this trance, a radical transformation is unleashed when they summon, together, a mysterious creature born from within themselves. Through their bodies and visual memory, a mutation occurs that pushes them to escape into the forest during the night. The next morning, each one leaves the cabin on their own, now living in a world where their friendship no longer exists.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Lejanía",
+     "director": "Daniel Velásquez Patarroyo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "17 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/lejanía",
+      "date": "2026-11-16"
+     },
+     "synopsis_en": "A traveler heads toward Lejanía, a beach on an island hidden in the vastness of the Pacific Ocean, where visitors are said to experience supernatural visions. Amid fragmented landscapes and clandestine presences lurking in the shadows, reality blurs and time unravels.",
+     "poster": "/assets/aleste-2026/lejania.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lejania-2026",
+     "tmdb_id": 1668904,
+     "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
+     "genre": "Documental",
+     "year": 2026,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Sol de niebla",
+     "director": "María José Ibarra, Florentino Vargas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "6 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/sol-de-niebla",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/sol-de-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sol-de-niebla",
+     "tmdb_id": 1791609,
+     "synopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
+     "year": 2026,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Desde acá veo la tormenta",
+     "director": "Juan Felipe Restrepo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "11 min",
+     "_src": {
+      "url": "https://www.alestfestival.com/programa2026/desde-acá-veo-la-tormenta",
+      "date": "2026-11-16"
+     },
+     "poster": "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
      "posterSource": "oficial",
-     "synopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
-     "genre": "Drama",
+     "synopsis": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo.",
+     "genre": "Familia",
      "year": 2026,
      "synopsis_lang": "es"
     },
@@ -2928,76 +3054,82 @@
      "synopsis_lang": "es"
     },
     {
-     "title": "Todo lo que pasará mañana",
-     "director": "Santiago Calle García",
+     "title": "Transversal30FF",
+     "director": "Sergio Mejía",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "duration": "15 min",
+     "year": 2025,
+     "duration": "6 min",
      "_src": {
-      "url": "https://www.alestfestival.com/programa2026/todo-lo-que-pasará-mañana",
-      "date": "2026-11-16"
+      "url": "https://cinematecadebogota.gov.co/node/peliculas/4087?sede=11",
+      "date": "2026-11-23"
      },
-     "poster": "/assets/aleste-2026/todo-lo-que-pasara-manana.jpg",
+     "synopsis": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.",
+     "synopsis_lang": "es",
+     "poster": "/assets/aleste-2026/transversal30ff.jpg",
      "posterSource": "tmdb",
-     "lbSlug": "todo-lo-que-pasara-manana",
-     "tmdb_id": 1812504,
-     "synopsis": "Un encuentro entre amigos se convierte en una experiencia que altera su realidad y transforma sus relaciones.",
-     "synopsis_en": "A hybrid queer short film that follows three friends during a weekend at a cabin in the rural area of Medellín. After spending time at a nearby river, the group arrives at their retreat in the middle of the forest, immersing themselves in a deep psychotropic ritual of love and desire. This experience alters their reality and ends up fracturing their relationship, evoking fragments and scraps of their shared memories. In this trance, a radical transformation is unleashed when they summon, together, a mysterious creature born from within themselves. Through their bodies and visual memory, a mutation occurs that pushes them to escape into the forest during the night. The next morning, each one leaves the cabin on their own, now living in a world where their friendship no longer exists.",
-     "synopsis_lang": "es"
+     "lbSlug": "transversal-30ff",
+     "tmdb_id": 1525925
     }
    ],
    "_fid": "f_cb55e388f2",
    "id": "f_cb55e388f2",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313365",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "time": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "venue": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "sala": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "duration": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4087?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "qa_type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "title": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "film_list": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     },
     "type": {
      "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "fecha": "2026-11-23"
     }
    }
   },
   {
-   "title": "La ciudad blanca",
+   "title": "En la ciudad blanca",
    "type": "film",
    "section": "🎞️ Fokus: Las Grietas del Muro",
    "director": "Alain Tanner",
@@ -3019,7 +3151,7 @@
    "has_qa": false,
    "synopsis": "Harto del mar, Paul, un mecánico suizo que trabaja en las ruidosas entrañas de un barco mercante, desembarca en Lisboa.",
    "synopsis_lang": "es",
-   "poster": "/assets/aleste-2026/la-ciudad-blanca.jpg",
+   "poster": "/assets/aleste-2026/en-la-ciudad-blanca.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.alestfestival.com/programa2026/la-ciudad-blanca",
@@ -3033,6 +3165,7 @@
    "_fid": "f_8b4e1bc31e",
    "id": "f_8b4e1bc31e",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313368",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3058,19 +3191,28 @@
      "tipo": "festival-web",
      "fecha": "2026-11-16"
     },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4083?sede=11"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
     },
     "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-18",
+     "url": "https://www.alestfestival.com/_files/ugd/9df115_ee9f35372e1648ada212855f749ddc09.pdf"
     },
     "type": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
     }
-   }
+   },
+   "titulos_anteriores": [
+    "La ciudad blanca"
+   ]
   },
   {
    "title": "Los golfos",
@@ -3109,6 +3251,7 @@
    "_fid": "f_5378451bd6",
    "id": "f_5378451bd6",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313372",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3133,6 +3276,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-23",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4089?sede=11"
     },
     "has_qa": {
      "tipo": "festival-pdf",
@@ -3165,7 +3313,7 @@
     "17:00"
    ],
    "day": "2026-11-29",
-   "time": "17:00",
+   "time": "16:30",
    "day_order": 11,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 2",
@@ -3191,8 +3339,9 @@
      "fecha": "2026-11-16"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "festival-ig",
+     "fecha": "2026-11-19",
+     "url": "https://www.instagram.com/p/Df8iF1QFpzk/"
     },
     "venue": {
      "tipo": "festival-web",
@@ -3243,7 +3392,7 @@
    "time": "19:00",
    "day_order": 11,
    "venue": "Cinemateca de Bogotá - Bogotá",
-   "sala": "Sala 2",
+   "sala": "Sala 3",
    "has_qa": false,
    "synopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
    "synopsis_lang": "es",
@@ -3275,8 +3424,9 @@
      "fecha": "2026-11-16"
     },
     "sala": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-16"
+     "tipo": "sala",
+     "fecha": "2026-11-24",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4116?sede=11"
     },
     "duration": {
      "tipo": "festival-web",
@@ -3382,7 +3532,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T10:32:54",
+  "fecha": "2026-11-24T09:18:19",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"

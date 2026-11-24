@@ -16,14 +16,11 @@
   }
  ],
  "sinopsis": {
-  "es": "En un lugar extraño y oscuro, un grupo de jóvenes de colores proyecta su futuro.",
+  "es": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas.",
   "en": "In a strange, dark place, a colourful group of young people project their future."
  },
- "generos": [
-  "Ficción"
- ],
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg",
+  "archivo": "/assets/aleste-2026/futuros-luminosos.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -37,6 +34,7 @@
   }
  ],
  "presentaciones": [
+  "aleste-2026",
   "cinemancia-2026",
   "cinetoro-2026",
   "ficci-65",

@@ -18,5 +18,11 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la página ya no existe en Letterboxd",
+  "fecha": "2026-11-24"
  }
 }

@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:tiff-2026,tiff-2026,tiff-2026,tiff-2026",
+  "fuente": "festival:tiff-2026,tiff-2026,tiff-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -9,10 +9,16 @@
  },
  "anio": {
   "fuente": "festival",
-  "regla": "anio-mas-temprano"
+  "regla": "único"
  },
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24"
  }
 }

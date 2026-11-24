@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "https://www.instagram.com/p/DfzeOb2lq6q/",
-  "capturado": "2026-11-19",
+  "capturado": "2026-11-21",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Las 3 secciones de la Selección (aprobadas por Juan, 11 nov) viven en cada obra; las funciones de la programación (16 nov) mezclan obras de varias, así que la función va en «Selección Oficial» (título del carrusel Dfk4smulKBB). «Proyecciones especiales» (LezAma, Horizonte, Mindalae) y «Encuentros y actividades»: PROPUESTA para Juan.",
@@ -412,7 +412,7 @@
    "sala": "Caja de Colores",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Familiares, amistades y colegas recuerdan a Mauricio Lezama: cineasta, maestro y gestor cultural que encontró en las imágenes una forma de transformar su territorio.",
+   "synopsis": "Proyección y conversatorio con Emmanuel Jaramillo, productor general. Modera: Diego Pachón.",
    "synopsis_lang": "es",
    "poster": "/assets/cineparalapaz-2026/lezama-vivir-filmando.jpg",
    "posterSource": "tmdb",
@@ -735,7 +735,7 @@
    "day_order": 3,
    "venue": "Centro Cultural La Tullpa - Bogotá",
    "has_qa": false,
-   "synopsis": "Un documental que recupera la memoria oral del pueblo kichwa otavalo y sus caminos como artesanos, comerciantes y viajeros universales.",
+   "synopsis": "Proyección internacional.",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DfzeOb2lq6q/",
@@ -780,7 +780,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-19T08:55:29",
+  "fecha": "2026-11-21T13:21:09",
   "plan_sha": "7d88043063d11589",
   "paso": 6,
   "cmd": "python3 pipeline/cineparalapaz-2026-verificar.py"

@@ -4,19 +4,25 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:898817",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "anio-mas-temprano"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  },
  "paises": {
   "fuente": "tmdb:898817",
   "regla": "tmdb-manda"
  },
- "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23"
  }
 }

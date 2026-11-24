@@ -27,6 +27,15 @@ validate.py [sinopsis-cobertura] (vigila lo publicado). Mismo patrón que
   archivo: aleste-2026, el mismo id que usan publicar.py y las correcciones). Ese número solo
   puede bajar. Un festival que no está ahí parte de cero.
 
+· UNA SINOPSIS DEFECTUOSA CUENTA COMO SI NO ESTUVIERA (23 nov 2026, Juan: «un
+  error gigante que debemos corregir con un guardián muy serio»). Este guardián
+  solo miraba que HUBIERA texto, y pasaron publicadas la lista de actores
+  (Popayán leyó la columna equivocada), enlaces de compra (la web de Ficcali,
+  heredados a tres festivales), un texto acreditado a FilmAffinity (estaba así en
+  TMDB), inglés, portugués y conversatorios. La regla la da
+  sinopsis_unicas.defectos(); la acción es `corregir`. Un falso positivo se
+  declara en `sinopsis_revisada` de -correcciones.json con su `_por_que`.
+
 CASCADA de búsqueda (en orden; la sinopsis del festival manda porque es la
 que el público lee en el programa):
   1. la ficha de la obra en la web de la sala o del festival
@@ -58,6 +67,15 @@ def _es(o):
 
 def _otro(o):
     return str(o.get('synopsis_en') or '').strip()
+
+
+def revisadas(fid, raiz=REPO):
+    """`sinopsis_revisada`: textos que el detector marca y una persona leyó."""
+    p = os.path.join(raiz, 'festivals', 'staging', f'{fid}-correcciones.json')
+    if not os.path.exists(p):
+        return set()
+    v = (json.load(open(p, encoding='utf-8')) or {}).get('sinopsis_revisada') or {}
+    return {_n(k) for k, x in v.items() if isinstance(x, dict) and str(x.get('_por_que') or '').strip()}
 
 
 def declaradas(fid, raiz=REPO):
@@ -93,10 +111,15 @@ def obras(films):
 
 def pendientes(fid, films, raiz=REPO):
     """Obras sin sinopsis en español y sin declaración → [{titulo, programa, accion}]."""
-    dec = declaradas(fid, raiz)
+    from sinopsis_unicas import defectos
+    dec, rev = declaradas(fid, raiz), revisadas(fid, raiz)
     out = []
     for o, prog in obras(films):
         if _es(o):
+            ds = [] if _n(o['title']) in rev else defectos(_es(o))
+            if ds:
+                out.append({'titulo': o['title'], 'programa': prog.get('title') if prog else None,
+                            'accion': 'corregir', 'defectos': ds})
             continue
         if _n(o['title']) in dec or (prog is not None and _n(prog.get('title')) in dec):
             continue
@@ -121,6 +144,8 @@ def excede(fid, films, raiz=REPO):
 
 def linea(x):
     prog = f' (en «{x["programa"][:30]}»)' if x.get('programa') else ''
+    if x['accion'] == 'corregir':
+        return f'«{x["titulo"][:50]}»{prog} — corregir: ' + ', '.join(x['defectos'])
     verbo = 'traducir: hay sinopsis en inglés' if x['accion'] == 'traducir' else 'buscar: ' + ' → '.join(CASCADA)
     return f'«{x["titulo"][:50]}»{prog} — {verbo}'
 
@@ -152,7 +177,7 @@ if __name__ == '__main__':
             sys.exit(0)
         viejo = deuda()
         subio = {k: (viejo.get(k, 0), v) for k, v in conteo.items() if v > viejo.get(k, 0)}
-        if viejo and subio:
+        if viejo and subio and '--nueva-regla' not in a:
             sys.exit('✗ la deuda solo baja; subió en: ' +
                      ', '.join(f'{k} {a_}→{b_}' for k, (a_, b_) in subio.items()))
         json.dump({'_nota': 'Obras publicadas sin sinopsis en español y sin `sin_sinopsis`, '

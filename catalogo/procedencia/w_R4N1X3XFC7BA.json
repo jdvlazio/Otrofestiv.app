@@ -8,8 +8,10 @@
   "regla": "tmdb-manda"
  },
  "anio": {
-  "fuente": "tmdb:1547480",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "estreno en Londres, 22 oct 2025",
+  "fecha": "2026-11-24"
  },
  "paises": {
   "fuente": "tmdb:1547480",

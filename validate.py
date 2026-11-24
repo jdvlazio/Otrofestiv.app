@@ -4249,6 +4249,71 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── EXCEPCIONES DECLARADAS EN EL DATO (20 nov 2026, lección del Under) ───────
+# Una actividad sin duración publicada o un título que dice «instalación» sin ser
+# una exposición se declaraban en listas de ESTE archivo: cada caso de un festival
+# era un PR de código y una vuelta de CI (tres en la semana del Under). Desde hoy
+# se declaran en festivals/staging/<id>-correcciones.json, como `sin_afiche` y
+# `sin_sinopsis`, con su porqué OBLIGATORIO:
+#     "sin_duracion":  {"<título>": {"_por_que": "el PDF da solo la hora de inicio"}}
+#     "no_es_abierta": {"<título>": {"_por_que": "es el acto de abrir, con hora"}}
+# Una declaración sin porqué no cuenta y pone rojo [excepcion-sin-porque]. Las
+# listas de abajo siguen valiendo para los casos viejos.
+def _excepciones_declaradas(clave):
+    import glob as _g_ex, json as _j_ex
+    _ok, _mal = set(), []
+    for _cp in sorted(_g_ex.glob('festivals/staging/*-correcciones.json')):
+        _fid = _cp.split('/')[-1][:-len('-correcciones.json')]
+        try:
+            _dd = (_j_ex.load(open(_cp, encoding='utf-8')) or {}).get(clave) or {}
+        except Exception:
+            continue
+        for _t, _v in _dd.items():
+            if isinstance(_v, dict) and str(_v.get('_por_que') or '').strip():
+                _ok.add((_fid, _t))
+            else:
+                _mal.append(f'{_fid}: {clave} «{_t[:40]}» sin _por_que')
+    return _ok, _mal
+
+
+check = 'excepcion-sin-porque'
+try:
+    _mal_ex = _excepciones_declaradas('sin_duracion')[1] + _excepciones_declaradas('no_es_abierta')[1]
+    if _mal_ex:
+        fail(check, 'una excepción sin su porqué no cuenta: ' + '; '.join(_mal_ex))
+    else:
+        ok(check, 'toda excepción declarada en el dato (sin_duracion, no_es_abierta) lleva su porqué')
+except Exception as _e:
+    warn(check, f'no se pudo verificar excepcion-sin-porque: {_e}')
+
+check = 'duracion-vs-tmdb'
+# Funza, 20 nov 2026: «Basta Mamá» publicada con 125 min (la franja con su
+# conversatorio) y dura 77. Dueño único: pipeline/duraciones.py — una obra cuya
+# duración difiere de TMDB en más de 5 min y del 10 % se corrige o se declara en
+# `duracion_distinta` de <id>-correcciones.json con su porqué. También la frena
+# publicar.py; acá se vigila lo YA publicado de los festivales vivos.
+try:
+    import sys as _sys_du
+    if 'pipeline' not in _sys_du.path:
+        _sys_du.path.insert(0, 'pipeline')
+    import duraciones as _dura
+    import json as _j_du
+    _dif, _mal_du = [], []
+    for _fdu in _festivalesVivos():
+        try:
+            _ddu = _j_du.load(open(f'festivals/{_fdu}.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        _dif += [f'{_fdu}: {_dura.linea(_x)}' for _x in _dura.distintas(_fdu, _ddu.get('films'))]
+        _mal_du += _dura.declaradas(_fdu)[1]
+    if _dif or _mal_du:
+        fail(check, f'{len(_dif)} duración(es) que contradicen a TMDB sin declarar · ' + ' · '.join((_mal_du + _dif)[:6])
+             + ('' if len(_mal_du + _dif) <= 6 else f' … y {len(_mal_du + _dif) - 6} más'))
+    else:
+        ok(check, 'ninguna obra de un festival vivo contradice la duración de TMDB sin su porqué')
+except Exception as _e:
+    warn(check, f'no se pudo verificar duracion-vs-tmdb: {_e}')
+
 check = 'activity-duration'
 try:
     import json as _json
@@ -4283,7 +4348,15 @@ try:
         ('cineparalapaz-2026', 'Premiación'),
         ('cineparalapaz-2026', 'Cierre musical · Concierto andino: Yananty y Runa Taky'),
         ('cineparalapaz-2026', 'Samay Punlla · Conmemoración a las almas'),
+        # Under — el PDF del festival (pág. 6) da solo la hora de inicio de estas
+        # actividades, o ninguna en la proyección sorpresa (20 nov 2026)
+        ('under-2026', 'Fiesta Under · El Vikingo Selektor'),   # «9:00 PM / FIESTA UNDER», sin hora de cierre
+        ('under-2026', 'Orígenes de los lenguajes experimentales y laboratorio de creación'),   # charla-taller 3:00 PM, sin duración
+        ('under-2026', 'Hacerlo sin permiso. Laboratorio de apropiación'),   # charla-taller 3:00 PM, sin duración
+        ('under-2026', 'Proyección sorpresa'),   # sin hora ni duración en el PDF
     }
+    # …y las declaradas en el dato (`sin_duracion` de -correcciones.json)
+    _PENDING = _PENDING | _excepciones_declaradas('sin_duracion')[0]
     _viol = []
     for _fname in _ACTIVE:
         _fp = 'festivals/' + _fname + '.json'
@@ -4311,7 +4384,7 @@ try:
                 if (_fname, _tt) not in _PENDING:
                     _viol.append(f"{_fname}: '{_tt}'")
     if _viol:
-        fail(check, 'actividad(es) sin duración en festival activo (obligatoria — alimenta el plan): ' + '; '.join(_viol))
+        fail(check, 'actividad(es) sin duración en festival activo (obligatoria — alimenta el plan; si la organización no la publica, `sin_duracion` con su porqué en festivals/staging/<id>-correcciones.json): ' + '; '.join(_viol))
     else:
         _pend = len(_PENDING)
         ok(check, f'toda actividad de festivales activos tiene duración' + (f' ({_pend} excepción(es) pendiente(s) de dato de la organización)' if _pend else ''))
@@ -6249,6 +6322,7 @@ try:
             'es la «instalación» del 1.er Encuentro Departamental: el acto de abrirlo, '
             'con hora, no una instalación artística (agenda de Funza, 19 nov 2026)',
     }
+    _ABIERTA_DATO = _excepciones_declaradas('no_es_abierta')[0]   # declaradas en el dato
     _malas = []
     for _fab in _festivalesVivos():
         try:
@@ -6262,10 +6336,10 @@ try:
             # TAMBIÉN la descripción (21 oct 2026): «Una vez en un cuerpo: Habitar
             # la imagen» (Anibia) no dice exposición en el título; lo dice su texto
             _txt = ' '.join(str(_x.get(k) or '') for k in ('title', 'synopsis', 'synopsis_en', 'description'))
-            if _PAL.search(_txt) and (_fab, _tt) not in _ABIERTA_NO:
+            if _PAL.search(_txt) and (_fab, _tt) not in _ABIERTA_NO and (_fab, _tt) not in _ABIERTA_DATO:
                 _malas.append(f'{_fab}: «{_tt[:40]}» {_x.get("day","")} {_x.get("time","")}')
     if _malas:
-        fail(check, 'actividad abierta publicada como función con hora (va con info:true, o se declara en _ABIERTA_NO): '
+        fail(check, 'actividad abierta publicada como función con hora (va con info:true, o se declara `no_es_abierta` con su porqué en festivals/staging/<id>-correcciones.json): '
              + ' · '.join(sorted(set(_malas))[:5]))
     else:
         ok(check, 'ninguna exposición/instalación de un festival vivo se publica como función reservable')
@@ -6523,6 +6597,26 @@ except Exception as _e:
 
 
 
+# ── [sinopsis-larga] la sinopsis se lee en un celular: 350 caracteres ──────────
+# Decisión de Juan (23 nov 2026). Dueño: pipeline/sinopsis_cortas.py; cómo se
+# redacta y verifica: pipeline/SINOPSIS-CORTA.md. Trinquete por festival.
+check = 'sinopsis-larga'
+try:
+    import sys as _sys_sl
+    if 'pipeline' not in _sys_sl.path:
+        _sys_sl.path.insert(0, 'pipeline')
+    import sinopsis_cortas as _scor, catalogo as _cat_sl
+    _mal_sl = _scor.invalidas(_cat_sl.decisiones())
+    _exc_sl = _scor.excedidos()
+    if _mal_sl or _exc_sl:
+        fail(check, '; '.join(_mal_sl[:6] + [f'{f}: {n} de más de {_scor.MAX} caracteres (techo {t}) — condensar con la skill sinopsis-corta: ' + ', '.join(x[:4])
+                                             for f, n, t, x in _exc_sl[:6]]))
+    else:
+        ok(check, 'toda síntesis está verificada contra su original y ningún festival suma sinopsis largas')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+
 # ── [config-esm] node --check da un VERDE FALSO ─────────────────────────────
 # src/config.js es un MÓDULO ES, y `node --check` lo analiza como script: un
 # archivo con la llave de un festival sin cerrar pasa ese chequeo y revienta en
@@ -6683,6 +6777,9 @@ try:
                    '(«es») dice «Cortometraje seleccionado en MIDBO 2023», que no es sinopsis (10 oct 2026)',
                    ('bhff-2026', 'Moviedreams'):
                    'TMDB 1776749: overview vacío en es-ES, es-MX y en-US (7 oct); la parrilla no trae sinopsis',
+                   ('popayan-2026', 'Nascemos para semente'):
+                   'TMDB 1700918: sin overview en español; en inglés dice «Born to Be Seed», que es el título '
+                   '(23 nov 2026). Lo publicado era la lista de actores',
                    ('bhff-2026', 'Esquirlas de Caracol'):
                    'TMDB 1718595: overview vacío en es-ES, es-MX y en-US (7 oct); la parrilla no trae sinopsis'}
     _malos = []
@@ -7191,6 +7288,48 @@ try:
         warn(check, 'bajó el hueco — correr python3 pipeline/catalogo.py --medir: ' + ', '.join(_baja[:8]))
 except Exception:
     pass
+
+# ── [obra-unica] lo publicado de una obra es lo decidido, en todos los festivales ──
+# 24 nov 2026 (revisión senior): pipeline/obra_unica.py. Con decisión, todos los
+# festivales publican esa; sin decisión, coinciden o hay que decidir.
+check = 'obra-unica'
+try:
+    import obra_unica as _ou
+    _ciego = _ou.autoprueba()
+    _div = _ou.divergencias(_fests, _decs)
+    _sobra = _ou.excepciones_de_mas(_fests, _decs)
+    if _ciego:
+        fail(check, 'el guardián no ve cambios en: ' + ', '.join(_ciego))
+    elif _div:
+        fail(check, f'{len(_div)} divergencia(s) — python3 pipeline/obra_unica.py: ' + ' · '.join([_ou.texto(x) for x in _div[:4]] + _ou.que_hacer(_div)))
+    elif _sobra:
+        fail(check, 'excepción que ya no hace falta, bórrala de obra_unica.EXCEPCIONES: ' + ', '.join(_sobra))
+    else:
+        ok(check, 'lo publicado de cada obra es lo decidido en todos los festivales')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [ficha-obra] cada campo de la obra, por lista o por forma ──────────────────
+# Juan, 24 nov 2026: «Qatar» se publicó como género. Dueño de la regla de cada
+# campo: pipeline/ficha_obra.py (docs/OBRA.md). Trinquete por festival y regla;
+# un festival nuevo parte de cero.
+check = 'ficha-obra'
+try:
+    import ficha_obra as _fo
+    _ciega = _fo.autoprueba()
+    _exc = _fo.excedidos(_fests)
+    if _ciega:
+        fail(check, 'reglas ciegas: ' + ' · '.join(_ciega[:4]))
+    elif _exc:
+        fail(check, f'{len(_exc)} regla(s) sobre su deuda — python3 pipeline/ficha_obra.py <festival>: '
+             + ' · '.join(f'{_f} {_r}: ' + ', '.join(_x[:3]) for _f, _r, _x in _exc[:5]))
+    else:
+        ok(check, 'ningún festival suma datos de obra fuera de regla')
+        _hol = _fo.holgura(_fests)
+        if _hol:
+            warn(check, 'bajó la deuda — python3 pipeline/ficha_obra.py --congelar: ' + ', '.join(_hol[:6]))
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 # ── [caja-titulo] programas y secciones en Título (regla de Juan, 15 oct 2026) ──
 # «Muestra de Cortos», «Colombia Viva»: las palabras son del festival y la caja

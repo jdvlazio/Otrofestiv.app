@@ -16,7 +16,9 @@
   "regla": "tmdb-manda"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 213983",
+  "fecha": "2026-11-24"
  }
 }

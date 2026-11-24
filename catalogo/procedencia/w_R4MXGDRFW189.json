@@ -1,22 +1,34 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficica-2026,ficica-2026,miradas-2026,miradas-2026,siembrafest-2026,villadeleyvaiff-2026",
+  "fuente": "festival:ficica-2026,ficica-2026,ficica-2026,miradas-2026,miradas-2026,miradas-2026,siembrafest-2026,villadeleyvaiff-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24"
  },
  "anio": {
   "fuente": "tmdb:1592964",
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "tmdb:1592964",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1592964)",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23"
  }
 }

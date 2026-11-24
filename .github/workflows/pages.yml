@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.deploy2.outputs.page_url || steps.deploy3.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v5
@@ -76,7 +76,30 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
+      # REINTENTO (20 nov 2026): deploy-pages a veces no encuentra el artifact
+      # recién subido («No artifacts named github-pages») — el Under falló 3
+      # veces seguidas y solo pasó con un workflow_dispatch nuevo. Es un retraso
+      # de GitHub en registrar el artifact: esperar y volver a pedir lo arregla.
+      # Un paso no puede leer el mensaje de error de otro, así que se reintenta
+      # ante CUALQUIER fallo del deploy; es idempotente (publica el mismo
+      # artifact) y lo que no se arregle reintentando falla en el tercer intento.
       - id: deploy
+        continue-on-error: true
         uses: actions/deploy-pages@v4
         with:
           timeout: 1200000   # 20 min (10 por defecto): Pages a veces tarda
+      - if: steps.deploy.outcome == 'failure'
+        run: echo "::warning::deploy-pages falló (intento 1); se reintenta en 60 s" && sleep 60
+      - id: deploy2
+        if: steps.deploy.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 1200000
+      - if: steps.deploy.outcome == 'failure' && steps.deploy2.outcome == 'failure'
+        run: echo "::warning::deploy-pages falló (intento 2); último intento en 120 s" && sleep 120
+      - id: deploy3
+        if: steps.deploy.outcome == 'failure' && steps.deploy2.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 1200000

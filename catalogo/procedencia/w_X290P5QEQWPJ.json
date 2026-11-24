@@ -1,0 +1,24 @@
+{
+ "titulo_original": {
+  "fuente": "festival:under-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "tmdb:1700468",
+  "regla": "tmdb-manda"
+ },
+ "anio": {
+  "fuente": "festival",
+  "regla": "único"
+ },
+ "paises": {
+  "fuente": "festival",
+  "regla": "pais-union"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24"
+ }
+}

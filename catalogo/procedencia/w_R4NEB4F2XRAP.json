@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficica-2026,ficica-2026,ficica-2026",
+  "fuente": "festival:ficica-2026,ficica-2026,ficica-2026,ficica-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23"
  }
 }

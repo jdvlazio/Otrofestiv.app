@@ -45,7 +45,7 @@
    "type": "object", "required": ["work_id", "campo", "motivo", "fecha"], "additionalProperties": false,
    "properties": {
     "work_id": {"$ref": "#/$defs/id_obra"},
-    "campo": {"type": "string", "description": "campo de la obra, o «no-es» (decisión negativa de identidad), o «no-alta-tmdb»"},
+    "campo": {"type": "string", "description": "campo de la obra, o «no-es» (decisión negativa de identidad), «no-alta-tmdb», o «ficha-ok» (la ficha de TMDB `valor` es correcta aunque acredite otra dirección; work_id puede ir vacío)"},
     "valor": {},
     "motivo": {"type": "string", "minLength": 1},
     "fecha": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},

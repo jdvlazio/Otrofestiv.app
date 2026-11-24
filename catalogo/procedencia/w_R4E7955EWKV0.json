@@ -12,11 +12,15 @@
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "tmdb:1046304",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "el último país de la lista de BIFF se leyó como género: se recompone",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24"
  }
 }

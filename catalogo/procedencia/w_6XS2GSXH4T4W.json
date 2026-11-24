@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "lo publicado era la lista de actores; ninguna fuente nuestra cuenta la obra",
+  "fecha": "2026-11-23"
  }
 }

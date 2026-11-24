@@ -3,7 +3,8 @@
  "titulo_original": "La reserva",
  "anio": 2025,
  "paises": [
-  "MX"
+  "MX",
+  "QA"
  ],
  "directores": [
   "Pablo Pérez Lombardini"
@@ -16,15 +17,14 @@
   }
  ],
  "sinopsis": {
-  "es": "Una guardabosques convence a su comunidad de expulsar a un grupo de invasores de su reserva natural, provocando una amenaza mucho mayor.",
+  "es": "Julia, una guardabosques de Monte Virgen, descubre que los talamontes están destruyendo la reserva natural que rodea su comunidad. Mientras intenta detenerlos y conseguir el apoyo de los habitantes del pueblo, se enfrenta al miedo, la indiferencia y las amenazas de quienes controlan la tala ilegal.",
   "en": "A park ranger convinces her community to expel a group of intruders from their nature reserve, only to trigger a far greater threat."
  },
  "generos": [
-  "Thriller / drama / naturaleza",
   "Thriller"
  ],
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w185/fMu0fMn9c9r7UJMu8CIsFSGmK6z.jpg",
+  "archivo": "/assets/jardin-2026/la-reserva.jpg",
   "veredicto": "oficial"
  },
  "xref": {

@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24"
  }
 }
