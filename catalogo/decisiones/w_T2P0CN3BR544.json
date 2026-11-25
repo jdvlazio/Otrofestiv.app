@@ -6,5 +6,86 @@
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24",
   "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_T2P0CN3BR544",
+  "campo": "directores",
+  "valor": [
+   "Crew TSK"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Crew TSK"
+  }
+ },
+ {
+  "work_id": "w_T2P0CN3BR544",
+  "campo": "anio",
+  "valor": 2019,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2019"
+  }
+ },
+ {
+  "work_id": "w_T2P0CN3BR544",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_T2P0CN3BR544",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_T2P0CN3BR544",
+  "campo": "sinopsis.es",
+  "valor": "Desde las calles de Bogotá llega Roofianes 2, un documental realizado por la Crew TSK que nos sumerge en el universo más underground del graffiti bogotano. Una producción que registra las acciones de la crew TSK, sus recorridos, intervenciones y experiencias dentro de la escena del graffiti de la capital.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Desde las calles de Bogotá llega Roofianes 2, un documental realizado por la Crew TSK que nos sumerge en el universo más underground del graffiti bogotano. Una producción que registra las acciones de la crew TSK, sus recorridos, intervenciones y experiencias dentro de la escena del graffiti de la capital."
+  }
+ },
+ {
+  "work_id": "w_T2P0CN3BR544",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/roofianes2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/roofianes2.jpg"
+  }
  }
 ]

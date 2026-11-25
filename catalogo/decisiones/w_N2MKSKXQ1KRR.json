@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_N2MKSKXQ1KRR",
+  "campo": "directores",
+  "valor": [
+   "Isben Isaeb"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Isben Isaeb"
+  }
+ },
+ {
+  "work_id": "w_N2MKSKXQ1KRR",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_N2MKSKXQ1KRR",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_N2MKSKXQ1KRR",
+  "campo": "sinopsis.es",
+  "valor": "Las calles tienen historias que contar, voces que merecen ser escuchadas y expresiones que construyen identidad.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Las calles tienen historias que contar, voces que merecen ser escuchadas y expresiones que construyen identidad."
+  }
+ },
+ {
+  "work_id": "w_N2MKSKXQ1KRR",
+  "campo": "sinopsis.en",
+  "valor": "The streets have stories to tell, voices that deserve to be heard and expressions that build identity.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "The streets have stories to tell, voices that deserve to be heard and expressions that build identity."
+  }
+ },
+ {
+  "work_id": "w_N2MKSKXQ1KRR",
+  "campo": "xref.tmdb",
+  "valor": 1828506,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "1828506"
+  }
+ },
+ {
+  "work_id": "w_N2MKSKXQ1KRR",
+  "campo": "xref.letterboxd",
+  "valor": "el-lejano-sur",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "el-lejano-sur"
+  }
+ },
+ {
+  "work_id": "w_N2MKSKXQ1KRR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/el-lejano-sur.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/el-lejano-sur.jpg"
+  }
+ }
+]

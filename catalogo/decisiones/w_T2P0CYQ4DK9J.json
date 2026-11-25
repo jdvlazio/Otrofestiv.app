@@ -1,0 +1,66 @@
+[
+ {
+  "work_id": "w_T2P0CYQ4DK9J",
+  "campo": "directores",
+  "valor": [
+   "Resk12"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Resk12"
+  }
+ },
+ {
+  "work_id": "w_T2P0CYQ4DK9J",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_T2P0CYQ4DK9J",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_T2P0CYQ4DK9J",
+  "campo": "sinopsis.es",
+  "valor": "Una misión secreta en una de las líneas del metro de París. Entre túneles, trenes y adrenalina, RESK12 nos lleva al interior de una misión de graffiti ferroviario en el corazón de la capital francesa.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Una misión secreta en una de las líneas del metro de París. Entre túneles, trenes y adrenalina, RESK12 nos lleva al interior de una misión de graffiti ferroviario en el corazón de la capital francesa."
+  }
+ },
+ {
+  "work_id": "w_T2P0CYQ4DK9J",
+  "campo": "sinopsis.en",
+  "valor": "A secret mission on one of the lines of the Paris metro. Among tunnels, trains and adrenaline, RESK12 takes us inside a train graffiti mission in the heart of the French capital.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "A secret mission on one of the lines of the Paris metro. Among tunnels, trains and adrenaline, RESK12 takes us inside a train graffiti mission in the heart of the French capital."
+  }
+ }
+]

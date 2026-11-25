@@ -1,0 +1,119 @@
+[
+ {
+  "work_id": "w_N2MKTFTRVTFM",
+  "campo": "directores",
+  "valor": [
+   "Krone"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Krone"
+  }
+ },
+ {
+  "work_id": "w_N2MKTFTRVTFM",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_N2MKTFTRVTFM",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_N2MKTFTRVTFM",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_N2MKTFTRVTFM",
+  "campo": "sinopsis.es",
+  "valor": "El graffiti cruza fronteras, conecta ciudades y convierte los trenes y las calles en territorios de expresión. Un recorrido por la cultura urbana latinoamericana, donde el graffiti es mucho más que pintura: es identidad, movimiento y una forma de dejar huella.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "El graffiti cruza fronteras, conecta ciudades y convierte los trenes y las calles en territorios de expresión. Un recorrido por la cultura urbana latinoamericana, donde el graffiti es mucho más que pintura: es identidad, movimiento y una forma de dejar huella."
+  }
+ },
+ {
+  "work_id": "w_N2MKTFTRVTFM",
+  "campo": "sinopsis.en",
+  "valor": "Graffiti crosses borders, connects cities and turns trains and streets into territories of expression. A journey through Latin American urban culture, where graffiti is much more than paint: it is identity, movement and a way of leaving a mark.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Graffiti crosses borders, connects cities and turns trains and streets into territories of expression. A journey through Latin American urban culture, where graffiti is much more than paint: it is identity, movement and a way of leaving a mark."
+  }
+ },
+ {
+  "work_id": "w_N2MKTFTRVTFM",
+  "campo": "xref.tmdb",
+  "valor": 1828516,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "1828516"
+  }
+ },
+ {
+  "work_id": "w_N2MKTFTRVTFM",
+  "campo": "xref.letterboxd",
+  "valor": "still-free-1",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "still-free-1"
+  }
+ },
+ {
+  "work_id": "w_N2MKTFTRVTFM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/still-free-v2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/still-free-v2.jpg"
+  }
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "work_id": "w_N2MKV25YZB20",
+  "campo": "directores",
+  "valor": [
+   "Ozono"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Ozono"
+  }
+ },
+ {
+  "work_id": "w_N2MKV25YZB20",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_N2MKV25YZB20",
+  "campo": "paises",
+  "valor": [
+   "IT"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Italia"
+  }
+ }
+]

@@ -1,0 +1,141 @@
+[
+ {
+  "work_id": "w_N2MKSWF5M07G",
+  "campo": "directores",
+  "valor": [
+   "Iván Darío Alba"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Iván Darío Alba"
+  }
+ },
+ {
+  "work_id": "w_N2MKSWF5M07G",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_N2MKSWF5M07G",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_N2MKSWF5M07G",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_N2MKSWF5M07G",
+  "campo": "sinopsis.es",
+  "valor": "Cada trazo, cada muro y cada intervención urbana guarda una historia: el graffiti transforma el espacio público en un lugar de expresión, memoria y resistencia. Una película que invita a mirar las calles desde otra perspectiva y descubrir las historias que habitan en sus muros.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración CUAFF, segunda lectura)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Cada trazo, cada muro y cada intervención urbana guarda una historia: el graffiti transforma el espacio público en un lugar de expresión, memoria y resistencia. Un documental de Iván Alba que invita a mirar las calles desde otra perspectiva y descubrir las historias que habitan en sus muros."
+  },
+  "anteriores": [
+   {
+    "valor": "Cada trazo, cada muro y cada intervención urbana guarda una historia: el graffiti transforma el espacio público en un lugar de expresión, memoria y resistencia. Un documental de Iván Alba que invita a mirar las calles desde otra perspectiva y descubrir las historias que habitan en sus muros.",
+    "motivo": "alta desde cuaff-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración cuaff-2026)"
+   }
+  ],
+  "vistas": [
+   "0b694f559825"
+  ],
+  "fuente": "https://www.instagram.com/p/DfkFGHmlZnr/"
+ },
+ {
+  "work_id": "w_N2MKSWF5M07G",
+  "campo": "sinopsis.en",
+  "valor": "Every stroke, every wall and every urban intervention holds a story: graffiti turns public space into a place of expression, memory and resistance. A film that invites us to look at the streets from another perspective and discover the stories that live on their walls.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración CUAFF, segunda lectura)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Every stroke, every wall and every urban intervention holds a story: graffiti turns public space into a place of expression, memory and resistance. A documentary by Iván Alba that invites us to look at the streets from another perspective and discover the stories that live on their walls."
+  },
+  "anteriores": [
+   {
+    "valor": "Every stroke, every wall and every urban intervention holds a story: graffiti turns public space into a place of expression, memory and resistance. A documentary by Iván Alba that invites us to look at the streets from another perspective and discover the stories that live on their walls.",
+    "motivo": "alta desde cuaff-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración cuaff-2026)"
+   }
+  ],
+  "fuente": "https://www.instagram.com/p/DfkFGHmlZnr/"
+ },
+ {
+  "work_id": "w_N2MKSWF5M07G",
+  "campo": "xref.tmdb",
+  "valor": 1828510,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "1828510"
+  }
+ },
+ {
+  "work_id": "w_N2MKSWF5M07G",
+  "campo": "xref.letterboxd",
+  "valor": "muralmente-instrucciones-para-interpretar",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "muralmente-instrucciones-para-interpretar"
+  }
+ },
+ {
+  "work_id": "w_N2MKSWF5M07G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/instrucciones-para-interpretar-graffiti-el-beso-de-los-invis.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/instrucciones-para-interpretar-graffiti-el-beso-de-los-invis.jpg"
+  }
+ }
+]
