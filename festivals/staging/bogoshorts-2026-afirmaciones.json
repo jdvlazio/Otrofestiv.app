@@ -40,6 +40,448 @@
     "publicado": "2026-11-18"
    },
    "evidencia": "catálogo (modificado el 18 nov), pág. 12, Competencia VR: «Mié. 2, Jue. 3, Vie. 4 y Mar. 8 … 2:00 p.m. a 6:00 p.m. · Sab. 5 y Dom. 6 … 11:00 a.m. a 6:00 p.m.»; las 4 fichas web abiertas el 24 nov (festival.bogoshorts.com/corto/4379 a 4382) dicen «Martes 8 de Diciembre 2026 … 14:00». La grilla (13 nov) y el Facebook del 9 nov traen solo la regla general de festivos, 11:00"
+  },
+  {
+   "funcion": "f_0f47ae4440",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 7-8 y bases de IMAGINATÓN pág. 5, vistas: un filminuto $20.000 aficionado, $50.000 profesional"
+  },
+  {
+   "funcion": "f_0f47ae4440",
+   "casilla": "requires_registration",
+   "valor": true,
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 3 y 7: inscripción por categoría, pagos hasta el miércoles 2 de diciembre 11:59 p.m."
+  },
+  {
+   "funcion": "f_704aa401d8",
+   "casilla": "ticket_url",
+   "valor": "https://www.tuboleta.com/es/eventos/chi-ancy-chiquishorts-bogoshorts-kids",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/3744?sede=11",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "ficha de la Cinemateca, sáb 5 dic 2:00 PM Sala 3"
+  },
+  {
+   "funcion": "f_cd2bb0c567",
+   "casilla": "entrada",
+   "valor": "libre",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/011_aliens.html",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "boletín 011: «única proyección nocturna y gratuita al aire libre»; catálogo págs. 14 y 19 (18 nov), vistas: «Entrada con manilla»; la grilla (13 nov) decía invitación"
+  },
+  {
+   "funcion": "f_659948e13a",
+   "casilla": "time",
+   "valor": "19:30",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
+    "fecha": "2026-11-24",
+    "publicado": "2026-11-18"
+   },
+   "evidencia": "pág. 19, vista: «Cóctel 6:30 p.m. · Evento 7:30 p.m. · Entrada con invitación»; la grilla (13 nov) dice lo mismo"
+  },
+  {
+   "funcion": "f_3113445ec2",
+   "casilla": "time",
+   "valor": "19:30",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
+    "fecha": "2026-11-24",
+    "publicado": "2026-11-18"
+   },
+   "evidencia": "pág. 19, vista: «Cóctel 6:30 p.m. · Evento 7:30 p.m. · Entrada con invitación»; la grilla (13 nov) dice lo mismo"
+  },
+  {
+   "funcion": "f_1cce389f20",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_661e5e5f34",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_cd6a9dff40",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_10979b2923",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_00e9cfb024",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_40c580a270",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_3b49438af0",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_e45b0de929",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_3cc8328112",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_767ead9c37",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_e25297cb6a",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_f58604503e",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_c51e8db23d",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_522a341f7a",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_83a9049f6c",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_59c96c2dc8",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_45df56b5d3",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_85c6681f2c",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_6f3bdb31d4",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_49b80a8e41",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_461086bc4e",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_a621b3b272",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_a23f2842ab",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_9adbaf188e",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_c5eaf42bea",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_e15df51f84",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_1d38a3191d",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_4f94fb5564",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_4b8aac68ec",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_50249df760",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_fdd4020249",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_1bcb1f9e13",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_5b1ba5fe8c",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_c78486af98",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-24"
+   },
+   "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
   }
  ]
 }

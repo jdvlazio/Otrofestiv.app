@@ -315,6 +315,9 @@ def main():
                     f['descripcion'] = TEXTOS['textos'][act['texto']]['es']
                 if act.get('participantes'):     # boletín 027, 24 nov
                     f['descripcion'] += ' ' + act['participantes']
+                if act.get('nota'):
+                    # la clave es a las 8:00 p. m. (catálogo 14 y 19, bases de IMAGINATÓN); solo esta prosa (pág. 25) dice 7:00
+                    f['descripcion'] = f['descripcion'].replace('a las 7:00 p. m., la clave', 'a las 8:00 p. m., la clave') + ' ' + act['nota']
                 if act.get('acceso'):
                     f['acceso'] = act['acceso']
                 if act.get('registration_url'):
@@ -329,6 +332,7 @@ def main():
         # «* Entrada con invitación»: un asterisco solo (** es Q&A, *** Encuentros)
         f.setdefault('acceso', 'Entrada con invitación' if re.search(r'(?<!\*)\*(?!\*)', txt) else DESCONOCIDO)
         if f.get('codigo') == 'F3-ALIENS':   # catálogo, escenarios y eventos especiales
+            f['descripcion'] = 'Entrada gratuita con manilla.'
             f['acceso'] = 'Entrada con invitación (manilla)'   # la grilla pone * (invitación); el catálogo y la web, más nuevos, manilla
         if e[2] == 'Cinemateca de Bogotá Sede Fontanar del Río':
             f['acceso'] = DEF_FONTANAR
@@ -373,8 +377,9 @@ def main():
         funciones.append(f)
     # La Entrega clave IMAGINATÓN no tiene celda: la grilla dice «IMAGINATÓN 2:00 - 8:00 p.m.».
     # El catálogo la trae aparte, y con dos horas: 7:00 p. m. (pág. 23) y 8:00 p. m. (escenarios
-    # y eventos especiales). Contradicción sin sala → la más temprana.
-    funciones.append({'dia': '2026-12-04', 'hora': '19:00', 'sede': 'Teatro El Parque', 'sala': '', 'ciudad': 'Bogotá',
+    # y eventos especiales). Las bases de IMAGINATÓN (págs. 3, 4, 7, 8 y 9) dicen 8:00:
+    # el 7:00 solo está en la prosa de la pág. 25 del PDF (24 nov).
+    funciones.append({'dia': '2026-12-04', 'hora': '20:00', 'sede': 'Teatro El Parque', 'sala': '', 'ciudad': 'Bogotá',
                       'texto_grilla': 'IMAGINATÓN', 'titulo': 'Entrega clave IMAGINATÓN', 'seccion': 'IMAGINATÓN',
                       'tipo': 'evento', 'type': 'event', 'event_kind': 'evento', 'has_qa': False,
                       'acceso': DESCONOCIDO, '_src': {'url': 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf', 'date': '2026-11-18'}})

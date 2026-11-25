@@ -408,7 +408,7 @@
    "poster_path": "/10EzunjgyzqgjRN5MrTWHweS8wk.jpg",
    "synopsis_es": "",
    "synopsis_en": "An Irish folk horror short filmed in Donegal, Ireland.",
-   "genero": "",
+   "genero": "Terror",
    "anio_tmdb": 2026,
    "duracion_tmdb": 16,
    "pais_tmdb": "Ireland",
@@ -418,7 +418,10 @@
    "_director": "Peter Vass",
    "_sondeado": "2026-11-24",
    "poster": "/assets/bogoshorts-2026/banshee.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_4KGNGB1M5J9B (bogoshorts-2026)"
+   }
   },
   {
    "titulo": "Barcelona",
@@ -3897,7 +3900,7 @@
    "poster_path": null,
    "synopsis_es": "A partir del relato de una madre y una abuela sobre el asesinato de un travesti, lx directorx estructura este corto documental que explora el ensueño —ese territorio entre la memoria y la imaginación— de un recuerdo de infancia. Con archivos de la comunidad trans en Ecuador durante los 90 y found footage se teje un microrrelato sobre la memoria, la muerte y la ausencia. Una tentativa por escapar del olvido y volverse eterna a través del cine.",
    "synopsis_en": "Based on the account of a mother and a grandmother about the murder of a travesti, this short documentary explores the dreamlike state—that territory between memory and imagination—of a childhood recollection. Using Ecuadorian archival footage from the 1990s and found footage, it weaves a micro-narrative about memory, death, and absence. An attempt to escape oblivion and become eternal through cinema.",
-   "genero": "",
+   "genero": "Documental",
    "anio_tmdb": 2026,
    "duracion_tmdb": 10,
    "pais_tmdb": "",
@@ -3923,7 +3926,10 @@
     }
    ],
    "poster": "/assets/filcmar-2026/pude-ver-un-fantasma-desde-mi-ventana.jpg",
-   "_afiche": "ya publicada en filcmar-2026: se reusa su afiche"
+   "_afiche": "ya publicada en filcmar-2026: se reusa su afiche",
+   "_heredado": {
+    "genero": "catálogo w_R4JGHQMX1DHC (bogoshorts-2026, filcmar-2026)"
+   }
   },
   {
    "titulo": "Pupa",
@@ -5292,7 +5298,11 @@
    "titulo": "El píxel y la parcela",
    "poster": "/assets/bogoshorts-2026/el-pixel-y-la-parcela.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4244)"
+   "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4244)",
+   "genero": "Documental",
+   "_heredado": {
+    "genero": "catálogo w_4KDR35MQ0D5X (bogoshorts-2026)"
+   }
   },
   {
    "titulo": "Szepty",
@@ -5733,7 +5743,7 @@
    "poster_path": "/10EzunjgyzqgjRN5MrTWHweS8wk.jpg",
    "synopsis_es": "",
    "synopsis_en": "An Irish folk horror short filmed in Donegal, Ireland.",
-   "genero": "",
+   "genero": "Terror",
    "anio_tmdb": 2026,
    "duracion_tmdb": 16,
    "pais_tmdb": "Ireland",
@@ -5743,7 +5753,10 @@
    "_director": "Peter Vass",
    "_sondeado": "2026-11-24",
    "poster": "/assets/bogoshorts-2026/banshee.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "_heredado": {
+    "genero": "catálogo w_4KGNGB1M5J9B (bogoshorts-2026)"
+   }
   },
   "Barcelona": {
    "tmdb_id": 356487,
@@ -9044,7 +9057,7 @@
    "poster_path": null,
    "synopsis_es": "A partir del relato de una madre y una abuela sobre el asesinato de un travesti, lx directorx estructura este corto documental que explora el ensueño —ese territorio entre la memoria y la imaginación— de un recuerdo de infancia. Con archivos de la comunidad trans en Ecuador durante los 90 y found footage se teje un microrrelato sobre la memoria, la muerte y la ausencia. Una tentativa por escapar del olvido y volverse eterna a través del cine.",
    "synopsis_en": "Based on the account of a mother and a grandmother about the murder of a travesti, this short documentary explores the dreamlike state—that territory between memory and imagination—of a childhood recollection. Using Ecuadorian archival footage from the 1990s and found footage, it weaves a micro-narrative about memory, death, and absence. An attempt to escape oblivion and become eternal through cinema.",
-   "genero": "",
+   "genero": "Documental",
    "anio_tmdb": 2026,
    "duracion_tmdb": 10,
    "pais_tmdb": "",
@@ -9070,7 +9083,10 @@
     }
    ],
    "poster": "/assets/filcmar-2026/pude-ver-un-fantasma-desde-mi-ventana.jpg",
-   "_afiche": "ya publicada en filcmar-2026: se reusa su afiche"
+   "_afiche": "ya publicada en filcmar-2026: se reusa su afiche",
+   "_heredado": {
+    "genero": "catálogo w_R4JGHQMX1DHC (bogoshorts-2026, filcmar-2026)"
+   }
   },
   "Pupa": {
    "tmdb_id": 1641481,

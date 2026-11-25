@@ -371,7 +371,7 @@
     "18:30"
    ],
    "day": "2026-12-01",
-   "time": "18:30",
+   "time": "19:30",
    "day_order": 0,
    "venue": "Teatro Jorge Eliécer Gaitán - Bogotá",
    "event_kind": "apertura",
@@ -389,8 +389,10 @@
      "fecha": "2026-11-13"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "publicado": "2026-11-18",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf"
     },
     "venue": {
      "tipo": "festival-web",
@@ -959,7 +961,8 @@
      "synopsis": "Los datos producen narrativas, políticas y leyes. Le dan forma a la tierra. El píxel y la parcela investiga el rol de los datos en la violencia de la erradicación de la coca en la Amazonía colombiana. Desde el momento en que la coca fue prohibida, su existencia y destrucción han sido cuantificadas y documentadas. Las imágenes de la coca son capturadas por satélites, fotografías y mapas, creando un complejo de información que convierte a la planta en un ser clandestino a ser eliminado.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/el-pixel-y-la-parcela.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "genre": "Documental"
     },
     {
      "title": "A Wolf in the Suburbs",
@@ -2818,7 +2821,7 @@
    ],
    "_fid": "f_1cce389f20",
    "id": "f_1cce389f20",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2841,8 +2844,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -3001,7 +3005,7 @@
    ],
    "_fid": "f_661e5e5f34",
    "id": "f_661e5e5f34",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3024,8 +3028,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -3205,7 +3210,7 @@
    ],
    "_fid": "f_cd6a9dff40",
    "id": "f_cd6a9dff40",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3228,8 +3233,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -3388,7 +3394,7 @@
    ],
    "_fid": "f_10979b2923",
    "id": "f_10979b2923",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3407,8 +3413,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -3463,7 +3470,7 @@
    "tmdb_id": 1368172,
    "_fid": "f_00e9cfb024",
    "id": "f_00e9cfb024",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3482,8 +3489,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -4427,6 +4435,7 @@
      "poster": "/assets/filcmar-2026/pude-ver-un-fantasma-desde-mi-ventana.jpg",
      "lbSlug": "i-could-see-a-ghost-from-my-window",
      "tmdb_id": 1690034,
+     "genre": "Documental",
      "posterSource": "oficial"
     },
     {
@@ -5916,7 +5925,7 @@
    ],
    "_fid": "f_40c580a270",
    "id": "f_40c580a270",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -5939,8 +5948,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -6097,7 +6107,7 @@
    ],
    "_fid": "f_3b49438af0",
    "id": "f_3b49438af0",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -6120,8 +6130,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -6344,7 +6355,7 @@
    ],
    "_fid": "f_e45b0de929",
    "id": "f_e45b0de929",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -6363,8 +6374,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -6541,7 +6553,7 @@
    ],
    "_fid": "f_3cc8328112",
    "id": "f_3cc8328112",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -6560,8 +6572,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -7617,7 +7630,8 @@
      "poster": "/assets/bogoshorts-2026/banshee.jpg",
      "posterSource": "tmdb",
      "lbSlug": "banshee-2026",
-     "tmdb_id": 1583583
+     "tmdb_id": 1583583,
+     "genre": "Terror"
     },
     {
      "title": "Night Feeds",
@@ -9384,11 +9398,12 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "description": "El viernes 4 de diciembre, todos los participantes en Bogotá deberán reunirse en el Teatro El Parque para grabar sus claquetas oficiales y recibir, a las 7:00 p. m., la clave que dará inicio a la maratón. Desde este emblemático espacio del Parque Nacional se dará la partida para que los realizadores salgan a conquistar la ciudad con sus cámaras. Quienes participen desde otras regiones del país podrán acceder a la claqueta y la clave a través de los canales virtuales del festival, conectando distintas geografías en una misma experiencia de creación.",
+   "description": "El viernes 4 de diciembre, todos los participantes en Bogotá deberán reunirse en el Teatro El Parque para grabar sus claquetas oficiales y recibir, a las 8:00 p. m., la clave que dará inicio a la maratón. Desde este emblemático espacio del Parque Nacional se dará la partida para que los realizadores salgan a conquistar la ciudad con sus cámaras. Quienes participen desde otras regiones del país podrán acceder a la claqueta y la clave a través de los canales virtuales del festival, conectando distintas geografías en una misma experiencia de creación. Inscripción: $20.000 (aficionado) o $50.000 (profesional) por un filminuto, hasta el 2 de diciembre a las 11:59 p. m.",
    "description_lang": "es",
    "_fid": "f_0f47ae4440",
    "id": "f_0f47ae4440",
-   "is_free": true,
+   "is_free": false,
+   "requires_registration": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -9407,8 +9422,14 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+    },
+    "requires_registration": {
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -9587,7 +9608,7 @@
    ],
    "_fid": "f_767ead9c37",
    "id": "f_767ead9c37",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -9610,8 +9631,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -9854,7 +9876,7 @@
    ],
    "_fid": "f_e25297cb6a",
    "id": "f_e25297cb6a",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -9877,8 +9899,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -10054,7 +10077,7 @@
    ],
    "_fid": "f_f58604503e",
    "id": "f_f58604503e",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -10077,8 +10100,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -10259,7 +10283,7 @@
    ],
    "_fid": "f_c51e8db23d",
    "id": "f_c51e8db23d",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -10278,8 +10302,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -10460,7 +10485,7 @@
    ],
    "_fid": "f_522a341f7a",
    "id": "f_522a341f7a",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -10479,8 +10504,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -12088,6 +12114,7 @@
    "_fid": "f_704aa401d8",
    "id": "f_704aa401d8",
    "is_free": false,
+   "ticket_url": "https://www.tuboleta.com/es/eventos/chi-ancy-chiquishorts-bogoshorts-kids",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -12112,6 +12139,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-13"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-24",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/3744?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -13558,7 +13590,7 @@
    ],
    "_fid": "f_83a9049f6c",
    "id": "f_83a9049f6c",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -13581,8 +13613,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -13710,7 +13743,7 @@
    ],
    "_fid": "f_59c96c2dc8",
    "id": "f_59c96c2dc8",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -13733,8 +13766,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -13796,7 +13830,8 @@
      "synopsis": "Los datos producen narrativas, políticas y leyes. Le dan forma a la tierra. El píxel y la parcela investiga el rol de los datos en la violencia de la erradicación de la coca en la Amazonía colombiana. Desde el momento en que la coca fue prohibida, su existencia y destrucción han sido cuantificadas y documentadas. Las imágenes de la coca son capturadas por satélites, fotografías y mapas, creando un complejo de información que convierte a la planta en un ser clandestino a ser eliminado.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/el-pixel-y-la-parcela.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "genre": "Documental"
     },
     {
      "title": "A Wolf in the Suburbs",
@@ -13891,7 +13926,7 @@
    ],
    "_fid": "f_45df56b5d3",
    "id": "f_45df56b5d3",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -13914,8 +13949,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -14044,6 +14080,7 @@
      "poster": "/assets/filcmar-2026/pude-ver-un-fantasma-desde-mi-ventana.jpg",
      "lbSlug": "i-could-see-a-ghost-from-my-window",
      "tmdb_id": 1690034,
+     "genre": "Documental",
      "posterSource": "oficial"
     },
     {
@@ -14092,7 +14129,7 @@
    ],
    "_fid": "f_85c6681f2c",
    "id": "f_85c6681f2c",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -14111,8 +14148,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -14247,7 +14285,7 @@
    ],
    "_fid": "f_6f3bdb31d4",
    "id": "f_6f3bdb31d4",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -14266,8 +14304,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -14421,9 +14460,11 @@
      "genre": "Drama"
     }
    ],
+   "description": "Entrada gratuita con manilla.",
+   "description_lang": "es",
    "_fid": "f_cd2bb0c567",
    "id": "f_cd2bb0c567",
-   "by_invitation": true,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -14443,7 +14484,8 @@
     },
     "entrada": {
      "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/011_aliens.html"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -17220,7 +17262,7 @@
    ],
    "_fid": "f_49b80a8e41",
    "id": "f_49b80a8e41",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -17243,8 +17285,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -17403,7 +17446,7 @@
    ],
    "_fid": "f_461086bc4e",
    "id": "f_461086bc4e",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -17426,8 +17469,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -17566,7 +17610,7 @@
    ],
    "_fid": "f_a621b3b272",
    "id": "f_a621b3b272",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -17589,8 +17633,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -17762,7 +17807,7 @@
    ],
    "_fid": "f_a23f2842ab",
    "id": "f_a23f2842ab",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -17781,8 +17826,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -17920,7 +17966,7 @@
    ],
    "_fid": "f_9adbaf188e",
    "id": "f_9adbaf188e",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -17939,8 +17985,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -18360,7 +18407,7 @@
    ],
    "_fid": "f_c5eaf42bea",
    "id": "f_c5eaf42bea",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -18383,8 +18430,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -18586,7 +18634,7 @@
    ],
    "_fid": "f_e15df51f84",
    "id": "f_e15df51f84",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -18609,8 +18657,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -18777,7 +18826,7 @@
    ],
    "_fid": "f_1d38a3191d",
    "id": "f_1d38a3191d",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -18800,8 +18849,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -18935,7 +18985,7 @@
    ],
    "_fid": "f_4f94fb5564",
    "id": "f_4f94fb5564",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -18954,8 +19004,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -19112,7 +19163,7 @@
    ],
    "_fid": "f_4b8aac68ec",
    "id": "f_4b8aac68ec",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -19131,8 +19182,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -20104,7 +20156,8 @@
      "poster": "/assets/bogoshorts-2026/banshee.jpg",
      "posterSource": "tmdb",
      "lbSlug": "banshee-2026",
-     "tmdb_id": 1583583
+     "tmdb_id": 1583583,
+     "genre": "Terror"
     },
     {
      "title": "Night Feeds",
@@ -21635,7 +21688,7 @@
    ],
    "_fid": "f_50249df760",
    "id": "f_50249df760",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -21658,8 +21711,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -21797,7 +21851,7 @@
    ],
    "_fid": "f_fdd4020249",
    "id": "f_fdd4020249",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -21820,8 +21874,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -21959,7 +22014,7 @@
    ],
    "_fid": "f_1bcb1f9e13",
    "id": "f_1bcb1f9e13",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -21982,8 +22037,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -22162,7 +22218,7 @@
    ],
    "_fid": "f_5b1ba5fe8c",
    "id": "f_5b1ba5fe8c",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -22181,8 +22237,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -22339,7 +22396,7 @@
    ],
    "_fid": "f_c78486af98",
    "id": "f_c78486af98",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -22358,8 +22415,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -22389,7 +22447,7 @@
     "18:30"
    ],
    "day": "2026-12-08",
-   "time": "18:30",
+   "time": "19:30",
    "day_order": 7,
    "venue": "Teatro Delia Zapata Olivella - Bogotá",
    "event_kind": "awards",
@@ -22407,8 +22465,10 @@
      "fecha": "2026-11-13"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-24",
+     "publicado": "2026-11-18",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf"
     },
     "venue": {
      "tipo": "festival-web",
@@ -22448,10 +22508,10 @@
    "_ancla": [
     "Teatro El Parque - Bogotá",
     "2026-12-04",
-    "19:00"
+    "20:00"
    ],
    "day": "2026-12-04",
-   "time": "19:00",
+   "time": "20:00",
    "day_order": 3,
    "venue": "Teatro El Parque - Bogotá",
    "event_kind": "evento",
@@ -22575,7 +22635,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T19:20:40",
+  "fecha": "2026-11-24T20:03:06",
   "plan_sha": "9d351ae0eb82b4eb",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"

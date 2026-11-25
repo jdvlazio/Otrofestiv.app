@@ -5210,7 +5210,7 @@
    "has_qa": false,
    "event_kind": "evento",
    "duracion_min": 240,
-   "descripcion": "El viernes 4 de diciembre, todos los participantes en Bogotá deberán reunirse en el Teatro El Parque para grabar sus claquetas oficiales y recibir, a las 7:00 p. m., la clave que dará inicio a la maratón. Desde este emblemático espacio del Parque Nacional se dará la partida para que los realizadores salgan a conquistar la ciudad con sus cámaras. Quienes participen desde otras regiones del país podrán acceder a la claqueta y la clave a través de los canales virtuales del festival, conectando distintas geografías en una misma experiencia de creación.",
+   "descripcion": "El viernes 4 de diciembre, todos los participantes en Bogotá deberán reunirse en el Teatro El Parque para grabar sus claquetas oficiales y recibir, a las 8:00 p. m., la clave que dará inicio a la maratón. Desde este emblemático espacio del Parque Nacional se dará la partida para que los realizadores salgan a conquistar la ciudad con sus cámaras. Quienes participen desde otras regiones del país podrán acceder a la claqueta y la clave a través de los canales virtuales del festival, conectando distintas geografías en una misma experiencia de creación. Inscripción: $20.000 (aficionado) o $50.000 (profesional) por un filminuto, hasta el 2 de diciembre a las 11:59 p. m.",
    "acceso": "Entrada libre (no se anuncia pago)"
   },
   {
@@ -8164,6 +8164,7 @@
    "has_qa": false,
    "_nota": "la celda trae «Aliens (52')»: el programa F3-ALIENS (IG DehCoz4kZkM)",
    "acceso": "Entrada con invitación (manilla)",
+   "descripcion": "Entrada gratuita con manilla.",
    "obras": [
     {
      "titulo": "R’ha",
@@ -13064,7 +13065,7 @@
   },
   {
    "dia": "2026-12-04",
-   "hora": "19:00",
+   "hora": "20:00",
    "sede": "Teatro El Parque",
    "sala": "",
    "ciudad": "Bogotá",
