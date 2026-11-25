@@ -221,7 +221,7 @@ OBRA = {
     'The Unbreakable Boy': {'pais': 'Estados Unidos'},                            # PDF: Estados Unidos, India
     'A las 9 es la cita': {'anio': 2024}, 'Discómanos': {'anio': 2024},           # Feelsales; Bogoshorts 2024
     'Animero son de la muerte': {'anio': 2025}, 'Make up: El arte de amar': {'anio': 2025},
-    'No te despiertes': {'anio': 2025, 'director': 'Hernán Velásquez'},
+    'No te despiertes': {'director': 'Hernán Velásquez'},
     'Suelo': {'anio': 2026}, 'Chaika': {'pais': 'Colombia, Cuba'}, 'Alpha': {'pais': 'Países Bajos, Eslovenia, Suiza'}, 'Almanya – Willkommen in Deutschland': {'anio': 2011},
 }
 TEXTOS = f'{REPO}/festivals/staging/festicineantioquia-2026-sinopsis-cortas.json'

@@ -7882,11 +7882,12 @@
  {
   "work_id": "w_R4J1NQYSTW0Z",
   "campo": "sinopsis.es",
-  "valor": "En el bar Babel, donde vivos y muertos se mezclan, Dante busca recordar su pasado antes de que la Flaca, la Muerte en esta ciudad, cobre su deuda. Jacob oculta a su padre, cura fanático, su deseo de ser drag queen, y Uma, una gitana, intenta engañar a la Flaca para salvar a su hija. Sus destinos chocan en una lucha contra lo inevitable.",
+  "valor": "En el bar Babel se mezclan vivos y muertos. Dante busca recordar su pasado antes de que la Flaca, la Muerte, cobre su deuda. Jacob oculta su deseo de ser drag queen a su padre, cura fanático; Uma, gitana con apuesta propia, intenta engañar a la Flaca para salvar a su hija. Entre pactos y desafíos, sus destinos chocan en lucha contra lo inevitable.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficma-2026, girardota-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
   "vistas": [
+   "269809f20960",
    "bf621f63c4cb",
    "eb25758f7429",
    "ef63caa0be25"
@@ -7907,11 +7908,11 @@
   "titulo": "Llueve sobre Babel",
   "original": "En el bar Babel, donde vivos y muertos se mezclan, Dante busca recordar su pasado antes de que la Flaca, la Muerte en esta ciudad, cobre su deuda. Jacob esconde de su padre, un sacerdote fanático, su deseo de ser drag queen, mientras Uma, una gitana con su propia apuesta, intenta engañar a la Flaca para salvar a su hija. Entre pactos y desafíos, sus destinos chocan en una lucha contra lo inevitable.",
   "sintesis": {
-   "redacta": "montador festicineantioquia-2026",
-   "verifica": "verificador de sinopsis (agente 2)",
+   "redacta": "corrector festicineantioquia-2026",
+   "verifica": "verificador de sinopsis (agente, 25 nov)",
    "veredicto": "fiel",
-   "fecha": "2026-11-24",
-   "huella": "f1ac89c04231"
+   "fecha": "2026-11-25",
+   "huella": "656105ef9049"
   }
  },
  {
@@ -8036,13 +8037,14 @@
  {
   "work_id": "w_R4K1F412E5VW",
   "campo": "sinopsis.es",
-  "valor": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes queer enfrentan, en los espacios que habitan, prejuicios sociales que intentan limitar su forma de ser. Deciden usar la moda y sus cuerpos para expresar y construir su identidad como un proceso fluido, libre y sin etiquetas.",
+  "valor": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes queer enfrentan prejuicios que intentan limitar su forma de ser. Esa tensión los confronta con su identidad y los lleva a cuestionar la necesidad de validación externa. Así, usan moda y cuerpo para expresar y construir su identidad como un proceso fluido, libre y sin etiquetas.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (girardota-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
   "vistas": [
    "0b58a5655ba4",
-   "957b2cfc56e7"
+   "957b2cfc56e7",
+   "ecc76f8bf152"
   ],
   "antes": {
    "ficidi-2026": "Dos jóvenes queer exploran sus identidades a través del cuerpo, el arte y la expresión personal.",
@@ -8056,11 +8058,11 @@
   "titulo": "Maricones",
   "original": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes Queer que, al habitar distintos espacios, enfrentan prejuicios sociales que intentan limitar su forma de ser. Esta tensión los confronta con su proceso identitario y los lleva a cuestionar la necesidad de validación externa. Así, deciden usar la moda y sus cuerpos como herramienta para expresar y construir su identidad como un proceso de constante fluidez, libre y sin etiquetas.",
   "sintesis": {
-   "redacta": "montador festicineantioquia-2026",
-   "verifica": "verificador de sinopsis (agente 2)",
+   "redacta": "corrector festicineantioquia-2026",
+   "verifica": "verificador de sinopsis (agente, 25 nov)",
    "veredicto": "fiel",
-   "fecha": "2026-11-24",
-   "huella": "637df71c20fc"
+   "fecha": "2026-11-25",
+   "huella": "8e27368b710c"
   }
  },
  {
@@ -37681,14 +37683,22 @@
  {
   "work_id": "w_R4JB102F8QWB",
   "campo": "sinopsis.en",
-  "valor": "In a community in southern Venezuela, three generations of the Pemón people fight for the return of their ancestral grandmother, Kowai Kueka. Her spirit is embodied in a red jasper stone of more than twenty tons, taken to Germany without the community's consent for an art installation.",
-  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje festicineantioquia-2026)",
+  "valor": "In southern Venezuela, three generations of the Pemón people fight for the return of their ancestral grandmother, Kowai Kueka. Her spirit is embodied in a red jasper stone, removed and taken to Germany without the community's consent for an art installation. The guardians of memory set out on a journey of resistance against memoricide.",
+  "motivo": "versión corta (350) más fiel al original; redactor y verificador distintos (25 nov 2026)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
   "antes": {
    "festicineantioquia-2026": "In a community in southern Venezuela, three generations of the Pemón people fight for the return of their ancestral grandmother, Kowai Kueka. Her spirit is embodied in a red jasper stone of more than twenty tons, taken to Germany without the community's consent for an art installation.",
    "ficpa-2026": "Three generations of the Pemón people fight to reclaim their ancestral grandmother. The spirit of Kowai Kueka, embodied in a sacred red jasper stone, was taken from Venezuela to Germany as art without their consent."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "In a community in southern Venezuela, three generations of the Pemón people fight for the return of their ancestral grandmother, Kowai Kueka. Her spirit is embodied in a red jasper stone of more than twenty tons, taken to Germany without the community's consent for an art installation.",
+    "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
  },
  {
   "work_id": "w_R4G8K6M9KW94",
@@ -37704,30 +37714,46 @@
  {
   "work_id": "w_R4K1F412E5VW",
   "campo": "sinopsis.en",
-  "valor": "Since they were little, Ginger and Louie knew they were different. In the spaces they inhabit, two young queer people face social prejudices that try to limit their way of being. They decide to use fashion and their bodies to express and build their identity as a fluid process, free and without labels.",
-  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje festicineantioquia-2026)",
+  "valor": "Since childhood, Ginger and Louie knew they were different. Young and queer, they face prejudices that try to limit their way of being. This confronts them with their identity and leads them to question the need for external validation. So they use fashion and their bodies to express and build their identity as a fluid, free process without labels.",
+  "motivo": "versión corta (350) más fiel al original; redactor y verificador distintos (25 nov 2026)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
   "antes": {
    "festicineantioquia-2026": "Since they were little, Ginger and Louie knew they were different. In the spaces they inhabit, two young queer people face social prejudices that try to limit their way of being. They decide to use fashion and their bodies to express and build their identity as a fluid process, free and without labels.",
    "ficidi-2026": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels.",
    "girardota-2026": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Since they were little, Ginger and Louie knew they were different. In the spaces they inhabit, two young queer people face social prejudices that try to limit their way of being. They decide to use fashion and their bodies to express and build their identity as a fluid process, free and without labels.",
+    "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
  },
  {
   "work_id": "w_R4J1NQYSTW0Z",
   "campo": "sinopsis.en",
-  "valor": "At the Babel bar, where the living and the dead mingle, Dante tries to recall his past before la Flaca, Death in this city, collects her debt. Jacob hides from his fanatical priest father his wish to be a drag queen, and Uma, a Gypsy woman, tries to trick la Flaca to save her daughter. Their destinies collide in a fight against the inevitable.",
-  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje festicineantioquia-2026)",
+  "valor": "At the Babel bar, living and dead mingle. Dante tries to recall his past before la Flaca, Death, collects his debt. Jacob hides his wish to be a drag queen from his fanatical priest father. Uma, a Gypsy with her own wager, tries to trick la Flaca to save her daughter. Amid pacts and challenges, their fates collide in a fight against the inevitable.",
+  "motivo": "versión corta (350) más fiel al original; redactor y verificador distintos (25 nov 2026)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
   "antes": {
    "festicineantioquia-2026": "At the Babel bar, where the living and the dead mingle, Dante tries to recall his past before la Flaca, Death in this city, collects her debt. Jacob hides from his fanatical priest father his wish to be a drag queen, and Uma, a Gypsy woman, tries to trick la Flaca to save her daughter. Their destinies collide in a fight against the inevitable.",
    "ficma-2026": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
    "girardota-2026": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
    "narrarelfuturo-2026": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
    "villadelcine-2026": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "At the Babel bar, where the living and the dead mingle, Dante tries to recall his past before la Flaca, Death in this city, collects her debt. Jacob hides from his fanatical priest father his wish to be a drag queen, and Uma, a Gypsy woman, tries to trick la Flaca to save her daughter. Their destinies collide in a fight against the inevitable.",
+    "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
  },
  {
   "work_id": "w_R4K253HAQJA6",
@@ -37814,12 +37840,12 @@
   "work_id": "w_P1KWCFG616WE",
   "campo": "afiche",
   "valor": {
-   "archivo": "/assets/festicinerio-2026/no-te-despiertes.jpg",
+   "archivo": "/assets/festicineantioquia-2026/no-te-despiertes.jpg",
    "veredicto": "oficial"
   },
-  "motivo": "el que ya publica el almacén",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje festicineantioquia-2026)",
+  "motivo": "el afiche completo (el de Leviza, 2500x3465) llevado a 780x1170 sin recortar; el de Rionegro corta los créditos",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
   "antes": {
    "festicineantioquia-2026": "/assets/festicineantioquia-2026/no-te-despiertes.jpg",
    "festicinerio-2026": "/assets/festicinerio-2026/no-te-despiertes.jpg",
@@ -37827,7 +37853,23 @@
   },
   "vistas": [
    "/assets/festicineantioquia-2026/no-te-despiertes.jpg",
+   "/assets/festicinerio-2026/no-te-despiertes.jpg",
    "/assets/leviza/NoTeDespiertes.jpg"
+  ],
+  "anteriores": [
+   {
+    "valor": {
+     "archivo": "/assets/festicinerio-2026/no-te-despiertes.jpg",
+     "veredicto": "oficial"
+    },
+    "motivo": "el que ya publica el almacén",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)",
+    "vistas": [
+     "/assets/festicineantioquia-2026/no-te-despiertes.jpg",
+     "/assets/leviza/NoTeDespiertes.jpg"
+    ]
+   }
   ]
  },
  {
@@ -37874,14 +37916,23 @@
  {
   "work_id": "w_P1KWCFG616WE",
   "campo": "anio",
-  "valor": 2025,
-  "motivo": "TMDB 1536959 no lo dice; almacén",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje festicineantioquia-2026)",
+  "valor": 2023,
+  "motivo": "ShortFilmWire (https://shortfilmwire.com/en/embedded/film/200126864/toto): Colombia, 2023, 8'32\", dirección Hernán Velásquez Villa, la misma; el 2026-02-07 de TMDB 1536959 puede ser un estreno posterior",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
   "antes": {
    "festicineantioquia-2026": "2025",
-   "festicinerio-2026": "2026"
-  }
+   "festicinerio-2026": "2026",
+   "leviza-2026": "2025"
+  },
+  "anteriores": [
+   {
+    "valor": 2025,
+    "motivo": "TMDB 1536959 no lo dice; almacén",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
  },
  {
   "work_id": "w_8GJ7B5KCEQ78",
@@ -37907,10 +37958,10 @@
  {
   "work_id": "w_R4JB102F8QWB",
   "campo": "sinopsis.es",
-  "valor": "En una comunidad del sur de Venezuela, tres generaciones del pueblo pemón luchan por el retorno de su abuela ancestral, Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas, sustraída y llevada a Alemania sin el consentimiento de la comunidad para una instalación artística.",
-  "motivo": "versión corta (350)",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje festicineantioquia-2026)",
+  "valor": "En el sur de Venezuela, tres generaciones del pueblo pemón luchan por el retorno de su abuela ancestral, Kowai Kueka. Su espíritu encarna en una piedra de jaspe rojo, sustraída y llevada a Alemania sin consentimiento de la comunidad para una instalación artística. Los guardianes de la memoria emprenden un viaje de resistencia contra el memoricidio.",
+  "motivo": "el original entero que publicó FICPA 2026, para sintetizarlo con sinopsis_cortas.py",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
   "antes": {
    "festicineantioquia-2026": "En una comunidad del sur de Venezuela, tres generaciones del pueblo pemón luchan por el retorno de su abuela ancestral, Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas, sustraída y llevada a Alemania sin el consentimiento de la comunidad para una instalación artística.",
    "ficpa-2026": "En una comunidad al sur de Venezuela, tres generaciones del pueblo Pemón luchan por el retorno de su abuela ancestral Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas que fue sustraída y llevada hasta Alemania sin el consentimiento de la comunidad para que formara parte de una instalación artística. Los guardianes de la memoria ancestral emprenden un viaje de resistencia contra el memoricidio para la restitución del equilibrio natural."
@@ -37918,7 +37969,29 @@
   "vistas": [
    "160cfba95aed",
    "242d0a7efbfc"
-  ]
+  ],
+  "anteriores": [
+   {
+    "valor": "En una comunidad del sur de Venezuela, tres generaciones del pueblo pemón luchan por el retorno de su abuela ancestral, Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas, sustraída y llevada a Alemania sin el consentimiento de la comunidad para una instalación artística.",
+    "motivo": "versión corta (350)",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)",
+    "vistas": [
+     "160cfba95aed",
+     "242d0a7efbfc"
+    ]
+   }
+  ],
+  "original_de": [],
+  "titulo": "Kueka, memoria ancestral",
+  "original": "En una comunidad al sur de Venezuela, tres generaciones del pueblo Pemón luchan por el retorno de su abuela ancestral Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas que fue sustraída y llevada hasta Alemania sin el consentimiento de la comunidad para que formara parte de una instalación artística. Los guardianes de la memoria ancestral emprenden un viaje de resistencia contra el memoricidio para la restitución del equilibrio natural.",
+  "sintesis": {
+   "redacta": "corrector festicineantioquia-2026",
+   "verifica": "verificador de sinopsis (agente, 25 nov)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-25",
+   "huella": "ebfe2ff873f1"
+  }
  },
  {
   "work_id": "w_R4G8K6M9KW94",
@@ -44902,5 +44975,39 @@
   "antes": {
    "festicineantioquia-2026": "/assets/festicineantioquia-2026/matrioshka.jpg"
   }
+ },
+ {
+  "work_id": "w_R4NEB0P5YBYH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://otrofestiv.app/assets/siembrafest/animero-son-de-la-muerte.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "es la tarjeta de SiembraFest, no un afiche de la obra: SiembraFest la conserva y nadie la hereda",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026), por decisión de Juan",
+  "antes": {
+   "siembrafest-2026": "/assets/siembrafest/animero-son-de-la-muerte.jpg"
+  },
+  "vistas": [
+   "/assets/siembrafest/animero-son-de-la-muerte.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4NEB13RV6EZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://otrofestiv.app/assets/siembrafest/make-up-el-arte-de-amar.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "es la tarjeta de SiembraFest, no un afiche de la obra: SiembraFest la conserva y nadie la hereda",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026), por decisión de Juan",
+  "antes": {
+   "siembrafest-2026": "/assets/siembrafest/make-up-el-arte-de-amar.jpg"
+  },
+  "vistas": [
+   "/assets/siembrafest/make-up-el-arte-de-amar.jpg"
+  ]
  }
 ]

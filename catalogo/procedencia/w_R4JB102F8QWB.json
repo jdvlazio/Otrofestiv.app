@@ -30,8 +30,8 @@
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
-  "fecha": "2026-11-24"
+  "motivo": "versión corta (350) más fiel al original; redactor y verificador distintos (25 nov 2026)",
+  "fecha": "2026-11-25"
  },
  "afiche": {
   "fuente": "humano",
@@ -42,8 +42,8 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "versión corta (350)",
-  "fecha": "2026-11-24"
+  "motivo": "el original entero que publicó FICPA 2026, para sintetizarlo con sinopsis_cortas.py",
+  "fecha": "2026-11-25"
  },
  "xref.tmdb": {
   "fuente": "humano",

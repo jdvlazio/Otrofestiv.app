@@ -12,8 +12,8 @@
  "anio": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "TMDB 1536959 no lo dice; almacén",
-  "fecha": "2026-11-24"
+  "motivo": "ShortFilmWire (https://shortfilmwire.com/en/embedded/film/200126864/toto): Colombia, 2023, 8'32\", dirección Hernán Velásquez Villa, la misma; el 2026-02-07 de TMDB 1536959 puede ser un estreno posterior",
+  "fecha": "2026-11-25"
  },
  "paises": {
   "fuente": "humano",
@@ -30,8 +30,8 @@
  "afiche": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "el que ya publica el almacén",
-  "fecha": "2026-11-24"
+  "motivo": "el afiche completo (el de Leviza, 2500x3465) llevado a 780x1170 sin recortar; el de Rionegro corta los créditos",
+  "fecha": "2026-11-25"
  },
  "xref.letterboxd": {
   "fuente": "humano",
