@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_R4NEB2E4M4YS",
+  "campo": "directores",
+  "valor": [
+   "Nelson Silva"
+  ],
+  "motivo": "crédito del afiche original y TMDB 1817245; SiembraFest trae el nombre completo de la misma persona",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "antes": {
+   "provinciadevelez-2026": "Nelson Silva",
+   "siembrafest-2026": "Nelson Omar Silva Sánchez"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2E4M4YS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "afiche original de la obra; el de SiembraFest es tarjeta del festival",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+   "siembrafest-2026": "/assets/siembrafest/sinfonia-incompleta-de-oficios-del-fonce.jpg"
+  },
+  "vistas": [
+   "/assets/siembrafest/sinfonia-incompleta-de-oficios-del-fonce.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4NEB2E4M4YS",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "2024",
+   "siembrafest-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2E4M4YS",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2E4M4YS",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Documental",
+   "siembrafest-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2E4M4YS",
+  "campo": "sinopsis.es",
+  "valor": "En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares.",
+  "motivo": "texto del festival (Facebook, 25 nov 2026)",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "antes": {
+   "provinciadevelez-2026": "En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares."
+  }
+ },
+ {
+  "work_id": "w_R4NEB2E4M4YS",
+  "campo": "sinopsis.en",
+  "valor": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places.",
+  "motivo": "texto del festival (Facebook, 25 nov 2026)",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "antes": {
+   "provinciadevelez-2026": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places."
+  }
+ },
+ {
+  "work_id": "w_R4NEB2E4M4YS",
+  "campo": "xref.tmdb",
+  "valor": 1817245,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1817245"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2E4M4YS",
+  "campo": "xref.letterboxd",
+  "valor": "sinfonia-incompleta-de-oficios-del-fonce",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "sinfonia-incompleta-de-oficios-del-fonce"
+  }
+ }
+]

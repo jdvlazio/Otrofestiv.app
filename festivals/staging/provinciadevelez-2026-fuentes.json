@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "pipeline/fuentes_descubrir.py",
-  "capturado": "2026-11-24T15:00",
+  "capturado": "2026-11-25T10:04",
   "paginas_leidas": 3,
   "errores": [
    "https://www.facebook.com/festivaldecinebarbosa: HTTP Error 400: Bad Request"
@@ -10,14 +10,14 @@
  "raices": {
   "web": "https://festivaldecineprovinciadevelez.com/",
   "facebook": "https://www.facebook.com/festivaldecinebarbosa",
-  "_sin_bio": "el link de la bio de IG no se pudo leer sin sesión (24 nov 2026); la web y el Facebook sí se recorrieron"
+  "bio": "https://festivaldecineprovinciadevelez.com/"
  },
  "items": {
   "https://festivaldecineprovinciadevelez.com/landing/carteleras/ayuno-y-cenizas.jpg": {
    "tipo": "imagen-programa",
    "visto_en": "https://festivaldecineprovinciadevelez.com/",
    "primera_vez": "2026-11-24T15:00",
-   "ultima_vez": "2026-11-24T15:00",
+   "ultima_vez": "2026-11-25T10:04",
    "estado": "usada",
    "_por_que": "afiche de la obra, en el catálogo (web/cart-ayuno-y-cenizas.jpg)",
    "revisado": "2026-11-24T15:00"
@@ -26,7 +26,7 @@
    "tipo": "imagen-programa",
    "visto_en": "https://festivaldecineprovinciadevelez.com/",
    "primera_vez": "2026-11-24T15:00",
-   "ultima_vez": "2026-11-24T15:00",
+   "ultima_vez": "2026-11-25T10:04",
    "estado": "usada",
    "_por_que": "afiche de la obra, en el catálogo (web/cart-fantastico-sr-fox.jpg)",
    "revisado": "2026-11-24T15:00"
@@ -35,7 +35,7 @@
    "tipo": "imagen-programa",
    "visto_en": "https://festivaldecineprovinciadevelez.com/",
    "primera_vez": "2026-11-24T15:00",
-   "ultima_vez": "2026-11-24T15:00",
+   "ultima_vez": "2026-11-25T10:04",
    "estado": "descartada",
    "_por_que": "foto histórica que ilustra el afiche; no es programación",
    "revisado": "2026-11-24T15:00"
@@ -44,7 +44,7 @@
    "tipo": "imagen-programa",
    "visto_en": "https://festivaldecineprovinciadevelez.com/",
    "primera_vez": "2026-11-24T15:00",
-   "ultima_vez": "2026-11-24T15:00",
+   "ultima_vez": "2026-11-25T10:04",
    "estado": "usada",
    "_por_que": "afiche de la obra, en el catálogo (web/cart-tres-lunas-nuevas.jpg)",
    "revisado": "2026-11-24T15:00"

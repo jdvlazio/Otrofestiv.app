@@ -2,7 +2,9 @@
  "id": "w_JTT49B2JV3A9",
  "titulo_original": "Nueve jueves en Riachuelo",
  "anio": null,
- "paises": [],
+ "paises": [
+  "CO"
+ ],
  "directores": [
   "Nelson Silva"
  ],
@@ -13,6 +15,10 @@
  "generos": [
   "Documental"
  ],
+ "afiche": {
+  "archivo": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
+  "veredicto": "oficial"
+ },
  "xref": {},
  "versiones": [
   {
@@ -21,6 +27,7 @@
   }
  ],
  "presentaciones": [
-  "cineparalapaz-2026"
+  "cineparalapaz-2026",
+  "provinciadevelez-2026"
  ]
 }

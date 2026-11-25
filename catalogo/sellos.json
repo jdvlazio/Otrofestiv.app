@@ -2775,6 +2775,22 @@
   "veredicto": "fiel",
   "verifica": "primera lectura"
  },
+ "w_9M7GCAS0P0JM": {
+  "contra": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
+  "fecha": "2026-11-25",
+  "huella": "e7d36b1eb82a",
+  "redacta": "Claude",
+  "veredicto": "fiel",
+  "verifica": "Claude (agente verificador)"
+ },
+ "w_9M7GCM4JM67J": {
+  "contra": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
+  "fecha": "2026-11-25",
+  "huella": "6e198dd97db2",
+  "redacta": "Claude",
+  "veredicto": "fiel",
+  "verifica": "Claude (agente verificador)"
+ },
  "w_B2TQJ9FSGSGK": {
   "contra": "https://www.themoviedb.org/movie/1399696",
   "fecha": "2026-11-25",
@@ -6190,6 +6206,14 @@
   "redacta": "primera lectura",
   "veredicto": "fiel",
   "verifica": "segunda lectura"
+ },
+ "w_R4NEB2E4M4YS": {
+  "contra": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
+  "fecha": "2026-11-25",
+  "huella": "050a54e1ab73",
+  "redacta": "Claude (agente verificador)",
+  "veredicto": "fiel",
+  "verifica": "Claude"
  },
  "w_R4NEB2RNHWKD": {
   "contra": "https://www.themoviedb.org/movie/1817231",

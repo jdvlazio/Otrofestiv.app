@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "https://festivaldecineprovinciadevelez.com/ (landing.js: 29 obras) + IG @9_festcineprovinciadevelez (Bright Data)",
-  "capturado": "2026-11-24",
+  "capturado": "2026-11-25",
   "metodo": "arreglo de landing.js + OCR del sistema (pipeline/ocr.py) de 29+29 láminas + a ojo"
  },
  "obras": [
@@ -18,7 +18,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -42,7 +42,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -70,7 +70,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-05",
@@ -96,7 +96,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -123,7 +123,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -150,11 +150,19 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
-   "franja": "sin función en los días oficiales (1–6 dic)",
+   "funcion": {
+    "fecha": "2026-12-02",
+    "hora": "18:00",
+    "sede": "Parque Central Cite",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul (4 láminas, 25 nov): «CONVOCATORIA SARAVITA DOCUMENTAL · PARQUE CENTRAL CITE · MIÉRCOLES 2 DE DICIEMBRE · DESDE LAS 6:00 P.M.» pintado en cada una"
+   },
+   "sinopsis": "Una niña emprende un viaje bastante conmovedor para sanar y para dejar ir. Su madre siempre la acompañará.",
+   "_sinopsis_de": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
    "afiche": "assets/provinciadevelez-2026/pez-azul.jpg",
-   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/08 (afiche recortado de la lámina del festival)"
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/08 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "A girl sets out on a quite moving journey to heal and to let go. Her mother will always be with her."
   },
   {
    "titulo": "Salvemos el agua",
@@ -168,7 +176,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-03",
@@ -196,7 +204,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -220,7 +228,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -244,7 +252,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -268,7 +276,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "franja": "sin función en los días oficiales (1–6 dic)",
    "sinopsis": "El levantamiento de un templo sagrado femenino y el regreso de un ritual antiguo musical.",
@@ -289,13 +297,19 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
-   "franja": "sin función en los días oficiales (1–6 dic)",
-   "sinopsis": "Un documental dedicado a La Belleza, Santander, en su quincuagésimo aniversario de vida jurídica: un municipio de paisajes increíbles y gente tenaz, ejemplo de progreso, paz y resiliencia en la provincia veleña.",
-   "_sinopsis_de": "https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 12)",
+   "funcion": {
+    "fecha": "2026-12-02",
+    "hora": "18:00",
+    "sede": "Parque Central Cite",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul (4 láminas, 25 nov): «CONVOCATORIA SARAVITA DOCUMENTAL · PARQUE CENTRAL CITE · MIÉRCOLES 2 DE DICIEMBRE · DESDE LAS 6:00 P.M.» pintado en cada una"
+   },
+   "sinopsis": "La historia del municipio de La Belleza, Santander, es contada por sus propias voces. Desde lo poco que se sabe de sus habitantes precolombinos, los Tisquizoques, hasta nuestros días, se revela la historia fundacional del municipio, pasando por los capítulos más aciagos y de cómo al día de hoy es un remanso de paz de exuberante belleza.",
+   "_sinopsis_de": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
    "afiche": "assets/provinciadevelez-2026/la-belleza.jpg",
-   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/12 (afiche recortado de la lámina del festival)"
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/12 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "The story of the municipality of La Belleza, Santander, is told by its own voices. From the little that is known of its pre-Columbian inhabitants, the Tisquizoques, to the present day, its founding history is revealed, through its darkest chapters and on to how today it is an exuberantly beautiful haven of peace."
   },
   {
    "titulo": "Un diálogo para sanar la Tierra",
@@ -309,7 +323,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-05",
@@ -336,7 +350,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-05",
@@ -363,13 +377,19 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
-   "franja": "sin función en los días oficiales (1–6 dic)",
+   "funcion": {
+    "fecha": "2026-12-02",
+    "hora": "18:00",
+    "sede": "Parque Central Cite",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul (4 láminas, 25 nov): «CONVOCATORIA SARAVITA DOCUMENTAL · PARQUE CENTRAL CITE · MIÉRCOLES 2 DE DICIEMBRE · DESDE LAS 6:00 P.M.» pintado en cada una"
+   },
    "sinopsis": "Edson Velandia tiene nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es descubrir qué quiere tocar cada estudiante.",
    "_sinopsis_de": "festivals/cineparalapaz-2026.json (Cine para la Paz 2026)",
    "afiche": "assets/provinciadevelez-2026/nueve-jueves-en-riachuelo.jpg",
-   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/06 (afiche recortado de la lámina del festival)"
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/06 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play."
   },
   {
    "titulo": "Ecos del cañaveral",
@@ -384,7 +404,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "franja": "sin función en los días oficiales (1–6 dic)",
    "sinopsis": "En el corazón del trapiche, donde el sonido de la caña molida acompaña las jornadas de trabajo, Ecos del cañaveral retrata la vida de cinco campesinos hacedores de panela que han dedicado su existencia a un oficio ancestral.",
@@ -405,7 +425,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "franja": "sin función en los días oficiales (1–6 dic)",
    "sinopsis": "En el corazón de la sabana de Bogotá, el humedal Gualí es un santuario de biodiversidad. El documental se sumerge en su riqueza natural a través de una narrativa visual poética.",
@@ -428,9 +448,19 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
-   "franja": "sin función en los días oficiales (1–6 dic)"
+   "funcion": {
+    "fecha": "2026-12-02",
+    "hora": "18:00",
+    "sede": "Parque Central Cite",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul (4 láminas, 25 nov): «CONVOCATORIA SARAVITA DOCUMENTAL · PARQUE CENTRAL CITE · MIÉRCOLES 2 DE DICIEMBRE · DESDE LAS 6:00 P.M.» pintado en cada una"
+   },
+   "sinopsis": "En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares.",
+   "_sinopsis_de": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
+   "afiche": "assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/05 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places."
   },
   {
    "titulo": "De la tradición a la prohibición",
@@ -443,7 +473,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-02",
@@ -470,7 +500,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-05",
@@ -496,7 +526,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-05",
@@ -522,7 +552,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "franja": "sin función en los días oficiales (1–6 dic)",
    "afiche": "assets/provinciadevelez-2026/coming-from-hell.jpg",
@@ -541,7 +571,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfhmCGsEZ84/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-01",
@@ -566,7 +596,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "franja": "sin función en los días oficiales (1–6 dic)",
    "afiche": "assets/provinciadevelez-2026/el-empiezo.jpg",
@@ -585,7 +615,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfhmCGsEZ84/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -612,7 +642,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -636,7 +666,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-05",
@@ -663,7 +693,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -690,7 +720,7 @@
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "funcion": {
     "fecha": "2026-12-04",
@@ -711,7 +741,7 @@
    "_evidencia": "web «Franja infantil» + lámina «MUESTRA ESPECIAL · FRANJA INFANTIL»",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "seccion": "Franja infantil",
    "funcion": {
@@ -730,7 +760,7 @@
    "_evidencia": "web «Franja infantil · Wes Anderson · stop motion» + lámina «MUESTRA ESPECIAL · FRANJA PARA NIÑOS»",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "seccion": "Franja infantil",
    "funcion": {
@@ -749,7 +779,7 @@
    "_evidencia": "lámina «MUESTRA ESPECIAL BARBOSA»; el afiche dice «My Name is Bill W.» (James Woods, JoBeth Williams, James Garner); el pie del 17 nov la presenta como «La caída»",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "seccion": "Muestra especial",
    "funcion": {
@@ -768,7 +798,7 @@
    "_evidencia": "pie Df7ZYXrEaXh: «película de 20 minutos inspirada en Barbosa, nominada a la India Catalina, que se presentó en el 2016 … presencia de la escritora y directora Carolina Muñoz»; lámina Df71yg2P6hF (y FB 19 nov): «MUESTRA ESPECIAL LA IMAGINADA 2016 – 2026 · DIRECTORA CAROLINA MUÑOZ · VIERNES 4 DE DICIEMBRE · DESDE LAS 6:00 P. M. · LA TANTE · BARBOSA»",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "pais": "Colombia",
    "seccion": "Muestra especial",
@@ -791,7 +821,7 @@
    "_evidencia": "lámina Df-DlZyERf2/02: «CONVOCATORIA SARAVITA · DOCUMENTAL · Una serie documental de Left Hand Rotation · UMA UÑJIRINAKA · Puchucollo Alto (CUIDADORXS DEL AGUA) · SELECCIÓN OFICIAL 2026»; no está en las 29 de la web; el pie escribe «Puchukollo Alto»",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "pais": "Bolivia",
    "categoria": "Documental",
@@ -810,7 +840,7 @@
    "_evidencia": "lámina Df-DlZyERf2/04: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Un Film De Cine Club Barbosa & Celuloide · Realizado Por Wilson Beltran, Wilson Valderrama»",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "pais": "Colombia",
    "seccion": "Muestra especial",
@@ -827,7 +857,7 @@
    "_evidencia": "lámina Df-DlZyERf2/08: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Entre Ríos · Todos somos hermanos»; sin créditos; tipo supuesto por la portada (documental y cortometraje), sin duración",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "seccion": "Muestra especial",
    "franja": "sin función en los días oficiales (1–6 dic)"
@@ -839,7 +869,7 @@
    "_evidencia": "web: «es una de las películas de la muestra central, y su director nos acompaña en el festival»; sin día ni hora",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "seccion": "Muestra central",
    "franja": "sin función en los días oficiales (1–6 dic)",
@@ -853,7 +883,7 @@
    "_evidencia": "web: «también de Rodrigo Dimaté y estreno nacional, es la otra película de la muestra central»; sin día ni hora",
    "_src": {
     "url": "https://festivaldecineprovinciadevelez.com/",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    "seccion": "Muestra central",
    "franja": "sin función en los días oficiales (1–6 dic)",

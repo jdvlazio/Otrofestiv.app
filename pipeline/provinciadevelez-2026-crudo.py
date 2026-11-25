@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""provinciadevelez-2026-crudo.py — el catálogo → crudo: 6 funciones (24 nov 2026).
+"""provinciadevelez-2026-crudo.py — el catálogo → crudo: 7 funciones (25 nov 2026).
 
 Cada obra del catálogo trae su(s) función(es) con la lámina que lo dice; acá se
 agrupan por día, hora y sede, en el orden de las láminas. Una función con una obra
@@ -19,11 +19,14 @@ from lib import provenance  # noqa: E402
 
 CAT = f'{REPO}/festivals/staging/provinciadevelez-2026-catalogo.json'
 OUT = f'{REPO}/festivals/staging/provinciadevelez-2026-crudo.json'
+FB25 = 'https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul'
 IG = 'https://www.instagram.com/p/'
 # (día, hora) → título, sección, post, fecha del post, obras en el orden de las láminas
 FUNCIONES = {
     ('2026-12-01', '18:00'): ('La familia Bélier + El pescador (videoclip)', 'Franja Infantil', 'DfxyKI-S9LA', '2026-11-15', [
         'La familia Bélier', 'El pescador (videoclip)']),
+    ('2026-12-02', '18:00'): ('Nueve jueves en Riachuelo + 3 Obras', 'Selección Oficial', FB25, '2026-11-25', [
+        'Nueve jueves en Riachuelo', 'Sinfonía incompleta de oficios del Fonce', 'La Belleza', 'Pez azul']),
     ('2026-12-02', '19:00'): ('My Name Is Bill W. + De la tradición a la prohibición', 'Muestra Especial', 'Df2AcYNEbXC', '2026-11-17', [
         'My Name Is Bill W.', 'De la tradición a la prohibición']),
     ('2026-12-03', '18:00'): ('El fantástico Sr. Fox + Salvemos el agua', 'Franja Infantil', 'Df4hzKXkYiP', '2026-11-18', [
@@ -62,7 +65,7 @@ def main():
     for (dia, hora), (tit, sec, sc, fecha, obras) in FUNCIONES.items():
         f = {'titulo': tit, 'dia': dia, 'hora': hora, 'sede': sedes[dia, hora], 'seccion': sec,
              'acceso': 'Entrada libre',
-             '_src': {'url': f'{IG}{sc}/', 'date': fecha, 'tipo': 'festival-ig'}}
+             '_src': {'url': sc if sc.startswith('http') else f'{IG}{sc}/', 'date': fecha, 'tipo': 'festival' if sc.startswith('http') else 'festival-ig'}}
         os_ = [obra(cat[t]) for t in obras]
         if len(os_) == 1:
             f.update({k: v for k, v in os_[0].items() if k != 'titulo'})

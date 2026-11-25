@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "IG @9_festcineprovinciadevelez (láminas) vía provinciadevelez-2026-catalogo.json",
-  "capturado": "2026-11-24",
+  "capturado": "2026-11-25",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Rótulos de las láminas y la web: «SELECCIÓN OFICIAL 2026», «FRANJA INFANTIL», «MUESTRA ESPECIAL». PROPUESTA para Juan. «Muestra Central» se suma cuando tenga función.",
@@ -114,14 +114,14 @@
    "archetype": "Muestra / País",
    "order": 1
   },
-  "⭐ Muestra Especial": {
-   "en": "Special Showcase",
-   "archetype": "Especiales / Eventos",
-   "order": 2
-  },
   "🏆 Selección Oficial": {
    "en": "Official Selection",
    "archetype": "Competencia",
+   "order": 2
+  },
+  "⭐ Muestra Especial": {
+   "en": "Special Showcase",
+   "archetype": "Especiales / Eventos",
    "order": 3
   }
  },
@@ -136,6 +136,17 @@
    "_match": "Google Maps (19 nov 2026): «Leo Olarte Escuela de Formación Musical» — a 30 m de «Cancha el marsella» (5.9361995,-73.6157191), como dice la lámina",
    "_maps": "https://www.google.com/maps/place/Leo+Olarte+Escuela+de+Formaci%C3%B3n+Musical/@5.9359462,-73.6155809,17z",
    "_matriz": "s_c760d1fd"
+  },
+  "Parque Central Cite - Barbosa": {
+   "short": "Parque Central Cite",
+   "city": "Barbosa",
+   "lat": 5.9646939,
+   "lng": -73.603604,
+   "address": "Corregimiento de Cite, Barbosa",
+   "_prec": "manual",
+   "_match": "Google Maps (25 nov 2026): «Parque Central De Cite», Cite, Barbosa, Santander",
+   "_maps": "https://www.google.com/maps/place/Parque+Central+De+Cite/@5.9646939,-73.603604,17z",
+   "_matriz": "s_4c6ebcc5"
   },
   "Grupo Central AA - Barbosa": {
    "short": "Grupo Central AA",
@@ -241,6 +252,87 @@
    "id": "f_f9339da525"
   },
   {
+   "title": "Nueve Jueves en Riachuelo + 3 Obras",
+   "type": "film",
+   "section": "🏆 Selección Oficial",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "40 min",
+   "_ancla": [
+    "Parque Central Cite - Barbosa",
+    "2026-12-02",
+    "18:00"
+   ],
+   "day": "2026-12-02",
+   "time": "18:00",
+   "day_order": 1,
+   "venue": "Parque Central Cite - Barbosa",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
+    "date": "2026-11-25",
+    "tipo": "festival"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Nueve jueves en Riachuelo",
+     "director": "Nelson Silva",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "genre": "Documental",
+     "synopsis_en": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
+     "synopsis": "Edson Velandia tiene nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es descubrir qué quiere tocar cada estudiante.",
+     "synopsis_lang": "es",
+     "poster": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
+     "posterSource": "oficial",
+     "duration": "24 min"
+    },
+    {
+     "title": "Sinfonía incompleta de oficios del Fonce",
+     "director": "Nelson Silva",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2024,
+     "genre": "Documental",
+     "synopsis_en": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places.",
+     "synopsis": "En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares.",
+     "synopsis_lang": "es",
+     "poster": "/assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
+     "tmdb_id": 1817245,
+     "duration": "16 min"
+    },
+    {
+     "title": "La Belleza",
+     "director": "Nelson Silva",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "genre": "Documental",
+     "synopsis_en": "The story of the municipality of La Belleza, Santander, is told by its own voices. From the little that is known of its pre-Columbian inhabitants, the Tisquizoques, to the present day, its founding history is revealed, through its darkest chapters and on to how today it is an exuberantly beautiful haven of peace.",
+     "synopsis": "La historia del municipio de La Belleza, Santander, es contada por sus propias voces. Desde lo poco que se sabe de sus habitantes precolombinos, los Tisquizoques, hasta nuestros días, se revela la historia fundacional del municipio, pasando por los capítulos más aciagos y de cómo al día de hoy es un remanso de paz de exuberante belleza.",
+     "synopsis_lang": "es",
+     "poster": "/assets/provinciadevelez-2026/la-belleza-v2.jpg",
+     "posterSource": "oficial"
+    },
+    {
+     "title": "Pez azul",
+     "director": "J. Joel Gómez G.",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "synopsis_en": "A girl sets out on a quite moving journey to heal and to let go. Her mother will always be with her.",
+     "synopsis": "Una niña emprende un viaje bastante conmovedor para sanar y para dejar ir. Su madre siempre la acompañará.",
+     "synopsis_lang": "es",
+     "poster": "/assets/provinciadevelez-2026/pez-azul-v2.jpg",
+     "posterSource": "oficial"
+    }
+   ],
+   "_fid": "f_2204c2d881",
+   "id": "f_2204c2d881"
+  },
+  {
    "title": "My Name Is Bill W. + De la tradición a la prohibición",
    "type": "film",
    "section": "⭐ Muestra Especial",
@@ -288,7 +380,8 @@
      "synopsis": "Es un documental que explora la evolución de las plantas sagradas de poder desde los rituales ancestrales hasta su estigmatización y prohibición en la sociedad contemporánea. La película se sitúa en un contexto latinoamericano para cuestionar los discursos oficiales que han criminalizado estos saberes, revelando procesos de despojo cultural y ruptura de la memoria colectiva.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/de-la-tradicion-a-la-prohibicion.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "director": "Lente Andino Films"
     }
    ],
    "_fid": "f_203b9c0849",
@@ -298,7 +391,7 @@
    "title": "El fantástico Sr. Fox + Salvemos el agua",
    "type": "film",
    "section": "🧒 Franja Infantil",
-   "country": "United States of America, Colombia",
+   "country": "United States, Colombia",
    "flags": "🇺🇸🇨🇴",
    "duration": "87 min",
    "_ancla": [
@@ -329,7 +422,7 @@
      "synopsis": "Un astuto zorro llamado Fox (voz original de George Clooney) parece llevar una vida idílica con su esposa (Meryl Streep) y con su hijo Ash (Jason Schwartzman). Pero, por las noches, el señor Fox se dedica a robar gallinas, patos y pavos en las granjas vecinas. Los granjeros deciden acabar con la situación cazando a Mr. Fox. Basada en el famoso libro para niños de Roald Dahl.",
      "synopsis_en": "The Fantastic Mr. Fox, bored with his current life, plans a heist against the three local farmers. The farmers, tired of sharing their chickens with the sly fox, seek revenge against him and his family.",
      "genre": "Aventura",
-     "country": "United States of America",
+     "country": "United States",
      "year": 2009,
      "synopsis_lang": "es",
      "duration": "87 min",
@@ -634,8 +727,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T16:22:34",
-  "plan_sha": "000e0785312106ef",
+  "fecha": "2026-11-25T10:36:02",
+  "plan_sha": "5e15e89e3223db1c",
   "paso": 7,
   "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"
  }

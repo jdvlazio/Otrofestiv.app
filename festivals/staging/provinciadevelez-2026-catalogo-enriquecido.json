@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-24"
+  "capturado": "2026-11-25"
  },
  "_origen": "provinciadevelez-2026-catalogo.json",
  "obras": [
@@ -41,6 +41,9 @@
     {
      "festival": "cineparalapaz-2026",
      "titulo": "Nueve jueves en Riachuelo",
+     "poster": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
      "duration": "24 min",
      "genre": "Documental",
      "synopsis_en": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
@@ -76,22 +79,34 @@
    "duracion_tmdb": 16,
    "pais_tmdb": "",
    "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4NEB2E4M4YS, ficfusa-2026, provinciadevelez-2026, siembrafest-2026)",
+   "work_id": "w_R4NEB2E4M4YS",
    "_ya_publicada": [
-    {
-     "festival": "siembrafest-2026",
-     "titulo": "Sinfonía incompleta de oficios del Fonce",
-     "poster": "/assets/siembrafest/sinfonia-incompleta-de-oficios-del-fonce.jpg",
-     "posterSource": "oficial",
-     "country": "Colombia",
-     "year": 2024,
-     "duration": "16 min",
-     "genre": "Documental"
-    },
     {
      "festival": "ficfusa-2026",
      "titulo": "Sinfonía incompleta de oficios del fonce",
-     "duration": "16 min"
+     "tmdb_id": 1817245,
+     "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "16 min",
+     "genre": "Documental",
+     "synopsis_en": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places.",
+     "sinopsis": "En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Sinfonía incompleta de oficios del Fonce",
+     "tmdb_id": 1817245,
+     "poster": "/assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "16 min",
+     "genre": "Documental",
+     "synopsis_en": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places.",
+     "sinopsis": "En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares."
     }
    ]
   },
@@ -121,7 +136,7 @@
    "genero": "Aventura",
    "anio_tmdb": 2009,
    "duracion_tmdb": 87,
-   "pais_tmdb": "United States of America",
+   "pais_tmdb": "United States",
    "lbSlug": "fantastic-mr-fox",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 10315 «Fantastic Mr. Fox» (2009) de Wes Anderson: la web la presenta como «El fantástico Sr. Fox · Wes Anderson · stop motion» y la lámina del 18 nov pinta el afiche francés «Fantastic Mr. Fox · un film de Wes Anderson» (Amalric, Huppert). Título en español de la obra"
   },
@@ -135,7 +150,7 @@
    "genero": "Drama",
    "anio_tmdb": 1989,
    "duracion_tmdb": 100,
-   "pais_tmdb": "United States of America",
+   "pais_tmdb": "United States",
    "lbSlug": "my-name-is-bill-w",
    "_verificado": "el catálogo ya la tiene (w_7JCW8RFWEPCG, provinciadevelez-2026)",
    "work_id": "w_7JCW8RFWEPCG"
@@ -243,22 +258,34 @@
    "duracion_tmdb": 16,
    "pais_tmdb": "",
    "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_verificado": "el catálogo ya la tiene (w_R4NEB2E4M4YS, ficfusa-2026, provinciadevelez-2026, siembrafest-2026)",
+   "work_id": "w_R4NEB2E4M4YS",
    "_ya_publicada": [
-    {
-     "festival": "siembrafest-2026",
-     "titulo": "Sinfonía incompleta de oficios del Fonce",
-     "poster": "/assets/siembrafest/sinfonia-incompleta-de-oficios-del-fonce.jpg",
-     "posterSource": "oficial",
-     "country": "Colombia",
-     "year": 2024,
-     "duration": "16 min",
-     "genre": "Documental"
-    },
     {
      "festival": "ficfusa-2026",
      "titulo": "Sinfonía incompleta de oficios del fonce",
-     "duration": "16 min"
+     "tmdb_id": 1817245,
+     "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "16 min",
+     "genre": "Documental",
+     "synopsis_en": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places.",
+     "sinopsis": "En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Sinfonía incompleta de oficios del Fonce",
+     "tmdb_id": 1817245,
+     "poster": "/assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "16 min",
+     "genre": "Documental",
+     "synopsis_en": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places.",
+     "sinopsis": "En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares."
     }
    ]
   },
@@ -286,7 +313,7 @@
    "genero": "Aventura",
    "anio_tmdb": 2009,
    "duracion_tmdb": 87,
-   "pais_tmdb": "United States of America",
+   "pais_tmdb": "United States",
    "lbSlug": "fantastic-mr-fox",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 10315 «Fantastic Mr. Fox» (2009) de Wes Anderson: la web la presenta como «El fantástico Sr. Fox · Wes Anderson · stop motion» y la lámina del 18 nov pinta el afiche francés «Fantastic Mr. Fox · un film de Wes Anderson» (Amalric, Huppert). Título en español de la obra"
   },
@@ -299,7 +326,7 @@
    "genero": "Drama",
    "anio_tmdb": 1989,
    "duracion_tmdb": 100,
-   "pais_tmdb": "United States of America",
+   "pais_tmdb": "United States",
    "lbSlug": "my-name-is-bill-w",
    "_verificado": "el catálogo ya la tiene (w_7JCW8RFWEPCG, provinciadevelez-2026)",
    "work_id": "w_7JCW8RFWEPCG"
