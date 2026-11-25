@@ -1,0 +1,61 @@
+[
+ {
+  "work_id": "w_ZR5KC2MVSDVP",
+  "campo": "directores",
+  "valor": [
+   "Sebastián Rosas Santamaría"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Sebastián Rosas Santamaría",
+   "guatape-2026": "Sebastián Rosas Santamaría"
+  }
+ },
+ {
+  "work_id": "w_ZR5KC2MVSDVP",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026",
+   "guatape-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5KC2MVSDVP",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "guatape-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5KC2MVSDVP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/hasta-que-amanezca.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/hasta-que-amanezca.jpg",
+   "guatape-2026": "/assets/bhff-2026/hasta-que-amanezca.jpg"
+  }
+ }
+]

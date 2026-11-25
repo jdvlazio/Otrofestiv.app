@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_ZR5MJACSQ2C8",
+  "campo": "directores",
+  "valor": [
+   "Juan Pablo Chajín"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Juan Pablo Chajín"
+  }
+ },
+ {
+  "work_id": "w_ZR5MJACSQ2C8",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5MJACSQ2C8",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5MJACSQ2C8",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_ZR5MJACSQ2C8",
+  "campo": "sinopsis.es",
+  "valor": "En una casa a las afueras de la ciudad, una reunión entre viejos amigos de colegio promete una noche de nostalgia. Pero cuando secretos enterrados emergen y un invitado aparece muerto, la velada se convierte en una batalla por sobrevivir. Aislados del mundo exterior, todos se vuelven sospechosos en este emocionante thriller de suspenso. Cada revelación lleva a giros inesperados mientras luchan por descubrir al asesino entre ellos. ¿Quién es el culpable y cuál es su motivo? Una noche que comenzó con recuerdos terminará con la verdad más oscura.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "En una casa a las afueras de la ciudad, una reunión entre viejos amigos de colegio promete una noche de nostalgia. Pero cuando secretos enterrados emergen y un invitado aparece muerto, la velada se convierte en una batalla por sobrevivir. Aislados del mundo exterior, todos se vuelven sospechosos en este emocionante thriller de suspenso. Cada revelación lleva a giros inesperados mientras luchan por descubrir al asesino entre ellos. ¿Quién es el culpable y cuál es su motivo? Una noche que comenzó con recuerdos terminará con la verdad más oscura."
+  }
+ },
+ {
+  "work_id": "w_ZR5MJACSQ2C8",
+  "campo": "sinopsis.en",
+  "valor": "In a house on the outskirts of the city, a gathering of old school friends promises a night of nostalgia. But when buried secrets begin to surface and one of the guests turns up dead, the evening quickly becomes a fight for survival. Isolated from the outside world, everyone becomes a suspect in this gripping suspense thriller. Each revelation brings unexpected twists as they struggle to uncover the killer among them. Who is responsible, and what is their motive? A night that began with memories will end with the darkest truth.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "In a house on the outskirts of the city, a gathering of old school friends promises a night of nostalgia. But when buried secrets begin to surface and one of the guests turns up dead, the evening quickly becomes a fight for survival. Isolated from the outside world, everyone becomes a suspect in this gripping suspense thriller. Each revelation brings unexpected twists as they struggle to uncover the killer among them. Who is responsible, and what is their motive? A night that began with memories will end with the darkest truth."
+  }
+ },
+ {
+  "work_id": "w_ZR5MJACSQ2C8",
+  "campo": "xref.tmdb",
+  "valor": 1650805,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1650805"
+  }
+ },
+ {
+  "work_id": "w_ZR5MJACSQ2C8",
+  "campo": "xref.letterboxd",
+  "valor": "tarde-o-temprano",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "tarde-o-temprano"
+  }
+ },
+ {
+  "work_id": "w_ZR5MJACSQ2C8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/tarde-o-temprano.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/tarde-o-temprano.jpg"
+  }
+ }
+]

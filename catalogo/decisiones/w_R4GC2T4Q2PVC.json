@@ -78,5 +78,63 @@
    "fantasmagoria-2026": "Ciencia ficción",
    "villadelcine-2026": "Fantasía / Drama"
   }
+ },
+ {
+  "work_id": "w_R4GC2T4Q2PVC",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2023",
+   "fantasmagoria-2026": "2023",
+   "villadelcine-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_R4GC2T4Q2PVC",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "fantasmagoria-2026": "Colombia",
+   "villadelcine-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4GC2T4Q2PVC",
+  "campo": "xref.tmdb",
+  "valor": 1786245,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1786245",
+   "fantasmagoria-2026": "1786245",
+   "villadelcine-2026": "1786245"
+  }
+ },
+ {
+  "work_id": "w_R4GC2T4Q2PVC",
+  "campo": "xref.letterboxd",
+  "valor": "quazar",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "quazar",
+   "fantasmagoria-2026": "quazar",
+   "villadelcine-2026": "quazar"
+  }
  }
 ]

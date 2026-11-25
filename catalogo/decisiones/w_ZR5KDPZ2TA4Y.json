@@ -1,0 +1,108 @@
+[
+ {
+  "work_id": "w_ZR5KDPZ2TA4Y",
+  "campo": "directores",
+  "valor": [
+   "Pablo Olmos Arrayales"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Pablo Olmos Arrayales"
+  }
+ },
+ {
+  "work_id": "w_ZR5KDPZ2TA4Y",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5KDPZ2TA4Y",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_ZR5KDPZ2TA4Y",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_ZR5KDPZ2TA4Y",
+  "campo": "sinopsis.es",
+  "valor": "Max regresa a casa después de un largo día de trabajo. Una mujer ebria se sube al mismo vagón de metro en el que viaja él. Su actuar errante llama la atención de otro pasajero que no tiene buenas intenciones. Max será testigo de lo que pasa en el Metro por las noches.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Max regresa a casa después de un largo día de trabajo. Una mujer ebria se sube al mismo vagón de metro en el que viaja él. Su actuar errante llama la atención de otro pasajero que no tiene buenas intenciones. Max será testigo de lo que pasa en el Metro por las noches."
+  }
+ },
+ {
+  "work_id": "w_ZR5KDPZ2TA4Y",
+  "campo": "xref.tmdb",
+  "valor": 1355178,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1355178"
+  }
+ },
+ {
+  "work_id": "w_ZR5KDPZ2TA4Y",
+  "campo": "xref.letterboxd",
+  "valor": "nocturna-2024-2",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "nocturna-2024-2"
+  }
+ },
+ {
+  "work_id": "w_ZR5KDPZ2TA4Y",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/nocturna.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/nocturna.jpg"
+  }
+ }
+]

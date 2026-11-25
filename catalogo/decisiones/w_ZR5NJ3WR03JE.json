@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_ZR5NJ3WR03JE",
+  "campo": "directores",
+  "valor": [
+   "Samuel Andrés Ruiz Pico"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Samuel Andrés Ruiz Pico"
+  }
+ },
+ {
+  "work_id": "w_ZR5NJ3WR03JE",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5NJ3WR03JE",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5NJ3WR03JE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/parasitos.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/parasitos.jpg"
+  }
+ }
+]

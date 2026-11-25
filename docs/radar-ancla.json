@@ -5531,8 +5531,10 @@
    "fechas_2026": "27–29/30 NOV 2026 (6ª)",
    "web": null,
    "ig": null,
-   "estado": "radar",
-   "id_config": null,
+   "estado": "en_app",
+   "id_config": [
+    "medellinhorror2026"
+   ],
    "issue": [
     1033
    ],

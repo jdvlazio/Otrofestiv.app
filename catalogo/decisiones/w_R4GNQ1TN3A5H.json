@@ -43,5 +43,74 @@
    "bhff-2026": "siempre-hay-un-monstruo",
    "fantasmagoria-2026": "siempre-hay-un-monstruo"
   }
+ },
+ {
+  "work_id": "w_R4GNQ1TN3A5H",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026",
+   "fantasmagoria-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4GNQ1TN3A5H",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "España",
+   "fantasmagoria-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_R4GNQ1TN3A5H",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Terror",
+   "fantasmagoria-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_R4GNQ1TN3A5H",
+  "campo": "sinopsis.es",
+  "valor": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas.",
+   "fantasmagoria-2026": "Un grupo de agentes investiga un incidente ocurrido durante una fiesta privada en la casa de un joven actor. Lo que comienza como un caso rutinario se convierte rápidamente en el caso más monstruoso y aterrador de sus vidas."
+  }
+ },
+ {
+  "work_id": "w_R4GNQ1TN3A5H",
+  "campo": "xref.tmdb",
+  "valor": 1794456,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1794456",
+   "fantasmagoria-2026": "1794456"
+  }
  }
 ]

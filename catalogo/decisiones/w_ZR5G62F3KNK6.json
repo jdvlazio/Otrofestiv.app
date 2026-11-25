@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_ZR5G62F3KNK6",
+  "campo": "directores",
+  "valor": [
+   "Eduart Zapata"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Eduart Zapata"
+  }
+ },
+ {
+  "work_id": "w_ZR5G62F3KNK6",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5G62F3KNK6",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5G62F3KNK6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/la-noche-de-las-bestias.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/la-noche-de-las-bestias.jpg"
+  }
+ }
+]

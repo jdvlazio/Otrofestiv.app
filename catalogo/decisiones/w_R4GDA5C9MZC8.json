@@ -32,5 +32,74 @@
   "vistas": [
    "e7520eefa015"
   ]
+ },
+ {
+  "work_id": "w_R4GDA5C9MZC8",
+  "campo": "directores",
+  "valor": [
+   "Juan González Henao"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Juan González Henao",
+   "fantasmagoria-2026": "Juan González Henao"
+  }
+ },
+ {
+  "work_id": "w_R4GDA5C9MZC8",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026",
+   "fantasmagoria-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4GDA5C9MZC8",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "fantasmagoria-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4GDA5C9MZC8",
+  "campo": "xref.tmdb",
+  "valor": 1794425,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1794425",
+   "fantasmagoria-2026": "1794425"
+  }
+ },
+ {
+  "work_id": "w_R4GDA5C9MZC8",
+  "campo": "xref.letterboxd",
+  "valor": "ubicua",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "ubicua",
+   "fantasmagoria-2026": "ubicua"
+  }
  }
 ]

@@ -1,0 +1,118 @@
+[
+ {
+  "work_id": "w_9SSQ7877S0FV",
+  "campo": "directores",
+  "valor": [
+   "Jesús Cázares"
+  ],
+  "motivo": "póster oficial y TMDB",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Jesus Cazares"
+  },
+  "anteriores": [
+   {
+    "valor": [
+     "Jesus Cazares"
+    ],
+    "motivo": "alta desde medellinhorror-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude"
+   }
+  ]
+ },
+ {
+  "work_id": "w_9SSQ7877S0FV",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_9SSQ7877S0FV",
+  "campo": "generos",
+  "valor": [
+   "Ciencia ficción"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Ciencia ficción"
+  }
+ },
+ {
+  "work_id": "w_9SSQ7877S0FV",
+  "campo": "sinopsis.es",
+  "valor": "Un hombre usa tecnología analógica para borrar un recuerdo doloroso de su pasado. Pero en “EL OLVIDO”, la manipulación de la memoria lo arrastra a una espiral de confusión, enfrentándolo a las inesperadas y perturbadoras consecuencias de reescribir su propia historia.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Un hombre usa tecnología analógica para borrar un recuerdo doloroso de su pasado. Pero en “EL OLVIDO”, la manipulación de la memoria lo arrastra a una espiral de confusión, enfrentándolo a las inesperadas y perturbadoras consecuencias de reescribir su propia historia."
+  }
+ },
+ {
+  "work_id": "w_9SSQ7877S0FV",
+  "campo": "sinopsis.en",
+  "valor": "A man uses analog technology to erase a painful memory from his past. But in “EL OLVIDO”, manipulating memory drags him into a spiral of confusion, confronting him with the unexpected and disturbing consequences of rewriting his own story.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "A man uses analog technology to erase a painful memory from his past. But in “EL OLVIDO”, manipulating memory drags him into a spiral of confusion, confronting him with the unexpected and disturbing consequences of rewriting his own story."
+  }
+ },
+ {
+  "work_id": "w_9SSQ7877S0FV",
+  "campo": "xref.tmdb",
+  "valor": 1527240,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "1527240"
+  }
+ },
+ {
+  "work_id": "w_9SSQ7877S0FV",
+  "campo": "xref.letterboxd",
+  "valor": "el-olvido-1",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "el-olvido-1"
+  }
+ },
+ {
+  "work_id": "w_9SSQ7877S0FV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/forgetting.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/forgetting.jpg"
+  }
+ }
+]

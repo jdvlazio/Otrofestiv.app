@@ -48,5 +48,109 @@
     ]
    }
   ]
+ },
+ {
+  "work_id": "w_R4JN02952TSE",
+  "campo": "directores",
+  "valor": [
+   "Juan Pablo Rendón"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Juan Pablo Rendón",
+   "festicinerio-2026": "Juan Pablo Rendón",
+   "filcmar-2026": "Juan Pablo Rendón"
+  }
+ },
+ {
+  "work_id": "w_R4JN02952TSE",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025",
+   "festicinerio-2026": "2025",
+   "filcmar-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4JN02952TSE",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "festicinerio-2026": "Colombia",
+   "filcmar-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4JN02952TSE",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Drama",
+   "festicinerio-2026": "Drama",
+   "filcmar-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4JN02952TSE",
+  "campo": "sinopsis.en",
+  "valor": "Aurora, a young woman who is part of a religious sect with her mother, doubts the veracity of the words of Bernabé, the leader, and seeks a way to make her mother and the rest of the community understand that the truth is not there. Everything becomes chaotic when Aurora begins to have connections with the sacred idol and her objective changes drastically, changing the normality of the community.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Aurora, a young woman who is part of a religious sect with her mother, doubts the veracity of the words of Bernabé, the leader, and seeks a way to make her mother and the rest of the community understand that the truth is not there. Everything becomes chaotic when Aurora begins to have connections with the sacred idol and her objective changes drastically, changing the normality of the community.",
+   "festicinerio-2026": "Aurora, a young woman who is part of a religious sect with her mother, doubts the veracity of the words of Bernabé, the leader, and seeks a way to make her mother and the rest of the community understand that the truth is not there. Everything becomes chaotic when Aurora begins to have connections with the sacred idol and her objective changes drastically, changing the normality of the community.",
+   "filcmar-2026": "Aurora, a young woman who is part of a religious sect with her mother, doubts the veracity of the words of Bernabé, the leader, and seeks a way to make her mother and the rest of the community understand that the truth is not there. Everything becomes chaotic when Aurora begins to have connections with the sacred idol and her objective changes drastically, changing the normality of the community."
+  }
+ },
+ {
+  "work_id": "w_R4JN02952TSE",
+  "campo": "xref.tmdb",
+  "valor": 1526356,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1526356",
+   "festicinerio-2026": "1526356",
+   "filcmar-2026": "1526356"
+  }
+ },
+ {
+  "work_id": "w_R4JN02952TSE",
+  "campo": "xref.letterboxd",
+  "valor": "el-ocaso-de-los-dioses-nightfall-of-gods",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "el-ocaso-de-los-dioses-nightfall-of-gods",
+   "festicinerio-2026": "el-ocaso-de-los-dioses-nightfall-of-gods",
+   "filcmar-2026": "el-ocaso-de-los-dioses-nightfall-of-gods"
+  }
  }
 ]

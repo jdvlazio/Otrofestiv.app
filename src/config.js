@@ -141,6 +141,8 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  // Medellín Horror Fest (2026-11-25, alta-festival.py): del plan
+  '👻 Selección Oficial': 'Official Selection',
   // BOGOSHORTS (2026-11-23, alta-festival.py): del plan
   '🧑‍🏫 Al Tablero': 'To the Board',
   '🖼️ Expone': 'Exhibits',
@@ -402,6 +404,24 @@ export const NOTICES=[
 //
 // Al agregar festival: también actualizar FESTIVALS en tools/enricher.html
 export const FESTIVAL_CONFIG={
+  'medellinhorror2026': {
+    // Alta con pipeline/alta-festival.py (2026-11-25): lo editorial sale de
+    // pipeline/medellinhorror-2026.plan.json; los días, de festivalStartStr/festivalEndStr.
+    name:'Medellín Horror Fest',displayName:'Medellín Horror Fest',fullName:'Medellín Horror Fest',shortName:'MHF',
+    city:'Medellín',country:'CO',
+    dates:'26–29 NOV',dates_en:'NOV 26–29',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/medellinhorror2026.jpg',
+    tagline:'Festival de Cine de Terror',
+    instagram:'medellinhorrorfest', storageKey:'medellinhorror2026_',festivalStartStr:'2026-11-26T00:00:00',festivalEndStr:'2026-11-29T23:59:00',
+    festivalDates:{'2026-11-26':'2026-11-26','2026-11-27':'2026-11-27','2026-11-28':'2026-11-28','2026-11-29':'2026-11-29'},
+    days:[{k:'2026-11-26',d:26,lbl:'JUE'},{k:'2026-11-27',d:27,lbl:'VIE'},{k:'2026-11-28',d:28,lbl:'SÁB'},{k:'2026-11-29',d:29,lbl:'DOM'}],
+    dayKeys:['2026-11-26','2026-11-27','2026-11-28','2026-11-29'],
+    dayShort:{'2026-11-26':'JUE 26','2026-11-27':'VIE 27','2026-11-28':'SÁB 28','2026-11-29':'DOM 29'},
+    dayShort_en:{'2026-11-26':'THU 26','2026-11-27':'FRI 27','2026-11-28':'SAT 28','2026-11-29':'SUN 29'},
+    dayLong:{'2026-11-26':'Jueves 26 de noviembre','2026-11-27':'Viernes 27 de noviembre','2026-11-28':'Sábado 28 de noviembre','2026-11-29':'Domingo 29 de noviembre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'bogoshorts2026': {
     // Alta con pipeline/alta-festival.py (2026-11-23): lo editorial sale de
     // pipeline/bogoshorts-2026.plan.json; los días, de festivalStartStr/festivalEndStr.
@@ -1592,6 +1612,8 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // Medellín Horror Fest (2026-11-25, alta-festival.py): del plan
+  '👻 Selección Oficial': 'Cortos / Programas',
   // BOGOSHORTS (2026-11-23, alta-festival.py): del plan
   '🧑‍🏫 Al Tablero': 'Charlas / Industria',
   '🖼️ Expone': 'Especiales / Eventos',

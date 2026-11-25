@@ -88,5 +88,103 @@
    "ficma-2026": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "villadelcine-2026": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict."
   }
+ },
+ {
+  "work_id": "w_R4GP49AWA2ZH",
+  "campo": "directores",
+  "valor": [
+   "Andrés Buitrago"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Andrés Buitrago",
+   "fantasmagoria-2026": "Andrés Buitrago",
+   "festicinerio-2026": "Andrés Buitrago",
+   "ficfusa-2026": "Andrés Buitrago",
+   "ficica-2026": "Andrés Buitrago",
+   "ficma-2026": "Andrés Buitrago",
+   "siembrafest-2026": "Andrés Buitrago",
+   "villadelcine-2026": "Andrés Buitrago"
+  }
+ },
+ {
+  "work_id": "w_R4GP49AWA2ZH",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025",
+   "fantasmagoria-2026": "2025",
+   "festicinerio-2026": "2025",
+   "ficfusa-2026": "2025",
+   "ficica-2026": "2025",
+   "ficma-2026": "2025",
+   "siembrafest-2026": "2025",
+   "villadelcine-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4GP49AWA2ZH",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "fantasmagoria-2026": "Colombia",
+   "festicinerio-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "ficica-2026": "Colombia",
+   "ficma-2026": "Colombia",
+   "siembrafest-2026": "Colombia",
+   "villadelcine-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4GP49AWA2ZH",
+  "campo": "xref.tmdb",
+  "valor": 1565878,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1565878",
+   "fantasmagoria-2026": "1565878",
+   "festicinerio-2026": "1565878",
+   "ficfusa-2026": "1565878",
+   "ficica-2026": "1565878",
+   "ficma-2026": "1565878",
+   "villadelcine-2026": "1565878"
+  }
+ },
+ {
+  "work_id": "w_R4GP49AWA2ZH",
+  "campo": "xref.letterboxd",
+  "valor": "que-el-cielo-nos-perdone",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "que-el-cielo-nos-perdone",
+   "fantasmagoria-2026": "que-el-cielo-nos-perdone",
+   "festicinerio-2026": "que-el-cielo-nos-perdone",
+   "ficfusa-2026": "que-el-cielo-nos-perdone",
+   "ficica-2026": "que-el-cielo-nos-perdone",
+   "ficma-2026": "que-el-cielo-nos-perdone",
+   "siembrafest-2026": "que-el-cielo-nos-perdone",
+   "villadelcine-2026": "que-el-cielo-nos-perdone"
+  }
  }
 ]

@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_ZR5G6CVRVADB",
+  "campo": "directores",
+  "valor": [
+   "Esteban J. Corzo"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Esteban J. Corzo"
+  }
+ },
+ {
+  "work_id": "w_ZR5G6CVRVADB",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5G6CVRVADB",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5G6CVRVADB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/el-laberinto-del-cuerpo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/el-laberinto-del-cuerpo.jpg"
+  }
+ }
+]

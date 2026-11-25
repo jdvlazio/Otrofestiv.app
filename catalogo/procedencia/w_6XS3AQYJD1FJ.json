@@ -4,19 +4,57 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1559987",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "así firma en el afiche y en TMDB",
+  "fecha": "2026-11-25"
  },
  "anio": {
-  "fuente": "tmdb:1559987",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "tmdb:1559987",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "el afiche original, completo y con más resolución",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "traducción de la sinopsis en español",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la misma sinopsis con los espacios correctos",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma obra en FICICA",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma obra en FICICA",
+  "fecha": "2026-11-25"
  }
 }

@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_ZR5E7QF3GY58",
+  "campo": "directores",
+  "valor": [
+   "Hur Bum-Wook"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Hur Bum-Wook"
+  }
+ },
+ {
+  "work_id": "w_ZR5E7QF3GY58",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_ZR5E7QF3GY58",
+  "campo": "paises",
+  "valor": [
+   "KR"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Corea del Sur"
+  }
+ },
+ {
+  "work_id": "w_ZR5E7QF3GY58",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_ZR5E7QF3GY58",
+  "campo": "sinopsis.es",
+  "valor": "Un cerdo que quiere ser humano está dispuesto a darlo todo, cueste lo que cueste. Un humano que quiere ser animal está dispuesto a renunciar a todo.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Un cerdo que quiere ser humano está dispuesto a darlo todo, cueste lo que cueste. Un humano que quiere ser animal está dispuesto a renunciar a todo."
+  }
+ },
+ {
+  "work_id": "w_ZR5E7QF3GY58",
+  "campo": "sinopsis.en",
+  "valor": "A pig wanting to be a human is ready to give it his all, whatever the cost. A human wanting to be an animal is ready to give up everything.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "A pig wanting to be a human is ready to give it his all, whatever the cost. A human wanting to be an animal is ready to give up everything."
+  }
+ },
+ {
+  "work_id": "w_ZR5E7QF3GY58",
+  "campo": "xref.tmdb",
+  "valor": 1298085,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1298085"
+  }
+ },
+ {
+  "work_id": "w_ZR5E7QF3GY58",
+  "campo": "xref.letterboxd",
+  "valor": "pig-that-survived-foot-and-mouth-disease",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "pig-that-survived-foot-and-mouth-disease"
+  }
+ },
+ {
+  "work_id": "w_ZR5E7QF3GY58",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/cerdo-que-sobrevivio-a-la-fiebre-aftosa.jpg"
+  }
+ }
+]

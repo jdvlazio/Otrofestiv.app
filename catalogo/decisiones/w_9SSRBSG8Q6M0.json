@@ -1,0 +1,143 @@
+[
+ {
+  "work_id": "w_9SSRBSG8Q6M0",
+  "campo": "directores",
+  "valor": [
+   "Alphonse Ferrari"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Alphonse Ferrari"
+  }
+ },
+ {
+  "work_id": "w_9SSRBSG8Q6M0",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_9SSRBSG8Q6M0",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_9SSRBSG8Q6M0",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_9SSRBSG8Q6M0",
+  "campo": "sinopsis.es",
+  "valor": "En el andén desierto de una estación, un joven espera el metro cuando su reproductor de música explota en sus manos. En las sombras aparece una máquina expendedora donde antes no había nada, y su neón le despierta un hambre incontrolable. En un mundo esclavizado por el consumismo, algunos pagos exigen más que dinero…",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "En el andén desierto de una estación de tren, bañado por una luz pálida, un joven espera el metro. El silencio es denso, solo roto por el soplo del viento y el crepitar de su reproductor de música. De repente, el dispositivo explota en sus manos, lanzando chispas en la oscuridad. Una tensión invisible se apodera del lugar, como si algo, en algún lugar, lo estuviera observando. En las sombras, aparece una máquina expendedora donde antes no había nada. Sus luces de neón parpadean débilmente, atrayendo su mirada y despertando un hambre repentina e incontrolable. Se acerca, introduce una moneda y espera lo que le corresponde… En un mundo esclavizado por el consumismo, algunos pagos exigen más que dinero…"
+  },
+  "vistas": [
+   "4884c71dec64"
+  ],
+  "original_de": [
+   "medellinhorror-2026"
+  ],
+  "titulo": "Snacktime",
+  "original": "En el andén desierto de una estación de tren, bañado por una luz pálida, un joven espera el metro. El silencio es denso, solo roto por el soplo del viento y el crepitar de su reproductor de música. De repente, el dispositivo explota en sus manos, lanzando chispas en la oscuridad. Una tensión invisible se apodera del lugar, como si algo, en algún lugar, lo estuviera observando. En las sombras, aparece una máquina expendedora donde antes no había nada. Sus luces de neón parpadean débilmente, atrayendo su mirada y despertando un hambre repentina e incontrolable. Se acerca, introduce una moneda y espera lo que le corresponde… En un mundo esclavizado por el consumismo, algunos pagos exigen más que dinero…",
+  "sintesis": {
+   "redacta": "Claude (sesión onboarding)",
+   "verifica": "Claude (verificador acbdb802)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-25",
+   "huella": "577ffd23d33a"
+  }
+ },
+ {
+  "work_id": "w_9SSRBSG8Q6M0",
+  "campo": "sinopsis.en",
+  "valor": "On a deserted station platform, a young man is waiting for the subway when his music player explodes in his hands. In the shadows, a vending machine appears where there was nothing before, and its neon lights awaken an uncontrollable hunger in him. In a world enslaved by consumerism, some payments demand more than money…",
+  "motivo": "el EN de TMDB se corta; paralelo a la española",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "On a deserted train station platform, bathed in a pale light, a young man waits for his subway. The silence is heavy, only broken by the wind’s breath and the crackle of his music player. Suddenly, the device explodes in his hands, throwing sparks into the darkness. An invisible tension settles, as if something, somewhere, is watching him."
+  },
+  "anteriores": [
+   {
+    "valor": "On a deserted train station platform, bathed in a pale light, a young man waits for his subway. The silence is heavy, only broken by the wind’s breath and the crackle of his music player. Suddenly, the device explodes in his hands, throwing sparks into the darkness. An invisible tension settles, as if something, somewhere, is watching him.",
+    "motivo": "alta desde medellinhorror-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude"
+   }
+  ]
+ },
+ {
+  "work_id": "w_9SSRBSG8Q6M0",
+  "campo": "xref.tmdb",
+  "valor": 1533699,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "1533699"
+  }
+ },
+ {
+  "work_id": "w_9SSRBSG8Q6M0",
+  "campo": "xref.letterboxd",
+  "valor": "snacktime",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "snacktime"
+  }
+ },
+ {
+  "work_id": "w_9SSRBSG8Q6M0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/snacktime.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/snacktime.jpg"
+  }
+ }
+]

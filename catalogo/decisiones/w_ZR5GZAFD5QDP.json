@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_ZR5GZAFD5QDP",
+  "campo": "directores",
+  "valor": [
+   "Pablo Otero"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Pablo Otero"
+  }
+ },
+ {
+  "work_id": "w_ZR5GZAFD5QDP",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5GZAFD5QDP",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_ZR5GZAFD5QDP",
+  "campo": "sinopsis.es",
+  "valor": "Seis mujeres de la alta sociedad se reúnen en una mansión, unidas por un pacto secreto. Una de ellas lo ha roto, y las consecuencias serán desastrosas. ¿Quién es la traidora?",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Seis mujeres de la alta sociedad se reúnen en una mansión, unidas por un pacto secreto. Una de ellas lo ha roto, y las consecuencias serán desastrosas. ¿Quién es la traidora?"
+  }
+ },
+ {
+  "work_id": "w_ZR5GZAFD5QDP",
+  "campo": "sinopsis.en",
+  "valor": "Six high-society women gather in a mansion bound by a secret pact, a pact one of them has broken and whose consequences will be disastrous. Who is the traitor?",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Six high-society women gather in a mansion bound by a secret pact, a pact one of them has broken and whose consequences will be disastrous. Who is the traitor?"
+  }
+ },
+ {
+  "work_id": "w_ZR5GZAFD5QDP",
+  "campo": "xref.tmdb",
+  "valor": 1647552,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1647552"
+  }
+ },
+ {
+  "work_id": "w_ZR5GZAFD5QDP",
+  "campo": "xref.letterboxd",
+  "valor": "pactum",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "pactum"
+  }
+ },
+ {
+  "work_id": "w_ZR5GZAFD5QDP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/pactum.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/pactum.jpg"
+  }
+ }
+]

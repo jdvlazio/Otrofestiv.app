@@ -148,7 +148,7 @@ def decidir(decs, vals, w, campo, valor, motivo, quien, fecha, veredicto=None):
         import afiches_unicos
         if veredicto and veredicto not in afiches_unicos._FUENTE:
             raise SystemExit(f'✗ veredicto desconocido: {veredicto}')
-        v = dict(d['valor']) if d and d['valor']['archivo'] == valor else {'archivo': valor, 'veredicto': veredicto or sys.exit('✗ falta --veredicto oficial|oficial-festival|fotograma')}
+        v = dict(d['valor'], **({'veredicto': veredicto} if veredicto else {})) if d and d['valor']['archivo'] == valor else {'archivo': valor, 'veredicto': veredicto or sys.exit('✗ falta --veredicto oficial|oficial-festival|fotograma')}
     if campo == 'paises':
         from herencia import _pais_es
         if not _pais_es(v):

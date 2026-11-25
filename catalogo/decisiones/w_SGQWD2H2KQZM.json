@@ -1,0 +1,94 @@
+[
+ {
+  "work_id": "w_SGQWD2H2KQZM",
+  "campo": "directores",
+  "valor": [
+   "Isaac Berrocal Bravo"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Isaac Berrocal Bravo"
+  }
+ },
+ {
+  "work_id": "w_SGQWD2H2KQZM",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_SGQWD2H2KQZM",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_SGQWD2H2KQZM",
+  "campo": "sinopsis.es",
+  "valor": "Esther y Mario regresan de unas vacaciones por Perú. En el pueblo de Huasao, Esther recibe una limpia espiritual. A su regreso ella sufre un accidente doméstico que la dejará inmóvil en el suelo tras una discusión con Mario. Pero Mario oculta un secreto que le llevará a tomar una decisión terrible al descubrirla, siendo entonces cuando se desate el mal en las vidas que le rodean.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Esther y Mario regresan de unas vacaciones por Perú. En el pueblo de Huasao, Esther recibe una limpia espiritual. A su regreso ella sufre un accidente doméstico que la dejará inmóvil en el suelo tras una discusión con Mario. Pero Mario oculta un secreto que le llevará a tomar una decisión terrible al descubrirla, siendo entonces cuando se desate el mal en las vidas que le rodean."
+  }
+ },
+ {
+  "work_id": "w_SGQWD2H2KQZM",
+  "campo": "xref.tmdb",
+  "valor": 1576982,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1576982"
+  }
+ },
+ {
+  "work_id": "w_SGQWD2H2KQZM",
+  "campo": "xref.letterboxd",
+  "valor": "el-ritual-de-huasao",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "el-ritual-de-huasao"
+  }
+ },
+ {
+  "work_id": "w_SGQWD2H2KQZM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/el-ritual-de-huasao.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/el-ritual-de-huasao.jpg"
+  }
+ }
+]

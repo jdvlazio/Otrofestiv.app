@@ -6,17 +6,17 @@
    "fuentes": {
     "tmdb_titulo": {
      "url": "https://www.themoviedb.org/search/movie?query=Borrowed%20Light",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "«Borrowed Light»: 2 resultado(s) → ninguna verifica"
     },
     "tmdb_alternos": {
      "url": "https://www.themoviedb.org/search/movie?query=borrowed%20light",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "«borrowed light»: 2 resultado(s) → ninguna verifica"
     },
     "tmdb_director": {
      "url": "https://www.themoviedb.org/search/person?query=Christian%20Stahlhofen",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "Christian Stahlhofen: sin perfil en TMDB"
     },
     "pagina_del_festival": {
@@ -86,17 +86,17 @@
    "fuentes": {
     "tmdb_titulo": {
      "url": "https://www.themoviedb.org/search/movie?query=Familier%20/%20Familiar",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "«Familier / Familiar»: 0 resultado(s) → ninguna verifica"
     },
     "tmdb_alternos": {
      "url": "https://www.themoviedb.org/search/movie?query=familier%20familiar",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "«familier familiar»: 0 resultado(s) → ninguna verifica"
     },
     "tmdb_director": {
      "url": "https://www.themoviedb.org/search/person?query=Julien%20Hom%C3%A8re",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "Julien Homère: sin perfil en TMDB"
     },
     "pagina_del_festival": {
@@ -316,18 +316,18 @@
    "fuentes": {
     "tmdb_titulo": {
      "url": "https://www.themoviedb.org/search/movie?query=Tenebrios",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "«Tenebrios»: 0 resultado(s) → ninguna verifica"
     },
     "tmdb_alternos": {
      "url": "https://www.themoviedb.org/search/movie?query=tenebrios",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "«tenebrios»: 0 resultado(s) → ninguna verifica"
     },
     "tmdb_director": {
-     "url": "https://www.themoviedb.org/person/6680533",
-     "fecha": "2026-11-18",
-     "resultado": "Tarik Antón Ferro (6680533): dirige 1"
+     "url": "https://www.themoviedb.org/person/6680533 https://www.themoviedb.org/person/6686201",
+     "fecha": "2026-11-25",
+     "resultado": "Tarik Antón Ferro (6680533): dirige 0; Tarik Anton Ferro (6686201): dirige 1"
     },
     "pagina_del_festival": {
      "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/TENEBRIOS.webp",
@@ -409,17 +409,17 @@
    "fuentes": {
     "tmdb_titulo": {
      "url": "https://www.themoviedb.org/search/movie?query=There%20Is%20Something%20Behind%20You",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "«There Is Something Behind You»: 0 resultado(s) → ninguna verifica"
     },
     "tmdb_alternos": {
      "url": "https://www.themoviedb.org/search/movie?query=there%20is%20something%20behind%20you",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "«there is something behind you»: 0 resultado(s) → ninguna verifica"
     },
     "tmdb_director": {
      "url": "https://www.themoviedb.org/search/person?query=Juli%C3%A1n%20Andr%C3%A9s%20G%C3%B3mez%20Reyes",
-     "fecha": "2026-11-18",
+     "fecha": "2026-11-25",
      "resultado": "Julián Andrés Gómez Reyes: sin perfil en TMDB"
     },
     "pagina_del_festival": {
@@ -482,11 +482,34 @@
     "fecha": "2026-11-18"
    },
    "estado": "alta_posible"
+  },
+  "The Screaming": {
+   "titulo": "The Screaming",
+   "fuentes": {
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/the-screaming-2025/",
+     "fecha": "2026-11-25",
+     "resultado": "existe, enlazada a TMDB 1522505"
+    },
+    "festivales_previos": {
+     "url": "https://rue-morgue.com/?p=153222",
+     "fecha": "2026-11-25",
+     "resultado": "Fantasia 2025: mejor dirección de corto, Boivin y Villeneuve"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1522505,
+   "evidencia": "mismos directores (Boivin y Villeneuve), 8 min, 2025, que el póster del festival y la revista pág. 10",
+   "respaldo": [
+    "festivales_previos",
+    "letterboxd"
+   ],
+   "ficha_fecha": "2026-11-25"
   }
  },
  "_provenance": {
   "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
-  "capturado": "2026-11-18"
+  "capturado": "2026-11-25"
  },
  "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano."
 }

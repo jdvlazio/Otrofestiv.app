@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_ZR5KR8Q5TGEB",
+  "campo": "directores",
+  "valor": [
+   "Pablo Camargo López"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Pablo Camargo López"
+  }
+ },
+ {
+  "work_id": "w_ZR5KR8Q5TGEB",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5KR8Q5TGEB",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_ZR5KR8Q5TGEB",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_ZR5KR8Q5TGEB",
+  "campo": "sinopsis.es",
+  "valor": "Es 1991, Ana María y Juan Manuel, una pareja de recién casados, reciben una criatura como regalo de bodas. ¿Lograrán cuidarla durante un año para preservar su matrimonio?.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Es 1991, Ana María y Juan Manuel, una pareja de recién casados, reciben una criatura como regalo de bodas. ¿Lograrán cuidarla durante un año para preservar su matrimonio?."
+  }
+ },
+ {
+  "work_id": "w_ZR5KR8Q5TGEB",
+  "campo": "sinopsis.en",
+  "valor": "It's 1991. Ana and Juan, a newlywed couple, receive a creature as a wedding gift. Amid the oppressive atmosphere of Juan's family, will they be able to care for it for a year to preserve their marriage?",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "It's 1991. Ana and Juan, a newlywed couple, receive a creature as a wedding gift. Amid the oppressive atmosphere of Juan's family, will they be able to care for it for a year to preserve their marriage?"
+  }
+ },
+ {
+  "work_id": "w_ZR5KR8Q5TGEB",
+  "campo": "xref.tmdb",
+  "valor": 1496765,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1496765"
+  }
+ },
+ {
+  "work_id": "w_ZR5KR8Q5TGEB",
+  "campo": "xref.letterboxd",
+  "valor": "a-year-of-marriage",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "a-year-of-marriage"
+  }
+ },
+ {
+  "work_id": "w_ZR5KR8Q5TGEB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/ano-de-casados.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/ano-de-casados.jpg"
+  }
+ }
+]

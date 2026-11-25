@@ -12,5 +12,111 @@
   "vistas": [
    "757b807db14c"
   ]
+ },
+ {
+  "work_id": "w_ZR5DCF7WPKB8",
+  "campo": "directores",
+  "valor": [
+   "Diego G. Medina"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Diego G. Medina"
+  }
+ },
+ {
+  "work_id": "w_ZR5DCF7WPKB8",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5DCF7WPKB8",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_ZR5DCF7WPKB8",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_ZR5DCF7WPKB8",
+  "campo": "sinopsis.en",
+  "valor": "Just before his concert, Santiago, a young conductor, receives tragic news that sends him on a journey of guilt, distortion, and terror. Reality shatters: time loops, a lurking monster, and the possible extinction of humanity engulf his world.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Just before his concert, Santiago, a young conductor, receives tragic news that sends him on a journey of guilt, distortion, and terror. Reality shatters: time loops, a lurking monster, and the possible extinction of humanity engulf his world."
+  }
+ },
+ {
+  "work_id": "w_ZR5DCF7WPKB8",
+  "campo": "xref.tmdb",
+  "valor": 1568478,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1568478"
+  }
+ },
+ {
+  "work_id": "w_ZR5DCF7WPKB8",
+  "campo": "xref.letterboxd",
+  "valor": "hiperrealidad",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "hiperrealidad"
+  }
+ },
+ {
+  "work_id": "w_ZR5DCF7WPKB8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/hiperrealidad.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/hiperrealidad.jpg"
+  }
  }
 ]

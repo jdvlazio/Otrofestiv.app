@@ -1,0 +1,125 @@
+[
+ {
+  "work_id": "w_6XS3AQYJD1FJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficica-2026/hay-algo-detras-de-ti.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el afiche original, completo y con más resolución",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "ficica-2026": "/assets/ficica-2026/hay-algo-detras-de-ti.jpg",
+   "medellinhorror-2026": "/assets/medellinhorror-2026/there-is-something-behind-you.jpg"
+  },
+  "vistas": [
+   "/assets/medellinhorror-2026/there-is-something-behind-you.jpg"
+  ]
+ },
+ {
+  "work_id": "w_6XS3AQYJD1FJ",
+  "campo": "directores",
+  "valor": [
+   "Julián Gómez Reyes"
+  ],
+  "motivo": "así firma en el afiche y en TMDB",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "ficica-2026": "Julián Andrés Gómez Reyes",
+   "medellinhorror-2026": "Julián Andrés Gómez Reyes"
+  }
+ },
+ {
+  "work_id": "w_6XS3AQYJD1FJ",
+  "campo": "sinopsis.en",
+  "valor": "Have you ever felt something watching you in the dark? Do you hear strange sounds at night? Have you wanted to wake from a dream and could not? Join Morgana, a clever and enigmatic black cat, as she explores mystery stories lived by girls and boys in different places and moments of their lives.",
+  "motivo": "traducción de la sinopsis en español",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "medellinhorror-2026": "Have you ever felt something watching you in the dark? Do you hear strange sounds at night? Have you wanted to wake from a dream and could not? Join Morgana, a clever and enigmatic black cat, as she explores mystery stories lived by girls and boys in different places and moments of their lives."
+  }
+ },
+ {
+  "work_id": "w_6XS3AQYJD1FJ",
+  "campo": "sinopsis.es",
+  "valor": "¿Alguna vez has sentido que algo te observa en la oscuridad? ¿Escuchas sonidos extraños en las noches? ¿Has querido despertar de un sueño y no has podido? Explora junto a Morgana, una astuta y enigmática gata negra, distintas historias de misterio vividas por niñas y niños en diferentes lugares y momentos de su vida.",
+  "motivo": "la misma sinopsis con los espacios correctos",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "ficica-2026": "¿Alguna vez has sentido que algo te observa en la oscuridad?¿Escuchas sonidos extraños en las noches? ¿Has querido despertar de un sueño y no has podido? Explora junto a Morgana, una astuta y enigmática gata negra, distintas historias de misterio vividas por niñas y niños en diferentes lugares y momentos de su vida.",
+   "medellinhorror-2026": "¿Alguna vez has sentido que algo te observa en la oscuridad? ¿Escuchas sonidos extraños en las noches? ¿Has querido despertar de un sueño y no has podido? Explora junto a Morgana, una astuta y enigmática gata negra, distintas historias de misterio vividas por niñas y niños en diferentes lugares y momentos de su vida."
+  },
+  "vistas": [
+   "4aa042de1ce1"
+  ]
+ },
+ {
+  "work_id": "w_6XS3AQYJD1FJ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "ficica-2026": "2025",
+   "medellinhorror-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_6XS3AQYJD1FJ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "ficica-2026": "Colombia",
+   "medellinhorror-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_6XS3AQYJD1FJ",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "ficica-2026": "Animación",
+   "medellinhorror-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_6XS3AQYJD1FJ",
+  "campo": "xref.tmdb",
+  "valor": 1559987,
+  "motivo": "misma obra en FICICA",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "ficica-2026": "1559987"
+  }
+ },
+ {
+  "work_id": "w_6XS3AQYJD1FJ",
+  "campo": "xref.letterboxd",
+  "valor": "hay-algo-detras-de-ti",
+  "motivo": "misma obra en FICICA",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "ficica-2026": "hay-algo-detras-de-ti"
+  }
+ }
+]

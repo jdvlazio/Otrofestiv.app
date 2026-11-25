@@ -1,17 +1,29 @@
 {
- "_nota": "Medellín Horror Fest 2026, sexta edición (Medellín, 26–29 nov 2026). PRE-ONBOARDING, SIN PUBLICAR. Fuente: Revista Digital edición 01 (medellinhorrorfest.com, nov 2026) — 13 cortos de la Selección Oficial (dirección, país, duración) y 3 largometrajes en House of Demons Medellín con día y hora (26 nov 20:00 y 22:00, 27 nov 22:00; ENTRADA GRATIS). Los 13 pósteres del carrusel de medellinhorrorfest.com/seleccion-2026/ (14 nov) contrastan títulos y directores. Los cortos van en Hero Academy de Comic Con Medellín (Plaza Mayor, 27–29 nov) SIN día ni hora publicados (/actividades/, 18 nov: «muy pronto más información»). Sin bloque `festival`: se escribe al montar. Secciones, nombre y tagline: PROPUESTA para Juan.",
+ "_nota": "Medellín Horror Fest 2026, sexta edición (26–29 nov). Revista ed. 01 (largos y 13 cortos) + agenda oficial de Comic Con Medellín (25 nov): dos pases de 'Selección de cortos' de 30 min, sin decir cuáles. Los 13 cortos van en un bloque sin horario.",
  "pasos": [
   {
    "cmd": "python3 pipeline/medellinhorror-2026-catalogo.py",
    "que": "revista ed. 01 (págs. 3–4, 9–10) + 13 pósteres de la web → catálogo (16 obras)"
   },
   {
-   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/medellinhorror-2026-catalogo.json",
-   "que": "la cascada de TMDB y lo ya publicado → catálogo enriquecido"
+   "cmd": "python3 pipeline/medellinhorror-2026-crudo.py",
+   "que": "revista + agenda Comic Con → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py medellinhorror-2026 --posters",
+   "que": "TMDB + afiches"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py medellinhorror-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/medellinhorror-2026-verificar.py",
+   "que": "cada función y corto contra la revista (texto y OCR) y la agenda de Comic Con"
   }
  ],
  "fuentes_vivas": [],
- "_nota_fuentes_vivas": "Pre-onboarding sin parrilla: la programación de Hero Academy aún no salió. Al montar se declara medellinhorrorfest.com/actividades/.",
+ "_nota_fuentes_vivas": "medellinhorrorfest.com/actividades/ y la agenda de Comic Con se releen a mano hasta el 29 nov",
  "radar": null,
  "radar_nota": "Sin issue de radar: llegó por el vigía de IG (preonboarding de pipeline/ig-vigia-cuentas.json), que reportó la selección el 15 nov 2026.",
  "_fuentes_versionadas": {
@@ -20,6 +32,58 @@
   "festivals/staging/medellinhorror-2026-correcciones.json": "fichas",
   "festivals/staging/medellinhorror-2026-altas.json": "registro de altas (pipeline/altas.py)",
   "festivals/staging/medellinhorror-2026-venues-geo.json": "sedes: House of Demons y Plaza Mayor, pines de Google Maps (almacén s_065b13d4, s_ecedd1d7)",
-  "festivals/staging/medellinhorror-2026-sinopsis.json": "sinopsis en español declaradas (traducción propia con contexto de la sinopsis EN de TMDB; Demonatrix reusada de bhff-2026): la lee enriquecer.py al montar"
+  "festivals/staging/medellinhorror-2026-sinopsis.json": "sinopsis en español declaradas (traducción propia con contexto de la sinopsis EN de TMDB; Demonatrix reusada de bhff-2026): la lee enriquecer.py al montar",
+  "festivals/staging/medellinhorror-2026-crudo.json": "la programación",
+  "festivals/staging/medellinhorror-2026-enriquecido.json": "fichas TMDB/Letterboxd",
+  "pipeline/medellinhorror-2026-verificar.py": "el verificador"
+ },
+ "festival": {
+  "crudo": "festivals/staging/medellinhorror-2026-crudo.json",
+  "enriquecido": "festivals/staging/medellinhorror-2026-enriquecido.json",
+  "geo": "festivals/staging/medellinhorror-2026-venues-geo.json",
+  "secciones": {
+   "Largometrajes": {
+    "emoji": "🎬",
+    "en": "Feature Films",
+    "archetype": "Muestra / País"
+   },
+   "Selección Oficial": {
+    "emoji": "👻",
+    "en": "Official Selection",
+    "archetype": "Cortos / Programas"
+   }
+  },
+  "sedes": {
+   "House of Demons": [
+    "House of Demons - Medellín",
+    ""
+   ],
+   "Plaza Mayor": [
+    "Plaza Mayor - Medellín",
+    ""
+   ]
+  },
+  "name": "Medellín Horror Fest",
+  "displayName": "Medellín Horror Fest",
+  "fullName": "Medellín Horror Fest",
+  "shortName": "MHF",
+  "tagline": "Festival de Cine de Terror",
+  "city": "Medellín",
+  "country": "CO",
+  "dates": "26–29 NOV",
+  "dates_en": "NOV 26–29",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "medellinhorror2026_",
+  "instagram": "medellinhorrorfest",
+  "festivalStartStr": "2026-11-26T00:00:00",
+  "festivalEndStr": "2026-11-29T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "noviembre",
+  "dias_vacios": [
+   "2026-11-28"
+  ],
+  "ticketing_model": "mixed",
+  "seccion_default": "Selección Oficial"
  }
 }

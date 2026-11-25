@@ -78,7 +78,8 @@
    "festivales": [
     "medellinhorror-2026"
    ],
-   "ciudad": "Medellín"
+   "ciudad": "Medellín",
+   "corto": "House of Demons"
   },
   "s_0a4d1410": {
    "nombre": "Bar Yenyeré",
@@ -5207,7 +5208,11 @@
    "festivales": [
     "medellinhorror-2026"
    ],
-   "ciudad": "Medellín"
+   "ciudad": "Medellín",
+   "salas": [
+    "Salón Circo digital"
+   ],
+   "corto": "Plaza Mayor"
   },
   "s_ed5a19ae": {
    "nombre": "Museo Casa Antonio Nariño",

@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:bhff-2026,fantasofest-2026,fantasofest-2026",
+  "fuente": "festival:bhff-2026,fantasofest-2026,fantasofest-2026,medellinhorror-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -10,16 +10,22 @@
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1534530",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "BHFF y FantasoFest ya la publicaron con 2025",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "tmdb:1534530",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "orden ya publicado",
+  "fecha": "2026-11-25"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
  },
  "afiche": {
   "fuente": "humano",
@@ -36,7 +42,19 @@
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "el EN contradice al ES; padre vampiro confirmado en Anibia y El Observador (red snuff: El Observador)",
+  "motivo": "paralelo a la española",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
   "fecha": "2026-11-25"
  }
 }

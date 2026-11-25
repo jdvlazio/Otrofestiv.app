@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_ZR5GKACCC5D4",
+  "campo": "directores",
+  "valor": [
+   "Javier Lozano"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Javier Lozano"
+  }
+ },
+ {
+  "work_id": "w_ZR5GKACCC5D4",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5GKACCC5D4",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_ZR5GKACCC5D4",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_ZR5GKACCC5D4",
+  "campo": "sinopsis.es",
+  "valor": "Insectos astutos invaden una casa y perturban la vida de sus habitantes.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Insectos astutos invaden una casa y perturban la vida de sus habitantes."
+  }
+ },
+ {
+  "work_id": "w_ZR5GKACCC5D4",
+  "campo": "sinopsis.en",
+  "valor": "Cunning insects invade a house and disrupt the lives of its inhabitants.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Cunning insects invade a house and disrupt the lives of its inhabitants."
+  }
+ },
+ {
+  "work_id": "w_ZR5GKACCC5D4",
+  "campo": "xref.tmdb",
+  "valor": 1580595,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1580595"
+  }
+ },
+ {
+  "work_id": "w_ZR5GKACCC5D4",
+  "campo": "xref.letterboxd",
+  "valor": "necrosectos",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "necrosectos"
+  }
+ },
+ {
+  "work_id": "w_ZR5GKACCC5D4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/necrosectos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/necrosectos.jpg"
+  }
+ }
+]

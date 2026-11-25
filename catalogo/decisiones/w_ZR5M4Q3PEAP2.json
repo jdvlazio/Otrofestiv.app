@@ -1,0 +1,82 @@
+[
+ {
+  "work_id": "w_ZR5M4Q3PEAP2",
+  "campo": "directores",
+  "valor": [
+   "LSDavid",
+   "Miguel Solís"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "LSDavid, Miguel Solís"
+  }
+ },
+ {
+  "work_id": "w_ZR5M4Q3PEAP2",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5M4Q3PEAP2",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_ZR5M4Q3PEAP2",
+  "campo": "sinopsis.es",
+  "valor": "En la víspera de San Juan, Iván llega a una fiesta clandestina en un bosque, dispuesto a perderse en la música, en el fuego y en Clara, la chica que lo obsesiona. Pero después de probar una sustancia extraña, la celebración se convierte en una pesadilla.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "En la víspera de San Juan, Iván llega a una fiesta clandestina en un bosque, dispuesto a perderse en la música, en el fuego y en Clara, la chica que lo obsesiona. Pero después de probar una sustancia extraña, la celebración se convierte en una pesadilla."
+  }
+ },
+ {
+  "work_id": "w_ZR5M4Q3PEAP2",
+  "campo": "sinopsis.en",
+  "valor": "Iván arrives at an underground party in a forest on Midsummer's Eve, seeking to lose himself in the music, the fire, and Clara, the girl he's obsessed with. But after trying a strange substance, the celebration turns into a nightmare.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Iván arrives at an underground party in a forest on Midsummer's Eve, seeking to lose himself in the music, the fire, and Clara, the girl he's obsessed with. But after trying a strange substance, the celebration turns into a nightmare."
+  }
+ },
+ {
+  "work_id": "w_ZR5M4Q3PEAP2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/anax.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/anax.jpg"
+  }
+ }
+]

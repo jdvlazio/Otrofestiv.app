@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_ZR5MHP774EZ9",
+  "campo": "directores",
+  "valor": [
+   "Roger Conners"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Roger Conners"
+  }
+ },
+ {
+  "work_id": "w_ZR5MHP774EZ9",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5MHP774EZ9",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_ZR5MHP774EZ9",
+  "campo": "sinopsis.es",
+  "valor": "Después de una noche de drogas y desenfreno que termina con la sobredosis fatal de un joven gay menor de edad, a un testigo inocente le toca cargar con la culpa. Cuando él sale de la cárcel, el verdadero culpable se convierte en el blanco de la venganza de un asesino excéntrico.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Después de una noche de drogas y desenfreno que termina con la sobredosis fatal de un joven gay menor de edad, a un testigo inocente le toca cargar con la culpa. Cuando él sale de la cárcel, el verdadero culpable se convierte en el blanco de la venganza de un asesino excéntrico."
+  }
+ },
+ {
+  "work_id": "w_ZR5MHP774EZ9",
+  "campo": "sinopsis.en",
+  "valor": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge."
+  }
+ },
+ {
+  "work_id": "w_ZR5MHP774EZ9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/meat-the-movie.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/meat-the-movie.jpg"
+  }
+ }
+]

@@ -1,0 +1,96 @@
+[
+ {
+  "work_id": "w_9SSPHV0AJVM3",
+  "campo": "directores",
+  "valor": [
+   "Julien Homère"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Julien Homère"
+  }
+ },
+ {
+  "work_id": "w_9SSPHV0AJVM3",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_9SSPHV0AJVM3",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_9SSPHV0AJVM3",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_9SSPHV0AJVM3",
+  "campo": "sinopsis.es",
+  "valor": "Élodie despierta en la noche, sola en la cama matrimonial. Mientras busca a su esposo, se encuentra de pronto frente a su silueta al final del pasillo. Tiene su voz, habla como él, pero… ¿de verdad es su esposo?",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Élodie despierta en la noche, sola en la cama matrimonial. Mientras busca a su esposo, se encuentra de pronto frente a su silueta al final del pasillo. Tiene su voz, habla como él, pero… ¿de verdad es su esposo?"
+  }
+ },
+ {
+  "work_id": "w_9SSPHV0AJVM3",
+  "campo": "sinopsis.en",
+  "valor": "Élodie wakes up at night, alone in her marital bed. While looking for her husband, she suddenly finds herself facing his silhouette at the end of the hallway. He has his voice, he speaks like him, but… Is it really her husband?",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Élodie wakes up at night, alone in her marital bed. While looking for her husband, she suddenly finds herself facing his silhouette at the end of the hallway. He has his voice, he speaks like him, but… Is it really her husband?"
+  }
+ },
+ {
+  "work_id": "w_9SSPHV0AJVM3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/familier-familiar.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/familier-familiar.jpg"
+  }
+ }
+]

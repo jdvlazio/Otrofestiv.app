@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_9SSQJ24D62S8",
+  "campo": "directores",
+  "valor": [
+   "Guillaume Boivin",
+   "Steve Villeneuve"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Guillaume Boivin, Steve Villeneuve"
+  }
+ },
+ {
+  "work_id": "w_9SSQJ24D62S8",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_9SSQJ24D62S8",
+  "campo": "paises",
+  "valor": [
+   "CA"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Canadá"
+  }
+ },
+ {
+  "work_id": "w_9SSQJ24D62S8",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Suspenso"
+  }
+ },
+ {
+  "work_id": "w_9SSQJ24D62S8",
+  "campo": "sinopsis.es",
+  "valor": "Es el turno de noche en la morgue y Mara se prepara para lo que debería ser una velada tranquila de autopsias, sola en el edificio. O eso cree…",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Es el turno de noche en la morgue y Mara se prepara para lo que debería ser una velada tranquila de autopsias, sola en el edificio. O eso cree…"
+  }
+ },
+ {
+  "work_id": "w_9SSQJ24D62S8",
+  "campo": "sinopsis.en",
+  "valor": "It's the graveyard shift at the morgue and Mara prepares for what should be a quiet evening of autopsy alone in the building. Or so she thinks...",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "It's the graveyard shift at the morgue and Mara prepares for what should be a quiet evening of autopsy alone in the building. Or so she thinks..."
+  }
+ },
+ {
+  "work_id": "w_9SSQJ24D62S8",
+  "campo": "xref.tmdb",
+  "valor": 1522505,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "1522505"
+  }
+ },
+ {
+  "work_id": "w_9SSQJ24D62S8",
+  "campo": "xref.letterboxd",
+  "valor": "the-screaming-2025",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "the-screaming-2025"
+  }
+ },
+ {
+  "work_id": "w_9SSQJ24D62S8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/the-screaming.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/the-screaming.jpg"
+  }
+ }
+]
