@@ -1,6 +1,6 @@
 {
  "id": "w_4KF4176WJ8KE",
- "titulo_original": "Běi Huí Gu− Xiàn",
+ "titulo_original": "Běi Huí Guī Xiàn",
  "anio": 2026,
  "paises": [
   "CN",
@@ -10,6 +10,10 @@
   "Alex Jiang"
  ],
  "aliases": [
+  {
+   "titulo": "Běi Huí Gu− Xiàn",
+   "tipo": "festival"
+  },
   {
    "titulo": "Tropic of Cancer",
    "idioma": "en",
@@ -24,7 +28,7 @@
   "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+  "archivo": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
   "veredicto": "oficial",
   "fuente": "tmdb"
  },

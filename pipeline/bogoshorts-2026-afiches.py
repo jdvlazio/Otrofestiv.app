@@ -23,7 +23,7 @@ ALIAS = {'Idols': '4205', 'Cold Coffee': '4195', 'Cvijeće': '4249', 'On naît s
          'The Waiting Palm': '4238', 'Savia (Alfilera)': '4344', 'Kupljena sjecanja': '4313',
          'Nothing Here is Lost': '4364', 'Raj’in': '4381', 'When the Flowers Bloom': '4380',
          'Berzingue (Crache)': '4345', 'The Beat (Matías Aguayo)': '4347', 'Cocodrilo (Dillom)': '4346',
-         'Argentina Is Daing (Marttein)': '4348', 'Oui (Balming Tiger)': '4349', 'Běi Huí Gu− Xiàn': '4259'}
+         'Argentina Is Daing (Marttein)': '4348', 'Oui (Balming Tiger)': '4349', 'Běi Huí Guī Xiàn': '4259'}
 
 
 def n(t):

@@ -76,7 +76,7 @@
    "_por_que": "altas.py --sondar: tmdb_director: TMDB 758792 «Solos» — director ✓ y año/duración ✓",
    "_registro": "bogoshorts-2026-altas.json"
   },
-  "Summer": {
+  "End of Summer": {
    "tmdb": 1256387,
    "_fuente": "https://www.themoviedb.org/movie/1256387",
    "_por_que": "altas.py --sondar: tmdb_director: TMDB 1256387 «END OF SUMMER» — director ✓ y año/duración ✓",
@@ -220,7 +220,7 @@
    "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_registro": "bogoshorts-2026-altas.json"
   },
-  "Běi Huí Gu− Xiàn": {
+  "Běi Huí Guī Xiàn": {
    "tmdb": 1826831,
    "_fuente": "https://www.themoviedb.org/movie/1826831",
    "_por_que": "altas.py --ficha: TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
@@ -357,6 +357,15 @@
   },
   "Noche Sagitario": {
    "_por_que": "el post solo da la hora de inicio"
+  }
+ },
+ "sin_sinopsis": {
+  "La primera estampilla de Korinco": {
+   "_por_que": "el catálogo oficial (pág. 191) solo habla de la alianza entre festivales; Minikino dice que es stop motion hecho por niños de 10 a 12 años, sin argumento",
+   "fuentes": [
+    "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf#page=191",
+    "https://minikino.org/en/korinco-2026-en/"
+   ]
   }
  }
 }

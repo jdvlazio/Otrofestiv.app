@@ -4361,7 +4361,7 @@
      "tmdb_id": 1641481
     },
     {
-     "title": "Běi Huí Gu− Xiàn",
+     "title": "Běi Huí Guī Xiàn",
      "director": "Alex Jiang",
      "country": "China, Estados Unidos",
      "flags": "🇨🇳🇺🇸",
@@ -4378,10 +4378,13 @@
      "synopsis": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
      "genre": "Drama",
      "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+     "poster": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
      "posterSource": "tmdb",
      "lbSlug": "tropic-of-cancer-1",
-     "tmdb_id": 1826831
+     "tmdb_id": 1826831,
+     "titulos_anteriores": [
+      "Běi Huí Gu− Xiàn"
+     ]
     },
     {
      "title": "See You in the Morning",
@@ -6625,7 +6628,7 @@
      "genre": "Animación"
     },
     {
-     "title": "Summer",
+     "title": "End of Summer",
      "director": "Tara Attarzadeh",
      "country": "Irán",
      "flags": "🇮🇷",
@@ -6640,15 +6643,18 @@
      },
      "synopsis": "Una niña juega en un columpio en la azotea de su casa hasta que la cuerda se rompe. Mientras observa unas palomas, imagina que vuela libremente sobre la ciudad; al volver a la realidad, la amenaza de la guerra irrumpe en su mundo.",
      "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/summer.jpg",
+     "poster": "/assets/bogoshorts-2026/end-of-summer.jpg",
      "posterSource": "tmdb",
      "lbSlug": "end-of-summer-2023-1",
      "tmdb_id": 1256387,
-     "genre": "Animación"
+     "genre": "Animación",
+     "titulos_anteriores": [
+      "Summer"
+     ]
     },
     {
      "title": "The Soloists",
-     "director": "Mehrnaz Abdollahinia, Feben Elias",
+     "director": "Mehrnaz Abdollahinia, Feben Elias Woldehawariat, Razahk Issaka, Celeste Jamneck, Yi Liu",
      "country": "Francia",
      "flags": "🇫🇷",
      "year": 2021,
@@ -11732,7 +11738,7 @@
      "genre": "Animación"
     },
     {
-     "title": "Summer",
+     "title": "End of Summer",
      "director": "Tara Attarzadeh",
      "country": "Irán",
      "flags": "🇮🇷",
@@ -11747,15 +11753,18 @@
      },
      "synopsis": "Una niña juega en un columpio en la azotea de su casa hasta que la cuerda se rompe. Mientras observa unas palomas, imagina que vuela libremente sobre la ciudad; al volver a la realidad, la amenaza de la guerra irrumpe en su mundo.",
      "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/summer.jpg",
+     "poster": "/assets/bogoshorts-2026/end-of-summer.jpg",
      "posterSource": "tmdb",
      "lbSlug": "end-of-summer-2023-1",
      "tmdb_id": 1256387,
-     "genre": "Animación"
+     "genre": "Animación",
+     "titulos_anteriores": [
+      "Summer"
+     ]
     },
     {
      "title": "The Soloists",
-     "director": "Mehrnaz Abdollahinia, Feben Elias",
+     "director": "Mehrnaz Abdollahinia, Feben Elias Woldehawariat, Razahk Issaka, Celeste Jamneck, Yi Liu",
      "country": "Francia",
      "flags": "🇫🇷",
      "year": 2021,
@@ -11942,7 +11951,7 @@
    "film_list": [
     {
      "title": "Cat Me If You Can",
-     "director": "Edouard Delebecque, Giovanni Edwards",
+     "director": "Edouard Delebecque, Giovanni Edwards, Amaury Da Costa, Erwan Annah, Yauhan Guo, Andrea Origlia",
      "country": "Francia",
      "flags": "🇫🇷",
      "year": 2026,
@@ -13205,14 +13214,11 @@
      "year": 2026,
      "duration": "5 min",
      "title_en": "KORINCO’s first stamp",
-     "synopsis_en": "A new production born from the creative partnership between the MINIKINO (Indonesia), SESIFF (South Korea), and BOGOSHORTS (Colombia) festivals, which continues to promote cinematic exchange among the three countries.",
      "_src": {
       "url": "https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11",
       "date": "2026-11-23"
      },
-     "synopsis": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.",
-     "genre": "Animación",
-     "synopsis_lang": "es"
+     "genre": "Animación"
     }
    ],
    "_fid": "f_482722604c",
@@ -13304,7 +13310,7 @@
     },
     {
      "title": "Space Stallions",
-     "director": "Thorvaldur S. Gunnarsson, Jonatan Brüsch",
+     "director": "Thorvaldur S. Gunnarsson, Jonatan Brüsch, Ágúst Kristinsson, Arna Rut Diego Snæbjörnsdóttir, Esben J. Jespersen, Touraj Khosravi, Polina Bokhan",
      "country": "Dinamarca",
      "flags": "🇩🇰",
      "year": 2012,
@@ -13974,7 +13980,7 @@
      "tmdb_id": 1641481
     },
     {
-     "title": "Běi Huí Gu− Xiàn",
+     "title": "Běi Huí Guī Xiàn",
      "director": "Alex Jiang",
      "country": "China, Estados Unidos",
      "flags": "🇨🇳🇺🇸",
@@ -13991,10 +13997,13 @@
      "synopsis": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
      "genre": "Drama",
      "synopsis_lang": "es",
-     "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+     "poster": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
      "posterSource": "tmdb",
      "lbSlug": "tropic-of-cancer-1",
-     "tmdb_id": 1826831
+     "tmdb_id": 1826831,
+     "titulos_anteriores": [
+      "Běi Huí Gu− Xiàn"
+     ]
     },
     {
      "title": "See You in the Morning",
@@ -14328,7 +14337,7 @@
     },
     {
      "title": "Asteria",
-     "director": "Lola Grand, Alexandre Arpentinier, Mathieu",
+     "director": "Lola Grand, Alexandre Arpentinier, Mathieu Blanchys, Tristan Lamarca, Thomas Lemaille, Jean-Charles Lusseau",
      "country": "Francia",
      "flags": "🇫🇷",
      "year": 2016,
@@ -14664,14 +14673,11 @@
      "year": 2026,
      "duration": "5 min",
      "title_en": "KORINCO’s first stamp",
-     "synopsis_en": "A new production born from the creative partnership between the MINIKINO (Indonesia), SESIFF (South Korea), and BOGOSHORTS (Colombia) festivals, which continues to promote cinematic exchange among the three countries.",
      "_src": {
       "url": "https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11",
       "date": "2026-11-23"
      },
-     "synopsis": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.",
-     "genre": "Animación",
-     "synopsis_lang": "es"
+     "genre": "Animación"
     }
    ],
    "_fid": "f_262de95bb6",
@@ -16499,7 +16505,7 @@
    "film_list": [
     {
      "title": "Cat Me If You Can",
-     "director": "Edouard Delebecque, Giovanni Edwards",
+     "director": "Edouard Delebecque, Giovanni Edwards, Amaury Da Costa, Erwan Annah, Yauhan Guo, Andrea Origlia",
      "country": "Francia",
      "flags": "🇫🇷",
      "year": 2026,
@@ -17029,14 +17035,11 @@
      "year": 2026,
      "duration": "5 min",
      "title_en": "KORINCO’s first stamp",
-     "synopsis_en": "A new production born from the creative partnership between the MINIKINO (Indonesia), SESIFF (South Korea), and BOGOSHORTS (Colombia) festivals, which continues to promote cinematic exchange among the three countries.",
      "_src": {
       "url": "https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11",
       "date": "2026-11-23"
      },
-     "synopsis": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.",
-     "genre": "Animación",
-     "synopsis_lang": "es"
+     "genre": "Animación"
     }
    ],
    "_fid": "f_58509ed531",
@@ -22248,7 +22251,7 @@
     },
     {
      "title": "Space Stallions",
-     "director": "Thorvaldur S. Gunnarsson, Jonatan Brüsch",
+     "director": "Thorvaldur S. Gunnarsson, Jonatan Brüsch, Ágúst Kristinsson, Arna Rut Diego Snæbjörnsdóttir, Esben J. Jespersen, Touraj Khosravi, Polina Bokhan",
      "country": "Dinamarca",
      "flags": "🇩🇰",
      "year": 2012,
@@ -22574,7 +22577,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T18:51:19",
+  "fecha": "2026-11-24T19:05:38",
   "plan_sha": "ffb90333f9801666",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"

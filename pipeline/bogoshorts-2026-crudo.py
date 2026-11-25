@@ -132,7 +132,7 @@ GENERO_OBRA = {
     'Querida A.': 'Documental',  # https://dafilmfestival.com/es/movie/querida-a/
     '跳房子': 'Documental',  # https://www.themoviedb.org/movie/1736821
     '环岛': 'Drama',  # https://www.themoviedb.org/movie/1599912
-    'Běi Huí Gu− Xiàn': 'Drama',  # https://www.themoviedb.org/movie/1826831
+    'Běi Huí Guī Xiàn': 'Drama',  # https://www.themoviedb.org/movie/1826831
     'Barra brava': 'Documental',  # https://www.labocine.com/films/barra-brava
     'Raj’in': 'Documental',  # https://www.btselem.org/we-shall-return/index.html
     'Nothing Happens After Your Absence': 'Documental',  # https://tiranafilmfest.org/?p=30711
@@ -151,11 +151,7 @@ def _hu(t):
 
 KORINCO = {'genero': 'Animación',  # minikino.org/en/korinco-2026-en: «stop-motion animated short film»
            'titulo': 'La primera estampilla de Korinco', 'pais': 'Colombia, Indonesia, Corea del Sur', 'anio': 2026, 'duracion_min': 5,
-           'sinopsis': 'Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y '
-                       'BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.',
-           # el inglés del mismo párrafo del catálogo (chiquiSHORTS) y el título inglés de festival.bogoshorts.com/corto/4335
-           'synopsis_en': 'A new production born from the creative partnership between the MINIKINO (Indonesia), SESIFF (South Korea), and '
-                          'BOGOSHORTS (Colombia) festivals, which continues to promote cinematic exchange among the three countries.',
+           # sin sinopsis: el catálogo (pág. 191) y Minikino hablan de la alianza, no de la obra (24 nov)
            'title_en': 'KORINCO’s first stamp',
            '_src': {'url': 'https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11', 'date': '2026-11-23'}}
 TEXTOS = json.load(open(f'{REPO}/festivals/staging/bogoshorts-2026-textos.json', encoding='utf-8'))

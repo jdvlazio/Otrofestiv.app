@@ -116,6 +116,12 @@ INGLES = {'L’uomo meccanico': 'The Mechanical Man',
           'La ciudad de las flores (Maleza y Los Floripondios)': 'City of Flowers'}
 
 
+# el título como está IMPRESO, donde el PDF lo trae roto como texto: un glifo suelto (北回归线, Berlinale Talents
+# 405774: Běi Huí Guī Xiàn) y un título persa cuya línea inglesa se parte («پایان تابستان / End of Summer», pág. 163, vista)
+TITULO = {'Summer': 'End of Summer'}
+GLIFO = {'Gu− Xiàn': 'Guī Xiàn'}
+
+
 def solo_es(t):
     """La sinopsis sin la versión en inglés que le sigue (Cortofilia las apila)."""
     out = []
@@ -201,8 +207,16 @@ def leer():
                 prox = [c[1] for c in bs if col(c) and c[1] > b[3] + 1 and any(META.match(z) for z in c[4])]
                 lim = min(prox) if prox else 1e9
                 dr = [c for c in bs if col(c) and b[3] - 1 <= c[1] < lim and c[4][0].startswith('dirección / direction')]
-                d = m['dir'] or dir_previa or (director(unir(min(dr, key=lambda c: c[1])[4])) if dr else '')
-                partes = [s.strip() for s in re.split(r'\s+/\s*|\s*/\s+', unir(tit))]
+                linea = ''
+                if dr:
+                    c0 = min(dr, key=lambda c: c[1])
+                    linea = unir(c0[4])
+                    # la lista sigue en el bloque pegado de abajo («…, Mathieu» / «Blanchys, …»): es otra línea del PDF
+                    sig = [c for c in bs if abs(c[0] - c0[0]) < 3 and -1 <= c[1] - c0[3] < 3]
+                    if sig and not ROL.search(' ' + linea.split('dirección / direction', 1)[1]) and not re.search(r'/|\d|^(Premier|Estreno)', sig[0][4][0]):
+                        linea = unir([linea] + sig[0][4])
+                d = m['dir'] or dir_previa or (director(linea) if dr else '')
+                partes = [s.strip() for s in re.split(r'\s+/\s*|\s*/\s+', TITULO.get(unir(tit), unir(tit).replace('Gu− Xiàn', GLIFO['Gu− Xiàn'])))]
                 obra = {'titulo': partes[0], 'director': d.strip(), 'pais': m['pais'].strip(),
                         'anio': int(m['anio'])}
                 if partes[1:]:

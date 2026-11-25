@@ -357,7 +357,7 @@
    "lbSlug": "asteria",
    "_verificado": "el catálogo ya la tiene (w_4KJA35RRG18G, bogoshorts-2026)",
    "work_id": "w_4KJA35RRG18G",
-   "_director": "Lola Grand, Alexandre Arpentinier, Mathieu",
+   "_director": "Lola Grand, Alexandre Arpentinier, Mathieu Blanchys, Tristan Lamarca, Thomas Lemaille, Jean-Charles Lusseau",
    "_sondeado": "2026-11-24",
    "poster": "/assets/bogoshorts-2026/asteria.jpg",
    "posterSource": "tmdb"
@@ -659,7 +659,7 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Běi Huí Gu− Xiàn",
+   "titulo": "Běi Huí Guī Xiàn",
    "tmdb_id": 1826831,
    "titulo_original": "北回歸線",
    "poster_path": "/hyz7xasmzm8Lcgfk2IK0uo3nzPv.jpg",
@@ -674,7 +674,7 @@
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
    "_director": "Alex Jiang",
    "_sondeado": "2026-11-24",
-   "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+   "poster": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -728,7 +728,7 @@
    "lbSlug": "cat-me-if-you-can",
    "_verificado": "el catálogo ya la tiene (w_4KHVJA5C3STR, bogoshorts-2026)",
    "work_id": "w_4KHVJA5C3STR",
-   "_director": "Edouard Delebecque, Giovanni Edwards",
+   "_director": "Edouard Delebecque, Giovanni Edwards, Amaury Da Costa, Erwan Annah, Yauhan Guo, Andrea Origlia",
    "_sondeado": "2026-11-24",
    "poster": "/assets/bogoshorts-2026/cat-me-if-you-can.jpg",
    "posterSource": "tmdb"
@@ -1439,6 +1439,24 @@
    "_director": "Andrea Szelesová",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/en-ten-tyky.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "End of Summer",
+   "tmdb_id": 1256387,
+   "titulo_original": "END OF SUMMER",
+   "poster_path": "/nOJT7vMAMGe6fp3cTiJ5rJpXiyK.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A little girl plays on a swing on the roof of a house. She roams around the city freely, daydreaming with a flock of pigeons, when suddenly the swing’s rope breaks. Times are about to change.",
+   "genero": "Animación",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 3,
+   "pais_tmdb": "",
+   "lbSlug": "end-of-summer-2023-1",
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1256387 «END OF SUMMER» — director ✓ y año/duración ✓",
+   "_director": "Tara Attarzadeh",
+   "_sondeado": "2026-11-24",
+   "poster": "/assets/bogoshorts-2026/end-of-summer.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -4330,7 +4348,7 @@
    "lbSlug": "space-stallions",
    "_verificado": "el catálogo ya la tiene (w_4KJ4SN2TADQ3, bogoshorts-2026)",
    "work_id": "w_4KJ4SN2TADQ3",
-   "_director": "Thorvaldur S. Gunnarsson, Jonatan Brüsch",
+   "_director": "Thorvaldur S. Gunnarsson, Jonatan Brüsch, Ágúst Kristinsson, Arna Rut Diego Snæbjörnsdóttir, Esben J. Jespersen, Touraj Khosravi, Polina Bokhan",
    "_sondeado": "2026-11-24",
    "poster": "/assets/bogoshorts-2026/space-stallions.jpg",
    "posterSource": "tmdb"
@@ -4400,24 +4418,6 @@
     }
    ],
    "poster": "/assets/bogoshorts-2026/suite-intercontinental.jpg",
-   "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Summer",
-   "tmdb_id": 1256387,
-   "titulo_original": "END OF SUMMER",
-   "poster_path": "/nOJT7vMAMGe6fp3cTiJ5rJpXiyK.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A little girl plays on a swing on the roof of a house. She roams around the city freely, daydreaming with a flock of pigeons, when suddenly the swing’s rope breaks. Times are about to change.",
-   "genero": "Animación",
-   "anio_tmdb": 2023,
-   "duracion_tmdb": 3,
-   "pais_tmdb": "",
-   "lbSlug": "end-of-summer-2023-1",
-   "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1256387 «END OF SUMMER» — director ✓ y año/duración ✓",
-   "_director": "Tara Attarzadeh",
-   "_sondeado": "2026-11-24",
-   "poster": "/assets/bogoshorts-2026/summer.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -4563,9 +4563,9 @@
    "duracion_tmdb": 7,
    "pais_tmdb": "France",
    "lbSlug": "the-soloists",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "The Soloists",
-   "_director": "Mehrnaz Abdollahinia, Feben Elias",
+   "_verificado": "el catálogo ya la tiene (w_4KGCT4Y5QCVE, bogoshorts-2026)",
+   "work_id": "w_4KGCT4Y5QCVE",
+   "_director": "Mehrnaz Abdollahinia, Feben Elias Woldehawariat, Razahk Issaka, Celeste Jamneck, Yi Liu",
    "_sondeado": "2026-11-24",
    "poster": "/assets/bogoshorts-2026/the-soloists.jpg",
    "posterSource": "tmdb"
@@ -5319,8 +5319,8 @@
    "_afiche": "declarado: Afiche oficial en ficha BOGOSHORTS corto/4229"
   },
   {
-   "titulo": "Běi Huí Gu− Xiàn",
-   "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+   "titulo": "Běi Huí Guī Xiàn",
+   "poster": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4259), 5400×7200"
   },
@@ -5685,7 +5685,7 @@
    "lbSlug": "asteria",
    "_verificado": "el catálogo ya la tiene (w_4KJA35RRG18G, bogoshorts-2026)",
    "work_id": "w_4KJA35RRG18G",
-   "_director": "Lola Grand, Alexandre Arpentinier, Mathieu",
+   "_director": "Lola Grand, Alexandre Arpentinier, Mathieu Blanchys, Tristan Lamarca, Thomas Lemaille, Jean-Charles Lusseau",
    "_sondeado": "2026-11-24",
    "poster": "/assets/bogoshorts-2026/asteria.jpg",
    "posterSource": "tmdb"
@@ -5974,7 +5974,7 @@
    "poster": "/assets/bogoshorts-2026/bus.jpg",
    "posterSource": "tmdb"
   },
-  "Běi Huí Gu− Xiàn": {
+  "Běi Huí Guī Xiàn": {
    "tmdb_id": 1826831,
    "titulo_original": "北回歸線",
    "poster_path": "/hyz7xasmzm8Lcgfk2IK0uo3nzPv.jpg",
@@ -5989,7 +5989,7 @@
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
    "_director": "Alex Jiang",
    "_sondeado": "2026-11-24",
-   "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+   "poster": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
    "posterSource": "tmdb"
   },
   "Cada día paso por aquí": {
@@ -6040,7 +6040,7 @@
    "lbSlug": "cat-me-if-you-can",
    "_verificado": "el catálogo ya la tiene (w_4KHVJA5C3STR, bogoshorts-2026)",
    "work_id": "w_4KHVJA5C3STR",
-   "_director": "Edouard Delebecque, Giovanni Edwards",
+   "_director": "Edouard Delebecque, Giovanni Edwards, Amaury Da Costa, Erwan Annah, Yauhan Guo, Andrea Origlia",
    "_sondeado": "2026-11-24",
    "poster": "/assets/bogoshorts-2026/cat-me-if-you-can.jpg",
    "posterSource": "tmdb"
@@ -6719,6 +6719,23 @@
    "_director": "Andrea Szelesová",
    "_sondeado": "2026-11-15",
    "poster": "/assets/bogoshorts-2026/en-ten-tyky.jpg",
+   "posterSource": "tmdb"
+  },
+  "End of Summer": {
+   "tmdb_id": 1256387,
+   "titulo_original": "END OF SUMMER",
+   "poster_path": "/nOJT7vMAMGe6fp3cTiJ5rJpXiyK.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A little girl plays on a swing on the roof of a house. She roams around the city freely, daydreaming with a flock of pigeons, when suddenly the swing’s rope breaks. Times are about to change.",
+   "genero": "Animación",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 3,
+   "pais_tmdb": "",
+   "lbSlug": "end-of-summer-2023-1",
+   "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1256387 «END OF SUMMER» — director ✓ y año/duración ✓",
+   "_director": "Tara Attarzadeh",
+   "_sondeado": "2026-11-24",
+   "poster": "/assets/bogoshorts-2026/end-of-summer.jpg",
    "posterSource": "tmdb"
   },
   "Eri": {
@@ -9456,7 +9473,7 @@
    "lbSlug": "space-stallions",
    "_verificado": "el catálogo ya la tiene (w_4KJ4SN2TADQ3, bogoshorts-2026)",
    "work_id": "w_4KJ4SN2TADQ3",
-   "_director": "Thorvaldur S. Gunnarsson, Jonatan Brüsch",
+   "_director": "Thorvaldur S. Gunnarsson, Jonatan Brüsch, Ágúst Kristinsson, Arna Rut Diego Snæbjörnsdóttir, Esben J. Jespersen, Touraj Khosravi, Polina Bokhan",
    "_sondeado": "2026-11-24",
    "poster": "/assets/bogoshorts-2026/space-stallions.jpg",
    "posterSource": "tmdb"
@@ -9524,23 +9541,6 @@
     }
    ],
    "poster": "/assets/bogoshorts-2026/suite-intercontinental.jpg",
-   "posterSource": "tmdb"
-  },
-  "Summer": {
-   "tmdb_id": 1256387,
-   "titulo_original": "END OF SUMMER",
-   "poster_path": "/nOJT7vMAMGe6fp3cTiJ5rJpXiyK.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A little girl plays on a swing on the roof of a house. She roams around the city freely, daydreaming with a flock of pigeons, when suddenly the swing’s rope breaks. Times are about to change.",
-   "genero": "Animación",
-   "anio_tmdb": 2023,
-   "duracion_tmdb": 3,
-   "pais_tmdb": "",
-   "lbSlug": "end-of-summer-2023-1",
-   "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1256387 «END OF SUMMER» — director ✓ y año/duración ✓",
-   "_director": "Tara Attarzadeh",
-   "_sondeado": "2026-11-24",
-   "poster": "/assets/bogoshorts-2026/summer.jpg",
    "posterSource": "tmdb"
   },
   "Sunrise Meets Sunset": {
@@ -9678,9 +9678,9 @@
    "duracion_tmdb": 7,
    "pais_tmdb": "France",
    "lbSlug": "the-soloists",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "The Soloists",
-   "_director": "Mehrnaz Abdollahinia, Feben Elias",
+   "_verificado": "el catálogo ya la tiene (w_4KGCT4Y5QCVE, bogoshorts-2026)",
+   "work_id": "w_4KGCT4Y5QCVE",
+   "_director": "Mehrnaz Abdollahinia, Feben Elias Woldehawariat, Razahk Issaka, Celeste Jamneck, Yi Liu",
    "_sondeado": "2026-11-24",
    "poster": "/assets/bogoshorts-2026/the-soloists.jpg",
    "posterSource": "tmdb"
@@ -10213,8 +10213,8 @@
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4286), 450×636"
   },
-  "Běi Huí Gu− Xiàn": {
-   "poster": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+  "Běi Huí Guī Xiàn": {
+   "poster": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4259), 5400×7200"
   }

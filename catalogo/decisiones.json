@@ -24112,10 +24112,16 @@
  {
   "work_id": "w_BCSJ1Z4J99ED",
   "campo": "sinopsis.es",
-  "valor": "Dos ladrones de tumbas están listos para cometer sus fechorías, sin esperar la pequeña sorpresa que les aguarda.",
-  "motivo": "traducida de su sinopsis en inglés; verificada por otro agente",
+  "valor": "Durante el velorio de una mujer joven, dos ladrones descubren que el cadáver lleva un anillo valioso. Esperan a la noche para abrir el mausoleo, pero la joven abre los ojos, se levanta del ataúd y les pide ayuda para salir del cementerio.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Juan («Apruebo ambas»)"
+  "quien": "festival (catálogo BOGOSHORTS)",
+  "antes": {
+   "bogoshorts-2026": "Dos ladrones de tumbas están listos para cometer sus fechorías, sin esperar la pequeña sorpresa que les aguarda."
+  },
+  "vistas": [
+   "7dc5d0431784"
+  ]
  },
  {
   "work_id": "w_5K3ARBZAS9ZE",
@@ -38755,24 +38761,28 @@
  {
   "work_id": "w_4KJ27QNHW320",
   "campo": "sinopsis.es",
-  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Juan",
+  "quien": "lector BOGOSHORTS C",
   "vistas": [
+   "1962db9e9b69",
    "9a806bf0d364"
   ],
   "original_de": [
    "bogoshorts-2026"
   ],
   "titulo": "L’uomo meccanico",
-  "valor": "La criminal Mado es arrestada por matar a un científico al que había robado el diseño de un robot. Su estancia en el presidio durará poco: tras inyectarse una droga que la sume en un aparente estado catatónico, escapará de la enfermería provocando un incendio. Una vez en libertad, utiliza el robot para llevar a cabo sus planes criminales.",
+  "valor": "La criminal Mado es arrestada por matar a un científico al que había robado el diseño de un robot. Su estancia en el presidio durará poco: tras inyectarse una droga que la sume en un aparente estado catatónico, escapará de la enfermería después de provocar un incendio. Una vez en libertad, utiliza el robot para llevar a cabo sus planes criminales.",
   "original": "Una criminal llamada Mado es arrestada por matar a un científico al que previamente había robado el diseño de un robot. Sin embargo, su estancia en el presidio durará poco; tras inyectarse una droga que la sume en un aparente estado catatónico, escapará de la enfermería de la prisión tras provocar un incendio. Una vez en libertad, Mado utiliza el robot para llevar a cabo sus planes criminales.",
   "sintesis": {
-   "redacta": "Claude (redactor)",
-   "verifica": "Claude (verificador distinto)",
+   "redacta": "lector BOGOSHORTS C",
+   "verifica": "PENDIENTE",
    "veredicto": "fiel",
    "fecha": "2026-11-24",
-   "huella": "0f2006aaf15c"
+   "huella": "9fd033640459"
+  },
+  "antes": {
+   "bogoshorts-2026": "La criminal Mado es arrestada por matar a un científico al que había robado el diseño de un robot. Su estancia en el presidio durará poco: tras inyectarse una droga que la sume en un aparente estado catatónico, escapará de la enfermería provocando un incendio. Una vez en libertad, utiliza el robot para llevar a cabo sus planes criminales."
   }
  },
  {
@@ -38874,24 +38884,28 @@
  {
   "work_id": "w_4KJK6B7R2GQ0",
   "campo": "sinopsis.es",
-  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Juan",
+  "quien": "lector BOGOSHORTS D",
   "vistas": [
+   "3a52e7934b3b",
    "ff4026c368df"
   ],
   "original_de": [
    "bogoshorts-2026"
   ],
   "titulo": "The Beat (Matías Aguayo)",
-  "valor": "Matías Aguayo, maestro de música, convierte una clase sobre el ritmo en un portal a otros mundos. Instrumento por instrumento, guía a sus alumnos títeres por la anatomía de un beat, y la lección cobra vida propia y los transporta a un mundo hecho de piñatas y un salón geométrico animado. Los alumnos se pierden en la música y él, por fin, se suelta.",
+  "valor": "Matías Aguayo, maestro de música, convierte una clase sobre el ritmo en un portal a otros mundos. Instrumento por instrumento, guía a sus alumnos títeres por la anatomía de un beat, hasta que la lección cobra vida propia. Se transportan al mundo de títeres hecho de piñatas y un salón geométrico animado, y los alumnos se pierden en la música.",
   "original": "Matías Aguayo es un maestro de música que convierte una clase sobre el ritmo en un portal a otros mundos. Instrumento por instrumento, guía a sus alumnos títeres por la anatomía de un beat, hasta que la lección cobra vida propia. Se transportan al mundo de títeres hecho de piñatas y un salón geométrico animado. Mientras habla de los instrumentos, los alumnos se pierden en la música, hasta que sin darse cuenta el maestro, por fin suelto, se convierte en títere para entrar en el groove con todos.",
   "sintesis": {
-   "redacta": "Claude (redactor)",
-   "verifica": "Claude (verificador distinto)",
+   "redacta": "lector BOGOSHORTS D",
+   "verifica": "PENDIENTE",
    "veredicto": "fiel",
    "fecha": "2026-11-24",
-   "huella": "28ce9c0ca847"
+   "huella": "2f115e030c5a"
+  },
+  "antes": {
+   "bogoshorts-2026": "Matías Aguayo, maestro de música, convierte una clase sobre el ritmo en un portal a otros mundos. Instrumento por instrumento, guía a sus alumnos títeres por la anatomía de un beat, y la lección cobra vida propia y los transporta a un mundo hecho de piñatas y un salón geométrico animado. Los alumnos se pierden en la música y él, por fin, se suelta."
   }
  },
  {
@@ -38964,24 +38978,28 @@
  {
   "work_id": "w_4KJKM85ABDBX",
   "campo": "sinopsis.es",
-  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Juan",
+  "quien": "lector BOGOSHORTS D",
   "vistas": [
+   "4621c3bf8120",
    "5e6b8d9e736d"
   ],
   "original_de": [
    "bogoshorts-2026"
   ],
   "titulo": "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)",
-  "valor": "Un campesino del Lago de Tota va a la fiesta de cumpleaños de una amistad. Allí se encuentra con su expareja y descubre que tiene un nuevo amorío. Despechado, decide ir a la playa y embriagarse. La luna, desde el cielo, toma la forma de su amada y, entre la confusión y la oscuridad, el campesino se adentra en las olas.",
+  "valor": "Un campesino del Lago de Tota va a la fiesta de cumpleaños de una amistad. Allí se encuentra con su expareja y descubre que tiene un nuevo amorío. Despechado, decide ir a la playa y embriagarse. Allí se encuentra con la luna, que desde el cielo toma la forma de su amada.",
   "original": "Un campesino del Lago de Tota se dirige a la fiesta de cumpleaños de una amistad. En la celebración se encuentra con su ex pareja, descubriendo que tiene un nuevo amorío. Despechado, el hombre decide ir a la playa y embriagarse. Allí se encuentra con la luna, quién desde el cielo toma la forma de su amada. Entre la confusión y la oscuridad el campesino termina nadando en las olas y descendiendo al fondo del lago.",
   "sintesis": {
-   "redacta": "Claude (redactor)",
-   "verifica": "Claude (verificador distinto)",
+   "redacta": "lector BOGOSHORTS D",
+   "verifica": "PENDIENTE",
    "veredicto": "fiel",
    "fecha": "2026-11-24",
-   "huella": "14e778c0a4fc"
+   "huella": "d94045a17e58"
+  },
+  "antes": {
+   "bogoshorts-2026": "Un campesino del Lago de Tota va a la fiesta de cumpleaños de una amistad. Allí se encuentra con su expareja y descubre que tiene un nuevo amorío. Despechado, decide ir a la playa y embriagarse. La luna, desde el cielo, toma la forma de su amada y, entre la confusión y la oscuridad, el campesino se adentra en las olas."
   }
  },
  {
@@ -39056,24 +39074,28 @@
  {
   "work_id": "w_4KJKNW459K1X",
   "campo": "sinopsis.es",
-  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Juan",
+  "quien": "lector BOGOSHORTS D",
   "vistas": [
-   "c566a1c73db6"
+   "c566a1c73db6",
+   "ed93bf4bce7a"
   ],
   "original_de": [
    "bogoshorts-2026"
   ],
   "titulo": "Marea (Lido Pimienta)",
-  "valor": "Una canción sobre la juventud caribeña que reivindica su espacio y su derecho a la alegría, a pesar de los demonios parásitos llamados gentrificación, colonialismo, desplazamiento, despojo de tierras y explotación sexual. Una cínica canción de amor para el fin de los tiempos. Resistimos a través de la danza y de la sublime belleza caribeña.",
+  "valor": "Canción sobre la juventud caribeña que reivindica deliberadamente su espacio y su derecho a la alegría, a pesar de los demonios parásitos: gentrificación, colonialismo de asentamiento, desplazamiento, despojo de tierras y explotación sexual. Cínica canción de amor para el fin de los tiempos. Resistimos en la danza y la sublime belleza caribeña.",
   "original": "Una canción sobre la juventud caribeña que existe y reivindica deliberadamente su espacio y su derecho a la alegría, a pesar de los demonios parásitos llamados gentrificación, colonialismo de asentamiento, desplazamiento, despojo de tierras y explotación sexual. Una cínica canción de amor para el fin de los tiempos. Resistimos a través de la danza y de la sublime belleza caribeña.",
   "sintesis": {
-   "redacta": "Claude (redactor)",
-   "verifica": "Claude (verificador distinto)",
+   "redacta": "lector BOGOSHORTS D",
+   "verifica": "PENDIENTE",
    "veredicto": "fiel",
    "fecha": "2026-11-24",
-   "huella": "aa8e4c0ee3e7"
+   "huella": "26c092e47019"
+  },
+  "antes": {
+   "bogoshorts-2026": "Una canción sobre la juventud caribeña que reivindica su espacio y su derecho a la alegría, a pesar de los demonios parásitos llamados gentrificación, colonialismo, desplazamiento, despojo de tierras y explotación sexual. Una cínica canción de amor para el fin de los tiempos. Resistimos a través de la danza y de la sublime belleza caribeña."
   }
  },
  {
@@ -39102,24 +39124,28 @@
  {
   "work_id": "w_4KEWC0PG23NP",
   "campo": "sinopsis.es",
-  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Juan",
+  "quien": "lector BOGOSHORTS B",
   "vistas": [
+   "5c324f04768d",
    "af3617af96de"
   ],
   "original_de": [
    "bogoshorts-2026"
   ],
   "titulo": "Yndige mennesker",
-  "valor": "Cuatro cineastas llevan lo más oscuro de Hans Christian Andersen al terror: un cuidador descubre que un moribundo guarda secretos; una madre intenta impedir la muerte de su hijo tras verla en un sueño; un espejo trastorna a una pareja; a un músico lo acosa su musa. Cortos sobre la pérdida, el deseo y el impulso de cambiar lo que parece inevitable.",
+  "valor": "Cuatro cineastas llevan lo más oscuro de Hans Christian Andersen al terror: un cuidador descubre que un moribundo guarda secretos; una madre trata de impedir la muerte de su hijo tras soñarla; un espejo trastorna a una pareja; un músico se siente acosado por su musa. Cortos sobre pérdida, deseo y el impulso de cambiar lo que parece inevitable.",
   "original": "Cuatro cineastas daneses llevan el lado más oscuro de Hans Christian Andersen al terror contemporáneo. Un joven cuidador descubre que el hombre moribundo a su cargo guarda secretos; una madre intenta impedir la muerte de su hijo después de verla en un sueño; una pareja se muda al campo y encuentra un espejo que trastorna su vida; y un músico incapaz de componer empieza a sentirse acosado por su propia musa. Cada corto fue escrito y dirigido por un cineasta diferente pero todos se desarrollaron en colaboración y se entrelazan en torno a la pérdida, el deseo y el impulso de cambiar lo que parece inevitable.",
   "sintesis": {
-   "redacta": "Claude",
-   "verifica": "Juan (24 nov 2026)",
+   "redacta": "lector BOGOSHORTS B",
+   "verifica": "PENDIENTE",
    "veredicto": "fiel",
    "fecha": "2026-11-24",
-   "huella": "4dc8882def81"
+   "huella": "b62157961416"
+  },
+  "antes": {
+   "bogoshorts-2026": "Cuatro cineastas llevan lo más oscuro de Hans Christian Andersen al terror: un cuidador descubre que un moribundo guarda secretos; una madre intenta impedir la muerte de su hijo tras verla en un sueño; un espejo trastorna a una pareja; a un músico lo acosa su musa. Cortos sobre la pérdida, el deseo y el impulso de cambiar lo que parece inevitable."
   }
  },
  {
@@ -39257,10 +39283,10 @@
  {
   "work_id": "w_BCSJ1Z4J99ED",
   "campo": "sinopsis.en",
-  "valor": "Two grave robbers are ready to commit their misdeeds without expecting the little surprise that awaits them.",
-  "motivo": "la que corresponde a la española decidida",
+  "valor": "During a young woman’s funeral, two thieves discover that the body is wearing a valuable ring. They wait until nightfall to break into the mausoleum, but the young woman opens her eyes, rises from the coffin, and asks them to help her escape from the cemetery.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "quien": "festival (catálogo BOGOSHORTS)",
   "antes": {
    "bogoshorts-2026": "During a young woman’s funeral, two thieves discover that the body is wearing a valuable ring. They wait until nightfall to break into the mausoleum, but the young woman opens her eyes, rises from the coffin, and asks them to help her escape from the cemetery. Pinilla filmed it using leftover film reels after losing the footage for La isla fantasma during a robbery. His assistant, Ana Cecilia Mejía, co-wrote the screenplay and stars in the short film.",
    "fantasmagoria-2026": "Two grave robbers are ready to commit their misdeeds without expecting the little surprise that awaits them."
@@ -39368,10 +39394,10 @@
  {
   "work_id": "w_R4QPX912QAQ8",
   "campo": "sinopsis.es",
-  "valor": "Una mujer despierta temprano en su cumpleaños para robarse unas horas de escritura. Cada momento de inspiración es interrumpido por demandas domésticas hasta que la carga mental llega a un punto de quiebre.",
-  "motivo": "cuenta más de la obra; ya publicada",
+  "valor": "Es sábado, y una mujer lucha con la dificultad de conciliar su vida familiar y su necesidad de escapar.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "quien": "lector BOGOSHORTS A",
   "antes": {
    "bogoshorts-2026": "Es sábado, y una mujer lucha con la dificultad de conciliar su vida familiar y su necesidad de escapar.",
    "tribeca-2026": "Una mujer despierta temprano en su cumpleaños para robarse unas horas de escritura. Cada momento de inspiración es interrumpido por demandas domésticas hasta que la carga mental llega a un punto de quiebre."
@@ -39421,10 +39447,10 @@
  {
   "work_id": "w_R4QPX912QAQ8",
   "campo": "sinopsis.en",
-  "valor": "A woman wakes early on her birthday to steal a few hours of writing time. Every inspiration is interrupted by domestic demands — laundry, children, meals — until the mental load reaches a breaking point.",
-  "motivo": "cuenta más de la obra; ya publicada",
+  "valor": "It’s Saturday, and a woman struggles with the difficulty of reconciling her home life and her need to escape.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "quien": "lector BOGOSHORTS A",
   "antes": {
    "bogoshorts-2026": "It’s Saturday, and a woman struggles with the difficulty of reconciling her home life and her need to escape.",
    "tribeca-2026": "A woman wakes early on her birthday to steal a few hours of writing time. Every inspiration is interrupted by domestic demands — laundry, children, meals — until the mental load reaches a breaking point."
@@ -39873,10 +39899,10 @@
  {
   "work_id": "w_4KDR096SGAQ9",
   "campo": "sinopsis.en",
-  "valor": "Narciso drifts downward through the underground city, drawn into a search for a lost friend who has been installing illegal software into their brain. But instead of finding them, he discovers a river—trapped inside his own mind, its flow paralyzed by synthetic enzymes that keep him awake.To release it, he must confront a long-ignored truth.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Narciso drifts downward through the underground city, drawn into a search for a lost friend who has been installing illegal software into their brain. But instead of finding them, he discovers a river—trapped inside his own mind, its flow paralyzed by synthetic enzymes that keep him awake. To release it, he must confront a long-ignored truth.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Narciso drifts downward through the underground city, drawn into a search for a lost friend who has been installing illegal software into their brain. But instead of finding them, he discovers a river—trapped inside his own mind, its flow paralyzed by synthetic enzymes that keep him awake.To release it, he must confront a long-ignored truth."
@@ -40627,14 +40653,17 @@
  {
   "work_id": "w_4KDSQ2DFC6FA",
   "campo": "sinopsis.es",
-  "valor": "La escuela de un alojamiento temporal para migrantes en Ivrysur-Seine es el centro del mundo para los niños que viven allí. No es un lugar cualquiera: allí hacen amigos y encuentran un hogar lejos de casa. Este documental les da espacio para mostrar sus vidas en el exilio desde su propia perspectiva.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "La escuela de un alojamiento temporal para migrantes en Ivry-sur-Seine es el centro del mundo para los niños que viven allí. No es un lugar cualquiera: allí hacen amigos y encuentran un hogar lejos de casa. Este documental les da espacio para mostrar sus vidas en el exilio desde su propia perspectiva.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "La escuela de un alojamiento temporal para migrantes en Ivrysur-Seine es el centro del mundo para los niños que viven allí. No es un lugar cualquiera: allí hacen amigos y encuentran un hogar lejos de casa. Este documental les da espacio para mostrar sus vidas en el exilio desde su propia perspectiva."
-  }
+  },
+  "vistas": [
+   "535ebf82223c"
+  ]
  },
  {
   "work_id": "w_4KDSQ2DFC6FA",
@@ -41764,10 +41793,10 @@
  {
   "work_id": "w_4KE01AC6F6D6",
   "campo": "sinopsis.en",
-  "valor": "Pinchu is pervy guy, and everyone laughs at his antics—including his girlfriend Jimena, who’s turning 30 this weekend and throwing an epic party. Only Bea sees him for what he really is, though this traumatic experience may make her question whether she’s been excusing the behavior of someone she loves in the same way.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Pinchu is a pervy guy, and everyone laughs at his antics—including his girlfriend Jimena, who’s turning 30 this weekend and throwing an epic party. Only Bea sees him for what he really is, though this traumatic experience may make her question whether she’s been excusing the behavior of someone she loves in the same way.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Pinchu is pervy guy, and everyone laughs at his antics—including his girlfriend Jimena, who’s turning 30 this weekend and throwing an epic party. Only Bea sees him for what he really is, though this traumatic experience may make her question whether she’s been excusing the behavior of someone she loves in the same way."
@@ -42418,10 +42447,10 @@
  {
   "work_id": "w_4KE6GK8FS60T",
   "campo": "sinopsis.en",
-  "valor": "A little boy plays with wooden toys in a sandbox; one is broken. The toy draws him into a hidden world beneath the sand, where toys come alive. Through mist he reaches the glowing workshop of an old man who crafts magical toys. The boy plays happily, but the old man knows he doesn’t belong there and gently guides him home with a farewell gift. Back in the sunny sandbox, the boy finds his toy mended. Passing a workshop and old family photos, he realizes the old man looked like his grandfather.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "A little boy plays with wooden toys in a sandbox; one is broken. The toy draws him into a hidden world beneath the sand, where toys come alive. Through mist he reaches the glowing workshop of an old man who crafts magical toys. The boy plays happily, but the old man knows he doesn’t belong there.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "A little boy plays with wooden toys in a sandbox; one is broken. The toy draws him into a hidden world beneath the sand, where toys come alive. Through mist he reaches the glowing workshop of an old man who crafts magical toys. The boy plays happily, but the old man knows he doesn’t belong there and gently guides him home with a farewell gift. Back in the sunny sandbox, the boy finds his toy mended. Passing a workshop and old family photos, he realizes the old man looked like his grandfather."
@@ -43291,10 +43320,10 @@
  {
   "work_id": "w_4KE9K3XEVDCP",
   "campo": "sinopsis.en",
-  "valor": "An early summer evening starts with a game. As one kid counts to three thousand, the others hide in a row of suburban gardens. Meanwhile, a young father spends the evening with someone else’s child, an old man awaits a call that will change his life, and the future of a friendship is threatened. The game ends when mosquitoes start rising from the grass.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "An early summer evening starts with a game. As one kid counts to three thousand, the others hide in a row of suburban gardens. Meanwhile, a young father spends the evening with someone else’s child, an old man awaits a call that will change his life, and the future of a friendship is threatened.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "An early summer evening starts with a game. As one kid counts to three thousand, the others hide in a row of suburban gardens. Meanwhile, a young father spends the evening with someone else’s child, an old man awaits a call that will change his life, and the future of a friendship is threatened. The game ends when mosquitoes start rising from the grass."
@@ -44727,10 +44756,10 @@
  {
   "work_id": "w_7THX058RWMDS",
   "campo": "sinopsis.en",
-  "valor": "Raj’in (We Shall Return) is an immersive documentary capturing the ongoing ethnic cleansing of Palestinians in the West Bank by settler militias and Israeli authorities. Filmed over the last three years, the cinematic experience follows the displacement of over 20 communities, with three protagonists bearing witness to the systematic, daily violence. The film weaves 360º footage, placing viewers inside a vanishing Palestinian landscape, and phone footage recording events on the ground,unfiltered.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Raj’in (We Shall Return) is an immersive documentary capturing the ongoing ethnic cleansing of Palestinians in the West Bank by settler militias and Israeli authorities. Filmed over the last three years, the cinematic experience follows the displacement of over 20 communities, with three protagonists bearing witness to the systematic, daily violence. The film weaves 360º footage, placing viewers inside a vanishing Palestinian landscape, and phone footage recording events on the ground, unfiltered.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Raj’in (We Shall Return) is an immersive documentary capturing the ongoing ethnic cleansing of Palestinians in the West Bank by settler militias and Israeli authorities. Filmed over the last three years, the cinematic experience follows the displacement of over 20 communities, with three protagonists bearing witness to the systematic, daily violence. The film weaves 360º footage, placing viewers inside a vanishing Palestinian landscape, and phone footage recording events on the ground,unfiltered."
@@ -45863,10 +45892,10 @@
  {
   "work_id": "w_4KEMW1R9M48Q",
   "campo": "sinopsis.en",
-  "valor": "Silvia is pregnant and longs to become a mother. She lives with Ana, her best friend, who one night, after drinking, infects her with a dangerous virus that threatens her unborn baby. Furious, Silvia kicks Ana out and confronts her deepest fear: giving birth to death. When Ana returns months later, she finds Silvia gravely ill. She decides to care for her, but although Silvia recovers, the virus leaves irreversible consequences.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Silvia is pregnant and longs to become a mother. She lives with Ana, her best friend, who one night, after drinking, infects her with a dangerous virus that threatens her unborn baby. Furious, Silvia kicks Ana out and confronts her deepest fear: giving birth to death. When Ana returns months later, she finds Silvia gravely ill and decides to care for her.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Silvia is pregnant and longs to become a mother. She lives with Ana, her best friend, who one night, after drinking, infects her with a dangerous virus that threatens her unborn baby. Furious, Silvia kicks Ana out and confronts her deepest fear: giving birth to death. When Ana returns months later, she finds Silvia gravely ill. She decides to care for her, but although Silvia recovers, the virus leaves irreversible consequences."
@@ -46217,10 +46246,10 @@
  {
   "work_id": "w_4KEPD3RDGX1M",
   "campo": "sinopsis.en",
-  "valor": "This is the story of Pedro Blanco, a lonely and unpleasant 45-yearold lumberjack who lives in a ramshackle wooden house, isolated from the world in an almost deforested forest. His mission in life is to cut down all the trees around him... until one day, one of them refuses to be felled.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "This is the story of Pedro Blanco, a lonely and unpleasant 45-year-old lumberjack who lives in a ramshackle wooden house, isolated from the world in an almost deforested forest. His mission in life is to cut down all the trees around him... until one day, one of them refuses to be felled.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "This is the story of Pedro Blanco, a lonely and unpleasant 45-yearold lumberjack who lives in a ramshackle wooden house, isolated from the world in an almost deforested forest. His mission in life is to cut down all the trees around him... until one day, one of them refuses to be felled."
@@ -46428,10 +46457,10 @@
  {
   "work_id": "w_4KEQGV71ZQH3",
   "campo": "sinopsis.en",
-  "valor": "A portrait of an ordinary “one child” Chinese family in their habitat an ordinary apartment. Over the course of 5 nights their lives range from unremarkable to downright banal as the characters slip in and out of their respective roles.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "A portrait of an ordinary “one child” Chinese family in their habitat: an ordinary apartment. Over the course of 5 nights their lives range from unremarkable to downright banal as the characters slip in and out of their respective roles.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "A portrait of an ordinary “one child” Chinese family in their habitat an ordinary apartment. Over the course of 5 nights their lives range from unremarkable to downright banal as the characters slip in and out of their respective roles."
@@ -46651,10 +46680,10 @@
  {
   "work_id": "w_4KES6P5HD813",
   "campo": "sinopsis.en",
-  "valor": "Blending cold surveillance footage with intimate whispers from an online dating app, Love in the Gaze of a Panopticon surveils spaces between public and private, physical and digital, the unseen and unheard, lyrically transforms the images of machinery cameras into a longing gaze for connection in the artist’s hometown, Hong Kong.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Blending cold surveillance footage with intimate whispers from an online dating app, Love in the Gaze of a Panopticon surveils spaces between public and private, physical and digital, the unseen and unheard, and lyrically transforms the images of machinery cameras into a longing gaze for connection in the artist’s hometown, Hong Kong.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Blending cold surveillance footage with intimate whispers from an online dating app, Love in the Gaze of a Panopticon surveils spaces between public and private, physical and digital, the unseen and unheard, lyrically transforms the images of machinery cameras into a longing gaze for connection in the artist’s hometown, Hong Kong."
@@ -48152,10 +48181,10 @@
  {
   "work_id": "w_4KEX3MXAPVG7",
   "campo": "sinopsis.en",
-  "valor": "A girl reads a letter to her great-grandfather, sharing her family’s experience with migration. Meanwhile, a ceramic hippopotamus, brought to Colombia as an invasive species, wanders through the new world it is forced to inhabit. As the animal encounters new species and unfamiliar sensations, the poetic imagery evokes nostalgic memories and introspective journeys.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "A woman reads a letter to her great-grandfather, sharing her family’s experience with migration. Meanwhile, a ceramic hippopotamus, brought to Colombia as an invasive species, wanders through the new world it is forced to inhabit. As the animal encounters new species and unfamiliar sensations, the poetic imagery evokes nostalgic memories and introspective journeys.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "A girl reads a letter to her great-grandfather, sharing her family’s experience with migration. Meanwhile, a ceramic hippopotamus, brought to Colombia as an invasive species, wanders through the new world it is forced to inhabit. As the animal encounters new species and unfamiliar sensations, the poetic imagery evokes nostalgic memories and introspective journeys."
@@ -48258,10 +48287,10 @@
  {
   "work_id": "w_4KEX48ECW9KM",
   "campo": "sinopsis.en",
-  "valor": "Patricio works for his sisters and feels trapped in a life that no longer fits him. Determined to break away, he drifts through a night charged with expectation and the desire for renewal. A date with a mysterious man seems to open the door to something new. But as the night deepens, attraction turns uneasy and intimacy slips into danger. Governed by its own rules, the night spirals toward an unexpected and bloody outcome.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Patricio works for his sisters and feels trapped in a life that no longer fits him. Determined to break away, he drifts through a night charged with expectation and the desire for renewal. A date with a mysterious man seems to open the door to something new. But as the night deepens, attraction turns uneasy and intimacy slips into danger.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Patricio works for his sisters and feels trapped in a life that no longer fits him. Determined to break away, he drifts through a night charged with expectation and the desire for renewal. A date with a mysterious man seems to open the door to something new. But as the night deepens, attraction turns uneasy and intimacy slips into danger. Governed by its own rules, the night spirals toward an unexpected and bloody outcome."
@@ -48964,10 +48993,10 @@
  {
   "work_id": "w_R4GJYFY7T1RA",
   "campo": "sinopsis.en",
-  "valor": "A parody of Mandrake the Magician filmed during the era of price gouging, starring Gustavo de la Hoz and Pinilla himself. The Ministry of Communications initially refused to allow it to be screened, arguing that it lacked a message. A test screening for Cine Colombia employees—who reacted with shock—earned Pinilla his first distribution contract.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "In Bogotá’s Parque Nacional, a girl asks some men to change a coin so she can make a phone call. Meanwhile, the members of a group outing mock a couple who are kissing. A thief snatches the girl’s purse and runs off at full speed; she chases after him, screaming. Both run past a magician who is reading one of his spells.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "A parody of Mandrake the Magician filmed during the era of price gouging, starring Gustavo de la Hoz and Pinilla himself. The Ministry of Communications initially refused to allow it to be screened, arguing that it lacked a message. A test screening for Cine Colombia employees—who reacted with shock—earned Pinilla his first distribution contract."
@@ -49042,22 +49071,25 @@
  {
   "work_id": "w_4KF3GN2Q70X6",
   "campo": "sinopsis.es",
-  "valor": "Un joven oficinista se dedica a pretender a todas sus compañeras y amigas, hasta que una de ellas le da una lección sentimental. Comedia moral en clave popular, protagonizada por Gustavo de la Hoz y Rubiela Hurtado. Muestra al Pinilla menos conocido: el del humor y la fábula de costumbres.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Un joven oficinista se dedica a pretender a todas sus compañeras y amigas, hasta que una de ellas le da una lección sentimental. Comedia moral en clave popular.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Un joven oficinista se dedica a pretender a todas sus compañeras y amigas, hasta que una de ellas le da una lección sentimental. Comedia moral en clave popular, protagonizada por Gustavo de la Hoz y Rubiela Hurtado. Muestra al Pinilla menos conocido: el del humor y la fábula de costumbres."
-  }
+  },
+  "vistas": [
+   "4b725cabb545"
+  ]
  },
  {
   "work_id": "w_4KF3GN2Q70X6",
   "campo": "sinopsis.en",
-  "valor": "A young office worker spends his time trying to seduce all his female coworkers and friends, until one of them teaches him a lesson in love. A moral comedy with a popular twist, starring Gustavo de la Hoz and Rubiela Hurtado. It showcases a lesser-known side of Pinilla: his sense of humor and his social satire.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "A young office worker spends his time trying to seduce all his female coworkers and friends, until one of them teaches him a lesson in love. A moral comedy with a popular twist.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "A young office worker spends his time trying to seduce all his female coworkers and friends, until one of them teaches him a lesson in love. A moral comedy with a popular twist, starring Gustavo de la Hoz and Rubiela Hurtado. It showcases a lesser-known side of Pinilla: his sense of humor and his social satire."
@@ -49331,7 +49363,7 @@
   "work_id": "w_4KF4176WJ8KE",
   "campo": "afiche",
   "valor": {
-   "archivo": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg",
+   "archivo": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
    "veredicto": "oficial",
    "fuente": "tmdb"
   },
@@ -49340,7 +49372,7 @@
   "quien": "Claude (montaje BOGOSHORTS)",
   "sembrada": true,
   "antes": {
-   "bogoshorts-2026": "/assets/bogoshorts-2026/bei-hui-gu-xian.jpg"
+   "bogoshorts-2026": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg"
   }
  },
  {
@@ -49930,22 +49962,25 @@
  {
   "work_id": "w_4KF5J046MV9D",
   "campo": "sinopsis.es",
-  "valor": "Tres mujeres de distintas edades coinciden en la sala de espera de un oftalmólogo. Cuando Sasha escucha a las dos mayores hablar de una tragedia que vivieron, cambia su forma de verlas. Pero pierde la oportunidad de acercarse a ellas.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Tres mujeres de distintas edades coinciden en la sala de espera de un oftalmólogo. Cuando Sasha escucha a las dos mayores hablar de una tragedia que vivieron, cambia su forma de verlas.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Tres mujeres de distintas edades coinciden en la sala de espera de un oftalmólogo. Cuando Sasha escucha a las dos mayores hablar de una tragedia que vivieron, cambia su forma de verlas. Pero pierde la oportunidad de acercarse a ellas."
-  }
+  },
+  "vistas": [
+   "77225ae435d1"
+  ]
  },
  {
   "work_id": "w_4KF5J046MV9D",
   "campo": "sinopsis.en",
-  "valor": "Three women of different ages and backgrounds meet in the waiting room of an ophthalmologist’s office. Overhearing the conversation of the two older women, the young woman Sasha learns of the tragedy they experienced. The indifference she felt towards them until that moment is replaced by a sense of closeness and connection. However, the chance to share this is irreversibly lost.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Three women of different ages and backgrounds meet in the waiting room of an ophthalmologist’s office. Overhearing the conversation of the two older women, the young woman Sasha learns of the tragedy they experienced. The indifference she felt towards them until that moment is replaced by a sense of closeness and connection.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Three women of different ages and backgrounds meet in the waiting room of an ophthalmologist’s office. Overhearing the conversation of the two older women, the young woman Sasha learns of the tragedy they experienced. The indifference she felt towards them until that moment is replaced by a sense of closeness and connection. However, the chance to share this is irreversibly lost."
@@ -50404,10 +50439,10 @@
  {
   "work_id": "w_4KF7KQ2DGYFZ",
   "campo": "sinopsis.en",
-  "valor": "Kim Min-ha has always dreamed of the bright lights, but now she’s an almost 30-year-old wannabe K-pop idol. She has talent, but people only care about her resemblance to Park Hye-mi, the superstar she believes is living the life that should be hers. Hellbent on revenge, she uses that resemblance to gain access to the star’s home. This encounter between a washed-up dreamer and an untouchable celebrity unearths common ground, until it devolves into a bloody home invasion which consumes them both.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Kim Min-ha has always dreamed of the bright lights, but now she’s an almost 30-year-old wannabe K-pop idol. She has talent, but people only care about her resemblance to Park Hye-mi, the superstar she believes is living the life that should be hers. Hellbent on revenge, she uses that resemblance to gain access to the star’s home.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Kim Min-ha has always dreamed of the bright lights, but now she’s an almost 30-year-old wannabe K-pop idol. She has talent, but people only care about her resemblance to Park Hye-mi, the superstar she believes is living the life that should be hers. Hellbent on revenge, she uses that resemblance to gain access to the star’s home. This encounter between a washed-up dreamer and an untouchable celebrity unearths common ground, until it devolves into a bloody home invasion which consumes them both."
@@ -51198,10 +51233,10 @@
  {
   "work_id": "w_4KFBQ00Q0VJ2",
   "campo": "sinopsis.en",
-  "valor": "Among photographs, audio recordings, and VHS videos, the director discovered incomplete clues about a car trip he took with his father. After seeking the intercession of Apostle Daniel, patron saint of memory, the clues from the trip fade, and what initially seemed to be a search for a lost journey turns into a quest to uncover an uncomfortable truth: that his memories hide lies.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Among photographs, audio recordings, and VHS videos, the director discovers incomplete clues about a car trip he took with his father. After seeking the intercession of Apostle Daniel, patron saint of memory, the clues from the trip fade, and what initially seemed to be a search for a lost journey turns into a quest to uncover an uncomfortable truth about his memories.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Among photographs, audio recordings, and VHS videos, the director discovered incomplete clues about a car trip he took with his father. After seeking the intercession of Apostle Daniel, patron saint of memory, the clues from the trip fade, and what initially seemed to be a search for a lost journey turns into a quest to uncover an uncomfortable truth: that his memories hide lies."
@@ -53814,22 +53849,25 @@
  {
   "work_id": "w_4KFSPXY9EM48",
   "campo": "sinopsis.es",
-  "valor": "Una persona joven encuentra a su gato muerto en la bañera. Decide cuidarlo pese a las advertencias de su madre, que todavía no comprende. A través de la muerte de su gato, toma conciencia del paso del tiempo.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Una persona joven encuentra a su gato muerto en la bañera. Decide cuidarlo a pesar de unas advertencias de su madre cuyo sentido todavía no comprende. A través de la muerte de su gato, toma conciencia del paso del tiempo.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Una persona joven encuentra a su gato muerto en la bañera. Decide cuidarlo pese a las advertencias de su madre, que todavía no comprende. A través de la muerte de su gato, toma conciencia del paso del tiempo."
-  }
+  },
+  "vistas": [
+   "d5108cc94020"
+  ]
  },
  {
   "work_id": "w_4KFSPXY9EM48",
   "campo": "sinopsis.en",
-  "valor": "A young adult discovers their cat, dead in the bathtub. They decide to take care of him besides their mom’s warnings that they don’t understand yet. Through their cat’s death, the protagonist becomes aware of the passing time.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "A young adult discovers their cat, dead in the bathtub. They decide to take care of him despite their mom’s warnings that they don’t understand yet. Through their cat’s death, the protagonist becomes aware of the passing time.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "A young adult discovers their cat, dead in the bathtub. They decide to take care of him besides their mom’s warnings that they don’t understand yet. Through their cat’s death, the protagonist becomes aware of the passing time."
@@ -53944,10 +53982,10 @@
  {
   "work_id": "w_4KFVGSZJYP89",
   "campo": "sinopsis.en",
-  "valor": "In the Darién Gap, the roadless jungle between Colombia and Panama, thousands of inmigrants record on their phones the crossing they undertake on their way to the United States. There Is No Path reassembles these fragmented videos into a narrative about risk, survival, and the urgency to keep moving.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "In the Darién Gap, the roadless jungle between Colombia and Panama, thousands of migrants record on their phones the crossing they undertake on their way to the United States. No hay camino reassembles these fragmented videos into a first-person narrative about risk, survival, and the urgency to keep moving.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "In the Darién Gap, the roadless jungle between Colombia and Panama, thousands of inmigrants record on their phones the crossing they undertake on their way to the United States. There Is No Path reassembles these fragmented videos into a narrative about risk, survival, and the urgency to keep moving."
@@ -55567,22 +55605,25 @@
  {
   "work_id": "w_4KG69QZ7CPQ0",
   "campo": "sinopsis.es",
-  "valor": "En el despiadado mundo de las bandas juveniles de los años noventa, un bailarín de 16 años, desesperado, traiciona a su mejor amigo y a sus compañeros en un intento equivocado de asegurar su lugar bajo los reflectores, solo para descubrir el verdadero costo de la fama.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "En el despiadado mundo de las boy bands de los años noventa, un bailarín de 16 años, desesperado, traiciona a su mejor amigo y a sus compañeros de banda en un intento equivocado de asegurar su lugar bajo los reflectores, solo para descubrir el verdadero costo de la fama.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "En el despiadado mundo de las bandas juveniles de los años noventa, un bailarín de 16 años, desesperado, traiciona a su mejor amigo y a sus compañeros en un intento equivocado de asegurar su lugar bajo los reflectores, solo para descubrir el verdadero costo de la fama."
-  }
+  },
+  "vistas": [
+   "fda14392bed6"
+  ]
  },
  {
   "work_id": "w_4KG69QZ7CPQ0",
   "campo": "sinopsis.en",
-  "valor": "In the cutthroat world of 1990s boy bands, a desperate 16-yearold dancer betrays his best friend and bandmates in a misguided attempt to secure his spot in the limelight, only to discover the true cost of fame.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "In the cutthroat world of 1990s boy bands, a desperate 16-year-old dancer betrays his best friend and bandmates in a misguided attempt to secure his spot in the limelight, only to discover the true cost of fame.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "In the cutthroat world of 1990s boy bands, a desperate 16-yearold dancer betrays his best friend and bandmates in a misguided attempt to secure his spot in the limelight, only to discover the true cost of fame."
@@ -56235,7 +56276,7 @@
   "work_id": "w_4KGC93E57XD3",
   "campo": "afiche",
   "valor": {
-   "archivo": "/assets/bogoshorts-2026/summer.jpg",
+   "archivo": "/assets/bogoshorts-2026/end-of-summer.jpg",
    "veredicto": "oficial",
    "fuente": "tmdb"
   },
@@ -56244,7 +56285,7 @@
   "quien": "Claude (montaje BOGOSHORTS)",
   "sembrada": true,
   "antes": {
-   "bogoshorts-2026": "/assets/bogoshorts-2026/summer.jpg"
+   "bogoshorts-2026": "/assets/bogoshorts-2026/end-of-summer.jpg"
   }
  },
  {
@@ -56252,11 +56293,14 @@
   "campo": "directores",
   "valor": [
    "Mehrnaz Abdollahinia",
-   "Feben Elias"
+   "Feben Elias Woldehawariat",
+   "Razahk Issaka",
+   "Celeste Jamneck",
+   "Yi Liu"
   ],
-  "motivo": "alta desde bogoshorts-2026",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS B",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Mehrnaz Abdollahinia, Feben Elias"
@@ -57323,10 +57367,10 @@
  {
   "work_id": "w_4KGHHBJD2TPA",
   "campo": "sinopsis.en",
-  "valor": "In 1985-1987, the American journalist Edward Serotta visited the Communist Romania and took photos of the harsh realities of the country. The Secret Police (Securitate) followed him and secretly took photos of him taking photos. 40 year later, we put together the two sets of images, a shot-reverse shot about the comedic side of History.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "In 1985-1987, the American journalist Edward Serotta visited the Communist Romania and took photos of the harsh realities of the country. The Secret Police (Securitate) followed him and secretly took photos of him taking photos. 40 years later, we put together the two sets of images, a shot-reverse shot about the comedic side of History.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS C",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "In 1985-1987, the American journalist Edward Serotta visited the Communist Romania and took photos of the harsh realities of the country. The Secret Police (Securitate) followed him and secretly took photos of him taking photos. 40 year later, we put together the two sets of images, a shot-reverse shot about the comedic side of History."
@@ -63385,10 +63429,10 @@
  {
   "work_id": "w_4KHTXKGSFBCN",
   "campo": "sinopsis.en",
-  "valor": "After turning 11 years old, Pilar receives a book about menstruation, but what se uncovers in its pages reveals a painful truth that has nothing to do with growing up.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "After turning 11 years old, Pilar receives a book about menstruation, but what she uncovers in its pages reveals a painful truth that has nothing to do with growing up.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS C",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "After turning 11 years old, Pilar receives a book about menstruation, but what se uncovers in its pages reveals a painful truth that has nothing to do with growing up."
@@ -63976,10 +64020,10 @@
  {
   "work_id": "w_R4ENGEB7EKSY",
   "campo": "sinopsis.en",
-  "valor": "Lamentos de un balcón is an experimental film that explores the architecture of the Rodadero area (Santa Marta, Colombia) and its relationship to mass tourism.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Tremble, tremble. My coffee spills. The TransMilenio on Avenida Caracas blurs the lights. I dodge the vomit. I understand nothing, I never did. I want to become an ear of corn. A respite awaits me. The asphalt is a virus that invades everything. I carry it within me, from Bogotá to the beaches of Gaira.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS A",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Lamentos de un balcón is an experimental film that explores the architecture of the Rodadero area (Santa Marta, Colombia) and its relationship to mass tourism."
@@ -64020,11 +64064,15 @@
   "campo": "directores",
   "valor": [
    "Edouard Delebecque",
-   "Giovanni Edwards"
+   "Giovanni Edwards",
+   "Amaury Da Costa",
+   "Erwan Annah",
+   "Yauhan Guo",
+   "Andrea Origlia"
   ],
-  "motivo": "alta desde bogoshorts-2026",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS C",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Edouard Delebecque, Giovanni Edwards"
@@ -65657,30 +65705,6 @@
   }
  },
  {
-  "work_id": "w_4KJ4AKF6H2TK",
-  "campo": "sinopsis.es",
-  "valor": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países.",
-  "motivo": "alta desde bogoshorts-2026",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
-  "sembrada": true,
-  "antes": {
-   "bogoshorts-2026": "Una nueva producción nacida de la alianza creativa entre los festivales MINIKINO (Indonesia), SESIFF (Corea del Sur) y BOGOSHORTS (Colombia), que continúa promoviendo el intercambio cinematográfico entre los tres países."
-  }
- },
- {
-  "work_id": "w_4KJ4AKF6H2TK",
-  "campo": "sinopsis.en",
-  "valor": "A new production born from the creative partnership between the MINIKINO (Indonesia), SESIFF (South Korea), and BOGOSHORTS (Colombia) festivals, which continues to promote cinematic exchange among the three countries.",
-  "motivo": "alta desde bogoshorts-2026",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
-  "sembrada": true,
-  "antes": {
-   "bogoshorts-2026": "A new production born from the creative partnership between the MINIKINO (Indonesia), SESIFF (South Korea), and BOGOSHORTS (Colombia) festivals, which continues to promote cinematic exchange among the three countries."
-  }
- },
- {
   "work_id": "w_4KJ4B5TCZ32D",
   "campo": "directores",
   "valor": [
@@ -65803,11 +65827,16 @@
   "campo": "directores",
   "valor": [
    "Thorvaldur S. Gunnarsson",
-   "Jonatan Brüsch"
+   "Jonatan Brüsch",
+   "Ágúst Kristinsson",
+   "Arna Rut Diego Snæbjörnsdóttir",
+   "Esben J. Jespersen",
+   "Touraj Khosravi",
+   "Polina Bokhan"
   ],
-  "motivo": "alta desde bogoshorts-2026",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Thorvaldur S. Gunnarsson, Jonatan Brüsch"
@@ -66396,11 +66425,14 @@
   "valor": [
    "Lola Grand",
    "Alexandre Arpentinier",
-   "Mathieu"
+   "Mathieu Blanchys",
+   "Tristan Lamarca",
+   "Thomas Lemaille",
+   "Jean-Charles Lusseau"
   ],
-  "motivo": "alta desde bogoshorts-2026",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Lola Grand, Alexandre Arpentinier, Mathieu"
@@ -67986,10 +68018,10 @@
  {
   "work_id": "w_4KJK5DKMW6XX",
   "campo": "sinopsis.en",
-  "valor": "In a world buried in trash and consumerism, Alfilera discovers the emptyness inside humanity and unleashes the plant revolution, as they are determined to reclaim what is theirs.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "In a world buried in trash and consumerism, Alfilera discovers the emptiness inside humanity and unleashes the plant revolution, as they are determined to reclaim what is theirs.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "In a world buried in trash and consumerism, Alfilera discovers the emptyness inside humanity and unleashes the plant revolution, as they are determined to reclaim what is theirs."
@@ -68189,10 +68221,10 @@
  {
   "work_id": "w_4KJK6B7R2GQ0",
   "campo": "sinopsis.en",
-  "valor": "Matías Aguayo is a music teacher whose beat class turns the classroom into a portal. Instrument by instrument, he guides his puppet students through the anatomy of a beat, until the lesson takes on a life of its own. A piñata-built puppet world unravels and an animated geometric classroom takes shape. The more he shows the instruments, the more his students lose themselves in the music, until the teacher turns into a puppet himself, finally loose, finally in the groove with everyone else.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Music teacher Matías Aguayo turns a class on rhythm into a portal to other worlds. Instrument by instrument, he guides his puppet students through the anatomy of a beat, until the lesson takes on a life of its own. They are transported to a puppet world of piñatas and an animated geometric classroom, and the students lose themselves in the music.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Matías Aguayo is a music teacher whose beat class turns the classroom into a portal. Instrument by instrument, he guides his puppet students through the anatomy of a beat, until the lesson takes on a life of its own. A piñata-built puppet world unravels and an animated geometric classroom takes shape. The more he shows the instruments, the more his students lose themselves in the music, until the teacher turns into a puppet himself, finally loose, finally in the groove with everyone else."
@@ -68242,14 +68274,17 @@
  {
   "work_id": "w_4KJK6MN8G4AR",
   "campo": "sinopsis.es",
-  "valor": "MARTTEIN pasa sus dias con su compañero haciendo musica encerrados en su apartamento hasta que, una confesión global, desata el caos en su contra. Comienzan a ser acechados por los vecinos que quieren irrumpir en su departamento y por los elementos extraños que envían los Estados Unidos hasta, tambien, su apartamento.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "MARTTEIN pasa sus días con su compañero haciendo música encerrados en su apartamento, hasta que una confesión global desata el caos en su contra. Comienzan a ser acechados por los vecinos que quieren irrumpir en su departamento y por los elementos extraños que envían los Estados Unidos hasta, también, su apartamento.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "MARTTEIN pasa sus dias con su compañero haciendo musica encerrados en su apartamento hasta que, una confesión global, desata el caos en su contra. Comienzan a ser acechados por los vecinos que quieren irrumpir en su departamento y por los elementos extraños que envían los Estados Unidos hasta, tambien, su apartamento."
-  }
+  },
+  "vistas": [
+   "d647de7c15d0"
+  ]
  },
  {
   "work_id": "w_4KJK6MN8G4AR",
@@ -68693,10 +68728,10 @@
  {
   "work_id": "w_4KJKKQ8K29RA",
   "campo": "sinopsis.en",
-  "valor": "Lucía is trapped in her routine: waking up, going to the office, working, returning home and watching television, each day resembles the last, and that consumes her time after time, television being her only refuge, which begins to invade her dreams with an auction for an empty chair and Luis Miguel masks, she wins but every time she wakes up she realizes nothing has changed. This music video, in its dreamlike aesthetic, questions the culture of productivity and the empty promise of meritocracy.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Lucía is trapped in her routine: waking up, going to the office, returning home and watching television, her only refuge, which begins to invade her dreams with an auction for an empty chair and Luis Miguel masks. Dreamlike in its aesthetic, this music video questions the culture of productivity and the empty promise of meritocracy.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Lucía is trapped in her routine: waking up, going to the office, working, returning home and watching television, each day resembles the last, and that consumes her time after time, television being her only refuge, which begins to invade her dreams with an auction for an empty chair and Luis Miguel masks, she wins but every time she wakes up she realizes nothing has changed. This music video, in its dreamlike aesthetic, questions the culture of productivity and the empty promise of meritocracy."
@@ -68840,10 +68875,10 @@
  {
   "work_id": "w_4KJKM85ABDBX",
   "campo": "sinopsis.en",
-  "valor": "A farmer from Tota Lake heads to a friend’s birthday party. At the celebration, he runs into his ex-partner and discovers she has a new lover. Heartbroken, the man decides to go to the beach and get drunk. There, he encounters the moon, which takes the form of his beloved from the sky. Between confusion and darkness, the farmer ends up swimming in the waves and descending to the bottom of the lake.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "A farmer from Lake Tota heads to a friend’s birthday party. There, he runs into his ex-partner and discovers she has a new lover. Heartbroken, he decides to go to the beach and get drunk. There, he encounters the moon, which takes the form of his beloved from the sky.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "A farmer from Tota Lake heads to a friend’s birthday party. At the celebration, he runs into his ex-partner and discovers she has a new lover. Heartbroken, the man decides to go to the beach and get drunk. There, he encounters the moon, which takes the form of his beloved from the sky. Between confusion and darkness, the farmer ends up swimming in the waves and descending to the bottom of the lake."
@@ -68907,10 +68942,10 @@
  {
   "work_id": "w_4KJKMJHZRCWS",
   "campo": "sinopsis.en",
-  "valor": "A young woman faces the difficult process of change and adaptation that comes with breaking up with someone who once played a significant role in her life. Hopeless amidst her apartment, she summons the strength to dismantle what was once a home, removing pictures, plants, and memories. As if carried by the wind, she sets out toward an unknown destination—one that holds the promise of new beginnings, of moving forward, and of living a different life.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "A woman in her thirties faces the difficult process of change that comes with a breakup. Dejected in the middle of her apartment, she summons the strength to dismantle what was once a home. As if carried by the wind, she sets out toward an unknown destination, one that holds the promise of new beginnings, of moving forward, of living another life.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "A young woman faces the difficult process of change and adaptation that comes with breaking up with someone who once played a significant role in her life. Hopeless amidst her apartment, she summons the strength to dismantle what was once a home, removing pictures, plants, and memories. As if carried by the wind, she sets out toward an unknown destination—one that holds the promise of new beginnings, of moving forward, and of living a different life."
@@ -68974,10 +69009,10 @@
  {
   "work_id": "w_4KJKMYYD8CDH",
   "campo": "sinopsis.en",
-  "valor": "On a full-moon night, Tabi wanders through deserted landscapes of Cali, gradually transforming spaces associated with danger into territories of freedom. Through music, dance, and esoteric rituals, she encounters different versions of herself, shedding fear and embracing her strength and desire. As her journey unfolds, the boundary between Tabi and the moon dissolves, culminating in a mystical communion with the cosmos.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "On a full-moon night, Tabi wanders through deserted landscapes of Cali, transforming spaces of danger into territories of freedom. Through music, dance and esoteric rituals, she encounters different versions of herself, shedding fear and embracing her strength and desire. The boundary between her and the moon dissolves.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "On a full-moon night, Tabi wanders through deserted landscapes of Cali, gradually transforming spaces associated with danger into territories of freedom. Through music, dance, and esoteric rituals, she encounters different versions of herself, shedding fear and embracing her strength and desire. As her journey unfolds, the boundary between Tabi and the moon dissolves, culminating in a mystical communion with the cosmos."
@@ -69108,14 +69143,17 @@
  {
   "work_id": "w_4KJKNKG7HACX",
   "campo": "sinopsis.es",
-  "valor": "Suba es la localidad más poblada de Bogotá, anteriormente fue un pueblo, allí vivieron indigenas muiscas. Es una localidad con grandes contradicciones sociales, Maleza es una cantautora de la localidad e hizo una canción a su madre, a la casa que ella construyó allí y a las mujeres de su entorno.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Suba es la localidad más poblada de Bogotá; anteriormente fue un pueblo, allí vivieron indígenas muiscas. Es una localidad con grandes contradicciones sociales. Maleza es una cantautora de la localidad e hizo una canción a su madre, a la casa que ella construyó allí y a las mujeres de su entorno.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Suba es la localidad más poblada de Bogotá, anteriormente fue un pueblo, allí vivieron indigenas muiscas. Es una localidad con grandes contradicciones sociales, Maleza es una cantautora de la localidad e hizo una canción a su madre, a la casa que ella construyó allí y a las mujeres de su entorno."
-  }
+  },
+  "vistas": [
+   "8499774ec377"
+  ]
  },
  {
   "work_id": "w_4KJKNKG7HACX",

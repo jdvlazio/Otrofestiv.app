@@ -36,13 +36,13 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "traducida de su sinopsis en inglés; verificada por otro agente",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24"
  },
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "la que corresponde a la española decidida",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24"
  },
  "xref.tmdb": {

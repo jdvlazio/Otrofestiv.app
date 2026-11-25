@@ -1,12 +1,18 @@
 {
  "id": "w_4KGC93E57XD3",
- "titulo_original": "Summer",
+ "titulo_original": "End of Summer",
  "anio": 2023,
  "paises": [
   "IR"
  ],
  "directores": [
   "Tara Attarzadeh"
+ ],
+ "aliases": [
+  {
+   "titulo": "Summer",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
   "es": "Una niña juega en un columpio en la azotea de su casa hasta que la cuerda se rompe. Mientras observa unas palomas, imagina que vuela libremente sobre la ciudad; al volver a la realidad, la amenaza de la guerra irrumpe en su mundo.",
@@ -16,7 +22,7 @@
   "Animación"
  ],
  "afiche": {
-  "archivo": "/assets/bogoshorts-2026/summer.jpg",
+  "archivo": "/assets/bogoshorts-2026/end-of-summer.jpg",
   "veredicto": "oficial",
   "fuente": "tmdb"
  },
