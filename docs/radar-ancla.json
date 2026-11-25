@@ -5104,10 +5104,10 @@
    "region": "Caribe",
    "mes": 11,
    "mes_texto": "noviembre",
-   "fechas_2026": "sin confirmar",
+   "fechas_2026": "26 OCT–2 NOV 2026",
    "web": null,
    "ig": null,
-   "estado": "radar",
+   "estado": "pasado_2026",
    "id_config": null,
    "issue": null,
    "apoyo": null,
@@ -5115,11 +5115,11 @@
     "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?pagina=24",
     "https://radionacional.co/cultura/cine/festival-audiovisual-de-los-montes-de-maria-2023-programacion"
    ],
-   "nota": "Última edición confirmada: 2023 (12°). No encontré 2024–2026.",
+   "nota": "Última edición confirmada: 2023 (12°). No encontré 2024–2026. Es el mismo festival de la entrada \"famma\".",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": 1,
-   "verificado_el": "2026-10-11",
+   "verificado_el": "2026-11-25",
    "origen": [
     "ancla 11 oct: calendario 11 oct"
    ],
@@ -5371,7 +5371,7 @@
     "https://github.com/jdvlazio/Otrofestiv.app/issues/1319",
     "ICPA Antioquia — Resolución 422 de 2026 (18 ago 2026), Convocatoria Cinematografía y Audiovisuales"
    ],
-   "nota": null,
+   "nota": " Festhome (25 nov): 13–16 nov 2026; la realización no está confirmada.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
@@ -5382,7 +5382,9 @@
    "copias": {
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
-   }
+   },
+   "inicio_2026": "2026-11-13",
+   "conclusion": "paso"
   },
   {
    "clave": "funza",
@@ -6697,7 +6699,68 @@
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
    },
-   "conclusion": "esperando"
+   "conclusion": "esperando",
+   "inicio_2026": "2026-12-04",
+   "fuentes_miradas": {
+    "redes": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "sede": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "obras": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "web": [
+     {
+      "url": "https://fecili.com",
+      "fecha": "2026-11-25",
+      "resultado": "ilegible",
+      "nota": "no resuelve"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "https://filmmakers.festhome.com/en/festival/2287",
+      "fecha": "2026-11-25",
+      "resultado": "encontro",
+      "nota": "4–7 dic; notifica 30 nov"
+     }
+    ]
+   }
   },
   {
    "clave": "ficgo",
@@ -6753,10 +6816,10 @@
     ],
     "sede": [
      {
-      "url": "",
+      "url": "https://ficgofestival.com/convocatoria",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada",
-      "nota": "itinerante"
+      "resultado": "encontro",
+      "nota": "San Onofre, Tolú, Coveñas, Berrugas y Rincón del Mar; sin recintos"
      }
     ],
     "anfitrion": [
@@ -6768,9 +6831,10 @@
     ],
     "boleteria": [
      {
-      "url": "",
+      "url": "https://ficgofestival.com/convocatoria",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "encontro",
+      "nota": "gratuito y al aire libre"
      }
     ],
     "prensa": [
@@ -6849,9 +6913,10 @@
     ],
     "sede": [
      {
-      "url": "",
+      "url": "https://changuitovisual.wixsite.com/changuitovisual/filmfestival",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "encontro",
+      "nota": "descentralizado; sin sedes listadas"
      }
     ],
     "anfitrion": [
@@ -6863,9 +6928,10 @@
     ],
     "boleteria": [
      {
-      "url": "",
+      "url": "https://changuitovisual.wixsite.com/changuitovisual/filmfestival",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "nada",
+      "nota": ""
      }
     ],
     "prensa": [
@@ -7128,10 +7194,10 @@
     ],
     "sede": [
      {
-      "url": "",
+      "url": "https://www.radionacional.co/noticias-colombia/festival-de-cine-hecho-con-celular-entregara-premios-de-10-millones",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada",
-      "nota": "agenda de Cinépolis"
+      "resultado": "encontro",
+      "nota": "Cinépolis VIP Barranquilla, sin horario"
      }
     ],
     "anfitrion": [
@@ -7157,17 +7223,18 @@
     ],
     "obras": [
      {
-      "url": "",
+      "url": "https://www.radionacional.co/noticias-colombia/festival-de-cine-hecho-con-celular-entregara-premios-de-10-millones",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada",
-      "nota": "la selección aún no existe"
+      "resultado": "no_aplica",
+      "nota": "convocatoria abierta hasta el 30 nov"
      }
     ],
     "convocatoria": [
      {
-      "url": "",
+      "url": "https://www.elheraldo.co/cultura/cine/2026/11/11/de-tu-celular-a-la-pantalla-grande-la-novena-edicion-del-tengo-fe-film-festival-abre-su-convocatoria/",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "encontro",
+      "nota": ""
      }
     ]
    }
@@ -7220,10 +7287,10 @@
     ],
     "sede": [
      {
-      "url": "",
+      "url": "https://filmmakers.festhome.com/festival/festival-de-cortometrajes-cine-chicu",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada",
-      "nota": "la resolución no la nombra"
+      "resultado": "nada",
+      "nota": "solo la dirección del organizador (Km 1 Vía La Punta)"
      }
     ],
     "anfitrion": [
@@ -7235,30 +7302,34 @@
     ],
     "boleteria": [
      {
-      "url": "",
+      "url": "https://filmmakers.festhome.com/festival/festival-de-cortometrajes-cine-chicu",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "nada",
+      "nota": "no habla de entrada del público"
      }
     ],
     "prensa": [
      {
-      "url": "",
+      "url": "https://tenjoculturayturismo.gov.co/noticias",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "nada",
+      "nota": "última del 21 oct"
      }
     ],
     "obras": [
      {
-      "url": "",
+      "url": "https://filmmakers.festhome.com/festival/festival-de-cortometrajes-cine-chicu",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "nada",
+      "nota": "se anuncian el 26 nov"
      }
     ],
     "convocatoria": [
      {
-      "url": "ficha en Festhome",
+      "url": "https://filmmakers.festhome.com/festival/festival-de-cortometrajes-cine-chicu",
       "fecha": "2026-11-25",
-      "resultado": "encontro"
+      "resultado": "encontro",
+      "nota": "seleccionados 26 nov"
      }
     ]
    }
@@ -7536,15 +7607,15 @@
    "fuente": [
     "https://bogota.siggraph.org/"
    ],
-   "nota": "Las fechas 28–29 nov no aparecen en su web (febrero, y 9 may en Colombia 5.0) ni en la agenda de la Cinemateca. 28 NOV 17:00 y 29 NOV 11:00 en Maloka, gratis con inscripción https://forms.gle/ZoKFxLh7YXMVvymb9; sin títulos publicados. La selección de su web es la de febrero: no usarla.",
+   "nota": "Las fechas 28–29 nov no aparecen en su web (febrero, y 9 may en Colombia 5.0) ni en la agenda de la Cinemateca. 28 NOV 17:00 y 29 NOV 11:00 en Maloka, gratis con inscripción https://forms.gle/ZoKFxLh7YXMVvymb9; sin títulos publicados. La selección de su web es la de febrero: no usarla. El festival fue en febrero. Lo del 28–29 nov en Maloka es una muestra sin títulos (así la llama su formulario): no se monta.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
    "verificado_el": "2026-11-23",
    "origen": null,
    "copias": null,
-   "inicio_2026": "2026-11-28",
-   "conclusion": "esperando",
+   "inicio_2026": "2026-02-27",
+   "conclusion": "paso",
    "fuentes_miradas": {
     "web": [
      {
@@ -7594,16 +7665,18 @@
     ],
     "obras": [
      {
-      "url": "",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdz70J_LqMSZVYknlYk9pAIqXcrnkgBgBV5j8d6Zq68cZEXvw/viewform",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "nada",
+      "nota": "sin títulos; que sea el Electronic Theater completo no consta"
      }
     ],
     "convocatoria": [
      {
-      "url": "",
+      "url": "https://bogota.siggraph.org/en/eventos/",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "nada",
+      "nota": "curaduría de ACM SIGGRAPH"
      }
     ]
    }
@@ -7620,7 +7693,7 @@
    "fechas_2026": "26–28 NOV 2026 (6ª)",
    "web": null,
    "ig": null,
-   "estado": "radar",
+   "estado": "descartado",
    "id_config": [],
    "issue": [],
    "apoyo": null,
@@ -7630,7 +7703,7 @@
    ],
    "nota": "Virtual según su ficha de FilmFreeway (leída solo en el resumen de búsqueda; la página no abre); Festhome da las fechas. Virtual por el terremoto (Festhome). 55 obras con ficha en la web, sin horas; los enlaces \"Ver corto\" probados dan 404 el 25 nov. Solo con hora: dos charlas por Zoom, 26 nov 16:00 y 27 nov 17:00 (IG).",
    "discrepancias": null,
-   "motivo_descarte": null,
+   "motivo_descarte": "edición virtual por enlaces, sin funciones en sala (25 nov 2026)",
    "importancia": null,
    "verificado_el": "2026-11-23",
    "origen": null,
@@ -7850,7 +7923,7 @@
    "fechas_2026": "sin confirmar",
    "web": "https://muestradecineyvideowayuu.blogspot.com/",
    "ig": null,
-   "estado": "radar",
+   "estado": "descartado",
    "id_config": [],
    "issue": [],
    "apoyo": null,
@@ -7860,7 +7933,7 @@
    ],
    "nota": "15ª: Riohacha, 20–22 nov, al parecer de 2025 (resumen de búsqueda). Sin rastro de 2026.",
    "discrepancias": null,
-   "motivo_descarte": null,
+   "motivo_descarte": "Es muestra, no festival (regla de Juan).",
    "importancia": null,
    "verificado_el": "2026-11-23",
    "origen": null,
