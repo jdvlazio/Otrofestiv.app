@@ -27,6 +27,34 @@ class Memoria(unittest.TestCase):
             fh.write(b'dos')
         self.assertNotEqual(e.hechos('f')['x.jpg'], e.huella(self.f))
 
+    def test_dice_cuando_se_capturo_y_no_se_mezcla_con_los_afiches(self):
+        e.anotar('f', [self.f])
+        with open(e.libro('f')) as fh:
+            self.assertTrue(json.load(fh)['_provenance']['capturado'])
+        self.assertEqual(set(e.hechos('f')), {'x.jpg'})
+
+    def test_un_libro_viejo_sin_procedencia_la_gana_sin_perder_nada(self):
+        with open(e.libro('f'), 'w') as fh:
+            json.dump({'y.jpg': 'abc'}, fh)
+        e.anotar('f', [self.f])
+        self.assertEqual(set(e.hechos('f')), {'x.jpg', 'y.jpg'})
+        with open(e.libro('f')) as fh:
+            self.assertIn('_provenance', json.load(fh))
+
+    def test_sin_afiches_nuevos_tambien_gana_procedencia_y_luego_no_se_toca(self):
+        with open(e.libro('f'), 'w') as fh:
+            json.dump({'y.jpg': 'abc'}, fh)
+        e.anotar('f', [])
+        with open(e.libro('f')) as fh:
+            d = json.load(fh)
+        self.assertIn('_provenance', d)
+        d['_provenance']['capturado'] = '2000-01-01'
+        with open(e.libro('f'), 'w') as fh:
+            json.dump(d, fh)
+        e.anotar('f', [])
+        with open(e.libro('f')) as fh:
+            self.assertEqual(json.load(fh)['_provenance']['capturado'], '2000-01-01')
+
     def test_anotar_no_olvida_los_de_antes(self):
         e.anotar('f', [self.f])
         g = os.path.join(self.d, 'y.jpg')
