@@ -39,11 +39,11 @@
   "verifica": "agente lector 25 nov (no montó): grilla PDF, catálogo PDF y agenda de la sala, función por función"
  },
  "f_0f47ae4440": {
-  "contra": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf",
+  "contra": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/006_imaginaton.html · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf págs. 3, 4, 5 y 7 · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
   "fecha": "2026-11-25",
-  "huella": "beecfa48b906",
+  "huella": "6160b8efb434",
   "monta": "sesión de montaje bogoshorts (nov 2026)",
-  "verifica": "agente lector 25 nov (no montó): grilla PDF, catálogo PDF y agenda de la sala, función por función"
+  "verifica": "agente lector 25 nov B (no montó)"
  },
  "f_0f4ff25435": {
   "contra": "https://cinematecadebogota.gov.co/agenda",
@@ -185,6 +185,20 @@
   "monta": "sesión de montaje bogoshorts (nov 2026)",
   "verifica": "agente lector 25 nov (no montó): grilla PDF, catálogo PDF y agenda de la sala, función por función"
  },
+ "f_337f034282": {
+  "contra": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf (Escenarios y sección CVR) · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf · fuentes/bogoshorts-2026/grilla-2026-11-13.png · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf pág. 5 · fuentes/bogoshorts-2026/cinemateca-2026-11-23 (agenda: no trae VR)",
+  "fecha": "2026-11-25",
+  "huella": "5a2cf13b71bd",
+  "monta": "sesión de montaje bogoshorts (nov 2026)",
+  "verifica": "agente lector 25 nov B (no montó)"
+ },
+ "f_3587c9ac67": {
+  "contra": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf (BOGOSHORTS Expone) · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf pág. 5 · fuentes/bogoshorts-2026/grilla-2026-11-13.png",
+  "fecha": "2026-11-25",
+  "huella": "9611d199193e",
+  "monta": "sesión de montaje bogoshorts (nov 2026)",
+  "verifica": "agente lector 25 nov B (no montó)"
+ },
  "f_38bbdbc21b": {
   "contra": "https://forms.gle/AiRzKvKJRTKPUUkq5",
   "fecha": "2026-11-25",
@@ -311,6 +325,13 @@
   "monta": "sesión de montaje bogoshorts (nov 2026)",
   "verifica": "agente lector 25 nov (no montó): grilla PDF, catálogo PDF y agenda de la sala, función por función"
  },
+ "f_5ade8fa1d3": {
+  "contra": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/006_imaginaton.html · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf págs. 3, 4, 5 y 7 · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+  "fecha": "2026-11-25",
+  "huella": "de3645bf995c",
+  "monta": "sesión de montaje bogoshorts (nov 2026)",
+  "verifica": "agente lector 25 nov B (no montó)"
+ },
  "f_5b1ba5fe8c": {
   "contra": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
   "fecha": "2026-11-25",
@@ -436,6 +457,13 @@
   "huella": "5aa548b634fe",
   "monta": "sesión de montaje bogoshorts (nov 2026)",
   "verifica": "agente lector 25 nov (no montó): grilla PDF, catálogo PDF y agenda de la sala, función por función"
+ },
+ "f_7c09194342": {
+  "contra": "fuentes/ig-vigia/DgGg1WOu3FA.json · fuentes/ig-vigia/fb-1146231084939325.json · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
+  "fecha": "2026-11-25",
+  "huella": "2a2160297e40",
+  "monta": "sesión de montaje bogoshorts (nov 2026)",
+  "verifica": "agente lector 25 nov B (no montó)"
  },
  "f_7c90331d4d": {
   "contra": "https://cinematecadebogota.gov.co/agenda",
@@ -577,6 +605,13 @@
   "monta": "sesión de montaje bogoshorts (nov 2026)",
   "verifica": "agente lector 25 nov (no montó): grilla PDF, catálogo PDF y agenda de la sala, función por función"
  },
+ "f_b6b7b90bd7": {
+  "contra": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf (Escenarios y sección CVR) · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf · fuentes/bogoshorts-2026/grilla-2026-11-13.png · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf pág. 5 · fuentes/bogoshorts-2026/cinemateca-2026-11-23 (agenda: no trae VR)",
+  "fecha": "2026-11-25",
+  "huella": "40b137d032e1",
+  "monta": "sesión de montaje bogoshorts (nov 2026)",
+  "verifica": "agente lector 25 nov B (no montó)"
+ },
  "f_b7cb144e4e": {
   "contra": "https://cinematecadebogota.gov.co/agenda",
   "fecha": "2026-11-25",
@@ -597,6 +632,13 @@
   "huella": "be82ac1f82c9",
   "monta": "sesión de montaje bogoshorts (nov 2026)",
   "verifica": "agente lector 25 nov (no montó): grilla PDF, catálogo PDF y agenda de la sala, función por función"
+ },
+ "f_be5e5b4bdb": {
+  "contra": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf (Escenarios y sección CVR) · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf · fuentes/bogoshorts-2026/grilla-2026-11-13.png · https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf pág. 5 · fuentes/bogoshorts-2026/cinemateca-2026-11-23 (agenda: no trae VR)",
+  "fecha": "2026-11-25",
+  "huella": "a3f7560436cd",
+  "monta": "sesión de montaje bogoshorts (nov 2026)",
+  "verifica": "agente lector 25 nov B (no montó)"
  },
  "f_c1227c7280": {
   "contra": "https://cinematecadebogota.gov.co/agenda",
