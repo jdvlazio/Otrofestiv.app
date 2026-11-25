@@ -340,7 +340,9 @@ def control(fid, d, abrir=urllib.request.urlopen, hoy=None, modelo=True, fs=None
     frena = not antes
     try:
         futuras = [k for k, f in funciones(d).items() if futura(f, hoy or _hoy())]
-        frena = frena or 2 * sum(k not in antes for k in futuras) > len(futuras)
+        nuevas = sum(k not in antes for k in futuras)
+        # una o dos funciones de última hora son un cambio urgente, no un programa
+        frena = frena or nuevas > 2 and 2 * nuevas > len(futuras)
         mal, pend = revisar(fid, d, hoy, modelo, todas=not antes)
     except Exception as e:      # dato mal formado: frena la primera, nunca a un publicado
         mal, pend = [f'no se pudo revisar: {type(e).__name__} {e}'], []

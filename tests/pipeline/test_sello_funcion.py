@@ -270,6 +270,8 @@ class Publicado(Base):
         self.assertTrue(self.control(fest(F, *otras), FID)[0])              # 3 nuevas de 4
         f, av = self.control(fest(F, *otras), FID, pub=fest(F, otras[0]))   # 2 de 4: justo la mitad, pasa
         self.assertTrue(f == [] and av)
+        f, av = self.control(fest(F, *otras[:2]), FID)                      # 2 de última hora: avisa
+        self.assertTrue(f == [] and av)
         pas = [dict(x, day='2026-11-01') for x in otras]                    # las pasadas no cuentan
         self.assertEqual(self.control(fest(F, *pas), FID)[0], [])
         self.assertEqual(self.control(fest(F, *pas), FID)[1], [])
@@ -309,6 +311,7 @@ class CI(Base):
         self.assertIn("if: github.event_name == 'pull_request'", paso)
         self.assertIn('sello_funcion.py --ci', paso)
         self.assertIn('fetch-depth: 2', yml)
+        self.assertIn('cambios=$(git diff', paso)     # si el diff falla, el paso falla
         self.assertNotIn('${{', paso)
         self.assertNotIn('secrets.', yml)
 
