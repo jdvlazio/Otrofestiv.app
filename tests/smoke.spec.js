@@ -62,13 +62,17 @@ test('T136 — un visitante sin sesión solo pide el consenso público, una vez 
   const aSupabase = [];
   // En el orden en que SALEN: las respuestas pueden llegar al revés (20 nov 2026, la del
   // festival por defecto llegó de última y la prueba cayó; la app descarta esa respuesta).
+  // Solo las de la carga en curso: enterFestival recarga, y una petición de la carga
+  // anterior (respondida o cancelada) no es una lectura repetida.
   page.on('request', r => {
+    if (r.isNavigationRequest() && r.frame() === page.mainFrame()) { aSupabase.length = 0; return; }
     const u = r.url();
     if (r.method() !== 'OPTIONS' && u.includes('supabase.co') && u.includes('/rest/')) {
       const x = { status: null, tabla: u.includes('screening_reports') ? 'screening_reports' : u.slice(-40),
         fest: (() => { try { return JSON.parse(r.postData() || '{}').p_festival; } catch (e) { return null; } })() };
       aSupabase.push(x);
-      r.response().then(res => { x.status = res ? res.status() : 0; }).catch(() => { x.status = 0; });
+      const fuera = () => { const i = aSupabase.indexOf(x); if (i >= 0) aSupabase.splice(i, 1); };
+      r.response().then(res => { if (res) x.status = res.status(); else fuera(); }).catch(fuera);
     }
   });
   await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00', { consensoReal: true });
