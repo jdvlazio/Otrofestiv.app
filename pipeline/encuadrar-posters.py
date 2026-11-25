@@ -73,7 +73,11 @@ FONDO_ES_ARTE = {'funeral-siniestro.jpg',
                  'sigilo.jpg', 'el-susurro.jpg', 'esquirlas-de-caracol.jpg',
                  # CINETORO 2026 (31 oct): el cielo gris de «Traducir lo propio» y el
                  # papel claro de «Um corpo sem cavalo?» llegan al borde; mirados, no hay marco
-                 'traducir-lo-propio-o-el-sintoma-de-recordar.jpg', 'um-corpo-sem-cavalo.jpg'}
+                 'traducir-lo-propio-o-el-sintoma-de-recordar.jpg', 'um-corpo-sem-cavalo.jpg',
+                 # BOGOSHORTS 2026 (25 nov): el negro de «Complementarios» y el azul y verde de
+                 # «Varoncito» llegan al borde; dos corridas les comieron una franja y se
+                 # repusieron del original de TMDB. Mirados, no hay marco
+                 'complementarios.jpg', 'varoncito.jpg'}
 
 
 # LO HECHO SE RECUERDA (24 nov 2026, «Complementarios» y «Varoncito» de BOGOSHORTS): decidir
