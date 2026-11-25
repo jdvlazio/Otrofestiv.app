@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_5X2YEATYBKSZ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "estreno mundial en Mar del Plata, nov 2025",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://es.hollywoodreporter.com/lorena-villarreal-estrenara-la-vida-es-en-el-festival-internacional-de-cine-de-mar-del-plata/ · https://www.quien.com/cultura/2026/01/09/la-vida-es-pelicula-mexicana-goteborg-lorena-villarreal",
+  "antes": {
+   "ficfusa-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_5X2YEATYBKSZ",
+  "campo": "sinopsis.es",
+  "valor": "Nora está por cumplir 40 años y no deja de preguntarse qué sentido tiene todo. La celebración se vuelve una serie de tropiezos que la empujan a descubrirse: se enfrenta a su historia familiar, la muerte, el desempleo, el fin de su relación poliamorosa y la urgencia de redefinir el amor, su sexualidad y lo que de verdad quiere de la vida.",
+  "motivo": "pasa de 350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://letterboxd.com/film/life-is-2025/ · https://program.goteborgfilmfestival.se/en/program/life-is",
+  "antes": {
+   "ficfusa-2026": "Nora está por cumplir 40 años y no deja de preguntarse: ¿qué sentido tiene todo esto? Lo que iba a ser una celebración se convierte en una serie de tropiezos que la empujan a descubrirse. Con heridas abiertas, deseos no dichos y un pasado que todavía quema, Nora se enfrenta a su historia familiar, a la muerte, al desempleo, al derrumbe de su relación poliamorosa y a la urgencia de redefinir el amor, su sexualidad y lo que de verdad quiere de la vida."
+  },
+  "vistas": [
+   "2a6c312389d2"
+  ]
+ },
+ {
+  "work_id": "w_5X2YEATYBKSZ",
+  "campo": "sinopsis.en",
+  "valor": "Nora is about to turn 40 and can't stop wondering what the point of it all is. The celebration becomes a series of missteps that push her toward self-discovery: she faces her family history, death, unemployment, the end of her polyamorous relationship and the urgent need to redefine love, her sexuality and what she truly wants from life.",
+  "motivo": "pasa de 350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://letterboxd.com/film/life-is-2025/ · https://program.goteborgfilmfestival.se/en/program/life-is",
+  "antes": {
+   "ficfusa-2026": "Nora is about to turn 40 and can't stop wondering: what's the point of all this? What was meant to be a celebration turns into a series of unfortunate missteps that push her toward self-discovery. With open wounds, unspoken desires, and a burning past, Nora confronts her family history, death, unemployment, the collapse of her polyamorous relationship, and the urgent need to redefine love, her sexuality, and what she truly wants from life."
+  }
+ },
+ {
+  "work_id": "w_5X2YEATYBKSZ",
+  "campo": "directores",
+  "valor": [
+   "Lorena Villarreal"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Lorena Villarreal"
+  }
+ },
+ {
+  "work_id": "w_5X2YEATYBKSZ",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_5X2YEATYBKSZ",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_5X2YEATYBKSZ",
+  "campo": "xref.tmdb",
+  "valor": 1529400,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1529400"
+  }
+ },
+ {
+  "work_id": "w_5X2YEATYBKSZ",
+  "campo": "xref.letterboxd",
+  "valor": "life-is-2025",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "life-is-2025"
+  }
+ },
+ {
+  "work_id": "w_5X2YEATYBKSZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/la-vida-es.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "/assets/ficfusa-2026/la-vida-es.jpg"
+  }
+ }
+]

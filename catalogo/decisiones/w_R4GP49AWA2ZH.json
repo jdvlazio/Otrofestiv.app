@@ -33,10 +33,10 @@
  {
   "work_id": "w_R4GP49AWA2ZH",
   "campo": "sinopsis.es",
-  "valor": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026, fantasmagoria-2026, festicinerio-2026, ficfusa-2026 +1)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "Colombia, 1951. En La Violencia, brutal guerra entre liberales y conservadores, dos chulavitas, asesinos pagados por el gobierno, acechan a un sacerdote en la noche, esperando que los lleve a la cabaña del bosque donde se esconden sus víctimas. Pero el horror que encuentran allí es mil veces peor que el dolor que pensaban infligir.",
+  "motivo": "414>350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "vistas": [
    "9ca413616367",
    "ca81298feeed"
@@ -50,7 +50,20 @@
    "ficma-2026": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
    "siembrafest-2026": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
    "villadelcine-2026": "Colombia, 1951. En plena Violencia, dos chulavitas, sicarios al servicio del Gobierno, siguen a un sacerdote durante la noche, convencidos de que los conducirá hasta una cabaña donde se esconden sus víctimas. Al internarse en el bosque, descubrirán un horror mucho más oscuro que cualquiera de sus propios actos."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026, fantasmagoria-2026, festicinerio-2026, ficfusa-2026 +1)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "9ca413616367",
+     "ca81298feeed"
+    ]
+   }
+  ],
+  "fuente": "fuentes/bogoshorts-2026/web-cortos/3988.html · http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
  },
  {
   "work_id": "w_R4GP49AWA2ZH",
@@ -75,10 +88,10 @@
  {
   "work_id": "w_R4GP49AWA2ZH",
   "campo": "sinopsis.en",
-  "valor": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
-  "motivo": "la que ya publica otro festival: una sola por obra",
-  "fecha": "2026-11-24",
-  "quien": "regla de Juan: la sinopsis es de la obra",
+  "valor": "Colombia, 1951. During La Violencia, a brutal war between Liberals and Conservatives, two chulavitas, government-paid killers, stalk a priest at night, hoping he will lead them to the cabin in the woods where their victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
+  "motivo": "394>350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "antes": {
    "bhff-2026": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "fantasmagoria-2026": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
@@ -86,8 +99,18 @@
    "ficfusa-2026": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "ficica-2026": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "ficma-2026": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
+   "siembrafest-2026": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
    "villadelcine-2026": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict.",
+    "motivo": "la que ya publica otro festival: una sola por obra",
+    "fecha": "2026-11-24",
+    "quien": "regla de Juan: la sinopsis es de la obra"
+   }
+  ],
+  "fuente": "fuentes/bogoshorts-2026/web-cortos/3988.html · http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
  },
  {
   "work_id": "w_R4GP49AWA2ZH",

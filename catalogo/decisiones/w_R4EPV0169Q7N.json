@@ -55,5 +55,79 @@
    "ficfusa-2026": "«Stories that shape the paths along which the water flows  Voices that travel between the sky and the mountains  The wind and its whistling frighten the water  The earth chokes  A storm of tears trickles down the skin  It is the salt that cultivates the streams to wander  Voices that travel between the sky and the mountains»",
    "miradas-2026": "«Stories that shape the paths along which the water flows  Voices that travel between the sky and the mountains  The wind and its whistling frighten the water  The earth chokes  A storm of tears trickles down the skin  It is the salt that cultivates the streams to wander  Voices that travel between the sky and the mountains»"
   }
+ },
+ {
+  "work_id": "w_R4EPV0169Q7N",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "miradas-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4EPV0169Q7N",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Experimental",
+   "miradas-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_R4EPV0169Q7N",
+  "campo": "xref.tmdb",
+  "valor": 1758059,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1758059",
+   "miradas-2026": "1758059"
+  }
+ },
+ {
+  "work_id": "w_R4EPV0169Q7N",
+  "campo": "xref.letterboxd",
+  "valor": "mal-de-tierra-2025",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "mal-de-tierra-2025",
+   "miradas-2026": "mal-de-tierra-2025"
+  }
+ },
+ {
+  "work_id": "w_R4EPV0169Q7N",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cineautopsia/mal-de-tierra.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "/assets/cineautopsia/mal-de-tierra.jpg",
+   "ficfusa-2026": "/assets/cineautopsia/mal-de-tierra.jpg",
+   "miradas-2026": "/assets/cineautopsia/mal-de-tierra.jpg"
+  }
  }
 ]

@@ -46,5 +46,85 @@
    "ficfusa-2026": "el-espejo-de-la-vida",
    "filcmar-2026": "el-espejo-de-la-vida"
   }
+ },
+ {
+  "work_id": "w_R4JJ9W6S4FCQ",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "sin género publicado",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://letterboxd.com/film/the-mirror-of-life/",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4JJ9W6S4FCQ",
+  "campo": "sinopsis.en",
+  "valor": "On a dark night, a boy follows a sign leading him to a mysterious candy machine hidden inside a forbidden bar. To reach it, he must summon his courage and face challenges that will test his wit, bravery, and determination.",
+  "motivo": "faltaba; equivale al español",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://letterboxd.com/film/the-mirror-of-life/",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4JJ9W6S4FCQ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicinerio-2026": "2025",
+   "ficfusa-2026": "2025",
+   "filcmar-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4JJ9W6S4FCQ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicinerio-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "filcmar-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4JJ9W6S4FCQ",
+  "campo": "sinopsis.es",
+  "valor": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicinerio-2026": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+   "ficfusa-2026": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+   "filcmar-2026": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación."
+  }
+ },
+ {
+  "work_id": "w_R4JJ9W6S4FCQ",
+  "campo": "xref.tmdb",
+  "valor": 1791654,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicinerio-2026": "1791654",
+   "ficfusa-2026": "1791654",
+   "filcmar-2026": "1791654"
+  }
  }
 ]

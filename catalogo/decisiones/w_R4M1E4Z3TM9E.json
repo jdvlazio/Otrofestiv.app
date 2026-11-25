@@ -52,5 +52,94 @@
    "midbo-2026": "Guatemala, Estados Unidos",
    "villadelcine-2026": "Guatemala y Estados Unidos"
   }
+ },
+ {
+  "work_id": "w_R4M1E4Z3TM9E",
+  "campo": "sinopsis.en",
+  "valor": "In Ciudad Peronia, Guatemala, sisters Lesli and Lupe turn art into a form of care and resistance. After the death of 41 girls in a state home, they bring together young people from their community in a parade of puppets, fire and drums to reclaim the streets and confront violence against women.",
+  "motivo": "traducción exacta de la sinopsis en español; la publicada es otra frase",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "fuentes/villadelcine-2026/obras/comparsa.html",
+  "antes": {
+   "ficfusa-2026": "From the shadows of a Guatemalan neighbourhood scared into silence, two sisters lead a luminous rebellion—unleashing joy, art, and radical truth in a fight for survival.",
+   "midbo-2026": "From the shadows of a Guatemalan neighbourhood scared into silence, two sisters lead a luminous rebellion—unleashing joy, art, and radical truth in a fight for survival.",
+   "villadelcine-2026": "From the shadows of a Guatemalan neighbourhood scared into silence, two sisters lead a luminous rebellion—unleashing joy, art, and radical truth in a fight for survival."
+  }
+ },
+ {
+  "work_id": "w_R4M1E4Z3TM9E",
+  "campo": "directores",
+  "valor": [
+   "Vickie Curtis",
+   "Doug Anderson"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Vickie Curtis, Doug Anderson",
+   "midbo-2026": "Vickie Curtis, Doug Anderson",
+   "villadelcine-2026": "Vickie Curtis, Doug Anderson"
+  }
+ },
+ {
+  "work_id": "w_R4M1E4Z3TM9E",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "2025",
+   "midbo-2026": "2025",
+   "villadelcine-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4M1E4Z3TM9E",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Documental",
+   "midbo-2026": "Documental",
+   "villadelcine-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4M1E4Z3TM9E",
+  "campo": "xref.tmdb",
+  "valor": 1480404,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1480404",
+   "midbo-2026": "1480404",
+   "villadelcine-2026": "1480404"
+  }
+ },
+ {
+  "work_id": "w_R4M1E4Z3TM9E",
+  "campo": "xref.letterboxd",
+  "valor": "comparsa-2025",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "comparsa-2025",
+   "midbo-2026": "comparsa-2025",
+   "villadelcine-2026": "comparsa-2025"
+  }
  }
 ]

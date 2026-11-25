@@ -3,8 +3,7 @@
  "titulo_original": "La vida es",
  "anio": 2025,
  "paises": [
-  "MX",
-  "GB"
+  "MX"
  ],
  "directores": [
   "Lorena Villarreal"
@@ -17,15 +16,16 @@
   }
  ],
  "sinopsis": {
-  "es": "Nora está por cumplir 40 años y no deja de preguntarse: ¿qué sentido tiene todo esto? Lo que iba a ser una celebración se convierte en una serie de tropiezos que la empujan a descubrirse. Con heridas abiertas, deseos no dichos y un pasado que todavía quema, Nora se enfrenta a su historia familiar, a la muerte, al desempleo, al derrumbe de su relación poliamorosa y a la urgencia de redefinir el amor, su sexualidad y lo que de verdad quiere de la vida.",
-  "en": "Nora is about to turn 40 and can't stop wondering: what's the point of all this? What was meant to be a celebration turns into a series of unfortunate missteps that push her toward self-discovery. With open wounds, unspoken desires, and a burning past, Nora confronts her family history, death, unemployment, the collapse of her polyamorous relationship, and the urgent need to redefine love, her sexuality, and what she truly wants from life."
+  "es": "Nora está por cumplir 40 años y no deja de preguntarse qué sentido tiene todo. La celebración se vuelve una serie de tropiezos que la empujan a descubrirse: se enfrenta a su historia familiar, la muerte, el desempleo, el fin de su relación poliamorosa y la urgencia de redefinir el amor, su sexualidad y lo que de verdad quiere de la vida.",
+  "en": "Nora is about to turn 40 and can't stop wondering what the point of it all is. The celebration becomes a series of missteps that push her toward self-discovery: she faces her family history, death, unemployment, the end of her polyamorous relationship and the urgent need to redefine love, her sexuality and what she truly wants from life."
  },
  "generos": [
   "Comedia"
  ],
  "afiche": {
   "archivo": "/assets/ficfusa-2026/la-vida-es.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1529400,

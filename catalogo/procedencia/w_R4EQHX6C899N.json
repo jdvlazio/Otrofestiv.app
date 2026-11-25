@@ -6,15 +6,49 @@
  "directores": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "un dato por obra: el valor del almacén (tmdb:1572828)",
-  "fecha": "2026-11-24"
+  "motivo": "orden de nombre coherente (hoy mezcla apellido-nombre y nombre-apellido)",
+  "fecha": "2026-11-25"
  },
  "anio": {
-  "fuente": "tmdb:1572828",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "tmdb:1572828",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "acortada: pasaba de 350",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "traducción exacta de la sinopsis en español",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  }
 }

@@ -26,10 +26,10 @@
  {
   "work_id": "w_R4HF7EGXSQ60",
   "campo": "sinopsis.es",
-  "valor": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad, al recordar que unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cortoscali-2026, ficdeh-2026, ficfusa-2026, ficmontanas-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad: unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "vistas": [
    "1c5f4d049548",
    "220f0b0c053b"
@@ -40,7 +40,20 @@
    "ficfusa-2026": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad, al recordar que unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete.",
    "ficmontanas-2026": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad, al recordar que unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete.",
    "villadelcine-2026": "Pirimín, un niño kogui, recibe una pistola de agua y descubre en ella la promesa de un juego. Pero esa noche escucha a su padre recordar las armas que obligaron a su comunidad a abandonar el territorio. Desde entonces, el juguete adquiere otro peso y Pirimín deberá decidir qué hacer con él."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad, al recordar que unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cortoscali-2026, ficdeh-2026, ficfusa-2026, ficmontanas-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "1c5f4d049548",
+     "220f0b0c053b"
+    ]
+   }
+  ],
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
  },
  {
   "work_id": "w_R4HF7EGXSQ60",
@@ -77,10 +90,10 @@
  {
   "work_id": "w_R4HF7EGXSQ60",
   "campo": "sinopsis.en",
-  "valor": "Pirimín, a Kogui boy, receives a water gun as a gift. That night, he hears his father voice his unease, recalling that similar weapons forced them to abandon their settlements. Now Pirimín doesn’t know what to do with the toy.",
-  "motivo": "«express his discontent when similar weapons forced them» confunde el recuerdo con el presente; se ajusta al español.",
+  "valor": "Pirimín, a Kogui boy, receives a water gun as a gift. That night, he hears his father voice his discontent: similar weapons forced them to abandon their settlements. Now Pirimín doesn’t know what to do with the toy.",
+  "motivo": "segunda lectura",
   "fecha": "2026-11-25",
-  "quien": "segunda lectura (sellos)",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "titulo": "Sukua",
   "antes": {
    "cortoscali-2026": "When a Kogui child is given a water pistol as a toy, he begins to explore the familiar spaces of his territory with a new look. Sukua fluidly travels through the exterior and interior of his home and some remnants of the community that are manifested around the child's playful sweetness. The strangeness of the toy adds, at the same time, childish tenderness and noisy tension by its contrast with the environment and by the suggested violence that morally affects the father.",
@@ -95,7 +108,80 @@
     "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
     "fecha": "2026-11-24",
     "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   },
+   {
+    "valor": "Pirimín, a Kogui boy, receives a water gun as a gift. That night, he hears his father voice his unease, recalling that similar weapons forced them to abandon their settlements. Now Pirimín doesn’t know what to do with the toy.",
+    "motivo": "«express his discontent when similar weapons forced them» confunde el recuerdo con el presente; se ajusta al español.",
+    "fecha": "2026-11-25",
+    "quien": "segunda lectura (sellos)"
    }
-  ]
+  ],
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
+ },
+ {
+  "work_id": "w_R4HF7EGXSQ60",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cortoscali-2026": "2025",
+   "ficdeh-2026": "2025",
+   "ficfusa-2026": "2025",
+   "ficmontanas-2026": "2025",
+   "villadelcine-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EGXSQ60",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cortoscali-2026": "Colombia",
+   "ficdeh-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "ficmontanas-2026": "Colombia",
+   "villadelcine-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EGXSQ60",
+  "campo": "xref.tmdb",
+  "valor": 1456197,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cortoscali-2026": "1456197",
+   "ficdeh-2026": "1456197",
+   "ficfusa-2026": "1456197",
+   "ficmontanas-2026": "1456197",
+   "villadelcine-2026": "1456197"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EGXSQ60",
+  "campo": "xref.letterboxd",
+  "valor": "sukua",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cortoscali-2026": "sukua",
+   "ficdeh-2026": "sukua",
+   "ficfusa-2026": "sukua",
+   "ficmontanas-2026": "sukua",
+   "villadelcine-2026": "sukua"
+  }
  }
 ]

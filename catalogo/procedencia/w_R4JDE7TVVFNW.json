@@ -16,8 +16,16 @@
   "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "tmdb:1746279",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "generos": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "catálogo: «Drama rural»",
+  "fecha": "2026-11-25"
  },
  "afiche": {
   "fuente": "humano",
@@ -28,7 +36,25 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (festicinerio-2026, ficfusa-2026, ficpa-2026, guatape-2026)",
-  "fecha": "2026-11-23"
+  "motivo": "a la ES le faltaba la segunda frase del original y de la EN",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  }
 }

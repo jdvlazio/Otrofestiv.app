@@ -7,16 +7,20 @@
   "EC"
  ],
  "directores": [
-  "Rodrigo Cuervo J.",
-  "Zumaya Mayers C."
+  "Zumaya Mayers",
+  "Rodrigo Cuervo"
  ],
  "sinopsis": {
-  "es": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante.",
-  "en": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation."
+  "es": "Serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural y conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas.",
+  "en": "A documentary series that journeys through magical, lush territories and the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle, and cultural preservation, and to know the strength and depth of an ancestral legacy that defies adversity and takes pride in its African roots."
  },
+ "generos": [
+  "Documental"
+ ],
  "afiche": {
   "archivo": "/assets/ficfusa-2026/legado-v2.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1817230,

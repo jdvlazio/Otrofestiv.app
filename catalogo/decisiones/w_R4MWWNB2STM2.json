@@ -17,12 +17,119 @@
  {
   "work_id": "w_R4MWWNB2STM2",
   "campo": "sinopsis.en",
-  "valor": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation.",
-  "motivo": "la que ya publica otro festival: una sola por obra",
-  "fecha": "2026-11-24",
-  "quien": "regla de Juan: la sinopsis es de la obra",
+  "valor": "A documentary series that journeys through magical, lush territories and the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle, and cultural preservation, and to know the strength and depth of an ancestral legacy that defies adversity and takes pride in its African roots.",
+  "motivo": "la EN era parcial; traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "antes": {
-   "ficfusa-2026": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation."
+   "ficfusa-2026": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation.",
+   "popayan-2026": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation."
+  },
+  "anteriores": [
+   {
+    "valor": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation.",
+    "motivo": "la que ya publica otro festival: una sola por obra",
+    "fecha": "2026-11-24",
+    "quien": "regla de Juan: la sinopsis es de la obra"
+   }
+  ],
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
+ },
+ {
+  "work_id": "w_R4MWWNB2STM2",
+  "campo": "sinopsis.es",
+  "valor": "Serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural y conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas.",
+  "motivo": "647>350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante.",
+   "popayan-2026": "Una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante."
+  },
+  "vistas": [
+   "fe5b76d43888"
+  ]
+ },
+ {
+  "work_id": "w_R4MWWNB2STM2",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "catálogo: Documental; TMDB: «serie documental»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://www.themoviedb.org/movie/1817230?language=es-ES",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4MWWNB2STM2",
+  "campo": "directores",
+  "valor": [
+   "Zumaya Mayers",
+   "Rodrigo Cuervo"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Zumaya Mayers, Rodrigo Cuervo",
+   "popayan-2026": "Zumaya Mayers, Rodrigo Cuervo"
+  }
+ },
+ {
+  "work_id": "w_R4MWWNB2STM2",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "2024",
+   "popayan-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_R4MWWNB2STM2",
+  "campo": "xref.tmdb",
+  "valor": 1817230,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1817230"
+  }
+ },
+ {
+  "work_id": "w_R4MWWNB2STM2",
+  "campo": "xref.letterboxd",
+  "valor": "legado-3",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "legado-3"
+  }
+ },
+ {
+  "work_id": "w_R4MWWNB2STM2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/legado-v2.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "/assets/ficfusa-2026/legado-v2.jpg"
   }
  }
 ]

@@ -10,12 +10,16 @@
   "fecha": "2026-10-12"
  },
  "anio": {
-  "fuente": "tmdb:1796541",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  },
  "generos": {
   "fuente": "humano",
@@ -28,5 +32,29 @@
   "regla": "decisión",
   "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "pasaba de 350",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "traducción exacta de la sinopsis en español",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  }
 }

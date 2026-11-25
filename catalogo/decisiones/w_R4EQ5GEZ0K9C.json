@@ -71,5 +71,121 @@
    "popayan-2026": "Laura María Rodríguez Moreno",
    "siembrafest-2026": "Laura Rodríguez"
   }
+ },
+ {
+  "work_id": "w_R4EQ5GEZ0K9C",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "2025",
+   "cineautopsia-2026": "2025",
+   "cinetoro-2026": "2025",
+   "fantasmagoria-2026": "2025",
+   "ficfusa-2026": "2025",
+   "filcmar-2026": "2025",
+   "popayan-2026": "2025",
+   "siembrafest-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4EQ5GEZ0K9C",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Colombia",
+   "cineautopsia-2026": "Colombia",
+   "cinetoro-2026": "Colombia",
+   "fantasmagoria-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "filcmar-2026": "Colombia",
+   "popayan-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4EQ5GEZ0K9C",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Animación",
+   "cinetoro-2026": "Animación",
+   "fantasmagoria-2026": "Animación",
+   "ficfusa-2026": "Animación",
+   "filcmar-2026": "Animación",
+   "popayan-2026": "Animación",
+   "siembrafest-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4EQ5GEZ0K9C",
+  "campo": "sinopsis.en",
+  "valor": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "cineautopsia-2026": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "cinetoro-2026": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "fantasmagoria-2026": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "ficfusa-2026": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "filcmar-2026": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "popayan-2026": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "siembrafest-2026": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space."
+  }
+ },
+ {
+  "work_id": "w_R4EQ5GEZ0K9C",
+  "campo": "xref.tmdb",
+  "valor": 1592968,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "1592968",
+   "cineautopsia-2026": "1592968",
+   "cinetoro-2026": "1592968",
+   "fantasmagoria-2026": "1592968",
+   "ficfusa-2026": "1592968",
+   "filcmar-2026": "1592968",
+   "popayan-2026": "1592968"
+  }
+ },
+ {
+  "work_id": "w_R4EQ5GEZ0K9C",
+  "campo": "xref.letterboxd",
+  "valor": "shame-in-the-face-of-furtive-eyes",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "shame-in-the-face-of-furtive-eyes",
+   "cineautopsia-2026": "shame-in-the-face-of-furtive-eyes",
+   "cinetoro-2026": "shame-in-the-face-of-furtive-eyes",
+   "fantasmagoria-2026": "shame-in-the-face-of-furtive-eyes",
+   "ficfusa-2026": "shame-in-the-face-of-furtive-eyes",
+   "filcmar-2026": "shame-in-the-face-of-furtive-eyes",
+   "popayan-2026": "shame-in-the-face-of-furtive-eyes",
+   "siembrafest-2026": "shame-in-the-face-of-furtive-eyes"
+  }
  }
 ]

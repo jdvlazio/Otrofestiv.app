@@ -36,10 +36,10 @@
  {
   "work_id": "w_R4DJH9SYECN9",
   "campo": "sinopsis.es",
-  "valor": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026, miradas-2026, villadeleyvaiff-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias compartidas a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita.",
+  "motivo": "la publicada añade «un viaje inquietante…», que el inglés no dice y es relleno",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "vistas": [
    "08f3753a2b42",
    "4979663eb33e",
@@ -58,7 +58,23 @@
    "miradas-2026": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado.",
    "popayan-2026": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita.",
    "villadeleyvaiff-2026": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026, miradas-2026, villadeleyvaiff-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "08f3753a2b42",
+     "4979663eb33e",
+     "a51f19d7bbab",
+     "c6b8e9e156b8",
+     "d0123951d25c"
+    ]
+   }
+  ],
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · festivals/staging/popayan-2026-catalogo.json"
  },
  {
   "work_id": "w_R4DJH9SYECN9",
@@ -125,6 +141,90 @@
    "miradas-2026": "Animación",
    "popayan-2026": "Animación",
    "villadeleyvaiff-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4DJH9SYECN9",
+  "campo": "sinopsis.en",
+  "valor": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence. By exploring the experiences they share through their bodies, she manages to confront the nature of what inhabits her.",
+  "motivo": "pareja completa en inglés",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "festivals/staging/popayan-2026-catalogo.json",
+  "antes": {
+   "aff-2026": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "anibia-2026": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "cinetoro-2026": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "ficcali-2026": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "ficfusa-2026": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "filcmar-2026": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "jardin-2026": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "miradas-2026": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "popayan-2026": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "villadeleyvaiff-2026": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence."
+  }
+ },
+ {
+  "work_id": "w_R4DJH9SYECN9",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "aff-2026": "2025",
+   "anibia-2026": "2025",
+   "cinetoro-2026": "2025",
+   "ficcali-2026": "2025",
+   "ficfusa-2026": "2025",
+   "filcmar-2026": "2025",
+   "jardin-2026": "2025",
+   "miradas-2026": "2025",
+   "popayan-2026": "2025",
+   "villadeleyvaiff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4DJH9SYECN9",
+  "campo": "xref.tmdb",
+  "valor": 1522316,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "aff-2026": "1522316",
+   "anibia-2026": "1522316",
+   "cinetoro-2026": "1522316",
+   "ficcali-2026": "1522316",
+   "ficfusa-2026": "1522316",
+   "filcmar-2026": "1522316",
+   "jardin-2026": "1522316",
+   "miradas-2026": "1522316",
+   "popayan-2026": "1522316",
+   "villadeleyvaiff-2026": "1522316"
+  }
+ },
+ {
+  "work_id": "w_R4DJH9SYECN9",
+  "campo": "xref.letterboxd",
+  "valor": "once-in-a-body",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "aff-2026": "once-in-a-body",
+   "anibia-2026": "once-in-a-body",
+   "cinetoro-2026": "once-in-a-body",
+   "ficcali-2026": "once-in-a-body",
+   "ficfusa-2026": "once-in-a-body",
+   "filcmar-2026": "once-in-a-body",
+   "jardin-2026": "once-in-a-body",
+   "miradas-2026": "once-in-a-body",
+   "popayan-2026": "once-in-a-body",
+   "villadeleyvaiff-2026": "once-in-a-body"
   }
  }
 ]

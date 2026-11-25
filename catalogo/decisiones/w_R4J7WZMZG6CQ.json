@@ -12,5 +12,68 @@
    "ficfusa-2026": "Documental",
    "ficmontanas-2026": "Siembra Cine"
   }
+ },
+ {
+  "work_id": "w_R4J7WZMZG6CQ",
+  "campo": "sinopsis.es",
+  "valor": "Un grupo de jóvenes de un barrio marginal de la ciudad de Pereira genera un cambio positivo en su entorno a través de la música. Por medio de una batucada lideran una transformación social y abren los mundos por encima de su realidad.",
+  "motivo": "sin sinopsis; catálogo, corregidas concordancia y tilde",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {},
+  "vistas": []
+ },
+ {
+  "work_id": "w_R4J7WZMZG6CQ",
+  "campo": "sinopsis.en",
+  "valor": "A group of young people from a marginalized neighborhood in the city of Pereira creates positive change around them through music. With a batucada percussion group, they lead a social transformation and open up worlds beyond their reality.",
+  "motivo": "traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4J7WZMZG6CQ",
+  "campo": "directores",
+  "valor": [
+   "Juan Ruiz"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Juan Ruiz",
+   "ficmontanas-2026": "Juan Ruiz"
+  }
+ },
+ {
+  "work_id": "w_R4J7WZMZG6CQ",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_R4J7WZMZG6CQ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Colombia",
+   "ficmontanas-2026": "Colombia"
+  }
  }
 ]

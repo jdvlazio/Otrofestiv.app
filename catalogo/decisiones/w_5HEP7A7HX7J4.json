@@ -2,9 +2,137 @@
  {
   "work_id": "w_5HEP7A7HX7J4",
   "campo": "sinopsis.es",
-  "valor": "Nicolás es un niño que cree que, cuando su abuela muere, se va a la luna. Por eso empieza a crear artefactos para viajar hasta allá y volver a verla. Sin embargo, todos sus inventos fallan, y su padre intenta hacer realidad su sueño.",
-  "motivo": "traducida de su sinopsis en inglés; verificada por otro agente",
-  "fecha": "2026-11-24",
-  "quien": "Juan («Apruebo ambas»)"
+  "valor": "Nicolás es un niño que cree que, cuando su abuela muere, se va a la luna. Por eso empieza a crear muchos artefactos para viajar hasta allá y volver a verla. Sin embargo, todos sus inventos fallan, y su padre intenta hacer realidad su sueño.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "anteriores": [
+   {
+    "valor": "Nicolás es un niño que cree que, cuando su abuela muere, se va a la luna. Por eso empieza a crear artefactos para viajar hasta allá y volver a verla. Sin embargo, todos sus inventos fallan, y su padre intenta hacer realidad su sueño.",
+    "motivo": "traducida de su sinopsis en inglés; verificada por otro agente",
+    "fecha": "2026-11-24",
+    "quien": "Juan («Apruebo ambas»)"
+   }
+  ],
+  "fuente": "https://www.themoviedb.org/movie/549260",
+  "antes": {
+   "ficfusa-2026": "Nicolás es un niño que cree que, cuando su abuela muere, se va a la luna. Por eso empieza a crear artefactos para viajar hasta allá y volver a verla. Sin embargo, todos sus inventos fallan, y su padre intenta hacer realidad su sueño."
+  },
+  "vistas": [
+   "b678ab064671"
+  ]
+ },
+ {
+  "work_id": "w_5HEP7A7HX7J4",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "catálogo del festival: «Animación»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_5HEP7A7HX7J4",
+  "campo": "directores",
+  "valor": [
+   "Sandra Reyes Sotomayor"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Sandra Reyes Sotomayor"
+  }
+ },
+ {
+  "work_id": "w_5HEP7A7HX7J4",
+  "campo": "anio",
+  "valor": 2015,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "2015"
+  }
+ },
+ {
+  "work_id": "w_5HEP7A7HX7J4",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_5HEP7A7HX7J4",
+  "campo": "sinopsis.en",
+  "valor": "Nicolás is a little kid who thinks that when his grandmother dies, she goes to the moon. Therefore, he begins to create a lot of artifacts to travel to the moon to see her again. However, he fails in all his inventions and his father tries to make his dream come true.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Nicolás is a little kid who thinks that when his grandmother dies, she goes to the moon. Therefore, he begins to create a lot of artifacts, to travel to the moon to see her again. However, he fails in all his inventions and his father tries to make his dream come true."
+  },
+  "anteriores": [
+   {
+    "valor": "Nicolás is a little kid who thinks that when his grandmother dies, she goes to the moon. Therefore, he begins to create a lot of artifacts, to travel to the moon to see her again. However, he fails in all his inventions and his father tries to make his dream come true.",
+    "motivo": "alta desde ficfusa-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración ficfusa-2026)"
+   }
+  ],
+  "fuente": "https://www.themoviedb.org/movie/549260"
+ },
+ {
+  "work_id": "w_5HEP7A7HX7J4",
+  "campo": "xref.tmdb",
+  "valor": 549260,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "549260"
+  }
+ },
+ {
+  "work_id": "w_5HEP7A7HX7J4",
+  "campo": "xref.letterboxd",
+  "valor": "sinfonia-del-viaje-a-la-luna",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "sinfonia-del-viaje-a-la-luna"
+  }
+ },
+ {
+  "work_id": "w_5HEP7A7HX7J4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/sinfonia-del-viaje-a-la-luna.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "/assets/ficfusa-2026/sinfonia-del-viaje-a-la-luna.jpg"
+  }
  }
 ]

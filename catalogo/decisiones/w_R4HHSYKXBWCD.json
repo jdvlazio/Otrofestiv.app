@@ -24,11 +24,12 @@
  {
   "work_id": "w_R4HHSYKXBWCD",
   "campo": "sinopsis.es",
-  "valor": "Separada de su madre al cruzar la selva entre Colombia y Panamá, Zuli, una pequeña migrante venezolana, deja atrás su infancia para sobrevivir y trabaja para un coyote que guía migrantes. En uno de sus viajes tropieza con un portal a una tierra mágica donde reconecta con su inocencia y su imaginación y aprende a ser niña otra vez.",
-  "motivo": "Coma entre sujeto y verbo, Zuli aparece sin presentar y pasa de 350.",
+  "valor": "Separada de su madre al cruzar la selva entre Colombia y Panamá, Zuli, una pequeña migrante venezolana, se ve obligada a dejar su infancia para sobrevivir y trabaja para un coyote que guía migrantes. En uno de sus viajes tropieza con un portal a una tierra mágica donde reconecta con su inocencia y su imaginación y aprende a ser niña otra vez.",
+  "motivo": "segunda lectura",
   "fecha": "2026-11-25",
-  "quien": "segunda lectura (sellos)",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "vistas": [
+   "3c6224c74daf",
    "be8075d96be7",
    "f2d34d67c6ab"
   ],
@@ -48,8 +49,19 @@
      "be8075d96be7",
      "f2d34d67c6ab"
     ]
+   },
+   {
+    "valor": "Separada de su madre al cruzar la selva entre Colombia y Panamá, Zuli, una pequeña migrante venezolana, deja atrás su infancia para sobrevivir y trabaja para un coyote que guía migrantes. En uno de sus viajes tropieza con un portal a una tierra mágica donde reconecta con su inocencia y su imaginación y aprende a ser niña otra vez.",
+    "motivo": "Coma entre sujeto y verbo, Zuli aparece sin presentar y pasa de 350.",
+    "fecha": "2026-11-25",
+    "quien": "segunda lectura (sellos)",
+    "vistas": [
+     "be8075d96be7",
+     "f2d34d67c6ab"
+    ]
    }
-  ]
+  ],
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
  },
  {
   "work_id": "w_R4HHSYKXBWCD",
@@ -84,6 +96,87 @@
    "ficfusa-2026": "Colombia",
    "ficica-2026": "Venezuela/US/Canada/Colombia",
    "popayan-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HHSYKXBWCD",
+  "campo": "sinopsis.en",
+  "valor": "Separated from her mother while crossing the jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, must abandon her childhood to survive and works for a coyote who guides migrants. On one trip she stumbles upon a portal to a magical land where she reconnects with her innocence and imagination and learns to be a child again.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficdeh-2026": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+   "ficfusa-2026": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+   "ficica-2026": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+   "popayan-2026": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again."
+  },
+  "anteriores": [
+   {
+    "valor": "Separated from her mother while crossing the jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, leaves her childhood behind to survive and works for a coyote who guides migrants. On one trip she stumbles upon a portal to a magical land where she reconnects with her innocence and imagination and learns to be a girl again.",
+    "motivo": "traducción fiel del original; 445>350",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+    "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4HHSYKXBWCD",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "catálogo: «Drama Fantasía»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4HHSYKXBWCD",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficdeh-2026": "2025",
+   "ficfusa-2026": "2025",
+   "ficica-2026": "2025",
+   "popayan-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HHSYKXBWCD",
+  "campo": "xref.tmdb",
+  "valor": 1488751,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficdeh-2026": "1488751",
+   "ficfusa-2026": "1488751",
+   "ficica-2026": "1488751",
+   "popayan-2026": "1488751"
+  }
+ },
+ {
+  "work_id": "w_R4HHSYKXBWCD",
+  "campo": "xref.letterboxd",
+  "valor": "beyond-2025",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficdeh-2026": "beyond-2025",
+   "ficfusa-2026": "beyond-2025",
+   "ficica-2026": "beyond-2025",
+   "popayan-2026": "beyond-2025"
   }
  }
 ]

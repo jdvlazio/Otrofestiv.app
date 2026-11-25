@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_5HEQ0553YH74",
+  "campo": "sinopsis.es",
+  "valor": "A pesar del miedo y el dolor, un preso político de la dictadura argentina busca estar presente en la vida de sus hijos con imaginación y belleza.",
+  "motivo": "sin sinopsis; texto del catálogo",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {},
+  "vistas": []
+ },
+ {
+  "work_id": "w_5HEQ0553YH74",
+  "campo": "sinopsis.en",
+  "valor": "Despite fear and pain, a political prisoner of the Argentine dictatorship seeks to be present in his children’s lives through imagination and beauty.",
+  "motivo": "traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_5HEQ0553YH74",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "TAFFNY: Animation; catálogo: «Documental Animado»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://www.taffny.com/short-2026/floreceran · http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_5HEQ0553YH74",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo: 2026 (única fuente expresa del año)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_5HEQ0553YH74",
+  "campo": "directores",
+  "valor": [
+   "Claudia Ruiz"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Claudia Ruiz",
+   "villadeleyvaiff-2026": "Claudia Ruiz"
+  }
+ },
+ {
+  "work_id": "w_5HEQ0553YH74",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Argentina",
+   "villadeleyvaiff-2026": "Argentina"
+  }
+ }
+]

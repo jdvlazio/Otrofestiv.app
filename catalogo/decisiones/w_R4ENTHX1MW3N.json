@@ -21,12 +21,118 @@
  {
   "work_id": "w_R4ENTHX1MW3N",
   "campo": "sinopsis.en",
-  "valor": "Between the lines of affection and pain, a generational dispute unfolds over what it means to be a woman. A daughter faces the challenge of listening to her mother and grandmother with the aim of blurring the lines that define her identity.",
-  "motivo": "la que ya publica otro festival: una sola por obra",
-  "fecha": "2026-11-24",
-  "quien": "regla de Juan: la sinopsis es de la obra",
+  "valor": "Between the lines of affection and pain, a generational dispute unfolds over what a woman should be. A daughter faces the challenge of listening to her mother and grandmother with the aim of blurring the forms that underpin her identity.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "antes": {
+   "cineautopsia-2026": "Between the lines of affection and pain, a generational dispute unfolds over what it means to be a woman. A daughter faces the challenge of listening to her mother and grandmother with the aim of blurring the lines that define her identity.",
    "ficfusa-2026": "Between the lines of affection and pain, a generational dispute unfolds over what it means to be a woman. A daughter faces the challenge of listening to her mother and grandmother with the aim of blurring the lines that define her identity."
+  },
+  "anteriores": [
+   {
+    "valor": "Between the lines of affection and pain, a generational dispute unfolds over what it means to be a woman. A daughter faces the challenge of listening to her mother and grandmother with the aim of blurring the lines that define her identity.",
+    "motivo": "la que ya publica otro festival: una sola por obra",
+    "fecha": "2026-11-24",
+    "quien": "regla de Juan: la sinopsis es de la obra"
+   }
+  ],
+  "fuente": "https://www.themoviedb.org/movie/1406490"
+ },
+ {
+  "work_id": "w_R4ENTHX1MW3N",
+  "campo": "directores",
+  "valor": [
+   "Alejandra Morales García"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Alejandra Morales García",
+   "ficfusa-2026": "Alejandra Morales García"
+  }
+ },
+ {
+  "work_id": "w_R4ENTHX1MW3N",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "2024",
+   "ficfusa-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_R4ENTHX1MW3N",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Colombia",
+   "ficfusa-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4ENTHX1MW3N",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4ENTHX1MW3N",
+  "campo": "sinopsis.es",
+  "valor": "Entre las líneas del afecto y el dolor se traza una disputa generacional sobre el deber ser mujer. Una hija se enfrenta al reto de escuchar a su madre y su abuela con el propósito de desdibujar las formas que cimientan su identidad.",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Entre las líneas del afecto y el dolor se traza una disputa generacional sobre el deber ser mujer. Una hija se enfrenta al reto de escuchar a su madre y su abuela con el propósito de desdibujar las formas que cimientan su identidad.",
+   "ficfusa-2026": "Entre las líneas del afecto y el dolor se traza una disputa generacional sobre el deber ser mujer. Una hija se enfrenta al reto de escuchar a su madre y su abuela con el propósito de desdibujar las formas que cimientan su identidad."
+  }
+ },
+ {
+  "work_id": "w_R4ENTHX1MW3N",
+  "campo": "xref.tmdb",
+  "valor": 1406490,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "1406490",
+   "ficfusa-2026": "1406490"
+  }
+ },
+ {
+  "work_id": "w_R4ENTHX1MW3N",
+  "campo": "xref.letterboxd",
+  "valor": "entrelazadas",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "entrelazadas",
+   "ficfusa-2026": "entrelazadas"
   }
  }
 ]

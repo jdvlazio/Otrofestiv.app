@@ -10,12 +10,22 @@
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1525925",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "tmdb:1525925",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "generos": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "FICFUSA Comedia; Al Este «tono de comedia dramática»",
+  "fecha": "2026-11-25"
  },
  "afiche": {
   "fuente": "humano",
@@ -33,6 +43,18 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "Traducción de la del catálogo; mismo motivo",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
   "fecha": "2026-11-25"
  }
 }

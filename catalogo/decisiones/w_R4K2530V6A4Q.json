@@ -1,0 +1,90 @@
+[
+ {
+  "work_id": "w_R4K2530V6A4Q",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "catálogo y tarjeta de FICFUSA; fuente única",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4K2530V6A4Q",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "«Drama, Experimental»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4K2530V6A4Q",
+  "campo": "sinopsis.es",
+  "valor": "En lo profundo de la selva colombiana, un joven reclutado a la fuerza huye de regreso a su hogar.",
+  "motivo": "faltaba",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {},
+  "vistas": []
+ },
+ {
+  "work_id": "w_R4K2530V6A4Q",
+  "campo": "sinopsis.en",
+  "valor": "Deep in the Colombian jungle, a young man recruited by force flees back home.",
+  "motivo": "traducción exacta de la sinopsis en español",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4K2530V6A4Q",
+  "campo": "directores",
+  "valor": [
+   "Pedro Valencia"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Pedro Valencia",
+   "girardota-2026": "Pedro Valencia"
+  }
+ },
+ {
+  "work_id": "w_R4K2530V6A4Q",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4K2530V6A4Q",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg",
+   "girardota-2026": "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg"
+  }
+ }
+]

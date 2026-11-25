@@ -60,5 +60,104 @@
    "jardin-2026": "Documental",
    "siembrafest-2026": "Animación"
   }
+ },
+ {
+  "work_id": "w_R4J8B1Y13P37",
+  "campo": "sinopsis.es",
+  "valor": "Cortometraje documental animado que reconstruye la memoria de Alberto, un hombre que creció en el campo colombiano entre la violencia, el trabajo forzado y el desplazamiento. En conversaciones con su hijo Daniel, sus recuerdos cobran vida en dibujos, para explorar cómo las historias familiares se vuelven memoria colectiva de un país en conflicto.",
+  "motivo": "pasaba de 350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://www.themoviedb.org/movie/1796541 · festivals/staging/ficpa-2026-crudo.json",
+  "antes": {
+   "anibia-2026": "Relatos del Camino es un cortometraje documental animado que reconstruye la memoria de Alberto, un hombre que creció en el campo colombiano en medio de la violencia, el trabajo forzado y el desplazamiento. A través de conversaciones con su hijo Daniel, sus recuerdos cobran vida mediante dibujos y animación, dando forma a un relato íntimo sobre la infancia, la migración y la resistencia. La película entrelaza pasado y presente para explorar cómo las historias familiares se convierten en memoria colectiva de un país marcado por el conflicto.",
+   "cortoscali-2026": "Relatos del Camino es un cortometraje documental animado que reconstruye la memoria de Alberto, un hombre que creció en el campo colombiano en medio de la violencia, el trabajo forzado y el desplazamiento. A través de conversaciones con su hijo Daniel, sus recuerdos cobran vida mediante dibujos y animación, dando forma a un relato íntimo sobre la infancia, la migración y la resistencia. La película entrelaza pasado y presente para explorar cómo las historias familiares se convierten en memoria colectiva de un país marcado por el conflicto.",
+   "ficfusa-2026": "Relatos del Camino es un cortometraje documental animado que reconstruye la memoria de Alberto, un hombre que creció en el campo colombiano en medio de la violencia, el trabajo forzado y el desplazamiento. A través de conversaciones con su hijo Daniel, sus recuerdos cobran vida mediante dibujos y animación, dando forma a un relato íntimo sobre la infancia, la migración y la resistencia. La película entrelaza pasado y presente para explorar cómo las historias familiares se convierten en memoria colectiva de un país marcado por el conflicto.",
+   "ficmontanas-2026": "Relatos del Camino es un cortometraje documental animado que reconstruye la memoria de Alberto, un hombre que creció en el campo colombiano en medio de la violencia, el trabajo forzado y el desplazamiento. A través de conversaciones con su hijo Daniel, sus recuerdos cobran vida mediante dibujos y animación, dando forma a un relato íntimo sobre la infancia, la migración y la resistencia. La película entrelaza pasado y presente para explorar cómo las historias familiares se convierten en memoria colectiva de un país marcado por el conflicto.",
+   "ficpa-2026": "Relatos del Camino es un cortometraje documental animado que reconstruye la memoria de Alberto, un hombre que creció en el campo colombiano en medio de la violencia, el trabajo forzado y el desplazamiento. A través de conversaciones con su hijo Daniel, sus recuerdos cobran vida mediante dibujos y animación, dando forma a un relato íntimo sobre la infancia, la migración y la resistencia. La película entrelaza pasado y presente para explorar cómo las historias familiares se convierten en memoria colectiva de un país marcado por el conflicto."
+  },
+  "vistas": [
+   "5db92cc71944"
+  ]
+ },
+ {
+  "work_id": "w_R4J8B1Y13P37",
+  "campo": "sinopsis.en",
+  "valor": "Animated documentary short that reconstructs the memory of Alberto, a man who grew up in the Colombian countryside amid violence, forced labour and displacement. In conversations with his son Daniel, his memories come to life in drawings, exploring how family stories become the collective memory of a country in conflict.",
+  "motivo": "traducción exacta de la sinopsis en español",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://www.themoviedb.org/movie/1796541",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4J8B1Y13P37",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "2025",
+   "cortoscali-2026": "2025",
+   "ficfusa-2026": "2025",
+   "ficmontanas-2026": "2025",
+   "ficpa-2026": "2025",
+   "jardin-2026": "2025",
+   "siembrafest-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4J8B1Y13P37",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Colombia",
+   "cortoscali-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "ficmontanas-2026": "Colombia",
+   "ficpa-2026": "Colombia",
+   "jardin-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4J8B1Y13P37",
+  "campo": "xref.tmdb",
+  "valor": 1796541,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "1796541",
+   "cortoscali-2026": "1796541",
+   "ficfusa-2026": "1796541",
+   "ficmontanas-2026": "1796541",
+   "ficpa-2026": "1796541"
+  }
+ },
+ {
+  "work_id": "w_R4J8B1Y13P37",
+  "campo": "xref.letterboxd",
+  "valor": "relatos-del-camino",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "relatos-del-camino",
+   "cortoscali-2026": "relatos-del-camino",
+   "ficfusa-2026": "relatos-del-camino",
+   "ficmontanas-2026": "relatos-del-camino",
+   "ficpa-2026": "relatos-del-camino"
+  }
  }
 ]

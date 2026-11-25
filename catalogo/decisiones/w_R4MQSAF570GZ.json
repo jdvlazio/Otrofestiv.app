@@ -31,5 +31,100 @@
    "ficfusa-2026": "Diana Marcela Moreno",
    "popayan-2026": "Diana Moreno"
   }
+ },
+ {
+  "work_id": "w_R4MQSAF570GZ",
+  "campo": "sinopsis.en",
+  "valor": "Liliana, a young Indigenous Pasto woman, travels through her territory awakening memories. In an encounter with her Elders and with sacred places amid the Andes, she evokes and reconstructs the dictum of Juan Chiles, who 200 years ago called on people to be like water, stone, and foam.",
+  "motivo": "la EN (TMDB) era otro texto; traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "fuentes/popayan-2026/cinecorto/post-15596.json",
+  "antes": {
+   "ficfusa-2026": "A young woman recalls memories of an indigenous person from Nudo de los Pastos, between Ecuador and Colombia, and reflects on the pollution that threatens her land.",
+   "popayan-2026": "A young woman recalls memories of an indigenous person from Nudo de los Pastos, between Ecuador and Colombia, and reflects on the pollution that threatens her land."
+  }
+ },
+ {
+  "work_id": "w_R4MQSAF570GZ",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "2024",
+   "popayan-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_R4MQSAF570GZ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Colombia",
+   "popayan-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4MQSAF570GZ",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Documental",
+   "popayan-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4MQSAF570GZ",
+  "campo": "sinopsis.es",
+  "valor": "Liliana, joven indígena Pasto, recorre su territorio despertando memorias. En un encuentro con sus Mayores y con los lugares sagrados en medio de los Andes, evoca y reconstruye la sentencia de Juan Chiles, quien 200 años atrás invitaba a ser como el agua, la piedra y la espuma.",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Liliana, joven indígena Pasto, recorre su territorio despertando memorias. En un encuentro con sus Mayores y con los lugares sagrados en medio de los Andes, evoca y reconstruye la sentencia de Juan Chiles, quien 200 años atrás invitaba a ser como el agua, la piedra y la espuma.",
+   "popayan-2026": "Liliana, joven indígena Pasto, recorre su territorio despertando memorias. En un encuentro con sus Mayores y con los lugares sagrados en medio de los Andes, evoca y reconstruye la sentencia de Juan Chiles, quien 200 años atrás invitaba a ser como el agua, la piedra y la espuma."
+  }
+ },
+ {
+  "work_id": "w_R4MQSAF570GZ",
+  "campo": "xref.tmdb",
+  "valor": 1386237,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1386237",
+   "popayan-2026": "1386237"
+  }
+ },
+ {
+  "work_id": "w_R4MQSAF570GZ",
+  "campo": "xref.letterboxd",
+  "valor": "like-water-stone-and-foam",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "like-water-stone-and-foam",
+   "popayan-2026": "like-water-stone-and-foam"
+  }
  }
 ]

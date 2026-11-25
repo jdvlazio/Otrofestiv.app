@@ -6,15 +6,19 @@
   "CO"
  ],
  "directores": [
-  "Sandra Reyes"
+  "Sandra Reyes Sotomayor"
  ],
  "sinopsis": {
-  "es": "Nicolás es un niño que cree que, cuando su abuela muere, se va a la luna. Por eso empieza a crear artefactos para viajar hasta allá y volver a verla. Sin embargo, todos sus inventos fallan, y su padre intenta hacer realidad su sueño.",
-  "en": "Nicolás is a little kid who thinks that when his grandmother dies, she goes to the moon. Therefore, he begins to create a lot of artifacts, to travel to the moon to see her again. However, he fails in all his inventions and his father tries to make his dream come true."
+  "es": "Nicolás es un niño que cree que, cuando su abuela muere, se va a la luna. Por eso empieza a crear muchos artefactos para viajar hasta allá y volver a verla. Sin embargo, todos sus inventos fallan, y su padre intenta hacer realidad su sueño.",
+  "en": "Nicolás is a little kid who thinks that when his grandmother dies, she goes to the moon. Therefore, he begins to create a lot of artifacts to travel to the moon to see her again. However, he fails in all his inventions and his father tries to make his dream come true."
  },
+ "generos": [
+  "Animación"
+ ],
  "afiche": {
   "archivo": "/assets/ficfusa-2026/sinfonia-del-viaje-a-la-luna.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 549260,

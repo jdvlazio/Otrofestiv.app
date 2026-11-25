@@ -1,0 +1,91 @@
+[
+ {
+  "work_id": "w_5HEPHMY67RR0",
+  "campo": "directores",
+  "valor": [
+   "Álex Parra",
+   "Libertad Benavides",
+   "Alicia Bullich",
+   "Luz Rodríguez",
+   "Carolina Cuéllar",
+   "Consuelo Soto",
+   "María Bonillo",
+   "Beatriz Esteban"
+  ],
+  "motivo": "Mismas ocho personas; ortografía y orden de la escuela y la SGAE",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ecib.es/ · https://fundacionsgae.org/actividad/el-joven-talento-audiovisual-toma-sitges-con-los-premios-sgae-nueva-autoria-2026/",
+  "antes": {
+   "ficfusa-2026": "Libertad Benavides, Alex Parra, Alicia Bullich, Luz Rodriguez, Carolina Cuellar, Consuelo Soto, María Bonillo, Beatriz Esteban"
+  }
+ },
+ {
+  "work_id": "w_5HEPHMY67RR0",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "sin año publicado",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://reteena.com/inici/projeccions/sessio-de-curtmetratges-de-talent-jove-i/",
+  "antes": {}
+ },
+ {
+  "work_id": "w_5HEPHMY67RR0",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "stop motion; SGAE dice animación",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://fundacionsgae.org/actividad/el-joven-talento-audiovisual-toma-sitges-con-los-premios-sgae-nueva-autoria-2026/",
+  "antes": {}
+ },
+ {
+  "work_id": "w_5HEPHMY67RR0",
+  "campo": "sinopsis.es",
+  "valor": "En un bosque mágico, Dumia y su perro mecánico Tic viven en armonía hasta que Alfred, un humano codicioso, ve un tesoro en algo trivial y desata sus peores ideas. Seducida por la tecnología, Dumia pierde lo que más le importa y, para recuperarlo, deberá reconstruir la amistad perdida y cerrar un trato verdaderamente brillante.",
+  "motivo": "catálogo acortado a 350; «peores ideas» según CO-Festival (catálogo: «sueños»)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://co-festival.coop/c/films/un-trato-brillante/",
+  "antes": {},
+  "vistas": []
+ },
+ {
+  "work_id": "w_5HEPHMY67RR0",
+  "campo": "sinopsis.en",
+  "valor": "In a magical forest, Dumia and her mechanical dog Tic live in harmony until Alfred, a greedy human, sees treasure in something trivial and sets off his worst ideas. Seduced by technology, Dumia loses what matters most to her and, to get it back, must rebuild the lost friendship and strike a truly brilliant deal.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "In a magical forest, Dumia and her mechanical dog Tic live in harmony until Alfred, a greedy human, sees treasure in something trivial and sets off his worst ideas. Seduced by technology, Dumia loses what matters most to her and, to get it back, must rebuild the lost friendship and strike a truly shiny deal."
+  },
+  "anteriores": [
+   {
+    "valor": "In a magical forest, Dumia and her mechanical dog Tic live in harmony until Alfred, a greedy human, sees treasure in something trivial and sets off his worst ideas. Seduced by technology, Dumia loses what matters most to her and, to get it back, must rebuild the lost friendship and strike a truly shiny deal.",
+    "motivo": "traducción exacta de la sinopsis en español",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+    "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
+   }
+  ]
+ },
+ {
+  "work_id": "w_5HEPHMY67RR0",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "España"
+  }
+ }
+]

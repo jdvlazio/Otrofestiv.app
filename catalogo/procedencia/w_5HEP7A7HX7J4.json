@@ -4,21 +4,57 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:549260",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  },
  "anio": {
-  "fuente": "tmdb:549260",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "generos": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "catálogo del festival: «Animación»",
+  "fecha": "2026-11-25"
  },
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "traducida de su sinopsis en inglés; verificada por otro agente",
-  "fecha": "2026-11-24"
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  }
 }

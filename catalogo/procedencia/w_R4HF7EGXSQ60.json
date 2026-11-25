@@ -10,12 +10,16 @@
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1456197",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "tmdb:1456197",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
  },
  "generos": {
   "fuente": "humano",
@@ -32,13 +36,25 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cortoscali-2026, ficdeh-2026, ficfusa-2026, ficmontanas-2026)",
-  "fecha": "2026-11-23"
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25"
  },
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "«express his discontent when similar weapons forced them» confunde el recuerdo con el presente; se ajusta al español.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde ficfusa-2026",
   "fecha": "2026-11-25"
  }
 }
