@@ -250,7 +250,10 @@ horas estaban en la revista de su web y en la agenda de Comic Con, el evento anf
 Desde entonces cada festival lleva en el ancla `inicio_2026`, `fuentes_miradas` (ocho clases:
 web, redes, sede, anfitrión, boletería, prensa, obras, convocatoria) y `conclusion`.
 
-- `python3 pipeline/radar_fuentes.py` corre **cada día** en el vigía: nombra lo que empieza en 21 días con fuentes sin mirar o lecturas de más de 7 días, y lo que a 14 días no está premontado.
+- `python3 pipeline/radar_fuentes.py` corre **cada día** en el vigía (09:00). Nombra lo que empieza en 45 días con fuentes sin mirar; lo que hay que releer (cada clase con su fecha: 7 días, o 2 cuando faltan 14 o menos); lo que está a 4 días sin publicar; lo publicado con obras sin hora; y lo de este mes o el próximo sin fecha de inicio.
+- El pre-montaje en una rama o en `festivals/staging/` no cuenta como publicado. Un mensaje sin respuesta no cierra ninguna fuente.
+- Solo vale la página abierta. Lo visto en el resultado de un buscador es `extracto` y sigue siendo hueco. Web, redes, sede y convocatoria no se cierran con una búsqueda.
+- `no_aplica` lleva nota con el porqué.
 - "Sin información" solo se puede concluir con las ocho clases miradas y un canal propio leído. Si no, es `esperando`.
 - `ilegible` no es `nada`. Lo no mirado se anota `no_mirada`.
 - Con dos fechas posibles se anota la más temprana.
