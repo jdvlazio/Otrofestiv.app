@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:festicine-antioquia-2026,girardota-2026,villadelcine-2026",
+  "fuente": "festival:festicineantioquia-2026,girardota-2026,villadelcine-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -12,19 +12,19 @@
  "anio": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "paises": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "generos": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "afiche": {
@@ -36,25 +36,25 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "versión corta (350), redactor y verificador distintos; festicine-antioquia-2026",
+  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "versión corta (350), redactor y verificador distintos; festicine-antioquia-2026",
+  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "xref.tmdb": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "xref.letterboxd": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  }
 }

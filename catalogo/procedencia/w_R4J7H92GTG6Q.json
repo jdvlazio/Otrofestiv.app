@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:festicine-antioquia-2026,ficmontanas-2026,jardin-2026,popayan-2026,villadelcine-2026",
+  "fuente": "festival:festicineantioquia-2026,ficmontanas-2026,jardin-2026,popayan-2026,villadelcine-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -12,13 +12,13 @@
  "anio": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "paises": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "generos": {
@@ -42,19 +42,19 @@
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "xref.tmdb": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "xref.letterboxd": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  }
 }

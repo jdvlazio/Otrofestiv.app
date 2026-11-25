@@ -380,13 +380,13 @@ export const NOTICES=[
 //
 // Al agregar festival: también actualizar FESTIVALS en tools/enricher.html
 export const FESTIVAL_CONFIG={
-  'festicine-antioquia2026': {
+  'festicineantioquia2026': {
     // Alta con pipeline/alta-festival.py (2026-11-24): lo editorial sale de
-    // pipeline/festicine-antioquia-2026.plan.json; los días, de festivalStartStr/festivalEndStr.
+    // pipeline/festicineantioquia-2026.plan.json; los días, de festivalStartStr/festivalEndStr.
     name:'Santa Fe de Antioquia',displayName:'Santa Fe de Antioquia',fullName:'27.º Festival de Cine de Santa Fe de Antioquia',shortName:'FESTICINE ANTIOQUIA',
     city:'Santa Fe de Antioquia',country:'CO',
     dates:'4–8 DIC',dates_en:'DEC 4–8',year:2026,timezoneOffset:'-05:00',
-    keyArt:'/assets/keyart/festicine-antioquia2026.jpg',
+    keyArt:'/assets/keyart/festicineantioquia2026.jpg',
     tagline:'Festival de Cine',
     instagram:'festicineantioquia', storageKey:'festicineantioquia2026_',festivalStartStr:'2026-12-04T00:00:00',festivalEndStr:'2026-12-08T23:59:00',
     festivalDates:{'2026-12-04':'2026-12-04','2026-12-05':'2026-12-05','2026-12-06':'2026-12-06','2026-12-07':'2026-12-07','2026-12-08':'2026-12-08'},

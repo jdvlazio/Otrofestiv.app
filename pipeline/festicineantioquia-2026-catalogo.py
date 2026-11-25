@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""festicine-antioquia-2026-catalogo.py — 27.° Festival de Cine de Santa Fe de Antioquia (4–8 dic 2026).
+"""festicineantioquia-2026-catalogo.py — 27.° Festival de Cine de Santa Fe de Antioquia (4–8 dic 2026).
 
 LA FUENTE: el PDF «Festicine 2026 Programación» (24 nov, 2 páginas, texto en curvas),
 leído a ojo a 300 dpi y transcrito acá fila por fila. Segunda lectura ciega:
-fuentes/festicine-antioquia-2026/lectura-2.json, y OCR; las compara -verificar.py.
+fuentes/festicineantioquia-2026/lectura-2.json, y OCR; las compara -verificar.py.
 Caja de Pandora además en texto (wp-json, 25 ago: 21 filas) y en IG DgISGJ7ESMG.
 Óperas Primas además en texto (wp-json, 24 nov).
 
 PARRILLA: día|hora|sede|rótulo|título|presencia. OBRAS: título|dirección|país|año|min.
 CORRECCIONES declaradas abajo (la palabra del PDF queda en `impreso`).
-Escribe festivals/staging/festicine-antioquia-2026-catalogo.json
+Escribe festivals/staging/festicineantioquia-2026-catalogo.json
 """
 import io, json, os, re, sys
 
@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 from lib import provenance  # noqa: E402
 
 PDF = 'https://festicineantioquia.org/wp-content/uploads/2026/11/Festicine-2026-Programacion.web_.pdf'
-OUT = f'{REPO}/festivals/staging/festicine-antioquia-2026-catalogo.json'
+OUT = f'{REPO}/festivals/staging/festicineantioquia-2026-catalogo.json'
 FECHA = '2026-11-24'
 
 # U Universidad de Antioquia (auditorio) · A su Aula 201 · M Museo Juan del Corral ·
@@ -224,7 +224,7 @@ OBRA = {
     'No te despiertes': {'anio': 2025, 'director': 'Hernán Velásquez'},
     'Suelo': {'anio': 2026}, 'Chaika': {'pais': 'Colombia, Cuba'}, 'Alpha': {'pais': 'Países Bajos, Eslovenia, Suiza'}, 'Almanya – Willkommen in Deutschland': {'anio': 2011},
 }
-TEXTOS = f'{REPO}/festivals/staging/festicine-antioquia-2026-sinopsis-cortas.json'
+TEXTOS = f'{REPO}/festivals/staging/festicineantioquia-2026-sinopsis-cortas.json'
 # La 2.ª línea de título del PDF (en español: «Un pedazo de cielo», «La odisea»…) no se usa.
 # dirección mal escrita en el PDF (TMDB y la obra dicen otra)
 IMPRESO = {'Campeones': 'Javier Fasser', 'Almanya – Willkommen in Deutschland': 'Yasemin Semdereli'}

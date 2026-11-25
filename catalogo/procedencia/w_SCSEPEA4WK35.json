@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:cortoscali-2026,festicine-antioquia-2026",
+  "fuente": "festival:cortoscali-2026,festicineantioquia-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -16,25 +16,25 @@
  "paises": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "generos": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  },
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "alta desde festicine-antioquia-2026",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  }
 }

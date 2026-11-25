@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""festicine-antioquia-2026-verificar.py — la lectura ciega (otro agente, sin ver el
+"""festicineantioquia-2026-verificar.py — la lectura ciega (otro agente, sin ver el
 repo) y el OCR del PDF contra el build: día, hora, sede, sala, título y minutos."""
 import io, json, os, re, sys, unicodedata
 
@@ -7,7 +7,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 from ocr import leer  # noqa: E402
 
-FID = 'festicine-antioquia-2026'
+FID = 'festicineantioquia-2026'
 SRC = f'{REPO}/fuentes/{FID}'
 CLAVE = {'Universidad de Antioquia': 'Universidad', 'Museo Juan': 'Museo', 'Hotel Mariscal': 'Mariscal',
          'Cámara de Comercio': 'Cámara', 'Plaza Mayor': 'Plaza Mayor', 'Sede de empleo': 'Comfenalco',
