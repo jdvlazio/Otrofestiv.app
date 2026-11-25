@@ -367,6 +367,22 @@ def publicar(fid, forzar=False, ensayo=False):
         import ficha_unica
         for _t, _k, _a, _b in ficha_unica.aplicar(out):
             print(f'  · {_k} del almacén: «{_t[:40]}» {_a} → {_b}')
+        # LA OBRA ES LA FUENTE (paso 7): en un festival nuevo, sus datos salen del almacén
+        import obra_fuente
+        if obra_fuente.enrolado(fid):
+            _vis = {x['work_id']: [x['valor']['archivo']] + list(x.get('vistas') or []) for x in catalogo.decisiones() if x['campo'] == 'afiche'}
+            _img = sorted({str(o.get('title')) for o in obra_fuente._obras(out) if o.get('poster') and o['work_id'] in _vis and o['poster'] not in _vis[o['work_id']]})
+            if _img:
+                print(f'  ⚠ {len(_img)} afiche(s) nuevos sin comparar con el del almacén — afiches_unicos.py --revisar: ' + ' · '.join(_img[:5]))
+                if _ENSAYO is not None:
+                    _ENSAYO.append(f'afiches nuevos sin comparar ({len(_img)})')
+            for _t, _k, _a, _b in obra_fuente.componer(out):
+                print(f'  · {_k} del almacén: «{str(_t)[:40]}» {str(_a)[:40]} → {str(_b)[:40]}')
+            _pf = obra_fuente.problemas(fid, out)
+            if _pf:
+                print(f'  ⚠ {len(_pf)} dato(s) de obra que no salen del almacén — obra_fuente.py {fid} --sembrar: ' + ' · '.join(f'«{t}» {k}: {q}' for t, k, q in _pf[:4]))
+                if _ENSAYO is not None:
+                    _ENSAYO.append(f'datos de obra sin dueño en el almacén ({len(_pf)})')
         # [obra-unica]: lo que quedó distinto de otro festival frena el push; se dice acá
         import obra_unica
         _fs = {**obra_unica._festivales(), fid: out}
@@ -377,6 +393,12 @@ def publicar(fid, forzar=False, ensayo=False):
             print('    → ' + _h)
         if _div and _ENSAYO is not None:
             _ENSAYO.append(f'datos de obra que difieren de otro festival ({len(_div)})')
+        import sello_obra
+        _sin = [x for x in sello_obra.faltan(_fs) if x[0] in sello_obra.publicadas({fid: out})]
+        if _sin:
+            print(f'  ⚠ {len(_sin)} obra(s) sin sello — otro agente las lee y sello_obra.py --sellar: ' + ' · '.join(x[1] for x in _sin[:6]))
+            if _ENSAYO is not None:
+                _ENSAYO.append(f'obras sin sello de verificación ({len(_sin)})')
         if _nuevas:
             print(f'  ⚠ {len(_nuevas)} obras que el catálogo no tiene todavía (el push queda frenado hasta sumarlas):')
             for t in _nuevas[:10]:

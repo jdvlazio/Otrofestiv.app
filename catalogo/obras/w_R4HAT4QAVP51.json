@@ -1,17 +1,26 @@
 {
  "id": "w_R4HAT4QAVP51",
  "titulo_original": "Instant Life",
- "anio": null,
+ "anio": 2022,
  "paises": [
   "US",
   "DE"
  ],
- "directores": [],
+ "directores": [
+  "Anja Dornieden",
+  "Juan David González Monroy"
+ ],
+ "sinopsis": {
+  "es": "Tres películas reproducen plano a plano la compilación Instant Life (1981). Cada parte de aquella era, a su vez, un remake de otra Instant Life (1941), una película muda hoy perdida. Al final de la proyección de 1941, los espectadores recibían un acertijo impreso; en la de 1981, ya sonora, el acertijo forma parte de la obra.",
+  "en": "Three films reproduce, shot for shot, the compilation Instant Life (1981). Each part of it was in turn a remake of another Instant Life (1941), a silent film now lost. At the end of the 1941 screening, viewers received a printed riddle; in the 1981 version, which already has sound, the riddle is part of the work."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20154413_0.png?itok=y69N_vUg",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 926872
+ },
  "versiones": [
   {
    "etiqueta": "27 min",

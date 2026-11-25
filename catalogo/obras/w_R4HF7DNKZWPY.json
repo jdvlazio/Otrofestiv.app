@@ -16,14 +16,16 @@
   }
  ],
  "sinopsis": {
-  "es": "Ben Rivers filma en Marruecos durante el rodaje de una película de Arturo Ripstein, creando un ensayo sobre el cine, el poder y la mirada colonial.",
-  "en": "Ben Rivers films in Morocco during the shooting of an Arturo Ripstein film, creating an essay about cinema, power, and the colonial gaze."
+  "es": "En los desiertos de Marruecos, el rodaje de una película dirigida por Oliver Laxe se despliega de forma inquietante. Un autor pierde el control, abandona el set y se interna en el desierto, donde lo secuestra un grupo de nómadas. Una fábula alucinatoria sobre la deshumanización, entre realidad y ficción, inspirada en un relato de Paul Bowles.",
+  "en": "In the deserts of Morocco, the shooting of a film directed by Oliver Laxe unfolds in a disturbing manner. A filmmaker loses control, abandons the set and ventures into the desert, where a group of nomads kidnaps him. A hallucinatory fable about dehumanization, between reality and fiction, inspired by a Paul Bowles story."
  },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w185/mMI70Ber4DqsITUJr7oZCjrsZnH.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 348890
+ },
  "versiones": [
   {
    "etiqueta": "96 min",

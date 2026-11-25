@@ -1,16 +1,25 @@
 {
  "id": "w_R4HC1F0J2KZT",
  "titulo_original": "Come and Dance with Me",
- "anio": null,
+ "anio": 2014,
  "paises": [
   "DE"
  ],
- "directores": [],
+ "directores": [
+  "Anja Dornieden",
+  "Juan David González Monroy"
+ ],
+ "sinopsis": {
+  "es": "Una breve historia del cine, de 1888, cuando George Eastman registró la palabra inventada «Kodak», a 2012, cuando Eastman Kodak se declaró en quiebra. En medio, los trabajadores que los Lumière filmaron saliendo de su fábrica, el elefante electrocutado que filmó Edison y unos enanos que bailan en un parque de atracciones en China.",
+  "en": "An abridged history of motion pictures, from 1888, when George Eastman registered the made-up word “Kodak,” to 2012, when Eastman Kodak filed for bankruptcy. In between: the workers the Lumières filmed leaving their factory, the electrocuted elephant Edison filmed, and dwarfs dancing at an amusement park in China."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-05%20173312.png?itok=YL7Tv6gw",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 716029
+ },
  "versiones": [
   {
    "etiqueta": "4 min",

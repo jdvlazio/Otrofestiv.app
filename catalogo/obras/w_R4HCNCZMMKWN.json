@@ -6,11 +6,12 @@
   "AT"
  ],
  "directores": [
-  "Tizza Covi"
+  "Tizza Covi",
+  "Rainer Frimmel"
  ],
  "sinopsis": {
-  "es": "En un viejo apartamento de Viena se acumulan las memorias materiales y afectivas de Al Cook, un hombre de 80 años que ha dedicado su vida al blues y al country, a la melancolía evocadora de los sonidos de Robert Johnson y Elvis Presley.",
-  "en": "In an old apartment in Vienna, the material and emotional memories of Al Cook accumulate — an 80-year-old man who has devoted his life to blues and country, to the evocative melancholy of Robert Johnson and Elvis Presley."
+  "es": "Al Cook, de 80 años, ha dedicado su vida al blues y al country. Cuando una inmobiliaria presiona a los inquilinos, queda solo en su viejo edificio de Viena y se rehúsa al desalojo: quiere preservar el espacio que fue testigo de su vida con Silvia, su esposa fallecida. En 16mm, un relato sereno, tierno y a veces cómico, entre ficción y documental.",
+  "en": "Al Cook, 80, has devoted his life to blues and country music. When a real estate company pressures the tenants, he is left alone in his old Vienna building and refuses eviction: he wants to preserve the space that witnessed his life with Silvia, his late wife. On 16mm, a calm, tender, at times comical story between fiction and documentary."
  },
  "generos": [
   "Música"
@@ -19,7 +20,9 @@
   "archivo": "https://image.tmdb.org/t/p/w500/ho5fr5Zlepoo2c4P9NTed3D6B0m.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1426957
+ },
  "versiones": [
   {
    "etiqueta": "86 min",

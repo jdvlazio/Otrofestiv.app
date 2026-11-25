@@ -1,16 +1,24 @@
 {
  "id": "w_R4HB84K88B5Y",
  "titulo_original": "Evacuations",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "US"
  ],
- "directores": [],
+ "directores": [
+  "Lilli Carré"
+ ],
+ "sinopsis": {
+  "es": "Multitudes frenéticas de pintura contrastan con el blanco y negro del papel y llenan de color los espacios inhabitados. Los cuerpos, hechos de pinceladas, son absorbidos por el sonido y evacúan apresurados los lugares públicos; los objetos vivos llenan el cuadro y evidencian el vacío humano. Un cortometraje experimental.",
+  "en": "Frenetic crowds of paint contrast with the black and white of the paper and fill the empty spaces with color. Bodies made of brushstrokes are absorbed by sound and hastily evacuate public places; living objects fill the frame and highlight the human void. An experimental short."
+ },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w92/mzDgA3o8Xx9m4A1AEOmz8DrNrnc.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1552115
+ },
  "versiones": [
   {
    "etiqueta": "7 min",

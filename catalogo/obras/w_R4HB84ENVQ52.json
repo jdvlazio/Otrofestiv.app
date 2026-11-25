@@ -1,16 +1,24 @@
 {
  "id": "w_R4HB84ENVQ52",
  "titulo_original": "La baraja de Myriam",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "CL"
  ],
- "directores": [],
+ "directores": [
+  "Cristina Hadwa"
+ ],
+ "sinopsis": {
+  "es": "Los ojos de una mujer que duerme se mueven rápidamente. Entre parpadeos se suceden imágenes que revelan la historia de su abuela, una mujer bruja que tuvo que migrar de Palestina a Chile. La animación es el lenguaje con que susurran los muertos, entre la tierra nueva y la vieja, el pasado y el presente.",
+  "en": "The eyes of a sleeping woman move rapidly. Between blinks, images flash by that reveal the story of her grandmother, a witch who had to migrate from Palestine to Chile. Animation is the language through which the dead whisper, between the new land and the old, the past and the present."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Screenshot%202026-04-05%20at%2000.29.4.png?itok=cUJ_Btno",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1668914
+ },
  "versiones": [
   {
    "etiqueta": "14 min",

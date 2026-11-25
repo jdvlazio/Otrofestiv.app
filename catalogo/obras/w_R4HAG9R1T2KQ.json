@@ -16,8 +16,8 @@
   }
  ],
  "sinopsis": {
-  "es": "Ruth Beckermann rastrea la trayectoria de su familia judía entre Austria y Israel, entrelazando testimonios, archivos y viajes para construir un retrato íntimo de la memoria, la identidad y el exilio.",
-  "en": "Ruth Beckermann traces her Jewish family's trajectory between Austria and Israel, weaving together testimonies, archives, and journeys to build an intimate portrait of memory, identity, and exile."
+  "es": "Entre cuentos y un paisaje invernal, helado y brumoso, filmado en 16mm, la cineasta viaja al encuentro de aldeanos, mujeres en una sauna, un rabino y un sobreviviente del Holocausto que muestra el cementerio judío de Sereth. Un documental inquietante y fantasmal donde su historia personal dialoga con las de quienes encuentra.",
+  "en": "Amid folk tales and a wintry landscape, frozen and foggy, shot on 16mm, the filmmaker travels to meet villagers, women in a sauna, a rabbi and a Holocaust survivor who shows the Jewish cemetery of Sereth. An eerie, ghostly documentary where her personal history enters into dialogue with those of the people who cross her path."
  },
  "generos": [
   "Documental"
@@ -26,7 +26,9 @@
   "archivo": "https://image.tmdb.org/t/p/w500/hiOlIn1R8AQTCc76cAjNdwYNWoS.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 412430
+ },
  "versiones": [
   {
    "etiqueta": "95 min",

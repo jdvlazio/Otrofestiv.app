@@ -6,7 +6,7 @@
  "directores": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "un dato por obra: el valor del almacén (tmdb:1456186)",
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
   "fecha": "2026-11-24"
  },
  "anio": {
@@ -32,5 +32,11 @@
   "regla": "decisión",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2025, ficfusa-2026, ficica-2026)",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24"
  }
 }

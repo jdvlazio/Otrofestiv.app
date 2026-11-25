@@ -458,7 +458,7 @@ python3 pipeline/alta-festival.py <id> --ensayo   # + TODOS los guardianes, una 
 (días y rótulos derivados de las fechas; nombre, subtítulo y sigla copiados del
 plan), `SECTION_EN` y `SECTION_ARCHETYPES` (de `festival.secciones` del plan,
 con `en` y `archetype`), la entrada de `docs/radar-ancla.json`, y regenera las
-huellas y fechas del afiche de portada y `CLAUDE.md`. **No inventa nada
+huellas y fechas del afiche de portada. **No inventa nada
 editorial**: si al plan le falta el subtítulo, el inglés de una sección o el
 afiche en `assets/keyart/<id-app>.jpg`, lo lista como pendiente y no escribe esa
 pieza. Correrlo dos veces no cambia nada.
@@ -472,6 +472,29 @@ Se publica cuando el ensayo pasa.
 **Sinopsis de más de 350 caracteres** (23 nov 2026): después de sumar las obras al
 catálogo se condensan con [SINOPSIS-CORTA.md](SINOPSIS-CORTA.md) (uno redacta, otro
 verifica; el original se guarda). Las frena `[sinopsis-larga]` en el push.
+
+**Español e inglés** (24 nov 2026): una obra con sinopsis la tiene en los dos idiomas.
+Se escriben juntas al condensar; `python3 pipeline/sinopsis_par.py <id>` dice qué
+falta y `[sinopsis-par]` lo frena. También al sumar una obra a un festival en curso.
+
+**El sello** (24 nov 2026): otro agente, distinto del que redactó, lee dirección, año,
+español e inglés contra la fuente y los sella (`python3 pipeline/sello_obra.py --sellar
+lote.json`). Sin sello, o si algo cambia después, `[sello-obra]` no deja publicar. El texto
+que llegó se guarda entero en `catalogo/originales.json` y no se edita.
+
+**La función y su acceso** (24 nov 2026): después de `alta-festival.py` (su
+config entra en la huella) y antes de la primera publicación, (1) el inventario
+de fuentes sin nada `sin-revisar`; (2) `festivals/staging/<id>-acceso.json`: cómo se entra por
+función, sala, sede o festival, «declarado» con cita y url o «sin-aviso» con la URL de todo lo
+inventariado, también lo descartado; (3) `sello_funcion.py --lote <id> <archivo>`, otro agente lee cada función contra su
+fuente, y `--sellar`. `publicar-datos.py` frena si falta algo (también en `--ensayo`); también el CI del PR (`--ci`); con las
+funciones ya publicadas solo avisa y se sella después. Formato en `pipeline/sello_funcion.py`.
+
+**La obra es la fuente** (24 nov 2026): `[obra-fuente]`. Orden: publicar →
+`catalogo_construir.py --escribir` (da los ids) → `obra_fuente.py <id> --sembrar --quien X`
+→ `catalogo_construir.py --escribir` → `sello_obra.py --original` y `--sellar` → push.
+Después, un dato de la obra se cambia en el almacén (`obra_unica.py --decidir`) y se
+aplica; nunca en el festival. Se echa atrás con `deshacer.py`.
 
 **Excepciones como dato, no como código** (20 nov 2026): una actividad sin
 duración publicada o un título que dice «instalación» sin ser exposición se

@@ -19,6 +19,9 @@ entero en el almacén. Dueño: `pipeline/sinopsis_cortas.py`.
 
 El primer lote de un festival que Juan no haya visto se le muestra, antes y después, antes de publicar.
 
+## Español e inglés
+Toda obra con sinopsis la tiene en los dos idiomas (`[sinopsis-par]`). Al acortar, el redactor deja **las dos** desde el original, y el verificador compara cada una contra el original y entre sí: mismos hechos, mismo tono. Se traduce el sentido, no las palabras: español de Colombia, sin calcos. Si existe la sinopsis oficial en el otro idioma, manda. El género de una persona real no se supone.
+
 ## Guía de redacción (máximo 350; lo natural es 220–320)
 Antes de escribir, anota del original: **quién**, **qué pasa o qué mira**, **qué está en juego**, **forma** (documental, experimental, animación: si la dice) y **tono**. Eso es lo que debe sobrevivir.
 - Solo lo que dice el original. Ni datos de memoria, ni un sinónimo que suba o baje la intensidad.

@@ -30,5 +30,17 @@
   "regla": "decisión",
   "motivo": "misma imagen en varios festivales: la copia más completa",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24"
  }
 }

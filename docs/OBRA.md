@@ -22,9 +22,14 @@ Dueño: `pipeline/ficha_obra.py`; guardián `[ficha-obra]`.
 | Año | Número, el del primer estreno |
 | Sinopsis ES | Cuenta la obra, en español, cierra la frase; corta: `[sinopsis-larga]` |
 | Sinopsis EN | En inglés, cierra la frase, no habla del festival |
+| Sinopsis ES y EN | Si hay una, está la otra: `[sinopsis-par]` |
 | Duración | «N min» (es de la copia) |
 | Letterboxd / TMDB | forma del slug / número |
 | Afiche | archivo que existe |
+
+**Tres sinopsis por obra:** la original (`catalogo/originales.json`: texto, idioma y
+fuente; no se edita), la corta en español y la corta en inglés. Que sean de ESA
+película: `[sello-obra]`.
 
 Que sea el **mismo** en todos los festivales: `[obra-unica]`. Que sea **verdad**:
 la identidad contra su fuente (en construcción, paso 2 y 3 del plan).
@@ -35,3 +40,21 @@ la identidad contra su fuente (en construcción, paso 2 y 3 del plan).
 identidades dudosas. 4. Limpiar país, género, dirección, año, duración. 5. Errores
 de criterio, con hoja. 6. Sinopsis. 7. La obra como fuente. 8. Deshacer y
 originales. 9. Prueba final: rearmar un festival terminado y comparar.
+
+## Deshacer
+
+Cada decisión de `catalogo/decisiones.json` guarda en `antes` lo que publicaba cada
+festival, tal como lo escribía (texto, número o ruta; el `valor` puede ir en otra
+forma, p. ej. ISO). Si publicaba dos valores, es una lista. Sin `antes`: la decisión
+no reemplazó ningún valor o es anterior y no se pudo recuperar.
+
+## La obra es la fuente (paso 7)
+
+En un festival nuevo, dirección, año, país, género, sinopsis, afiche, TMDB y Letterboxd
+salen de `catalogo/decisiones.json`; el festival pone la función y el lugar. El JSON que
+lee la app se publica completo, pero se arma: `pipeline/obra_fuente.py`. Guardián
+`[obra-fuente]`. Los festivales anteriores están en `catalogo/obra-fuente-legado.json`
+(solo baja); sus obras se revisan cuando vuelvan en un festival nuevo.
+
+Echar atrás una decisión: `python3 pipeline/deshacer.py <work_id> <campo> --escribir`.
+Sellar exige el original guardado (`sello_obra.py --original`).

@@ -1,16 +1,25 @@
 {
  "id": "w_R4HAG9AYGDFW",
  "titulo_original": "Sonali",
- "anio": null,
+ "anio": 2017,
  "paises": [
   "CH"
  ],
- "directores": [],
+ "directores": [
+  "Jorge Cadena",
+  "Lucía Martínez García"
+ ],
+ "sinopsis": {
+  "es": "Sonali, una hijra, sale del barrio de Versova, en Bombay, y se dirige al club donde cada noche ofrece su espectáculo bajo las miradas del público.",
+  "en": "Sonali, a hijra, leaves the neighborhood of Versova, in Mumbai, and heads to the club where every night she performs her show under the gaze of the audience."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/254919-1920x1054%20-%20Yan%20Dec.jpg?itok=EeAwmLhP",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1668907
+ },
  "versiones": [
   {
    "etiqueta": "8 min",

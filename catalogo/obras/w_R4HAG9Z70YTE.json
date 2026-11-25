@@ -1,16 +1,24 @@
 {
  "id": "w_R4HAG9Z70YTE",
  "titulo_original": "Soeurs Jarariju",
- "anio": null,
+ "anio": 2018,
  "paises": [
   "CH"
  ],
- "directores": [],
+ "directores": [
+  "Jorge Cadena"
+ ],
+ "sinopsis": {
+  "es": "En medio de un paisaje austero contaminado por una mina de carbón en el norte de Colombia, Viviana y Yandris, dos hermanas adolescentes wayuu, descubren sus tradiciones a través de rituales ancestrales. Cuando su padre muere, las hermanas Jarariju abandonan su territorio en un acto de valentía.",
+  "en": "In the middle of an austere landscape polluted by a coal mine in northern Colombia, Viviana and Yandris, two teenage Wayuu sisters, discover their traditions through ancestral rituals. When their father dies, the Jarariju sisters leave their territory in an act of courage."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Screenshot%202026-04-04%20at%2023.27.1.png?itok=rlQuj2tc",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 583356
+ },
  "versiones": [
   {
    "etiqueta": "21 min",

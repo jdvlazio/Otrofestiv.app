@@ -10,12 +10,12 @@
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1651710",
+  "fuente": "tmdb:1635457",
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "tmdb:1635457",
+  "regla": "tmdb-manda"
  },
  "generos": {
   "fuente": "festival",
@@ -37,6 +37,18 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la ficha anterior (1651710) ya no existe en TMDB; Letterboxd lleva esta",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
   "fecha": "2026-11-24"
  }
 }

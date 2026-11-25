@@ -234,6 +234,10 @@ def construir(R):
                     continue
                 if a['_ap'] and b['_ap']:
                     if a['_ap'] != b['_ap']:
+                        # «Isabella Cárdenas» / «Isabella Cárdenas Marín»: una obra que NACE no se
+                        # duplica en silencio (24 nov 2026). Entre dos con identidad, son homónimos.
+                        if (not a.get('wid') or not b.get('wid')) and _anio_ok(a['anio'], b['anio']) and catalogo.misma_persona_larga(a['director'], re.split(r',|;|/|&|\s(?:y|e|and)\s', b['director'] or '')):
+                            candidatos.append((ids[x], ids[y], 'mismo título y la misma persona con nombre más largo'))
                         continue                  # homónimos
                     if _anio_ok(a['anio'], b['anio']):
                         une(ids[x], ids[y], 'mismo título, director y año')
@@ -472,6 +476,8 @@ def materializar(R, grupos, key, cache):
     for d in rev['identidad']:
         if not d['misma']:
             a, b = (x[0] if len(x) == 1 else catalogo.obra_de(nuevas, *x[:2], director=x[2] if len(x) > 2 else '') for x in (d['a'], d['b']))
+            if not a or not b:
+                sys.exit(f'✗ revision-fase2.json: {d["a"]} / {d["b"]} no apunta a una obra — usar su work_id')
             if (a, 'no-es') not in ya:
                 decs.append({'work_id': a, 'campo': 'no-es', 'valor': b, 'motivo': d['motivo'], 'fecha': hoy, 'quien': rev['quien']})
     # prioridad máxima: la decisión humana

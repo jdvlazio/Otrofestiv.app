@@ -1,16 +1,27 @@
 {
  "id": "w_R4HF7D972FS5",
  "titulo_original": "Viaje a la explotación",
- "anio": null,
+ "anio": 1974,
  "paises": [
   "ES"
  ],
- "directores": [],
+ "directores": [
+  "Mercè Conesa",
+  "Bartomeu Vilà",
+  "Joan Simó",
+  "Rosa Babí"
+ ],
+ "sinopsis": {
+  "es": "En la Barcelona de los años 70, migrantes marroquíes llegan a las estaciones de tren. Con imágenes de sus rostros y maletas y de los barrios marginales donde se instalan, y con testimonios sonoros, este documental militante, rodado en la clandestinidad en los últimos años del franquismo, denuncia la discriminación y la precariedad que enfrentan.",
+  "en": "In 1970s Barcelona, Moroccan migrants arrive at train stations. With images of their faces and suitcases, of the marginal neighborhoods where they settle, and audio testimonies, this militant documentary, filmed clandestinely in the final years of the Franco regime, denounces the discrimination and precarity they face."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/ViajeExplotacion%20-%20Josep%20Calle.jpg?itok=pU71m7-F",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1628880
+ },
  "versiones": [
   {
    "etiqueta": "19 min",

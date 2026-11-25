@@ -1,16 +1,24 @@
 {
  "id": "w_R4HAT44R9W4C",
  "titulo_original": "Pequeno Jogo",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "BR"
  ],
- "directores": [],
+ "directores": [
+  "Sofia Tomic"
+ ],
+ "sinopsis": {
+  "es": "De noche, en una cancha de pavimento iluminada por los postes de luz, una mujer juega en silencio con un balón. La registra una imagen digital austera. Entre el tedio y la hipnosis, la observación del juego ajeno lo prolonga hacia el espesor del mundo frondoso.",
+  "en": "At night, on a paved court lit by streetlights, a woman plays in silence with a ball. An austere digital image records her. Between tedium and trance, observing this other's game extends it toward the depths of the lush world."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PEQUENO-JOGO-POSTER_ES%20-%20Sofia%20Tomic.png?itok=ZkyptTrE",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1625325
+ },
  "versiones": [
   {
    "etiqueta": "12 min",

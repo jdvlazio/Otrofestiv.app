@@ -1,17 +1,25 @@
 {
  "id": "w_R4HAT5VM48NN",
  "titulo_original": "3cm of Complexity",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "AT",
   "GR"
  ],
- "directores": [],
+ "directores": [
+  "Anna Vasof"
+ ],
+ "sinopsis": {
+  "es": "Objetos aparentemente inútiles, incendios en Grecia e inquietudes sobre la salud de la cineasta se entrecruzan en un juego donde el cuerpo, la crisis ecológica y la sociedad contemporánea entran en tensión. Con espontaneidad y humor dialogan la vida cotidiana, la ansiedad ante el futuro y la capacidad de adaptación creativa.",
+  "en": "Seemingly useless objects, fires in Greece and concerns about the filmmaker's health intertwine in a playful narrative where the body, the ecological crisis and contemporary society come into tension. With spontaneity and humor, everyday life, anxiety about the future and the capacity for creative adaptation enter into dialogue."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Film%20Poster_3cm%20of%20Complexity%20-%20Fanny%20Berghofer.jpg?itok=RsFqy5mK",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1574532
+ },
  "versiones": [
   {
    "etiqueta": "21 min",

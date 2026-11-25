@@ -4487,7 +4487,8 @@ except Exception as _e:
 # doc de contexto no produce una duda: produce una conclusión falsa, con seguridad.
 #
 # Este check regenera el archivo en un temporal y compara SOLO lo que el script
-# DERIVA del repo (la tabla de festivales y el bloque de features). El resto del
+# DERIVA del repo (el bloque de features) y exige que la lista de festivales NO
+# esté copiada ahí (24 nov 2026). El resto del
 # documento es prosa del template y no caduca sola. Si difieren: correr el script.
 check = 'claude-md-fresco'
 try:
@@ -4511,28 +4512,19 @@ try:
         else:
             # Solo las secciones DERIVADAS. La línea del último commit cambia con
             # cada commit por definición: compararla haría fallar el check siempre.
-            # La columna «Estado» sale del RELOJ (festivalStatus: próximo/recién
-            # terminado/archivado), no del repo: entre el commit y el CI un
-            # festival cruza un umbral y CLAUDE.md queda «desactualizado» sin que
-            # nadie tocara nada, bloqueando PRs ajenos (pasó en el #682, 18 ago).
-            # Se compara la lista de festivales y features — que sí es del repo —
-            # ignorando esa última celda.
-            def _sin_estado(_linea):
-                if not _linea.startswith('|'):
-                    return _linea
-                _cells = _linea.rstrip().rstrip('|').split('|')
-                return '|'.join(_cells[:-1]) + '|' if len(_cells) > 2 else _linea
             def _derivado(txt):
                 out = []
-                for _sec in ('### Festivales', '### Features activas'):
+                for _sec in ('### Features activas',):
                     if _sec in txt:
                         _t = txt[txt.index(_sec):]
                         _fin = _t.find('\n---')
                         _t = _t[:_fin if _fin > 0 else 1200]
-                        out.append('\n'.join(_sin_estado(_l) for _l in _t.split('\n')))
+                        out.append(_t)
                 return '\n'.join(out)
-            if _derivado(_viejo).strip() != _derivado(_nuevo).strip():
-                fail(check, 'CLAUDE.md desactualizado respecto al repo (festivales o features) '
+            if 'node scripts/generate-claude-md.js --festivales' not in _viejo or re.search(r'^\| `[a-z]+20\d\d` \|', _viejo, re.M):
+                fail(check, 'CLAUDE.md lleva una copia de la lista de festivales: se consulta en vivo (--festivales)')
+            elif _derivado(_viejo).strip() != _derivado(_nuevo).strip():
+                fail(check, 'CLAUDE.md desactualizado respecto al repo (features) '
                             '— correr: node scripts/generate-claude-md.js')
             else:
                 ok(check, 'CLAUDE.md al día con el estado derivado del repo')
@@ -5631,6 +5623,27 @@ try:
         ok(check, 'ningún sidecar escrito-sin-lector convive con su gemelo leído-sin-escritor')
 except Exception as _e:
     warn(check, f'no se pudo verificar pipeline-circuito: {_e}')
+
+# ── [solo-dias-oficiales] nada fuera de las fechas del afiche ──────────────────
+# Regla de Juan (8 oct 2026); el 24 nov Vélez se armó desde el 30 nov con afiche
+# «1–6 dic». Las fechas oficiales viven en `canales` de ig-vigia-cuentas.json.
+check = 'solo-dias-oficiales'
+try:
+    import glob, sys as _sysd
+    _sysd.path.insert(0, 'pipeline')
+    import canales as _cn
+    _cu = json.load(open('pipeline/ig-vigia-cuentas.json', encoding='utf-8'))
+    _fu = {}
+    for _p in sorted(glob.glob('festivals/*.json')):
+        _d = _cn.fuera_de_fechas(_cu, os.path.basename(_p)[:-5], json.load(open(_p, encoding='utf-8')))
+        if _d:
+            _fu[os.path.basename(_p)[:-5]] = _d
+    if _fu:
+        fail(check, 'función o fecha fuera de las fechas oficiales del festival: ' + ' · '.join(f'{k} {", ".join(x)}' for k, x in _fu.items()))
+    else:
+        ok(check, 'ninguna función fuera de las fechas oficiales declaradas')
+except Exception as _e:
+    fail(check, f'no se pudo medir: {_e}')
 
 # ── [sede-matriz] un lugar, un pin: la matriz de sedes ─────────────────────────
 # 16 nov 2026 (Juan: «así como hay una de películas, las sedes deberían vivir en
@@ -7185,6 +7198,7 @@ try:
               'afirmaciones.json', 'funciones-ids.json', 'conflictos.json',
               'funciones-decisiones.json',  # §11.3.4, 18 oct 2026
               'palmares.json', 'avisos.json',  # publicar.py los lleva al JSON (f-string), 19 oct 2026
+              'sellos-funcion.json', 'acceso.json',  # pipeline/sello_funcion.py, 24 nov 2026
               'altas.json'}  # el registro de altas: pipeline/altas.py (f-string) y sus guardianes, 15 nov 2026
     _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
            sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+(?:-[a-z]+)*-20\d\d-', _f))
@@ -7328,6 +7342,98 @@ try:
         _hol = _fo.holgura(_fests)
         if _hol:
             warn(check, 'bajó la deuda — python3 pipeline/ficha_obra.py --congelar: ' + ', '.join(_hol[:6]))
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [sinopsis-par] español e inglés (pipeline/sinopsis_par.py) ───────────────
+# Juan, 24 nov 2026: había obras con sinopsis en inglés y sin español, y al revés.
+check = 'sinopsis-par'
+try:
+    import sinopsis_par as _sp
+    _ciega = _sp.autoprueba()
+    _exc = _sp.excedidos(_fests)
+    if _ciega:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
+    elif _exc:
+        fail(check, 'sinopsis en un solo idioma — traducirla con la skill sinopsis-corta: '
+             + ' · '.join(f'{_f}: ' + ', '.join(_x[:4]) + (f' (+{len(_x) - 4})' if len(_x) > 4 else '') for _f, _x in _exc[:5]))
+    else:
+        ok(check, 'ninguna obra suma sinopsis en un solo idioma')
+        _hol = _sp.holgura(_fests)
+        if _hol:
+            warn(check, 'bajó la deuda — python3 pipeline/sinopsis_par.py --congelar: ' + ', '.join(_hol[:6]))
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [sello-obra] la sinopsis y la dirección son de ESA película (pipeline/sello_obra.py) ──
+# Juan, 24 nov 2026: 31 obras publicaban datos de otra película, bien escritos.
+check = 'sello-obra'
+try:
+    import sello_obra as _se
+    _ciega, _fal, _gem = _se.autoprueba(), _se.faltan(_fests), _se.gemelas(_fests)
+    if _ciega:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
+    elif _fal or _gem:
+        fail(check, f'{len(_fal)} obra(s) sin verificar y {len(_gem)} texto(s) en dos obras — otro agente las lee contra su fuente y sello_obra.py --sellar: '
+             + ' · '.join(f'«{_t}» {_w}: {_q}' for _w, _t, _q in _fal[:5]) + ' ' + ' · '.join(sorted(_gem)[:3]))
+    else:
+        ok(check, f'{len(_se.sellos())} de {len(_se.publicadas(_fests))} obras selladas; el resto, en deuda y sin cambios')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [sello-funcion] la función, releída y con acceso citado (pipeline/sello_funcion.py) ──
+# Juan, 24 nov 2026 (BOGOSHORTS). Sin red: frena un archivo inválido y avisa
+# contradicciones y pendientes (un cambio urgente gratis→pago no se traba); la primera publicación la frena publicar-datos.py.
+check = 'sello-funcion'
+try:
+    import glob as _gsf, json as _jsf, os as _osf
+    import sello_funcion as _sf
+    _ciega_sf, _mal_sf, _pend_sf = _sf.autoprueba(), [], []
+    _con_sf = {_osf.path.basename(_p)[:-len(_s)] for _s in ('-sellos-funcion.json', '-acceso.json')
+               for _p in _gsf.glob('festivals/staging/*' + _s)}
+    _viv_sf = set(_festivalesVivos())
+    for _fid in sorted(_con_sf | _viv_sf):
+        _p = f'festivals/{_fid}.json'
+        _d = _jsf.load(open(_p, encoding='utf-8')) if _osf.path.exists(_p) else None
+        if _d is None and _fid not in _con_sf:
+            continue
+        try:
+            _m, _q = _sf.revisar(_fid, _d, todas=False)
+        except Exception as _e:     # dato ajeno a los sellos: lo frena su guardián
+            _m, _q = [], [f'no se pudo revisar: {type(_e).__name__} {_e}']
+        _mal_sf += [f'{_fid}: {_x}' for _x in _m]
+        if _q and _fid in _viv_sf:
+            _pend_sf.append(f'{_fid} {len(_q)} (' + _q[0][:90] + ')')
+    if _ciega_sf:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega_sf))
+    elif _mal_sf:
+        fail(check, f'{len(_mal_sf)} sello(s) o acceso(s) inválidos: ' + ' · '.join(_mal_sf[:5]))
+    elif _pend_sf:
+        warn(check, 'funciones por sellar, acceso o inventario pendientes (sello_funcion.py informe <id>): ' + ', '.join(_pend_sf))
+    else:
+        ok(check, 'funciones selladas y acceso con fuente en los festivales vivos')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [obra-fuente] la obra es la fuente (pipeline/obra_fuente.py, paso 7) ────────
+check = 'obra-fuente'
+try:
+    import obra_fuente as _of
+    import catalogo as _cat_of
+    _ciega, _dec = _of.autoprueba(), _cat_of.decisiones()
+    _pf = [(_f, _x) for _f in sorted(_fests) if _of.enrolado(_f) for _x in _of.problemas(_f, _fests[_f], _dec)]
+    _de_mas = sorted(_of.legado() - set(_fests))
+    if _ciega:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
+    elif _pf:
+        fail(check, f'{len(_pf)} dato(s) de obra que no salen del almacén — obra_fuente.py <festival> --sembrar o --aplicar: '
+             + ' · '.join(f'{_f} «{_x[0]}» {_x[1]}: {_x[2]}' for _f, _x in _pf[:5]))
+    elif _of.legado() - _of.LEGADO_MAX:
+        fail(check, 'al legado no entra ningún festival: ' + ', '.join(sorted(_of.legado() - _of.LEGADO_MAX)))
+    elif _de_mas:
+        fail(check, 'en el legado y sin publicar, quitar: ' + ', '.join(_de_mas[:5]))
+    else:
+        ok(check, f'{len(set(_fests) - _of.legado())} festival(es) se arman desde el almacén; {len(_of.legado())} en el legado')
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 

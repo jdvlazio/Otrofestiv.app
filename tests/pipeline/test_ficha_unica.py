@@ -15,9 +15,14 @@ class FichaUnica(unittest.TestCase):
         self.assertEqual((o['director'], o['year'], o['country'], o['flags']), ('Ana Díaz, Luz Paz', 2025, 'Colombia, Francia', '🇨🇴🇫🇷'))
         self.assertEqual(fu.aplicar(d, DEC), [])
 
-    def test_no_llena_vacios_ni_toca_otras_obras_ni_la_duracion(self):
-        d = {'films': [{'title': 'X', 'work_id': 'w_1', 'duration': '20 min'}, {'title': 'Y', 'work_id': 'w_2', 'year': 2000}]}
-        self.assertEqual(fu.aplicar(d, DEC), [])
+    def test_llena_lo_que_identifica_la_obra_y_nada_mas(self):
+        d = {'films': [{'title': 'X', 'work_id': 'w_1', 'duration': '20 min'}, {'title': 'Y', 'work_id': 'w_2', 'year': 2000}, {'title': 'T', 'type': 'event', 'work_id': 'w_1'}]}
+        decs = [{'work_id': 'w_1', 'campo': 'directores', 'valor': ['Radu Jude']}, {'work_id': 'w_1', 'campo': 'anio', 'valor': 2025},
+                {'work_id': 'w_1', 'campo': 'paises', 'valor': ['RO']}, {'work_id': 'w_1', 'campo': 'generos', 'valor': ['Drama']}]
+        fu.aplicar(d, decs)
+        self.assertEqual(d['films'][0], {'title': 'X', 'work_id': 'w_1', 'duration': '20 min', 'director': 'Radu Jude', 'year': 2025, 'country': 'Rumania', 'flags': '🇷🇴', 'genre': 'Drama'})
+        self.assertEqual(d['films'][1:], [{'title': 'Y', 'work_id': 'w_2', 'year': 2000}, {'title': 'T', 'type': 'event', 'work_id': 'w_1'}])
+        self.assertEqual(fu.aplicar(d, decs), [])
 
 
 if __name__ == '__main__':

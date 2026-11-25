@@ -11,8 +11,8 @@
   "Kristen Stewart"
  ],
  "sinopsis": {
-  "es": "La ópera prima de la actriz Kristen Stewart es una adaptación del best seller autobiográfico de la exnadadora Lidia Yuknavitch, una mujer que carga con las cicatrices de una infancia atravesada por abusos y de una juventud marcada por la…",
-  "en": "Kristen Stewart's directorial debut adapts the autobiographical bestseller by former swimmer Lidia Yuknavitch — a woman carrying the scars of an abuse-marked childhood and a youth defined by addiction and loss, who finds her voice through literature."
+  "es": "La exnadadora Lidia Yuknavitch carga con las cicatrices de una infancia atravesada por abusos y una juventud marcada por las adicciones y las relaciones fallidas. Por medio de la natación o la escritura, enfrenta sus traumas en un viaje angustiante. Adaptación fragmentada, sensorial y poética de su libro autobiográfico.",
+  "en": "Former swimmer Lidia Yuknavitch bears the scars of a childhood marred by abuse and a youth marked by addiction and failed relationships. Through swimming or writing, she confronts her traumas on a harrowing journey. A fragmented, sensory, poetic adaptation of her autobiographical book."
  },
  "generos": [
   "Drama"
@@ -21,7 +21,9 @@
   "archivo": "https://image.tmdb.org/t/p/w500/pU3GZI6C9lxzxUnBccIQLThDLVY.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 524635
+ },
  "versiones": [
   {
    "etiqueta": "128 min",

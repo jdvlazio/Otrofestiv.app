@@ -1,16 +1,24 @@
 {
  "id": "w_R4HCND17YVMD",
  "titulo_original": "Ghost Strata",
- "anio": null,
+ "anio": 2019,
  "paises": [
   "GB"
  ],
- "directores": [],
+ "directores": [
+  "Ben Rivers"
+ ],
+ "sinopsis": {
+  "es": "Los «ghost strata» son los elementos ausentes de la roca que dan indicios de lo que una vez hubo allí. Filmada en diversos lugares del mundo y dividida en los meses en que se rodó, la película explora el impacto de la humanidad sobre la Tierra. Sonidos y textos encontrados crean una reflexión sobre el tiempo, la memoria, los restos y la extinción.",
+  "en": "“Ghost strata” are the elements missing from the rock that offer hints of what was once there. Filmed in various places over the globe and divided into the months of its shooting, the film explores humanity's impact on the Earth. Found sound and text create a meditation on time, memory, leftovers, and extinction."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Ghost%2BStrata%2Bstill%2B4_0.jpg?itok=DSphQJHs",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 600173
+ },
  "versiones": [
   {
    "etiqueta": "46 min",

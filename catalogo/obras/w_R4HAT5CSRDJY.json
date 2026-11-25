@@ -1,17 +1,26 @@
 {
  "id": "w_R4HAT5CSRDJY",
  "titulo_original": "Warnungen an die ferne Zukunft",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "DE",
   "GB"
  ],
- "directores": [],
+ "directores": [
+  "Juliane Jaschnow",
+  "Stefanie Schroeder"
+ ],
+ "sinopsis": {
+  "es": "Otra cara de un video viral en el que activistas estrellan tomates contra una pintura de Monet abre un ensayo errático y lúcido entre grabaciones vistas hasta el cansancio: conferencias en línea sobre territorialidad y clima, imágenes científicas, paisajes desoladores de la industrialización. Un filme sobre lo que está siendo el futuro.",
+  "en": "Another side of a viral video in which activists hurl tomatoes at a Monet painting opens an erratic, lucid essay among footage seen ad nauseam: online conferences on territoriality and climate, scientific images, desolate landscapes of industrialization. A film about what the future is becoming."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Warnungen%20an%20die%20ferne%20Zukunft%20PLAKAT%20-%20Ju%20liane_page-0001.jpg?itok=BKoBLV6t",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1616784
+ },
  "versiones": [
   {
    "etiqueta": "19 min",
