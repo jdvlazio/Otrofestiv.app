@@ -482,6 +482,14 @@ español e inglés contra la fuente y los sella (`python3 pipeline/sello_obra.py
 lote.json`). Sin sello, o si algo cambia después, `[sello-obra]` no deja publicar. El texto
 que llegó se guarda entero en `catalogo/originales.json` y no se edita.
 
+**La función y su acceso** (24 nov 2026): después de `alta-festival.py` (su
+config entra en la huella) y antes de la primera publicación, (1) el inventario
+de fuentes sin nada `sin-revisar`; (2) `festivals/staging/<id>-acceso.json`: cómo se entra por
+función, sala, sede o festival, «declarado» con cita y url o «sin-aviso» con la URL de todo lo
+inventariado, también lo descartado; (3) `sello_funcion.py --lote <id> <archivo>`, otro agente lee cada función contra su
+fuente, y `--sellar`. `publicar-datos.py` frena si falta algo (también en `--ensayo`); también el CI del PR (`--ci`); con las
+funciones ya publicadas solo avisa y se sella después. Formato en `pipeline/sello_funcion.py`.
+
 **La obra es la fuente** (24 nov 2026): `[obra-fuente]`. Orden: publicar →
 `catalogo_construir.py --escribir` (da los ids) → `obra_fuente.py <id> --sembrar --quien X`
 → `catalogo_construir.py --escribir` → `sello_obra.py --original` y `--sellar` → push.
