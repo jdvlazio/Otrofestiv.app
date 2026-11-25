@@ -34,6 +34,10 @@ FICMA (90 funciones desde un PDF de imágenes). Todo lo que dice aquí se pagó.
 Antes de abrir la web del festival: **leer su issue de radar**, y bajarlo con
 `pipeline/radar.py <id>` para que quede como fuente versionada.
 
+Y correr `pipeline/radar_fuentes.py`: ningún festival se espera, se descarta ni se reporta
+"sin información" por una sola fuente. Se miran las ocho clases (web, redes, sede, anfitrión,
+boletería, prensa, obras, convocatoria) y queda escrito qué dijo cada una (`docs/RADAR.md`).
+
 No es burocracia, es lo más barato que hay. El radar vigila cada festival desde
 meses antes y escribe lo que cambia: cuándo la web seguía congelada en el año
 pasado mientras la bio ya anunciaba la edición, qué talleres aparecieron y qué
