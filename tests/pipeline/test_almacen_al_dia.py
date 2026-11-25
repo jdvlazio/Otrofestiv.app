@@ -114,7 +114,7 @@ class AltaConFicha(unittest.TestCase):
         m._publicar = pub
         viejo, env = sys.argv, dict(os.environ)
         sys.argv = ['x', 'bogoshorts-2026', '--desde-main', *args]
-        os.environ.update(GITHUB_ACTIONS='true', GITHUB_REF='refs/heads/main')
+        os.environ.update(GITHUB_ACTIONS='true', GITHUB_REF='refs/heads/main', OTF_POR='prueba')
         try:
             with self.assertRaises(SystemExit):
                 m.main()
