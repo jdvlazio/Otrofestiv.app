@@ -533,7 +533,7 @@ el comando otra vez.
 
 PR de historia: `node scripts/bump-version.js` → commit (los 5 archivos del bump
 JUNTOS) → push → PR **de datos** (la frontera código/datos es un guardián de
-CI; mezcla deliberada = etiqueta `frontera-ok`) → CI verde → merge (el dueño
+CI; antes, a diario, `pipeline/integrar.py` y, tras el commit, `integrar.py --revisar <id>`; mezcla deliberada = etiqueta `frontera-ok`) → CI verde → merge (el dueño
 de la rama la lleva hasta el final) → **verificar el deploy de Pages y el JSON
 en producción con curl**, no asumirlo.
 

@@ -134,6 +134,8 @@ def decisiones(raiz=DIR):
     if os.path.exists(os.path.join(raiz, 'decisiones.json')):
         raise ValueError('catalogo/decisiones.json ya no existe: cada obra tiene su archivo en '
                          'catalogo/decisiones/ (si vino de un merge, python3 pipeline/integrar.py lo reparte)')
+    if glob.glob(os.path.join(raiz, 'obras', '*.json')) and not os.path.isdir(os.path.join(raiz, 'decisiones')):
+        raise ValueError('falta catalogo/decisiones/: hay obras y ninguna decisión')
     out = []
     for p in sorted(glob.glob(os.path.join(raiz, 'decisiones', '*.json'))):
         with io.open(p, encoding='utf-8') as fh:
