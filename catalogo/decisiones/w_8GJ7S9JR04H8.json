@@ -45,5 +45,101 @@
    "funza-2026": "Fernando, un hombre de 45 años que aún vive con su sobreprotectora madre, intenta ocultarle ese secreto a su moderna novia, quien además es su jefa. Lo que comienza como una pequeña mentira durante una cena de cumpleaños se convierte en un enredo de secretos, choques generacionales y divertidas situaciones que lo obligarán a elegir entre la comodidad de mamá y el amor de su vida.",
    "guatape-2026": "Fernando, un hombre de 45 años que aún vive con su sobreprotectora madre, intenta ocultarle ese secreto a su moderna novia, quien además es su jefa. Lo que comienza como una pequeña mentira durante una cena de cumpleaños se convierte en un enredo de secretos, choques generacionales y divertidas situaciones que lo obligarán a elegir entre la comodidad de mamá y el amor de su vida."
   }
+ },
+ {
+  "work_id": "w_8GJ7S9JR04H8",
+  "campo": "sinopsis.en",
+  "valor": "Fernando, 45, still lives with his overprotective mother and tries to hide it from his modern girlfriend, who is also his boss. The small lie, which begins at a birthday dinner, turns into a comic tangle of secrets and generational clashes: he will have to choose between the comfort of mom and the love of his life.",
+  "motivo": "la inglesa no contaba lo mismo que la española",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración Funza, verificador independiente)",
+  "antes": {
+   "funza-2026": "Fernando's 45th birthday dinner turns into a territorial war when his alpha-mom meets his empowered girlfriend. To survive the night, he must finally cut the umbilical cord or remain her \"little boy\" forever.",
+   "guatape-2026": "Fernando's 45th birthday dinner turns into a territorial war when his alpha-mom meets his empowered girlfriend. To survive the night, he must finally cut the umbilical cord or remain her \"little boy\" forever."
+  },
+  "fuente": "https://www.themoviedb.org/movie/1627217"
+ },
+ {
+  "work_id": "w_8GJ7S9JR04H8",
+  "campo": "directores",
+  "valor": [
+   "Flora Martínez"
+  ],
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "Flora Martínez",
+   "guatape-2026": "Flora Martínez"
+  }
+ },
+ {
+  "work_id": "w_8GJ7S9JR04H8",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "2026",
+   "guatape-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_8GJ7S9JR04H8",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_8GJ7S9JR04H8",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "Comedia",
+   "guatape-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_8GJ7S9JR04H8",
+  "campo": "xref.tmdb",
+  "valor": 1627217,
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "1627217",
+   "guatape-2026": "1627217"
+  }
+ },
+ {
+  "work_id": "w_8GJ7S9JR04H8",
+  "campo": "xref.letterboxd",
+  "valor": "basta-mama",
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "basta-mama",
+   "guatape-2026": "basta-mama"
+  }
  }
 ]

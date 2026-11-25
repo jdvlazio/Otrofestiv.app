@@ -62,10 +62,10 @@
  {
   "work_id": "w_8GJ7B5KCEQ78",
   "campo": "anio",
-  "valor": 2025,
-  "motivo": "alta desde festicineantioquia-2026",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje festicineantioquia-2026)",
+  "valor": 2024,
+  "motivo": "estreno mundial: Toronto, 6 sep 2024",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración Funza, verificador independiente)",
   "sembrada": true,
   "antes": {
    "cineparalapaz-2026": "2025",
@@ -73,7 +73,16 @@
    "funza-2026": "2025",
    "guatape-2026": "2025",
    "mambe-2026": "2025"
-  }
+  },
+  "anteriores": [
+   {
+    "valor": 2025,
+    "motivo": "alta desde festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ],
+  "fuente": "https://www.elpais.com.co/entretenimiento/cesar-acevedo-director-caleno-habla-de-su-segundo-largometraje-horizonte-2341.html"
  },
  {
   "work_id": "w_8GJ7B5KCEQ78",
@@ -96,10 +105,10 @@
  {
   "work_id": "w_8GJ7B5KCEQ78",
   "campo": "sinopsis.es",
-  "valor": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
-  "motivo": "alta desde festicineantioquia-2026",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje festicineantioquia-2026)",
+  "valor": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio podrán reparar los frágiles lazos que los unen y quizá encontrar la redención.",
+  "motivo": "los dos idiomas cuentan lo mismo; sacrificio y lazos: TMDB 1265716",
+  "fecha": "2026-11-25",
+  "quien": "Claude (segunda lectura Funza)",
   "sembrada": true,
   "antes": {
    "cineparalapaz-2026": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
@@ -107,15 +116,38 @@
    "funza-2026": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
    "guatape-2026": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
    "mambe-2026": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+    "motivo": "alta desde festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   },
+   {
+    "valor": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio quizá encuentren la redención.",
+    "motivo": "la fuente dice quizá",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración Funza, verificador independiente)",
+    "fuente": "https://www.themoviedb.org/movie/1265716",
+    "vistas": [
+     "54a18d539f09"
+    ]
+   }
+  ],
+  "vistas": [
+   "54a18d539f09",
+   "9c815aff8d96"
+  ],
+  "fuente": "https://radionacional.co/cultura/cine/pelicula-colombiana-horizonte-historia-y-sinopsis · https://www.themoviedb.org/movie/1265716"
  },
  {
   "work_id": "w_8GJ7B5KCEQ78",
   "campo": "sinopsis.en",
-  "valor": "Two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
-  "motivo": "frase agramatical",
+  "valor": "Two ghosts, a mother and son, search for the missing father on a journey, both physical and spiritual, through a world ravaged by war. Basilio, a criminal in life, must relive his acts with his mother as witness. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+  "motivo": "los dos idiomas cuentan lo mismo; sacrificio y lazos: TMDB 1265716",
   "fecha": "2026-11-25",
-  "quien": "segunda lectura (sellos)",
+  "quien": "Claude (segunda lectura Funza)",
   "sembrada": true,
   "antes": {
    "cineparalapaz-2026": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
@@ -130,8 +162,22 @@
     "motivo": "alta desde festicineantioquia-2026",
     "fecha": "2026-11-24",
     "quien": "Claude (montaje festicineantioquia-2026)"
+   },
+   {
+    "valor": "Two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+    "motivo": "frase agramatical",
+    "fecha": "2026-11-25",
+    "quien": "segunda lectura (sellos)"
+   },
+   {
+    "valor": "Two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Basilio, a criminal in life, must relive his acts with his mother as witness. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+    "motivo": "faltaba lo de Basilio, que la española sí cuenta",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración Funza, verificador independiente)",
+    "fuente": "https://radionacional.co/cultura/cine/pelicula-colombiana-horizonte-historia-y-sinopsis"
    }
-  ]
+  ],
+  "fuente": "https://radionacional.co/cultura/cine/pelicula-colombiana-horizonte-historia-y-sinopsis · https://www.themoviedb.org/movie/1265716"
  },
  {
   "work_id": "w_8GJ7B5KCEQ78",
