@@ -32,13 +32,13 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
-  "fecha": "2026-11-23"
+  "motivo": "'Decide' levantar el ánimo contradice la sinopsis de Cannes (tiene ese encargo); TMDB dice 'organiza espectáculos'.",
+  "fecha": "2026-11-25"
  },
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24"
+  "motivo": "El inglés perdía la idea central (los espectáculos) y contradecía al español: 'is asked' frente a 'decide'.",
+  "fecha": "2026-11-25"
  }
 }

@@ -23,10 +23,10 @@
  {
   "work_id": "w_R4DFCSRS9XK8",
   "campo": "sinopsis.es",
-  "valor": "Brigitte Baptiste, Ph.D., se ha consolidado como una de las principales expertas ambientales de Colombia y también como un ícono transgénero influyente e inesperado.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aff-2026, fecibac-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "Brigitte Baptiste es una ecóloga transgénero cuyas investigaciones pioneras desafían desde hace años las convenciones científicas y sociales. Con seguimiento, archivo y animación digital, la película teje un soliloquio íntimo y un retrato lleno de matices, con ideas frescas sobre la vida, la familia y la actualidad.",
+  "motivo": "la publicada solo describe a la persona y no cuenta la película",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "07e8b7b4ae22",
    "5b4e07ba001e"
@@ -35,7 +35,19 @@
    "aff-2026": "Brigitte Baptiste, Ph.D., se ha consolidado como una de las principales expertas ambientales de Colombia y también como un ícono transgénero influyente e inesperado.",
    "fecibac-2026": "Brigitte Baptiste, Ph.D., se ha consolidado como una de las principales expertas ambientales de Colombia y también como un ícono transgénero influyente e inesperado.",
    "ficma-2026": "Brigitte Baptiste is a female transgender ecologist whose groundbreaking research has challenged scientific and social conventions for years. With the help of tracking, archive footage and digital animation, the film weaves an intimate soliloquy and a richly nuanced portrait around an extraordinary protagonist, whose refreshing ideas about life, family and current issues may, perhaps, rekindle hope for the future of our planet."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Brigitte Baptiste, Ph.D., se ha consolidado como una de las principales expertas ambientales de Colombia y también como un ícono transgénero influyente e inesperado.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aff-2026, fecibac-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "07e8b7b4ae22",
+     "5b4e07ba001e"
+    ]
+   }
+  ]
  },
  {
   "work_id": "w_R4DFCSRS9XK8",
@@ -53,15 +65,23 @@
  {
   "work_id": "w_R4DFCSRS9XK8",
   "campo": "sinopsis.en",
-  "valor": "Brigitte Baptiste is a transgender ecologist, TV host, and one of Colombia's leading environmental experts. A portrait of a woman who has redefined what it means to be a scientist and a public figure.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "Brigitte Baptiste is a transgender ecologist whose groundbreaking research has challenged scientific and social conventions for years. Through tracking, archive footage and digital animation, the film weaves an intimate soliloquy and a nuanced portrait, with her refreshing ideas about life, family and current issues.",
+  "motivo": "«TV host» no lo sostiene ninguna fuente vista",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "titulo": "Brigitte Planeta B",
   "antes": {
    "aff-2026": "Brigitte Baptiste is a transgender ecologist, TV host, and one of Colombia's leading environmental experts. A portrait of a woman who has redefined what it means to be a scientist and a public figure.",
    "fecibac-2026": "Brigitte Baptiste is a female transgender ecologist whose groundbreaking research has challenged scientific and social conventions for years. With the help of tracking, archive footage and digital animation, the film weaves an intimate soliloquy and a richly nuanced portrait around an extraordinary protagonist, whose refreshing ideas about life, family and current issues may, perhaps, rekindle hope for the future of our planet.",
    "ficma-2026": "Brigitte Baptiste is a female transgender ecologist whose groundbreaking research has challenged scientific and social conventions for years. With the help of tracking, archive footage and digital animation, the film weaves an intimate soliloquy and a richly nuanced portrait around an extraordinary protagonist, whose refreshing ideas about life, family and current issues may, perhaps, rekindle hope for the future of our planet."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Brigitte Baptiste is a transgender ecologist, TV host, and one of Colombia's leading environmental experts. A portrait of a woman who has redefined what it means to be a scientist and a public figure.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
  }
 ]

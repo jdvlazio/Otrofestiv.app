@@ -21,10 +21,10 @@
  {
   "work_id": "w_FBZA6DCNBRHR",
   "campo": "sinopsis.es",
-  "valor": "La hija menor de una familia de osos perezosos, reconstruye los recuerdos con sus padres y sus tres hermanos. Tras lo humano de una familia normal, el espíritu salvaje se asoma en los detalles de la cotidianidad que se vuelven indomables en la memoria.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (anibia-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "La hija menor de una familia de osos perezosos reconstruye los recuerdos con sus padres y sus tres hermanos. Tras lo humano de una familia normal, el espíritu salvaje se asoma en los detalles de la cotidianidad que se vuelven indomables en la memoria.",
+  "motivo": "coma entre sujeto y verbo",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "3da6d851cb11",
    "abaa7ab3b62e"
@@ -32,6 +32,18 @@
   "antes": {
    "anibia-2026": "La hija menor de una familia de osos perezosos, reconstruye los recuerdos con sus padres y sus tres hermanos. Tras lo humano de una familia normal, el espíritu salvaje se asoma en los detalles de la cotidianidad que se vuelven indomables en la memoria.",
    "ficcali-2026": "El más joven de una familia perezosa reconstruye su historia. Detrás de la normalidad de la vida cotidiana, la extravagancia se oculta en los pequeños detalles de la vida y crea recuerdos duraderos."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "La hija menor de una familia de osos perezosos, reconstruye los recuerdos con sus padres y sus tres hermanos. Tras lo humano de una familia normal, el espíritu salvaje se asoma en los detalles de la cotidianidad que se vuelven indomables en la memoria.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (anibia-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "3da6d851cb11",
+     "abaa7ab3b62e"
+    ]
+   }
+  ]
  }
 ]

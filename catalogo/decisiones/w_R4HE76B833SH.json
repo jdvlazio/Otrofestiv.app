@@ -30,9 +30,21 @@
  {
   "work_id": "w_R4HE76B833SH",
   "campo": "anio",
-  "valor": 2025,
-  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
-  "fecha": "2026-11-24",
-  "quien": "plan del almacén (revisión)"
+  "valor": 2024,
+  "motivo": "Ficha FICM: 2024; estreno mundial oct 2024",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "anteriores": [
+   {
+    "valor": 2025,
+    "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+    "fecha": "2026-11-24",
+    "quien": "plan del almacén (revisión)"
+   }
+  ],
+  "antes": {
+   "ficci-65": "2025",
+   "ficdeh-2026": "2025"
+  }
  }
 ]

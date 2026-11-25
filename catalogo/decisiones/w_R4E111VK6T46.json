@@ -21,10 +21,10 @@
  {
   "work_id": "w_R4E111VK6T46",
   "campo": "sinopsis.es",
-  "valor": "En el desierto de Ennedi, en Chad, se alzan entre la arena montañas milenarias. Estas guardan el recuerdo de un pasado olvidado y susurran antiguas leyendas. Kellou, una joven de un pueblo cercano, se ve atormentada por visiones inquietantes que la aislan de quienes la rodean. Su mundo da un vuelco el día en que conoce a Aya, una marginada rechazada por la comunidad. Mientras los habitantes del pueblo se ponen en contra de su creciente hermandad, Kellou debe defender a Aya y enfrentarse a la hostilidad de su propia gente, al tiempo que lucha por su libertad.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "En el desierto de Ennedi, en Chad, unas montañas milenarias guardan el recuerdo de un pasado olvidado. Kellou, una joven atormentada por visiones que la aíslan, conoce a Aya, una marginada. Mientras el pueblo se opone a su creciente hermandad, Kellou debe defender a Aya, enfrentarse a la hostilidad de su gente y luchar por su libertad.",
+  "motivo": "errata «aislan»; condensada a 350",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "7ba154b497e0",
    "c3659720520b"
@@ -32,7 +32,19 @@
   "antes": {
    "biff-2026": "En el desierto de Ennedi, en Chad, se alzan entre la arena montañas milenarias. Estas guardan el recuerdo de un pasado olvidado y susurran antiguas leyendas. Kellou, una joven de un pueblo cercano, se ve atormentada por visiones inquietantes que la aislan de quienes la rodean. Su mundo da un vuelco el día en que conoce a Aya, una marginada rechazada por la comunidad. Mientras los habitantes del pueblo se ponen en contra de su creciente hermandad, Kellou debe defender a Aya y enfrentarse a la hostilidad de su propia gente, al tiempo que lucha por su libertad.",
    "tiff-2026": "Cinco años después de Lingui, los lazos sagrados, el director chadiano Mahamat-Saleh Haroun vuelve al festival con su nueva película, ganadora del Premio FIPRESCI en la Berlinale de 2026."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "En el desierto de Ennedi, en Chad, se alzan entre la arena montañas milenarias. Estas guardan el recuerdo de un pasado olvidado y susurran antiguas leyendas. Kellou, una joven de un pueblo cercano, se ve atormentada por visiones inquietantes que la aislan de quienes la rodean. Su mundo da un vuelco el día en que conoce a Aya, una marginada rechazada por la comunidad. Mientras los habitantes del pueblo se ponen en contra de su creciente hermandad, Kellou debe defender a Aya y enfrentarse a la hostilidad de su propia gente, al tiempo que lucha por su libertad.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "7ba154b497e0",
+     "c3659720520b"
+    ]
+   }
+  ]
  },
  {
   "work_id": "w_R4E111VK6T46",

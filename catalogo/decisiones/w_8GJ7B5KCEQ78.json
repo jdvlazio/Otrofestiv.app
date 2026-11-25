@@ -112,10 +112,10 @@
  {
   "work_id": "w_8GJ7B5KCEQ78",
   "campo": "sinopsis.en",
-  "valor": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
-  "motivo": "alta desde festicineantioquia-2026",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje festicineantioquia-2026)",
+  "valor": "Two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+  "motivo": "frase agramatical",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "sembrada": true,
   "antes": {
    "cineparalapaz-2026": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
@@ -123,7 +123,15 @@
    "funza-2026": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
    "guatape-2026": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
    "mambe-2026": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+    "motivo": "alta desde festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
  },
  {
   "work_id": "w_8GJ7B5KCEQ78",

@@ -21,10 +21,10 @@
  {
   "work_id": "w_R4H0CA0SCZ7K",
   "campo": "sinopsis.es",
-  "valor": "Con una mirada atenta, la cineasta Claire Simon enfrenta estudiantes y profesores de bachillerato a los libros de Annie Ernaux, primera mujer francesa en recibir el Premio Nobel de Literatura.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "Con una mirada atenta, la cineasta Claire Simon da voz a estudiantes y profesores de bachillerato que leen los libros de Annie Ernaux, primera francesa en recibir el Premio Nobel de Literatura.",
+  "motivo": "falta «a»; frase mal construida",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "80f9eb2c12d9",
    "aaa5ffcab2a0"
@@ -32,6 +32,18 @@
   "antes": {
    "ficcali-2026": "Con una mirada atenta, la cineasta Claire Simon enfrenta estudiantes y profesores de bachillerato a los libros de Annie Ernaux, primera mujer francesa en recibir el Premio Nobel de Literatura.",
    "midbo-2026": "Figura fundamental del feminismo contemporáneo y primera francesa en recibir el Premio Nobel de Literatura, Annie Ernaux es considerada por muchos una fuente de emancipación individual y colectiva, al entrelazar lo íntimo con lo universal. La cineasta Claire Simon le dedica un retrato original en el que da voz a estudiantes y profesores. ¿Cómo se enseña la obra de Ernaux en escuelas secundarias y universidades? ¿Cómo se recibe, se estudia y se aprende? ¿Cómo se acercan los jóvenes franceses de hoy a sus escritos? Al situar su cámara en las aulas francesas, Simon captura el impacto vivo de las palabras de Ernaux: su poder para despertar, cuestionar certezas y generar nuevos niveles de conciencia al llevar a los estudiantes a reflexionar sobre sus propias vidas durante la adolescencia. A través de esta mirada al proceso de transmisión, Simon muestra cómo la obra de Ernaux, tras ocupar el lugar que le corresponde en la literatura universal, continúa inspirando a los jóvenes en su búsqueda de libertad y autodeterminación."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Con una mirada atenta, la cineasta Claire Simon enfrenta estudiantes y profesores de bachillerato a los libros de Annie Ernaux, primera mujer francesa en recibir el Premio Nobel de Literatura.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "80f9eb2c12d9",
+     "aaa5ffcab2a0"
+    ]
+   }
+  ]
  }
 ]
