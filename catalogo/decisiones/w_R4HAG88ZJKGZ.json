@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HAG88ZJKGZ",
+  "campo": "directores",
+  "valor": [
+   "Jorge Cadena"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 184",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=184"
+ },
+ {
+  "work_id": "w_R4HAG88ZJKGZ",
+  "campo": "anio",
+  "valor": 2016,
+  "motivo": "catálogo oficial de FICCI 65, p. 184",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=184"
+ },
+ {
+  "work_id": "w_R4HAG88ZJKGZ",
+  "campo": "paises",
+  "valor": [
+   "CH"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 184",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=184",
+  "antes": {
+   "ficci-65": "Suiza"
+  }
+ },
+ {
+  "work_id": "w_R4HAG88ZJKGZ",
+  "campo": "sinopsis.es",
+  "valor": "Tres espacios donde los hombres se encuentran y llenan el vacío de la vida cotidiana en Tiflis: los baños, la barbería y una casa vacía habitada por tres golondrinas. La palabra fluye en lugares cerrados y el director observa su intimidad, los gestos y lo imprevisible. Una metáfora de la libertad, sueño de la Georgia contemporánea.",
+  "motivo": "catálogo oficial de FICCI 65, p. 184",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=184"
+ },
+ {
+  "work_id": "w_R4HAG88ZJKGZ",
+  "campo": "sinopsis.en",
+  "valor": "Three places where men meet and fill the emptiness of daily life in Tbilisi: the baths, the barber’s, and an empty house inhabited by three swallows. Speech flows in enclosed spaces, and the director observes its intimacy, the gestures, and the unexpected. A metaphor for freedom, the dream of contemporary Georgia.",
+  "motivo": "catálogo oficial de FICCI 65, p. 184",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=184"
+ },
+ {
+  "work_id": "w_R4HAG88ZJKGZ",
+  "campo": "xref.tmdb",
+  "valor": 757890,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/757890"
+ }
+]

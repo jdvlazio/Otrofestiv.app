@@ -1,0 +1,92 @@
+[
+ {
+  "work_id": "w_4KDVAZC8TJ9D",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "75bf139840f7"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Stadionul Dragostei",
+  "valor": "Un equipo de fútbol llega al «Estadio del Amor», en un remoto pueblo de Transilvania, para un partido amistoso. Lo que comienza como un típico desplazamiento se convierte en un viaje en el tiempo, lleno de historias y encanto local de lo que alguna vez fue un próspero pueblo minero que mantiene viva su memoria a través del fútbol.",
+  "original": "Un equipo de fútbol llega al “Estadio del Amor”, un campo situado en un remoto pueblo de Transilvania, para disputar un partido amistoso. Lo que comienza como un típico desplazamiento se convierte en un viaje en el tiempo, lleno de historias y encanto local de lo que alguna vez fue un próspero pueblo minero que mantiene viva su memoria a través del fútbol.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "1dcc76068c1f"
+  }
+ },
+ {
+  "work_id": "w_4KDVAZC8TJ9D",
+  "campo": "directores",
+  "valor": [
+   "José Andrés Canales"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "José Andrés Canales"
+  }
+ },
+ {
+  "work_id": "w_4KDVAZC8TJ9D",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KDVAZC8TJ9D",
+  "campo": "paises",
+  "valor": [
+   "RO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rumania"
+  }
+ },
+ {
+  "work_id": "w_4KDVAZC8TJ9D",
+  "campo": "sinopsis.en",
+  "valor": "A football team arrives at the “Stadium of Love,” a pitch located in a remote village in Transylvania, to play a friendly match. What begins as a typical away game turns into a journey through time, filled with stories and the local charm of a once-thriving mining town that keeps its memory alive through football.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A football team arrives at the “Stadium of Love,” a pitch located in a remote village in Transylvania, to play a friendly match. What begins as a typical away game turns into a journey through time, filled with stories and the local charm of a once-thriving mining town that keeps its memory alive through football."
+  }
+ },
+ {
+  "work_id": "w_4KDVAZC8TJ9D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/stadionul-dragostei.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/stadionul-dragostei.jpg"
+  }
+ }
+]

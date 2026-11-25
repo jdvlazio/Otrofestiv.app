@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HF7D43JX7X",
+  "campo": "directores",
+  "valor": [
+   "Ben Rivers"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 286",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=286"
+ },
+ {
+  "work_id": "w_R4HF7D43JX7X",
+  "campo": "anio",
+  "valor": 2008,
+  "motivo": "catálogo oficial de FICCI 65, p. 286",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=286"
+ },
+ {
+  "work_id": "w_R4HF7D43JX7X",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 286",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=286",
+  "antes": {
+   "ficci-65": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_R4HF7D43JX7X",
+  "campo": "sinopsis.es",
+  "valor": "El hogar de una familia en plena naturaleza: vivir, trabajar y divertirse en una granja a lo largo de las estaciones. Animales y niños en libertad, objetos cotidianos y un paisaje sublime, en formato Scope revelado a mano. Sin una historia concreta, ni principio, ni nudo, ni desenlace: solo fragmentos de vidas siendo vividas.",
+  "motivo": "catálogo oficial de FICCI 65, p. 286",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=286"
+ },
+ {
+  "work_id": "w_R4HF7D43JX7X",
+  "campo": "sinopsis.en",
+  "valor": "A family’s home in the wilderness: living, working, and playing on a farm through the seasons. Free-roaming animals and children, everyday objects, and a sublime landscape, in hand-processed Scope. No particular story, no beginning, middle, or end: just fragments of lives being lived.",
+  "motivo": "catálogo oficial de FICCI 65, p. 286",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=286"
+ },
+ {
+  "work_id": "w_R4HF7D43JX7X",
+  "campo": "xref.tmdb",
+  "valor": 162445,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/162445"
+ }
+]

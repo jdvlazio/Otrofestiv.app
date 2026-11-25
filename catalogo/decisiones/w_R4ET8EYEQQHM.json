@@ -1,0 +1,54 @@
+[
+ {
+  "work_id": "w_R4ET8EYEQQHM",
+  "campo": "sinopsis.es",
+  "valor": "Un año después de terminar Tú me abrasas, Piñeiro presenta el prefacio que no pudo incluir en el montaje final. Siguiendo a Pavese, quien escribió un prefacio para cada capítulo de Diálogos con Leucó, acá presentamos, finalmente, nuestro prefacio.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2025)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "5eb9006e0018",
+   "69cf1824954f"
+  ],
+  "antes": {
+   "cinemancia-2025": [
+    "Rafael es poeta y vive con su mejor amigo, tiene un trabajo triste en una oficina gris y un noviazgo desgastado. La ciudad está colapsando por una ola de calor.",
+    "Un año después de terminar Tú me abrasas, Piñeiro presenta el prefacio que no pudo incluir en el montaje final. Siguiendo a Pavese, quien escribió un prefacio para cada capítulo de Diálogos con Leucó, acá presentamos, finalmente, nuestro prefacio."
+   ]
+  }
+ },
+ {
+  "work_id": "w_R4ET8EYEQQHM",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2025": [
+    2024,
+    2025
+   ]
+  }
+ },
+ {
+  "work_id": "w_R4ET8EYEQQHM",
+  "campo": "xref.tmdb",
+  "valor": 1444346,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/preface-to-the-little-dialogue/"
+ },
+ {
+  "work_id": "w_R4ET8EYEQQHM",
+  "campo": "sinopsis.en",
+  "valor": "A year after finishing You Burn Me, Piñeiro presents the preface he could not include in the final cut. Following Pavese, who wrote a preface for each chapter of Dialogues with Leucò, here, at last, is our preface.",
+  "motivo": "la que publicaba era de otra obra; traducida de su española",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)",
+  "antes": {
+   "cinemancia-2025": "Rafael is a poet who lives with his best friend, holds a sad job in a gray office, and has a worn-out relationship. The city is collapsing under a heat wave."
+  }
+ }
+]

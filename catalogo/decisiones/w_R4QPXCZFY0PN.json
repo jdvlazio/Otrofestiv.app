@@ -1,0 +1,124 @@
+[
+ {
+  "work_id": "w_R4QPXCZFY0PN",
+  "campo": "sinopsis.es",
+  "valor": "A una joven desesperada por dormir bien la mantienen despierta sus ruidosísimos vecinos. Mientras intenta imaginar qué causa la cacofonía de arriba, la realidad deriva en fantasía y comienza una batalla épica por la paz y la cordura.",
+  "motivo": "la publicada tenía un dato falso o era relleno; desde la ficha oficial",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («Aprobadas»)",
+  "antes": {
+   "tribeca-2026": "Un cortometraje en competencia en Tribeca 2026."
+  },
+  "vistas": [
+   "c41855a54895"
+  ],
+  "fuente": "https://tribecafilm.com/films/dear-upstairs-neighbors-2026",
+  "titulo": "Dear Upstairs Neighbors"
+ },
+ {
+  "work_id": "w_R4QPXCZFY0PN",
+  "campo": "sinopsis.en",
+  "valor": "A young woman desperate for a good night’s sleep is kept awake by her exceedingly noisy neighbors. As she struggles to imagine what could be causing the cacophony upstairs, reality drifts into fantasy, and an epic battle for peace and sanity ensues.",
+  "motivo": "la publicada tenía un dato falso o era relleno; desde la ficha oficial",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («Aprobadas»)",
+  "antes": {
+   "tribeca-2026": "A short film in competition at Tribeca 2026."
+  },
+  "fuente": "https://tribecafilm.com/films/dear-upstairs-neighbors-2026",
+  "titulo": "Dear Upstairs Neighbors"
+ },
+ {
+  "work_id": "w_R4QPXCZFY0PN",
+  "campo": "xref.tmdb",
+  "valor": 1639520,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/dear-upstairs-neighbors/"
+ },
+ {
+  "work_id": "w_R4QPXCZFY0PN",
+  "campo": "directores",
+  "valor": [
+   "Connie Qin He"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4QPXCZFY0PN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/dear-upstairs-neighbors.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "afiche vertical contra fotograma apaisado (Vertical sobre still)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/dear-upstairs-neighbors.jpg",
+   "tribeca-2026": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/7019/large_Dear_Upstairs_Neighbors-Clean-16x9-01.jpg"
+  },
+  "vistas": [
+   "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/7019/large_Dear_Upstairs_Neighbors-Clean-16x9-01.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4QPXCZFY0PN",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "tribeca-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4QPXCZFY0PN",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos",
+   "tribeca-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4QPXCZFY0PN",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación",
+   "tribeca-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4QPXCZFY0PN",
+  "campo": "xref.letterboxd",
+  "valor": "dear-upstairs-neighbors",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "dear-upstairs-neighbors",
+   "tribeca-2026": "dear-upstairs-neighbors"
+  }
+ }
+]

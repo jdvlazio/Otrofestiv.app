@@ -1,0 +1,22 @@
+[
+ {
+  "work_id": "w_R4PYB42WQT9V",
+  "campo": "xref.letterboxd",
+  "valor": "moongirl-2026",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "tiff-2026": "moongirl-1"
+  }
+ },
+ {
+  "work_id": "w_R4PYB42WQT9V",
+  "campo": "xref.tmdb",
+  "valor": 1744388,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/moongirl-1/"
+ }
+]

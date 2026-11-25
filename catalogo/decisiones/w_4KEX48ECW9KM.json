@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KEX48ECW9KM",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "54099ee717a3"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "La hora de irse",
+  "valor": "Patricio trabaja para sus hermanas y se siente atrapado en una vida que ya no le pertenece. Decidido a escapar, deambula por una noche cargada de expectativas y deseo de cambio. Una cita con un hombre misterioso parece abrir la puerta a algo nuevo, pero la atracción se vuelve inquietante y la intimidad deriva en peligro.",
+  "original": "Patricio trabaja para sus hermanas y se siente atrapado en una vida que ya no le pertenece. Decidido a escapar, deambula por una noche cargada de expectativas y deseo de cambio. Una cita con un hombre misterioso parece abrir la puerta a algo nuevo. Pero a medida que la noche avanza, la atracción se vuelve inquietante y la intimidad deriva en peligro. Regida por sus propias reglas, la noche se precipita hacia un desenlace inesperado y sangriento.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9036616351b1"
+  }
+ },
+ {
+  "work_id": "w_4KEX48ECW9KM",
+  "campo": "directores",
+  "valor": [
+   "Renzo Cozza"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Renzo Cozza"
+  }
+ },
+ {
+  "work_id": "w_4KEX48ECW9KM",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEX48ECW9KM",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_4KEX48ECW9KM",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KEX48ECW9KM",
+  "campo": "sinopsis.en",
+  "valor": "Patricio works for his sisters and feels trapped in a life that no longer fits him. Determined to break away, he drifts through a night charged with expectation and the desire for renewal. A date with a mysterious man seems to open the door to something new. But as the night deepens, attraction turns uneasy and intimacy slips into danger.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Patricio works for his sisters and feels trapped in a life that no longer fits him. Determined to break away, he drifts through a night charged with expectation and the desire for renewal. A date with a mysterious man seems to open the door to something new. But as the night deepens, attraction turns uneasy and intimacy slips into danger. Governed by its own rules, the night spirals toward an unexpected and bloody outcome."
+  }
+ },
+ {
+  "work_id": "w_4KEX48ECW9KM",
+  "campo": "xref.tmdb",
+  "valor": 1614670,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1614670"
+  }
+ },
+ {
+  "work_id": "w_4KEX48ECW9KM",
+  "campo": "xref.letterboxd",
+  "valor": "time-to-go-2026-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "time-to-go-2026-1"
+  }
+ },
+ {
+  "work_id": "w_4KEX48ECW9KM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-hora-de-irse.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-hora-de-irse.jpg"
+  }
+ }
+]

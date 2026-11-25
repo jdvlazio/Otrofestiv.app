@@ -1,0 +1,47 @@
+[
+ {
+  "work_id": "w_50XGVBRY17Z7",
+  "campo": "no-es",
+  "valor": "w_R4PS7MYC5SKG",
+  "motivo": "dos cortos distintos con el mismo título en TIFF: Pelechian (Armenia, 1992, 8 min) y Lindroth von Bahr (2026, 17 min, TMDB 1472669)",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)"
+ },
+ {
+  "work_id": "w_50XGVBRY17Z7",
+  "campo": "xref.tmdb",
+  "valor": 200148,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/end-1992/"
+ },
+ {
+  "work_id": "w_50XGVBRY17Z7",
+  "campo": "sinopsis.es",
+  "valor": "Peleshian convierte imágenes de un viaje en tren en una metáfora de la forma de una vida. A los primeros rostros en el vagón les siguen el paisaje, el recorrido por un túnel negro y la salida final a una luz blanca y pura.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/200148"
+ },
+ {
+  "work_id": "w_50XGVBRY17Z7",
+  "campo": "sinopsis.en",
+  "valor": "Peleshian transforms footage from a train ride into a metaphor for the shape of a life. Early images of faces on the train give way to landscape, a journey through a black tunnel, and a final emergence into pure white light.",
+  "motivo": "de su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/200148"
+ },
+ {
+  "work_id": "w_50XGVBRY17Z7",
+  "campo": "directores",
+  "valor": [
+   "Artavazd Pelechian"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

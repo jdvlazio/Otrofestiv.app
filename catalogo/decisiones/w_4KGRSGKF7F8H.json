@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KGRSGKF7F8H",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "b0b0da1d868d"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Computadora",
+  "valor": "Un alma espera reencarnarse mientras recuerda su vida como monja en el Observatorio Astronómico Vaticano a principios del siglo XX. Allí participó en un proyecto para cartografiar el cielo nocturno y recibió el título de “computadora” por sus cálculos repetitivos. Desencantada con esa existencia, contempla ser programadora en su próxima vida.",
+  "original": "Un alma espera reencarnarse mientras recuerda su vida como monja en el Observatorio Astronómico Vaticano a principios del siglo XX. Allí participó en Carte du Ciel, un ambicioso proyecto internacional para cartografiar el cielo nocturno, y recibió el título de “computadora” por sus cálculos repetitivos. Desencantada con su existencia anterior, contempla convertirse en programadora en su próxima vida.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "6c0f89a2d985"
+  }
+ },
+ {
+  "work_id": "w_4KGRSGKF7F8H",
+  "campo": "directores",
+  "valor": [
+   "Alice dos Reis"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alice dos Reis"
+  }
+ },
+ {
+  "work_id": "w_4KGRSGKF7F8H",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGRSGKF7F8H",
+  "campo": "paises",
+  "valor": [
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KGRSGKF7F8H",
+  "campo": "generos",
+  "valor": [
+   "Ciencia ficción"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ciencia ficción"
+  }
+ },
+ {
+  "work_id": "w_4KGRSGKF7F8H",
+  "campo": "sinopsis.en",
+  "valor": "A soul waits to be reincarnated while reflecting back on her past life as a nun, who worked at the Vatican Astronomical Observatory in early-20th century. There, she took part in the “Carte du Ciel” — an ambitious international project to map the night sky, earning the early title of “computer” as a result of processing repetitive calculations. Disillusioned with her previous existence, she considers becoming a coder in her next life.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A soul waits to be reincarnated while reflecting back on her past life as a nun, who worked at the Vatican Astronomical Observatory in early-20th century. There, she took part in the “Carte du Ciel” — an ambitious international project to map the night sky, earning the early title of “computer” as a result of processing repetitive calculations. Disillusioned with her previous existence, she considers becoming a coder in her next life."
+  }
+ },
+ {
+  "work_id": "w_4KGRSGKF7F8H",
+  "campo": "xref.tmdb",
+  "valor": 1504269,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1504269"
+  }
+ },
+ {
+  "work_id": "w_4KGRSGKF7F8H",
+  "campo": "xref.letterboxd",
+  "valor": "oh-be-a-fine-girl-kiss-me",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "oh-be-a-fine-girl-kiss-me"
+  }
+ },
+ {
+  "work_id": "w_4KGRSGKF7F8H",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/computadora.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/computadora.jpg"
+  }
+ }
+]

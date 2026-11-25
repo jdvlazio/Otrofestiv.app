@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGN10A22F1Q",
+  "campo": "directores",
+  "valor": [
+   "Martha G. Ayerbe"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Martha G. Ayerbe"
+  }
+ },
+ {
+  "work_id": "w_4KGN10A22F1Q",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KGN10A22F1Q",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KGN10A22F1Q",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suspenso"
+  }
+ },
+ {
+  "work_id": "w_4KGN10A22F1Q",
+  "campo": "sinopsis.es",
+  "valor": "Martín, un niño tímido y sensible, acompaña a su padre y al jefe de éste durante un día de caza. La jornada sacará a la luz las tensiones y frustraciones de estos dos hombres, poniendo a prueba la valía de Martín.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Martín, un niño tímido y sensible, acompaña a su padre y al jefe de éste durante un día de caza. La jornada sacará a la luz las tensiones y frustraciones de estos dos hombres, poniendo a prueba la valía de Martín."
+  }
+ },
+ {
+  "work_id": "w_4KGN10A22F1Q",
+  "campo": "sinopsis.en",
+  "valor": "On a hunting trip, young Martín accompanies his father and his father’s boss. As the day progresses, each man’s inner tensions and frustrations come to light, putting Martín’s sensitivity and quiet strength to the test.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On a hunting trip, young Martín accompanies his father and his father’s boss. As the day progresses, each man’s inner tensions and frustrations come to light, putting Martín’s sensitivity and quiet strength to the test."
+  }
+ },
+ {
+  "work_id": "w_4KGN10A22F1Q",
+  "campo": "xref.tmdb",
+  "valor": 1651912,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1651912"
+  }
+ },
+ {
+  "work_id": "w_4KGN10A22F1Q",
+  "campo": "xref.letterboxd",
+  "valor": "bait-2025-2",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "bait-2025-2"
+  }
+ },
+ {
+  "work_id": "w_4KGN10A22F1Q",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/senuelo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/senuelo.jpg"
+  }
+ }
+]

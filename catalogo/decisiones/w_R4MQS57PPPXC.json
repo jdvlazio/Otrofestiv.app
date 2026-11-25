@@ -1,0 +1,33 @@
+[
+ {
+  "work_id": "w_R4MQS57PPPXC",
+  "campo": "sinopsis.es",
+  "valor": "Una violinista de una orquesta de provincia polaca, cuyo marido dirige el conjunto, visita Estados Unidos y conoce a un director de orquesta de fama mundial. En el pasado, él estuvo enamorado de la madre de la violinista. Hipocondríaco y algo inestable, el maestro regresa a Polonia para dirigir la orquesta de provincia.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "70aa3efc63fc"
+  ],
+  "antes": {
+   "olhar-2026": "Una violinista de una orquesta provincial polaca, cuyo marido es el director del conjunto, visita los EE. UU. y se relaciona con un director sinfónico mundialmente famoso. Resulta que, en el pasado, él estuvo enamorado de la madre de la violinista. El director, un hipocondríaco algo inestable, regresa a Polonia para dirigir la orquesta provincial."
+  }
+ },
+ {
+  "work_id": "w_R4MQS57PPPXC",
+  "campo": "xref.tmdb",
+  "valor": 95269,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-conductor/"
+ },
+ {
+  "work_id": "w_R4MQS57PPPXC",
+  "campo": "anio",
+  "valor": 1979,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4DM15TX08G9",
+  "campo": "directores",
+  "valor": [
+   "Rafaela Camelo"
+  ],
+  "motivo": "la ficha decía otra persona",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "aff-2026": "Matías Rojas Valencia"
+  },
+  "fuente": "https://www.themoviedb.org/movie/1403855"
+ },
+ {
+  "work_id": "w_R4DM15TX08G9",
+  "campo": "xref.tmdb",
+  "valor": 1403855,
+  "motivo": "misma trama, año y duración",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "fuente": "https://www.themoviedb.org/movie/1403855"
+ }
+]

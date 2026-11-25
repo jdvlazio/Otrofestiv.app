@@ -1,0 +1,33 @@
+[
+ {
+  "work_id": "w_R4EZ7VK937KA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/fantasmagoria-2026/cuadecuc-vampir.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/fantasmagoria-2026/cuadecuc-vampir.jpg",
+   "https://image.tmdb.org/t/p/w500/6Ktgs4F6wfphozsi0KOgZzHeKCq.jpg"
+  ],
+  "antes": {
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/6Ktgs4F6wfphozsi0KOgZzHeKCq.jpg",
+   "fantasmagoria-2026": "/assets/fantasmagoria-2026/cuadecuc-vampir.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4EZ7VK937KA",
+  "campo": "anio",
+  "valor": 1971,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:126278)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2026": 1971,
+   "fantasmagoria-2026": 1972
+  }
+ }
+]

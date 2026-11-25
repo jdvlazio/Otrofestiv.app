@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4E6Y2QNSTZP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/luis-tercero.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/luis-tercero.jpg",
+   "/assets/ficcali-2026/luis-tercero.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/luis-tercero.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/luis-tercero.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4E6Y2QNSTZP",
+  "campo": "sinopsis.es",
+  "valor": "Luis se jubila después de cuarenta años de trabajo como profesor de historia. Presionado por su familia, busca qué hacer mientras su esposa, Amelia, se entrega a la pintura y al ejercicio grupal con nuevos amigos. Desde Bogotá llega su hijo Alejandro, quien desarrolla un proyecto musical al que invita a su padre, que toca muy bien el acordeón. Sin embargo, Luis da con un grupo de músicos de su edad con quienes concuerda mucho más y con los que disfruta el hallazgo de un muy buen público en casas geriátricas. Padre e hijo chocan, sin imaginar que la música los une al igual que el vacío sin rumbo de sus generaciones.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "4f9e99ab880d",
+   "c1b01ec5d4a7"
+  ],
+  "antes": {
+   "biff-2026": "Luis se ha pensionado y no resuelve qué hacer en sus días de quietud. Su hijo llega a la ciudad con un proyecto musical al que invita a su padre, pero Luis no se siente cómodo. Luis entonces conoce a un taxista con el que se proponen crear una banda con amigos y conocidos de su edad. Padre e hijo chocan sin imaginar que la música los une, al igual que el vacío sin rumbo de sus generaciones en una sociedad que pareciera darles la espalda.",
+   "ficcali-2026": "Luis se jubila después de cuarenta años de trabajo como profesor de historia. Presionado por su familia, busca qué hacer mientras su esposa, Amelia, se entrega a la pintura y al ejercicio grupal con nuevos amigos. Desde Bogotá llega su hijo Alejandro, quien desarrolla un proyecto musical al que invita a su padre, que toca muy bien el acordeón. Sin embargo, Luis da con un grupo de músicos de su edad con quienes concuerda mucho más y con los que disfruta el hallazgo de un muy buen público en casas geriátricas. Padre e hijo chocan, sin imaginar que la música los une al igual que el vacío sin rumbo de sus generaciones."
+  }
+ }
+]

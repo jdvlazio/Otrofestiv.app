@@ -1,0 +1,117 @@
+[
+ {
+  "work_id": "w_4KF3J1TYKF0J",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "a18e5529d17b"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Pupa",
+  "valor": "Ensayo fílmico de realismo mágico construido a partir de las experiencias de personas trans y no binarias, con Beta, recientemente operade en un proceso de reafirmación de género, como figura central. Su historia se abre a otras voces para tejer un espacio común donde resistencia y cuidado se entrelazan en busca de un presente-futuro habitable.",
+  "original": "Pupa es un ensayo fílmico de realismo mágico construido a partir de las experiencias de personas trans y no binarias, teniendo como figura central a Beta, recientemente operade en un proceso de reafirmación de género. Su historia se abre a otras voces, buscando tejer un espacio común donde la resistencia y el cuidado se entrelazan en la búsqueda de un presente-futuro habitable.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "d038c077ba54"
+  }
+ },
+ {
+  "work_id": "w_4KF3J1TYKF0J",
+  "campo": "directores",
+  "valor": [
+   "Antía Carreira Vázquez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Antía Carreira Vázquez"
+  }
+ },
+ {
+  "work_id": "w_4KF3J1TYKF0J",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KF3J1TYKF0J",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KF3J1TYKF0J",
+  "campo": "sinopsis.en",
+  "valor": "Pupa is a film essay of magical realism built from the experiences of trans and non-binary people, with Beta as its central figure, recently operated on in a process of gender affirmation. Their story opens up to other voices, seeking to weave a shared space where resistance and care intertwine in the search for a livable present-future.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Pupa is a film essay of magical realism built from the experiences of trans and non-binary people, with Beta as its central figure, recently operated on in a process of gender affirmation. Their story opens up to other voices, seeking to weave a shared space where resistance and care intertwine in the search for a livable present-future."
+  }
+ },
+ {
+  "work_id": "w_4KF3J1TYKF0J",
+  "campo": "xref.tmdb",
+  "valor": 1641481,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1641481"
+  }
+ },
+ {
+  "work_id": "w_4KF3J1TYKF0J",
+  "campo": "xref.letterboxd",
+  "valor": "pupa-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "pupa-1"
+  }
+ },
+ {
+  "work_id": "w_4KF3J1TYKF0J",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/pupa.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/pupa.jpg"
+  }
+ }
+]

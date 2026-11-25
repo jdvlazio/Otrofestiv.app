@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_7THX058RWMDS",
+  "campo": "directores",
+  "valor": [
+   "Faiz Abu Rmeleh",
+   "Keren Manor"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Faiz Abu Rmeleh, Keren Manor"
+  }
+ },
+ {
+  "work_id": "w_7THX058RWMDS",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_7THX058RWMDS",
+  "campo": "paises",
+  "valor": [
+   "DE",
+   "PS"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alemania, Palestina"
+  }
+ },
+ {
+  "work_id": "w_7THX058RWMDS",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_7THX058RWMDS",
+  "campo": "sinopsis.es",
+  "valor": "Documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de 20 comunidades con tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes en 360° de un paisaje que desaparece con otras de celular.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno."
+  }
+ },
+ {
+  "work_id": "w_7THX058RWMDS",
+  "campo": "sinopsis.en",
+  "valor": "Immersive documentary on the ongoing ethnic cleansing of Palestinians in the West Bank by settler militias and Israeli authorities. Filmed over three years, it follows the displacement of over 20 communities, with three protagonists bearing witness to systematic, daily violence. It weaves 360º footage of a vanishing landscape with phone footage.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Raj’in (We Shall Return) is an immersive documentary capturing the ongoing ethnic cleansing of Palestinians in the West Bank by settler militias and Israeli authorities. Filmed over the last three years, the cinematic experience follows the displacement of over 20 communities, with three protagonists bearing witness to the systematic, daily violence. The film weaves 360º footage, placing viewers inside a vanishing Palestinian landscape, and phone footage recording events on the ground,unfiltered."
+  }
+ },
+ {
+  "work_id": "w_7THX058RWMDS",
+  "campo": "xref.tmdb",
+  "valor": 1841396,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841396"
+  }
+ },
+ {
+  "work_id": "w_7THX058RWMDS",
+  "campo": "xref.letterboxd",
+  "valor": "rajin",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "rajin"
+  }
+ },
+ {
+  "work_id": "w_7THX058RWMDS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/raj-in.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/raj-in.jpg"
+  }
+ }
+]

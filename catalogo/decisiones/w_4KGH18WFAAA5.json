@@ -1,0 +1,119 @@
+[
+ {
+  "work_id": "w_4KGH18WFAAA5",
+  "campo": "directores",
+  "valor": [
+   "Ingrid Pérez López"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ingrid Pérez López"
+  }
+ },
+ {
+  "work_id": "w_4KGH18WFAAA5",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_4KGH18WFAAA5",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KGH18WFAAA5",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KGH18WFAAA5",
+  "campo": "sinopsis.es",
+  "valor": "La víspera de su primera comunión, Rocío acompaña a su padre a recoger el vestido de la ceremonia. Allí descubre que él engaña a su madre con la modista. Al día siguiente la ceremonia sigue en pie, aunque Rocío ya no mira a su padre de la misma forma.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "La víspera de su primera comunión, Rocío acompaña a su padre a recoger el vestido de la ceremonia. Allí descubre que él engaña a su madre con la modista. Al día siguiente la ceremonia sigue en pie, aunque Rocío ya no mira a su padre de la misma forma."
+  }
+ },
+ {
+  "work_id": "w_4KGH18WFAAA5",
+  "campo": "sinopsis.en",
+  "valor": "On the eve of her first communion, Rocío goes with her father to collect her dress. There, she discovers he is having an affair with the dressmaker. The ceremony goes ahead the following day, but Rocío no longer sees her father in the same way.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On the eve of her first communion, Rocío goes with her father to collect her dress. There, she discovers he is having an affair with the dressmaker. The ceremony goes ahead the following day, but Rocío no longer sees her father in the same way."
+  }
+ },
+ {
+  "work_id": "w_4KGH18WFAAA5",
+  "campo": "xref.tmdb",
+  "valor": 1445035,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1445035"
+  }
+ },
+ {
+  "work_id": "w_4KGH18WFAAA5",
+  "campo": "xref.letterboxd",
+  "valor": "tomorrow-2024-3",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "tomorrow-2024-3"
+  }
+ },
+ {
+  "work_id": "w_4KGH18WFAAA5",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/manana.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/manana.jpg"
+  }
+ }
+]

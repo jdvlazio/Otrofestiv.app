@@ -1,0 +1,33 @@
+[
+ {
+  "work_id": "w_R4PYB00XDK3K",
+  "campo": "xref.letterboxd",
+  "valor": "mammalia-2026",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "tiff-2026": "mammalia-1"
+  }
+ },
+ {
+  "work_id": "w_R4PYB00XDK3K",
+  "campo": "xref.tmdb",
+  "valor": 1745705,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/mammalia-1/"
+ },
+ {
+  "work_id": "w_R4PYB00XDK3K",
+  "campo": "paises",
+  "valor": [
+   "GR",
+   "NL"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KE821XNGJWG",
+  "campo": "directores",
+  "valor": [
+   "Emily Lawson"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Emily Lawson"
+  }
+ },
+ {
+  "work_id": "w_4KE821XNGJWG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KE821XNGJWG",
+  "campo": "paises",
+  "valor": [
+   "CA"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Canadá"
+  }
+ },
+ {
+  "work_id": "w_4KE821XNGJWG",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KE821XNGJWG",
+  "campo": "sinopsis.es",
+  "valor": "Un hombre moribundo busca la liberación definitiva: un nacimiento a la inversa.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un hombre moribundo busca la liberación definitiva: un nacimiento a la inversa."
+  }
+ },
+ {
+  "work_id": "w_4KE821XNGJWG",
+  "campo": "sinopsis.en",
+  "valor": "A dying man seeks the ultimate release: a birth in reverse.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A dying man seeks the ultimate release: a birth in reverse."
+  }
+ },
+ {
+  "work_id": "w_4KE821XNGJWG",
+  "campo": "xref.tmdb",
+  "valor": 1637224,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1637224"
+  }
+ },
+ {
+  "work_id": "w_4KE821XNGJWG",
+  "campo": "xref.letterboxd",
+  "valor": "man-eating-pussy",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "man-eating-pussy"
+  }
+ },
+ {
+  "work_id": "w_4KE821XNGJWG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/man-eating-pussy.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/man-eating-pussy.jpg"
+  }
+ }
+]

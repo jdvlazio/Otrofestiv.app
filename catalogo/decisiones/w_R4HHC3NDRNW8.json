@@ -1,0 +1,22 @@
+[
+ {
+  "work_id": "w_R4HHC3NDRNW8",
+  "campo": "xref.letterboxd",
+  "valor": "amalgama-2019",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "ficdeh-2026": "amalgama-1"
+  }
+ },
+ {
+  "work_id": "w_R4HHC3NDRNW8",
+  "campo": "xref.tmdb",
+  "valor": 1737955,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/amalgama-1/"
+ }
+]

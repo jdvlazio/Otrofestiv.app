@@ -1,0 +1,68 @@
+[
+ {
+  "work_id": "w_R4KECGPX9X48",
+  "campo": "directores",
+  "valor": [
+   "Santiago Gomxz",
+   "Cristian Rojas"
+  ],
+  "motivo": "Jardín acredita la codirección; Vartex solo al primero",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "jardin-2026": "Santiago Gomxz, Cristian Rojas",
+   "miradas-2026": "Santiago Gomxz",
+   "vartex-2026": "Santiago Gomxz"
+  }
+ },
+ {
+  "work_id": "w_R4KECGPX9X48",
+  "campo": "sinopsis.es",
+  "valor": "Saúl duerme en la casa de su abuela y sueña con una pitonisa que le dice que la única forma de acabar con el pecado que siente en la intimidad es matando al pecador. Saúl recuerda a un ser amado mientras la voz de la pitonisa crece cada vez más dentro de su cabeza, hasta entender que la única forma de liberarse es perdonándose a sí mismo.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (jardin-2026, miradas-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "4ce01a4d4396",
+   "bbad2be9c13f"
+  ],
+  "antes": {
+   "jardin-2026": "Saúl duerme en la casa de su abuela y sueña con una pitonisa que le dice que la única forma de acabar con el pecado que siente en la intimidad es matando al pecador. Saúl recuerda a un ser amado mientras la voz de la pitonisa crece cada vez más dentro de su cabeza, hasta entender que la única forma de liberarse es perdonándose a sí mismo.",
+   "miradas-2026": "Saúl duerme en la casa de su abuela y sueña con una pitonisa que le dice que la única forma de acabar con el pecado que siente en la intimidad es matando al pecador. Saúl recuerda a un ser amado mientras la voz de la pitonisa crece cada vez más dentro de su cabeza, hasta entender que la única forma de liberarse es perdonándose a sí mismo.",
+   "vartex-2026": "En sus sueños, Saúl ve a una pitonisa que le dice que la única manera de liberarse de su pecado es matar al pecador. Al recordar a un ser amado, su conflicto interno lo lleva a una lucha entre el perdón y la autodestrucción."
+  }
+ },
+ {
+  "work_id": "w_R4KECGPX9X48",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/jardin-2026/de-saul.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "el mismo still en los dos festivales",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/miradas-2026/de-saul.jpg"
+  ],
+  "antes": {
+   "jardin-2026": "/assets/jardin-2026/de-saul.jpg",
+   "miradas-2026": "/assets/miradas-2026/de-saul.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4KECGPX9X48",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "jardin-2026": "Experimental",
+   "miradas-2026": "Ficción"
+  }
+ }
+]

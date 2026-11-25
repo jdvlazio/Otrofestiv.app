@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_R4H3V76PWV4G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/somnolitico.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficcali-2026/somnolitico.jpg",
+   "/assets/filcmar-2026/somnolitico.jpg",
+   "/assets/jardin-2026/somnolitico.jpg"
+  ],
+  "antes": {
+   "ficcali-2026": "/assets/ficcali-2026/somnolitico.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/somnolitico.jpg",
+   "jardin-2026": "/assets/jardin-2026/somnolitico.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4H3V76PWV4G",
+  "campo": "sinopsis.es",
+  "valor": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "6660de8b8198",
+   "7a185b2b2f84",
+   "c5a18cd2dde5"
+  ],
+  "antes": {
+   "ficcali-2026": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
+   "filcmar-2026": "Un ser extraño se pierde en el caos del sistema de transporte, moviéndose de un lugar a otro sin encontrar salida. Los caminos están saturados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, sin rostro, se mueven automáticamente, creando un laberinto donde las rutas parecen interminables. La gente adormecida se funde con el entorno, y mientras el autobús continúa su camino, el ser finalmente se encuentra a sí mismo.",
+   "jardin-2026": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, pasando de un lugar a otro sin encontrar una salida. Los caminos se ven invadidos por recorridos acelerados que van y vuelven como cascadas humanas. Los transeúntes, sin identidad, se mueven automáticamente, creando un laberinto en el que las rutas parecen no tener fin. Personas dormidas y agotadas parecen fusionarse con el entorno y, mientras el bus sigue su marcha, el ser finalmente logra descubrirse a si mismx."
+  }
+ },
+ {
+  "work_id": "w_R4H3V76PWV4G",
+  "campo": "directores",
+  "valor": [
+   "Abril Natalia Velásquez"
+  ],
+  "motivo": "un dato por obra: la forma completa y bien escrita entre lo acreditado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficcali-2026": "Abril Natalia Velázquez",
+   "filcmar-2026": "Abril Natalia Velásquez",
+   "jardin-2026": "Abril Velasquez"
+  }
+ },
+ {
+  "work_id": "w_R4H3V76PWV4G",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1590709)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficcali-2026": 2026,
+   "filcmar-2026": 2026,
+   "jardin-2026": 2025
+  }
+ }
+]

@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4HD24NS1D4A",
+  "campo": "directores",
+  "valor": [
+   "Lucrecia Martel"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 210",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=210"
+ },
+ {
+  "work_id": "w_R4HD24NS1D4A",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 210",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=210",
+  "antes": {
+   "ficci-65": "1997"
+  }
+ },
+ {
+  "work_id": "w_R4HD24NS1D4A",
+  "campo": "paises",
+  "valor": [
+   "AR",
+   "US",
+   "MX",
+   "FR",
+   "NL",
+   "DK"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 210",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=210",
+  "antes": {
+   "ficci-65": "Argentina, Estados Unidos, México, Francia, Países Bajos, Dinamarca"
+  }
+ },
+ {
+  "work_id": "w_R4HD24NS1D4A",
+  "campo": "sinopsis.es",
+  "valor": "En 2009, un terrateniente y dos expolicías asesinan al indígena Javier Chocobar; el caso tarda nueve años en llegar a juicio. El documental entreteje el video del crimen, la puesta en escena de la justicia, el territorio en disputa visto por drones, charlas con los chuschagasta y sus fotografías, e interroga con indignación los mitos de la nación.",
+  "motivo": "catálogo oficial de FICCI 65, p. 210",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=210",
+  "antes": {
+   "ficci-65": "La directora argentina Lucrecia Martel es una de las maestras del cine contemporáneo y su capacidad de juntar imágenes y sonidos para lograr efectos inesperados, a menudo perturbadores, brilla en su primer largometraje documental."
+  }
+ },
+ {
+  "work_id": "w_R4HD24NS1D4A",
+  "campo": "sinopsis.en",
+  "valor": "In 2009, a landowner and two former police officers murder the Indigenous man Javier Chocobar; the case takes nine years to reach court. The documentary interweaves video of the crime, the staging of justice, the disputed land seen by drones, talks with the Chuschagasta, and their photographs, questioning the nation's myths with indignation.",
+  "motivo": "catálogo oficial de FICCI 65, p. 210",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=210",
+  "antes": {
+   "ficci-65": "Argentine director Lucrecia Martel is one of the masters of contemporary cinema, and her capacity to bring together images and sounds to achieve unexpected, often unsettling effects shines in her first feature-length documentary."
+  }
+ },
+ {
+  "work_id": "w_R4HD24NS1D4A",
+  "campo": "xref.tmdb",
+  "valor": 661603,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/661603"
+ }
+]

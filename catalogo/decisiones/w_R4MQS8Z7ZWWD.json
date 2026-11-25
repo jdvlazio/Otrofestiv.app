@@ -1,0 +1,46 @@
+[
+ {
+  "work_id": "w_R4MQS8Z7ZWWD",
+  "campo": "sinopsis.es",
+  "valor": "¿Makunaima es Duwid? Una pregunta, un proceso, una película y memoria viva del pueblo wapichana. La película propone sumergirse en sus narrativas tradicionales a partir del territorio de la Serra da Lua, en Roraima, e invita a reflexionar sobre el célebre personaje Macunaíma, de Mário de Andrade, que cumplirá cien años en 2028, y sobre sus raíces indígenas.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "9a65760d728e"
+  ],
+  "antes": {
+   "olhar-2026": "¿Makunaima es Duwid? Una pregunta, un proceso, una película y memoria viva del pueblo Wapichana. La película propone una inmersión en las narrativas tradicionales Wapichana desde el territorio de la Serra da Lua, en Roraima. El guion incita al público a reflexionar sobre el famoso personaje Macunaíma de Mário de Andrade, que cumplirá 100 años en 2028, y sus relaciones con sus raíces indígenas, en especial las del Pueblo Wapichana."
+  }
+ },
+ {
+  "work_id": "w_R4MQS8Z7ZWWD",
+  "campo": "xref.letterboxd",
+  "valor": "duwid-tuminzik-is-makunaima-duwid",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "olhar-2026": "duwid-tuminkiz-makunaima-e-duwid"
+  }
+ },
+ {
+  "work_id": "w_R4MQS8Z7ZWWD",
+  "campo": "xref.tmdb",
+  "valor": 1688906,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/duwid-tuminkiz-makunaima-e-duwid/"
+ },
+ {
+  "work_id": "w_R4MQS8Z7ZWWD",
+  "campo": "directores",
+  "valor": [
+   "Gustavo Caboco Wapichana"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

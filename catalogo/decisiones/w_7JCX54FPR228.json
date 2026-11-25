@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_7JCX54FPR228",
+  "campo": "directores",
+  "valor": [
+   "Tatiana Lobera"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Tatiana Lobera"
+  }
+ },
+ {
+  "work_id": "w_7JCX54FPR228",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCX54FPR228",
+  "campo": "sinopsis.es",
+  "valor": "El minuto recorre la tristeza de la vejez y a través del tango transmite el sentimiento de una lágrima por la nostalgia.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "El minuto recorre la tristeza de la vejez y a través del tango transmite el sentimiento de una lágrima por la nostalgia."
+  }
+ },
+ {
+  "work_id": "w_7JCX54FPR228",
+  "campo": "sinopsis.en",
+  "valor": "This one-minute film travels through the sadness of old age and, through tango, conveys the feeling of a tear shed out of nostalgia.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "This one-minute film travels through the sadness of old age and, through tango, conveys the feeling of a tear shed out of nostalgia."
+  }
+ },
+ {
+  "work_id": "w_7JCX54FPR228",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/olvidar-a-miriam.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/olvidar-a-miriam.jpg"
+  }
+ }
+]

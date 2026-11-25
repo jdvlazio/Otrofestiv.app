@@ -1,0 +1,46 @@
+[
+ {
+  "work_id": "w_R4NEB1T5EMBG",
+  "campo": "xref.tmdb",
+  "valor": 1355190,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/elipsis-2021/"
+ },
+ {
+  "work_id": "w_R4NEB1T5EMBG",
+  "campo": "sinopsis.es",
+  "valor": "Un hombre cae en un bucle temporal y vive un encierro tormentoso todos los días.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/1355190"
+ },
+ {
+  "work_id": "w_R4NEB1T5EMBG",
+  "campo": "sinopsis.en",
+  "valor": "A man falls into a time loop and lives through a tormenting confinement every day.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4NEB1T5EMBG",
+  "campo": "directores",
+  "valor": [
+   "Dayana González Fajardo"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4NEB1T5EMBG",
+  "campo": "anio",
+  "valor": 2020,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

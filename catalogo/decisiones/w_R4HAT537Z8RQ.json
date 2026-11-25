@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HAT537Z8RQ",
+  "campo": "directores",
+  "valor": [
+   "Kiều Anh Nguyễn Phượng"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 158",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=158"
+ },
+ {
+  "work_id": "w_R4HAT537Z8RQ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 158",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=158"
+ },
+ {
+  "work_id": "w_R4HAT537Z8RQ",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "VN"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 158",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=158",
+  "antes": {
+   "ficci-65": "Francia, Vietnam"
+  }
+ },
+ {
+  "work_id": "w_R4HAT537Z8RQ",
+  "campo": "sinopsis.es",
+  "valor": "La separación de dos amantes, marcada por la partida de uno de ellos de Vietnam hacia Alemania en los años 80, se prolonga hasta el presente como una melancolía brumosa. Vaporosa y corrosiva, conserva el peso del pasado y se dispersa hasta desdibujar el paisaje y deformar el lenguaje.",
+  "motivo": "catálogo oficial de FICCI 65, p. 158",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=158"
+ },
+ {
+  "work_id": "w_R4HAT537Z8RQ",
+  "campo": "sinopsis.en",
+  "valor": "The separation of two lovers, marked by one of them leaving Vietnam for Germany in the 1980s, lingers to this day as a misty melancholy. Vaporous and corrosive, it retains the weight of the past and disperses until it blurs the landscape and distorts language.",
+  "motivo": "catálogo oficial de FICCI 65, p. 158",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=158"
+ },
+ {
+  "work_id": "w_R4HAT537Z8RQ",
+  "campo": "xref.tmdb",
+  "valor": 1640203,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1640203"
+ }
+]

@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HB85BQC0RW",
+  "campo": "directores",
+  "valor": [
+   "Angel Wu"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 132",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=132"
+ },
+ {
+  "work_id": "w_R4HB85BQC0RW",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 132",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=132"
+ },
+ {
+  "work_id": "w_R4HB85BQC0RW",
+  "campo": "paises",
+  "valor": [
+   "TW"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 132",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=132",
+  "antes": {
+   "ficci-65": "Taiwán"
+  }
+ },
+ {
+  "work_id": "w_R4HB85BQC0RW",
+  "campo": "sinopsis.es",
+  "valor": "Un obrero fabrica un tótem de madera, ávido de consumirlo hasta el desgaste. El frenesí del trabajo, la entrega total a la producción y al consumo, y el deterioro del cuerpo son arrojados agresivamente a la pantalla. Un corto experimental gobernado por el exceso, que salta entre fotografía, dibujo, animación y collage.",
+  "motivo": "catálogo oficial de FICCI 65, p. 132",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=132"
+ },
+ {
+  "work_id": "w_R4HB85BQC0RW",
+  "campo": "sinopsis.en",
+  "valor": "A worker crafts a wooden totem, eager to consume it until it wears away. The frenzy of work, total devotion to production and consumption, and the deterioration of the body are aggressively hurled onto the screen. An experimental short ruled by excess, leaping between photography, drawing, animation and collage.",
+  "motivo": "catálogo oficial de FICCI 65, p. 132",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=132"
+ },
+ {
+  "work_id": "w_R4HB85BQC0RW",
+  "campo": "xref.tmdb",
+  "valor": 1488733,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1488733"
+ }
+]

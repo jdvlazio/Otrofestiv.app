@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_8BX7CTV11W15",
+  "campo": "directores",
+  "valor": [
+   "Dani de la Orden"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Dani de la Orden"
+  }
+ },
+ {
+  "work_id": "w_8BX7CTV11W15",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_8BX7CTV11W15",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "IT"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "España, Italia"
+  }
+ },
+ {
+  "work_id": "w_8BX7CTV11W15",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_8BX7CTV11W15",
+  "campo": "sinopsis.es",
+  "valor": "Montse, divorciada y con dos hijos que hace tiempo que la ignoran, se prepara para una reunión familiar en su casa de la Costa Brava.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Montse, divorciada y con dos hijos que hace tiempo que la ignoran, se prepara para una reunión familiar en su casa de la Costa Brava."
+  }
+ },
+ {
+  "work_id": "w_8BX7CTV11W15",
+  "campo": "sinopsis.en",
+  "valor": "Montse, divorced and with two children who have long ignored her, prepares for a family reunion at her home on the Costa Brava.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Montse, divorced and with two children who have long ignored her, prepares for a family reunion at her home on the Costa Brava."
+  }
+ },
+ {
+  "work_id": "w_8BX7CTV11W15",
+  "campo": "xref.tmdb",
+  "valor": 1218193,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1218193"
+  }
+ },
+ {
+  "work_id": "w_8BX7CTV11W15",
+  "campo": "xref.letterboxd",
+  "valor": "a-house-on-fire-2024",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "a-house-on-fire-2024"
+  }
+ },
+ {
+  "work_id": "w_8BX7CTV11W15",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/casa-en-llamas.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/casa-en-llamas.jpg"
+  }
+ }
+]

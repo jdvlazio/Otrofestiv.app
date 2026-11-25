@@ -1,0 +1,43 @@
+[
+ {
+  "work_id": "w_R4NEB2RNHWKD",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/siembrafest/noche-de-vuelo.jpg",
+   "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg"
+  ],
+  "antes": {
+   "siembrafest-2026": "/assets/siembrafest/noche-de-vuelo.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2RNHWKD",
+  "campo": "sinopsis.es",
+  "valor": "Un cortometraje sobre una llamada entre dos suicidas que detiene, por un instante, el salto al vacío.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "villadeleyvaiff-2026": "Un cortometraje sobre una llamada entre dos suicidas que detiene, por un instante, el salto al vacío."
+  }
+ },
+ {
+  "work_id": "w_R4NEB2RNHWKD",
+  "campo": "sinopsis.en",
+  "valor": "A short film about a phone call between two people on the verge of suicide that holds back, for an instant, the leap into the void.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "villadeleyvaiff-2026": "A short film about a phone call between two people on the verge of suicide that holds back, for an instant, the leap into the void."
+  }
+ }
+]

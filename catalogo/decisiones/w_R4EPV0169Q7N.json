@@ -1,0 +1,59 @@
+[
+ {
+  "work_id": "w_R4EPV0169Q7N",
+  "campo": "sinopsis.es",
+  "valor": "Historias que moldean los caminos por donde corre el agua. Voces que viajan entre el cielo y las montañas. El viento y su silbido asustan al agua. La tierra se ahoga. Una tormenta de lágrimas resbala por la piel. Es la sal la que cultiva los arroyos para que vaguen. Voces que viajan entre el cielo y las montañas.",
+  "motivo": "corrección de «en inglés»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "856d911dffdd"
+  ],
+  "antes": {
+   "cineautopsia-2026": "«Stories that shape the paths along which the water flows Voices that travel between the sky and the mountains The wind and its whistling frighten the water The earth chokes A storm of tears trickles down the skin It is the salt that cultivates the streams to wander Voices that travel between the sky and the mountains»",
+   "ficfusa-2026": "«Stories that shape the paths along which the water flows Voices that travel between the sky and the mountains The wind and its whistling frighten the water The earth chokes A storm of tears trickles down the skin It is the salt that cultivates the streams to wander Voices that travel between the sky and the mountains»",
+   "miradas-2026": "«Stories that shape the paths along which the water flows Voices that travel between the sky and the mountains The wind and its whistling frighten the water The earth chokes A storm of tears trickles down the skin It is the salt that cultivates the streams to wander Voices that travel between the sky and the mountains»"
+  }
+ },
+ {
+  "work_id": "w_R4EPV0169Q7N",
+  "campo": "directores",
+  "valor": [
+   "Laura Camila Caballero",
+   "Sara Idárraga"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cineautopsia-2026": "Laura Camila Caballero, Sara Idárraga",
+   "ficfusa-2026": "Laura Camila Caballero, Sara Idárraga",
+   "miradas-2026": "Camila Caballero Guzmán"
+  }
+ },
+ {
+  "work_id": "w_R4EPV0169Q7N",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1758059)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cineautopsia-2026": 2025,
+   "ficfusa-2026": 2026,
+   "miradas-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4EPV0169Q7N",
+  "campo": "sinopsis.en",
+  "valor": "Stories that shape the paths along which the water flows. Voices that travel between the sky and the mountains. The wind and its whistling frighten the water. The earth chokes. A storm of tears trickles down the skin. It is the salt that cultivates the streams to wander. Voices that travel between the sky and the mountains.",
+  "motivo": "versos puntuados en una línea",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "ficfusa-2026": "«Stories that shape the paths along which the water flows  Voices that travel between the sky and the mountains  The wind and its whistling frighten the water  The earth chokes  A storm of tears trickles down the skin  It is the salt that cultivates the streams to wander  Voices that travel between the sky and the mountains»",
+   "miradas-2026": "«Stories that shape the paths along which the water flows  Voices that travel between the sky and the mountains  The wind and its whistling frighten the water  The earth chokes  A storm of tears trickles down the skin  It is the salt that cultivates the streams to wander  Voices that travel between the sky and the mountains»"
+  }
+ }
+]

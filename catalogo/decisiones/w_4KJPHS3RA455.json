@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJPHS3RA455",
+  "campo": "directores",
+  "valor": [
+   "Lía Lugilde"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lía Lugilde"
+  }
+ },
+ {
+  "work_id": "w_4KJPHS3RA455",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJPHS3RA455",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KJPHS3RA455",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KJPHS3RA455",
+  "campo": "sinopsis.es",
+  "valor": "El gesto de saltar sirve de punto de partida para un ensayo que aborda el suicidio y el silencio que lo rodea en Asturias.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "El gesto de saltar sirve de punto de partida para un ensayo que aborda el suicidio y el silencio que lo rodea en Asturias."
+  }
+ },
+ {
+  "work_id": "w_4KJPHS3RA455",
+  "campo": "sinopsis.en",
+  "valor": "The act of jumping becomes the starting point for an essay about suicide and the silence surrounding it in Asturias.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "The act of jumping becomes the starting point for an essay about suicide and the silence surrounding it in Asturias."
+  }
+ },
+ {
+  "work_id": "w_4KJPHS3RA455",
+  "campo": "xref.tmdb",
+  "valor": 1574593,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1574593"
+  }
+ },
+ {
+  "work_id": "w_4KJPHS3RA455",
+  "campo": "xref.letterboxd",
+  "valor": "saltar",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "saltar"
+  }
+ },
+ {
+  "work_id": "w_4KJPHS3RA455",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/saltar.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/saltar.jpg"
+  }
+ }
+]

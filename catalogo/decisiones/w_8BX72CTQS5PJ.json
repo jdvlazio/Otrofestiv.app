@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX72CTQS5PJ",
+  "campo": "directores",
+  "valor": [
+   "Janna Ji Wonders"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Janna Ji Wonders"
+  }
+ },
+ {
+  "work_id": "w_8BX72CTQS5PJ",
+  "campo": "anio",
+  "valor": 2020,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2020"
+  }
+ },
+ {
+  "work_id": "w_8BX72CTQS5PJ",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_8BX72CTQS5PJ",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_8BX72CTQS5PJ",
+  "campo": "sinopsis.es",
+  "valor": "Si existe una memoria familiar que avanza a lo largo de la historia, entonces determina los actos de cada generación. La directora cuenta la historia de las mujeres de su familia, entre el lago Walchensee, los sueños hippies y la comuna en torno a Rainer Langhans.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Si existe una memoria familiar que avanza a lo largo de la historia, entonces determina los actos de cada generación. La directora cuenta la historia de las mujeres de su familia, entre el lago Walchensee, los sueños hippies y la comuna en torno a Rainer Langhans."
+  }
+ },
+ {
+  "work_id": "w_8BX72CTQS5PJ",
+  "campo": "sinopsis.en",
+  "valor": "If there is such a thing as a family memory that carries forward through history, then it determines the actions of every generation. The director tells the story of the women in her family, between Walchensee, hippie dreams and the commune around Rainer Langhans.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "If there is such a thing as a family memory that carries forward through history, then it determines the actions of every generation. The director tells the story of the women in her family, between Walchensee, hippie dreams and the commune around Rainer Langhans."
+  }
+ },
+ {
+  "work_id": "w_8BX72CTQS5PJ",
+  "campo": "xref.tmdb",
+  "valor": 656299,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "656299"
+  }
+ },
+ {
+  "work_id": "w_8BX72CTQS5PJ",
+  "campo": "xref.letterboxd",
+  "valor": "walchensee-forever",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "walchensee-forever"
+  }
+ },
+ {
+  "work_id": "w_8BX72CTQS5PJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/walchensee-forever.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/walchensee-forever.jpg"
+  }
+ }
+]

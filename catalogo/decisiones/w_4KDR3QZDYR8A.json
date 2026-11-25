@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KDR3QZDYR8A",
+  "campo": "directores",
+  "valor": [
+   "Amélie Hardy"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Amélie Hardy"
+  }
+ },
+ {
+  "work_id": "w_4KDR3QZDYR8A",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KDR3QZDYR8A",
+  "campo": "paises",
+  "valor": [
+   "CA"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Canadá"
+  }
+ },
+ {
+  "work_id": "w_4KDR3QZDYR8A",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KDR3QZDYR8A",
+  "campo": "sinopsis.es",
+  "valor": "Bienvenidos a Mississauga, donde el césped está recortado, los vecinos vigilan y ninguna brizna de hierba se atreve a portarse mal. Excepto en la casa de Wolf Ruck. Su césped crece libremente, y los problemas también.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Bienvenidos a Mississauga, donde el césped está recortado, los vecinos vigilan y ninguna brizna de hierba se atreve a portarse mal. Excepto en la casa de Wolf Ruck. Su césped crece libremente, y los problemas también."
+  }
+ },
+ {
+  "work_id": "w_4KDR3QZDYR8A",
+  "campo": "sinopsis.en",
+  "valor": "Welcome to Mississauga where lawns are clipped, neighbors are watchful and no blade of grass dares misbehave. Except at Wolf Ruck’s place. His lawn grows wild, and so does the trouble.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Welcome to Mississauga where lawns are clipped, neighbors are watchful and no blade of grass dares misbehave. Except at Wolf Ruck’s place. His lawn grows wild, and so does the trouble."
+  }
+ },
+ {
+  "work_id": "w_4KDR3QZDYR8A",
+  "campo": "xref.tmdb",
+  "valor": 1637214,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1637214"
+  }
+ },
+ {
+  "work_id": "w_4KDR3QZDYR8A",
+  "campo": "xref.letterboxd",
+  "valor": "a-wolf-in-the-suburbs",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "a-wolf-in-the-suburbs"
+  }
+ },
+ {
+  "work_id": "w_4KDR3QZDYR8A",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/a-wolf-in-the-suburbs.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/a-wolf-in-the-suburbs.jpg"
+  }
+ }
+]

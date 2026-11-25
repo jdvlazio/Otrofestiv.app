@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_8BX73EXJ0BM5",
+  "campo": "directores",
+  "valor": [
+   "Maren Ade"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Maren Ade"
+  }
+ },
+ {
+  "work_id": "w_8BX73EXJ0BM5",
+  "campo": "anio",
+  "valor": 2016,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2016"
+  }
+ },
+ {
+  "work_id": "w_8BX73EXJ0BM5",
+  "campo": "paises",
+  "valor": [
+   "DE",
+   "AT",
+   "FR",
+   "RO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Alemania, Austria, Francia, Rumania"
+  }
+ },
+ {
+  "work_id": "w_8BX73EXJ0BM5",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_8BX73EXJ0BM5",
+  "campo": "sinopsis.es",
+  "valor": "Inès trabaja en una gran empresa alemana en Bucarest. Su vida está perfectamente organizada hasta que su padre, Winfried, llega sin avisar y le pregunta: «¿eres feliz?». Ella no sabe responder. Ese padre que a veces estorba y la avergüenza la ayudará a darle de nuevo sentido a su vida con un personaje imaginario: el divertido Toni Erdmann.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Inès trabaja en una gran empresa alemana en Bucarest. Su vida está perfectamente organizada hasta que su padre, Winfried, llega sin avisar y le pregunta: «¿eres feliz?». Ella no sabe responder. Ese padre que a veces estorba y la avergüenza la ayudará a darle de nuevo sentido a su vida con un personaje imaginario: el divertido Toni Erdmann."
+  }
+ },
+ {
+  "work_id": "w_8BX73EXJ0BM5",
+  "campo": "sinopsis.en",
+  "valor": "Inès works for a large German company in Bucharest. Her life is perfectly organized until her father, Winfried, turns up unannounced and asks, “are you happy?” She cannot answer. The father who at times gets in the way and embarrasses her will help her find meaning in life again through an imaginary character: the funny Toni Erdmann.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Inès works for a large German company in Bucharest. Her life is perfectly organized until her father, Winfried, turns up unannounced and asks, “are you happy?” She cannot answer. The father who at times gets in the way and embarrasses her will help her find meaning in life again through an imaginary character: the funny Toni Erdmann."
+  }
+ },
+ {
+  "work_id": "w_8BX73EXJ0BM5",
+  "campo": "xref.tmdb",
+  "valor": 374475,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "374475"
+  }
+ },
+ {
+  "work_id": "w_8BX73EXJ0BM5",
+  "campo": "xref.letterboxd",
+  "valor": "toni-erdmann",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "toni-erdmann"
+  }
+ },
+ {
+  "work_id": "w_8BX73EXJ0BM5",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/toni-erdmann.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/toni-erdmann.jpg"
+  }
+ }
+]

@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KDT1FZ9ZC90",
+  "campo": "directores",
+  "valor": [
+   "Hervé Demers"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Hervé Demers"
+  }
+ },
+ {
+  "work_id": "w_4KDT1FZ9ZC90",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KDT1FZ9ZC90",
+  "campo": "paises",
+  "valor": [
+   "CA"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Canadá"
+  }
+ },
+ {
+  "work_id": "w_4KDT1FZ9ZC90",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KDT1FZ9ZC90",
+  "campo": "sinopsis.es",
+  "valor": "Migrantes de África subsahariana han decidido comenzar de nuevo al norte del paralelo 49. En las vastas extensiones del norte de Canadá, reflexionan sobre los desafíos y los esplendores de una estación que nunca han vivido: el invierno.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Migrantes de África subsahariana han decidido comenzar de nuevo al norte del paralelo 49. En las vastas extensiones del norte de Canadá, reflexionan sobre los desafíos y los esplendores de una estación que nunca han vivido: el invierno."
+  }
+ },
+ {
+  "work_id": "w_4KDT1FZ9ZC90",
+  "campo": "sinopsis.en",
+  "valor": "Immigrants from Sub-Saharan Africa have chosen to start their lives over north of the 49th parallel. Here, in the vast expanses of Northern Canada, they reflect on the challenges and splendors of a season they’ve never yet experienced: winter.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Immigrants from Sub-Saharan Africa have chosen to start their lives over north of the 49th parallel. Here, in the vast expanses of Northern Canada, they reflect on the challenges and splendors of a season they’ve never yet experienced: winter."
+  }
+ },
+ {
+  "work_id": "w_4KDT1FZ9ZC90",
+  "campo": "xref.tmdb",
+  "valor": 1547983,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1547983"
+  }
+ },
+ {
+  "work_id": "w_4KDT1FZ9ZC90",
+  "campo": "xref.letterboxd",
+  "valor": "land-of-cold",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "land-of-cold"
+  }
+ },
+ {
+  "work_id": "w_4KDT1FZ9ZC90",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/en-pays-froid.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/en-pays-froid.jpg"
+  }
+ }
+]

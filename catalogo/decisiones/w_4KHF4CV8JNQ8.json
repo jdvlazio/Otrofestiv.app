@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_4KHF4CV8JNQ8",
+  "campo": "directores",
+  "valor": [
+   "Aliona Zagurovska"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Aliona Zagurovska"
+  }
+ },
+ {
+  "work_id": "w_4KHF4CV8JNQ8",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHF4CV8JNQ8",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KHF4CV8JNQ8",
+  "campo": "sinopsis.es",
+  "valor": "Azor es un perro abandonado por una familia ucraniana que huye de la guerra. El tiempo pasa y los drones sobrevuelan el lugar. Solo en el apartamento, Azor sueña.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Azor es un perro abandonado por una familia ucraniana que huye de la guerra. El tiempo pasa y los drones sobrevuelan el lugar. Solo en el apartamento, Azor sueña."
+  }
+ },
+ {
+  "work_id": "w_4KHF4CV8JNQ8",
+  "campo": "sinopsis.en",
+  "valor": "Azor is a dog abandoned by a Ukrainian family fleeing the war. Time passes and drones hover overhead. Alone in the apartment, Azor dreams.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Azor is a dog abandoned by a Ukrainian family fleeing the war. Time passes and drones hover overhead. Alone in the apartment, Azor dreams."
+  }
+ },
+ {
+  "work_id": "w_4KHF4CV8JNQ8",
+  "campo": "xref.tmdb",
+  "valor": 1561305,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1561305"
+  }
+ },
+ {
+  "work_id": "w_4KHF4CV8JNQ8",
+  "campo": "xref.letterboxd",
+  "valor": "ici-azor",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "ici-azor"
+  }
+ },
+ {
+  "work_id": "w_4KHF4CV8JNQ8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/ici-azor.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/ici-azor.jpg"
+  }
+ }
+]

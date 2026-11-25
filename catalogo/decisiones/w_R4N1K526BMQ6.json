@@ -1,0 +1,49 @@
+[
+ {
+  "work_id": "w_R4N1K526BMQ6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/anibia-2026/hacker-leonilia.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/anibia-2026/hacker-leonilia.jpg",
+   "/assets/qaff/hacker-leonilia.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/hacker-leonilia.jpg",
+   "qaff-2026": "/assets/qaff/hacker-leonilia.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4N1K526BMQ6",
+  "campo": "sinopsis.es",
+  "valor": "En el futuro, una anciana hacker y bordadora deberá enfrentar a sus problemas y usar las habilidades para escapar de una realidad virtual. Esta historia es basada en la vida de mi abuela, Leonilia Ferreira.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (anibia-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "223e09356631",
+   "4de83b547157"
+  ],
+  "antes": {
+   "anibia-2026": "En el futuro, una anciana hacker y bordadora deberá enfrentar a sus problemas y usar las habilidades para escapar de una realidad virtual. Esta historia es basada en la vida de mi abuela, Leonilia Ferreira.",
+   "qaff-2026": "En el futuro, una anciana hacker y bordadora debe enfrentar sus propios traumas y usar sus habilidades para escapar de una realidad virtual. Esta historia está basada en la vida de mi abuela, Leonilia Ferreira. 15"
+  }
+ },
+ {
+  "work_id": "w_R4N1K526BMQ6",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1539677)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": 2025,
+   "qaff-2026": 2026
+  }
+ }
+]

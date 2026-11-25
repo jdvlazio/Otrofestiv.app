@@ -1,0 +1,29 @@
+[
+ {
+  "work_id": "w_R4N432K445TX",
+  "campo": "sinopsis.es",
+  "valor": "Izidine, un detective de policía recientemente ascendido, es llamado a un hogar de ancianos ubicado en una antigua fortaleza colonial para investigar un crimen: el director del hogar ha sido asesinado.",
+  "motivo": "corrección de «texto roto»: texto del festival, corregido",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "1dad0f56aa4b"
+  ],
+  "antes": {
+   "qaff-2026": "IZIDINE, un detective de policía recientemente ascendido, es llamado a un hogar de ancianos ubicado en una antigua fortaleza colonial para investigar un crimen: el director del hogar ha sido asesinado. 15"
+  }
+ },
+ {
+  "work_id": "w_R4N432K445TX",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1369889",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "qaff-2026": "Ficción"
+  }
+ }
+]

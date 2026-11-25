@@ -1,0 +1,82 @@
+[
+ {
+  "work_id": "w_4KJKKZY245CS",
+  "campo": "directores",
+  "valor": [
+   "Valeria Martí",
+   "El Kalvo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Valeria Martí, El Kalvo"
+  }
+ },
+ {
+  "work_id": "w_4KJKKZY245CS",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJKKZY245CS",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJKKZY245CS",
+  "campo": "sinopsis.es",
+  "valor": "En un barrio cualquiera, en una esquina cualquiera, una tienda. Nancy descubre una infidelidad justo cuando dos ladrones irrumpen. Carmenza resolverá cuentas pendientes.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En un barrio cualquiera, en una esquina cualquiera, una tienda. Nancy descubre una infidelidad justo cuando dos ladrones irrumpen. Carmenza resolverá cuentas pendientes."
+  }
+ },
+ {
+  "work_id": "w_4KJKKZY245CS",
+  "campo": "sinopsis.en",
+  "valor": "In an ordinary neighborhood, on an ordinary street corner, there is a shop. Nancy discovers an act of infidelity just as two thieves burst in. Carmenza will settle some unfinished business.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In an ordinary neighborhood, on an ordinary street corner, there is a shop. Nancy discovers an act of infidelity just as two thieves burst in. Carmenza will settle some unfinished business."
+  }
+ },
+ {
+  "work_id": "w_4KJKKZY245CS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/nancy-resabiada-cumbia-el-kalvo-la-banda-resabiada.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/nancy-resabiada-cumbia-el-kalvo-la-banda-resabiada.jpg"
+  }
+ }
+]

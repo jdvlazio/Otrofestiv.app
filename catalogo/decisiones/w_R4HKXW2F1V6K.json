@@ -1,0 +1,32 @@
+[
+ {
+  "work_id": "w_R4HKXW2F1V6K",
+  "campo": "sinopsis.en",
+  "valor": "How is the implementation of the Peace Agreement between the National Government and the FARC-EP? How have women's living conditions improved as a result of the gender commitments established in the Agreement? In 2023, in the heart of Chocó, the Local Monitoring Committee was created—a group of 15 social leaders and human rights defenders working to turn the promises of the Peace Agreement into tangible realities for women in Bahía Solano, El Carmen de Atrato, Istmina, Medio San Juan, and Quibdó.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "ficdeh-2026": "How is the implementation of the Peace Agreement between the National Government and the FARC-EP? How have women's living conditions improved as a result of the gender commitments established in the Agreement? In 2023, in the heart of Chocó, the Local Monitoring Committee was created—a group of 15 social leaders and human rights defenders working to turn the promises of the Peace Agreement into tangible realities for women in Bahía Solano, El Carmen de Atrato, Istmina, Medio San Juan, and Quibdó"
+  }
+ },
+ {
+  "work_id": "w_R4HKXW2F1V6K",
+  "campo": "xref.tmdb",
+  "valor": 1738584,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/juntas-por-la-paz-del-choco/"
+ },
+ {
+  "work_id": "w_R4HKXW2F1V6K",
+  "campo": "directores",
+  "valor": [
+   "Andrés Estefan"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

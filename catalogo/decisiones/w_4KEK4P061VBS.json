@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KEK4P061VBS",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "9d924ed9b0da"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Querida A.",
+  "valor": "En la era del control y la hiperconectividad, todo parece dejar rastro, pero hay vidas que flotan por debajo del umbral de visibilidad. Durante cinco años, A. vive en las calles de Barcelona, sin documentos, y su familia no consigue localizarla, hasta que un mensaje por Facebook lo cambia todo. Una reflexión visual sobre la ciudad contemporánea.",
+  "original": "Vivimos en la era del control y de la hiperconectividad, todos nuestros gestos y movimientos parecen dejar rastro y, sin embargo, hay vidas que flotan por debajo del umbral de visibilidad. Durante cinco años A. vive en las calles de Barcelona, sin documentos y sin domicilio fijo. Su familia no consigue localizarla, hasta que un mensaje por Facebook lo cambia todo. Una reflexión visual sobre la ciudad contemporánea y sus agujeros negros.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "c45bed24af88"
+  }
+ },
+ {
+  "work_id": "w_4KEK4P061VBS",
+  "campo": "directores",
+  "valor": [
+   "Elena Molina"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Elena Molina"
+  }
+ },
+ {
+  "work_id": "w_4KEK4P061VBS",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_4KEK4P061VBS",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KEK4P061VBS",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEK4P061VBS",
+  "campo": "sinopsis.en",
+  "valor": "We live in an age of control and hyperconnectivity; all our gestures and movements seem to leave a trace and yet there are lives that float below the threshold of visibility. For 5 years A. has been living on the streets of Barcelona, without any official papers or fixed abode. Her family is unable to locate her until a Facebook message changes everything. A visual reflection on the city of today and its black holes.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "We live in an age of control and hyperconnectivity; all our gestures and movements seem to leave a trace and yet there are lives that float below the threshold of visibility. For 5 years A. has been living on the streets of Barcelona, without any official papers or fixed abode. Her family is unable to locate her until a Facebook message changes everything. A visual reflection on the city of today and its black holes."
+  }
+ },
+ {
+  "work_id": "w_4KEK4P061VBS",
+  "campo": "xref.tmdb",
+  "valor": 1841395,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841395"
+  }
+ },
+ {
+  "work_id": "w_4KEK4P061VBS",
+  "campo": "xref.letterboxd",
+  "valor": "querida-a",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "querida-a"
+  }
+ },
+ {
+  "work_id": "w_4KEK4P061VBS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/querida-a.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/querida-a.jpg"
+  }
+ }
+]

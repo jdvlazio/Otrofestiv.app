@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX6WRW7DYD5",
+  "campo": "directores",
+  "valor": [
+   "Carlos Saura"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Carlos Saura"
+  }
+ },
+ {
+  "work_id": "w_8BX6WRW7DYD5",
+  "campo": "anio",
+  "valor": 1976,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1976"
+  }
+ },
+ {
+  "work_id": "w_8BX6WRW7DYD5",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_8BX6WRW7DYD5",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX6WRW7DYD5",
+  "campo": "sinopsis.es",
+  "valor": "Ana, una niña de ocho años que vive en Madrid con su abuela y sus dos hermanas, llora la muerte de su madre.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Ana, una niña de ocho años que vive en Madrid con su abuela y sus dos hermanas, llora la muerte de su madre."
+  }
+ },
+ {
+  "work_id": "w_8BX6WRW7DYD5",
+  "campo": "sinopsis.en",
+  "valor": "Ana, an eight-year-old girl living in Madrid with her grandmother and two sisters, mourns the death of her mother.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Ana, an eight-year-old girl living in Madrid with her grandmother and two sisters, mourns the death of her mother."
+  }
+ },
+ {
+  "work_id": "w_8BX6WRW7DYD5",
+  "campo": "xref.tmdb",
+  "valor": 51857,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "51857"
+  }
+ },
+ {
+  "work_id": "w_8BX6WRW7DYD5",
+  "campo": "xref.letterboxd",
+  "valor": "cria",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "cria"
+  }
+ },
+ {
+  "work_id": "w_8BX6WRW7DYD5",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/cria-cuervos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/cria-cuervos.jpg"
+  }
+ }
+]

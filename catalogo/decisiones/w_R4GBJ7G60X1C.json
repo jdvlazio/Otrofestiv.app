@@ -1,0 +1,29 @@
+[
+ {
+  "work_id": "w_R4GBJ7G60X1C",
+  "campo": "directores",
+  "valor": [
+   "Pablo Sánchez Mejía",
+   "Moisés Cataño Rivillas"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "bhff-2026": "Pablo Sánchez Mejía, Moisés Cataño Rivillas",
+   "fantasmagoria-2026": "Pablo Sánchez Mejía y Moisés Cataño Rivillas"
+  }
+ },
+ {
+  "work_id": "w_R4GBJ7G60X1C",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "bhff-2026": 2025,
+   "fantasmagoria-2026": 2026
+  }
+ }
+]

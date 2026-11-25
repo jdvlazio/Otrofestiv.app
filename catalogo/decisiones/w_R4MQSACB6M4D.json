@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQSACB6M4D",
+  "campo": "sinopsis.es",
+  "valor": "Cuando era un joven xondaro, guerrero del pueblo guaraní, Libório se adentraba en las haciendas y enfrentaba a los hacendados en busca de la abeja jateí. Hoy, ya anciano, les enseña a sus nietos a criar las abejas en la propia aldea: «Antes el monte era libre. Si uno quería, podía entrar y traer jateí, cazar y traer los animales. Hoy no; solo tenemos este pedacito de monte donde los ava guaraní pueden entrar».",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "813d235c6e36"
+  ],
+  "antes": {
+   "olhar-2026": "Cuando era un joven xondaro, guerrero del pueblo Guaraní, Libório recorría haciendas y enfrentaba a los hacendados en busca de la abeja Jateí. Hoy, ya anciano, Libório enseña a sus nietos a criar las abejas en la propia aldea: «Antiguamente el monte era libre. Si querías, podías entrar y traer Jateí, cazar y traer los animales. Hoy en día no, solo tenemos este pedacito de monte donde los Ava Guaraní podemos entrar.»"
+  }
+ },
+ {
+  "work_id": "w_R4MQSACB6M4D",
+  "campo": "xref.tmdb",
+  "valor": 1688860,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/yvyraija-ha-jatei-rehegua-os-quatro-guerreiros/"
+ }
+]

@@ -9,7 +9,7 @@ vigila. Mientras catalogo/obras/ esté vacío, los guardianes pasan sin más; co
 nunca falló no es de fiar).
 
     catalogo/obras/<id>.json     una obra por archivo
-    catalogo/decisiones.json     decisiones humanas (prioridad máxima)
+    catalogo/decisiones/w_*.json decisiones humanas (prioridad máxima)
     catalogo/fusiones.json       ids absorbidos → superviviente (nunca se borra)
     catalogo/procedencia/<id>.json  de dónde salió cada campo
 """
@@ -117,8 +117,70 @@ def _lista(raiz, nombre):
 SIN_VALOR = ('no-es', 'no-alta-tmdb', 'ficha-ok')
 
 
+# UN ARCHIVO POR OBRA (25 nov 2026): con todas en decisiones.json, dos ramas que
+# agregaban al final chocaban siempre, y BOGOSHORTS lo pasó de 3 MB. Este módulo es el
+# único que sabe dónde viven; todos leen y escriben por aquí. `reemplaza` es una posición:
+# en disco, dentro del archivo de su obra; en memoria, dentro de la lista entera.
+SIN_OBRA = '_sin-obra'          # ficha-ok no es de una obra
+
+
+def _nombre_dec(w):
+    if w and not re.fullmatch(r'w_[A-Z0-9]+', w):
+        raise ValueError(f'work_id inválido: {w!r}')
+    return w or SIN_OBRA
+
+
 def decisiones(raiz=DIR):
-    return _lista(raiz, 'decisiones.json')
+    if os.path.exists(os.path.join(raiz, 'decisiones.json')):
+        raise ValueError('catalogo/decisiones.json ya no existe: cada obra tiene su archivo en '
+                         'catalogo/decisiones/ (si vino de un merge, python3 pipeline/integrar.py lo reparte)')
+    out = []
+    for p in sorted(glob.glob(os.path.join(raiz, 'decisiones', '*.json'))):
+        with io.open(p, encoding='utf-8') as fh:
+            xs = json.load(fh)
+        for x in xs:
+            if _nombre_dec(x['work_id']) != os.path.basename(p)[:-5]:
+                raise ValueError(f'{os.path.basename(p)} trae una decisión de {x["work_id"]}')
+        out += [dict(x, reemplaza=x['reemplaza'] + len(out)) if x.get('reemplaza') is not None else x for x in xs]
+    return out
+
+
+def archivos_decisiones(decs, raiz=DIR):
+    """{ruta: texto | None} de lo que deja la lista en disco (None = se borra)."""
+    por, lugar = {}, []
+    for d in decs:
+        xs = por.setdefault(_nombre_dec(d['work_id']), [])
+        lugar.append((d['work_id'], len(xs)))
+        xs.append(d)
+    for xs in por.values():
+        for i, d in enumerate(xs):
+            if d.get('reemplaza') is not None:
+                w, n = lugar[d['reemplaza']]
+                if w != d['work_id']:
+                    raise ValueError(f'{d["work_id"]} reemplaza una decisión de otra obra ({w})')
+                xs[i] = dict(d, reemplaza=n)
+    out = {os.path.join(raiz, 'decisiones', k + '.json'): json.dumps(v, ensure_ascii=False, indent=1) for k, v in por.items()}
+    for p in glob.glob(os.path.join(raiz, 'decisiones', '*.json')):
+        out.setdefault(p, None)
+    return out
+
+
+def escribir_decisiones(decs, raiz=DIR):
+    """Solo toca los archivos que cambian → cuántos."""
+    todo, n = archivos_decisiones(decs, raiz), 0
+    os.makedirs(os.path.join(raiz, 'decisiones'), exist_ok=True)
+    for p, t in todo.items():
+        if t is None:
+            os.remove(p)
+        else:
+            if os.path.exists(p):
+                with io.open(p, encoding='utf-8') as fh:
+                    if fh.read() == t:
+                        continue
+            with io.open(p, 'w', encoding='utf-8') as fh:
+                fh.write(t)
+        n += 1
+    return n
 
 
 def fusiones(raiz=DIR):

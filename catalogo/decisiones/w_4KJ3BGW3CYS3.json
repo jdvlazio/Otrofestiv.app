@@ -1,0 +1,92 @@
+[
+ {
+  "work_id": "w_4KJ3BGW3CYS3",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "0c9bc10c3400"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El mandado",
+  "valor": "Wilmar, un niño campesino tímido pero decidido, vive el primer amor mientras lucha por ser aceptado y valorado por lo que es. Con la ayuda de su mejor amigo, enfrentará malentendidos, prejuicios y burlas, y descubrirá que ser fiel a sus raíces también es valentía. Una historia que celebra la amistad, la infancia y la dignidad de la vida rural.",
+  "original": "Wilmar, un niño campesino tímido pero decidido, vive la experiencia del primer amor mientras lucha por ser aceptado en la escuela y valorado por lo que es. Con la ayuda de su mejor amigo, enfrentará malentendidos, prejuicios y burlas, descubriendo que ser fiel a sus raíces es también un acto de valentía. Una historia que celebra la amistad, algunas travesuras, la infancia y la dignidad de la vida rural.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "6e603def41e8"
+  }
+ },
+ {
+  "work_id": "w_4KJ3BGW3CYS3",
+  "campo": "directores",
+  "valor": [
+   "Ingrid Paola Bonilla Rodríguez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ingrid Paola Bonilla Rodríguez"
+  }
+ },
+ {
+  "work_id": "w_4KJ3BGW3CYS3",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJ3BGW3CYS3",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJ3BGW3CYS3",
+  "campo": "sinopsis.en",
+  "valor": "Wilmar, a shy but determined country boy, experiences his first love whilst struggling to be accepted at school and valued for who he is. With the help of his best friend, he will face misunderstandings, prejudice and teasing, discovering that staying true to his roots is also an act of courage. A story that celebrates friendship, a bit of mischief, childhood and the dignity of rural life.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Wilmar, a shy but determined country boy, experiences his first love whilst struggling to be accepted at school and valued for who he is. With the help of his best friend, he will face misunderstandings, prejudice and teasing, discovering that staying true to his roots is also an act of courage. A story that celebrates friendship, a bit of mischief, childhood and the dignity of rural life."
+  }
+ },
+ {
+  "work_id": "w_4KJ3BGW3CYS3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/el-mandado.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/el-mandado.jpg"
+  }
+ }
+]

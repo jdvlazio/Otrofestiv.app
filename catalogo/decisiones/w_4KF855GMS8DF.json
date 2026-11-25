@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_4KF855GMS8DF",
+  "campo": "directores",
+  "valor": [
+   "Manuela Ocampo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Manuela Ocampo"
+  }
+ },
+ {
+  "work_id": "w_4KF855GMS8DF",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KF855GMS8DF",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KF855GMS8DF",
+  "campo": "sinopsis.es",
+  "valor": "Una cuentera costeña y su hijo llegan a un pueblo donde los niños han desaparecido y las historias están prohibidas. Cuando su hijo desaparece, ella deberá enfrentarse a una misteriosa mujer y pagar un terrible precio para intentar salvarlo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una cuentera costeña y su hijo llegan a un pueblo donde los niños han desaparecido y las historias están prohibidas. Cuando su hijo desaparece, ella deberá enfrentarse a una misteriosa mujer y pagar un terrible precio para intentar salvarlo."
+  }
+ },
+ {
+  "work_id": "w_4KF855GMS8DF",
+  "campo": "sinopsis.en",
+  "valor": "A Caribbean storyteller and her son arrive in a village where children have vanished and stories are forbidden. When her son goes missing, she must confront a mysterious woman and pay a terrible price to try to save him.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A Caribbean storyteller and her son arrive in a village where children have vanished and stories are forbidden. When her son goes missing, she must confront a mysterious woman and pay a terrible price to try to save him."
+  }
+ },
+ {
+  "work_id": "w_4KF855GMS8DF",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/amara.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/amara.jpg"
+  }
+ }
+]

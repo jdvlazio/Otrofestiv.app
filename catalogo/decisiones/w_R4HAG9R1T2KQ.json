@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HAG9R1T2KQ",
+  "campo": "directores",
+  "valor": [
+   "Ruth Beckermann"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 292",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=292",
+  "antes": {
+   "ficci-65": "Ruth Beckermann"
+  }
+ },
+ {
+  "work_id": "w_R4HAG9R1T2KQ",
+  "campo": "anio",
+  "valor": 1987,
+  "motivo": "catálogo oficial de FICCI 65, p. 292",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=292",
+  "antes": {
+   "ficci-65": "1987"
+  }
+ },
+ {
+  "work_id": "w_R4HAG9R1T2KQ",
+  "campo": "paises",
+  "valor": [
+   "AT"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 292",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=292",
+  "antes": {
+   "ficci-65": "Austria"
+  }
+ },
+ {
+  "work_id": "w_R4HAG9R1T2KQ",
+  "campo": "sinopsis.es",
+  "valor": "Entre cuentos y un paisaje invernal, helado y brumoso, filmado en 16mm, la cineasta viaja al encuentro de aldeanos, mujeres en una sauna, un rabino y un sobreviviente del Holocausto que muestra el cementerio judío de Sereth. Un documental inquietante y fantasmal donde su historia personal dialoga con las de quienes encuentra.",
+  "motivo": "catálogo oficial de FICCI 65, p. 292",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=292",
+  "antes": {
+   "ficci-65": "Ruth Beckermann rastrea la trayectoria de su familia judía entre Austria y Israel, entrelazando testimonios, archivos y viajes para construir un retrato íntimo de la memoria, la identidad y el exilio."
+  }
+ },
+ {
+  "work_id": "w_R4HAG9R1T2KQ",
+  "campo": "sinopsis.en",
+  "valor": "Amid folk tales and a wintry landscape, frozen and foggy, shot on 16mm, the filmmaker travels to meet villagers, women in a sauna, a rabbi and a Holocaust survivor who shows the Jewish cemetery of Sereth. An eerie, ghostly documentary where her personal history enters into dialogue with those of the people who cross her path.",
+  "motivo": "catálogo oficial de FICCI 65, p. 292",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=292",
+  "antes": {
+   "ficci-65": "Ruth Beckermann traces her Jewish family's trajectory between Austria and Israel, weaving together testimonies, archives, and journeys to build an intimate portrait of memory, identity, and exile."
+  }
+ },
+ {
+  "work_id": "w_R4HAG9R1T2KQ",
+  "campo": "xref.tmdb",
+  "valor": 412430,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/412430"
+ }
+]

@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_SCSEPEA4WK35",
+  "campo": "directores",
+  "valor": [
+   "Isabella Cárdenas Marín"
+  ],
+  "motivo": "la forma completa, web y PDF del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "cortoscali-2026": "Isabella Cárdenas",
+   "festicineantioquia-2026": "Isabella Cárdenas Marín"
+  }
+ },
+ {
+  "work_id": "w_SCSEPEA4WK35",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cortoscali-2026": "Colombia",
+   "festicineantioquia-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_SCSEPEA4WK35",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_SCSEPEA4WK35",
+  "campo": "sinopsis.es",
+  "valor": "Cortometraje documental que explora el arte, el contraste y la reconciliación a través del mundo drag.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cortoscali-2026": "Cortometraje documental que explora el arte, el contraste y la reconciliación a través del mundo drag.",
+   "festicineantioquia-2026": "Cortometraje documental que explora el arte, el contraste y la reconciliación a través del mundo drag."
+  }
+ },
+ {
+  "work_id": "w_SCSEPEA4WK35",
+  "campo": "sinopsis.en",
+  "valor": "A short documentary that explores art, contrast and reconciliation through the world of drag.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "A short documentary that explores art, contrast and reconciliation through the world of drag."
+  }
+ }
+]

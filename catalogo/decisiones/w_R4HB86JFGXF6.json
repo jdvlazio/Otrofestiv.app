@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HB86JFGXF6",
+  "campo": "directores",
+  "valor": [
+   "Gabriel Azorín"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 66",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=66",
+  "antes": {
+   "ficci-65": "Gabriel Azorín"
+  }
+ },
+ {
+  "work_id": "w_R4HB86JFGXF6",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 66",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=66",
+  "antes": {
+   "ficci-65": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HB86JFGXF6",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "PT"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 66",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=66",
+  "antes": {
+   "ficci-65": "España, Portugal"
+  }
+ },
+ {
+  "work_id": "w_R4HB86JFGXF6",
+  "campo": "sinopsis.es",
+  "valor": "Unos jóvenes portugueses cruzan la frontera para pasar la noche en unas termales, entre ruinas romanas. António enfrenta la distancia creciente con su amigo Jota. Allí también están Aurelio y Pompeyo, dos legionarios en la víspera de partir a la guerra. Separados por dos milenios, comparten temores. Un relato pausado sobre la amistad masculina.",
+  "motivo": "catálogo oficial de FICCI 65, p. 66",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=66",
+  "antes": {
+   "ficci-65": "Un grupo de jóvenes portugueses cruza la frontera para pasar la noche en unas antiguas termales, en medio de las ruinas de un antiguo fuerte romano."
+  }
+ },
+ {
+  "work_id": "w_R4HB86JFGXF6",
+  "campo": "sinopsis.en",
+  "valor": "A group of young Portuguese cross the border to spend the night at thermal baths amid Roman ruins. António faces the growing distance from his friend Jota. Aurelio and Pompeyo, two legionnaires on the eve of leaving for war, are there too. Two millennia apart, they share similar fears. An unhurried story of male friendship.",
+  "motivo": "catálogo oficial de FICCI 65, p. 66",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=66",
+  "antes": {
+   "ficci-65": "A group of young Portuguese cross the border to spend a night at ancient thermal springs amid the ruins of a Roman fort."
+  }
+ },
+ {
+  "work_id": "w_R4HB86JFGXF6",
+  "campo": "xref.tmdb",
+  "valor": 858477,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/858477"
+ }
+]

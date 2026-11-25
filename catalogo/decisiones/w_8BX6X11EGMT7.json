@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_8BX6X11EGMT7",
+  "campo": "directores",
+  "valor": [
+   "Ainara Aparici"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Ainara Aparici"
+  }
+ },
+ {
+  "work_id": "w_8BX6X11EGMT7",
+  "campo": "anio",
+  "valor": 2021,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2021"
+  }
+ },
+ {
+  "work_id": "w_8BX6X11EGMT7",
+  "campo": "paises",
+  "valor": [
+   "CL",
+   "CR"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Chile, Costa Rica"
+  }
+ },
+ {
+  "work_id": "w_8BX6X11EGMT7",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_8BX6X11EGMT7",
+  "campo": "sinopsis.es",
+  "valor": "En San José de Costa Rica, la familia de Melba y Víctor no ha parado de crecer: han sido seis hijos biológicos y más de 130 acogidos en 40 años. Hoy, algunos buscan distintos caminos hacia la madurez, mientras un nuevo niño se integra poco a poco en esta gran familia.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "En San José de Costa Rica, la familia de Melba y Víctor no ha parado de crecer: han sido seis hijos biológicos y más de 130 acogidos en 40 años. Hoy, algunos buscan distintos caminos hacia la madurez, mientras un nuevo niño se integra poco a poco en esta gran familia."
+  }
+ },
+ {
+  "work_id": "w_8BX6X11EGMT7",
+  "campo": "sinopsis.en",
+  "valor": "In San José, Costa Rica, Melba and Víctor's family has never stopped growing: six biological children and more than 130 taken in over 40 years. Today, some of them look for different paths to adulthood, while a new child slowly becomes part of this great family.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "In San José, Costa Rica, Melba and Víctor's family has never stopped growing: six biological children and more than 130 taken in over 40 years. Today, some of them look for different paths to adulthood, while a new child slowly becomes part of this great family."
+  }
+ },
+ {
+  "work_id": "w_8BX6X11EGMT7",
+  "campo": "xref.tmdb",
+  "valor": 882688,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "882688"
+  }
+ },
+ {
+  "work_id": "w_8BX6X11EGMT7",
+  "campo": "xref.letterboxd",
+  "valor": "130-children",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "130-children"
+  }
+ },
+ {
+  "work_id": "w_8BX6X11EGMT7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/130-hermanos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/130-hermanos.jpg"
+  }
+ }
+]

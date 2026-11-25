@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJ5FWWZMASS",
+  "campo": "directores",
+  "valor": [
+   "Ayaka Ohira"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ayaka Ohira"
+  }
+ },
+ {
+  "work_id": "w_4KJ5FWWZMASS",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJ5FWWZMASS",
+  "campo": "paises",
+  "valor": [
+   "JP"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Japón"
+  }
+ },
+ {
+  "work_id": "w_4KJ5FWWZMASS",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KJ5FWWZMASS",
+  "campo": "sinopsis.es",
+  "valor": "Zero llega sin recuerdos al planeta Amatera, devastado por una guerra. Al conocer a Ring, líder de la resistencia, comienza a descubrir su identidad y su vínculo con un conflicto que se extiende por toda la galaxia.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Zero llega sin recuerdos al planeta Amatera, devastado por una guerra. Al conocer a Ring, líder de la resistencia, comienza a descubrir su identidad y su vínculo con un conflicto que se extiende por toda la galaxia."
+  }
+ },
+ {
+  "work_id": "w_4KJ5FWWZMASS",
+  "campo": "sinopsis.en",
+  "valor": "Zero arrives on the war-torn planet Amatera with no memory of her past. After meeting resistance leader Ring, she begins to uncover her identity and her connection to a conflict spanning the galaxy.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Zero arrives on the war-torn planet Amatera with no memory of her past. After meeting resistance leader Ring, she begins to uncover her identity and her connection to a conflict spanning the galaxy."
+  }
+ },
+ {
+  "work_id": "w_4KJ5FWWZMASS",
+  "campo": "xref.tmdb",
+  "valor": 1500531,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1500531"
+  }
+ },
+ {
+  "work_id": "w_4KJ5FWWZMASS",
+  "campo": "xref.letterboxd",
+  "valor": "shinsei-galverse",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "shinsei-galverse"
+  }
+ },
+ {
+  "work_id": "w_4KJ5FWWZMASS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/galverse.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/galverse.jpg"
+  }
+ }
+]

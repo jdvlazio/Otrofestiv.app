@@ -1,0 +1,36 @@
+[
+ {
+  "work_id": "w_R4MQS8FEG07V",
+  "campo": "sinopsis.es",
+  "valor": "Dos amigos descubren un tesoro escondido, pero ninguno de los dos quiere aceptarlo. Juntos encuentran una solución que hará brotar un hermoso futuro para toda la aldea. El jardín mágico es una historia sobre la generosidad y el poder transformador de los verdaderos tesoros.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "caf585b1cd4a"
+  ],
+  "antes": {
+   "olhar-2026": "Dos amigos descubren un tesoro escondido, pero ambos se niegan a aceptarlo. Juntos encuentran una solución que hará brotar un hermoso futuro para toda la aldea. El Jardín Mágico es una historia sobre la generosidad y el poder transformador de los verdaderos tesoros."
+  }
+ },
+ {
+  "work_id": "w_R4MQS8FEG07V",
+  "campo": "xref.letterboxd",
+  "valor": "the-magic-garden-2025",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "olhar-2026": "o-jardim-magico"
+  }
+ },
+ {
+  "work_id": "w_R4MQS8FEG07V",
+  "campo": "xref.tmdb",
+  "valor": 1475725,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/o-jardim-magico/"
+ }
+]

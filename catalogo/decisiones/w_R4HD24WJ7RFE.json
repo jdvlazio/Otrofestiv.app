@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4HD24WJ7RFE",
+  "campo": "directores",
+  "valor": [
+   "Agostina Di Luciano",
+   "Leon Schwitter"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 181",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=181",
+  "antes": {
+   "ficci-65": "Joyce Trozzo"
+  }
+ },
+ {
+  "work_id": "w_R4HD24WJ7RFE",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 181",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=181",
+  "antes": {
+   "ficci-65": "2016"
+  }
+ },
+ {
+  "work_id": "w_R4HD24WJ7RFE",
+  "campo": "paises",
+  "valor": [
+   "CH",
+   "AR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 181",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=181",
+  "antes": {
+   "ficci-65": "Suiza, Argentina"
+  }
+ },
+ {
+  "work_id": "w_R4HD24WJ7RFE",
+  "campo": "sinopsis.es",
+  "valor": "Omar es agricultor y vive con su nieto Noah en un pueblo del campo argentino. Una noche, de su cuerpo sale una bola de luz, y ambos tratan de indagar el significado de lo sucedido. Mientras tanto, en una casa de campo cuyos dueños casi nunca están, las cuidadoras Rosana y Lily hacen un descubrimiento que las llena de misterio.",
+  "motivo": "catálogo oficial de FICCI 65, p. 181",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=181",
+  "antes": {
+   "ficci-65": "Son muchas las formas cotidianas en las que la luz nos hace partícipes de su milagro: el fogón de la cocina, las estrellas en el cielo, el reflejo de las formas sobre el agua."
+  }
+ },
+ {
+  "work_id": "w_R4HD24WJ7RFE",
+  "campo": "sinopsis.en",
+  "valor": "Omar is a farmer who lives with his grandson Noah in a village in the Argentine countryside. One night, a ball of light emerges from his body, and both try to uncover the meaning of what happened. Meanwhile, in a country house whose owners are almost never present, caretakers Rosana and Lily make a discovery that fills them with mystery.",
+  "motivo": "catálogo oficial de FICCI 65, p. 181",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=181",
+  "antes": {
+   "ficci-65": "There are many everyday ways in which light makes us participants in its miracle: the kitchen stove, stars in the sky, the reflection of shapes on water."
+  }
+ },
+ {
+  "work_id": "w_R4HD24WJ7RFE",
+  "campo": "xref.tmdb",
+  "valor": 1450272,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1450272"
+ }
+]

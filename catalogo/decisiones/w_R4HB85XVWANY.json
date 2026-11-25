@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HB85XVWANY",
+  "campo": "directores",
+  "valor": [
+   "Angelika Spangel"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 131",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=131"
+ },
+ {
+  "work_id": "w_R4HB85XVWANY",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 131",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=131"
+ },
+ {
+  "work_id": "w_R4HB85XVWANY",
+  "campo": "paises",
+  "valor": [
+   "AT"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 131",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=131",
+  "antes": {
+   "ficci-65": "Austria"
+  }
+ },
+ {
+  "work_id": "w_R4HB85XVWANY",
+  "campo": "sinopsis.es",
+  "valor": "En el dilatado tiempo de un pequeño pueblo, los caminos del juego y del incidente parecen intercambiarse sin aviso. Siempre hay algo importante casi pasando: un auto ardiendo en medio de la vía, una muerte que termina siendo un juego, altercados con motores y animales. Dureza y vulnerabilidad, con la pizca de tragedia que hay en toda diversión.",
+  "motivo": "catálogo oficial de FICCI 65, p. 131",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=131"
+ },
+ {
+  "work_id": "w_R4HB85XVWANY",
+  "campo": "sinopsis.en",
+  "valor": "In the slow time of a small town, the paths of play and incident seem to trade places without warning. Something important is always almost happening: a car burning in the road, a death that ends up being a game, altercations with engines and animals. Toughness and vulnerability, with the touch of tragedy found in all fun.",
+  "motivo": "catálogo oficial de FICCI 65, p. 131",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=131"
+ },
+ {
+  "work_id": "w_R4HB85XVWANY",
+  "campo": "xref.tmdb",
+  "valor": 1614684,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1614684"
+ }
+]

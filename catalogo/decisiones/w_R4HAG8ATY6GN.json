@@ -1,0 +1,68 @@
+[
+ {
+  "work_id": "w_R4HAG8ATY6GN",
+  "campo": "directores",
+  "valor": [
+   "Jorge Giannoni",
+   "Jorge Denti",
+   "Manuela Generali"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 271",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=271"
+ },
+ {
+  "work_id": "w_R4HAG8ATY6GN",
+  "campo": "anio",
+  "valor": 1971,
+  "motivo": "catálogo oficial de FICCI 65, p. 271",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=271"
+ },
+ {
+  "work_id": "w_R4HAG8ATY6GN",
+  "campo": "paises",
+  "valor": [
+   "AR",
+   "IT",
+   "LB",
+   "PS"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 271",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=271",
+  "antes": {
+   "ficci-65": "Argentina, Italia, Palestina"
+  }
+ },
+ {
+  "work_id": "w_R4HAG8ATY6GN",
+  "campo": "sinopsis.es",
+  "valor": "A comienzos de los setenta, el Colectivo de Cine del Tercer Mundo viaja por tierra hasta Líbano y convive durante meses con cuadros políticos, miembros de la Unidad de Cine Palestino, fedayines y mujeres de los campamentos. Un documental filmado en Beirut, de inmersión y compromiso político, sobre el paso de refugiados a revolucionarios.",
+  "motivo": "catálogo oficial de FICCI 65, p. 271",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=271"
+ },
+ {
+  "work_id": "w_R4HAG8ATY6GN",
+  "campo": "sinopsis.en",
+  "valor": "In the early 1970s, the Third World Film Collective travels overland to Lebanon and lives for months alongside political cadres, members of the Palestinian Film Unit, fedayeen, and women from the camps. A documentary filmed in Beirut, of immersion and political commitment, on the passage from refugees to revolutionaries.",
+  "motivo": "catálogo oficial de FICCI 65, p. 271",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=271"
+ },
+ {
+  "work_id": "w_R4HAG8ATY6GN",
+  "campo": "xref.tmdb",
+  "valor": 1443254,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1443254"
+ }
+]

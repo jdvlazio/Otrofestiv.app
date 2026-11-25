@@ -1,0 +1,124 @@
+[
+ {
+  "work_id": "w_9K5ZAA4ZNBV7",
+  "campo": "sinopsis.es",
+  "valor": "Un viaje al interior que escudriña en la identidad femenina, fragmentando y resignificando sus representaciones, interviniendo las imágenes a través del collage en stop motion en búsqueda de libertad.",
+  "motivo": "sinopsis oficial del festival o de Bogoshorts",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)"
+ },
+ {
+  "work_id": "w_9K5ZAA4ZNBV7",
+  "campo": "sinopsis.en",
+  "valor": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom.",
+  "motivo": "mismo texto, otra traducción: queda la publicada",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "anibia-2026": "A journey inward that delves into female identity, fragmenting and reinterpreting its representations, intervening in the images through stop-motion collage in search of freedom.",
+   "bogoshorts-2026": "An inner journey that delves into female identity, fragmenting and resignifying its representations by intervening images through stop motion collage in search of freedom."
+  }
+ },
+ {
+  "work_id": "w_9K5ZAA4ZNBV7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/anibia-2026/una-parvada-de-estruendo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "mismo afiche: queda el publicado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/una-parvada-de-estruendo.jpg",
+   "bogoshorts-2026": "/assets/bogoshorts-2026/una-parvada-de-estruendo.jpg"
+  },
+  "vistas": [
+   "/assets/bogoshorts-2026/una-parvada-de-estruendo.jpg"
+  ]
+ },
+ {
+  "work_id": "w_9K5ZAA4ZNBV7",
+  "campo": "directores",
+  "valor": [
+   "Mariana Mendivil"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Mariana Mendivil",
+   "bogoshorts-2026": "Mariana Mendivil"
+  }
+ },
+ {
+  "work_id": "w_9K5ZAA4ZNBV7",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "2025",
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_9K5ZAA4ZNBV7",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "México",
+   "bogoshorts-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_9K5ZAA4ZNBV7",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Animación",
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_9K5ZAA4ZNBV7",
+  "campo": "xref.tmdb",
+  "valor": 1602532,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "1602532",
+   "bogoshorts-2026": "1602532"
+  }
+ },
+ {
+  "work_id": "w_9K5ZAA4ZNBV7",
+  "campo": "xref.letterboxd",
+  "valor": "a-flock-of-thunder",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "a-flock-of-thunder",
+   "bogoshorts-2026": "a-flock-of-thunder"
+  }
+ }
+]

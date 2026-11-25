@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4EBD4MNQCXM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/anibia-2026/este-no-es-tu-jardin.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/anibia-2026/este-no-es-tu-jardin.jpg",
+   "https://image.tmdb.org/t/p/w500/4lvIAjisaG8A35jPyvGDcCH49gq.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/este-no-es-tu-jardin.jpg",
+   "cineautopsia-2026": "https://image.tmdb.org/t/p/w500/4lvIAjisaG8A35jPyvGDcCH49gq.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4EBD4MNQCXM",
+  "campo": "sinopsis.es",
+  "valor": "Arraigada en humedales, páramos y bosques centenarios al borde de la desaparición, la película hace chocar la memoria con un futuro especulado. Quinientos años de explotación, exilio y resistencia se alimentan de un dolor colectivo y de las ganas de resquebrajarlo todo.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cineautopsia-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "25675018501d",
+   "af63213b53f9"
+  ],
+  "antes": {
+   "anibia-2026": "Enraizados en humedales, páramos y bosques centenarios a punto de desaparecer, recuerdos y un futuro especulado convergen. 500 años de explotación, exilio y resiliencia se nutren de un dolor colectivo y un deseo de agrietarlo todo.",
+   "cineautopsia-2026": "Arraigada en humedales, páramos y bosques centenarios al borde de la desaparición, la película hace chocar la memoria con un futuro especulado. Quinientos años de explotación, exilio y resistencia se alimentan de un dolor colectivo y de las ganas de resquebrajarlo todo."
+  }
+ }
+]

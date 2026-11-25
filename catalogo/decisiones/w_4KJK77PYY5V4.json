@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_4KJK77PYY5V4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "d20b38f44b91"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Chingona (Tamara Flores)",
+  "valor": "Tamara Flores avanza con determinación por las coloridas calles de Acatlán, México, pueblo natal de su madre. Su larguísima trenza es un símbolo vivo de fuerza y empoderamiento. Entre color, ritmo y baile, este himno visual sobre abrirse camino y apropiarse de cada paso celebra la identidad y la libertad de vivir según las propias reglas.",
+  "original": "Tamara Flores avanza con determinación por las coloridas calles de Acatlán, México, pueblo natal de su madre. Su larguísima trenza es un símbolo vivo de fuerza y empoderamiento. Chingona es un himno visual sobre abrirse camino y apropiarse de cada paso. Entre color, ritmo y baile, celebra la identidad y la libertad de vivir según las propias reglas.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9e9e1505750a"
+  }
+ },
+ {
+  "work_id": "w_4KJK77PYY5V4",
+  "campo": "directores",
+  "valor": [
+   "Rupert Höller"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rupert Höller"
+  }
+ },
+ {
+  "work_id": "w_4KJK77PYY5V4",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJK77PYY5V4",
+  "campo": "paises",
+  "valor": [
+   "MX",
+   "AT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "México, Austria"
+  }
+ },
+ {
+  "work_id": "w_4KJK77PYY5V4",
+  "campo": "generos",
+  "valor": [
+   "Música"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Música"
+  }
+ },
+ {
+  "work_id": "w_4KJK77PYY5V4",
+  "campo": "sinopsis.en",
+  "valor": "Tamara Flores moves with fearless determination through the colorful streets of Acatlán, Mexico, the hometown of her mother. Her impossibly long braid is a living symbol of strength and empowerment. “Chingona” is a bold visual anthem about carving your own path and owning every step forward. Bursting with color, rhythm and dance, it’s a celebration of identity and the unapologetic freedom to live life on your own terms.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tamara Flores moves with fearless determination through the colorful streets of Acatlán, Mexico, the hometown of her mother. Her impossibly long braid is a living symbol of strength and empowerment. “Chingona” is a bold visual anthem about carving your own path and owning every step forward. Bursting with color, rhythm and dance, it’s a celebration of identity and the unapologetic freedom to live life on your own terms."
+  }
+ },
+ {
+  "work_id": "w_4KJK77PYY5V4",
+  "campo": "xref.tmdb",
+  "valor": 1719717,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1719717"
+  }
+ },
+ {
+  "work_id": "w_4KJK77PYY5V4",
+  "campo": "xref.letterboxd",
+  "valor": "tamara-flores-chingona",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "tamara-flores-chingona"
+  }
+ },
+ {
+  "work_id": "w_4KJK77PYY5V4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/chingona-tamara-flores.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/chingona-tamara-flores.jpg"
+  }
+ }
+]

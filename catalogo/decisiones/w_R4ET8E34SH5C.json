@@ -1,0 +1,136 @@
+[
+ {
+  "work_id": "w_R4ET8E34SH5C",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/g4ibgfPUUcDjFQM3gPI377Z847p.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/villadeleyvaiff-2026/tres-hermanas.jpg",
+   "https://image.tmdb.org/t/p/w500/g4ibgfPUUcDjFQM3gPI377Z847p.jpg"
+  ],
+  "antes": {
+   "cinemancia-2025": "https://image.tmdb.org/t/p/w500/g4ibgfPUUcDjFQM3gPI377Z847p.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/tres-hermanas.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4ET8E34SH5C",
+  "campo": "sinopsis.en",
+  "valor": "A Colombian filmmaker approaching old age seeks out her two sisters — one in France, one in Israel — to explore how each faces aging and death. Honest, tender, and occasionally funny.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Tres hermanas",
+  "antes": {
+   "cinemancia-2025": "A Colombian filmmaker approaching old age seeks out her two sisters — one in France, one in Israel — to explore how each faces aging and death. Honest, tender, and occasionally funny.",
+   "villadeleyvaiff-2026": "Three sisters entering old age. Three sisters that are very knit together but have opposing views, that are very close but live far apart, one in Tel Aviv, one in Paris and one in Bogotá. A film about how the passage of time affects us, about death, both our own and that of those who shared their lives with us.  Director Joyce Ventura films herself and her two sisters over many years, reflecting on the aging process, acceptance of one's own death and that of our loved ones, and exposing the anxieties that come with facing the end of life. The three very different sisters, each living in different cities, contrast their opposite existential perspectives and personalities.  Old age, a life stage that we often choose to ignore but inevitably concerns us all, is narrated in first person with humor and sensitivity."
+  }
+ },
+ {
+  "work_id": "w_R4ET8E34SH5C",
+  "campo": "directores",
+  "valor": [
+   "Joyce Ventura"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2025": "Joyce Ventura",
+   "festicineantioquia-2026": "Joyce Ventura",
+   "villadeleyvaiff-2026": "Joyce Ventura"
+  }
+ },
+ {
+  "work_id": "w_R4ET8E34SH5C",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2025": "2025",
+   "festicineantioquia-2026": "2025",
+   "villadeleyvaiff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4ET8E34SH5C",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2025": "Colombia",
+   "festicineantioquia-2026": "Colombia",
+   "villadeleyvaiff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4ET8E34SH5C",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2025": "Drama",
+   "festicineantioquia-2026": "Drama",
+   "villadeleyvaiff-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4ET8E34SH5C",
+  "campo": "sinopsis.es",
+  "valor": "Una cineasta colombiana en la antesala de la vejez busca a sus dos hermanas —una en Francia, otra en Israel— para explorar cómo cada una enfrenta el envejecimiento y la muerte. Con humor y sin tabúes.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2025": "Una cineasta colombiana en la antesala de la vejez busca a sus dos hermanas —una en Francia, otra en Israel— para explorar cómo cada una enfrenta el envejecimiento y la muerte. Con humor y sin tabúes.",
+   "festicineantioquia-2026": "Una cineasta colombiana en la antesala de la vejez busca a sus dos hermanas —una en Francia, otra en Israel— para explorar cómo cada una enfrenta el envejecimiento y la muerte. Con humor y sin tabúes.",
+   "villadeleyvaiff-2026": "Una cineasta colombiana en la antesala de la vejez busca a sus dos hermanas —una en Francia, otra en Israel— para explorar cómo cada una enfrenta el envejecimiento y la muerte. Con humor y sin tabúes."
+  }
+ },
+ {
+  "work_id": "w_R4ET8E34SH5C",
+  "campo": "xref.tmdb",
+  "valor": 1546645,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1546645",
+   "villadeleyvaiff-2026": "1546645"
+  }
+ },
+ {
+  "work_id": "w_R4ET8E34SH5C",
+  "campo": "xref.letterboxd",
+  "valor": "tres-hermanas",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "tres-hermanas",
+   "villadeleyvaiff-2026": "tres-hermanas"
+  }
+ }
+]

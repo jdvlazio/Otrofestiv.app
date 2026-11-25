@@ -1,0 +1,162 @@
+[
+ {
+  "work_id": "w_R4JB102F8QWB",
+  "campo": "sinopsis.en",
+  "valor": "In southern Venezuela, three generations of the Pemón people fight for the return of their ancestral grandmother, Kowai Kueka. Her spirit is embodied in a red jasper stone, removed and taken to Germany without the community's consent for an art installation. The guardians of memory set out on a journey of resistance against memoricide.",
+  "motivo": "versión corta (350) más fiel al original; redactor y verificador distintos (25 nov 2026)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "In a community in southern Venezuela, three generations of the Pemón people fight for the return of their ancestral grandmother, Kowai Kueka. Her spirit is embodied in a red jasper stone of more than twenty tons, taken to Germany without the community's consent for an art installation.",
+   "ficpa-2026": "Three generations of the Pemón people fight to reclaim their ancestral grandmother. The spirit of Kowai Kueka, embodied in a sacred red jasper stone, was taken from Venezuela to Germany as art without their consent."
+  },
+  "anteriores": [
+   {
+    "valor": "In a community in southern Venezuela, three generations of the Pemón people fight for the return of their ancestral grandmother, Kowai Kueka. Her spirit is embodied in a red jasper stone of more than twenty tons, taken to Germany without the community's consent for an art installation.",
+    "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4JB102F8QWB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficpa-2026/kueka-memoria-ancestral.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el que ya publica el almacén",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/kueka-memoria-ancestral.jpg",
+   "ficpa-2026": "/assets/ficpa-2026/kueka-memoria-ancestral.jpg"
+  },
+  "vistas": [
+   "/assets/festicineantioquia-2026/kueka-memoria-ancestral.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4JB102F8QWB",
+  "campo": "sinopsis.es",
+  "valor": "En el sur de Venezuela, tres generaciones del pueblo pemón luchan por el retorno de su abuela ancestral, Kowai Kueka. Su espíritu encarna en una piedra de jaspe rojo, sustraída y llevada a Alemania sin consentimiento de la comunidad para una instalación artística. Los guardianes de la memoria emprenden un viaje de resistencia contra el memoricidio.",
+  "motivo": "el original entero que publicó FICPA 2026, para sintetizarlo con sinopsis_cortas.py",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "En una comunidad del sur de Venezuela, tres generaciones del pueblo pemón luchan por el retorno de su abuela ancestral, Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas, sustraída y llevada a Alemania sin el consentimiento de la comunidad para una instalación artística.",
+   "ficpa-2026": "En una comunidad al sur de Venezuela, tres generaciones del pueblo Pemón luchan por el retorno de su abuela ancestral Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas que fue sustraída y llevada hasta Alemania sin el consentimiento de la comunidad para que formara parte de una instalación artística. Los guardianes de la memoria ancestral emprenden un viaje de resistencia contra el memoricidio para la restitución del equilibrio natural."
+  },
+  "vistas": [
+   "160cfba95aed",
+   "242d0a7efbfc"
+  ],
+  "anteriores": [
+   {
+    "valor": "En una comunidad del sur de Venezuela, tres generaciones del pueblo pemón luchan por el retorno de su abuela ancestral, Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas, sustraída y llevada a Alemania sin el consentimiento de la comunidad para una instalación artística.",
+    "motivo": "versión corta (350)",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)",
+    "vistas": [
+     "160cfba95aed",
+     "242d0a7efbfc"
+    ]
+   }
+  ],
+  "original_de": [],
+  "titulo": "Kueka, memoria ancestral",
+  "original": "En una comunidad al sur de Venezuela, tres generaciones del pueblo Pemón luchan por el retorno de su abuela ancestral Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas que fue sustraída y llevada hasta Alemania sin el consentimiento de la comunidad para que formara parte de una instalación artística. Los guardianes de la memoria ancestral emprenden un viaje de resistencia contra el memoricidio para la restitución del equilibrio natural.",
+  "sintesis": {
+   "redacta": "corrector festicineantioquia-2026",
+   "verifica": "verificador de sinopsis (agente, 25 nov)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-25",
+   "huella": "ebfe2ff873f1"
+  }
+ },
+ {
+  "work_id": "w_R4JB102F8QWB",
+  "campo": "directores",
+  "valor": [
+   "María de los Ángeles Peña Fonseca"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "María de los Ángeles Peña Fonseca",
+   "ficpa-2026": "María de los Ángeles Peña Fonseca"
+  }
+ },
+ {
+  "work_id": "w_R4JB102F8QWB",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2025",
+   "ficpa-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4JB102F8QWB",
+  "campo": "paises",
+  "valor": [
+   "VE"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Venezuela",
+   "ficpa-2026": "Venezuela"
+  }
+ },
+ {
+  "work_id": "w_R4JB102F8QWB",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental",
+   "ficpa-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4JB102F8QWB",
+  "campo": "xref.tmdb",
+  "valor": 1514102,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1514102",
+   "ficpa-2026": "1514102"
+  }
+ },
+ {
+  "work_id": "w_R4JB102F8QWB",
+  "campo": "xref.letterboxd",
+  "valor": "kueka-ancestral-memory",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "kueka-ancestral-memory",
+   "ficpa-2026": "kueka-ancestral-memory"
+  }
+ }
+]

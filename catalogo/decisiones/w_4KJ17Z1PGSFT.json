@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJ17Z1PGSFT",
+  "campo": "directores",
+  "valor": [
+   "Celia Galán"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Celia Galán"
+  }
+ },
+ {
+  "work_id": "w_4KJ17Z1PGSFT",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJ17Z1PGSFT",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KJ17Z1PGSFT",
+  "campo": "generos",
+  "valor": [
+   "Ciencia ficción"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ciencia ficción"
+  }
+ },
+ {
+  "work_id": "w_4KJ17Z1PGSFT",
+  "campo": "sinopsis.es",
+  "valor": "Dos desconocidas participan en un experimento de robótica en el que tendrán que determinar quién de las dos no es humana.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Dos desconocidas participan en un experimento de robótica en el que tendrán que determinar quién de las dos no es humana."
+  }
+ },
+ {
+  "work_id": "w_4KJ17Z1PGSFT",
+  "campo": "sinopsis.en",
+  "valor": "Two strangers take part in a robotics experiment in which they will have to determine which of the two is not human.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Two strangers take part in a robotics experiment in which they will have to determine which of the two is not human."
+  }
+ },
+ {
+  "work_id": "w_4KJ17Z1PGSFT",
+  "campo": "xref.tmdb",
+  "valor": 1463767,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1463767"
+  }
+ },
+ {
+  "work_id": "w_4KJ17Z1PGSFT",
+  "campo": "xref.letterboxd",
+  "valor": "gynoid",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "gynoid"
+  }
+ },
+ {
+  "work_id": "w_4KJ17Z1PGSFT",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/ginoide.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/ginoide.jpg"
+  }
+ }
+]

@@ -1,0 +1,43 @@
+[
+ {
+  "work_id": "w_R4N1K580DBZD",
+  "campo": "sinopsis.es",
+  "valor": "En el corazón del Chocó, Diógenes, un joven universitario afrocolombiano, vive atrapado entre las tradiciones de su abuelo Anacleto, un maestro productor de viche, y sus propias aspiraciones de salir al mundo y construir una vida diferente.",
+  "motivo": "corrección de «texto roto»: texto del festival sin lo que no era sinopsis",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "fba9c4ecc420"
+  ],
+  "antes": {
+   "qaff-2026": "En el corazón del Chocó, Diógenes, un joven universitario afrocolombiano, vive atrapado entre las tradiciones de su abuelo Anacleto, un maestro productor de viche, y sus propias aspiraciones de salir al mundo y construir una vida diferente. 15"
+  }
+ },
+ {
+  "work_id": "w_R4N1K580DBZD",
+  "campo": "xref.tmdb",
+  "valor": 1496482,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/viche/"
+ },
+ {
+  "work_id": "w_R4N1K580DBZD",
+  "campo": "directores",
+  "valor": [
+   "Jorge Eliecer Leudo Murillo"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4N1K580DBZD",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

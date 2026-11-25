@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGR8SY1CCH9",
+  "campo": "directores",
+  "valor": [
+   "Prin Rodriguez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Prin Rodriguez"
+  }
+ },
+ {
+  "work_id": "w_4KGR8SY1CCH9",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KGR8SY1CCH9",
+  "campo": "paises",
+  "valor": [
+   "PE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Perú"
+  }
+ },
+ {
+  "work_id": "w_4KGR8SY1CCH9",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KGR8SY1CCH9",
+  "campo": "sinopsis.es",
+  "valor": "En pie de igualdad, las voces entran en diálogo con la naturaleza. Hablan del alimento, de los lazos afectivos y de cómo no hay futuro sin pasado.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En pie de igualdad, las voces entran en diálogo con la naturaleza. Hablan del alimento, de los lazos afectivos y de cómo no hay futuro sin pasado."
+  }
+ },
+ {
+  "work_id": "w_4KGR8SY1CCH9",
+  "campo": "sinopsis.en",
+  "valor": "On an equal footing, voices enter into dialogue with nature. They speak of sustenance, emotional bonds and of how there is no future without a past.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On an equal footing, voices enter into dialogue with nature. They speak of sustenance, emotional bonds and of how there is no future without a past."
+  }
+ },
+ {
+  "work_id": "w_4KGR8SY1CCH9",
+  "campo": "xref.tmdb",
+  "valor": 1490021,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1490021"
+  }
+ },
+ {
+  "work_id": "w_4KGR8SY1CCH9",
+  "campo": "xref.letterboxd",
+  "valor": "food-for-everyone-deities-nature-and-humans",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "food-for-everyone-deities-nature-and-humans"
+  }
+ },
+ {
+  "work_id": "w_4KGR8SY1CCH9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/comida-para-todos-divinidades-naturaleza-y-humanos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/comida-para-todos-divinidades-naturaleza-y-humanos.jpg"
+  }
+ }
+]

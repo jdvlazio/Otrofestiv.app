@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KEGFM1Q79VQ",
+  "campo": "directores",
+  "valor": [
+   "Marga Almirall Rotés"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Marga Almirall Rotés"
+  }
+ },
+ {
+  "work_id": "w_4KEGFM1Q79VQ",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_4KEGFM1Q79VQ",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KEGFM1Q79VQ",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEGFM1Q79VQ",
+  "campo": "sinopsis.es",
+  "valor": "Somorrostro en tres actes mezcla tres tiempos y tres formatos cinematográficos para tratar de reflejar los cambios operados en la ciudad de Barcelona en los últimos sesenta años, así como captar la transformación de las formas de filmar.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Somorrostro en tres actes mezcla tres tiempos y tres formatos cinematográficos para tratar de reflejar los cambios operados en la ciudad de Barcelona en los últimos sesenta años, así como captar la transformación de las formas de filmar."
+  }
+ },
+ {
+  "work_id": "w_4KEGFM1Q79VQ",
+  "campo": "sinopsis.en",
+  "valor": "Somorrostro en tres actes combines three periods and three cinematographic formats in an attempt to reflect the changes undergone by the city of Barcelona in the past sixty years, as well as to capture the transformation of how we film.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Somorrostro en tres actes combines three periods and three cinematographic formats in an attempt to reflect the changes undergone by the city of Barcelona in the past sixty years, as well as to capture the transformation of how we film."
+  }
+ },
+ {
+  "work_id": "w_4KEGFM1Q79VQ",
+  "campo": "xref.tmdb",
+  "valor": 1107012,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1107012"
+  }
+ },
+ {
+  "work_id": "w_4KEGFM1Q79VQ",
+  "campo": "xref.letterboxd",
+  "valor": "somorrostro-en-tres-actes",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "somorrostro-en-tres-actes"
+  }
+ },
+ {
+  "work_id": "w_4KEGFM1Q79VQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/somorrostro-en-tres-actes.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/somorrostro-en-tres-actes.jpg"
+  }
+ }
+]

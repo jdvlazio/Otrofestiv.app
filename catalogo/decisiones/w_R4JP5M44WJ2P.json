@@ -1,0 +1,134 @@
+[
+ {
+  "campo": "directores",
+  "valor": [
+   "Nicolás Pereda"
+  ],
+  "motivo": "la de filcmar-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficci-65": "Zev Robinson",
+   "filcmar-2026": "Nicolás Pereda",
+   "tiff-2026": "Nicolás Pereda"
+  },
+  "work_id": "w_R4JP5M44WJ2P"
+ },
+ {
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "la de filcmar-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficci-65": "2012",
+   "filcmar-2026": "2026",
+   "tiff-2026": "2026"
+  },
+  "work_id": "w_R4JP5M44WJ2P"
+ },
+ {
+  "work_id": "w_R4JP5M44WJ2P",
+  "campo": "paises",
+  "valor": [
+   "MX",
+   "DE",
+   "CA"
+  ],
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "filcmar-2026": "México",
+   "tiff-2026": "Alemania, Canadá, México"
+  }
+ },
+ {
+  "work_id": "w_R4JP5M44WJ2P",
+  "campo": "sinopsis.es",
+  "valor": "Rosa, compositora de música contemporánea, da su primera entrevista televisiva en la casa de su colega Tere para ocultárselo a su marido. La charla se ve interrumpida por cortes de luz y un perro que no para de ladrar.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (filcmar-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "603add4a94ce",
+   "d5d7a64708d4"
+  ],
+  "antes": {
+   "filcmar-2026": "Rosa, compositora de música contemporánea, da su primera entrevista televisiva en la casa de su colega Tere para ocultárselo a su marido. La charla se ve interrumpida por cortes de luz y un perro que no para de ladrar.",
+   "tiff-2026": "El prolífico autor mexicano-canadiense Nicolás Pereda firma su película más afilada y más divertida hasta la fecha con Everything Else is Noise, una comedia de costumbres y desastres, socarrona y autoconsciente, con un trío de compositoras e intérpretes de música clásica."
+  }
+ },
+ {
+  "work_id": "w_R4JP5M44WJ2P",
+  "campo": "sinopsis.en",
+  "valor": "Rosa, a contemporary music composer, agrees to give her first television interview at her colleague Tere’s apartment to keep it secret from her husband. What begins as a simple professional conversation turns into an absurd and comic portrait of rivalries and affections among three women—Rosa, Tere, and Tere’s daughter Luisa—interrupted by power outages, a constantly barking dog, and the visit of a famous composer. As the interview unravels, family and artistic tensions surface, revealing, with humor, both the fragility of prestige and the strength of complicity.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Everything Else is Noise",
+  "antes": {
+   "filcmar-2026": "Rosa, a contemporary music composer, agrees to give her first television interview at her colleague Tere’s apartment to keep it secret from her husband. What begins as a simple professional conversation turns into an absurd and comic portrait of rivalries and affections among three women—Rosa, Tere, and Tere’s daughter Luisa—interrupted by power outages, a constantly barking dog, and the visit of a famous composer. As the interview unravels, family and artistic tensions surface, revealing, with humor, both the fragility of prestige and the strength of complicity.",
+   "tiff-2026": "Prolific Mexican-Canadian auteur Nicolás Pereda has delivered his sharpest and most amusing film yet with Everything Else is Noise, a sly, self-reflexive comedy of manners and mishaps involving a trio of women classical composers and musicians."
+  }
+ },
+ {
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "la de filcmar-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "filcmar-2026": "Comedia",
+   "tiff-2026": "Comedia"
+  },
+  "work_id": "w_R4JP5M44WJ2P"
+ },
+ {
+  "work_id": "w_R4JP5M44WJ2P",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/filcmar-2026/lo-demas-es-ruido.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/filcmar-2026/lo-demas-es-ruido.jpg",
+   "https://image.tmdb.org/t/p/w500/vVK5ao81og9fcwQ5VP5frKFRe9a.jpg",
+   "https://image.tmdb.org/t/p/w185/vVK5ao81og9fcwQ5VP5frKFRe9a.jpg"
+  ],
+  "antes": {
+   "filcmar-2026": "/assets/filcmar-2026/lo-demas-es-ruido.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/vVK5ao81og9fcwQ5VP5frKFRe9a.jpg",
+   "ficci-65": "https://image.tmdb.org/t/p/w185/vVK5ao81og9fcwQ5VP5frKFRe9a.jpg"
+  }
+ },
+ {
+  "campo": "xref.letterboxd",
+  "valor": "everything-else-is-noise",
+  "motivo": "la de filcmar-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "filcmar-2026": "everything-else-is-noise",
+   "tiff-2026": "everything-else-is-noise"
+  },
+  "work_id": "w_R4JP5M44WJ2P"
+ },
+ {
+  "campo": "xref.tmdb",
+  "valor": 1616861,
+  "motivo": "la de filcmar-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "filcmar-2026": "1616861",
+   "tiff-2026": "1616861"
+  },
+  "work_id": "w_R4JP5M44WJ2P"
+ }
+]

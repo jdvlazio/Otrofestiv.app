@@ -1,0 +1,105 @@
+[
+ {
+  "work_id": "w_4KJGAQBYGZ3R",
+  "campo": "directores",
+  "valor": [
+   "Gerardo García León"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Gerardo García León"
+  }
+ },
+ {
+  "work_id": "w_4KJGAQBYGZ3R",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJGAQBYGZ3R",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_4KJGAQBYGZ3R",
+  "campo": "sinopsis.es",
+  "valor": "Mientras acompaña un cortejo fúnebre, Rosa viaja en la misma camioneta que su esposo y su hermana. Sospecha que los dos tienen una relación y la tensión crece en el silencio.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mientras acompaña un cortejo fúnebre, Rosa viaja en la misma camioneta que su esposo y su hermana. Sospecha que los dos tienen una relación y la tensión crece en el silencio."
+  }
+ },
+ {
+  "work_id": "w_4KJGAQBYGZ3R",
+  "campo": "sinopsis.en",
+  "valor": "Rosa rides with her husband and sister in a van following a funeral procession. She suspects they are having an affair, and tension grows as the three sit in silence.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rosa rides with her husband and sister in a van following a funeral procession. She suspects they are having an affair, and tension grows as the three sit in silence."
+  }
+ },
+ {
+  "work_id": "w_4KJGAQBYGZ3R",
+  "campo": "xref.tmdb",
+  "valor": 1754993,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1754993"
+  }
+ },
+ {
+  "work_id": "w_4KJGAQBYGZ3R",
+  "campo": "xref.letterboxd",
+  "valor": "el-cortejo-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "el-cortejo-2026"
+  }
+ },
+ {
+  "work_id": "w_4KJGAQBYGZ3R",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/el-cortejo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/el-cortejo.jpg"
+  }
+ }
+]

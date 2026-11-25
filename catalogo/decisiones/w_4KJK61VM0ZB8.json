@@ -1,0 +1,93 @@
+[
+ {
+  "work_id": "w_4KJK61VM0ZB8",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "66b8e4eb6add"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Cocodrilo (Dillom)",
+  "valor": "Videoclip en stop motion construido a partir de tatuajes realizados sobre más de 250 fans de Dillom en dos jornadas, antes del lanzamiento de su disco LA NUEVA VIOLENCIA. Los participantes marcaron para siempre sus cuerpos con imágenes de un disco que nunca habían escuchado. Un acto de fe ciega, devoción y locura.",
+  "original": "Dirigido por Rocío Gastaldi y Andrés Capasso, “Cocodrilo” es un videoclip en stop motion construido a partir de tatuajes realizados sobre más de 250 fans de Dillom durante dos jornadas. Los tatuajes se hicieron antes del lanzamiento de su reciente disco LA NUEVA VIOLENCIA: los participantes marcaron para siempre sus cuerpos con imágenes de un disco que nunca habían escuchado. Un acto de fe ciega, devoción y locura.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "3a55b5975db8"
+  }
+ },
+ {
+  "work_id": "w_4KJK61VM0ZB8",
+  "campo": "directores",
+  "valor": [
+   "Rocío Gastaldi",
+   "Andrés Capasso"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rocío Gastaldi, Andrés Capasso"
+  }
+ },
+ {
+  "work_id": "w_4KJK61VM0ZB8",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJK61VM0ZB8",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_4KJK61VM0ZB8",
+  "campo": "sinopsis.en",
+  "valor": "Directed by Rocío Gastaldi and Andrés Capasso, “Cocodrilo” is a stop-motion music video built from tattoos made on more than 250 Dillom fans over two days. The tattoos were done before the release of his new album LA NUEVA VIOLENCIA: participants permanently marked their bodies with images from a record they had never heard. An act of blind faith, devotion and madness.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Directed by Rocío Gastaldi and Andrés Capasso, “Cocodrilo” is a stop-motion music video built from tattoos made on more than 250 Dillom fans over two days. The tattoos were done before the release of his new album LA NUEVA VIOLENCIA: participants permanently marked their bodies with images from a record they had never heard. An act of blind faith, devotion and madness."
+  }
+ },
+ {
+  "work_id": "w_4KJK61VM0ZB8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/cocodrilo-dillom.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/cocodrilo-dillom.jpg"
+  }
+ }
+]

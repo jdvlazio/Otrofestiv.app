@@ -1,0 +1,66 @@
+[
+ {
+  "work_id": "w_R4NEB3HZ8WTB",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "regla anio-mas-temprano",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "siembrafest-2026": 2025,
+   "villadelcine-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4NEB3HZ8WTB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/siembrafest/catatumbo-casa-del-trueno-memoria-y-dignidad.jpg",
+   "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg"
+  ],
+  "antes": {
+   "siembrafest-2026": "/assets/siembrafest/catatumbo-casa-del-trueno-memoria-y-dignidad.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4NEB3HZ8WTB",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "siembrafest-2026": "Animación",
+   "villadelcine-2026": "Animación y Ciencia Ficción"
+  }
+ },
+ {
+  "work_id": "w_R4NEB3HZ8WTB",
+  "campo": "sinopsis.es",
+  "valor": "Cada noche, los relámpagos iluminan el Catatumbo, una tierra donde la belleza natural convive con las marcas del conflicto. Entre guerrillas, desplazamientos y cultivos convertidos en sustento y estigma, esta animación recorre la memoria de una región que, bajo un cielo que nunca se apaga, continúa defendiendo su dignidad y su esperanza.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "villadelcine-2026": "Cada noche, los relámpagos iluminan el Catatumbo, una tierra donde la belleza natural convive con las marcas del conflicto. Entre guerrillas, desplazamientos y cultivos convertidos en sustento y estigma, esta animación recorre la memoria de una región que, bajo un cielo que nunca se apaga, continúa defendiendo su dignidad y su esperanza."
+  }
+ },
+ {
+  "work_id": "w_R4NEB3HZ8WTB",
+  "campo": "sinopsis.en",
+  "valor": "Every night, lightning illuminates Catatumbo, a land where natural beauty coexists with the marks of conflict. Amid guerrillas, displacement and crops turned into sustenance and stigma, this animation travels through the memory of a region that, under a sky that never goes dark, keeps defending its dignity and its hope.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "work_id": "w_R4MQS4E3GV9K",
+  "campo": "sinopsis.es",
+  "valor": "Roma, junio de 1979. Exiliados brasileños filman la Conferencia Internacional por la Amnistía en Brasil, el mayor encuentro de la izquierda brasileña fuera del país. Casi medio siglo después, esas imágenes reavivan el debate sobre la permanencia del aparato represivo de la dictadura y la impunidad de los torturadores.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "5838a89fc8e3"
+  ],
+  "antes": {
+   "olhar-2026": "Roma, junio de 1979. Exiliados brasileños filman la Conferencia Internacional por la Amnistía en Brasil, el mayor encuentro de la izquierda brasileña fuera del país. Casi medio siglo después, esas imágenes reavivan el debate sobre la permanencia del aparato represivo de la dictadura y la impunidad de los torturadores."
+  }
+ },
+ {
+  "work_id": "w_R4MQS4E3GV9K",
+  "campo": "xref.letterboxd",
+  "valor": "amnesty-1979",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "olhar-2026": "anistia-79"
+  }
+ },
+ {
+  "work_id": "w_R4MQS4E3GV9K",
+  "campo": "xref.tmdb",
+  "valor": 1611769,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/anistia-79/"
+ }
+]

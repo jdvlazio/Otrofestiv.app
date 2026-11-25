@@ -1,0 +1,147 @@
+[
+ {
+  "work_id": "w_ZR5FE4J5AM6C",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/anibia-2026/replay.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/anibia-2026/replay.jpg",
+   "/assets/bhff-2026/replay.jpg",
+   "/assets/ficica-2026/replay.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/replay.jpg",
+   "bhff-2026": "/assets/bhff-2026/replay.jpg",
+   "ficica-2026": "/assets/ficica-2026/replay.jpg"
+  }
+ },
+ {
+  "work_id": "w_ZR5FE4J5AM6C",
+  "campo": "directores",
+  "valor": [
+   "Simón Matallana Nossa"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Simón Matallana Nossa",
+   "bhff-2026": "Simón Matallana Nossa",
+   "ficica-2026": "Simón Matallana"
+  }
+ },
+ {
+  "work_id": "w_ZR5FE4J5AM6C",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "2026",
+   "bhff-2026": "2026",
+   "festicineantioquia-2026": "2026",
+   "ficica-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5FE4J5AM6C",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Colombia",
+   "bhff-2026": "Colombia",
+   "festicineantioquia-2026": "Colombia",
+   "ficica-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5FE4J5AM6C",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Animación",
+   "bhff-2026": "Animación",
+   "festicineantioquia-2026": "Animación",
+   "ficica-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_ZR5FE4J5AM6C",
+  "campo": "sinopsis.es",
+  "valor": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
+   "bhff-2026": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
+   "festicineantioquia-2026": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco.",
+   "ficica-2026": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
+  }
+ },
+ {
+  "work_id": "w_ZR5FE4J5AM6C",
+  "campo": "sinopsis.en",
+  "valor": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+   "bhff-2026": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+   "festicineantioquia-2026": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+   "ficica-2026": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device."
+  }
+ },
+ {
+  "work_id": "w_ZR5FE4J5AM6C",
+  "campo": "xref.tmdb",
+  "valor": 1677190,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "1677190",
+   "bhff-2026": "1677190",
+   "festicineantioquia-2026": "1677190",
+   "ficica-2026": "1677190"
+  }
+ },
+ {
+  "work_id": "w_ZR5FE4J5AM6C",
+  "campo": "xref.letterboxd",
+  "valor": "replay-2026",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "replay-2026",
+   "bhff-2026": "replay-2026",
+   "festicineantioquia-2026": "replay-2026",
+   "ficica-2026": "replay-2026"
+  }
+ }
+]

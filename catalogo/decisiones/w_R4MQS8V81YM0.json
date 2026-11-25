@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS8V81YM0",
+  "campo": "sinopsis.es",
+  "valor": "En 1986, una criatura de siete años desafía los patrones de género y el prejuicio en su escuela al luchar por jugar fútbol entre los niños, y descubre en la cancha la fuerza de ser quien es.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "47684cf3bf4b"
+  ],
+  "antes": {
+   "olhar-2026": "En 1986, una criatura de siete años desafía los estándares de género y el prejuicio en su escuela al luchar por jugar al fútbol entre los niños — y descubrir, en la cancha, la fuerza de ser quien es."
+  }
+ },
+ {
+  "work_id": "w_R4MQS8V81YM0",
+  "campo": "xref.tmdb",
+  "valor": 1639951,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/theo-2026/"
+ }
+]

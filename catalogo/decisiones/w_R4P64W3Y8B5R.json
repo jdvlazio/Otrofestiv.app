@@ -1,0 +1,24 @@
+[
+ {
+  "work_id": "w_R4P64W3Y8B5R",
+  "campo": "xref.letterboxd",
+  "valor": "man-overboard-2026",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "tiff-2026": "hombre-al-agua"
+  }
+ },
+ {
+  "work_id": "w_R4P64W3Y8B5R",
+  "campo": "sinopsis.en",
+  "valor": "The latest directorial feature from Gael García Bernal (Chicuarotes) is a psychologically astute comedy of manners for the modern age, following an ensemble of eclectic characters seeking to become something more than who they are.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "tiff-2026": "The latest directorial feature from Gael García Bernal (TIFF ’19’s Chicuarotes) is a psychologically astute comedy of manners for the modern age, following an ensemble of eclectic characters seeking to become something more than who they are."
+  }
+ }
+]

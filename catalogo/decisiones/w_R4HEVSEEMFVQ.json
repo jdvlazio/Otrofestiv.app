@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HEVSEEMFVQ",
+  "campo": "directores",
+  "valor": [
+   "Yaela Gottlieb"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 88",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=88"
+ },
+ {
+  "work_id": "w_R4HEVSEEMFVQ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 88",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=88"
+ },
+ {
+  "work_id": "w_R4HEVSEEMFVQ",
+  "campo": "paises",
+  "valor": [
+   "PE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 88",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=88",
+  "antes": {
+   "ficci-65": "Alemania, Perú"
+  }
+ },
+ {
+  "work_id": "w_R4HEVSEEMFVQ",
+  "campo": "sinopsis.es",
+  "valor": "Llega el Año Nuevo a Palestina, un caserío al interior de Perú. Los palestinos se preparan para la celebración: visten, rellenan y luego queman los muñecos de Año Viejo. Documental hecho de dualidades, en los nombres de los pueblos y en la escucha de dos lenguajes, que deja ver otra dimensión, tan silenciosa como intensa.",
+  "motivo": "catálogo oficial de FICCI 65, p. 88",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=88"
+ },
+ {
+  "work_id": "w_R4HEVSEEMFVQ",
+  "campo": "sinopsis.en",
+  "valor": "New Year arrives in Palestina, a small village in the Peruvian interior. The Palestinians prepare for the celebration: they dress, stuff, and then burn the Old Year dolls. A documentary made of dualities, in the villages' names and in listening to two languages, that reveals another dimension, as silent as it is intense.",
+  "motivo": "catálogo oficial de FICCI 65, p. 88",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=88"
+ },
+ {
+  "work_id": "w_R4HEVSEEMFVQ",
+  "campo": "xref.tmdb",
+  "valor": 1643576,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1643576"
+ }
+]

@@ -86,8 +86,7 @@ if __name__ == '__main__':
     que, tocados = deshacer(decs, fs, *a)
     print(que)
     if '--escribir' in sys.argv:
-        with open(os.path.join(catalogo.DIR, 'decisiones.json'), 'w', encoding='utf-8') as fh:
-            fh.write(json.dumps(decs, ensure_ascii=False, indent=1))
+        catalogo.escribir_decisiones(decs)
         for fid in tocados:
             _guardar(os.path.join(REPO, 'festivals', fid + '.json'), fs[fid])
     else:

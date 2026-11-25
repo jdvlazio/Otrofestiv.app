@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4MMFQPBNEZM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/el-coloquio-de-los-pajaros.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/el-coloquio-de-los-pajaros.jpg",
+   "/assets/under-2026/el-coloquio-de-los-pajaros.jpg"
+  ],
+  "antes": {
+   "midbo-2026": "/assets/midbo-2026/el-coloquio-de-los-pajaros.jpg",
+   "under-2026": "/assets/under-2026/el-coloquio-de-los-pajaros.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4MMFQPBNEZM",
+  "campo": "sinopsis.es",
+  "valor": "Un buen día, no amaneció más. En ese reino de oscuridad, un grupo de viejos anarco-poetas se ve obligado a vivir en la clandestinidad y busca, en aquelarres y reuniones secretas, adoptar identidades no humanas. Una fábula documental en la que la poesía, la danza y la amistad son armas de insubordinación.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "41361a687f7e",
+   "b50816570461"
+  ],
+  "original_de": [
+   "midbo-2026",
+   "under-2026"
+  ],
+  "titulo": "El coloquio de los pájaros",
+  "original": "Un buen día, no amaneció más. En ese reino de oscuridad que inevitablemente atrajo plagas, persecución, devastación y muerte, un grupo de viejos anarco-poetas se ve obligado a vivir en la clandestinidad y, durante sus aquelarres y secretas reuniones, buscan adoptar identidades no humanas. En esta fábula documental, que utiliza como alegoría el mito sufí del mismo nombre, la poesía, la danza y la amistad se erigen como armas de insubordinación al orden actual de las cosas.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "084cf06233a2"
+  },
+  "antes": {
+   "midbo-2026": "Un buen día, no amaneció más. En ese reino de oscuridad que inevitablemente atrajo plagas, persecución, devastación y muerte, un grupo de viejos anarco-poetas se ve obligado a vivir en la clandestinidad y, durante sus aquelarres y secretas reuniones, buscan adoptar identidades no humanas. En esta fábula documental, que utiliza como alegoría el mito sufí del mismo nombre, la poesía, la danza y la amistad se erigen como armas de insubordinación al orden actual de las cosas.",
+   "under-2026": "Había una vez un grupo de poetas anarquistas peruanos obligados a esconderse que, durante sus reuniones secretas, buscaban asumir una identidad no humana. Basándose en la famosa fábula persa del mismo nombre, el cineasta traduce el poder de la poesía y la amistad en imágenes y sonido, sirviendo como posturas defiantes contra el orden establecido."
+  }
+ },
+ {
+  "work_id": "w_R4MMFQPBNEZM",
+  "campo": "directores",
+  "valor": [
+   "Sofía Velázquez Núñez"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "midbo-2026": "Sofía Velázquez Núñez",
+   "under-2026": "Sofía Velázquez"
+  }
+ }
+]

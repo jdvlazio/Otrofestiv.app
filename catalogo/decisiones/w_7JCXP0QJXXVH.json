@@ -1,0 +1,55 @@
+[
+ {
+  "work_id": "w_7JCXP0QJXXVH",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_7JCXP0QJXXVH",
+  "campo": "sinopsis.es",
+  "valor": "Un joven camina por el monte con amigos, pero al quedarse solo, la soledad y los ruidos extraños lo llenan de terror. Luego de perder la conciencia, despierta en una habitación misteriosa donde un ser espiritual le revela realidades sobre el mundo y el desequilibrio que gobierna el universo.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Un joven camina por el monte con amigos, pero al quedarse solo, la soledad y los ruidos extraños lo llenan de terror. Luego de perder la conciencia, despierta en una habitación misteriosa donde un ser espiritual le revela realidades sobre el mundo y el desequilibrio que gobierna el universo."
+  }
+ },
+ {
+  "work_id": "w_7JCXP0QJXXVH",
+  "campo": "sinopsis.en",
+  "valor": "A young man walks through the woods with friends, but when he is left alone, solitude and strange noises fill him with terror. After losing consciousness, he wakes in a mysterious room where a spiritual being reveals to him realities about the world and the imbalance that governs the universe.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "A young man walks through the woods with friends, but when he is left alone, solitude and strange noises fill him with terror. After losing consciousness, he wakes in a mysterious room where a spiritual being reveals to him realities about the world and the imbalance that governs the universe."
+  }
+ },
+ {
+  "work_id": "w_7JCXP0QJXXVH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/llantos-del-monte.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/llantos-del-monte.jpg"
+  }
+ }
+]

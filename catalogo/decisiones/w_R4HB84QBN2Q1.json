@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HB84QBN2Q1",
+  "campo": "directores",
+  "valor": [
+   "Sophy Romvari"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 108",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=108",
+  "antes": {
+   "ficci-65": "Sophy Romvari"
+  }
+ },
+ {
+  "work_id": "w_R4HB84QBN2Q1",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 108",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=108",
+  "antes": {
+   "ficci-65": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HB84QBN2Q1",
+  "campo": "paises",
+  "valor": [
+   "CA",
+   "HU"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 108",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=108",
+  "antes": {
+   "ficci-65": "Canadá, Hungría"
+  }
+ },
+ {
+  "work_id": "w_R4HB84QBN2Q1",
+  "campo": "sinopsis.es",
+  "valor": "Una familia húngara acaba de llegar a Vancouver. Los gestos, silencios y tensiones de su convivencia se revelan por la mirada de la hija menor y conducen hacia otro de los hijos, adolescente, que parece cargar una vida mucho más larga que sus años. Con la mirada de la adulta y la de la niña, el pasado se revisita, se oscurece y se ilumina.",
+  "motivo": "catálogo oficial de FICCI 65, p. 108",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=108",
+  "antes": {
+   "ficci-65": "Violeta Parra cantaba que después de vivir un siglo se puede volver a tener 17 años."
+  }
+ },
+ {
+  "work_id": "w_R4HB84QBN2Q1",
+  "campo": "sinopsis.en",
+  "valor": "A Hungarian family has just arrived in Vancouver. The gestures, silences and tensions of their daily life are revealed through the eyes of the youngest daughter and lead to another of the children, a teenager who seems to carry a life much longer than their years. Through the eyes of adult and child, the past is revisited, darkens and brightens.",
+  "motivo": "catálogo oficial de FICCI 65, p. 108",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=108",
+  "antes": {
+   "ficci-65": "Violeta Parra sang that after living a century, one can be seventeen again."
+  }
+ },
+ {
+  "work_id": "w_R4HB84QBN2Q1",
+  "campo": "xref.tmdb",
+  "valor": 1184941,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1184941"
+ }
+]

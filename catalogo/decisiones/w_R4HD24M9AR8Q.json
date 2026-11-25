@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HD24M9AR8Q",
+  "campo": "directores",
+  "valor": [
+   "Vanessa Monti"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 59",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=59"
+ },
+ {
+  "work_id": "w_R4HD24M9AR8Q",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 59",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=59"
+ },
+ {
+  "work_id": "w_R4HD24M9AR8Q",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "DE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 59",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=59",
+  "antes": {
+   "ficci-65": "Colombia, Alemania"
+  }
+ },
+ {
+  "work_id": "w_R4HD24M9AR8Q",
+  "campo": "sinopsis.es",
+  "valor": "Una joven colombiana que vive en Alemania se enfrenta a su pasado cuando la grabación de un ritual reaparece en medio de una cita romántica. Filmado en VHS en un bosque, el gesto es simple: manos que cubren con tierra lo que desean despedir. Entre creencias populares y personalidades extravagantes, los rituales perforan o reparan el duelo.",
+  "motivo": "catálogo oficial de FICCI 65, p. 59",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=59"
+ },
+ {
+  "work_id": "w_R4HD24M9AR8Q",
+  "campo": "sinopsis.en",
+  "valor": "A young Colombian woman living in Germany confronts her past when a recording of a ritual resurfaces in the middle of a romantic date. Filmed on VHS in a forest, the gesture is simple: hands covering with earth what they wish to bid farewell to. Amid popular beliefs and eccentric personalities, rituals pierce or heal grief.",
+  "motivo": "catálogo oficial de FICCI 65, p. 59",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=59"
+ },
+ {
+  "work_id": "w_R4HD24M9AR8Q",
+  "campo": "xref.tmdb",
+  "valor": 1621315,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1621315"
+ }
+]

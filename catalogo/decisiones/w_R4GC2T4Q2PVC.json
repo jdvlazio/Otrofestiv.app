@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_R4GC2T4Q2PVC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/quazar.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bhff-2026/quazar.jpg",
+   "/assets/fantasmagoria-2026/quazar.jpg",
+   "/assets/villadelcine-2026/quazar.jpg"
+  ],
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/quazar.jpg",
+   "fantasmagoria-2026": "/assets/fantasmagoria-2026/quazar.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/quazar.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4GC2T4Q2PVC",
+  "campo": "sinopsis.es",
+  "valor": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026, fantasmagoria-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "1419f780ec87",
+   "63d8632c2166"
+  ],
+  "antes": {
+   "bhff-2026": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+   "fantasmagoria-2026": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+   "villadelcine-2026": "Tras una ruptura, Kim acude a terapia para entender por qué Ana, su expareja, la visita cada noche convertida en una criatura extraterrestre. Mientras reconstruye la transformación de aquella relación, deberá enfrentarse al monstruo que habita sus recuerdos y encontrar una forma de despedirse de lo que todavía la persigue."
+  }
+ },
+ {
+  "work_id": "w_R4GC2T4Q2PVC",
+  "campo": "directores",
+  "valor": [
+   "William Alejandro Vargas Daza"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "bhff-2026": "Alejandro Vargas",
+   "fantasmagoria-2026": "Alejandro Vargas",
+   "villadelcine-2026": "William Alejandro Vargas Daza"
+  }
+ },
+ {
+  "work_id": "w_R4GC2T4Q2PVC",
+  "campo": "generos",
+  "valor": [
+   "Ciencia ficción"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "bhff-2026": "Ciencia ficción",
+   "fantasmagoria-2026": "Ciencia ficción",
+   "villadelcine-2026": "Fantasía / Drama"
+  }
+ }
+]

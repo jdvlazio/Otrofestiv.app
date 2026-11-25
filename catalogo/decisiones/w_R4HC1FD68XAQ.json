@@ -1,0 +1,88 @@
+[
+ {
+  "work_id": "w_R4HC1FD68XAQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/la-forma-y-la-raiz.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/la-forma-y-la-raiz.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_poster%20la%20forma%20y%20la%20raiz%20-%20Nathalia%20Quimbay%20Cadena.jpg?itok=dR-4fsTr"
+  ],
+  "antes": {
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_poster%20la%20forma%20y%20la%20raiz%20-%20Nathalia%20Quimbay%20Cadena.jpg?itok=dR-4fsTr",
+   "midbo-2026": "/assets/midbo-2026/la-forma-y-la-raiz.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HC1FD68XAQ",
+  "campo": "directores",
+  "valor": [
+   "Nathalia Quimbay Cadena",
+   "Valeria Moraima Berríos"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficci-65": "Nathalia Quimbay Cadena, Valeria Moraima Berríos",
+   "midbo-2026": "Nathalia Quimbay Cadena y Valeria Moraima Berríos"
+  }
+ },
+ {
+  "work_id": "w_R4HC1FD68XAQ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1660700)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficci-65": 2026,
+   "midbo-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4HC1FD68XAQ",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "CU"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1660700)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficci-65": "Colombia/Cuba",
+   "midbo-2026": "Colombia, Cuba"
+  }
+ },
+ {
+  "work_id": "w_R4HC1FD68XAQ",
+  "campo": "sinopsis.en",
+  "valor": "A delicate, patient contemplation of life in the countryside that reveals a rhythm that seems familiar: the pulse of the living. In this documentary, landscapes become characters without a self, within which the insistence of death is gradually heralded, itself the form of origin: the root.",
+  "motivo": "catálogo oficial de FICCI 65, p. 49",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=49"
+ },
+ {
+  "work_id": "w_R4HC1FD68XAQ",
+  "campo": "sinopsis.es",
+  "valor": "Una contemplación delicada y paciente de la vida en el campo que revela un ritmo que parece conocido: el pulso de lo vivo. En este documental los paisajes se vuelven personajes sin «yo», dentro de los que se va anunciando la insistencia de la muerte, que es a su vez la forma del principio: la raíz.",
+  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 49",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (lector independiente)",
+  "antes": {
+   "ficci-65": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo.",
+   "midbo-2026": "Un retrato de la vida en transformación en el campo: se nace, crece y muere. Es una invitación a percibir la existencia con mayor calma, prestando atención a aquellos pequeños detalles y micro-mundos que suelen pasar desapercibidos en nuestra cotidianidad, en donde se mezcla la vida de las plantas y los animales en su constante transcurso de crecimiento y muerte. Esta contemplación de la vida rural se captura a través de planos fijos y visualmente serenos, que contrastan con un vasto y dinámico movimiento de sonido, creando una experiencia sensorial inmersiva y profundamente reflexiva. Nos invita a recordar lo insignificantes que somos en este ciclo eterno, donde finalmente todos nos convertimos en polvo."
+  },
+  "vistas": [
+   "475431507870"
+  ],
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=49"
+ }
+]

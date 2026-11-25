@@ -1,0 +1,52 @@
+[
+ {
+  "work_id": "w_R4ETZY9VSZMZ",
+  "campo": "directores",
+  "valor": [
+   "María Ardila",
+   "Liliana Correa"
+  ],
+  "motivo": "TMDB 1538892; «Mária» era errata",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)",
+  "antes": {
+   "cinemancia-2025": "Maria Carolina Ardila, Liliana Patricia Correa",
+   "popayan-2026": "Mária Carolina Ardila y Liliana Correa"
+  }
+ },
+ {
+  "work_id": "w_R4ETZY9VSZMZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/sonar-una-serpiente.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/popayan-2026/sonar-una-serpiente.jpg",
+   "https://cinemanciafestival.com/wp-content/uploads/2025/08/Sonar-una-serpiente1.png"
+  ],
+  "antes": {
+   "cinemancia-2025": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Sonar-una-serpiente1.png",
+   "popayan-2026": "/assets/popayan-2026/sonar-una-serpiente.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4ETZY9VSZMZ",
+  "campo": "sinopsis.es",
+  "valor": "Una joven taxidermista, criada entre fósiles y vitrinas de museo, encuentra una fotografía que lo cambia todo: su madre joven sostiene la mirada de una serpiente con intensidad casi ritual. Desde entonces, los reptiles irrumpen en su vida como obsesión y presencia inevitable, atravesando su trabajo, su cuerpo y su deseo. En esa atracción late algo primitivo y voraz que la impulsa a entrelazar la figura de la serpiente con la maternidad en un mismo impulso vital. Historia personal, linaje y el enigma de lo ofidio se enredan en una espiral de instintos y revelaciones que la arrastran más allá de lo humano.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (popayan-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "ac50574e0261",
+   "d0a6925615d5"
+  ],
+  "antes": {
+   "cinemancia-2025": "Una bióloga forense que ha pasado su vida entre fósiles y vitrinas de museo encuentra una foto que lo cambia todo: es su madre, joven, sosteniendo la mirada de una serpiente con una intensidad casi ritual. A partir de ese momento, los reptiles comienzan a infiltrarse en su vida.",
+   "popayan-2026": "Una joven taxidermista, criada entre fósiles y vitrinas de museo, encuentra una fotografía que lo cambia todo: su madre joven sostiene la mirada de una serpiente con intensidad casi ritual. Desde entonces, los reptiles irrumpen en su vida como obsesión y presencia inevitable, atravesando su trabajo, su cuerpo y su deseo. En esa atracción late algo primitivo y voraz que la impulsa a entrelazar la figura de la serpiente con la maternidad en un mismo impulso vital. Historia personal, linaje y el enigma de lo ofidio se enredan en una espiral de instintos y revelaciones que la arrastran más allá de lo humano."
+  }
+ }
+]

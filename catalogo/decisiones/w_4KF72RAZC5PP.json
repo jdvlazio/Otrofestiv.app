@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KF72RAZC5PP",
+  "campo": "directores",
+  "valor": [
+   "Danielle Shapira",
+   "Matt Sweeney"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Danielle Shapira, Matt Sweeney"
+  }
+ },
+ {
+  "work_id": "w_4KF72RAZC5PP",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KF72RAZC5PP",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KF72RAZC5PP",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KF72RAZC5PP",
+  "campo": "sinopsis.es",
+  "valor": "Angela vive sola en una cabaña remota, donde ocupa sus días preservando la vida aislada que ha construido para sí misma. Sin embargo, todo cambia cuando descubre a un niño mudo en su propiedad.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Angela vive sola en una cabaña remota, donde ocupa sus días preservando la vida aislada que ha construido para sí misma. Sin embargo, todo cambia cuando descubre a un niño mudo en su propiedad."
+  }
+ },
+ {
+  "work_id": "w_4KF72RAZC5PP",
+  "campo": "sinopsis.en",
+  "valor": "Angela lives alone in a remote cabin, where her days are occupied preserving the isolated life she’s built for herself. But everything changes when she discovers a mute young boy on her property.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Angela lives alone in a remote cabin, where her days are occupied preserving the isolated life she’s built for herself. But everything changes when she discovers a mute young boy on her property."
+  }
+ },
+ {
+  "work_id": "w_4KF72RAZC5PP",
+  "campo": "xref.tmdb",
+  "valor": 1787585,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1787585"
+  }
+ },
+ {
+  "work_id": "w_4KF72RAZC5PP",
+  "campo": "xref.letterboxd",
+  "valor": "i-wanna-go-home",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "i-wanna-go-home"
+  }
+ },
+ {
+  "work_id": "w_4KF72RAZC5PP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/i-wanna-go-home.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/i-wanna-go-home.jpg"
+  }
+ }
+]

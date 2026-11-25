@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_4KFBQ00Q0VJ2",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "c91fe1d87b0b"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Cartas a Daniel Apóstol",
+  "valor": "Entre fotografías, audios y videos en VHS, el director descubre pistas inconclusas sobre un viaje en carro que hizo junto a su padre. Después de recurrir a la intercesión del Apóstol Daniel, patrono de la memoria, las pistas se desvanecen y la búsqueda del viaje se transforma en una travesía para desvelar una verdad incómoda sobre sus recuerdos.",
+  "original": "Entre fotografías, audios y videos en VHS el director descubre pistas inconclusas sobre un viaje en carro que hizo junto a su padre. Después de recurrir a la intercesión del Apóstol Daniel, patrono de la memoria, las pistas del viaje se desvanecen y lo que en un inicio parecía ser la búsqueda por un viaje perdido, se transforma en una travesía para desvelar una verdad incómoda: que sus recuerdos esconden mentiras.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "5e6c6506de86"
+  }
+ },
+ {
+  "work_id": "w_4KFBQ00Q0VJ2",
+  "campo": "directores",
+  "valor": [
+   "David Suárez Muñetón"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "David Suárez Muñetón"
+  }
+ },
+ {
+  "work_id": "w_4KFBQ00Q0VJ2",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFBQ00Q0VJ2",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KFBQ00Q0VJ2",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KFBQ00Q0VJ2",
+  "campo": "sinopsis.en",
+  "valor": "Among photographs, audio recordings, and VHS videos, the director discovers incomplete clues about a car trip he took with his father. After seeking the intercession of Apostle Daniel, patron saint of memory, the clues from the trip fade, and what initially seemed to be a search for a lost journey turns into a quest to uncover an uncomfortable truth about his memories.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Among photographs, audio recordings, and VHS videos, the director discovered incomplete clues about a car trip he took with his father. After seeking the intercession of Apostle Daniel, patron saint of memory, the clues from the trip fade, and what initially seemed to be a search for a lost journey turns into a quest to uncover an uncomfortable truth: that his memories hide lies."
+  }
+ },
+ {
+  "work_id": "w_4KFBQ00Q0VJ2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/cartas-a-daniel-apostol.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/cartas-a-daniel-apostol.jpg"
+  }
+ }
+]

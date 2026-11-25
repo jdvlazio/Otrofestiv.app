@@ -1,0 +1,36 @@
+[
+ {
+  "work_id": "w_R4MQS7FMQPYA",
+  "campo": "sinopsis.es",
+  "valor": "Un niño curioso y una niña serena se encuentran a la orilla de un lago. Allí surgen reflexiones sobre la vida, de forma sutil e inesperada. Al fin y al cabo, ¿qué es ser una piedra?",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "c5a6462927f2"
+  ],
+  "antes": {
+   "olhar-2026": "Un niño curioso y una niña serena se encuentran a la orilla de un lago. Allí surgen reflexiones sobre la vida, de forma sutil e inesperada. Al fin y al cabo, ¿qué es ser una piedra?"
+  }
+ },
+ {
+  "work_id": "w_R4MQS7FMQPYA",
+  "campo": "xref.letterboxd",
+  "valor": "the-girl-who-wanted-to-be-a-stone",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "olhar-2026": "a-menina-que-queria-ser-pedra"
+  }
+ },
+ {
+  "work_id": "w_R4MQS7FMQPYA",
+  "campo": "xref.tmdb",
+  "valor": 1688870,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/a-menina-que-queria-ser-pedra/"
+ }
+]

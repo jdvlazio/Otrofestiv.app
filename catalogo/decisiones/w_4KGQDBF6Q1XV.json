@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGQDBF6Q1XV",
+  "campo": "directores",
+  "valor": [
+   "Alexander Peskador"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alexander Peskador"
+  }
+ },
+ {
+  "work_id": "w_4KGQDBF6Q1XV",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGQDBF6Q1XV",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_4KGQDBF6Q1XV",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_4KGQDBF6Q1XV",
+  "campo": "sinopsis.es",
+  "valor": "Cuando Wilhelm decide vender la casa de su difunta madre, Hildegard, esta regresa inesperadamente de entre los muertos... en forma de lata asesina. Una comedia sobre la pérdida, la desesperación... y los accidentes domésticos mortales.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Cuando Wilhelm decide vender la casa de su difunta madre, Hildegard, esta regresa inesperadamente de entre los muertos... en forma de lata asesina. Una comedia sobre la pérdida, la desesperación... y los accidentes domésticos mortales."
+  }
+ },
+ {
+  "work_id": "w_4KGQDBF6Q1XV",
+  "campo": "sinopsis.en",
+  "valor": "When Wilhelm decides to sell the house of his deceased mother, Hildegard, she unexpectedly returns from the dead – in the shape of a murderous tin can. A comedy about loss, despair... and deadly household accidents.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "When Wilhelm decides to sell the house of his deceased mother, Hildegard, she unexpectedly returns from the dead – in the shape of a murderous tin can. A comedy about loss, despair... and deadly household accidents."
+  }
+ },
+ {
+  "work_id": "w_4KGQDBF6Q1XV",
+  "campo": "xref.tmdb",
+  "valor": 1668176,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1668176"
+  }
+ },
+ {
+  "work_id": "w_4KGQDBF6Q1XV",
+  "campo": "xref.letterboxd",
+  "valor": "rolling-mother",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "rolling-mother"
+  }
+ },
+ {
+  "work_id": "w_4KGQDBF6Q1XV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/dosenmutter.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/dosenmutter.jpg"
+  }
+ }
+]

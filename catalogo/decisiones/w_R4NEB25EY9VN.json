@@ -1,0 +1,30 @@
+[
+ {
+  "work_id": "w_R4NEB25EY9VN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/tercertiempo/cantos-al-juego-de-bolar.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/siembrafest/cantos-al-juego-de-bolar.jpg",
+   "/assets/tercertiempo/cantos-al-juego-de-bolar.jpg"
+  ],
+  "antes": {
+   "siembrafest-2026": "/assets/siembrafest/cantos-al-juego-de-bolar.jpg",
+   "tercertiempo-2026": "/assets/tercertiempo/cantos-al-juego-de-bolar.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4NEB25EY9VN",
+  "campo": "xref.tmdb",
+  "valor": 1732655,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/cantos-al-juego-de-bolar/"
+ }
+]

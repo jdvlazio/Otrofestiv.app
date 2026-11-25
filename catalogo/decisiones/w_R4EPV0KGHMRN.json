@@ -1,0 +1,78 @@
+[
+ {
+  "work_id": "w_R4EPV0KGHMRN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/filme-pin.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cineautopsia/filme-pin.jpg",
+   "/assets/midbo-2026/filme-pin.jpg",
+   "/assets/popayan-2026/filme-pin.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER-FILME-PIN-2026%20-%20La%20Vulcanizadora.jpg?itok=qrKWWtjf"
+  ],
+  "antes": {
+   "cineautopsia-2026": "/assets/cineautopsia/filme-pin.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER-FILME-PIN-2026%20-%20La%20Vulcanizadora.jpg?itok=qrKWWtjf",
+   "midbo-2026": "/assets/midbo-2026/filme-pin.jpg",
+   "popayan-2026": "/assets/popayan-2026/filme-pin.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4EPV0KGHMRN",
+  "campo": "sinopsis.es",
+  "valor": "Entre luz, metal y plata, Filme Pin transforma una colección de pines solidarios en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cineautopsia-2026, ficci-65)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "4f0e5c77ea26",
+   "85407bc092b8",
+   "c84b708c0d03"
+  ],
+  "antes": {
+   "cineautopsia-2026": "Entre luz, metal y plata, Filme Pin transforma una colección de pines solidarios en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal.",
+   "ficci-65": "Entre luz, metal y plata, Filme Pin transforma una colección de pines solidarios en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal.",
+   "midbo-2026": "Entre la luz, el metal y la plata, «Filme Pin» convierte una colección de pines de solidaridad en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal.",
+   "popayan-2026": "Entre luz, metal y destellos, Filme PIN reimagina un archivo, redimensiona el objeto popular y político: nos presenta a otra escala, espectros de las luchas, del exilio y de la solidaridad internacional contra el régimen fascista y colonial portugués."
+  }
+ },
+ {
+  "work_id": "w_R4EPV0KGHMRN",
+  "campo": "directores",
+  "valor": [
+   "María Rojas Arias",
+   "Andrés Jurado"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cineautopsia-2026": "María Rojas Arias, Andrés Jurado",
+   "ficci-65": "María Rojas Arias, Andrés Jurado",
+   "midbo-2026": "María Rojas Arias y Andrés Jurado",
+   "popayan-2026": "Maria Rojas Arias y Andrés Jurado"
+  }
+ },
+ {
+  "work_id": "w_R4EPV0KGHMRN",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "PT"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1616856)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cineautopsia-2026": "Colombia - Portugal",
+   "ficci-65": "Colombia/Portugal",
+   "midbo-2026": "Colombia, Portugal",
+   "popayan-2026": "Colombia, Portugal"
+  }
+ }
+]

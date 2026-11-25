@@ -104,7 +104,7 @@ Por campo: `{valor, fuente, referencia, fecha, regla}`, con `fuente ∈ {tmdb,
 wikidata, festival:<fid>, humano:juan, derivado}`. Vive aparte para que la obra se
 lea limpia. Responde «¿de dónde salió este año?» sin adivinar.
 
-### 3.5 Decisiones (`catalogo/decisiones.json`)
+### 3.5 Decisiones (`catalogo/decisiones/`)
 
 Una fila por decisión humana: `{work_id, campo, valor, motivo, fecha, reemplaza}`.
 Prioridad máxima en la supervivencia: ninguna regeneración la pisa. Incluye las
@@ -144,7 +144,7 @@ umbral con datos reales, no a ojo.
 | Título original, año, director, país, idioma | **Decisión humana** > TMDB > Wikidata > festival | el festival puede *proponer* una corrección, que cae en candidatos |
 | Duración | **Versión proyectada** (festival) > TMDB | si difieren > 5 min, aviso |
 | Sinopsis ES / EN | **Una por obra** (Juan, 23 nov 2026; antes ganaba la de cada festival): oficial de la obra > la mejor publicada por un festival > traducción nuestra con contexto > TMDB | lo del evento (invitados, charla) va en la función; nunca una traducción como si fuera oficial |
-| Afiche | **Uno por obra** (Juan, 23 nov 2026): oficial de la obra > del festival > editorial nuestro | la elección vive en `decisiones.json` (campo `afiche`); uno nuevo se compara con `pipeline/afiches_unicos.py` (abajo) |
+| Afiche | **Uno por obra** (Juan, 23 nov 2026): oficial de la obra > del festival > editorial nuestro | la elección vive en `decisiones/` (campo `afiche`); uno nuevo se compara con `pipeline/afiches_unicos.py` (abajo) |
 | Emoji, arquetipo, EN de sección | Nuestra capa | nunca pisa el nombre verbatim |
 
 **Cuándo lo nuevo reemplaza lo del almacén** (Juan, 23 nov 2026: la campaña de
@@ -211,7 +211,7 @@ silencio (es la regla de «sin ficha no se publica», llevada a la obra).
 |---|---|---|---|
 | **0. Diseño** | Este documento + esquema JSON del catálogo + los 5 guardianes escritos como tests que fallan | PR de docs, sin datos | 1 sesión |
 | **1. Censo → catálogo inicial** | Script `catalogo/construir.py` que lee los 32 festivales + sidecars, agrupa por xref/huella, asigna ids, escribe procedencia. Salida en **modo simulación**: lista de coincidencias, candidatos y contradicciones, sin publicar nada | `catalogo/` con ~2.500 obras + hoja de **candidatos** (estimo 100–200 pares) y de **contradicciones** (111 obras) para tu revisión | 1–2 sesiones + tu revisión |
-| **2. Resolver contradicciones** | Tú decides sobre la hoja (una vez por obra, no por festival): grafía del director, año, afiche que manda. Cada respuesta entra a `decisiones.json` | catálogo coherente; 58 decisiones duplicadas → 1 cada una | tu tiempo, por lotes |
+| **2. Resolver contradicciones** | Tú decides sobre la hoja (una vez por obra, no por festival): grafía del director, año, afiche que manda. Cada respuesta entra a `decisiones/` | catálogo coherente; 58 decisiones duplicadas → 1 cada una | tu tiempo, por lotes |
 | **3. Cablear el pipeline** | `cascada_obra`, escritura de vuelta, `work_id` en la vista, guardianes activos. Modo simulación: regenerar los 32 festivales y diffear contra producción, **cero cambios no explicados** | PR de pipeline | 1–2 sesiones |
 | **4. Probar con dos festivales** | MUBI Fest (8 obras ya en catálogo de 12) y FICICA (31 de 81) | onboarding sin volver a sondear lo conocido; hoja de contacto solo con lo nuevo | 1 sesión |
 | **5. Altas TMDB desde el catálogo** | La cola de altas sale del catálogo (obras sin xref, con afiche oficial ≥ 500 px, director y año) y se marca una vez | lotes de altas sin re-filtrar por festival | continuo |

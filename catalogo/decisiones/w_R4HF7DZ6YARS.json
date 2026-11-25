@@ -1,0 +1,72 @@
+[
+ {
+  "work_id": "w_R4HF7DZ6YARS",
+  "campo": "directores",
+  "valor": [
+   "Carlos Palau"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 312",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=312"
+ },
+ {
+  "work_id": "w_R4HF7DZ6YARS",
+  "campo": "anio",
+  "valor": 1986,
+  "motivo": "catálogo oficial de FICCI 65, p. 312",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=312",
+  "antes": {
+   "ficci-65": "1986"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DZ6YARS",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 312",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=312",
+  "antes": {
+   "ficci-65": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DZ6YARS",
+  "campo": "sinopsis.es",
+  "valor": "José Miguel y sus amigos rompen la calma sacra de su internado en Tuluá: hacen pilatunas, sacan de quicio a los profesores y persiguen faldas de noche. En el colegio de al lado, las niñas intentan hablar de amor con la madre superiora y se dan besos de práctica. Viven en mundos separados y esperan encontrarse, con permiso o a escondidas.",
+  "motivo": "catálogo oficial de FICCI 65, p. 312",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=312",
+  "antes": {
+   "ficci-65": "Mojicones con gaseosa en el recreo, faldas por debajo de la rodilla, duchas heladas, pasodobles en el solar, veinte muchachitos en catequesis."
+  }
+ },
+ {
+  "work_id": "w_R4HF7DZ6YARS",
+  "campo": "sinopsis.en",
+  "valor": "José Miguel and his friends disrupt the sacred calm of their Tuluá boarding school: they pull pranks, drive teachers crazy, and chase girls at night. At the school next door, the girls try to talk about love with the Mother Superior and practice kissing. They live in separate worlds, waiting to meet, with permission or in secret.",
+  "motivo": "catálogo oficial de FICCI 65, p. 312",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=312",
+  "antes": {
+   "ficci-65": "Sweet biscuits with soda at recess, skirts below the knee, cold showers, pasodobles in the courtyard, twenty boys in catechism."
+  }
+ },
+ {
+  "work_id": "w_R4HF7DZ6YARS",
+  "campo": "xref.tmdb",
+  "valor": 721261,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/721261"
+ }
+]

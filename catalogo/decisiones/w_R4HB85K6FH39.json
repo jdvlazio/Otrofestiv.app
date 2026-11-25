@@ -1,0 +1,82 @@
+[
+ {
+  "work_id": "w_R4HB85K6FH39",
+  "campo": "directores",
+  "valor": [
+   "Clyde Gates",
+   "Gabriel Sanson"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 130",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=130"
+ },
+ {
+  "work_id": "w_R4HB85K6FH39",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 130",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=130"
+ },
+ {
+  "work_id": "w_R4HB85K6FH39",
+  "campo": "paises",
+  "valor": [
+   "BE",
+   "FR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 130",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=130",
+  "antes": {
+   "ficci-65": "Bélgica, Francia"
+  }
+ },
+ {
+  "work_id": "w_R4HB85K6FH39",
+  "campo": "sinopsis.es",
+  "valor": "La cámara recorre la ciudad en primera persona y con desconcierto, a través de los sentidos de un fantasma que parece estar en el purgatorio: oficinas, carruseles, pasadizos subterráneos, podredumbres industriales, geriátricos, la salida de un estadio. Allí se conoce la corporalidad de los ángeles: una mitología de la muerte y el nacimiento.",
+  "motivo": "catálogo oficial de FICCI 65, p. 130",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=130"
+ },
+ {
+  "work_id": "w_R4HB85K6FH39",
+  "campo": "sinopsis.en",
+  "valor": "The camera wanders the city in first person, disoriented, through the senses of a ghost who seems to be in purgatory: offices, carousels, underground passageways, industrial wastelands, nursing homes, the exit of a stadium. There we experience the physicality of angels, in a mythology of death and birth.",
+  "motivo": "catálogo oficial de FICCI 65, p. 130",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=130"
+ },
+ {
+  "work_id": "w_R4HB85K6FH39",
+  "campo": "xref.tmdb",
+  "valor": 1601623,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1601623"
+ },
+ {
+  "work_id": "w_R4HB85K6FH39",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/uIk7XxzSPY0miDlAYjCyhTJOsIc.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el anterior era de otra película del mismo título; visto uno al lado del otro",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "vistas": [
+   "https://image.tmdb.org/t/p/w92/lpcPZ6dfJFLjpeDAuvsMi11amOR.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w92/lpcPZ6dfJFLjpeDAuvsMi11amOR.jpg"
+  }
+ }
+]

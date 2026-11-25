@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS40W8BMV",
+  "campo": "sinopsis.es",
+  "valor": "A Holandesinha acompaña a Luiza Godoi Acosta, una joven con síndrome de Down que sueña con ser cineasta y realiza su primer cortometraje, Lágrimas de um Pierrot. El documental recorre todas las etapas del proceso creativo y revela su visión del mundo, los desafíos que enfrenta y los que supera ante el capacitismo. Producida en el interior de Paraná, la película celebra la inclusión y afirma el cine como espacio de posibilidades, pertenencia y perseverancia.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "a2c5ee72cc76"
+  ],
+  "antes": {
+   "olhar-2026": "A Holandesinha acompaña a Luiza Godoi Acosta, una joven con Síndrome de Down que sueña con ser cineasta y realiza su primer cortometraje, Lágrimas de um Pierrot. El documental recorre todas las etapas del proceso creativo, revelando su visión del mundo, los desafíos que enfrenta y las superaciones frente al capacitismo. Producido en el interior de Paraná, el filme celebra la inclusión y afirma el cine como espacio de posibilidades, pertenencia y perseverancia."
+  }
+ },
+ {
+  "work_id": "w_R4MQS40W8BMV",
+  "campo": "xref.tmdb",
+  "valor": 1688827,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/a-holandesinha/"
+ }
+]

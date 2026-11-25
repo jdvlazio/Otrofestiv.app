@@ -1,0 +1,134 @@
+[
+ {
+  "work_id": "w_4KEX3MXAPVG7",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5923137517f6"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "¿El regreso pa’ cuándo?",
+  "valor": "Una mujer lee una carta a su bisabuelo y comparte la experiencia migratoria de su familia. Mientras tanto, un hipopótamo de cerámica, llevado a Colombia como especie invasora, deambula por el nuevo mundo que se ve obligado a habitar. A medida que encuentra especies y sensaciones desconocidas, las imágenes poéticas evocan recuerdos nostálgicos.",
+  "original": "Una mujer lee una carta a su bisabuelo, compartiendo la experiencia migratoria de su familia. Mientras tanto, un hipopótamo de cerámica, llevado a Colombia como una especie invasora, deambula por el nuevo mundo que se ve obligado a habitar. A medida que el animal se encuentra con nuevas especies y sensaciones desconocidas, las imágenes poéticas evocan recuerdos nostálgicos y viajes introspectivos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "6b5ac463b7ef"
+  }
+ },
+ {
+  "work_id": "w_4KEX3MXAPVG7",
+  "campo": "directores",
+  "valor": [
+   "Antonia Bello Vélez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Antonia Bello Vélez"
+  }
+ },
+ {
+  "work_id": "w_4KEX3MXAPVG7",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEX3MXAPVG7",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "FI",
+   "BE",
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia, Finlandia, Bélgica, Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KEX3MXAPVG7",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KEX3MXAPVG7",
+  "campo": "sinopsis.en",
+  "valor": "A woman reads a letter to her great-grandfather, sharing her family’s experience with migration. Meanwhile, a ceramic hippopotamus, brought to Colombia as an invasive species, wanders through the new world it is forced to inhabit. As the animal encounters new species and unfamiliar sensations, the poetic imagery evokes nostalgic memories and introspective journeys.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A girl reads a letter to her great-grandfather, sharing her family’s experience with migration. Meanwhile, a ceramic hippopotamus, brought to Colombia as an invasive species, wanders through the new world it is forced to inhabit. As the animal encounters new species and unfamiliar sensations, the poetic imagery evokes nostalgic memories and introspective journeys."
+  }
+ },
+ {
+  "work_id": "w_4KEX3MXAPVG7",
+  "campo": "xref.tmdb",
+  "valor": 1841400,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841400"
+  }
+ },
+ {
+  "work_id": "w_4KEX3MXAPVG7",
+  "campo": "xref.letterboxd",
+  "valor": "el-regreso-pa-cuando",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "el-regreso-pa-cuando"
+  }
+ },
+ {
+  "work_id": "w_4KEX3MXAPVG7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/el-regreso-pa-cuando.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/el-regreso-pa-cuando.jpg"
+  }
+ }
+]

@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_4KE8DPCGFZ6Q",
+  "campo": "directores",
+  "valor": [
+   "Antoneta Alamat Kusijanović"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Antoneta Alamat Kusijanović"
+  }
+ },
+ {
+  "work_id": "w_4KE8DPCGFZ6Q",
+  "campo": "anio",
+  "valor": 2017,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2017"
+  }
+ },
+ {
+  "work_id": "w_4KE8DPCGFZ6Q",
+  "campo": "paises",
+  "valor": [
+   "HR",
+   "SI",
+   "SE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia, Eslovenia, Suecia"
+  }
+ },
+ {
+  "work_id": "w_4KE8DPCGFZ6Q",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KE8DPCGFZ6Q",
+  "campo": "sinopsis.es",
+  "valor": "Julija, de trece años, huye con su madre de un hogar violento y vuelve a la isla donde creció. Busca a su amiga Ana, pero el rechazo de esta despierta en Julija la violencia que creía haber dejado atrás.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Julija, de trece años, huye con su madre de un hogar violento y vuelve a la isla donde creció. Busca a su amiga Ana, pero el rechazo de esta despierta en Julija la violencia que creía haber dejado atrás."
+  }
+ },
+ {
+  "work_id": "w_4KE8DPCGFZ6Q",
+  "campo": "sinopsis.en",
+  "valor": "Thirteen-year-old Julija and her mother flee a violent home and return to the island where Julija grew up. She looks for her friend Ana, whose rejection brings back the violence Julija thought she had escaped.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Thirteen-year-old Julija and her mother flee a violent home and return to the island where Julija grew up. She looks for her friend Ana, whose rejection brings back the violence Julija thought she had escaped."
+  }
+ },
+ {
+  "work_id": "w_4KE8DPCGFZ6Q",
+  "campo": "xref.tmdb",
+  "valor": 440336,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "440336"
+  }
+ },
+ {
+  "work_id": "w_4KE8DPCGFZ6Q",
+  "campo": "xref.letterboxd",
+  "valor": "into-the-blue-2017",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "into-the-blue-2017"
+  }
+ },
+ {
+  "work_id": "w_4KE8DPCGFZ6Q",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/u-plavetnilo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/u-plavetnilo.jpg"
+  }
+ }
+]

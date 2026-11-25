@@ -1,0 +1,113 @@
+[
+ {
+  "campo": "directores",
+  "valor": [
+   "The Critics",
+   "Pietra Brettkelly"
+  ],
+  "motivo": "la de tribeca-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "tribeca-2026": "The Critics, Pietra Brettkelly",
+   "ficci-65": "Peter Faiman"
+  },
+  "work_id": "w_R4HCNBFVSZ6V"
+ },
+ {
+  "work_id": "w_R4HCNBFVSZ6V",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 225",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=225",
+  "antes": {
+   "ficci-65": "1986"
+  }
+ },
+ {
+  "work_id": "w_R4HCNBFVSZ6V",
+  "campo": "paises",
+  "valor": [
+   "NZ",
+   "NG"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 225",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=225",
+  "antes": {
+   "ficci-65": "Nueva Zelanda, Nigeria"
+  }
+ },
+ {
+  "work_id": "w_R4HCNBFVSZ6V",
+  "campo": "sinopsis.es",
+  "valor": "En Kaduna, Nigeria, un grupo de niños convierte un patio en un universo de ciencia ficción con un solo teléfono y una imaginación sin límites. Filmada durante trece años, sigue a su colectivo mientras la creatividad se vuelve un salvavidas y una forma audaz de reescribir su futuro.",
+  "motivo": "la publicada tenía un dato falso o era relleno; desde la ficha oficial",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («Aprobadas»)",
+  "antes": {
+   "tribeca-2026": "Un colectivo de jóvenes cineastas en Kadua, Nigeria, hace ciencia ficción con un solo teléfono y electricidad errática. Trece años después, Los Critics siguen haciendo películas y han captado la atención del mundo."
+  },
+  "vistas": [
+   "8c1fa5fa9c1d"
+  ],
+  "fuente": "https://tribecafilm.com/films/crocodile-2026",
+  "titulo": "Crocodile"
+ },
+ {
+  "campo": "sinopsis.en",
+  "valor": "A collective of young filmmakers in Kaduna, Nigeria, make science fiction films on a single phone with erratic electricity. Thirteen years later, The Critics are still making movies — and have caught the attention of the world.",
+  "motivo": "la de tribeca-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "tribeca-2026": "A collective of young filmmakers in Kaduna, Nigeria, make science fiction films on a single phone with erratic electricity. Thirteen years later, The Critics are still making movies — and have caught the attention of the world.",
+   "ficci-65": "A documentary about the rise of Nigerian cinema Nollywood and its global impact, filmed between Lagos and Auckland."
+  },
+  "work_id": "w_R4HCNBFVSZ6V"
+ },
+ {
+  "campo": "generos",
+  "valor": [
+   "Aventura"
+  ],
+  "motivo": "la de tribeca-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "tribeca-2026": "Aventura"
+  },
+  "work_id": "w_R4HCNBFVSZ6V"
+ },
+ {
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/xAINsxBG7dhLf7TZRydJlFerqJF.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "la de tribeca-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "tribeca-2026": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/6920/medium_Crocodile_Crocodile_Film_Limited_1_clean_16x9.jpg",
+   "ficci-65": "https://image.tmdb.org/t/p/w185/xnvPAd1GnyBPDvSGVa6aq89dw33.jpg"
+  },
+  "work_id": "w_R4HCNBFVSZ6V",
+  "vistas": [
+   "https://image.tmdb.org/t/p/w185/xnvPAd1GnyBPDvSGVa6aq89dw33.jpg",
+   "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/6920/medium_Crocodile_Crocodile_Film_Limited_1_clean_16x9.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4HCNBFVSZ6V",
+  "campo": "xref.tmdb",
+  "valor": 1616881,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1616881"
+ }
+]

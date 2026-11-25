@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGGG33VEXZE",
+  "campo": "directores",
+  "valor": [
+   "César Heredia Cruz"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "César Heredia Cruz"
+  }
+ },
+ {
+  "work_id": "w_4KGGG33VEXZE",
+  "campo": "anio",
+  "valor": 2014,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2014"
+  }
+ },
+ {
+  "work_id": "w_4KGGG33VEXZE",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KGGG33VEXZE",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KGGG33VEXZE",
+  "campo": "sinopsis.es",
+  "valor": "Andrés se gana la vida recorriendo carreteras en un Renault 4 lleno de objetos. Viaja con su padre, que se aferra a los recuerdos de la familia y a sus antiguas narraciones de ciclismo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Andrés se gana la vida recorriendo carreteras en un Renault 4 lleno de objetos. Viaja con su padre, que se aferra a los recuerdos de la familia y a sus antiguas narraciones de ciclismo."
+  }
+ },
+ {
+  "work_id": "w_4KGGG33VEXZE",
+  "campo": "sinopsis.en",
+  "valor": "Andrés makes a living travelling the roads in a Renault 4 filled with odds and ends. His father travels with him, holding on to family memories and his past as a cycling commentator.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Andrés makes a living travelling the roads in a Renault 4 filled with odds and ends. His father travels with him, holding on to family memories and his past as a cycling commentator."
+  }
+ },
+ {
+  "work_id": "w_4KGGG33VEXZE",
+  "campo": "xref.tmdb",
+  "valor": 1826828,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1826828"
+  }
+ },
+ {
+  "work_id": "w_4KGGG33VEXZE",
+  "campo": "xref.letterboxd",
+  "valor": "elefante-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "elefante-1"
+  }
+ },
+ {
+  "work_id": "w_4KGGG33VEXZE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/elefante.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/elefante.jpg"
+  }
+ }
+]

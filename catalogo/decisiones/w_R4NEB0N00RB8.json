@@ -1,0 +1,40 @@
+[
+ {
+  "work_id": "w_R4NEB0N00RB8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
+   "/assets/siembrafest/desde-aca-veo-la-tormenta.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
+   "siembrafest-2026": "/assets/siembrafest/desde-aca-veo-la-tormenta.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4NEB0N00RB8",
+  "campo": "sinopsis.es",
+  "valor": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "aleste-2026": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo."
+  }
+ },
+ {
+  "work_id": "w_R4NEB0N00RB8",
+  "campo": "sinopsis.en",
+  "valor": "Julia is going through a decisive moment in her life. What should bring her happiness is disturbed by painful memories and the presence of death. Faced with a life that insists on making its way, she will have to confront her deepest fears before crossing a threshold that will change everything.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

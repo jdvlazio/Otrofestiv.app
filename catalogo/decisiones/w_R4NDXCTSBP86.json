@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4NDXCTSBP86",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/tercertiempo/entrenador-de-locos.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/tercertiempo/entrenador-de-locos.jpg",
+   "https://image.tmdb.org/t/p/w500/D8N4FBRKkPM8laxkVHPiv6ZDfY.jpg"
+  ],
+  "antes": {
+   "qaff-2026": "https://image.tmdb.org/t/p/w500/D8N4FBRKkPM8laxkVHPiv6ZDfY.jpg",
+   "tercertiempo-2026": "/assets/tercertiempo/entrenador-de-locos.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4NDXCTSBP86",
+  "campo": "sinopsis.es",
+  "valor": "En Dakar, un entrenador reúne a un equipo de fútbol conformado por personas con trastornos mentales. Entre la pobreza, la exclusión y el estigma social, los jugadores encuentran en el deporte una oportunidad para construir comunidad y perseguir un sueño que los llevará hasta Italia.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (tercertiempo-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "aae80a7fe820",
+   "c1012f9bd55c"
+  ],
+  "antes": {
+   "qaff-2026": "En Dakar, Malick Biteye forma un equipo de fútbol compuesto por jugadores con trastornos mentales. En un contexto de pobreza absoluta, las historias y los deseos de estos hombres, que luchan contra el estigma, se entrelazan. Su viaje culmina en Italia, donde cumplen su sueño de jugar en un partido de fútbol internacional. 20",
+   "tercertiempo-2026": "En Dakar, un entrenador reúne a un equipo de fútbol conformado por personas con trastornos mentales. Entre la pobreza, la exclusión y el estigma social, los jugadores encuentran en el deporte una oportunidad para construir comunidad y perseguir un sueño que los llevará hasta Italia."
+  }
+ },
+ {
+  "work_id": "w_R4NDXCTSBP86",
+  "campo": "paises",
+  "valor": [
+   "SN",
+   "IT"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "qaff-2026": "Senegal",
+   "tercertiempo-2026": "Italia"
+  }
+ },
+ {
+  "work_id": "w_R4NDXCTSBP86",
+  "campo": "sinopsis.en",
+  "valor": "In Dakar, a coach brings together a football team made up of people with mental disorders. Amid poverty, exclusion and social stigma, the players find in sport a chance to build community and chase a dream that will take them all the way to Italy.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "tercertiempo-2026": "In Dakar, a coach brings together a football team made up of people with mental disorders. Amid poverty, exclusion and social stigma, the players find in sport a chance to build community and chase a dream that will take them all the way to Italy."
+  }
+ }
+]

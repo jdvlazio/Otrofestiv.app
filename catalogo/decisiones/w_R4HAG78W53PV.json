@@ -1,0 +1,46 @@
+[
+ {
+  "work_id": "w_R4HAG78W53PV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w185/7aR0r9KVSfbzmCOGXGfulpmKOBj.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/feito-pipa.jpg",
+   "https://image.tmdb.org/t/p/w185/7aR0r9KVSfbzmCOGXGfulpmKOBj.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w185/7aR0r9KVSfbzmCOGXGfulpmKOBj.jpg",
+   "ficdeh-2026": "/assets/ficdeh/feito-pipa.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HAG78W53PV",
+  "campo": "sinopsis.es",
+  "valor": "Gugu es un niño soñador y apasionado por el fútbol que vive con su abuela Dilma, una profesora jubilada que lo cría de manera libre y afectuosa. Por el contrario, la relación del niño con su padre, Batista, es difícil, marcada por ausencias, expectativas y afectos no expresados. Abuela y nieto viven solos junto a la represa de Araújo Lima que, después de años de sequía, comienza a revelar las ruinas de una antigua ciudad sumergida, sacando a la luz recuerdos que cambiaron la vida de la familia.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "1240e0a31875",
+   "904f819e6776"
+  ],
+  "antes": {
+   "ficci-65": "Gugu tiene 12 años y crece en una pequeña comunidad a orillas del embalse Araújo-Lima, cuyo nivel desciende gradualmente revelando las ruinas de una ciudad sumergida. Vive con su abuela Dilma, rodeado de ternura, picardía y tardes de fútbol.",
+   "ficdeh-2026": "Gugu es un niño soñador y apasionado por el fútbol que vive con su abuela Dilma, una profesora jubilada que lo cría de manera libre y afectuosa. Por el contrario, la relación del niño con su padre, Batista, es difícil, marcada por ausencias, expectativas y afectos no expresados. Abuela y nieto viven solos junto a la represa de Araújo Lima que, después de años de sequía, comienza a revelar las ruinas de una antigua ciudad sumergida, sacando a la luz recuerdos que cambiaron la vida de la familia."
+  }
+ },
+ {
+  "work_id": "w_R4HAG78W53PV",
+  "campo": "xref.tmdb",
+  "valor": 1393615,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/gugus-world/"
+ }
+]

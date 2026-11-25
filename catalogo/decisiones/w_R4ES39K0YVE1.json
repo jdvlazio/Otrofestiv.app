@@ -1,0 +1,104 @@
+[
+ {
+  "work_id": "w_R4ES39K0YVE1",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficdeh/andariega.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/festicinerio-2026/andariega.jpg",
+   "/assets/ficdeh/andariega.jpg",
+   "/assets/ficma/andariega.jpg",
+   "/assets/filcmar-2026/andariega.jpg",
+   "https://image.tmdb.org/t/p/w500/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg"
+  ],
+  "antes": {
+   "cinemancia-2025": "https://image.tmdb.org/t/p/w500/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg",
+   "festicinerio-2026": "/assets/festicinerio-2026/andariega.jpg",
+   "ficdeh-2026": "/assets/ficdeh/andariega.jpg",
+   "ficma-2026": "/assets/ficma/andariega.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/andariega.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4ES39K0YVE1",
+  "campo": "sinopsis.es",
+  "valor": "Chena, 26 años, recorre cada año cientos de kilómetros para trabajar como jornalera en los cultivos colombianos. Lleva ocho años sin ahorrar ni alcanzar independencia. Su cuerpo y su voluntad son todo lo que tiene.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2025, festicinerio-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "15eee347a029",
+   "2285eeee6146",
+   "2a9b23eee021",
+   "b669890a2a1f",
+   "c16d81c11e55"
+  ],
+  "antes": {
+   "cinemancia-2025": "Chena, 26 años, recorre cada año cientos de kilómetros para trabajar como jornalera en los cultivos colombianos. Lleva ocho años sin ahorrar ni alcanzar independencia. Su cuerpo y su voluntad son todo lo que tiene.",
+   "festicinerio-2026": "Chena, 26 años, recorre cada año cientos de kilómetros para trabajar como jornalera en los cultivos colombianos. Lleva ocho años sin ahorrar ni alcanzar independencia. Su cuerpo y su voluntad son todo lo que tiene.",
+   "ficdeh-2026": "Cada año, Chena, de 26 años, se une a la diáspora de campesinos andariegos que se movilizan por Colombia recogiendo las cosechas de café. Viajar y trabajar son la base de su autonomía. En su equipaje carga un cuaderno escolar donde escribe reflexiones sobre su pasado y la vida que afronta como mujer y madre sosteniendo a los lejos un hogar lleno de dificultades y escasez. A pesar de su juventud, su cuerpo se está debilitando, poniendo en entredicho su propia idea de libertad.",
+   "ficma-2026": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom.",
+   "filcmar-2026": "Chena es una madre soltera de 26 años que cada año se une a la diáspora de campesinos que recorren cientos de kilómetros lejos de sus hogares para trabajar como jornaleros o recolectores de café en Colombia. A pesar del durísimo trabajo, prefiere este tipo de vida nómada porque le da la posibilidad de elegir dónde y cuándo trabajar. Sobrevivir dependerá de su capacidad para realizar tareas físicamente exigentes, de su temple para enfrentarse a un mundo de hombres y de la fortaleza de su propio cuerpo, que empieza a debilitarse debido al esfuerzo diario que debe soportar. En su equipaje carga un diario donde escribe reflexiones sobre su pasado y la vida que lleva como andariega. Después de ocho años trabajando en los cultivos, no ha podido ahorrar dinero ni adquirir independencia económica. Por ahora solo espera volver a casa a finales de año, justo a tiempo para celebrar el cumpleaños de su hijo Totoi.",
+   "siembrafest-2026": "Acompaña a una joven madre campesina en los caminos del trabajo rural y la cosecha de café."
+  }
+ },
+ {
+  "work_id": "w_R4ES39K0YVE1",
+  "campo": "directores",
+  "valor": [
+   "Raúl Soto Rodríguez"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2025": "Raúl Soto",
+   "festicinerio-2026": "Raúl Soto R.",
+   "ficdeh-2026": "Raúl Soto",
+   "ficma-2026": "Raúl Soto Rodríguez",
+   "filcmar-2026": "Raúl Soto",
+   "siembrafest-2026": "Raúl Soto Rodríguez"
+  }
+ },
+ {
+  "work_id": "w_R4ES39K0YVE1",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "cinemancia-2025": "Drama",
+   "festicinerio-2026": "Documental",
+   "ficdeh-2026": "Drama",
+   "ficma-2026": "Documental",
+   "filcmar-2026": "Documental",
+   "siembrafest-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4ES39K0YVE1",
+  "campo": "sinopsis.en",
+  "valor": "Every year, 26-year-old Chena walks hundreds of kilometers to work as a day laborer on Colombian crops. Eight years in, she has saved nothing. Her body and her will are all she has.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Andariega",
+  "antes": {
+   "cinemancia-2025": "Every year, 26-year-old Chena walks hundreds of kilometers to work as a day laborer on Colombian crops. Eight years in, she has saved nothing. Her body and her will are all she has.",
+   "festicinerio-2026": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom.",
+   "ficdeh-2026": "Every year, 26-year-old Chena walks hundreds of kilometers to work as a day laborer on Colombian crops. Eight years in, she has saved nothing. Her body and her will are all she has.",
+   "ficma-2026": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom.",
+   "filcmar-2026": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom.",
+   "siembrafest-2026": "Each year, 26-year-old María Yessenia Herrera, best known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters."
+  }
+ }
+]

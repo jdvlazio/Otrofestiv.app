@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS8MV6ADH",
+  "campo": "sinopsis.es",
+  "valor": "Baby, una estrella de rock en ascenso, sufre una fiebre que le impide crear canciones nuevas. Cuando recibe una llamada de Pepeu, su antiguo compañero musical y examante, deciden componer juntos una última canción: una melodía de cura y resurrección para tocar en una noche de luna de sangre.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "5e4cd18b0ebc"
+  ],
+  "antes": {
+   "olhar-2026": "Baby, un rockstar en ascenso, está atormentado por una fiebre que le impide crear nuevas canciones. Al recibir una llamada de Pepeu, su excompañero musical y examante, deciden componer una última canción juntos: una melodía de cura y resurrección para tocar en una noche de luna de sangre."
+  }
+ },
+ {
+  "work_id": "w_R4MQS8MV6ADH",
+  "campo": "xref.tmdb",
+  "valor": 1688913,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/pirexia/"
+ }
+]

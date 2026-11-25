@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KES6P5HD813",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "75b4adc78631"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Love in the Gaze of a Panopticon",
+  "valor": "Con frías imágenes de vigilancia y susurros íntimos de una aplicación de citas, la obra observa los espacios entre lo público y lo privado, lo físico y lo digital, lo invisible y lo inaudible. Transforma líricamente las imágenes de cámaras automáticas en una mirada que anhela la conexión en Hong Kong, ciudad natal del artista.",
+  "original": "Combinando frías imágenes de vigilancia con susurros íntimos de una aplicación de citas, Love in the Gaze of a Panopticon observa los espacios entre lo público y lo privado, lo físico y lo digital, lo invisible y lo inaudible. Transforma líricamente las imágenes de cámaras automáticas en una mirada que anhela la conexión en Hong Kong, ciudad natal del artista.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "171a1ca3fb80"
+  }
+ },
+ {
+  "work_id": "w_4KES6P5HD813",
+  "campo": "directores",
+  "valor": [
+   "Arnold Tam"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Arnold Tam"
+  }
+ },
+ {
+  "work_id": "w_4KES6P5HD813",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KES6P5HD813",
+  "campo": "paises",
+  "valor": [
+   "HK"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Hong Kong"
+  }
+ },
+ {
+  "work_id": "w_4KES6P5HD813",
+  "campo": "generos",
+  "valor": [
+   "Romance"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Romance"
+  }
+ },
+ {
+  "work_id": "w_4KES6P5HD813",
+  "campo": "sinopsis.en",
+  "valor": "Blending cold surveillance footage with intimate whispers from an online dating app, Love in the Gaze of a Panopticon surveils spaces between public and private, physical and digital, the unseen and unheard, and lyrically transforms the images of machinery cameras into a longing gaze for connection in the artist’s hometown, Hong Kong.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Blending cold surveillance footage with intimate whispers from an online dating app, Love in the Gaze of a Panopticon surveils spaces between public and private, physical and digital, the unseen and unheard, lyrically transforms the images of machinery cameras into a longing gaze for connection in the artist’s hometown, Hong Kong."
+  }
+ },
+ {
+  "work_id": "w_4KES6P5HD813",
+  "campo": "xref.tmdb",
+  "valor": 1702725,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1702725"
+  }
+ },
+ {
+  "work_id": "w_4KES6P5HD813",
+  "campo": "xref.letterboxd",
+  "valor": "love-in-the-gaze-of-a-panopticon",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "love-in-the-gaze-of-a-panopticon"
+  }
+ },
+ {
+  "work_id": "w_4KES6P5HD813",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/love-in-the-gaze-of-a-panopticon.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/love-in-the-gaze-of-a-panopticon.jpg"
+  }
+ }
+]

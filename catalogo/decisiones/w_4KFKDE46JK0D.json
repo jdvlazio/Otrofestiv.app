@@ -1,0 +1,107 @@
+[
+ {
+  "work_id": "w_4KFKDE46JK0D",
+  "campo": "directores",
+  "valor": [
+   "Rubens Fabricio Anzolin",
+   "João Fernando Chagas"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rubens Fabricio Anzolin, João Fernando Chagas"
+  }
+ },
+ {
+  "work_id": "w_4KFKDE46JK0D",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KFKDE46JK0D",
+  "campo": "paises",
+  "valor": [
+   "BR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Brasil"
+  }
+ },
+ {
+  "work_id": "w_4KFKDE46JK0D",
+  "campo": "sinopsis.es",
+  "valor": "En el antiguo puerto de Pelotas, en el sur de Brasil, los hombres trabajan mientras la noche se instala.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En el antiguo puerto de Pelotas, en el sur de Brasil, los hombres trabajan mientras la noche se instala."
+  }
+ },
+ {
+  "work_id": "w_4KFKDE46JK0D",
+  "campo": "sinopsis.en",
+  "valor": "In the old port of Pelotas, in the deep south of Brazil, men work while the night takes hold.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the old port of Pelotas, in the deep south of Brazil, men work while the night takes hold."
+  }
+ },
+ {
+  "work_id": "w_4KFKDE46JK0D",
+  "campo": "xref.tmdb",
+  "valor": 1580205,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1580205"
+  }
+ },
+ {
+  "work_id": "w_4KFKDE46JK0D",
+  "campo": "xref.letterboxd",
+  "valor": "night-shift-2026-8",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "night-shift-2026-8"
+  }
+ },
+ {
+  "work_id": "w_4KFKDE46JK0D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/braco-forte.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/braco-forte.jpg"
+  }
+ }
+]

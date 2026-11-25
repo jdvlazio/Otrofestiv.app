@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HCNBK7QVN6",
+  "campo": "directores",
+  "valor": [
+   "Faraz Shariat"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 120",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=120",
+  "antes": {
+   "ficci-65": "Billy Wilder"
+  }
+ },
+ {
+  "work_id": "w_R4HCNBK7QVN6",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 120",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=120",
+  "antes": {
+   "ficci-65": "1957"
+  }
+ },
+ {
+  "work_id": "w_R4HCNBK7QVN6",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 120",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=120",
+  "antes": {
+   "ficci-65": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_R4HCNBK7QVN6",
+  "campo": "sinopsis.es",
+  "valor": "Seyo Kim, una fiscal alemana de origen coreano, sobrevive a un ataque racista con una bomba molotov e inicia una investigación. El tortuoso proceso personal y legal pone en riesgo su integridad física, su trabajo y sus límites éticos. Un thriller judicial que denuncia la xenofobia en Alemania y un sistema policial y judicial lejos de ser imparcial.",
+  "motivo": "catálogo oficial de FICCI 65, p. 120",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=120",
+  "antes": {
+   "ficci-65": "Faraz Shariat construye un thriller político en Alemania sobre un joven abogado iraní que defiende a solicitantes de asilo mientras enfrenta su propia identidad y las contradicciones del sistema legal europeo."
+  }
+ },
+ {
+  "work_id": "w_R4HCNBK7QVN6",
+  "campo": "sinopsis.en",
+  "valor": "Seyo Kim, a German prosecutor of Korean origin, survives a racist Molotov cocktail attack and opens an investigation. The tortuous personal and legal process puts her physical safety, job, and ethical limits at risk. A legal thriller denouncing xenophobia in Germany and a police and judicial system far from impartial.",
+  "motivo": "catálogo oficial de FICCI 65, p. 120",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=120",
+  "antes": {
+   "ficci-65": "Faraz Shariat constructs a political thriller in Germany about a young Iranian lawyer who defends asylum seekers while confronting his own identity and the contradictions of the European legal system."
+  }
+ },
+ {
+  "work_id": "w_R4HCNBK7QVN6",
+  "campo": "xref.tmdb",
+  "valor": 1599784,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1599784"
+ }
+]

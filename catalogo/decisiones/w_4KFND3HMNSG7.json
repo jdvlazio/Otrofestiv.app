@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KFND3HMNSG7",
+  "campo": "directores",
+  "valor": [
+   "Susa Monteiro"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Susa Monteiro"
+  }
+ },
+ {
+  "work_id": "w_4KFND3HMNSG7",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFND3HMNSG7",
+  "campo": "paises",
+  "valor": [
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KFND3HMNSG7",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KFND3HMNSG7",
+  "campo": "sinopsis.es",
+  "valor": "Un hombre solitario atraviesa paisajes. No sabemos si huye de algo o regresa a algún lugar. Es absolutamente libre. Viaja, contempla y sueña.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un hombre solitario atraviesa paisajes. No sabemos si huye de algo o regresa a algún lugar. Es absolutamente libre. Viaja, contempla y sueña."
+  }
+ },
+ {
+  "work_id": "w_4KFND3HMNSG7",
+  "campo": "sinopsis.en",
+  "valor": "A lone man traverses landscapes. We don’t know if he runs away from something or if he is returning somewhere. He is absolutely free. He travels, contemplates and dreams.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A lone man traverses landscapes. We don’t know if he runs away from something or if he is returning somewhere. He is absolutely free. He travels, contemplates and dreams."
+  }
+ },
+ {
+  "work_id": "w_4KFND3HMNSG7",
+  "campo": "xref.tmdb",
+  "valor": 1729975,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1729975"
+  }
+ },
+ {
+  "work_id": "w_4KFND3HMNSG7",
+  "campo": "xref.letterboxd",
+  "valor": "vagabond-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "vagabond-2026"
+  }
+ },
+ {
+  "work_id": "w_4KFND3HMNSG7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/vagabundo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/vagabundo.jpg"
+  }
+ }
+]

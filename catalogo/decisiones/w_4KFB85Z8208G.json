@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KFB85Z8208G",
+  "campo": "directores",
+  "valor": [
+   "Diego Rojas"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Diego Rojas"
+  }
+ },
+ {
+  "work_id": "w_4KFB85Z8208G",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFB85Z8208G",
+  "campo": "paises",
+  "valor": [
+   "CA"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Canadá"
+  }
+ },
+ {
+  "work_id": "w_4KFB85Z8208G",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KFB85Z8208G",
+  "campo": "sinopsis.es",
+  "valor": "Durante una década, una familia lucha por obtener la ciudadanía estadounidense, enfrentando el miedo y el sacrificio mientras construye una identidad que trasciende el estatus legal en un clima migratorio hostil.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Durante una década, una familia lucha por obtener la ciudadanía estadounidense, enfrentando el miedo y el sacrificio mientras construye una identidad que trasciende el estatus legal en un clima migratorio hostil."
+  }
+ },
+ {
+  "work_id": "w_4KFB85Z8208G",
+  "campo": "sinopsis.en",
+  "valor": "Over a decade, a family struggles for U.S. citizenship, confronting fear and sacrifice while forging an identity beyond legal status in a hostile immigration climate.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Over a decade, a family struggles for U.S. citizenship, confronting fear and sacrifice while forging an identity beyond legal status in a hostile immigration climate."
+  }
+ },
+ {
+  "work_id": "w_4KFB85Z8208G",
+  "campo": "xref.tmdb",
+  "valor": 1664319,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1664319"
+  }
+ },
+ {
+  "work_id": "w_4KFB85Z8208G",
+  "campo": "xref.letterboxd",
+  "valor": "prayer-for-all-simple-things",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "prayer-for-all-simple-things"
+  }
+ },
+ {
+  "work_id": "w_4KFB85Z8208G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/prayer-for-all-simple-things.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/prayer-for-all-simple-things.jpg"
+  }
+ }
+]

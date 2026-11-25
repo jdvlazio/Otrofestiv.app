@@ -1,0 +1,172 @@
+[
+ {
+  "work_id": "w_R4HF7EKJN5JE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/fecibac-2026/el-juego-de-la-vida.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/fecibac-2026/el-juego-de-la-vida.jpg",
+   "/assets/ficdeh/el-juego-de-la-vida.jpg",
+   "/assets/ficma/el-juego-de-la-vida.jpg"
+  ],
+  "antes": {
+   "fecibac-2026": "/assets/fecibac-2026/el-juego-de-la-vida.jpg",
+   "ficdeh-2026": "/assets/ficdeh/el-juego-de-la-vida.jpg",
+   "ficma-2026": "/assets/ficma/el-juego-de-la-vida.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EKJN5JE",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1562450)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "fecibac-2026": 2025,
+   "ficdeh-2026": 2026,
+   "ficma-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4HF7EKJN5JE",
+  "campo": "sinopsis.es",
+  "valor": "Un documentalista sigue durante 14 años a cinco familias colombianas que enfrentan las desigualdades de un país donde el origen influye en las oportunidades. Sus decisiones, frustraciones, resiliencia y logros revelan que, aunque las reglas no son iguales para todos, persiste la voluntad de transformar el propio destino.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (fecibac-2026, ficdeh-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "43e748a9785e",
+   "874124e3779b"
+  ],
+  "antes": {
+   "fecibac-2026": "Un documentalista sigue durante 14 años a cinco familias colombianas que enfrentan las desigualdades de un país donde el origen influye en las oportunidades. A través de sus decisiones, frustraciones, resiliencia y logros, revela que, aunque las reglas no son iguales para todos, la voluntad de transformar el propio destino persiste. El juego de la vida es un retrato íntimo sobre la movilidad social, la dignidad y la esperanza en Colombia.",
+   "ficdeh-2026": "Un documentalista sigue durante 14 años a cinco familias colombianas que enfrentan las desigualdades de un país donde el origen influye en las oportunidades. A través de sus decisiones, frustraciones, resiliencia y logros, revela que, aunque las reglas no son iguales para todos, la voluntad de transformar el propio destino persiste. El juego de la vida es un retrato íntimo sobre la movilidad social, la dignidad y la esperanza en Colombia.",
+   "ficma-2026": "A documentary filmmaker follows five Colombian families for 14 years as they struggle to get ahead in a country where moving forward does not always mean progress."
+  },
+  "original_de": [
+   "fecibac-2026",
+   "festicineantioquia-2026",
+   "ficdeh-2026",
+   "ficma-2026"
+  ],
+  "titulo": "El juego de la vida",
+  "original": "Un documentalista sigue durante 14 años a cinco familias colombianas que enfrentan las desigualdades de un país donde el origen influye en las oportunidades. A través de sus decisiones, frustraciones, resiliencia y logros, revela que, aunque las reglas no son iguales para todos, la voluntad de transformar el propio destino persiste. El juego de la vida es un retrato íntimo sobre la movilidad social, la dignidad y la esperanza en Colombia.",
+  "sintesis": {
+   "redacta": "montador festicineantioquia-2026",
+   "verifica": "verificador de sinopsis (agente 2)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b23687369926"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EKJN5JE",
+  "campo": "sinopsis.en",
+  "valor": "For 14 years, a documentary filmmaker follows five Colombian families facing the inequalities of a country where origins shape opportunity. Their decisions, frustrations, resilience and achievements reveal that, although the rules are not the same for everyone, the will to change one's own destiny persists.",
+  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "titulo": "El Juego de la Vida",
+  "antes": {
+   "fecibac-2026": "A documentary filmmaker follows five Colombian families for 14 years as they struggle to get ahead in a country where moving forward does not always mean progress.",
+   "festicineantioquia-2026": "A documentary filmmaker follows five Colombian families for 14 years as they struggle to get ahead in a country where moving forward does not always mean progress.",
+   "ficdeh-2026": "A documentary follows five Colombian families for 14 years as they confront the inequalities of a country where one's origins influence opportunities. Through their decisions, frustrations, resilience, and achievements, it reveals that, although the rules are not the same for everyone, the will to transform one's own destiny persists. THE GAME OF LIFE is an intimate portrait of social mobility, dignity, and hope in Colombia.",
+   "ficma-2026": "A documentary filmmaker follows five Colombian families for 14 years as they struggle to get ahead in a country where moving forward does not always mean progress."
+  },
+  "anteriores": [
+   {
+    "valor": "A documentary filmmaker follows five Colombian families for 14 years as they struggle to get ahead in a country where moving forward does not always mean progress.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4HF7EKJN5JE",
+  "campo": "directores",
+  "valor": [
+   "Mario Andrés Ruiz Zuluaga"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "fecibac-2026": "Mario Andrés Ruiz Zuluaga",
+   "festicineantioquia-2026": "Mario Andrés Ruiz Zuluaga",
+   "ficdeh-2026": "Mario Andrés Ruiz Zuluaga",
+   "ficma-2026": "Mario Andrés Ruiz Zuluaga"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EKJN5JE",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "fecibac-2026": "Colombia",
+   "festicineantioquia-2026": "Colombia",
+   "ficdeh-2026": "Colombia",
+   "ficma-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EKJN5JE",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "fecibac-2026": "Documental",
+   "festicineantioquia-2026": "Documental",
+   "ficdeh-2026": "Documental",
+   "ficma-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EKJN5JE",
+  "campo": "xref.tmdb",
+  "valor": 1562450,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "fecibac-2026": "1562450",
+   "festicineantioquia-2026": "1562450",
+   "ficdeh-2026": "1562450",
+   "ficma-2026": "1562450"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EKJN5JE",
+  "campo": "xref.letterboxd",
+  "valor": "the-game-of-life-2025",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "fecibac-2026": "the-game-of-life-2025",
+   "festicineantioquia-2026": "the-game-of-life-2025",
+   "ficdeh-2026": "the-game-of-life-2025",
+   "ficma-2026": "the-game-of-life-2025"
+  }
+ }
+]

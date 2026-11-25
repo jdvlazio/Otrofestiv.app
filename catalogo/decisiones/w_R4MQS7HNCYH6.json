@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4MQS7HNCYH6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/la-tierra-prometida.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/la-tierra-prometida.jpg",
+   "/pjk8K5MpQJX0XczTC2KOVWNj0lC.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/la-tierra-prometida.jpg",
+   "olhar-2026": "/pjk8K5MpQJX0XczTC2KOVWNj0lC.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4MQS7HNCYH6",
+  "campo": "sinopsis.es",
+  "valor": "En Łódź, a fines del siglo XIX, tres socios se juegan todo para levantar su propia fábrica textil en una ciudad de capitalismo salvaje: un polaco, un alemán y un judío.",
+  "motivo": "sinopsis oficial de Al Este (#1594), sin la frase del premio; reemplaza nuestra traducción",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "d4f6d5372818",
+   "f2919c223b40"
+  ],
+  "antes": {
+   "aleste-2026": "En Łódź, a fines del siglo XIX, tres socios se juegan todo para levantar su propia fábrica textil en una ciudad de capitalismo salvaje: un polaco, un alemán y un judío. Fue nominada al Óscar a mejor película extranjera.",
+   "olhar-2026": "Tres amigos esperan construir una fábrica, pero sus planes se ven rápidamente amenazados por la política local y por el peligroso romance de uno de los socios."
+  }
+ },
+ {
+  "work_id": "w_R4MQS7HNCYH6",
+  "campo": "sinopsis.en",
+  "valor": "At the turn of the century, Lodz, Poland, was a quick-paced manufacturing center for textiles, replete with cutthroat industrialists and unsafe working conditions. Three young friends, a Pole, a Jew, and a German, pool their money together to build a factory.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Ziemia obiecana",
+  "antes": {
+   "aleste-2026": "At the turn of the century, Lodz, Poland, was a quick-paced manufacturing center for textiles, replete with cutthroat industrialists and unsafe working conditions. Three young friends, a Pole, a Jew, and a German, pool their money together to build a factory.",
+   "olhar-2026": "Three friends hope to build a factory, but their plans are quickly jeopardized by local politics and by the dangerous love affair of one of the partners."
+  }
+ }
+]

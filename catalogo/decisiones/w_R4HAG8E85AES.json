@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HAG8E85AES",
+  "campo": "directores",
+  "valor": [
+   "Hong Sang-soo"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 114",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=114",
+  "antes": {
+   "ficci-65": "Hong Sang-soo"
+  }
+ },
+ {
+  "work_id": "w_R4HAG8E85AES",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 114",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=114",
+  "antes": {
+   "ficci-65": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HAG8E85AES",
+  "campo": "paises",
+  "valor": [
+   "KR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 114",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=114",
+  "antes": {
+   "ficci-65": "Corea del Sur"
+  }
+ },
+ {
+  "work_id": "w_R4HAG8E85AES",
+  "campo": "sinopsis.es",
+  "valor": "Un pretendiente conoce a los padres de su novia. Aspirante a poeta, maneja un auto viejo, busca sintonizarse con la belleza del mundo y rechaza las dinámicas aceleradas, cuadriculadas y consumistas en las que los suegros esperan que se integre. Cenas, largas conversaciones e incomodidad en un retrato ambiguo y agridulce.",
+  "motivo": "catálogo oficial de FICCI 65, p. 114",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=114",
+  "antes": {
+   "ficci-65": "Hong Sang-soo regresa al Festival de Berlín con una película en blanco y negro que sigue a una directora que viaja a la playa con su familia y que, en sus conversaciones con extraños, reflexiona sobre el amor, el arte y la naturaleza humana."
+  }
+ },
+ {
+  "work_id": "w_R4HAG8E85AES",
+  "campo": "sinopsis.en",
+  "valor": "A suitor meets his girlfriend's parents for the first time. An aspiring poet, he drives an old car, seeks to tune in to the beauty of the world, and rejects the fast-paced, rigid, consumerist dynamic his in-laws expect him to join. Dinners, long conversations, and awkwardness in an ambiguous, bittersweet portrait.",
+  "motivo": "catálogo oficial de FICCI 65, p. 114",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=114",
+  "antes": {
+   "ficci-65": "Hong Sang-soo returns to the Berlin Film Festival with a black-and-white film following a director who travels to the beach with her family and, in conversations with strangers, reflects on love, art, and human nature."
+  }
+ },
+ {
+  "work_id": "w_R4HAG8E85AES",
+  "campo": "xref.tmdb",
+  "valor": 1418849,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1418849"
+ }
+]

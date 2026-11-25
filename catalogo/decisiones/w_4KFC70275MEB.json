@@ -1,0 +1,105 @@
+[
+ {
+  "work_id": "w_4KFC70275MEB",
+  "campo": "directores",
+  "valor": [
+   "Segundo de Chomón"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Segundo de Chomón"
+  }
+ },
+ {
+  "work_id": "w_4KFC70275MEB",
+  "campo": "anio",
+  "valor": 1912,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1912"
+  }
+ },
+ {
+  "work_id": "w_4KFC70275MEB",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España, Francia"
+  }
+ },
+ {
+  "work_id": "w_4KFC70275MEB",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KFC70275MEB",
+  "campo": "sinopsis.es",
+  "valor": "Escamillo sufre por una tenia. El corto convierte su dolencia en una comedia grotesca mediante trucajes y animación.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Escamillo sufre por una tenia. El corto convierte su dolencia en una comedia grotesca mediante trucajes y animación."
+  }
+ },
+ {
+  "work_id": "w_4KFC70275MEB",
+  "campo": "sinopsis.en",
+  "valor": "Escamillo suffers from a tapeworm. Trick effects and animation turn his affliction into grotesque comedy.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Escamillo suffers from a tapeworm. Trick effects and animation turn his affliction into grotesque comedy."
+  }
+ },
+ {
+  "work_id": "w_4KFC70275MEB",
+  "campo": "xref.tmdb",
+  "valor": 1058527,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1058527"
+  }
+ },
+ {
+  "work_id": "w_4KFC70275MEB",
+  "campo": "xref.letterboxd",
+  "valor": "el-gusano-solitario",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "el-gusano-solitario"
+  }
+ }
+]

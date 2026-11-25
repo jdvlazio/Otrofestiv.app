@@ -1,0 +1,29 @@
+[
+ {
+  "work_id": "w_R4EVBDPJHAXG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg",
+   "/assets/cinemancia/todas-las-canciones-del-mundo.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg",
+   "cinemancia-2026": "/assets/cinemancia/todas-las-canciones-del-mundo.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4EVBDPJHAXG",
+  "campo": "sinopsis.en",
+  "valor": "A narrative or documentary journey into the collective and emotional memory that songs build in people’s lives. It weaves together different stories around the creation, loss or preservation of music, showing how melodies define historical, geographical and personal moments in Colombia.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

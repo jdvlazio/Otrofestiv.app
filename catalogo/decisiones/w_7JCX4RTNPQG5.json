@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_7JCX4RTNPQG5",
+  "campo": "directores",
+  "valor": [
+   "Fabián Chávez"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Fabián Chávez"
+  }
+ },
+ {
+  "work_id": "w_7JCX4RTNPQG5",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCX4RTNPQG5",
+  "campo": "sinopsis.es",
+  "valor": "Este cortometraje, grabado en el Páramo de Sumapaz, es un acercamiento poético a la vida de este territorio, que observa su inmensidad pero también su lado más oscuro: la violencia que sufrió hace años.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Este cortometraje, grabado en el Páramo de Sumapaz, es un acercamiento poético a la vida de este territorio, que observa su inmensidad pero también su lado más oscuro: la violencia que sufrió hace años."
+  }
+ },
+ {
+  "work_id": "w_7JCX4RTNPQG5",
+  "campo": "sinopsis.en",
+  "valor": "This short film, shot in the Sumapaz páramo, is a poetic approach to life in this territory, looking at its vastness but also its darkest side: the violence it suffered years ago.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "This short film, shot in the Sumapaz páramo, is a poetic approach to life in this territory, looking at its vastness but also its darkest side: the violence it suffered years ago."
+  }
+ },
+ {
+  "work_id": "w_7JCX4RTNPQG5",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/paisaje-niebla.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/paisaje-niebla.jpg"
+  }
+ }
+]

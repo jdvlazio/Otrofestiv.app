@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4HEVTJK2YRN",
+  "campo": "directores",
+  "valor": [
+   "Sol Iglesias SK"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 208",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=208",
+  "antes": {
+   "ficci-65": "Sally El Hosaini"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTJK2YRN",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 208",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=208",
+  "antes": {
+   "ficci-65": "2022"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTJK2YRN",
+  "campo": "paises",
+  "valor": [
+   "AR",
+   "MX",
+   "US"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 208",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=208",
+  "antes": {
+   "ficci-65": "Argentina, México, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTJK2YRN",
+  "campo": "sinopsis.es",
+  "valor": "En una Buenos Aires apocalíptica, con extensas olas de calor y días en los que no llega la noche, un grupo de amigos se refugia en mansiones buscando agua y atrapando lo que queda del placer y lo cotidiano. La troupe fugitiva traspasa la propiedad privada casi como si jugara al escondite, en una ciudad vacía y fantasmal.",
+  "motivo": "catálogo oficial de FICCI 65, p. 208",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=208",
+  "antes": {
+   "ficci-65": "En las grietas de una ciudad civilizada (esa que desde un inicio nació muerta) respira el colapso."
+  }
+ },
+ {
+  "work_id": "w_R4HEVTJK2YRN",
+  "campo": "sinopsis.en",
+  "valor": "In an apocalyptic Buenos Aires, with long heat waves and days when night never falls, a group of friends takes refuge in mansions, searching for water and seizing what remains of pleasure and the everyday. The fugitive troupe trespasses on private property almost as if playing hide-and-seek, in an empty, ghostly city.",
+  "motivo": "catálogo oficial de FICCI 65, p. 208",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=208",
+  "antes": {
+   "ficci-65": "In the cracks of a civilized city — one that was born dead from the start — collapse breathes."
+  }
+ },
+ {
+  "work_id": "w_R4HEVTJK2YRN",
+  "campo": "xref.tmdb",
+  "valor": 1523304,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1523304"
+ }
+]

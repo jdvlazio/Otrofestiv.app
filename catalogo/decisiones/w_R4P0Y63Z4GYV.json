@@ -1,0 +1,86 @@
+[
+ {
+  "work_id": "w_R4P0Y63Z4GYV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/miradas-2026/moscas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/miradas-2026/moscas.jpg",
+   "/assets/mubibogota-2026/moscas.jpg",
+   "https://image.tmdb.org/t/p/w500/tff1IQnQIfx4akKYbD2rsGk31pU.jpg"
+  ],
+  "antes": {
+   "miradas-2026": "/assets/miradas-2026/moscas.jpg",
+   "mubibogota-2026": "/assets/mubibogota-2026/moscas.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/tff1IQnQIfx4akKYbD2rsGk31pU.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4P0Y63Z4GYV",
+  "campo": "sinopsis.es",
+  "valor": "Olga vive en un enorme multifamiliar en donde lleva una existencia solitaria, regida por hábitos inalterables. Pero cuando, por necesidad económica, renta un cuarto de su departamento a un hombre quien a escondidas mete también a su hijo de nueve años, Olga se enfrenta a lo que más miedo le tiene, la conexión emocional.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (miradas-2026, mubibogota-2026 · corregida)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "37cf49bea225",
+   "6d947dfa1c07"
+  ],
+  "antes": {
+   "miradas-2026": "Olga vive en un enorme multifamiliar en donde lleva una existencia solitaria, regida por hábitos inalterables. Pero cuando, por necesidad económica, renta un cuarto de su departamento a un hombre quien a escondidas mete también a su hijo de nueve años, Olga se enfrenta a lo que más miedo le tiene, la conexión emocional. Q&A con el director",
+   "mubibogota-2026": "Olga vive en un enorme multifamiliar en donde lleva una existencia solitaria, regida por hábitos inalterables. Pero cuando, por necesidad económica, renta un cuarto de su departamento a un hombre quien a escondidas mete también a su hijo de nueve años, Olga se enfrenta a lo que más miedo le tiene, la conexión emocional. Q&A con el director",
+   "tiff-2026": "Cuando una mujer solitaria le alquila un cuarto a un padre con un familiar hospitalizado, surge un vínculo inesperado con su hijo pequeño, en este relato tierno de Fernando Eimbcke sobre el cuidado, el encuentro y la transformación callada."
+  }
+ },
+ {
+  "work_id": "w_R4P0Y63Z4GYV",
+  "campo": "paises",
+  "valor": [
+   "MX",
+   "ES"
+  ],
+  "motivo": "dossier de ventas (Alpha Violet)",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "miradas-2026": "México, España, Argentina",
+   "mubibogota-2026": "Mexico",
+   "tiff-2026": "México"
+  },
+  "fuente": "https://www.alphaviolet.com/wp-content/uploads/2026/01/MOSCAS-FLIES-PRESSKIT_light2.pdf"
+ },
+ {
+  "work_id": "w_R4P0Y63Z4GYV",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "miradas-2026": "Ficción",
+   "mubibogota-2026": "Drama",
+   "tiff-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4P0Y63Z4GYV",
+  "campo": "sinopsis.en",
+  "valor": "Olga lives a strictly regulated life without attachments in a vast apartment block. When out of financial necessity she rents a room in her apartment to a man who also sneaks-in his nine-year-old son, an unlikely bond forms. Her carefully controlled world begins to shift, and their lives become intertwined against her will.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Flies",
+  "antes": {
+   "miradas-2026": "Olga lives a strictly regulated life without attachments in a vast apartment block. When out of financial necessity she rents a room in her apartment to a man who also sneaks-in his nine-year-old son, an unlikely bond forms. Her carefully controlled world begins to shift, and their lives become intertwined against her will.",
+   "mubibogota-2026": "Olga lives a strictly regulated life without attachments in a vast apartment block. When out of financial necessity she rents a room in her apartment to a man who also sneaks-in his nine-year-old son, an unlikely bond forms. Her carefully controlled world begins to shift, and their lives become intertwined against her will.",
+   "tiff-2026": "When a lonely woman rents a room to a father with a hospitalized relative, she forms an unexpected bond with his young son, in Fernando Eimbcke’s tender story about care, connection, and quiet transformation."
+  }
+ }
+]

@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HF7EJ69AFE",
+  "campo": "directores",
+  "valor": [
+   "Ben Rivers"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 283",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=283"
+ },
+ {
+  "work_id": "w_R4HF7EJ69AFE",
+  "campo": "anio",
+  "valor": 2019,
+  "motivo": "catálogo oficial de FICCI 65, p. 283",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=283"
+ },
+ {
+  "work_id": "w_R4HF7EJ69AFE",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 283",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=283",
+  "antes": {
+   "ficci-65": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EJ69AFE",
+  "campo": "sinopsis.es",
+  "valor": "Seres futuristas surgen de un inquietante paisaje lleno de humo y de las profundidades de la tierra. Rodada en los vastos y oscuros pasadizos de las cuevas de Wookey Hole, donde hubo vestigios de civilizaciones perdidas, presagia un mundo subterráneo habitado por una especie evolucionada a partir del nuestro, amenazado por problemas ambientales.",
+  "motivo": "catálogo oficial de FICCI 65, p. 283",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=283"
+ },
+ {
+  "work_id": "w_R4HF7EJ69AFE",
+  "campo": "sinopsis.en",
+  "valor": "Futuristic beings emerge from an eerie, smoke-filled landscape and the depths of the earth. Shot in the vast, dark passages of Wookey Hole Caves, which once held remnants of lost civilizations, it foretells a subterranean world occupied by a species evolved from our own world, threatened by environmental problems.",
+  "motivo": "catálogo oficial de FICCI 65, p. 283",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=283"
+ },
+ {
+  "work_id": "w_R4HF7EJ69AFE",
+  "campo": "xref.tmdb",
+  "valor": 662049,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/662049"
+ }
+]

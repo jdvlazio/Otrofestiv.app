@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4HE768025KE",
+  "campo": "directores",
+  "valor": [
+   "Ramiro Sonzini",
+   "Ezequiel Salinas"
+  ],
+  "motivo": "TMDB 1554544: codirección",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "ficci-65": "Ramiro Sonzini",
+   "olhar-2026": "Ramiro Sonzini, Ezequiel Salinas"
+  }
+ },
+ {
+  "work_id": "w_R4HE768025KE",
+  "campo": "xref.tmdb",
+  "valor": 1554544,
+  "motivo": "TMDB",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "ficci-65": 1554544,
+   "olhar-2026": 1554544
+  }
+ },
+ {
+  "work_id": "w_R4HE768025KE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/39jzHk0VK2kdt9lRAb8CqNuGcGc.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/39jzHk0VK2kdt9lRAb8CqNuGcGc.jpg",
+   "https://image.tmdb.org/t/p/w500/39jzHk0VK2kdt9lRAb8CqNuGcGc.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w500/39jzHk0VK2kdt9lRAb8CqNuGcGc.jpg",
+   "olhar-2026": "/39jzHk0VK2kdt9lRAb8CqNuGcGc.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HE768025KE",
+  "campo": "sinopsis.es",
+  "valor": "Pelu, de treinta y tantos, es el humilde proyeccionista de un cineclub municipal. Ante la crisis, debe convertirse en el vigilante nocturno del cine y, con el tiempo, el lugar se transforma en su nuevo hogar. Poco a poco, una pequeña comunidad empieza a formarse allí después del cierre: un grupo de cuidacarros que duermen en el cine y se vuelven sus amigos más cercanos, junto con Vale, una excompañera de colegio que usa el espacio para grabar videos para OnlyFans.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (traducción nuestra del portugués)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "3ac0aa566a92",
+   "950de19a2a2e"
+  ],
+  "antes": {
+   "ficci-65": "Esta es una comedia cinéfila atravesada por la crisis, a la vez solitaria y solidaria.",
+   "olhar-2026": "Pelu, treintañero, es el humilde proyeccionista de un cineclub municipal. Ante la crisis, debe convertirse en el vigilante nocturno del cine y, con el tiempo, el lugar se transforma en su nuevo hogar.\nPoco a poco, una pequeña comunidad comienza a formarse dentro del cine tras el horario de cierre. La componen un grupo de “cuidacoches” que duermen allí y, con el tiempo, se vuelven sus amigos más cercanos, junto con Vale, una excompañera de escuela que usa el espacio para grabar videos para OnlyFans."
+  }
+ },
+ {
+  "work_id": "w_R4HE768025KE",
+  "campo": "sinopsis.en",
+  "valor": "Pelu, in his thirties, is the modest projectionist of a municipal film club. Faced with the crisis, he must become the cinema’s night watchman and over time, it turns into his new home. Little by little, a small community begins to take shape inside the cinema after closing hours. It consists of a group of “naranjitas” (informal parking attendants) who sleep there and, eventually, become his closest friends, along with Vale, a former classmate who uses the space to record OnlyFans videos.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "La noche está marchándose ya",
+  "antes": {
+   "ficci-65": "This is a cinephile comedy shot through with crisis — simultaneously solitary and solidary.",
+   "olhar-2026": "Pelu, in his thirties, is the modest projectionist of a municipal film club. Faced with the crisis, he must become the cinema’s night watchman and over time, it turns into his new home.\nLittle by little, a small community begins to take shape inside the cinema after closing hours. It consists of a group of “naranjitas” (informal parking attendants) who sleep there and, eventually, become his closest friends, along with Vale, a former classmate who uses the space to record OnlyFans videos."
+  }
+ }
+]

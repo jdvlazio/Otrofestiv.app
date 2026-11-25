@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_R4NEB1TRDBS1",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinetoro-2026/tres-gatos-parias-v2.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "la vertical, sin la marca de SiembraFest",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/cinetoro-2026/tres-gatos-parias.jpg",
+   "/assets/siembrafest/tres-gatos-parias.jpg"
+  ],
+  "antes": {
+   "cinetoro-2026": "/assets/cinetoro-2026/tres-gatos-parias.jpg",
+   "siembrafest-2026": "/assets/siembrafest/tres-gatos-parias.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4NEB1TRDBS1",
+  "campo": "directores",
+  "valor": [
+   "Iván Sierra"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Iván Sierra",
+   "cinetoro-2026": "Ivan Sierra",
+   "siembrafest-2026": "Iván Sierra"
+  }
+ },
+ {
+  "work_id": "w_R4NEB1TRDBS1",
+  "campo": "sinopsis.es",
+  "valor": "Dos gatos persas y un dibujante tratan de hacer películas en medio de una guerra, desafortunadamente nadie las entiende.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "anibia-2026": "Dos gatos persas y un dibujante tratan de hacer películas en medio de una guerra, desafortunadamente nadie las entiende.",
+   "cinetoro-2026": "Dos gatos persas y un dibujante tratan de hacer películas en medio de una guerra, desafortunadamente nadie las entiende."
+  }
+ },
+ {
+  "work_id": "w_R4NEB1TRDBS1",
+  "campo": "sinopsis.en",
+  "valor": "Two Persian cats and a cartoonist try to make films in the middle of a war; unfortunately, nobody understands them.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

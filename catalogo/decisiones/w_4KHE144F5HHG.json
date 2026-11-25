@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KHE144F5HHG",
+  "campo": "directores",
+  "valor": [
+   "Marie Lukáčová"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Marie Lukáčová"
+  }
+ },
+ {
+  "work_id": "w_4KHE144F5HHG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHE144F5HHG",
+  "campo": "paises",
+  "valor": [
+   "CZ"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "República Checa"
+  }
+ },
+ {
+  "work_id": "w_4KHE144F5HHG",
+  "campo": "generos",
+  "valor": [
+   "Fantasía"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Fantasía"
+  }
+ },
+ {
+  "work_id": "w_4KHE144F5HHG",
+  "campo": "sinopsis.es",
+  "valor": "Un cuento de rap sobre la justicia, narrado en tres actos.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un cuento de rap sobre la justicia, narrado en tres actos."
+  }
+ },
+ {
+  "work_id": "w_4KHE144F5HHG",
+  "campo": "sinopsis.en",
+  "valor": "A rap fairytale of justice, told in three acts.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A rap fairytale of justice, told in three acts."
+  }
+ },
+ {
+  "work_id": "w_4KHE144F5HHG",
+  "campo": "xref.tmdb",
+  "valor": 1599643,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1599643"
+  }
+ },
+ {
+  "work_id": "w_4KHE144F5HHG",
+  "campo": "xref.letterboxd",
+  "valor": "orla",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "orla"
+  }
+ },
+ {
+  "work_id": "w_4KHE144F5HHG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/orla.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/orla.jpg"
+  }
+ }
+]

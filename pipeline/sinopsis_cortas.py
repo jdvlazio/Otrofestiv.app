@@ -6,7 +6,7 @@ Decisión de Juan (23 nov 2026): «las versiones cortas dentro de la app se ven
 muchísimo mejor… es una app pequeña de bolsillo». La síntesis NO recorta: se
 reescribe. El original queda entero en el almacén y nunca se edita.
 
-Dónde vive: en la decisión `sinopsis.es` de la obra (catalogo/decisiones.json),
+Dónde vive: en la decisión `sinopsis.es` de la obra (catalogo/decisiones/),
 que ya gana en todos los festivales (sinopsis_unicas.aplicar):
     valor        la síntesis
     original     el texto completo, con `original_de` (festivales que lo traen)
@@ -161,8 +161,7 @@ def registrar(xs, fecha):
     mal = invalidas([d for d in decs if d['work_id'] in ids])
     if mal:
         raise SystemExit('✗ no se registra nada:\n  ' + '\n  '.join(mal))
-    with open(os.path.join(cat.DIR, 'decisiones.json'), 'w', encoding='utf-8') as fh:
-        fh.write(json.dumps(decs, ensure_ascii=False, indent=1))
+    cat.escribir_decisiones(decs)
     return len(xs)
 
 

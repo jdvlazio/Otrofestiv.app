@@ -1,0 +1,47 @@
+[
+ {
+  "work_id": "w_R4MQS5FAT0Z3",
+  "campo": "sinopsis.es",
+  "valor": "A finales de los años ochenta, cerca del fin de la guerra civil libanesa, Khalil regresa a Beirut con una nueva identidad para enfrentarse a los viejos amigos y compañeros de armas que dejó atrás al fingir su muerte una década antes.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "3db709ded05b"
+  ],
+  "antes": {
+   "olhar-2026": "Lleno de fantasmas y memorias, el largometraje debut de Ghassan Salhab transcurre a finales de los años 1980, cerca del fin de la Guerra Civil Libanesa. El protagonista, Khalil, regresa a Beirut bajo una nueva identidad, para un enfrentamiento con los viejos amigos y compañeros de armas que dejó atrás tras su muerte fingida una década antes."
+  }
+ },
+ {
+  "work_id": "w_R4MQS5FAT0Z3",
+  "campo": "xref.letterboxd",
+  "valor": "phantom-beirut",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "olhar-2026": "beirut-phantom"
+  }
+ },
+ {
+  "work_id": "w_R4MQS5FAT0Z3",
+  "campo": "sinopsis.en",
+  "valor": "Full of ghosts and memories, Ghassan Salhab’s debut feature film is set in the late 1980’s, towards the end of Lebanon’s Civil War. Protagonist Khalil returns to Beirut under a new identity, and to a confrontation with the old friends and comrades in arms he left behind following his faked death a decade earlier.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "olhar-2026": "Full of ghosts and memories, Ghassan Salhab’s debut feature film is set in the late 1980’s, towards the end of Lebanon’s Civil War. Protagonist Khalil returns to Beirut under a new identity, and to a confrontation with the old friends and comrades in arms he left behind following his faked death a decade earlier"
+  }
+ },
+ {
+  "work_id": "w_R4MQS5FAT0Z3",
+  "campo": "xref.tmdb",
+  "valor": 327874,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/beirut-phantom/"
+ }
+]

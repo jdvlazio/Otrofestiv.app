@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX6VNDW749E",
+  "campo": "directores",
+  "valor": [
+   "Riccardo Gabrielli"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Riccardo Gabrielli"
+  }
+ },
+ {
+  "work_id": "w_8BX6VNDW749E",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_8BX6VNDW749E",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_8BX6VNDW749E",
+  "campo": "generos",
+  "valor": [
+   "Aventura"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Aventura"
+  }
+ },
+ {
+  "work_id": "w_8BX6VNDW749E",
+  "campo": "sinopsis.es",
+  "valor": "Un grupo de buceadores viaja a la isla Malpelo para la aventura de su vida. En su última inmersión, una poderosa corriente los separa y desaparecen en el Pacífico: sin barco, sin orientación y a cientos de millas de tierra firme, cada uno se enfrenta a un océano implacable, mientras quienes los buscan solo pueden adivinar dónde están.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Un grupo de buceadores viaja a la isla Malpelo para la aventura de su vida. En su última inmersión, una poderosa corriente los separa y desaparecen en el Pacífico: sin barco, sin orientación y a cientos de millas de tierra firme, cada uno se enfrenta a un océano implacable, mientras quienes los buscan solo pueden adivinar dónde están."
+  }
+ },
+ {
+  "work_id": "w_8BX6VNDW749E",
+  "campo": "sinopsis.en",
+  "valor": "A group of divers travels to Malpelo Island for the adventure of their lives. On their last dive, a powerful current pulls them apart and they vanish in the Pacific: with no boat, no bearings and hundreds of miles from land, each one faces a relentless ocean, while those searching for them can only guess where they are.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "A group of divers travels to Malpelo Island for the adventure of their lives. On their last dive, a powerful current pulls them apart and they vanish in the Pacific: with no boat, no bearings and hundreds of miles from land, each one faces a relentless ocean, while those searching for them can only guess where they are."
+  }
+ },
+ {
+  "work_id": "w_8BX6VNDW749E",
+  "campo": "xref.tmdb",
+  "valor": 1791526,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1791526"
+  }
+ },
+ {
+  "work_id": "w_8BX6VNDW749E",
+  "campo": "xref.letterboxd",
+  "valor": "pacifico-2026",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "pacifico-2026"
+  }
+ },
+ {
+  "work_id": "w_8BX6VNDW749E",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/pacifico.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/pacifico.jpg"
+  }
+ }
+]

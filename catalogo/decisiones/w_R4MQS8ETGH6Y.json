@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS8ETGH6Y",
+  "campo": "sinopsis.es",
+  "valor": "Un musical interseccional en torno a un colectivo activista de bailarines con y sin discapacidad. El pie lesionado de una solista obliga a los demás a buscar la manera de llevar a escena su inminente estreno, mientras intentan no hundirse en el abismo de sus propias neurosis.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "572c0a895753"
+  ],
+  "antes": {
+   "olhar-2026": "Un musical interseccional centrado en un colectivo activista de bailarines con y sin discapacidad, donde el pie lesionado de una solista hace que los demás se esfuercen por encontrar la manera de montar su inminente estreno, mientras intentan evitar caer en el abismo de sus propias neurosis."
+  }
+ },
+ {
+  "work_id": "w_R4MQS8ETGH6Y",
+  "campo": "xref.tmdb",
+  "valor": 1559099,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/bad-luck-2025/"
+ }
+]

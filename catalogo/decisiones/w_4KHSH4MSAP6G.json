@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KHSH4MSAP6G",
+  "campo": "directores",
+  "valor": [
+   "Clara Vieira"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Clara Vieira"
+  }
+ },
+ {
+  "work_id": "w_4KHSH4MSAP6G",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHSH4MSAP6G",
+  "campo": "paises",
+  "valor": [
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KHSH4MSAP6G",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KHSH4MSAP6G",
+  "campo": "sinopsis.es",
+  "valor": "Un grupo de adolescentes se va de campamento. Mientras dos intentan aclarar qué sienten el uno por el otro, las luciérnagas los guían al interior del bosque.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un grupo de adolescentes se va de campamento. Mientras dos intentan aclarar qué sienten el uno por el otro, las luciérnagas los guían al interior del bosque."
+  }
+ },
+ {
+  "work_id": "w_4KHSH4MSAP6G",
+  "campo": "sinopsis.en",
+  "valor": "A group of teenagers gathers for camping. While two of them try to define their romantic relationship, they are surprised by a swarm of fireflies that guides them into the heart of the forest.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A group of teenagers gathers for camping. While two of them try to define their romantic relationship, they are surprised by a swarm of fireflies that guides them into the heart of the forest."
+  }
+ },
+ {
+  "work_id": "w_4KHSH4MSAP6G",
+  "campo": "xref.tmdb",
+  "valor": 1640221,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1640221"
+  }
+ },
+ {
+  "work_id": "w_4KHSH4MSAP6G",
+  "campo": "xref.letterboxd",
+  "valor": "where-fireflies-sparkle",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "where-fireflies-sparkle"
+  }
+ },
+ {
+  "work_id": "w_4KHSH4MSAP6G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/onde-nascem-os-pirilampos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/onde-nascem-os-pirilampos.jpg"
+  }
+ }
+]

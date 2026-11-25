@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4HB85A3V5M4",
+  "campo": "directores",
+  "valor": [
+   "Hlynur Pálmason"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 146",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=146",
+  "antes": {
+   "ficci-65": "Luc Besson"
+  }
+ },
+ {
+  "work_id": "w_R4HB85A3V5M4",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 146",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=146",
+  "antes": {
+   "ficci-65": "1999"
+  }
+ },
+ {
+  "work_id": "w_R4HB85A3V5M4",
+  "campo": "paises",
+  "valor": [
+   "IS",
+   "DK",
+   "FR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 146",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=146",
+  "antes": {
+   "ficci-65": "Islandia, Dinamarca, Francia"
+  }
+ },
+ {
+  "work_id": "w_R4HB85A3V5M4",
+  "campo": "sinopsis.es",
+  "valor": "En el campo islandés, tres hermanos construyen una figura rudimentaria, mitad caballero, mitad espantapájaros. A lo largo de las estaciones, la cámara fija observa cómo se transforma y adquiere identidad hasta encarnar a Juana de Arco. Un estudio minimalista y poético del paisaje, los elementos y la infancia como territorio de invención.",
+  "motivo": "catálogo oficial de FICCI 65, p. 146",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=146",
+  "antes": {
+   "ficci-65": "Hlynur Pálmason reinterpreta el mito de Juana de Arco situando la historia en el presente. Una joven recorre Islandia a caballo, sola, en un viaje que oscila entre lo espiritual y lo físico."
+  }
+ },
+ {
+  "work_id": "w_R4HB85A3V5M4",
+  "campo": "sinopsis.en",
+  "valor": "In the Icelandic countryside, three siblings build a rudimentary figure, half knight, half scarecrow. Throughout the seasons, the fixed camera observes how it transforms and acquires identity until it embodies Joan of Arc. A minimalist, poetic study of the landscape, the elements, and childhood as a territory of invention.",
+  "motivo": "catálogo oficial de FICCI 65, p. 146",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=146",
+  "antes": {
+   "ficci-65": "Hlynur Pálmason reinterprets the Joan of Arc myth set in the present day. A young woman rides alone on horseback across Iceland in a journey that oscillates between the spiritual and the physical."
+  }
+ },
+ {
+  "work_id": "w_R4HB85A3V5M4",
+  "campo": "xref.tmdb",
+  "valor": 1533420,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1533420"
+ }
+]

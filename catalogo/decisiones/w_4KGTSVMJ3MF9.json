@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGTSVMJ3MF9",
+  "campo": "directores",
+  "valor": [
+   "Tania de León Yong"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tania de León Yong"
+  }
+ },
+ {
+  "work_id": "w_4KGTSVMJ3MF9",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGTSVMJ3MF9",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_4KGTSVMJ3MF9",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KGTSVMJ3MF9",
+  "campo": "sinopsis.es",
+  "valor": "Soñé con Zapata explora la experiencia migrante. Entre fragmentos oníricos y voz en off se articula la memoria, la identidad y el desplazamiento; es una mirada personal sobre los caminos que transforman a quienes habitan entre distintos lugares.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Soñé con Zapata explora la experiencia migrante. Entre fragmentos oníricos y voz en off se articula la memoria, la identidad y el desplazamiento; es una mirada personal sobre los caminos que transforman a quienes habitan entre distintos lugares."
+  }
+ },
+ {
+  "work_id": "w_4KGTSVMJ3MF9",
+  "campo": "sinopsis.en",
+  "valor": "Soñé con Zapata explores the migrant experience. Through dreamlike fragments and voice-over, it weaves together memory, identity, and displacement, offering a personal view of the paths that transform those who migrate.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Soñé con Zapata explores the migrant experience. Through dreamlike fragments and voice-over, it weaves together memory, identity, and displacement, offering a personal view of the paths that transform those who migrate."
+  }
+ },
+ {
+  "work_id": "w_4KGTSVMJ3MF9",
+  "campo": "xref.tmdb",
+  "valor": 1730588,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1730588"
+  }
+ },
+ {
+  "work_id": "w_4KGTSVMJ3MF9",
+  "campo": "xref.letterboxd",
+  "valor": "sone-con-zapata",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "sone-con-zapata"
+  }
+ },
+ {
+  "work_id": "w_4KGTSVMJ3MF9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/sone-con-zapata.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/sone-con-zapata.jpg"
+  }
+ }
+]

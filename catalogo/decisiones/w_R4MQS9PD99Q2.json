@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS9PD99Q2",
+  "campo": "sinopsis.es",
+  "valor": "Los ibejis recién nacidos Ayomi y Zola reciben su primer ebó de palabras: una ofrenda de protección, fe y ancestralidad.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "178c0efb95eb"
+  ],
+  "antes": {
+   "olhar-2026": "Los ibejis recién nacidos Ayomi y Zola reciben su primer ebó de palabras: una ofrenda de protección, fe y ancestralidad."
+  }
+ },
+ {
+  "work_id": "w_R4MQS9PD99Q2",
+  "campo": "xref.tmdb",
+  "valor": 1688852,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/reza-para-baobabs-um-ebo-de-palavras-para/"
+ }
+]

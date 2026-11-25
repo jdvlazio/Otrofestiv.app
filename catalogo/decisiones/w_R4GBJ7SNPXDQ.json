@@ -1,0 +1,153 @@
+[
+ {
+  "work_id": "w_R4GBJ7SNPXDQ",
+  "campo": "directores",
+  "valor": [
+   "Colectivo Artefactum Suba"
+  ],
+  "motivo": "la forma completa, en dos de los tres festivales",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "fantasmagoria-2026": "ARTEFACTUM SUBA",
+   "festicinerio-2026": "Artefactum Suba",
+   "ficfusa-2026": "Artefactum Suba",
+   "filcmar-2026": "Colectivo Artefactum Suba",
+   "siembrafest-2026": "Colectivo Artefactum Suba"
+  }
+ },
+ {
+  "work_id": "w_R4GBJ7SNPXDQ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "regla anio-mas-temprano (2 de 3 festivales)",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "fantasmagoria-2026": 2025,
+   "festicinerio-2026": 2025,
+   "ficfusa-2026": 2025,
+   "filcmar-2026": 2026,
+   "siembrafest-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4GBJ7SNPXDQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicinerio-2026/hdlt.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bogoshorts-2026/hdlt.jpg",
+   "/assets/festicinerio-2026/hdlt.jpg",
+   "/assets/ficfusa-2026/hdlt.jpg",
+   "/assets/filcmar-2026/hdlt.jpg",
+   "/assets/siembrafest/hdlt.jpg"
+  ],
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/hdlt.jpg",
+   "fantasmagoria-2026": "/assets/filcmar-2026/hdlt.jpg",
+   "festicinerio-2026": "/assets/festicinerio-2026/hdlt.jpg",
+   "ficfusa-2026": "/assets/ficfusa-2026/hdlt.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/hdlt.jpg",
+   "siembrafest-2026": "/assets/siembrafest/hdlt.jpg"
+  },
+  "a_mano": true
+ },
+ {
+  "work_id": "w_R4GBJ7SNPXDQ",
+  "campo": "sinopsis.en",
+  "valor": "Mixed media Found footage film made by a Colombian Collective.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "festicinerio-2026": "Mixed media Found footage film made by a Colombian Collective",
+   "ficfusa-2026": "Mixed media Found footage film made by a Colombian Collective"
+  }
+ },
+ {
+  "work_id": "w_R4GBJ7SNPXDQ",
+  "campo": "sinopsis.es",
+  "valor": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "fantasmagoria-2026": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+   "festicinerio-2026": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+   "ficfusa-2026": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+   "filcmar-2026": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
+  }
+ },
+ {
+  "work_id": "w_R4GBJ7SNPXDQ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia",
+   "fantasmagoria-2026": "Colombia",
+   "festicinerio-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "filcmar-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4GBJ7SNPXDQ",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama",
+   "fantasmagoria-2026": "Drama",
+   "festicinerio-2026": "Drama",
+   "ficfusa-2026": "Drama",
+   "filcmar-2026": "Drama",
+   "siembrafest-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4GBJ7SNPXDQ",
+  "campo": "xref.tmdb",
+  "valor": 1796013,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1796013",
+   "festicinerio-2026": "1796013",
+   "ficfusa-2026": "1796013"
+  }
+ },
+ {
+  "work_id": "w_R4GBJ7SNPXDQ",
+  "campo": "xref.letterboxd",
+  "valor": "hdlt",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "hdlt",
+   "festicinerio-2026": "hdlt",
+   "ficfusa-2026": "hdlt"
+  }
+ }
+]

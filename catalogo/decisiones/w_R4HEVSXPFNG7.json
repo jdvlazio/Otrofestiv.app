@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HEVSXPFNG7",
+  "campo": "directores",
+  "valor": [
+   "Aitor Arregi",
+   "José María Goenaga"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 200",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=200",
+  "antes": {
+   "ficci-65": "Aitor Arregi"
+  }
+ },
+ {
+  "work_id": "w_R4HEVSXPFNG7",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 200",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=200",
+  "antes": {
+   "ficci-65": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HEVSXPFNG7",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 200",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=200",
+  "antes": {
+   "ficci-65": "España"
+  }
+ },
+ {
+  "work_id": "w_R4HEVSXPFNG7",
+  "campo": "sinopsis.es",
+  "valor": "A los 76 años, Vicente pasa de una vida junto al mar, marcada por la fiesta y el placer, a la recatada rutina de una residencia para ancianos. Allí reaparecen los tabúes y prejuicios hacia la comunidad LGTBIQ+, que lo obligan de nuevo a silenciar y ocultar su identidad. Un drama sobre la homosexualidad en la vejez.",
+  "motivo": "catálogo oficial de FICCI 65, p. 200",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=200",
+  "antes": {
+   "ficci-65": "En medio de la creciente apertura del cine hacia las historias de la comunidad LGTBIQ+, un relato sobre la homosexualidad en la vejez continúa siendo poco frecuente."
+  }
+ },
+ {
+  "work_id": "w_R4HEVSXPFNG7",
+  "campo": "sinopsis.en",
+  "valor": "At 76, Vicente moves from a life by the sea, marked by partying and pleasure, to the restrained routine of a nursing home. There, taboos and prejudices toward the LGBTQI+ community resurface, forcing him once again to silence and hide his identity. A drama about homosexuality in old age.",
+  "motivo": "catálogo oficial de FICCI 65, p. 200",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=200",
+  "antes": {
+   "ficci-65": "Amid the growing openness of cinema to LGBTIQ+ stories, a narrative about homosexuality in old age remains rare."
+  }
+ },
+ {
+  "work_id": "w_R4HEVSXPFNG7",
+  "campo": "xref.tmdb",
+  "valor": 1400214,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1400214"
+ }
+]

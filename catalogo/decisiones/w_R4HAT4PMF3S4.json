@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HAT4PMF3S4",
+  "campo": "directores",
+  "valor": [
+   "Anja Dornieden",
+   "Juan David González Monroy"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 302",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=302"
+ },
+ {
+  "work_id": "w_R4HAT4PMF3S4",
+  "campo": "anio",
+  "valor": 2014,
+  "motivo": "catálogo oficial de FICCI 65, p. 302",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=302"
+ },
+ {
+  "work_id": "w_R4HAT4PMF3S4",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 302",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=302",
+  "antes": {
+   "ficci-65": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_R4HAT4PMF3S4",
+  "campo": "sinopsis.es",
+  "valor": "En 1984, una nube gigantesca sume en la oscuridad la localidad de Hüllen-Hüllen. Un mes después, queda abandonada. En una cueva de las afueras, los investigadores hallan una máquina que proyecta imágenes sobre todas las superficies y una hoja manuscrita titulada Wolkenschatten: «Tesoros en las nubes».",
+  "motivo": "catálogo oficial de FICCI 65, p. 302",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=302"
+ },
+ {
+  "work_id": "w_R4HAT4PMF3S4",
+  "campo": "sinopsis.en",
+  "valor": "In 1984, a giant cloud plunges the town of Hüllen-Hüllen into darkness. A month later, it is abandoned. In a cave on the outskirts, investigators find a machine projecting images onto every surface and a handwritten sheet titled Wolkenschatten: “Cloud Treasures.”",
+  "motivo": "catálogo oficial de FICCI 65, p. 302",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=302"
+ },
+ {
+  "work_id": "w_R4HAT4PMF3S4",
+  "campo": "xref.tmdb",
+  "valor": 639730,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/639730"
+ }
+]

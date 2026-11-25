@@ -1,0 +1,117 @@
+[
+ {
+  "work_id": "w_4KG4F30BJ61Q",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "e7404dc7e6a4"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Némica",
+  "valor": "En el caótico cierre de una filmación, una reconocida directora enfrenta su escena final y el límite entre el arte y el abuso. La tensión se desborda cuando las emociones de los actores, el equipo técnico y la cineasta se mezclan con heridas abiertas y culpas. Todos deben decidir hasta dónde están dispuestos a llegar para crear una obra de arte.",
+  "original": "En el caótico cierre de una filmación, una reconocida directora enfrenta su escena final y el límite entre el arte y el abuso. En el set, la tensión se desborda cuando las emociones de los actores, el equipo técnico y la propia cineasta se mezclan con heridas abiertas, culpas compartidas y deseos de redención.Némica es un retrato íntimo del poder, la vulnerabilidad , el abuso y la creación, donde todos deben decidir hasta dónde están dispuestos a llegar para crear una obra de arte.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "d8d00ac2d26c"
+  }
+ },
+ {
+  "work_id": "w_4KG4F30BJ61Q",
+  "campo": "directores",
+  "valor": [
+   "Felipe Flórez Ramos"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Felipe Flórez Ramos"
+  }
+ },
+ {
+  "work_id": "w_4KG4F30BJ61Q",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KG4F30BJ61Q",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KG4F30BJ61Q",
+  "campo": "sinopsis.en",
+  "valor": "On the chaotic final day of shooting, a celebrated director faces her last scene—on the thin line between art and abuse. As tensions rise on set, emotions spill over between the actors, the crew, and the filmmaker herself, blurring the boundaries between guilt, healing, abuse, and creation. Némica is an intimate portrait of power, vulnerability, and artistic obsession, where everyone must decide how far they are willing to go to heal, to blame, or to harm in order to create a masterpiece.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On the chaotic final day of shooting, a celebrated director faces her last scene—on the thin line between art and abuse. As tensions rise on set, emotions spill over between the actors, the crew, and the filmmaker herself, blurring the boundaries between guilt, healing, abuse, and creation. Némica is an intimate portrait of power, vulnerability, and artistic obsession, where everyone must decide how far they are willing to go to heal, to blame, or to harm in order to create a masterpiece."
+  }
+ },
+ {
+  "work_id": "w_4KG4F30BJ61Q",
+  "campo": "xref.tmdb",
+  "valor": 1841394,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841394"
+  }
+ },
+ {
+  "work_id": "w_4KG4F30BJ61Q",
+  "campo": "xref.letterboxd",
+  "valor": "nemica",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "nemica"
+  }
+ },
+ {
+  "work_id": "w_4KG4F30BJ61Q",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/nemica.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/nemica.jpg"
+  }
+ }
+]

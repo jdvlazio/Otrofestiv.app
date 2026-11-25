@@ -1,0 +1,44 @@
+[
+ {
+  "work_id": "w_R4HKXWDYZFVJ",
+  "campo": "directores",
+  "valor": [
+   "John Agudelo Suárez"
+  ],
+  "motivo": "la grafía con tildes de los festivales; TMDB la escribe «John Edicson Agudelo Suarez»",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "ficdeh-2026": "John Agudelo Suárez",
+   "siembrafest-2026": "John Agudelo Suárez"
+  }
+ },
+ {
+  "work_id": "w_R4HKXWDYZFVJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/946mgZZneD5dezapP1PcPwoUlfu.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/floresmiro.jpg",
+   "https://image.tmdb.org/t/p/w500/946mgZZneD5dezapP1PcPwoUlfu.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/floresmiro.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/946mgZZneD5dezapP1PcPwoUlfu.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HKXWDYZFVJ",
+  "campo": "xref.tmdb",
+  "valor": 1738416,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/floresmiro/"
+ }
+]

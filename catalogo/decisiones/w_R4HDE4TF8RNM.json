@@ -1,0 +1,140 @@
+[
+ {
+  "work_id": "w_R4HDE4TF8RNM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/suite-intercontinental.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bogoshorts-2026/suite-intercontinental.jpg",
+   "/assets/popayan-2026/suite-intercontinental.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz"
+  ],
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/suite-intercontinental.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz",
+   "popayan-2026": "/assets/popayan-2026/suite-intercontinental.jpg"
+  },
+  "a_mano": true
+ },
+ {
+  "work_id": "w_R4HDE4TF8RNM",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "36e7a48bc9d9",
+   "8f1ce893cf89"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Suite Intercontinental",
+  "valor": "Desde el piso treinta de una torre de vidrio, Margot observa una Cali agitada por la tensión. Deslumbrada por el sol tropical, recorre la ciudad ajena a lo que la rodea y sus fantasías se confunden con la realidad. En la calle cruza la mirada con un hombre de torso desnudo y ojos penetrantes. Lo sigue cada día y se acerca al objeto de su deseo.",
+  "original": "Desde el piso treinta de una torre de vidrio, Margot observa una Cali agitada por la tensión. Deslumbrada por el sol tropical, recorre la ciudad ajena a lo que la rodea y sus fantasías se confunden con la realidad. En la calle, su mirada se cruza con la de un hombre de torso desnudo y ojos penetrantes. Margot lo sigue cada día y se acerca poco a poco al objeto de su deseo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b56130bbd86b"
+  },
+  "antes": {
+   "ficci-65": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
+   "popayan-2026": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo."
+  }
+ },
+ {
+  "work_id": "w_R4HDE4TF8RNM",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "FR"
+  ],
+  "motivo": "coproducción: catálogo oficial de BOGOSHORTS 2026; los otros daban solo Colombia",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "Colombia, Francia",
+   "ficci-65": "Colombia",
+   "popayan-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HDE4TF8RNM",
+  "campo": "directores",
+  "valor": [
+   "Lola Tartane"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lola Tartane",
+   "ficci-65": "Lola Tartane",
+   "popayan-2026": "Lola Tartane"
+  }
+ },
+ {
+  "work_id": "w_R4HDE4TF8RNM",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "ficci-65": "2026",
+   "popayan-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HDE4TF8RNM",
+  "campo": "sinopsis.en",
+  "valor": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
+   "ficci-65": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
+   "popayan-2026": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire."
+  }
+ },
+ {
+  "work_id": "w_R4HDE4TF8RNM",
+  "campo": "xref.tmdb",
+  "valor": 1668898,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1668898",
+   "ficci-65": "1668898",
+   "popayan-2026": "1668898"
+  }
+ },
+ {
+  "work_id": "w_R4HDE4TF8RNM",
+  "campo": "xref.letterboxd",
+  "valor": "suite-intercontinental",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "suite-intercontinental",
+   "ficci-65": "suite-intercontinental",
+   "popayan-2026": "suite-intercontinental"
+  }
+ }
+]

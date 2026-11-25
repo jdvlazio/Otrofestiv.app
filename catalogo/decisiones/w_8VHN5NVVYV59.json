@@ -1,0 +1,39 @@
+[
+ {
+  "work_id": "w_8VHN5NVVYV59",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "661eb91997f5"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Cenizas y diamantes",
+  "valor": "En Polonia, concluida la Segunda Guerra Mundial, el idealismo cede el paso a formas de anarquía y extremismo. Un joven que milita en un grupo ultranacionalista recibe el encargo de asesinar a un importante comunista; pero, cuando encuentra el amor, en pocas horas sus certezas comienzan a convertirse en dudas.",
+  "original": "En Polonia, concluida la Segunda Guerra Mundial, la situación política y social es caótica. El idealismo cede el paso a diversas formas de anarquía y extremismo. El protagonista, un joven que milita en un grupo ultranacionalista, recibe el encargo de asesinar a un importante comunista; pero, cuando el joven encuentra el amor, en pocas horas sus certezas comienzan a convertirse en dudas.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "5731f8f860e6"
+  },
+  "antes": {
+   "aleste-2026": "En Polonia, concluida la Segunda Guerra Mundial, la situación política y social es caótica. El idealismo cede el paso a diversas formas de anarquía y extremismo. El protagonista, un joven que milita en un grupo ultranacionalista, recibe el encargo de asesinar a un importante comunista; pero, cuando el joven encuentra el amor, en pocas horas sus certezas comienzan a convertirse en dudas."
+  }
+ },
+ {
+  "work_id": "w_8VHN5NVVYV59",
+  "campo": "sinopsis.en",
+  "valor": "A young academy soldier, Maciek Chelmicki, is ordered to shoot the secretary of the KW PPR. A coincidence causes him to kill someone else. Meeting face to face with his victim, he gets a shock. He faces the necessity of repeating the assassination. He meets Krystyna, a girl working as a barmaid in the restaurant of the \"Monopol\" hotel. His affection for her makes him even more aware of the senselessness of killing at the end of the war. Loyalty to the oath he took, and thus the obligation to obey the order, tips the scales.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "aleste-2026": "A young academy soldier, Maciek Chelmicki, is ordered to shoot the secretary of the KW PPR. A coincidence causes him to kill someone else. Meeting face to face with his victim, he gets a shock. He faces the necessity of repeating the assassination.  He meets Krystyna, a girl working as a barmaid in the restaurant of the \"Monopol\" hotel. His affection for her makes him even more aware of the senselessness of killing at the end of the war. Loyalty to the oath he took, and thus the obligation to obey the order, tips the scales."
+  }
+ }
+]

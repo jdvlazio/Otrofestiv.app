@@ -1,0 +1,89 @@
+[
+ {
+  "work_id": "w_R4MX6E365FH2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/corazon-galvanico.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/popayan-2026/corazon-galvanico.jpg",
+   "https://image.tmdb.org/t/p/w500/wfamQLJcXInlAxEZ6DtbdIJxNwT.jpg"
+  ],
+  "antes": {
+   "popayan-2026": "/assets/popayan-2026/corazon-galvanico.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/wfamQLJcXInlAxEZ6DtbdIJxNwT.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4MX6E365FH2",
+  "campo": "sinopsis.es",
+  "valor": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella y trascender su forma humana.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (popayan-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "45d32c4f3ca1",
+   "7658114d7f5f"
+  ],
+  "antes": {
+   "popayan-2026": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella y trascender su forma humana.",
+   "siembrafest-2026": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella."
+  }
+ },
+ {
+  "work_id": "w_R4MX6E365FH2",
+  "campo": "directores",
+  "valor": [
+   "Valentina Valencia Giraldo"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "popayan-2026": "Valentina Valencia Giraldo",
+   "siembrafest-2026": "Valentina Valencia"
+  }
+ },
+ {
+  "work_id": "w_R4MX6E365FH2",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1376037)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "popayan-2026": 2025,
+   "siembrafest-2026": 2024
+  }
+ },
+ {
+  "work_id": "w_R4MX6E365FH2",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "popayan-2026": "Ciencia ficción",
+   "siembrafest-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4MX6E365FH2",
+  "campo": "sinopsis.en",
+  "valor": "This is a story set on the future Caribbean coast, which is almost uninhabitable due to pollution and climate change. Amidst the gloomy landscape of the new world order OHM, we find Ivy, our protagonist, who, after a heartbreaking breakup, is left in a very delicate emotional state.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "popayan-2026": "This is a story set on the future Caribbean coast, which is almost  uninhabitable due to pollution and climate change. Amidst the gloomy landscape of the new world order OHM, we find Ivy, our protagonist, who, after a heartbreaking breakup, is left in a very delicate emotional state.",
+   "siembrafest-2026": "This is a story set on the future Caribbean coast, which is almost  uninhabitable due to pollution and climate change. Amidst the gloomy landscape of the new world order OHM, we find Ivy, our protagonist, who, after a heartbreaking breakup, is left in a very delicate emotional state."
+  }
+ }
+]

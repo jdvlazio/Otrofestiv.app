@@ -5,7 +5,7 @@
 POR QUÉ EXISTE (23 nov 2026, Juan): «el afiche de una película debería ser uno
 solo». Medido ese día: 271 obras con más de un afiche entre festivales, 761
 imágenes; 133 eran la misma imagen repetida. El afiche es de la OBRA: se elige
-una vez y queda en catalogo/decisiones.json (campo `afiche`), que
+una vez y queda en catalogo/decisiones/ (campo `afiche`), que
 catalogo_construir.py respeta siempre.
 
 QUÉ SE COMPARA: la IMAGEN, no la etiqueta (`posterSource` miente: tarjetas de
@@ -187,7 +187,7 @@ def aplicar(d, decs=None):
 
 
 def registrar(ruta):
-    """Las elecciones aprobadas (salida de la comparación) → catalogo/decisiones.json."""
+    """Las elecciones aprobadas (salida de la comparación) → catalogo/decisiones/."""
     import io
     import json
     import sys
@@ -202,8 +202,7 @@ def registrar(ruta):
         decs.append({'work_id': e['work_id'], 'campo': 'afiche', 'valor': e['valor'], 'motivo': e['motivo'],
                      'fecha': e['fecha'], 'quien': e['quien'], 'vistas': e.get('vistas') or []})
         n += 1
-    io.open(os.path.join(catalogo.DIR, 'decisiones.json'), 'w', encoding='utf-8').write(
-        json.dumps(decs, ensure_ascii=False, indent=1))
+    catalogo.escribir_decisiones(decs)
     return n
 
 

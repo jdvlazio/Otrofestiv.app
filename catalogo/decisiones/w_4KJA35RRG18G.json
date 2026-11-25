@@ -1,0 +1,125 @@
+[
+ {
+  "work_id": "w_4KJA35RRG18G",
+  "campo": "directores",
+  "valor": [
+   "Lola Grand",
+   "Alexandre Arpentinier",
+   "Mathieu Blanchys",
+   "Tristan Lamarca",
+   "Thomas Lemaille",
+   "Jean-Charles Lusseau"
+  ],
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lola Grand, Alexandre Arpentinier, Mathieu"
+  }
+ },
+ {
+  "work_id": "w_4KJA35RRG18G",
+  "campo": "anio",
+  "valor": 2016,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2016"
+  }
+ },
+ {
+  "work_id": "w_4KJA35RRG18G",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KJA35RRG18G",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KJA35RRG18G",
+  "campo": "sinopsis.es",
+  "valor": "Dos astronautas llegan a un planeta desconocido para conquistarlo, pero un encuentro inesperado pone a prueba su misión y su profesionalismo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Dos astronautas llegan a un planeta desconocido para conquistarlo, pero un encuentro inesperado pone a prueba su misión y su profesionalismo."
+  }
+ },
+ {
+  "work_id": "w_4KJA35RRG18G",
+  "campo": "sinopsis.en",
+  "valor": "Two astronauts arrive to conquer an unexplored planet, but an unexpected encounter tests their mission and professionalism.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Two astronauts arrive to conquer an unexplored planet, but an unexpected encounter tests their mission and professionalism."
+  }
+ },
+ {
+  "work_id": "w_4KJA35RRG18G",
+  "campo": "xref.tmdb",
+  "valor": 441043,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "441043"
+  }
+ },
+ {
+  "work_id": "w_4KJA35RRG18G",
+  "campo": "xref.letterboxd",
+  "valor": "asteria",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "asteria"
+  }
+ },
+ {
+  "work_id": "w_4KJA35RRG18G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/asteria.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/asteria.jpg"
+  }
+ }
+]

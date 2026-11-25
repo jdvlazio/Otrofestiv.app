@@ -1,0 +1,147 @@
+[
+ {
+  "work_id": "w_R4HCND964DS3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/lejania.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/lejania.jpg",
+   "/assets/bogoshorts-2026/lejania.jpg",
+   "/assets/jardin-2026/lejania.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PO%CC%81STER%20LEJANIA%20-%20Carolina%20Zarate%20Garcia.png?itok=UPHrcFZ4"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/lejania.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_PO%CC%81STER%20LEJANIA%20-%20Carolina%20Zarate%20Garcia.png?itok=UPHrcFZ4",
+   "jardin-2026": "/assets/jardin-2026/lejania.jpg",
+   "bogoshorts-2026": "/assets/bogoshorts-2026/lejania.jpg"
+  },
+  "a_mano": true
+ },
+ {
+  "work_id": "w_R4HCND964DS3",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "CL"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aleste-2026": "Colombia",
+   "ficci-65": "Colombia/Chile",
+   "jardin-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HCND964DS3",
+  "campo": "xref.letterboxd",
+  "valor": "lejania-2026",
+  "motivo": "comprobado en Letterboxd por su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (plan aprobado por Juan)",
+  "antes": {
+   "aleste-2026": "lejania-2026",
+   "ficci-65": "lejania-1",
+   "jardin-2026": "lejania-1"
+  }
+ },
+ {
+  "work_id": "w_R4HCND964DS3",
+  "campo": "sinopsis.en",
+  "valor": "A traveler heads toward Lejanía, a beach on an island hidden in the vastness of the Pacific Ocean, where visitors are said to experience supernatural visions. Amid fragmented landscapes and clandestine presences lurking in the shadows, reality blurs and time unravels.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "aleste-2026": "A traveler heads toward Lejanía, a beach on an island hidden in the vastness of the Pacific Ocean, where visitors are said to experience supernatural visions. Amid fragmented landscapes and clandestine presences lurking in the shadows, reality blurs and time unravels."
+  }
+ },
+ {
+  "work_id": "w_R4HCND964DS3",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "tres de cuatro festivales (Aleste, FICCI, Jardín); BOGOSHORTS lo deduce de la sección",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "aleste-2026": "Documental",
+   "ficci-65": "Documental",
+   "jardin-2026": "Documental",
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_R4HCND964DS3",
+  "campo": "sinopsis.es",
+  "valor": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano Pacífico, donde, según se dice, los visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras, la realidad se desdibuja y el tiempo se deshace.",
+  "motivo": "mismo texto, con la puntuación corregida",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "aleste-2026": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
+   "ficci-65": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
+   "jardin-2026": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
+   "bogoshorts-2026": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano Pacífico, donde, según se dice, los visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras, la realidad se desdibuja y el tiempo se deshace."
+  },
+  "vistas": [
+   "2143900182c7",
+   "74284e20d511"
+  ]
+ },
+ {
+  "work_id": "w_R4HCND964DS3",
+  "campo": "directores",
+  "valor": [
+   "Daniel Velásquez Patarroyo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "aleste-2026": "Daniel Velásquez Patarroyo",
+   "bogoshorts-2026": "Daniel Velásquez Patarroyo",
+   "ficci-65": "Daniel Velásquez Patarroyo",
+   "jardin-2026": "Daniel Velásquez Patarroyo"
+  }
+ },
+ {
+  "work_id": "w_R4HCND964DS3",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "aleste-2026": "2026",
+   "bogoshorts-2026": "2026",
+   "ficci-65": "2026",
+   "jardin-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HCND964DS3",
+  "campo": "xref.tmdb",
+  "valor": 1668904,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "aleste-2026": "1668904",
+   "bogoshorts-2026": "1668904",
+   "ficci-65": "1668904",
+   "jardin-2026": "1668904"
+  }
+ }
+]

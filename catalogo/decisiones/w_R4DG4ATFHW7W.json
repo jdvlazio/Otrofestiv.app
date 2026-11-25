@@ -1,0 +1,128 @@
+[
+ {
+  "campo": "directores",
+  "valor": [
+   "Simón Vélez"
+  ],
+  "motivo": "la de aff-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficci-65": "Sriram Raja",
+   "aff-2026": "Simón Vélez",
+   "itagui-2026": "Simón Vélez"
+  },
+  "work_id": "w_R4DG4ATFHW7W"
+ },
+ {
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "la de aff-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficci-65": "2019",
+   "aff-2026": "2026",
+   "itagui-2026": "2026"
+  },
+  "work_id": "w_R4DG4ATFHW7W"
+ },
+ {
+  "work_id": "w_R4DG4ATFHW7W",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "PT"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1426106)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "Colombia/Portugal",
+   "itagui-2026": "Colombia, Portugal"
+  }
+ },
+ {
+  "work_id": "w_R4DG4ATFHW7W",
+  "campo": "sinopsis.es",
+  "valor": "Machado, colombiano radicado en Francia, regresa a Medellín para robar una esmeralda. Mientras ejecuta el plan, se enreda en una serie de eventos que lo llevan a reconsiderar su misión.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "aff-2026": "Machado, colombiano radicado en Francia, regresa a Medellín para robar una esmeralda. Mientras ejecuta el plan, se enreda en una serie de eventos que lo llevan a reconsiderar su misión."
+  }
+ },
+ {
+  "work_id": "w_R4DG4ATFHW7W",
+  "campo": "sinopsis.en",
+  "valor": "Machado, a Colombian living in France, is hired to return to his hometown of Medellín and steal an emerald. During the risky execution of his plan, he becomes entangled in a series of events that lead him to reconsider the ultimate goal of his mission.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Piedras preciosas",
+  "antes": {
+   "aff-2026": "Machado, a Colombian living in France, returns to Medellín to steal an emerald. As he executes his plan, he becomes entangled in a series of events that force him to reconsider his mission.",
+   "itagui-2026": "Machado, a Colombian living in France, is hired to return to his hometown of Medellín and steal an emerald. During the risky execution of his plan, he becomes entangled in a series of events that lead him to reconsider the ultimate goal of his mission."
+  }
+ },
+ {
+  "work_id": "w_R4DG4ATFHW7W",
+  "campo": "generos",
+  "valor": [
+   "Crimen"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "aff-2026": "Acción",
+   "itagui-2026": "Crimen"
+  }
+ },
+ {
+  "work_id": "w_R4DG4ATFHW7W",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/itagui-2026/piedras-preciosas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/itagui-2026/piedras-preciosas.jpg",
+   "https://image.tmdb.org/t/p/w500/ufQVaCjHk7GdTPQLcjsBUS1gjjR.jpg",
+   "https://image.tmdb.org/t/p/w185/dVwPsLV4Pi9CPmbOHeIYs4k2lpk.jpg"
+  ],
+  "antes": {
+   "aff-2026": "https://image.tmdb.org/t/p/w500/ufQVaCjHk7GdTPQLcjsBUS1gjjR.jpg",
+   "itagui-2026": "/assets/itagui-2026/piedras-preciosas.jpg",
+   "ficci-65": "https://image.tmdb.org/t/p/w185/dVwPsLV4Pi9CPmbOHeIYs4k2lpk.jpg"
+  }
+ },
+ {
+  "campo": "xref.letterboxd",
+  "valor": "gemstones-2026",
+  "motivo": "la de aff-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "aff-2026": "gemstones-2026",
+   "itagui-2026": "gemstones-2026"
+  },
+  "work_id": "w_R4DG4ATFHW7W"
+ },
+ {
+  "campo": "xref.tmdb",
+  "valor": 1426106,
+  "motivo": "la de aff-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "aff-2026": "1426106",
+   "itagui-2026": "1426106"
+  },
+  "work_id": "w_R4DG4ATFHW7W"
+ }
+]

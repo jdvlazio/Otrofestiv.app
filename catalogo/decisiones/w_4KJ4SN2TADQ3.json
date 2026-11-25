@@ -1,0 +1,126 @@
+[
+ {
+  "work_id": "w_4KJ4SN2TADQ3",
+  "campo": "directores",
+  "valor": [
+   "Thorvaldur S. Gunnarsson",
+   "Jonatan Brüsch",
+   "Ágúst Kristinsson",
+   "Arna Rut Diego Snæbjörnsdóttir",
+   "Esben J. Jespersen",
+   "Touraj Khosravi",
+   "Polina Bokhan"
+  ],
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Thorvaldur S. Gunnarsson, Jonatan Brüsch"
+  }
+ },
+ {
+  "work_id": "w_4KJ4SN2TADQ3",
+  "campo": "anio",
+  "valor": 2012,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2012"
+  }
+ },
+ {
+  "work_id": "w_4KJ4SN2TADQ3",
+  "campo": "paises",
+  "valor": [
+   "DK"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Dinamarca"
+  }
+ },
+ {
+  "work_id": "w_4KJ4SN2TADQ3",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KJ4SN2TADQ3",
+  "campo": "sinopsis.es",
+  "valor": "La oscuridad se extiende por el multiverso. Guiados por Mother Mustang, los Space Stallions se enfrentan a Destructo en una aventura que homenajea las series animadas de los años ochenta.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "La oscuridad se extiende por el multiverso. Guiados por Mother Mustang, los Space Stallions se enfrentan a Destructo en una aventura que homenajea las series animadas de los años ochenta."
+  }
+ },
+ {
+  "work_id": "w_4KJ4SN2TADQ3",
+  "campo": "sinopsis.en",
+  "valor": "Darkness spreads across the multiverse. Guided by Mother Mustang, the Space Stallions face Destructo in an adventure paying tribute to the animated series of the 1980s.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Darkness spreads across the multiverse. Guided by Mother Mustang, the Space Stallions face Destructo in an adventure paying tribute to the animated series of the 1980s."
+  }
+ },
+ {
+  "work_id": "w_4KJ4SN2TADQ3",
+  "campo": "xref.tmdb",
+  "valor": 381744,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "381744"
+  }
+ },
+ {
+  "work_id": "w_4KJ4SN2TADQ3",
+  "campo": "xref.letterboxd",
+  "valor": "space-stallions",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "space-stallions"
+  }
+ },
+ {
+  "work_id": "w_4KJ4SN2TADQ3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/space-stallions.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/space-stallions.jpg"
+  }
+ }
+]

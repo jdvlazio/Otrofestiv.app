@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_4KEX04Q5XST3",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "8a5ccf2a7d8a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El Alto de los Buitres",
+  "valor": "En lo alto de las montañas se esconde ‘El Alto de los Buitres’, un lugar tanto espléndido como hostil, según quién lo mire y cuántas patas tenga. Un perro callejero, atormentado por su entorno, se cruza con una joven que decide ser amable. El encuentro nos recuerda el valor de las pequeñas acciones allí donde la compasión es cada vez más escasa.",
+  "original": "Escondido en lo alto de las montañas se encuentra ‘El Alto de los Buitres’, un lugar tanto espléndido como hostil, dependiendo de quién lo mire y cuántas patas tenga. Un perro callejero, atormentado por su entorno, cruza su camino con una joven que decide -en un mundo donde se puede ser cualquier cosa- ser amable. A través de este encuentro, ‘El Alto de los Buitres’ nos recuerda el valor de las pequeñas acciones en un entorno donde la compasión es un recurso cada vez más escaso.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "c9842d9285bd"
+  }
+ },
+ {
+  "work_id": "w_4KEX04Q5XST3",
+  "campo": "directores",
+  "valor": [
+   "Sebastian Felipe Villarraga Acosta"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Sebastian Felipe Villarraga Acosta"
+  }
+ },
+ {
+  "work_id": "w_4KEX04Q5XST3",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEX04Q5XST3",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KEX04Q5XST3",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KEX04Q5XST3",
+  "campo": "sinopsis.en",
+  "valor": "Hidden high in the mountains lies ‘El Alto de los Buitres’ (The Vulture Heights), a place both splendid and painful, depending on who gazes upon it and how many legs they have. A stray dog, tormented by his surroundings, crosses paths with a young woman who decides—in a world where one can be anything—to be kind. Through this encounter, ‘El Alto de los Buitres’ reminds us of the value of small actions in an environment where compassion is becoming an increasingly scarce resource.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Hidden high in the mountains lies ‘El Alto de los Buitres’ (The Vulture Heights), a place both splendid and painful, depending on who gazes upon it and how many legs they have. A stray dog, tormented by his surroundings, crosses paths with a young woman who decides—in a world where one can be anything—to be kind. Through this encounter, ‘El Alto de los Buitres’ reminds us of the value of small actions in an environment where compassion is becoming an increasingly scarce resource."
+  }
+ },
+ {
+  "work_id": "w_4KEX04Q5XST3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/el-alto-de-los-buitres.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/el-alto-de-los-buitres.jpg"
+  }
+ }
+]

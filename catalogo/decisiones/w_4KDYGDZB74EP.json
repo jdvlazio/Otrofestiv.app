@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KDYGDZB74EP",
+  "campo": "directores",
+  "valor": [
+   "Margarida Paias"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Margarida Paias"
+  }
+ },
+ {
+  "work_id": "w_4KDYGDZB74EP",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KDYGDZB74EP",
+  "campo": "paises",
+  "valor": [
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KDYGDZB74EP",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KDYGDZB74EP",
+  "campo": "sinopsis.es",
+  "valor": "En un verano de los años ochenta, Rui Carlos juega al fútbol todas las tardes con sus amigos. Cuando se pincha el balón, le toca resolver el problema solo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En un verano de los años ochenta, Rui Carlos juega al fútbol todas las tardes con sus amigos. Cuando se pincha el balón, le toca resolver el problema solo."
+  }
+ },
+ {
+  "work_id": "w_4KDYGDZB74EP",
+  "campo": "sinopsis.en",
+  "valor": "Summer, 80s. Rui Carlos and his friends spend their afternoons playing football. When the ball gets punctured, he is left alone to deal with the responsibility and challenges of adult life.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Summer, 80s. Rui Carlos and his friends spend their afternoons playing football. When the ball gets punctured, he is left alone to deal with the responsibility and challenges of adult life."
+  }
+ },
+ {
+  "work_id": "w_4KDYGDZB74EP",
+  "campo": "xref.tmdb",
+  "valor": 1515847,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1515847"
+  }
+ },
+ {
+  "work_id": "w_4KDYGDZB74EP",
+  "campo": "xref.letterboxd",
+  "valor": "rui-carlos",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "rui-carlos"
+  }
+ },
+ {
+  "work_id": "w_4KDYGDZB74EP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/rui-carlos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/rui-carlos.jpg"
+  }
+ }
+]

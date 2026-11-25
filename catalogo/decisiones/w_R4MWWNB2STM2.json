@@ -1,0 +1,28 @@
+[
+ {
+  "work_id": "w_R4MWWNB2STM2",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "EC"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficfusa-2026": "Colombia, Ecuador",
+   "popayan-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4MWWNB2STM2",
+  "campo": "sinopsis.en",
+  "valor": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "ficfusa-2026": "A documentary series that travels through the Afro-descendant memory of Latin America to reveal intertwined stories of resistance, struggle and cultural preservation."
+  }
+ }
+]

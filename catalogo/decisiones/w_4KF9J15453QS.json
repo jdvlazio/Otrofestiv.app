@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KF9J15453QS",
+  "campo": "directores",
+  "valor": [
+   "Juan Felipe León"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Juan Felipe León"
+  }
+ },
+ {
+  "work_id": "w_4KF9J15453QS",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KF9J15453QS",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KF9J15453QS",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KF9J15453QS",
+  "campo": "sinopsis.es",
+  "valor": "Nilza, una mujer rural, desea donar su cuerpo a la ciencia cuando muera. Busca a Paula, una artista y modelo de dibujo, para que realice una pintura sobre la forma en la que desea ser conservada tras su muerte. Esta imagen se convierte en retrato artístico, ilustración científica o vívido presagio.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Nilza, una mujer rural, desea donar su cuerpo a la ciencia cuando muera. Busca a Paula, una artista y modelo de dibujo, para que realice una pintura sobre la forma en la que desea ser conservada tras su muerte. Esta imagen se convierte en retrato artístico, ilustración científica o vívido presagio."
+  }
+ },
+ {
+  "work_id": "w_4KF9J15453QS",
+  "campo": "sinopsis.en",
+  "valor": "Nilza, a woman from the countryside, wants to donate her body to science when she dies. She seeks out Paula, an artist and drawing model, to paint a picture of how she would like to be preserved after death. This image becomes an artistic portrait, a scientific illustration, or a vivid premonition.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Nilza, a woman from the countryside, wants to donate her body to science when she dies. She seeks out Paula, an artist and drawing model, to paint a picture of how she would like to be preserved after death. This image becomes an artistic portrait, a scientific illustration, or a vivid premonition."
+  }
+ },
+ {
+  "work_id": "w_4KF9J15453QS",
+  "campo": "xref.tmdb",
+  "valor": 1713424,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1713424"
+  }
+ },
+ {
+  "work_id": "w_4KF9J15453QS",
+  "campo": "xref.letterboxd",
+  "valor": "anatomia-de-un-retrato",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "anatomia-de-un-retrato"
+  }
+ },
+ {
+  "work_id": "w_4KF9J15453QS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/anatomia-de-un-retrato.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/anatomia-de-un-retrato.jpg"
+  }
+ }
+]

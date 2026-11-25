@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS6ZARB01",
+  "campo": "xref.tmdb",
+  "valor": 1401106,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/salvation-2026/"
+ },
+ {
+  "work_id": "w_R4MQS6ZARB01",
+  "campo": "paises",
+  "valor": [
+   "TR",
+   "FR",
+   "NL",
+   "GR",
+   "SE"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

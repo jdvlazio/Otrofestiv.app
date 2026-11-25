@@ -1,0 +1,30 @@
+[
+ {
+  "work_id": "w_R4NEB16PTEXR",
+  "campo": "xref.tmdb",
+  "valor": 1753835,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/el-mejor-chocolate-del-mundo/"
+ },
+ {
+  "work_id": "w_R4NEB16PTEXR",
+  "campo": "sinopsis.es",
+  "valor": "Una periodista vuelve a su pueblo, devastado por la guerra, para escribir sobre un concurso de cacao. Allí redescubre su pasado y encuentra una oportunidad de redención en el hermano de su primer amor, que fue asesinado.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/1753835"
+ },
+ {
+  "work_id": "w_R4NEB16PTEXR",
+  "campo": "directores",
+  "valor": [
+   "John Agudelo Suárez"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HB84ENVQ52",
+  "campo": "directores",
+  "valor": [
+   "Cristina Hadwa"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 252",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=252"
+ },
+ {
+  "work_id": "w_R4HB84ENVQ52",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 252",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=252"
+ },
+ {
+  "work_id": "w_R4HB84ENVQ52",
+  "campo": "paises",
+  "valor": [
+   "CL"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 252",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=252",
+  "antes": {
+   "ficci-65": "Chile"
+  }
+ },
+ {
+  "work_id": "w_R4HB84ENVQ52",
+  "campo": "sinopsis.es",
+  "valor": "Los ojos de una mujer que duerme se mueven rápidamente. Entre parpadeos se suceden imágenes que revelan la historia de su abuela, una mujer bruja que tuvo que migrar de Palestina a Chile. La animación es el lenguaje con que susurran los muertos, entre la tierra nueva y la vieja, el pasado y el presente.",
+  "motivo": "catálogo oficial de FICCI 65, p. 252",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=252"
+ },
+ {
+  "work_id": "w_R4HB84ENVQ52",
+  "campo": "sinopsis.en",
+  "valor": "The eyes of a sleeping woman move rapidly. Between blinks, images flash by that reveal the story of her grandmother, a witch who had to migrate from Palestine to Chile. Animation is the language through which the dead whisper, between the new land and the old, the past and the present.",
+  "motivo": "catálogo oficial de FICCI 65, p. 252",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=252"
+ },
+ {
+  "work_id": "w_R4HB84ENVQ52",
+  "campo": "xref.tmdb",
+  "valor": 1668914,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1668914"
+ }
+]

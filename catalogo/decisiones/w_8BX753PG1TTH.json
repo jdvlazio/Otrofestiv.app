@@ -1,0 +1,31 @@
+[
+ {
+  "work_id": "w_8BX753PG1TTH",
+  "campo": "directores",
+  "valor": [
+   "Chhamber",
+   "Lexx"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Chhamber, Lexx"
+  }
+ },
+ {
+  "work_id": "w_8BX753PG1TTH",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia"
+  }
+ }
+]

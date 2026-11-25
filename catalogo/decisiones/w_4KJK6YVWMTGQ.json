@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_4KJK6YVWMTGQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "6b5621d96128"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Oui (Balming Tiger)",
+  "valor": "En Gongbu Korea, instituto ficticio sobre los sueños, el investigador Park Min se asoma uno a uno a los sueños de cada miembro de Balming Tiger. Con el vestuario de su concierto, los integrantes recorren paisajes oníricos que difuminan la frontera entre lo real y lo irreal. Un viaje lúdico y extraño al subconsciente, al ritmo hipnótico de «Oui».",
+  "original": "En Gongbu Korea, un instituto ficticio que estudia los sueños humanos, el investigador Park Min (interpretado por Wonjin, integrante de Balming Tiger) se asoma uno a uno a los sueños de cada miembro del colectivo. Con el vestuario escénico de su concierto, los integrantes recorren paisajes oníricos llenos de elementos que difuminan la frontera entre lo real y lo irreal. Un viaje lúdico y extraño al subconsciente, al ritmo hipnótico de “Oui”",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "261632169710"
+  }
+ },
+ {
+  "work_id": "w_4KJK6YVWMTGQ",
+  "campo": "directores",
+  "valor": [
+   "Lee Suho",
+   "San Yawn",
+   "Lee Sohyun",
+   "Im Subin",
+   "Keem Dohyeong"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lee Suho, San Yawn, Lee Sohyun, Im Subin, Keem Dohyeong"
+  }
+ },
+ {
+  "work_id": "w_4KJK6YVWMTGQ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJK6YVWMTGQ",
+  "campo": "paises",
+  "valor": [
+   "KR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Corea del Sur"
+  }
+ },
+ {
+  "work_id": "w_4KJK6YVWMTGQ",
+  "campo": "sinopsis.en",
+  "valor": "At ‘Gongbu Korea’, a fictional institute that studies human dreams, researcher Park Min (played by Balming Tiger member Wonjin) peers into the dreams of each Balming Tiger member, one by one. Wearing the stage costumes from the collective’s headline concert, the whole members drift through dreamscapes filled with carefully placed elements that blur the line between the real and the unreal. A playful, uncanny journey into the subconscious, set to the hypnotic pulse of “Oui.”",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "At ‘Gongbu Korea’, a fictional institute that studies human dreams, researcher Park Min (played by Balming Tiger member Wonjin) peers into the dreams of each Balming Tiger member, one by one. Wearing the stage costumes from the collective’s headline concert, the whole members drift through dreamscapes filled with carefully placed elements that blur the line between the real and the unreal. A playful, uncanny journey into the subconscious, set to the hypnotic pulse of “Oui.”"
+  }
+ }
+]

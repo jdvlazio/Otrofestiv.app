@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS6N7JH0F",
+  "campo": "sinopsis.es",
+  "valor": "Włodek es un hombre tímido que le teme tanto a su madre como a su esposa. Pero al conocer a Irena, su vida toma un nuevo rumbo.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "748e9443a846"
+  ],
+  "antes": {
+   "olhar-2026": "Włodek es un hombre tímido que teme tanto a su madre como a su esposa. Sin embargo, al conocer a Irena, su vida toma un nuevo rumbo."
+  }
+ },
+ {
+  "work_id": "w_R4MQS6N7JH0F",
+  "campo": "xref.tmdb",
+  "valor": 198669,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/hunting-flies/"
+ }
+]

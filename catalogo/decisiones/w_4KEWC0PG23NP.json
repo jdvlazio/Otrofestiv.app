@@ -1,0 +1,138 @@
+[
+ {
+  "work_id": "w_4KEWC0PG23NP",
+  "campo": "sinopsis.es",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "vistas": [
+   "5c324f04768d",
+   "af3617af96de"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Yndige mennesker",
+  "valor": "Cuatro cineastas llevan lo más oscuro de Hans Christian Andersen al terror: un cuidador descubre que un moribundo guarda secretos; una madre trata de impedir la muerte de su hijo tras soñarla; un espejo trastorna a una pareja; un músico se siente acosado por su musa. Cortos sobre pérdida, deseo y el impulso de cambiar lo que parece inevitable.",
+  "original": "Cuatro cineastas daneses llevan el lado más oscuro de Hans Christian Andersen al terror contemporáneo. Un joven cuidador descubre que el hombre moribundo a su cargo guarda secretos; una madre intenta impedir la muerte de su hijo después de verla en un sueño; una pareja se muda al campo y encuentra un espejo que trastorna su vida; y un músico incapaz de componer empieza a sentirse acosado por su propia musa. Cada corto fue escrito y dirigido por un cineasta diferente pero todos se desarrollaron en colaboración y se entrelazan en torno a la pérdida, el deseo y el impulso de cambiar lo que parece inevitable.",
+  "sintesis": {
+   "redacta": "lector BOGOSHORTS B",
+   "verifica": "lector BOGOSHORTS E",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b62157961416"
+  },
+  "antes": {
+   "bogoshorts-2026": "Cuatro cineastas llevan lo más oscuro de Hans Christian Andersen al terror: un cuidador descubre que un moribundo guarda secretos; una madre intenta impedir la muerte de su hijo tras verla en un sueño; un espejo trastorna a una pareja; a un músico lo acosa su musa. Cortos sobre la pérdida, el deseo y el impulso de cambiar lo que parece inevitable."
+  }
+ },
+ {
+  "work_id": "w_4KEWC0PG23NP",
+  "campo": "directores",
+  "valor": [
+   "Anders Jon",
+   "Kasper Juhl",
+   "Michael Kunov",
+   "Michael Panduro"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Anders Jon, Kasper Juhl, Michael Kunov, Michael Panduro"
+  }
+ },
+ {
+  "work_id": "w_4KEWC0PG23NP",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KEWC0PG23NP",
+  "campo": "paises",
+  "valor": [
+   "DK"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Dinamarca"
+  }
+ },
+ {
+  "work_id": "w_4KEWC0PG23NP",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_4KEWC0PG23NP",
+  "campo": "sinopsis.en",
+  "valor": "Four Danish filmmakers bring the darker side of Hans Christian Andersen into contemporary horror. A young caregiver discovers that the dying man in his care is hiding secrets; a mother tries to prevent her son’s death after seeing it in a dream; a couple move to the countryside and find a mirror that upends their lives; and a musician struggling to write is haunted by his own muse. Each short film was written and directed by a different filmmaker, but all four were developed together and are linked by loss, desire and the urge to change what seems inevitable.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Four Danish filmmakers bring the darker side of Hans Christian Andersen into contemporary horror. A young caregiver discovers that the dying man in his care is hiding secrets; a mother tries to prevent her son’s death after seeing it in a dream; a couple move to the countryside and find a mirror that upends their lives; and a musician struggling to write is haunted by his own muse. Each short film was written and directed by a different filmmaker, but all four were developed together and are linked by loss, desire and the urge to change what seems inevitable."
+  }
+ },
+ {
+  "work_id": "w_4KEWC0PG23NP",
+  "campo": "xref.tmdb",
+  "valor": 1368172,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1368172"
+  }
+ },
+ {
+  "work_id": "w_4KEWC0PG23NP",
+  "campo": "xref.letterboxd",
+  "valor": "adorable-humans",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "adorable-humans"
+  }
+ },
+ {
+  "work_id": "w_4KEWC0PG23NP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/yndige-mennesker.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/yndige-mennesker.jpg"
+  }
+ }
+]

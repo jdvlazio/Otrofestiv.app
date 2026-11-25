@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KHWSKJPGRPF",
+  "campo": "directores",
+  "valor": [
+   "Lena von Döhren"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lena von Döhren"
+  }
+ },
+ {
+  "work_id": "w_4KHWSKJPGRPF",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHWSKJPGRPF",
+  "campo": "paises",
+  "valor": [
+   "CH"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suiza"
+  }
+ },
+ {
+  "work_id": "w_4KHWSKJPGRPF",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KHWSKJPGRPF",
+  "campo": "sinopsis.es",
+  "valor": "Al encenderse un farol, los insectos se arremolinan alrededor de la luz. Desde una cueva cercana, unos murciélagos hambrientos ven la oportunidad de cenar.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Al encenderse un farol, los insectos se arremolinan alrededor de la luz. Desde una cueva cercana, unos murciélagos hambrientos ven la oportunidad de cenar."
+  }
+ },
+ {
+  "work_id": "w_4KHWSKJPGRPF",
+  "campo": "sinopsis.en",
+  "valor": "When a lantern is lit, insects swarm around it. Hungry bats in a nearby cave see their chance to find dinner.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "When a lantern is lit, insects swarm around it. Hungry bats in a nearby cave see their chance to find dinner."
+  }
+ },
+ {
+  "work_id": "w_4KHWSKJPGRPF",
+  "campo": "xref.tmdb",
+  "valor": 1599776,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1599776"
+  }
+ },
+ {
+  "work_id": "w_4KHWSKJPGRPF",
+  "campo": "xref.letterboxd",
+  "valor": "bats-bugs",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "bats-bugs"
+  }
+ },
+ {
+  "work_id": "w_4KHWSKJPGRPF",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/nachtschwarmer.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/nachtschwarmer.jpg"
+  }
+ }
+]

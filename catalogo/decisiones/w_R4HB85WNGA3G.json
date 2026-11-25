@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HB85WNGA3G",
+  "campo": "directores",
+  "valor": [
+   "Víctor Gaviria"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 322",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=322",
+  "antes": {
+   "ficci-65": "Víctor Gaviria"
+  }
+ },
+ {
+  "work_id": "w_R4HB85WNGA3G",
+  "campo": "anio",
+  "valor": 1990,
+  "motivo": "catálogo oficial de FICCI 65, p. 322",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=322",
+  "antes": {
+   "ficci-65": "1990"
+  }
+ },
+ {
+  "work_id": "w_R4HB85WNGA3G",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 322",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=322",
+  "antes": {
+   "ficci-65": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HB85WNGA3G",
+  "campo": "sinopsis.es",
+  "valor": "Medellín, años 80. Rodrigo deambula sin rumbo por calles habitadas por jóvenes marginados, escuchando casetes piratas de punk. Mientras otros adolescentes consumen drogas, trafican y se unen a redes de sicarios, él intenta formar una banda con amigos atrapados en el mismo entorno, en una ciudad dominada por la violencia.",
+  "motivo": "catálogo oficial de FICCI 65, p. 322",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=322",
+  "antes": {
+   "ficci-65": "En 1990 se produjo un cambio fundamental en el cine independiente colombiano."
+  }
+ },
+ {
+  "work_id": "w_R4HB85WNGA3G",
+  "campo": "sinopsis.en",
+  "valor": "Medellín, the 1980s. Rodrigo wanders aimlessly through streets inhabited by marginalized youth, listening to pirated punk cassettes. While other teenagers use drugs, deal and join hitman networks, he tries to form a band with friends caught in the same environment, in a city dominated by violence.",
+  "motivo": "catálogo oficial de FICCI 65, p. 322",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=322",
+  "antes": {
+   "ficci-65": "In 1990, a fundamental shift occurred in Colombian independent cinema."
+  }
+ },
+ {
+  "work_id": "w_R4HB85WNGA3G",
+  "campo": "xref.tmdb",
+  "valor": 177579,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/177579"
+ }
+]

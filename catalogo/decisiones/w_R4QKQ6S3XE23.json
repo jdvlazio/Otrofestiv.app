@@ -1,0 +1,39 @@
+[
+ {
+  "work_id": "w_R4QKQ6S3XE23",
+  "campo": "xref.tmdb",
+  "valor": 1663244,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/two-pids/"
+ },
+ {
+  "work_id": "w_R4QKQ6S3XE23",
+  "campo": "sinopsis.es",
+  "valor": "Después del estreno mundial de Being John Smith en Toronto, una experiencia extraña en el hotel del cineasta lo lleva a preguntarse por la naturaleza de la realidad.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/1663244"
+ },
+ {
+  "work_id": "w_R4QKQ6S3XE23",
+  "campo": "sinopsis.en",
+  "valor": "After the first screening of Being John Smith in Toronto, a strange experience in the filmmaker’s hotel causes him to ponder the nature of reality.",
+  "motivo": "de su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/1663244"
+ },
+ {
+  "work_id": "w_R4QKQ6S3XE23",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

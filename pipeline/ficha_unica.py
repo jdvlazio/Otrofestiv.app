@@ -6,7 +6,7 @@ POR QUÉ EXISTE (24 nov 2026, Juan): son de la obra, como el afiche
 (afiches_unicos.py) y la sinopsis (sinopsis_unicas.py). Ese día diferían entre
 festivales 129 obras en director, 54 en año y 78 en país: grafías («Garcia JC»),
 nombres a medias, coproducciones incompletas, países en inglés. Lo elegido vive
-en catalogo/decisiones.json (`directores`, `anio`, `paises`). La duración NO:
+en catalogo/decisiones/ (`directores`, `anio`, `paises`). La duración NO:
 es de la copia que proyecta cada festival.
 
 También el GÉNERO (`generos`) y la SINOPSIS EN INGLÉS (`sinopsis.en`), desde el

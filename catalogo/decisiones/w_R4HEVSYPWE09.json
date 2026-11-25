@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HEVSYPWE09",
+  "campo": "directores",
+  "valor": [
+   "Lea Vidotto Labastie"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 90",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=90"
+ },
+ {
+  "work_id": "w_R4HEVSYPWE09",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 90",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=90"
+ },
+ {
+  "work_id": "w_R4HEVSYPWE09",
+  "campo": "paises",
+  "valor": [
+   "CU",
+   "IT"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 90",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=90",
+  "antes": {
+   "ficci-65": "Cuba, Italia"
+  }
+ },
+ {
+  "work_id": "w_R4HEVSYPWE09",
+  "campo": "sinopsis.es",
+  "valor": "En el centro de La Habana, Malelo, de 67 años, vive en una casa heredada de una vecina burguesa sin descendientes. Este documental entra con delicadeza en sus tareas cotidianas, en su relación con los vecinos y en el tiempo en el que no hay nada que hacer: el de las curiosidades, la niñez, los apagones y las preguntas sobre el futuro.",
+  "motivo": "catálogo oficial de FICCI 65, p. 90",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=90"
+ },
+ {
+  "work_id": "w_R4HEVSYPWE09",
+  "campo": "sinopsis.en",
+  "valor": "In the heart of Havana, 67-year-old Malelo lives in a house inherited from a bourgeois neighbor with no descendants. This documentary gently enters his daily tasks, his relationship with his neighbors, and the moments when there is nothing to do: those of curiosities, childhood, blackouts, and questions about the future.",
+  "motivo": "catálogo oficial de FICCI 65, p. 90",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=90"
+ },
+ {
+  "work_id": "w_R4HEVSYPWE09",
+  "campo": "xref.tmdb",
+  "valor": 1661149,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1661149"
+ }
+]

@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KH0MC6VV2VC",
+  "campo": "directores",
+  "valor": [
+   "Daniel Arias"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Daniel Arias"
+  }
+ },
+ {
+  "work_id": "w_4KH0MC6VV2VC",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KH0MC6VV2VC",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KH0MC6VV2VC",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KH0MC6VV2VC",
+  "campo": "sinopsis.es",
+  "valor": "Juan y Mauri trabajan como guardias de seguridad en un exclusivo parking de lujo frecuentado por turistas adinerados. Mientras sobreviven como pueden en sus monótonas y precarias jornadas nocturnas, una noche todo da un giro inesperado.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Juan y Mauri trabajan como guardias de seguridad en un exclusivo parking de lujo frecuentado por turistas adinerados. Mientras sobreviven como pueden en sus monótonas y precarias jornadas nocturnas, una noche todo da un giro inesperado."
+  }
+ },
+ {
+  "work_id": "w_4KH0MC6VV2VC",
+  "campo": "sinopsis.en",
+  "valor": "Juan and Mauri work as security guards in an exclusive luxury parking garage frequented by wealthy tourists. While they barely get by during their monotonous and precarious night shifts, one night everything takes an unexpected turn.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Juan and Mauri work as security guards in an exclusive luxury parking garage frequented by wealthy tourists. While they barely get by during their monotonous and precarious night shifts, one night everything takes an unexpected turn."
+  }
+ },
+ {
+  "work_id": "w_4KH0MC6VV2VC",
+  "campo": "xref.tmdb",
+  "valor": 1742772,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1742772"
+  }
+ },
+ {
+  "work_id": "w_4KH0MC6VV2VC",
+  "campo": "xref.letterboxd",
+  "valor": "la-garita",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "la-garita"
+  }
+ },
+ {
+  "work_id": "w_4KH0MC6VV2VC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-garita.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-garita.jpg"
+  }
+ }
+]

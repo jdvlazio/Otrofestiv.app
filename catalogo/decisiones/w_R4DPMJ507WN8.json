@@ -1,0 +1,90 @@
+[
+ {
+  "work_id": "w_R4DPMJ507WN8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/la-libertad-doble-v2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/la-libertad-doble-v2.jpg",
+   "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
+   "https://image.tmdb.org/t/p/w500/sBX05RMcO8eFcpV9hI7o2qA7mbH.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/la-libertad-doble-v2.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/la-libertad-doble-v2.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/sBX05RMcO8eFcpV9hI7o2qA7mbH.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DPMJ507WN8",
+  "campo": "sinopsis.es",
+  "valor": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0947c11740c9",
+   "11e2e3cd4153",
+   "b221987c881d"
+  ],
+  "antes": {
+   "biff-2026": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
+   "ficcali-2026": "Misael trabaja solo con su hacha, cortando árboles en el monte. Una responsabilidad inesperada altera su vida y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido. Lisandro Alonso retoma el personaje, las acciones y la forma minuciosa y delicada de observarlos de su película La libertad (2001), con la que se estableció como parte de una nueva generación de cine argentino. Esta novedosa mirada plantea un giro reflexivo sobre el personaje, su tiempo, nuestro tiempo y la forma de asumir el cine de director.",
+   "tiff-2026": "Más que una continuación o una secuela de su debut revelación, un eco astuto y sagaz: la grácil y extraordinariamente hermosa Double Freedom, de Lisandro Alonso, nos devuelve a la vida diaria de Misael, un peón solitario de La Pampa argentina."
+  }
+ },
+ {
+  "work_id": "w_R4DPMJ507WN8",
+  "campo": "paises",
+  "valor": [
+   "CL",
+   "AR",
+   "LU",
+   "DE",
+   "GB"
+  ],
+  "motivo": "coproducción según la agencia de ventas",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "biff-2026": "Chile, Argentina, Luxemburgo, Alemania,",
+   "ficcali-2026": "Chile, Argentina, Luxemburgo, Alemania, Reino Unido",
+   "tiff-2026": "Chile, Argentina, Luxemburgo, Alemania, Reino Unido"
+  },
+  "fuente": "https://luxboxfilms.com/double-freedom/"
+ },
+ {
+  "work_id": "w_R4DPMJ507WN8",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "biff-2026": "Reino Unido",
+   "ficcali-2026": "Drama",
+   "tiff-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_R4DPMJ507WN8",
+  "campo": "sinopsis.en",
+  "valor": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Double Freedom",
+  "antes": {
+   "biff-2026": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
+   "ficcali-2026": "Misael works alone with his axe, cutting down trees in the woods. An unexpected responsibility upends his life, and the logic of his days fades away in a nature where human reason holds no meaning.",
+   "tiff-2026": "Less follow-up or sequel to his breakout debut than a sly and clever echo, Lisandro Alonso’s graceful and extraordinarily beautiful Double Freedom returns us to the daily life of Misael, a solitary labourer in Argentina’s rural La Pampa."
+  }
+ }
+]

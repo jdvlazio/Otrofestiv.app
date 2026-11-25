@@ -185,8 +185,7 @@ if __name__ == '__main__':
         arg = lambda n: a[a.index(n) + 1] if n in a else sys.exit(f'✗ falta {n}')
         d = decidir(decs, publicado(fs)[0], a[1], a[2], a[3], arg('--motivo'), arg('--quien'), datetime.date.today().isoformat(),
                     veredicto=a[a.index('--veredicto') + 1] if '--veredicto' in a else None)
-        with open(os.path.join(catalogo.DIR, 'decisiones.json'), 'w', encoding='utf-8') as fh:
-            fh.write(json.dumps(decs, ensure_ascii=False, indent=1))
+        catalogo.escribir_decisiones(decs)
         print('✓', json.dumps(d, ensure_ascii=False))
     else:
         xs = [x for x in divergencias(fs, decs) if not a or any(a[0] in f for f in x[4].values())]

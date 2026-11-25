@@ -1,0 +1,72 @@
+[
+ {
+  "work_id": "w_R4HEVSJ6W6FG",
+  "campo": "directores",
+  "valor": [
+   "Anne Pinheiro Guimarães"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 218",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=218"
+ },
+ {
+  "work_id": "w_R4HEVSJ6W6FG",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 218",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=218",
+  "antes": {
+   "ficci-65": "2005"
+  }
+ },
+ {
+  "work_id": "w_R4HEVSJ6W6FG",
+  "campo": "paises",
+  "valor": [
+   "BR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 218",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=218",
+  "antes": {
+   "ficci-65": "Brasil"
+  }
+ },
+ {
+  "work_id": "w_R4HEVSJ6W6FG",
+  "campo": "sinopsis.es",
+  "valor": "Es 1986 y Brasil vuelve a la democracia entre la esperanza y la incertidumbre. Helena se muda a Brasilia con sus hijos, de 15 y 7 años. Cada uno afronta a su manera la ausencia del padre, en un viaje de negocios sin regreso claro: la madre, sumida en dolor y preguntas; los hijos, descubriendo una ciudad extraña donde todos parecen migrantes.",
+  "motivo": "catálogo oficial de FICCI 65, p. 218",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=218",
+  "antes": {
+   "ficci-65": "Helena se muda a Brasilia con sus hijos, de 15 y 7 años. Cada uno afronta a su manera la ausencia de su padre, que permanece en un viaje de negocios sin fecha clara de regreso."
+  }
+ },
+ {
+  "work_id": "w_R4HEVSJ6W6FG",
+  "campo": "sinopsis.en",
+  "valor": "It is 1986 and Brazil is returning to democracy amid hope and uncertainty. Helena moves to Brasilia with her children, 15 and 7. Each copes in their own way with the absence of their father, on a business trip with no clear return: the mother, sunk in pain and questions; the children, discovering a strange city where everyone seems a migrant.",
+  "motivo": "catálogo oficial de FICCI 65, p. 218",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=218",
+  "antes": {
+   "ficci-65": "Helena moves to Brasília with her children, ages 15 and 7. Each copes in their own way with their father's absence, as he remains on an open-ended business trip."
+  }
+ },
+ {
+  "work_id": "w_R4HEVSJ6W6FG",
+  "campo": "xref.tmdb",
+  "valor": 1307903,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1307903"
+ }
+]

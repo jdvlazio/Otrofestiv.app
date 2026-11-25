@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KEY8THMZB0B",
+  "campo": "directores",
+  "valor": [
+   "Christian Avilés"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Christian Avilés"
+  }
+ },
+ {
+  "work_id": "w_4KEY8THMZB0B",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEY8THMZB0B",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KEY8THMZB0B",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KEY8THMZB0B",
+  "campo": "sinopsis.es",
+  "valor": "En la oscuridad y el silencio de su habitación, un adolescente aislado, enfermo de deseo, lanza un hechizo. Mientras visiones violentas deforman su realidad, una burbuja amenaza con explotar; algo se tiene que romper.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En la oscuridad y el silencio de su habitación, un adolescente aislado, enfermo de deseo, lanza un hechizo. Mientras visiones violentas deforman su realidad, una burbuja amenaza con explotar; algo se tiene que romper."
+  }
+ },
+ {
+  "work_id": "w_4KEY8THMZB0B",
+  "campo": "sinopsis.en",
+  "valor": "In his dark, silent room, a secluded teenager sick with a burning desire casts a spell. As violent visions warp his reality, a bubble threatens to burst; something must break.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In his dark, silent room, a secluded teenager sick with a burning desire casts a spell. As violent visions warp his reality, a bubble threatens to burst; something must break."
+  }
+ },
+ {
+  "work_id": "w_4KEY8THMZB0B",
+  "campo": "xref.tmdb",
+  "valor": 1600939,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1600939"
+  }
+ },
+ {
+  "work_id": "w_4KEY8THMZB0B",
+  "campo": "xref.letterboxd",
+  "valor": "stallion-and-a-crystal-ball",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "stallion-and-a-crystal-ball"
+  }
+ },
+ {
+  "work_id": "w_4KEY8THMZB0B",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/stallion-y-la-bola-de-cristal.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/stallion-y-la-bola-de-cristal.jpg"
+  }
+ }
+]

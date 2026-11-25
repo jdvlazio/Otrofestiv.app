@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_R4K8TWSK1FYV",
+  "campo": "sinopsis.es",
+  "valor": "La Estancia es una casa condenada a desaparecer en una ciudad que, como Medellín, ha sido despiadada con la memoria. Esta película es un viaje a las entrañas de un conventillo habitado por hombres viejos y solitarios que nos revelan sus vidas, sus amores, sus deseos, e incluso su visión de la muerte.",
+  "motivo": "corrección de «habla del evento»: texto del festival sin lo que no era sinopsis",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "cecebdc002b9"
+  ],
+  "antes": {
+   "itagui-2026": "La Estancia es una casa condenada a desaparecer en una ciudad que, como Medellín, ha sido despiadada con la memoria. Esta película es un viaje a las entrañas de un conventillo habitado por hombres viejos y solitarios que nos revelan sus vidas, sus amores, sus deseos, e incluso su visión de la muerte. Invitados: Mauricio Carmona Rivera (productor) y Javier Ocampo (protagonista)."
+  }
+ },
+ {
+  "work_id": "w_R4K8TWSK1FYV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/itagui-2026/estancia.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el que ya publica el almacén",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/estancia.jpg",
+   "itagui-2026": "/assets/itagui-2026/estancia.jpg"
+  },
+  "vistas": [
+   "/assets/festicineantioquia-2026/estancia.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4K8TWSK1FYV",
+  "campo": "directores",
+  "valor": [
+   "Andrés Carmona Rivera"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Andrés Carmona Rivera",
+   "itagui-2026": "Andrés Carmona Rivera"
+  }
+ },
+ {
+  "work_id": "w_R4K8TWSK1FYV",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2024",
+   "itagui-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_R4K8TWSK1FYV",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia",
+   "itagui-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4K8TWSK1FYV",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental",
+   "itagui-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4K8TWSK1FYV",
+  "campo": "sinopsis.en",
+  "valor": "La Estancia is a house doomed to disappear in a city like Medellín, where memory is treated harshly. It's a journey into a boarding house inhabited by old, lonely men who reveal their lives, loves, desires, and even their view of death. Guillermo and Álvaro, a couple for over 50 years, recall a buried city where homosexuality was silenced. Raúl, Guillermo’s current partner, seems trapped in a daily hell of bitterness. Javier, the antithesis, is a mystic who wears a kimono, is Mormon, and works in multi-level marketing. This place holds as many rooms as possible universes, separated by endless stairs, dark corridors, and glowing thresholds. A house, a labyrinth, a family—fractured like any other—where dialogue unfolds in broken conversations, where one’s view becomes another’s question. A web of silence, conflict, and mystery. A place they never expected to end up in—and from which they may never leave.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "La Estancia is a house doomed to disappear in a city like Medellín, where memory is treated harshly. It's a journey into a boarding house inhabited by old, lonely men who reveal their lives, loves, desires, and even their view of death. Guillermo and Álvaro, a couple for over 50 years, recall a buried city where homosexuality was silenced. Raúl, Guillermo’s current partner, seems trapped in a daily hell of bitterness. Javier, the antithesis, is a mystic who wears a kimono, is Mormon, and works in multi-level marketing. This place holds as many rooms as possible universes, separated by endless stairs, dark corridors, and glowing thresholds. A house, a labyrinth, a family—fractured like any other—where dialogue unfolds in broken conversations, where one’s view becomes another’s question. A web of silence, conflict, and mystery. A place they never expected to end up in—and from which they may never leave.",
+   "itagui-2026": "La Estancia is a house doomed to disappear in a city like Medellín, where memory is treated harshly. It's a journey into a boarding house inhabited by old, lonely men who reveal their lives, loves, desires, and even their view of death. Guillermo and Álvaro, a couple for over 50 years, recall a buried city where homosexuality was silenced. Raúl, Guillermo’s current partner, seems trapped in a daily hell of bitterness. Javier, the antithesis, is a mystic who wears a kimono, is Mormon, and works in multi-level marketing. This place holds as many rooms as possible universes, separated by endless stairs, dark corridors, and glowing thresholds. A house, a labyrinth, a family—fractured like any other—where dialogue unfolds in broken conversations, where one’s view becomes another’s question. A web of silence, conflict, and mystery. A place they never expected to end up in—and from which they may never leave."
+  }
+ },
+ {
+  "work_id": "w_R4K8TWSK1FYV",
+  "campo": "xref.tmdb",
+  "valor": 1278956,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1278956",
+   "itagui-2026": "1278956"
+  }
+ },
+ {
+  "work_id": "w_R4K8TWSK1FYV",
+  "campo": "xref.letterboxd",
+  "valor": "estancia-2024",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "estancia-2024",
+   "itagui-2026": "estancia-2024"
+  }
+ }
+]

@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KE8X6ZCDT6Z",
+  "campo": "directores",
+  "valor": [
+   "Hana Jušić"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Hana Jušić"
+  }
+ },
+ {
+  "work_id": "w_4KE8X6ZCDT6Z",
+  "campo": "anio",
+  "valor": 2015,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2015"
+  }
+ },
+ {
+  "work_id": "w_4KE8X6ZCDT6Z",
+  "campo": "paises",
+  "valor": [
+   "HR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia"
+  }
+ },
+ {
+  "work_id": "w_4KE8X6ZCDT6Z",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KE8X6ZCDT6Z",
+  "campo": "sinopsis.es",
+  "valor": "Durante el cumpleaños de su marido, Sandra pasa el día con la familia de él. A medida que la hostilidad aumenta, le cuesta distinguir lo que sucede de lo que imagina.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Durante el cumpleaños de su marido, Sandra pasa el día con la familia de él. A medida que la hostilidad aumenta, le cuesta distinguir lo que sucede de lo que imagina."
+  }
+ },
+ {
+  "work_id": "w_4KE8X6ZCDT6Z",
+  "campo": "sinopsis.en",
+  "valor": "At her husband’s birthday celebration, Sandra spends the day with his family. As their hostility grows, she finds it harder to separate what happens from what she imagines.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "At her husband’s birthday celebration, Sandra spends the day with his family. As their hostility grows, she finds it harder to separate what happens from what she imagines."
+  }
+ },
+ {
+  "work_id": "w_4KE8X6ZCDT6Z",
+  "campo": "xref.tmdb",
+  "valor": 367050,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "367050"
+  }
+ },
+ {
+  "work_id": "w_4KE8X6ZCDT6Z",
+  "campo": "xref.letterboxd",
+  "valor": "no-wolf-has-a-house",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "no-wolf-has-a-house"
+  }
+ },
+ {
+  "work_id": "w_4KE8X6ZCDT6Z",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/da-je-kuca-dobra-i-vuk-bi-je-imao.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/da-je-kuca-dobra-i-vuk-bi-je-imao.jpg"
+  }
+ }
+]

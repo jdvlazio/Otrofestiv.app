@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KEC0K9DSQ3P",
+  "campo": "directores",
+  "valor": [
+   "Anaël Dang"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Anaël Dang"
+  }
+ },
+ {
+  "work_id": "w_4KEC0K9DSQ3P",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEC0K9DSQ3P",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KEC0K9DSQ3P",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEC0K9DSQ3P",
+  "campo": "sinopsis.es",
+  "valor": "A los 21 años, mi padre me entrega un sobre que contiene un secreto familiar. Veinte años después, intento desentrañar las mentiras y los silencios que definieron mi vida y la de mi familia.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A los 21 años, mi padre me entrega un sobre que contiene un secreto familiar. Veinte años después, intento desentrañar las mentiras y los silencios que definieron mi vida y la de mi familia."
+  }
+ },
+ {
+  "work_id": "w_4KEC0K9DSQ3P",
+  "campo": "sinopsis.en",
+  "valor": "At 21, my father hands me an envelope containing a family secret. Twenty years later, I try to untangle the lies and things left unsaid that defined both mine and my family’s lives.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "At 21, my father hands me an envelope containing a family secret. Twenty years later, I try to untangle the lies and things left unsaid that defined both mine and my family’s lives."
+  }
+ },
+ {
+  "work_id": "w_4KEC0K9DSQ3P",
+  "campo": "xref.tmdb",
+  "valor": 1567979,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1567979"
+  }
+ },
+ {
+  "work_id": "w_4KEC0K9DSQ3P",
+  "campo": "xref.letterboxd",
+  "valor": "triangle-2025",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "triangle-2025"
+  }
+ },
+ {
+  "work_id": "w_4KEC0K9DSQ3P",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/triangle.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/triangle.jpg"
+  }
+ }
+]

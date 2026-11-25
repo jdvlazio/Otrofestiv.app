@@ -1,0 +1,96 @@
+[
+ {
+  "work_id": "w_4KGTS3BEMR4X",
+  "campo": "directores",
+  "valor": [
+   "Aimée Lavignac",
+   "Laura Adriana Weibel"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Aimée Lavignac, Laura Adriana Weibel"
+  }
+ },
+ {
+  "work_id": "w_4KGTS3BEMR4X",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGTS3BEMR4X",
+  "campo": "paises",
+  "valor": [
+   "CH"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suiza"
+  }
+ },
+ {
+  "work_id": "w_4KGTS3BEMR4X",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KGTS3BEMR4X",
+  "campo": "sinopsis.es",
+  "valor": "Un comentario misógino de la manosfera, que describe a la Virgen María como la mujer ideal, impulsa a dos cineastas a explorar cómo se la entiende hoy. A partir de una llamada al Vaticano, su investigación recorre ámbitos políticos y personales, retratando una figura sobre la que aún se proyectan deseos e ideologías contradictorios.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un comentario misógino de la manosfera, que describe a la Virgen María como la mujer ideal, impulsa a dos cineastas a explorar cómo se la entiende hoy. A partir de una llamada al Vaticano, su investigación recorre ámbitos políticos y personales, retratando una figura sobre la que aún se proyectan deseos e ideologías contradictorios."
+  }
+ },
+ {
+  "work_id": "w_4KGTS3BEMR4X",
+  "campo": "sinopsis.en",
+  "valor": "A misogynistic remark from the „manosphere“, describing the Holy Mary as the ideal woman, impulses two women filmmakers to explore how Mary is understood today. Starting with a phone call to the Vatican, their research takes them into political and personal spheres, painting a picture of a figure onto whom contradictory desires and ideologies are still projected to this day.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A misogynistic remark from the „manosphere“, describing the Holy Mary as the ideal woman, impulses two women filmmakers to explore how Mary is understood today. Starting with a phone call to the Vatican, their research takes them into political and personal spheres, painting a picture of a figure onto whom contradictory desires and ideologies are still projected to this day."
+  }
+ },
+ {
+  "work_id": "w_4KGTS3BEMR4X",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/who-are-we-against-god.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/who-are-we-against-god.jpg"
+  }
+ }
+]

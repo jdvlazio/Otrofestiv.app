@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KFCRRZG7PDK",
+  "campo": "directores",
+  "valor": [
+   "Marc Riba",
+   "Anna Solanas"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Marc Riba, Anna Solanas"
+  }
+ },
+ {
+  "work_id": "w_4KFCRRZG7PDK",
+  "campo": "anio",
+  "valor": 2010,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2010"
+  }
+ },
+ {
+  "work_id": "w_4KFCRRZG7PDK",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KFCRRZG7PDK",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suspenso"
+  }
+ },
+ {
+  "work_id": "w_4KFCRRZG7PDK",
+  "campo": "sinopsis.es",
+  "valor": "Barcelona, 1912. En la calle de Ponent del barrio del Raval, Enriqueta y Ramoneta, dos ancianas gemelas unidas por una relación perversa, secuestran a Juanito.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Barcelona, 1912. En la calle de Ponent del barrio del Raval, Enriqueta y Ramoneta, dos ancianas gemelas unidas por una relación perversa, secuestran a Juanito."
+  }
+ },
+ {
+  "work_id": "w_4KFCRRZG7PDK",
+  "campo": "sinopsis.en",
+  "valor": "Barcelona, 1912. On Ponent Street in the Raval district, Enriqueta and Ramoneta, two elderly twin sisters bound by a perverse relationship, kidnap Juanito.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Barcelona, 1912. On Ponent Street in the Raval district, Enriqueta and Ramoneta, two elderly twin sisters bound by a perverse relationship, kidnap Juanito."
+  }
+ },
+ {
+  "work_id": "w_4KFCRRZG7PDK",
+  "campo": "xref.tmdb",
+  "valor": 317213,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "317213"
+  }
+ },
+ {
+  "work_id": "w_4KFCRRZG7PDK",
+  "campo": "xref.letterboxd",
+  "valor": "the-twin-girls-of-sunset-street",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-twin-girls-of-sunset-street"
+  }
+ },
+ {
+  "work_id": "w_4KFCRRZG7PDK",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/les-bessones-del-carrer-de-ponent.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/les-bessones-del-carrer-de-ponent.jpg"
+  }
+ }
+]

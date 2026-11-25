@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HE76WE0T7W",
+  "campo": "directores",
+  "valor": [
+   "Ruth Beckermann"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 294",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=294",
+  "antes": {
+   "ficci-65": "Ruth Beckermann"
+  }
+ },
+ {
+  "work_id": "w_R4HE76WE0T7W",
+  "campo": "anio",
+  "valor": 2018,
+  "motivo": "catálogo oficial de FICCI 65, p. 294",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=294",
+  "antes": {
+   "ficci-65": "2018"
+  }
+ },
+ {
+  "work_id": "w_R4HE76WE0T7W",
+  "campo": "paises",
+  "valor": [
+   "AT"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 294",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=294",
+  "antes": {
+   "ficci-65": "Austria"
+  }
+ },
+ {
+  "work_id": "w_R4HE76WE0T7W",
+  "campo": "sinopsis.es",
+  "valor": "Con noticiarios, el documental combina las denuncias contra Kurt Waldheim, antiguo soldado del aparato militar nazi y exsecretario general de las Naciones Unidas, con pruebas de su convicción de poder llevar a Austria a una nueva era de «gloria» y del apoyo popular que recibió. Un caso que resuena con patrones históricos que parecen repetirse.",
+  "motivo": "catálogo oficial de FICCI 65, p. 294",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=294",
+  "antes": {
+   "ficci-65": "Ruth Beckermann documenta el escándalo político que estalló en Austria cuando se reveló el pasado nazi de Kurt Waldheim durante su campaña presidencial de 1986."
+  }
+ },
+ {
+  "work_id": "w_R4HE76WE0T7W",
+  "campo": "sinopsis.en",
+  "valor": "Drawing on newsreels, the documentary combines the accusations against Kurt Waldheim, a former soldier in the Nazi military apparatus and ex-UN Secretary-General, with evidence of his conviction that he could lead Austria into a new era of “glory” and of his popular support. A case echoing historical patterns that seem to repeat themselves.",
+  "motivo": "catálogo oficial de FICCI 65, p. 294",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=294",
+  "antes": {
+   "ficci-65": "Ruth Beckermann documents the political scandal that erupted in Austria when Kurt Waldheim's Nazi past was revealed during his 1986 presidential campaign."
+  }
+ },
+ {
+  "work_id": "w_R4HE76WE0T7W",
+  "campo": "xref.tmdb",
+  "valor": 499673,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/499673"
+ }
+]

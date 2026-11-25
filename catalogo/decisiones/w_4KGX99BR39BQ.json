@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_4KGX99BR39BQ",
+  "campo": "directores",
+  "valor": [
+   "Maite Lucía Valero"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Maite Lucía Valero"
+  }
+ },
+ {
+  "work_id": "w_4KGX99BR39BQ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGX99BR39BQ",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KGX99BR39BQ",
+  "campo": "sinopsis.es",
+  "valor": "Es de noche, Laura camina agitada por una calle solitaria. La Chica la persigue, quiere darle el bolso que se le ha caído. La Chica llega a un túnel vacío y el face ID del móvil de Laura se desbloquea con su cara. La Chica comenzará a vivir la vida de Laura.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Es de noche, Laura camina agitada por una calle solitaria. La Chica la persigue, quiere darle el bolso que se le ha caído. La Chica llega a un túnel vacío y el face ID del móvil de Laura se desbloquea con su cara. La Chica comenzará a vivir la vida de Laura."
+  }
+ },
+ {
+  "work_id": "w_4KGX99BR39BQ",
+  "campo": "sinopsis.en",
+  "valor": "It’s late at night and Laura hurries down a deserted street. The Girl is chasing after her, trying to return the handbag she dropped. The Girl reaches an empty tunnel, and Laura’s phone unlocks with Face ID, recognizing her face. From that moment on, The Girl begins to live Laura’s life.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "It’s late at night and Laura hurries down a deserted street. The Girl is chasing after her, trying to return the handbag she dropped. The Girl reaches an empty tunnel, and Laura’s phone unlocks with Face ID, recognizing her face. From that moment on, The Girl begins to live Laura’s life."
+  }
+ },
+ {
+  "work_id": "w_4KGX99BR39BQ",
+  "campo": "xref.tmdb",
+  "valor": 1841389,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841389"
+  }
+ },
+ {
+  "work_id": "w_4KGX99BR39BQ",
+  "campo": "xref.letterboxd",
+  "valor": "la-suma-de-todas-las-partes",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "la-suma-de-todas-las-partes"
+  }
+ },
+ {
+  "work_id": "w_4KGX99BR39BQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-suma-de-todas-las-partes.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-suma-de-todas-las-partes.jpg"
+  }
+ }
+]

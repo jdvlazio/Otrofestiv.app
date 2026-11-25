@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_R4H50AY1TEJ8",
+  "campo": "directores",
+  "valor": [
+   "Juan Manuel González"
+  ],
+  "motivo": "TMDB 1469210",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)",
+  "antes": {
+   "ficcali-2026": "Juan Manuel González",
+   "ficica-2026": "Juan Manuel González",
+   "villadelcine-2026": "Juan M. González"
+  }
+ },
+ {
+  "work_id": "w_R4H50AY1TEJ8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/alivios.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficcali-2026/alivios.jpg",
+   "/assets/villadelcine-2026/alivios.jpg"
+  ],
+  "antes": {
+   "ficcali-2026": "/assets/ficcali-2026/alivios.jpg",
+   "ficica-2026": "/assets/ficcali-2026/alivios.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/alivios.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4H50AY1TEJ8",
+  "campo": "sinopsis.es",
+  "valor": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026, ficica-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "6c4199e348d4",
+   "fb1ddb7808b8"
+  ],
+  "antes": {
+   "ficcali-2026": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
+   "ficica-2026": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
+   "villadelcine-2026": "Carlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo dolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un sacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de encontrar juntos otra forma de alivio."
+  }
+ },
+ {
+  "work_id": "w_R4H50AY1TEJ8",
+  "campo": "paises",
+  "valor": [
+   "MX",
+   "VE"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1469210)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficcali-2026": "México, Venezuela",
+   "ficica-2026": "México, Venezuela",
+   "villadelcine-2026": "México"
+  }
+ }
+]

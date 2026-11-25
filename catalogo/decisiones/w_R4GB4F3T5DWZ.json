@@ -1,0 +1,55 @@
+[
+ {
+  "work_id": "w_R4GB4F3T5DWZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/no-es-el-fin-del-mundo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bhff-2026/no-es-el-fin-del-mundo.jpg",
+   "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
+   "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg"
+  ],
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/no-es-el-fin-del-mundo.jpg",
+   "fantasmagoria-2026": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4GB4F3T5DWZ",
+  "campo": "sinopsis.es",
+  "valor": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026, fantasmagoria-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "195034739d5a",
+   "a7559f2e6c9b"
+  ],
+  "antes": {
+   "bhff-2026": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+   "fantasmagoria-2026": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+   "villadelcine-2026": "Tras la devastación de Bogotá, Carlos se refugia con su padre ciego y exmilitar en una casa de campo. Cuando su hermana los abandona, debe protegerlo solo y esconderle una verdad imposible: afuera comenzó un apocalipsis zombi. Sobrevivir será tan difícil como enfrentar la distancia que siempre ha existido entre ambos."
+  }
+ },
+ {
+  "work_id": "w_R4GB4F3T5DWZ",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "bhff-2026": "Terror",
+   "fantasmagoria-2026": "Terror",
+   "villadelcine-2026": "Terror / Drama"
+  }
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4DQY4JKPW0V",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/lByDG8HfSamsJqFLcvW9dlxBxIA.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/everytime.jpg",
+   "https://image.tmdb.org/t/p/w500/lByDG8HfSamsJqFLcvW9dlxBxIA.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/everytime.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/lByDG8HfSamsJqFLcvW9dlxBxIA.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DQY4JKPW0V",
+  "campo": "sinopsis.es",
+  "valor": "Una tragedia une a una madre, a su hija y a un chico adolescente. Mientras luchan con los sentimientos de culpa y perdón, este insólito trío se va de viaje a Tenerife para disfrutar de unas vacaciones familiares que nunca tuvieron lugar. Bajo el resplandor del sol, el pasado y el presente comienzan a entremezclarse sutilmente.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "72ca6033e0ae",
+   "ebae7aaba56f"
+  ],
+  "antes": {
+   "biff-2026": "Una tragedia une a una madre, a su hija y a un chico adolescente. Mientras luchan con los sentimientos de culpa y perdón, este insólito trío se va de viaje a Tenerife para disfrutar de unas vacaciones familiares que nunca tuvieron lugar. Bajo el resplandor del sol, el pasado y el presente comienzan a entremezclarse sutilmente.",
+   "tiff-2026": "Una madre en duelo y el novio de su hija muerta indagan en la culpa, el duelo y el perdón durante unas vacaciones familiares, en la audaz y turbadora película de Sandra Wollner, ganadora de Un Certain Regard."
+  }
+ },
+ {
+  "work_id": "w_R4DQY4JKPW0V",
+  "campo": "sinopsis.en",
+  "valor": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife for a family holiday that never happened. Under the glow of the sun, past and present quietly start to overlap.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Everytime",
+  "antes": {
+   "biff-2026": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap.",
+   "tiff-2026": "A grieving mother and her late daughter’s boyfriend explore questions of guilt, grief, and forgiveness on a family holiday, in Sandra Wollner’s bold and haunting Un Certain Regard winner."
+  }
+ }
+]

@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_4KG1PY0VQ221",
+  "campo": "directores",
+  "valor": [
+   "Darío Vejarano Tafur"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Darío Vejarano Tafur"
+  }
+ },
+ {
+  "work_id": "w_4KG1PY0VQ221",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KG1PY0VQ221",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KG1PY0VQ221",
+  "campo": "sinopsis.es",
+  "valor": "Tras la muerte de su padre, dos hermanas deben bajar por las escaleras de un edificio el único objeto que heredaron: un pesado escritorio. Lo que parecía una simple mudanza se convierte en una tarea agotadora que pone a prueba su relación y saca a relucir viejos conflictos familiares.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tras la muerte de su padre, dos hermanas deben bajar por las escaleras de un edificio el único objeto que heredaron: un pesado escritorio. Lo que parecía una simple mudanza se convierte en una tarea agotadora que pone a prueba su relación y saca a relucir viejos conflictos familiares."
+  }
+ },
+ {
+  "work_id": "w_4KG1PY0VQ221",
+  "campo": "sinopsis.en",
+  "valor": "After their father’s death, two sisters must carry down the stairs of an apartment building the only object they inherited: a heavy desk. What seems like a simple move becomes an exhausting task that tests their relationship and brings long-standing family conflicts to the surface.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After their father’s death, two sisters must carry down the stairs of an apartment building the only object they inherited: a heavy desk. What seems like a simple move becomes an exhausting task that tests their relationship and brings long-standing family conflicts to the surface."
+  }
+ },
+ {
+  "work_id": "w_4KG1PY0VQ221",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/escritorio.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/escritorio.jpg"
+  }
+ }
+]

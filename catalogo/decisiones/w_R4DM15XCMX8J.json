@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_R4DM15XCMX8J",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://admin.alternativa.film/uploads/SAMBA_INFINITO_POSTER_VERSION_02_LOW_Leonardo_Martinelli_f26536cccd.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "https://admin.alternativa.film/uploads/SAMBA_INFINITO_POSTER_VERSION_02_LOW_Leonardo_Martinelli_f26536cccd.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/SAMBA-INFINITO-POSTER-VERSION-02_LOW%20-%20Leonardo%20Martinelli.jpg?itok=amDXZSrX"
+  ],
+  "antes": {
+   "aff-2026": "https://admin.alternativa.film/uploads/SAMBA_INFINITO_POSTER_VERSION_02_LOW_Leonardo_Martinelli_f26536cccd.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/SAMBA-INFINITO-POSTER-VERSION-02_LOW%20-%20Leonardo%20Martinelli.jpg?itok=amDXZSrX"
+  }
+ },
+ {
+  "work_id": "w_R4DM15XCMX8J",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 87",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=87"
+ },
+ {
+  "work_id": "w_R4DM15XCMX8J",
+  "campo": "sinopsis.es",
+  "valor": "El revés del carnaval. Un limpiador de las calles de Río de Janeiro, marcado por una pérdida, encara los pliegues de la fiesta. Anochece la samba y él deambula hasta la madrugada junto a un niño con alas, extraviado de su madre. Una fantasía de personajes construidos con ingenuidad radical.",
+  "motivo": "catálogo oficial de FICCI 65, p. 87",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=87"
+ },
+ {
+  "work_id": "w_R4DM15XCMX8J",
+  "campo": "sinopsis.en",
+  "valor": "The flip side of Carnival. A street cleaner in Rio de Janeiro, marked by a loss, confronts the complexities of the celebration. The samba fades and he wanders until dawn alongside a winged child separated from his mother. A fantasy whose characters are built with radical innocence.",
+  "motivo": "catálogo oficial de FICCI 65, p. 87",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=87"
+ },
+ {
+  "work_id": "w_R4DM15XCMX8J",
+  "campo": "xref.tmdb",
+  "valor": 1461116,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1461116"
+ }
+]

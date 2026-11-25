@@ -1,0 +1,124 @@
+[
+ {
+  "work_id": "w_4KG69QZ7CPQ0",
+  "campo": "directores",
+  "valor": [
+   "India Opzoomer"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "India Opzoomer"
+  }
+ },
+ {
+  "work_id": "w_4KG69QZ7CPQ0",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KG69QZ7CPQ0",
+  "campo": "paises",
+  "valor": [
+   "CA",
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Canadá, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KG69QZ7CPQ0",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KG69QZ7CPQ0",
+  "campo": "sinopsis.es",
+  "valor": "En el despiadado mundo de las boy bands de los años noventa, un bailarín de 16 años, desesperado, traiciona a su mejor amigo y a sus compañeros de banda en un intento equivocado de asegurar su lugar bajo los reflectores, solo para descubrir el verdadero costo de la fama.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En el despiadado mundo de las bandas juveniles de los años noventa, un bailarín de 16 años, desesperado, traiciona a su mejor amigo y a sus compañeros en un intento equivocado de asegurar su lugar bajo los reflectores, solo para descubrir el verdadero costo de la fama."
+  },
+  "vistas": [
+   "fda14392bed6"
+  ]
+ },
+ {
+  "work_id": "w_4KG69QZ7CPQ0",
+  "campo": "sinopsis.en",
+  "valor": "In the cutthroat world of 1990s boy bands, a desperate 16-year-old dancer betrays his best friend and bandmates in a misguided attempt to secure his spot in the limelight, only to discover the true cost of fame.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the cutthroat world of 1990s boy bands, a desperate 16-yearold dancer betrays his best friend and bandmates in a misguided attempt to secure his spot in the limelight, only to discover the true cost of fame."
+  }
+ },
+ {
+  "work_id": "w_4KG69QZ7CPQ0",
+  "campo": "xref.tmdb",
+  "valor": 1530007,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1530007"
+  }
+ },
+ {
+  "work_id": "w_4KG69QZ7CPQ0",
+  "campo": "xref.letterboxd",
+  "valor": "poster-boy-2025",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "poster-boy-2025"
+  }
+ },
+ {
+  "work_id": "w_4KG69QZ7CPQ0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/poster-boy.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/poster-boy.jpg"
+  }
+ }
+]

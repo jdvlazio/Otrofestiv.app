@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS8CME573",
+  "campo": "sinopsis.es",
+  "valor": "A partir de un fragmento de un largometraje de la Albania comunista, en el que un niño sueña con construir una ciudad moderna, la película gira en torno a los procesos de transformación, históricos y actuales, del espacio urbano. Reflexiona sobre el poder de las imágenes, las utopías de ayer y de hoy, y cómo las estructuras de poder pueden imponerse al bien común.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "cbfcbf8ff9c7"
+  ],
+  "antes": {
+   "olhar-2026": "Comenzando con un fragmento de un largometraje de la era comunista de Albania, en el que un niño sueña con la construcción de una ciudad moderna, «Cada época sueña con la próxima» gira en torno a los procesos de transformación histórica y actual del espacio urbano. La película reflexiona sobre el poder de las imágenes, las utopías históricas y contemporáneas, y cómo las estructuras de poder pueden imponerse sobre el bien común y lo público en general."
+  }
+ },
+ {
+  "work_id": "w_R4MQS8CME573",
+  "campo": "xref.tmdb",
+  "valor": 1572709,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/every-epoch-dreams-the-next/"
+ }
+]

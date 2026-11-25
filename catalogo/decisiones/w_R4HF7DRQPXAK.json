@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HF7DRQPXAK",
+  "campo": "directores",
+  "valor": [
+   "Diego «Mapache» Fuentes"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 174",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=174",
+  "antes": {
+   "ficci-65": "Diego \"Mapache\" Fuentes"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DRQPXAK",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 174",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=174",
+  "antes": {
+   "ficci-65": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DRQPXAK",
+  "campo": "paises",
+  "valor": [
+   "CL"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 174",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=174",
+  "antes": {
+   "ficci-65": "Chile"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DRQPXAK",
+  "campo": "sinopsis.es",
+  "valor": "Un punketo descubre los superpoderes de una bebida alcohólica y los usa para enfrentar a villanos de nuestro tiempo: consumismo, capitalismo e imperialismo. En blanco y negro granuloso, inspirada en el cómic, los videojuegos, los fanzines y el «hazlo tú mismo», una aventura desfachatada que celebra el quehacer conjunto y las familias que elegimos.",
+  "motivo": "catálogo oficial de FICCI 65, p. 174",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=174",
+  "antes": {
+   "ficci-65": "Hay algo chispeante en esta ópera prima del chileno Diego Fuentes; algo como una fiesta que se salió de control, como un pogo poderoso que hace tambalear las paredes, como la energía rara de la rabia alegre."
+  }
+ },
+ {
+  "work_id": "w_R4HF7DRQPXAK",
+  "campo": "sinopsis.en",
+  "valor": "A young punk discovers the superpowers of an alcoholic beverage and uses them to take on villains of our time: consumerism, capitalism, and imperialism. In grainy black and white, inspired by comics, video games, fanzines, and “do-it-yourself” culture, a cheeky adventure celebrating collective action and the families we choose.",
+  "motivo": "catálogo oficial de FICCI 65, p. 174",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=174",
+  "antes": {
+   "ficci-65": "There is something sparkling in this debut by Chilean filmmaker Diego Fuentes — something like a party that got out of hand, like a powerful mosh pit that shakes the walls, like the strange energy of joyful rage."
+  }
+ },
+ {
+  "work_id": "w_R4HF7DRQPXAK",
+  "campo": "xref.tmdb",
+  "valor": 1475972,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1475972"
+ }
+]

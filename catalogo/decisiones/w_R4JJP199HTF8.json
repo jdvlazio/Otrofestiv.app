@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_R4JJP199HTF8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/filcmar-2026/la-danza-del-caos.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cinetoro-2026/la-danza-del-caos.jpg",
+   "/assets/festicinerio-2026/baile-del-caos.jpg",
+   "/assets/filcmar-2026/la-danza-del-caos.jpg"
+  ],
+  "antes": {
+   "cinetoro-2026": "/assets/cinetoro-2026/la-danza-del-caos.jpg",
+   "festicinerio-2026": "/assets/festicinerio-2026/baile-del-caos.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/la-danza-del-caos.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4JJP199HTF8",
+  "campo": "sinopsis.es",
+  "valor": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (filcmar-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "4872103eb499",
+   "6a8c036f83ec",
+   "a8f234d6bac9"
+  ],
+  "antes": {
+   "cinetoro-2026": "«La danza del caos» es un cortometraje animado experimental que traduce la teoría de los «Cinco Ritmos» de Gabrielle Roth en una experiencia audiovisual abstracta. A través del movimiento y el diseño de sonido, la animación sustituye al cuerpo físico para llevar a los espectadores a un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y a dejarse llevar por el ritmo como guía para la interpretación.",
+   "festicinerio-2026": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta.",
+   "filcmar-2026": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación."
+  }
+ },
+ {
+  "work_id": "w_R4JJP199HTF8",
+  "campo": "directores",
+  "valor": [
+   "Valeria Preciado Romaña"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinetoro-2026": "Valeria Preciado Romaña",
+   "festicinerio-2026": "Valeria Preciado",
+   "filcmar-2026": "Valeria Preciado Romaña"
+  }
+ },
+ {
+  "work_id": "w_R4JJP199HTF8",
+  "campo": "xref.letterboxd",
+  "valor": "the-dance-of-chaos",
+  "motivo": "comprobado en Letterboxd por su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (plan aprobado por Juan)",
+  "antes": {
+   "cinetoro-2026": "the-dance-of-chaos",
+   "festicinerio-2026": "the-dance-of-chaos",
+   "filcmar-2026": "la-danza-del-caos"
+  }
+ },
+ {
+  "work_id": "w_R4JJP199HTF8",
+  "campo": "sinopsis.en",
+  "valor": "The Dance of Chaos is an experimental animated short film that translates Gabrielle Roth's Five Rhythms theory into an abstract audiovisual experience. Through movement and sound design, the animation replaces the physical body to take viewers on a sensory journey that traverses different rhythms until reaching a state of contained chaos. The short film immerses the viewer in a sensory experience that invites them to feel and let themselves be carried away by the rhythm as a guide to interpretation.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "cinetoro-2026": "The Dance of Chaos is an experimental animated short film that translates Gabrielle Roth's Five Rhythms theory into an abstract audiovisual experience. Through movement and sound design, the animation replaces the physical body to take viewers on a sensory journey that traverses different rhythms until reaching a state of contained chaos. The short film immerses the viewer in a sensory experience that invites them to feel and let themselves be carried away by the rhythm as a guide to interpretation.",
+   "festicinerio-2026": "The Dance of Chaos is an experimental animated short film that translates Gabrielle Roth's Five Rhythms theory into an abstract audiovisual experience. Through movement and sound design, the animation replaces the physical body to take viewers on a sensory journey that traverses different rhythms until reaching a state of contained chaos. The short film immerses the viewer in a sensory experience that invites them to feel and let themselves be carried away by the rhythm as a guide to interpretation."
+  }
+ }
+]

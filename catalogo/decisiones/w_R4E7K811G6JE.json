@@ -1,0 +1,86 @@
+[
+ {
+  "work_id": "w_R4E7K811G6JE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/iluminada.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/iluminada.jpg",
+   "/assets/ficcali-2026/iluminada.jpg",
+   "/assets/miradas-2026/iluminada.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/iluminada.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/iluminada.jpg",
+   "miradas-2026": "/assets/miradas-2026/iluminada.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4E7K811G6JE",
+  "campo": "sinopsis.es",
+  "valor": "Iluminada tiene visiones. Intenta comprenderlas escribiendo en diarios privados. Sus escritos son poesía que nadie más escucha. Su vida en los barrios periféricos de Bogotá, plagada de dificultades, no le deja ni tiempo ni espacio. Hasta que conoce a Juan, un joven que parece abrirle las puertas a otro mundo. Pero su relación con un extraño no es bien vista por quienes controlan el barrio.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026, miradas-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "6a3738a95018",
+   "c76781b0feb7"
+  ],
+  "antes": {
+   "biff-2026": "Iluminada tiene visiones. Intenta comprenderlas escribiendo en diarios privados. Sus escritos son poesía que nadie más escucha. Su vida en los barrios periféricos de Bogotá, plagada de dificultades, no le deja ni tiempo ni espacio. Hasta que conoce a Juan, un joven que parece abrirle las puertas a otro mundo. Pero su relación con un extraño no es bien vista por quienes controlan el barrio.",
+   "ficcali-2026": "Iluminada tiene visiones que trata de entender escribiendo diarios íntimos. Sus textos son poesía que nadie más escucha. Su vida en los barrios periféricos de Bogotá, plagados de dificultades, no le da tiempo ni espacio, hasta que conoce a Juan, un muchacho que parece abrirle otro mundo. No obstante, su relación con alguien extraño no es del agrado de quienes controlan el barrio. A partir de un trabajo muy cercano con sus actrices, Nicolás Rincón compone con ellas personajes que ahondan en sus mundos, llenos de sabiduría y poesía. Si bien las formas en las que se encarnan las violencias no dan un respiro, la fuerza de las mujeres (actrices y personajes) consiguen transmitirnos energía vital y esperanza.",
+   "miradas-2026": "Iluminada tiene visiones. Intenta comprenderlas escribiendo en diarios privados. Sus escritos son poesía que nadie más escucha. Su vida en los barrios periféricos de Bogotá, plagada de dificultades, no le deja ni tiempo ni espacio. Hasta que conoce a Juan, un joven que parece abrirle las puertas a otro mundo. Pero su relación con un extraño no es bien vista por quienes controlan el barrio."
+  }
+ },
+ {
+  "work_id": "w_R4E7K811G6JE",
+  "campo": "directores",
+  "valor": [
+   "Nicolás Rincón Gille"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "Nicolás Rincón Gille",
+   "ficcali-2026": "Nicolás Rincón",
+   "miradas-2026": "Nicolás Rincón Gille"
+  }
+ },
+ {
+  "work_id": "w_R4E7K811G6JE",
+  "campo": "paises",
+  "valor": [
+   "BE",
+   "CO"
+  ],
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "Bélgica",
+   "ficcali-2026": "Bélgica",
+   "miradas-2026": "Colombia, Bélgica"
+  }
+ },
+ {
+  "work_id": "w_R4E7K811G6JE",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "biff-2026": "Drama",
+   "ficcali-2026": "Drama",
+   "miradas-2026": "Ficción"
+  }
+ }
+]

@@ -1,0 +1,54 @@
+[
+ {
+  "work_id": "w_R4DHSYGCHRN0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/runa-simi.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficcali-2026/runa-simi.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/RUNA%20SIMI%20POSTER%20AF%20-%20Claudia%20chavez%20levano.jpg?itok=ObXBIPVJ",
+   "https://image.tmdb.org/t/p/w185/eXeQscX8CHbp2orMEF33d4OAshA.jpg"
+  ],
+  "antes": {
+   "aff-2026": "https://image.tmdb.org/t/p/w185/eXeQscX8CHbp2orMEF33d4OAshA.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/runa-simi.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/RUNA%20SIMI%20POSTER%20AF%20-%20Claudia%20chavez%20levano.jpg?itok=ObXBIPVJ"
+  }
+ },
+ {
+  "work_id": "w_R4DHSYGCHRN0",
+  "campo": "sinopsis.es",
+  "valor": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aff-2026, ficci-65)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "2b2799b68b10",
+   "d90542f10902"
+  ],
+  "antes": {
+   "aff-2026": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo.",
+   "ficcali-2026": "Un indígena está tratando de salvar a su lengua de la extinción. Fernando, actor de doblaje cusqueño, sueña con doblar El rey león al quechua. Este viaje, junto a su hijo Dylan, se convierte en una odisea profundamente personal, de paternidad y activismo, que pondrá a prueba su compromiso con su lengua y su cultura.",
+   "ficci-65": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo."
+  }
+ },
+ {
+  "work_id": "w_R4DHSYGCHRN0",
+  "campo": "sinopsis.en",
+  "valor": "A Peruvian voice actor sets out to convince Disney to dub The Lion King into Quechua. The journey becomes a personal odyssey of fatherhood and activism.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Runa Simi",
+  "antes": {
+   "aff-2026": "A Peruvian voice actor sets out to convince Disney to dub The Lion King into Quechua. The journey becomes a personal odyssey of fatherhood and activism.",
+   "ficcali-2026": "Single father and Cusco radio host Fernando shares a modest yet endearing hobby with his son: dubbing classic animated clips into Quechua, an Indigenous language spoken by a relatively small population. When one of their dubs unexpectedly goes viral, a private passion transforms into something far more ambitious and meaningful.",
+   "ficci-65": "A Peruvian voice actor sets out to convince Disney to dub The Lion King into Quechua. The journey becomes a personal odyssey of fatherhood and activism."
+  }
+ }
+]

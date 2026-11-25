@@ -1,0 +1,142 @@
+[
+ {
+  "campo": "directores",
+  "valor": [
+   "David Bingong"
+  ],
+  "motivo": "la de midbo-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficci-65": "Robert Schwentke",
+   "midbo-2026": "David Bingong",
+   "qaff-2026": "David Bingong",
+   "under-2026": "David Bingong"
+  },
+  "work_id": "w_R4KV6C5S5CP9"
+ },
+ {
+  "work_id": "w_R4KV6C5S5CP9",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1463516)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "midbo-2026": 2025,
+   "qaff-2026": 2026,
+   "under-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4KV6C5S5CP9",
+  "campo": "paises",
+  "valor": [
+   "CM",
+   "ES"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1463516)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "midbo-2026": "Camerún, España",
+   "qaff-2026": "Camerún",
+   "under-2026": "Camerún, España"
+  }
+ },
+ {
+  "work_id": "w_R4KV6C5S5CP9",
+  "campo": "sinopsis.es",
+  "valor": "En la frontera entre Marruecos y España, aguardamos impacientes el boza – la travesía a Europa. Entre los sucesivos intentos fallidos, sobrevivimos, y yo, como el «artista», debo mantener viva la llama de la esperanza del grupo. Con una cámara y un puñado de canciones, hicimos juntos esta película.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026, under-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0edcfc540b02",
+   "2c1636041f5e"
+  ],
+  "antes": {
+   "midbo-2026": "En la frontera entre Marruecos y España, aguardamos impacientes el boza – la travesía a Europa. Entre los sucesivos intentos fallidos, sobrevivimos, y yo, como el «artista», debo mantener viva la llama de la esperanza del grupo. Con una cámara y un puñado de canciones, hicimos juntos esta película.",
+   "qaff-2026": "En la frontera entre Marruecos y España, esperamos impacientemente la \"boza\" para cruzar a Europa. Tras un intento fallido tras otro, sobrevivimos, y yo, el \"Artista\", debo mantener viva la llama de la esperanza para todo el grupo. 18",
+   "under-2026": "En la frontera entre Marruecos y España, aguardamos impacientes el boza – la travesía a Europa. Entre los sucesivos intentos fallidos, sobrevivimos, y yo, como el «artista», debo mantener viva la llama de la esperanza del grupo. Con una cámara y un puñado de canciones, hicimos juntos esta película."
+  }
+ },
+ {
+  "campo": "sinopsis.en",
+  "valor": "On the border between Morocco and Spain, we wait impatiently for the boza: the crossing to Europe. Between successive failed attempts, we survive, and I, as “the artist”, must keep the group’s flame of hope alive. With a camera and a handful of songs, we made this film together.",
+  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 199",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (lector independiente)",
+  "antes": {
+   "ficci-65": "David Bingong follows a group of Cameroonian immigrants in Spain, intimately portraying their lives, dreams, and the weight of displacement.",
+   "midbo-2026": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe.",
+   "qaff-2026": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe.",
+   "under-2026": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe."
+  },
+  "work_id": "w_R4KV6C5S5CP9",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=199"
+ },
+ {
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "la de midbo-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "midbo-2026": "Documental",
+   "qaff-2026": "Documental",
+   "under-2026": "Documental"
+  },
+  "work_id": "w_R4KV6C5S5CP9"
+ },
+ {
+  "work_id": "w_R4KV6C5S5CP9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/the-travelers.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/the-travelers.jpg",
+   "/assets/under-2026/les-voyageurs.jpg",
+   "https://image.tmdb.org/t/p/w500/sSMEXMfV9njHYVuZpHCzReqYRs7.jpg"
+  ],
+  "antes": {
+   "midbo-2026": "/assets/midbo-2026/the-travelers.jpg",
+   "qaff-2026": "https://image.tmdb.org/t/p/w500/sSMEXMfV9njHYVuZpHCzReqYRs7.jpg",
+   "under-2026": "/assets/under-2026/les-voyageurs.jpg",
+   "ficci-65": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAEOALQDASIAAhEBAxEB/8QAHQAAAQUBAQEBAAAAAAAAAAAABgAEBQcIAwIBCf/EAFUQAAEDAgQEAwYBBgcMBgsAAAECAwQFEQAGEiEHEzFBIlFhCBQycYGRoRUjQlKxwRYkM2JzstEYJTQ3Y3KCkqK08PE2U3SUs"
+  }
+ },
+ {
+  "campo": "xref.letterboxd",
+  "valor": "the-travelers-2025",
+  "motivo": "la de midbo-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "midbo-2026": "the-travelers-2025",
+   "qaff-2026": "the-travelers-2025",
+   "under-2026": "the-travelers-2025"
+  },
+  "work_id": "w_R4KV6C5S5CP9"
+ },
+ {
+  "campo": "xref.tmdb",
+  "valor": 1463516,
+  "motivo": "la de midbo-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "midbo-2026": "1463516",
+   "qaff-2026": "1463516",
+   "under-2026": "1463516"
+  },
+  "work_id": "w_R4KV6C5S5CP9"
+ }
+]

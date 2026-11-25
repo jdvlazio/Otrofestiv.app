@@ -1,0 +1,51 @@
+[
+ {
+  "work_id": "w_R4G7B5FD31JG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/fantasmagoria-2026/al-final-del-espectro.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/fantasmagoria-2026/al-final-del-espectro.jpg",
+   "/assets/girardota-2026/al-final-del-espectro.jpg"
+  ],
+  "antes": {
+   "fantasmagoria-2026": "/assets/fantasmagoria-2026/al-final-del-espectro.jpg",
+   "girardota-2026": "/assets/girardota-2026/al-final-del-espectro.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4G7B5FD31JG",
+  "campo": "sinopsis.es",
+  "valor": "Tras una fuerte experiencia traumática por la que empieza a ser víctima de una fuerte agorafobia, Vega se ve obligada a pasar un tiempo alejada de su trabajo y, por recomendación de su Padre, decide mudarse a un nuevo apartamento, en donde prácticamente comienza a vivir como una ermitaña; su vida cambia radicalmente, ve cosas que no se pueden explicar y escucha voces que no puede ignorar. A medida que unas horribles visiones se intensifican, Vega empieza a comprender un oscuro rompecabezas, y a conocer el poder maligno de lo sobrenatural.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (fantasmagoria-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "cfbf7e0783dc",
+   "f116073bd4f9"
+  ],
+  "antes": {
+   "fantasmagoria-2026": "Tras una fuerte experiencia traumática por la que empieza a ser víctima de una fuerte agorafobia, Vega se ve obligada a pasar un tiempo alejada de su trabajo y, por recomendación de su Padre, decide mudarse a un nuevo apartamento, en donde prácticamente comienza a vivir como una ermitaña; su vida cambia radicalmente, ve cosas que no se pueden explicar y escucha voces que no puede ignorar. A medida que unas horribles visiones se intensifican, Vega empieza a comprender un oscuro rompecabezas, y a conocer el poder maligno de lo sobrenatural.",
+   "girardota-2026": "Al final del espectro cuenta la historia de Vega, una mujer que después de pasar por una experiencia traumática, empieza a sufrir de miedo a los espacios abiertos (agorafobia). Por este motivo se aleja de su trabajo y por recomendación de su padre se muda a un nuevo apartamento donde empieza a vivir como una ermitaña. Este cambio radical de vida la hace ver cosas inexplicables y escuchar voces que la sumen en una situación desesperada."
+  }
+ },
+ {
+  "work_id": "w_R4G7B5FD31JG",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "fantasmagoria-2026": "Terror",
+   "girardota-2026": "Misterio"
+  }
+ }
+]

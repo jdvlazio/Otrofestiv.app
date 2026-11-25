@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4PS7MRBT4FT",
+  "campo": "xref.tmdb",
+  "valor": 183725,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/we-1969/"
+ },
+ {
+  "work_id": "w_R4PS7MRBT4FT",
+  "campo": "sinopsis.es",
+  "valor": "Poema cinematográfico cuyo sentido recae en el título, Nosotros, que representa al pueblo armenio dentro de la especificidad de su historia —genocidio, repatriación— y unifica los aspectos chocantes de la vida cotidiana en la tierra natal.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/183725"
+ },
+ {
+  "work_id": "w_R4PS7MRBT4FT",
+  "campo": "sinopsis.en",
+  "valor": "Monumental picture exploring the identity and fate of the Armenian nation.",
+  "motivo": "de su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/183725"
+ },
+ {
+  "work_id": "w_R4PS7MRBT4FT",
+  "campo": "directores",
+  "valor": [
+   "Artavazd Pelechian"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4PS7MRBT4FT",
+  "campo": "paises",
+  "valor": [
+   "AM",
+   "SU"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

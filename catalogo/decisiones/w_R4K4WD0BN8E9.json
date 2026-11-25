@@ -1,0 +1,29 @@
+[
+ {
+  "work_id": "w_R4K4WD0BN8E9",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "estreno en cines, 8 oct 2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "itagui-2026": 2019
+  },
+  "fuente": "https://www.produ.com/cine/noticias/inolvidable-heidi-pelicula-colombia-argentina-estreno-marcela-citterio/"
+ },
+ {
+  "work_id": "w_R4K4WD0BN8E9",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "AR"
+  ],
+  "motivo": "coproducción colombo-argentina según PRODU",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "itagui-2026": "Argentina"
+  },
+  "fuente": "https://www.produ.com/cine/noticias/inolvidable-heidi-pelicula-colombia-argentina-estreno-marcela-citterio/"
+ }
+]

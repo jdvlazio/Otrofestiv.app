@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4DJ5XYQ7SV3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/pacifico.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/pacifico.jpg",
+   "https://admin.alternativa.film/uploads/Pacifico_still_6_Daniel_Duque_aaa8ad50ea.jpg"
+  ],
+  "antes": {
+   "aff-2026": "https://admin.alternativa.film/uploads/Pacifico_still_6_Daniel_Duque_aaa8ad50ea.jpg",
+   "midbo-2026": "/assets/midbo-2026/pacifico.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DJ5XYQ7SV3",
+  "campo": "sinopsis.es",
+  "valor": "En el Pacífico colombiano se celebran los nacimientos con un canto en particular: los arrullos. Esta música honra la vida en un territorio en conflicto donde antiguos esclavos encontraron refugio al final de la esclavitud en Colombia. En estas mismas aguas, cada año, miles de ballenas llegan desde la Antártida para dar a luz a sus ballenatos. «Pacífico» teje un relato polifónico en torno a los nacimientos en un espacio líquido donde el cuerpo, el territorio y la historia se encuentran.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "736baeffd77f",
+   "79378efcc63b"
+  ],
+  "antes": {
+   "aff-2026": "Pacífico es el nombre de una región, pero también de una fuerza. Una tierra donde la música acompaña la vida y donde uno puede renacer.",
+   "midbo-2026": "En el Pacífico colombiano se celebran los nacimientos con un canto en particular: los arrullos. Esta música honra la vida en un territorio en conflicto donde antiguos esclavos encontraron refugio al final de la esclavitud en Colombia. En estas mismas aguas, cada año, miles de ballenas llegan desde la Antártida para dar a luz a sus ballenatos. «Pacífico» teje un relato polifónico en torno a los nacimientos en un espacio líquido donde el cuerpo, el territorio y la historia se encuentran."
+  }
+ },
+ {
+  "work_id": "w_R4DJ5XYQ7SV3",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1640216)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": 2026,
+   "midbo-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4DJ5XYQ7SV3",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "CO"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1640216)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "Colombia/Francia",
+   "midbo-2026": "Francia, Colombia"
+  }
+ }
+]

@@ -1,0 +1,21 @@
+[
+ {
+  "work_id": "w_SCSBGTNMZM6G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/p2pdJ39KCZwmTqN4nCJMcTFQKs7.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "la única imagen de la ficha de TMDB (1693579) es una hoja de contactos de las fotos de archivo de Edmundo Camana, sin título ni créditos: no es el afiche; no se encontró afiche oficial (TMDB, web, IG de @cortoscali, 26 oct 2026)",
+  "fecha": "2026-10-26",
+  "quien": "Claude (misma regla que w_R4F1D2Q71DK4; a revisión de Juan en el PR)"
+ },
+ {
+  "work_id": "w_SCSBGTNMZM6G",
+  "campo": "ficha-ok",
+  "valor": 1693579,
+  "motivo": "Pix & Hertz es el colectivo; TMDB acredita a Joseline Urco Sánchez",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (plan aprobado por Juan)"
+ }
+]

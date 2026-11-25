@@ -1,0 +1,115 @@
+[
+ {
+  "work_id": "w_R4MXGDRFW189",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficica-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/anibia-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+   "/assets/ficica-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+   "/assets/miradas-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+   "/assets/popayan-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+   "/assets/villadeleyvaiff-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+   "https://image.tmdb.org/t/p/w500/a6MItsvgkatTwGoBzkPdho4OvU5.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+   "ficica-2026": "/assets/ficica-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+   "miradas-2026": "/assets/miradas-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+   "popayan-2026": "/assets/popayan-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4MXGDRFW189",
+  "campo": "directores",
+  "valor": [
+   "Juan Camilo González"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Juan Camilo González",
+   "ficica-2026": "Juan Camilo Gonzales",
+   "miradas-2026": "Juan Camilo González",
+   "popayan-2026": "Juan Camilo González",
+   "siembrafest-2026": "Juan Camilo González",
+   "villadeleyvaiff-2026": "Juan Camilo González"
+  }
+ },
+ {
+  "work_id": "w_R4MXGDRFW189",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "AR"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1592964)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Colombia, Argentina",
+   "ficica-2026": "Colombia",
+   "miradas-2026": "Colombia, Argentina",
+   "popayan-2026": "Colombia, Argentina",
+   "siembrafest-2026": "Colombia",
+   "villadeleyvaiff-2026": "Colombia, Argentina"
+  }
+ },
+ {
+  "work_id": "w_R4MXGDRFW189",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "anibia-2026": "Animación",
+   "ficica-2026": "Animación",
+   "miradas-2026": "Animación",
+   "popayan-2026": "Animación",
+   "siembrafest-2026": "Drama",
+   "villadeleyvaiff-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4MXGDRFW189",
+  "campo": "sinopsis.en",
+  "valor": "The Colombian Montes de María are home to the emechiche (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "anibia-2026": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+   "ficica-2026": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+   "miradas-2026": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+   "popayan-2026": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+   "siembrafest-2026": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+   "villadeleyvaiff-2026": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts."
+  }
+ },
+ {
+  "work_id": "w_R4MXGDRFW189",
+  "campo": "sinopsis.es",
+  "valor": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "anibia-2026": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes.",
+   "ficica-2026": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes.",
+   "miradas-2026": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes.",
+   "popayan-2026": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes.",
+   "villadeleyvaiff-2026": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
+  }
+ }
+]

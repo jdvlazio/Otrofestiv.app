@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KJ3TGBG8RZT",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "49cec1d1cbbf"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Mudanza",
+  "valor": "En la casa que fue de su abuela, Joaquina y Leonor asisten a una despedida que no comprenden del todo. Las adultas empacan la vida en cajas, mientras ellas descubren en los objetos una forma de seguir jugando. La mudanza se vuelve una especie de ritual, donde las niñas reconstruyen, a su manera, aquello que las adultas intentan dejar atrás.",
+  "original": "En la casa que fue de su abuela, Joaquina y Leonor asisten a una despedida que no comprenden del todo. A su alrededor, las adultas empacan la vida en cajas, mientras ellas descubren en los objetos una forma de seguir jugando. La mudanza se convierte en una especie de ritual: un tránsito entre la memoria y la imaginación, donde las niñas reconstruyen, a su manera, aquello que las adultas intentan dejar atrás.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "85d631cfb63a"
+  }
+ },
+ {
+  "work_id": "w_4KJ3TGBG8RZT",
+  "campo": "directores",
+  "valor": [
+   "Laura Gutiérrez Ardila"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Laura Gutiérrez Ardila"
+  }
+ },
+ {
+  "work_id": "w_4KJ3TGBG8RZT",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJ3TGBG8RZT",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJ3TGBG8RZT",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KJ3TGBG8RZT",
+  "campo": "sinopsis.en",
+  "valor": "In their grandmother’s house, Joaquina and Leonor witness a farewell they do not fully understand. Around them, the adults pack life into boxes, while the girls find in objects a way to keep playing. The move becomes a kind of ritual—a passage between memory and imagination, where the girls rebuild, in their own way, what the adults are trying to leave behind.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In their grandmother’s house, Joaquina and Leonor witness a farewell they do not fully understand. Around them, the adults pack life into boxes, while the girls find in objects a way to keep playing. The move becomes a kind of ritual—a passage between memory and imagination, where the girls rebuild, in their own way, what the adults are trying to leave behind."
+  }
+ },
+ {
+  "work_id": "w_4KJ3TGBG8RZT",
+  "campo": "xref.tmdb",
+  "valor": 1774481,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1774481"
+  }
+ },
+ {
+  "work_id": "w_4KJ3TGBG8RZT",
+  "campo": "xref.letterboxd",
+  "valor": "when-things-move",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "when-things-move"
+  }
+ },
+ {
+  "work_id": "w_4KJ3TGBG8RZT",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/mudanza.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/mudanza.jpg"
+  }
+ }
+]

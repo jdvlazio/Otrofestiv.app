@@ -1,0 +1,107 @@
+[
+ {
+  "work_id": "w_4KG026GYZBXS",
+  "campo": "directores",
+  "valor": [
+   "Theo Montoya"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Theo Montoya"
+  }
+ },
+ {
+  "work_id": "w_4KG026GYZBXS",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KG026GYZBXS",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia, Francia"
+  }
+ },
+ {
+  "work_id": "w_4KG026GYZBXS",
+  "campo": "sinopsis.es",
+  "valor": "Principios de los años 2000, Colombia. El comandante Montoya, al frente de la lucha contra las FARC, reúne a sus tropas para celebrar su ascenso a general. Pero, al caer la noche, una violenta tormenta interrumpe la fiesta.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Principios de los años 2000, Colombia. El comandante Montoya, al frente de la lucha contra las FARC, reúne a sus tropas para celebrar su ascenso a general. Pero, al caer la noche, una violenta tormenta interrumpe la fiesta."
+  }
+ },
+ {
+  "work_id": "w_4KG026GYZBXS",
+  "campo": "sinopsis.en",
+  "valor": "Early 2000s, Colombia. Commander Montoya, at the forefront of the fight against the FARC, gathered his troops to celebrate his promotion to General. But as night fell, the party is interrupted by a violent storm.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Early 2000s, Colombia. Commander Montoya, at the forefront of the fight against the FARC, gathered his troops to celebrate his promotion to General. But as night fell, the party is interrupted by a violent storm."
+  }
+ },
+ {
+  "work_id": "w_4KG026GYZBXS",
+  "campo": "xref.tmdb",
+  "valor": 1678770,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1678770"
+  }
+ },
+ {
+  "work_id": "w_4KG026GYZBXS",
+  "campo": "xref.letterboxd",
+  "valor": "thunder-platoon",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "thunder-platoon"
+  }
+ },
+ {
+  "work_id": "w_4KG026GYZBXS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/peloton-trueno.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/peloton-trueno.jpg"
+  }
+ }
+]

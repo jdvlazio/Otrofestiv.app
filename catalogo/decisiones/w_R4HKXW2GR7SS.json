@@ -1,0 +1,51 @@
+[
+ {
+  "work_id": "w_R4HKXW2GR7SS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficidi-2026/mas-alla-de-la-corona.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/sed-el-flagelo-guajiro.jpg",
+   "/assets/ficidi-2026/mas-alla-de-la-corona.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/sed-el-flagelo-guajiro.jpg",
+   "ficidi-2026": "/assets/ficidi-2026/mas-alla-de-la-corona.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HKXW2GR7SS",
+  "campo": "sinopsis.es",
+  "valor": "Ángel debe responder tres preguntas y superar una serie de obstáculos antes de lograr su sueño: ser coronada Reina Trans de Palmira, Colombia.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "1bb0880d8120",
+   "427bb21ec54c"
+  ],
+  "antes": {
+   "ficdeh-2026": "Ángel debe responder tres preguntas y superar una serie de obstáculos antes de lograr su sueño: ser coronada Reina Trans de Palmira, Colombia.",
+   "ficidi-2026": "Una persona trans enfrenta obstáculos para alcanzar el sueño de convertirse en Reina Trans de Palmira."
+  }
+ },
+ {
+  "work_id": "w_R4HKXW2GR7SS",
+  "campo": "directores",
+  "valor": [
+   "Juan David Mesa Buitrago"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": "Juan David Mesa",
+   "ficidi-2026": "Juan David Mesa Buitrago"
+  }
+ }
+]

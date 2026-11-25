@@ -1,0 +1,30 @@
+[
+ {
+  "work_id": "w_R4QPX9JDTY28",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "Tribeca y su distribuidora",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "tribeca-2026": "France",
+   "villadeleyvaiff-2026": "USA"
+  },
+  "fuente": "https://tribecafilm.com/films/saba-2026"
+ },
+ {
+  "work_id": "w_R4QPX9JDTY28",
+  "campo": "sinopsis.en",
+  "valor": "Saba is a metaphorical animated short film, about life, our journey and the endless effort to get closure with the meaningful people in our life.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Saba",
+  "antes": {
+   "tribeca-2026": "Saba is a metaphorical animated short film, about life, our journey and the endless effort to get closure with the meaningful people in our life.",
+   "villadeleyvaiff-2026": "In an abstract and symbolic world where gravity is reversed, a unique bond forms between a grandfather and his grandson. As Saba, the grandfather guides the boy through this surreal reality, a violent storm strikes, tearing one of the ropes anchoring their home - and with it, their life together. After suffering a devastating loss of Saba, the boy embarks on an emotional journey in search of closure. Through a stylized and poetic visual language, the film explores life's fundamental questions: the paths we take, separation from those we love, and the endless effort to find closure, reconcile loss, and move forward."
+  }
+ }
+]

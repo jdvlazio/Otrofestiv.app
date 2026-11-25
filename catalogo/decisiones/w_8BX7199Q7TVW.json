@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7199Q7TVW",
+  "campo": "directores",
+  "valor": [
+   "Fabián Bielinsky"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Fabián Bielinsky"
+  }
+ },
+ {
+  "work_id": "w_8BX7199Q7TVW",
+  "campo": "anio",
+  "valor": 2000,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2000"
+  }
+ },
+ {
+  "work_id": "w_8BX7199Q7TVW",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_8BX7199Q7TVW",
+  "campo": "generos",
+  "valor": [
+   "Crimen"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Crimen"
+  }
+ },
+ {
+  "work_id": "w_8BX7199Q7TVW",
+  "campo": "sinopsis.es",
+  "valor": "Buenos Aires. Juan y Marcos son dos estafadores a punto de dar el golpe de sus vidas, el que puede convertirlos, al fin, en millonarios. Solo disponen de 24 horas, pero si lo planean todo al detalle, nada puede salir mal… o eso creen.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Buenos Aires. Juan y Marcos son dos estafadores a punto de dar el golpe de sus vidas, el que puede convertirlos, al fin, en millonarios. Solo disponen de 24 horas, pero si lo planean todo al detalle, nada puede salir mal… o eso creen."
+  }
+ },
+ {
+  "work_id": "w_8BX7199Q7TVW",
+  "campo": "sinopsis.en",
+  "valor": "Buenos Aires. Juan and Marcos are two con artists about to pull off the job of their lives, the one that could finally make them millionaires. They have only 24 hours, but if they plan every detail, nothing can go wrong… or so they think.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Buenos Aires. Juan and Marcos are two con artists about to pull off the job of their lives, the one that could finally make them millionaires. They have only 24 hours, but if they plan every detail, nothing can go wrong… or so they think."
+  }
+ },
+ {
+  "work_id": "w_8BX7199Q7TVW",
+  "campo": "xref.tmdb",
+  "valor": 18079,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "18079"
+  }
+ },
+ {
+  "work_id": "w_8BX7199Q7TVW",
+  "campo": "xref.letterboxd",
+  "valor": "nine-queens",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "nine-queens"
+  }
+ },
+ {
+  "work_id": "w_8BX7199Q7TVW",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/nueve-reinas.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/nueve-reinas.jpg"
+  }
+ }
+]

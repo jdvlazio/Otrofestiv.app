@@ -1,0 +1,67 @@
+[
+ {
+  "work_id": "w_7THWZ6NHS6J9",
+  "campo": "directores",
+  "valor": [
+   "Shiue-Ying Wei",
+   "Chia-Wen Ko"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Shiue-Ying Wei, Chia-Wen Ko"
+  }
+ },
+ {
+  "work_id": "w_7THWZ6NHS6J9",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_7THWZ6NHS6J9",
+  "campo": "paises",
+  "valor": [
+   "TW"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Taiwán"
+  }
+ },
+ {
+  "work_id": "w_7THWZ6NHS6J9",
+  "campo": "sinopsis.es",
+  "valor": "En una ciudad subterránea posapocalíptica, una investigadora halla un diente de león capaz de sobrevivir en la superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR, se guían haces de luz entre las sombras y descubren recuerdos olvidados, en busca del camino a la superficie.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie."
+  }
+ },
+ {
+  "work_id": "w_7THWZ6NHS6J9",
+  "campo": "sinopsis.en",
+  "valor": "In a post-apocalyptic underground city, a lone researcher discovers a dandelion capable of surviving the harsh surface. Hoping to restore life to a barren world, she sets out to replant it above ground. In this VR experience, players guide beams of light through the darkness, uncovering forgotten memories as they seek a path back to the surface.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In a post-apocalyptic underground city, a lone researcher discovers a dandelion capable of surviving the harsh surface climate. Hoping to restore life to the barren world, she sets out to replant the seedling above ground. In this picture-book-inspired VR experience, players guide beams of light through the darkness, uncovering illustrated illusions and forgotten memories as they search for a path back to the surface."
+  }
+ }
+]

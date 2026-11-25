@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HEVTS8E3MD",
+  "campo": "directores",
+  "valor": [
+   "Yusuke Iwasaki"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 176",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=176",
+  "antes": {
+   "ficci-65": "Iwasaki Yusuke"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTS8E3MD",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 176",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=176",
+  "antes": {
+   "ficci-65": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTS8E3MD",
+  "campo": "paises",
+  "valor": [
+   "JP"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 176",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=176",
+  "antes": {
+   "ficci-65": "Japón"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTS8E3MD",
+  "campo": "sinopsis.es",
+  "valor": "Los minimercados japoneses, o konbini, abren 24 horas y son ejemplos de eficiencia. Aquí son también agujeros negros de alienación y desconexión, entre comida empacada, cordialidad obligada y encuentros insatisfactorios. Entre el drama, la comedia negra y el horror, un horror que no está en las sombras sino en pasillos cegadoramente iluminados.",
+  "motivo": "catálogo oficial de FICCI 65, p. 176",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=176",
+  "antes": {
+   "ficci-65": "Los minimercados en Japón (conocidos como konbini) son parte fundamental del tejido urbano local: abiertos 24 horas, con comida higiénicamente empacada, lista para servir y una variedad de servicios adicionales, como correo y papelería."
+  }
+ },
+ {
+  "work_id": "w_R4HEVTS8E3MD",
+  "campo": "sinopsis.en",
+  "valor": "Japanese convenience stores, or konbini, open 24 hours a day and are examples of efficiency. Here they are also black holes of alienation and disconnection, amid packaged food, obligatory friendliness and unsatisfying encounters. Between drama, black comedy and horror, a horror found not in the shadows but in blindingly bright aisles.",
+  "motivo": "catálogo oficial de FICCI 65, p. 176",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=176",
+  "antes": {
+   "ficci-65": "Convenience stores in Japan (known as konbini) are a fundamental part of the urban fabric: open 24 hours, with hygienically packaged ready-to-serve food and a range of additional services including mail and stationery."
+  }
+ },
+ {
+  "work_id": "w_R4HEVTS8E3MD",
+  "campo": "xref.tmdb",
+  "valor": 1616908,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1616908"
+ }
+]

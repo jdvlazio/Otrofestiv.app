@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KG1R4RN6JAM",
+  "campo": "directores",
+  "valor": [
+   "Mónica Juanita Hernández Duquino"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mónica Juanita Hernández Duquino"
+  }
+ },
+ {
+  "work_id": "w_4KG1R4RN6JAM",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KG1R4RN6JAM",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KG1R4RN6JAM",
+  "campo": "generos",
+  "valor": [
+   "Ciencia ficción"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ciencia ficción"
+  }
+ },
+ {
+  "work_id": "w_4KG1R4RN6JAM",
+  "campo": "sinopsis.es",
+  "valor": "La señora Teotiste ya no quiere vivir más. Su esposo ha desaparecido al igual que varias personas vecinas de la vereda y el pueblo en donde vive y sus días se han llenado de vacío. Pero a pesar de querer acabar con su vida, una fuerza que ella desconoce le impide acabar con su vida. Parece que algo falta por hacer.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "La señora Teotiste ya no quiere vivir más. Su esposo ha desaparecido al igual que varias personas vecinas de la vereda y el pueblo en donde vive y sus días se han llenado de vacío. Pero a pesar de querer acabar con su vida, una fuerza que ella desconoce le impide acabar con su vida. Parece que algo falta por hacer."
+  }
+ },
+ {
+  "work_id": "w_4KG1R4RN6JAM",
+  "campo": "sinopsis.en",
+  "valor": "Mrs. Teotiste no longer wishes to live. Her husband has disappeared—as have several of her neighbors from the rural area and the town where she resides—and her days have become filled with emptiness. Yet, despite her desire to end her life, an unknown force prevents her from doing so. It seems there is still something left to be done.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mrs. Teotiste no longer wishes to live. Her husband has disappeared—as have several of her neighbors from the rural area and the town where she resides—and her days have become filled with emptiness. Yet, despite her desire to end her life, an unknown force prevents her from doing so. It seems there is still something left to be done."
+  }
+ },
+ {
+  "work_id": "w_4KG1R4RN6JAM",
+  "campo": "xref.tmdb",
+  "valor": 1574771,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1574771"
+  }
+ },
+ {
+  "work_id": "w_4KG1R4RN6JAM",
+  "campo": "xref.letterboxd",
+  "valor": "el-futuro-ya-paso",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "el-futuro-ya-paso"
+  }
+ },
+ {
+  "work_id": "w_4KG1R4RN6JAM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/el-futuro-ya-paso.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/el-futuro-ya-paso.jpg"
+  }
+ }
+]

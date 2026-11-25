@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HEVTM4VR8X",
+  "campo": "directores",
+  "valor": [
+   "Luciano Pedro Jr."
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 91",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=91"
+ },
+ {
+  "work_id": "w_R4HEVTM4VR8X",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 91",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=91"
+ },
+ {
+  "work_id": "w_R4HEVTM4VR8X",
+  "campo": "paises",
+  "valor": [
+   "BR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 91",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=91",
+  "antes": {
+   "ficci-65": "Brasil"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTM4VR8X",
+  "campo": "sinopsis.es",
+  "valor": "Una elegía sobre el retorno de Sebastião, bisabuelo del director, a Porto de Pedras, el pueblo pesquero donde vivió junto a su amante Edna. Ante el desconcierto de la muerte de ella, emprende un viaje de huida para enterrar un corazón. Imágenes borrosas y agitadas, con gestos propios del Super 8, entre lo térreo y lo onírico de la nostalgia.",
+  "motivo": "catálogo oficial de FICCI 65, p. 91",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=91"
+ },
+ {
+  "work_id": "w_R4HEVTM4VR8X",
+  "campo": "sinopsis.en",
+  "valor": "An elegy on the return of Sebastião, the director's great-grandfather, to Porto de Pedras, the fishing village where he lived with his lover Edna. Faced with the bewilderment of her death, he embarks on a journey of escape to bury a heart. Blurry, agitated images with Super 8 gestures, between the earthly and the dreamlike side of nostalgia.",
+  "motivo": "catálogo oficial de FICCI 65, p. 91",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=91"
+ },
+ {
+  "work_id": "w_R4HEVTM4VR8X",
+  "campo": "xref.tmdb",
+  "valor": 1530155,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1530155"
+ }
+]

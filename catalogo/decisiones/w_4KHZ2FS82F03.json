@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KHZ2FS82F03",
+  "campo": "directores",
+  "valor": [
+   "Antonin Niclass"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Antonin Niclass"
+  }
+ },
+ {
+  "work_id": "w_4KHZ2FS82F03",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHZ2FS82F03",
+  "campo": "paises",
+  "valor": [
+   "CH"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suiza"
+  }
+ },
+ {
+  "work_id": "w_4KHZ2FS82F03",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KHZ2FS82F03",
+  "campo": "sinopsis.es",
+  "valor": "Un monito despierta en un estudio donde todo parece inmóvil. Una selva que ve a lo lejos inspira al mono y a sus amigos a construir su propio bosque.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un monito despierta en un estudio donde todo parece inmóvil. Una selva que ve a lo lejos inspira al mono y a sus amigos a construir su propio bosque."
+  }
+ },
+ {
+  "work_id": "w_4KHZ2FS82F03",
+  "campo": "sinopsis.en",
+  "valor": "A little monkey wakes up in a studio where everything seems frozen. A glimpse of a faraway jungle inspires the monkey and its friends to build a forest of their own.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A little monkey wakes up in a studio where everything seems frozen. A glimpse of a faraway jungle inspires the monkey and its friends to build a forest of their own."
+  }
+ },
+ {
+  "work_id": "w_4KHZ2FS82F03",
+  "campo": "xref.tmdb",
+  "valor": 1717093,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1717093"
+  }
+ },
+ {
+  "work_id": "w_4KHZ2FS82F03",
+  "campo": "xref.letterboxd",
+  "valor": "into-the-forest-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "into-the-forest-2026"
+  }
+ },
+ {
+  "work_id": "w_4KHZ2FS82F03",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/vers-la-foret.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/vers-la-foret.jpg"
+  }
+ }
+]

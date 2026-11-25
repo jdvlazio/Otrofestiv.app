@@ -1,0 +1,82 @@
+[
+ {
+  "work_id": "w_4KEZC7D91YE3",
+  "campo": "directores",
+  "valor": [
+   "Margrét Seema Takyar"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Margrét Seema Takyar"
+  }
+ },
+ {
+  "work_id": "w_4KEZC7D91YE3",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEZC7D91YE3",
+  "campo": "paises",
+  "valor": [
+   "IS",
+   "NO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Islandia, Noruega"
+  }
+ },
+ {
+  "work_id": "w_4KEZC7D91YE3",
+  "campo": "sinopsis.es",
+  "valor": "Seis semanas después de dar a luz, Katrín acude al centro de salud de su localidad con su hija recién nacida para un control de rutina. A medida que avanza el examen, su comportamiento se vuelve cada vez más preocupante y empieza a tomar decisiones que están lejos de ser rutinarias.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Seis semanas después de dar a luz, Katrín acude al centro de salud de su localidad con su hija recién nacida para un control de rutina. A medida que avanza el examen, su comportamiento se vuelve cada vez más preocupante y empieza a tomar decisiones que están lejos de ser rutinarias."
+  }
+ },
+ {
+  "work_id": "w_4KEZC7D91YE3",
+  "campo": "sinopsis.en",
+  "valor": "Six weeks after giving birth, Katrín arrives at her local health clinic with her newborn daughter for a routine check-up. As the examination unfolds, Katrín’s behaviour becomes increasingly concerning, and she begins making choices that are anything but routine.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Six weeks after giving birth, Katrín arrives at her local health clinic with her newborn daughter for a routine check-up. As the examination unfolds, Katrín’s behaviour becomes increasingly concerning, and she begins making choices that are anything but routine."
+  }
+ },
+ {
+  "work_id": "w_4KEZC7D91YE3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/skiladagur.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/skiladagur.jpg"
+  }
+ }
+]

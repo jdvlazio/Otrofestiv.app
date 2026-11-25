@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HC1F0NEY4D",
+  "campo": "directores",
+  "valor": [
+   "Ben Rivers"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 277",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=277",
+  "antes": {
+   "ficci-65": "Ben Rivers"
+  }
+ },
+ {
+  "work_id": "w_R4HC1F0NEY4D",
+  "campo": "anio",
+  "valor": 2011,
+  "motivo": "catálogo oficial de FICCI 65, p. 277",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=277",
+  "antes": {
+   "ficci-65": "2012"
+  }
+ },
+ {
+  "work_id": "w_R4HC1F0NEY4D",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 277",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=277",
+  "antes": {
+   "ficci-65": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_R4HC1F0NEY4D",
+  "campo": "sinopsis.es",
+  "valor": "En medio del bosque escocés, un hombre establece sus propias reglas en relación con el territorio. Lleva una vida de ermitaño, de ritmos pausados y gestos mínimos. Escombros y residuos se transforman en ventanas, paredes, refugio. Filmada en 16mm y en blanco y negro, desplaza lo cotidiano hacia lo mítico y lo prosaico hacia lo surreal.",
+  "motivo": "catálogo oficial de FICCI 65, p. 277",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=277",
+  "antes": {
+   "ficci-65": "En medio del bosque escocés, un hombre establece sus propias reglas en relación con el territorio."
+  }
+ },
+ {
+  "work_id": "w_R4HC1F0NEY4D",
+  "campo": "sinopsis.en",
+  "valor": "In the heart of the Scottish forest, a man sets his own rules in relation to the land. He leads a hermit's life of unhurried rhythms and minimal gestures. Debris and waste are transformed into windows, walls, shelter. Shot on 16mm in black and white, it shifts the everyday toward the mythical and the prosaic toward the surreal.",
+  "motivo": "catálogo oficial de FICCI 65, p. 277",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=277",
+  "antes": {
+   "ficci-65": "Deep in the Scottish forest, a man sets his own rules in relation to the land."
+  }
+ },
+ {
+  "work_id": "w_R4HC1F0NEY4D",
+  "campo": "xref.tmdb",
+  "valor": 97762,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/97762"
+ }
+]

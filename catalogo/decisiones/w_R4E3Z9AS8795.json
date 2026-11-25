@@ -1,0 +1,68 @@
+[
+ {
+  "work_id": "w_R4E3Z9AS8795",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/elephants-in-the-fog.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/elephants-in-the-fog.jpg",
+   "https://image.tmdb.org/t/p/w500/z44dP4mpwchqbpL6jxdmiTJkX4A.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/elephants-in-the-fog.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/z44dP4mpwchqbpL6jxdmiTJkX4A.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4E3Z9AS8795",
+  "campo": "sinopsis.es",
+  "valor": "En un pequeño pueblo nepalí enclavado en el corazón de un bosque poblado por elefantes salvajes, Pirati es la matriarca de una comunidad Kinnar. Sueña con escapar para llevar una vida «normal» junto al hombre del que está enamorada. Pero cuando una de sus hijas desaparece, debe investigar y elegir entre el amor y la responsabilidad hacia su comunidad.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "26a1a05698c7",
+   "e1dc24a5b3fe"
+  ],
+  "antes": {
+   "biff-2026": "En un pequeño pueblo nepalí enclavado en el corazón de un bosque poblado por elefantes salvajes, Pirati es la matriarca de una comunidad Kinnar. Sueña con escapar para llevar una vida «normal» junto al hombre del que está enamorada. Pero cuando una de sus hijas desaparece, debe investigar y elegir entre el amor y la responsabilidad hacia su comunidad.",
+   "tiff-2026": "La matriarca de un pueblo (Puspa Thing Lama) debe elegir entre los deseos de su corazón y su deber con la comunidad cuando una joven desaparece en el bosque, en este thriller delicado y absorbente."
+  }
+ },
+ {
+  "work_id": "w_R4E3Z9AS8795",
+  "campo": "paises",
+  "valor": [
+   "NP",
+   "DE",
+   "BR",
+   "FR",
+   "NO"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1661926)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "Nepal, Alemania, Brasil, Francia, Noruega",
+   "tiff-2026": "Nepal, Francia, Alemania, Brasil, Noruega"
+  }
+ },
+ {
+  "work_id": "w_R4E3Z9AS8795",
+  "campo": "sinopsis.en",
+  "valor": "In a small Nepalese village nestled in the heart of a forest populated by wild elephants, Pirati is the matriarch of a Kinnar community. She dreams of escaping to a “normal” life with the man she is in love with. But when one of her daughters disappears, she must investigate and choose between love and responsibility to her community.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Elephants in the Fog",
+  "antes": {
+   "biff-2026": "In a small Nepalese village nestled in the heart of a forest populated by wild elephants, Pirati is the matriarch of a Kinnar community. She dreams of escaping to a “normal” life with the man she is in love with. But when one of her daughters disappears, she must investigate and choose between love and responsibility to her community.",
+   "tiff-2026": "A village matriarch (Puspa Thing Lama) must choose between her heart’s desires and her duty to her community when a young woman disappears into the forest in this delicate, riveting thriller."
+  }
+ }
+]

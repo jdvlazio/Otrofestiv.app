@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HCNBKANJ6H",
+  "campo": "directores",
+  "valor": [
+   "Mustafa Uzuner"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 138",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=138",
+  "antes": {
+   "ficci-65": "Mustafa Uzuner"
+  }
+ },
+ {
+  "work_id": "w_R4HCNBKANJ6H",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 138",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=138",
+  "antes": {
+   "ficci-65": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HCNBKANJ6H",
+  "campo": "paises",
+  "valor": [
+   "CA",
+   "TR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 138",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=138",
+  "antes": {
+   "ficci-65": "Canadá, Turquía"
+  }
+ },
+ {
+  "work_id": "w_R4HCNBKANJ6H",
+  "campo": "sinopsis.es",
+  "valor": "Ensayo íntimo y poético en tres movimientos sobre la historia reciente de Turquía: de los intentos por ingresar a la Unión Europea al periodo de Erdoğan, pasando por el eclipse solar de 1999. Las capas de tiempo se filtran unas en otras, la memoria personal se entrelaza con la colectiva y surge una sinfonía urbana de la Estambul contemporánea.",
+  "motivo": "catálogo oficial de FICCI 65, p. 138",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=138",
+  "antes": {
+   "ficci-65": "Mustafa Uzuner sigue a un grupo de músicos que recorren Turquía y Canadá preservando tradiciones sonoras que corren el riesgo de desaparecer."
+  }
+ },
+ {
+  "work_id": "w_R4HCNBKANJ6H",
+  "campo": "sinopsis.en",
+  "valor": "An intimate, poetic essay in three movements on Turkey's recent history: from its attempts to join the European Union to the Erdoğan period, by way of the 1999 solar eclipse. Layers of time filter into one another, personal memory intertwines with collective memory, and an urban symphony of contemporary Istanbul emerges.",
+  "motivo": "catálogo oficial de FICCI 65, p. 138",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=138",
+  "antes": {
+   "ficci-65": "Mustafa Uzuner follows a group of musicians traveling through Turkey and Canada, preserving sonic traditions at risk of disappearing."
+  }
+ },
+ {
+  "work_id": "w_R4HCNBKANJ6H",
+  "campo": "xref.tmdb",
+  "valor": 1572192,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1572192"
+ }
+]

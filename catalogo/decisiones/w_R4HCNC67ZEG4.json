@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HCNC67ZEG4",
+  "campo": "directores",
+  "valor": [
+   "Julián Galay"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 206",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=206",
+  "antes": {
+   "ficci-65": "Simon Payne"
+  }
+ },
+ {
+  "work_id": "w_R4HCNC67ZEG4",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 206",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=206",
+  "antes": {
+   "ficci-65": "2017"
+  }
+ },
+ {
+  "work_id": "w_R4HCNC67ZEG4",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 206",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=206",
+  "antes": {
+   "ficci-65": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_R4HCNC67ZEG4",
+  "campo": "sinopsis.es",
+  "valor": "La búsqueda de un sueño abre una deriva entre lo científico y lo onírico por museos, laboratorios y fragmentos de Buenos Aires. Entre encuentros con investigadores y la observación paciente de animales, el documental pregunta qué significa prestar atención a otras formas de vida. El sonido invita a una escucha más amplia del mundo.",
+  "motivo": "catálogo oficial de FICCI 65, p. 206",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=206",
+  "antes": {
+   "ficci-65": "Los Cruces parte de una premisa sencilla y enigmática: la búsqueda de un sueño."
+  }
+ },
+ {
+  "work_id": "w_R4HCNC67ZEG4",
+  "campo": "sinopsis.en",
+  "valor": "The search for a dream opens a drift between the scientific and the dreamlike through museums, laboratories, and fragments of Buenos Aires. Between encounters with researchers and the patient observation of animals, the documentary asks what it means to pay attention to other forms of life. Sound invites a broader listening to the world.",
+  "motivo": "catálogo oficial de FICCI 65, p. 206",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=206",
+  "antes": {
+   "ficci-65": "Los Cruces starts from a simple and enigmatic premise: the search for a dream."
+  }
+ },
+ {
+  "work_id": "w_R4HCNC67ZEG4",
+  "campo": "xref.tmdb",
+  "valor": 1493043,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1493043"
+ }
+]

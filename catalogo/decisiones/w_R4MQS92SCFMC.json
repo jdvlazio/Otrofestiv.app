@@ -1,0 +1,33 @@
+[
+ {
+  "work_id": "w_R4MQS92SCFMC",
+  "campo": "sinopsis.es",
+  "valor": "Miguel, de 17 años, vive en una pequeña ciudad del interior de Brasil y sueña con ser actor. Al pasar una prueba en una gran ciudad, se enfrenta al dilema de dejar atrás su casa y a su mejor amigo, João. Miguel se da cuenta de que huir es más fácil que despedirse.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "05175d7795b2"
+  ],
+  "antes": {
+   "olhar-2026": "Miguel, de 17 años, habitante de una pequeña ciudad del interior de Brasil, sueña con convertirse en actor. Al aprobar una audición en una gran ciudad, se ve ante el dilema de dejar atrás su casa y a su mejor amigo, João. Miguel se da cuenta de que huir es más fácil que despedirse."
+  }
+ },
+ {
+  "work_id": "w_R4MQS92SCFMC",
+  "campo": "xref.tmdb",
+  "valor": 1688833,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/terrestrial-stars/"
+ },
+ {
+  "work_id": "w_R4MQS92SCFMC",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

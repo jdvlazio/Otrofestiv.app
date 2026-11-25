@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HB843T82WT",
+  "campo": "directores",
+  "valor": [
+   "Eva Sajanová"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 250",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=250"
+ },
+ {
+  "work_id": "w_R4HB843T82WT",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 250",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=250"
+ },
+ {
+  "work_id": "w_R4HB843T82WT",
+  "campo": "paises",
+  "valor": [
+   "SK"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 250",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=250",
+  "antes": {
+   "ficci-65": "Eslovaquia"
+  }
+ },
+ {
+  "work_id": "w_R4HB843T82WT",
+  "campo": "sinopsis.es",
+  "valor": "En Bratislava, las fuentes públicas pasan de ser estructuras inmóviles del espacio urbano a presencias vivas capaces de hablar. En esta exploración poética del sonido, el agua conduce la mirada y la escucha a lo largo del día, entre escultura, paisaje sonoro y ficción especulativa, y emerge aquello que la ciudad ha dejado de escuchar.",
+  "motivo": "catálogo oficial de FICCI 65, p. 250",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=250"
+ },
+ {
+  "work_id": "w_R4HB843T82WT",
+  "campo": "sinopsis.en",
+  "valor": "In Bratislava, public fountains shift from immobile structures of the urban landscape to living presences capable of speaking. In this poetic exploration of sound, water guides gaze and listening through the day, between sculpture, soundscape, and speculative fiction, and what the city has ceased to hear begins to emerge.",
+  "motivo": "catálogo oficial de FICCI 65, p. 250",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=250"
+ },
+ {
+  "work_id": "w_R4HB843T82WT",
+  "campo": "xref.tmdb",
+  "valor": 1537269,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1537269"
+ }
+]

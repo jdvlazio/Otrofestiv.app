@@ -1,0 +1,92 @@
+[
+ {
+  "work_id": "w_R4HCNCE5C51N",
+  "campo": "directores",
+  "valor": [
+   "Kim Ekberg"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 110",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=110",
+  "antes": {
+   "ficci-65": "Jack Benjamin Gill"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCE5C51N",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 110",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=110",
+  "antes": {
+   "ficci-65": "2019"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCE5C51N",
+  "campo": "paises",
+  "valor": [
+   "SE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 110",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=110",
+  "antes": {
+   "ficci-65": "Suecia"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCE5C51N",
+  "campo": "sinopsis.es",
+  "valor": "Un hombre de 40 años, en lugar de buscar trabajo, se queda jugando en la calle y sigue viviendo con su madre. En blanco y negro, la película lo sigue en una rutina sencilla en la que se infiltra algo que el modelo capitalista nos ha arrebatado: el ocio. Contar chistes, dormirse mirando al sol, reír a carcajadas del mundo adulto.",
+  "motivo": "catálogo oficial de FICCI 65, p. 110",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=110",
+  "antes": {
+   "ficci-65": "El fantasma de un proyecto económico nacional se ve desestabilizado por un hombre que, en lugar de buscar trabajo, se queda jugando en la calle y sigue viviendo con su madre."
+  }
+ },
+ {
+  "work_id": "w_R4HCNCE5C51N",
+  "campo": "sinopsis.en",
+  "valor": "A 40-year-old man, instead of looking for work, stays playing in the street and still lives with his mother. In black and white, the film follows him through a simple routine infiltrated by something the capitalist model has taken from us: leisure. Telling jokes, falling asleep looking at the sun, laughing out loud at the adult world.",
+  "motivo": "catálogo oficial de FICCI 65, p. 110",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=110",
+  "antes": {
+   "ficci-65": "The ghost of a national economic project is destabilized by a man who, instead of looking for work, stays playing in the street and keeps living with his mother."
+  }
+ },
+ {
+  "work_id": "w_R4HCNCE5C51N",
+  "campo": "xref.tmdb",
+  "valor": 1616878,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1616878"
+ },
+ {
+  "work_id": "w_R4HCNCE5C51N",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/jMFkXsqipwZSRP0913AWv8N5Ok9.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el anterior era de otra película del mismo título; visto uno al lado del otro",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "vistas": [
+   "https://image.tmdb.org/t/p/w185/nNf90VVYTRnVQAGdhWm31cMQyWe.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w185/nNf90VVYTRnVQAGdhWm31cMQyWe.jpg"
+  }
+ }
+]

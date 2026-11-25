@@ -1,0 +1,120 @@
+[
+ {
+  "campo": "directores",
+  "valor": [
+   "Lina Rodríguez"
+  ],
+  "motivo": "la de ficfusa-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficfusa-2026": "Lina Rodríguez",
+   "ficci-65": "Leo Schatzl"
+  },
+  "work_id": "w_R4HB83AP7807"
+ },
+ {
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "la de ficfusa-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficfusa-2026": "2025",
+   "ficci-65": "2005"
+  },
+  "work_id": "w_R4HB83AP7807"
+ },
+ {
+  "work_id": "w_R4HB83AP7807",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "CA"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 36",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=36",
+  "antes": {
+   "ficci-65": "Colombia"
+  }
+ },
+ {
+  "campo": "sinopsis.es",
+  "valor": "A lo largo de más de 70 años, dos mujeres cuentan cómo crecieron en Colombia y emigraron a Canadá. Entrelazada con momentos clave de la historia colombiana, Puntos de fuga es una composición polifónica de espejos, laberintos, sueños y pesadillas que cuestiona la idea de perspectiva y la linealidad de la historia y del tiempo.",
+  "motivo": "la de ficfusa-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficfusa-2026": "A lo largo de más de 70 años, dos mujeres cuentan cómo crecieron en Colombia y emigraron a Canadá. Entrelazada con momentos clave de la historia colombiana, Puntos de fuga es una composición polifónica de espejos, laberintos, sueños y pesadillas que cuestiona la idea de perspectiva y la linealidad de la historia y del tiempo.",
+   "ficci-65": "Lina Rodriguez entreteje la historia de su madre con la suya propia, entrelazándolas con episodios de la historia de Colombia."
+  },
+  "work_id": "w_R4HB83AP7807"
+ },
+ {
+  "campo": "sinopsis.en",
+  "valor": "Spanning over 70 years, two women recount their experiences growing up in Colombia and immigrating to Canada. Intersecting with key moments in Colombian history, Vanishing Points is a polyphonic composition of mirrors, labyrinths, dreams, and nightmares that question the idea of perspective and the linearity of history and time.",
+  "motivo": "la de ficfusa-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficfusa-2026": "Spanning over 70 years, two women recount their experiences growing up in Colombia and immigrating to Canada. Intersecting with key moments in Colombian history, Vanishing Points is a polyphonic composition of mirrors, labyrinths, dreams, and nightmares that question the idea of perspective and the linearity of history and time.",
+   "ficci-65": "Lina Rodriguez interweaves her mother's story with her own, interlacing them with episodes from Colombia's history."
+  },
+  "work_id": "w_R4HB83AP7807"
+ },
+ {
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "la de ficfusa-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficfusa-2026": "Documental"
+  },
+  "work_id": "w_R4HB83AP7807"
+ },
+ {
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/puntos-de-fuga.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "la de ficfusa-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficfusa-2026": "/assets/ficfusa-2026/puntos-de-fuga.jpg",
+   "ficci-65": "https://image.tmdb.org/t/p/w185/uu4faKnq2i8ds8JoSrL110XTXT5.jpg"
+  },
+  "work_id": "w_R4HB83AP7807",
+  "vistas": [
+   "https://image.tmdb.org/t/p/w185/uu4faKnq2i8ds8JoSrL110XTXT5.jpg"
+  ]
+ },
+ {
+  "campo": "xref.letterboxd",
+  "valor": "vanishing-points-2025",
+  "motivo": "la de ficfusa-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficfusa-2026": "vanishing-points-2025"
+  },
+  "work_id": "w_R4HB83AP7807"
+ },
+ {
+  "campo": "xref.tmdb",
+  "valor": 1525164,
+  "motivo": "la de ficfusa-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "ficfusa-2026": "1525164"
+  },
+  "work_id": "w_R4HB83AP7807"
+ }
+]

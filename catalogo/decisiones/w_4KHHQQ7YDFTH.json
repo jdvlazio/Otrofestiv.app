@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KHHQQ7YDFTH",
+  "campo": "directores",
+  "valor": [
+   "Sofía Camargo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Sofía Camargo"
+  }
+ },
+ {
+  "work_id": "w_4KHHQQ7YDFTH",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHHQQ7YDFTH",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KHHQQ7YDFTH",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KHHQQ7YDFTH",
+  "campo": "sinopsis.es",
+  "valor": "Tras la deportación de su esposo, María, una inmigrante mexicana, se muda a California con sus dos hijas para empezar de nuevo. Cuando un perro callejero las sigue hasta su nueva casa y se niega a irse, el silencio entre ellas comienza a quebrarse.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tras la deportación de su esposo, María, una inmigrante mexicana, se muda a California con sus dos hijas para empezar de nuevo. Cuando un perro callejero las sigue hasta su nueva casa y se niega a irse, el silencio entre ellas comienza a quebrarse."
+  }
+ },
+ {
+  "work_id": "w_4KHHQQ7YDFTH",
+  "campo": "sinopsis.en",
+  "valor": "Maria, an immigrant mother, and her two daughters move to California after the father’s deportation. When a stray black dog follows them home and refuses to leave, the family’s silence begins to crack.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Maria, an immigrant mother, and her two daughters move to California after the father’s deportation. When a stray black dog follows them home and refuses to leave, the family’s silence begins to crack."
+  }
+ },
+ {
+  "work_id": "w_4KHHQQ7YDFTH",
+  "campo": "xref.tmdb",
+  "valor": 1747054,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1747054"
+  }
+ },
+ {
+  "work_id": "w_4KHHQQ7YDFTH",
+  "campo": "xref.letterboxd",
+  "valor": "la-selva-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "la-selva-2026"
+  }
+ },
+ {
+  "work_id": "w_4KHHQQ7YDFTH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-selva.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-selva.jpg"
+  }
+ }
+]

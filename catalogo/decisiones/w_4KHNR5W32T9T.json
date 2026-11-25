@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KHNR5W32T9T",
+  "campo": "directores",
+  "valor": [
+   "Gavati Wad"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Gavati Wad"
+  }
+ },
+ {
+  "work_id": "w_4KHNR5W32T9T",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_4KHNR5W32T9T",
+  "campo": "paises",
+  "valor": [
+   "IN",
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "India, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KHNR5W32T9T",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KHNR5W32T9T",
+  "campo": "sinopsis.es",
+  "valor": "Al intentar conciliar el sueño, una joven se pregunta por el cosmos y el lugar que ocupa en él. Conversaciones, visiones e imágenes en 16 mm entrelazan ciencia, espiritualidad y superstición.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Al intentar conciliar el sueño, una joven se pregunta por el cosmos y el lugar que ocupa en él. Conversaciones, visiones e imágenes en 16 mm entrelazan ciencia, espiritualidad y superstición."
+  }
+ },
+ {
+  "work_id": "w_4KHNR5W32T9T",
+  "campo": "sinopsis.en",
+  "valor": "As she tries to fall asleep, a young woman wonders about the cosmos and her place in it. Conversations, visions and 16 mm images bring science, spirituality and superstition together.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "As she tries to fall asleep, a young woman wonders about the cosmos and her place in it. Conversations, visions and 16 mm images bring science, spirituality and superstition together."
+  }
+ },
+ {
+  "work_id": "w_4KHNR5W32T9T",
+  "campo": "xref.tmdb",
+  "valor": 1220561,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1220561"
+  }
+ },
+ {
+  "work_id": "w_4KHNR5W32T9T",
+  "campo": "xref.letterboxd",
+  "valor": "o-seeker",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "o-seeker"
+  }
+ },
+ {
+  "work_id": "w_4KHNR5W32T9T",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/o-seeker.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/o-seeker.jpg"
+  }
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_4RPT53V0H8F6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/todo-lo-que-pasara-manana.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/todo-lo-que-pasara-manana.jpg",
+   "/assets/festicinerio-2026/todo-lo-que-pasara-manana.jpg",
+   "/assets/ficidi-2026/todo-lo-que-pasara-manana.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/todo-lo-que-pasara-manana.jpg",
+   "festicinerio-2026": "/assets/festicinerio-2026/todo-lo-que-pasara-manana.jpg",
+   "ficidi-2026": "/assets/ficidi-2026/todo-lo-que-pasara-manana.jpg"
+  }
+ },
+ {
+  "work_id": "w_4RPT53V0H8F6",
+  "campo": "sinopsis.en",
+  "valor": "A gathering of friends turns into an experience that alters their reality and transforms their relationships.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Todo lo que pasará mañana",
+  "antes": {
+   "aleste-2026": "A hybrid queer short film that follows three friends during a weekend at a cabin in the rural area of Medellín. After spending time at a nearby river, the group arrives at their retreat in the middle of the forest, immersing themselves in a deep psychotropic ritual of love and desire. This experience alters their reality and ends up fracturing their relationship, evoking fragments and scraps of their shared memories. In this trance, a radical transformation is unleashed when they summon, together, a mysterious creature born from within themselves. Through their bodies and visual memory, a mutation occurs that pushes them to escape into the forest during the night. The next morning, each one leaves the cabin on their own, now living in a world where their friendship no longer exists.",
+   "festicinerio-2026": "A gathering of friends turns into an experience that alters their reality and transforms their relationships.",
+   "ficidi-2026": "A gathering of friends turns into an experience that alters their reality and transforms their relationships."
+  }
+ },
+ {
+  "work_id": "w_4RPT53V0H8F6",
+  "campo": "xref.letterboxd",
+  "valor": "everything-that-will-happen-tomorrow",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "aleste-2026": "todo-lo-que-pasara-manana",
+   "festicinerio-2026": "todo-lo-que-pasara-manana",
+   "ficidi-2026": "todo-lo-que-pasara-manana"
+  }
+ }
+]

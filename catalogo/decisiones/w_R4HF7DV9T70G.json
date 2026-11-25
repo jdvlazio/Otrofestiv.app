@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HF7DV9T70G",
+  "campo": "directores",
+  "valor": [
+   "Juan Ibáñez"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 334",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=334",
+  "antes": {
+   "ficci-65": "Juan Ibáñez"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DV9T70G",
+  "campo": "anio",
+  "valor": 1967,
+  "motivo": "catálogo oficial de FICCI 65, p. 334",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=334",
+  "antes": {
+   "ficci-65": "1967"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DV9T70G",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 334",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=334",
+  "antes": {
+   "ficci-65": "México"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DV9T70G",
+  "campo": "sinopsis.es",
+  "valor": "Paloma y Jaime, una pareja joven y rica, quieren seguir de fiesta y se cuelan en un carro ajeno. Es del Gato, un tipo rudo y callejero que, con otros tres hombres, forma la banda de Los caifanes. Por un prostíbulo, una funeraria y una posada de Ciudad de México, la noche revela un mundo oculto a la clase alta. Un melodrama en cinco capítulos.",
+  "motivo": "catálogo oficial de FICCI 65, p. 334",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=334",
+  "antes": {
+   "ficci-65": "Paloma y Jaime, una pareja joven y rica, quieren seguir de fiesta cuando la reunión nocturna y aburrida de sus amigos burgueses termina temprano."
+  }
+ },
+ {
+  "work_id": "w_R4HF7DV9T70G",
+  "campo": "sinopsis.en",
+  "valor": "Paloma and Jaime, a young, wealthy couple, want to keep partying and sneak into a stranger's car. It belongs to El Gato, a tough, streetwise guy who, with three other men, forms the gang Los caifanes. Through a brothel, a funeral home, and an inn in Mexico City, the night reveals a world hidden from the upper class. A melodrama in five chapters.",
+  "motivo": "catálogo oficial de FICCI 65, p. 334",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=334",
+  "antes": {
+   "ficci-65": "Paloma and Jaime, a young wealthy couple, want to keep partying when the dull late-night gathering with their bourgeois friends ends early."
+  }
+ },
+ {
+  "work_id": "w_R4HF7DV9T70G",
+  "campo": "xref.tmdb",
+  "valor": 169428,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/169428"
+ }
+]

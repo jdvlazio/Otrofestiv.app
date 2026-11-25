@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_7THWF5492V4Y",
+  "campo": "directores",
+  "valor": [
+   "Naima Karim"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Naima Karim"
+  }
+ },
+ {
+  "work_id": "w_7THWF5492V4Y",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_7THWF5492V4Y",
+  "campo": "paises",
+  "valor": [
+   "NL",
+   "BD",
+   "SA"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Países Bajos, Bangladesh, Arabia Saudita"
+  }
+ },
+ {
+  "work_id": "w_7THWF5492V4Y",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_7THWF5492V4Y",
+  "campo": "sinopsis.es",
+  "valor": "Historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, es invitado a apoyarla en sus desafíos. Busca generar empatía hacia realidades frecuentemente incomprendidas.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mirage es una historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, recibe la invitación a apoyarla en sus desafíos. La obra busca generar empatía hacia realidades frecuentemente incomprendidas."
+  }
+ },
+ {
+  "work_id": "w_7THWF5492V4Y",
+  "campo": "sinopsis.en",
+  "valor": "An interactive virtual reality story of a young girl battling depression and anxiety, based on the lived experience of Naima Karim and her daughter. The audience journeys through the girl’s mind and, through interactivity and a haptic vest, is encouraged to support her through her challenges. It inspires empathy for often misunderstood realities.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mirage is an interactive Virtual Reality story of a young girl who is battling depression and anxiety, based on the artist Naima Karim and her daughter’s lived experience. The audience embarks on an immersive journey through the young girl’s mind. Using interactivity and a haptic vest, they will be encouraged to support her through her challenges. Mirage sheds light on the often misunderstood realities of depression and anxiety, inspiring empathy."
+  }
+ },
+ {
+  "work_id": "w_7THWF5492V4Y",
+  "campo": "xref.tmdb",
+  "valor": 1705630,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1705630"
+  }
+ },
+ {
+  "work_id": "w_7THWF5492V4Y",
+  "campo": "xref.letterboxd",
+  "valor": "mirage-2025-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "mirage-2025-1"
+  }
+ },
+ {
+  "work_id": "w_7THWF5492V4Y",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/mirage.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/mirage.jpg"
+  }
+ }
+]

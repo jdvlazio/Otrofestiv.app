@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_4KDRP7E1EVR5",
+  "campo": "directores",
+  "valor": [
+   "Antonia Colodro",
+   "Alaa Hathleen"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Antonia Colodro, Alaa Hathleen"
+  }
+ },
+ {
+  "work_id": "w_4KDRP7E1EVR5",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KDRP7E1EVR5",
+  "campo": "paises",
+  "valor": [
+   "PS",
+   "CL",
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Palestina, Chile, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KDRP7E1EVR5",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KDRP7E1EVR5",
+  "campo": "sinopsis.es",
+  "valor": "Filmado íntegramente con imágenes de teléfonos celulares, el documental sigue a Alaa, futbolista y fisioterapeuta de Umm al-Khair, en Cisjordania bajo ocupación israelí, mientras registra la vida cotidiana entre demoliciones, violencia de colonos y control militar.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Filmado íntegramente con imágenes de teléfonos celulares, el documental sigue a Alaa, futbolista y fisioterapeuta de Umm al-Khair, en Cisjordania bajo ocupación israelí, mientras registra la vida cotidiana entre demoliciones, violencia de colonos y control militar."
+  }
+ },
+ {
+  "work_id": "w_4KDRP7E1EVR5",
+  "campo": "sinopsis.en",
+  "valor": "Filmed entirely with cellphone footage, Alaa, a soccer player and physical therapist from Umm al-Khair in the Israeli-occupied West Bank, records daily life amid demolitions, settler violence, and military control.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Filmed entirely with cellphone footage, Alaa, a soccer player and physical therapist from Umm al-Khair in the Israeli-occupied West Bank, records daily life amid demolitions, settler violence, and military control."
+  }
+ },
+ {
+  "work_id": "w_4KDRP7E1EVR5",
+  "campo": "xref.tmdb",
+  "valor": 1589944,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1589944"
+  }
+ },
+ {
+  "work_id": "w_4KDRP7E1EVR5",
+  "campo": "xref.letterboxd",
+  "valor": "living-despite-them",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "living-despite-them"
+  }
+ },
+ {
+  "work_id": "w_4KDRP7E1EVR5",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/living-despite-them.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/living-despite-them.jpg"
+  }
+ }
+]

@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HCNCG1PCNP",
+  "campo": "directores",
+  "valor": [
+   "Jorge Sanjinés"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 262",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=262"
+ },
+ {
+  "work_id": "w_R4HCNCG1PCNP",
+  "campo": "anio",
+  "valor": 1965,
+  "motivo": "catálogo oficial de FICCI 65, p. 262",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=262"
+ },
+ {
+  "work_id": "w_R4HCNCG1PCNP",
+  "campo": "paises",
+  "valor": [
+   "BO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 262",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=262",
+  "antes": {
+   "ficci-65": "Bolivia"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCG1PCNP",
+  "campo": "sinopsis.es",
+  "valor": "Desde la ciudad minera de Huanuni, la película entra poco a poco en la oscuridad de las minas y en la precariedad de los pirquiñeros, trabajadores independientes que perforan la roca solo con cincel y martillo. En los parajes más peligrosos y abandonados, uno de ellos comienza a percibir el sonido y el movimiento de la tierra.",
+  "motivo": "catálogo oficial de FICCI 65, p. 262",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=262"
+ },
+ {
+  "work_id": "w_R4HCNCG1PCNP",
+  "campo": "sinopsis.en",
+  "valor": "From the mining town of Huanuni, the film gradually enters the darkness of the mines and the precarious life of the pirquiñeros, independent workers who break through rock with only a chisel and hammer. In the most dangerous and abandoned areas, one of them begins to sense the sound and movement of the earth.",
+  "motivo": "catálogo oficial de FICCI 65, p. 262",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=262"
+ },
+ {
+  "work_id": "w_R4HCNCG1PCNP",
+  "campo": "xref.tmdb",
+  "valor": 521520,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/521520"
+ }
+]

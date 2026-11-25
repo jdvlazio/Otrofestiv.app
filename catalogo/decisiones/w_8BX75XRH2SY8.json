@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX75XRH2SY8",
+  "campo": "directores",
+  "valor": [
+   "Kateryna Gornostai"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Kateryna Gornostai"
+  }
+ },
+ {
+  "work_id": "w_8BX75XRH2SY8",
+  "campo": "anio",
+  "valor": 2021,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2021"
+  }
+ },
+ {
+  "work_id": "w_8BX75XRH2SY8",
+  "campo": "paises",
+  "valor": [
+   "UA"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Ucrania"
+  }
+ },
+ {
+  "work_id": "w_8BX75XRH2SY8",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX75XRH2SY8",
+  "campo": "sinopsis.es",
+  "valor": "Salir con amigos, fumar mucho, girar botellas y besarse, cometer errores, jugar, negarse a aceptar, soñar con los ojos abiertos: la vida adolescente puede ser abrumadoramente hermosa y difícil a la vez. Un retrato emotivo y de muchas capas de una generación, que fluye entre la ficción y el documental.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Salir con amigos, fumar mucho, girar botellas y besarse, cometer errores, jugar, negarse a aceptar, soñar con los ojos abiertos: la vida adolescente puede ser abrumadoramente hermosa y difícil a la vez. Un retrato emotivo y de muchas capas de una generación, que fluye entre la ficción y el documental."
+  }
+ },
+ {
+  "work_id": "w_8BX75XRH2SY8",
+  "campo": "sinopsis.en",
+  "valor": "Hanging out with friends, smoking a lot, spinning bottles and kissing, making mistakes, playing, refusing to accept, dreaming with open eyes: teenage life can be overwhelmingly beautiful and difficult at once. An emotional, multi-layered portrait of a generation that flows between fiction and documentary.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Hanging out with friends, smoking a lot, spinning bottles and kissing, making mistakes, playing, refusing to accept, dreaming with open eyes: teenage life can be overwhelmingly beautiful and difficult at once. An emotional, multi-layered portrait of a generation that flows between fiction and documentary."
+  }
+ },
+ {
+  "work_id": "w_8BX75XRH2SY8",
+  "campo": "xref.tmdb",
+  "valor": 794785,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "794785"
+  }
+ },
+ {
+  "work_id": "w_8BX75XRH2SY8",
+  "campo": "xref.letterboxd",
+  "valor": "stop-zemlia",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "stop-zemlia"
+  }
+ },
+ {
+  "work_id": "w_8BX75XRH2SY8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/stop-zemlia.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/stop-zemlia.jpg"
+  }
+ }
+]

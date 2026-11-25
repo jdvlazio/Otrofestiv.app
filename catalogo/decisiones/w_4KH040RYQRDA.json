@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KH040RYQRDA",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "b57b09c85cfb"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Gitano",
+  "valor": "Jesús, un niño gitano, afronta con ilusión su primer día de instituto, pero pronto choca con barreras invisibles que le hacen cuestionarse si ese camino está hecho para él. Entre prejuicios, su identidad comienza a tambalearse. Rubén, su profesor de Historia, le abrirá una posibilidad: cuestionar los estereotipos y construir su propio futuro.",
+  "original": "Jesús, un niño gitano, afronta con ilusión su primer día de instituto, pero pronto choca con barreras invisibles que le hacen cuestionarse si ese camino está hecho para él. Entre expectativas sociales, prejuicios y el peso de su entorno, su identidad comienza a tambalearse. La figura de Rubén, su profesor de Historia, le abrirá una nueva mirada: la posibilidad de cuestionar los estereotipos y construir su propio futuro.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "707caea1287b"
+  }
+ },
+ {
+  "work_id": "w_4KH040RYQRDA",
+  "campo": "directores",
+  "valor": [
+   "Cristian Serrano Jiménez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Cristian Serrano Jiménez"
+  }
+ },
+ {
+  "work_id": "w_4KH040RYQRDA",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KH040RYQRDA",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KH040RYQRDA",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KH040RYQRDA",
+  "campo": "sinopsis.en",
+  "valor": "Jesús, a Roma boy, approaches his first day of high school with excitement, but soon encounters invisible barriers that make him question whether this path is truly meant for him. Caught between social expectations, prejudice, and the weight of his environment, his identity begins to falter. Through Rubén, his History teacher, he discovers a new perspective: the possibility of challenging stereotypes and shaping his own future.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Jesús, a Roma boy, approaches his first day of high school with excitement, but soon encounters invisible barriers that make him question whether this path is truly meant for him. Caught between social expectations, prejudice, and the weight of his environment, his identity begins to falter. Through Rubén, his History teacher, he discovers a new perspective: the possibility of challenging stereotypes and shaping his own future."
+  }
+ },
+ {
+  "work_id": "w_4KH040RYQRDA",
+  "campo": "xref.tmdb",
+  "valor": 1782360,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1782360"
+  }
+ },
+ {
+  "work_id": "w_4KH040RYQRDA",
+  "campo": "xref.letterboxd",
+  "valor": "gitano-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "gitano-2026"
+  }
+ },
+ {
+  "work_id": "w_4KH040RYQRDA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/gitano.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/gitano.jpg"
+  }
+ }
+]

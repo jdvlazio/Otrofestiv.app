@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGE14X32AE7",
+  "campo": "directores",
+  "valor": [
+   "Sarah Saidan"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Sarah Saidan"
+  }
+ },
+ {
+  "work_id": "w_4KGE14X32AE7",
+  "campo": "anio",
+  "valor": 2014,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2014"
+  }
+ },
+ {
+  "work_id": "w_4KGE14X32AE7",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KGE14X32AE7",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KGE14X32AE7",
+  "campo": "sinopsis.es",
+  "valor": "Vida, una joven socorrista iraní, aspira a representar a su equipo en una competición internacional en Australia. La llegada de Sareh, una nueva nadadora tan rápida y talentosa como ella, cambia sus expectativas.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Vida, una joven socorrista iraní, aspira a representar a su equipo en una competición internacional en Australia. La llegada de Sareh, una nueva nadadora tan rápida y talentosa como ella, cambia sus expectativas."
+  }
+ },
+ {
+  "work_id": "w_4KGE14X32AE7",
+  "campo": "sinopsis.en",
+  "valor": "Vida, a young Iranian lifeguard, hopes to represent her team at an international competition in Australia. Her expectations change when Sareh arrives, a newcomer whose speed and talent match her own.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Vida, a young Iranian lifeguard, hopes to represent her team at an international competition in Australia. Her expectations change when Sareh arrives, a newcomer whose speed and talent match her own."
+  }
+ },
+ {
+  "work_id": "w_4KGE14X32AE7",
+  "campo": "xref.tmdb",
+  "valor": 344653,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "344653"
+  }
+ },
+ {
+  "work_id": "w_4KGE14X32AE7",
+  "campo": "xref.letterboxd",
+  "valor": "beach-flags",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "beach-flags"
+  }
+ },
+ {
+  "work_id": "w_4KGE14X32AE7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/beach-flags.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/beach-flags.jpg"
+  }
+ }
+]

@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_4KEB44TF4HF7",
+  "campo": "directores",
+  "valor": [
+   "Felipe Casanova"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Felipe Casanova"
+  }
+ },
+ {
+  "work_id": "w_4KEB44TF4HF7",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KEB44TF4HF7",
+  "campo": "paises",
+  "valor": [
+   "BE",
+   "CH",
+   "BR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Bélgica, Suiza, Brasil"
+  }
+ },
+ {
+  "work_id": "w_4KEB44TF4HF7",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEB44TF4HF7",
+  "campo": "sinopsis.es",
+  "valor": "En medio del bullicio del Carnaval de Río, Ilma le escribe a su hijo. ¿Cómo percibe su presencia entre la multitud? Suspendida en el tiempo, la celebración se convierte en un espacio de memoria y resistencia política.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En medio del bullicio del Carnaval de Río, Ilma le escribe a su hijo. ¿Cómo percibe su presencia entre la multitud? Suspendida en el tiempo, la celebración se convierte en un espacio de memoria y resistencia política."
+  }
+ },
+ {
+  "work_id": "w_4KEB44TF4HF7",
+  "campo": "sinopsis.en",
+  "valor": "Within the revelry of Rio’s Carnival, Ilma writes to her son. How does she sense his presence in the crowd? Suspended in time, the celebration becomes a space of memory and political resistance.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Within the revelry of Rio’s Carnival, Ilma writes to her son. How does she sense his presence in the crowd? Suspended in time, the celebration becomes a space of memory and political resistance."
+  }
+ },
+ {
+  "work_id": "w_4KEB44TF4HF7",
+  "campo": "xref.tmdb",
+  "valor": 1522351,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1522351"
+  }
+ },
+ {
+  "work_id": "w_4KEB44TF4HF7",
+  "campo": "xref.letterboxd",
+  "valor": "rio-remains-beautiful",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "rio-remains-beautiful"
+  }
+ },
+ {
+  "work_id": "w_4KEB44TF4HF7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/o-rio-de-janeiro-continua-lindo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/o-rio-de-janeiro-continua-lindo.jpg"
+  }
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4K5WM3QWZ9G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/leonel.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bhff-2026/leonel.jpg",
+   "/assets/itagui-2026/leonel.jpg"
+  ],
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/leonel.jpg",
+   "itagui-2026": "/assets/itagui-2026/leonel.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4K5WM3QWZ9G",
+  "campo": "sinopsis.es",
+  "valor": "Leonel despierta sin memoria en una granja aislada. Afuera, algo lo observa. Mientras intenta descubrir quién es y cómo llegó allí, sucesos extraños empiezan a revelar fragmentos de un pasado que preferiría olvidar. Pronto, las respuestas resultan más perturbadoras que la oscuridad que lo rodea.",
+  "motivo": "corrección de «habla del evento»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "3fd98c98693d"
+  ],
+  "antes": {
+   "bhff-2026": "Invitados: Equipo de producción.",
+   "itagui-2026": "Invitados: Equipo de producción."
+  }
+ },
+ {
+  "work_id": "w_R4K5WM3QWZ9G",
+  "campo": "directores",
+  "valor": [
+   "Simón Ceballos Escobar"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "bhff-2026": "Simón Ceballos Escobar",
+   "itagui-2026": "Simón Ceballos"
+  }
+ }
+]

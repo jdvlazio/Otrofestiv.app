@@ -1,0 +1,95 @@
+[
+ {
+  "work_id": "w_4KE6WGWSC2GA",
+  "campo": "directores",
+  "valor": [
+   "Zofia Zwiruk"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Zofia Zwiruk"
+  }
+ },
+ {
+  "work_id": "w_4KE6WGWSC2GA",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KE6WGWSC2GA",
+  "campo": "paises",
+  "valor": [
+   "PL"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Polonia"
+  }
+ },
+ {
+  "work_id": "w_4KE6WGWSC2GA",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KE6WGWSC2GA",
+  "campo": "sinopsis.es",
+  "valor": "Dos mujeres cuidan a una niña que despierta gritando cada noche. Agotadas por el insomnio y la creciente ansiedad, realizan un ritual para librarla de sus pesadillas. Aunque funciona, lo que provoca los gritos permanece: en lugar de desaparecer, pasa a una de las mujeres, obligándola a enfrentarse a sus propios miedos.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Dos mujeres cuidan a una niña que despierta gritando cada noche. Agotadas por el insomnio y la creciente ansiedad, realizan un ritual para librarla de sus pesadillas. Aunque funciona, lo que provoca los gritos permanece: en lugar de desaparecer, pasa a una de las mujeres, obligándola a enfrentarse a sus propios miedos."
+  }
+ },
+ {
+  "work_id": "w_4KE6WGWSC2GA",
+  "campo": "sinopsis.en",
+  "valor": "Two women take care of the girl who wakes up screaming every night. Tired from restless nights and growing anxiety, they perform a ritual meant to get rid of the child’s nightmares. Even though it yields results, the thing behind the screams still lingers. Instead of disappearing, it gets passed onto one of the women, forcing her to confront her own fears.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Two women take care of the girl who wakes up screaming every night. Tired from restless nights and growing anxiety, they perform a ritual meant to get rid of the child’s nightmares. Even though it yields results, the thing behind the screams still lingers. Instead of disappearing, it gets passed onto one of the women, forcing her to confront her own fears."
+  }
+ },
+ {
+  "work_id": "w_4KE6WGWSC2GA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/szepty.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/szepty.jpg"
+  }
+ }
+]
