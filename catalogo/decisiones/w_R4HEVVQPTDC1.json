@@ -41,16 +41,26 @@
   "work_id": "w_R4HEVVQPTDC1",
   "campo": "directores",
   "valor": [
-   "Santiago Alejandro Muñoz",
    "Atikeinis Durán Izquierdo"
   ],
-  "motivo": "un dato por obra: el valor del almacén (festival)",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "motivo": "catálogo FICCI, afiche y FICCALI; solo TMDB sumaba a su productor",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "antes": {
    "ficcali-2026": "Atikeinis Durán Izquierdo",
    "ficci-65": "Santiago Alejandro Muñoz, Atikeinis Durán Izquierdo",
    "ficdeh-2026": "Atikeinis Durán Izquierdo"
-  }
+  },
+  "anteriores": [
+   {
+    "valor": [
+     "Santiago Alejandro Muñoz",
+     "Atikeinis Durán Izquierdo"
+    ],
+    "motivo": "un dato por obra: el valor del almacén (festival)",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)"
+   }
+  ]
  }
 ]

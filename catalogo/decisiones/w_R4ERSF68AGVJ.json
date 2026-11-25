@@ -25,10 +25,10 @@
  {
   "work_id": "w_R4ERSF68AGVJ",
   "campo": "sinopsis.es",
-  "valor": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2025, villadeleyvaiff-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Su hijo está enfermo, su esposa está embarazada y no hay dinero para un médico. Una noche se emborracha y es arrestado; en la cárcel, en un arranque de furia, se rebela contra el cacique del pueblo.",
+  "motivo": "Texto cortado: faltaban el hijo enfermo y la rebelión, idea central.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "24dec557e474",
    "72090922bf90",
@@ -39,7 +39,20 @@
    "filcmar-2026": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Su hijo está enfermo, su esposa está embarazada y él reproduce la violencia que lo rodea. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado. En la cárcel, en un arrebato de furia, se rebela contra el jefe político del pueblo de la única manera que puede.",
    "mubibogota-2026": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Su hijo está enfermo, su esposa embarazada, y él mismo reproduce la violencia que lo rodea. Sin dinero para tratamientos médicos, una noche se emborracha y es arrestado. En la cárcel, en un estallido de furia, se rebela contra el cacique político del pueblo de la única manera que le es posible. Q&A con Vladimir Durán y Pedro Adrián Zuluaga",
    "villadeleyvaiff-2026": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2025, villadeleyvaiff-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "24dec557e474",
+     "72090922bf90",
+     "856c5d411ab5"
+    ]
+   }
+  ]
  },
  {
   "work_id": "w_R4ERSF68AGVJ",
@@ -61,16 +74,24 @@
  {
   "work_id": "w_R4ERSF68AGVJ",
   "campo": "sinopsis.en",
-  "valor": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to secure his family's survival. With no money for medical treatment, one night he gets drunk and is arrested.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to secure his family's survival. His son is ill, his wife is pregnant and there is no money for treatment. One night he gets drunk and is arrested; in jail, in a burst of fury, he rebels against the town's political boss.",
+  "motivo": "Texto cortado: faltaban el hijo enfermo y la rebelión, idea central.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "titulo": "La paga",
   "antes": {
    "cinemancia-2025": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to secure his family's survival. With no money for medical treatment, one night he gets drunk and is arrested.",
    "filcmar-2026": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry.",
    "mubibogota-2026": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry.",
    "villadeleyvaiff-2026": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to secure his family's survival. With no money for medical treatment, one night he gets drunk and is arrested.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
  }
 ]

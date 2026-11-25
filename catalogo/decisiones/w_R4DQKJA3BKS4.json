@@ -21,10 +21,10 @@
  {
   "work_id": "w_R4DQKJA3BKS4",
   "campo": "sinopsis.es",
-  "valor": "Finales de la década de 1980 en New York. Jimmy George, un carismático artista del Downtown, se rebela contra su propia mortalidad entregándose por completo a un nuevo papel, a un romance imprudente y al abrazo de su comunidad creativa.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "Finales de la década de 1980 en Nueva York. Jimmy George, un carismático artista del Downtown, se rebela contra su propia mortalidad entregándose por completo a un nuevo papel, a un romance imprudente y al abrazo de su comunidad creativa.",
+  "motivo": "topónimo sin traducir",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "73f89a203868",
    "91b18104cae7"
@@ -32,7 +32,19 @@
   "antes": {
    "biff-2026": "Finales de la década de 1980 en New York. Jimmy George, un carismático artista del Downtown, se rebela contra su propia mortalidad entregándose por completo a un nuevo papel, a un romance imprudente y al abrazo de su comunidad creativa.",
    "tiff-2026": "La mirada de Ira Sachs sobre unos artistas neoyorquinos que viven bajo el fantasma del sida en los años ochenta se centra en la alegría y en la salvación que da la creación."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Finales de la década de 1980 en New York. Jimmy George, un carismático artista del Downtown, se rebela contra su propia mortalidad entregándose por completo a un nuevo papel, a un romance imprudente y al abrazo de su comunidad creativa.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "73f89a203868",
+     "91b18104cae7"
+    ]
+   }
+  ]
  },
  {
   "work_id": "w_R4DQKJA3BKS4",

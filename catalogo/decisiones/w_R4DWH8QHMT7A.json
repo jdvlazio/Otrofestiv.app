@@ -21,10 +21,10 @@
  {
   "work_id": "w_R4DWH8QHMT7A",
   "campo": "sinopsis.es",
-  "valor": "Los Gheorghiu, una devota pareja rumano-noruega, se instalan en un pueblo situado en un fiordo remoto, donde entablan una estrecha relación con sus vecinos, los Halberg. Sus hijos se hacen amigos a pesar de sus diferentes formas de educación. Cuando la adolescente Elia Gheorghiu llega a la escuela con algunos moretones en el cuerpo, la comunidad se pregunta si la educación tradicional que los padres de los Gheorghiu les imparten tendría algo que ver con ello.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "Los Gheorghiu, una devota pareja rumano-noruega, se instalan en un pueblo junto a un fiordo, donde se hacen amigos de sus vecinos, los Halberg. Cuando la adolescente Elia Gheorghiu llega a la escuela con moretones, la comunidad se pregunta si tiene que ver la educación tradicional que reciben los hijos de la pareja.",
+  "motivo": "«la que los padres de los Gheorghiu les imparten» cambia el hecho: los padres son los Gheorghiu (TMDB, Cannes)",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "98bc5043c08f",
    "fc61e1b0abae"
@@ -32,7 +32,19 @@
   "antes": {
    "biff-2026": "Los Gheorghiu, una devota pareja rumano-noruega, se instalan en un pueblo situado en un fiordo remoto, donde entablan una estrecha relación con sus vecinos, los Halberg. Sus hijos se hacen amigos a pesar de sus diferentes formas de educación. Cuando la adolescente Elia Gheorghiu llega a la escuela con algunos moretones en el cuerpo, la comunidad se pregunta si la educación tradicional que los padres de los Gheorghiu les imparten tendría algo que ver con ello.",
    "tiff-2026": "Ganadora de la Palma de Oro en el pasado Festival de Cannes, lo último del guionista y director Cristian Mungiu es un drama judicial de alto voltaje, sostenido por un dilema moral profundo."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Los Gheorghiu, una devota pareja rumano-noruega, se instalan en un pueblo situado en un fiordo remoto, donde entablan una estrecha relación con sus vecinos, los Halberg. Sus hijos se hacen amigos a pesar de sus diferentes formas de educación. Cuando la adolescente Elia Gheorghiu llega a la escuela con algunos moretones en el cuerpo, la comunidad se pregunta si la educación tradicional que los padres de los Gheorghiu les imparten tendría algo que ver con ello.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "98bc5043c08f",
+     "fc61e1b0abae"
+    ]
+   }
+  ]
  },
  {
   "work_id": "w_R4DWH8QHMT7A",
@@ -57,14 +69,22 @@
  {
   "work_id": "w_R4DWH8QHMT7A",
   "campo": "sinopsis.en",
-  "valor": "Following the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave their life behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth gives them hope for a fresh start. But the fragile peace begins to unravel when the Gheorghiu family’s young daughter, Elia, arrives at school covered in bruises.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "After the deaths of Mihai's parents, Mihai and Lisbet Gheorghiu leave Romania and move with their children to a remote village in Norway, near Lisbet's family. They grow close to their neighbors, the Halbergs, but the fragile peace begins to unravel when the Gheorghius' daughter Elia arrives at school covered in bruises.",
+  "motivo": "el personaje es Lisbet (TMDB), no Lisbeth; se quita «young», que choca con la adolescente del español",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "titulo": "Fjord",
   "antes": {
    "biff-2026": "Following the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave their life behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth gives them hope for a fresh start. But the fragile peace begins to unravel when the Gheorghiu family’s young daughter, Elia, arrives at school covered in bruises.",
    "tiff-2026": "Winner of the prestigious Palme d’Or at this year’s Cannes Film Festival, the latest from writer-director Cristian Mungiu is a gripping high-stakes courtroom drama driven by a profound moral dilemma."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Following the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave their life behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth gives them hope for a fresh start. But the fragile peace begins to unravel when the Gheorghiu family’s young daughter, Elia, arrives at school covered in bruises.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
  }
 ]

@@ -26,5 +26,32 @@
   "fecha": "2026-11-24",
   "quien": "plan del almacén (Juan, «sigue con el plan»)",
   "fuente": "https://letterboxd.com/film/cantos-al-juego-de-bolar/"
+ },
+ {
+  "work_id": "w_R4NEB25EY9VN",
+  "campo": "sinopsis.es",
+  "valor": "Una pieza de animación poética que explora el fútbol no desde la competencia, sino como un rito, una danza y una celebración colectiva, y acompaña visualmente un poema dedicado al movimiento y a la sensibilidad del juego.",
+  "motivo": "lo publicado no aparece en ninguna fuente; TMDB describe la obra",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "siembrafest-2026": "Un ensayo audiovisual y poético sobre la infancia, el balón y la esencia del juego. Una reflexión sobre el fútbol como libertad, imaginación y encuentro colectivo.",
+   "tercertiempo-2026": "Un ensayo audiovisual y poético sobre la infancia, el balón y la esencia del juego. Una reflexión sobre el fútbol como libertad, imaginación y encuentro colectivo."
+  },
+  "vistas": [
+   "3ceb118f6f65"
+  ]
+ },
+ {
+  "work_id": "w_R4NEB25EY9VN",
+  "campo": "sinopsis.en",
+  "valor": "A poetic animated piece that explores football not as competition but as a rite, a dance and a collective celebration, a visual accompaniment to a poem devoted to movement and to the sensibility of the game.",
+  "motivo": "lo publicado no aparece en ninguna fuente; TMDB describe la obra",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "siembrafest-2026": "A poetic audiovisual essay on childhood, the ball and the essence of play. A reflection on football as freedom, imagination and collective encounter.",
+   "tercertiempo-2026": "A poetic audiovisual essay on childhood, the ball and the essence of play. A reflection on football as freedom, imagination and collective encounter."
+  }
  }
 ]

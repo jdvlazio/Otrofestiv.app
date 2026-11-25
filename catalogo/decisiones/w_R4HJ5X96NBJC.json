@@ -40,5 +40,17 @@
   "fecha": "2026-11-24",
   "quien": "plan del almacén (Juan, «sigue con el plan»)",
   "fuente": "https://letterboxd.com/film/herencia-los-cantos-de-la-tierra/"
+ },
+ {
+  "work_id": "w_R4HJ5X96NBJC",
+  "campo": "sinopsis.en",
+  "valor": "For generations, peasant music has carried the stories, customs and affections of rural communities in Colombia's interior. Through coplas, rhythms and traditional instruments, young and old keep alive a heritage born of the land, work and the musical fusions that gave a whole region its identity.",
+  "motivo": "«carranguera», requinto, tiple y guacharaca no están en TMDB; se traduce el español.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "ficdeh-2026": "A documentary celebrating peasant 'carranguera' music —voices, stories and instruments like the requinto, tiple and guacharaca— as the root of rural Colombian identity.",
+   "siembrafest-2026": "A documentary celebrating peasant 'carranguera' music —voices, stories and instruments like the requinto, tiple and guacharaca— as the root of rural Colombian identity."
+  }
  }
 ]

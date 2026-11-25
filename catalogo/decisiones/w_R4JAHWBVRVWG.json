@@ -35,16 +35,28 @@
  {
   "work_id": "w_R4JAHWBVRVWG",
   "campo": "sinopsis.es",
-  "valor": "Narra la historia de Óscar, un hombre que regresa a su pueblo en Jalisco tras la inminente muerte de su padre, el cartero local. La película está protagonizada por Fátima Molina, Pablo Astiazarán y Giovanna Zacarías, explorando temas como la migración, el duelo y la ausencia.",
-  "motivo": "se quita lo que no es sinopsis; nada se escribe",
-  "fecha": "2026-11-24",
-  "quien": "Juan (hoja del paso 6)",
+  "valor": "Ante la muerte inminente de su padre, el cartero del pueblo, Óscar vuelve a México por primera vez y descubre que es el único hombre entre las pocas mujeres del lugar. Mientras intenta regresar a Estados Unidos, se encarga del correo y le escribe a un niño las cartas que este espera de su padre.",
+  "motivo": "reparto y temas en vez de sinopsis",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "antes": {
    "ficpa-2026": "Narra la historia de Óscar, un hombre que regresa a su pueblo en Jalisco tras la inminente muerte de su padre, el cartero local. La película está protagonizada por Fátima Molina, Pablo Astiazarán y Giovanna Zacarías, explorando temas como la migración, el duelo y la ausencia. Largometraje Internacional Documental",
    "guatape-2026": "Narra la historia de Óscar, un hombre que regresa a su pueblo en Jalisco tras la inminente muerte de su padre, el cartero local. La película está protagonizada por Fátima Molina, Pablo Astiazarán y Giovanna Zacarías, explorando temas como la migración, el duelo y la ausencia. Largometraje Internacional Documental"
   },
   "vistas": [
+   "0c09026b930e",
    "5f924ee470c2"
+  ],
+  "anteriores": [
+   {
+    "valor": "Narra la historia de Óscar, un hombre que regresa a su pueblo en Jalisco tras la inminente muerte de su padre, el cartero local. La película está protagonizada por Fátima Molina, Pablo Astiazarán y Giovanna Zacarías, explorando temas como la migración, el duelo y la ausencia.",
+    "motivo": "se quita lo que no es sinopsis; nada se escribe",
+    "fecha": "2026-11-24",
+    "quien": "Juan (hoja del paso 6)",
+    "vistas": [
+     "5f924ee470c2"
+    ]
+   }
   ]
  },
  {
