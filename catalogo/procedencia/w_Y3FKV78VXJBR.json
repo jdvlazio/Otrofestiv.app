@@ -4,14 +4,14 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "humano",
-  "regla": "decisión",
-  "motivo": "alta desde cajica-2026",
-  "fecha": "2026-11-25"
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "beca de creación de cortometrajes adjudicada el 7 oct 2026 (Resolución 099)",
+  "fecha": "2026-11-25"
  },
  "paises": {
   "fuente": "humano",
