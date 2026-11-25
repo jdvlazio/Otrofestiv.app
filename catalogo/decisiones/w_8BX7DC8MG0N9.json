@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7DC8MG0N9",
+  "campo": "directores",
+  "valor": [
+   "Cristina Rodríguez Paz"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Cristina Rodríguez Paz"
+  }
+ },
+ {
+  "work_id": "w_8BX7DC8MG0N9",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_8BX7DC8MG0N9",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_8BX7DC8MG0N9",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_8BX7DC8MG0N9",
+  "campo": "sinopsis.es",
+  "valor": "Una foquista en crisis profesional emprende un viaje hasta las últimas fareras, que le muestran otro modo de estar en el mundo. La búsqueda se vuelve un relato interior, entrelazado con el proceso de hacer cine: una carta para su sobrino y una oda al documental y a su poder de capturar lo que está a punto de desaparecer.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Una foquista en crisis profesional emprende un viaje hasta las últimas fareras, que le muestran otro modo de estar en el mundo. La búsqueda se vuelve un relato interior, entrelazado con el proceso de hacer cine: una carta para su sobrino y una oda al documental y a su poder de capturar lo que está a punto de desaparecer."
+  }
+ },
+ {
+  "work_id": "w_8BX7DC8MG0N9",
+  "campo": "sinopsis.en",
+  "valor": "A focus puller in a professional crisis travels to the last women lighthouse keepers, who show her another way of being in the world. The search becomes an inner story interwoven with the process of making films: a letter to her nephew and an ode to documentary and its power to capture what is about to disappear.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "A focus puller in a professional crisis travels to the last women lighthouse keepers, who show her another way of being in the world. The search becomes an inner story interwoven with the process of making films: a letter to her nephew and an ode to documentary and its power to capture what is about to disappear."
+  }
+ },
+ {
+  "work_id": "w_8BX7DC8MG0N9",
+  "campo": "xref.tmdb",
+  "valor": 1582354,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1582354"
+  }
+ },
+ {
+  "work_id": "w_8BX7DC8MG0N9",
+  "campo": "xref.letterboxd",
+  "valor": "even-if-we-are-islands",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "even-if-we-are-islands"
+  }
+ },
+ {
+  "work_id": "w_8BX7DC8MG0N9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/aunque-seamos-islas.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/aunque-seamos-islas.jpg"
+  }
+ }
+]

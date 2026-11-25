@@ -1,0 +1,60 @@
+[
+ {
+  "work_id": "w_R4JKF0VSTNC1",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/anibia-2026/chicha-la-chicharra.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/anibia-2026/chicha-la-chicharra.jpg",
+   "/assets/ficfusa-2026/chicha-la-chicharra.jpg",
+   "/assets/filcmar-2026/chicha-la-chicharra.jpg",
+   "https://image.tmdb.org/t/p/w500/knhGoKZFD0s4CyvzpMFXsqrkdPO.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/chicha-la-chicharra.jpg",
+   "ficfusa-2026": "/assets/ficfusa-2026/chicha-la-chicharra.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/chicha-la-chicharra.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/knhGoKZFD0s4CyvzpMFXsqrkdPO.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4JKF0VSTNC1",
+  "campo": "sinopsis.es",
+  "valor": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficfusa-2026, siembrafest-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "3f3913786482",
+   "7a91ac56f78a",
+   "c9437d96d84a"
+  ],
+  "antes": {
+   "anibia-2026": "Una chicharra llamada Chicha emerge de la tierra y descubre que el árbol de aguacate donde nació ha sido talado. Decidida a crear un bosque, deposita sus esperanzas en un pequeño retoño, pero deberá aceptar la fugacidad de su vida y aprender a vivir el presente.",
+   "ficfusa-2026": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente.",
+   "filcmar-2026": "Chicha es una pequeña cigarra que ha pasado décadas esperando emerger de la tierra. Sin embargo, cuando por fin llega el día, se decepciona profundamente al descubrir que el bosque que tanto anhelaba ha sido reemplazado por una ciudad. Por suerte, Chicha encuentra un pequeño árbol de aguacate y decide cuidarlo, con la esperanza de que se convierta en un nuevo bosque. Lo que Chicha ignora es que, tras emerger de la tierra, las cigarras solo viven unas pocas semanas, y ese tiempo no le alcanzará para presenciar el crecimiento del árbol.",
+   "siembrafest-2026": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente."
+  }
+ },
+ {
+  "work_id": "w_R4JKF0VSTNC1",
+  "campo": "directores",
+  "valor": [
+   "Sofía Alejandra Uzcátegui León"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Sofía Uzcátegui León",
+   "ficfusa-2026": "Sofía Alejandra Uzcátegui León",
+   "filcmar-2026": "Sofia Alejandra Uzcátegui",
+   "siembrafest-2026": "Sofía Alejandra Uzcátegui León"
+  }
+ }
+]

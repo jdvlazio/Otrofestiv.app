@@ -1,0 +1,51 @@
+[
+ {
+  "work_id": "w_6XS3FP1HZPJ6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cortoscali-2026/when-the-tiger-roars.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cortoscali-2026/when-the-tiger-roars.jpg",
+   "/assets/ficica-2026/when-the-tiger-roars.jpg"
+  ],
+  "antes": {
+   "cortoscali-2026": "/assets/cortoscali-2026/when-the-tiger-roars.jpg",
+   "ficica-2026": "/assets/ficica-2026/when-the-tiger-roars.jpg"
+  }
+ },
+ {
+  "work_id": "w_6XS3FP1HZPJ6",
+  "campo": "directores",
+  "valor": [
+   "Lam Can-Zhao"
+  ],
+  "motivo": "un dato por obra: la forma completa y bien escrita entre lo acreditado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cortoscali-2026": "Can-Zhao Lam",
+   "ficica-2026": "Lam Can-Zhao"
+  }
+ },
+ {
+  "work_id": "w_6XS3FP1HZPJ6",
+  "campo": "paises",
+  "valor": [
+   "CN",
+   "MY",
+   "CH"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1555607)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cortoscali-2026": "China, Malaysia, Switzerland",
+   "ficica-2026": "China"
+  }
+ }
+]

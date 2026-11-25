@@ -1,0 +1,36 @@
+[
+ {
+  "work_id": "w_R4MQS9SR7HEB",
+  "campo": "sinopsis.es",
+  "valor": "Futuros recuerdos que se forman en una noche cualquiera de Goiás. En el patio de la casa de su abuela, Caju, de diez años, vivirá su primera madrugada en vela con los amigos de su tío Tiago, un joven rebelde.",
+  "motivo": "corrección de «en portugués, resto de página web»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "4046139ad2b3"
+  ],
+  "antes": {
+   "olhar-2026": "Futuros recuerdos formándose en una noche cualquiera de Goiás. En el patio trasero de la casa de su abuela, Caju, una criatura de 10 años, vivirá su primera madrugada en vela con los amigos de su tío Tiago, un joven rebelde."
+  }
+ },
+ {
+  "work_id": "w_R4MQS9SR7HEB",
+  "campo": "sinopsis.en",
+  "valor": "Tiago and his friends in just another hot night in the city of Goiânia, where nothing happens. While for Caju, Tiago’s ten year old niece, it's her very first night of youth.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "olhar-2026": "Tiago and his friends in just another hot night in the city of Goiânia, where nothing happens. While for Caju, Tiago’s ten year old niece, it's her very first night of youth.\nBEHIND THE SCENES"
+  }
+ },
+ {
+  "work_id": "w_R4MQS9SR7HEB",
+  "campo": "xref.tmdb",
+  "valor": 1688910,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/pinguim-de-doce-de-leite/"
+ }
+]

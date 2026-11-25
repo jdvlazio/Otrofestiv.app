@@ -1,0 +1,73 @@
+[
+ {
+  "work_id": "w_R4E2TNFGZSCY",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/minotauro.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/minotauro.jpg",
+   "/assets/ficcali-2026/minotauro.jpg",
+   "https://image.tmdb.org/t/p/w500/7XH2vaVsishBS0GuCgO3bOXfCaB.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/minotauro.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/minotauro.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/7XH2vaVsishBS0GuCgO3bOXfCaB.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4E2TNFGZSCY",
+  "campo": "sinopsis.es",
+  "valor": "Rusia, 2022. Cuando Gleb, un exitoso director de empresa, se ve acorralado por las crecientes presiones corporativas y un mundo cada vez más inestable, el colapso de su vida, tan cuidadosamente ordenada, se precipita hacia la violencia.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "5163cfc9842b",
+   "7cdd406e69f8",
+   "f0470f4506ff"
+  ],
+  "antes": {
+   "biff-2026": "Rusia, 2022. Cuando Gleb, un exitoso director de empresa, se ve acorralado por las crecientes presiones corporativas y un mundo cada vez más inestable, el colapso de su vida, tan cuidadosamente ordenada, se precipita hacia la violencia.",
+   "ficcali-2026": "Rusia, 2022. Cuando Gleb, un exitoso director de empresa, se ve asediado por las crecientes presiones corporativas y un mundo cada vez más inestable, el colapso de su vida, cuidadosamente ordenada, se precipita hacia la violencia. Cine negro que adapta La mujer infiel, de Chabrol, al contexto de los inicios de la guerra de Rusia contra Ucrania.",
+   "tiff-2026": "Tras nueve años de silencio, durante los cuales huyó de su Rusia natal al exilio, Andrey Zvyagintsev (El regreso, Leviatán) vuelve con una relectura de La mujer infiel, de Claude Chabrol, adaptada a la retórica de patriarcado y belicismo que hoy domina su país."
+  }
+ },
+ {
+  "work_id": "w_R4E2TNFGZSCY",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "LV",
+   "DE"
+  ],
+  "motivo": "coproducción según Cannes y Film New Europe",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "biff-2026": "Francia, Alemania, Letonia",
+   "ficcali-2026": "Francia, Letonia, Alemania",
+   "tiff-2026": "Francia, Alemania, Letonia"
+  },
+  "fuente": "https://www.festival-cannes.com/en/f/minotaur/"
+ },
+ {
+  "work_id": "w_R4E2TNFGZSCY",
+  "campo": "sinopsis.en",
+  "valor": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Minotaur",
+  "antes": {
+   "biff-2026": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
+   "ficcali-2026": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
+   "tiff-2026": "After a nine-year hiatus, during which he fled his native Russia into exile, Andrey Zvyagintsev (The Return, TIFF ’03, Leviathan, TIFF ’14) returns with a reworking of Claude Chabrol's La femme infidèle, adapted to his homeland's current rhetoric of patriarchy and warmongering."
+  }
+ }
+]

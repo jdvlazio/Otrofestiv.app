@@ -1,0 +1,39 @@
+[
+ {
+  "work_id": "w_X28HTRBK8KV2",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "80e1240f2493"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Las muertes más bellas del mundo",
+  "valor": "En los años ochenta, mientras arreciaba una guerra mortal respaldada por Estados Unidos, decenas de miles de salvadoreños hicieron de la región de Washington D. C. su nuevo hogar. De esa migración nació un movimiento artístico: los artistas dieron sentido a una identidad salvadoreño-washingtoniana y moldearon la escena cultural de la ciudad.",
+  "original": "Mientras en los años ochenta arreciaba una guerra mortal respaldada por Estados Unidos, decenas de miles de salvadoreños hicieron de la región de Washington D. C. su nuevo hogar. Esa migración masiva dio origen a un nuevo movimiento artístico. Columbia Road, en Adams Morgan, se volvió un foco del reasentamiento salvadoreño, donde los artistas dieron sentido a una identidad salvadoreño-washingtoniana única y, en el camino, moldearon la escena cultural vibrante y duradera de la ciudad.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "539974d0e547"
+  },
+  "antes": {
+   "under-2026": "Mientras en los años ochenta arreciaba una guerra mortal respaldada por Estados Unidos, decenas de miles de salvadoreños hicieron de la región de Washington D. C. su nuevo hogar. Esa migración masiva dio origen a un nuevo movimiento artístico. Columbia Road, en Adams Morgan, se volvió un foco del reasentamiento salvadoreño, donde los artistas dieron sentido a una identidad salvadoreño-washingtoniana única y, en el camino, moldearon la escena cultural vibrante y duradera de la ciudad."
+  }
+ },
+ {
+  "work_id": "w_X28HTRBK8KV2",
+  "campo": "sinopsis.en",
+  "valor": "As a deadly US-backed war raged in the 1980s, tens of thousands of Salvadorans made the Washington, DC, region their new home. This mass migration gave birth to a new artistic movement. Columbia Road in Adams Morgan became a hotspot of Salvadoran resettlement, where artists brought meaning to a uniquely Salvadoran-Washingtonian identity. In the process, they shaped the city’s vibrant, longstanding, and thriving cultural scene.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "under-2026": "As a deadly US-backed war raged in the 1980s, tens of thousands of Salvadorans made the Washington, DC, region their new home. This mass migration gave birth to a new artistic movement. Columbia Road in Adams Morgan became a hotspot of Salvadoran resettlement, where artists brought meaning to a uniquely Salvadoran-Washingtonian identity.  In the process, they shaped the city’s vibrant, longstanding, and thriving cultural scene."
+  }
+ }
+]

@@ -1,0 +1,133 @@
+[
+ {
+  "work_id": "w_4KE5T266SQ0H",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "742d1d1f36b2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Like a Beast",
+  "valor": "Tras otro viaje de un multimillonario al espacio y unos Juegos Olímpicos de Invierno en medio del desierto, teníamos algo claro: todos íbamos a morir. La estupidez humana había llegado a su cima: plátanos envueltos en plástico, perros homosexuales abatidos a tiros. Cambio climático. Revolución. Guerra. Y después de todo... haremos fotos.",
+  "original": "Tras otro viaje de un multimillonario al espacio y unos Juegos Olímpicos de Invierno en medio del desierto, teníamos algo claro: todos íbamos a morir. La estupidez humana había llegado a su cima: plátanos envueltos en plástico, perros homosexuales abatidos a tiros. Pérdida de poder adquisitivo. Cambio climático. Revolución. Guerra. Y después de todo... haremos fotos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "fb42196f3f8f"
+  }
+ },
+ {
+  "work_id": "w_4KE5T266SQ0H",
+  "campo": "directores",
+  "valor": [
+   "Bruno Tondeur"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Bruno Tondeur"
+  }
+ },
+ {
+  "work_id": "w_4KE5T266SQ0H",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KE5T266SQ0H",
+  "campo": "paises",
+  "valor": [
+   "BE",
+   "FR",
+   "NL"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Bélgica, Francia, Países Bajos"
+  }
+ },
+ {
+  "work_id": "w_4KE5T266SQ0H",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KE5T266SQ0H",
+  "campo": "sinopsis.en",
+  "valor": "After yet another billionaire’s trip to space, after Winter Olympics held in the middle of a desert, we were sure of one thing: we were all going to die. Human stupidity had reached its peak: bananas wrapped in plastic, homosexual dogs shot dead. Loss of purchasing power. Climate change. Revolution. War. And after that... we’ll take pictures.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After yet another billionaire’s trip to space, after Winter Olympics held in the middle of a desert, we were sure of one thing: we were all going to die. Human stupidity had reached its peak: bananas wrapped in plastic, homosexual dogs shot dead. Loss of purchasing power. Climate change. Revolution. War. And after that... we’ll take pictures."
+  }
+ },
+ {
+  "work_id": "w_4KE5T266SQ0H",
+  "campo": "xref.tmdb",
+  "valor": 1725079,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1725079"
+  }
+ },
+ {
+  "work_id": "w_4KE5T266SQ0H",
+  "campo": "xref.letterboxd",
+  "valor": "like-a-beast-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "like-a-beast-2026"
+  }
+ },
+ {
+  "work_id": "w_4KE5T266SQ0H",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/like-a-beast.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/like-a-beast.jpg"
+  }
+ }
+]

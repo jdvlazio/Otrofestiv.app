@@ -1,0 +1,22 @@
+[
+ {
+  "work_id": "w_R4HM7GT7ZW24",
+  "campo": "xref.letterboxd",
+  "valor": "outside-2024-4",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "ficdeh-2026": "outside-9"
+  }
+ },
+ {
+  "work_id": "w_R4HM7GT7ZW24",
+  "campo": "xref.tmdb",
+  "valor": 1738879,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/outside-9/"
+ }
+]

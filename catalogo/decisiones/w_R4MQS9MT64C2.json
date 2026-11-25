@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS9MT64C2",
+  "campo": "sinopsis.es",
+  "valor": "En un centro de entrenamiento médico, uno de los robots quirúrgicos «Da Vinci» adquiere autonomía y conciencia de sí mismo. Empieza a vagar por el edificio y descubre un espacio híbrido donde el progreso clínico se mezcla con ecos de guerra: creado por el ejército de Estados Unidos en los años ochenta, su propósito inicial era operar a soldados heridos en campos de batalla remotos. La película reflexiona sobre la frontera entre curar y matar.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "95e07e5a4dee"
+  ],
+  "antes": {
+   "olhar-2026": "Dentro de una instalación de entrenamiento médico, uno de los robots quirúrgicos «Da-Vinci» adquiere autonomía y autoconciencia. Empieza a deambular por el edificio y descubre un espacio híbrido donde el progreso clínico se mezcla con ecos de guerra. Creado por el Ejército de los EE.UU. en la década de 1980, el propósito inicial del Da-Vinci era operar a soldados heridos en campos de batalla remotos. La película reflexiona sobre la frontera entre curar y matar: ser una herramienta de cuidado y, a la vez, un arma poshumana de precisión."
+  }
+ },
+ {
+  "work_id": "w_R4MQS9MT64C2",
+  "campo": "xref.tmdb",
+  "valor": 1567965,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/detach-2025/"
+ }
+]

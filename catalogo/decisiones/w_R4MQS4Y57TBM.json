@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS4Y57TBM",
+  "campo": "sinopsis.es",
+  "valor": "Entre el tedio y la falta de oportunidades, con el alcohol como único compañero de noches y días, un grupo de amigos se esfuerza por salir adelante en un pequeño distrito minero del interior de Brasil.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "86b9bbd8e0f9"
+  ],
+  "antes": {
+   "olhar-2026": "Conviviendo con el tedio y la falta de oportunidades, aferrados al alcohol como único compañero de las noches y los días, un grupo de amigos se esfuerza por sacar la vida adelante en un pequeño distrito minero del interior de Brasil."
+  }
+ },
+ {
+  "work_id": "w_R4MQS4Y57TBM",
+  "campo": "xref.tmdb",
+  "valor": 1658239,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-night-and-the-days-of-miguel-burnier/"
+ }
+]

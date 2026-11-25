@@ -1,0 +1,39 @@
+[
+ {
+  "work_id": "w_R4F7DZ8TPY3C",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinetoro-2026/preguntas-frecuentes.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cinetoro-2026/preguntas-frecuentes.jpg",
+   "https://image.tmdb.org/t/p/w500/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg"
+  ],
+  "antes": {
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg",
+   "cinetoro-2026": "/assets/cinetoro-2026/preguntas-frecuentes.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4F7DZ8TPY3C",
+  "campo": "sinopsis.es",
+  "valor": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, siembrafest-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "6e2e9e9fd5af",
+   "87c42e89aa99"
+  ],
+  "antes": {
+   "cinemancia-2026": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
+   "cinetoro-2026": "S. le escribe a Juan, quien está profundamente dormido. S. reflexiona sobre las imágenes y el cine, y un consejo de un director al que admira la desafía a ella y a toda su obra anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre materiales, su propio archivo de imágenes y sonidos, las pestañas de su navegador de Internet, películas del oeste y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregársela a Juan cuando se despierte.",
+   "siembrafest-2026": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte."
+  }
+ }
+]

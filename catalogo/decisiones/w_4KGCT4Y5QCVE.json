@@ -1,0 +1,124 @@
+[
+ {
+  "work_id": "w_4KGCT4Y5QCVE",
+  "campo": "directores",
+  "valor": [
+   "Mehrnaz Abdollahinia",
+   "Feben Elias Woldehawariat",
+   "Razahk Issaka",
+   "Celeste Jamneck",
+   "Yi Liu"
+  ],
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mehrnaz Abdollahinia, Feben Elias"
+  }
+ },
+ {
+  "work_id": "w_4KGCT4Y5QCVE",
+  "campo": "anio",
+  "valor": 2021,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2021"
+  }
+ },
+ {
+  "work_id": "w_4KGCT4Y5QCVE",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KGCT4Y5QCVE",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KGCT4Y5QCVE",
+  "campo": "sinopsis.es",
+  "valor": "En un pueblo sometido a normas absurdas, tres hermanas cantantes preparan su actuación para el festival de otoño junto a su perro. Un imprevisto amenaza con impedirles participar.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En un pueblo sometido a normas absurdas, tres hermanas cantantes preparan su actuación para el festival de otoño junto a su perro. Un imprevisto amenaza con impedirles participar."
+  }
+ },
+ {
+  "work_id": "w_4KGCT4Y5QCVE",
+  "campo": "sinopsis.en",
+  "valor": "In a village bound by absurd rules, three sisters prepare a singing performance for the autumn festival, accompanied by their dog. An unforeseen event threatens to keep them from taking part.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In a village bound by absurd rules, three sisters prepare a singing performance for the autumn festival, accompanied by their dog. An unforeseen event threatens to keep them from taking part."
+  }
+ },
+ {
+  "work_id": "w_4KGCT4Y5QCVE",
+  "campo": "xref.tmdb",
+  "valor": 884553,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "884553"
+  }
+ },
+ {
+  "work_id": "w_4KGCT4Y5QCVE",
+  "campo": "xref.letterboxd",
+  "valor": "the-soloists",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-soloists"
+  }
+ },
+ {
+  "work_id": "w_4KGCT4Y5QCVE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/the-soloists.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/the-soloists.jpg"
+  }
+ }
+]

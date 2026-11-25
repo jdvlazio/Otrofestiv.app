@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KHRH5M6MZZP",
+  "campo": "directores",
+  "valor": [
+   "Daria Blažević"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Daria Blažević"
+  }
+ },
+ {
+  "work_id": "w_4KHRH5M6MZZP",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KHRH5M6MZZP",
+  "campo": "paises",
+  "valor": [
+   "HR",
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia, Francia"
+  }
+ },
+ {
+  "work_id": "w_4KHRH5M6MZZP",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KHRH5M6MZZP",
+  "campo": "sinopsis.es",
+  "valor": "Tres amigas pasan un día de verano en el barrio. Entre juegos y conversaciones intentan dejar atrás un encuentro incómodo con un hombre de la zona.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tres amigas pasan un día de verano en el barrio. Entre juegos y conversaciones intentan dejar atrás un encuentro incómodo con un hombre de la zona."
+  }
+ },
+ {
+  "work_id": "w_4KHRH5M6MZZP",
+  "campo": "sinopsis.en",
+  "valor": "Three girls spend a lazy summer day in their neighborhood, trying to forget an encounter with a local pervert.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Three girls spend a lazy summer day in their neighborhood, trying to forget an encounter with a local pervert."
+  }
+ },
+ {
+  "work_id": "w_4KHRH5M6MZZP",
+  "campo": "xref.tmdb",
+  "valor": 1484951,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1484951"
+  }
+ },
+ {
+  "work_id": "w_4KHRH5M6MZZP",
+  "campo": "xref.letterboxd",
+  "valor": "lessons-2025-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "lessons-2025-1"
+  }
+ },
+ {
+  "work_id": "w_4KHRH5M6MZZP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/lekcije.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/lekcije.jpg"
+  }
+ }
+]

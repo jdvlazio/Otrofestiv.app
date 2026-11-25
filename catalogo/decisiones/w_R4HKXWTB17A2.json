@@ -1,0 +1,60 @@
+[
+ {
+  "work_id": "w_R4HKXWTB17A2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/narrarelfuturo-2026/despues-del-frio.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/despues-del-frio.jpg",
+   "/assets/narrarelfuturo-2026/despues-del-frio.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/despues-del-frio.jpg",
+   "narrarelfuturo-2026": "/assets/narrarelfuturo-2026/despues-del-frio.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HKXWTB17A2",
+  "campo": "sinopsis.es",
+  "valor": "En 2016, Colombia firmó un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. ‘Después del frío’ narra las historias de tres personas: un ganadero uribista que fue secuestrado, un coronel implicado en ‘falsos positivos’ y un líder social de Siloé, en Cali. A través de entrevistas cercanas y humanas, este documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0ff137b8025f",
+   "edbd12cdbabb"
+  ],
+  "antes": {
+   "ficdeh-2026": "En 2016, Colombia firmó un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. ‘Después del frío’ narra las historias de tres personas: un ganadero uribista que fue secuestrado, un coronel implicado en ‘falsos positivos’ y un líder social de Siloé, en Cali. A través de entrevistas cercanas y humanas, este documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto.",
+   "narrarelfuturo-2026": "En 2016, Colombia firma un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. 'Después del frío' narra las historias de tres personas: un ganadero que fue secuestrado, un coronel implicado en 'falsos positivos' y un líder social. A través de sus experiencias, el documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto."
+  }
+ },
+ {
+  "work_id": "w_R4HKXWTB17A2",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1369339)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": 2022,
+   "narrarelfuturo-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4HKXWTB17A2",
+  "campo": "sinopsis.en",
+  "valor": "In 2016 Colombia signed a historic peace agreement with the FARC, ending a 60-year war. Después del frío follows three lives: a cattle rancher and Uribe supporter who was kidnapped, a colonel implicated in the \"false positives\" killings, and a community leader from Siloé, in Cali. Through close, humane interviews, the film reveals the difficulties and the small victories on the road to reconciliation and justice in a country still shadowed by the conflict.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "ficdeh-2026": "In 2016 Colombia signed a historic peace agreement with the FARC, ending a 60-year war. Después del frío follows three lives: a cattle rancher and Uribe supporter who was kidnapped, a colonel implicated in the \"false positives\" killings, and a community leader from Siloé, in Cali. Through close, humane interviews, the film reveals the difficulties and the small victories on the road to reconciliation and justice in a country still shadowed by the conflict."
+  }
+ }
+]

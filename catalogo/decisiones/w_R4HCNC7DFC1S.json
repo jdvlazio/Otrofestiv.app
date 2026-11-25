@@ -1,0 +1,94 @@
+[
+ {
+  "work_id": "w_R4HCNC7DFC1S",
+  "campo": "directores",
+  "valor": [
+   "Radu Jude"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 172",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=172",
+  "antes": {
+   "ficci-65": "Luc Besson"
+  }
+ },
+ {
+  "work_id": "w_R4HCNC7DFC1S",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 172",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=172",
+  "antes": {
+   "ficci-65": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HCNC7DFC1S",
+  "campo": "paises",
+  "valor": [
+   "RO",
+   "AT",
+   "LU"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 172",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=172",
+  "antes": {
+   "ficci-65": "Rumania, Austria, Luxemburgo"
+  }
+ },
+ {
+  "work_id": "w_R4HCNC7DFC1S",
+  "campo": "sinopsis.es",
+  "valor": "Distintas versiones del célebre vampiro en una sátira episódica e irreverente, que va del uso del archivo a la inteligencia artificial en clave de kitsch grotesco. Delirante y vulgar, combina los géneros más dispares y mira con sarcasmo la identidad nacional rumana, el consumismo, la banalización de los mitos, la tecnología y el propio cine.",
+  "motivo": "catálogo oficial de FICCI 65, p. 172",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=172",
+  "antes": {
+   "ficci-65": "Radu Jude adapta el mito de Drácula en clave de comedia política rumana, interrogando la historia, el poder y la corrupción con su característica ironía radical."
+  }
+ },
+ {
+  "work_id": "w_R4HCNC7DFC1S",
+  "campo": "sinopsis.en",
+  "valor": "Different versions of the famous vampire in an episodic, irreverent satire, ranging from the use of archives to artificial intelligence in a grotesque kitsch key. Delirious and vulgar, it combines the most disparate genres and looks sardonically at Romanian national identity, consumerism, the trivialization of myths, technology, and cinema itself.",
+  "motivo": "catálogo oficial de FICCI 65, p. 172",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=172",
+  "antes": {
+   "ficci-65": "Radu Jude adapts the Dracula myth as a Romanian political comedy, interrogating history, power, and corruption with his characteristic radical irony."
+  }
+ },
+ {
+  "work_id": "w_R4HCNC7DFC1S",
+  "campo": "xref.tmdb",
+  "valor": 1323409,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1323409"
+ },
+ {
+  "work_id": "w_R4HCNC7DFC1S",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/jfkYBHNFncxVSY0ReUrE5YoIYYu.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el anterior era de otra película del mismo título; visto uno al lado del otro",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "vistas": [
+   "https://image.tmdb.org/t/p/w185/ff7fyDdtXM2wu9jsm9gOMYtpvOl.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w185/ff7fyDdtXM2wu9jsm9gOMYtpvOl.jpg"
+  }
+ }
+]

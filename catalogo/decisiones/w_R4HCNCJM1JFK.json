@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HCNCJM1JFK",
+  "campo": "directores",
+  "valor": [
+   "Jorge Silva",
+   "Marta Rodríguez"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 316",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=316",
+  "antes": {
+   "ficci-65": "Marta Rodríguez"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCJM1JFK",
+  "campo": "anio",
+  "valor": 1971,
+  "motivo": "catálogo oficial de FICCI 65, p. 316",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=316",
+  "antes": {
+   "ficci-65": "1971"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCJM1JFK",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 316",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=316",
+  "antes": {
+   "ficci-65": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCJM1JFK",
+  "campo": "sinopsis.es",
+  "valor": "Tras siglos de explotación por colonos y terratenientes, la comunidad Guahibo en el Vichada se organizó en una cooperativa indígena. En respuesta, los terratenientes, haciendo uso del aparato estatal, desataron una violencia brutal contra la comunidad de Planas. Un documental de denuncia sobre la persecución histórica a los pueblos indígenas.",
+  "motivo": "catálogo oficial de FICCI 65, p. 316",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=316",
+  "antes": {
+   "ficci-65": "Marta Rodríguez y Jorge Silva documentan la violencia ejercida contra las comunidades indígenas del Llano colombiano en los años 70, en una de las obras fundacionales del cine político latinoamericano."
+  }
+ },
+ {
+  "work_id": "w_R4HCNCJM1JFK",
+  "campo": "sinopsis.en",
+  "valor": "After centuries of exploitation by settlers and landowners, the Guahibo community in Vichada organized itself into an Indigenous cooperative. In response, the landowners, making use of the state apparatus, unleashed brutal violence against the community of Planas. A documentary denouncing the historical persecution of Indigenous peoples.",
+  "motivo": "catálogo oficial de FICCI 65, p. 316",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=316",
+  "antes": {
+   "ficci-65": "Marta Rodríguez and Jorge Silva document the violence inflicted upon indigenous communities in the Colombian Llano in the 1970s, in one of Latin American political cinema's foundational works."
+  }
+ },
+ {
+  "work_id": "w_R4HCNCJM1JFK",
+  "campo": "xref.tmdb",
+  "valor": 270364,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/270364"
+ }
+]

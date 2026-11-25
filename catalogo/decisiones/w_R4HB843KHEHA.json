@@ -1,0 +1,65 @@
+[
+ {
+  "work_id": "w_R4HB843KHEHA",
+  "campo": "directores",
+  "valor": [
+   "Olga Pärn",
+   "Priit Pärn"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 253",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=253"
+ },
+ {
+  "work_id": "w_R4HB843KHEHA",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "catálogo oficial de FICCI 65, p. 253",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=253"
+ },
+ {
+  "work_id": "w_R4HB843KHEHA",
+  "campo": "paises",
+  "valor": [
+   "EE",
+   "FR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 253",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=253",
+  "antes": {
+   "ficci-65": "Estonia, Francia"
+  }
+ },
+ {
+  "work_id": "w_R4HB843KHEHA",
+  "campo": "sinopsis.es",
+  "valor": "En una Nápoles romántica y nostálgica, entre despechados, terroristas y un detective, se abre un triángulo amoroso. En esta animación los personajes caminan acartonados, con gestos extraños, como si respondieran a un mundo contemporáneo, digital, vigilado y antihumano, y la emoción se desborda a pesar de los rostros inexpresivos.",
+  "motivo": "catálogo oficial de FICCI 65, p. 253",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=253"
+ },
+ {
+  "work_id": "w_R4HB843KHEHA",
+  "campo": "sinopsis.en",
+  "valor": "In a romantic, nostalgic Naples, amid the spurned, terrorists, and a detective, a love triangle unfolds. In this animation the characters walk stiffly, with strange gestures, as if responding to a contemporary, digital, surveilled, and inhuman world, and emotion overflows despite the expressionless faces.",
+  "motivo": "catálogo oficial de FICCI 65, p. 253",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=253"
+ },
+ {
+  "work_id": "w_R4HB843KHEHA",
+  "campo": "xref.tmdb",
+  "valor": 1118585,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1118585"
+ }
+]

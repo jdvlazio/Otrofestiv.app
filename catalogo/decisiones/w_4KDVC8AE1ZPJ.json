@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_4KDVC8AE1ZPJ",
+  "campo": "directores",
+  "valor": [
+   "Andrés Khamis Giacoman",
+   "Francisca Khamis Giacoman"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Andrés Khamis Giacoman, Francisca Khamis Giacoman"
+  }
+ },
+ {
+  "work_id": "w_4KDVC8AE1ZPJ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KDVC8AE1ZPJ",
+  "campo": "paises",
+  "valor": [
+   "CL",
+   "ES",
+   "PS"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Chile, España, Palestina"
+  }
+ },
+ {
+  "work_id": "w_4KDVC8AE1ZPJ",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KDVC8AE1ZPJ",
+  "campo": "sinopsis.es",
+  "valor": "En un seguimiento de los hinchas del Club Deportivo Palestino, se entabla un diálogo entre Chile y Palestina sobre identidad y retorno, uniendo ambos territorios en un espacio de celebración, donde soñar con la victoria es imaginar un futuro posible.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En un seguimiento de los hinchas del Club Deportivo Palestino, se entabla un diálogo entre Chile y Palestina sobre identidad y retorno, uniendo ambos territorios en un espacio de celebración, donde soñar con la victoria es imaginar un futuro posible."
+  }
+ },
+ {
+  "work_id": "w_4KDVC8AE1ZPJ",
+  "campo": "sinopsis.en",
+  "valor": "Through a portrayal of the fans of Club Deportivo Palestino, a dialogue unfolds between Chile and Palestine on identity and return, connecting both territories within a space of celebration, where dreaming of victory creates a possible future.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Through a portrayal of the fans of Club Deportivo Palestino, a dialogue unfolds between Chile and Palestine on identity and return, connecting both territories within a space of celebration, where dreaming of victory creates a possible future."
+  }
+ },
+ {
+  "work_id": "w_4KDVC8AE1ZPJ",
+  "campo": "xref.tmdb",
+  "valor": 1508247,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1508247"
+  }
+ },
+ {
+  "work_id": "w_4KDVC8AE1ZPJ",
+  "campo": "xref.letterboxd",
+  "valor": "baisanos",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "baisanos"
+  }
+ },
+ {
+  "work_id": "w_4KDVC8AE1ZPJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/baisanos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/baisanos.jpg"
+  }
+ }
+]

@@ -1,0 +1,49 @@
+[
+ {
+  "work_id": "w_8GJ6SWM680BD",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/guatape-2026/planeta-fome.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/guatape-2026/planeta-fome.jpg",
+   "/assets/miradas-2026/planeta-fome.jpg"
+  ],
+  "antes": {
+   "guatape-2026": "/assets/guatape-2026/planeta-fome.jpg",
+   "miradas-2026": "/assets/miradas-2026/planeta-fome.jpg"
+  }
+ },
+ {
+  "work_id": "w_8GJ6SWM680BD",
+  "campo": "directores",
+  "valor": [
+   "Édier William Medeiros da Silva"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "guatape-2026": "Édier William",
+   "miradas-2026": "Édier William Medeiros da Silva"
+  }
+ },
+ {
+  "work_id": "w_8GJ6SWM680BD",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "guatape-2026": "Drama",
+   "miradas-2026": "Animación"
+  }
+ }
+]

@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS9GR6VCM",
+  "campo": "sinopsis.es",
+  "valor": "Cuando me fui a vivir con amigos por primera vez, se volvió costumbre recibir gente en casa todo el tiempo.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "5d6dfa009b41"
+  ],
+  "antes": {
+   "olhar-2026": "Cuando fui a vivir con amigos por primera vez, se volvió costumbre recibir gente en casa todo el tiempo."
+  }
+ },
+ {
+  "work_id": "w_R4MQS9GR6VCM",
+  "campo": "xref.tmdb",
+  "valor": 1688900,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/cerimonia/"
+ }
+]

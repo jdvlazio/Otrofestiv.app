@@ -1,0 +1,94 @@
+[
+ {
+  "work_id": "w_R4HEVTT0JWFJ",
+  "campo": "directores",
+  "valor": [
+   "Ralitza Petrova"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 116",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=116",
+  "antes": {
+   "ficci-65": "Hank Hoffman"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTT0JWFJ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 116",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=116",
+  "antes": {
+   "ficci-65": "2021"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTT0JWFJ",
+  "campo": "paises",
+  "valor": [
+   "BG",
+   "DK",
+   "SE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 116",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=116",
+  "antes": {
+   "ficci-65": "Bulgaria, Dinamarca, Suecia"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTT0JWFJ",
+  "campo": "sinopsis.es",
+  "valor": "La protagonista, psicóloga penitenciaria, afronta el duelo por la muerte de su padre, a quien solo vio una vez en la vida. Además hereda una de sus deudas, lo que complica los sentimientos contradictorios que la abruman y las dificultades de la intimidad. Un drama introspectivo, glacial e inquietante sobre la soledad y el deseo reprimido.",
+  "motivo": "catálogo oficial de FICCI 65, p. 116",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=116",
+  "antes": {
+   "ficci-65": "Con esta película, la guionista y directora Ralitza Petrova construye un universo cerrado y distante de relaciones fracturadas, emociones frustradas y melancolía existencial."
+  }
+ },
+ {
+  "work_id": "w_R4HEVTT0JWFJ",
+  "campo": "sinopsis.en",
+  "valor": "The protagonist, a prison psychologist, grapples with grief over the death of her father, whom she saw only once in her life. She also inherits one of his debts, which complicates the conflicting emotions that overwhelm her and her difficulties with intimacy. An icy, disturbing, introspective drama about loneliness and repressed desire.",
+  "motivo": "catálogo oficial de FICCI 65, p. 116",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=116",
+  "antes": {
+   "ficci-65": "With this film, writer-director Ralitza Petrova constructs a closed and distant universe of fractured relationships, frustrated emotions, and existential melancholy."
+  }
+ },
+ {
+  "work_id": "w_R4HEVTT0JWFJ",
+  "campo": "xref.tmdb",
+  "valor": 1318818,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1318818"
+ },
+ {
+  "work_id": "w_R4HEVTT0JWFJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/qkAzo9CvGHaE2JNL50NPGgPcOkM.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el anterior era de otra película del mismo título; visto uno al lado del otro",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "vistas": [
+   "https://image.tmdb.org/t/p/w185/6pje38DTgtBM6610Vllk6azBEcW.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w185/6pje38DTgtBM6610Vllk6azBEcW.jpg"
+  }
+ }
+]

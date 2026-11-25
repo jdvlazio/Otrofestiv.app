@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KF41SH3RNAZ",
+  "campo": "directores",
+  "valor": [
+   "Gaby Clingman"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Gaby Clingman"
+  }
+ },
+ {
+  "work_id": "w_4KF41SH3RNAZ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KF41SH3RNAZ",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KF41SH3RNAZ",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KF41SH3RNAZ",
+  "campo": "sinopsis.es",
+  "valor": "En el verano de 1997, tras la repentina muerte de su novia, una joven reúne a sus amigos para robar el cuerpo y asegurarse de poder darle una despedida digna.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En el verano de 1997, tras la repentina muerte de su novia, una joven reúne a sus amigos para robar el cuerpo y asegurarse de poder darle una despedida digna."
+  }
+ },
+ {
+  "work_id": "w_4KF41SH3RNAZ",
+  "campo": "sinopsis.en",
+  "valor": "In the summer of 1997, after the sudden death of her girlfriend, a young woman enlists her friends to steal the body to ensure a proper farewell.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the summer of 1997, after the sudden death of her girlfriend, a young woman enlists her friends to steal the body to ensure a proper farewell."
+  }
+ },
+ {
+  "work_id": "w_4KF41SH3RNAZ",
+  "campo": "xref.tmdb",
+  "valor": 1782292,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1782292"
+  }
+ },
+ {
+  "work_id": "w_4KF41SH3RNAZ",
+  "campo": "xref.letterboxd",
+  "valor": "see-you-in-the-morning-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "see-you-in-the-morning-1"
+  }
+ },
+ {
+  "work_id": "w_4KF41SH3RNAZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/see-you-in-the-morning.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/see-you-in-the-morning.jpg"
+  }
+ }
+]

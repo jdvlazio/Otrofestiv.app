@@ -1,0 +1,92 @@
+[
+ {
+  "work_id": "w_4KJKMJHZRCWS",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "66c24babcdd1"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Herir al viento (Monopop, Monstera Delizziosa)",
+  "valor": "Una mujer en sus 30s se enfrenta al difícil proceso de cambio que conlleva una ruptura. Abatida en medio de su apartamento, toma fuerza para desmantelar lo que fue un hogar. Como llevada por el viento, emprende su camino hacia un destino desconocido, que alberga la ilusión de nuevos comienzos, de continuar, de vivir otra vida.",
+  "original": "Una mujer en sus 30s se enfrenta al difícil proceso de cambio y adaptación que conlleva la ruptura con alguien que ha sido importante. Abatida en medio de su apartamento, toma fuerza para desmantelar lo que fue un hogar, quitando cuadros, plantas y muebles. Como llevada por el viento, emprende su camino hacia un destino desconocido, uno que alberga la ilusión de nuevos comienzos, de continuar, de vivir otra vida.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "3ffddab7f8f6"
+  }
+ },
+ {
+  "work_id": "w_4KJKMJHZRCWS",
+  "campo": "directores",
+  "valor": [
+   "David Rendón Peláez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "David Rendón Peláez"
+  }
+ },
+ {
+  "work_id": "w_4KJKMJHZRCWS",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJKMJHZRCWS",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJKMJHZRCWS",
+  "campo": "sinopsis.en",
+  "valor": "A woman in her thirties faces the difficult process of change that comes with a breakup. Dejected in the middle of her apartment, she summons the strength to dismantle what was once a home. As if carried by the wind, she sets out toward an unknown destination, one that holds the promise of new beginnings, of moving forward, of living another life.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A young woman faces the difficult process of change and adaptation that comes with breaking up with someone who once played a significant role in her life. Hopeless amidst her apartment, she summons the strength to dismantle what was once a home, removing pictures, plants, and memories. As if carried by the wind, she sets out toward an unknown destination—one that holds the promise of new beginnings, of moving forward, and of living a different life."
+  }
+ },
+ {
+  "work_id": "w_4KJKMJHZRCWS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/herir-al-viento-monopop-monstera-delizziosa.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/herir-al-viento-monopop-monstera-delizziosa.jpg"
+  }
+ }
+]

@@ -1,0 +1,28 @@
+[
+ {
+  "work_id": "w_X28RV6F31EQA",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "09a0a0371b39"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "The Shapeshifter's lament",
+  "valor": "Una fantasía poética sobre las especies introducidas, un relato de parentesco, metamorfosis y la frágil persistencia de la memoria. Queda una pregunta: ¿cómo responderían los habitantes originarios a los recién llegados, invitados por nadie, que rompen la armonía de la tierra y de sus formas de vida?",
+  "original": "The Shapeshifter's Lament es una fantasía poética sobre las especies introducidas. Sitúa la supervivencia en las fronteras cambiantes entre distintas formas de vida y teje un relato de parentesco, metamorfosis y la frágil persistencia de la memoria. Queda una pregunta: ¿cómo responderían los habitantes originarios a los recién llegados, invitados por nadie, que rompen la armonía de la tierra y de sus formas de vida?",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "31af43c26d28"
+  },
+  "antes": {
+   "under-2026": "The Shapeshifter's Lament es una fantasía poética sobre las especies introducidas. Sitúa la supervivencia en las fronteras cambiantes entre distintas formas de vida y teje un relato de parentesco, metamorfosis y la frágil persistencia de la memoria. Queda una pregunta: ¿cómo responderían los habitantes originarios a los recién llegados, invitados por nadie, que rompen la armonía de la tierra y de sus formas de vida?"
+  }
+ }
+]

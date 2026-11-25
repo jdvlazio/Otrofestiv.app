@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX6WFK6PRMS",
+  "campo": "directores",
+  "valor": [
+   "Nico Manzano"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Nico Manzano"
+  }
+ },
+ {
+  "work_id": "w_8BX6WFK6PRMS",
+  "campo": "anio",
+  "valor": 2021,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2021"
+  }
+ },
+ {
+  "work_id": "w_8BX6WFK6PRMS",
+  "campo": "paises",
+  "valor": [
+   "VE"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Venezuela"
+  }
+ },
+ {
+  "work_id": "w_8BX6WFK6PRMS",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX6WFK6PRMS",
+  "campo": "sinopsis.es",
+  "valor": "Cuando su banda, Los Pijamistas, acepta tocar en un festival de propaganda del régimen de Nicolás Maduro, el cantante Andrés Bravo la deja y empieza de cero su proyecto en solitario. La crisis y un entorno alienado le romperán la coraza, pero lo acompañarán Las Bestias, dos seres enmascarados y misteriosos.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Cuando su banda, Los Pijamistas, acepta tocar en un festival de propaganda del régimen de Nicolás Maduro, el cantante Andrés Bravo la deja y empieza de cero su proyecto en solitario. La crisis y un entorno alienado le romperán la coraza, pero lo acompañarán Las Bestias, dos seres enmascarados y misteriosos."
+  }
+ },
+ {
+  "work_id": "w_8BX6WFK6PRMS",
+  "campo": "sinopsis.en",
+  "valor": "When his band, Los Pijamistas, agrees to play a propaganda festival of the Nicolás Maduro regime, singer Andrés Bravo leaves and starts a solo project from scratch. The crisis and an alienated environment will break his armor, but The Beasts, two masked and mysterious beings, will accompany him.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "When his band, Los Pijamistas, agrees to play a propaganda festival of the Nicolás Maduro regime, singer Andrés Bravo leaves and starts a solo project from scratch. The crisis and an alienated environment will break his armor, but The Beasts, two masked and mysterious beings, will accompany him."
+  }
+ },
+ {
+  "work_id": "w_8BX6WFK6PRMS",
+  "campo": "xref.tmdb",
+  "valor": 764521,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "764521"
+  }
+ },
+ {
+  "work_id": "w_8BX6WFK6PRMS",
+  "campo": "xref.letterboxd",
+  "valor": "me-the-beasts",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "me-the-beasts"
+  }
+ },
+ {
+  "work_id": "w_8BX6WFK6PRMS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/yo-y-las-bestias.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/yo-y-las-bestias.jpg"
+  }
+ }
+]

@@ -1,0 +1,28 @@
+[
+ {
+  "work_id": "w_JETDDR1A4XA4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "1e1047d8ab0d"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Pulse",
+  "valor": "Hace tiempo que Michi, Yunko y Yabe no tienen noticias de un amigo. Michi lo visita y lo nota extraño; él dice estar bien, pero al poco rato aparece colgado del techo. Por otro lado, Ryusuke prueba sin mucho éxito a conectarse a internet. De pronto su ordenador entra solo en la red y aparece un mensaje: «¿Quieres ver un fantasma?».",
+  "original": "Hace tiempo que Michi, Yunko y Yabe no tienen noticias de un amigo. Cuando Michi va a visitarlo a su casa lo encuentra un poco extraño. Aunque él dice encontrarse bien, al poco rato se encuentra colgado del techo. Por otro lado tenemos a Ryusuke, que prueba a conectarse a internet por primera vez, sin mucho éxito. De pronto su ordenador comienza a entrar solo en la red, y aparece una extraña página web, donde aparecen turbadoras imágenes de habitaciones oscuras y finalmente un inquietante mensaje: \"¿Quieres ver un fantasma?\".",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "e332de34d516"
+  },
+  "antes": {
+   "aleste-2026": "Hace tiempo que Michi, Yunko y Yabe no tienen noticias de un amigo. Cuando Michi va a visitarlo a su casa lo encuentra un poco extraño. Aunque él dice encontrarse bien, al poco rato se encuentra colgado del techo. Por otro lado tenemos a Ryusuke, que prueba a conectarse a internet por primera vez, sin mucho éxito. De pronto su ordenador comienza a entrar solo en la red, y aparece una extraña página web, donde aparecen turbadoras imágenes de habitaciones oscuras y finalmente un inquietante mensaje: \"¿Quieres ver un fantasma?\"."
+  }
+ }
+]

@@ -1,0 +1,21 @@
+[
+ {
+  "work_id": "w_R4FBYJM4E9CV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/j5r2H4KqokTowdqR2hF2NC6pSEO.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/los-golfos.jpg",
+   "https://image.tmdb.org/t/p/w500/j5r2H4KqokTowdqR2hF2NC6pSEO.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/los-golfos.jpg",
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/j5r2H4KqokTowdqR2hF2NC6pSEO.jpg"
+  }
+ }
+]

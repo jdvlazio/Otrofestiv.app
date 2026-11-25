@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KH103Q0ZHY0",
+  "campo": "directores",
+  "valor": [
+   "Will Niava"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Will Niava"
+  }
+ },
+ {
+  "work_id": "w_4KH103Q0ZHY0",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KH103Q0ZHY0",
+  "campo": "paises",
+  "valor": [
+   "CA"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Canadá"
+  }
+ },
+ {
+  "work_id": "w_4KH103Q0ZHY0",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KH103Q0ZHY0",
+  "campo": "sinopsis.es",
+  "valor": "Koffi, hijo de un trompetista legendario, se enfrenta al legado de su padre y a los fantasmas de Costa de Marfil durante una noche que se sale de control.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Koffi, hijo de un trompetista legendario, se enfrenta al legado de su padre y a los fantasmas de Costa de Marfil durante una noche que se sale de control."
+  }
+ },
+ {
+  "work_id": "w_4KH103Q0ZHY0",
+  "campo": "sinopsis.en",
+  "valor": "Over the course of an increasingly chaotic night, Koffi, the son of a legendary trumpet player, reckons with his father’s legacy and ghosts from Côte d’Ivoire.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Over the course of an increasingly chaotic night, Koffi, the son of a legendary trumpet player, reckons with his father’s legacy and ghosts from Côte d’Ivoire."
+  }
+ },
+ {
+  "work_id": "w_4KH103Q0ZHY0",
+  "campo": "xref.tmdb",
+  "valor": 1529981,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1529981"
+  }
+ },
+ {
+  "work_id": "w_4KH103Q0ZHY0",
+  "campo": "xref.letterboxd",
+  "valor": "jazz-infernal",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "jazz-infernal"
+  }
+ },
+ {
+  "work_id": "w_4KH103Q0ZHY0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/jazz-infernal.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/jazz-infernal.jpg"
+  }
+ }
+]

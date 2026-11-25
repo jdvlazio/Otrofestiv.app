@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS9FB722B",
+  "campo": "sinopsis.es",
+  "valor": "Dragón Rojo y Puma Punku, dos adolescentes abandonados y perdidos en una ciudad boliviana, se vuelven adictos a un videojuego retro llamado Dragon para escapar de su monótona realidad: trabajar en el mercado con sus tías y luchar contra el aburrimiento. Juegan junto a Elfo, un gamer chino-boliviano, y Hada, un viejo borracho atrapado en los años noventa. Un día, Puma Punku le roba a Hada su bien más preciado, su espada, y Hada sale a capturar al ladrón para quemarlo vivo.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "81f7f02ae7f9"
+  ],
+  "antes": {
+   "olhar-2026": "Dragón Rojo y Puma Punku, dos adolescentes abandonados y perdidos en una ciudad boliviana, se vuelven adictos a un videojuego retro llamado Dragon para escapar de su realidad monótona — trabajando en el mercado con sus tías y luchando contra el aburrimiento. En el juego juegan junto a Elfo, un gamer chino-boliviano, y Hada, un viejo borracho atrapado en los años 1990. Pero un día, Puma Punku roba el bien más preciado de Hada — su espada. En busca de venganza, Hada sale a capturar al ladrón y quemarlo vivo."
+  }
+ },
+ {
+  "work_id": "w_R4MQS9FB722B",
+  "campo": "xref.tmdb",
+  "valor": 1451075,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/dragon-2025-1/"
+ }
+]

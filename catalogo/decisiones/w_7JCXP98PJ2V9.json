@@ -1,0 +1,103 @@
+[
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "sinopsis.en",
+  "valor": "Estiven, a young carpenter's apprentice, works with dedication in a workshop where the echo of the tools coexists with the warnings of his master, Orlando. One night, amid sawdust and inexplicable noises, an accident plunges him into an uncertain passage between life and death.",
+  "motivo": "traducción de la sinopsis en español (pie del festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "In an old carpentry shop, Estiven confronts the souls and the incessant echo of the cicadas. Between life and limbo, his spirit is trapped in a spiritual plane where unfinished work, memory, and the supernatural merge in a state of confusion."
+  }
+ },
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "la lámina del festival dice 2025 (DfcpGHfoWWI/14); TMDB fecha el 6 sep 2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "directores",
+  "valor": [
+   "Absalón Rincón Muñoz"
+  ],
+  "motivo": "créditos de la lámina DfcpGHfoWWI/14: ABSALON RINCON MUÑOZ",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "Absalón Rincón Muñoz"
+  }
+ },
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "sinopsis.es",
+  "valor": "Estiven, un joven aprendiz de carpintero, trabaja con dedicación en un taller donde conviven el eco de las herramientas y las advertencias de su maestro Orlando. Una noche, entre el polvo de la madera y ruidos inexplicables, un accidente lo sumerge en un tránsito incierto entre la vida y la muerte.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Estiven, un joven aprendiz de carpintero, trabaja con dedicación en un taller donde conviven el eco de las herramientas y las advertencias de su maestro Orlando. Una noche, entre el polvo de la madera y ruidos inexplicables, un accidente lo sumerge en un tránsito incierto entre la vida y la muerte."
+  }
+ },
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "xref.tmdb",
+  "valor": 1753860,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1753860"
+  }
+ },
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "xref.letterboxd",
+  "valor": "escision-de-la-cigarra",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "escision-de-la-cigarra"
+  }
+ },
+ {
+  "work_id": "w_7JCXP98PJ2V9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/escision-de-la-cigarra.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/escision-de-la-cigarra.jpg"
+  }
+ }
+]

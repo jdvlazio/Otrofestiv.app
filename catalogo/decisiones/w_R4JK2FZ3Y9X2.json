@@ -1,0 +1,68 @@
+[
+ {
+  "work_id": "w_R4JK2FZ3Y9X2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/filcmar-2026/la-pecera.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/filcmar-2026/la-pecera.jpg",
+   "/assets/siembrafest/la-pecera.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/filcmar-2026/la-pecera.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/la-pecera.jpg",
+   "siembrafest-2026": "/assets/siembrafest/la-pecera.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4JK2FZ3Y9X2",
+  "campo": "sinopsis.es",
+  "valor": "En una ciudad abarrotada, un robot mecánico vive su vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot se embarca en un viaje, solo para darse cuenta poco a poco de que lo que el cristal ocultaba podría no ser algo a lo que temer después de todo.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (anibia-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "68b4c30e4e6d",
+   "cb7ce44ac04b"
+  ],
+  "antes": {
+   "anibia-2026": "En una ciudad abarrotada, un robot mecánico vive su vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot se embarca en un viaje, solo para darse cuenta poco a poco de que lo que el cristal ocultaba podría no ser algo a lo que temer después de todo.",
+   "filcmar-2026": "En una ciudad bulliciosa, un robot mecánico lleva una vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot emprende un viaje, solo para darse cuenta poco a poco de que lo que ocultaba el cristal tal vez no sea tan temible después de todo."
+  }
+ },
+ {
+  "work_id": "w_R4JK2FZ3Y9X2",
+  "campo": "directores",
+  "valor": [
+   "Ángela Tatiana Fonseca Gálvez"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Angela Tatiana Fonseca Galvez",
+   "filcmar-2026": "Angela Tatiana Fonseca Galvez",
+   "siembrafest-2026": "Ángela Tatiana Fonseca Gálvez"
+  }
+ },
+ {
+  "work_id": "w_R4JK2FZ3Y9X2",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "CN"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Colombia, China",
+   "siembrafest-2026": "Colombia"
+  }
+ }
+]

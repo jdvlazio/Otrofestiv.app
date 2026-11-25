@@ -1,0 +1,149 @@
+[
+ {
+  "work_id": "w_R4J6CZM22Y88",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/guatape-2026/un-poeta.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficmontanas/un-poeta.jpg",
+   "/assets/guatape-2026/un-poeta.jpg",
+   "/assets/villadelcine-2026/un-poeta.jpg"
+  ],
+  "antes": {
+   "ficmontanas-2026": "/assets/ficmontanas/un-poeta.jpg",
+   "guatape-2026": "/assets/guatape-2026/un-poeta.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/un-poeta.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4J6CZM22Y88",
+  "campo": "sinopsis.es",
+  "valor": "La obsesión de Óscar Restrepo por la poesía no le ha reportado ninguna gloria. Envejecido y errático, ha sucumbido al tópico del poeta en la sombra. Conocer a Yurlady, una adolescente de origen humilde, y ayudarla a cultivar su talento trae algo de luz a sus días, pero arrastrarla al mundo de la poesía quizá no sea el camino.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (guatape-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "3a4728aeb4ed",
+   "966002f387a1",
+   "d8492e63dc06"
+  ],
+  "antes": {
+   "ficmontanas-2026": "Un poeta entrado en años encuentra un propósito al guiar a Yurlady, una joven talentosa, aunque exponerla al mundo de la poesía quizás no sea la mejor idea.",
+   "guatape-2026": "La obsesión de Óscar Restrepo por la poesía no le ha reportado ninguna gloria. Envejecido y errático, ha sucumbido al tópico del poeta en la sombra. Conocer a Yurlady, una adolescente de origen humilde, y ayudarla a cultivar su talento trae algo de luz a sus días, pero arrastrarla al mundo de la poesía quizá no sea el camino.",
+   "villadelcine-2026": "La obsesión de Óscar Restrepo por la poesía no le trajo ninguna gloria. Envejecido y errático, ha sucumbido al cliché del poeta en la penumbra. Conocer a Yurlady, una humilde adolescente; ayudarla a cultivar su talento trae algo de luz a sus días, pero arrastrarla al mundo de los poetas tal vez no sea el camino."
+  }
+ },
+ {
+  "work_id": "w_R4J6CZM22Y88",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "DE",
+   "SE"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1465563)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficmontanas-2026": "Colombia",
+   "guatape-2026": "Colombia, Germany, Sweden",
+   "villadelcine-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4J6CZM22Y88",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "ficmontanas-2026": "Comedia",
+   "guatape-2026": "Comedia",
+   "villadelcine-2026": "Comedia / Drama"
+  }
+ },
+ {
+  "work_id": "w_R4J6CZM22Y88",
+  "campo": "sinopsis.en",
+  "valor": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise. His own poetic pursuits led nowhere, leaving him a stereotypical obscure writer.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Un poeta",
+  "antes": {
+   "ficmontanas-2026": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise.",
+   "guatape-2026": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise. His own poetic pursuits led nowhere, leaving him a stereotypical obscure writer.",
+   "villadelcine-2026": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise. His own poetic pursuits led nowhere, leaving him a stereotypical obscure writer."
+  }
+ },
+ {
+  "work_id": "w_R4J6CZM22Y88",
+  "campo": "directores",
+  "valor": [
+   "Simón Mesa Soto"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Simón Mesa Soto",
+   "ficmontanas-2026": "Simón Mesa Soto",
+   "guatape-2026": "Simón Mesa Soto",
+   "villadelcine-2026": "Simón Mesa Soto"
+  }
+ },
+ {
+  "work_id": "w_R4J6CZM22Y88",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2025",
+   "ficmontanas-2026": "2025",
+   "guatape-2026": "2025",
+   "villadelcine-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4J6CZM22Y88",
+  "campo": "xref.tmdb",
+  "valor": 1465563,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1465563",
+   "ficmontanas-2026": "1465563",
+   "guatape-2026": "1465563",
+   "villadelcine-2026": "1465563"
+  }
+ },
+ {
+  "work_id": "w_R4J6CZM22Y88",
+  "campo": "xref.letterboxd",
+  "valor": "a-poet",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "a-poet",
+   "ficmontanas-2026": "a-poet",
+   "guatape-2026": "a-poet",
+   "villadelcine-2026": "a-poet"
+  }
+ }
+]

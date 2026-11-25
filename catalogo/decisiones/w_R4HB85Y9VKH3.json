@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HB85Y9VKH3",
+  "campo": "directores",
+  "valor": [
+   "Gaël Kamilindi"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 231",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=231"
+ },
+ {
+  "work_id": "w_R4HB85Y9VKH3",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 231",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=231"
+ },
+ {
+  "work_id": "w_R4HB85Y9VKH3",
+  "campo": "paises",
+  "valor": [
+   "CH",
+   "FR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 231",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=231",
+  "antes": {
+   "ficci-65": "Suiza, Francia"
+  }
+ },
+ {
+  "work_id": "w_R4HB85Y9VKH3",
+  "campo": "sinopsis.es",
+  "valor": "Una conversación de trabajo se convierte en una aventura y desemboca en el enamoramiento entre Soli y Moh, ¿o sería Joe? Con sencillez, la película habla de amor, migración y duelo frente a la censura de lo homoafectivo, y juega con sus niveles: quizá nunca sepamos qué es la película, qué es la película dentro de la película y qué es la realidad.",
+  "motivo": "catálogo oficial de FICCI 65, p. 231",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=231"
+ },
+ {
+  "work_id": "w_R4HB85Y9VKH3",
+  "campo": "sinopsis.en",
+  "valor": "A work conversation turns into an adventure and leads to Soli and Moh, or is it Joe?, falling in love. With simplicity, the film speaks of love, migration, and grief in the face of censorship of homo-affective themes, and plays with its levels: we may never know what is the film, what is the film within the film, and what is reality.",
+  "motivo": "catálogo oficial de FICCI 65, p. 231",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=231"
+ },
+ {
+  "work_id": "w_R4HB85Y9VKH3",
+  "campo": "xref.tmdb",
+  "valor": 1614698,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1614698"
+ }
+]

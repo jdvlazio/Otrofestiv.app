@@ -1,0 +1,44 @@
+[
+ {
+  "work_id": "w_R4HJ5X96NBJC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficdeh/herencia-los-cantos-de-la-tierra.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/herencia-los-cantos-de-la-tierra.jpg",
+   "https://image.tmdb.org/t/p/w500/jCdjqbA6mKPlpDkFgufv1zf5RnF.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/herencia-los-cantos-de-la-tierra.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/jCdjqbA6mKPlpDkFgufv1zf5RnF.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5X96NBJC",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "ficdeh-2026": "Documental",
+   "siembrafest-2026": "Familia"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5X96NBJC",
+  "campo": "xref.tmdb",
+  "valor": 1670058,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/herencia-los-cantos-de-la-tierra/"
+ }
+]

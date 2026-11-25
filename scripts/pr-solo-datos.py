@@ -36,22 +36,44 @@ def revisar(archivos, diff_config):
     motivos = [f'archivo fuera de datos: {a}' for a in malos]
     if 'src/config.js' in archivos:
         for l in diff_config.splitlines():
-            if l.startswith(('+++', '---')) or not l.startswith(('+', '-')):
+            if not l.startswith(('+', '-')):
                 continue
             if not LINEA_KEYART.match(l[1:]):
                 motivos.append(f'src/config.js cambia algo que no es keyArt: {l[:100]}')
     return motivos
 
 
+def completo(archivos, total, diff):
+    """`gh pr view --json files` da 100 y callaba: en BOGOSHORTS vio 100 de 929 (25 nov 2026)."""
+    motivos = []
+    if len(archivos) != total:
+        motivos.append(f'no pude ver todos los archivos: {len(archivos)} de {total}')
+    if 'src/config.js' in archivos and not diff:
+        motivos.append('no pude ver el cambio de src/config.js')
+    return motivos
+
+
+def traer(pr):
+    total = json.loads(subprocess.check_output(['gh', 'pr', 'view', pr, '--json', 'changedFiles']))['changedFiles']
+    xs = [json.loads(l) for l in subprocess.check_output(
+        ['gh', 'api', '--paginate', f'repos/{{owner}}/{{repo}}/pulls/{int(pr)}/files?per_page=100',
+         '--jq', '.[] | {filename, previous_filename, patch: (if .filename == "src/config.js" then .patch else null end)}'],
+        text=True).splitlines() if l]
+    # un renombre también saca al archivo de donde estaba
+    archivos = [x['filename'] for x in xs]
+    viejos = [x['previous_filename'] for x in xs if x.get('previous_filename')]
+    diff = next((x.get('patch') or '' for x in xs if x['filename'] == 'src/config.js'), '')
+    if len(archivos) != total:
+        return archivos, diff, total
+    return archivos + viejos, diff, total + len(viejos)
+
+
 def main():
     if len(sys.argv) != 2:
         sys.exit(__doc__)
     pr = sys.argv[1]
-    info = json.loads(subprocess.check_output(['gh', 'pr', 'view', pr, '--json', 'files']))
-    archivos = [f['path'] for f in info['files']]
-    diff = subprocess.check_output(['gh', 'pr', 'diff', pr], text=True)
-    trozo = re.search(r'diff --git a/src/config\.js.*?(?=\ndiff --git |\Z)', diff, re.S)
-    motivos = revisar(archivos, trozo.group(0) if trozo else '')
+    archivos, diff, total = traer(pr)
+    motivos = revisar(archivos, diff) + completo(archivos, total, diff)
     if motivos:
         print(f'✗ PR {pr}: NO es solo datos — necesita a Juan')
         for m in motivos:

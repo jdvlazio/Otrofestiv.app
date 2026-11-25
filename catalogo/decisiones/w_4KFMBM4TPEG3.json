@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KFMBM4TPEG3",
+  "campo": "directores",
+  "valor": [
+   "Lara Carvalho"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lara Carvalho"
+  }
+ },
+ {
+  "work_id": "w_4KFMBM4TPEG3",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFMBM4TPEG3",
+  "campo": "paises",
+  "valor": [
+   "BR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Brasil"
+  }
+ },
+ {
+  "work_id": "w_4KFMBM4TPEG3",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KFMBM4TPEG3",
+  "campo": "sinopsis.es",
+  "valor": "Lara reúne a su hermana y a sus sobrinas en la antigua casa familiar en el interior de Goiás. La presencia de la difunta madre y abuela se manifiesta en los espacios, en los objetos, en los rasgos físicos de las hijas y nietas, y en los recuerdos que se van diluyendo con cada generación.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lara reúne a su hermana y a sus sobrinas en la antigua casa familiar en el interior de Goiás. La presencia de la difunta madre y abuela se manifiesta en los espacios, en los objetos, en los rasgos físicos de las hijas y nietas, y en los recuerdos que se van diluyendo con cada generación."
+  }
+ },
+ {
+  "work_id": "w_4KFMBM4TPEG3",
+  "campo": "sinopsis.en",
+  "valor": "Lara brings together her sister and nieces in their family’s old house, located in a small town in the Brazilian countryside. Through portraits and poetic scenes, the presence of their late mother and grandmother, Mônica Lourença, is revealed in the physical features of her daughters and granddaughters, in the objects, the spaces, and in the memories that gradually fade with each generation.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lara brings together her sister and nieces in their family’s old house, located in a small town in the Brazilian countryside. Through portraits and poetic scenes, the presence of their late mother and grandmother, Mônica Lourença, is revealed in the physical features of her daughters and granddaughters, in the objects, the spaces, and in the memories that gradually fade with each generation."
+  }
+ },
+ {
+  "work_id": "w_4KFMBM4TPEG3",
+  "campo": "xref.tmdb",
+  "valor": 1653995,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1653995"
+  }
+ },
+ {
+  "work_id": "w_4KFMBM4TPEG3",
+  "campo": "xref.letterboxd",
+  "valor": "ill-dance-my-way-to-you",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "ill-dance-my-way-to-you"
+  }
+ },
+ {
+  "work_id": "w_4KFMBM4TPEG3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/vou-dancar-ate-voce.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/vou-dancar-ate-voce.jpg"
+  }
+ }
+]

@@ -1,0 +1,119 @@
+[
+ {
+  "work_id": "w_4KJMK06H4RE7",
+  "campo": "directores",
+  "valor": [
+   "Aitana Ahrens"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Aitana Ahrens"
+  }
+ },
+ {
+  "work_id": "w_4KJMK06H4RE7",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJMK06H4RE7",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KJMK06H4RE7",
+  "campo": "generos",
+  "valor": [
+   "Misterio"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Misterio"
+  }
+ },
+ {
+  "work_id": "w_4KJMK06H4RE7",
+  "campo": "sinopsis.es",
+  "valor": "Una joven que busca agua en una cueva se encuentra con otra muchacha. Un sonido inquietante las atrae hacia una profundidad que les resulta extrañamente familiar.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una joven que busca agua en una cueva se encuentra con otra muchacha. Un sonido inquietante las atrae hacia una profundidad que les resulta extrañamente familiar."
+  }
+ },
+ {
+  "work_id": "w_4KJMK06H4RE7",
+  "campo": "sinopsis.en",
+  "valor": "A young woman searching for water in a cave encounters another girl. An unsettling sound draws them deeper, toward a place that feels strangely familiar.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A young woman searching for water in a cave encounters another girl. An unsettling sound draws them deeper, toward a place that feels strangely familiar."
+  }
+ },
+ {
+  "work_id": "w_4KJMK06H4RE7",
+  "campo": "xref.tmdb",
+  "valor": 1840640,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1840640"
+  }
+ },
+ {
+  "work_id": "w_4KJMK06H4RE7",
+  "campo": "xref.letterboxd",
+  "valor": "fantasy-land-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "fantasy-land-2026"
+  }
+ },
+ {
+  "work_id": "w_4KJMK06H4RE7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/fantasy-land.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/fantasy-land.jpg"
+  }
+ }
+]

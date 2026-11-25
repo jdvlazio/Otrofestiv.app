@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KHB4242C9PM",
+  "campo": "directores",
+  "valor": [
+   "Renata Lučić"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Renata Lučić"
+  }
+ },
+ {
+  "work_id": "w_4KHB4242C9PM",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHB4242C9PM",
+  "campo": "paises",
+  "valor": [
+   "HR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia"
+  }
+ },
+ {
+  "work_id": "w_4KHB4242C9PM",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KHB4242C9PM",
+  "campo": "sinopsis.es",
+  "valor": "Lela y Vid son dos hermanos que crecen en un entorno familiar tóxico, lleno de violencia y carga emocional. Son aliados para lidiar con sus padres. Pero un incidente desencadena un conflicto entre ellos.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lela y Vid son dos hermanos que crecen en un entorno familiar tóxico, lleno de violencia y carga emocional. Son aliados para lidiar con sus padres. Pero un incidente desencadena un conflicto entre ellos."
+  }
+ },
+ {
+  "work_id": "w_4KHB4242C9PM",
+  "campo": "sinopsis.en",
+  "valor": "Lela and Vid are sister and brother growing up in a toxic family environment filled with violence and emotional weight. They are each other’s allies in dealing with their parents. But an incident leads to a conflict between them.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lela and Vid are sister and brother growing up in a toxic family environment filled with violence and emotional weight. They are each other’s allies in dealing with their parents. But an incident leads to a conflict between them."
+  }
+ },
+ {
+  "work_id": "w_4KHB4242C9PM",
+  "campo": "xref.tmdb",
+  "valor": 1712540,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1712540"
+  }
+ },
+ {
+  "work_id": "w_4KHB4242C9PM",
+  "campo": "xref.letterboxd",
+  "valor": "2000-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2000-2026"
+  }
+ },
+ {
+  "work_id": "w_4KHB4242C9PM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/2000.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/2000.jpg"
+  }
+ }
+]

@@ -5,7 +5,7 @@
 Decisión de Juan (23 nov 2026): la sinopsis es de la OBRA, como el afiche
 (afiches_unicos.py). Medido ese día: 184 obras con más de una en español, y solo
 15 eran el mismo texto o casi. Se leyeron las 184 sugeridas; lo elegido vive en
-catalogo/decisiones.json (campo `sinopsis.es`), que el constructor respeta.
+catalogo/decisiones/ (campo `sinopsis.es`), que el constructor respeta.
 
 UNA SINOPSIS CUENTA LA OBRA, en español y sin nada del evento. Defectos que se
 encontraron PUBLICADOS: la lista de actores, enlaces de compra, «Q&A con el
@@ -175,8 +175,7 @@ def registrar(ruta):
         if e['work_id'] not in ya:
             decs.append({**e, 'campo': 'sinopsis.es'})
             n += 1
-    with open(os.path.join(cat.DIR, 'decisiones.json'), 'w', encoding='utf-8') as fh:
-        fh.write(json.dumps(decs, ensure_ascii=False, indent=1))
+    cat.escribir_decisiones(decs)
     return n
 
 

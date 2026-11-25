@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HF7C1PCRX6",
+  "campo": "directores",
+  "valor": [
+   "Shannie Villa"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 169",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=169"
+ },
+ {
+  "work_id": "w_R4HF7C1PCRX6",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 169",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=169"
+ },
+ {
+  "work_id": "w_R4HF7C1PCRX6",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 169",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=169",
+  "antes": {
+   "ficci-65": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HF7C1PCRX6",
+  "campo": "sinopsis.es",
+  "valor": "Los estudiantes de un taller de cine de La Boquilla, en Cartagena, se convierten en piratas: buscan un mapa, se enfrentan con los adversarios y siguen las pistas del tesoro. En tres cortos juegan con los tiempos y las posibilidades del cine que comienzan a conocer, entre la amistad y la creación.",
+  "motivo": "catálogo oficial de FICCI 65, p. 169",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=169"
+ },
+ {
+  "work_id": "w_R4HF7C1PCRX6",
+  "campo": "sinopsis.en",
+  "valor": "Students from a film workshop in La Boquilla, Cartagena, become pirates: they search for a map, face their adversaries, and follow the treasure clues. In three shorts they play with the rhythms and possibilities of the cinema they are beginning to discover, between friendship and creation.",
+  "motivo": "catálogo oficial de FICCI 65, p. 169",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=169"
+ },
+ {
+  "work_id": "w_R4HF7C1PCRX6",
+  "campo": "xref.tmdb",
+  "valor": 1668939,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1668939"
+ }
+]

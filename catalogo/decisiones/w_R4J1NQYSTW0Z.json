@@ -1,0 +1,182 @@
+[
+ {
+  "work_id": "w_R4J1NQYSTW0Z",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficma/llueve-sobre-babel.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficma/llueve-sobre-babel.jpg",
+   "/assets/girardota-2026/llueve-sobre-babel.jpg",
+   "/assets/narrarelfuturo-2026/llueve-sobre-babel.jpg",
+   "/assets/villadelcine-2026/llueve-sobre-babel.jpg"
+  ],
+  "antes": {
+   "ficma-2026": "/assets/ficma/llueve-sobre-babel.jpg",
+   "girardota-2026": "/assets/girardota-2026/llueve-sobre-babel.jpg",
+   "narrarelfuturo-2026": "/assets/narrarelfuturo-2026/llueve-sobre-babel.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/llueve-sobre-babel.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4J1NQYSTW0Z",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1388977)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficma-2026": 2025,
+   "girardota-2026": 2025,
+   "narrarelfuturo-2026": 2026,
+   "villadelcine-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4J1NQYSTW0Z",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "US",
+   "ES"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1388977)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficma-2026": "Colombia",
+   "girardota-2026": "Colombia, United States of America, Spain",
+   "narrarelfuturo-2026": "Colombia",
+   "villadelcine-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4J1NQYSTW0Z",
+  "campo": "generos",
+  "valor": [
+   "Fantasía"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "ficma-2026": "Fantasía",
+   "girardota-2026": "Fantasía",
+   "narrarelfuturo-2026": "Fantasía",
+   "villadelcine-2026": "Fantasía / Drama / Comedia"
+  }
+ },
+ {
+  "work_id": "w_R4J1NQYSTW0Z",
+  "campo": "sinopsis.es",
+  "valor": "En el bar Babel se mezclan vivos y muertos. Dante busca recordar su pasado antes de que la Flaca, la Muerte, cobre su deuda. Jacob oculta su deseo de ser drag queen a su padre, cura fanático; Uma, gitana con apuesta propia, intenta engañar a la Flaca para salvar a su hija. Entre pactos y desafíos, sus destinos chocan en lucha contra lo inevitable.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficma-2026, girardota-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "269809f20960",
+   "bf621f63c4cb",
+   "eb25758f7429",
+   "ef63caa0be25"
+  ],
+  "antes": {
+   "ficma-2026": "En el bar Babel, donde vivos y muertos se mezclan, Dante busca recordar su pasado antes de que la Flaca, la Muerte en esta ciudad, cobre su deuda. Jacob esconde de su padre, un sacerdote fanático, su deseo de ser drag queen, mientras Uma, una gitana con su propia apuesta, intenta engañar a la Flaca para salvar a su hija. Entre pactos y desafíos, sus destinos chocan en una lucha contra lo inevitable.",
+   "girardota-2026": "En el bar Babel, donde vivos y muertos se mezclan, Dante busca recordar su pasado antes de que la Flaca, la Muerte en esta ciudad, cobre su deuda. Jacob esconde de su padre, un sacerdote fanático, su deseo de ser drag queen, mientras Uma, una gitana con su propia apuesta, intenta engañar a la Flaca para salvar a su hija. Entre pactos y desafíos, sus destinos chocan en una lucha contra lo inevitable.",
+   "narrarelfuturo-2026": "El limbo nunca fue tan seductor como en Llueve sobre Babel. Escrita y dirigida por Gala del Sol, esta reinterpretación del Inferno de Dante toma la forma de un drama coral. La acción se centra en Babel, un bar donde distintos personajes se cruzan con La Flaca, la mismísima encarnación de la Muerte, con quien las almas pueden apostar años de vida en un intento por burlar su destino.",
+   "villadelcine-2026": "Esta reinterpretación del Inferno de Dante toma la forma de un drama coral. La acción se centra en Babel, un bar donde distintos personajes se cruzan con La Flaca, la mismísima encarnación de la Muerte, con quien las almas pueden apostar años de vida en un intento por burlar su destino. FESTIVAL DE CINE EUREKA NUEVA OLA ROLA MUESTRA + Q&A 0:53:00 | Colombia | Cortometrajes Juveniles Bogotanos Es indiscutible que el cine de la ciudad de Bogotá es imprescindible en la escena cinematográfica del país. La cultura bogotana respira a través de películas centradas en la creatividad narrativa en formatos como la animación y diferentes medios de narración, siendo satíricas dentro de la estética amplia de la ciudad de Bogotá, destacando cómo una nueva generación se apropia de su cine y lo evoluciona."
+  },
+  "original_de": [
+   "festicineantioquia-2026",
+   "ficma-2026",
+   "girardota-2026",
+   "narrarelfuturo-2026",
+   "villadelcine-2026"
+  ],
+  "titulo": "Llueve sobre Babel",
+  "original": "En el bar Babel, donde vivos y muertos se mezclan, Dante busca recordar su pasado antes de que la Flaca, la Muerte en esta ciudad, cobre su deuda. Jacob esconde de su padre, un sacerdote fanático, su deseo de ser drag queen, mientras Uma, una gitana con su propia apuesta, intenta engañar a la Flaca para salvar a su hija. Entre pactos y desafíos, sus destinos chocan en una lucha contra lo inevitable.",
+  "sintesis": {
+   "redacta": "corrector festicineantioquia-2026",
+   "verifica": "verificador de sinopsis (agente, 25 nov)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-25",
+   "huella": "656105ef9049"
+  }
+ },
+ {
+  "work_id": "w_R4J1NQYSTW0Z",
+  "campo": "sinopsis.en",
+  "valor": "At the Babel bar, living and dead mingle. Dante tries to recall his past before la Flaca, Death, collects his debt. Jacob hides his wish to be a drag queen from his fanatical priest father. Uma, a Gypsy with her own wager, tries to trick la Flaca to save her daughter. Amid pacts and challenges, their fates collide in a fight against the inevitable.",
+  "motivo": "versión corta (350) más fiel al original; redactor y verificador distintos (25 nov 2026)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "At the Babel bar, where the living and the dead mingle, Dante tries to recall his past before la Flaca, Death in this city, collects her debt. Jacob hides from his fanatical priest father his wish to be a drag queen, and Uma, a Gypsy woman, tries to trick la Flaca to save her daughter. Their destinies collide in a fight against the inevitable.",
+   "ficma-2026": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
+   "girardota-2026": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
+   "narrarelfuturo-2026": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
+   "villadelcine-2026": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself."
+  },
+  "anteriores": [
+   {
+    "valor": "At the Babel bar, where the living and the dead mingle, Dante tries to recall his past before la Flaca, Death in this city, collects her debt. Jacob hides from his fanatical priest father his wish to be a drag queen, and Uma, a Gypsy woman, tries to trick la Flaca to save her daughter. Their destinies collide in a fight against the inevitable.",
+    "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4J1NQYSTW0Z",
+  "campo": "directores",
+  "valor": [
+   "Gala del Sol"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Gala del Sol",
+   "ficma-2026": "Gala del Sol",
+   "girardota-2026": "Gala del Sol",
+   "narrarelfuturo-2026": "Gala del Sol",
+   "villadelcine-2026": "Gala del Sol"
+  }
+ },
+ {
+  "work_id": "w_R4J1NQYSTW0Z",
+  "campo": "xref.tmdb",
+  "valor": 1388977,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1388977",
+   "ficma-2026": "1388977",
+   "girardota-2026": "1388977",
+   "narrarelfuturo-2026": "1388977",
+   "villadelcine-2026": "1388977"
+  }
+ },
+ {
+  "work_id": "w_R4J1NQYSTW0Z",
+  "campo": "xref.letterboxd",
+  "valor": "rains-over-babel",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "rains-over-babel",
+   "ficma-2026": "rains-over-babel",
+   "girardota-2026": "rains-over-babel",
+   "narrarelfuturo-2026": "rains-over-babel",
+   "villadelcine-2026": "rains-over-babel"
+  }
+ }
+]

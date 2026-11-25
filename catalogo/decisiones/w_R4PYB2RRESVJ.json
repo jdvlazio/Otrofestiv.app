@@ -1,0 +1,33 @@
+[
+ {
+  "work_id": "w_R4PYB2RRESVJ",
+  "campo": "xref.letterboxd",
+  "valor": "el-aumento-2026",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "tiff-2026": "el-aumento-1"
+  }
+ },
+ {
+  "work_id": "w_R4PYB2RRESVJ",
+  "campo": "xref.tmdb",
+  "valor": 1745768,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/el-aumento-1/"
+ },
+ {
+  "work_id": "w_R4PYB2RRESVJ",
+  "campo": "paises",
+  "valor": [
+   "AR",
+   "US"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

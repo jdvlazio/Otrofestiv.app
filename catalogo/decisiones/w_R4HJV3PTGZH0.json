@@ -1,0 +1,87 @@
+[
+ {
+  "work_id": "w_R4HJV3PTGZH0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficdeh/la-luz-por-primera-vez.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/la-luz-por-primera-vez.jpg",
+   "/assets/ficfusa-2026/la-luz-por-primera-vez.jpg",
+   "/assets/ficma/la-luz-por-primera-vez.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/la-luz-por-primera-vez.jpg",
+   "ficfusa-2026": "/assets/ficfusa-2026/la-luz-por-primera-vez.jpg",
+   "ficma-2026": "/assets/ficma/la-luz-por-primera-vez.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HJV3PTGZH0",
+  "campo": "sinopsis.es",
+  "valor": "Natalia Pinilla, fotógrafa y activista, emprende un viaje que cruza Santander, Norte de Santander y España para descubrir la obra de Amalia Ramírez, una mujer olvidada que, a comienzos del siglo XX, capturó una de las imágenes más impactantes de la historia colombiana: la pirámide de calaveras de Palonegro, símbolo brutal de la Guerra de los Mil Días. Más de un siglo después, esa fotografía resurge y posiciona a Amalia como, quizás, la primera mujer fotógrafa de Colombia.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "5b795d38f185",
+   "a073f3cbce98",
+   "b6a78e94baee"
+  ],
+  "antes": {
+   "ficdeh-2026": "Natalia Pinilla, fotógrafa y activista, emprende un viaje que cruza Santander, Norte de Santander y España para descubrir la obra de Amalia Ramírez, una mujer olvidada que, a comienzos del siglo XX, capturó una de las imágenes más impactantes de la historia colombiana: la pirámide de calaveras de Palonegro, símbolo brutal de la Guerra de los Mil Días. Más de un siglo después, esa fotografía resurge y posiciona a Amalia como, quizás, la primera mujer fotógrafa de Colombia.",
+   "ficfusa-2026": "Natalia Pinilla, fotógrafa y activista, emprende un viaje que cruza Santander, Norte de Santander y España para descubrir la obra de Amalia Ramírez, una mujer olvidada que, a comienzos del siglo XX, capturó una de las imágenes más impactantes de la historia colombiana: la pirámide de calaveras de Palonegro, símbolo brutal de la Guerra de los Mil Días. Más de un siglo después, esa fotografía resurge y posiciona a Amalia como, quizás, la primera mujer fotógrafa de Colombia. Conversatorio con la directora Ibeth Rey y Mauricio Donoso, dir. de Fotocultura",
+   "ficma-2026": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory."
+  }
+ },
+ {
+  "work_id": "w_R4HJV3PTGZH0",
+  "campo": "directores",
+  "valor": [
+   "Ibeth Rey Jerez",
+   "Frank Rodríguez Rojas"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": "Ibeth Rey Jerez, Frank Rodríguez",
+   "ficfusa-2026": "Ibeth Rey y Frank Rodríguez Rojas",
+   "ficma-2026": "Ibeth Rey Jerez, Frank Rodríguez"
+  }
+ },
+ {
+  "work_id": "w_R4HJV3PTGZH0",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "ES"
+  ],
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": "Colombia, España",
+   "ficfusa-2026": "Colombia, España",
+   "ficma-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HJV3PTGZH0",
+  "campo": "sinopsis.en",
+  "valor": "Natalia Pinilla, photographer and activist, embarks on a journey that crosses Santander, Norte de Santander, and Spain to discover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, positioning Amalia as perhaps Colombia's first female photographer.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "La Luz por Primera Vez",
+  "antes": {
+   "ficdeh-2026": "Natalia Pinilla, photographer and activist, embarks on a journey that crosses Santander, Norte de Santander, and Spain to discover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, positioning Amalia as perhaps Colombia's first female photographer.",
+   "ficfusa-2026": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory.",
+   "ficma-2026": "Natalia Pinilla, photographer and activist, embarks on a journey across Santander, Norte de Santander, and Madrid, Spain, to uncover the work of Amalia Ramírez, a forgotten woman who, at the beginning of the 20th century, captured one of the most impactful images in Colombian history: the pyramid of skulls at Palonegro, a brutal symbol of the Thousand Days' War. More than a century later, this photograph resurfaces, establishing Amalia as the country's first female photographer. Along the way, she discovers previously unseen archives, connects with descendants unaware of her legacy, and finds a contemporary echo of her struggle in other women photographers. Through historical revelations and intimate encounters, the documentary reconstructs not only Amalia's work but also the memory of a country scarred by violence. The rediscovery of her photographs—portraits, everyday scenes, and forgotten visual testimonies—transforms her into a symbol of resistance, art, and memory."
+  }
+ }
+]

@@ -1,0 +1,35 @@
+[
+ {
+  "work_id": "w_R4MQS63732X3",
+  "campo": "sinopsis.es",
+  "valor": "Wiktor se muda a la casa de su tío, en el campo, y visita la propiedad vecina de los Wilko. Quince años antes había pasado allí unas vacaciones maravillosas con las seis hermanas que vivían en el lugar.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "25d330b100c0"
+  ],
+  "antes": {
+   "olhar-2026": "Wictor se muda a la casa de su tío en el campo. Visita la propiedad vecina de los Wilko. Quince años antes, había pasado unas vacaciones maravillosas allí, con las seis hermanas que vivían en el lugar."
+  }
+ },
+ {
+  "work_id": "w_R4MQS63732X3",
+  "campo": "xref.tmdb",
+  "valor": 117483,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-maids-of-wilko/"
+ },
+ {
+  "work_id": "w_R4MQS63732X3",
+  "campo": "paises",
+  "valor": [
+   "PL"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

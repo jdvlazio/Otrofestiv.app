@@ -1,0 +1,62 @@
+[
+ {
+  "work_id": "w_R4ET8FVT5MKJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/transversal30ff.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/transversal30ff.jpg",
+   "/assets/ficfusa-2026/transversal-30ff.jpg",
+   "https://image.tmdb.org/t/p/w500/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/transversal30ff.jpg",
+   "cinemancia-2025": "https://image.tmdb.org/t/p/w500/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg",
+   "ficfusa-2026": "/assets/ficfusa-2026/transversal-30ff.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4ET8FVT5MKJ",
+  "campo": "sinopsis.es",
+  "valor": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aleste-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "1969b71fa148",
+   "e0d857d1de94"
+  ],
+  "antes": {
+   "aleste-2026": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.",
+   "ficfusa-2026": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos."
+  }
+ },
+ {
+  "work_id": "w_R4ET8FVT5MKJ",
+  "campo": "directores",
+  "valor": [
+   "Checho Mejía"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1525925)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aleste-2026": "Sergio Mejía",
+   "cinemancia-2025": "Sergio Mejía",
+   "ficfusa-2026": "Checho Mejía"
+  }
+ },
+ {
+  "work_id": "w_R4ET8FVT5MKJ",
+  "campo": "sinopsis.en",
+  "valor": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

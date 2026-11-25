@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGW8XAHE5H0",
+  "campo": "directores",
+  "valor": [
+   "Anouk Chambaz"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Anouk Chambaz"
+  }
+ },
+ {
+  "work_id": "w_4KGW8XAHE5H0",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGW8XAHE5H0",
+  "campo": "paises",
+  "valor": [
+   "CH"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suiza"
+  }
+ },
+ {
+  "work_id": "w_4KGW8XAHE5H0",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KGW8XAHE5H0",
+  "campo": "sinopsis.es",
+  "valor": "Es un día como cualquier otro en las Naciones Unidas. Realmente, nada especial. Salvo, quizá, esa inusual epidemia que parece propagarse entre los miembros del consejo... Pero por lo demás, todo está bien. Sí, todo está perfectamente bien.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Es un día como cualquier otro en las Naciones Unidas. Realmente, nada especial. Salvo, quizá, esa inusual epidemia que parece propagarse entre los miembros del consejo... Pero por lo demás, todo está bien. Sí, todo está perfectamente bien."
+  }
+ },
+ {
+  "work_id": "w_4KGW8XAHE5H0",
+  "campo": "sinopsis.en",
+  "valor": "It’s an ordinary day at the United Nations. Nothing unexpected, really. Except, perhaps, for that strange epidemic spreading among the members of the council... But otherwise, everything is fine. Yes, it’s a perfectly quiet day.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "It’s an ordinary day at the United Nations. Nothing unexpected, really. Except, perhaps, for that strange epidemic spreading among the members of the council... But otherwise, everything is fine. Yes, it’s a perfectly quiet day."
+  }
+ },
+ {
+  "work_id": "w_4KGW8XAHE5H0",
+  "campo": "xref.tmdb",
+  "valor": 1820579,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1820579"
+  }
+ },
+ {
+  "work_id": "w_4KGW8XAHE5H0",
+  "campo": "xref.letterboxd",
+  "valor": "a-quiet-day-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "a-quiet-day-2026"
+  }
+ },
+ {
+  "work_id": "w_4KGW8XAHE5H0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/a-quiet-day.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/a-quiet-day.jpg"
+  }
+ }
+]

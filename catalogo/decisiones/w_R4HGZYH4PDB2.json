@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4HGZYH4PDB2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/si-la-escombrera-hablara.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/si-la-escombrera-hablara.jpg",
+   "/assets/midbo-2026/si-la-escombrera-hablara.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/si-la-escombrera-hablara.jpg",
+   "midbo-2026": "/assets/midbo-2026/si-la-escombrera-hablara.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HGZYH4PDB2",
+  "campo": "sinopsis.es",
+  "valor": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "d8d6ebcfd63a",
+   "eb541ce5877b"
+  ],
+  "antes": {
+   "ficdeh-2026": "En la comuna 13 de Medellín se encuentra la fosa urbana más grande de América Latina: La Escombrera. Las familias de las personas víctimas de desaparición forzada la señalan como el lugar donde están muchos de los 503 desaparecidos de este territorio. TRas dos décadas de negacionismo, la búsqueda forense liderada por el colectivo Mujeres Caminando por la Verdad desencadenó en 2024, el hallazgo de cuerpos. Este acontecimiento histórico envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar.",
+   "midbo-2026": "En la comuna 13 de Medellín existe la fosa urbana a cielo abierto más grande de América Latina. Durante más de veinte años, La Escombrera ha sido señalada por familias de personas víctimas de desaparición forzada como el lugar donde posiblemente se encuentren muchos de los 503 desaparecidos de este territorio. Mujeres Caminando por la Verdad lidera la búsqueda forense que, en medio de incontables obstáculos y tras dos décadas de negacionismo, desencadenó en el hallazgo de cuerpos en diciembre del año 2024. Este acontecimiento histórico, una bocanada de aire fresco para las familias buscadoras, envió un mensaje muy claro a toda Colombia: la tierra ha comenzado a hablar."
+  }
+ }
+]

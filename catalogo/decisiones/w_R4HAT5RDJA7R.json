@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HAT5RDJA7R",
+  "campo": "directores",
+  "valor": [
+   "Irati Gorostidi Agirretxe"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 192",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=192",
+  "antes": {
+   "ficci-65": "Farah Khan"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5RDJA7R",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 192",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=192",
+  "antes": {
+   "ficci-65": "2014"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5RDJA7R",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 192",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=192",
+  "antes": {
+   "ficci-65": "España"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5RDJA7R",
+  "campo": "sinopsis.es",
+  "valor": "Un grupo de trabajadores inicia una huelga silenciosa que no trasciende: el colectivo no comparte los ideales de los más jóvenes. Estos deciden transformar su vida e instalarse en una colorida comuna, donde ensayan un nuevo modelo de familia. Pero en lo cotidiano emergen tensiones. Del gris de la fábrica al color rural, una búsqueda de libertad.",
+  "motivo": "catálogo oficial de FICCI 65, p. 192",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=192",
+  "antes": {
+   "ficci-65": "En un gesto de rebeldía y poética, un grupo de trabajadores inicia una huelga silenciosa. Sin embargo, el impacto de esta pequeña revolución no trasciende: el colectivo no comparte los ideales de los más jóvenes."
+  }
+ },
+ {
+  "work_id": "w_R4HAT5RDJA7R",
+  "campo": "sinopsis.en",
+  "valor": "A group of workers begins a silent strike that goes no further: the collective does not share the ideals of its youngest. They decide to transform their lives and settle in a colorful commune, where they try out a new family model. But tensions emerge in daily life. From the gray of the factory to rural color, a quest for freedom.",
+  "motivo": "catálogo oficial de FICCI 65, p. 192",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=192",
+  "antes": {
+   "ficci-65": "In a gesture of rebellion and poetry, a group of workers begins a silent strike. Yet the impact of this small revolution goes unnoticed: the collective does not share the ideals of the younger generation."
+  }
+ },
+ {
+  "work_id": "w_R4HAT5RDJA7R",
+  "campo": "xref.tmdb",
+  "valor": 1025388,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1025388"
+ }
+]

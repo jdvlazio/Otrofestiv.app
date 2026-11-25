@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KGMH5W98ZRG",
+  "campo": "directores",
+  "valor": [
+   "Avi Mograbi"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Avi Mograbi"
+  }
+ },
+ {
+  "work_id": "w_4KGMH5W98ZRG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGMH5W98ZRG",
+  "campo": "paises",
+  "valor": [
+   "PT",
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Portugal, Francia"
+  }
+ },
+ {
+  "work_id": "w_4KGMH5W98ZRG",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KGMH5W98ZRG",
+  "campo": "sinopsis.es",
+  "valor": "El cineasta Avi Mograbi y su profesor de árabe y amigo, Ali Al Azhari, emprenden la búsqueda de las ruinas de Saffuriya, el pueblo de Ali, del cual fue expulsado durante la Nakba palestina de 1948 y, en su lugar, encuentran una vida que nunca se detuvo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "El cineasta Avi Mograbi y su profesor de árabe y amigo, Ali Al Azhari, emprenden la búsqueda de las ruinas de Saffuriya, el pueblo de Ali, del cual fue expulsado durante la Nakba palestina de 1948 y, en su lugar, encuentran una vida que nunca se detuvo."
+  }
+ },
+ {
+  "work_id": "w_4KGMH5W98ZRG",
+  "campo": "sinopsis.en",
+  "valor": "Filmmaker Avi Mograbi and his Arabic teacher and friend Ali Al Azhari go looking for the ruins of Ali’s village Saffuriya from which he was expelled during the 1948 Palestinian Nakba. Instead, they find a life that never ceased.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Filmmaker Avi Mograbi and his Arabic teacher and friend Ali Al Azhari go looking for the ruins of Ali’s village Saffuriya from which he was expelled during the 1948 Palestinian Nakba. Instead, they find a life that never ceased."
+  }
+ },
+ {
+  "work_id": "w_4KGMH5W98ZRG",
+  "campo": "xref.tmdb",
+  "valor": 1736524,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1736524"
+  }
+ },
+ {
+  "work_id": "w_4KGMH5W98ZRG",
+  "campo": "xref.letterboxd",
+  "valor": "wild-asparagus",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "wild-asparagus"
+  }
+ },
+ {
+  "work_id": "w_4KGMH5W98ZRG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/halayon.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/halayon.jpg"
+  }
+ }
+]

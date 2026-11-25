@@ -1,0 +1,66 @@
+[
+ {
+  "work_id": "w_R4EA7YZPGAKZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/donde-comienza-el-rio.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/donde-comienza-el-rio.jpg",
+   "https://images.ctfassets.net/22n7d68fswlw/4tyJPJL69IwAbPDN9j963X/c0082d4aed5ac345bc9922f5438a87e9/Where-the-River-Begins_Still_Hero.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/donde-comienza-el-rio.jpg",
+   "tiff-2026": "https://images.ctfassets.net/22n7d68fswlw/4tyJPJL69IwAbPDN9j963X/c0082d4aed5ac345bc9922f5438a87e9/Where-the-River-Begins_Still_Hero.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4EA7YZPGAKZ",
+  "campo": "sinopsis.es",
+  "valor": "Yajaira, una joven indígena, vive con su hija María en un violento barrio de Bogotá. Perseguida por los sueños de la selva que fue su hogar, anhela regresar a la comunidad de la que huyó. Tras la muerte de su sobrino, decide irse para proteger a su hija. Jhon, un joven pandillero del centro, se une a ellas en su arriesgado viaje hacia el remoto río Andágueda. Solo la selva decidirá su destino.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "222f966857bc",
+   "6d662afe1319"
+  ],
+  "antes": {
+   "biff-2026": "Yajaira, una joven indígena, vive con su hija María en un violento barrio de Bogotá. Perseguida por los sueños de la selva que fue su hogar, anhela regresar a la comunidad de la que huyó. Tras la muerte de su sobrino, decide irse para proteger a su hija. Jhon, un joven pandillero del centro, se une a ellas en su arriesgado viaje hacia el remoto río Andágueda. Solo la selva decidirá su destino.",
+   "tiff-2026": "En el tercer largometraje, tonificante y poético, de Juan Andrés Arango, una mujer emberá desplazada por la violencia emprende un viaje peligroso para buscar una vida mejor para ella y para su hija."
+  }
+ },
+ {
+  "work_id": "w_R4EA7YZPGAKZ",
+  "campo": "paises",
+  "valor": [
+   "CA",
+   "CO",
+   "NO"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:865567)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "Colombia, Canadá",
+   "tiff-2026": "Canadá, Colombia, Noruega"
+  }
+ },
+ {
+  "work_id": "w_R4EA7YZPGAKZ",
+  "campo": "sinopsis.en",
+  "valor": "Yajaira, a young but strong Embera woman, lives with her daughter Maria in a violent Bogotá neighborhood. Haunted by dreams of the jungle, she longs to return to the village she once called home. After a tragedy strikes, they have no choice but to leave. Jhon, a charismatic young gang member, joins them on their dangerous journey to the Andágueda River, driven by motives he keeps hidden. Donde Comienza el Río is a poignant, poetic film where a perilous escape becomes a journey of healing. As the jungle reemerges through memory and dream, masks fall and reality is touched by the magic of Yajaira’s inner world.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Where the River Begins",
+  "antes": {
+   "biff-2026": "Yajaira, a young but strong Embera woman, lives with her daughter Maria in a violent Bogotá neighborhood. Haunted by dreams of the jungle, she longs to return to the village she once called home. After a tragedy strikes, they have no choice but to leave. Jhon, a charismatic young gang member, joins them on their dangerous journey to the Andágueda River, driven by motives he keeps hidden.  Donde Comienza el Río is a poignant, poetic film where a perilous escape becomes a journey of healing. As the jungle reemerges through memory and dream, masks fall and reality is touched by the magic of Yajaira’s inner world.",
+   "tiff-2026": "In Juan Andrés Arango’s bracing and poetic third feature, an Emberá woman displaced by violence undertakes a dangerous journey to find a better life for herself and her daughter."
+  }
+ }
+]

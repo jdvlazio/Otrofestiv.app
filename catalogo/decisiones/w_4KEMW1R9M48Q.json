@@ -1,0 +1,117 @@
+[
+ {
+  "work_id": "w_4KEMW1R9M48Q",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "609e994c9725"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Lo entrañable",
+  "valor": "Silvia está embarazada, desea ser mamá y vive con Ana, su mejor amiga. Una noche, pasada de tragos, Ana la contagia de un peligroso virus que pondrá en riesgo la vida del bebé. Llena de ira, Silvia la echa de la casa y se enfrenta al profundo miedo de parir la muerte. Tiempo después, Ana regresa, la encuentra gravemente enferma y decide cuidarla.",
+  "original": "Silvia está embarazada y desea ser mamá, vive con Ana, su mejor amiga. Una noche, pasada de tragos, Ana contagia a Silvia de un peligroso virus que pondrá en riesgo la vida del bebé que viene en camino. Llena de ira, Silvia decide echarla de la casa y a partir de ese momento, se enfrenta al profundo miedo de parir la muerte. Tiempo después, Ana regresa y encuentra a Silvia gravemente enferma. Decide cuidarla, pero aunque Silvia logra recuperarse, el virus ha dejado consecuencias irreversibles.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "90613dbd8a39"
+  }
+ },
+ {
+  "work_id": "w_4KEMW1R9M48Q",
+  "campo": "directores",
+  "valor": [
+   "Valentina Laverde Castillo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Valentina Laverde Castillo"
+  }
+ },
+ {
+  "work_id": "w_4KEMW1R9M48Q",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEMW1R9M48Q",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KEMW1R9M48Q",
+  "campo": "sinopsis.en",
+  "valor": "Silvia is pregnant and longs to become a mother. She lives with Ana, her best friend, who one night, after drinking, infects her with a dangerous virus that threatens her unborn baby. Furious, Silvia kicks Ana out and confronts her deepest fear: giving birth to death. When Ana returns months later, she finds Silvia gravely ill and decides to care for her.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Silvia is pregnant and longs to become a mother. She lives with Ana, her best friend, who one night, after drinking, infects her with a dangerous virus that threatens her unborn baby. Furious, Silvia kicks Ana out and confronts her deepest fear: giving birth to death. When Ana returns months later, she finds Silvia gravely ill. She decides to care for her, but although Silvia recovers, the virus leaves irreversible consequences."
+  }
+ },
+ {
+  "work_id": "w_4KEMW1R9M48Q",
+  "campo": "xref.tmdb",
+  "valor": 1841392,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841392"
+  }
+ },
+ {
+  "work_id": "w_4KEMW1R9M48Q",
+  "campo": "xref.letterboxd",
+  "valor": "lo-entranable",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "lo-entranable"
+  }
+ },
+ {
+  "work_id": "w_4KEMW1R9M48Q",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/lo-entranable.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/lo-entranable.jpg"
+  }
+ }
+]

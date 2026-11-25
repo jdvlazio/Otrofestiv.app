@@ -1,0 +1,52 @@
+[
+ {
+  "work_id": "w_R4DW5H3N6W5G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/princesa-burro.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/princesa-burro.jpg",
+   "/assets/ficcali-2026/princesa-burro.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/princesa-burro.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/princesa-burro.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DW5H3N6W5G",
+  "campo": "sinopsis.es",
+  "valor": "En un reino de cuento de hadas donde el amor está prohibido, la princesa Diana desafía el decreto del rey al enamorarse de Lalo. Cuando él es desterrado, un brazalete mágico la transporta a través de mundos y espacios-tiempos paralelos en un viaje para recuperar sus sueños y su amor perdido.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "c2c4fa62e2a9",
+   "e09ff2c9e866"
+  ],
+  "antes": {
+   "biff-2026": "En un reino de cuento de hadas donde el amor está prohibido, la princesa Diana desafía el decreto del rey al enamorarse de Lalo. Cuando él es desterrado, un brazalete mágico la transporta a través de mundos y espacios-tiempos paralelos en un viaje para recuperar sus sueños y su amor perdido.",
+   "ficcali-2026": "En un reino de cuento de hadas, donde el amor está prohibido, la princesa Diana desafía el decreto del rey al enamorarse de Lalo. Cuando él es desterrado, un brazalete mágico la transporta entre mundos y espacios-tiempo paralelos para recuperar sus sueños y su amor perdido. Con la premisa del cuento «Piel de asno», Cristóbal León y Joaquín Cociña continúan el desarrollo de su mundo fantástico y terrorífico de gran creatividad audiovisual. Mezclan técnicas y usan maquetas y trucos mecánicos para adentrarse en nuestros miedos y lo hacen atravesando todo tipo de planos de realidad mediante el juego con los códigos de distintos géneros cinematográficos."
+  }
+ },
+ {
+  "work_id": "w_R4DW5H3N6W5G",
+  "campo": "directores",
+  "valor": [
+   "Cristóbal León",
+   "Joaquín Cociña"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "Cristóbal León, Joaquín Cociña",
+   "ficcali-2026": "Joaquín Cociña, Cristóbal León"
+  }
+ }
+]

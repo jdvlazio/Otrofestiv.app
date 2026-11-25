@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4HC1F4D4YSJ",
+  "campo": "directores",
+  "valor": [
+   "Alain Gomis"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 227",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=227",
+  "antes": {
+   "ficci-65": "Alain Gomis"
+  }
+ },
+ {
+  "work_id": "w_R4HC1F4D4YSJ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 227",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=227",
+  "antes": {
+   "ficci-65": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HC1F4D4YSJ",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "SN",
+   "GW"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 227",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=227",
+  "antes": {
+   "ficci-65": "Francia, Senegal, Guinea-Bisáu"
+  }
+ },
+ {
+  "work_id": "w_R4HC1F4D4YSJ",
+  "campo": "sinopsis.es",
+  "valor": "Un casting, o su imitación, selecciona a personas que actuarán como familia en dos rituales: una boda en Francia y un velatorio en Guinea-Bisáu. Entre documental y ficción, la película pone en duda la realidad de lo que vemos y documenta existencias históricamente marginadas, con respeto por lo tradicional y lo sagrado.",
+  "motivo": "catálogo oficial de FICCI 65, p. 227",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=227",
+  "antes": {
+   "ficci-65": "«DAO es el movimiento perpetuo y circular que fluye en todo y une al mundo». La película comienza con la presentación del concepto que le da nombre, introduciendo al espectador en el ritmo de la experiencia audiovisual que propone a continuación."
+  }
+ },
+ {
+  "work_id": "w_R4HC1F4D4YSJ",
+  "campo": "sinopsis.en",
+  "valor": "A casting call, or a mock one, selects people to act as a family in two rituals: a wedding in France and a wake in Guinea-Bissau. Between documentary and fiction, the film casts doubt on the reality of what we see and documents historically marginalized lives, with respect for the traditional and the sacred.",
+  "motivo": "catálogo oficial de FICCI 65, p. 227",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=227",
+  "antes": {
+   "ficci-65": "'DAO is the perpetual circular movement that flows through everything and unites the world.' The film opens with the concept that gives it its name, drawing the viewer into the audiovisual rhythm that follows."
+  }
+ },
+ {
+  "work_id": "w_R4HC1F4D4YSJ",
+  "campo": "xref.tmdb",
+  "valor": 1135582,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1135582"
+ }
+]

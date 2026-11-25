@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_7JCVSXZMH0YV",
+  "campo": "sinopsis.es",
+  "valor": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Gündiwa Villafaña Mejía.",
+  "motivo": "la lámina DfcqutroV1z/08 escribe «Gündiwa»",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Güindiva Villafaña Mejía."
+  },
+  "vistas": [
+   "eea30048f0e6"
+  ]
+ },
+ {
+  "work_id": "w_7JCVSXZMH0YV",
+  "campo": "sinopsis.en",
+  "valor": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Gündiwa Villafaña Mejía.",
+  "motivo": "la lámina DfcqutroV1z/08 escribe «Gündiwa»",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Güindiva Villafaña Mejía."
+  }
+ },
+ {
+  "work_id": "w_7JCVSXZMH0YV",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCVSXZMH0YV",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_7JCVSXZMH0YV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/un-dialogo-para-sanar-la-tierra.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/un-dialogo-para-sanar-la-tierra.jpg"
+  }
+ }
+]

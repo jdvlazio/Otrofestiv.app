@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KJ3DQA6Q5VJ",
+  "campo": "directores",
+  "valor": [
+   "Andrea Szelesová"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Andrea Szelesová"
+  }
+ },
+ {
+  "work_id": "w_4KJ3DQA6Q5VJ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJ3DQA6Q5VJ",
+  "campo": "paises",
+  "valor": [
+   "CZ",
+   "SK"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "República Checa, Eslovaquia"
+  }
+ },
+ {
+  "work_id": "w_4KJ3DQA6Q5VJ",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KJ3DQA6Q5VJ",
+  "campo": "sinopsis.es",
+  "valor": "Yios, un niño mítico cuya cabeza brilla como el sol, no consigue hacer amigos entre las nubes. Todo cambia cuando cae a la Tierra.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Yios, un niño mítico cuya cabeza brilla como el sol, no consigue hacer amigos entre las nubes. Todo cambia cuando cae a la Tierra."
+  }
+ },
+ {
+  "work_id": "w_4KJ3DQA6Q5VJ",
+  "campo": "sinopsis.en",
+  "valor": "Yios, a lonely mythical boy whose head shines like the sun, struggles to make friends in the clouds. After he falls down to Earth, everything changes...",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Yios, a lonely mythical boy whose head shines like the sun, struggles to make friends in the clouds. After he falls down to Earth, everything changes..."
+  }
+ },
+ {
+  "work_id": "w_4KJ3DQA6Q5VJ",
+  "campo": "xref.tmdb",
+  "valor": 1616186,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1616186"
+  }
+ },
+ {
+  "work_id": "w_4KJ3DQA6Q5VJ",
+  "campo": "xref.letterboxd",
+  "valor": "eeny-meeny-miny-moe-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "eeny-meeny-miny-moe-2026"
+  }
+ },
+ {
+  "work_id": "w_4KJ3DQA6Q5VJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/en-ten-tyky.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/en-ten-tyky.jpg"
+  }
+ }
+]

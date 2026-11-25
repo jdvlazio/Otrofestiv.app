@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HAT5A0J0QY",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/bosque-arriba-en-la-montana.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/bosque-arriba-en-la-montana.jpg",
+   "https://image.tmdb.org/t/p/w500/r5brsK8rdog4ewLZPihvb0tntZh.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w500/r5brsK8rdog4ewLZPihvb0tntZh.jpg",
+   "midbo-2026": "/assets/midbo-2026/bosque-arriba-en-la-montana.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5A0J0QY",
+  "campo": "sinopsis.es",
+  "valor": "En 2017, fuerzas de seguridad del Estado mataron al joven mapuche Rafael Nahuel en un bosque de la Patagonia argentina. En ese mismo territorio, en la comunidad de Mirta Ñancunao, se sostiene desde hace años una lucha contra el avance de las empresas forestales. Un viaje por carretera recorre la memoria de familias desintegradas por el genocidio conocido como la «Campaña del Desierto», que a fines del siglo XIX devastó comunidades y territorios. La película también acompaña a jóvenes que reconstruyen su identidad a través de la música. Basándose en expedientes judiciales, documentos oficiales y archivos forenses, la película saca a la luz procesos de desarraigo y ruptura de identidad perpetrados a través de la violencia material y simbólica.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "2e9ab3181d32",
+   "6ed149d39045"
+  ],
+  "antes": {
+   "ficci-65": "En 2017, Rafael Nahuel, un joven mapuche, fue asesinado por la Prefectura Naval Argentina en el bosque andino de Villa Mascardi, en la Patagonia.",
+   "midbo-2026": "En 2017, fuerzas de seguridad del Estado mataron al joven mapuche Rafael Nahuel en un bosque de la Patagonia argentina. En ese mismo territorio, en la comunidad de Mirta Ñancunao, se sostiene desde hace años una lucha contra el avance de las empresas forestales. Un viaje por carretera recorre la memoria de familias desintegradas por el genocidio conocido como la «Campaña del Desierto», que a fines del siglo XIX devastó comunidades y territorios. La película también acompaña a jóvenes que reconstruyen su identidad a través de la música. Basándose en expedientes judiciales, documentos oficiales y archivos forenses, la película saca a la luz procesos de desarraigo y ruptura de identidad perpetrados a través de la violencia material y simbólica."
+  }
+ },
+ {
+  "work_id": "w_R4HAT5A0J0QY",
+  "campo": "directores",
+  "valor": [
+   "Sofía Bordenave"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficci-65": "Sofía Bordenave",
+   "midbo-2026": "Sofia Bordenave"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5A0J0QY",
+  "campo": "sinopsis.en",
+  "valor": "In 2017, young Mapuche Rafael Nahuel was killed by police in the Patagonian forest. Site visits, court proceedings – the film unites the elements involved in solving the crime. Meticulously observed: the struggle for civil rights and narrating history.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Bosque arriba en la montaña",
+  "antes": {
+   "ficci-65": "In 2017, Rafael Nahuel, a young Mapuche man, was killed by the Argentine Naval Prefecture in the Andean forest of Villa Mascardi, Patagonia.",
+   "midbo-2026": "In 2017, young Mapuche Rafael Nahuel was killed by police in the Patagonian forest. Site visits, court proceedings – the film unites the elements involved in solving the crime. Meticulously observed: the struggle for civil rights and narrating history."
+  }
+ }
+]

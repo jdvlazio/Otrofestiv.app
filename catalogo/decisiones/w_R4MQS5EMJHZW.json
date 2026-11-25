@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS5EMJHZW",
+  "campo": "sinopsis.es",
+  "valor": "En un lluvioso futuro cercano, un hombre sin memoria llamado K emprende un viaje trágico y absurdo para encontrar su lugar en el mundo, después de usar un extraño dispositivo de inteligencia artificial creado para ayudar a personas con un nuevo síndrome neurológico.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "0d39c5f735a1"
+  ],
+  "antes": {
+   "olhar-2026": "En un lluvioso futuro cercano, un hombre sin memoria llamado K emprende un viaje trágico y absurdo para intentar encontrar su lugar en el mundo después de usar un extraño dispositivo de IA creado para ayudar a personas con un nuevo síndrome neurológico."
+  }
+ },
+ {
+  "work_id": "w_R4MQS5EMJHZW",
+  "campo": "xref.tmdb",
+  "valor": 1293202,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/future-future/"
+ }
+]

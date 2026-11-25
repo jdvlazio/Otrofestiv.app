@@ -1,0 +1,24 @@
+[
+ {
+  "work_id": "w_R4QMRGDKMFYS",
+  "campo": "xref.letterboxd",
+  "valor": "whatcha-want",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "tiff-2026": "watcha-want"
+  }
+ },
+ {
+  "work_id": "w_R4QMRGDKMFYS",
+  "campo": "sinopsis.en",
+  "valor": "The latest comedy from writer-director Mina Shum (Double Happiness, Meditation Park) tells the story of a young woman from Hong Kong whose marriage to an affluent businessman is beginning to resemble a gilded cage.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "tiff-2026": "The latest comedy from writer-director Mina Shum (Double Happiness, TIFF ’17’s Meditation Park) tells the story of a young woman from Hong Kong whose marriage to an affluent businessman is beginning to resemble a gilded cage."
+  }
+ }
+]

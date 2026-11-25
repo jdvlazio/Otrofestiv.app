@@ -1,0 +1,127 @@
+[
+ {
+  "work_id": "w_R4F45MWYW0TY",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "vistas": [
+   "/assets/bogoshorts-2026/mi-amigo-el-arquitecto.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MFTA_Final_Untextured_Low-Res%20-%20MEDIOCIELO%20Cine%20%281%29.jpg?itok=MXASl-yt",
+   "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg"
+  ],
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/mi-amigo-el-arquitecto.jpg",
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/sMB00Njgb5QlOHPoD16Am79twm5.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MFTA_Final_Untextured_Low-Res%20-%20MEDIOCIELO%20Cine%20%281%29.jpg?itok=MXASl-yt"
+  }
+ },
+ {
+  "work_id": "w_R4F45MWYW0TY",
+  "campo": "sinopsis.es",
+  "valor": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
+  "motivo": "mismo contenido: queda la publicada",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "Una mujer inventa una historia para evocar una amistad perdida. Llama a sus amigos y con ellos imagina una fábula. Esta es una película sobre la transformación: la historia de dos pájaros que un día se convirtieron en humanos —un ornitólogo y su amigo, el arquitecto—.",
+   "cinemancia-2026": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto.",
+   "ficci-65": "Una mujer inventa un relato para evocar una amistad perdida. Junto a sus amigos imagina una fábula: la historia de dos pájaros que un día se hicieron humanos, un Ornitólogo y su amigo, El Arquitecto."
+  },
+  "vistas": [
+   "04feaa06a167",
+   "ec1770770391"
+  ]
+ },
+ {
+  "work_id": "w_R4F45MWYW0TY",
+  "campo": "sinopsis.en",
+  "valor": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
+  "motivo": "mismo contenido: queda la publicada",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable; a film about metamorphosis: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
+   "cinemancia-2026": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect.",
+   "ficci-65": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect."
+  }
+ },
+ {
+  "work_id": "w_R4F45MWYW0TY",
+  "campo": "directores",
+  "valor": [
+   "Óscar Garzón"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Óscar Garzón",
+   "cinemancia-2026": "Óscar Garzón",
+   "ficci-65": "Óscar Garzón"
+  }
+ },
+ {
+  "work_id": "w_R4F45MWYW0TY",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "cinemancia-2026": "2026",
+   "ficci-65": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4F45MWYW0TY",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia",
+   "cinemancia-2026": "Colombia",
+   "ficci-65": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4F45MWYW0TY",
+  "campo": "xref.tmdb",
+  "valor": 1655621,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1655621",
+   "cinemancia-2026": "1655621",
+   "ficci-65": "1655621"
+  }
+ },
+ {
+  "work_id": "w_R4F45MWYW0TY",
+  "campo": "xref.letterboxd",
+  "valor": "my-friend-the-architect",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "my-friend-the-architect",
+   "cinemancia-2026": "my-friend-the-architect",
+   "ficci-65": "my-friend-the-architect"
+  }
+ }
+]

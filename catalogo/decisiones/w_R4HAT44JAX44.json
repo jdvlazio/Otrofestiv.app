@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HAT44JAX44",
+  "campo": "directores",
+  "valor": [
+   "Fernando Saldivia Yáñez"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 245",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=245"
+ },
+ {
+  "work_id": "w_R4HAT44JAX44",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 245",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=245"
+ },
+ {
+  "work_id": "w_R4HAT44JAX44",
+  "campo": "paises",
+  "valor": [
+   "CL",
+   "US"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 245",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=245",
+  "antes": {
+   "ficci-65": "Chile, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4HAT44JAX44",
+  "campo": "sinopsis.es",
+  "valor": "Tras años viviendo en Chicago, una joven pareja quechua conversa sobre su eventual regreso a su comunidad andina en el Perú. Con narración en español, canto en quechua y una puesta en escena sencilla, este corto híbrido capta un momento íntimo de la migración contemporánea, sostenida por el deseo compartido de volver a casa.",
+  "motivo": "catálogo oficial de FICCI 65, p. 245",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=245"
+ },
+ {
+  "work_id": "w_R4HAT44JAX44",
+  "campo": "sinopsis.en",
+  "valor": "After years of living in Chicago, a young Quechua couple talks about their eventual return to their Andean community in Peru. With narration in Spanish, songs in Quechua, and a simple staging, this hybrid short captures an intimate moment of contemporary migration, sustained by the shared desire to return home.",
+  "motivo": "catálogo oficial de FICCI 65, p. 245",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=245"
+ },
+ {
+  "work_id": "w_R4HAT44JAX44",
+  "campo": "xref.tmdb",
+  "valor": 1551101,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1551101"
+ }
+]

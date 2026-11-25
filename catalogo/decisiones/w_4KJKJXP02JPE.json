@@ -1,0 +1,68 @@
+[
+ {
+  "work_id": "w_4KJKJXP02JPE",
+  "campo": "directores",
+  "valor": [
+   "Rodrigo Méndez",
+   "Joana Colomar"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rodrigo Méndez, Joana Colomar"
+  }
+ },
+ {
+  "work_id": "w_4KJKJXP02JPE",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJKJXP02JPE",
+  "campo": "paises",
+  "valor": [
+   "UY",
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Uruguay, España"
+  }
+ },
+ {
+  "work_id": "w_4KJKJXP02JPE",
+  "campo": "sinopsis.es",
+  "valor": "La pérdida aparente de la capacidad de amar lleva a nuestro personaje a merodear las calles de la ciudad en busca de una señal.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "La pérdida aparente de la capacidad de amar lleva a nuestro personaje a merodear las calles de la ciudad en busca de una señal."
+  }
+ },
+ {
+  "work_id": "w_4KJKJXP02JPE",
+  "campo": "sinopsis.en",
+  "valor": "The apparent loss of the ability to love leads our character to wander the city streets in search of a sign.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "The apparent loss of the ability to love leads our character to wander the city streets in search of a sign."
+  }
+ }
+]

@@ -1,0 +1,30 @@
+[
+ {
+  "work_id": "w_R4JPHQZDZNTP",
+  "campo": "sinopsis.en",
+  "valor": "In this film manifesto, two Amazonian filmmakers decide to denounce the historical process of inventing and exploiting the rainforest as an inexhaustible Garden of Eden. Moving between Munich and Belém, immersed in a sea of greenwashing which drowns them every single day, they reveal how racism and prejudice, both in Brazil and worldwide, are still organized around the concept of a 'savage demographic void' unable to speak for itself.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "finca-2026": "In this film manifesto, two Amazonian filmmakers decide to denounce the historical process of inventing and exploiting the rainforest as an inexhaustible Garden of Eden. Moving between Munich and Belém, immersed in a sea of greenwashing which drowns them every single day, they reveal how racism and prejudice, both in Brazil and worldwide, are still organized around the concept of a 'savage demographic void' unable to speak for itself"
+  }
+ },
+ {
+  "work_id": "w_R4JPHQZDZNTP",
+  "campo": "xref.tmdb",
+  "valor": 1394275,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/no-more-history-without-us/"
+ },
+ {
+  "work_id": "w_R4JPHQZDZNTP",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

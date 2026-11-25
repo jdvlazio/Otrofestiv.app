@@ -1,0 +1,35 @@
+[
+ {
+  "work_id": "w_R4GVXWNEDD2M",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/boato.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/festicinerio-2026/boato.jpg",
+   "/assets/ficcali-2026/boato.jpg"
+  ],
+  "antes": {
+   "festicinerio-2026": "/assets/festicinerio-2026/boato.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/boato.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4GVXWNEDD2M",
+  "campo": "directores",
+  "valor": [
+   "Alexandra Michel Julio"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "festicinerio-2026": "Alexandra Michel Julio",
+   "ficcali-2026": "Alexandra Julio"
+  }
+ }
+]

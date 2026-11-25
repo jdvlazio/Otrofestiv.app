@@ -1,0 +1,44 @@
+[
+ {
+  "work_id": "w_4KJ4AKF6H2TK",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJ4AKF6H2TK",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "ID",
+   "KR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia, Indonesia, Corea del Sur"
+  }
+ },
+ {
+  "work_id": "w_4KJ4AKF6H2TK",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ }
+]

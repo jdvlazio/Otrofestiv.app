@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4JDE7TVVFNW",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicinerio-2026/la-gallina-saraviada.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/festicinerio-2026/la-gallina-saraviada.jpg",
+   "/assets/ficpa-2026/la-gallina-saraviada.jpg",
+   "/assets/guatape-2026/la-gallina-saraviada.jpg",
+   "https://image.tmdb.org/t/p/w500/8zhRsq8nEjsjFLl29onD7LXeQfz.jpg"
+  ],
+  "antes": {
+   "festicinerio-2026": "/assets/festicinerio-2026/la-gallina-saraviada.jpg",
+   "ficfusa-2026": "/assets/ficpa-2026/la-gallina-saraviada.jpg",
+   "ficpa-2026": "/assets/ficpa-2026/la-gallina-saraviada.jpg",
+   "guatape-2026": "/assets/guatape-2026/la-gallina-saraviada.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/8zhRsq8nEjsjFLl29onD7LXeQfz.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4JDE7TVVFNW",
+  "campo": "sinopsis.es",
+  "valor": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (festicinerio-2026, ficfusa-2026, ficpa-2026, guatape-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "c271db1fa36a",
+   "ddc95360fc95"
+  ],
+  "antes": {
+   "festicinerio-2026": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
+   "ficfusa-2026": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
+   "ficpa-2026": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
+   "guatape-2026": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
+   "siembrafest-2026": "Convierte el empeño de una mujer mayor por preservar el linaje de su última gallina en un relato íntimo sobre la persistencia de la vida."
+  }
+ },
+ {
+  "work_id": "w_R4JDE7TVVFNW",
+  "campo": "directores",
+  "valor": [
+   "Ingrid Paola Bonilla Rodríguez"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "festicinerio-2026": "Ingrid Bonilla",
+   "ficfusa-2026": "Ingrid Paola Bonilla Rodriguez",
+   "ficpa-2026": "Ingrid Paola Bonilla Rodriguez",
+   "guatape-2026": "Ingrid Paola Bonilla Rodríguez",
+   "siembrafest-2026": "Ingrid Bonilla Rodríguez"
+  }
+ },
+ {
+  "work_id": "w_R4JDE7TVVFNW",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1746279)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "festicinerio-2026": 2026,
+   "ficfusa-2026": 2026,
+   "ficpa-2026": 2026,
+   "guatape-2026": 2026,
+   "siembrafest-2026": 2025
+  }
+ }
+]

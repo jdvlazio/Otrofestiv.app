@@ -1,0 +1,119 @@
+[
+ {
+  "work_id": "w_7JCX65BM88M0",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Claude",
+  "vistas": [
+   "4bdb775dcc3d"
+  ],
+  "original_de": [
+   "provinciadevelez-2026"
+  ],
+  "titulo": "El pescador",
+  "valor": "Un retrato íntimo del Caribe a través de la vida de quienes se dedican al mar. De la voz de un pescador puertorriqueño al vínculo entre un padre y su hijo en Colombia, la película muestra cómo la pesca une y distingue, y retrata un legado hecho de tradición, lucha y esperanza.",
+  "original": "Un retrato íntimo del Caribe a través de la vida de quienes se dedican al mar. De la voz de un pescador puertorriqueño al vínculo entre un padre y su hijo en Colombia, la película muestra cómo la pesca une y distingue, y retrata un legado hecho de tradición, lucha y esperanza. Filmada en La Parguera (Lajas, Puerto Rico) y en Palomino (La Guajira, Colombia).",
+  "sintesis": {
+   "redacta": "Claude (montaje provinciadevelez)",
+   "verifica": "agente verificador independiente (Sonnet)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "8ea99493d099"
+  }
+ },
+ {
+  "work_id": "w_7JCX65BM88M0",
+  "campo": "sinopsis.en",
+  "valor": "An intimate portrait of the Caribbean through the lives of those who devote themselves to the sea. From the voice of a Puerto Rican fisherman to the bond between a father and his son in Colombia, the film reveals how fishing both unites and distinguishes, portraying a legacy shaped by tradition, struggle, and hope.",
+  "motivo": "la de TMDB sin la frase de locaciones, que el español no trae",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "El Pescador is an intimate portrait of the Caribbean through the lives of those who devote themselves to the sea. From the voice of a Puerto Rican fisherman to the bond between a father and his son in Colombia, the film reveals how fishing both unites and distinguishes, portraying a legacy shaped by tradition, struggle, and hope. Filmed in La Parguera, Lajas, Puerto Rico and Palomino, La Guajira, Colombia."
+  }
+ },
+ {
+  "work_id": "w_7JCX65BM88M0",
+  "campo": "directores",
+  "valor": [
+   "Juan Cruz"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Juan Cruz"
+  }
+ },
+ {
+  "work_id": "w_7JCX65BM88M0",
+  "campo": "paises",
+  "valor": [
+   "PR",
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Puerto Rico, Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCX65BM88M0",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_7JCX65BM88M0",
+  "campo": "xref.tmdb",
+  "valor": 1558138,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1558138"
+  }
+ },
+ {
+  "work_id": "w_7JCX65BM88M0",
+  "campo": "xref.letterboxd",
+  "valor": "el-pescador-1",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "el-pescador-1"
+  }
+ },
+ {
+  "work_id": "w_7JCX65BM88M0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/el-pescador.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/el-pescador.jpg"
+  }
+ }
+]

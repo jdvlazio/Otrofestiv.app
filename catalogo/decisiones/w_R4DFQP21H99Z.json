@@ -1,0 +1,66 @@
+[
+ {
+  "work_id": "w_R4DFQP21H99Z",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w185/apNxjF4eu2Oy3kqugfBgUP37C4O.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/la-hija-condor.jpg",
+   "https://image.tmdb.org/t/p/w185/apNxjF4eu2Oy3kqugfBgUP37C4O.jpg"
+  ],
+  "antes": {
+   "aff-2026": "https://image.tmdb.org/t/p/w185/apNxjF4eu2Oy3kqugfBgUP37C4O.jpg",
+   "ficdeh-2026": "/assets/ficdeh/la-hija-condor.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DFQP21H99Z",
+  "campo": "sinopsis.es",
+  "valor": "Clara es una adolescente que vive en una comunidad indígena en los Andes. Su madre adoptiva, una partera que la acogió cuando era bebé, le ha enseñado los antiguos cantos para guiar a las mujeres en el parto. Melodías transmitidas de generación en generación y, que se cree, ayudan a traer nueva vida al mundo de manera segura. Pero, aunque su voz continúa con la tradición, sus sueños están en otro lugar: anhela dejar las montañas y convertirse en una estrella de música folclórica en la gran ciudad.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "353bd7296477",
+   "a5a895c86081"
+  ],
+  "antes": {
+   "aff-2026": "Clara, adolescente de una pequeña comunidad indígena en los Andes, criada por su madre adoptiva partera, sueña con ser estrella de música folclórica en la ciudad.",
+   "ficdeh-2026": "Clara es una adolescente que vive en una comunidad indígena en los Andes. Su madre adoptiva, una partera que la acogió cuando era bebé, le ha enseñado los antiguos cantos para guiar a las mujeres en el parto. Melodías transmitidas de generación en generación y, que se cree, ayudan a traer nueva vida al mundo de manera segura. Pero, aunque su voz continúa con la tradición, sus sueños están en otro lugar: anhela dejar las montañas y convertirse en una estrella de música folclórica en la gran ciudad."
+  }
+ },
+ {
+  "work_id": "w_R4DFQP21H99Z",
+  "campo": "paises",
+  "valor": [
+   "BO",
+   "PE",
+   "UY"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1459062)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "Bolivia/Perú/Uruguay",
+   "ficdeh-2026": "Bolivia, Perú, Uruguay"
+  }
+ },
+ {
+  "work_id": "w_R4DFQP21H99Z",
+  "campo": "sinopsis.en",
+  "valor": "Clara is a teenager growing up in a small indigenous community high in the Andes. Her adoptive mother, a midwife who took her in as a baby, has taught her the ancient songs used to guide women through childbirth, melodies passed down for generations, believed to bring new life safely into the world. But while her voice carries on this tradition, her dreams lie elsewhere: she longs to leave the mountains behind and become a folkloric music star in the big city.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "La hija cóndor",
+  "antes": {
+   "aff-2026": "Clara, a teenager in an Andean indigenous community, learns she was adopted from a sacred condor. As her eighteenth birthday approaches, she must choose between the human world she knows and the one she came from.",
+   "ficdeh-2026": "Clara is a teenager growing up in a small indigenous community high in the Andes. Her adoptive mother, a midwife who took her in as a baby, has taught her the ancient songs used to guide women through childbirth, melodies passed down for generations, believed to bring new life safely into the world. But while her voice carries on this tradition, her dreams lie elsewhere: she longs to leave the mountains behind and become a folkloric music star in the big city."
+  }
+ }
+]

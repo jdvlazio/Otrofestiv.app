@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7105XY8AA",
+  "campo": "directores",
+  "valor": [
+   "Daniel Chong"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Daniel Chong"
+  }
+ },
+ {
+  "work_id": "w_8BX7105XY8AA",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_8BX7105XY8AA",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_8BX7105XY8AA",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_8BX7105XY8AA",
+  "campo": "sinopsis.es",
+  "valor": "Una amante de los animales aprovecha la oportunidad de usar una tecnología que pone su conciencia en un castor robótico y descubre misterios del mundo animal que van más allá de lo que podría haber imaginado.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Una amante de los animales aprovecha la oportunidad de usar una tecnología que pone su conciencia en un castor robótico y descubre misterios del mundo animal que van más allá de lo que podría haber imaginado."
+  }
+ },
+ {
+  "work_id": "w_8BX7105XY8AA",
+  "campo": "sinopsis.en",
+  "valor": "An animal lover seizes the chance to use a technology that places her consciousness in a robotic beaver, uncovering mysteries within the animal world beyond anything she could have imagined.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "An animal lover seizes the chance to use a technology that places her consciousness in a robotic beaver, uncovering mysteries within the animal world beyond anything she could have imagined."
+  }
+ },
+ {
+  "work_id": "w_8BX7105XY8AA",
+  "campo": "xref.tmdb",
+  "valor": 1327819,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1327819"
+  }
+ },
+ {
+  "work_id": "w_8BX7105XY8AA",
+  "campo": "xref.letterboxd",
+  "valor": "hoppers",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "hoppers"
+  }
+ },
+ {
+  "work_id": "w_8BX7105XY8AA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/hoppers-operacion-castor.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/hoppers-operacion-castor.jpg"
+  }
+ }
+]

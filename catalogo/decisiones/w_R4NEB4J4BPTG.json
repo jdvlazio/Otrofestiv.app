@@ -1,0 +1,21 @@
+[
+ {
+  "work_id": "w_R4NEB4J4BPTG",
+  "campo": "xref.tmdb",
+  "valor": 1338503,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/con-un-pie-en-la-gloria/"
+ },
+ {
+  "work_id": "w_R4NEB4J4BPTG",
+  "campo": "directores",
+  "valor": [
+   "Eduardo Esparza"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

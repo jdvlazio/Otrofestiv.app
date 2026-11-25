@@ -1,0 +1,43 @@
+[
+ {
+  "work_id": "w_R4MYH1FJ6Q71",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/la-guerra-de-los-tomates.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficica-2026/la-guerra-de-los-tomates.jpg",
+   "/assets/popayan-2026/la-guerra-de-los-tomates.jpg"
+  ],
+  "antes": {
+   "ficica-2026": "/assets/ficica-2026/la-guerra-de-los-tomates.jpg",
+   "popayan-2026": "/assets/popayan-2026/la-guerra-de-los-tomates.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4MYH1FJ6Q71",
+  "campo": "directores",
+  "valor": [
+   "Juan Carlos Gutiérrez"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1753830)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficica-2026": "Juan Carlos Gutierrez",
+   "popayan-2026": "Juancarlos Gutiérrez"
+  }
+ },
+ {
+  "work_id": "w_R4MYH1FJ6Q71",
+  "campo": "sinopsis.es",
+  "valor": "Dos grupos de niños, locales y migrantes, representarán al barrio en un torneo, idea que desatará una guerra de tomates. Una niña carismática sacará lo mejor de cada quien al intentar unir a un equipo improbable contra un rival inesperado.",
+  "motivo": "traducida de su sinopsis en inglés; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)"
+ }
+]

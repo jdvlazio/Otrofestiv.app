@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQSAM02DV6",
+  "campo": "sinopsis.es",
+  "valor": "Mustafa Abu Ali, uno de los tres integrantes que fundaron la Unidad de Cine Palestino, propone un montaje crítico que cruza imágenes de campos de refugiados palestinos con los ataques israelíes a esos territorios, con una banda sonora que cuenta su propia historia. El título ironiza con la célebre frase de Golda Meir de que los palestinos no existen.",
+  "motivo": "corrección de «en portugués, crédito de otra base»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "3e82bea1c451"
+  ],
+  "antes": {
+   "olhar-2026": "Como uno de los tres integrantes que fundaron la Unidad de Cine Palestino (UCP), Mustafa Abu-Ali propone aquí un montaje crítico que cruza imágenes de campos de refugiados palestinos con ataques israelíes a esos territorios, usando de fondo una banda sonora que cuenta ella misma una historia. El corto, que usa irónicamente la famosa frase de la entonces primera ministra israelí Golda Meir de que los «palestinos no existen», es uno de los pocos filmes de la UCP que sobrevivieron al saqueo que Israel hizo de los archivos de la Organización para la Liberación de Palestina, en 1982, en Beirut, Líbano. (C.A.)"
+  }
+ },
+ {
+  "work_id": "w_R4MQSAM02DV6",
+  "campo": "xref.tmdb",
+  "valor": 259254,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/they-do-not-exist/"
+ }
+]

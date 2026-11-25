@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_R4HQ9NNQ5PNF",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/narrarelfuturo-2026/habitante.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficma/habitante.jpg",
+   "/assets/itagui-2026/habitante.jpg",
+   "/assets/narrarelfuturo-2026/habitante.jpg"
+  ],
+  "antes": {
+   "ficma-2026": "/assets/ficma/habitante.jpg",
+   "itagui-2026": "/assets/itagui-2026/habitante.jpg",
+   "narrarelfuturo-2026": "/assets/narrarelfuturo-2026/habitante.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HQ9NNQ5PNF",
+  "campo": "sinopsis.es",
+  "valor": "Dar una vuelta al mundo y filmar. Habitante emerge de los archivos del fotógrafo José Alejandro González, quien por dos décadas retrató conversaciones con desconocidos mientras deambulaba por callejones sin nombre, ciudades famosas, rincones apartados y continentes. Los fragmentos de viaje reúnen encuentros fugaces: la emoción de los comienzos inesperados y también la amargura de las inevitables despedidas. Se comparten voces y silencios, algunos de ellos incómodos, otros enigmáticos y felices que revelan preguntas comunes sobre migración, desarraigo y soledad, sobre cómo habitar el mundo. En su diario, el fotógrafo mira hacia fuera, observa a otros mientras se descubre a sí mismo, registra con su cámara aquello que el afán de los días impide ver.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (narrarelfuturo-2026 · corregida)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "2cec8e353a29",
+   "6ae911509a4e",
+   "c92a162d05d8"
+  ],
+  "antes": {
+   "ficma-2026": "José Alejandro González traveled the world with a camera, capturing faces, voices, and fleeting encounters with strangers. On one of those trips, while working as a cleaner in a hotel in the north, the camera turned on itself. Habitante was born from that gesture: an intimate logbook made up of personal archives, fragments of travel, and shared silences. Through a sensitive and fragmented montage, the film explores the resonances between the filmmaker's life and those he encountered along the way, revealing common echoes of migration, uprooting, and searching. More than a portrait of the other, Habitante is a question about how we inhabit the world, about the sometimes impossible desire to belong. Between tenderness and discomfort, between observation and self-exploration, the film becomes an emotional diary that, by looking outward, ends up revealing the inner landscape of the filmmaker.",
+   "itagui-2026": "Invitados: José Alejandro González.",
+   "narrarelfuturo-2026": "Dar una vuelta al mundo y filmar. Habitante emerge de los archivos del fotógrafo José Alejandro González, quien por dos décadas retrató conversaciones con desconocidos mientras deambulaba por callejones sin nombre, ciudades famosas, rincones apartados y continentes. Los fragmentos de viaje reúnen encuentros fugaces: la emoción de los comienzos inesperados y también la amargura de las inevitables despedidas. Se comparten voces y silencios, algunos de ellos incómodos, otros enigmáticos y felices que revelan preguntas comunes sobre migración, desarraigo y soledad, sobre cómo habitar el mundo. En su diario, el fotógrafo mira hacia fuera, observa a otros mientras se descubre así mismo, registra con su cámara aquello que el afán de los días impide ver."
+  }
+ },
+ {
+  "work_id": "w_R4HQ9NNQ5PNF",
+  "campo": "directores",
+  "valor": [
+   "José Alejandro González Vargas"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1571285)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficma-2026": "José Alejandro González",
+   "itagui-2026": "José Alejandro González",
+   "narrarelfuturo-2026": "José Alejandro Gonzalez"
+  }
+ },
+ {
+  "work_id": "w_R4HQ9NNQ5PNF",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1571285)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficma-2026": 2026,
+   "itagui-2026": 2025,
+   "narrarelfuturo-2026": 2026
+  }
+ }
+]

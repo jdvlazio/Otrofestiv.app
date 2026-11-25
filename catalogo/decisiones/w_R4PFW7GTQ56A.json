@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4PFW7GTQ56A",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/londres.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/londres.jpg",
+   "https://images.ctfassets.net/22n7d68fswlw/4vdodyzLCLZm0KJbxf46mc/b0d7fec6cf123788d083a7e816a4d246/London_Poster.webp"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/londres.jpg",
+   "tiff-2026": "https://images.ctfassets.net/22n7d68fswlw/4vdodyzLCLZm0KJbxf46mc/b0d7fec6cf123788d083a7e816a4d246/London_Poster.webp"
+  }
+ },
+ {
+  "work_id": "w_R4PFW7GTQ56A",
+  "campo": "sinopsis.es",
+  "valor": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aleste-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "2f799004aac7",
+   "cb6d0a6a52e0"
+  ],
+  "antes": {
+   "aleste-2026": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan.",
+   "tiff-2026": "Una road movie experimental y a la vez tierna sobre los trayectos compartidos de un hombre enigmático por la escénica autopista del Oeste de Austria, rodada en estudio con técnicas antiguas de retroproyección. La premiada London, de Sebastian Brameshuber, es una rareza de destreza técnica que nunca traiciona su núcleo emocional."
+  }
+ },
+ {
+  "work_id": "w_R4PFW7GTQ56A",
+  "campo": "sinopsis.en",
+  "valor": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "London",
+  "antes": {
+   "aleste-2026": "Bobby drives back and forth between Vienna and Salzburg, giving lifts to strangers on the way, sharing conversations that drift from the mundane to the deeply personal. In this tender portrait of today’s Europe, anonymity and warmth still go hand in hand.",
+   "tiff-2026": "An experimental yet tender road movie about an enigmatic man’s shared commutes across Austria’s scenic West Autobahn — shot in-studio with vintage rear-projection techniques — Sebastian Brameshuber’s award-winning London is a rare work of technical prowess that never belies its emotional core."
+  }
+ }
+]

@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS6Z4TM5E",
+  "campo": "sinopsis.es",
+  "valor": "Una mujer explora la lucha de varias generaciones de su familia contra el alcoholismo desde una perspectiva profundamente personal. Mezcla imágenes documentales, ritmo, texto e imágenes mejoradas con inteligencia artificial para crear un retrato honesto y compasivo de los efectos de la adicción.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "4d866e6dfe23"
+  ],
+  "antes": {
+   "olhar-2026": "Una mujer explora la lucha generacional de su familia contra el alcoholismo a través de una perspectiva profundamente personal, mezclando imágenes documentales, ritmo, texto e imágenes mejoradas por IA para crear un retrato honesto y compasivo de los impactos de la adicción."
+  }
+ },
+ {
+  "work_id": "w_R4MQS6Z4TM5E",
+  "campo": "xref.tmdb",
+  "valor": 1616833,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/if-pigeons-turned-to-gold/"
+ }
+]

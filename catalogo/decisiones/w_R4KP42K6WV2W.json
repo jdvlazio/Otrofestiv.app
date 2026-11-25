@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_R4KP42K6WV2W",
+  "campo": "sinopsis.es",
+  "valor": "Una familia adinerada espera su cuarto hijo. El padre, ginecólogo, pretende practicarle un aborto a su esposa y esterilizarla, pero una serie de sucesos hace que los hijos vayan muriendo uno a uno.",
+  "motivo": "sinopsis oficial del festival o de Bogoshorts",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)"
+ },
+ {
+  "work_id": "w_R4KP42K6WV2W",
+  "campo": "directores",
+  "valor": [
+   "Jairo Pinilla Téllez"
+  ],
+  "motivo": "nombre completo: catálogo BOGOSHORTS y Cuadernos de Cine Colombiano n.º 8",
+  "fecha": "2026-11-24",
+  "quien": "Claude, respuesta de App a la revisión (rama bogoshorts)",
+  "antes": {
+   "mamut-2026": "Jairo Pinilla",
+   "bogoshorts-2026": "Jairo Pinilla Téllez"
+  }
+ },
+ {
+  "work_id": "w_R4KP42K6WV2W",
+  "campo": "sinopsis.en",
+  "valor": "A wealthy family is expecting their fourth child. The father, a gynecologist, intends to perform an abortion on his wife and sterilize her, but a series of events causes the children to die one by one.",
+  "motivo": "catálogo BOGOSHORTS: las frases que corresponden a la española decidida",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "A wealthy family is expecting their fourth child. The father, a gynecologist, intends to perform an abortion on his wife and sterilize her, but a series of events causes the children to die one by one. Pinilla made this film almost entirely on his own, as a test run before his first feature film. The protagonist’s enormous shadow embodies the idea that his money allows him to do anything, and it shrinks as he loses power.",
+   "mamut-2026": "An abortion doctor confronts his family problems."
+  }
+ },
+ {
+  "work_id": "w_R4KP42K6WV2W",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/mamut-2026/minuto-fatal.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "misma imagen: queda la publicada; es un fotograma, no un afiche",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/minuto-fatal.jpg",
+   "mamut-2026": "/assets/mamut-2026/minuto-fatal.jpg"
+  },
+  "vistas": [
+   "/assets/bogoshorts-2026/minuto-fatal.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4KP42K6WV2W",
+  "campo": "anio",
+  "valor": 1977,
+  "motivo": "Cuadernos de Cine Colombiano n.º 8 (Cinemateca, https://idartesencasa.gov.co/sites/default/files/libros_pdf/Cuadernos%20de%20cine%20colombiano%20Primera%20epoca%20No%208%20Jairo%20Pinilla%20Tellez.pdf); Univalle (https://cvisaacs.univalle.edu.co/cine/jairo-pinilla-tellez/); catálogo BOGOSHORTS 2026. Proimágenes dice 1974",
+  "fecha": "2026-11-24",
+  "quien": "Claude, respuesta de App a la revisión (rama bogoshorts)",
+  "antes": {
+   "mamut-2026": 1974,
+   "bogoshorts-2026": 1977
+  }
+ },
+ {
+  "work_id": "w_R4KP42K6WV2W",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia",
+   "mamut-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4KP42K6WV2W",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama",
+   "mamut-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4KP42K6WV2W",
+  "campo": "xref.tmdb",
+  "valor": 939831,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "939831",
+   "mamut-2026": "939831"
+  }
+ },
+ {
+  "work_id": "w_R4KP42K6WV2W",
+  "campo": "xref.letterboxd",
+  "valor": "minuto-fatal",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "minuto-fatal",
+   "mamut-2026": "minuto-fatal"
+  }
+ }
+]

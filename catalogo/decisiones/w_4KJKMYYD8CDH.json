@@ -1,0 +1,92 @@
+[
+ {
+  "work_id": "w_4KJKMYYD8CDH",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "2a84b0430851"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "La luna y yo (Tabi Wav)",
+  "valor": "En una noche de luna llena, Tabi deambula por paisajes desiertos de Cali, transformando espacios de peligro en territorios de libertad. A través de la música, el baile y rituales esotéricos, se encuentra con distintas versiones de sí misma, dejando atrás el miedo y abrazando su fuerza y deseo. El límite entre ella y la luna se desvanece.",
+  "original": "En una noche de luna llena, Tabi deambula por paisajes desiertos de Cali, transformando gradualmente espacios de peligro en territorios de libertad. A través de la música, baile y rituales esotéricos, se encuentra con distintas versiones de sí misma, dejando atrás el miedo y abrazando su fuerza y deseo. A medida que avanza, el límite entre Tabi y la luna se desvanece, culminando en una comunión mística con el cosmos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "143623be3bcc"
+  }
+ },
+ {
+  "work_id": "w_4KJKMYYD8CDH",
+  "campo": "directores",
+  "valor": [
+   "Manuelita Rosero Méndez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Manuelita Rosero Méndez"
+  }
+ },
+ {
+  "work_id": "w_4KJKMYYD8CDH",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJKMYYD8CDH",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJKMYYD8CDH",
+  "campo": "sinopsis.en",
+  "valor": "On a full-moon night, Tabi wanders through deserted landscapes of Cali, transforming spaces of danger into territories of freedom. Through music, dance and esoteric rituals, she encounters different versions of herself, shedding fear and embracing her strength and desire. The boundary between her and the moon dissolves.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On a full-moon night, Tabi wanders through deserted landscapes of Cali, gradually transforming spaces associated with danger into territories of freedom. Through music, dance, and esoteric rituals, she encounters different versions of herself, shedding fear and embracing her strength and desire. As her journey unfolds, the boundary between Tabi and the moon dissolves, culminating in a mystical communion with the cosmos."
+  }
+ },
+ {
+  "work_id": "w_4KJKMYYD8CDH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-luna-y-yo-tabi-wav.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-luna-y-yo-tabi-wav.jpg"
+  }
+ }
+]

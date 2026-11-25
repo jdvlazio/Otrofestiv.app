@@ -1,0 +1,107 @@
+[
+ {
+  "work_id": "w_R4J7WZ1AZR2D",
+  "campo": "directores",
+  "valor": [
+   "Carlos Ospina"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Carlos Ospina",
+   "ficmontanas-2026": "Carlos Ospina"
+  }
+ },
+ {
+  "work_id": "w_R4J7WZ1AZR2D",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_R4J7WZ1AZR2D",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia",
+   "ficmontanas-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4J7WZ1AZR2D",
+  "campo": "sinopsis.es",
+  "valor": "Un taxista tiene un encuentro apasionado con su amante en su cita semanal. La noche se vuelve turbia cuando su oscuro pasado emerge durante un mal juego del destino. Su dualidad se revela: el apacible conductor y el despiadado justiciero. Un giro inesperado conecta sus vidas en una compleja danza de secretos.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Un taxista tiene un encuentro apasionado con su amante en su cita semanal. La noche se vuelve turbia cuando su oscuro pasado emerge durante un mal juego del destino. Su dualidad se revela: el apacible conductor y el despiadado justiciero. Un giro inesperado conecta sus vidas en una compleja danza de secretos."
+  }
+ },
+ {
+  "work_id": "w_R4J7WZ1AZR2D",
+  "campo": "sinopsis.en",
+  "valor": "A taxi driver has a passionate encounter with his lover on their weekly date. The night turns murky when his dark past emerges during a bad game of fate. His duality is revealed: the gentle driver and the ruthless vigilante. An unexpected twist connects their lives in a complex dance of secrets.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "A taxi driver has a passionate encounter with his lover on their weekly date. The night turns murky when his dark past emerges during a bad game of fate. His duality is revealed: the gentle driver and the ruthless vigilante. An unexpected twist connects their lives in a complex dance of secrets."
+  }
+ },
+ {
+  "work_id": "w_R4J7WZ1AZR2D",
+  "campo": "xref.tmdb",
+  "valor": 1562336,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1562336"
+  }
+ },
+ {
+  "work_id": "w_R4J7WZ1AZR2D",
+  "campo": "xref.letterboxd",
+  "valor": "the-date-is-at-9",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "the-date-is-at-9"
+  }
+ },
+ {
+  "work_id": "w_R4J7WZ1AZR2D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/a-las-9-es-la-cita.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/a-las-9-es-la-cita.jpg"
+  }
+ }
+]

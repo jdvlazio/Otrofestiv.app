@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HEVVFRD478",
+  "campo": "directores",
+  "valor": [
+   "Kizzis Ramírez Delgado"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 164",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=164"
+ },
+ {
+  "work_id": "w_R4HEVVFRD478",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 164",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=164"
+ },
+ {
+  "work_id": "w_R4HEVVFRD478",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 164",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=164",
+  "antes": {
+   "ficci-65": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HEVVFRD478",
+  "campo": "sinopsis.es",
+  "valor": "Mediante títeres, la película celebra Ángeles somos, tradición infantil que consiste en recolectar bastimento para un sancocho comunitario cada primero de noviembre. Choco, una niña que recorre el barrio, descubre que la tradición solo sobrevivirá con su esfuerzo y el de su comunidad.",
+  "motivo": "catálogo oficial de FICCI 65, p. 164",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=164"
+ },
+ {
+  "work_id": "w_R4HEVVFRD478",
+  "campo": "sinopsis.en",
+  "valor": "Through puppetry, the film celebrates Ángeles somos, a children’s tradition of collecting food for a communal sancocho every November 1st. Choco, a girl who walks through her neighborhood, discovers that the tradition will only survive through her own efforts and those of her community.",
+  "motivo": "catálogo oficial de FICCI 65, p. 164",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=164"
+ },
+ {
+  "work_id": "w_R4HEVVFRD478",
+  "campo": "xref.tmdb",
+  "valor": 1668920,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1668920"
+ }
+]

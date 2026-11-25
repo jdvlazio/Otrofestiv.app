@@ -1,0 +1,67 @@
+[
+ {
+  "work_id": "w_R4HB86VE5454",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficma/el-principe-de-nanawa.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficma/el-principe-de-nanawa.jpg",
+   "https://image.tmdb.org/t/p/w500/usQn5xDRN7eeKmCaQDCSpXD8j8K.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w500/usQn5xDRN7eeKmCaQDCSpXD8j8K.jpg",
+   "ficma-2026": "/assets/ficma/el-principe-de-nanawa.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HB86VE5454",
+  "campo": "sinopsis.es",
+  "valor": "Con la frontera de Nanawa-Clorinda como escenario, el documental fue construido con los diarios cotidianos que Ángel filma desde los 10 años, combinados con imágenes de diferentes registros que dialogan entre sí y vienen acompañando desde hace tiempo los encuentros entre la realizadora y el protagonista.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficma-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "2ea34d519113",
+   "b89d0e780135"
+  ],
+  "antes": {
+   "ficci-65": "El paso de la infancia a la adultez es un tema poderoso y este documental resonante de Clarisa Navas nos invita a verlo a través de un niño carismático y parlanchín en un pueblo fronterizo entre Argentina y Paraguay.",
+   "ficma-2026": "Con la frontera de Nanawa-Clorinda como escenario, el documental fue construido con los diarios cotidianos que Ángel filma desde los 10 años, combinados con imágenes de diferentes registros que dialogan entre sí y vienen acompañando desde hace tiempo los encuentros entre la realizadora y el protagonista."
+  }
+ },
+ {
+  "work_id": "w_R4HB86VE5454",
+  "campo": "paises",
+  "valor": [
+   "AR",
+   "PY",
+   "CO",
+   "DE"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:808224)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficci-65": "Argentina/Colombia/Paraguay",
+   "ficma-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_R4HB86VE5454",
+  "campo": "sinopsis.en",
+  "valor": "On a bustling footbridge separating Argentina and Paraguay, where people traffic all kinds of things in a mix of Guarani and Spanish, we meet Angel. Over the course of the next ten years, Angel will have to make decisive choices for his future.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "El príncipe de Nanawa",
+  "antes": {
+   "ficci-65": "The passage from childhood to adulthood is a powerful theme, and Clarisa Navas's resonant documentary invites us to witness it through a charismatic and talkative boy in a border town between Argentina and Paraguay.",
+   "ficma-2026": "On a bustling footbridge separating Argentina and Paraguay, where people traffic all kinds of things in a mix of Guarani and Spanish, we meet Angel. Over the course of the next ten years, Angel will have to make decisive choices for his future."
+  }
+ }
+]

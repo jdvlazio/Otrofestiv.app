@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJAY0M60DNN",
+  "campo": "directores",
+  "valor": [
+   "Ferand Peek"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ferand Peek"
+  }
+ },
+ {
+  "work_id": "w_4KJAY0M60DNN",
+  "campo": "anio",
+  "valor": 2014,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2014"
+  }
+ },
+ {
+  "work_id": "w_4KJAY0M60DNN",
+  "campo": "paises",
+  "valor": [
+   "NZ"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Nueva Zelanda"
+  }
+ },
+ {
+  "work_id": "w_4KJAY0M60DNN",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suspenso"
+  }
+ },
+ {
+  "work_id": "w_4KJAY0M60DNN",
+  "campo": "sinopsis.es",
+  "valor": "Dentro de trescientos años, un investigador revisa la grabación de la cápsula de un mercenario dañada durante una invasión colonial. Las imágenes revelan una primera misión que sale desastrosamente mal.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Dentro de trescientos años, un investigador revisa la grabación de la cápsula de un mercenario dañada durante una invasión colonial. Las imágenes revelan una primera misión que sale desastrosamente mal."
+  }
+ },
+ {
+  "work_id": "w_4KJAY0M60DNN",
+  "campo": "sinopsis.en",
+  "valor": "Three hundred years in the future, an investigator reviews footage from a mercenary’s pod damaged during a colonial invasion. The recording reveals a first mission that goes disastrously wrong.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Three hundred years in the future, an investigator reviews footage from a mercenary’s pod damaged during a colonial invasion. The recording reveals a first mission that goes disastrously wrong."
+  }
+ },
+ {
+  "work_id": "w_4KJAY0M60DNN",
+  "campo": "xref.tmdb",
+  "valor": 306527,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "306527"
+  }
+ },
+ {
+  "work_id": "w_4KJAY0M60DNN",
+  "campo": "xref.letterboxd",
+  "valor": "mis-drop",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "mis-drop"
+  }
+ },
+ {
+  "work_id": "w_4KJAY0M60DNN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/mis-drop.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/mis-drop.jpg"
+  }
+ }
+]

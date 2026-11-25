@@ -1,0 +1,139 @@
+[
+ {
+  "work_id": "w_7JCVTGAAS5A4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Claude",
+  "vistas": [
+   "1f9d604c9493"
+  ],
+  "original_de": [
+   "provinciadevelez-2026"
+  ],
+  "titulo": "La familia Bélier",
+  "valor": "Todos en la familia Bélier son sordomudos, excepto Paula, de 16 años, intérprete de sus padres, sobre todo en la granja. Alentada por su profesor de música, que descubre su talento para el canto, decide prepararse para la audición del Coro de Radio France: una elección que la obligará a distanciarse de su familia.",
+  "original": "Todos los miembros de la familia Bélier son sordomudos, excepto Paula, de 16 años. Ella hace de intérprete para sus padres, especialmente en lo que respecta al funcionamiento de la granja de la familia. Un día, alentada por su profesor de música, que ha descubierto su talento para el canto, decide prepararse para la audición del Coro de Radio France, pero se trata de una elección que la obligará a distanciarse de su familia.",
+  "sintesis": {
+   "redacta": "Claude (montaje provinciadevelez)",
+   "verifica": "agente verificador independiente (Sonnet)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "eeaaa1e29b09"
+  }
+ },
+ {
+  "work_id": "w_7JCVTGAAS5A4",
+  "campo": "directores",
+  "valor": [
+   "Éric Lartigau"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Éric Lartigau"
+  }
+ },
+ {
+  "work_id": "w_7JCVTGAAS5A4",
+  "campo": "anio",
+  "valor": 2014,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "2014"
+  }
+ },
+ {
+  "work_id": "w_7JCVTGAAS5A4",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_7JCVTGAAS5A4",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_7JCVTGAAS5A4",
+  "campo": "sinopsis.en",
+  "valor": "Everyone in the Bélier family is deaf and mute except 16-year-old Paula, who interprets for her parents, especially on the farm. Encouraged by her music teacher, who discovers her talent for singing, she decides to prepare for the Radio France Choir audition: a choice that will force her to distance herself from her family.",
+  "motivo": "la de TMDB contaba otra cosa; traducida de la española por el lector independiente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (lector independiente)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "The whole Bélier family is deaf, except for sixteen year old Paula who is the important translator in her parents' day to day life especially when it comes to matters concerning the family farm. When her music teacher discovers she has a fantastic singing voice and she gets an opportunity to enter a big Radio France contest the whole family's future is set up for big changes."
+  },
+  "anteriores": [
+   {
+    "valor": "The whole Bélier family is deaf, except for sixteen year old Paula who is the important translator in her parents' day to day life especially when it comes to matters concerning the family farm. When her music teacher discovers she has a fantastic singing voice and she gets an opportunity to enter a big Radio France contest the whole family's future is set up for big changes.",
+    "motivo": "alta desde provinciadevelez-2026",
+    "fecha": "2026-11-24",
+    "quien": "Juan («Sí, así»)"
+   }
+  ]
+ },
+ {
+  "work_id": "w_7JCVTGAAS5A4",
+  "campo": "xref.tmdb",
+  "valor": 304410,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "304410"
+  }
+ },
+ {
+  "work_id": "w_7JCVTGAAS5A4",
+  "campo": "xref.letterboxd",
+  "valor": "the-belier-family",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "the-belier-family"
+  }
+ },
+ {
+  "work_id": "w_7JCVTGAAS5A4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/la-familia-belier.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/la-familia-belier.jpg"
+  }
+ }
+]

@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_7JCWMS77BPSJ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Claude",
+  "vistas": [
+   "75cdf70f278b"
+  ],
+  "original_de": [
+   "provinciadevelez-2026"
+  ],
+  "titulo": "De la tradición a la prohibición",
+  "valor": "Documental que explora la evolución de las plantas sagradas de poder, desde los rituales ancestrales hasta su estigmatización y prohibición. En un contexto latinoamericano, cuestiona los discursos oficiales que han criminalizado estos saberes y revela procesos de despojo cultural y ruptura de la memoria colectiva.",
+  "original": "Es un documental que explora la evolución de las plantas sagradas de poder desde los rituales ancestrales hasta su estigmatización y prohibición en la sociedad contemporánea. La película se sitúa en un contexto latinoamericano para cuestionar los discursos oficiales que han criminalizado estos saberes, revelando procesos de despojo cultural y ruptura de la memoria colectiva.",
+  "sintesis": {
+   "redacta": "Claude (montaje provinciadevelez)",
+   "verifica": "agente verificador independiente (Sonnet)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b1f0aaade1e4"
+  }
+ },
+ {
+  "work_id": "w_7JCWMS77BPSJ",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_7JCWMS77BPSJ",
+  "campo": "sinopsis.en",
+  "valor": "A documentary exploring the evolution of sacred plants of power, from ancestral rituals to their stigmatization and prohibition. In a Latin American context, it questions the official narratives that have criminalized this knowledge and reveals processes of cultural dispossession and the rupture of collective memory.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "A documentary exploring the evolution of sacred plants of power, from ancestral rituals to their stigmatization and prohibition. In a Latin American context, it questions the official narratives that have criminalized this knowledge and reveals processes of cultural dispossession and the rupture of collective memory."
+  }
+ },
+ {
+  "work_id": "w_7JCWMS77BPSJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/de-la-tradicion-a-la-prohibicion.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/de-la-tradicion-a-la-prohibicion.jpg"
+  }
+ },
+ {
+  "work_id": "w_7JCWMS77BPSJ",
+  "campo": "directores",
+  "valor": [
+   "Lente Andino Films"
+  ],
+  "motivo": "afiche: «Dirección General: Lente Andino Films»",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (lector independiente)",
+  "fuente": "https://www.instagram.com/p/Df2AcYNEbXC/"
+ }
+]

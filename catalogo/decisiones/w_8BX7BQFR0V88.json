@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_8BX7BQFR0V88",
+  "campo": "directores",
+  "valor": [
+   "Camilo Vega"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Camilo Vega"
+  }
+ },
+ {
+  "work_id": "w_8BX7BQFR0V88",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_8BX7BQFR0V88",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_8BX7BQFR0V88",
+  "campo": "sinopsis.es",
+  "valor": "De niño, Pedro presenció el accidente que acabó con la carrera de ciclista de su padre. Decidido a darle un futuro a su familia, persigue el sueño de convertirse en el Rey de la Montaña.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "De niño, Pedro presenció el accidente que acabó con la carrera de ciclista de su padre. Decidido a darle un futuro a su familia, persigue el sueño de convertirse en el Rey de la Montaña."
+  }
+ },
+ {
+  "work_id": "w_8BX7BQFR0V88",
+  "campo": "sinopsis.en",
+  "valor": "As a child, Pedro witnessed the accident that put an end to his father's cycling career. Determined to give his family a future, he pursues the dream of becoming the King of the Mountain.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "As a child, Pedro witnessed the accident that put an end to his father's cycling career. Determined to give his family a future, he pursues the dream of becoming the King of the Mountain."
+  }
+ },
+ {
+  "work_id": "w_8BX7BQFR0V88",
+  "campo": "xref.tmdb",
+  "valor": 1181417,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1181417"
+  }
+ },
+ {
+  "work_id": "w_8BX7BQFR0V88",
+  "campo": "xref.letterboxd",
+  "valor": "el-rey-de-la-montana",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "el-rey-de-la-montana"
+  }
+ },
+ {
+  "work_id": "w_8BX7BQFR0V88",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/el-rey-de-la-montana.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/el-rey-de-la-montana.jpg"
+  }
+ }
+]

@@ -1,0 +1,96 @@
+[
+ {
+  "work_id": "w_4KJKNW459K1X",
+  "campo": "sinopsis.es",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "vistas": [
+   "c566a1c73db6",
+   "ed93bf4bce7a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Marea (Lido Pimienta)",
+  "valor": "Canción sobre la juventud caribeña que reivindica deliberadamente su espacio y su derecho a la alegría, a pesar de los demonios parásitos: gentrificación, colonialismo de asentamiento, desplazamiento, despojo de tierras y explotación sexual. Cínica canción de amor para el fin de los tiempos. Resistimos en la danza y la sublime belleza caribeña.",
+  "original": "Una canción sobre la juventud caribeña que existe y reivindica deliberadamente su espacio y su derecho a la alegría, a pesar de los demonios parásitos llamados gentrificación, colonialismo de asentamiento, desplazamiento, despojo de tierras y explotación sexual. Una cínica canción de amor para el fin de los tiempos. Resistimos a través de la danza y de la sublime belleza caribeña.",
+  "sintesis": {
+   "redacta": "lector BOGOSHORTS D",
+   "verifica": "lector BOGOSHORTS E",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "26c092e47019"
+  },
+  "antes": {
+   "bogoshorts-2026": "Una canción sobre la juventud caribeña que reivindica su espacio y su derecho a la alegría, a pesar de los demonios parásitos llamados gentrificación, colonialismo, desplazamiento, despojo de tierras y explotación sexual. Una cínica canción de amor para el fin de los tiempos. Resistimos a través de la danza y de la sublime belleza caribeña."
+  }
+ },
+ {
+  "work_id": "w_4KJKNW459K1X",
+  "campo": "directores",
+  "valor": [
+   "Sísifo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Sísifo"
+  }
+ },
+ {
+  "work_id": "w_4KJKNW459K1X",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJKNW459K1X",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJKNW459K1X",
+  "campo": "sinopsis.en",
+  "valor": "A song about Caribbean youth existing and intentionally claiming their space and their right to joy in spite of the parasite demons called gentrification, settler colonialism, displacement, land theft and sexual exploitation. A cynical love song for the end of times. In dance and sublime Caribbean beauty we resist.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A song about Caribbean youth existing and intentionally claiming their space and their right to joy in spite of the parasite demons called gentrification, settler colonialism, displacement, land theft and sexual exploitation. A cynical love song for the end of times. In dance and sublime Caribbean beauty we resist."
+  }
+ },
+ {
+  "work_id": "w_4KJKNW459K1X",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/marea-lido-pimienta.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/marea-lido-pimienta.jpg"
+  }
+ }
+]

@@ -1,0 +1,28 @@
+[
+ {
+  "work_id": "w_X28MMN6HYY9P",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "6f2a89e79916"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Comb story",
+  "valor": "Elena sostiene un peine de madera y los recuerdos la devuelven a la infancia: su madre la peinaba despacio, todos los días, incluso cuando Elena ya era una mujer joven. Cuando la vida la llevó a la ciudad, se cortó el pelo y, con él, el camino de regreso a casa. Nunca había entendido por qué su madre la peinaba.",
+  "original": "Elena sostiene un peine de madera y los recuerdos la devuelven a la infancia: su madre peinándola despacio, todos los días, incluso cuando Elena ya era una mujer joven. Cuando la vida la llevó a la ciudad, Elena se cortó el pelo y, con él, el camino de regreso a casa. Los años se llenaron de razones para no volver. Elena nunca entendió por qué su madre la peinaba, hasta el día en que por fin estuvo frente a ella, sacó el peine y le peinó el cabello por primera vez.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "4312f54dea3d"
+  },
+  "antes": {
+   "under-2026": "Elena sostiene un peine de madera y los recuerdos la devuelven a la infancia: su madre peinándola despacio, todos los días, incluso cuando Elena ya era una mujer joven. Cuando la vida la llevó a la ciudad, Elena se cortó el pelo y, con él, el camino de regreso a casa. Los años se llenaron de razones para no volver. Elena nunca entendió por qué su madre la peinaba, hasta el día en que por fin estuvo frente a ella, sacó el peine y le peinó el cabello por primera vez."
+  }
+ }
+]

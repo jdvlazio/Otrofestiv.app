@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KH4TTVQ2GMB",
+  "campo": "directores",
+  "valor": [
+   "Irina Rubina"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Irina Rubina"
+  }
+ },
+ {
+  "work_id": "w_4KH4TTVQ2GMB",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_4KH4TTVQ2GMB",
+  "campo": "paises",
+  "valor": [
+   "DE",
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alemania, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KH4TTVQ2GMB",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KH4TTVQ2GMB",
+  "campo": "sinopsis.es",
+  "valor": "Las pinturas de Miles Davis cobran movimiento al ritmo de su versión instrumental de What’s Love Got to Do with It.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Las pinturas de Miles Davis cobran movimiento al ritmo de su versión instrumental de What’s Love Got to Do with It."
+  }
+ },
+ {
+  "work_id": "w_4KH4TTVQ2GMB",
+  "campo": "sinopsis.en",
+  "valor": "Miles Davis’s paintings come to life to his instrumental version of What’s Love Got to Do with It.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Miles Davis’s paintings come to life to his instrumental version of What’s Love Got to Do with It."
+  }
+ },
+ {
+  "work_id": "w_4KH4TTVQ2GMB",
+  "campo": "xref.tmdb",
+  "valor": 1150037,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1150037"
+  }
+ },
+ {
+  "work_id": "w_4KH4TTVQ2GMB",
+  "campo": "xref.letterboxd",
+  "valor": "miles-davis-whats-love-got-to-do-with-it",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "miles-davis-whats-love-got-to-do-with-it"
+  }
+ },
+ {
+  "work_id": "w_4KH4TTVQ2GMB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/miles-davis-what-s-love-got-to-do-with-it.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/miles-davis-what-s-love-got-to-do-with-it.jpg"
+  }
+ }
+]

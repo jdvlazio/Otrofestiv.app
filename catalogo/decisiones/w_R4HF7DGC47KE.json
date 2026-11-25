@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HF7DGC47KE",
+  "campo": "directores",
+  "valor": [
+   "Anja Dornieden",
+   "Juan David González Monroy"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 306",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=306"
+ },
+ {
+  "work_id": "w_R4HF7DGC47KE",
+  "campo": "anio",
+  "valor": 2013,
+  "motivo": "catálogo oficial de FICCI 65, p. 306",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=306"
+ },
+ {
+  "work_id": "w_R4HF7DGC47KE",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 306",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=306",
+  "antes": {
+   "ficci-65": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DGC47KE",
+  "campo": "sinopsis.es",
+  "valor": "En 2009 se inaugura en China un parque temático llamado El Reino de los Enanos. Personas de todo el país son reclutadas para vivir allí y entretener a los visitantes, con dos requisitos: tener entre 18 y 40 años y medir menos de 130 centímetros. Dos veces al día cantan y bailan ante un público que paga por verlas.",
+  "motivo": "catálogo oficial de FICCI 65, p. 306",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=306"
+ },
+ {
+  "work_id": "w_R4HF7DGC47KE",
+  "campo": "sinopsis.en",
+  "valor": "In 2009, a theme park called The Kingdom of the Dwarves opens in China. People from all over the country are recruited to live there and entertain visitors, with two requirements: being between 18 and 40 years old and under 130 centimeters tall. Twice a day they sing and dance before a crowd that pays to see them.",
+  "motivo": "catálogo oficial de FICCI 65, p. 306",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=306"
+ },
+ {
+  "work_id": "w_R4HF7DGC47KE",
+  "campo": "xref.tmdb",
+  "valor": 648312,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/648312"
+ }
+]

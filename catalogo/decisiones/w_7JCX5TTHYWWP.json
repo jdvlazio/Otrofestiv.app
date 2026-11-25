@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_7JCX5TTHYWWP",
+  "campo": "directores",
+  "valor": [
+   "Edward Llanos",
+   "Simón Muñoz"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Edward Llanos, Simón Muñoz"
+  }
+ },
+ {
+  "work_id": "w_7JCX5TTHYWWP",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCX5TTHYWWP",
+  "campo": "sinopsis.es",
+  "valor": "Buscando escapar de la rutina de la ciudad, un grupo de jóvenes visita a una amiga que vive sola en las montañas. Rodeados por la inmensidad del paisaje y el silencio del campo, escuchan los relatos que ella conoce sobre la región.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Buscando escapar de la rutina de la ciudad, un grupo de jóvenes visita a una amiga que vive sola en las montañas. Rodeados por la inmensidad del paisaje y el silencio del campo, escuchan los relatos que ella conoce sobre la región."
+  }
+ },
+ {
+  "work_id": "w_7JCX5TTHYWWP",
+  "campo": "sinopsis.en",
+  "valor": "Seeking to escape the routine of the city, a group of young people visit a friend who lives alone in the mountains. Surrounded by the vastness of the landscape and the silence of the countryside, they listen to the stories she knows about the region.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Seeking to escape the routine of the city, a group of young people visit a friend who lives alone in the mountains. Surrounded by the vastness of the landscape and the silence of the countryside, they listen to the stories she knows about the region."
+  }
+ },
+ {
+  "work_id": "w_7JCX5TTHYWWP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/entre-amigos.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/entre-amigos.jpg"
+  }
+ }
+]

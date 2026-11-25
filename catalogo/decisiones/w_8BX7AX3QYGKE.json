@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_8BX7AX3QYGKE",
+  "campo": "directores",
+  "valor": [
+   "Elisa Eliash"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Elisa Eliash"
+  }
+ },
+ {
+  "work_id": "w_8BX7AX3QYGKE",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_8BX7AX3QYGKE",
+  "campo": "paises",
+  "valor": [
+   "CL",
+   "PE",
+   "BR"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Chile, Perú, Brasil"
+  }
+ },
+ {
+  "work_id": "w_8BX7AX3QYGKE",
+  "campo": "generos",
+  "valor": [
+   "Familia"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Familia"
+  }
+ },
+ {
+  "work_id": "w_8BX7AX3QYGKE",
+  "campo": "sinopsis.es",
+  "valor": "Nino es un niño consentido que, sumido en una fuerte fiebre, es absorbido por un cuadro misterioso. Aunque su mamá se lo había advertido, se desata el truco que lo hace caer presa de la pintura. Así, Nino no hace más que perderse en un laberinto de imágenes mientras intenta volver a casa.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Nino es un niño consentido que, sumido en una fuerte fiebre, es absorbido por un cuadro misterioso. Aunque su mamá se lo había advertido, se desata el truco que lo hace caer presa de la pintura. Así, Nino no hace más que perderse en un laberinto de imágenes mientras intenta volver a casa."
+  }
+ },
+ {
+  "work_id": "w_8BX7AX3QYGKE",
+  "campo": "sinopsis.en",
+  "valor": "Nino is a spoiled child who, in the grip of a strong fever, is absorbed by a mysterious painting. Even though his mother had warned him, the trick that makes him prey to the painting is unleashed. And so Nino does nothing but get lost in a maze of images as he tries to return home.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Nino is a spoiled child who, in the grip of a strong fever, is absorbed by a mysterious painting. Even though his mother had warned him, the trick that makes him prey to the painting is unleashed. And so Nino does nothing but get lost in a maze of images as he tries to return home."
+  }
+ },
+ {
+  "work_id": "w_8BX7AX3QYGKE",
+  "campo": "xref.tmdb",
+  "valor": 743512,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "743512"
+  }
+ },
+ {
+  "work_id": "w_8BX7AX3QYGKE",
+  "campo": "xref.letterboxd",
+  "valor": "fever-2022-1",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "fever-2022-1"
+  }
+ },
+ {
+  "work_id": "w_8BX7AX3QYGKE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/fiebre.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/fiebre.jpg"
+  }
+ }
+]

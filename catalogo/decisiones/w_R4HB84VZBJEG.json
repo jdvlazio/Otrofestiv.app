@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HB84VZBJEG",
+  "campo": "directores",
+  "valor": [
+   "Lance Hammer"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 118",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=118",
+  "antes": {
+   "ficci-65": "Lance Hammer"
+  }
+ },
+ {
+  "work_id": "w_R4HB84VZBJEG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 118",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=118",
+  "antes": {
+   "ficci-65": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HB84VZBJEG",
+  "campo": "paises",
+  "valor": [
+   "GB",
+   "US"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 118",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=118",
+  "antes": {
+   "ficci-65": "Reino Unido, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4HB84VZBJEG",
+  "campo": "sinopsis.es",
+  "valor": "Leslie padece demencia avanzada y vive con Martin, su esposo y cuidador. Su hija Amanda, recién mudada a Londres, lo descubre teniendo relaciones sexuales con ella y acude a la Policía. Surgen dilemas sobre los límites del consentimiento y las fisuras del sistema de salud, mientras ambos cuestionan sus roles y confrontan sus propios abismos.",
+  "motivo": "catálogo oficial de FICCI 65, p. 118",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=118",
+  "antes": {
+   "ficci-65": "Leslie padece demencia avanzada y vive con Martin, su esposo y principal cuidador. Amanda, la hija de Leslie, acaba de mudarse a Londres para tomarse un año sabático y estar más cerca de su madre."
+  }
+ },
+ {
+  "work_id": "w_R4HB84VZBJEG",
+  "campo": "sinopsis.en",
+  "valor": "Leslie suffers from advanced dementia and lives with Martin, her husband and caregiver. Her daughter Amanda, newly moved to London, discovers him having sex with her and goes to the police. Dilemmas arise over the limits of consent and the cracks in the healthcare system, while both question their roles and confront their own abysses.",
+  "motivo": "catálogo oficial de FICCI 65, p. 118",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=118",
+  "antes": {
+   "ficci-65": "Leslie has advanced dementia and lives with Martin, her husband and primary caregiver. Amanda, Leslie's daughter, has just moved to London for a sabbatical year to be closer to her mother."
+  }
+ },
+ {
+  "work_id": "w_R4HB84VZBJEG",
+  "campo": "xref.tmdb",
+  "valor": 1021848,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1021848"
+ }
+]

@@ -1,0 +1,92 @@
+[
+ {
+  "work_id": "w_4KGA885KHXXN",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5f2b3858bc83"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Perjalanan Menuju Surga",
+  "valor": "Atrapada por la distancia y el costo inalcanzable de la peregrinación del Hajj, Sulastri (68) participa con un grupo de aldeanos en un “Hajj local” en una cueva, dirigidos por un guía espiritual. No se da cuenta de que el viaje es hacia una ilusión y sus propias esperanzas. Pero quizás, a los ojos de Dios, ese viaje realmente alcance el cielo.",
+  "original": "Atrapada por la distancia y el costo inalcanzable de realizar la peregrinación del Hajj, Sulastri (68) y un grupo de aldeanos participan en un ritual de “Hajj local” en una cueva, dirigidos por un guía espiritual. Ella no se da cuenta de que el viaje espiritual no es hacia La Meca, sino hacia una ilusión y sus propias esperanzas. Sin embargo, ¿quién puede saberlo con certeza? Quizás, a los ojos de Dios, ese viaje realmente alcance el cielo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "022d91fb3a0d"
+  }
+ },
+ {
+  "work_id": "w_4KGA885KHXXN",
+  "campo": "directores",
+  "valor": [
+   "Kenny Gulardi"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Kenny Gulardi"
+  }
+ },
+ {
+  "work_id": "w_4KGA885KHXXN",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGA885KHXXN",
+  "campo": "paises",
+  "valor": [
+   "ID"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Indonesia"
+  }
+ },
+ {
+  "work_id": "w_4KGA885KHXXN",
+  "campo": "sinopsis.en",
+  "valor": "Trapped by distance and the unaffordable cost of performing the Hajj pilgrimage, Sulastri (68) and a group of villagers take part in a “local hajj” ritual in a cave led by a spiritual guide. She doesn’t realize that the spiritual journey is not toward Mecca, but toward an illusion and her own hopes. Yet who can truly know? Perhaps in God’s eyes, that journey truly does reach heaven.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Trapped by distance and the unaffordable cost of performing the Hajj pilgrimage, Sulastri (68) and a group of villagers take part in a “local hajj” ritual in a cave led by a spiritual guide. She doesn’t realize that the spiritual journey is not toward Mecca, but toward an illusion and her own hopes. Yet who can truly know? Perhaps in God’s eyes, that journey truly does reach heaven."
+  }
+ },
+ {
+  "work_id": "w_4KGA885KHXXN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/perjalanan-menuju-surga.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/perjalanan-menuju-surga.jpg"
+  }
+ }
+]

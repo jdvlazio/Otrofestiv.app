@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_8BX70KB5ZQFV",
+  "campo": "directores",
+  "valor": [
+   "Luis Montealegre"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Luis Montealegre"
+  }
+ },
+ {
+  "work_id": "w_8BX70KB5ZQFV",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_8BX70KB5ZQFV",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_8BX70KB5ZQFV",
+  "campo": "sinopsis.es",
+  "valor": "Johana, taxista, madre ausente y llena de deudas, recibe en su taxi a un delincuente que abandona un long play valorado en millones, recién robado a Franklin, un discómano salvaje que mata por él. Para aliviar sus deudas y acercarse a su familia, busca compradores sin sospechar que varias personas van tras lo mismo.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Johana, taxista, madre ausente y llena de deudas, recibe en su taxi a un delincuente que abandona un long play valorado en millones, recién robado a Franklin, un discómano salvaje que mata por él. Para aliviar sus deudas y acercarse a su familia, busca compradores sin sospechar que varias personas van tras lo mismo."
+  }
+ },
+ {
+  "work_id": "w_8BX70KB5ZQFV",
+  "campo": "sinopsis.en",
+  "valor": "Johana, a taxi driver and absent mother deep in debt, picks up a criminal who leaves behind an LP worth millions, just stolen from Franklin, a savage record fanatic who kills for it. To ease her debts and get closer to her family, she looks for buyers without suspecting that several people are after the same thing.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Johana, a taxi driver and absent mother deep in debt, picks up a criminal who leaves behind an LP worth millions, just stolen from Franklin, a savage record fanatic who kills for it. To ease her debts and get closer to her family, she looks for buyers without suspecting that several people are after the same thing."
+  }
+ },
+ {
+  "work_id": "w_8BX70KB5ZQFV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/discomanos.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/discomanos.jpg"
+  }
+ }
+]

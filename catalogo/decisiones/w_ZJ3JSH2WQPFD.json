@@ -1,0 +1,29 @@
+[
+ {
+  "work_id": "w_ZJ3JSH2WQPFD",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 260680",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_ZJ3JSH2WQPFD",
+  "campo": "sinopsis.es",
+  "valor": "Silvio Vega, hombre criado en la orfandad y la violencia del campo Colombiano, en el ocaso de su vida viaja con dos nietos para forzarlos a que lo maten antes de que lo haga la vejez. Al acercarse a la indescifrable esencia del viejo ellos prefieren prolongar su agonía y la sórdida inutilidad de esos días en mitad de la indiferencia de una naturaleza voraz, misteriosa y poderosa como la del Casanare, en los Llanos Colombia.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "miradas-2026": "Silvio Vega, hombre criado en la orfandad y la violencia del campo Colombiano, en el ocaso de su vida viaja con dos nietos para forzarlos a que lo maten antes de que lo haga la vejez. Al acercarse a la indescifrable  esencia del viejo ellos prefieren prolongar su agonía y la sórdida inutilidad de esos días en mitad de la indiferencia de una naturaleza voraz, misteriosa y poderosa como la del Casanare, en los Llanos Colombia."
+  },
+  "vistas": [
+   "e3dc52e8fae0"
+  ]
+ }
+]

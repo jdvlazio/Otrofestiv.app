@@ -1,0 +1,129 @@
+[
+ {
+  "work_id": "w_R4ET8D5G92EK",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/espaciar.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "mismo afiche, a mayor tamaño (780 contra 345)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/espaciar.jpg",
+   "cinemancia-2025": "https://cinemanciafestival.com/wp-content/uploads/2025/08/ESPACIAR-AFICHE.jpg"
+  },
+  "vistas": [
+   "https://cinemanciafestival.com/wp-content/uploads/2025/08/ESPACIAR-AFICHE.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4ET8D5G92EK",
+  "campo": "directores",
+  "valor": [
+   "Daniela Giraldo Suárez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Daniela Giraldo Suárez",
+   "cinemancia-2025": "Daniela Giraldo Suárez"
+  }
+ },
+ {
+  "work_id": "w_R4ET8D5G92EK",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025",
+   "cinemancia-2025": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4ET8D5G92EK",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia",
+   "cinemancia-2025": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4ET8D5G92EK",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental",
+   "cinemancia-2025": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_R4ET8D5G92EK",
+  "campo": "sinopsis.es",
+  "valor": "Una aproximación científica a las posibilidades de SER. Paisajes, objetos y palabras retratan la naturaleza fluida y cambiante para reflexionar acerca de la distancia, la separación y cuestionar cómo ocupamos y elegimos nuestro lugar en el mundo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una aproximación científica a las posibilidades de SER. Paisajes, objetos y palabras retratan la naturaleza fluida y cambiante para reflexionar acerca de la distancia, la separación y cuestionar cómo ocupamos y elegimos nuestro lugar en el mundo.",
+   "cinemancia-2025": "Una aproximación científica a las posibilidades de SER. Paisajes, objetos y palabras retratan la naturaleza fluida y cambiante para reflexionar acerca de la distancia, la separación y cuestionar cómo ocupamos y elegimos nuestro lugar en el mundo."
+  }
+ },
+ {
+  "work_id": "w_R4ET8D5G92EK",
+  "campo": "sinopsis.en",
+  "valor": "A scientific approach to the possibilities of BEING. TO SPACE portrays the fluid and changing nature to reflect on distance, separation and questions how we choose our steps and life.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A scientific approach to the possibilities of BEING. TO SPACE portrays the fluid and changing nature to reflect on distance, separation and questions how we choose our steps and life.",
+   "cinemancia-2025": "A scientific approach to the possibilities of BEING. TO SPACE portrays the fluid and changing nature to reflect on distance, separation and questions how we choose our steps and life."
+  }
+ },
+ {
+  "work_id": "w_R4ET8D5G92EK",
+  "campo": "xref.tmdb",
+  "valor": 1841386,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841386"
+  }
+ },
+ {
+  "work_id": "w_R4ET8D5G92EK",
+  "campo": "xref.letterboxd",
+  "valor": "espaciar",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "espaciar",
+   "cinemancia-2025": "espaciar"
+  }
+ }
+]

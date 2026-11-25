@@ -1,0 +1,107 @@
+[
+ {
+  "work_id": "w_R4DKB1K2S5M9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/anibia-2026/balada-de-peces-y-pajaros.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/4DzqfMptovKV0IHiNc2eG1hXzR5.jpg",
+   "/assets/anibia-2026/balada-de-peces-y-pajaros.jpg",
+   "/assets/fantasmagoria-2026/balada-de-peces-y-pajaros.jpg",
+   "https://admin.alternativa.film/uploads/BLD_FRAME_5_ALTA_RESOLUCION_Balada_peces_y_pajaros_9ed5500d0a.png"
+  ],
+  "antes": {
+   "aff-2026": "https://admin.alternativa.film/uploads/BLD_FRAME_5_ALTA_RESOLUCION_Balada_peces_y_pajaros_9ed5500d0a.png",
+   "anibia-2026": "/assets/anibia-2026/balada-de-peces-y-pajaros.jpg",
+   "fantasmagoria-2026": "/assets/fantasmagoria-2026/balada-de-peces-y-pajaros.jpg",
+   "olhar-2026": "/4DzqfMptovKV0IHiNc2eG1hXzR5.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DKB1K2S5M9",
+  "campo": "sinopsis.es",
+  "valor": "Carlina perdió a su padre en el conflicto armado colombiano y vive sola con su madre. El dolor sigue siendo insoportable y ellas se aferran a sus recuerdos y objetos personales para sobrevivir. Todo cambia con la aparición de un pez místico que será el guía de Carlina durante su aventura.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aff-2026, fantasmagoria-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "2a4ccfbca074",
+   "49a261dbd300",
+   "7b509f1be93d"
+  ],
+  "antes": {
+   "aff-2026": "Carlina perdió a su padre en el conflicto armado colombiano y vive sola con su madre. El dolor sigue siendo insoportable y ellas se aferran a sus recuerdos y objetos personales para sobrevivir. Todo cambia con la aparición de un pez místico que será el guía de Carlina durante su aventura.",
+   "anibia-2026": "Carlina, una niña que perdió a su padre en el conflicto armado colombiano, vive sola con su madre. Un día un pez místico que será su guía durante su aventura. Carlina atraviesa diferentes situaciones enfrentándose a su odio y temores. Estos sentimientos lejos de ayudarle la acaban transformando. Carlina acaba encontrando así la paz interior.",
+   "fantasmagoria-2026": "Carlina perdió a su padre en el conflicto armado colombiano y vive sola con su madre. El dolor sigue siendo insoportable y ellas se aferran a sus recuerdos y objetos personales para sobrevivir. Todo cambia con la aparición de un pez místico que será el guía de Carlina durante su aventura.",
+   "olhar-2026": "Carlina perdió a su padre en el conflicto armado colombiano y vive sola con su madre. El dolor todavía es abrumador, y ambas se aferran a sus recuerdos y objetos personales para sobrevivir. Todo cambia con la aparición de un pez místico que será el guía de Carlina durante su aventura."
+  }
+ },
+ {
+  "work_id": "w_R4DKB1K2S5M9",
+  "campo": "directores",
+  "valor": [
+   "Anny Uribe Zambrano",
+   "Juan José Arévalo"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "Anny Uribe, Juan José Arévalo",
+   "anibia-2026": "Anny Uribe Zambrano y Juan José Arévalo",
+   "fantasmagoria-2026": "Anny Uribe y Juan José Arévalo",
+   "olhar-2026": "Anny Uribe, Juan José Arévalo"
+  }
+ },
+ {
+  "work_id": "w_R4DKB1K2S5M9",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1592956)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": 2025,
+   "anibia-2026": 2024,
+   "fantasmagoria-2026": 2025,
+   "olhar-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4DKB1K2S5M9",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "CO"
+  ],
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "Colombia/España",
+   "anibia-2026": "España, Colombia",
+   "fantasmagoria-2026": "Colombia y España",
+   "olhar-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_R4DKB1K2S5M9",
+  "campo": "sinopsis.en",
+  "valor": "Carlina lost her father in the Colombian armed conflict and lives alone with her mother. The pain is still overwhelming, and they both hold on to their memories and personal objects in order to survive. Everything changes with the appearance of a mystical fish that will be Carlina's guide during her adventure.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Balada de peces y pájaros",
+  "antes": {
+   "aff-2026": "A girl caught up in the Colombian armed conflict leaves her home, guided by a mystical being. On her journey, she discovers how resentment turns her into the very thing she hates, but through forgiveness, she manages to find inner peace for herself and her family.",
+   "anibia-2026": "A girl caught up in the Colombian armed conflict leaves her home, guided by a mystical being. On her journey, she discovers how resentment turns her into the very thing she hates, but through forgiveness, she manages to find inner peace for herself and her family.",
+   "fantasmagoria-2026": "A girl caught up in the Colombian armed conflict leaves her home, guided by a mystical being. On her journey, she discovers how resentment turns her into the very thing she hates, but through forgiveness, she manages to find inner peace for herself and her family.",
+   "olhar-2026": "Carlina lost her father in the Colombian armed conflict and lives alone with her mother. The pain is still overwhelming, and they both hold on to their memories and personal objects in order to survive. Everything changes with the appearance of a mystical fish that will be Carlina's guide during her adventure."
+  }
+ }
+]

@@ -1,0 +1,59 @@
+[
+ {
+  "work_id": "w_R4F7ST1C6JNH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cineparalapaz-2026/medellin-yo-te-saludo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cineparalapaz-2026/medellin-yo-te-saludo.jpg",
+   "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg"
+  ],
+  "antes": {
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/8uFN3cAwlxc5DhLlgXsFtxaBYiT.jpg",
+   "cineparalapaz-2026": "/assets/cineparalapaz-2026/medellin-yo-te-saludo.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4F7ST1C6JNH",
+  "campo": "sinopsis.es",
+  "valor": "Imágenes de archivo de guerras lejanas se cruzan con rostros y ruinas de Medellín. El montaje hace resonar violencias separadas por el tiempo y el territorio.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cineparalapaz-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "675dea6284d6",
+   "fb2b0fdebd0d"
+  ],
+  "antes": {
+   "cinemancia-2026": "A través del montaje con archivos historicos de prensa y reportaje - Yo te saludo Medellín - propone un encuentro entre imágenes que nunca compartieron un mismo tiempo ni un mismo territorio. En ese diálogo, la película revela ecos inesperados entre guerras, rostros y ruinas, mientras pone en tensión nuevas formas de mirar el pasado, explora cómo el cine y la fotografía pueden interrogar la memoria, preguntándose si la violencia realmente cambia de forma o si son las imágenes las que, una y otra vez, vuelven a encontrarse a través del tiempo.",
+   "cineparalapaz-2026": "Imágenes de archivo de guerras lejanas se cruzan con rostros y ruinas de Medellín. El montaje hace resonar violencias separadas por el tiempo y el territorio."
+  }
+ },
+ {
+  "work_id": "w_R4F7ST1C6JNH",
+  "campo": "directores",
+  "valor": [
+   "Lucas Muñoz Cataño"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2026": "Lucas Muñoz",
+   "cineparalapaz-2026": "Lucas Muñoz Cataño"
+  }
+ },
+ {
+  "work_id": "w_R4F7ST1C6JNH",
+  "campo": "sinopsis.en",
+  "valor": "Archival images of distant wars intersect with the faces and ruins of Medellín. The editing makes acts of violence separated by time and territory resonate with one another.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

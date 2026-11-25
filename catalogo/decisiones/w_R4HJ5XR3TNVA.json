@@ -1,0 +1,42 @@
+[
+ {
+  "work_id": "w_R4HJ5XR3TNVA",
+  "campo": "xref.letterboxd",
+  "valor": "the-silence-of-the-earth-2025",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "ficdeh-2026": "le-silence-de-la-terre"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5XR3TNVA",
+  "campo": "xref.tmdb",
+  "valor": 1609774,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/le-silence-de-la-terre/"
+ },
+ {
+  "work_id": "w_R4HJ5XR3TNVA",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4HJ5XR3TNVA",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "FR",
+   "BE"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

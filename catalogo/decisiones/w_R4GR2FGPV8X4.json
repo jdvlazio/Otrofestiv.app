@@ -1,0 +1,55 @@
+[
+ {
+  "work_id": "w_R4GR2FGPV8X4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/fantasmagoria-2026/manual-para-invocar-fantasmas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/fantasmagoria-2026/manual-para-invocar-fantasmas.jpg",
+   "/assets/mamut-2026/manual-para-invocar-fantasmas.jpg",
+   "https://image.tmdb.org/t/p/w500/i7xnqfBINWSDHPNXhAqpThZJ8Fw.jpg"
+  ],
+  "antes": {
+   "fantasmagoria-2026": "/assets/fantasmagoria-2026/manual-para-invocar-fantasmas.jpg",
+   "ficci-65": "https://image.tmdb.org/t/p/w500/i7xnqfBINWSDHPNXhAqpThZJ8Fw.jpg",
+   "mamut-2026": "/assets/mamut-2026/manual-para-invocar-fantasmas.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4GR2FGPV8X4",
+  "campo": "sinopsis.es",
+  "valor": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia con el propósito de expandir sus dominios en América, amparados por la sombra de la dictadura franquista. En el año 2021 salió a la luz la denuncia de 43 mujeres suramericanas contra esta organización, por trata de personas y explotación. En un ejercicio de memoria imaginativa, un grupo de actrices se adentra en un internado abandonado entre las frías montañas de Antioquia, para construir una obra de teatro inspirada en las vidas de aquellas mujeres. Poco a poco los ensayos se salen de control y las actrices terminan invocando a los fantasmas de sus antepasadas, que sedientas de justicia se apoderan de la cámara, transformando el rumbo de la película.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (mamut-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "905016554e78",
+   "ab36cd3f01b8",
+   "d13f266d3faa"
+  ],
+  "antes": {
+   "fantasmagoria-2026": "En un internado abandonado en las montañas de Antioquia, un grupo de actrices recrea las denuncias de 43 mujeres contra el Opus Dei. Lo que comienza como un ejercicio teatral pronto despierta a las fantasmas del pasado, que sedientas de justicia, toman el control de la cámara y de la película misma. Conversatorio con Alejandra Rocas y Juliana Zuluaga.",
+   "ficci-65": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia para expandir su influencia en América Latina, amparados por la sombra de la dictadura franquista.",
+   "mamut-2026": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia con el propósito de expandir sus dominios en América, amparados por la sombra de la dictadura franquista. En el año 2021 salió a la luz la denuncia de 43 mujeres suramericanas contra esta organización, por trata de personas y explotación. En un ejercicio de memoria imaginativa, un grupo de actrices se adentra en un internado abandonado entre las frías montañas de Antioquia, para construir una obra de teatro inspirada en las vidas de aquellas mujeres. Poco a poco los ensayos se salen de control y las actrices terminan invocando a los fantasmas de sus antepasadas, que sedientas de justicia se apoderan de la cámara, transformando el rumbo de la película."
+  }
+ },
+ {
+  "work_id": "w_R4GR2FGPV8X4",
+  "campo": "sinopsis.en",
+  "valor": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America. In 2021, the complaint against this organization by 43 women for trafficking and exploitation reopened the historical wound. In an exercise of imaginative memory, a group of actresses enters an abandoned school to create a play inspired by those silenced lives.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Manual para invocar fantasmas",
+  "antes": {
+   "fantasmagoria-2026": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America. In 2021, the complaint against this organization by 43 women for trafficking and exploitation reopened the historical wound. In an exercise of imaginative memory, a group of actresses enters an abandoned school to create a play inspired by those silenced lives.",
+   "ficci-65": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America, sheltered by the shadow of Franco's dictatorship.",
+   "mamut-2026": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America. In 2021, the complaint against this organization by 43 women for trafficking and exploitation reopened the historical wound. In an exercise of imaginative memory, a group of actresses enters an abandoned school to create a play inspired by those silenced lives."
+  }
+ }
+]

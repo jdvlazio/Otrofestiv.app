@@ -1,0 +1,59 @@
+[
+ {
+  "work_id": "w_R4JD0Z8HBW6B",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cineparalapaz-2026/la-pandemia-del-feminicidio-en-colombia.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cineparalapaz-2026/la-pandemia-del-feminicidio-en-colombia.jpg",
+   "/assets/ficpa-2026/la-pandemia-del-feminicidio.jpg"
+  ],
+  "antes": {
+   "cineparalapaz-2026": "/assets/cineparalapaz-2026/la-pandemia-del-feminicidio-en-colombia.jpg",
+   "ficpa-2026": "/assets/ficpa-2026/la-pandemia-del-feminicidio.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4JD0Z8HBW6B",
+  "campo": "sinopsis.es",
+  "valor": "Detrás de cada cifra hay un nombre. Mujeres organizadas alzan la voz frente al feminicidio en Colombia y acompañan una lucha colectiva contra la impunidad.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cineparalapaz-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "07c8d4073654",
+   "4dcf8b8c903a"
+  ],
+  "antes": {
+   "cineparalapaz-2026": "Detrás de cada cifra hay un nombre. Mujeres organizadas alzan la voz frente al feminicidio en Colombia y acompañan una lucha colectiva contra la impunidad.",
+   "ficpa-2026": "Expone la violencia que enfrentan las mujeres en un país marcado por la impunidad. El documental revela historias de activistas que alzan su voz frente al silencio institucional, el dolor, la memoria y la resistencia."
+  }
+ },
+ {
+  "work_id": "w_R4JD0Z8HBW6B",
+  "campo": "directores",
+  "valor": [
+   "Yesika Alejandra Calderón Hernández"
+  ],
+  "motivo": "un dato por obra: la forma completa y bien escrita entre lo acreditado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cineparalapaz-2026": "Yesika Alejandra Calderón Hernández",
+   "ficpa-2026": "Alejandra Calderón"
+  }
+ },
+ {
+  "work_id": "w_R4JD0Z8HBW6B",
+  "campo": "sinopsis.en",
+  "valor": "Behind every figure there is a name. Organized women raise their voices against femicide in Colombia and stand with a collective struggle against impunity.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

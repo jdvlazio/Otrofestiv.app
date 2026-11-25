@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KF6375PN0Z6",
+  "campo": "directores",
+  "valor": [
+   "Judita Gamulin"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Judita Gamulin"
+  }
+ },
+ {
+  "work_id": "w_4KF6375PN0Z6",
+  "campo": "anio",
+  "valor": 2015,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2015"
+  }
+ },
+ {
+  "work_id": "w_4KF6375PN0Z6",
+  "campo": "paises",
+  "valor": [
+   "HR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia"
+  }
+ },
+ {
+  "work_id": "w_4KF6375PN0Z6",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KF6375PN0Z6",
+  "campo": "sinopsis.es",
+  "valor": "Dos familias visitan a sus padres, que comparten una habitación de hospital. Mientras una discute por problemas cotidianos, la otra ve la situación de una manera muy distinta.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Dos familias visitan a sus padres, que comparten una habitación de hospital. Mientras una discute por problemas cotidianos, la otra ve la situación de una manera muy distinta."
+  }
+ },
+ {
+  "work_id": "w_4KF6375PN0Z6",
+  "campo": "sinopsis.en",
+  "valor": "Two families are visiting their fathers who are sharing a hospital room. One family is arguing about their trivial problems, while the other one has a completely different perspective.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Two families are visiting their fathers who are sharing a hospital room. One family is arguing about their trivial problems, while the other one has a completely different perspective."
+  }
+ },
+ {
+  "work_id": "w_4KF6375PN0Z6",
+  "campo": "xref.tmdb",
+  "valor": 1826811,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1826811"
+  }
+ },
+ {
+  "work_id": "w_4KF6375PN0Z6",
+  "campo": "xref.letterboxd",
+  "valor": "cvijece",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "cvijece"
+  }
+ },
+ {
+  "work_id": "w_4KF6375PN0Z6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/cvijece.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/cvijece.jpg"
+  }
+ }
+]

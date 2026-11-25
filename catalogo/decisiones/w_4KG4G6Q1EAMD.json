@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KG4G6Q1EAMD",
+  "campo": "directores",
+  "valor": [
+   "Júlia Coldwell Serra"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Júlia Coldwell Serra"
+  }
+ },
+ {
+  "work_id": "w_4KG4G6Q1EAMD",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KG4G6Q1EAMD",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KG4G6Q1EAMD",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KG4G6Q1EAMD",
+  "campo": "sinopsis.es",
+  "valor": "Candela atropella accidentalmente al perro de su sobrino y decide no confesarlo. Se inventa una leyenda sobre una peregrinación de perros e invita al niño a unirse a la búsqueda. A medida que buscan al perro, las mentiras empiezan a consumirla poco a poco.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Candela atropella accidentalmente al perro de su sobrino y decide no confesarlo. Se inventa una leyenda sobre una peregrinación de perros e invita al niño a unirse a la búsqueda. A medida que buscan al perro, las mentiras empiezan a consumirla poco a poco."
+  }
+ },
+ {
+  "work_id": "w_4KG4G6Q1EAMD",
+  "campo": "sinopsis.en",
+  "valor": "Candela accidentally runs over her nephew’s dog and decides not to confess. She invents a legend about a pilgrimage of dogs and invites the boy to join the search. As they look for it, lies gradually begin to consume her.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Candela accidentally runs over her nephew’s dog and decides not to confess. She invents a legend about a pilgrimage of dogs and invites the boy to join the search. As they look for it, lies gradually begin to consume her."
+  }
+ },
+ {
+  "work_id": "w_4KG4G6Q1EAMD",
+  "campo": "xref.tmdb",
+  "valor": 1557169,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1557169"
+  }
+ },
+ {
+  "work_id": "w_4KG4G6Q1EAMD",
+  "campo": "xref.letterboxd",
+  "valor": "nobody-barks",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "nobody-barks"
+  }
+ },
+ {
+  "work_id": "w_4KG4G6Q1EAMD",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/ningu-borda.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/ningu-borda.jpg"
+  }
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "work_id": "w_R4EVBC98MK78",
+  "campo": "xref.letterboxd",
+  "valor": "the-many-deaths-of-antonio-parreiras",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "cinemancia-2025": "as-muitas-mortes-de-antonio-parreiras"
+  }
+ },
+ {
+  "work_id": "w_R4EVBC98MK78",
+  "campo": "xref.tmdb",
+  "valor": 1412974,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/as-muitas-mortes-de-antonio-parreiras/"
+ }
+]

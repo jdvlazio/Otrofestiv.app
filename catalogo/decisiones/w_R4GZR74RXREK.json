@@ -1,0 +1,68 @@
+[
+ {
+  "work_id": "w_R4GZR74RXREK",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/muchas-muchas-gracias.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/muchas-muchas-gracias.jpg",
+   "/assets/cinetoro-2026/muchas-muchas-gracias.jpg",
+   "/assets/ficcali-2026/muchas-muchas-gracias.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/muchas-muchas-gracias.jpg",
+   "cinetoro-2026": "/assets/cinetoro-2026/muchas-muchas-gracias.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/muchas-muchas-gracias.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4GZR74RXREK",
+  "campo": "sinopsis.es",
+  "valor": "Entre China y Colombia, una abuela y su nieto heredan historias de hambre, abundancia y migración, al intentar descubrir dónde pertenece una familia entre dos mundos.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aleste-2026, ficcali-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "8183fb6762f5",
+   "93085cb57f8e"
+  ],
+  "antes": {
+   "aleste-2026": "Entre China y Colombia, una abuela y su nieto heredan historias de hambre, abundancia y migración, al intentar descubrir dónde pertenece una familia entre dos mundos.",
+   "cinetoro-2026": "En el mundo hay siete océanos. En uno de ellos, el Pacífico, hay tres continentes y dos países que empiezan con C: China y Colombia. En uno nací yo, en el otro mi abuela. A ella le tocó el hambre, a mí la abundancia; sus paisanos tenían los ojos rasgados y cocinaban en wok para vivir sin sonreír, los míos eran negros y tocaban el bunde fúnebre para morir sonriendo. A ambos nos tocó aceptar que el mundo no estaba para nosotros, a ella por ser una china que emigró de costa a costa por un marido que murió y a mí por ser su nieto. Aun así, existimos y de ahí nació lo que soy, seré y siempre seremos, gente que no es de aquí ni de allá. Un espacio liminal, donde ella es la piedra que fue y volvió de lo más profundo y yo madera humedecida flotando en el océano. Muchas, muchas gracias es un cortometraje documental experimental que explora cómo la familia inventa su propio origen a través de los relatos que transmite, recuerda, exagera u olvida. A través de un retrato sensorial y estético de la migración de Macao, China, a Buenaventura, Colombia, los recuerdos de sus integrantes revelan cómo la memoria transforma una historia familiar en una mitología.",
+   "ficcali-2026": "Entre China y Colombia, una abuela y su nieto heredan historias de hambre, abundancia y migración, al intentar descubrir dónde pertenece una familia entre dos mundos."
+  }
+ },
+ {
+  "work_id": "w_R4GZR74RXREK",
+  "campo": "directores",
+  "valor": [
+   "Oiyi Kan"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1592612)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aleste-2026": "Oiyi Kan",
+   "cinetoro-2026": "Manuel Alejandro Orozco Van",
+   "ficcali-2026": "Oiyi Kan"
+  }
+ },
+ {
+  "work_id": "w_R4GZR74RXREK",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1592612)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aleste-2026": 2025,
+   "cinetoro-2026": 2026,
+   "ficcali-2026": 2015
+  }
+ }
+]

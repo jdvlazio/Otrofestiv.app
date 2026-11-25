@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KFJB16EJ1QV",
+  "campo": "directores",
+  "valor": [
+   "Pedro Geraldo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Pedro Geraldo"
+  }
+ },
+ {
+  "work_id": "w_4KFJB16EJ1QV",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFJB16EJ1QV",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "BR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia, Brasil"
+  }
+ },
+ {
+  "work_id": "w_4KFJB16EJ1QV",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KFJB16EJ1QV",
+  "campo": "sinopsis.es",
+  "valor": "Después de dos años, una mujer trans regresa a Brasil para cuidar a su padre, que se recupera de una cirugía ocular. Ante la ausencia de palabras, los contactos que orientan y los pequeños gestos se convierten en el lenguaje de su reencuentro.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Después de dos años, una mujer trans regresa a Brasil para cuidar a su padre, que se recupera de una cirugía ocular. Ante la ausencia de palabras, los contactos que orientan y los pequeños gestos se convierten en el lenguaje de su reencuentro."
+  }
+ },
+ {
+  "work_id": "w_4KFJB16EJ1QV",
+  "campo": "sinopsis.en",
+  "valor": "After two years, a trans woman returns to Brazil to care for her father, who is recovering from eye surgery. In the absence of words, guiding touches and small gestures become the language of their reencounter.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After two years, a trans woman returns to Brazil to care for her father, who is recovering from eye surgery. In the absence of words, guiding touches and small gestures become the language of their reencounter."
+  }
+ },
+ {
+  "work_id": "w_4KFJB16EJ1QV",
+  "campo": "xref.tmdb",
+  "valor": 1584486,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1584486"
+  }
+ },
+ {
+  "work_id": "w_4KFJB16EJ1QV",
+  "campo": "xref.letterboxd",
+  "valor": "the-gray-blind-lake",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-gray-blind-lake"
+  }
+ },
+ {
+  "work_id": "w_4KFJB16EJ1QV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/o-lago-cinza-e-cego.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/o-lago-cinza-e-cego.jpg"
+  }
+ }
+]

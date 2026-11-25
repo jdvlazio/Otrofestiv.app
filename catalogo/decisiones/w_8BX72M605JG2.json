@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_8BX72M605JG2",
+  "campo": "directores",
+  "valor": [
+   "Florence Miailhe"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Florence Miailhe"
+  }
+ },
+ {
+  "work_id": "w_8BX72M605JG2",
+  "campo": "anio",
+  "valor": 2021,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2021"
+  }
+ },
+ {
+  "work_id": "w_8BX72M605JG2",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "DE",
+   "CZ"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Francia, Alemania, República Checa"
+  }
+ },
+ {
+  "work_id": "w_8BX72M605JG2",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_8BX72M605JG2",
+  "campo": "sinopsis.es",
+  "valor": "Un pequeño pueblo saqueado, una familia obligada a huir. Los dos hijos mayores, Kyona y Adriel, son separados de sus padres y afrontan solos el exilio, un viaje heroico de la infancia a la adolescencia por un continente desgarrado por la guerra y la persecución a los migrantes, en busca de refugio y de su familia.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Un pequeño pueblo saqueado, una familia obligada a huir. Los dos hijos mayores, Kyona y Adriel, son separados de sus padres y afrontan solos el exilio, un viaje heroico de la infancia a la adolescencia por un continente desgarrado por la guerra y la persecución a los migrantes, en busca de refugio y de su familia."
+  }
+ },
+ {
+  "work_id": "w_8BX72M605JG2",
+  "campo": "sinopsis.en",
+  "valor": "A small village plundered, a family forced to flee. The two eldest children, Kyona and Adriel, are separated from their parents and face exile alone, a heroic journey from childhood to adolescence across a continent torn by war and the persecution of migrants, in search of refuge and their family.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "A small village plundered, a family forced to flee. The two eldest children, Kyona and Adriel, are separated from their parents and face exile alone, a heroic journey from childhood to adolescence across a continent torn by war and the persecution of migrants, in search of refuge and their family."
+  }
+ },
+ {
+  "work_id": "w_8BX72M605JG2",
+  "campo": "xref.tmdb",
+  "valor": 586945,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "586945"
+  }
+ },
+ {
+  "work_id": "w_8BX72M605JG2",
+  "campo": "xref.letterboxd",
+  "valor": "the-crossing-2021-1",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "the-crossing-2021-1"
+  }
+ },
+ {
+  "work_id": "w_8BX72M605JG2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/die-odyssee.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/die-odyssee.jpg"
+  }
+ }
+]

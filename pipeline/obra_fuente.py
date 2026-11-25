@@ -6,7 +6,7 @@ Juan, 24 nov 2026 (paso 7 de docs/OBRA.md): «una película es el insumo princip
 festival lo que agrega es la función y en dónde». Cada festival guardaba su copia de
 dirección, año, país, género, sinopsis, afiche y enlaces, y las copias se separaban.
 
-En un festival NUEVO esos datos no son suyos: salen de catalogo/decisiones.json. El
+En un festival NUEVO esos datos no son suyos: salen de catalogo/decisiones/. El
 JSON que lee la app se sigue publicando completo (instaladas y sin conexión), pero se
 ARMA: `componer(desnudar(d))`. Guardián [obra-fuente]:
   · todo dato de obra publicado tiene su decisión y es ese;
@@ -220,8 +220,7 @@ if __name__ == '__main__':
             sys.exit('✗ falta --quien')
         decs = catalogo.decisiones()
         n = sembrar(fid, d, decs, a[a.index('--quien') + 1], festivales=fs)
-        with open(os.path.join(catalogo.DIR, 'decisiones.json'), 'w', encoding='utf-8') as fh:
-            fh.write(json.dumps(decs, ensure_ascii=False, indent=1))
+        catalogo.escribir_decisiones(decs)
         print(n, 'decisiones')
     elif '--aplicar' in a:
         from sinopsis_unicas import _guardar

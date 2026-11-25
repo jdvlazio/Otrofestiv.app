@@ -1,0 +1,82 @@
+[
+ {
+  "work_id": "w_4KJ3AFEG1AGC",
+  "campo": "directores",
+  "valor": [
+   "Daniel Alemán Montero"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Daniel Alemán Montero"
+  }
+ },
+ {
+  "work_id": "w_4KJ3AFEG1AGC",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJ3AFEG1AGC",
+  "campo": "paises",
+  "valor": [
+   "CU",
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Cuba, España"
+  }
+ },
+ {
+  "work_id": "w_4KJ3AFEG1AGC",
+  "campo": "sinopsis.es",
+  "valor": "En una noche de tormenta, Kevin le cuenta a su hermana Ana la leyenda del Monstruo del Flash, un ser que convierte a los niños en memes para vengarse. Pero la broma se vuelve contra él cuando Ana lo sorprende disfrazada y lo enfrenta en su propio juego. Lo que parecía inventado revela algo inquietante: ¿y si el Monstruo del Flash fuera real?",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En una noche de tormenta, Kevin le cuenta a su hermana Ana la leyenda del Monstruo del Flash, un ser que convierte a los niños en memes para vengarse. Pero la broma se vuelve contra él cuando Ana lo sorprende disfrazada y lo enfrenta en su propio juego. Lo que parecía inventado revela algo inquietante: ¿y si el Monstruo del Flash fuera real?"
+  }
+ },
+ {
+  "work_id": "w_4KJ3AFEG1AGC",
+  "campo": "sinopsis.en",
+  "valor": "On a stormy night, Kevin tells his sister Ana the legend of the Flash Monster, a creature that turns children into memes for revenge. But the joke backfires when Ana surprises him in disguise. What seemed made-up reveals something unsettling: what if the Flash Monster is real?",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On a stormy night, Kevin tells his sister Ana the legend of the Flash Monster, a creature that turns children into memes for revenge. But the joke backfires when Ana surprises him in disguise. What seemed made-up reveals something unsettling: what if the Flash Monster is real?"
+  }
+ },
+ {
+  "work_id": "w_4KJ3AFEG1AGC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/bu.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/bu.jpg"
+  }
+ }
+]

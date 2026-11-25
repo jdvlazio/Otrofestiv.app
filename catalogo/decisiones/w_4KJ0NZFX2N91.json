@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KJ0NZFX2N91",
+  "campo": "directores",
+  "valor": [
+   "Rémi Durin"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rémi Durin"
+  }
+ },
+ {
+  "work_id": "w_4KJ0NZFX2N91",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJ0NZFX2N91",
+  "campo": "paises",
+  "valor": [
+   "BE",
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Bélgica, Francia"
+  }
+ },
+ {
+  "work_id": "w_4KJ0NZFX2N91",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KJ0NZFX2N91",
+  "campo": "sinopsis.es",
+  "valor": "Andréa se queda paralizada antes de salir a escena en el espectáculo escolar. Un viaje a un palacio entre las nubes le da la oportunidad de reunir el valor para volver.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Andréa se queda paralizada antes de salir a escena en el espectáculo escolar. Un viaje a un palacio entre las nubes le da la oportunidad de reunir el valor para volver."
+  }
+ },
+ {
+  "work_id": "w_4KJ0NZFX2N91",
+  "campo": "sinopsis.en",
+  "valor": "Andréa freezes just before going onstage for the school show. A journey to a palace among the clouds gives her a chance to find the courage to return.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Andréa freezes just before going onstage for the school show. A journey to a palace among the clouds gives her a chance to find the courage to return."
+  }
+ },
+ {
+  "work_id": "w_4KJ0NZFX2N91",
+  "campo": "xref.tmdb",
+  "valor": 1597412,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1597412"
+  }
+ },
+ {
+  "work_id": "w_4KJ0NZFX2N91",
+  "campo": "xref.letterboxd",
+  "valor": "the-great-dreamscape",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-great-dreamscape"
+  }
+ },
+ {
+  "work_id": "w_4KJ0NZFX2N91",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-grande-revasion.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-grande-revasion.jpg"
+  }
+ }
+]

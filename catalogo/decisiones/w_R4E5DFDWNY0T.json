@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4E5DFDWNY0T",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/hermanas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/hermanas.jpg",
+   "https://images.ctfassets.net/22n7d68fswlw/6ZVzJDgqYNfz8yA7SdLXag/6df15fc8227651d9aaac01cfb85e642f/Sisters-01.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/hermanas.jpg",
+   "tiff-2026": "https://images.ctfassets.net/22n7d68fswlw/6ZVzJDgqYNfz8yA7SdLXag/6df15fc8227651d9aaac01cfb85e642f/Sisters-01.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4E5DFDWNY0T",
+  "campo": "sinopsis.es",
+  "valor": "Chelo y Marta son hermanas, y sus vidas están a punto de cambiar para siempre. Ese verano, un suceso inesperado sacude los cimientos de su familia, trayendo fantasmas del pasado al presente. Lo que antes parecía un vínculo inquebrantable se pone a prueba, obligándolas a enfrentar un doloroso dilema: ¿hasta dónde están dispuestas a llegar para proteger a las personas que más aman, aunque eso signifique romper los lazos con parte de su propia familia?",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "dbfb2c04a1e3",
+   "e73376d1eba8"
+  ],
+  "antes": {
+   "biff-2026": "Chelo y Marta son hermanas, y sus vidas están a punto de cambiar para siempre. Ese verano, un suceso inesperado sacude los cimientos de su familia, trayendo fantasmas del pasado al presente. Lo que antes parecía un vínculo inquebrantable se pone a prueba, obligándolas a enfrentar un doloroso dilema: ¿hasta dónde están dispuestas a llegar para proteger a las personas que más aman, aunque eso signifique romper los lazos con parte de su propia familia?",
+   "tiff-2026": "En las afueras de Madrid, dos hermanas reúnen a sus familias un fin de semana de verano para celebrar aniversarios y la noche de San Juan. Pero la alegría se vuelve horror cuando surge una grave acusación de abuso sexual por parte de uno de sus hijos."
+  }
+ },
+ {
+  "work_id": "w_R4E5DFDWNY0T",
+  "campo": "directores",
+  "valor": [
+   "Ione Hernández Sáenz"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "Ione Hernández Sáenz",
+   "tiff-2026": "Ione Hernández"
+  }
+ },
+ {
+  "work_id": "w_R4E5DFDWNY0T",
+  "campo": "sinopsis.en",
+  "valor": "Two sisters bring their families together for a summer weekend near Madrid to celebrate milestones and the San Juan Festival. The celebration turns dark when a child makes a serious sexual abuse allegation.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Sisters",
+  "antes": {
+   "biff-2026": "Two sisters bring their families together for a summer weekend near Madrid to celebrate milestones and the San Juan Festival. The celebration turns dark when a child makes a serious sexual abuse allegation.",
+   "tiff-2026": "Outside of Madrid, two sisters unite their families on a summer weekend, celebrating milestones and the solstice-heralding San Juan Festival. However, joy quickly turns to horror when a serious allegation of sexual abuse surfaces from one of their children."
+  }
+ }
+]

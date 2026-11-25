@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KFPE5350M1D",
+  "campo": "directores",
+  "valor": [
+   "Ada Güvenir"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ada Güvenir"
+  }
+ },
+ {
+  "work_id": "w_4KFPE5350M1D",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFPE5350M1D",
+  "campo": "paises",
+  "valor": [
+   "BE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Bélgica"
+  }
+ },
+ {
+  "work_id": "w_4KFPE5350M1D",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KFPE5350M1D",
+  "campo": "sinopsis.es",
+  "valor": "Una historia sobre muchas realidades a la vez. A veces una por vez, otras, todas a la vez.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una historia sobre muchas realidades a la vez. A veces una por vez, otras, todas a la vez."
+  }
+ },
+ {
+  "work_id": "w_4KFPE5350M1D",
+  "campo": "sinopsis.en",
+  "valor": "A story about being in many realities at once. Sometimes one at a time, sometimes all at once.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A story about being in many realities at once. Sometimes one at a time, sometimes all at once."
+  }
+ },
+ {
+  "work_id": "w_4KFPE5350M1D",
+  "campo": "xref.tmdb",
+  "valor": 1711972,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1711972"
+  }
+ },
+ {
+  "work_id": "w_4KFPE5350M1D",
+  "campo": "xref.letterboxd",
+  "valor": "if-only-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "if-only-2026"
+  }
+ },
+ {
+  "work_id": "w_4KFPE5350M1D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/if-only.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/if-only.jpg"
+  }
+ }
+]

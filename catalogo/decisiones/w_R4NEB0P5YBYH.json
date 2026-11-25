@@ -1,0 +1,100 @@
+[
+ {
+  "work_id": "w_R4NEB0P5YBYH",
+  "campo": "directores",
+  "valor": [
+   "Nadine Holguín Urrego"
+  ],
+  "motivo": "la forma completa; la propia tarjeta de SiembraFest la escribe así",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "Nadine Holguín Urrego",
+   "siembrafest-2026": "Nadine Holguín"
+  }
+ },
+ {
+  "work_id": "w_R4NEB0P5YBYH",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2025",
+   "siembrafest-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4NEB0P5YBYH",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4NEB0P5YBYH",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama",
+   "siembrafest-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4NEB0P5YBYH",
+  "campo": "sinopsis.es",
+  "valor": "Tista, «el Animero» del pueblo, busca un sucesor para guiar a las ánimas en su recorrido nocturno de noviembre y convence a su hijo Efraín de acompañarlo. Incrédulo y curioso, Efraín desobedece la advertencia de no mirar atrás y es invitado a la danza que tanto temen los vivos: el son de la muerte.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Tista, «el Animero» del pueblo, busca un sucesor para guiar a las ánimas en su recorrido nocturno de noviembre y convence a su hijo Efraín de acompañarlo. Incrédulo y curioso, Efraín desobedece la advertencia de no mirar atrás y es invitado a la danza que tanto temen los vivos: el son de la muerte."
+  }
+ },
+ {
+  "work_id": "w_R4NEB0P5YBYH",
+  "campo": "sinopsis.en",
+  "valor": "Tista, the village's “Animero,” seeks a successor to guide the souls on their night walk each November and persuades his son Efraín to come along. Skeptical and curious, Efraín disobeys the warning not to look back and is invited to the dance the living so fear: the “son de la muerte.”",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Tista, the village's “Animero,” seeks a successor to guide the souls on their night walk each November and persuades his son Efraín to come along. Skeptical and curious, Efraín disobeys the warning not to look back and is invited to the dance the living so fear: the “son de la muerte.”"
+  }
+ },
+ {
+  "work_id": "w_R4NEB0P5YBYH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://otrofestiv.app/assets/siembrafest/animero-son-de-la-muerte.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "es la tarjeta de SiembraFest, no un afiche de la obra: SiembraFest la conserva y nadie la hereda",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026), por decisión de Juan",
+  "antes": {
+   "siembrafest-2026": "/assets/siembrafest/animero-son-de-la-muerte.jpg"
+  },
+  "vistas": [
+   "/assets/siembrafest/animero-son-de-la-muerte.jpg"
+  ]
+ }
+]

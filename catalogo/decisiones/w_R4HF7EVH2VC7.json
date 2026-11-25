@@ -1,0 +1,136 @@
+[
+ {
+  "work_id": "w_R4HF7EVH2VC7",
+  "campo": "directores",
+  "valor": [
+   "John Agudelo Suárez"
+  ],
+  "motivo": "la grafía con tildes de los festivales; TMDB 1595081 la escribe sin tildes",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "cortoscali-2026": "John Edicson Agudelo Suarez",
+   "festicinerio-2026": "Jhon Agudelo",
+   "ficdeh-2026": "John Agudelo Suárez",
+   "ficica-2026": "John Agudelo",
+   "leviza-2026": "Jhon Agudelo Suárez",
+   "siembrafest-2026": "John Agudelo Suárez",
+   "villadelcine-2026": "John Agudelo"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EVH2VC7",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "TMDB 1595081 (estreno 8 dic 2025)",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "cortoscali-2026": 2025,
+   "festicinerio-2026": 2025,
+   "ficdeh-2026": 2025,
+   "ficica-2026": 2025,
+   "leviza-2026": 2025,
+   "siembrafest-2026": 2024,
+   "villadelcine-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4HF7EVH2VC7",
+  "campo": "xref.tmdb",
+  "valor": 1595081,
+  "motivo": "TMDB",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "cortoscali-2026": 1595081,
+   "festicinerio-2026": 1595081,
+   "ficdeh-2026": 1595081,
+   "ficica-2026": 1595081,
+   "leviza-2026": 1595081,
+   "villadelcine-2026": 1595081
+  }
+ },
+ {
+  "work_id": "w_R4HF7EVH2VC7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicinerio-2026/independencia.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/festicinerio-2026/independencia.jpg",
+   "/assets/ficdeh/la-independencia.jpg",
+   "/assets/leviza/LaIndependencia.webp",
+   "/assets/villadelcine-2026/independence.jpg"
+  ],
+  "antes": {
+   "cortoscali-2026": "/assets/ficdeh/la-independencia.jpg",
+   "festicinerio-2026": "/assets/festicinerio-2026/independencia.jpg",
+   "ficdeh-2026": "/assets/ficdeh/la-independencia.jpg",
+   "ficica-2026": "/assets/ficdeh/la-independencia.jpg",
+   "leviza-2026": "/assets/leviza/LaIndependencia.webp",
+   "siembrafest-2026": "/assets/ficdeh/la-independencia.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/independence.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EVH2VC7",
+  "campo": "sinopsis.es",
+  "valor": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cortoscali-2026, festicinerio-2026, ficdeh-2026, ficica-2026 +2)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "4f83b6c9f6dc",
+   "90e99cdf26f0"
+  ],
+  "antes": {
+   "cortoscali-2026": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+   "festicinerio-2026": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+   "ficdeh-2026": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+   "ficica-2026": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+   "leviza-2026": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+   "siembrafest-2026": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+   "villadelcine-2026": "Tras años de sacrificarse por una familia que da por sentado su cuidado, Cecilia, de 52 años, llega al límite. Cansada de la irresponsabilidad de su hijo y de vivir para los demás, decide romper con todo y recuperar una vida que también le pertenece."
+  }
+ },
+ {
+  "work_id": "w_R4HF7EVH2VC7",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "cortoscali-2026": "Drama",
+   "festicinerio-2026": "Drama",
+   "ficdeh-2026": "Drama",
+   "ficica-2026": "Drama",
+   "siembrafest-2026": "Ficción",
+   "villadelcine-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EVH2VC7",
+  "campo": "xref.letterboxd",
+  "valor": "independence-2025",
+  "motivo": "comprobado en Letterboxd por su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (plan aprobado por Juan)",
+  "antes": {
+   "cortoscali-2026": "independence-2025",
+   "festicinerio-2026": "independence-2025",
+   "ficdeh-2026": "independence-2025",
+   "ficica-2026": "independence-2025",
+   "siembrafest-2026": "independence-2025",
+   "villadelcine-2026": "independence-2025",
+   "leviza-2026": "⚠️ LB PENDIENTE"
+  }
+ }
+]

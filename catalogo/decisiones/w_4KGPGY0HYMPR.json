@@ -1,0 +1,117 @@
+[
+ {
+  "work_id": "w_4KGPGY0HYMPR",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "8ad6a28d1c13"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Lo que él se lleva, no vuelve",
+  "valor": "Durante un ritual tradicional de sanación, Jonathan recibe una quena, una flauta andina como la que tocaba su padre antes de desaparecer. La hace sonar, deseoso de tocar como él, y despierta al Duende, una oscura presencia del folclore andino. Cuando este amenaza con llevarse a su madre, Jonathan deberá enfrentarse al vacío que dejó su padre.",
+  "original": "Durante un ritual tradicional de sanación, Jonathan recibe una quena, una flauta andina como la que tocaba su padre antes de desaparecer. Impulsado por el deseo de tocar como él, hace sonar la quena y despierta al Duende, una antigua y oscura presencia del folclore andino que siempre viene por alguien. Cuando el Duende amenaza con llevarse a su madre, Jonathan deberá enfrentarse al vacío que dejó la ausencia de su padre.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "59faf74cf9f4"
+  }
+ },
+ {
+  "work_id": "w_4KGPGY0HYMPR",
+  "campo": "directores",
+  "valor": [
+   "Juan David Barragán Delgado"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Juan David Barragán Delgado"
+  }
+ },
+ {
+  "work_id": "w_4KGPGY0HYMPR",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGPGY0HYMPR",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KGPGY0HYMPR",
+  "campo": "sinopsis.en",
+  "valor": "During a traditional healing ritual, Jonathan receives a quena, an Andean flute like the one his father used to play before he disappeared. Driven by the desire to play like him, Jonathan plays the flute and awakens the Duende, an ancient, dark presence from Andean folklore that always comes for someone. When the Duende threatens to take his mother away, Jonathan must confront the emptiness left by his father’s absence.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "During a traditional healing ritual, Jonathan receives a quena, an Andean flute like the one his father used to play before he disappeared. Driven by the desire to play like him, Jonathan plays the flute and awakens the Duende, an ancient, dark presence from Andean folklore that always comes for someone. When the Duende threatens to take his mother away, Jonathan must confront the emptiness left by his father’s absence."
+  }
+ },
+ {
+  "work_id": "w_4KGPGY0HYMPR",
+  "campo": "xref.tmdb",
+  "valor": 1825082,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1825082"
+  }
+ },
+ {
+  "work_id": "w_4KGPGY0HYMPR",
+  "campo": "xref.letterboxd",
+  "valor": "lo-que-el-se-lleva-no-vuelve",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "lo-que-el-se-lleva-no-vuelve"
+  }
+ },
+ {
+  "work_id": "w_4KGPGY0HYMPR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/lo-que-el-se-lleva-no-vuelve.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/lo-que-el-se-lleva-no-vuelve.jpg"
+  }
+ }
+]

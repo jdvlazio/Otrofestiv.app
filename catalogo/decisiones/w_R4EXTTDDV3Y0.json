@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4EXTTDDV3Y0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/filcmar-2026/la-corazonada.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/filcmar-2026/la-corazonada.jpg",
+   "https://image.tmdb.org/t/p/w500/fvNadz6pkAhjlNQOsC20akHBgoU.jpg"
+  ],
+  "antes": {
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/fvNadz6pkAhjlNQOsC20akHBgoU.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/la-corazonada.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4EXTTDDV3Y0",
+  "campo": "sinopsis.es",
+  "valor": "Nieves administra un balneario junto a su hijo. Un verano, un motociclista se enamora de ella, pero el romance parece condenado al fracaso. Todo cambia con la llegada de una cineasta que decide incluirlos a ambos en su nueva película. Cuando se conviertan en actores, comenzarán a desdibujarse los límites entre la ficción y sus sentimientos.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (filcmar-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "c5a3fd1b68d7",
+   "e0df129a681a"
+  ],
+  "antes": {
+   "cinemancia-2026": "Nieves lleva una piscina junto a su hijo Martín. Un verano, un motociclista se enamora de ella. Lo suyo no parece funcionar, hasta que un equipo de rodaje llega a la piscina buscando locaciones y la directora decide poner al motociclista y a Natacha en su película.",
+   "filcmar-2026": "Nieves administra un balneario junto a su hijo. Un verano, un motociclista se enamora de ella, pero el romance parece condenado al fracaso. Todo cambia con la llegada de una cineasta que decide incluirlos a ambos en su nueva película. Cuando se conviertan en actores, comenzarán a desdibujarse los límites entre la ficción y sus sentimientos."
+  }
+ }
+]

@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4J545GDBDCV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficma/la-marcha-del-hambre.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficma/la-marcha-del-hambre.jpg",
+   "/assets/jardin-2026/la-marcha-del-hambre.jpg"
+  ],
+  "antes": {
+   "ficma-2026": "/assets/ficma/la-marcha-del-hambre.jpg",
+   "jardin-2026": "/assets/jardin-2026/la-marcha-del-hambre.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4J545GDBDCV",
+  "campo": "sinopsis.es",
+  "valor": "En 1966, cientos de maestros colombianos recorrieron 1.600 kilómetros a pie para defender la educación pública. Sesenta años después, una joven profesora llamada Sor intenta reconstruir aquella marcha y devolverle su lugar en la memoria colectiva.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (jardin-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0642cdf7d0e7",
+   "e8360e752f10"
+  ],
+  "antes": {
+   "ficma-2026": "In 1966, a group of courageous Colombian teachers defied all odds by embarking on an epic 1,600-kilometer march in defense of public education. Fifty-seven years later, they seek to return to the trail, but the pandemic and tragedy force them into lockdown. Only one hope remains: that Sor, a young teacher inspired by their legacy, will undertake the final journey in honor of their courage, accompanied by the voices of the walking teachers.",
+   "jardin-2026": "En 1966, cientos de maestros colombianos recorrieron 1.600 kilómetros a pie para defender la educación pública. Sesenta años después, una joven profesora llamada Sor intenta reconstruir aquella marcha y devolverle su lugar en la memoria colectiva."
+  }
+ },
+ {
+  "work_id": "w_R4J545GDBDCV",
+  "campo": "directores",
+  "valor": [
+   "Sorany Marín Trejos"
+  ],
+  "motivo": "un dato por obra: la forma completa y bien escrita entre lo acreditado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficma-2026": "Sorany Marin Trejos",
+   "jardin-2026": "Sorany Marín Trejos"
+  }
+ },
+ {
+  "work_id": "w_R4J545GDBDCV",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1653698)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficma-2026": 2024,
+   "jardin-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4J545GDBDCV",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "ficma-2026": "Documental",
+   "jardin-2026": "Documental / memoria / educación / historia social"
+  }
+ }
+]

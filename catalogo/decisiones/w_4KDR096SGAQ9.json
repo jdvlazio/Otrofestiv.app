@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_4KDR096SGAQ9",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "d6ee22822ec9"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "No te conozcas",
+  "valor": "Narciso desciende la ciudad subterránea en busca de un amigue perdide que ha estado instalando softwares ilegales en su cerebro. En lugar de encontrarle, descubre un río atrapado dentro de su propia mente, paralizado por enzimas sintéticas que lo mantienen despierto. Para liberarlo, debe enfrentar verdades ignoradas por mucho tiempo.",
+  "original": "Narciso desciende la ciudad subterránea, en la búsqueda de un amigue perdide que ha estado instalando softwares ilegales en su cerebro. Pero en lugar de encontrarle, descubre un río atrapado dentro de su propia mente, cuyo flujo está paralizado por enzimas sintéticas que lo mantienen despierto. Para liberarlo, debe enfrentar verdades que han sido ignoradas por mucho tiempo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "5daaca3460f0"
+  }
+ },
+ {
+  "work_id": "w_4KDR096SGAQ9",
+  "campo": "directores",
+  "valor": [
+   "Andrés Isaza Giraldo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Andrés Isaza Giraldo"
+  }
+ },
+ {
+  "work_id": "w_4KDR096SGAQ9",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KDR096SGAQ9",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia, Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KDR096SGAQ9",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KDR096SGAQ9",
+  "campo": "sinopsis.en",
+  "valor": "Narciso drifts downward through the underground city, drawn into a search for a lost friend who has been installing illegal software into their brain. But instead of finding them, he discovers a river—trapped inside his own mind, its flow paralyzed by synthetic enzymes that keep him awake. To release it, he must confront a long-ignored truth.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Narciso drifts downward through the underground city, drawn into a search for a lost friend who has been installing illegal software into their brain. But instead of finding them, he discovers a river—trapped inside his own mind, its flow paralyzed by synthetic enzymes that keep him awake.To release it, he must confront a long-ignored truth."
+  }
+ },
+ {
+  "work_id": "w_4KDR096SGAQ9",
+  "campo": "xref.tmdb",
+  "valor": 1841401,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841401"
+  }
+ },
+ {
+  "work_id": "w_4KDR096SGAQ9",
+  "campo": "xref.letterboxd",
+  "valor": "no-te-conozcas",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "no-te-conozcas"
+  }
+ },
+ {
+  "work_id": "w_4KDR096SGAQ9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/no-te-conozcas.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/no-te-conozcas.jpg"
+  }
+ }
+]

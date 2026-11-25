@@ -1,0 +1,58 @@
+[
+ {
+  "work_id": "w_R4MZH086RT3E",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/gladiolos.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/popayan-2026/gladiolos.jpg",
+   "https://image.tmdb.org/t/p/w500/hPcSDRpwapMHGFdi6dJ6pPLQAPf.jpg"
+  ],
+  "antes": {
+   "popayan-2026": "/assets/popayan-2026/gladiolos.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/hPcSDRpwapMHGFdi6dJ6pPLQAPf.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4MZH086RT3E",
+  "campo": "directores",
+  "valor": [
+   "Mónica Juanita Hernández Duquino"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "popayan-2026": "Mónica Juanita Hernández",
+   "siembrafest-2026": "Mónica Juanita Hernández Duquino"
+  }
+ },
+ {
+  "work_id": "w_R4MZH086RT3E",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "popayan-2026": 2023,
+   "siembrafest-2026": 2024
+  }
+ },
+ {
+  "work_id": "w_R4MZH086RT3E",
+  "campo": "sinopsis.es",
+  "valor": "Waldina, la vendedora de flores del pequeño pueblo de Arcabuco, ha fallecido. Su hijo Humberto llega desde la gran ciudad y decide hacer la última entrega de flores a sus clientes sin saber que tras una de esas puertas podría encontrar su felicidad.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "popayan-2026": "Waldina, la vendedora de flores del pequeño pueblo de Arcabuco, ha fallecido. Su hijo Humberto llega desde la gran ciudad y decide hacer la última entrega de flores a sus clientes sin saber que tras una de esas puertas podría encontrar su felicidad."
+  }
+ }
+]

@@ -1,0 +1,32 @@
+[
+ {
+  "work_id": "w_R4ESTGJG9KWF",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
+   "https://cinemanciafestival.com/wp-content/uploads/2025/08/Photo-2-Test_0051-1024x683.jpg"
+  ],
+  "antes": {
+   "cinemancia-2025": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Photo-2-Test_0051-1024x683.jpg",
+   "popayan-2026": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4ESTGJG9KWF",
+  "campo": "sinopsis.es",
+  "valor": "En un museo de arte clásico donde las pinturas cobran vida por la noche, una pintora negra frustrada que trabaja como conserje debe decidir si intervendrá cuando una nueva adquisición retrata la violación de una esclava.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "cinemancia-2025": "En un museo de arte clásico donde las pinturas cobran vida por la noche, una pintora negra frustrada que trabaja como conserje debe decidir si intervendrá cuando una nueva adquisición retrata la violación de una esclava."
+  }
+ }
+]

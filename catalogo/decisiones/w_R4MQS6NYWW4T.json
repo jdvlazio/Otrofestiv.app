@@ -1,0 +1,36 @@
+[
+ {
+  "work_id": "w_R4MQS6NYWW4T",
+  "campo": "sinopsis.es",
+  "valor": "Un pastor bondadoso, en conflicto con su fe, busca ayuda en poderes oscuros, y todo va bien hasta que deja de ir.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "cb70a2e99297"
+  ],
+  "antes": {
+   "olhar-2026": "Un pastor bondadoso en conflicto con su fe busca ayuda en poderes oscuros y todo va bien hasta que deja de ir."
+  }
+ },
+ {
+  "work_id": "w_R4MQS6NYWW4T",
+  "campo": "xref.tmdb",
+  "valor": 1342236,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-prophet-2026/"
+ },
+ {
+  "work_id": "w_R4MQS6NYWW4T",
+  "campo": "paises",
+  "valor": [
+   "MZ",
+   "ZA"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

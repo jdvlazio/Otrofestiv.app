@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HAG9Z70YTE",
+  "campo": "directores",
+  "valor": [
+   "Jorge Cadena"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 187",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=187"
+ },
+ {
+  "work_id": "w_R4HAG9Z70YTE",
+  "campo": "anio",
+  "valor": 2018,
+  "motivo": "catálogo oficial de FICCI 65, p. 187",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=187"
+ },
+ {
+  "work_id": "w_R4HAG9Z70YTE",
+  "campo": "paises",
+  "valor": [
+   "CH"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 187",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=187",
+  "antes": {
+   "ficci-65": "Suiza"
+  }
+ },
+ {
+  "work_id": "w_R4HAG9Z70YTE",
+  "campo": "sinopsis.es",
+  "valor": "En medio de un paisaje austero contaminado por una mina de carbón en el norte de Colombia, Viviana y Yandris, dos hermanas adolescentes wayuu, descubren sus tradiciones a través de rituales ancestrales. Cuando su padre muere, las hermanas Jarariju abandonan su territorio en un acto de valentía.",
+  "motivo": "catálogo oficial de FICCI 65, p. 187",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=187"
+ },
+ {
+  "work_id": "w_R4HAG9Z70YTE",
+  "campo": "sinopsis.en",
+  "valor": "In the middle of an austere landscape polluted by a coal mine in northern Colombia, Viviana and Yandris, two teenage Wayuu sisters, discover their traditions through ancestral rituals. When their father dies, the Jarariju sisters leave their territory in an act of courage.",
+  "motivo": "catálogo oficial de FICCI 65, p. 187",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=187"
+ },
+ {
+  "work_id": "w_R4HAG9Z70YTE",
+  "campo": "xref.tmdb",
+  "valor": 583356,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/583356"
+ }
+]

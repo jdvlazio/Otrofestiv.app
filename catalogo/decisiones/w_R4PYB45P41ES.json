@@ -1,0 +1,145 @@
+[
+ {
+  "work_id": "w_R4PYB45P41ES",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/anibia-2026/please.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/anibia-2026/please.jpg",
+   "/assets/bogoshorts-2026/please.jpg",
+   "https://images.ctfassets.net/22n7d68fswlw/v3USXZjJj0ihRmn9eW06V/77d5a5383126dc193287ee220cd2aff5/Please_Still_03.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/please.jpg",
+   "tiff-2026": "https://images.ctfassets.net/22n7d68fswlw/v3USXZjJj0ihRmn9eW06V/77d5a5383126dc193287ee220cd2aff5/Please_Still_03.jpg",
+   "bogoshorts-2026": "/assets/bogoshorts-2026/please.jpg"
+  },
+  "a_mano": true
+ },
+ {
+  "work_id": "w_R4PYB45P41ES",
+  "campo": "sinopsis.es",
+  "valor": "En una gran ciudad, varios personajes faltos de afecto buscan una relación y se ven envueltos en situaciones tan cómicas como absurdas, divertidas y emotivas.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (anibia-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "014984190abf",
+   "34fd9a0c519b"
+  ],
+  "antes": {
+   "anibia-2026": "En una gran ciudad, varios personajes faltos de afecto buscan una relación y se ven envueltos en situaciones tan cómicas como absurdas, divertidas y emotivas.",
+   "tiff-2026": "Anna Mantzaris da vida entrañable a personajes peculiares y adorables en su afilado retrato animado de la fricción entre el peso de ser necesario y nuestra hambre profunda de intimidad, en esta observación excéntrica y divertidísima sobre el romance, la necesidad y el vínculo humano."
+  }
+ },
+ {
+  "work_id": "w_R4PYB45P41ES",
+  "campo": "paises",
+  "valor": [
+   "SE",
+   "FR",
+   "CZ",
+   "FI",
+   "NO"
+  ],
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Suecia, Francia",
+   "tiff-2026": "Suecia, Francia, República Checa, Noruega, Finlandia"
+  }
+ },
+ {
+  "work_id": "w_R4PYB45P41ES",
+  "campo": "sinopsis.en",
+  "valor": "A dark comedy about humankind’s desire to love and to be loved. Centred around neediness, intimacy and romance. Told through a series of loosely connected, tender and absurd scenes, the film follows people who are searching for closeness and acceptance. In a world that preaches self-control, the film explores the sides we try to hide, such as feeling needy and pathetic. The stories overlap and reappear, gradually forming a portrait of collective longing.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Please",
+  "antes": {
+   "anibia-2026": "A dark comedy about humankind’s desire to love and to be loved. Centred around neediness, intimacy and romance.  Told through a series of loosely connected, tender and absurd scenes, the film follows people who are searching for closeness and acceptance. In a world that preaches self-control, the film explores the sides we try to hide, such as feeling needy and pathetic.  The stories overlap and reappear, gradually forming a portrait of collective longing.",
+   "tiff-2026": "Anna Mantzaris brings endearing, peculiar characters to lovable life in her sharp animated portrayal of the friction between the weight of being needed and our deep craving for intimacy, in this quirky, hilarious observation on romance, neediness, and human connection."
+  }
+ },
+ {
+  "work_id": "w_R4PYB45P41ES",
+  "campo": "directores",
+  "valor": [
+   "Anna Mantzaris"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Anna Mantzaris",
+   "bogoshorts-2026": "Anna Mantzaris",
+   "tiff-2026": "Anna Mantzaris"
+  }
+ },
+ {
+  "work_id": "w_R4PYB45P41ES",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "2026",
+   "bogoshorts-2026": "2026",
+   "tiff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4PYB45P41ES",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Animación",
+   "bogoshorts-2026": "Animación",
+   "tiff-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4PYB45P41ES",
+  "campo": "xref.tmdb",
+  "valor": 1660526,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "1660526",
+   "bogoshorts-2026": "1660526",
+   "tiff-2026": "1660526"
+  }
+ },
+ {
+  "work_id": "w_R4PYB45P41ES",
+  "campo": "xref.letterboxd",
+  "valor": "please-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "please-2026",
+   "bogoshorts-2026": "please-2026",
+   "tiff-2026": "please-2026"
+  }
+ }
+]

@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_7JCX47BMSE9D",
+  "campo": "directores",
+  "valor": [
+   "Javier Jiménez Corzo"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Javier Jiménez Corzo"
+  }
+ },
+ {
+  "work_id": "w_7JCX47BMSE9D",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCX47BMSE9D",
+  "campo": "sinopsis.es",
+  "valor": "Después de 15 años de ausencia, el reloj de la Inmaculada vuelve a latir en Barichara.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Después de 15 años de ausencia, el reloj de la Inmaculada vuelve a latir en Barichara."
+  }
+ },
+ {
+  "work_id": "w_7JCX47BMSE9D",
+  "campo": "sinopsis.en",
+  "valor": "After 15 years of absence, the Inmaculada clock beats again in Barichara.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "After 15 years of absence, the Inmaculada clock beats again in Barichara."
+  }
+ },
+ {
+  "work_id": "w_7JCX47BMSE9D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/el-latir-de-la-memoria.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/el-latir-de-la-memoria.jpg"
+  }
+ }
+]

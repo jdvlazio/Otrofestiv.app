@@ -1,0 +1,22 @@
+[
+ {
+  "work_id": "w_R4HJ5YE49437",
+  "campo": "xref.letterboxd",
+  "valor": "celeste-2025-2",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "ficdeh-2026": "celeste-2"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5YE49437",
+  "campo": "xref.tmdb",
+  "valor": 1737982,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/celeste-2/"
+ }
+]

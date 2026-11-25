@@ -1,0 +1,86 @@
+[
+ {
+  "work_id": "w_R4HD241JZEE7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicinerio-2026/sirena-mecanica.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/festicinerio-2026/sirena-mecanica.jpg",
+   "/assets/jardin-2026/sirena-mecanica.jpg",
+   "/assets/popayan-2026/sirena-mecanica.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20205043.png?itok=BR7oyf-o"
+  ],
+  "antes": {
+   "festicinerio-2026": "/assets/festicinerio-2026/sirena-mecanica.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20205043.png?itok=BR7oyf-o",
+   "jardin-2026": "/assets/jardin-2026/sirena-mecanica.jpg",
+   "popayan-2026": "/assets/popayan-2026/sirena-mecanica.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HD241JZEE7",
+  "campo": "directores",
+  "valor": [
+   "Violeta Vieytes Vivares",
+   "Damián Sato"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "festicinerio-2026": "Violeta Vieytes Vivares, Damián Sato",
+   "ficci-65": "Violeta Vieytes Vivares, Damián Sato",
+   "jardin-2026": "Violeta Vieytes Vivares y Damián Sato",
+   "popayan-2026": "Violeta Vieytes Vivares y Damián Sato"
+  }
+ },
+ {
+  "work_id": "w_R4HD241JZEE7",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "CO"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "festicinerio-2026": "España, Colombia",
+   "ficci-65": "España/Colombia",
+   "jardin-2026": "Colombia",
+   "popayan-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HD241JZEE7",
+  "campo": "sinopsis.en",
+  "valor": "Wearing a fencing mask and wielding a velvet-sheathed sword, the mermaid walks to the edge of her pond. As she stops, the digital image shatters: she wants to burn it all and further fractures the pixels with her sword. Amid glitches, fantasy, and handpan music, an inner adventure that reimagines the myth of the mermaid.",
+  "motivo": "catálogo oficial de FICCI 65, p. 61",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=61"
+ },
+ {
+  "work_id": "w_R4HD241JZEE7",
+  "campo": "sinopsis.es",
+  "valor": "Con máscara de esgrimista y espada forrada con terciopelo, la sirena camina hasta el borde de su estanque. Al detenerse, la imagen digital se desgarra: quiere quemarlo todo y fisura aún más los píxeles con su espada. Entre glitches, fantasía y música de handpan, una aventura interior que reimagina el mito de la sirena.",
+  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 61",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (lector independiente)",
+  "antes": {
+   "festicinerio-2026": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
+   "ficci-65": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
+   "jardin-2026": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
+   "popayan-2026": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia."
+  },
+  "vistas": [
+   "9a2466d1b5fc"
+  ],
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=61"
+ }
+]

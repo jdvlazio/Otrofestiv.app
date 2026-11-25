@@ -18,6 +18,14 @@ class SoloDatos(unittest.TestCase):
         d = "+    keyArt:'/assets/keyart/x-v2.jpg',\n+    city:'Cali',\n"
         self.assertTrue(g.revisar(['src/config.js'], d))
 
+    def test_una_lista_cortada_o_un_config_sin_diff_no_pasan(self):
+        self.assertTrue(g.completo(['a'], 2, ''))
+        self.assertTrue(g.completo(['src/config.js'], 1, ''))
+        self.assertEqual(g.completo(['a'], 1, ''), [])
+
+    def test_una_linea_que_empieza_por_mas_no_se_salta(self):
+        self.assertTrue(g.revisar(['src/config.js'], '+++globalThis.x;'))
+
     def test_codigo_no_pasa(self):
         for a in ('validate.py', 'pipeline/ig_vigia.py', 'src/main.js', 'tests/unit/a.test.js', 'scripts/x.py'):
             self.assertTrue(g.revisar([a], ''), a)

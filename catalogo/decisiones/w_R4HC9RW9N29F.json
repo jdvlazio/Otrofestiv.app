@@ -1,0 +1,34 @@
+[
+ {
+  "work_id": "w_R4HC9RW9N29F",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/montana-luminosa.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/montana-luminosa.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_ML%20Poster%20FICCI%2065%20-2026%20-%20Lony%20Welter.png?itok=0KYb7rep"
+  ],
+  "antes": {
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_ML%20Poster%20FICCI%2065%20-2026%20-%20Lony%20Welter.png?itok=0KYb7rep",
+   "midbo-2026": "/assets/midbo-2026/montana-luminosa.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HC9RW9N29F",
+  "campo": "sinopsis.en",
+  "valor": "In La Jagua, a riverside town in Huila, the men who come to open the earth for a dam disturb the territory’s pulse. Nidia, 55, a peasant and fique artisan, awaits the departure of her only son. As anxiety and insomnia set in, an unsettling presence grows within her, until she moves toward a revelation that holds the antidote to her pain.",
+  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 50",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (lector independiente)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=50",
+  "antes": {
+   "ficci-65": "Textual layers grow from the center to the summit of a mountain. The tensions surrounding the treasures of the earth's womb and the woman's womb trace a delicate map of stratigraphies, opaque and dark, yet of very intense life. In this experimental short, bodies pulse like an incantation against the world's pains.",
+   "midbo-2026": "Textual layers grow from the center to the summit of a mountain. The tensions surrounding the treasures of the earth's womb and the woman's womb trace a delicate map of stratigraphies, opaque and dark, yet of very intense life. In this experimental short, bodies pulse like an incantation against the world's pains."
+  }
+ }
+]

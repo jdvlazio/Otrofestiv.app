@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_7JCY08A1YE1K",
+  "campo": "directores",
+  "valor": [
+   "Javier Jiménez Corzo"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Javier Jiménez Corzo"
+  }
+ },
+ {
+  "work_id": "w_7JCY08A1YE1K",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCY08A1YE1K",
+  "campo": "sinopsis.es",
+  "valor": "Don Antonio: la memoria esculpida que da la bienvenida o el último adiós.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Don Antonio: la memoria esculpida que da la bienvenida o el último adiós."
+  }
+ },
+ {
+  "work_id": "w_7JCY08A1YE1K",
+  "campo": "sinopsis.en",
+  "valor": "Don Antonio: the sculpted memory that bids welcome or the last farewell.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Don Antonio: the sculpted memory that bids welcome or the last farewell."
+  }
+ },
+ {
+  "work_id": "w_7JCY08A1YE1K",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/el-arte-de-inmortalizar-mortales.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/el-arte-de-inmortalizar-mortales.jpg"
+  }
+ }
+]

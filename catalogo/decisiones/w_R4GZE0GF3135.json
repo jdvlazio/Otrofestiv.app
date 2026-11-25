@@ -1,0 +1,59 @@
+[
+ {
+  "work_id": "w_R4GZE0GF3135",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cortoscali-2026/el-mundo-de-humberto.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cortoscali-2026/el-mundo-de-humberto.jpg",
+   "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
+   "/assets/ficica-2026/el-mundo-de-humberto.jpg",
+   "/assets/ficpa-2026/el-mundo-de-humberto.jpg"
+  ],
+  "antes": {
+   "cortoscali-2026": "/assets/cortoscali-2026/el-mundo-de-humberto.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
+   "ficica-2026": "/assets/ficica-2026/el-mundo-de-humberto.jpg",
+   "ficpa-2026": "/assets/ficpa-2026/el-mundo-de-humberto.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4GZE0GF3135",
+  "campo": "sinopsis.es",
+  "valor": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cortoscali-2026, ficcali-2026, ficica-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "09651be2affe",
+   "1da9bad64f9e"
+  ],
+  "antes": {
+   "cortoscali-2026": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
+   "ficcali-2026": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
+   "ficica-2026": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
+   "ficpa-2026": "En el corazón de Cali (Colombia), un motel de 190 habitaciones temáticas se convierte en una obra de arte viva: un universo insólito, sensual y político concebido por Humberto Villegas, que Neneco, su cómplice escultor, materializa."
+  }
+ },
+ {
+  "work_id": "w_R4GZE0GF3135",
+  "campo": "directores",
+  "valor": [
+   "Paula Ortiz Gónima"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cortoscali-2026": "Paula Ortiz Gónima",
+   "ficcali-2026": "Paula Ortiz",
+   "ficica-2026": "Paula Ortiz",
+   "ficpa-2026": "Paula Ortiz Gónima"
+  }
+ }
+]

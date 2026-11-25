@@ -18,7 +18,7 @@ Un candidato NUNCA se une solo: queda en candidatos.json hasta que Juan decida.
     TMDB_API_KEY=… python3 pipeline/catalogo_construir.py --escribir
     python3 pipeline/catalogo_construir.py --comprobar   # ¿está al día? no escribe
 
---escribir (fase 3) materializa catalogo/obras/, procedencia/ y decisiones.json.
+--escribir (fase 3) materializa catalogo/obras/, procedencia/ y decisiones/.
 Re-correrlo es idempotente: cada grupo conserva el id de la obra que ya lo
 contenía (catalogo.obra_de), y las decisiones ya guardadas mandan.
 """
@@ -460,7 +460,7 @@ def materializar(R, grupos, key, cache):
         o['presentaciones'] = sorted({r['fest'] for r in regs})
         nuevas[wid], proc[wid] = o, pr
     if otras:
-        sys.exit('✗ fichas de TMDB de otra obra (corregir el tmdb_id —en lo ya publicado, decisión `xref.tmdb` y ficha_unica.py --aplicar --escribir—, o declarar en decisiones.json {"campo": "ficha-ok", "valor": <tmdb>, "work_id": "", "motivo": …}):\n  ' + '\n  '.join(otras))
+        sys.exit('✗ fichas de TMDB de otra obra (corregir el tmdb_id —en lo ya publicado, decisión `xref.tmdb` y ficha_unica.py --aplicar --escribir—, o declarar en decisiones/ {"campo": "ficha-ok", "valor": <tmdb>, "work_id": "", "motivo": …}):\n  ' + '\n  '.join(otras))
     # las decisiones de la revisión, por título → por work_id
     decs = [d for d in catalogo.decisiones()]
     ya = {(d['work_id'], d['campo']) for d in decs}
@@ -520,7 +520,7 @@ def salidas(R, grupos):
         out[f'{REPO}/catalogo/obras/{wid}.json'] = dump(o)
         out[f'{REPO}/catalogo/procedencia/{wid}.json'] = dump(proc[wid])
     out[f'{REPO}/catalogo/fusiones.json'] = dump(fus)
-    out[f'{REPO}/catalogo/decisiones.json'] = dump(decs)
+    out.update(catalogo.archivos_decisiones(decs, f'{REPO}/catalogo'))
     # la presentación apunta a su obra (fase 3b): solo se agrega `work_id`
     ix, sin_resolver = catalogo.indice(obs), []
     for p in sorted(glob.glob(f'{REPO}/festivals/*.json')):
@@ -552,6 +552,7 @@ def escribir(R, grupos):
         if t is None:
             os.remove(p)
         elif _actual(p) != t:
+            os.makedirs(os.path.dirname(p), exist_ok=True)
             io.open(p, 'w', encoding='utf-8').write(t)
     print(f'✓ {len(obs)} obras, {len(decs)} decisiones; {len(sin_resolver)} presentaciones sin obra única')
     for x in sin_resolver[:20]:

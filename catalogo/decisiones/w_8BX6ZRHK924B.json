@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX6ZRHK924B",
+  "campo": "directores",
+  "valor": [
+   "Juan Sebastián Valencia"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Juan Sebastián Valencia"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZRHK924B",
+  "campo": "anio",
+  "valor": 2011,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2011"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZRHK924B",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZRHK924B",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZRHK924B",
+  "campo": "sinopsis.es",
+  "valor": "Cinco extraños al borde de la desesperación apuestan fuertes sumas en un juego de póker con un solo ganador: un sacerdote en conflicto con sus principios, un hombre enamorado, un asesino a sueldo, un miliciano que lucha por salvar a su familia y la talladora. Todos saben que perder puede costarles la vida.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Cinco extraños al borde de la desesperación apuestan fuertes sumas en un juego de póker con un solo ganador: un sacerdote en conflicto con sus principios, un hombre enamorado, un asesino a sueldo, un miliciano que lucha por salvar a su familia y la talladora. Todos saben que perder puede costarles la vida."
+  }
+ },
+ {
+  "work_id": "w_8BX6ZRHK924B",
+  "campo": "sinopsis.en",
+  "valor": "Five strangers on the brink of despair bet large sums on a poker game with only one winner: a priest at odds with his principles, a man in love, a hired killer, a militiaman fighting to save his family and the woman dealing the cards. They all know that losing could cost them their lives.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Five strangers on the brink of despair bet large sums on a poker game with only one winner: a priest at odds with his principles, a man in love, a hired killer, a militiaman fighting to save his family and the woman dealing the cards. They all know that losing could cost them their lives."
+  }
+ },
+ {
+  "work_id": "w_8BX6ZRHK924B",
+  "campo": "xref.tmdb",
+  "valor": 132462,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "132462"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZRHK924B",
+  "campo": "xref.letterboxd",
+  "valor": "poker-2011",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "poker-2011"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZRHK924B",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/poker.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/poker.jpg"
+  }
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4PS7MPRZTHF",
+  "campo": "xref.tmdb",
+  "valor": 183718,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/beginning/"
+ },
+ {
+  "work_id": "w_R4PS7MPRZTHF",
+  "campo": "sinopsis.es",
+  "valor": "Ensayo filosófico sobre la Revolución de Octubre de 1917 en Rusia y su influencia sobre el destino del mundo en el siglo XX.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/183718"
+ },
+ {
+  "work_id": "w_R4PS7MPRZTHF",
+  "campo": "sinopsis.en",
+  "valor": "Philosophical essay about the October Revolution of 1917 in Russia, its influence on the destiny of the world in the 20th century.",
+  "motivo": "de su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/183718"
+ },
+ {
+  "work_id": "w_R4PS7MPRZTHF",
+  "campo": "directores",
+  "valor": [
+   "Artavazd Pelechian"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4PS7MPRZTHF",
+  "campo": "paises",
+  "valor": [
+   "AM",
+   "SU"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

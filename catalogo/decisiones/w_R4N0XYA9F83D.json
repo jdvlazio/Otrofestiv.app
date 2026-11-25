@@ -1,0 +1,44 @@
+[
+ {
+  "work_id": "w_R4N0XYA9F83D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/las-piedras-del-rio.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/las-piedras-del-rio.jpg",
+   "/assets/cortoscali-2026/las-piedras-del-rio.jpg",
+   "/assets/siembrafest/las-piedras-del-rio.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/las-piedras-del-rio.jpg",
+   "cortoscali-2026": "/assets/cortoscali-2026/las-piedras-del-rio.jpg",
+   "siembrafest-2026": "/assets/siembrafest/las-piedras-del-rio.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4N0XYA9F83D",
+  "campo": "sinopsis.es",
+  "valor": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "aleste-2026": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+   "cortoscali-2026": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+   "popayan-2026": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte."
+  }
+ },
+ {
+  "work_id": "w_R4N0XYA9F83D",
+  "campo": "sinopsis.en",
+  "valor": "On the banks of the Magdalena River, Esther guides the spirits of the disappeared, victims of violence, as they try to rebuild their interrupted stories and find their place between life and death.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

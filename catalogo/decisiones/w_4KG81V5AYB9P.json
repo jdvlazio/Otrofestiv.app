@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_4KG81V5AYB9P",
+  "campo": "directores",
+  "valor": [
+   "Amos Ostermeier"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Amos Ostermeier"
+  }
+ },
+ {
+  "work_id": "w_4KG81V5AYB9P",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KG81V5AYB9P",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_4KG81V5AYB9P",
+  "campo": "sinopsis.es",
+  "valor": "Entre la curiosidad y la conmoción, una multitud se reúne alrededor de un accidente de tránsito. Incapaces de intervenir y, en algunos casos, sin voluntad de hacerlo, los espectadores ignoran el peligro inminente que se cierne sobre ellos y amenaza con sepultarlos a todos.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Entre la curiosidad y la conmoción, una multitud se reúne alrededor de un accidente de tránsito. Incapaces de intervenir y, en algunos casos, sin voluntad de hacerlo, los espectadores ignoran el peligro inminente que se cierne sobre ellos y amenaza con sepultarlos a todos."
+  }
+ },
+ {
+  "work_id": "w_4KG81V5AYB9P",
+  "campo": "sinopsis.en",
+  "valor": "Partly driven by curiosity, partly frozen in shock, a crowd of onlookers gathers around a car accident. Unable and, in some cases, unwilling to intervene, the audience ignores the imminent danger above them, which threatens to bury them all beneath it.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Partly driven by curiosity, partly frozen in shock, a crowd of onlookers gathers around a car accident. Unable and, in some cases, unwilling to intervene, the audience ignores the imminent danger above them, which threatens to bury them all beneath it."
+  }
+ },
+ {
+  "work_id": "w_4KG81V5AYB9P",
+  "campo": "xref.tmdb",
+  "valor": 1810887,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1810887"
+  }
+ },
+ {
+  "work_id": "w_4KG81V5AYB9P",
+  "campo": "xref.letterboxd",
+  "valor": "die-tauben-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "die-tauben-2026"
+  }
+ },
+ {
+  "work_id": "w_4KG81V5AYB9P",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/die-tauben.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/die-tauben.jpg"
+  }
+ }
+]

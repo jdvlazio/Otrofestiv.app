@@ -1,0 +1,28 @@
+[
+ {
+  "work_id": "w_JET7AWMJQ4J4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "ef9825711278"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "La salamandra",
+  "valor": "Dos jóvenes escritores noveles aparecen en la vida de Rosemonde mientras escriben un drama sobre un pequeño incidente en el que su tío resultó herido, quizás al limpiar su rifle o, peor, por un disparo a propósito. Pierre, periodista, recibe el encargo del guion y pide ayuda a su amigo Paul, un poeta bohemio.",
+  "original": "Dos jóvenes escritores noveles aparecen en la vida de Rosemonde, una joven de clase trabajadora a la que conocen cuando se hallan escribiendo un drama sobre un pequeño incidente en el que su tío resultó herido, quizás mientras limpiaba su rifle o, peor, quizás le disparase a posta. Pierre, un periodista free-lance, recibe el encargo de escribir el guión, pero falto de tiempo pide ayuda a un poeta bohemio amigo suyo, Paul.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "f432ddc79dbb"
+  },
+  "antes": {
+   "aleste-2026": "Dos jóvenes escritores noveles aparecen en la vida de Rosemonde, una joven de clase trabajadora a la que conocen cuando se hallan escribiendo un drama sobre un pequeño incidente en el que su tío resultó herido, quizás mientras limpiaba su rifle o, peor, quizás le disparase a posta. Pierre, un periodista free-lance, recibe el encargo de escribir el guión, pero falto de tiempo pide ayuda a un poeta bohemio amigo suyo, Paul."
+  }
+ }
+]

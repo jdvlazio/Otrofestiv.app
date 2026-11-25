@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4G651V5H1G6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/iris-de-cristal.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bhff-2026/iris-de-cristal.jpg",
+   "/assets/fantasmagoria-2026/iris-de-cristal.jpg"
+  ],
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/iris-de-cristal.jpg",
+   "fantasmagoria-2026": "/assets/fantasmagoria-2026/iris-de-cristal.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4G651V5H1G6",
+  "campo": "sinopsis.es",
+  "valor": "Iris es una niña de 11 años que vive con su abuela y su gata Cristal. Una noche, mientras la abuela y la niña duermen, la Muerte llega inesperadamente para llevarse el alma de la abuela, pero por error extrae el alma de Iris. La gata Cristal, al presenciar lo ocurrido, intenta detener a la Muerte, quien escapa al más allá a través de un espejo, sin lograr atraparla.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026 · corregida)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "79c3ac20412c",
+   "f01af48603e3"
+  ],
+  "antes": {
+   "bhff-2026": "Iris es una niña de 11 años que vive con su abuela y su gata Cris- tal. Una noche, mientras la abuela y la niña duermen, la Muerte llega inesperadamente para llevarse el alma de la abuela, pero por error extrae el alma de Iris. La gata Cristal, al presenciar lo ocurrido, intenta detener a la Muerte, quien escapa al más allá a través de un espejo, sin lograr atraparla.",
+   "fantasmagoria-2026": "Narrafilms: Proyección con autodescripción – Personas con discapacidad visual."
+  }
+ },
+ {
+  "work_id": "w_R4G651V5H1G6",
+  "campo": "directores",
+  "valor": [
+   "Diego Gaviria Nieto"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "bhff-2026": "Diego Gaviria Nieto",
+   "fantasmagoria-2026": "Diego Gaviria"
+  }
+ },
+ {
+  "work_id": "w_R4G651V5H1G6",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1368500)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "bhff-2026": 2025,
+   "fantasmagoria-2026": 2024
+  }
+ }
+]

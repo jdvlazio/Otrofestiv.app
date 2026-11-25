@@ -1,0 +1,21 @@
+[
+ {
+  "work_id": "w_R4NEB3V9Y801",
+  "campo": "xref.tmdb",
+  "valor": 1445712,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/poligono-x/"
+ },
+ {
+  "work_id": "w_R4NEB3V9Y801",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

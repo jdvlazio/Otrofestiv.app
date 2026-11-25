@@ -1,0 +1,133 @@
+[
+ {
+  "work_id": "w_4KF7KQ2DGYFZ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5d998fedc789"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Idols",
+  "valor": "Kim Min-ha siempre ha soñado con la fama, pero es una aspirante a estrella del K-pop a punto de cumplir los 30. Tiene talento, pero a la gente solo le importa su parecido con la superestrella Park Hye-mi, que, según ella, vive la vida que debería ser suya. Decidida a vengarse, aprovecha ese parecido para colarse en la casa de la estrella.",
+  "original": "Kim Min-ha siempre ha soñado con las luces de la fama, pero ahora es una aspirante a estrella del K-pop a punto de cumplir los 30. Tiene talento, pero a la gente solo le importa su parecido con Park Hye-mi, la superestrella que, según ella, está viviendo la vida que debería ser suya. Decidida a vengarse, aprovecha ese parecido para colarse en la casa de la estrella. Este encuentro entre una soñadora fracasada y una celebridad intocable saca a la luz puntos en común, hasta que degenera en un sangriento allanamiento de morada que las consume a ambas.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "ca9376e35605"
+  }
+ },
+ {
+  "work_id": "w_4KF7KQ2DGYFZ",
+  "campo": "directores",
+  "valor": [
+   "Matt Halsall"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Matt Halsall"
+  }
+ },
+ {
+  "work_id": "w_4KF7KQ2DGYFZ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KF7KQ2DGYFZ",
+  "campo": "paises",
+  "valor": [
+   "KR",
+   "JP",
+   "GB"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Corea del Sur, Japón, Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_4KF7KQ2DGYFZ",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suspenso"
+  }
+ },
+ {
+  "work_id": "w_4KF7KQ2DGYFZ",
+  "campo": "sinopsis.en",
+  "valor": "Kim Min-ha has always dreamed of the bright lights, but now she’s an almost 30-year-old wannabe K-pop idol. She has talent, but people only care about her resemblance to Park Hye-mi, the superstar she believes is living the life that should be hers. Hellbent on revenge, she uses that resemblance to gain access to the star’s home.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Kim Min-ha has always dreamed of the bright lights, but now she’s an almost 30-year-old wannabe K-pop idol. She has talent, but people only care about her resemblance to Park Hye-mi, the superstar she believes is living the life that should be hers. Hellbent on revenge, she uses that resemblance to gain access to the star’s home. This encounter between a washed-up dreamer and an untouchable celebrity unearths common ground, until it devolves into a bloody home invasion which consumes them both."
+  }
+ },
+ {
+  "work_id": "w_4KF7KQ2DGYFZ",
+  "campo": "xref.tmdb",
+  "valor": 1654471,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1654471"
+  }
+ },
+ {
+  "work_id": "w_4KF7KQ2DGYFZ",
+  "campo": "xref.letterboxd",
+  "valor": "idols-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "idols-2026"
+  }
+ },
+ {
+  "work_id": "w_4KF7KQ2DGYFZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/idols.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/idols.jpg"
+  }
+ }
+]

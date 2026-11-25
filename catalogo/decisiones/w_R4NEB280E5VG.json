@@ -1,0 +1,126 @@
+[
+ {
+  "work_id": "w_R4NEB280E5VG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/un-pajaro-mas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "afiche de la obra; lo otro es tarjeta de sección",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/un-pajaro-mas.jpg",
+   "siembrafest-2026": "/assets/siembrafest/un-pajaro-mas.jpg"
+  },
+  "vistas": [
+   "/assets/siembrafest/un-pajaro-mas.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4NEB280E5VG",
+  "campo": "directores",
+  "valor": [
+   "Julián Gómez Reyes"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Julián Gómez Reyes",
+   "siembrafest-2026": "Julián Gómez Reyes"
+  }
+ },
+ {
+  "work_id": "w_R4NEB280E5VG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "siembrafest-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4NEB280E5VG",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4NEB280E5VG",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación",
+   "siembrafest-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4NEB280E5VG",
+  "campo": "sinopsis.es",
+  "valor": "Raquelita, una torcaza herida tras un accidente en la ciudad de Bogotá, encuentra refugio en la ventana de Tomás, un niño que la acompaña mientras sana. A partir de ese encuentro, Raquelita inicia un viaje poético por la ciudad, descubriendo personajes, vidas, detalles invisibles para los demás y su lugar en el mundo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Raquelita, una torcaza herida tras un accidente en la ciudad de Bogotá, encuentra refugio en la ventana de Tomás, un niño que la acompaña mientras sana. A partir de ese encuentro, Raquelita inicia un viaje poético por la ciudad, descubriendo personajes, vidas, detalles invisibles para los demás y su lugar en el mundo."
+  }
+ },
+ {
+  "work_id": "w_R4NEB280E5VG",
+  "campo": "sinopsis.en",
+  "valor": "After an accident in Bogotá, Raquelita, an injured dove, finds refuge on the windowsill of Tomás, a young boy who watches over her as she heals. From this unexpected encounter, Raquelita embarks on a poetic journey through the city, discovering extraordinary characters, hidden lives, and the little wonders that often go unnoticed, while slowly finding her own place in the world.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After an accident in Bogotá, Raquelita, an injured dove, finds refuge on the windowsill of Tomás, a young boy who watches over her as she heals. From this unexpected encounter, Raquelita embarks on a poetic journey through the city, discovering extraordinary characters, hidden lives, and the little wonders that often go unnoticed, while slowly finding her own place in the world."
+  }
+ },
+ {
+  "work_id": "w_R4NEB280E5VG",
+  "campo": "xref.tmdb",
+  "valor": 1841397,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841397"
+  }
+ },
+ {
+  "work_id": "w_R4NEB280E5VG",
+  "campo": "xref.letterboxd",
+  "valor": "un-pajaro-mas",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "un-pajaro-mas"
+  }
+ }
+]

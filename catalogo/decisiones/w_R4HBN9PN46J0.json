@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HBN9PN46J0",
+  "campo": "directores",
+  "valor": [
+   "Juan Cabral"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 102",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=102",
+  "antes": {
+   "ficci-65": "Juan Cabral"
+  }
+ },
+ {
+  "work_id": "w_R4HBN9PN46J0",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 102",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=102",
+  "antes": {
+   "ficci-65": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HBN9PN46J0",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 102",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=102",
+  "antes": {
+   "ficci-65": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_R4HBN9PN46J0",
+  "campo": "sinopsis.es",
+  "valor": "En Ushuaia, la ciudad más austral de Argentina, una niña extraña a su padre fallecido. De manera fortuita entra en contacto con el mundo de los muertos por una cabina telefónica abandonada y, con el deseo de comunicarse con él, se vuelve mediadora: transmite mensajes, sugerencias y advertencias entre ambos mundos. Un drama íntimo y emotivo.",
+  "motivo": "catálogo oficial de FICCI 65, p. 102",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=102",
+  "antes": {
+   "ficci-65": "Los paisajes de Tierra del Fuego poseen una cualidad conmovedora en su sobriedad, más aún vistos desde la exuberancia tropical."
+  }
+ },
+ {
+  "work_id": "w_R4HBN9PN46J0",
+  "campo": "sinopsis.en",
+  "valor": "In Ushuaia, Argentina’s southernmost city, a girl misses her deceased father. By chance she comes into contact with the world of the dead through an abandoned phone booth and, wishing to communicate with him, becomes a mediator, passing messages, suggestions, and warnings between both worlds. An intimate, emotional drama.",
+  "motivo": "catálogo oficial de FICCI 65, p. 102",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=102",
+  "antes": {
+   "ficci-65": "The landscapes of Tierra del Fuego have a moving quality in their austerity, even more so when viewed from the lush tropics."
+  }
+ },
+ {
+  "work_id": "w_R4HBN9PN46J0",
+  "campo": "xref.tmdb",
+  "valor": 1426451,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1426451"
+ }
+]

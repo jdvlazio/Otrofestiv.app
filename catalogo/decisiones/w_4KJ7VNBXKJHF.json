@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJ7VNBXKJHF",
+  "campo": "directores",
+  "valor": [
+   "Kaleb Lechowski"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Kaleb Lechowski"
+  }
+ },
+ {
+  "work_id": "w_4KJ7VNBXKJHF",
+  "campo": "anio",
+  "valor": 2013,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2013"
+  }
+ },
+ {
+  "work_id": "w_4KJ7VNBXKJHF",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_4KJ7VNBXKJHF",
+  "campo": "generos",
+  "valor": [
+   "Ciencia ficción"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ciencia ficción"
+  }
+ },
+ {
+  "work_id": "w_4KJ7VNBXKJHF",
+  "campo": "sinopsis.es",
+  "valor": "Tras la rebelión de las máquinas contra sus creadores, un alienígena cautivo es interrogado para revelar el paradero de los supervivientes de su especie.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tras la rebelión de las máquinas contra sus creadores, un alienígena cautivo es interrogado para revelar el paradero de los supervivientes de su especie."
+  }
+ },
+ {
+  "work_id": "w_4KJ7VNBXKJHF",
+  "campo": "sinopsis.en",
+  "valor": "After machines rebel against their creators, a captive alien is interrogated about the whereabouts of his species’ survivors.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After machines rebel against their creators, a captive alien is interrogated about the whereabouts of his species’ survivors."
+  }
+ },
+ {
+  "work_id": "w_4KJ7VNBXKJHF",
+  "campo": "xref.tmdb",
+  "valor": 159370,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "159370"
+  }
+ },
+ {
+  "work_id": "w_4KJ7VNBXKJHF",
+  "campo": "xref.letterboxd",
+  "valor": "rha",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "rha"
+  }
+ },
+ {
+  "work_id": "w_4KJ7VNBXKJHF",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/r-ha.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/r-ha.jpg"
+  }
+ }
+]

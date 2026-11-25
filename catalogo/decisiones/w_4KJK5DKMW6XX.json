@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_4KJK5DKMW6XX",
+  "campo": "directores",
+  "valor": [
+   "Nadiela"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Nadiela"
+  }
+ },
+ {
+  "work_id": "w_4KJK5DKMW6XX",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJK5DKMW6XX",
+  "campo": "paises",
+  "valor": [
+   "CL"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Chile"
+  }
+ },
+ {
+  "work_id": "w_4KJK5DKMW6XX",
+  "campo": "sinopsis.es",
+  "valor": "En un mundo enterrado bajo la basura y el consumismo, Alfilera descubre el vacío de la humanidad y desencadena la revolución de las plantas, decididas a reclamar lo que les pertenece.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En un mundo enterrado bajo la basura y el consumismo, Alfilera descubre el vacío de la humanidad y desencadena la revolución de las plantas, decididas a reclamar lo que les pertenece."
+  }
+ },
+ {
+  "work_id": "w_4KJK5DKMW6XX",
+  "campo": "sinopsis.en",
+  "valor": "In a world buried in trash and consumerism, Alfilera discovers the emptiness inside humanity and unleashes the plant revolution, as they are determined to reclaim what is theirs.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In a world buried in trash and consumerism, Alfilera discovers the emptyness inside humanity and unleashes the plant revolution, as they are determined to reclaim what is theirs."
+  }
+ },
+ {
+  "work_id": "w_4KJK5DKMW6XX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/savia-alfilera.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/savia-alfilera.jpg"
+  }
+ }
+]

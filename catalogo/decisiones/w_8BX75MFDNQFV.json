@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX75MFDNQFV",
+  "campo": "directores",
+  "valor": [
+   "Juan Felipe Orozco"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Juan Felipe Orozco"
+  }
+ },
+ {
+  "work_id": "w_8BX75MFDNQFV",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_8BX75MFDNQFV",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_8BX75MFDNQFV",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Suspenso"
+  }
+ },
+ {
+  "work_id": "w_8BX75MFDNQFV",
+  "campo": "sinopsis.es",
+  "valor": "En un futuro próximo azotado por la escasez de agua, Frank Molina, un periodista huraño, deberá enfrentarse a sus demonios para llegar al fondo de un macabro asesinato. La investigación lo arrastrará a las entrañas de una ciudad misteriosa donde nada es lo que parece.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "En un futuro próximo azotado por la escasez de agua, Frank Molina, un periodista huraño, deberá enfrentarse a sus demonios para llegar al fondo de un macabro asesinato. La investigación lo arrastrará a las entrañas de una ciudad misteriosa donde nada es lo que parece."
+  }
+ },
+ {
+  "work_id": "w_8BX75MFDNQFV",
+  "campo": "sinopsis.en",
+  "valor": "In a near future plagued by water scarcity, Frank Molina, a surly journalist, must face his demons to get to the bottom of a macabre murder. The investigation will drag him into the bowels of a mysterious city where nothing is what it seems.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "In a near future plagued by water scarcity, Frank Molina, a surly journalist, must face his demons to get to the bottom of a macabre murder. The investigation will drag him into the bowels of a mysterious city where nothing is what it seems."
+  }
+ },
+ {
+  "work_id": "w_8BX75MFDNQFV",
+  "campo": "xref.tmdb",
+  "valor": 1133923,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1133923"
+  }
+ },
+ {
+  "work_id": "w_8BX75MFDNQFV",
+  "campo": "xref.letterboxd",
+  "valor": "the-initiated-2023",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "the-initiated-2023"
+  }
+ },
+ {
+  "work_id": "w_8BX75MFDNQFV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/los-iniciados.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/los-iniciados.jpg"
+  }
+ }
+]

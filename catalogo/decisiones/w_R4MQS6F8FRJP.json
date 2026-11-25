@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4MQS6F8FRJP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/los-inocentes-encantadores.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/los-inocentes-encantadores.jpg",
+   "/t8fadEnUuIczqDZVcWaVQECUVRh.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/los-inocentes-encantadores.jpg",
+   "olhar-2026": "/t8fadEnUuIczqDZVcWaVQECUVRh.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4MQS6F8FRJP",
+  "campo": "sinopsis.es",
+  "valor": "Un joven médico está cansado de que las mujeres lo persigan. Una noche conoce a una muchacha que prácticamente se instala en su cuarto, y allí hablan de la moral y del amor.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aleste-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "2ee6c4d9adab",
+   "bbbf48ac996b"
+  ],
+  "antes": {
+   "aleste-2026": "Un joven médico está cansado de que las mujeres lo persigan. Una noche conoce a una muchacha que prácticamente se instala en su cuarto, y allí hablan de la moral y del amor.",
+   "olhar-2026": "Un mujeriego está cansado de ser buscado por mujeres. Una noche, conoce a una joven que prácticamente entra a la fuerza en su habitación, donde conversan sobre la moral y el amor."
+  }
+ },
+ {
+  "work_id": "w_R4MQS6F8FRJP",
+  "campo": "sinopsis.en",
+  "valor": "A young doctor is tired of being sought by women. One night he meets a young girl who all but forces herself into his room where they talk of morals and love.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Niewinni czarodzieje",
+  "antes": {
+   "aleste-2026": "A young doctor is tired of being sought by women. One night he meets a young girl who all but forces herself into his room where they talk of morals and love.",
+   "olhar-2026": "A womanizer is tired of being sought by women. One night he meets a young girl who all but forces herself into his room, where they talk of morals and love."
+  }
+ }
+]

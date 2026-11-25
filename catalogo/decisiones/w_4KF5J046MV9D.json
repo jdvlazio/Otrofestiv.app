@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_4KF5J046MV9D",
+  "campo": "directores",
+  "valor": [
+   "Dubravka Turić"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Dubravka Turić"
+  }
+ },
+ {
+  "work_id": "w_4KF5J046MV9D",
+  "campo": "anio",
+  "valor": 2015,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2015"
+  }
+ },
+ {
+  "work_id": "w_4KF5J046MV9D",
+  "campo": "paises",
+  "valor": [
+   "HR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia"
+  }
+ },
+ {
+  "work_id": "w_4KF5J046MV9D",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KF5J046MV9D",
+  "campo": "sinopsis.es",
+  "valor": "Tres mujeres de distintas edades coinciden en la sala de espera de un oftalmólogo. Cuando Sasha escucha a las dos mayores hablar de una tragedia que vivieron, cambia su forma de verlas.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tres mujeres de distintas edades coinciden en la sala de espera de un oftalmólogo. Cuando Sasha escucha a las dos mayores hablar de una tragedia que vivieron, cambia su forma de verlas. Pero pierde la oportunidad de acercarse a ellas."
+  },
+  "vistas": [
+   "77225ae435d1"
+  ]
+ },
+ {
+  "work_id": "w_4KF5J046MV9D",
+  "campo": "sinopsis.en",
+  "valor": "Three women of different ages and backgrounds meet in the waiting room of an ophthalmologist’s office. Overhearing the conversation of the two older women, the young woman Sasha learns of the tragedy they experienced. The indifference she felt towards them until that moment is replaced by a sense of closeness and connection.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Three women of different ages and backgrounds meet in the waiting room of an ophthalmologist’s office. Overhearing the conversation of the two older women, the young woman Sasha learns of the tragedy they experienced. The indifference she felt towards them until that moment is replaced by a sense of closeness and connection. However, the chance to share this is irreversibly lost."
+  }
+ },
+ {
+  "work_id": "w_4KF5J046MV9D",
+  "campo": "xref.tmdb",
+  "valor": 372453,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "372453"
+  }
+ },
+ {
+  "work_id": "w_4KF5J046MV9D",
+  "campo": "xref.letterboxd",
+  "valor": "belladonna-2015",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "belladonna-2015"
+  }
+ },
+ {
+  "work_id": "w_4KF5J046MV9D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/belladonna.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/belladonna.jpg"
+  }
+ }
+]

@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KHY1MRJNF3M",
+  "campo": "directores",
+  "valor": [
+   "Marta Gennari"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Marta Gennari"
+  }
+ },
+ {
+  "work_id": "w_4KHY1MRJNF3M",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KHY1MRJNF3M",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "CH"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia, Suiza"
+  }
+ },
+ {
+  "work_id": "w_4KHY1MRJNF3M",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KHY1MRJNF3M",
+  "campo": "sinopsis.es",
+  "valor": "Un ratón diminuto decide subir a una montaña enorme para apartar la mente de sus preocupaciones.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un ratón diminuto decide subir a una montaña enorme para apartar la mente de sus preocupaciones."
+  }
+ },
+ {
+  "work_id": "w_4KHY1MRJNF3M",
+  "campo": "sinopsis.en",
+  "valor": "A tiny mouse decides to climb an enormous mountain to take its mind off its worries.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A tiny mouse decides to climb an enormous mountain to take its mind off its worries."
+  }
+ },
+ {
+  "work_id": "w_4KHY1MRJNF3M",
+  "campo": "xref.tmdb",
+  "valor": 1647567,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1647567"
+  }
+ },
+ {
+  "work_id": "w_4KHY1MRJNF3M",
+  "campo": "xref.letterboxd",
+  "valor": "piccolo-piccolo",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "piccolo-piccolo"
+  }
+ },
+ {
+  "work_id": "w_4KHY1MRJNF3M",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/piccolo-piccolo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/piccolo-piccolo.jpg"
+  }
+ }
+]

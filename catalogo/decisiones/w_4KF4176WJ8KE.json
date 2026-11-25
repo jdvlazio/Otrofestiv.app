@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KF4176WJ8KE",
+  "campo": "directores",
+  "valor": [
+   "Alex Jiang"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alex Jiang"
+  }
+ },
+ {
+  "work_id": "w_4KF4176WJ8KE",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KF4176WJ8KE",
+  "campo": "paises",
+  "valor": [
+   "CN",
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "China, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KF4176WJ8KE",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KF4176WJ8KE",
+  "campo": "sinopsis.es",
+  "valor": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En una fábrica de lencería de un pueblo pequeño, un vínculo inesperado altera la rutina de un joven y lo lleva a descubrir su deseo."
+  }
+ },
+ {
+  "work_id": "w_4KF4176WJ8KE",
+  "campo": "sinopsis.en",
+  "valor": "In a small-town lingerie factory, a young man’s monotonous life is upended by an unexpected bond and his awakening queerness.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In a small-town lingerie factory, a young man’s monotonous life is upended by an unexpected bond and his awakening queerness."
+  }
+ },
+ {
+  "work_id": "w_4KF4176WJ8KE",
+  "campo": "xref.tmdb",
+  "valor": 1826831,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1826831"
+  }
+ },
+ {
+  "work_id": "w_4KF4176WJ8KE",
+  "campo": "xref.letterboxd",
+  "valor": "tropic-of-cancer-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "tropic-of-cancer-1"
+  }
+ },
+ {
+  "work_id": "w_4KF4176WJ8KE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg"
+  }
+ }
+]

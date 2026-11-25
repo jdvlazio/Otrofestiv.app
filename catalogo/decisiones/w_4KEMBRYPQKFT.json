@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KEMBRYPQKFT",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "70ea851688e2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Jülapüin Yonna",
+  "valor": "En la Alta Guajira, Weinshi, una joven wayuu de 15 años, descubre en sus sueños un llamado ancestral: la tierra necesita ser sanada con la Yonna, danza sagrada de su pueblo. Impulsada por visiones del desequilibrio causado por la explotación minera en su territorio, emprende un viaje hacia el sur en busca de la sabiduría y guía de sus abuelos.",
+  "original": "En el corazón de la Alta Guajira, Weinshi (15), “El tiempo” una joven del pueblo Wayuu, descubre un llamado ancestral en sus sueños, la tierra necesita ser sanada a través de la danza sagrada de su pueblo, la Yonna. Impulsada por visiones que revelan el desequilibrio causado por la explotación minera en su territorio, Weinshi emprende un viaje desde la Zona Norte Extrema hacia el sur, en busca de la sabiduría y guia de sus abuelos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a3b9bdbcc537"
+  }
+ },
+ {
+  "work_id": "w_4KEMBRYPQKFT",
+  "campo": "directores",
+  "valor": [
+   "Luzbeidy Monterrosa Atencio"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Luzbeidy Monterrosa Atencio"
+  }
+ },
+ {
+  "work_id": "w_4KEMBRYPQKFT",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEMBRYPQKFT",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KEMBRYPQKFT",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KEMBRYPQKFT",
+  "campo": "sinopsis.en",
+  "valor": "In the heart of La Alta Guajira, Weinshi (15), whose name means “Time”, a young girl from the Wayuu tribe, begins to hear an ancestral calling in her dreams: the earth must be healed through her people’s sacred dance, the Yonna. Driven by visions revealing the imbalance caused by mining exploitation in her territory, Weinshi sets out on a journey from the Extreme Northern Zone toward the south, seeking the wisdom and guidance of her elders.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the heart of La Alta Guajira, Weinshi (15), whose name means “Time”, a young girl from the Wayuu tribe, begins to hear an ancestral calling in her dreams: the earth must be healed through her people’s sacred dance, the Yonna. Driven by visions revealing the imbalance caused by mining exploitation in her territory, Weinshi sets out on a journey from the Extreme Northern Zone toward the south, seeking the wisdom and guidance of her elders."
+  }
+ },
+ {
+  "work_id": "w_4KEMBRYPQKFT",
+  "campo": "xref.tmdb",
+  "valor": 1616180,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1616180"
+  }
+ },
+ {
+  "work_id": "w_4KEMBRYPQKFT",
+  "campo": "xref.letterboxd",
+  "valor": "the-dream-of-dancing",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-dream-of-dancing"
+  }
+ },
+ {
+  "work_id": "w_4KEMBRYPQKFT",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/julapuin-yonna.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/julapuin-yonna.jpg"
+  }
+ }
+]

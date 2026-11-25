@@ -7,10 +7,10 @@ Esquema: [`esquema.json`](esquema.json). Lectura e invariantes: `pipeline/catalo
 |---|---|
 | `obras/<id>.json` | una obra (lo invariante: título original, directores, año, país, sinopsis, afiche, xref, versiones) |
 | `procedencia/<id>.json` | de dónde salió cada campo de esa obra |
-| `decisiones.json` | decisiones humanas; ganan siempre, también las negativas («no es la misma obra») |
+| `decisiones/` | decisiones humanas; ganan siempre, también las negativas («no es la misma obra») |
 | `fusiones.json` | id absorbido → superviviente; un id nunca se borra |
 | `candidatos.json` | pares de obras que pueden ser la misma, pendientes de Juan |
-| `revision-fase2.json` | la primera revisión (12 oct): 4 reglas generales, 8 decisiones de identidad y 25 de datos, por título; se convierten en `decisiones.json` al asignar ids |
+| `revision-fase2.json` | la primera revisión (12 oct): 4 reglas generales, 8 decisiones de identidad y 25 de datos, por título; se convierten en `decisiones/` al asignar ids |
 
 Fase 3a (12 oct 2026): materializado con `python3 pipeline/catalogo_construir.py --escribir`
 (requiere TMDB_API_KEY; caché fuera del repo, en `~/.cache/otrofestiv/`). 2.133 obras desde 4.104

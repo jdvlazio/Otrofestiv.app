@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HF7DVWSB9J",
+  "campo": "directores",
+  "valor": [
+   "Djouhra Abouda",
+   "Alain Bonnamy"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 264",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=264"
+ },
+ {
+  "work_id": "w_R4HF7DVWSB9J",
+  "campo": "anio",
+  "valor": 1976,
+  "motivo": "catálogo oficial de FICCI 65, p. 264",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=264"
+ },
+ {
+  "work_id": "w_R4HF7DVWSB9J",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 264",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=264",
+  "antes": {
+   "ficci-65": "Francia"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DVWSB9J",
+  "campo": "sinopsis.es",
+  "valor": "Una lista demasiado larga de inmigrantes argelinos asesinados en Francia en 1975 abre este ensayo de vanguardia sobre los trabajadores invisibles que sostienen París y las estructuras que los explotan. Imágenes repetidas al ritmo del trabajo manual, hogares precarios frente a los de sus empleadores, el metro abarrotado al amanecer.",
+  "motivo": "catálogo oficial de FICCI 65, p. 264",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=264"
+ },
+ {
+  "work_id": "w_R4HF7DVWSB9J",
+  "campo": "sinopsis.en",
+  "valor": "A list, far too long, of Algerian immigrants murdered in France in 1975 opens this avant-garde essay on the invisible workers who keep Paris running and the structures that exploit them. Images repeated to the rhythm of manual labor, precarious homes set against their employers' residences, the crowded subway at dawn.",
+  "motivo": "catálogo oficial de FICCI 65, p. 264",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=264"
+ },
+ {
+  "work_id": "w_R4HF7DVWSB9J",
+  "campo": "xref.tmdb",
+  "valor": 752481,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/752481"
+ }
+]

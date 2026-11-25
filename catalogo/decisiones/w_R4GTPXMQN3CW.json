@@ -1,0 +1,36 @@
+[
+ {
+  "work_id": "w_R4GTPXMQN3CW",
+  "campo": "xref.tmdb",
+  "valor": 981698,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/el-gato-cosmico-al-final/"
+ },
+ {
+  "work_id": "w_R4GTPXMQN3CW",
+  "campo": "sinopsis.es",
+  "valor": "Un matrimonio descubre que la puerta del pasillo ha desaparecido y la encuentra en lo alto del comedor. La puerta no será lo único en desaparecer.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/981698"
+ },
+ {
+  "work_id": "w_R4GTPXMQN3CW",
+  "campo": "sinopsis.en",
+  "valor": "A married couple discovers that the hallway door has disappeared and finds it high up in the dining room. The door will not be the only thing to disappear.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4GTPXMQN3CW",
+  "campo": "anio",
+  "valor": 2013,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

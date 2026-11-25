@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS7K9FW50",
+  "campo": "sinopsis.es",
+  "valor": "El día en que cumple 35 años, Marcus y su madre buscan un lugar en la costa para esparcir las cenizas del padre. Cuando su madre se enferma, él empieza a sentir que la sal del mar donde el padre descansa le corroe lentamente la vida.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "a1ae4e8d19b7"
+  ],
+  "antes": {
+   "olhar-2026": "El día en que cumple 35 años, Marcus y su madre buscan un lugar en la costa para esparcir las cenizas de su padre. Cuando su madre enferma, él empieza a sentir que la sal del mar donde descansa su padre corroe lentamente su vida."
+  }
+ },
+ {
+  "work_id": "w_R4MQS7K9FW50",
+  "campo": "xref.tmdb",
+  "valor": 1688921,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/reparacao/"
+ }
+]

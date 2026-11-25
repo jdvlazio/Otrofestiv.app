@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_8BX709N4QQPR",
+  "campo": "directores",
+  "valor": [
+   "Tomás Corredor"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Tomás Corredor"
+  }
+ },
+ {
+  "work_id": "w_8BX709N4QQPR",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_8BX709N4QQPR",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "BR",
+   "NO",
+   "MX"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia, Brasil, Noruega, México"
+  }
+ },
+ {
+  "work_id": "w_8BX709N4QQPR",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX709N4QQPR",
+  "campo": "sinopsis.es",
+  "valor": "En la toma del Palacio de Justicia, unos pocos guerrilleros quedan encerrados en un baño y deben resistir con cincuenta rehenes, por veintisiete horas, la brutalidad de una confrontación entre la guerrilla y las Fuerzas Armadas del Estado.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "En la toma del Palacio de Justicia, unos pocos guerrilleros quedan encerrados en un baño y deben resistir con cincuenta rehenes, por veintisiete horas, la brutalidad de una confrontación entre la guerrilla y las Fuerzas Armadas del Estado."
+  }
+ },
+ {
+  "work_id": "w_8BX709N4QQPR",
+  "campo": "sinopsis.en",
+  "valor": "During the siege of the Palace of Justice, a few guerrillas are trapped in a bathroom and, with fifty hostages, must withstand for twenty-seven hours the brutality of a confrontation between the guerrillas and the State's armed forces.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "During the siege of the Palace of Justice, a few guerrillas are trapped in a bathroom and, with fifty hostages, must withstand for twenty-seven hours the brutality of a confrontation between the guerrillas and the State's armed forces."
+  }
+ },
+ {
+  "work_id": "w_8BX709N4QQPR",
+  "campo": "xref.tmdb",
+  "valor": 1517874,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1517874"
+  }
+ },
+ {
+  "work_id": "w_8BX709N4QQPR",
+  "campo": "xref.letterboxd",
+  "valor": "november-2025",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "november-2025"
+  }
+ },
+ {
+  "work_id": "w_8BX709N4QQPR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/noviembre.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/noviembre.jpg"
+  }
+ }
+]

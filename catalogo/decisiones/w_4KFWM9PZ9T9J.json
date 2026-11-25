@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KFWM9PZ9T9J",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "ce513145890a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Pelo lindo",
+  "valor": "En 1985, durante el conflicto armado interno en Guatemala, Joaquín Rodas fue desaparecido por el Estado. Casi 40 años después, su madre, Josefa, sigue esperándolo. En su cumpleaños 90, en diálogo con el director, reflexiona sobre la ausencia y la capilla que construyó en su honor. Una historia personal marcada por la memoria y el paso del tiempo.",
+  "original": "En 1985, durante el conflicto armado interno en Guatemala, Joaquín Rodas fue desaparecido por el Estado. Casi 40 años después, su madre, Josefa Elizabeth Andrade, continúa esperándolo. En su cumpleaños 90, reflexiona sobre la ausencia y la capilla que construyó en su honor. Por medio de un diálogo entre Josefa y el director, la película aborda una historia personal marcada por la memoria y el paso del tiempo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "02e214f4a2a2"
+  }
+ },
+ {
+  "work_id": "w_4KFWM9PZ9T9J",
+  "campo": "directores",
+  "valor": [
+   "Josué García Prado"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Josué García Prado"
+  }
+ },
+ {
+  "work_id": "w_4KFWM9PZ9T9J",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFWM9PZ9T9J",
+  "campo": "paises",
+  "valor": [
+   "GT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Guatemala"
+  }
+ },
+ {
+  "work_id": "w_4KFWM9PZ9T9J",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KFWM9PZ9T9J",
+  "campo": "sinopsis.en",
+  "valor": "In 1985, during the violence of Guatemala’s Internal Armed Conflict, Joaquín Rodas Andrade was abducted and forcibly disappeared by the State. Nearly forty years later, his mother, Josefa Elizabeth Andrade, continues waiting for him. At 90 years old, Josefa, the director’s aunt, reflects on the absence of her son and on the chapel she built in his honor, convinced that he would one day return, which she named the Chapel of the Christ of the Kidnapping.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In 1985, during the violence of Guatemala’s Internal Armed Conflict, Joaquín Rodas Andrade was abducted and forcibly disappeared by the State. Nearly forty years later, his mother, Josefa Elizabeth Andrade, continues waiting for him. At 90 years old, Josefa, the director’s aunt, reflects on the absence of her son and on the chapel she built in his honor, convinced that he would one day return, which she named the Chapel of the Christ of the Kidnapping."
+  }
+ },
+ {
+  "work_id": "w_4KFWM9PZ9T9J",
+  "campo": "xref.tmdb",
+  "valor": 1682581,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1682581"
+  }
+ },
+ {
+  "work_id": "w_4KFWM9PZ9T9J",
+  "campo": "xref.letterboxd",
+  "valor": "pelo-lindo",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "pelo-lindo"
+  }
+ },
+ {
+  "work_id": "w_4KFWM9PZ9T9J",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/pelo-lindo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/pelo-lindo.jpg"
+  }
+ }
+]

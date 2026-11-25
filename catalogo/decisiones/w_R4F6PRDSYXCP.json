@@ -1,0 +1,136 @@
+[
+ {
+  "work_id": "w_R4F6PRDSYXCP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficica-2026/prueba-de-camara.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bogoshorts-2026/prueba-de-camara.jpg",
+   "/assets/ficica-2026/prueba-de-camara.jpg",
+   "https://image.tmdb.org/t/p/w500/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg"
+  ],
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/prueba-de-camara.jpg",
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/iYSrgk7v0pSWbAA4YFF5CP8mi0j.jpg",
+   "ficica-2026": "/assets/ficica-2026/prueba-de-camara.jpg"
+  },
+  "a_mano": true
+ },
+ {
+  "work_id": "w_R4F6PRDSYXCP",
+  "campo": "directores",
+  "valor": [
+   "David Correa Franco"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2026": "David Correa",
+   "ficica-2026": "David Correa Franco"
+  }
+ },
+ {
+  "work_id": "w_R4F6PRDSYXCP",
+  "campo": "sinopsis.es",
+  "valor": "Un padre canta tangos mientras una cámara antigua lo retrata en una serie de puestas en escena aparentemente inconexas, ruidos y fotos familiares. Su hijo, desde el otro lado del lente, escucha fragmentos de una cotidianeidad que no volverá. En ese breve instante convertido en película, la familia se vuelve memoria.",
+  "motivo": "catálogo BOGOSHORTS: la otra era el texto de un programa, no de la obra",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "Un padre canta tangos mientras una cámara antigua lo retrata en una serie de puestas en escena aparentemente inconexas, ruidos y fotos familiares. Su hijo, desde el otro lado del lente, escucha fragmentos de una cotidianeidad que no volverá. En ese breve instante convertido en película, la familia se vuelve memoria.",
+   "cinemancia-2026": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad.",
+   "ficica-2026": "Toda carta es un recuerdo, dedicado a películas en donde el archivo familiar aparece como una forma de correspondencia íntima: cartas a hijos, a padres, a abuelos, a quienes estuvieron y también a quienes fuimos. Entre fotografías, archivos domésticos, voces, objetos y gestos heredados, este programa reúne formas de mirar hacia atrás para decir algo en el presente: reconstruir un vínculo, nombrar una ausencia, acompañar una pérdida o afirmar una identidad."
+  },
+  "vistas": [
+   "96e95634b54f",
+   "e5fe9358229a"
+  ]
+ },
+ {
+  "work_id": "w_R4F6PRDSYXCP",
+  "campo": "sinopsis.en",
+  "valor": "A father sings tangos while an old camera portrays him in a series of seemingly disconnected stagings, noises, and family photos. His son, from the other side of the lens, listens to fragments of an everyday life that will not return. In that brief instant turned into film, the family becomes memory.",
+  "motivo": "catálogo BOGOSHORTS: la de la española decidida",
+  "fecha": "2026-11-24",
+  "quien": "Claude, respuesta de App a la revisión (rama bogoshorts)",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4F6PRDSYXCP",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "cinemancia-2026": "2026",
+   "ficica-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4F6PRDSYXCP",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia",
+   "cinemancia-2026": "Colombia",
+   "ficica-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4F6PRDSYXCP",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_R4F6PRDSYXCP",
+  "campo": "xref.tmdb",
+  "valor": 1743099,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1743099",
+   "cinemancia-2026": "1743099",
+   "ficica-2026": "1743099"
+  }
+ },
+ {
+  "work_id": "w_R4F6PRDSYXCP",
+  "campo": "xref.letterboxd",
+  "valor": "prueba-de-camara",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "prueba-de-camara",
+   "cinemancia-2026": "prueba-de-camara",
+   "ficica-2026": "prueba-de-camara"
+  }
+ }
+]

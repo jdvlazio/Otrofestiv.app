@@ -1,0 +1,103 @@
+[
+ {
+  "work_id": "w_4KDR35MQ0D5X",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "b32b41f5d1f7"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El píxel y la parcela",
+  "valor": "Los datos producen narrativas, políticas y leyes: le dan forma a la tierra. La obra investiga su rol en la violencia de la erradicación de la coca en la Amazonía colombiana. Satélites, fotografías y mapas capturan imágenes de la coca y crean un complejo de información que convierte a la planta en un ser clandestino a ser eliminado.",
+  "original": "Los datos producen narrativas, políticas y leyes. Le dan forma a la tierra. El píxel y la parcela investiga el rol de los datos en la violencia de la erradicación de la coca en la Amazonía colombiana. Desde el momento en que la coca fue prohibida, su existencia y destrucción han sido cuantificadas y documentadas. Las imágenes de la coca son capturadas por satélites, fotografías y mapas, creando un complejo de información que convierte a la planta en un ser clandestino a ser eliminado.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "d7f5b38e9487"
+  }
+ },
+ {
+  "work_id": "w_4KDR35MQ0D5X",
+  "campo": "directores",
+  "valor": [
+   "Hannah Meszaros Martin"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Hannah Meszaros Martin"
+  }
+ },
+ {
+  "work_id": "w_4KDR35MQ0D5X",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KDR35MQ0D5X",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KDR35MQ0D5X",
+  "campo": "sinopsis.en",
+  "valor": "Data creates narratives, policies and laws. Data shapes the earth. The Pixel and the Plot is about the role of data in the violence produced through the forced eradication of coca in the Colombian Amazon. From the moment that coca was outlawed its presence and destruction began to be quantified and documented. Images of coca are captured by satellites, photographs, and maps. Together they create an informational complex that constructs the plant as a clandestine being that must be eliminated.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Data creates narratives, policies and laws. Data shapes the earth. The Pixel and the Plot is about the role of data in the violence produced through the forced eradication of coca in the Colombian Amazon. From the moment that coca was outlawed its presence and destruction began to be quantified and documented. Images of coca are captured by satellites, photographs, and maps. Together they create an informational complex that constructs the plant as a clandestine being that must be eliminated."
+  }
+ },
+ {
+  "work_id": "w_4KDR35MQ0D5X",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/el-pixel-y-la-parcela.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/el-pixel-y-la-parcela.jpg"
+  }
+ },
+ {
+  "work_id": "w_4KDR35MQ0D5X",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "catálogo BOGOSHORTS 2026, pág. 109: «desde distintas aproximaciones documentales»",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "antes": {}
+ }
+]

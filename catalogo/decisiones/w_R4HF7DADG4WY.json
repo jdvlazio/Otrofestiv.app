@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HF7DADG4WY",
+  "campo": "directores",
+  "valor": [
+   "Ben Rivers"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 287",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=287"
+ },
+ {
+  "work_id": "w_R4HF7DADG4WY",
+  "campo": "anio",
+  "valor": 2008,
+  "motivo": "catálogo oficial de FICCI 65, p. 287",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=287"
+ },
+ {
+  "work_id": "w_R4HF7DADG4WY",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 287",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=287",
+  "antes": {
+   "ficci-65": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DADG4WY",
+  "campo": "sinopsis.es",
+  "valor": "Retrato de S, un hombre de 75 años obsesionado con Darwin, que vive en una zona remota de Inverness-shire. Las imágenes recorren la misteriosa geografía de su mundo: el jardín, los artilugios que ha creado, la tierra aislada donde construyó su casa. Se lo oye hablar de la vida en la Tierra y del lugar de los seres humanos en ella.",
+  "motivo": "catálogo oficial de FICCI 65, p. 287",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=287"
+ },
+ {
+  "work_id": "w_R4HF7DADG4WY",
+  "campo": "sinopsis.en",
+  "valor": "A portrait of S, a 75-year-old man obsessed with Darwin who lives in a remote part of Inverness-shire. The images explore the mysterious geography of his world: his garden, the contraptions he has made, the isolated land where he built his house. He is heard discussing life on Earth and the place of humans upon it.",
+  "motivo": "catálogo oficial de FICCI 65, p. 287",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=287"
+ },
+ {
+  "work_id": "w_R4HF7DADG4WY",
+  "campo": "xref.tmdb",
+  "valor": 162464,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/162464"
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4E5SMZ9Z959",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/la-gradiva.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/la-gradiva.jpg",
+   "https://image.tmdb.org/t/p/w500/iPYTq7YznBlI60ntPI9bdw57qT0.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/la-gradiva.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/iPYTq7YznBlI60ntPI9bdw57qT0.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4E5SMZ9Z959",
+  "campo": "sinopsis.es",
+  "valor": "Un grupo de alumnos de secundaria viaja a Pompeya para descubrir las ruinas y los cuerpos petrificados por el Vesubio. El viaje se convierte en un momento único en el que la fuerza de la juventud se encuentra con un mundo congelado en el tiempo. Sus deseos comienzan a aflorar con una intensidad inesperada, llevándolos hacia una ruptura irreversible.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "1498d9180c26",
+   "7df8f5d570a1"
+  ],
+  "antes": {
+   "biff-2026": "Un grupo de alumnos de secundaria viaja a Pompeya para descubrir las ruinas y los cuerpos petrificados por el Vesubio. El viaje se convierte en un momento único en el que la fuerza de la juventud se encuentra con un mundo congelado en el tiempo. Sus deseos comienzan a aflorar con una intensidad inesperada, llevándolos hacia una ruptura irreversible.",
+   "tiff-2026": "Un grupo de adolescentes franceses alborotados se va de excursión escolar a Pompeya, donde el deseo, la pasión, la angustia y las tensiones de clase del presente se despliegan sobre las ruinas del pasado antiguo."
+  }
+ },
+ {
+  "work_id": "w_R4E5SMZ9Z959",
+  "campo": "sinopsis.en",
+  "valor": "Amid the ancient ruins of Pompeii, a group of French teenagers on a class trip to Naples grapple with anxiety and exhilaration ahead of their high school graduation.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "La Gradiva",
+  "antes": {
+   "biff-2026": "Amid the ancient ruins of Pompeii, a group of French teenagers on a class trip to Naples grapple with anxiety and exhilaration ahead of their high school graduation.",
+   "tiff-2026": "A pack of rowdy French teenagers embark on a school field trip to Pompeii, where desire, passion, angst, and class tensions in the present unfold against the ruins of the ancient past."
+  }
+ }
+]

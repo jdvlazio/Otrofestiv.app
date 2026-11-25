@@ -1,0 +1,62 @@
+[
+ {
+  "work_id": "w_R4HK6KHKA2SC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficdeh/tierra-que-habla.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/tierra-que-habla.jpg",
+   "/assets/finca/tierra-que-habla.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/tierra-que-habla.jpg",
+   "finca-2026": "/assets/finca/tierra-que-habla.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HK6KHKA2SC",
+  "campo": "sinopsis.es",
+  "valor": "Tres universos, tres cosmogonías. Solón, del pueblo Kankuamo de Colombia; Ailín, una mujer mapuche de la Patagonia; y Luciano, un biotecnólogo argentino, se unen en esta historia sobre la recuperación de la tierra y la lucha permanente entre indígenas y usurpadores. A pesar de la distancia, kankuamos y mapuches son dos pueblos unidos por las mismas circunstancias. ¿Quién puede reparar la tierra? ¿Quién la usurpa? ¿Quién la escucha?",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "260165a75c7c",
+   "7be8f25ae0b9"
+  ],
+  "antes": {
+   "ficdeh-2026": "Tres universos, tres cosmogonías. Solón, del pueblo Kankuamo de Colombia; Ailín, una mujer mapuche de la Patagonia; y Luciano, un biotecnólogo argentino, se unen en esta historia sobre la recuperación de la tierra y la lucha permanente entre indígenas y usurpadores. A pesar de la distancia, kankuamos y mapuches son dos pueblos unidos por las mismas circunstancias. ¿Quién puede reparar la tierra? ¿Quién la usurpa? ¿Quién la escucha?",
+   "finca-2026": "Tierra que habla cuenta una historia a través de tres puntos de vista, de tres cosmogonías, de tres universos, tres formas de ver el mundo: Solón, parte del pueblo kankuamo (guardianes del equilibrio del mundo) desde Sierra Nevada en Colombia; Ailin, mujer del pueblo mapuche (Gente de la Tierra) desde la Patagonia, Argentina; y Luciano, un científico interesado por mitigar las consecuencias del extractivismo."
+  }
+ },
+ {
+  "work_id": "w_R4HK6KHKA2SC",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1738957)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": 2026,
+   "finca-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4HK6KHKA2SC",
+  "campo": "sinopsis.en",
+  "valor": "From the sacred mountains of the Kankuamo people to the winds of the Mapuche territories, this film sheds light on the urgent fight against exploitation, environmental destruction and cultural erasure. It tells the untold story of a struggle for unity that transcends borders and time. Who can heal the land? Who is exploiting it? And who is listening to it?",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Tierra que habla",
+  "antes": {
+   "ficdeh-2026": "From the sacred mountains of the Kankuamo people to the winds of the Mapuche territories, this film sheds light on the urgent fight against exploitation, environmental destruction and cultural erasure. It tells the untold story of a struggle for unity that transcends borders and time. Who can heal the land? Who is exploiting it? And who is listening to it?",
+   "finca-2026": "Tierra que habla tells a story from three points of view, three cosmogonies, three universes, three ways of seeing the world: Solón, from the Kankuamo people, (guardians of the world balance), in Sierra Nevada, Colombia; Ailin, a woman from the Mapuche people (People of the Earth) in Patagonia, Argentina; and Luciano, a scientist interested in mitigating the consequences of extractivism."
+  }
+ }
+]

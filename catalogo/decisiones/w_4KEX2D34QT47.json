@@ -1,0 +1,96 @@
+[
+ {
+  "work_id": "w_4KEX2D34QT47",
+  "campo": "directores",
+  "valor": [
+   "Luna Martin"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Luna Martin"
+  }
+ },
+ {
+  "work_id": "w_4KEX2D34QT47",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KEX2D34QT47",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia, Francia"
+  }
+ },
+ {
+  "work_id": "w_4KEX2D34QT47",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KEX2D34QT47",
+  "campo": "sinopsis.es",
+  "valor": "Tras partir hacia Colombia con mis cuadernos de dibujos, mis ojos se maravillan, pero ¿hasta dónde llegarán mis emociones?",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tras partir hacia Colombia con mis cuadernos de dibujos, mis ojos se maravillan, pero ¿hasta dónde llegarán mis emociones?"
+  }
+ },
+ {
+  "work_id": "w_4KEX2D34QT47",
+  "campo": "sinopsis.en",
+  "valor": "Having left for Colombia with my sketchbooks, my eyes are amazed by the new continent, but how far will my emotion go?",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Having left for Colombia with my sketchbooks, my eyes are amazed by the new continent, but how far will my emotion go?"
+  }
+ },
+ {
+  "work_id": "w_4KEX2D34QT47",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/on-nait-seul-on-meurt-seul.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/on-nait-seul-on-meurt-seul.jpg"
+  }
+ }
+]

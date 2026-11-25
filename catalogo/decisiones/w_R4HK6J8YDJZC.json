@@ -1,0 +1,105 @@
+[
+ {
+  "work_id": "w_R4HK6J8YDJZC",
+  "campo": "directores",
+  "valor": [
+   "Jacobo Albán",
+   "Carlos Zerpa",
+   "Beltrán Pérez"
+  ],
+  "motivo": "FICDEH acredita a los tres; TMDB omite a Albán y Popayán a los otros dos",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)",
+  "antes": {
+   "ficdeh-2026": "Jacobo Alban, Carlos Zerpa, Beltrán Pérez",
+   "popayan-2026": "Juan Jacobo Albán Torres"
+  }
+ },
+ {
+  "work_id": "w_R4HK6J8YDJZC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/sapos-por-todos-lados.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/sapos-por-todos-lados.jpg",
+   "/assets/popayan-2026/sapos-por-todos-lados.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/sapos-por-todos-lados.jpg",
+   "popayan-2026": "/assets/popayan-2026/sapos-por-todos-lados.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HK6J8YDJZC",
+  "campo": "sinopsis.es",
+  "valor": "Natalia no encuentra trabajo hasta que un antiguo profesor le ofrece la posibilidad de trabajar con exmiembros de la guerrilla. Esa nueva experiencia la confrontará directamente con sus prejuicios.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "24dbe6b16dd7",
+   "efdcb0035d8e"
+  ],
+  "antes": {
+   "ficdeh-2026": "Natalia no encuentra trabajo hasta que un antiguo profesor le ofrece la posibilidad de trabajar con exmiembros de la guerrilla. Esa nueva experiencia la confrontará directamente con sus prejuicios.",
+   "popayan-2026": "Natalia no encuentra trabajo cuando un antiguo profesor le ofrece la posibilidad de trabajar con ex-miembros de la guerrilla. Esa nueva experiencia la confronta a ella y sus prejuicios."
+  }
+ },
+ {
+  "work_id": "w_R4HK6J8YDJZC",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "FR",
+   "VE"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": "Colombia, Francia, Venezuela",
+   "popayan-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HK6J8YDJZC",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1738917",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "ficdeh-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_R4HK6J8YDJZC",
+  "campo": "xref.letterboxd",
+  "valor": "frogs-everywhere",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "ficdeh-2026": "sapos-por-todos-lados",
+   "popayan-2026": "sapos-por-todos-lados"
+  }
+ },
+ {
+  "work_id": "w_R4HK6J8YDJZC",
+  "campo": "sinopsis.en",
+  "valor": "Natalia cannot find work until a former teacher offers her a job working with ex-guerrilla members. The experience will confront her, head-on, with her own prejudices.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "ficdeh-2026": "Natalia cannot find work until a former teacher offers her a job working with ex-guerrilla members. The experience will confront her, head-on, with her own prejudices."
+  }
+ }
+]

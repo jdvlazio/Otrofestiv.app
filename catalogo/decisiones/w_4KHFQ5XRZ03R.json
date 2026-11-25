@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KHFQ5XRZ03R",
+  "campo": "directores",
+  "valor": [
+   "Arianna Ortiz"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Arianna Ortiz"
+  }
+ },
+ {
+  "work_id": "w_4KHFQ5XRZ03R",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHFQ5XRZ03R",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KHFQ5XRZ03R",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KHFQ5XRZ03R",
+  "campo": "sinopsis.es",
+  "valor": "Durante una cena de cumpleaños en una de esas típicas noches de frío glacial en Chicago, una presencia inesperada da vuelta las vidas de una familia argentina, para siempre.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Durante una cena de cumpleaños en una de esas típicas noches de frío glacial en Chicago, una presencia inesperada da vuelta las vidas de una familia argentina, para siempre."
+  }
+ },
+ {
+  "work_id": "w_4KHFQ5XRZ03R",
+  "campo": "sinopsis.en",
+  "valor": "On an icy Chicago night, an unexpected guest upends the lives of an Argentine mother and daughter over the course of an intimate birthday dinner.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On an icy Chicago night, an unexpected guest upends the lives of an Argentine mother and daughter over the course of an intimate birthday dinner."
+  }
+ },
+ {
+  "work_id": "w_4KHFQ5XRZ03R",
+  "campo": "xref.tmdb",
+  "valor": 1653554,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1653554"
+  }
+ },
+ {
+  "work_id": "w_4KHFQ5XRZ03R",
+  "campo": "xref.letterboxd",
+  "valor": "the-birthday-gift",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-birthday-gift"
+  }
+ },
+ {
+  "work_id": "w_4KHFQ5XRZ03R",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/the-birthday-gift.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/the-birthday-gift.jpg"
+  }
+ }
+]

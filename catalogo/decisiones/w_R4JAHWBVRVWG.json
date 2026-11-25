@@ -1,0 +1,62 @@
+[
+ {
+  "work_id": "w_R4JAHWBVRVWG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficpa-2026/alla-cartas-al-corazon.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficpa-2026/alla-cartas-al-corazon.jpg",
+   "/assets/guatape-2026/alla-cartas-al-corazon.jpg"
+  ],
+  "antes": {
+   "ficpa-2026": "/assets/ficpa-2026/alla-cartas-al-corazon.jpg",
+   "guatape-2026": "/assets/guatape-2026/alla-cartas-al-corazon.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4JAHWBVRVWG",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1130565)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficpa-2026": "México",
+   "guatape-2026": "Mexico"
+  }
+ },
+ {
+  "work_id": "w_R4JAHWBVRVWG",
+  "campo": "sinopsis.es",
+  "valor": "Narra la historia de Óscar, un hombre que regresa a su pueblo en Jalisco tras la inminente muerte de su padre, el cartero local. La película está protagonizada por Fátima Molina, Pablo Astiazarán y Giovanna Zacarías, explorando temas como la migración, el duelo y la ausencia.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "ficpa-2026": "Narra la historia de Óscar, un hombre que regresa a su pueblo en Jalisco tras la inminente muerte de su padre, el cartero local. La película está protagonizada por Fátima Molina, Pablo Astiazarán y Giovanna Zacarías, explorando temas como la migración, el duelo y la ausencia. Largometraje Internacional Documental",
+   "guatape-2026": "Narra la historia de Óscar, un hombre que regresa a su pueblo en Jalisco tras la inminente muerte de su padre, el cartero local. La película está protagonizada por Fátima Molina, Pablo Astiazarán y Giovanna Zacarías, explorando temas como la migración, el duelo y la ausencia. Largometraje Internacional Documental"
+  },
+  "vistas": [
+   "5f924ee470c2"
+  ]
+ },
+ {
+  "work_id": "w_R4JAHWBVRVWG",
+  "campo": "sinopsis.en",
+  "valor": "Faced with the imminent death of his father, the town postman, Oscar returns to Mexico for the first time and finds that he is now the only man among the handful of women who inhabit this small place where telephones and internet never reached. While trying to return to the United States, he takes charge of the mail and thus learns the stories and wishes of the inhabitants, including a child who asks about his father's letters. Oscar writes him the long-awaited letters and begins to bond with him and with Martha, his mother. When he can finally leave, he no longer wants to and will have to decide between going back or staying and rebuilding his life.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "ficpa-2026": "Faced with the imminent death of his father, the town postman, Oscar returns to Mexico for the first time and finds that he is now the only man among the handful of women who inhabit this small place where telephones and internet never reached.  While trying to return to the United States, he takes charge of the mail and thus learns the stories and wishes of the inhabitants, including a child who asks about his father's letters. Oscar writes him the long-awaited letters and begins to bond with him and with Martha, his mother. When he can finally leave, he no longer wants to and will have to decide between going back or staying and rebuilding his life.",
+   "guatape-2026": "Faced with the imminent death of his father, the town postman, Oscar returns to Mexico for the first time and finds that he is now the only man among the handful of women who inhabit this small place where telephones and internet never reached.  While trying to return to the United States, he takes charge of the mail and thus learns the stories and wishes of the inhabitants, including a child who asks about his father's letters. Oscar writes him the long-awaited letters and begins to bond with him and with Martha, his mother. When he can finally leave, he no longer wants to and will have to decide between going back or staying and rebuilding his life."
+  }
+ }
+]

@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KE01AC6F6D6",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "1f3e41ed0ff2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Pinchu es así",
+  "valor": "Pinchu es un guarrete y todos y todas le ríen la gracia, incluida su novia Jimena, que monta un fiestón épico por sus 30 años. Sólo Bea es capaz de verlo tal y como es, sin filtros, aunque quizá esa experiencia traumática la obligue a plantearse si no estará justificando de la misma forma el comportamiento de un ser muy querido.",
+  "original": "Pinchu es un guarrete y todos y todas le ríen la gracia, incluida su novia Jimena, que cumple 30 años este fin de semana y está montando un fiestón épico. Sólo Bea es capaz de verlo sin filtros, tal y como es, aunque quizá esa experiencia traumática la obligue a plantearse si ella no estará justificando de la misma forma el comportamiento de un ser muy querido.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "c6b8d847e831"
+  }
+ },
+ {
+  "work_id": "w_4KE01AC6F6D6",
+  "campo": "directores",
+  "valor": [
+   "Carmen Córdoba González"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Carmen Córdoba González"
+  }
+ },
+ {
+  "work_id": "w_4KE01AC6F6D6",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KE01AC6F6D6",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KE01AC6F6D6",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KE01AC6F6D6",
+  "campo": "sinopsis.en",
+  "valor": "Pinchu is a pervy guy, and everyone laughs at his antics—including his girlfriend Jimena, who’s turning 30 this weekend and throwing an epic party. Only Bea sees him for what he really is, though this traumatic experience may make her question whether she’s been excusing the behavior of someone she loves in the same way.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Pinchu is pervy guy, and everyone laughs at his antics—including his girlfriend Jimena, who’s turning 30 this weekend and throwing an epic party. Only Bea sees him for what he really is, though this traumatic experience may make her question whether she’s been excusing the behavior of someone she loves in the same way."
+  }
+ },
+ {
+  "work_id": "w_4KE01AC6F6D6",
+  "campo": "xref.tmdb",
+  "valor": 1676480,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1676480"
+  }
+ },
+ {
+  "work_id": "w_4KE01AC6F6D6",
+  "campo": "xref.letterboxd",
+  "valor": "pinchu-is-like-that",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "pinchu-is-like-that"
+  }
+ },
+ {
+  "work_id": "w_4KE01AC6F6D6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/pinchu-es-asi.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/pinchu-es-asi.jpg"
+  }
+ }
+]

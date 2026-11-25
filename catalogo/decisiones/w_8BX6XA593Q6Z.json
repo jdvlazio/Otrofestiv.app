@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_8BX6XA593Q6Z",
+  "campo": "directores",
+  "valor": [
+   "Rodrigo Domínguez",
+   "José Lecaros"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Rodrigo Domínguez, José Lecaros"
+  }
+ },
+ {
+  "work_id": "w_8BX6XA593Q6Z",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_8BX6XA593Q6Z",
+  "campo": "paises",
+  "valor": [
+   "CL"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Chile"
+  }
+ },
+ {
+  "work_id": "w_8BX6XA593Q6Z",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_8BX6XA593Q6Z",
+  "campo": "sinopsis.es",
+  "valor": "En la Cordillera de los Andes, diez vaqueros se embarcan en un nuevo rodeo, siguiendo una tradición que se remonta a casi dos siglos. Mientras arrean el ganado por las montañas, mantienen viva una costumbre marcada por el trabajo duro y la camaradería.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "En la Cordillera de los Andes, diez vaqueros se embarcan en un nuevo rodeo, siguiendo una tradición que se remonta a casi dos siglos. Mientras arrean el ganado por las montañas, mantienen viva una costumbre marcada por el trabajo duro y la camaradería."
+  }
+ },
+ {
+  "work_id": "w_8BX6XA593Q6Z",
+  "campo": "sinopsis.en",
+  "valor": "In the Andes, ten cowboys set out on a new rodeo, following a tradition that goes back almost two centuries. As they drive the cattle through the mountains, they keep alive a custom marked by hard work and camaraderie.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "In the Andes, ten cowboys set out on a new rodeo, following a tradition that goes back almost two centuries. As they drive the cattle through the mountains, they keep alive a custom marked by hard work and camaraderie."
+  }
+ },
+ {
+  "work_id": "w_8BX6XA593Q6Z",
+  "campo": "xref.tmdb",
+  "valor": 1721119,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1721119"
+  }
+ },
+ {
+  "work_id": "w_8BX6XA593Q6Z",
+  "campo": "xref.letterboxd",
+  "valor": "rodeo-de-campo",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "rodeo-de-campo"
+  }
+ },
+ {
+  "work_id": "w_8BX6XA593Q6Z",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/rodeo-de-campo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/rodeo-de-campo.jpg"
+  }
+ }
+]

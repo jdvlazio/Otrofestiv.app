@@ -1,0 +1,71 @@
+[
+ {
+  "work_id": "w_R4F84MW9WTH9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/liminal.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/liminal.jpg",
+   "https://image.tmdb.org/t/p/w500/hV8eL8v9isrSLOXoxtAdH8N9t0P.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/liminal.jpg",
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/hV8eL8v9isrSLOXoxtAdH8N9t0P.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4F84MW9WTH9",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "a60d8144a0ec"
+  ],
+  "original_de": [
+   "aleste-2026",
+   "cinemancia-2026"
+  ],
+  "titulo": "Liminal",
+  "valor": "¿Qué permanece en un lugar cuando nos vamos? Una travesía por espacios liminales, lugares de tránsito, ambigüedad y espera silenciosa, explora la relación de los seres humanos con los lugares que han habitado y habitan, y las sensaciones, los recuerdos y las emociones que despiertan.",
+  "original": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "a19f5a6187e0"
+  },
+  "antes": {
+   "aleste-2026": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
+   "cinemancia-2026": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas."
+  }
+ },
+ {
+  "work_id": "w_R4F84MW9WTH9",
+  "campo": "directores",
+  "valor": [
+   "Gabriella Castelblanco"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aleste-2026": "Gabriella Castelblanco",
+   "cinemancia-2026": "Gabriela Castelblanco"
+  }
+ },
+ {
+  "work_id": "w_R4F84MW9WTH9",
+  "campo": "sinopsis.en",
+  "valor": "What remains in a place when we leave? A journey through liminal spaces, places of transit, ambiguity and silent waiting, explores the relationship between human beings and the places they have lived in and live in, and the sensations, memories and emotions those places awaken.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

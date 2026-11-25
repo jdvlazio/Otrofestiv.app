@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7C92BMPFF",
+  "campo": "directores",
+  "valor": [
+   "Sebastián Vega"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Sebastián Vega"
+  }
+ },
+ {
+  "work_id": "w_8BX7C92BMPFF",
+  "campo": "anio",
+  "valor": 2016,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2016"
+  }
+ },
+ {
+  "work_id": "w_8BX7C92BMPFF",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_8BX7C92BMPFF",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX7C92BMPFF",
+  "campo": "sinopsis.es",
+  "valor": "Pablo es un joven indisciplinado que sueña con ser el mejor futbolista y así conseguir el reconocimiento que su padre nunca le ha dado. Su vida da un giro inesperado al lesionarse gravemente el día de su debut en la liga profesional. Ahora solo el coraje lo puede ayudar a levantarse de nuevo.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Pablo es un joven indisciplinado que sueña con ser el mejor futbolista y así conseguir el reconocimiento que su padre nunca le ha dado. Su vida da un giro inesperado al lesionarse gravemente el día de su debut en la liga profesional. Ahora solo el coraje lo puede ayudar a levantarse de nuevo."
+  }
+ },
+ {
+  "work_id": "w_8BX7C92BMPFF",
+  "campo": "sinopsis.en",
+  "valor": "Pablo is an undisciplined young man who dreams of being the best footballer and so winning the recognition his father has never given him. His life takes an unexpected turn when he is seriously injured on the day of his professional league debut. Now only courage can help him get up again.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Pablo is an undisciplined young man who dreams of being the best footballer and so winning the recognition his father has never given him. His life takes an unexpected turn when he is seriously injured on the day of his professional league debut. Now only courage can help him get up again."
+  }
+ },
+ {
+  "work_id": "w_8BX7C92BMPFF",
+  "campo": "xref.tmdb",
+  "valor": 592703,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "592703"
+  }
+ },
+ {
+  "work_id": "w_8BX7C92BMPFF",
+  "campo": "xref.letterboxd",
+  "valor": "pablo-2016",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "pablo-2016"
+  }
+ },
+ {
+  "work_id": "w_8BX7C92BMPFF",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/pablo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/pablo.jpg"
+  }
+ }
+]

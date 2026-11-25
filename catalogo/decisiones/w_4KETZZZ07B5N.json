@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_4KETZZZ07B5N",
+  "campo": "directores",
+  "valor": [
+   "Patrícia Saramago"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Patrícia Saramago"
+  }
+ },
+ {
+  "work_id": "w_4KETZZZ07B5N",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KETZZZ07B5N",
+  "campo": "paises",
+  "valor": [
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KETZZZ07B5N",
+  "campo": "sinopsis.es",
+  "valor": "Una joven pareja y su gato, al que esconden, comparten una habitación que apenas pueden pagar. Entre las dificultades cotidianas encuentran maneras de cuidarse.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una joven pareja y su gato, al que esconden, comparten una habitación que apenas pueden pagar. Entre las dificultades cotidianas encuentran maneras de cuidarse."
+  }
+ },
+ {
+  "work_id": "w_4KETZZZ07B5N",
+  "campo": "sinopsis.en",
+  "valor": "The messy life of a young couple and their clandestine cat in a room whose rent they cannot afford. A story of love, sharing, and hope — unshakable and resilient in its innocence in the face of the unstable and disordered life of our times.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "The messy life of a young couple and their clandestine cat in a room whose rent they cannot afford. A story of love, sharing, and hope — unshakable and resilient in its innocence in the face of the unstable and disordered life of our times."
+  }
+ },
+ {
+  "work_id": "w_4KETZZZ07B5N",
+  "campo": "xref.tmdb",
+  "valor": 1687829,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1687829"
+  }
+ },
+ {
+  "work_id": "w_4KETZZZ07B5N",
+  "campo": "xref.letterboxd",
+  "valor": "dois-e-um-gato",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "dois-e-um-gato"
+  }
+ },
+ {
+  "work_id": "w_4KETZZZ07B5N",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/dois-e-um-gato.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/dois-e-um-gato.jpg"
+  }
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_4RPVXBR5XHJY",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/under-2026/perros.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficidi-2026/perros.jpg",
+   "/assets/under-2026/perros.jpg"
+  ],
+  "antes": {
+   "ficidi-2026": "/assets/ficidi-2026/perros.jpg",
+   "under-2026": "/assets/under-2026/perros.jpg"
+  }
+ },
+ {
+  "work_id": "w_4RPVXBR5XHJY",
+  "campo": "sinopsis.es",
+  "valor": "Iván llega a una isla desierta para reencontrarse con su novio, sin saber que el viaje marcará una pérdida irreversible. Destruido por el duelo, accede a un antiguo ritual guiado por una chamana. La búsqueda de consuelo se transforma en una experiencia oscura: fuerzas desconocidas atraviesan el límite entre la vida y la muerte.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (under-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "12e04658a3b1",
+   "efd0cc08e285"
+  ],
+  "original_de": [
+   "ficidi-2026",
+   "under-2026"
+  ],
+  "titulo": "Perros",
+  "original": "Iván llega a una isla desierta para reencontrarse con su novio, sin saber que ese viaje marcará una pérdida irreversible. Destruido por el duelo y obsesionado con entender lo ocurrido, accede a participar de un antiguo ritual guiado por una chamana. Lo que comienza como una búsqueda de consuelo se transforma en una experiencia oscura: Fuerzas desconocidas atraviesan el límite entre la vida y la muerte. Iván deberá enfrentarse a aquello que regresó… y al precio de haberlo invocado.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "4a3e27279845"
+  },
+  "antes": {
+   "ficidi-2026": "Un hombre en duelo participa en un ritual que lo enfrenta a fuerzas desconocidas y al precio de intentar recuperar lo perdido.",
+   "under-2026": "Iván llega a una isla desierta para reencontrarse con su novio, sin saber que ese viaje marcará una pérdida irreversible. Destruido por el duelo y obsesionado con entender lo ocurrido, accede a participar de un antiguo ritual guiado por una chamana. Lo que comienza como una búsqueda de consuelo se transforma en una experiencia oscura: Fuerzas desconocidas atraviesan el límite entre la vida y la muerte. Iván deberá enfrentarse a aquello que regresó… y al precio de haberlo invocado."
+  }
+ }
+]

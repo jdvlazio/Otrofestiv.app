@@ -1,0 +1,22 @@
+[
+ {
+  "work_id": "w_R4PYB33N7T45",
+  "campo": "xref.letterboxd",
+  "valor": "soul-catcher-2026",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "tiff-2026": "soul-catcher-1"
+  }
+ },
+ {
+  "work_id": "w_R4PYB33N7T45",
+  "campo": "xref.tmdb",
+  "valor": 1746161,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/soul-catcher-1/"
+ }
+]

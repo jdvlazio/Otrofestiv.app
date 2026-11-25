@@ -1,0 +1,21 @@
+[
+ {
+  "work_id": "w_R4JEHJ841VTC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/filcmar-2026/el-pesebre.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficica-2026/presepio-el-pesebre.jpg",
+   "/assets/filcmar-2026/el-pesebre.jpg"
+  ],
+  "antes": {
+   "ficica-2026": "/assets/ficica-2026/presepio-el-pesebre.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/el-pesebre.jpg"
+  }
+ }
+]

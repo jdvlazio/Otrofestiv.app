@@ -1,0 +1,142 @@
+[
+ {
+  "work_id": "w_R4MA365QXQ6D",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "7c7c14b415f9"
+  ],
+  "original_de": [
+   "bogoshorts-2026",
+   "midbo-2026"
+  ],
+  "titulo": "Geografía espectral",
+  "valor": "A orillas de una represa que sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar y cubre el río de flores para invocar a sus muertos. El espíritu de los cuerpos arrojados al río navega junto a los peces. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida.",
+  "original": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "4b671ed6d061"
+  },
+  "antes": {
+   "midbo-2026": "A orillas de una represa hidroeléctrica, cuya construcción sepultó el antiguo cauce del río Cauca, un grupo de mujeres se reúne para bordar. Cubren el río de flores para invocar a sus muertos, en una geografía tejida por hilos de memoria y resistencia. El espíritu de los cuerpos arrojados al río y cubiertos por la represa inconclusa navega junto a los peces en el agua. Las almas emergen vestidas de fuego para escuchar el canto que les envían sus madres y hermanas desde la vida."
+  }
+ },
+ {
+  "work_id": "w_R4MA365QXQ6D",
+  "campo": "sinopsis.en",
+  "valor": "On the shores of a hydroelectric dam, whose construction buried the ancient course of the Cauca River, a group of women gathers to embroider. They cast flowers into the water to summon their dead, in a landscape stitched together with threads of memory and resistance. The spirits of the bodies once thrown into the river—now lying beneath the unfinished dam—drift alongside the fish. The souls rise, cloaked in fire, to hear the songs sent to them by their mothers and sisters among the living.",
+  "motivo": "catálogo BOGOSHORTS: la que corresponde a la española decidida",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "On the shores of a hydroelectric dam, whose construction buried the ancient course of the Cauca River, a group of women gathers to embroider. They cast flowers into the water to summon their dead, in a landscape stitched together with threads of memory and resistance. The spirits of the bodies once thrown into the river—now lying beneath the unfinished dam—drift alongside the fish. The souls rise, cloaked in fire, to hear the songs sent to them by their mothers and sisters among the living.",
+   "midbo-2026": "The natural landscape of Colombia’s Río Cauca Valley, with its mountains, forests, and rivers, has been reshaped and transformed for colonial hydroelectric production. Uprooted by the pursuit of profit, a community celebrates a fascinating ritual to remember and mourn its territory, contributing its own images and sounds to the film’s visual and audio stream."
+  }
+ },
+ {
+  "work_id": "w_R4MA365QXQ6D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/geografia-espectral.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "mismo afiche: queda el publicado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/geografia-espectral.jpg",
+   "midbo-2026": "/assets/midbo-2026/geografia-espectral.jpg"
+  },
+  "vistas": [
+   "/assets/bogoshorts-2026/geografia-espectral.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4MA365QXQ6D",
+  "campo": "directores",
+  "valor": [
+   "Manuel Mateo Gómez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Manuel Mateo Gómez",
+   "midbo-2026": "Manuel Mateo Gómez"
+  }
+ },
+ {
+  "work_id": "w_R4MA365QXQ6D",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "midbo-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4MA365QXQ6D",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia",
+   "midbo-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4MA365QXQ6D",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4MA365QXQ6D",
+  "campo": "xref.tmdb",
+  "valor": 1657838,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1657838",
+   "midbo-2026": "1657838"
+  }
+ },
+ {
+  "work_id": "w_R4MA365QXQ6D",
+  "campo": "xref.letterboxd",
+  "valor": "spectral-geography",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "spectral-geography",
+   "midbo-2026": "spectral-geography"
+  }
+ }
+]

@@ -1,0 +1,23 @@
+[
+ {
+  "work_id": "w_R4HHC3VVN83Q",
+  "campo": "xref.tmdb",
+  "valor": 1187122,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/un-pedrazo-de-paz-cobija-de-recuerdos/"
+ },
+ {
+  "work_id": "w_R4HHC3VVN83Q",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "VE",
+   "FR"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

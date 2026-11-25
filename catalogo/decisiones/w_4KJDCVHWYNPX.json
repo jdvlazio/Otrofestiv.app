@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJDCVHWYNPX",
+  "campo": "directores",
+  "valor": [
+   "André Balbuena"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "André Balbuena"
+  }
+ },
+ {
+  "work_id": "w_4KJDCVHWYNPX",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJDCVHWYNPX",
+  "campo": "paises",
+  "valor": [
+   "PE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Perú"
+  }
+ },
+ {
+  "work_id": "w_4KJDCVHWYNPX",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KJDCVHWYNPX",
+  "campo": "sinopsis.es",
+  "valor": "En un bus de Lima, un estudiante se niega a levantarse para darle el asiento a una pasajera mayor. El resto de los viajeros acaba tomando partido.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En un bus de Lima, un estudiante se niega a levantarse para darle el asiento a una pasajera mayor. El resto de los viajeros acaba tomando partido."
+  }
+ },
+ {
+  "work_id": "w_4KJDCVHWYNPX",
+  "campo": "sinopsis.en",
+  "valor": "On a bus in Lima, a student refuses to stand up for an older passenger. Soon the other passengers are taking sides.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On a bus in Lima, a student refuses to stand up for an older passenger. Soon the other passengers are taking sides."
+  }
+ },
+ {
+  "work_id": "w_4KJDCVHWYNPX",
+  "campo": "xref.tmdb",
+  "valor": 1274419,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1274419"
+  }
+ },
+ {
+  "work_id": "w_4KJDCVHWYNPX",
+  "campo": "xref.letterboxd",
+  "valor": "bus",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "bus"
+  }
+ },
+ {
+  "work_id": "w_4KJDCVHWYNPX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/bus.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/bus.jpg"
+  }
+ }
+]

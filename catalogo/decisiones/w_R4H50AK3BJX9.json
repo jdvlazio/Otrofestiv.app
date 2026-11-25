@@ -1,0 +1,52 @@
+[
+ {
+  "work_id": "w_R4H50AK3BJX9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicinerio-2026/arbol-en-pie.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/festicinerio-2026/arbol-en-pie.jpg",
+   "/assets/ficcali-2026/arbol-en-pie.jpg",
+   "/assets/ficfusa-2026/arbol-en-pie.jpg"
+  ],
+  "antes": {
+   "festicinerio-2026": "/assets/festicinerio-2026/arbol-en-pie.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/arbol-en-pie.jpg",
+   "ficfusa-2026": "/assets/ficfusa-2026/arbol-en-pie.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4H50AK3BJX9",
+  "campo": "directores",
+  "valor": [
+   "Red Comunitaria Trans",
+   "Rodrigo Torrijos",
+   "Mapa López"
+  ],
+  "motivo": "un dato por obra: la forma completa y bien escrita entre lo acreditado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "festicinerio-2026": "Red Comunitaria Trans, Mapa López, Rodrigo Torrijos",
+   "ficcali-2026": "Red Comunitaria Trans, Rodrigo Torrijos, Mapa López",
+   "ficfusa-2026": "Red Comunitaria Trans, Rodrigo Torrijos y Mapa López"
+  }
+ },
+ {
+  "work_id": "w_R4H50AK3BJX9",
+  "campo": "sinopsis.en",
+  "valor": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "festicinerio-2026": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm.",
+   "ficfusa-2026": "“Ceroxylon quindiuense,” the Quindío wax palm, is Colombia’s national tree. It embodies a perfect paradox for a country steeped in machismo, misogyny, and transphobia, as it is a plant with the ability to change its sex. It is a trans palm and the inspiration for Magdalena Morales, an Afro-Colombian trans leader, to join the Trans Community Network and plant a seed of rebellious light on the horizon of traditional Colombian Caribbean music. Her song of redemption rises above desolation and celebrates social struggles, from Palestine, the Congo, and Sudan to the streets of Bogotá’s Santa Fe neighborhood, where her trans sisters stand firm."
+  }
+ }
+]

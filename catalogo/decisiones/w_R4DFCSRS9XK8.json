@@ -1,0 +1,67 @@
+[
+ {
+  "work_id": "w_R4DFCSRS9XK8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/fecibac-2026/brigitte-planeta-b.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/fecibac-2026/brigitte-planeta-b.jpg",
+   "/assets/ficma/brigitte-planeta-b.jpg",
+   "https://image.tmdb.org/t/p/w500/ajUS8Zl4qCGcsuX9lNgphTYh3Qp.jpg"
+  ],
+  "antes": {
+   "aff-2026": "https://image.tmdb.org/t/p/w500/ajUS8Zl4qCGcsuX9lNgphTYh3Qp.jpg",
+   "fecibac-2026": "/assets/fecibac-2026/brigitte-planeta-b.jpg",
+   "ficma-2026": "/assets/ficma/brigitte-planeta-b.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DFCSRS9XK8",
+  "campo": "sinopsis.es",
+  "valor": "Brigitte Baptiste, Ph.D., se ha consolidado como una de las principales expertas ambientales de Colombia y también como un ícono transgénero influyente e inesperado.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aff-2026, fecibac-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "07e8b7b4ae22",
+   "5b4e07ba001e"
+  ],
+  "antes": {
+   "aff-2026": "Brigitte Baptiste, Ph.D., se ha consolidado como una de las principales expertas ambientales de Colombia y también como un ícono transgénero influyente e inesperado.",
+   "fecibac-2026": "Brigitte Baptiste, Ph.D., se ha consolidado como una de las principales expertas ambientales de Colombia y también como un ícono transgénero influyente e inesperado.",
+   "ficma-2026": "Brigitte Baptiste is a female transgender ecologist whose groundbreaking research has challenged scientific and social conventions for years. With the help of tracking, archive footage and digital animation, the film weaves an intimate soliloquy and a richly nuanced portrait around an extraordinary protagonist, whose refreshing ideas about life, family and current issues may, perhaps, rekindle hope for the future of our planet."
+  }
+ },
+ {
+  "work_id": "w_R4DFCSRS9XK8",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1498786)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": 2025,
+   "fecibac-2026": 2025,
+   "ficma-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4DFCSRS9XK8",
+  "campo": "sinopsis.en",
+  "valor": "Brigitte Baptiste is a transgender ecologist, TV host, and one of Colombia's leading environmental experts. A portrait of a woman who has redefined what it means to be a scientist and a public figure.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Brigitte Planeta B",
+  "antes": {
+   "aff-2026": "Brigitte Baptiste is a transgender ecologist, TV host, and one of Colombia's leading environmental experts. A portrait of a woman who has redefined what it means to be a scientist and a public figure.",
+   "fecibac-2026": "Brigitte Baptiste is a female transgender ecologist whose groundbreaking research has challenged scientific and social conventions for years. With the help of tracking, archive footage and digital animation, the film weaves an intimate soliloquy and a richly nuanced portrait around an extraordinary protagonist, whose refreshing ideas about life, family and current issues may, perhaps, rekindle hope for the future of our planet.",
+   "ficma-2026": "Brigitte Baptiste is a female transgender ecologist whose groundbreaking research has challenged scientific and social conventions for years. With the help of tracking, archive footage and digital animation, the film weaves an intimate soliloquy and a richly nuanced portrait around an extraordinary protagonist, whose refreshing ideas about life, family and current issues may, perhaps, rekindle hope for the future of our planet."
+  }
+ }
+]

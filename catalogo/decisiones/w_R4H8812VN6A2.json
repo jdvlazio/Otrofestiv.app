@@ -1,0 +1,99 @@
+[
+ {
+  "work_id": "w_R4H8812VN6A2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficcali-2026/historias-del-buen-valle.jpg",
+   "/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
+   "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg"
+  ],
+  "antes": {
+   "ficcali-2026": "/assets/ficcali-2026/historias-del-buen-valle.jpg",
+   "ficci-65": "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
+   "olhar-2026": "/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4H8812VN6A2",
+  "campo": "sinopsis.es",
+  "valor": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0b97ab9e4498",
+   "77fe677f4a82",
+   "9c7a50786227"
+  ],
+  "antes": {
+   "ficcali-2026": "En un barrio periférico donde se encuentran el mundo rural y el urbano, las casas de los primeros migrantes de la posguerra conviven con los nuevos bloques de una ciudad dormitorio donde se concentra la última oleada migratoria. Este rincón humilde se ha convertido en una auténtica aldea global, un retrato sereno y humanista de los conflictos sociales, generacionales e identitarios del mundo actual.",
+   "ficci-65": "De nuevo, José Luis Guerín ofrece una lección de cine documental, como lo reconoció el jurado del Festival de Cine de San Sebastián, que le otorgó su Premio Especial.",
+   "olhar-2026": "En las afueras de Barcelona, Vallbona es un enclave rodeado por un río, vías férreas y una autopista. Antonio, hijo de trabajadores catalanes, cultiva flores allí desde hace casi 90 años. Lo acompañan Makome, Norma y Tatiana, que provienen de diferentes orígenes sociales… Al ritmo de la música, de baños prohibidos y de amores florecientes, una forma poética de resistencia emerge ante los conflictos urbanos, sociales e identitarios del mundo."
+  }
+ },
+ {
+  "work_id": "w_R4H8812VN6A2",
+  "campo": "directores",
+  "valor": [
+   "José Luis Guerín"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficcali-2026": "José Luis Guerín",
+   "ficci-65": "José Luis Guerín",
+   "olhar-2026": "José Luis Guerin"
+  }
+ },
+ {
+  "work_id": "w_R4H8812VN6A2",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1457842)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficcali-2026": 2025,
+   "ficci-65": 2025,
+   "olhar-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4H8812VN6A2",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "FR"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1457842)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficcali-2026": "España",
+   "ficci-65": "España/Francia",
+   "olhar-2026": "España, Francia"
+  }
+ },
+ {
+  "work_id": "w_R4H8812VN6A2",
+  "campo": "sinopsis.en",
+  "valor": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Histoires de la bonne vallée",
+  "antes": {
+   "ficcali-2026": "In a peripheral neighbourhood, where the rural and urban worlds meet, the houses of the first migrants who arrived after the post-war period coexist with the new blocks of the dormitory city, where the latest wave of migration is concentrated. This humble corner is now an authentic global village. Good Valley Stories is a sum of constructs, of social, generational and identity, urban and ecological conflicts, but it is also a calm and humanistic look at today’s world.",
+   "ficci-65": "Once again, José Luis Guerín delivers a masterclass in documentary filmmaking, as recognized by the San Sebastián Film Festival jury, which awarded him its Special Prize.",
+   "olhar-2026": "En marge de Barcelone, Vallbona est une enclave entourée par une rivière, des voies ferrées et une autoroute. Antonio, fils d'ouvriers catalans, y cultive des fleurs depuis près de 90 ans. Il est rejoint par Makome, Norma, Tatiana, venus de tous horizons… Au rythme de la musique, des baignades interdites et des amours naissants, une forme poétique de résistance émerge face aux conflits urbains, sociaux et identitaires du monde."
+  }
+ }
+]

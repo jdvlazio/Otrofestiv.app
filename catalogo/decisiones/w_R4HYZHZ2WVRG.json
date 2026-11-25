@@ -1,0 +1,65 @@
+[
+ {
+  "work_id": "w_R4HYZHZ2WVRG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/fecibac-2026/en-tierra.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/fecibac-2026/en-tierra.jpg",
+   "/assets/ficma/en-tierra.jpg"
+  ],
+  "antes": {
+   "fecibac-2026": "/assets/fecibac-2026/en-tierra.jpg",
+   "ficma-2026": "/assets/ficma/en-tierra.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HYZHZ2WVRG",
+  "campo": "sinopsis.es",
+  "valor": "Viejos aviones DC-3 son el sustento de los habitantes de la Amazonía colombiana. El equipo de la película se sube a uno de ellos en un vuelo hacia asentamientos remotos. Pero esa conexión está amenazada y, sin ella, las comunidades quedarán totalmente aisladas.",
+  "motivo": "corrección de «en inglés»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "4227f5067453"
+  ],
+  "antes": {
+   "fecibac-2026": "Old DC-3s are the lifeline for residents of the Colombian Amazon. The film crew joins one of the planes on a flight to remote settlements. But this connection is under threat, and without it communities will face total isolation.",
+   "ficma-2026": "Old DC-3s are the lifeline for residents of the Colombian Amazon. The film crew joins one of the planes on a flight to remote settlements. But this connection is under threat, and without it communities will face total isolation."
+  }
+ },
+ {
+  "work_id": "w_R4HYZHZ2WVRG",
+  "campo": "directores",
+  "valor": [
+   "Simón Uribe"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1567732)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "fecibac-2026": "Simón Uribe",
+   "ficma-2026": "CURA Simón Uribe"
+  }
+ },
+ {
+  "work_id": "w_R4HYZHZ2WVRG",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "FR"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1567732)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "fecibac-2026": "Colombia, France",
+   "ficma-2026": "Colombia"
+  }
+ }
+]

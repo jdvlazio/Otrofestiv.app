@@ -1,0 +1,45 @@
+[
+ {
+  "work_id": "w_7JCXN5ZGRBNY",
+  "campo": "directores",
+  "valor": [
+   "Freddy Sanchez"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Freddy Sanchez"
+  }
+ },
+ {
+  "work_id": "w_7JCXN5ZGRBNY",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_7JCXN5ZGRBNY",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/anima-sola.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/anima-sola.jpg"
+  }
+ }
+]

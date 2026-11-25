@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KECFEW478VX",
+  "campo": "directores",
+  "valor": [
+   "Daniel Mann"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Daniel Mann"
+  }
+ },
+ {
+  "work_id": "w_4KECFEW478VX",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KECFEW478VX",
+  "campo": "paises",
+  "valor": [
+   "GB",
+   "DE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Reino Unido, Alemania"
+  }
+ },
+ {
+  "work_id": "w_4KECFEW478VX",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KECFEW478VX",
+  "campo": "sinopsis.es",
+  "valor": "A partir de una prueba de localización filmada en Uganda y de un intercambio de correos con el localizador, The Recce muestra los vínculos del cine con la tierra y su entrelazamiento con los imaginarios coloniales, uniendo la ficción de hacer películas con la ficción de construir Estados.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A partir de una prueba de localización filmada en Uganda y de un intercambio de correos con el localizador, The Recce muestra los vínculos del cine con la tierra y su entrelazamiento con los imaginarios coloniales, uniendo la ficción de hacer películas con la ficción de construir Estados."
+  }
+ },
+ {
+  "work_id": "w_4KECFEW478VX",
+  "campo": "sinopsis.en",
+  "valor": "Drawing on a location test filmed in Uganda and an email exchange with the location scout, The Recce captures cinema’s ties to land and its entanglement with colonial imaginaries, binding the fiction of filmmaking with the fiction of state-building.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drawing on a location test filmed in Uganda and an email exchange with the location scout, The Recce captures cinema’s ties to land and its entanglement with colonial imaginaries, binding the fiction of filmmaking with the fiction of state-building."
+  }
+ },
+ {
+  "work_id": "w_4KECFEW478VX",
+  "campo": "xref.tmdb",
+  "valor": 585661,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "585661"
+  }
+ },
+ {
+  "work_id": "w_4KECFEW478VX",
+  "campo": "xref.letterboxd",
+  "valor": "the-recce-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-recce-2026"
+  }
+ },
+ {
+  "work_id": "w_4KECFEW478VX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/the-recce.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/the-recce.jpg"
+  }
+ }
+]

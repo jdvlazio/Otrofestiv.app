@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_4KJKKEKPNC6Y",
+  "campo": "directores",
+  "valor": [
+   "Daniel Candamil"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Daniel Candamil"
+  }
+ },
+ {
+  "work_id": "w_4KJKKEKPNC6Y",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJKKEKPNC6Y",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJKKEKPNC6Y",
+  "campo": "sinopsis.es",
+  "valor": "Fragmentos De Una Tarde En Pance es un video musical y una pieza audiovisual de Sol Menguante, una cantautora de Cali, Colombia, cuyo trabajo mezcla el indie folk con raíces andinas y tradicionales. La pieza acompaña una canción cuyas letras exploran el valor de dejar ir situaciones, ideas y dolores internos que nos frenan.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Fragmentos De Una Tarde En Pance es un video musical y una pieza audiovisual de Sol Menguante, una cantautora de Cali, Colombia, cuyo trabajo mezcla el indie folk con raíces andinas y tradicionales. La pieza acompaña una canción cuyas letras exploran el valor de dejar ir situaciones, ideas y dolores internos que nos frenan."
+  }
+ },
+ {
+  "work_id": "w_4KJKKEKPNC6Y",
+  "campo": "sinopsis.en",
+  "valor": "Fragments Of An Afternoon On A River is a music video and audiovisual piece by Sol Menguante, a singer-songwriter from Cali, Colombia, whose work blends indie folk with andean and traditional roots. The piece accompanies a song whose lyrics explore the value of letting go, of situations, ideas, and inner pain that hold us back.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Fragments Of An Afternoon On A River is a music video and audiovisual piece by Sol Menguante, a singer-songwriter from Cali, Colombia, whose work blends indie folk with andean and traditional roots. The piece accompanies a song whose lyrics explore the value of letting go, of situations, ideas, and inner pain that hold us back."
+  }
+ },
+ {
+  "work_id": "w_4KJKKEKPNC6Y",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/fragmentos-de-una-tarde-en-pance-sol-menguante.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/fragmentos-de-una-tarde-en-pance-sol-menguante.jpg"
+  }
+ }
+]

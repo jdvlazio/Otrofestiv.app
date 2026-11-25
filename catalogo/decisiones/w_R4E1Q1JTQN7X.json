@@ -1,0 +1,33 @@
+[
+ {
+  "work_id": "w_R4E1Q1JTQN7X",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "biff-2026": "Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4E1Q1JTQN7X",
+  "campo": "paises",
+  "valor": [
+   "AR",
+   "BR",
+   "ES",
+   "FR",
+   "MX",
+   "US"
+  ],
+  "motivo": "el último país de la lista de BIFF se leyó como género: se recompone",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "biff-2026": "Argentina, Brasil, España, Francia, México, Estados"
+  }
+ }
+]

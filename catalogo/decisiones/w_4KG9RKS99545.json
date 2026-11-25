@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KG9RKS99545",
+  "campo": "directores",
+  "valor": [
+   "Arnas Balčiūnas"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Arnas Balčiūnas"
+  }
+ },
+ {
+  "work_id": "w_4KG9RKS99545",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KG9RKS99545",
+  "campo": "paises",
+  "valor": [
+   "LT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lituania"
+  }
+ },
+ {
+  "work_id": "w_4KG9RKS99545",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KG9RKS99545",
+  "campo": "sinopsis.es",
+  "valor": "Mientras vuelve a visitar su escuela, ahora abandonada, Ignas se encuentra con un antiguo compañero de clase. Mientras deambulan por pasillos llenos de recuerdos contradictorios, intentan capturar lo que pronto desaparecerá.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mientras vuelve a visitar su escuela, ahora abandonada, Ignas se encuentra con un antiguo compañero de clase. Mientras deambulan por pasillos llenos de recuerdos contradictorios, intentan capturar lo que pronto desaparecerá."
+  }
+ },
+ {
+  "work_id": "w_4KG9RKS99545",
+  "campo": "sinopsis.en",
+  "valor": "While revisiting his now-abandoned school, Ignas runs into a former classmate. As they wander through corridors filled with conflicting memories, they try to capture what will soon be gone.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "While revisiting his now-abandoned school, Ignas runs into a former classmate. As they wander through corridors filled with conflicting memories, they try to capture what will soon be gone."
+  }
+ },
+ {
+  "work_id": "w_4KG9RKS99545",
+  "campo": "xref.tmdb",
+  "valor": 1668922,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1668922"
+  }
+ },
+ {
+  "work_id": "w_4KG9RKS99545",
+  "campo": "xref.letterboxd",
+  "valor": "class-photo",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "class-photo"
+  }
+ },
+ {
+  "work_id": "w_4KG9RKS99545",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/klases-nuotrauka.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/klases-nuotrauka.jpg"
+  }
+ }
+]

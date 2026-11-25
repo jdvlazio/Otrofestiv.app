@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4DRYZAJJNS8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/qaff/bertha.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/bertha.jpg",
+   "/assets/ficcali-2026/bertha.jpg",
+   "/assets/qaff/bertha.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/bertha.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/bertha.jpg",
+   "qaff-2026": "/assets/qaff/bertha.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DRYZAJJNS8",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1742324)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": 2026,
+   "ficcali-2026": 2025,
+   "qaff-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4DRYZAJJNS8",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "biff-2026": "Comedia",
+   "qaff-2026": "Ficción"
+  }
+ }
+]

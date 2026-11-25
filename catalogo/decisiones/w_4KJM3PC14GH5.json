@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJM3PC14GH5",
+  "campo": "directores",
+  "valor": [
+   "Martina Rodríguez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Martina Rodríguez"
+  }
+ },
+ {
+  "work_id": "w_4KJM3PC14GH5",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJM3PC14GH5",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KJM3PC14GH5",
+  "campo": "generos",
+  "valor": [
+   "Misterio"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Misterio"
+  }
+ },
+ {
+  "work_id": "w_4KJM3PC14GH5",
+  "campo": "sinopsis.es",
+  "valor": "Tras la muerte de una niña en el lago de un pueblo, una escultora en busca de inspiración decide modelar su rostro y se adentra en un duelo que no le pertenece.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tras la muerte de una niña en el lago de un pueblo, una escultora en busca de inspiración decide modelar su rostro y se adentra en un duelo que no le pertenece."
+  }
+ },
+ {
+  "work_id": "w_4KJM3PC14GH5",
+  "campo": "sinopsis.en",
+  "valor": "After a girl dies in a village lake, a sculptor searching for inspiration decides to recreate her face and enters into a grief that is not her own.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After a girl dies in a village lake, a sculptor searching for inspiration decides to recreate her face and enters into a grief that is not her own."
+  }
+ },
+ {
+  "work_id": "w_4KJM3PC14GH5",
+  "campo": "xref.tmdb",
+  "valor": 1701420,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1701420"
+  }
+ },
+ {
+  "work_id": "w_4KJM3PC14GH5",
+  "campo": "xref.letterboxd",
+  "valor": "la-maleza",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "la-maleza"
+  }
+ },
+ {
+  "work_id": "w_4KJM3PC14GH5",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-maleza.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-maleza.jpg"
+  }
+ }
+]

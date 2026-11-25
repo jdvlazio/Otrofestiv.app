@@ -1,0 +1,130 @@
+[
+ {
+  "work_id": "w_4KDTWVRM7M5S",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5c7e6271370d"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "La línea del mar",
+  "valor": "En un pequeño pueblo del Pacífico colombiano, cinco jóvenes comparten sus días junto al mar. Entre conversaciones, caminatas y silencios, su amistad se entrelaza con el paisaje. A medida que el océano avanza, su vínculo se enfrenta a una despedida inevitable, marcada por la adultez, la nostalgia y la imposibilidad de quedarse.",
+  "original": "En un pequeño pueblo del Pacífico colombiano, cinco jóvenes comparten sus días junto al mar. Entre conversaciones, caminatas y silencios, su amistad se entrelaza con el paisaje. La marea, las ruinas y los espacios que habitan revelan una transformación silenciosa. A medida que el océano avanza, su vínculo se enfrenta a una despedida inevitable marcada por la adultez, la nostalgia y la imposibilidad de quedarse.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a2fee96c2413"
+  }
+ },
+ {
+  "work_id": "w_4KDTWVRM7M5S",
+  "campo": "directores",
+  "valor": [
+   "Melissa Saavedra Gil"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Melissa Saavedra Gil"
+  }
+ },
+ {
+  "work_id": "w_4KDTWVRM7M5S",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KDTWVRM7M5S",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KDTWVRM7M5S",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KDTWVRM7M5S",
+  "campo": "sinopsis.en",
+  "valor": "In a small town on Colombia’s Pacific coast, five teenagers spend their time by the sea. As they walk, talk, and fall into silence, the landscape becomes part of their friendship. The tide, the ruins, and the places they inhabit reveal a quiet transformation of the territory. As the ocean advances, their bond faces a farewell shaped by adulthood, nostalgia, and the impossibility of staying.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In a small town on Colombia’s Pacific coast, five teenagers spend their time by the sea. As they walk, talk, and fall into silence, the landscape becomes part of their friendship. The tide, the ruins, and the places they inhabit reveal a quiet transformation of the territory. As the ocean advances, their bond faces a farewell shaped by adulthood, nostalgia, and the impossibility of staying."
+  }
+ },
+ {
+  "work_id": "w_4KDTWVRM7M5S",
+  "campo": "xref.tmdb",
+  "valor": 1814340,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1814340"
+  }
+ },
+ {
+  "work_id": "w_4KDTWVRM7M5S",
+  "campo": "xref.letterboxd",
+  "valor": "la-linea-del-mar",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "la-linea-del-mar"
+  }
+ },
+ {
+  "work_id": "w_4KDTWVRM7M5S",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-linea-del-mar.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-linea-del-mar.jpg"
+  }
+ }
+]

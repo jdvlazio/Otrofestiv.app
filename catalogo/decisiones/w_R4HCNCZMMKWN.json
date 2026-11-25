@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HCNCZMMKWN",
+  "campo": "directores",
+  "valor": [
+   "Tizza Covi",
+   "Rainer Frimmel"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 124",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=124",
+  "antes": {
+   "ficci-65": "Tizza Covi"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCZMMKWN",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 124",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=124",
+  "antes": {
+   "ficci-65": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCZMMKWN",
+  "campo": "paises",
+  "valor": [
+   "AT"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 124",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=124",
+  "antes": {
+   "ficci-65": "Austria"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCZMMKWN",
+  "campo": "sinopsis.es",
+  "valor": "Al Cook, de 80 años, ha dedicado su vida al blues y al country. Cuando una inmobiliaria presiona a los inquilinos, queda solo en su viejo edificio de Viena y se rehúsa al desalojo: quiere preservar el espacio que fue testigo de su vida con Silvia, su esposa fallecida. En 16mm, un relato sereno, tierno y a veces cómico, entre ficción y documental.",
+  "motivo": "catálogo oficial de FICCI 65, p. 124",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=124",
+  "antes": {
+   "ficci-65": "En un viejo apartamento de Viena se acumulan las memorias materiales y afectivas de Al Cook, un hombre de 80 años que ha dedicado su vida al blues y al country, a la melancolía evocadora de los sonidos de Robert Johnson y Elvis Presley."
+  }
+ },
+ {
+  "work_id": "w_R4HCNCZMMKWN",
+  "campo": "sinopsis.en",
+  "valor": "Al Cook, 80, has devoted his life to blues and country music. When a real estate company pressures the tenants, he is left alone in his old Vienna building and refuses eviction: he wants to preserve the space that witnessed his life with Silvia, his late wife. On 16mm, a calm, tender, at times comical story between fiction and documentary.",
+  "motivo": "catálogo oficial de FICCI 65, p. 124",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=124",
+  "antes": {
+   "ficci-65": "In an old apartment in Vienna, the material and emotional memories of Al Cook accumulate — an 80-year-old man who has devoted his life to blues and country, to the evocative melancholy of Robert Johnson and Elvis Presley."
+  }
+ },
+ {
+  "work_id": "w_R4HCNCZMMKWN",
+  "campo": "xref.tmdb",
+  "valor": 1426957,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1426957"
+ }
+]

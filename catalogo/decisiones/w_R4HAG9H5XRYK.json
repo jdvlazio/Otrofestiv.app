@@ -1,0 +1,78 @@
+[
+ {
+  "work_id": "w_R4HAG9H5XRYK",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/filcmar-2026/si-no-ardemos-como-iluminar-la-noche.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/filcmar-2026/si-no-ardemos-como-iluminar-la-noche.jpg",
+   "https://image.tmdb.org/t/p/w500/aHIvJmr4s6gnUsdLs0t1FaCZOyz.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w500/aHIvJmr4s6gnUsdLs0t1FaCZOyz.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/si-no-ardemos-como-iluminar-la-noche.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HAG9H5XRYK",
+  "campo": "sinopsis.es",
+  "valor": "Laura, una joven introvertida de trece años, llega a un pueblo rodeado de plantaciones de palma y de un imponente bosque. Mientras se ajusta a la nueva configuración de su familia, Laura empieza a entrever un mundo oculto en donde circula la historia de una bestia que habita en el bosque y se alimenta de mujeres. Al principio, lo descarta como una fantasía infantil, pero cuando conoce a la magnética Daniela, su amistad la lleva en un viaje que revela la verdadera naturaleza de la bestia.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (filcmar-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "4c36cc6d28f8",
+   "b48f40483dcb"
+  ],
+  "antes": {
+   "ficci-65": "Este coming of age que transita entre fábula y crónica, sigue a Laura, adolescente de 13 años que se muda a una zona rural de Costa Rica.",
+   "filcmar-2026": "Laura, una joven introvertida de trece años, llega a un pueblo rodeado de plantaciones de palma y de un imponente bosque. Mientras se ajusta a la nueva configuración de su familia, Laura empieza a entrever un mundo oculto en donde circula la historia de una bestia que habita en el bosque y se alimenta de mujeres. Al principio, lo descarta como una fantasía infantil, pero cuando conoce a la magnética Daniela, su amistad la lleva en un viaje que revela la verdadera naturaleza de la bestia."
+  }
+ },
+ {
+  "work_id": "w_R4HAG9H5XRYK",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1327436)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficci-65": 2025,
+   "filcmar-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4HAG9H5XRYK",
+  "campo": "paises",
+  "valor": [
+   "CR",
+   "MX",
+   "FR"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1327436)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficci-65": "Costa Rica/México/Francia",
+   "filcmar-2026": "Costa Rica"
+  }
+ },
+ {
+  "work_id": "w_R4HAG9H5XRYK",
+  "campo": "sinopsis.en",
+  "valor": "13-year-old Laura feels adrift in her newly stitched-together family. Just as the forests and endless palm plantations begin to feel like home, she uncovers a lurking secret that threatens the women she holds close.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Si no ardemos, cómo iluminar la noche",
+  "antes": {
+   "ficci-65": "This coming-of-age story that moves between fable and chronicle follows Laura, a 13-year-old who moves to a rural area of Costa Rica.",
+   "filcmar-2026": "13-year-old Laura feels adrift in her newly stitched-together family. Just as the forests and endless palm plantations begin to feel like home, she uncovers a lurking secret that threatens the women she holds close."
+  }
+ }
+]

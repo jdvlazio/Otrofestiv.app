@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_R4HJ5XJMY01F",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficica-2026/una-torreta-en-llamas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/the-steak-el-bistec.jpg",
+   "/assets/ficica-2026/una-torreta-en-llamas.jpg",
+   "/assets/villadelcine-2026/a-burning-turret.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/the-steak-el-bistec.jpg",
+   "ficica-2026": "/assets/ficica-2026/una-torreta-en-llamas.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/a-burning-turret.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5XJMY01F",
+  "campo": "sinopsis.es",
+  "valor": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026, ficica-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "458b4202c0af",
+   "7b492d09efa1"
+  ],
+  "antes": {
+   "ficdeh-2026": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas.",
+   "ficica-2026": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas.",
+   "villadelcine-2026": "Tras un violento enfrentamiento, Yolanda y su nieta Alejandra encuentran a un soldado herido cerca de su rancho en las montañas. Mientras la abuela debate entre la cautela y la compasión, la joven se acerca al desconocido para confirmar una sospecha que podría ponerlas a ambas en peligro."
+  }
+ },
+ {
+  "work_id": "w_R4HJ5XJMY01F",
+  "campo": "directores",
+  "valor": [
+   "Humberto Flores Jáuregui"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": "Humberto Flores Jáuregui",
+   "ficica-2026": "Humberto Flores Jaruégui",
+   "villadelcine-2026": "Humberto Flores"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5XJMY01F",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "ficdeh-2026": "Drama",
+   "ficica-2026": "Drama",
+   "villadelcine-2026": "Drama / Thriller"
+  }
+ }
+]

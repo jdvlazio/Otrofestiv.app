@@ -1,0 +1,68 @@
+[
+ {
+  "work_id": "w_R4H45YCZGPMT",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/fecibac-2026/las-pesadillas-del-siervo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/fecibac-2026/las-pesadillas-del-siervo.jpg",
+   "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
+   "/assets/miradas-2026/las-pesadillas-del-siervo.jpg"
+  ],
+  "antes": {
+   "fecibac-2026": "/assets/fecibac-2026/las-pesadillas-del-siervo.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
+   "miradas-2026": "/assets/miradas-2026/las-pesadillas-del-siervo.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4H45YCZGPMT",
+  "campo": "sinopsis.es",
+  "valor": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (fecibac-2026, miradas-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "062b1720f355",
+   "1d0dc79f3a8c"
+  ],
+  "antes": {
+   "fecibac-2026": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo.",
+   "ficcali-2026": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
+   "miradas-2026": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo."
+  }
+ },
+ {
+  "work_id": "w_R4H45YCZGPMT",
+  "campo": "directores",
+  "valor": [
+   "Manuel Villa Machado"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "fecibac-2026": "Manuel Villa",
+   "ficcali-2026": "Manuel Villa",
+   "miradas-2026": "Manuel Villa Machado"
+  }
+ },
+ {
+  "work_id": "w_R4H45YCZGPMT",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1791689)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "fecibac-2026": 2025,
+   "ficcali-2026": 2025,
+   "miradas-2026": 2026
+  }
+ }
+]

@@ -1,0 +1,171 @@
+[
+ {
+  "work_id": "w_R4J6SRMMD6E9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficpa-2026/lactar.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficmontanas/lactar.jpg",
+   "/assets/ficpa-2026/lactar.jpg",
+   "/assets/itagui-2026/lactar.jpg",
+   "/assets/mambe-2026/lactar.jpg",
+   "/assets/villadeleyvaiff-2026/lactar.jpg"
+  ],
+  "antes": {
+   "ficmontanas-2026": "/assets/ficmontanas/lactar.jpg",
+   "ficpa-2026": "/assets/ficpa-2026/lactar.jpg",
+   "itagui-2026": "/assets/itagui-2026/lactar.jpg",
+   "mambe-2026": "/assets/mambe-2026/lactar.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/lactar.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRMMD6E9",
+  "campo": "sinopsis.es",
+  "valor": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficpa-2026, mambe-2026, villadeleyvaiff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "2b507817e4d5",
+   "e43631f1c03e",
+   "ed8a86313fe8"
+  ],
+  "antes": {
+   "ficmontanas-2026": "Una mujer de 62 años, atrapada en una vida de privilegio vacío, queda embarazada de su conductor y decide tener al bebé pese al rechazo de su familia y la sociedad.",
+   "ficpa-2026": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias.",
+   "itagui-2026": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias. Invitados: Harold Trompetero (director) y Heidy Carrasco (actriz).",
+   "mambe-2026": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias.",
+   "villadeleyvaiff-2026": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias."
+  }
+ },
+ {
+  "work_id": "w_R4J6SRMMD6E9",
+  "campo": "sinopsis.en",
+  "valor": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Lactar",
+  "antes": {
+   "ficmontanas-2026": "A 62-year-old woman in a hollow life of privilege becomes pregnant by her driver and decides to keep the baby against everyone's wishes.",
+   "ficpa-2026": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+   "itagui-2026": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+   "mambe-2026": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences.",
+   "villadeleyvaiff-2026": "A 62-year-old woman, trapped in a life of empty privilege, becomes pregnant by her driver. Facing rejection from her family and society, she decides to fight to bring to life a baby that seems impossible at her late age, regardless of the consequences."
+  }
+ },
+ {
+  "work_id": "w_R4J6SRMMD6E9",
+  "campo": "directores",
+  "valor": [
+   "Harold Trompetero"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Harold Trompetero",
+   "ficmontanas-2026": "Harold Trompetero",
+   "ficpa-2026": "Harold Trompetero",
+   "itagui-2026": "Harold Trompetero",
+   "mambe-2026": "Harold Trompetero",
+   "villadeleyvaiff-2026": "Harold Trompetero"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRMMD6E9",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2026",
+   "ficmontanas-2026": "2026",
+   "ficpa-2026": "2026",
+   "itagui-2026": "2026",
+   "mambe-2026": "2026",
+   "villadeleyvaiff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRMMD6E9",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia",
+   "ficmontanas-2026": "Colombia",
+   "ficpa-2026": "Colombia",
+   "itagui-2026": "Colombia",
+   "mambe-2026": "Colombia",
+   "villadeleyvaiff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRMMD6E9",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama",
+   "ficmontanas-2026": "Drama",
+   "ficpa-2026": "Drama",
+   "itagui-2026": "Drama",
+   "mambe-2026": "Drama",
+   "villadeleyvaiff-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRMMD6E9",
+  "campo": "xref.tmdb",
+  "valor": 1694304,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1694304",
+   "ficmontanas-2026": "1694304",
+   "ficpa-2026": "1694304",
+   "itagui-2026": "1694304",
+   "mambe-2026": "1694304",
+   "villadeleyvaiff-2026": "1694304"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRMMD6E9",
+  "campo": "xref.letterboxd",
+  "valor": "lactar",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "lactar",
+   "ficmontanas-2026": "lactar",
+   "ficpa-2026": "lactar",
+   "itagui-2026": "lactar",
+   "mambe-2026": "lactar",
+   "villadeleyvaiff-2026": "lactar"
+  }
+ }
+]

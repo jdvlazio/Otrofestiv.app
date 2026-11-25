@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KF537BZKWD8",
+  "campo": "directores",
+  "valor": [
+   "Zvonimir Jurić"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Zvonimir Jurić"
+  }
+ },
+ {
+  "work_id": "w_4KF537BZKWD8",
+  "campo": "anio",
+  "valor": 2009,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2009"
+  }
+ },
+ {
+  "work_id": "w_4KF537BZKWD8",
+  "campo": "paises",
+  "valor": [
+   "HR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia"
+  }
+ },
+ {
+  "work_id": "w_4KF537BZKWD8",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KF537BZKWD8",
+  "campo": "sinopsis.es",
+  "valor": "Recién mudada a un apartamento, una joven visita por cortesía a su vecina embarazada. La conversación se vuelve inquietante cuando la vecina le suplica que no se vaya.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Recién mudada a un apartamento, una joven visita por cortesía a su vecina embarazada. La conversación se vuelve inquietante cuando la vecina le suplica que no se vaya."
+  }
+ },
+ {
+  "work_id": "w_4KF537BZKWD8",
+  "campo": "sinopsis.en",
+  "valor": "A young woman who has just moved into a new flat pays a courtesy visit to her pregnant neighbor. Chatting over coffee, the situation intensifies when the secretive neighbor starts begging the woman not to leave.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A young woman who has just moved into a new flat pays a courtesy visit to her pregnant neighbor. Chatting over coffee, the situation intensifies when the secretive neighbor starts begging the woman not to leave."
+  }
+ },
+ {
+  "work_id": "w_4KF537BZKWD8",
+  "campo": "xref.tmdb",
+  "valor": 1135138,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1135138"
+  }
+ },
+ {
+  "work_id": "w_4KF537BZKWD8",
+  "campo": "xref.letterboxd",
+  "valor": "yellow-moon",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "yellow-moon"
+  }
+ },
+ {
+  "work_id": "w_4KF537BZKWD8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/zuti-mjesec.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/zuti-mjesec.jpg"
+  }
+ }
+]

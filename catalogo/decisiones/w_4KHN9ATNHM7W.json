@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KHN9ATNHM7W",
+  "campo": "directores",
+  "valor": [
+   "Davide Palella"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Davide Palella"
+  }
+ },
+ {
+  "work_id": "w_4KHN9ATNHM7W",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_4KHN9ATNHM7W",
+  "campo": "paises",
+  "valor": [
+   "IT",
+   "CH"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Italia, Suiza"
+  }
+ },
+ {
+  "work_id": "w_4KHN9ATNHM7W",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KHN9ATNHM7W",
+  "campo": "sinopsis.es",
+  "valor": "Desde el observatorio solar de Locarno, Sergio Cortesi dedicó décadas a observar el Sol y a dibujar las manchas de su superficie.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Desde el observatorio solar de Locarno, Sergio Cortesi dedicó décadas a observar el Sol y a dibujar las manchas de su superficie."
+  }
+ },
+ {
+  "work_id": "w_4KHN9ATNHM7W",
+  "campo": "sinopsis.en",
+  "valor": "From the solar observatory in Locarno, Sergio Cortesi spent decades watching the Sun and drawing the spots on its surface.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "From the solar observatory in Locarno, Sergio Cortesi spent decades watching the Sun and drawing the spots on its surface."
+  }
+ },
+ {
+  "work_id": "w_4KHN9ATNHM7W",
+  "campo": "xref.tmdb",
+  "valor": 990591,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "990591"
+  }
+ },
+ {
+  "work_id": "w_4KHN9ATNHM7W",
+  "campo": "xref.letterboxd",
+  "valor": "sonnenstube",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "sonnenstube"
+  }
+ },
+ {
+  "work_id": "w_4KHN9ATNHM7W",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/sonnenstube.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/sonnenstube.jpg"
+  }
+ }
+]

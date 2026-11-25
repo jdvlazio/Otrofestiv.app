@@ -1,0 +1,28 @@
+[
+ {
+  "work_id": "w_0H249P7TEFVN",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "63465c5153e7"
+  ],
+  "original_de": [
+   "cajica-2026"
+  ],
+  "titulo": "Itzia Tango y Cacao",
+  "valor": "Itzia es una mujer sorda que asegura haber comenzado a escuchar una música peculiar que siempre proviene del mismo punto cardinal. En su pueblo creen que está enloqueciendo e intentan convencerla de ir al médico. Para demostrar que no está loca, deberá emprender un viaje en busca de la fuente de la música.",
+  "original": "Itzia es una mujer sorda que asegura haber comenzado a escuchar una música peculiar que siempre proviene del mismo punto cardinal. En el pueblo donde vive la gente cree que está enloqueciendo y la intentan convencer para que vaya al médico. Pero Itzia está segura que esas melodías no son producto de su imaginación. Para demostrar que no está loca, deberá emprender un viaje para encontrar la fuente de la música.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "bed550f752cd"
+  },
+  "antes": {
+   "cajica-2026": "Itzia es una mujer sorda que asegura haber comenzado a escuchar una música peculiar que siempre proviene del mismo punto cardinal. En el pueblo donde vive la gente cree que está enloqueciendo y la intentan convencer para que vaya al médico. Pero Itzia está segura que esas melodías no son producto de su imaginación. Para demostrar que no está loca, deberá emprender un viaje para encontrar la fuente de la música."
+  }
+ }
+]

@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_R4PYB0VPF304",
+  "campo": "xref.tmdb",
+  "valor": 1686584,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/madrugada-2026/"
+ },
+ {
+  "work_id": "w_R4PYB0VPF304",
+  "campo": "paises",
+  "valor": [
+   "GT"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4PYB0VPF304",
+  "campo": "sinopsis.es",
+  "valor": "Koki, jardinero en Ciudad de Guatemala, esconde un secreto: es un vampiro. De día vive con su esposa y su hijo pequeño; de noche se alimenta en las sombras. Los padres intentan proteger al niño de la maldición. Pero cuando el hambre despierta en él, ocurre algo irreversible que sella una herencia trágica.",
+  "motivo": "catálogo BOGOSHORTS: cuenta la obra; la de TIFF es comentario curatorial",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "Koki, jardinero en Ciudad de Guatemala, esconde un secreto: es un vampiro. De día vive con su esposa y su hijo pequeño; de noche se alimenta en las sombras. Los padres intentan proteger al niño de la maldición. Pero cuando el hambre despierta en él, ocurre algo irreversible que sella una herencia trágica.",
+   "tiff-2026": "Cuando su hijo pequeño empieza a sentir deseos destructivos, un padre vampírico y una madre humana intentan protegerlo de correrías nocturnas empapadas de sangre, en esta reflexión de fuego lento de Sebastián Lojo sobre el malestar generacional."
+  },
+  "vistas": [
+   "00ac0e36a643",
+   "0867dc22e0da"
+  ]
+ },
+ {
+  "work_id": "w_R4PYB0VPF304",
+  "campo": "sinopsis.en",
+  "valor": "Koki, a gardener in Guatemala City, hides a secret: he is a vampire. By day he lives with his wife, and young son; by night he feeds in the shadows. Together, the parents try to shield the boy from the curse. But when the hunger awakens in him, something irreversible occurs, sealing a tragic inheritance.",
+  "motivo": "catálogo BOGOSHORTS: cuenta la obra; la de TIFF es comentario curatorial",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "Koki, a gardener in Guatemala City, hides a secret: he is a vampire. By day he lives with his wife, and young son; by night he feeds in the shadows. Together, the parents try to shield the boy from the curse. But when the hunger awakens in him, something irreversible occurs, sealing a tragic inheritance.",
+   "tiff-2026": "When their young son begins to experience destructive desires, a vampiric father and human mother try to shield him from blood-soaked nocturnal exploits in Sebastián Lojo’s slow-burn rumination on generational malaise."
+  }
+ },
+ {
+  "work_id": "w_R4PYB0VPF304",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/madrugada.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "afiche vertical contra fotograma apaisado (Vertical sobre still)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/madrugada.jpg",
+   "tiff-2026": "https://images.ctfassets.net/22n7d68fswlw/7cOKcUxq4gcTzMcYswv70p/c28dfb5d4d60805d6adc73b452b19169/Madrugada_Still_02.jpg"
+  },
+  "vistas": [
+   "https://images.ctfassets.net/22n7d68fswlw/7cOKcUxq4gcTzMcYswv70p/c28dfb5d4d60805d6adc73b452b19169/Madrugada_Still_02.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4PYB0VPF304",
+  "campo": "directores",
+  "valor": [
+   "Sebastián Lojo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Sebastián Lojo",
+   "tiff-2026": "Sebastián Lojo"
+  }
+ },
+ {
+  "work_id": "w_R4PYB0VPF304",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "tiff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4PYB0VPF304",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suspenso",
+   "tiff-2026": "Suspenso"
+  }
+ },
+ {
+  "work_id": "w_R4PYB0VPF304",
+  "campo": "xref.letterboxd",
+  "valor": "madrugada-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "madrugada-2026",
+   "tiff-2026": "madrugada-2026"
+  }
+ }
+]

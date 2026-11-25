@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HEGBP3B4BG",
+  "campo": "directores",
+  "valor": [
+   "Juliano Kunert"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 83",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=83"
+ },
+ {
+  "work_id": "w_R4HEGBP3B4BG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 83",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=83"
+ },
+ {
+  "work_id": "w_R4HEGBP3B4BG",
+  "campo": "paises",
+  "valor": [
+   "DO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 83",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=83",
+  "antes": {
+   "ficci-65": "República Dominicana"
+  }
+ },
+ {
+  "work_id": "w_R4HEGBP3B4BG",
+  "campo": "sinopsis.es",
+  "valor": "Un viaje inicia en el cielo y, poco a poco, atraviesa el brumoso paisaje de la religión, el territorio y la identidad de las Antillas. Entre luz y oscuridad, los límites se vuelven borrosos y las capas de la imagen dejan entrever el misterio de la fe. Experimentación etnográfica que guía hacia un estado interior a través de lo visible y lo aural.",
+  "motivo": "catálogo oficial de FICCI 65, p. 83",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=83"
+ },
+ {
+  "work_id": "w_R4HEGBP3B4BG",
+  "campo": "sinopsis.en",
+  "valor": "A journey begins in the sky and, little by little, traverses the misty landscape of religion, territory, and identity in the Antilles. Between light and darkness, boundaries blur and the layers of the image offer a glimpse of the mystery of faith. An ethnographic experiment that guides toward an inner state through the visible and the aural.",
+  "motivo": "catálogo oficial de FICCI 65, p. 83",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=83"
+ },
+ {
+  "work_id": "w_R4HEGBP3B4BG",
+  "campo": "xref.tmdb",
+  "valor": 1599934,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1599934"
+ }
+]

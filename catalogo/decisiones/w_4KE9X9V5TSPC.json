@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KE9X9V5TSPC",
+  "campo": "directores",
+  "valor": [
+   "Ana Šiškov"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ana Šiškov"
+  }
+ },
+ {
+  "work_id": "w_4KE9X9V5TSPC",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_4KE9X9V5TSPC",
+  "campo": "paises",
+  "valor": [
+   "HR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia"
+  }
+ },
+ {
+  "work_id": "w_4KE9X9V5TSPC",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KE9X9V5TSPC",
+  "campo": "sinopsis.es",
+  "valor": "Lućana, su madre Cvita y su hermano Stjepko preparan para la temporada la casa de su abuela, recién fallecida. En una familia que privilegia al hijo varón, Lućana hace pequeñas travesuras para llamar la atención de su madre.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lućana, su madre Cvita y su hermano Stjepko preparan para la temporada la casa de su abuela, recién fallecida. En una familia que privilegia al hijo varón, Lućana hace pequeñas travesuras para llamar la atención de su madre."
+  }
+ },
+ {
+  "work_id": "w_4KE9X9V5TSPC",
+  "campo": "sinopsis.en",
+  "valor": "Lućana, her mother Cvita and brother Stjepko are preparing the house of their recently deceased grandmother for the season. Cvita, the mater familias, sits at the top of the hierarchy in the household. After Cvita, comes Stjepko, because he is a man. Lućana vies for her mother’s love by pulling little pranks on her brother Stjepko. Yet, her efforts are futile because Lučana unfortunately cannot change what she has between her legs.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lućana, her mother Cvita and brother Stjepko are preparing the house of their recently deceased grandmother for the season. Cvita, the mater familias, sits at the top of the hierarchy in the household. After Cvita, comes Stjepko, because he is a man. Lućana vies for her mother’s love by pulling little pranks on her brother Stjepko. Yet, her efforts are futile because Lučana unfortunately cannot change what she has between her legs."
+  }
+ },
+ {
+  "work_id": "w_4KE9X9V5TSPC",
+  "campo": "xref.tmdb",
+  "valor": 1051276,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1051276"
+  }
+ },
+ {
+  "work_id": "w_4KE9X9V5TSPC",
+  "campo": "xref.letterboxd",
+  "valor": "dancing-on-the-grave",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "dancing-on-the-grave"
+  }
+ },
+ {
+  "work_id": "w_4KE9X9V5TSPC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/nije-pristojno-plesat-po-grobu.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/nije-pristojno-plesat-po-grobu.jpg"
+  }
+ }
+]

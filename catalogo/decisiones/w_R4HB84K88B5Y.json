@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HB84K88B5Y",
+  "campo": "directores",
+  "valor": [
+   "Lilli Carré"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 251",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=251"
+ },
+ {
+  "work_id": "w_R4HB84K88B5Y",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 251",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=251"
+ },
+ {
+  "work_id": "w_R4HB84K88B5Y",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 251",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=251",
+  "antes": {
+   "ficci-65": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4HB84K88B5Y",
+  "campo": "sinopsis.es",
+  "valor": "Multitudes frenéticas de pintura contrastan con el blanco y negro del papel y llenan de color los espacios inhabitados. Los cuerpos, hechos de pinceladas, son absorbidos por el sonido y evacúan apresurados los lugares públicos; los objetos vivos llenan el cuadro y evidencian el vacío humano. Un cortometraje experimental.",
+  "motivo": "catálogo oficial de FICCI 65, p. 251",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=251"
+ },
+ {
+  "work_id": "w_R4HB84K88B5Y",
+  "campo": "sinopsis.en",
+  "valor": "Frenetic crowds of paint contrast with the black and white of the paper and fill the empty spaces with color. Bodies made of brushstrokes are absorbed by sound and hastily evacuate public places; living objects fill the frame and highlight the human void. An experimental short.",
+  "motivo": "catálogo oficial de FICCI 65, p. 251",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=251"
+ },
+ {
+  "work_id": "w_R4HB84K88B5Y",
+  "campo": "xref.tmdb",
+  "valor": 1552115,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1552115"
+ }
+]

@@ -1,0 +1,66 @@
+[
+ {
+  "work_id": "w_R4HF7D972FS5",
+  "campo": "directores",
+  "valor": [
+   "Mercè Conesa",
+   "Bartomeu Vilà",
+   "Joan Simó",
+   "Rosa Babí"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 266",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=266"
+ },
+ {
+  "work_id": "w_R4HF7D972FS5",
+  "campo": "anio",
+  "valor": 1974,
+  "motivo": "catálogo oficial de FICCI 65, p. 266",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=266"
+ },
+ {
+  "work_id": "w_R4HF7D972FS5",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 266",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=266",
+  "antes": {
+   "ficci-65": "España"
+  }
+ },
+ {
+  "work_id": "w_R4HF7D972FS5",
+  "campo": "sinopsis.es",
+  "valor": "En la Barcelona de los años 70, migrantes marroquíes llegan a las estaciones de tren. Con imágenes de sus rostros y maletas y de los barrios marginales donde se instalan, y con testimonios sonoros, este documental militante, rodado en la clandestinidad en los últimos años del franquismo, denuncia la discriminación y la precariedad que enfrentan.",
+  "motivo": "catálogo oficial de FICCI 65, p. 266",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=266"
+ },
+ {
+  "work_id": "w_R4HF7D972FS5",
+  "campo": "sinopsis.en",
+  "valor": "In 1970s Barcelona, Moroccan migrants arrive at train stations. With images of their faces and suitcases, of the marginal neighborhoods where they settle, and audio testimonies, this militant documentary, filmed clandestinely in the final years of the Franco regime, denounces the discrimination and precarity they face.",
+  "motivo": "catálogo oficial de FICCI 65, p. 266",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=266"
+ },
+ {
+  "work_id": "w_R4HF7D972FS5",
+  "campo": "xref.tmdb",
+  "valor": 1628880,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1628880"
+ }
+]

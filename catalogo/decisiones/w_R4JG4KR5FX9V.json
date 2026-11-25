@@ -1,0 +1,41 @@
+[
+ {
+  "work_id": "w_R4JG4KR5FX9V",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/filcmar-2026/agachar-el-rostro.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficica-2026/agachar-el-rostro.jpg",
+   "/assets/filcmar-2026/agachar-el-rostro.jpg",
+   "/assets/miradas-2026/agachar-el-rostro.jpg",
+   "/assets/villadeleyvaiff-2026/agachar-el-rostro.jpg"
+  ],
+  "antes": {
+   "ficica-2026": "/assets/ficica-2026/agachar-el-rostro.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/agachar-el-rostro.jpg",
+   "miradas-2026": "/assets/miradas-2026/agachar-el-rostro.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/agachar-el-rostro.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4JG4KR5FX9V",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "ficica-2026": "Drama",
+   "filcmar-2026": "Drama",
+   "miradas-2026": "Ficción",
+   "villadeleyvaiff-2026": "Drama"
+  }
+ }
+]

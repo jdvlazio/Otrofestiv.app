@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4KZBSE3E8P3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/67p1TQnM2idYzE3rpWRs5wmnilJ.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/anibia-2026/unlearning-motherhood.jpg",
+   "/assets/ficfusa-2026/desaprender-la-maternidad.jpg",
+   "/assets/midbo-2026/unlearning-motherhood.jpg",
+   "https://image.tmdb.org/t/p/w500/67p1TQnM2idYzE3rpWRs5wmnilJ.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/unlearning-motherhood.jpg",
+   "ficfusa-2026": "/assets/ficfusa-2026/desaprender-la-maternidad.jpg",
+   "midbo-2026": "/assets/midbo-2026/unlearning-motherhood.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/67p1TQnM2idYzE3rpWRs5wmnilJ.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4KZBSE3E8P3",
+  "campo": "sinopsis.es",
+  "valor": "Una joven que siempre ha temido perder su libertad por la maternidad se comienza a angustiar tras un retraso en su periodo. El viaje en el que se embarca para adquirir una prueba de embarazo es revelador gracias a las conversaciones que escucha y entabla con mujeres que comparten historias poco convencionales sobre el hecho de ser madre.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (anibia-2026, ficfusa-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0ba3304a3266",
+   "bea19af6b98e"
+  ],
+  "antes": {
+   "anibia-2026": "Una joven que siempre ha temido perder su libertad por la maternidad se comienza a angustiar tras un retraso en su periodo. El viaje en el que se embarca para adquirir una prueba de embarazo es revelador gracias a las conversaciones que escucha y entabla con mujeres que comparten historias poco convencionales sobre el hecho de ser madre.",
+   "ficfusa-2026": "Una joven que siempre ha temido perder su libertad por la maternidad se comienza a angustiar tras un retraso en su periodo. El viaje en el que se embarca para adquirir una prueba de embarazo es revelador gracias a las conversaciones que escucha y entabla con mujeres que comparten historias poco convencionales sobre el hecho de ser madre.",
+   "midbo-2026": "Cuando se le retrasa el periodo, una mujer soltera de veintitantos, aterrorizada, va a la tienda a comprar una prueba de embarazo. Este trayecto adquiere un significado distinto cuando se encuentra con varias mujeres cuyas palabras, sin saberlo, la hacen cuestionar su profundo miedo a la maternidad."
+  }
+ },
+ {
+  "work_id": "w_R4KZBSE3E8P3",
+  "campo": "directores",
+  "valor": [
+   "Juliana Erazo Gómez"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Juliana Erazo Gómez",
+   "ficfusa-2026": "Juliana Erazo Gómez",
+   "midbo-2026": "Juliana Erazo Gómez",
+   "siembrafest-2026": "Juliana Erazo"
+  }
+ },
+ {
+  "work_id": "w_R4KZBSE3E8P3",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "NL"
+  ],
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Colombia, Países Bajos",
+   "ficfusa-2026": "Colombia, Países bajos",
+   "midbo-2026": "Colombia, Países Bajos",
+   "siembrafest-2026": "Colombia"
+  }
+ }
+]

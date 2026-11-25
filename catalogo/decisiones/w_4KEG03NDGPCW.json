@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KEG03NDGPCW",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "abb382fac57c"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Esa fugaz esencia que dejaron los sucesos",
+  "valor": "Las calles de Barcelona están pobladas de huellas de pequeñas y grandes luchas de las mujeres. Algunas apenas se perciben; otras son placas o monumentos que intentan reconstruir el pasado que la Historia con H mayúscula quiso borrar. Busco convertir la huella que se sale del tiempo y así sentir esa fugaz esencia que dejaron los sucesos.",
+  "original": "Las calles de Barcelona están pobladas de las huellas de pequeñas y grandes luchas que realizaron las mujeres a lo largo de la historia. Algunas, apenas se perciben, centellean, se ocultan. Otras, se han convertido en huellas intencionales, placas y/o monumentos que intentan reconstruir y actualizar el pasado que la Historia con H mayúscula quiso borrar. Busco convertir la huella que se sale del tiempo y así, sentir, esa fugaz esencia que dejaron los sucesos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "e905b853315d"
+  }
+ },
+ {
+  "work_id": "w_4KEG03NDGPCW",
+  "campo": "directores",
+  "valor": [
+   "Carolina Astudillo Muñoz"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Carolina Astudillo Muñoz"
+  }
+ },
+ {
+  "work_id": "w_4KEG03NDGPCW",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_4KEG03NDGPCW",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KEG03NDGPCW",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEG03NDGPCW",
+  "campo": "sinopsis.en",
+  "valor": "Barcelona’s streets are populated with traces of the small and great battles fought by women throughout history. Some are barely perceived, they flicker, they’re hidden. Others have become intentional traces, plaques and/or monuments that attempt to reconstruct and update the past that History with a capital H wanted to erase. I’m looking to convert the trace that escapes from time and thereby feel that fleeting essence left by events.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Barcelona’s streets are populated with traces of the small and great battles fought by women throughout history. Some are barely perceived, they flicker, they’re hidden. Others have become intentional traces, plaques and/or monuments that attempt to reconstruct and update the past that History with a capital H wanted to erase. I’m looking to convert the trace that escapes from time and thereby feel that fleeting essence left by events."
+  }
+ },
+ {
+  "work_id": "w_4KEG03NDGPCW",
+  "campo": "xref.tmdb",
+  "valor": 1073875,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1073875"
+  }
+ },
+ {
+  "work_id": "w_4KEG03NDGPCW",
+  "campo": "xref.letterboxd",
+  "valor": "that-fleeting-essence-left-by-events",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "that-fleeting-essence-left-by-events"
+  }
+ },
+ {
+  "work_id": "w_4KEG03NDGPCW",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/esa-fugaz-esencia-que-dejaron-los-sucesos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/esa-fugaz-esencia-que-dejaron-los-sucesos.jpg"
+  }
+ }
+]

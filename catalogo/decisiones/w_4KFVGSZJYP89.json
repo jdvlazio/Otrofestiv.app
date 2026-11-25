@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KFVGSZJYP89",
+  "campo": "directores",
+  "valor": [
+   "Luciana Espinoza Hoempler"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Luciana Espinoza Hoempler"
+  }
+ },
+ {
+  "work_id": "w_4KFVGSZJYP89",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFVGSZJYP89",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "PE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España, Perú"
+  }
+ },
+ {
+  "work_id": "w_4KFVGSZJYP89",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KFVGSZJYP89",
+  "campo": "sinopsis.es",
+  "valor": "En el Tapón del Darién, la selva sin carreteras entre Colombia y Panamá, miles de migrantes graban con sus celulares el cruce que emprenden rumbo a Estados Unidos. No hay camino recompone esos videos fragmentados en un relato en primera persona sobre el riesgo, la supervivencia y la urgencia de seguir avanzando.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En el Tapón del Darién, la selva sin carreteras entre Colombia y Panamá, miles de migrantes graban con sus celulares el cruce que emprenden rumbo a Estados Unidos. No hay camino recompone esos videos fragmentados en un relato en primera persona sobre el riesgo, la supervivencia y la urgencia de seguir avanzando."
+  }
+ },
+ {
+  "work_id": "w_4KFVGSZJYP89",
+  "campo": "sinopsis.en",
+  "valor": "In the Darién Gap, the roadless jungle between Colombia and Panama, thousands of migrants record on their phones the crossing they undertake on their way to the United States. No hay camino reassembles these fragmented videos into a first-person narrative about risk, survival, and the urgency to keep moving.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the Darién Gap, the roadless jungle between Colombia and Panama, thousands of inmigrants record on their phones the crossing they undertake on their way to the United States. There Is No Path reassembles these fragmented videos into a narrative about risk, survival, and the urgency to keep moving."
+  }
+ },
+ {
+  "work_id": "w_4KFVGSZJYP89",
+  "campo": "xref.tmdb",
+  "valor": 1770030,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1770030"
+  }
+ },
+ {
+  "work_id": "w_4KFVGSZJYP89",
+  "campo": "xref.letterboxd",
+  "valor": "there-is-no-path",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "there-is-no-path"
+  }
+ },
+ {
+  "work_id": "w_4KFVGSZJYP89",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/no-hay-camino.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/no-hay-camino.jpg"
+  }
+ }
+]

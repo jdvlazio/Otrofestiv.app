@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4J8B1Y13P37",
+  "campo": "directores",
+  "valor": [
+   "Daniel Prieto Muriel"
+  ],
+  "motivo": "nombre completo, en 3 de 4 festivales",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "anibia-2026": "Daniel Prieto Muriel",
+   "cortoscali-2026": "Daniel Prieto Muriel",
+   "ficfusa-2026": "Daniel Prieto",
+   "ficmontanas-2026": "Daniel Prieto Muriel",
+   "ficpa-2026": "Daniel Prieto Muriel",
+   "jardin-2026": "Daniel Prieto Muriel",
+   "siembrafest-2026": "Daniel Prieto Muriel"
+  }
+ },
+ {
+  "work_id": "w_R4J8B1Y13P37",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/anibia-2026/relatos-del-camino.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/anibia-2026/relatos-del-camino.jpg",
+   "/assets/cortoscali-2026/relatos-del-camino.jpg",
+   "/assets/ficfusa-2026/relatos-del-camino.jpg",
+   "/assets/ficpa-2026/relatos-del-camino.jpg",
+   "/assets/jardin-2026/relatos-del-camino.jpg",
+   "/assets/siembrafest/relatos-del-camino.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/relatos-del-camino.jpg",
+   "cortoscali-2026": "/assets/cortoscali-2026/relatos-del-camino.jpg",
+   "ficfusa-2026": "/assets/ficfusa-2026/relatos-del-camino.jpg",
+   "ficmontanas-2026": "/assets/ficpa-2026/relatos-del-camino.jpg",
+   "ficpa-2026": "/assets/ficpa-2026/relatos-del-camino.jpg",
+   "jardin-2026": "/assets/jardin-2026/relatos-del-camino.jpg",
+   "siembrafest-2026": "/assets/siembrafest/relatos-del-camino.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4J8B1Y13P37",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "ficmontanas-2026": "Animación",
+   "jardin-2026": "Documental",
+   "siembrafest-2026": "Animación"
+  }
+ }
+]

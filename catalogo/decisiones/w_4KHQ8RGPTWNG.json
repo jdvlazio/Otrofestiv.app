@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KHQ8RGPTWNG",
+  "campo": "directores",
+  "valor": [
+   "Simon Ellis"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Simon Ellis"
+  }
+ },
+ {
+  "work_id": "w_4KHQ8RGPTWNG",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KHQ8RGPTWNG",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_4KHQ8RGPTWNG",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KHQ8RGPTWNG",
+  "campo": "sinopsis.es",
+  "valor": "Un niño le explica el sistema solar a su hermana de dos años. Sus conversaciones y las imágenes del cielo nocturno chocan con las teorías conspirativas de las redes sociales.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un niño le explica el sistema solar a su hermana de dos años. Sus conversaciones y las imágenes del cielo nocturno chocan con las teorías conspirativas de las redes sociales."
+  }
+ },
+ {
+  "work_id": "w_4KHQ8RGPTWNG",
+  "campo": "sinopsis.en",
+  "valor": "A boy explains the solar system to his two-year-old sister. Their conversations and images of the night sky collide with conspiracy theories from social media.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A boy explains the solar system to his two-year-old sister. Their conversations and images of the night sky collide with conspiracy theories from social media."
+  }
+ },
+ {
+  "work_id": "w_4KHQ8RGPTWNG",
+  "campo": "xref.tmdb",
+  "valor": 1516640,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1516640"
+  }
+ },
+ {
+  "work_id": "w_4KHQ8RGPTWNG",
+  "campo": "xref.letterboxd",
+  "valor": "notes-from-planet-three",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "notes-from-planet-three"
+  }
+ },
+ {
+  "work_id": "w_4KHQ8RGPTWNG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/notes-from-planet-three.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/notes-from-planet-three.jpg"
+  }
+ }
+]

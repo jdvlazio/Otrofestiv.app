@@ -1,0 +1,93 @@
+[
+ {
+  "work_id": "w_R4HEVVQ7MBP0",
+  "campo": "directores",
+  "valor": [
+   "Ruth Beckermann"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 296",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=296",
+  "antes": {
+   "ficci-65": "Britton Caillouette"
+  }
+ },
+ {
+  "work_id": "w_R4HEVVQ7MBP0",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 296",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=296",
+  "antes": {
+   "ficci-65": "2020"
+  }
+ },
+ {
+  "work_id": "w_R4HEVVQ7MBP0",
+  "campo": "paises",
+  "valor": [
+   "AT",
+   "IT"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 296",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=296",
+  "antes": {
+   "ficci-65": "Austria, Italia"
+  }
+ },
+ {
+  "work_id": "w_R4HEVVQ7MBP0",
+  "campo": "sinopsis.es",
+  "valor": "En la cultura etíope, «wax & gold» se refiere a la ambigüedad del lenguaje: lo literal y lo simbólico. Desde uno de los hoteles más emblemáticos de Etiopía, ligado al emperador Haile Selassie, este ensayo documental reúne testimonios de trabajadores, turistas y migrantes de retorno, y devela las capas del colonialismo y de un proyecto de nación.",
+  "motivo": "catálogo oficial de FICCI 65, p. 296",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=296",
+  "antes": {
+   "ficci-65": "En la cultura etíope, Wax & Gold refiere a la ambigüedad del lenguaje: el significado literal y su dimensión simbólica."
+  }
+ },
+ {
+  "work_id": "w_R4HEVVQ7MBP0",
+  "campo": "sinopsis.en",
+  "valor": "In Ethiopian culture, “wax & gold” refers to the ambiguity of language: the literal and the symbolic. From one of Ethiopia's most iconic hotels, linked to Emperor Haile Selassie, this documentary essay gathers testimonies from workers, tourists, and returning migrants, and unravels the layers of colonialism and of a nation-building project.",
+  "motivo": "catálogo oficial de FICCI 65, p. 296",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=296",
+  "antes": {
+   "ficci-65": "In Ethiopian culture, Wax & Gold refers to the ambiguity of language: its literal meaning and its symbolic dimension."
+  }
+ },
+ {
+  "work_id": "w_R4HEVVQ7MBP0",
+  "campo": "xref.tmdb",
+  "valor": 1616130,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1616130"
+ },
+ {
+  "work_id": "w_R4HEVVQ7MBP0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/8wWgJcfHNDfI5kEbgbNFFhJdXjJ.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el anterior era de otra película del mismo título; visto uno al lado del otro",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "vistas": [
+   "https://image.tmdb.org/t/p/w500/6o01E09j48S9maCtltGIz1M4J0l.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w500/6o01E09j48S9maCtltGIz1M4J0l.jpg"
+  }
+ }
+]

@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS79TQZ72",
+  "campo": "sinopsis.es",
+  "valor": "Tres hermanas regresan a la hacienda donde nacieron. En medio del reencuentro con su hermano, reciben la visita de unos militares y enfrentan cuestiones y secretos del pasado.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "66ddf03a7a15"
+  ],
+  "antes": {
+   "olhar-2026": "Tres hermanas regresan a la hacienda en la que nacieron. En medio del reencuentro con su hermano, reciben la visita de militares y enfrentan cuestiones y secretos del pasado."
+  }
+ },
+ {
+  "work_id": "w_R4MQS79TQZ72",
+  "campo": "xref.tmdb",
+  "valor": 1650006,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/almost-winter-2026/"
+ }
+]

@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7B5TZR953",
+  "campo": "directores",
+  "valor": [
+   "Javier Fesser"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Javier Fesser"
+  }
+ },
+ {
+  "work_id": "w_8BX7B5TZR953",
+  "campo": "anio",
+  "valor": 2018,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2018"
+  }
+ },
+ {
+  "work_id": "w_8BX7B5TZR953",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_8BX7B5TZR953",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_8BX7B5TZR953",
+  "campo": "sinopsis.es",
+  "valor": "Marco, un entrenador profesional de baloncesto, se encuentra un día, en medio de una crisis personal, entrenando a un equipo compuesto por personas con discapacidad intelectual. Lo que comienza como un problema se acaba convirtiendo en una lección de vida.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Marco, un entrenador profesional de baloncesto, se encuentra un día, en medio de una crisis personal, entrenando a un equipo compuesto por personas con discapacidad intelectual. Lo que comienza como un problema se acaba convirtiendo en una lección de vida."
+  }
+ },
+ {
+  "work_id": "w_8BX7B5TZR953",
+  "campo": "sinopsis.en",
+  "valor": "Marco, a professional basketball coach, finds himself one day, in the middle of a personal crisis, coaching a team made up of people with intellectual disabilities. What begins as a problem ends up becoming a life lesson.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Marco, a professional basketball coach, finds himself one day, in the middle of a personal crisis, coaching a team made up of people with intellectual disabilities. What begins as a problem ends up becoming a life lesson."
+  }
+ },
+ {
+  "work_id": "w_8BX7B5TZR953",
+  "campo": "xref.tmdb",
+  "valor": 456929,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "456929"
+  }
+ },
+ {
+  "work_id": "w_8BX7B5TZR953",
+  "campo": "xref.letterboxd",
+  "valor": "champions-2018",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "champions-2018"
+  }
+ },
+ {
+  "work_id": "w_8BX7B5TZR953",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/campeones.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/campeones.jpg"
+  }
+ }
+]

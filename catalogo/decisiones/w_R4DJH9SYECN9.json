@@ -1,0 +1,130 @@
+[
+ {
+  "work_id": "w_R4DJH9SYECN9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/anibia-2026/una-vez-en-un-cuerpo.jpg",
+   "/assets/cinetoro-2026/una-vez-en-un-cuerpo.jpg",
+   "/assets/ficcali-2026/una-vez-en-un-cuerpo.jpg",
+   "/assets/filcmar-2026/una-vez-en-un-cuerpo.jpg",
+   "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
+   "/assets/miradas-2026/una-vez-en-un-cuerpo.jpg",
+   "/assets/popayan-2026/una-vez-en-un-cuerpo.jpg",
+   "/assets/villadeleyvaiff-2026/una-vez-en-un-cuerpo.jpg",
+   "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg"
+  ],
+  "antes": {
+   "aff-2026": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
+   "anibia-2026": "/assets/anibia-2026/una-vez-en-un-cuerpo.jpg",
+   "cinetoro-2026": "/assets/cinetoro-2026/una-vez-en-un-cuerpo.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/una-vez-en-un-cuerpo.jpg",
+   "ficfusa-2026": "/assets/cinetoro-2026/una-vez-en-un-cuerpo.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/una-vez-en-un-cuerpo.jpg",
+   "jardin-2026": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
+   "miradas-2026": "/assets/miradas-2026/una-vez-en-un-cuerpo.jpg",
+   "popayan-2026": "/assets/popayan-2026/una-vez-en-un-cuerpo.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/una-vez-en-un-cuerpo.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DJH9SYECN9",
+  "campo": "sinopsis.es",
+  "valor": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026, miradas-2026, villadeleyvaiff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "08f3753a2b42",
+   "4979663eb33e",
+   "a51f19d7bbab",
+   "c6b8e9e156b8",
+   "d0123951d25c"
+  ],
+  "antes": {
+   "aff-2026": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia.",
+   "anibia-2026": "Mientras lidia con un extraño ser que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de aquello que la habita.",
+   "cinetoro-2026": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente ocurrido durante su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra enfrentarse a la naturaleza de lo que habita en ella.",
+   "ficcali-2026": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado.",
+   "ficfusa-2026": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente ocurrido durante su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra enfrentarse a la naturaleza de lo que habita en ella.",
+   "filcmar-2026": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita.",
+   "jardin-2026": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita.",
+   "miradas-2026": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado.",
+   "popayan-2026": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita.",
+   "villadeleyvaiff-2026": "Mientras lidia con un extraño ser que vive en su interior, una mujer intenta reconciliarse con su hermana tras un incidente que las separó durante la adolescencia. Un viaje inquietante en el que tendrá que enfrentarse tanto a lo que lleva dentro como a las heridas del pasado."
+  }
+ },
+ {
+  "work_id": "w_R4DJH9SYECN9",
+  "campo": "directores",
+  "valor": [
+   "María Cristina Pérez González"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "María Cristina Pérez González",
+   "anibia-2026": "María Cristina Pérez González",
+   "cinetoro-2026": "María Cristina Pérez",
+   "ficcali-2026": "María Cristina Pérez",
+   "ficfusa-2026": "María Cristina Pérez",
+   "filcmar-2026": "María Cristina Pérez",
+   "jardin-2026": "María Cristina Pérez",
+   "miradas-2026": "María Cristina Pérez González",
+   "popayan-2026": "María Cristina Pérez González",
+   "villadeleyvaiff-2026": "María Cristina Pérez"
+  }
+ },
+ {
+  "work_id": "w_R4DJH9SYECN9",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "US"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1522316)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "Colombia/EEUU",
+   "anibia-2026": "Colombia, Estados Unidos",
+   "cinetoro-2026": "Colombia",
+   "ficcali-2026": "Colombia, Estados Unidos",
+   "ficfusa-2026": "Colombia",
+   "filcmar-2026": "Colombia, Estados Unidos",
+   "jardin-2026": "Colombia",
+   "miradas-2026": "Colombia",
+   "popayan-2026": "Colombia, United States of America",
+   "villadeleyvaiff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4DJH9SYECN9",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "aff-2026": "Animación",
+   "anibia-2026": "Animación",
+   "cinetoro-2026": "Animación",
+   "ficcali-2026": "Animación",
+   "ficfusa-2026": "Animación",
+   "filcmar-2026": "Animación",
+   "jardin-2026": "Experimental",
+   "miradas-2026": "Animación",
+   "popayan-2026": "Animación",
+   "villadeleyvaiff-2026": "Animación"
+  }
+ }
+]

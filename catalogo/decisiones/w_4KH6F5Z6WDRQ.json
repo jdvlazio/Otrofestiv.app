@@ -1,0 +1,133 @@
+[
+ {
+  "work_id": "w_4KH6F5Z6WDRQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "468dbdc1b98b"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "About Happy Hippos and Sad Peacocks",
+  "valor": "¿Cómo acabaron los pavos reales de la India en una isla de Berlín en el siglo XIX y los hipopótamos, un siglo más tarde, a orillas de un río en Colombia? Sus vidas allí parecen ser «felices y libres». Con imágenes cautivadoras, esta fábula descolonial los convierte en iconos salvajes, testigos de los caprichos de los poderosos.",
+  "original": "¿Cómo es que los pavos reales, originarios de la India, acabaron en una isla de Berlín en el siglo XIX, y los hipopótamos, un siglo más tarde, a orillas de un río en Colombia? Sus vidas allí parecen ser «felices y libres». Con unas imágenes cautivadoras, la fábula descolonial de Elkin Calderón Guevara y Johannes Förster los convierte en iconos salvajes, testigos de los caprichos de los poderosos.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9f4ee1ee2a7f"
+  }
+ },
+ {
+  "work_id": "w_4KH6F5Z6WDRQ",
+  "campo": "directores",
+  "valor": [
+   "Johannes Förster",
+   "Elkin Calderón Guevara"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Johannes Förster, Elkin Calderón Guevara"
+  }
+ },
+ {
+  "work_id": "w_4KH6F5Z6WDRQ",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_4KH6F5Z6WDRQ",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "DE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia, Alemania"
+  }
+ },
+ {
+  "work_id": "w_4KH6F5Z6WDRQ",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KH6F5Z6WDRQ",
+  "campo": "sinopsis.en",
+  "valor": "How did peacocks, originally from India, end up on an island in Berlin in the 19th century, and hippopotamuses, a century later, on the banks of a river in Colombia? Their lives there appear to be “happy and free”. With rapturous imagery, Elkin Calderón Guevara and Johannes Förster’s decolonial fable turns them into wild icons, bearing witness to the whims of the powerful.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "How did peacocks, originally from India, end up on an island in Berlin in the 19th century, and hippopotamuses, a century later, on the banks of a river in Colombia? Their lives there appear to be “happy and free”. With rapturous imagery, Elkin Calderón Guevara and Johannes Förster’s decolonial fable turns them into wild icons, bearing witness to the whims of the powerful."
+  }
+ },
+ {
+  "work_id": "w_4KH6F5Z6WDRQ",
+  "campo": "xref.tmdb",
+  "valor": 1272950,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1272950"
+  }
+ },
+ {
+  "work_id": "w_4KH6F5Z6WDRQ",
+  "campo": "xref.letterboxd",
+  "valor": "about-happy-hippos-and-sad-peacocks",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "about-happy-hippos-and-sad-peacocks"
+  }
+ },
+ {
+  "work_id": "w_4KH6F5Z6WDRQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/about-happy-hippos-and-sad-peacocks.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/about-happy-hippos-and-sad-peacocks.jpg"
+  }
+ }
+]

@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KG39RDAZNSJ",
+  "campo": "directores",
+  "valor": [
+   "Ambroise Rateau"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ambroise Rateau"
+  }
+ },
+ {
+  "work_id": "w_4KG39RDAZNSJ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KG39RDAZNSJ",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KG39RDAZNSJ",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KG39RDAZNSJ",
+  "campo": "sinopsis.es",
+  "valor": "El actor Philippe Rebbot llega a un rodaje sin haber leído el guion. A partir de ahí, el rodaje se desvía de lo previsto.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "El actor Philippe Rebbot llega a un rodaje sin haber leído el guion. A partir de ahí, el rodaje se desvía de lo previsto."
+  }
+ },
+ {
+  "work_id": "w_4KG39RDAZNSJ",
+  "campo": "sinopsis.en",
+  "valor": "Actor Philippe Rebbot goes to a film shoot without having read the script. Nothing goes as planned.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Actor Philippe Rebbot goes to a film shoot without having read the script. Nothing goes as planned."
+  }
+ },
+ {
+  "work_id": "w_4KG39RDAZNSJ",
+  "campo": "xref.tmdb",
+  "valor": 1691015,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1691015"
+  }
+ },
+ {
+  "work_id": "w_4KG39RDAZNSJ",
+  "campo": "xref.letterboxd",
+  "valor": "fiction-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "fiction-2026"
+  }
+ },
+ {
+  "work_id": "w_4KG39RDAZNSJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/fiction.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/fiction.jpg"
+  }
+ }
+]

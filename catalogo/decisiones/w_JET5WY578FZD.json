@@ -1,0 +1,28 @@
+[
+ {
+  "work_id": "w_JET5WY578FZD",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "21d66336cf28"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Historias de una mentira",
+  "valor": "En Grecia, su país natal, la realizadora se entera de que una amiga está enferma. Sus médicos y familiares se lo ocultan, y ella también debe guardar el secreto. Surgen recuerdos de su infancia en un entorno médico y decide conversar con su padre, médico, e investigar las razones de las mentiras médicas.",
+  "original": "Durante una estancia en Grecia, su país natal, la realizadora se entera de que una amiga está enferma. Sus médicos y familiares se lo ocultan y ella también debe guardar el secreto. Este hecho despierta recuerdos de su infancia en un entorno médico y de cómo esta práctica afectó a personas cercanas. Decide entonces conversar con su padre, médico, e iniciar una investigación íntima para comprender las razones detrás de las mentiras médicas.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-23",
+   "huella": "9902b4781bff"
+  },
+  "antes": {
+   "aleste-2026": "Durante una estancia en Grecia, su país natal, la realizadora se entera de que una amiga está enferma. Sus médicos y familiares se lo ocultan y ella también debe guardar el secreto. Este hecho despierta recuerdos de su infancia en un entorno médico y de cómo esta práctica afectó a personas cercanas. Decide entonces conversar con su padre, médico, e iniciar una investigación íntima para comprender las razones detrás de las mentiras médicas."
+  }
+ }
+]

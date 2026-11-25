@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KJJKNB5MZDV",
+  "campo": "directores",
+  "valor": [
+   "Fridtjof Stensæth Josefsen",
+   "Morten Borgestad"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Fridtjof Stensæth Josefsen, Morten Borgestad"
+  }
+ },
+ {
+  "work_id": "w_4KJJKNB5MZDV",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJJKNB5MZDV",
+  "campo": "paises",
+  "valor": [
+   "NO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Noruega"
+  }
+ },
+ {
+  "work_id": "w_4KJJKNB5MZDV",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KJJKNB5MZDV",
+  "campo": "sinopsis.es",
+  "valor": "Un hombre intenta encontrar su lugar entre sus amigos.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un hombre intenta encontrar su lugar entre sus amigos."
+  }
+ },
+ {
+  "work_id": "w_4KJJKNB5MZDV",
+  "campo": "sinopsis.en",
+  "valor": "A man is trying to find his place among friends.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A man is trying to find his place among friends."
+  }
+ },
+ {
+  "work_id": "w_4KJJKNB5MZDV",
+  "campo": "xref.tmdb",
+  "valor": 1699782,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1699782"
+  }
+ },
+ {
+  "work_id": "w_4KJJKNB5MZDV",
+  "campo": "xref.letterboxd",
+  "valor": "trio-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "trio-2026"
+  }
+ },
+ {
+  "work_id": "w_4KJJKNB5MZDV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/trio.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/trio.jpg"
+  }
+ }
+]

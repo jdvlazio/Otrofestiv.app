@@ -1,0 +1,36 @@
+[
+ {
+  "work_id": "w_R4MQS8RSGXBP",
+  "campo": "sinopsis.es",
+  "valor": "Una historia sobre una extraña isla y sus habitantes con cabezas de concreto, y un vertedero donde creían poder deshacerse de sus males, hasta que aparece una pequeña carranca de barro. Un cuento surrealista sobre cómo toda acción trae consecuencias.",
+  "motivo": "corrección de «en portugués, resto de página web»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "be9d47113cc9"
+  ],
+  "antes": {
+   "olhar-2026": "Una historia sobre una isla extraña y sus ciudadanos con cabezas de concreto, y un vertedero donde creían que podrían deshacerse de sus males, hasta que aparece una pequeña Carranca de barro. Un cuento surrealista sobre cómo toda acción genera consecuencias."
+  }
+ },
+ {
+  "work_id": "w_R4MQS8RSGXBP",
+  "campo": "sinopsis.en",
+  "valor": "A story about a strange island and its citizens with concrete heads, and a landfill where they believed they could rid themselves of all their evils, until a small clay Carranca appears. A surreal tale about how we forget that every action generates consequences.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "olhar-2026": "A story about a strange island and its citizens with concrete heads, and a landfill where they believed they could rid themselves of all their evils, until a small clay Carranca appears. A surreal tale about how we forget that every action generates consequences.\nVIDEOSTrailerBehind the Scenes"
+  }
+ },
+ {
+  "work_id": "w_R4MQS8RSGXBP",
+  "campo": "xref.tmdb",
+  "valor": 1688877,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/aterro-zeitgeist/"
+ }
+]

@@ -1,0 +1,125 @@
+[
+ {
+  "work_id": "w_4KHVJA5C3STR",
+  "campo": "directores",
+  "valor": [
+   "Edouard Delebecque",
+   "Giovanni Edwards",
+   "Amaury Da Costa",
+   "Erwan Annah",
+   "Yauhan Guo",
+   "Andrea Origlia"
+  ],
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS C",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Edouard Delebecque, Giovanni Edwards"
+  }
+ },
+ {
+  "work_id": "w_4KHVJA5C3STR",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHVJA5C3STR",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KHVJA5C3STR",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KHVJA5C3STR",
+  "campo": "sinopsis.es",
+  "valor": "Un gato al que acusan de asesinato tiene que alcanzar un tranvía para escapar de los perros policías que lo persiguen.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un gato al que acusan de asesinato tiene que alcanzar un tranvía para escapar de los perros policías que lo persiguen."
+  }
+ },
+ {
+  "work_id": "w_4KHVJA5C3STR",
+  "campo": "sinopsis.en",
+  "valor": "A cat framed for murder must catch a tram to escape a pack of police dogs.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A cat framed for murder must catch a tram to escape a pack of police dogs."
+  }
+ },
+ {
+  "work_id": "w_4KHVJA5C3STR",
+  "campo": "xref.tmdb",
+  "valor": 1817624,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1817624"
+  }
+ },
+ {
+  "work_id": "w_4KHVJA5C3STR",
+  "campo": "xref.letterboxd",
+  "valor": "cat-me-if-you-can",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "cat-me-if-you-can"
+  }
+ },
+ {
+  "work_id": "w_4KHVJA5C3STR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/cat-me-if-you-can.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/cat-me-if-you-can.jpg"
+  }
+ }
+]

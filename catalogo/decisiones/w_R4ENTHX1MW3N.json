@@ -1,0 +1,32 @@
+[
+ {
+  "work_id": "w_R4ENTHX1MW3N",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/entrelazadas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cineautopsia/entrelazadas-the-hardest-shapes.jpg",
+   "/assets/ficfusa-2026/entrelazadas.jpg"
+  ],
+  "antes": {
+   "cineautopsia-2026": "/assets/cineautopsia/entrelazadas-the-hardest-shapes.jpg",
+   "ficfusa-2026": "/assets/ficfusa-2026/entrelazadas.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4ENTHX1MW3N",
+  "campo": "sinopsis.en",
+  "valor": "Between the lines of affection and pain, a generational dispute unfolds over what it means to be a woman. A daughter faces the challenge of listening to her mother and grandmother with the aim of blurring the lines that define her identity.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "ficfusa-2026": "Between the lines of affection and pain, a generational dispute unfolds over what it means to be a woman. A daughter faces the challenge of listening to her mother and grandmother with the aim of blurring the lines that define her identity."
+  }
+ }
+]

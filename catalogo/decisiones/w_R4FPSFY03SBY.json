@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_R4FPSFY03SBY",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/mamut-2026/lolita-en-honda.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/mamut-2026/lolita-en-honda.jpg",
+   "/assets/midbo-2026/lolita-en-honda.jpg",
+   "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg"
+  ],
+  "antes": {
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+   "ficci-65": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+   "mamut-2026": "/assets/mamut-2026/lolita-en-honda.jpg",
+   "midbo-2026": "/assets/midbo-2026/lolita-en-honda.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4FPSFY03SBY",
+  "campo": "sinopsis.es",
+  "valor": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, mamut-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "192f0b18bd76",
+   "32755df4cf87",
+   "8dc88b52799d"
+  ],
+  "antes": {
+   "cinemancia-2026": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
+   "ficci-65": "Lolita en Honda es un viaje íntimo hacia la memoria familiar, donde Daniel Torres explora la infancia de su abuela para desentrañar las marcas del abandono y la violencia internalizada que moldearon su carácter.",
+   "mamut-2026": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
+   "midbo-2026": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez. En la película, Lolita recuerda su infancia en la ciudad de Honda, Tolima. A medida que explora ese recuerdo, el acto de recordar y recrear estas historias se convierte tanto en una ventana como en una barrera hacia el mundo que existe detrás de sus ojos. Así nos va llevando por un cuento de hadas en blanco y negro brumoso, manchado y lleno de grano, hacia el asombro y el miedo de una niña."
+  }
+ },
+ {
+  "work_id": "w_R4FPSFY03SBY",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1665546)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2026": 2026,
+   "ficci-65": 2026,
+   "mamut-2026": 2026,
+   "midbo-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4FPSFY03SBY",
+  "campo": "sinopsis.en",
+  "valor": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "ficci-65": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
+   "mamut-2026": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character.",
+   "midbo-2026": "Lolita en Honda is an intimate journey into family memory, in which Daniel Torres explores his grandmother's childhood to unravel the marks of abandonment and internalized violence that shaped her character."
+  }
+ }
+]

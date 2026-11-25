@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_8GJ9QKEV5RQC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/sierra-el-album-mortuorio.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bhff-2026/sierra-el-album-mortuorio.jpg",
+   "/assets/ficpa-2026/sierra-el-album-mortuorio.jpg",
+   "/assets/guatape-2026/sierra-el-album-mortuorio.jpg",
+   "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg"
+  ],
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/sierra-el-album-mortuorio.jpg",
+   "ficpa-2026": "/assets/ficpa-2026/sierra-el-album-mortuorio.jpg",
+   "guatape-2026": "/assets/guatape-2026/sierra-el-album-mortuorio.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg"
+  }
+ },
+ {
+  "work_id": "w_8GJ9QKEV5RQC",
+  "campo": "sinopsis.es",
+  "valor": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026, guatape-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0cd49e6f2d86",
+   "4ea37bd0f591",
+   "a62abde0c01c"
+  ],
+  "antes": {
+   "bhff-2026": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+   "ficpa-2026": "En Pueblo Blanco, la desaparición de una joven desata una cadena de violencia, fanatismo y corrupción. Entre secretos ocultos y una secta ancestral que resurge, la comunidad se enfrenta a una fuerza implacable que arrasa todo a su paso… porque lo que habita en la oscuridad alguna vez pidió ayuda. Largometraje Colombiano Documental",
+   "guatape-2026": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+   "villadelcine-2026": "La desaparición de Natalia rompe el silencio de Pueblo Blanco. Su búsqueda conduce a las autoridades hasta un bar clandestino, dos hermanas sometidas por su tío y un hombre herido hallado en el bosque. Pronto, la violencia, el fanatismo y una secta ancestral convertirán a todo el pueblo en un territorio de caza."
+  }
+ },
+ {
+  "work_id": "w_8GJ9QKEV5RQC",
+  "campo": "directores",
+  "valor": [
+   "Carlos Ortiz Alarcón"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "bhff-2026": "Carlos Ortiz Alarcón",
+   "ficpa-2026": "Carlos Ortiz Alarcón",
+   "guatape-2026": "Carlos Ortiz",
+   "villadelcine-2026": "Carlos Ortíz"
+  }
+ },
+ {
+  "work_id": "w_8GJ9QKEV5RQC",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "bhff-2026": "Terror",
+   "ficpa-2026": "Terror",
+   "guatape-2026": "Terror",
+   "villadelcine-2026": "Thriller Psicológico"
+  }
+ }
+]

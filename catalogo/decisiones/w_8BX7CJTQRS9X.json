@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7CJTQRS9X",
+  "campo": "directores",
+  "valor": [
+   "Yasemin Samdereli"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Yasemin Samdereli"
+  }
+ },
+ {
+  "work_id": "w_8BX7CJTQRS9X",
+  "campo": "anio",
+  "valor": 2011,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2011"
+  }
+ },
+ {
+  "work_id": "w_8BX7CJTQRS9X",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_8BX7CJTQRS9X",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX7CJTQRS9X",
+  "campo": "sinopsis.es",
+  "valor": "Tras 45 años en Alemania, el turco Hüseyin Yilmaz anuncia a su familia que compró casa en Turquía y deben volver para reformarla. La idea desata acaloradas discusiones. Su nieta Canan revela que está embarazada y, para consolar a su primo Cenk, humillado en la escuela por «extranjero», le cuenta una fantástica historia de cómo llegaron a Alemania.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Tras 45 años en Alemania, el turco Hüseyin Yilmaz anuncia a su familia que compró casa en Turquía y deben volver para reformarla. La idea desata acaloradas discusiones. Su nieta Canan revela que está embarazada y, para consolar a su primo Cenk, humillado en la escuela por «extranjero», le cuenta una fantástica historia de cómo llegaron a Alemania."
+  }
+ },
+ {
+  "work_id": "w_8BX7CJTQRS9X",
+  "campo": "sinopsis.en",
+  "valor": "After 45 years in Germany, Hüseyin Yilmaz, a Turk, tells his family he has bought a house in Turkey and they must go back to renovate it. Heated arguments follow. His granddaughter Canan reveals she is pregnant and, to comfort her cousin Cenk, humiliated at school as a “foreigner,” tells him a fantastic story of how they came to Germany.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "After 45 years in Germany, Hüseyin Yilmaz, a Turk, tells his family he has bought a house in Turkey and they must go back to renovate it. Heated arguments follow. His granddaughter Canan reveals she is pregnant and, to comfort her cousin Cenk, humiliated at school as a “foreigner,” tells him a fantastic story of how they came to Germany."
+  }
+ },
+ {
+  "work_id": "w_8BX7CJTQRS9X",
+  "campo": "xref.tmdb",
+  "valor": 63849,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "63849"
+  }
+ },
+ {
+  "work_id": "w_8BX7CJTQRS9X",
+  "campo": "xref.letterboxd",
+  "valor": "almanya-welcome-to-germany",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "almanya-welcome-to-germany"
+  }
+ },
+ {
+  "work_id": "w_8BX7CJTQRS9X",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/almanya-willkommen-in-deutschland.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/almanya-willkommen-in-deutschland.jpg"
+  }
+ }
+]

@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJ4B5TCZ32D",
+  "campo": "directores",
+  "valor": [
+   "Vitaliy Shushko"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Vitaliy Shushko"
+  }
+ },
+ {
+  "work_id": "w_4KJ4B5TCZ32D",
+  "campo": "anio",
+  "valor": 2016,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2016"
+  }
+ },
+ {
+  "work_id": "w_4KJ4B5TCZ32D",
+  "campo": "paises",
+  "valor": [
+   "RU"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rusia"
+  }
+ },
+ {
+  "work_id": "w_4KJ4B5TCZ32D",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KJ4B5TCZ32D",
+  "campo": "sinopsis.es",
+  "valor": "Un aventurero con un brazo biónico sigue un mapa en busca de un tesoro. Su recorrido lo lleva a una misteriosa torre, donde debe enfrentarse a máquinas, trampas y las consecuencias de su ambición.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un aventurero con un brazo biónico sigue un mapa en busca de un tesoro. Su recorrido lo lleva a una misteriosa torre, donde debe enfrentarse a máquinas, trampas y las consecuencias de su ambición."
+  }
+ },
+ {
+  "work_id": "w_4KJ4B5TCZ32D",
+  "campo": "sinopsis.en",
+  "valor": "An adventurer with a bionic arm follows a map in search of treasure. His journey leads to a mysterious tower, where he must confront machines, traps and the consequences of his ambition.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "An adventurer with a bionic arm follows a map in search of treasure. His journey leads to a mysterious tower, where he must confront machines, traps and the consequences of his ambition."
+  }
+ },
+ {
+  "work_id": "w_4KJ4B5TCZ32D",
+  "campo": "xref.tmdb",
+  "valor": 430609,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "430609"
+  }
+ },
+ {
+  "work_id": "w_4KJ4B5TCZ32D",
+  "campo": "xref.letterboxd",
+  "valor": "x-story",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "x-story"
+  }
+ },
+ {
+  "work_id": "w_4KJ4B5TCZ32D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/x-story.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/x-story.jpg"
+  }
+ }
+]

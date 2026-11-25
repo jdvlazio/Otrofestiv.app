@@ -1,0 +1,157 @@
+[
+ {
+  "work_id": "w_P1KWCFG616WE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/no-te-despiertes.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el afiche completo (el de Leviza, 2500x3465) llevado a 780x1170 sin recortar; el de Rionegro corta los créditos",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/no-te-despiertes.jpg",
+   "festicinerio-2026": "/assets/festicinerio-2026/no-te-despiertes.jpg",
+   "leviza-2026": "/assets/leviza/NoTeDespiertes.jpg"
+  },
+  "vistas": [
+   "/assets/festicineantioquia-2026/no-te-despiertes.jpg",
+   "/assets/festicinerio-2026/no-te-despiertes.jpg",
+   "/assets/leviza/NoTeDespiertes.jpg"
+  ],
+  "anteriores": [
+   {
+    "valor": {
+     "archivo": "/assets/festicinerio-2026/no-te-despiertes.jpg",
+     "veredicto": "oficial"
+    },
+    "motivo": "el que ya publica el almacén",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)",
+    "vistas": [
+     "/assets/festicineantioquia-2026/no-te-despiertes.jpg",
+     "/assets/leviza/NoTeDespiertes.jpg"
+    ]
+   }
+  ]
+ },
+ {
+  "work_id": "w_P1KWCFG616WE",
+  "campo": "directores",
+  "valor": [
+   "Hernán Velásquez Villa"
+  ],
+  "motivo": "la forma del PDF de Festicine, completa y con tildes",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "Hernán Velásquez",
+   "leviza-2026": "Hernán Velásquez",
+   "festicinerio-2026": "Hernán Velasquez Vila"
+  }
+ },
+ {
+  "work_id": "w_P1KWCFG616WE",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "ShortFilmWire (https://shortfilmwire.com/en/embedded/film/200126864/toto): Colombia, 2023, 8'32\", dirección Hernán Velásquez Villa, la misma; el 2026-02-07 de TMDB 1536959 puede ser un estreno posterior",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "2025",
+   "festicinerio-2026": "2026",
+   "leviza-2026": "2025"
+  },
+  "anteriores": [
+   {
+    "valor": 2025,
+    "motivo": "TMDB 1536959 no lo dice; almacén",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
+ },
+ {
+  "work_id": "w_P1KWCFG616WE",
+  "campo": "xref.letterboxd",
+  "valor": "no-te-despiertes",
+  "motivo": "TMDB 1536959",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "no-te-despiertes",
+   "festicinerio-2026": "no-te-despiertes",
+   "leviza-2026": "⚠️ LB PENDIENTE"
+  }
+ },
+ {
+  "work_id": "w_P1KWCFG616WE",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia",
+   "festicinerio-2026": "Colombia",
+   "leviza-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_P1KWCFG616WE",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama",
+   "festicinerio-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_P1KWCFG616WE",
+  "campo": "sinopsis.es",
+  "valor": "Sara está dibujando en casa. Cuando su padre llega del trabajo, empiezan a jugar, sin saber que su tranquilo ambiente familiar se verá inmerso en una situación en la que un juego y la inocencia de Sara serán de vital importancia.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Sara está dibujando en casa. Cuando su padre llega del trabajo, empiezan a jugar, sin saber que su tranquilo ambiente familiar se verá inmerso en una situación en la que un juego y la inocencia de Sara serán de vital importancia.",
+   "festicinerio-2026": "Sara está dibujando en casa. Cuando su padre llega del trabajo, empiezan a jugar, sin saber que su tranquilo ambiente familiar se verá inmerso en una situación en la que un juego y la inocencia de Sara serán de vital importancia."
+  }
+ },
+ {
+  "work_id": "w_P1KWCFG616WE",
+  "campo": "sinopsis.en",
+  "valor": "Sara is drawing at home. When her father arrives from work, they start playing, unaware that their peaceful family environment will soon be plunged into a situation in which a game and Sara's innocence will be of vital importance.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Sara is drawing at home. When her father arrives from work, they start playing, unaware that their peaceful family environment will soon be plunged into a situation in which a game and Sara's innocence will be of vital importance.",
+   "festicinerio-2026": "Sara is drawing at home. When her father arrives from work, they start playing, unaware that their peaceful family environment will soon be plunged into a situation in which a game and Sara's innocence will be of vital importance."
+  }
+ },
+ {
+  "work_id": "w_P1KWCFG616WE",
+  "campo": "xref.tmdb",
+  "valor": 1536959,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1536959",
+   "festicinerio-2026": "1536959"
+  }
+ }
+]

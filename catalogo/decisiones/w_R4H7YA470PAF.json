@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4H7YA470PAF",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/notre-corps.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficcali-2026/notre-corps.jpg",
+   "/assets/midbo-2026/notre-corps.jpg"
+  ],
+  "antes": {
+   "ficcali-2026": "/assets/ficcali-2026/notre-corps.jpg",
+   "midbo-2026": "/assets/midbo-2026/notre-corps.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4H7YA470PAF",
+  "campo": "sinopsis.es",
+  "valor": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, mediante la filmación de su diversidad, singularidad y belleza en todas las etapas de la vida. Se relatan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "057e52811515",
+   "69cf8d6e7d1b"
+  ],
+  "antes": {
+   "ficcali-2026": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, mediante la filmación de su diversidad, singularidad y belleza en todas las etapas de la vida. Se relatan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta.",
+   "midbo-2026": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, filmando su diversidad, singularidad y belleza en todas las etapas de la vida. Se despliegan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta."
+  }
+ }
+]

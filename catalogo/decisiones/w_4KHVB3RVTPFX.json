@@ -1,0 +1,92 @@
+[
+ {
+  "work_id": "w_4KHVB3RVTPFX",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "755053a14433"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Kevin, el niño del espacio",
+  "valor": "Junto a su grupo de amigxs, una adolescente documenta con su cámara sus días en un pequeño pueblo. Mientras todxs se preparan para un eclipse, su lente se detiene en Kevin, un chico enigmático que parece venir de otro lugar. Con el evento astronómico se revelará un suceso que cambiará la forma en que ella ve el universo.",
+  "original": "Junto a su grupo de amigxs, una adolescente documenta sus días en un pequeño pueblo a través de su cámara. Mientras todxs se preparan para un eclipse, el lente de esta joven se detiene en Kevin, un chico enigmático que parece venir de otro lugar. Con la llegada del evento astronómico se revelará un suceso que cambiará la forma en que ella ve el universo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "18757ed771d5"
+  }
+ },
+ {
+  "work_id": "w_4KHVB3RVTPFX",
+  "campo": "directores",
+  "valor": [
+   "Edward Gómez Granada"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Edward Gómez Granada"
+  }
+ },
+ {
+  "work_id": "w_4KHVB3RVTPFX",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHVB3RVTPFX",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KHVB3RVTPFX",
+  "campo": "sinopsis.en",
+  "valor": "Along with her group of friends, a teenager documents her days in a small town through her camera. As everyone prepares for an eclipse, this young woman’s lens focuses on Kevin, an enigmatic boy who seems to come from somewhere else. With the arrival of the astronomical event, a truth will be revealed that will change the way she sees the universe.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Along with her group of friends, a teenager documents her days in a small town through her camera. As everyone prepares for an eclipse, this young woman’s lens focuses on Kevin, an enigmatic boy who seems to come from somewhere else. With the arrival of the astronomical event, a truth will be revealed that will change the way she sees the universe."
+  }
+ },
+ {
+  "work_id": "w_4KHVB3RVTPFX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/kevin-el-nino-del-espacio.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/kevin-el-nino-del-espacio.jpg"
+  }
+ }
+]

@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_R4QPXCK0DZRA",
+  "campo": "sinopsis.es",
+  "valor": "Cuando las demás alzan el vuelo y la dejan atrás, una joven mariquita descubre que a veces en la vida hace falta una mano amiga… u ocho.",
+  "motivo": "la publicada contaba otra película; desde la ficha oficial",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («Aprobadas»)",
+  "antes": {
+   "tribeca-2026": "Henry, joven mochilero, se hace cargo inadvertidamente de la maleta de un desconocido en el aeropuerto y de inmediato se ve rodeado de policías que lo acusan de terrorismo."
+  },
+  "vistas": [
+   "bafd24273b66"
+  ],
+  "fuente": "https://tribecafilm.com/films/grounded-2026",
+  "titulo": "Grounded"
+ },
+ {
+  "work_id": "w_R4QPXCK0DZRA",
+  "campo": "sinopsis.en",
+  "valor": "Left behind as others take flight, a young ladybird discovers that sometimes in life you need a helping hand… or eight.",
+  "motivo": "la publicada contaba otra película; desde la ficha oficial",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («Aprobadas»)",
+  "antes": {
+   "tribeca-2026": "Young backpacker Henry inadvertently takes charge of a stranger's suitcase at the airport — and is immediately surrounded by police who accuse him of terrorism."
+  },
+  "fuente": "https://tribecafilm.com/films/grounded-2026",
+  "titulo": "Grounded"
+ },
+ {
+  "work_id": "w_R4QPXCK0DZRA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/grounded.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "afiche vertical contra fotograma apaisado (Vertical sobre still)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/grounded.jpg",
+   "tribeca-2026": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/7017/large_Grounded-Clean-16x9-01.jpg"
+  },
+  "vistas": [
+   "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/7017/large_Grounded-Clean-16x9-01.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4QPXCK0DZRA",
+  "campo": "directores",
+  "valor": [
+   "Chris Callus"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Chris Callus",
+   "tribeca-2026": "Chris Callus"
+  }
+ },
+ {
+  "work_id": "w_R4QPXCK0DZRA",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "tribeca-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4QPXCK0DZRA",
+  "campo": "paises",
+  "valor": [
+   "NZ"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Nueva Zelanda",
+   "tribeca-2026": "Nueva Zelanda"
+  }
+ },
+ {
+  "work_id": "w_R4QPXCK0DZRA",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación",
+   "tribeca-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4QPXCK0DZRA",
+  "campo": "xref.tmdb",
+  "valor": 1700763,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1700763"
+  }
+ },
+ {
+  "work_id": "w_R4QPXCK0DZRA",
+  "campo": "xref.letterboxd",
+  "valor": "grounded-2026-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "grounded-2026-1",
+   "tribeca-2026": "grounded-2026-1"
+  }
+ }
+]

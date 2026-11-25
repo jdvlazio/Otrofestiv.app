@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HAG82W8EJY",
+  "campo": "directores",
+  "valor": [
+   "Gillo Pontecorvo"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 336",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=336",
+  "antes": {
+   "ficci-65": "Sébastien Vaniček"
+  }
+ },
+ {
+  "work_id": "w_R4HAG82W8EJY",
+  "campo": "anio",
+  "valor": 1969,
+  "motivo": "catálogo oficial de FICCI 65, p. 336",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=336",
+  "antes": {
+   "ficci-65": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HAG82W8EJY",
+  "campo": "paises",
+  "valor": [
+   "IT"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 336",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=336",
+  "antes": {
+   "ficci-65": "Italia"
+  }
+ },
+ {
+  "work_id": "w_R4HAG82W8EJY",
+  "campo": "sinopsis.es",
+  "valor": "En una isla ficticia del Caribe, José Dolores encarna la rebelión. Frente a él, un personaje interpretado por Marlon Brando encarna la racionalidad colonial: cálculo, estrategia y manipulación. El enfrentamiento entre una fuerza insurgente y un poder que busca organizarla muestra cómo el imperio puede inducir, dirigir y reabsorber una revolución.",
+  "motivo": "catálogo oficial de FICCI 65, p. 336",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=336",
+  "antes": {
+   "ficci-65": "Realizada en 1969 por Gillo Pontecorvo, Queimada! propone una de las representaciones más incisivas del colonialismo en el cine moderno."
+  }
+ },
+ {
+  "work_id": "w_R4HAG82W8EJY",
+  "campo": "sinopsis.en",
+  "valor": "On a fictional Caribbean island, José Dolores embodies rebellion. Opposite him, a character played by Marlon Brando embodies colonial rationality: calculation, strategy and manipulation. The clash between an insurgent force and a power seeking to organize it shows how empire can induce, direct and reabsorb a revolution.",
+  "motivo": "catálogo oficial de FICCI 65, p. 336",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=336",
+  "antes": {
+   "ficci-65": "Made in 1969 by Gillo Pontecorvo, Burn! offers one of modern cinema's most incisive representations of colonialism."
+  }
+ },
+ {
+  "work_id": "w_R4HAG82W8EJY",
+  "campo": "xref.tmdb",
+  "valor": 42617,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/42617"
+ }
+]

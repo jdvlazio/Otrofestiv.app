@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_7JCW8FAXAVZN",
+  "campo": "directores",
+  "valor": [
+   "Juan Cruz"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Juan Cruz"
+  }
+ },
+ {
+  "work_id": "w_7JCW8FAXAVZN",
+  "campo": "paises",
+  "valor": [
+   "PR",
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Puerto Rico, Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCW8FAXAVZN",
+  "campo": "sinopsis.es",
+  "valor": "Este videoclip relaciona la pesca del Caribe de Puerto Rico y La Guajira, y persigue los pasos de Neymar, un niño de La Guajira que aprende la pesca desde temprana edad.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Este videoclip relaciona la pesca del Caribe de Puerto Rico y La Guajira, y persigue los pasos de Neymar, un niño de La Guajira que aprende la pesca desde temprana edad."
+  }
+ },
+ {
+  "work_id": "w_7JCW8FAXAVZN",
+  "campo": "sinopsis.en",
+  "valor": "This music video links fishing in the Caribbean of Puerto Rico and La Guajira, following Neymar, a boy from La Guajira who learns to fish from an early age.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "This music video links fishing in the Caribbean of Puerto Rico and La Guajira, following Neymar, a boy from La Guajira who learns to fish from an early age."
+  }
+ },
+ {
+  "work_id": "w_7JCW8FAXAVZN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/clip-el-pescador.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/clip-el-pescador.jpg"
+  }
+ }
+]

@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KHR0H0FQE9K",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "2d1de599a0c2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El dia de l’ós",
+  "valor": "Es el día de la fiesta del oso y el pueblo se prepara para la llegada de la bestia. Martí, sobrepasado por el bullicio de la ciudad, llega tarde a recoger a su hermano pequeño, Ángel, para quien convivir con él es un ejercicio de paciencia. Un retrato visceral y poético del vínculo masculino, hecho de golpes, silencios y, a ratos, amor salvaje.",
+  "original": "Es el día de la fiesta del oso y el pueblo se prepara para la llegada de la bestia. Martí, sobrepasado por el bullicio de la ciudad, llega tarde a recoger a su hermano pequeño, Ángel. Para Ángel, convivir con su hermano ha sido siempre un ejercicio de paciencia. Un retrato visceral y poético del vínculo masculino, hecho de empujones, golpes, silencios y, a ratos, una forma de amor salvaje.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "ad8ca7584db6"
+  }
+ },
+ {
+  "work_id": "w_4KHR0H0FQE9K",
+  "campo": "directores",
+  "valor": [
+   "Pau Peidro Vancells"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Pau Peidro Vancells"
+  }
+ },
+ {
+  "work_id": "w_4KHR0H0FQE9K",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHR0H0FQE9K",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KHR0H0FQE9K",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KHR0H0FQE9K",
+  "campo": "sinopsis.en",
+  "valor": "It’s The Day of the Bear Festival, and the town is bracing for the arrival of the beast. Martí, overwhelmed by the chaos of the city, arrives late to pick up his younger brother, Ángel. For Ángel, living with his brother has always tested his patience. A visceral and poetic portrait of masculine connection—built from blows, shoves, long silences, and, at times, a kind of untamed love.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "It’s The Day of the Bear Festival, and the town is bracing for the arrival of the beast. Martí, overwhelmed by the chaos of the city, arrives late to pick up his younger brother, Ángel. For Ángel, living with his brother has always tested his patience. A visceral and poetic portrait of masculine connection—built from blows, shoves, long silences, and, at times, a kind of untamed love."
+  }
+ },
+ {
+  "work_id": "w_4KHR0H0FQE9K",
+  "campo": "xref.tmdb",
+  "valor": 1808023,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1808023"
+  }
+ },
+ {
+  "work_id": "w_4KHR0H0FQE9K",
+  "campo": "xref.letterboxd",
+  "valor": "the-day-of-the-bear",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-day-of-the-bear"
+  }
+ },
+ {
+  "work_id": "w_4KHR0H0FQE9K",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/el-dia-de-l-os.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/el-dia-de-l-os.jpg"
+  }
+ }
+]

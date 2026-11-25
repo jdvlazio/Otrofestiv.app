@@ -1,0 +1,27 @@
+[
+ {
+  "work_id": "w_R4GEK9F91A0P",
+  "campo": "sinopsis.es",
+  "valor": "Una emisora de radio nocturna, un presentador cadavérico y cinco invitados con cinco historias insólitas de terror y ciencia ficción son el centro de la adaptación cinematográfica de la serie animada de culto La frecuencia Kirlian. ¿Qué le ocurrió realmente aquella noche a la emisora de radio, a la ciudad y a sus habitantes? Y lo más importante… ¿Por qué?",
+  "motivo": "corrección de «habla del evento»: texto del festival sin lo que no era sinopsis",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "ab5ee49b8473"
+  ],
+  "antes": {
+   "fantasmagoria-2026": "Una emisora de radio nocturna, un presentador cadavérico y cinco invitados con cinco historias insólitas de terror y ciencia ficción son el centro de la adaptación cinematográfica de la serie animada de culto La frecuencia Kirlian. ¿Qué le ocurrió realmente aquella noche a la emisora de radio, a la ciudad y a sus habitantes? Y lo más importante… ¿Por qué? Q&A."
+  }
+ },
+ {
+  "work_id": "w_R4GEK9F91A0P",
+  "campo": "sinopsis.en",
+  "valor": "A late-night radio station, a cadaverous host, and five guests with five unusual stories of horror and science fiction are the focus of the film adaptation of the cult animated series The Kirlian Frequency. What really happened that night to the radio station, the city, and its inhabitants? And most importantly... Why?",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "fantasmagoria-2026": "A late-night radio station, a cadaverous host, and five guests with five unusual stories of horror and science fiction are the focus of the film adaptation of the cult animated series The Kirlian Frequency.  What really happened that night to the radio station, the city, and its inhabitants? And most importantly... Why?"
+  }
+ }
+]

@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HEVRVAR1RQ",
+  "campo": "directores",
+  "valor": [
+   "Valentina Rosset"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 85",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=85"
+ },
+ {
+  "work_id": "w_R4HEVRVAR1RQ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 85",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=85"
+ },
+ {
+  "work_id": "w_R4HEVRVAR1RQ",
+  "campo": "paises",
+  "valor": [
+   "BR",
+   "US"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 85",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=85",
+  "antes": {
+   "ficci-65": "Brasil, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4HEVRVAR1RQ",
+  "campo": "sinopsis.es",
+  "valor": "Una mujer recorre una ciudad ajena como si entre sueños hubiese naufragado en ella. Intenta encontrar a un hombre difuso sin más herramientas que su dispersa atención, pero la vaga imagen de él se difumina entre los autos, las calles mudas y un canto desconsolado. La envuelve la tragedia de la extrañeza.",
+  "motivo": "catálogo oficial de FICCI 65, p. 85",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=85"
+ },
+ {
+  "work_id": "w_R4HEVRVAR1RQ",
+  "campo": "sinopsis.en",
+  "valor": "A woman wanders through a foreign city as if she had washed up there in a dream. She tries to find a vague man with nothing but her scattered attention, yet his faint image fades amid the cars, the silent streets and a heart-wrenching song. The tragedy of strangeness envelops her.",
+  "motivo": "catálogo oficial de FICCI 65, p. 85",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=85"
+ },
+ {
+  "work_id": "w_R4HEVRVAR1RQ",
+  "campo": "xref.tmdb",
+  "valor": 1649745,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1649745"
+ }
+]

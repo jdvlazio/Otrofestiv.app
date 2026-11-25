@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_4KFDNC0RT4QV",
+  "campo": "directores",
+  "valor": [
+   "Álex Salu",
+   "Arturo Lacal",
+   "Jordi Jiménez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Álex Salu, Arturo Lacal, Jordi Jiménez"
+  }
+ },
+ {
+  "work_id": "w_4KFDNC0RT4QV",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_4KFDNC0RT4QV",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KFDNC0RT4QV",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KFDNC0RT4QV",
+  "campo": "sinopsis.es",
+  "valor": "En un archipiélago de casas flotantes, Gilbert reparte paquetes en su góndola y Sullivan toca la trompeta. Un día, Gilbert decide quedarse con uno de los envíos.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En un archipiélago de casas flotantes, Gilbert reparte paquetes en su góndola y Sullivan toca la trompeta. Un día, Gilbert decide quedarse con uno de los envíos."
+  }
+ },
+ {
+  "work_id": "w_4KFDNC0RT4QV",
+  "campo": "sinopsis.en",
+  "valor": "In an archipelago of floating houses, Gilbert delivers parcels by gondola and Sullivan plays the trumpet. One day, Gilbert decides to keep a package.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In an archipelago of floating houses, Gilbert delivers parcels by gondola and Sullivan plays the trumpet. One day, Gilbert decides to keep a package."
+  }
+ },
+ {
+  "work_id": "w_4KFDNC0RT4QV",
+  "campo": "xref.tmdb",
+  "valor": 1364216,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1364216"
+  }
+ },
+ {
+  "work_id": "w_4KFDNC0RT4QV",
+  "campo": "xref.letterboxd",
+  "valor": "gilbert-2024",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "gilbert-2024"
+  }
+ },
+ {
+  "work_id": "w_4KFDNC0RT4QV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/gilbert.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/gilbert.jpg"
+  }
+ }
+]

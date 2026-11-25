@@ -1,0 +1,87 @@
+[
+ {
+  "work_id": "w_R4HCNBABG3FG",
+  "campo": "directores",
+  "valor": [
+   "Marbel Ina Vanegas Jusayu"
+  ],
+  "motivo": "TMDB 1668893",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "ficci-65": "Marbel Ina Vanegas Jusayu",
+   "ficdeh-2026": "Marbel Ina Vanegas Jusayu",
+   "ficica-2026": "Marbel Ina Vanegas Jusayu",
+   "leviza-2026": "Marbel Vanegas Jusayu"
+  }
+ },
+ {
+  "work_id": "w_R4HCNBABG3FG",
+  "campo": "xref.tmdb",
+  "valor": 1668893,
+  "motivo": "TMDB, misma directora",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "ficci-65": 1668893,
+   "ficdeh-2026": 1668893,
+   "ficica-2026": 1668893,
+   "leviza-2026": 1668893
+  }
+ },
+ {
+  "work_id": "w_R4HCNBABG3FG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficica-2026/pawa.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/pawa.jpg",
+   "/assets/ficica-2026/pawa.jpg",
+   "/assets/leviza/Pawa.jpeg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Portada%20Pawa%20png%20-%20Aguacate%20Audiovisual.jpg?itok=qWnn1F5-"
+  ],
+  "antes": {
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Portada%20Pawa%20png%20-%20Aguacate%20Audiovisual.jpg?itok=qWnn1F5-",
+   "ficdeh-2026": "/assets/ficdeh/pawa.jpg",
+   "ficica-2026": "/assets/ficica-2026/pawa.jpg",
+   "leviza-2026": "/assets/leviza/Pawa.jpeg"
+  }
+ },
+ {
+  "work_id": "w_R4HCNBABG3FG",
+  "campo": "sinopsis.es",
+  "valor": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficci-65, ficdeh-2026, leviza-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "52dd1c0e54c8",
+   "bb49e1fde40d"
+  ],
+  "antes": {
+   "ficci-65": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
+   "ficdeh-2026": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida.",
+   "ficica-2026": "En una mañana tranquila en una ranchería en La Guajira, Indira (9) da de comer a los pavos y gallinas, debido a la sequía e inicio de clases Josefa, (60) abuela de Indira, emprende un viaje junto a su nieta a las comunidades aledañas, para tratar de vender a Taata, el Pavo más grande y así poder comprar útiles escolares y comida.  En su travesía, en una parada de tienda en medio del desierto, se encuentran a su único cliente del día, un chofer de un volteo que les pide descuento para comprarles el pavo, en medio de la burla por no saber hablar bien el español.",
+   "leviza-2026": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida."
+  }
+ },
+ {
+  "work_id": "w_R4HCNBABG3FG",
+  "campo": "xref.letterboxd",
+  "valor": "pawa",
+  "motivo": "comprobado en Letterboxd por su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (plan aprobado por Juan)",
+  "antes": {
+   "ficci-65": "pawa",
+   "ficdeh-2026": "pawa",
+   "ficica-2026": "pawa",
+   "leviza-2026": "⚠️ LB PENDIENTE"
+  }
+ }
+]

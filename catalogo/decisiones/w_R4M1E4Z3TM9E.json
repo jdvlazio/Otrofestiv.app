@@ -1,0 +1,56 @@
+[
+ {
+  "work_id": "w_R4M1E4Z3TM9E",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/comparsa.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficfusa-2026/comparsa.jpg",
+   "/assets/midbo-2026/comparsa.jpg",
+   "/assets/villadelcine-2026/comparsa.jpg"
+  ],
+  "antes": {
+   "ficfusa-2026": "/assets/ficfusa-2026/comparsa.jpg",
+   "midbo-2026": "/assets/midbo-2026/comparsa.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/comparsa.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4M1E4Z3TM9E",
+  "campo": "sinopsis.es",
+  "valor": "En Ciudad Peronia, Guatemala, las hermanas Lesli y Lupe convierten el arte en una forma de cuidado y resistencia. Tras la muerte de 41 niñas en un hogar estatal, reúnen a jóvenes de su comunidad en una comparsa de títeres, fuego y tambores para reclamar las calles y enfrentar la violencia contra las mujeres.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (villadelcine-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "95a8982d75a9",
+   "97199288a867"
+  ],
+  "antes": {
+   "ficfusa-2026": "«Comparsa» sumerge por completo al público en el mundo intenso de Ciudad Peronia, Guatemala, donde las hermanas Lesli y Lupe utilizan el arte para movilizar a la juventud local y sanar heridas profundas. Tras la muerte de 41 niñas en un «Hogar Seguro» administrado por el Estado, y ante la negativa del gobierno a actuar, las hermanas responden con una comparsa comunitaria: una vibrante intervención callejera con marionetas gigantes, zanqueros que lanzan fuego y tambores atronadores. Con una valentía profundamente vulnerable, denuncian una estructura de poder que permite y perpetra la violencia contra las mujeres, y hablan abiertamente de la que ellas mismas han sufrido en su hogar. Su movimiento juvenil toma las calles, enfrentando la corrupción y reclamando el espacio público para mujeres y niñas. Al enraizar su lucha en la alegría y el cuidado colectivo, encuentran también sanación personal. «Comparsa» se construye sobre una relación de quince años entre las protagonistas y el equipo de realización, y ofrece un retrato conmovedor de la sororidad, la construcción de paz y el poder transformador del arte.",
+   "midbo-2026": "«Comparsa» sumerge por completo al público en el mundo intenso de Ciudad Peronia, Guatemala, donde las hermanas Lesli y Lupe utilizan el arte para movilizar a la juventud local y sanar heridas profundas. Tras la muerte de 41 niñas en un «Hogar Seguro» administrado por el Estado, y ante la negativa del gobierno a actuar, las hermanas responden con una comparsa comunitaria: una vibrante intervención callejera con marionetas gigantes, zanqueros que lanzan fuego y tambores atronadores. Con una valentía profundamente vulnerable, denuncian una estructura de poder que permite y perpetra la violencia contra las mujeres, y hablan abiertamente de la que ellas mismas han sufrido en su hogar. Su movimiento juvenil toma las calles, enfrentando la corrupción y reclamando el espacio público para mujeres y niñas. Al enraizar su lucha en la alegría y el cuidado colectivo, encuentran también sanación personal. «Comparsa» se construye sobre una relación de quince años entre las protagonistas y el equipo de realización, y ofrece un retrato conmovedor de la sororidad, la construcción de paz y el poder transformador del arte.",
+   "villadelcine-2026": "En Ciudad Peronia, Guatemala, las hermanas Lesli y Lupe convierten el arte en una forma de cuidado y resistencia. Tras la muerte de 41 niñas en un hogar estatal, reúnen a jóvenes de su comunidad en una comparsa de títeres, fuego y tambores para reclamar las calles y enfrentar la violencia contra las mujeres."
+  }
+ },
+ {
+  "work_id": "w_R4M1E4Z3TM9E",
+  "campo": "paises",
+  "valor": [
+   "GT",
+   "US"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1480404)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficfusa-2026": "Guatemala, Estados Unidos",
+   "midbo-2026": "Guatemala, Estados Unidos",
+   "villadelcine-2026": "Guatemala y Estados Unidos"
+  }
+ }
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "work_id": "w_R4MQS4GWNP6E",
+  "campo": "sinopsis.es",
+  "valor": "Un encuentro casual se convierte en un trío; el trío, en una orgía. En esta odisea de realismo mágico en un cuarto gay, Matias recuerda sus encuentros pasados y considera su futuro mientras conversa con una figura ficticia de la literatura brasileña.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "559c0fb1b831"
+  ],
+  "antes": {
+   "olhar-2026": "Un encuentro casual se convierte en un ménage à trois; el ménage à trois se convierte en una orgía. En esta odisea de realismo mágico en una habitación gay, Matias rememora sus encuentros pasados y considera su futuro, mientras conversa con una figura ficticia de la literatura brasileña."
+  }
+ },
+ {
+  "work_id": "w_R4MQS4GWNP6E",
+  "campo": "xref.tmdb",
+  "valor": 1568085,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-passion-according-to-ghb/"
+ },
+ {
+  "work_id": "w_R4MQS4GWNP6E",
+  "campo": "directores",
+  "valor": [
+   "Gustavo Vinagre",
+   "Vinicius Couto"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]
