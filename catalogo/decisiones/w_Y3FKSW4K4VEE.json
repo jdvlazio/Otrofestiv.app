@@ -24,5 +24,111 @@
   "antes": {
    "cajica-2026": "Gabriel, un excapitán del Ejército que ve cómo su hija mayor muere día a día por una enfermedad terminal, se entera de uno de los secretos mejor guardados de la historia: una cura milagrosa llamada «la sangre de Dios», que resguarda una tribu que conoce el lugar exacto donde se obtiene. Decide ir por ella como último recurso, pero un empresario farmacéutico corrupto también se entera y está dispuesto a exterminar a quien se le atraviese. El infierno comienza cuando los tres grupos se encuentran en la selva."
   }
+ },
+ {
+  "work_id": "w_Y3FKSW4K4VEE",
+  "campo": "directores",
+  "valor": [
+   "Lucho Velasco"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Lucho Velasco"
+  }
+ },
+ {
+  "work_id": "w_Y3FKSW4K4VEE",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_Y3FKSW4K4VEE",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_Y3FKSW4K4VEE",
+  "campo": "generos",
+  "valor": [
+   "Acción"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Acción"
+  }
+ },
+ {
+  "work_id": "w_Y3FKSW4K4VEE",
+  "campo": "sinopsis.en",
+  "valor": "Gabriel’s eldest daughter is dying day by day of a terminal illness. A former army captain, he learns of a miraculous cure guarded by a tribe, “the blood of God”, and decides to go after it as a last resort. But a corrupt pharmaceutical businessman also hears of it and is willing to wipe out anyone who gets in his way.",
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Gabriel’s eldest daughter is dying day by day of a terminal illness. A former army captain, he learns of a miraculous cure guarded by a tribe, “the blood of God”, and decides to go after it as a last resort. But a corrupt pharmaceutical businessman also hears of it and is willing to wipe out anyone who gets in his way."
+  }
+ },
+ {
+  "work_id": "w_Y3FKSW4K4VEE",
+  "campo": "xref.tmdb",
+  "valor": 1834002,
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "1834002"
+  }
+ },
+ {
+  "work_id": "w_Y3FKSW4K4VEE",
+  "campo": "xref.letterboxd",
+  "valor": "la-sangre-de-dios",
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "la-sangre-de-dios"
+  }
+ },
+ {
+  "work_id": "w_Y3FKSW4K4VEE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cajica-2026/la-sangre-de-dios.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "/assets/cajica-2026/la-sangre-de-dios.jpg"
+  }
  }
 ]

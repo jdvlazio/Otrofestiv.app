@@ -1,0 +1,30 @@
+[
+ {
+  "work_id": "w_Y3FKV78VXJBR",
+  "campo": "directores",
+  "valor": [
+   "Jhojan Fetecua"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Jhojan Fetecua"
+  }
+ },
+ {
+  "work_id": "w_Y3FKV78VXJBR",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Colombia"
+  }
+ }
+]

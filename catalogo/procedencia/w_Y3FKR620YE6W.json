@@ -8,11 +8,15 @@
   "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25"
  }
 }
