@@ -1775,7 +1775,18 @@
      "work_id": "w_R4HBN9AY1HWQ",
      "synopsis": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención.",
      "synopsis_lang": "es",
-     "synopsis_en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption."
+     "synopsis_en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption.",
+     "genre": "Drama",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HBN9AY1HWQ (bogoshorts-2026, cinetoro-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4HBN9AY1HWQ (bogoshorts-2026, cinetoro-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "the-devils-throat",
+     "director": "Mateo Ramírez",
+     "year": 2026,
+     "tmdb_id": 1641446
     },
     {
      "title": "Las formas de la magia",
@@ -1833,10 +1844,11 @@
     },
     {
      "title": "Todas las manos que solté",
+     "title_en": "All the Hands I’ve Let Go",
      "country": "Colombia, Francia",
      "duration": "23 min",
-     "posterSource": "custom",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0",
+     "posterSource": "oficial",
+     "poster": "/assets/bogoshorts-2026/todas-las-manos-que-solte.jpg",
      "work_id": "w_R4HBN9HF0D5J",
      "flags": "🇨🇴🇫🇷",
      "synopsis": "A raíz de la muerte de su madre, Laura Chará acude a la casa de su abuela y su tía para intentar reconstruir un relato que dé sentido a la pérdida. Ante el hermetismo de la abuela, la indagación de la nieta se desplaza hacia una contemplación más atenta del espacio y de un silencio significativo.",
@@ -1844,7 +1856,15 @@
      "director": "Laura Chará",
      "year": 2026,
      "synopsis_en": "Following her mother's death, Laura Chará goes to her grandmother's and aunt's house to try to piece together a narrative that gives meaning to the loss. Faced with her grandmother's reticence, the granddaughter's inquiry shifts toward a more attentive contemplation of the space and of a meaningful silence.",
-     "tmdb_id": 1645142
+     "tmdb_id": 1645142,
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HBN9HF0D5J (bogoshorts-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4HBN9HF0D5J (bogoshorts-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "all-the-hands-ive-let-go"
     },
     {
      "title": "Ya se ven los tigres en la lluvia",
@@ -3131,9 +3151,9 @@
      "title_en": "The Hunter",
      "lbSlug": "the-hunter-2026-1",
      "year": 2026,
-     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revela la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revela la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros, hasta las profundidades de la tierra y de sí mismo. El poder está en el significado que otorga a lo que encuentra.",
      "synopsis_lang": "es",
-     "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
+     "synopsis_en": "In a rolling landscape, the earth is written and rewritten by The Hunter. His bond with the land reveals the essence of a geography. His obsession with gold leads him on an unrelenting quest for treasures. The power lies in the meaning he assigns to what he finds. In the depths of the earth, and of himself, he discovers the truth that allows him to perpetuate his search.",
      "director": "Luciana Riso Soto, Manuel Villa",
      "tmdb_id": 1668874
     },
@@ -3213,7 +3233,7 @@
      },
      "lbSlug": "lejania-2026",
      "year": 2026,
-     "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
+     "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano Pacífico, donde, según se dice, los visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras, la realidad se desdibuja y el tiempo se deshace.",
      "synopsis_lang": "es",
      "director": "Daniel Velásquez Patarroyo",
      "tmdb_id": 1668904,
@@ -3605,7 +3625,7 @@
     },
     {
      "title": "Suite intercontinental",
-     "country": "Colombia",
+     "country": "Colombia, Francia",
      "duration": "24 min",
      "posterSource": "oficial",
      "poster": "/assets/popayan-2026/suite-intercontinental.jpg",
@@ -3622,11 +3642,12 @@
       }
      },
      "year": 2026,
-     "synopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
+     "synopsis": "Desde el piso treinta de una torre de vidrio, Margot observa una Cali agitada por la tensión. Deslumbrada por el sol tropical, recorre la ciudad ajena a lo que la rodea y sus fantasías se confunden con la realidad. En la calle cruza la mirada con un hombre de torso desnudo y ojos penetrantes. Lo sigue cada día y se acerca al objeto de su deseo.",
      "synopsis_lang": "es",
      "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
      "director": "Lola Tartane",
-     "tmdb_id": 1668898
+     "tmdb_id": 1668898,
+     "flags": "🇨🇴🇫🇷"
     }
    ],
    "id": "f_8277fe808d"
@@ -4751,7 +4772,18 @@
      "work_id": "w_R4HBN9AY1HWQ",
      "synopsis": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención.",
      "synopsis_lang": "es",
-     "synopsis_en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption."
+     "synopsis_en": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption.",
+     "genre": "Drama",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HBN9AY1HWQ (bogoshorts-2026, cinetoro-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4HBN9AY1HWQ (bogoshorts-2026, cinetoro-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "the-devils-throat",
+     "director": "Mateo Ramírez",
+     "year": 2026,
+     "tmdb_id": 1641446
     },
     {
      "title": "Las formas de la magia",
@@ -4809,10 +4841,11 @@
     },
     {
      "title": "Todas las manos que solté",
+     "title_en": "All the Hands I’ve Let Go",
      "country": "Colombia, Francia",
      "duration": "23 min",
-     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0",
-     "posterSource": "custom",
+     "poster": "/assets/bogoshorts-2026/todas-las-manos-que-solte.jpg",
+     "posterSource": "oficial",
      "work_id": "w_R4HBN9HF0D5J",
      "flags": "🇨🇴🇫🇷",
      "synopsis": "A raíz de la muerte de su madre, Laura Chará acude a la casa de su abuela y su tía para intentar reconstruir un relato que dé sentido a la pérdida. Ante el hermetismo de la abuela, la indagación de la nieta se desplaza hacia una contemplación más atenta del espacio y de un silencio significativo.",
@@ -4820,7 +4853,15 @@
      "director": "Laura Chará",
      "year": 2026,
      "synopsis_en": "Following her mother's death, Laura Chará goes to her grandmother's and aunt's house to try to piece together a narrative that gives meaning to the loss. Faced with her grandmother's reticence, the granddaughter's inquiry shifts toward a more attentive contemplation of the space and of a meaningful silence.",
-     "tmdb_id": 1645142
+     "tmdb_id": 1645142,
+     "genre": "Documental",
+     "_src": {
+      "heredado": {
+       "genre": "catálogo w_R4HBN9HF0D5J (bogoshorts-2026, ficci-65)",
+       "lbSlug": "catálogo w_R4HBN9HF0D5J (bogoshorts-2026, ficci-65)"
+      }
+     },
+     "lbSlug": "all-the-hands-ive-let-go"
     },
     {
      "title": "Ya se ven los tigres en la lluvia",
@@ -6009,9 +6050,9 @@
      "title_en": "The Hunter",
      "lbSlug": "the-hunter-2026-1",
      "year": 2026,
-     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revela la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revela la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros, hasta las profundidades de la tierra y de sí mismo. El poder está en el significado que otorga a lo que encuentra.",
      "synopsis_lang": "es",
-     "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
+     "synopsis_en": "In a rolling landscape, the earth is written and rewritten by The Hunter. His bond with the land reveals the essence of a geography. His obsession with gold leads him on an unrelenting quest for treasures. The power lies in the meaning he assigns to what he finds. In the depths of the earth, and of himself, he discovers the truth that allows him to perpetuate his search.",
      "director": "Luciana Riso Soto, Manuel Villa",
      "tmdb_id": 1668874
     },
@@ -6091,7 +6132,7 @@
      },
      "lbSlug": "lejania-2026",
      "year": 2026,
-     "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
+     "synopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano Pacífico, donde, según se dice, los visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras, la realidad se desdibuja y el tiempo se deshace.",
      "synopsis_lang": "es",
      "director": "Daniel Velásquez Patarroyo",
      "tmdb_id": 1668904,
@@ -6718,7 +6759,7 @@
     },
     {
      "title": "Suite intercontinental",
-     "country": "Colombia",
+     "country": "Colombia, Francia",
      "duration": "24 min",
      "poster": "/assets/popayan-2026/suite-intercontinental.jpg",
      "posterSource": "oficial",
@@ -6735,11 +6776,12 @@
       }
      },
      "year": 2026,
-     "synopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
+     "synopsis": "Desde el piso treinta de una torre de vidrio, Margot observa una Cali agitada por la tensión. Deslumbrada por el sol tropical, recorre la ciudad ajena a lo que la rodea y sus fantasías se confunden con la realidad. En la calle cruza la mirada con un hombre de torso desnudo y ojos penetrantes. Lo sigue cada día y se acerca al objeto de su deseo.",
      "synopsis_lang": "es",
      "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
      "director": "Lola Tartane",
-     "tmdb_id": 1668898
+     "tmdb_id": 1668898,
+     "flags": "🇨🇴🇫🇷"
     }
    ],
    "id": "f_34c3015bf3"
