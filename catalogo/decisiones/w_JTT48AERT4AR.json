@@ -6,5 +6,45 @@
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24",
   "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT48AERT4AR",
+  "campo": "directores",
+  "valor": [
+   "Diego Pachón Castro"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Diego Pachón Castro"
+  }
+ },
+ {
+  "work_id": "w_JTT48AERT4AR",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_JTT48AERT4AR",
+  "campo": "sinopsis.es",
+  "valor": "En la Casa de la Paz de Bogotá conviven Doris, firmante de paz, y Virgelina, defensora de derechos humanos. Dos vidas atravesadas por la guerra comparten un lugar para construir paz a diario.",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "En la Casa de la Paz de Bogotá conviven Doris, firmante de paz, y Virgelina, defensora de derechos humanos. Dos vidas atravesadas por la guerra comparten un lugar para construir paz a diario."
+  }
  }
 ]

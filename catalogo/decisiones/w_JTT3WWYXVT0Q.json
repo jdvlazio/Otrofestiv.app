@@ -2,15 +2,152 @@
  {
   "work_id": "w_JTT3WWYXVT0Q",
   "campo": "sinopsis.es",
-  "valor": "Mauricio Lezama fue asesinado en mayo de 2019, mientras hacía un casting en Arauca. En un país donde cada tres días asesinan a un líder social, su muerte une a la industria en torno a una reflexión sobre qué es hacer cine, por qué hacerlo y la diferencia entre contar historias en la ciudad y en la periferia.",
-  "motivo": "corrección de «habla del evento»: traducción nuestra del texto del festival",
-  "fecha": "2026-11-23",
-  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "valor": "Mauricio Lezama fue asesinado en mayo de 2019 mientras realizaba un casting en Arauca. En un país donde cada tres días es asesinado un líder social, su muerte une a la industria en torno a una reflexión sobre qué es el cine, por qué hacerlo y la diferencia entre narrar en la ciudad y la periferia.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración Cine para la Paz, segunda lectura)",
   "vistas": [
-   "370fc11c0c63"
+   "370fc11c0c63",
+   "b899964c3f11"
   ],
   "antes": {
    "cineparalapaz-2026": "Proyección y conversatorio con Emmanuel Jaramillo, productor general. Modera: Diego Pachón."
+  },
+  "anteriores": [
+   {
+    "valor": "Mauricio Lezama fue asesinado en mayo de 2019, mientras hacía un casting en Arauca. En un país donde cada tres días asesinan a un líder social, su muerte une a la industria en torno a una reflexión sobre qué es hacer cine, por qué hacerlo y la diferencia entre contar historias en la ciudad y en la periferia.",
+    "motivo": "corrección de «habla del evento»: traducción nuestra del texto del festival",
+    "fecha": "2026-11-23",
+    "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+    "vistas": [
+     "370fc11c0c63"
+    ]
+   }
+  ],
+  "fuente": "https://rtvcplay.co/peliculas-documentales/lez-ama-vivir-filmando"
+ },
+ {
+  "work_id": "w_JTT3WWYXVT0Q",
+  "campo": "directores",
+  "valor": [
+   "Mónica Moya"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Mónica Moya"
+  }
+ },
+ {
+  "work_id": "w_JTT3WWYXVT0Q",
+  "campo": "anio",
+  "valor": 2021,
+  "motivo": "el productor dice 2021; 2022 solo lo daba TMDB",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración Cine para la Paz, segunda lectura)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "2022"
+  },
+  "anteriores": [
+   {
+    "valor": 2022,
+    "motivo": "alta desde cineparalapaz-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración cineparalapaz-2026)"
+   }
+  ],
+  "fuente": "https://emmanueljaramillo.com"
+ },
+ {
+  "work_id": "w_JTT3WWYXVT0Q",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_JTT3WWYXVT0Q",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_JTT3WWYXVT0Q",
+  "campo": "sinopsis.en",
+  "valor": "Mauricio Lezama was murdered in May 2019 while holding a casting call in Arauca. In a country where a social leader is murdered every three days, his death unites the industry in a reflection on what cinema is, why make it and the difference between telling stories in the city and on the periphery.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración Cine para la Paz, segunda lectura)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Mauricio Lezama was murdered in May 2019 while casting in Arauca. In a country where a social leader is murdered every three days, his death unites the industry around a reflection on what filmmaking is, why make it and the difference between storytelling in the city and the periphery."
+  },
+  "anteriores": [
+   {
+    "valor": "Mauricio Lezama was murdered in May 2019 while casting in Arauca. In a country where a social leader is murdered every three days, his death unites the industry around a reflection on what filmmaking is, why make it and the difference between storytelling in the city and the periphery.",
+    "motivo": "alta desde cineparalapaz-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración cineparalapaz-2026)"
+   }
+  ],
+  "fuente": "https://rtvcplay.co/peliculas-documentales/lez-ama-vivir-filmando"
+ },
+ {
+  "work_id": "w_JTT3WWYXVT0Q",
+  "campo": "xref.tmdb",
+  "valor": 1049488,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "1049488"
+  }
+ },
+ {
+  "work_id": "w_JTT3WWYXVT0Q",
+  "campo": "xref.letterboxd",
+  "valor": "lez-ama-vivir-filmando",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "lez-ama-vivir-filmando"
+  }
+ },
+ {
+  "work_id": "w_JTT3WWYXVT0Q",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cineparalapaz-2026/lezama-vivir-filmando.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "/assets/cineparalapaz-2026/lezama-vivir-filmando.jpg"
   }
  }
 ]

@@ -10,12 +10,16 @@
   "fecha": "2026-10-12"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "tmdb:1713804",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25"
  },
  "generos": {
   "fuente": "humano",
@@ -44,7 +48,13 @@
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "la que ya publica otro festival: una sola por obra",
-  "fecha": "2026-11-24"
+  "motivo": "la inglesa contaba otra cosa y pasaba de 350",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25"
  }
 }

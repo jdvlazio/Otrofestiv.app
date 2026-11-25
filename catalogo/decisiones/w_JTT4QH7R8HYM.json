@@ -21,5 +21,59 @@
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24",
   "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT4QH7R8HYM",
+  "campo": "directores",
+  "valor": [
+   "Samia Maldonado"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Samia Maldonado"
+  }
+ },
+ {
+  "work_id": "w_JTT4QH7R8HYM",
+  "campo": "anio",
+  "valor": 2011,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "2011"
+  }
+ },
+ {
+  "work_id": "w_JTT4QH7R8HYM",
+  "campo": "paises",
+  "valor": [
+   "EC"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Ecuador"
+  }
+ },
+ {
+  "work_id": "w_JTT4QH7R8HYM",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Documental"
+  }
  }
 ]

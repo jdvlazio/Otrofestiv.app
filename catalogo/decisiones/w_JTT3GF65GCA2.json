@@ -6,5 +6,72 @@
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24",
   "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT3GF65GCA2",
+  "campo": "directores",
+  "valor": [
+   "Dubier Baicue",
+   "Ignacio Ramos",
+   "Sonica Cifuentes",
+   "Darinson Amaya"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Dubier Baicue, Ignacio Ramos, Sonica Cifuentes, Darinson Amaya"
+  }
+ },
+ {
+  "work_id": "w_JTT3GF65GCA2",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_JTT3GF65GCA2",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_JTT3GF65GCA2",
+  "campo": "sinopsis.es",
+  "valor": "En el resguardo Kiwnas Cxhab, el pueblo Nasa cuenta lo que la hoja de coca significa para su vida. Ante la erradicación forzada, defiende sus saberes y el derecho a decidir sobre su territorio.",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "En el resguardo Kiwnas Cxhab, el pueblo Nasa cuenta lo que la hoja de coca significa para su vida. Ante la erradicación forzada, defiende sus saberes y el derecho a decidir sobre su territorio."
+  }
+ },
+ {
+  "work_id": "w_JTT3GF65GCA2",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "producida por la Asociación Minga en Puerto Asís, Putumayo",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración Cine para la Paz)",
+  "fuente": "https://asociacionminga.co/la-coca-buen-vivir-del-pueblo-nasa/",
+  "antes": {}
  }
 ]

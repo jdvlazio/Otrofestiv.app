@@ -94,15 +94,75 @@
  {
   "work_id": "w_R4N5JQDH0WFG",
   "campo": "sinopsis.en",
-  "valor": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
-  "motivo": "la que ya publica otro festival: una sola por obra",
-  "fecha": "2026-11-24",
-  "quien": "regla de Juan: la sinopsis es de la obra",
+  "valor": "Young dancers reclaim the Danza de las Tabliteras through the movements and rhythms passed on by the last elders who kept this tradition of San Antonio, Bolívar, alive. In each gesture, the body becomes a refuge for a collective memory that finds new ways to endure.",
+  "motivo": "la inglesa contaba otra cosa y pasaba de 350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración Cine para la Paz, verificador independiente)",
   "antes": {
    "cineparalapaz-2026": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
    "fecibac-2026": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+   "qaff-2026": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
    "siembrafest-2026": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
    "villadelcine-2026": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit."
+  },
+  "anteriores": [
+   {
+    "valor": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+    "motivo": "la que ya publica otro festival: una sola por obra",
+    "fecha": "2026-11-24",
+    "quien": "regla de Juan: la sinopsis es de la obra"
+   }
+  ],
+  "fuente": "catálogo PDF de Villa del Cine 2026"
+ },
+ {
+  "work_id": "w_R4N5JQDH0WFG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "2026",
+   "fecibac-2026": "2026",
+   "qaff-2026": "2026",
+   "siembrafest-2026": "2026",
+   "villadelcine-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4N5JQDH0WFG",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Colombia",
+   "fecibac-2026": "Colombia",
+   "qaff-2026": "Colombia",
+   "siembrafest-2026": "Colombia",
+   "villadelcine-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4N5JQDH0WFG",
+  "campo": "xref.letterboxd",
+  "valor": "sheltering-gestures",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "sheltering-gestures",
+   "fecibac-2026": "sheltering-gestures",
+   "qaff-2026": "sheltering-gestures",
+   "siembrafest-2026": "sheltering-gestures",
+   "villadelcine-2026": "sheltering-gestures"
   }
  }
 ]

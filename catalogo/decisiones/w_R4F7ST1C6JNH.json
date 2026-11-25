@@ -55,5 +55,73 @@
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24",
   "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4F7ST1C6JNH",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2026": "2026",
+   "cineparalapaz-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4F7ST1C6JNH",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2026": "Colombia",
+   "cineparalapaz-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4F7ST1C6JNH",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4F7ST1C6JNH",
+  "campo": "xref.tmdb",
+  "valor": 1740554,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2026": "1740554",
+   "cineparalapaz-2026": "1740554"
+  }
+ },
+ {
+  "work_id": "w_R4F7ST1C6JNH",
+  "campo": "xref.letterboxd",
+  "valor": "medellin-yo-te-saludo",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2026": "medellin-yo-te-saludo",
+   "cineparalapaz-2026": "medellin-yo-te-saludo"
+  }
  }
 ]
