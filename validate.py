@@ -7198,6 +7198,7 @@ try:
               'afirmaciones.json', 'funciones-ids.json', 'conflictos.json',
               'funciones-decisiones.json',  # §11.3.4, 18 oct 2026
               'palmares.json', 'avisos.json',  # publicar.py los lleva al JSON (f-string), 19 oct 2026
+              'sellos-funcion.json', 'acceso.json',  # pipeline/sello_funcion.py, 24 nov 2026
               'altas.json'}  # el registro de altas: pipeline/altas.py (f-string) y sus guardianes, 15 nov 2026
     _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
            sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+(?:-[a-z]+)*-20\d\d-', _f))
@@ -7377,6 +7378,37 @@ try:
              + ' · '.join(f'«{_t}» {_w}: {_q}' for _w, _t, _q in _fal[:5]) + ' ' + ' · '.join(sorted(_gem)[:3]))
     else:
         ok(check, f'{len(_se.sellos())} de {len(_se.publicadas(_fests))} obras selladas; el resto, en deuda y sin cambios')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [sello-funcion] la función, releída y con acceso citado (pipeline/sello_funcion.py) ──
+# Juan, 24 nov 2026 (BOGOSHORTS). Sin red: frena lo inválido o contradictorio y avisa
+# lo pendiente; la primera publicación la frena publicar-datos.py.
+check = 'sello-funcion'
+try:
+    import glob as _gsf, json as _jsf, os as _osf
+    import sello_funcion as _sf
+    _ciega_sf, _mal_sf, _pend_sf = _sf.autoprueba(), [], []
+    _con_sf = {_osf.path.basename(_p)[:-len(_s)] for _s in ('-sellos-funcion.json', '-acceso.json')
+               for _p in _gsf.glob('festivals/staging/*' + _s)}
+    _viv_sf = set(_festivalesVivos())
+    for _fid in sorted(_con_sf | _viv_sf):
+        _p = f'festivals/{_fid}.json'
+        _d = _jsf.load(open(_p, encoding='utf-8')) if _osf.path.exists(_p) else None
+        if _d is None and _fid not in _con_sf:
+            continue
+        _m, _q = _sf.revisar(_fid, _d)
+        _mal_sf += [f'{_fid}: {_x}' for _x in _m]
+        if _q and _fid in _viv_sf:
+            _pend_sf.append(f'{_fid} {len(_q)}')
+    if _ciega_sf:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega_sf))
+    elif _mal_sf:
+        fail(check, f'{len(_mal_sf)} sello(s) o acceso(s) inválidos o contradictorios: ' + ' · '.join(_mal_sf[:5]))
+    elif _pend_sf:
+        warn(check, 'funciones por sellar, acceso o inventario pendientes (sello_funcion.py informe <id>): ' + ', '.join(_pend_sf))
+    else:
+        ok(check, 'funciones selladas y acceso con fuente en los festivales vivos')
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
