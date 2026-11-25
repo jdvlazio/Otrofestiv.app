@@ -11,7 +11,7 @@ el almacén trae su ficha; solo se investiga la nueva y después falta día, hor
   NUEVA       no hay nada parecido: investigar hoy
 
 Solo lee. Uso:
-    python3 pipeline/titulos.py festicine-antioquia-2026      # su <id>-catalogo.json
+    python3 pipeline/titulos.py festicineantioquia-2026      # su <id>-catalogo.json
     python3 pipeline/titulos.py lista.json                    # [{titulo, director, anio?, duracion_min?}]
 """
 import io

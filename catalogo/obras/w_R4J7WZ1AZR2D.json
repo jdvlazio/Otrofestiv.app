@@ -1,14 +1,25 @@
 {
  "id": "w_R4J7WZ1AZR2D",
  "titulo_original": "A las 9 es la cita",
- "anio": null,
+ "anio": 2024,
  "paises": [
   "CO"
  ],
  "directores": [
   "Carlos Ospina"
  ],
- "xref": {},
+ "sinopsis": {
+  "es": "Un taxista tiene un encuentro apasionado con su amante en su cita semanal. La noche se vuelve turbia cuando su oscuro pasado emerge durante un mal juego del destino. Su dualidad se revela: el apacible conductor y el despiadado justiciero. Un giro inesperado conecta sus vidas en una compleja danza de secretos.",
+  "en": "A taxi driver has a passionate encounter with his lover on their weekly date. The night turns murky when his dark past emerges during a bad game of fate. His duality is revealed: the gentle driver and the ruthless vigilante. An unexpected twist connects their lives in a complex dance of secrets."
+ },
+ "afiche": {
+  "archivo": "/assets/festicineantioquia-2026/a-las-9-es-la-cita.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1562336,
+  "letterboxd": "the-date-is-at-9"
+ },
  "versiones": [
   {
    "etiqueta": "18 min",
@@ -16,6 +27,7 @@
   }
  ],
  "presentaciones": [
+  "festicineantioquia-2026",
   "ficmontanas-2026"
  ]
 }

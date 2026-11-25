@@ -1,0 +1,32 @@
+{
+ "_provenance": {
+  "fuente": "duraciones comparadas entre fuentes",
+  "capturado": "2026-11-24"
+ },
+ "duraciones": [
+  {
+   "titulo": "Toni Erdmann",
+   "min": 162,
+   "fuente": "https://www.themoviedb.org/movie/374475",
+   "por_que": "el PDF imprime 182; TMDB, Letterboxd y Wikipedia dicen 162"
+  },
+  {
+   "titulo": "Die Odyssee",
+   "min": 84,
+   "fuente": "https://www.themoviedb.org/movie/586945",
+   "por_que": "el PDF imprime 122 (la cifra de Stop-Zemlia); TMDB y Wikipedia dicen 84"
+  },
+  {
+   "titulo": "Almanya – Willkommen in Deutschland",
+   "min": 101,
+   "fuente": "https://www.themoviedb.org/movie/63849",
+   "por_que": "el PDF imprime 116; TMDB y Wikipedia dicen 101"
+  },
+  {
+   "titulo": "Aunque seamos islas",
+   "min": 79,
+   "fuente": "https://www.themoviedb.org/movie/1582354",
+   "por_que": "el PDF imprime 69; TMDB, Cinemística y la distribuidora dicen 79"
+  }
+ ]
+}

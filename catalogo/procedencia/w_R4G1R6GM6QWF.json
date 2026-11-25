@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficcali-2026,ficcali-2026,ficcali-2026,ficfusa-2026,miradas-2026,miradas-2026,villadeleyvaiff-2026,villadeleyvaiff-2026",
+  "fuente": "festival:festicineantioquia-2026,ficcali-2026,ficcali-2026,ficcali-2026,ficfusa-2026,miradas-2026,miradas-2026,villadeleyvaiff-2026,villadeleyvaiff-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -43,6 +43,18 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  }
 }

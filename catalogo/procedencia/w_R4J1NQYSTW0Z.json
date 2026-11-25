@@ -1,11 +1,13 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficma-2026,girardota-2026,narrarelfuturo-2026,villadelcine-2026",
+  "fuente": "festival:festicineantioquia-2026,ficma-2026,girardota-2026,narrarelfuturo-2026,villadelcine-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  },
  "anio": {
   "fuente": "humano",
@@ -36,5 +38,23 @@
   "regla": "decisión",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficma-2026, girardota-2026)",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "versión corta (350) más fiel al original; redactor y verificador distintos (25 nov 2026)",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  }
 }

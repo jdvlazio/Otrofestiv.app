@@ -1,0 +1,48 @@
+{
+ "_provenance": {
+  "fuente": "pipeline/fuentes_descubrir.py",
+  "capturado": "2026-11-24T21:24",
+  "paginas_leidas": 31,
+  "errores": [
+   "https://www.facebook.com/FesticineSantaFeDeAntioquia: HTTP Error 400: Bad Request",
+   "https://festicineantioquia.org/wp-admin/admin-ajax.php: HTTP Error 400: Bad Request",
+   "https://festicineantioquia.org/wp-content/plugins/elementor/assets: HTTP Error 403: Forbidden",
+   "https://festicineantioquia.org/wp-content/uploads: HTTP Error 403: Forbidden",
+   "https://festicineantioquia.org/wp-content/themes/blocksy/static/bundle: HTTP Error 403: Forbidden"
+  ]
+ },
+ "raices": {
+  "web": "https://festicineantioquia.org/",
+  "facebook": "https://www.facebook.com/FesticineSantaFeDeAntioquia",
+  "_sin_bio": "el link de la bio de IG no se pudo leer sin sesión (24 nov 2026); la web y el Facebook sí se recorrieron"
+ },
+ "items": {
+  "https://festicineantioquia.org/wp-content/uploads/2026/11/Festicine-2026-Programacion.web_.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://festicineantioquia.org/27-festival-de-cine-de-santa-fe-de-antioquia/",
+   "primera_vez": "2026-11-24T21:24",
+   "ultima_vez": "2026-11-24T21:24",
+   "estado": "usada",
+   "_por_que": "la programación: transcrita entera; 2.ª lectura ciega y OCR. Acceso: talleres abiertos o con inscripción previa; nada de boletas ni costo",
+   "revisado": "2026-11-24T21:25"
+  },
+  "https://forms.gle/ZYRhrfM4ut4SdZHQ8": {
+   "tipo": "formulario",
+   "visto_en": "https://festicineantioquia.org/crea-con-contenido/",
+   "primera_vez": "2026-11-24T21:24",
+   "ultima_vez": "2026-11-24T21:24",
+   "estado": "descartada",
+   "_por_que": "inscripción al taller Crea con Contenido (sábados desde el 16 may 2026), ya pasó; abierto: no es una actividad del 4–8 dic ni habla de su acceso",
+   "revisado": "2026-11-24T21:25"
+  },
+  "https://www.eticketablanca.com/v2/cinema-regiones-comfenalco.php": {
+   "tipo": "boleteria",
+   "visto_en": "https://festicineantioquia.org/cinema-regiones-comfenalco-antioquia/",
+   "primera_vez": "2026-11-24T21:24",
+   "ultima_vez": "2026-11-24T21:24",
+   "estado": "descartada",
+   "_por_que": "boletas sin costo de Cinema Regiones Comfenalco (otros municipios, sep–nov); no es el festival",
+   "revisado": "2026-11-24T21:25"
+  }
+ }
+}

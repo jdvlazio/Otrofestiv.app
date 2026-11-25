@@ -861,6 +861,29 @@
    "ciudad": "Villa de Leyva",
    "corto": "Real Fábrica"
   },
+  "s_26a2abce": {
+   "nombre": "Universidad de Antioquia Seccional Occidente",
+   "lat": 6.5550126,
+   "lng": -75.8264716,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Universidad+de+Antioquia+-+Campus+Santa+Fe+de+Antioquia/@6.5550126,-75.8264716,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [
+    "Universidad de Antioquia Seccional Occidente - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "salas": [
+    "Auditorio",
+    "Aula 201"
+   ],
+   "corto": "Universidad de Antioquia Seccional Occidente"
+  },
   "s_274fbe5a": {
    "nombre": "Universidad del Magdalena",
    "lat": 11.2262461,
@@ -1848,6 +1871,26 @@
    "ciudad": "Caldas",
    "corto": "Casa Municipal de la Cultura"
   },
+  "s_67489d27": {
+   "nombre": "Plaza Mayor Simón Bolívar",
+   "lat": 6.5564099,
+   "lng": -75.82796,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Plaza+de+Bolívar/@6.5564099,-75.82796,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Parque principal",
+   "alias": [
+    "Plaza Mayor Simón Bolívar - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "corto": "Plaza Mayor Simón Bolívar"
+  },
   "s_67c78bba": {
    "nombre": "Comfama Otraparte",
    "lat": 6.1795206,
@@ -1982,6 +2025,26 @@
    "salas_alias": {
     "Cinemateca móvil, Laboratorio": "Cinemateca móvil, laboratorio"
    }
+  },
+  "s_6b6f9da6": {
+   "nombre": "Sede de empleo y emprendimiento Comfenalco Antioquia",
+   "lat": 6.55798,
+   "lng": -75.82984,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Arzobispado+Santa+Fe+de+Antioquia/@6.55798,-75.82984,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Parque de la Chinca, contiguo al Palacio Arzobispal",
+   "alias": [
+    "Sede de empleo y emprendimiento Comfenalco Antioquia - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "corto": "Sede de empleo y emprendimiento Comfenalco Antioquia"
   },
   "s_6badfe99": {
    "nombre": "Colombo",
@@ -2439,6 +2502,26 @@
    "ciudad": "Popayán",
    "corto": "Facultad de Artes Unicauca"
   },
+  "s_7f1eac48": {
+   "nombre": "Barrio Llano de Bolívar",
+   "lat": 6.5646701,
+   "lng": -75.824623,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cl.+18+&+Cra.+11/@6.5646701,-75.824623,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Sector calle 18 entre la carrera 11 y la vía al Tunal, diagonal al gimnasio al aire libre",
+   "alias": [
+    "Barrio Llano de Bolívar - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "corto": "Barrio Llano de Bolívar"
+  },
   "s_808cba64": {
    "nombre": "Universidad Jorge Tadeo Lozano",
    "lat": 4.606567,
@@ -2486,6 +2569,26 @@
    ],
    "ciudad": "Florencia",
    "corto": "Candela Café Bar"
+  },
+  "s_8090daa6": {
+   "nombre": "Barrio La Esmeralda",
+   "lat": 6.5153935,
+   "lng": -75.8179349,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/El+paso+real/@6.5153935,-75.8179349,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Vereda El Paso Real",
+   "alias": [
+    "Barrio La Esmeralda - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "corto": "Barrio La Esmeralda"
   },
   "s_80974dfb": {
    "nombre": "Coliseo Corregimiento de San Francisco",
@@ -2830,6 +2933,26 @@
    "ciudad": "Toro",
    "corto": "Mambo House"
   },
+  "s_901a0a59": {
+   "nombre": "Catedral Basílica Metropolitana",
+   "lat": 6.5569862,
+   "lng": -75.8274309,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Catedral+Metropolitana+De+La+Inmaculada+Concepción/@6.5569862,-75.8274309,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Plaza Mayor Simón Bolívar",
+   "alias": [
+    "Catedral Basílica Metropolitana - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "corto": "Catedral Basílica Metropolitana"
+  },
   "s_92850ca4": {
    "nombre": "Plaza Mayor",
    "lat": 5.6338197,
@@ -3080,6 +3203,29 @@
    ],
    "ciudad": "Marinilla",
    "corto": "Galería San José"
+  },
+  "s_9af60335": {
+   "nombre": "Cámara de Comercio de Medellín para Antioquia",
+   "lat": 6.556451,
+   "lng": -75.826457,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cámara+de+Comercio+de+Medellín+Centro+Empresarial+de+Occidente/@6.556451,-75.826457,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Sede Santa Fe de Antioquia",
+   "alias": [
+    "Cámara de Comercio de Medellín para Antioquia - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "salas": [
+    "Auditorio"
+   ],
+   "corto": "Cámara de Comercio de Medellín para Antioquia"
   },
   "s_9b2fec9a": {
    "nombre": "Mikuna Casa Cultural",
@@ -3552,6 +3698,29 @@
    ],
    "ciudad": "Marinilla",
    "corto": "Teatro Regional Valerio Antonio Jiménez"
+  },
+  "s_b2da5f1d": {
+   "nombre": "Museo Juan del Corral",
+   "lat": 6.5578327,
+   "lng": -75.8276182,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Museo+Juan+Del+Corral/@6.5578327,-75.8276182,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 11 # 9-77",
+   "alias": [
+    "Museo Juan del Corral - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "salas": [
+    "Auditorio"
+   ],
+   "corto": "Museo Juan del Corral"
   },
   "s_b320c2e3": {
    "nombre": "Bodega Insurgesta",
@@ -4624,6 +4793,29 @@
    ],
    "ciudad": "Medellín",
    "corto": "Antimateria Libros y Café"
+  },
+  "s_e1ed2a67": {
+   "nombre": "Hotel Mariscal Robledo",
+   "lat": 6.5577989,
+   "lng": -75.8292281,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Hotel+Mariscal+Robledo/@6.5577989,-75.8292281,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 12 # 9-70",
+   "alias": [
+    "Hotel Mariscal Robledo - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "salas": [
+    "Auditorio"
+   ],
+   "corto": "Hotel Mariscal Robledo"
   },
   "s_e2717fd7": {
    "nombre": "Casa TEA",
