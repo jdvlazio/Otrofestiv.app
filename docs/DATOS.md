@@ -30,9 +30,10 @@ festivals/<id>.json ─ publicar-datos.py ─▶ guardianes (≈2 min) ─▶ ra
 - **Main sigue siendo la historia:** el PR de datos se hace después. Al entrar a
   main, el job «Datos al almacén» republica ese festival **si ya está en el
   almacén**, así el almacén nunca queda atrás de main.
-- **Un festival entra al almacén a propósito, de a uno** (Juan, 18 oct): la
-  primera vez con `publicar-datos.py`. Un PR que toca muchos JSON no mueve a
-  nadie al almacén.
+- **El alta** (25 nov 2026): el merge que deja VISIBLE un festival vigente lo da de alta
+  en el almacén, con su ficha y sus controles de primera publicación. Nunca de golpe
+  (Juan, 18 oct): más de dos a la vez no entra ninguno. Uno oculto o terminado entra con
+  `publicar-datos.py`. Para retirar uno, primero se oculta (`group:'test'`).
 - **Registro:** cada publicación queda en `publicaciones_datos` (quién, cuándo,
   qué versión).
 

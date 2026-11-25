@@ -16,6 +16,14 @@ que publica v1 después del merge de v2 dejaría v1 para siempre.
 Límite conocido: la ficha se fecha por el último cambio de TODO src/config.js.
 Se decide de nuevo, con el índice fresco, justo antes de publicar cada uno.
 
+EL ALTA (25 nov 2026, BOGOSHORTS quedó en la web y no en el almacén hasta un comando aparte):
+un festival de main que NO está en el almacén, VISIBLE en la config (group distinto de
+'test') y sin terminar, entra solo, con su ficha. El acto a propósito es el merge que lo hace
+visible; sus controles de primera publicación (sello_funcion.control) frenan igual aquí.
+Más de ALTAS_JUNTAS a la vez no es un alta: es un índice a medias o un error, y no
+entra ninguno (Juan, 18 oct: nunca de golpe). Uno oculto o terminado entra a mano.
+Para RETIRAR uno del almacén, primero se oculta (group 'test'): si no, vuelve solo.
+
 Un festival que falla no detiene a los demás; se reintenta al final y, si sigue
 fallando, el job termina en rojo diciendo cuáles.
 
@@ -29,10 +37,11 @@ import subprocess
 import sys
 import time
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timezone
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PUBLICO = 'https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/'
+ALTAS_JUNTAS = 2
 ESPERA = 600      # s para TODA la corrida, a que el deploy suba los afiches
 
 
@@ -96,7 +105,28 @@ def indice():
     return d
 
 
+def config():
+    """{id de archivo: (grupo, fin)} de FESTIVAL_CONFIG."""
+    js = ("const m=await import(process.argv[1]);const o={};for(const[k,c]of Object.entries(m.FESTIVAL_CONFIG))"
+          "o[k]=[c.group||'',c.festivalEndStr||''];process.stdout.write(JSON.stringify(o))")
+    r = subprocess.run(['node', '--input-type=module', '-e', js, os.path.join(REPO, 'src', 'config.js')],
+                       capture_output=True, text=True, check=True, timeout=60)
+    return {re.sub(r'-?(\d+)$', r'-\1', k): tuple(v) for k, v in json.loads(r.stdout).items()}
+
+
+def altas(conf, en_almacen, existe, hoy):
+    """Los festivales que entran solos."""
+    return sorted(f for f, (grupo, fin) in conf.items()
+                  if f not in en_almacen and grupo != 'test' and fin[:10] >= hoy and existe(f))
+
+
+def hoy_colombia():
+    return datetime.fromtimestamp(time.time() - 5 * 3600, timezone.utc).strftime('%Y-%m-%d')
+
+
 def estado(f, e):
+    if e is None:
+        return 'publicar'                 # alta: no está en el almacén
     ruta = f'festivals/{f}.json'
     p = os.path.join(REPO, ruta)
     if not os.path.exists(p):
@@ -121,7 +151,19 @@ def estado(f, e):
 def main():
     traer_datos()
     lista, mal = [], []
-    for f, e in sorted(indice().items()):
+    ix = indice()
+    try:
+        nuevos = altas(config(), ix, lambda f: os.path.exists(os.path.join(REPO, f'festivals/{f}.json')), hoy_colombia())
+    except Exception as x:
+        print(f'· no pude ver si falta algún alta ({x})')
+        nuevos, mal = [], ['(altas)']
+    if len(nuevos) > ALTAS_JUNTAS:
+        print(f'· {len(nuevos)} festivales fuera del almacén a la vez: no entra ninguno solo: {" ".join(nuevos)}')
+        mal += nuevos
+        nuevos = []
+    for f in nuevos:
+        print(f'· ALTA: {f} no está en el almacén')
+    for f, e in sorted(ix.items()):
         try:
             d = estado(f, e)
         except Exception as x:
@@ -132,6 +174,7 @@ def main():
             print(f'· {f}: lo publicado es posterior a main: no se toca')
         elif d == 'publicar':
             lista.append(f)
+    lista += nuevos
     print(f'A publicar ({len(lista)}): {" ".join(lista) or "nada"}')
     if '--probar' in sys.argv:
         return
@@ -140,14 +183,16 @@ def main():
     def publicar(f, vuelta):
         try:
             traer_datos()
-            if estado(f, indice()[f]) != 'publicar':   # alguien lo publicó mientras tanto
+            e = indice()
+            if estado(f, e.get(f) if f in nuevos else e[f]) != 'publicar':   # alguien lo publicó mientras tanto
                 print(f'· {f}: ya no hace falta')
                 return True
         except Exception as x:
             print(f'· {f}: no pude compararlo ({x})')
             return False
         env = {**os.environ, 'OTF_ESPERA_AFICHES': str(max(0, int(fin - time.time())) if vuelta == 1 else 0)}
-        return subprocess.run([sys.executable, 'pipeline/publicar-datos.py', f, '--desde-main'], cwd=REPO, env=env).returncode == 0
+        return subprocess.run([sys.executable, 'pipeline/publicar-datos.py', f, '--desde-main',
+                               *(['--alta'] if f not in e else [])], cwd=REPO, env=env).returncode == 0
 
     mal += publicar_todos(lista, publicar)
     if mal:

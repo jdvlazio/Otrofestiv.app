@@ -26,6 +26,115 @@ class Decidir(unittest.TestCase):
         self.assertEqual(al.decidir(False, 0, False, 0, 0), 'igual')
 
 
+class Alta(unittest.TestCase):
+    C = {'n-2026': ('', '2026-12-08T23:00'), 'oculto-2026': ('test', '2026-12-08'), 'viejo-2026': ('', '2026-11-24'),
+         'ya-2026': ('', '2026-12-08'), 'sinjson-2026': ('', '2026-12-08'), 'sinfin-2026': ('', '')}
+
+    def test_entra_solo_el_visible_vigente_con_json_y_fuera_del_almacen(self):
+        self.assertEqual(al.altas(self.C, {'ya-2026': {}}, lambda f: f != 'sinjson-2026', '2026-11-25'), ['n-2026'])
+        self.assertEqual(al.altas({'n-2026': ('', '2026-11-25T23:00')}, {}, lambda f: True, '2026-11-25'), ['n-2026'])   # el último día todavía
+
+    def test_la_config_real_se_lee_y_nombra_archivos(self):
+        c = al.config()
+        self.assertIn('bogoshorts-2026', c)
+        self.assertEqual(c['cinemancia-2025'][0], 'test')
+
+    def correr(self, nuevos, ix=None, en_medio=None):
+        viejo = {k: getattr(al, k) for k in ('traer_datos', 'indice', 'altas', 'config', 'publicar_todos', 'estado')}
+        cola, vistos = [ix or {'a-2026': {}}], []
+        ini = al.estado
+        al.traer_datos, al.config, al.altas = (lambda: None), (lambda: {}), (lambda *a: list(nuevos))
+        al.indice = lambda: cola[0]
+        al.estado = lambda f, e: 'igual' if f == 'a-2026' else ini(f, e)
+        viejo_run, al.subprocess.run = al.subprocess.run, lambda c, **k: vistos.append(' '.join([c[2], *c[4:]])) or type('R', (), {'returncode': 0})()
+        def todos(lista, pub):
+            if en_medio:
+                cola[0] = en_medio
+            return [f for f in lista if not pub(f, 1)]
+        al.publicar_todos = todos
+        try:
+            try:
+                al.main()
+                return vistos, None
+            except SystemExit as e:
+                return vistos, str(e)
+        finally:
+            al.subprocess.run = viejo_run
+            for k, v in viejo.items():
+                setattr(al, k, v)
+
+    def test_uno_se_publica(self):
+        self.assertEqual(self.correr(['n-2026']), (['n-2026 --alta'], None))
+        self.assertEqual(self.correr(['n-2026', 'm-2026'])[0], ['n-2026 --alta', 'm-2026 --alta'])
+
+    def test_muchos_a_la_vez_no_entra_ninguno_y_queda_en_rojo(self):
+        vistos, err = self.correr(['x-1', 'y-1', 'z-1'])
+        self.assertEqual(vistos, [])
+        self.assertIn('x-1', err)
+
+    def test_el_alta_no_quita_las_republicaciones(self):
+        self.assertEqual(self.correr(['n-2026'], ix={'a-2026': {}, 'r-2026': None})[0], ['r-2026', 'n-2026 --alta'])
+
+    def test_un_publicado_que_desaparece_del_indice_no_se_republica(self):
+        vistos, err = self.correr([], ix={'a-2026': {}, 'r-2026': None}, en_medio={'a-2026': {}})
+        self.assertEqual((vistos, 'r-2026' in err), ([], True))
+
+    def test_si_no_se_lee_la_config_queda_en_rojo(self):
+        vistos, err = self.correr(None)
+        self.assertIn('altas', err)
+
+    def test_el_dia_es_el_de_colombia(self):
+        ahora = al.datetime(2026, 11, 26, 2, 0, tzinfo=al.timezone.utc).timestamp()     # 21:00 del 25 en Colombia
+        viejo, al.time.time = al.time.time, lambda: ahora
+        try:
+            self.assertEqual(al.hoy_colombia(), '2026-11-25')
+        finally:
+            al.time.time = viejo
+
+    def test_si_alguien_lo_publico_mientras_tanto_se_vuelve_a_decidir(self):
+        viejo, al.os.path.exists = al.os.path.exists, lambda p: False     # main ya no lo tiene: no se pisa
+        try:
+            self.assertEqual(self.correr(['n-2026'], en_medio={'a-2026': {}, 'n-2026': {}}), ([], None))
+        finally:
+            al.os.path.exists = viejo
+
+
+class AltaConFicha(unittest.TestCase):
+    """Con --alta viaja la ficha, y sin ficha no entra; sin --alta, un festival sin ficha en el almacén no la recibe."""
+    def correr(self, *args, ficha=True):
+        m, subido = _publicar_datos(), []
+        m._control_funciones = lambda *a: None
+        m._afiches_en_la_web = lambda *a, **k: None
+        m._no_entra = lambda *a: subido.append('no_entra')
+        m._ficha = lambda f: {'fichas/x.json': b'{}'} if ficha else {}
+        m._tiene_ficha = lambda f: False
+        def pub(archivos, *a):
+            subido.append(sorted(archivos))
+            raise SystemExit('hasta aquí')
+        m._publicar = pub
+        viejo, env = sys.argv, dict(os.environ)
+        sys.argv = ['x', 'bogoshorts-2026', '--desde-main', *args]
+        os.environ.update(GITHUB_ACTIONS='true', GITHUB_REF='refs/heads/main')
+        try:
+            with self.assertRaises(SystemExit):
+                m.main()
+        finally:
+            sys.argv = viejo
+            os.environ.clear()
+            os.environ.update(env)
+        return subido
+    J = 'festivals/bogoshorts-2026.json'
+
+    def test_alta(self):
+        self.assertEqual(self.correr('--alta'), ['no_entra', ['festivals/bogoshorts-2026.json', 'fichas/x.json']])
+
+    def test_alta_sin_ficha_no_entra(self):
+        self.assertEqual(self.correr('--alta', ficha=False), ['no_entra'])
+
+    def test_sin_alta_la_ficha_no_viaja(self):
+        self.assertEqual(self.correr(), [[self.J]])
+
+
 class Ficha(unittest.TestCase):
     I = {'name': 'X', 'keyArt': 'https://s/datos/keyart/aaaaaaaaaaaa.jpg'}
 
