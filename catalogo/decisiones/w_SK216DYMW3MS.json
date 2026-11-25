@@ -24,5 +24,111 @@
   "antes": {
    "funza-2026": "Javier, un hombre atormentado por visiones traumáticas de su infancia, es contratado por Raquel para restaurar una vieja mansión embrujada donde todas las noches, a las 3:33 a. m., aparece el espectro de una mujer misteriosa. Obsesionado, Javier emprende la misión imposible de salvar a alguien que ya está muerto, y busca respuestas en el padre Alirio."
   }
+ },
+ {
+  "work_id": "w_SK216DYMW3MS",
+  "campo": "sinopsis.en",
+  "valor": "Javier, a man haunted by traumatic childhood visions, is hired by Raquel to restore an old haunted mansion, where every night at 3:33 am, the specter of a mysterious woman appears. Obsessed, Javier embarks on the impossible mission of saving someone who is already dead.",
+  "motivo": "igual a la española, sin el padre Alirio",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración Funza, verificador independiente)",
+  "antes": {
+   "funza-2026": "Javier, a man haunted by traumatic childhood visions, is hired by Raquel to restore an old haunted mansion, where every night at 3:33 am, the specter of a mysterious woman appears. Obsessed, Javier embarks on the impossible mission of saving someone who is already dead, and seeks answers from Father Alirio."
+  },
+  "fuente": "https://www.themoviedb.org/movie/1599200"
+ },
+ {
+  "work_id": "w_SK216DYMW3MS",
+  "campo": "directores",
+  "valor": [
+   "Miguel Urrutia"
+  ],
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "Miguel Urrutia"
+  }
+ },
+ {
+  "work_id": "w_SK216DYMW3MS",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_SK216DYMW3MS",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_SK216DYMW3MS",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_SK216DYMW3MS",
+  "campo": "xref.tmdb",
+  "valor": 1599200,
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "1599200"
+  }
+ },
+ {
+  "work_id": "w_SK216DYMW3MS",
+  "campo": "xref.letterboxd",
+  "valor": "reflections-2025-4",
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "reflections-2025-4"
+  }
+ },
+ {
+  "work_id": "w_SK216DYMW3MS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/funza-2026/reflejos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde funza-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración funza-2026)",
+  "sembrada": true,
+  "antes": {
+   "funza-2026": "/assets/funza-2026/reflejos.jpg"
+  }
  }
 ]

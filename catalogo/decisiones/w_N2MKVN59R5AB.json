@@ -27,5 +27,111 @@
   "antes": {
    "cuaff-2026": "Documental que busca, en un relato de paralelismos, encontrar todos los matices posibles sobre un pedacito del centro de Bogotá, un microcosmos que se entrelaza y muere con la renovación de la ciudad. Graffiti, Rap y literatura (Mario Mendoza) aportan con datos inéditos todo lo que pasó en algún momento en uno de los barrios marginalizados del centro de Bogotá"
   }
+ },
+ {
+  "work_id": "w_N2MKVN59R5AB",
+  "campo": "directores",
+  "valor": [
+   "Luis Carlos Ayala"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Luis Carlos Ayala"
+  }
+ },
+ {
+  "work_id": "w_N2MKVN59R5AB",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_N2MKVN59R5AB",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_N2MKVN59R5AB",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_N2MKVN59R5AB",
+  "campo": "sinopsis.en",
+  "valor": "A documentary that, through a story of parallels, seeks every possible nuance of a small piece of downtown Bogotá: a microcosm that intertwines and dies with the city's renewal. Graffiti, rap and literature (Mario Mendoza) bring never-before-told accounts of what once happened in one of the marginalized neighborhoods of central Bogotá.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "A documentary that, through a story of parallels, seeks every possible nuance of a small piece of downtown Bogotá: a microcosm that intertwines and dies with the city's renewal. Graffiti, rap and literature (Mario Mendoza) bring never-before-told accounts of what once happened in one of the marginalized neighborhoods of central Bogotá."
+  }
+ },
+ {
+  "work_id": "w_N2MKVN59R5AB",
+  "campo": "xref.tmdb",
+  "valor": 1828501,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "1828501"
+  }
+ },
+ {
+  "work_id": "w_N2MKVN59R5AB",
+  "campo": "xref.letterboxd",
+  "valor": "sanber-vivencias-de-un-bajo-mundo",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "sanber-vivencias-de-un-bajo-mundo"
+  }
+ },
+ {
+  "work_id": "w_N2MKVN59R5AB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/sanber-vivencias-de-un-bajo-mundo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/sanber-vivencias-de-un-bajo-mundo.jpg"
+  }
  }
 ]

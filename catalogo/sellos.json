@@ -2704,20 +2704,20 @@
   "verifica": "primera lectura"
  },
  "w_8GJ7B5KCEQ78": {
-  "contra": "https://radionacional.co/cultura/cine/pelicula-colombiana-horizonte-historia-y-sinopsis",
+  "contra": "https://radionacional.co/cultura/cine/pelicula-colombiana-horizonte-historia-y-sinopsis · https://www.themoviedb.org/movie/1265716",
   "fecha": "2026-11-25",
-  "huella": "6c30c77209af",
-  "redacta": "primera lectura",
+  "huella": "16e637a972e9",
+  "redacta": "agente segunda lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "segunda lectura"
+  "verifica": "Claude (sesión App)"
  },
  "w_8GJ7S9JR04H8": {
   "contra": "https://www.themoviedb.org/movie/1627217",
   "fecha": "2026-11-25",
-  "huella": "cdb8139f9bab",
-  "redacta": "festival",
+  "huella": "82c2cef47ba9",
+  "redacta": "agente verificador (migración)",
   "veredicto": "fiel",
-  "verifica": "primera lectura"
+  "verifica": "agente segunda lectura (migración)"
  },
  "w_8GJ8PFFG53AE": {
   "contra": "https://www.themoviedb.org/movie/1478001",
@@ -3126,6 +3126,94 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "segunda lectura"
+ },
+ "w_N2MJT4QTG3Y5": {
+  "contra": "https://cinematecadebogota.gov.co/node/peliculas/4030",
+  "fecha": "2026-11-25",
+  "huella": "7559d0f9dd73",
+  "redacta": "primera lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
+ },
+ "w_N2MK9WH55ABP": {
+  "contra": "https://cinematecadebogota.gov.co/node/peliculas/4031",
+  "fecha": "2026-11-25",
+  "huella": "f81e7220ac8a",
+  "redacta": "agente segunda lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "Claude (sesión App)"
+ },
+ "w_N2MKREHYZ5RA": {
+  "contra": "https://www.instagram.com/p/DfkCq1vlXAe/",
+  "fecha": "2026-11-25",
+  "huella": "dfa5dd4d867c",
+  "redacta": "primera lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
+ },
+ "w_N2MKS2E76TV4": {
+  "contra": "https://www.instagram.com/p/Df2amWqlajg/",
+  "fecha": "2026-11-25",
+  "huella": "b016f8def171",
+  "redacta": "primera lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
+ },
+ "w_N2MKSKXQ1KRR": {
+  "contra": "https://www.instagram.com/p/DfkEI-ZFSa2/",
+  "fecha": "2026-11-25",
+  "huella": "ff16152ad747",
+  "redacta": "primera lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
+ },
+ "w_N2MKSWF5M07G": {
+  "contra": "https://www.instagram.com/p/DfkFGHmlZnr/",
+  "fecha": "2026-11-25",
+  "huella": "fcc4886ea655",
+  "redacta": "agente segunda lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "Claude (sesión App)"
+ },
+ "w_N2MKT6YBNK0Y": {
+  "contra": "https://www.instagram.com/p/DfkVdFolQHW/",
+  "fecha": "2026-11-25",
+  "huella": "f5c91b53b74f",
+  "redacta": "primera lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
+ },
+ "w_N2MKTFTRVTFM": {
+  "contra": "https://www.instagram.com/p/DfkG3folR3w/",
+  "fecha": "2026-11-25",
+  "huella": "2c95fb599c28",
+  "redacta": "primera lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
+ },
+ "w_N2MKTRY4K0ZG": {
+  "contra": "https://www.instagram.com/p/DfzaftWlRzG/",
+  "fecha": "2026-11-25",
+  "huella": "403ce4aea489",
+  "redacta": "agente segunda lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "Claude (sesión App)"
+ },
+ "w_N2MKVB934G46": {
+  "contra": "https://www.instagram.com/p/DfvPV3zDP5z/",
+  "fecha": "2026-11-25",
+  "huella": "b3e1811190ef",
+  "redacta": "primera lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
+ },
+ "w_N2MKVN59R5AB": {
+  "contra": "https://cinematecadebogota.gov.co/node/peliculas/4036",
+  "fecha": "2026-11-25",
+  "huella": "24e1799de7f5",
+  "redacta": "primera lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
  },
  "w_P1KS8DNKV57D": {
   "contra": "festivals/festicinerio-2026.json",
@@ -6494,6 +6582,30 @@
   "redacta": "montador festicineantioquia-2026",
   "veredicto": "fiel",
   "verifica": "sellador de obras (agente)"
+ },
+ "w_SK216DYMW3MS": {
+  "contra": "https://www.proimagenescolombia.com/secciones/cine_colombiano/peliculas_colombianas/pelicula_plantilla.php?id_pelicula=3157",
+  "fecha": "2026-11-25",
+  "huella": "d17f0698769d",
+  "redacta": "agente verificador (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
+ },
+ "w_T2P0CN3BR544": {
+  "contra": "https://www.instagram.com/p/Df7PVXvlVJz/",
+  "fecha": "2026-11-25",
+  "huella": "ce6d69645d04",
+  "redacta": "primera lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
+ },
+ "w_T2P0CYQ4DK9J": {
+  "contra": "https://www.instagram.com/p/Df8a61VjDKG/",
+  "fecha": "2026-11-25",
+  "huella": "181bd58c9f7e",
+  "redacta": "primera lectura (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
  },
  "w_X28H1T7D9C4G": {
   "contra": "https://www.themoviedb.org/movie/1484934",

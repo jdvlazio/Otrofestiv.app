@@ -1,0 +1,42 @@
+[
+ {
+  "work_id": "w_T2P0D99K438V",
+  "campo": "directores",
+  "valor": [
+   "Samuel Aricapa"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Samuel Aricapa"
+  }
+ },
+ {
+  "work_id": "w_T2P0D99K438V",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_T2P0D99K438V",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Colombia"
+  }
+ }
+]

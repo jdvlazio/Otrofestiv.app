@@ -9,15 +9,16 @@
   "Peds Shaumers"
  ],
  "sinopsis": {
-  "es": "Un homenaje al crew VSK y a la historia del graffiti writing en Bogotá. Desde la alquimia y la transformación de los materiales, Peds Shaumers busca reivindicar la memoria de su crew —Shuk, Skill y Suber— a través de la fundición de metales, convirtiendo el arte en un ejercicio de memoria, identidad y resistencia al olvido.",
-  "en": "A tribute to the VSK crew and the history of graffiti writing in Bogotá. Through the alchemy of metal casting, Peds Shaumers reclaims the memory of his crew — Shuk, Skill and Suber — turning art into an exercise of memory, identity and resistance to oblivion."
+  "es": "Un homenaje al crew VSK y a la historia del graffiti writing en Bogotá. Desde la alquimia y la transformación de los materiales, Peds Shaumers busca reivindicar la memoria de su crew a través de la fundición de metales, convirtiendo el arte en un ejercicio de memoria, identidad y resistencia al olvido.",
+  "en": "A tribute to the VSK crew and the history of graffiti writing in Bogotá. Through alchemy and the transformation of materials, Peds Shaumers seeks to reclaim the memory of his crew by casting metal, turning art into an exercise in memory, identity and resistance to oblivion."
  },
  "generos": [
   "Documental"
  ],
  "afiche": {
   "archivo": "/assets/cuaff-2026/vsk-en-metal.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1828519,

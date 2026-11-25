@@ -24,5 +24,111 @@
   "antes": {
    "cuaff-2026": "Lo que mantiene unido a este grupo de amigos es una causa artística urbana llamada graffiti que persigue la ley. Tienen normas y valores propios. Se rigen por un código honesto y estricto y sueñan, que para eso son artistas, con fama, respeto y reconocimiento. Pero de momento toca agitar el spray con nocturnidad y lo más urgente, escapar de la policía y responder al reto de un grupo rival, los temibles KBS, que les arrojan el guante de pintar entero un tren de cercanías."
   }
+ },
+ {
+  "work_id": "w_N2MJT4QTG3Y5",
+  "campo": "directores",
+  "valor": [
+   "Florian Gaag"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Florian Gaag"
+  }
+ },
+ {
+  "work_id": "w_N2MJT4QTG3Y5",
+  "campo": "anio",
+  "valor": 2006,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2006"
+  }
+ },
+ {
+  "work_id": "w_N2MJT4QTG3Y5",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_N2MJT4QTG3Y5",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_N2MJT4QTG3Y5",
+  "campo": "sinopsis.en",
+  "valor": "What unites this group of friends is graffiti, an urban art cause pursued by the law. They live by an honest, strict code and dream of fame, respect and recognition. For now, the urgent thing is to escape the police and answer a rival crew’s challenge: to paint an entire commuter train.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "What unites this group of friends is graffiti, an urban art cause pursued by the law. They live by an honest, strict code and dream of fame, respect and recognition. For now, the urgent thing is to escape the police and answer a rival crew’s challenge: to paint an entire commuter train."
+  }
+ },
+ {
+  "work_id": "w_N2MJT4QTG3Y5",
+  "campo": "xref.tmdb",
+  "valor": 14231,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "14231"
+  }
+ },
+ {
+  "work_id": "w_N2MJT4QTG3Y5",
+  "campo": "xref.letterboxd",
+  "valor": "wholetrain",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "wholetrain"
+  }
+ },
+ {
+  "work_id": "w_N2MJT4QTG3Y5",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/wholetrain.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/wholetrain.jpg"
+  }
  }
 ]

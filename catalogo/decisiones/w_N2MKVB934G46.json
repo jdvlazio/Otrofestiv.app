@@ -24,5 +24,110 @@
   "antes": {
    "cuaff-2026": "Un cortometraje filmado en una sola noche que refleja el estilo de vida de un escritor de graffiti, recorriendo las calles de Buenos Aires hasta altas horas de la madrugada. Acompañado por el sonido ambiente de la ciudad, muestra a los seres que habitan la calle cuando todos duermen, buscando spots para hacer tags o flops y algún kiosco donde conseguir alcohol a buen precio."
   }
+ },
+ {
+  "work_id": "w_N2MKVB934G46",
+  "campo": "directores",
+  "valor": [
+   "Newen"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Newen"
+  }
+ },
+ {
+  "work_id": "w_N2MKVB934G46",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_N2MKVB934G46",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_N2MKVB934G46",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_N2MKVB934G46",
+  "campo": "sinopsis.en",
+  "valor": "A short film shot in a single night that portrays the lifestyle of a graffiti writer, roaming the streets of Buenos Aires until the early hours. Accompanied by the ambient sound of the city, it shows the beings who inhabit the street while everyone sleeps, looking for spots for tags or throw-ups and a kiosk with cheap alcohol.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "A short film shot in a single night that portrays the lifestyle of a graffiti writer, roaming the streets of Buenos Aires until the early hours. Accompanied by the ambient sound of the city, it shows the beings who inhabit the street while everyone sleeps, looking for spots for tags or throw-ups and a kiosk with cheap alcohol."
+  }
+ },
+ {
+  "work_id": "w_N2MKVB934G46",
+  "campo": "xref.tmdb",
+  "valor": 1828517,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "1828517"
+  }
+ },
+ {
+  "work_id": "w_N2MKVB934G46",
+  "campo": "xref.letterboxd",
+  "valor": "morbo-x-noches-aires",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "morbo-x-noches-aires"
+  }
+ },
+ {
+  "work_id": "w_N2MKVB934G46",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/morbo-x-noches-aires-v2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/morbo-x-noches-aires-v2.jpg"
+  }
  }
 ]

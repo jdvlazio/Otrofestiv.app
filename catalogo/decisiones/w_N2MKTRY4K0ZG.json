@@ -1,0 +1,141 @@
+[
+ {
+  "work_id": "w_N2MKTRY4K0ZG",
+  "campo": "directores",
+  "valor": [
+   "Peds Shaumers"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Peds Shaumers"
+  }
+ },
+ {
+  "work_id": "w_N2MKTRY4K0ZG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_N2MKTRY4K0ZG",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_N2MKTRY4K0ZG",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_N2MKTRY4K0ZG",
+  "campo": "sinopsis.es",
+  "valor": "Un homenaje al crew VSK y a la historia del graffiti writing en Bogotá. Desde la alquimia y la transformación de los materiales, Peds Shaumers busca reivindicar la memoria de su crew a través de la fundición de metales, convirtiendo el arte en un ejercicio de memoria, identidad y resistencia al olvido.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración CUAFF, segunda lectura)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Un homenaje al crew VSK y a la historia del graffiti writing en Bogotá. Desde la alquimia y la transformación de los materiales, Peds Shaumers busca reivindicar la memoria de su crew —Shuk, Skill y Suber— a través de la fundición de metales, convirtiendo el arte en un ejercicio de memoria, identidad y resistencia al olvido."
+  },
+  "anteriores": [
+   {
+    "valor": "Un homenaje al crew VSK y a la historia del graffiti writing en Bogotá. Desde la alquimia y la transformación de los materiales, Peds Shaumers busca reivindicar la memoria de su crew —Shuk, Skill y Suber— a través de la fundición de metales, convirtiendo el arte en un ejercicio de memoria, identidad y resistencia al olvido.",
+    "motivo": "alta desde cuaff-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración cuaff-2026)"
+   }
+  ],
+  "vistas": [
+   "13054a838b67"
+  ],
+  "fuente": "https://www.instagram.com/p/DfzaftWlRzG/"
+ },
+ {
+  "work_id": "w_N2MKTRY4K0ZG",
+  "campo": "sinopsis.en",
+  "valor": "A tribute to the VSK crew and the history of graffiti writing in Bogotá. Through alchemy and the transformation of materials, Peds Shaumers seeks to reclaim the memory of his crew by casting metal, turning art into an exercise in memory, identity and resistance to oblivion.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración CUAFF, segunda lectura)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "A tribute to the VSK crew and the history of graffiti writing in Bogotá. Through alchemy and the transformation of materials, Peds Shaumers seeks to reclaim the memory of his crew — Shuk, Skill and Suber — by casting metal, turning art into an exercise in memory, identity and resistance to oblivion."
+  },
+  "anteriores": [
+   {
+    "valor": "A tribute to the VSK crew and the history of graffiti writing in Bogotá. Through alchemy and the transformation of materials, Peds Shaumers seeks to reclaim the memory of his crew — Shuk, Skill and Suber — by casting metal, turning art into an exercise in memory, identity and resistance to oblivion.",
+    "motivo": "alta desde cuaff-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración cuaff-2026)"
+   }
+  ],
+  "fuente": "https://www.instagram.com/p/DfzaftWlRzG/"
+ },
+ {
+  "work_id": "w_N2MKTRY4K0ZG",
+  "campo": "xref.tmdb",
+  "valor": 1828519,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "1828519"
+  }
+ },
+ {
+  "work_id": "w_N2MKTRY4K0ZG",
+  "campo": "xref.letterboxd",
+  "valor": "vsk-en-metal",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "vsk-en-metal"
+  }
+ },
+ {
+  "work_id": "w_N2MKTRY4K0ZG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/vsk-en-metal.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/vsk-en-metal.jpg"
+  }
+ }
+]

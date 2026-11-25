@@ -6,5 +6,73 @@
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24",
   "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_N2MKS2E76TV4",
+  "campo": "directores",
+  "valor": [
+   "Hitana",
+   "Sir Cesaro"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Hitana, Sir Cesaro"
+  }
+ },
+ {
+  "work_id": "w_N2MKS2E76TV4",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_N2MKS2E76TV4",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_N2MKS2E76TV4",
+  "campo": "sinopsis.es",
+  "valor": "Una propuesta audiovisual independiente que busca generar espacios para las raperas del underground. Una pieza con identidad propia, fuerza, creada para conectar, visibilizar y seguir construyendo lazos desde la música.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Una propuesta audiovisual independiente que busca generar espacios para las raperas del underground. Una pieza con identidad propia, fuerza, creada para conectar, visibilizar y seguir construyendo lazos desde la música."
+  }
+ },
+ {
+  "work_id": "w_N2MKS2E76TV4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/codigo-cypher-vol1.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/codigo-cypher-vol1.jpg"
+  }
  }
 ]
