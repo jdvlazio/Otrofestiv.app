@@ -7210,6 +7210,7 @@ try:
               'afirmaciones.json', 'funciones-ids.json', 'conflictos.json',
               'funciones-decisiones.json',  # §11.3.4, 18 oct 2026
               'palmares.json', 'avisos.json',  # publicar.py los lleva al JSON (f-string), 19 oct 2026
+              'encuadrados.json',  # la memoria de pipeline/encuadrar-posters.py (f-string), 25 nov 2026
               'sellos-funcion.json', 'acceso.json',  # pipeline/sello_funcion.py, 24 nov 2026
               'altas.json'}  # el registro de altas: pipeline/altas.py (f-string) y sus guardianes, 15 nov 2026
     _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \

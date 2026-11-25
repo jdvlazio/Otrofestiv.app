@@ -93,11 +93,21 @@ def hechos(fid):
     if not os.path.exists(libro(fid)):
         return {}
     with open(libro(fid), encoding='utf-8') as fh:
-        return json.load(fh)
+        d = json.load(fh)
+    return {k: v for k, v in d.items() if k != '_provenance'}
 
 
 def anotar(fid, rutas):
-    d = {**hechos(fid), **{os.path.basename(x): huella(x) for x in rutas}}
+    antes = hechos(fid)
+    d = {**antes, **{os.path.basename(x): huella(x) for x in rutas}}
+    if not d:
+        return
+    if d == antes:
+        with open(libro(fid), encoding='utf-8') as fh:
+            if '_provenance' in json.load(fh):
+                return
+    from lib import provenance
+    d['_provenance'] = provenance('pipeline/encuadrar-posters.py')
     with open(libro(fid), 'w', encoding='utf-8') as fh:
         json.dump(d, fh, ensure_ascii=False, indent=1, sort_keys=True)
 
