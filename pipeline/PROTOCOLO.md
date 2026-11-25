@@ -709,7 +709,8 @@ triplicado): `norm`, `hora24`, `rango_horario`, `curl_get`, `tmdb_get`,
 `provenance`, `cargar_crudo`. `python3 pipeline/lib.py` corre su selftest —
 los casos reales que cada una resolvió, incluidos los que costaron un bug.
 
-Guardianes del pipeline en `validate.py`: `[staging-provenance]` (sidecar
+Guardianes del pipeline en `validate.py`: `[id-festival]` (la clave del festival va sin guiones:
+`festicineantioquia-2026` → `festicineantioquia2026`), `[staging-provenance]` (sidecar
 nuevo sin fecha = error), `[pipeline-circuito]` (escrito-sin-lector junto a su
 gemelo leído-sin-escritor = error), `[sedes-apiladas]` y `[sala-en-sede]`
 (warnings sobre festivales activos).

@@ -4942,6 +4942,18 @@ except Exception as _e:
     warn(check, f'no se pudo verificar layer-direction: {_e}')
 
 
+# ── [id-festival] la clave de FESTIVAL_CONFIG va sin guiones ──────────────────
+# tests/helpers.js y una decena de chequeos leen las claves con [a-z0-9]+: una con
+# guion les es invisible y el festival queda sin revisar (Festicine Antioquia, 25 nov 2026).
+check = 'id-festival'
+_cfg_id = open('src/config.js', encoding='utf-8').read()
+_cfg_id = _cfg_id[_cfg_id.index('FESTIVAL_CONFIG'):]
+_mal_id = [_k for _k in re.findall(r"\n  '([^'\n]+)':\s*\{\s*\n(?:\s*//[^\n]*\n)*\s*(?:id|name|keyArt|group|fullName|shortName)\s*:", _cfg_id) if not re.fullmatch(r'[a-z0-9]+', _k)]
+if _mal_id:
+    fail(check, 'clave de festival con algo más que letras y números: ' + ', '.join(_mal_id))
+else:
+    ok(check, 'claves de festival sin guiones')
+
 # ── [staging-provenance] todo sidecar nuevo declara cuándo se capturó ─────────
 # El bug de las 48 salas de FICDEH vivió escondido porque nada decía de CUÁNDO
 # era cada sidecar. Regla: todo JSON nuevo en festivals/staging/ lleva

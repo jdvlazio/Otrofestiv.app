@@ -317,6 +317,16 @@ class CI(Base):
 
 
 class Sellar(Base):
+    def test_llevan_provenance(self):
+        # [staging-provenance] la exige en todo sidecar: no es un sello ni una entrada
+        with open(s._ruta(FID, 'sellos-funcion'), encoding='utf-8') as fh:
+            self.assertTrue(json.load(fh)['_provenance']['capturado'])
+        self.assertEqual(list(s.sidecars(FID)[0]), ['f_1'])
+        self.pon('acceso', {'_provenance': {'capturado': '2026-11-25'}, 'entradas': [LIBRE]})
+        self.assertEqual(s.revisar(FID, fest(), HOY, modelo=False), ([], []))
+        self.pon('acceso', {'_provenance': {}, 'entradas': {}})
+        self.assertTrue(s.revisar(FID, fest(), HOY, modelo=False)[0])
+
     def test_rechaza(self):
         d = fest(time='20:00')
         for k in ({'verifica': ' A '}, {'contra': ''}, {'contra': 'el programa'}, {'contra': 'n/a'}, {'monta': ''}, {'huella': 'x'}):
