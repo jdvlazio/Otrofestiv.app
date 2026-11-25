@@ -36,14 +36,14 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
-  "fecha": "2026-11-23"
+  "motivo": "el original español guardado NO está en TMDB (es-ES vacío; es-MX trae este otro texto, sin «emberá», «mestiza» ni «ancianos»)",
+  "fecha": "2026-11-25"
  },
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
-  "fecha": "2026-11-24"
+  "motivo": "traducción fiel del original",
+  "fecha": "2026-11-25"
  },
  "xref.tmdb": {
   "fuente": "humano",

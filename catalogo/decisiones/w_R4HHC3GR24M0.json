@@ -23,10 +23,10 @@
  {
   "work_id": "w_R4HHC3GR24M0",
   "campo": "sinopsis.es",
-  "valor": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados entre quienes sufren su ausencia y quienes guardan información clave. Esta película revela el papel de los aportantes de información: personas que participaron, directa o indirectamente, en las hostilidades y decidieron sumarse a la búsqueda humanitaria de la UBPD.",
+  "motivo": "pasaba de 350; equivale a la inglesa",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "vistas": [
    "4665ed774f25",
    "e5fc94a3acd9",
@@ -36,7 +36,21 @@
    "ficdeh-2026": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas.",
    "ficfusa-2026": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas. Conversatorio con Angélica, mujer buscadora; Frank Benítez, director de la película, y Juan Carlos Henao, de la Unidad de Búsqueda (UBPD). Modera Daniel Triviño",
    "ficmontanas-2026": "Documental sobre la búsqueda de personas dadas por desaparecidas: las voces de quienes buscan y el eco de una ausencia que insiste."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "En Colombia, la búsqueda de personas desaparecidas ha abierto caminos inesperados de encuentro entre quienes sufren su ausencia y quienes guardan información clave sobre su paradero. Este largometraje revela el papel fundamental de los aportantes de información, en las voces de quienes participaron directa e indirectamente en las hostilidades y que, desde el compromiso, han decidido sumarse al proceso humanitario de la búsqueda liderado por la Unidad de Búsqueda de Personas dadas por Desaparecidas.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "4665ed774f25",
+     "e5fc94a3acd9",
+     "f20a2827429f"
+    ]
+   }
+  ],
+  "fuente": "https://www.themoviedb.org/movie/1738005"
  },
  {
   "work_id": "w_R4HHC3GR24M0",
@@ -59,5 +73,93 @@
     "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
    }
   ]
+ },
+ {
+  "work_id": "w_R4HHC3GR24M0",
+  "campo": "directores",
+  "valor": [
+   "Frank Benítez Peña"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficdeh-2026": "Frank Benítez Peña",
+   "ficfusa-2026": "Frank Benítez Peña",
+   "ficmontanas-2026": "Frank Benítez Peña"
+  }
+ },
+ {
+  "work_id": "w_R4HHC3GR24M0",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficdeh-2026": "2026",
+   "ficfusa-2026": "2026",
+   "ficmontanas-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HHC3GR24M0",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficdeh-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "ficmontanas-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HHC3GR24M0",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficdeh-2026": "Documental",
+   "ficfusa-2026": "Documental",
+   "ficmontanas-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4HHC3GR24M0",
+  "campo": "xref.tmdb",
+  "valor": 1738005,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1738005"
+  }
+ },
+ {
+  "work_id": "w_R4HHC3GR24M0",
+  "campo": "xref.letterboxd",
+  "valor": "cuando-la-palabra-se-hace-busqueda",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficdeh-2026": "cuando-la-palabra-se-hace-busqueda",
+   "ficfusa-2026": "cuando-la-palabra-se-hace-busqueda",
+   "ficmontanas-2026": "cuando-la-palabra-se-hace-busqueda"
+  }
  }
 ]

@@ -2,15 +2,137 @@
  {
   "work_id": "w_5X2XBY4ESYA7",
   "campo": "sinopsis.es",
-  "valor": "Una joven cineasta recorre Asia para documentar el trabajo de directoras independientes, pero a medida que escucha sus historias, empiezan a aflorar recuerdos de su propio pasado. Un viaje que, además de acercarla a otras mujeres creadoras, la obligará a enfrentarse a sí misma.",
-  "motivo": "corrección de «habla del evento»: texto del festival sin lo que no era sinopsis",
-  "fecha": "2026-11-23",
-  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "valor": "Una joven cineasta viaja por Asia para documentar a directoras independientes, pero sus historias hacen aflorar su propio pasado.",
+  "motivo": "la publicada añade cosas; esta es literal y equivale al inglés",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "vistas": [
+   "5d4fe08ab971",
    "6861c6155023"
   ],
   "antes": {
    "ficfusa-2026": "Una joven cineasta recorre Asia para documentar el trabajo de directoras independientes, pero a medida que escucha sus historias, empiezan a aflorar recuerdos de su propio pasado. Un viaje que, además de acercarla a otras mujeres creadoras, la obligará a enfrentarse a sí misma. Conversatorio con la directora Coco Wouters"
+  },
+  "anteriores": [
+   {
+    "valor": "Una joven cineasta recorre Asia para documentar el trabajo de directoras independientes, pero a medida que escucha sus historias, empiezan a aflorar recuerdos de su propio pasado. Un viaje que, además de acercarla a otras mujeres creadoras, la obligará a enfrentarse a sí misma.",
+    "motivo": "corrección de «habla del evento»: texto del festival sin lo que no era sinopsis",
+    "fecha": "2026-11-23",
+    "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+    "vistas": [
+     "6861c6155023"
+    ]
+   }
+  ],
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://letterboxd.com/film/framing-her/"
+ },
+ {
+  "work_id": "w_5X2XBY4ESYA7",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "estrenada en la 41.ª Varsovia, oct 2025",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://mubi.com/en/us/films/framing-her · https://asianmoviepulse.com/2025/10/framing-her-2025-by-coco-wouters-documentary-review/",
+  "antes": {
+   "ficfusa-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_5X2XBY4ESYA7",
+  "campo": "directores",
+  "valor": [
+   "Coco Wouters"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Coco Wouters"
+  }
+ },
+ {
+  "work_id": "w_5X2XBY4ESYA7",
+  "campo": "paises",
+  "valor": [
+   "BE",
+   "SE",
+   "GB",
+   "NO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Bélgica, Suecia, Reino Unido, Noruega"
+  }
+ },
+ {
+  "work_id": "w_5X2XBY4ESYA7",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_5X2XBY4ESYA7",
+  "campo": "sinopsis.en",
+  "valor": "A young filmmaker travels across Asia to document independent women directors, but their stories bring her own past to the surface.",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "A young filmmaker travels across Asia to document independent women directors, but their stories bring her own past to the surface."
+  }
+ },
+ {
+  "work_id": "w_5X2XBY4ESYA7",
+  "campo": "xref.tmdb",
+  "valor": 1531982,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1531982"
+  }
+ },
+ {
+  "work_id": "w_5X2XBY4ESYA7",
+  "campo": "xref.letterboxd",
+  "valor": "framing-her",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "framing-her"
+  }
+ },
+ {
+  "work_id": "w_5X2XBY4ESYA7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/framing-her.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "/assets/ficfusa-2026/framing-her.jpg"
   }
  }
 ]

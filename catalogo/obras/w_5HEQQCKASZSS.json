@@ -1,7 +1,7 @@
 {
  "id": "w_5HEQQCKASZSS",
  "titulo_original": "La",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "CO",
   "AR"
@@ -9,6 +9,17 @@
  "directores": [
   "Tephy Piedrahita Avellaneda"
  ],
+ "sinopsis": {
+  "es": "La es un documental ensayo a modo de manifiesto que evidencia, en lenguaje femenino, que la sangre es el hilo narrativo de la memoria corporal y espiritual de la mujer. Entrelaza los significados y representaciones culturales de la menstruación con testimonios de mujeres que atravesaron la lucha armada por la vida y su territorio.",
+  "en": "La is a documentary essay in the form of a manifesto showing, in feminine language, that blood is the narrative thread of women’s bodily and spiritual memory. It weaves the cultural meanings and representations of menstruation with testimonies from women who lived through armed struggle for life and their territory."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/cineparalapaz-2026/la.jpg",
+  "veredicto": "oficial"
+ },
  "xref": {},
  "presentaciones": [
   "ficfusa-2026"

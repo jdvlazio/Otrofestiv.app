@@ -33,5 +33,103 @@
    "ficfusa-2026": "España, México",
    "guatape-2026": "México"
   }
+ },
+ {
+  "work_id": "w_8GJ8PFFG53AE",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "estreno mundial en FICG 40 (2025)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://amp.milenio.com/espectaculos/cine/olas-filme-horacio-alcara-presenta-ficg-40 · https://es.hollywoodreporter.com/?p=2760",
+  "antes": {
+   "ficfusa-2026": "2026",
+   "guatape-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_8GJ8PFFG53AE",
+  "campo": "sinopsis.es",
+  "valor": "En la isla de Magdala, la ambición de una madre y la crisis identitaria de una actriz se entrelazan en un estallido de delirio, donde los secretos del pueblo emergen guiados por voces que quiebran los límites entre realidad y locura.",
+  "motivo": "la publicada pasa de 350 (y trae «en vano» mal puesto)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "En una isla imaginaria, Gloria Zamora, una madre trabajadora, saca a relucir su verdadera personalidad con la llegada del dinero y el poder a su vida. Con la sumisión del cura del pueblo, Don Marcario, proveedor de la palabra de Dios en vano, conseguirá poner a todo un pueblo bajo sus pies. La hija de la familia, Trinidad, actúa como narradora con su propio monólogo interior, que guía al espectador en su ensoñación y juzga la malicia de su madre. En España, Rocío Aldama, la personificación de Sara Montiel. Una actriz con un único sueño: triunfar. Dos mundos y una mezcla de coincidencias e infortunios.",
+   "guatape-2026": "En una isla imaginaria, Gloria Zamora, una madre trabajadora, saca a relucir su verdadera personalidad con la llegada del dinero y el poder a su vida. Con la sumisión del cura del pueblo, Don Marcario, proveedor de la palabra de Dios en vano, conseguirá poner a todo un pueblo bajo sus pies. La hija de la familia, Trinidad, actúa como narradora con su propio monólogo interior, que guía al espectador en su ensoñación y juzga la malicia de su madre. En España, Rocío Aldama, la personificación de Sara Montiel. Una actriz con un único sueño: triunfar. Dos mundos y una mezcla de coincidencias e infortunios."
+  },
+  "vistas": [
+   "ff86095429e1"
+  ]
+ },
+ {
+  "work_id": "w_8GJ8PFFG53AE",
+  "campo": "sinopsis.en",
+  "valor": "On the island of Magdala, a mother's ambition and an actress's identity crisis intertwine in an outburst of delirium, where the town's secrets emerge, guided by voices that break down the limits between reality and madness.",
+  "motivo": "traducción exacta de la sinopsis en español",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "On an imaginary island, Gloria Zamora, a working mother, unleashes her true nature as money and power enter her life, bringing an entire town under her control. Her daughter, Trinidad, narrates the story, judging her mother’s malice through her inner monologue. Meanwhile, in Spain, actress Rocío Aldama, embodying Sara Montiel, chases her dream of success, as two worlds intertwine in a web of coincidences and misfortunes.",
+   "guatape-2026": "On an imaginary island, Gloria Zamora, a working mother, unleashes her true nature as money and power enter her life, bringing an entire town under her control. Her daughter, Trinidad, narrates the story, judging her mother’s malice through her inner monologue. Meanwhile, in Spain, actress Rocío Aldama, embodying Sara Montiel, chases her dream of success, as two worlds intertwine in a web of coincidences and misfortunes."
+  }
+ },
+ {
+  "work_id": "w_8GJ8PFFG53AE",
+  "campo": "directores",
+  "valor": [
+   "Horacio Alcalá"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Horacio Alcalá",
+   "guatape-2026": "Horacio Alcalá"
+  }
+ },
+ {
+  "work_id": "w_8GJ8PFFG53AE",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Drama",
+   "guatape-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8GJ8PFFG53AE",
+  "campo": "xref.tmdb",
+  "valor": 1478001,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1478001",
+   "guatape-2026": "1478001"
+  }
+ },
+ {
+  "work_id": "w_8GJ8PFFG53AE",
+  "campo": "xref.letterboxd",
+  "valor": "sobre-las-olas",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "sobre-las-olas",
+   "guatape-2026": "sobre-las-olas"
+  }
  }
 ]

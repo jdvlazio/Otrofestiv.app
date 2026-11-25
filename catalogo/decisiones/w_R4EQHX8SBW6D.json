@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_R4EQHX8SBW6D",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "pie del festival (copia local del vigía): «cine experimental contemporáneo»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://www.instagram.com/p/DfaNEWSERxC",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4EQHX8SBW6D",
+  "campo": "directores",
+  "valor": [
+   "Juan Sebastián Parra Posso"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Juan Sebastián Parra Posso",
+   "ficfusa-2026": "Juan Sebastián Parra Posso"
+  }
+ },
+ {
+  "work_id": "w_R4EQHX8SBW6D",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "2025",
+   "ficfusa-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4EQHX8SBW6D",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Colombia",
+   "ficfusa-2026": "Colombia"
+  }
+ }
+]

@@ -1,0 +1,99 @@
+[
+ {
+  "work_id": "w_5HEQQCKASZSS",
+  "campo": "sinopsis.es",
+  "valor": "La es un documental ensayo a modo de manifiesto que evidencia, en lenguaje femenino, que la sangre es el hilo narrativo de la memoria corporal y espiritual de la mujer. Entrelaza los significados y representaciones culturales de la menstruación con testimonios de mujeres que atravesaron la lucha armada por la vida y su territorio.",
+  "motivo": "catálogo, ajustado a 350 sin perder ideas",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {},
+  "vistas": []
+ },
+ {
+  "work_id": "w_5HEQQCKASZSS",
+  "campo": "sinopsis.en",
+  "valor": "La is a documentary essay in the form of a manifesto showing, in feminine language, that blood is the narrative thread of women’s bodily and spiritual memory. It weaves the cultural meanings and representations of menstruation with testimonies from women who lived through armed struggle for life and their territory.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "La is a documentary essay and manifesto showing, in feminine language, that blood is the narrative thread of women’s bodily and spiritual memory. It weaves the cultural meanings and representations of menstruation with testimonies from women who lived through armed struggle for life and their territory."
+  },
+  "anteriores": [
+   {
+    "valor": "La is a documentary essay and manifesto showing, in feminine language, that blood is the narrative thread of women’s bodily and spiritual memory. It weaves the cultural meanings and representations of menstruation with testimonies from women who lived through armed struggle for life and their territory.",
+    "motivo": "traducción fiel del original",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+    "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
+   }
+  ]
+ },
+ {
+  "work_id": "w_5HEQQCKASZSS",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "catálogo: Animación, Documental, Experimental; IG del festival (copia local del vigía): «película documental experimental»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://www.instagram.com/p/DfsMyayDyoh",
+  "antes": {}
+ },
+ {
+  "work_id": "w_5HEQQCKASZSS",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo: 2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_5HEQQCKASZSS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cineparalapaz-2026/la.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "afiche de esta misma obra que ya usa Cine para la Paz (abierto: título, «una película de Tephy Piedrahita Avellaneda», créditos; entero). El catálogo solo confirma título y directora",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {},
+  "vistas": []
+ },
+ {
+  "work_id": "w_5HEQQCKASZSS",
+  "campo": "directores",
+  "valor": [
+   "Tephy Piedrahita Avellaneda"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Tephy Piedrahita Avellaneda"
+  }
+ },
+ {
+  "work_id": "w_5HEQQCKASZSS",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "AR"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Colombia, Argentina"
+  }
+ }
+]

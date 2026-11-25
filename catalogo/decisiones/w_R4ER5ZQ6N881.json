@@ -1,0 +1,116 @@
+[
+ {
+  "work_id": "w_R4ER5ZQ6N881",
+  "campo": "sinopsis.es",
+  "valor": "Abjad Ḥawaz toma su nombre del antiguo orden del alfabeto árabe. A través del cuerpo de Salma Zahore, cada letra se baila y encarna en las ruinas de Barcelona. Con moda, música, poesía y performance, reivindica una lengua a menudo temida e incomprendida y la vuelve una celebración de la identidad, la resiliencia y la libertad artística.",
+  "motivo": "368>350; «resilience» es resiliencia",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://www.themoviedb.org/movie/1586176",
+  "antes": {
+   "cineautopsia-2026": "Abjad Ḥawaz toma su nombre del antiguo ordenamiento del alfabeto árabe. A través del cuerpo de Salma Zahore, cada letra se baila y se encarna en las ruinas de Barcelona. Entre moda, música, poesía y performance, la película reivindica una lengua a menudo temida e incomprendida y la convierte en una celebración de la identidad, la resistencia y la libertad artística.",
+   "ficfusa-2026": "Abjad Ḥawaz toma su nombre del antiguo ordenamiento del alfabeto árabe. A través del cuerpo de Salma Zahore, cada letra se baila y se encarna en las ruinas de Barcelona. Entre moda, música, poesía y performance, la película reivindica una lengua a menudo temida e incomprendida y la convierte en una celebración de la identidad, la resistencia y la libertad artística."
+  },
+  "vistas": [
+   "9a1a64a78c97"
+  ]
+ },
+ {
+  "work_id": "w_R4ER5ZQ6N881",
+  "campo": "sinopsis.en",
+  "valor": "Abjad Ḥawaz takes its name from the ancient order of the Arabic alphabet. Through Salma Zahore’s body, each letter is danced and embodied in the ruins of Barcelona. With fashion, music, poetry, and performance, it reclaims a language often feared and misunderstood, making it a celebration of identity, resilience, and artistic freedom.",
+  "motivo": "360>350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://www.themoviedb.org/movie/1586176",
+  "antes": {
+   "cineautopsia-2026": "Abjad Ḥawaz takes its name from the ancient ordering of the Arabic alphabet. Through the body of Salma Zahore, each letter is danced and embodied in the ruins of Barcelona. Blending fashion, music, poetry, and performance, the film reclaims a language often feared and misunderstood, turning it into a celebration of identity, resilience, and artistic freedom.",
+   "ficfusa-2026": "Abjad Ḥawaz takes its name from the ancient ordering of the Arabic alphabet. Through the body of Salma Zahore, each letter is danced and embodied in the ruins of Barcelona. Blending fashion, music, poetry, and performance, the film reclaims a language often feared and misunderstood, turning it into a celebration of identity, resilience, and artistic freedom."
+  }
+ },
+ {
+  "work_id": "w_R4ER5ZQ6N881",
+  "campo": "directores",
+  "valor": [
+   "Hadi Moussally"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Hadi Moussally",
+   "ficfusa-2026": "Hadi Moussally"
+  }
+ },
+ {
+  "work_id": "w_R4ER5ZQ6N881",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "2025",
+   "ficfusa-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4ER5ZQ6N881",
+  "campo": "paises",
+  "valor": [
+   "LB"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Líbano",
+   "ficfusa-2026": "Líbano"
+  }
+ },
+ {
+  "work_id": "w_R4ER5ZQ6N881",
+  "campo": "xref.tmdb",
+  "valor": 1586176,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "1586176",
+   "ficfusa-2026": "1586176"
+  }
+ },
+ {
+  "work_id": "w_R4ER5ZQ6N881",
+  "campo": "xref.letterboxd",
+  "valor": "abjad-hawaz",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "abjad-hawaz",
+   "ficfusa-2026": "abjad-hawaz"
+  }
+ },
+ {
+  "work_id": "w_R4ER5ZQ6N881",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cineautopsia/abjad-hawaz.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "/assets/cineautopsia/abjad-hawaz.jpg",
+   "ficfusa-2026": "/assets/cineautopsia/abjad-hawaz.jpg"
+  }
+ }
+]

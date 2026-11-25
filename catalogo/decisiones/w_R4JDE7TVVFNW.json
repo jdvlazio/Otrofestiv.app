@@ -26,10 +26,10 @@
  {
   "work_id": "w_R4JDE7TVVFNW",
   "campo": "sinopsis.es",
-  "valor": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (festicinerio-2026, ficfusa-2026, ficpa-2026, guatape-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan. Una anciana y sus animales, resistiendo juntos, porque en lo pequeño y cotidiano, la vida siempre encuentra la manera de continuar.",
+  "motivo": "a la ES le faltaba la segunda frase del original y de la EN",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "vistas": [
    "c271db1fa36a",
    "ddc95360fc95"
@@ -40,7 +40,20 @@
    "ficpa-2026": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
    "guatape-2026": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
    "siembrafest-2026": "Convierte el empeño de una mujer mayor por preservar el linaje de su última gallina en un relato íntimo sobre la persistencia de la vida."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Una anciana campesina lucha por preservar el linaje de su última gallina ante su desaparición; para ello recurre a su ingenio y diferentes medios de incubación de los últimos huevos que le quedan.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (festicinerio-2026, ficfusa-2026, ficpa-2026, guatape-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "c271db1fa36a",
+     "ddc95360fc95"
+    ]
+   }
+  ],
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
  },
  {
   "work_id": "w_R4JDE7TVVFNW",
@@ -72,6 +85,83 @@
    "ficpa-2026": 2026,
    "guatape-2026": 2026,
    "siembrafest-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4JDE7TVVFNW",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "catálogo: «Drama rural»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4JDE7TVVFNW",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicinerio-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "ficpa-2026": "Colombia",
+   "guatape-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4JDE7TVVFNW",
+  "campo": "sinopsis.en",
+  "valor": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicinerio-2026": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+   "ficfusa-2026": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+   "ficpa-2026": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+   "guatape-2026": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+   "siembrafest-2026": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on."
+  }
+ },
+ {
+  "work_id": "w_R4JDE7TVVFNW",
+  "campo": "xref.tmdb",
+  "valor": 1746279,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicinerio-2026": "1746279",
+   "ficfusa-2026": "1746279",
+   "ficpa-2026": "1746279",
+   "guatape-2026": "1746279"
+  }
+ },
+ {
+  "work_id": "w_R4JDE7TVVFNW",
+  "campo": "xref.letterboxd",
+  "valor": "la-gallina-saraviada",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicinerio-2026": "la-gallina-saraviada",
+   "ficfusa-2026": "la-gallina-saraviada",
+   "ficpa-2026": "la-gallina-saraviada",
+   "guatape-2026": "la-gallina-saraviada",
+   "siembrafest-2026": "la-gallina-saraviada"
   }
  }
 ]

@@ -36,14 +36,14 @@
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026, fantasmagoria-2026, festicinerio-2026, ficfusa-2026 +1)",
-  "fecha": "2026-11-23"
+  "motivo": "414>350",
+  "fecha": "2026-11-25"
  },
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "la que ya publica otro festival: una sola por obra",
-  "fecha": "2026-11-24"
+  "motivo": "394>350",
+  "fecha": "2026-11-25"
  },
  "xref.tmdb": {
   "fuente": "humano",

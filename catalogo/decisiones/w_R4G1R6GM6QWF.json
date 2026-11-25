@@ -145,14 +145,15 @@
  {
   "work_id": "w_R4G1R6GM6QWF",
   "campo": "sinopsis.en",
-  "valor": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "In a land stalked by monsters made of vegetation, Cleo ventures into the jungle to rescue her brother Martín. Joined by Iolo, a magical old woman, and a funny anteater, she must catch the monster that took him, but soon discovers that these creatures hide a surprising secret.",
+  "motivo": "la EN era otro texto más corto; traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "titulo": "Mu-ki-ra",
   "antes": {
    "anibia-2026": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
    "fantasmagoria-2026": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+   "festicineantioquia-2026": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
    "ficcali-2026": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
    "ficci-65": "Beyond the walls that protect the village stretches a magical and mysterious jungle, inhabited by creatures considered dangerous. For years, the villagers have trained as warriors from a young age.",
    "ficfusa-2026": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
@@ -160,7 +161,16 @@
    "filcmar-2026": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
    "miradas-2026": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
    "villadeleyvaiff-2026": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ],
+  "fuente": "fuentes/anibia-2026/fichas/3513.txt"
  },
  {
   "work_id": "w_R4G1R6GM6QWF",

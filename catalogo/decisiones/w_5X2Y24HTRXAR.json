@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_5X2Y24HTRXAR",
+  "campo": "sinopsis.es",
+  "valor": "La historia de Causa Justa, movimiento de organizaciones y activistas feministas que transformó el debate sobre el aborto en Colombia. Gracias a su trabajo, la Corte Constitucional lo despenalizó hasta la semana 24 con la Sentencia C-055 de 2022, e hizo del país un referente internacional en libertad reproductiva.",
+  "motivo": "la publicada (608) pasa de 350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "Este documental cuenta la historia de Causa Justa, el movimiento que logró despolitizar y transformar la conversación sobre el aborto en Colombia. Gracias a su trabajo, la Corte Constitucional despenalizó la interrupción voluntaria del embarazo hasta la semana 24 de gestación, lo que puso al país entre los más avanzados del mundo en este tema. A través de entrevistas y conversaciones, las protagonistas de estos logros, feministas de distintas edades, regiones y organizaciones del país, cuentan cómo hicieron realidad esta meta, por la que las mujeres feministas han luchado durante más de cinco décadas."
+  },
+  "vistas": [
+   "cc0838e63a0c"
+  ]
+ },
+ {
+  "work_id": "w_5X2Y24HTRXAR",
+  "campo": "sinopsis.en",
+  "valor": "The story of Causa Justa, a movement of feminist organizations and activists that transformed the abortion debate in Colombia. Thanks to its work, the Constitutional Court decriminalized abortion up to week 24 through Ruling C-055 of 2022, making the country an international reference in reproductive freedom.",
+  "motivo": "traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "This documentary tells the story of Causa Justa, a movement that succeeded in depoliticizing and transforming the dialogue on abortion in Colombia. Thanks to their efforts, the Constitutional Court decriminalized the voluntary interruption of pregnancy up to 24 weeks of gestation, placing the country among the most progressive in the world on this issue. Through interviews and conversations, the protagonists of these achievements, feminists of different ages, regions and organizations in the country, share how they made this goal, for which feminist women have fought for more than five decades, a reality."
+  }
+ },
+ {
+  "work_id": "w_5X2Y24HTRXAR",
+  "campo": "directores",
+  "valor": [
+   "Claudia Bermúdez Vélez"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Claudia Bermúdez Vélez"
+  }
+ },
+ {
+  "work_id": "w_5X2Y24HTRXAR",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_5X2Y24HTRXAR",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_5X2Y24HTRXAR",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_5X2Y24HTRXAR",
+  "campo": "xref.tmdb",
+  "valor": 1499403,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1499403"
+  }
+ },
+ {
+  "work_id": "w_5X2Y24HTRXAR",
+  "campo": "xref.letterboxd",
+  "valor": "la-libertad-es-mi-causa",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "la-libertad-es-mi-causa"
+  }
+ },
+ {
+  "work_id": "w_5X2Y24HTRXAR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/la-libertad-es-mi-causa-v2.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "/assets/ficfusa-2026/la-libertad-es-mi-causa-v2.jpg"
+  }
+ }
+]

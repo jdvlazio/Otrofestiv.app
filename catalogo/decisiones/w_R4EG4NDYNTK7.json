@@ -1,0 +1,130 @@
+[
+ {
+  "work_id": "w_R4EG4NDYNTK7",
+  "campo": "paises",
+  "valor": [
+   "US",
+   "FR"
+  ],
+  "motivo": "la productora da USA, France; China y Japón solo en Cineautopsia",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://www.midnightblurfilms.com/tamashi · https://letterboxd.com/film/tamashi/",
+  "antes": {
+   "cineautopsia-2026": "China, Francia, Japón, Estados Unidos",
+   "ficfusa-2026": "China, Francia, Japón, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4EG4NDYNTK7",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "sin género publicado",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://www.midnightblurfilms.com/tamashi · https://letterboxd.com/film/tamashi/",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4EG4NDYNTK7",
+  "campo": "sinopsis.es",
+  "valor": "En el desierto del valle de Payahuunadü (nombre que significa «tierra del agua que fluye»), en California, un padre danza butoh por primera vez frente a su descendiente, antes prodigio de la escalada. Se hablan a través de sus cuerpos para encontrar una forma de sanar su relación y la tierra.",
+  "motivo": "traducción exacta del original en inglés, sin género porque «child» no lo marca",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://letterboxd.com/film/tamashi/",
+  "antes": {
+   "cineautopsia-2026": "Alguna vez fluyó agua en el desierto del valle de Payahuunadu. Ashima Shiraishi, exprodigio de la escalada durante su infancia, junto a su padre, bailarín de butoh, ofrecen una ceremonia de escalada y danza para invitar a la sanación tanto de su fracturada relación como de la tierra de los Paiute.",
+   "ficfusa-2026": "Alguna vez fluyó agua en el desierto del valle de Payahuunadu. Ashima Shiraishi, exprodigio de la escalada durante su infancia, junto a su padre, bailarín de butoh, ofrecen una ceremonia de escalada y danza para invitar a la sanación tanto de su fracturada relación como de la tierra de los Paiute."
+  },
+  "vistas": [
+   "8c978324e67b"
+  ]
+ },
+ {
+  "work_id": "w_R4EG4NDYNTK7",
+  "campo": "directores",
+  "valor": [
+   "Ashima Shiraishi",
+   "Jess X. Snow"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Ashima Shiraishi, Jess X. Snow",
+   "ficfusa-2026": "Ashima Shiraishi, Jess X. Snow"
+  }
+ },
+ {
+  "work_id": "w_R4EG4NDYNTK7",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "2026",
+   "ficfusa-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4EG4NDYNTK7",
+  "campo": "sinopsis.en",
+  "valor": "In the desert of the Payahuunadü valley (the name means “land of flowing water”) of California, a father performs butoh for the first time in front of his former prodigy rock climber child. They speak to each other through their bodies to find a way to heal their relationship and the land.",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "In the desert of the Payahuunadü valley (the name means “land of flowing water”) of California, a father performs butoh for the first time in front of his former prodigy rock climber child. They speak to each other through their bodies to find a way to heal their relationship and the land.",
+   "ficfusa-2026": "In the desert of the Payahuunadü valley (the name means “land of flowing water”) of California, a father performs butoh for the first time in front of his former prodigy rock climber child. They speak to each other through their bodies to find a way to heal their relationship and the land."
+  }
+ },
+ {
+  "work_id": "w_R4EG4NDYNTK7",
+  "campo": "xref.tmdb",
+  "valor": 1604241,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "1604241",
+   "ficfusa-2026": "1604241"
+  }
+ },
+ {
+  "work_id": "w_R4EG4NDYNTK7",
+  "campo": "xref.letterboxd",
+  "valor": "tamashi",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "tamashi",
+   "ficfusa-2026": "tamashi"
+  }
+ },
+ {
+  "work_id": "w_R4EG4NDYNTK7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cineautopsia/tamashi.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "/assets/cineautopsia/tamashi.jpg",
+   "ficfusa-2026": "/assets/cineautopsia/tamashi.jpg"
+  }
+ }
+]

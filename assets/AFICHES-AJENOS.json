@@ -760,6 +760,13 @@
     "ficpa-2026"
    ]
   },
+  "/assets/cineparalapaz-2026/la.jpg": {
+   "sha1": "1d5a9d2a9d009eb4bd44a05ae7bb9551fa557557",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026"
+   ]
+  },
   "/assets/cineparalapaz-2026/medellin-yo-te-saludo.jpg": {
    "sha1": "b4fbf007b1f87909734969f5621422483a57c8fa",
    "veredicto": "afiche",
@@ -2292,6 +2299,7 @@
    "sha1": "12c255def3767e22d88ef11331750beb90673f98",
    "veredicto": "afiche",
    "usado_en": [
+    "ficfusa-2026",
     "siembrafest-2026"
    ]
   },

@@ -36,14 +36,106 @@
  {
   "work_id": "w_R4QPX8P3YFJZ",
   "campo": "sinopsis.en",
-  "valor": "A multigenerational Puerto Rican family uses filmmaking as therapy, performing and reenacting stories of abuse and trauma. Personal testimonies take the form of fantastical sequences where the women become warriors.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "Matininó tells the story of the Villanueva-Rodríguez family, a multigenerational family of Puerto Rican women who transform their experiences of misogyny and domestic violence into a science-fiction film about an island inhabited exclusively by women warriors.",
+  "motivo": "traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "titulo": "Matininó",
   "antes": {
    "ficfusa-2026": "A multi-generational family of outspoken Puerto Rican women takes center stage as they conceive and perform fantastical film vignettes as a way to navigate painful pasts in this visually-arresting, kaleidoscopic documentary.",
    "tribeca-2026": "A multigenerational Puerto Rican family uses filmmaking as therapy, performing and reenacting stories of abuse and trauma. Personal testimonies take the form of fantastical sequences where the women become warriors."
+  },
+  "anteriores": [
+   {
+    "valor": "A multigenerational Puerto Rican family uses filmmaking as therapy, performing and reenacting stories of abuse and trauma. Personal testimonies take the form of fantastical sequences where the women become warriors.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ],
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
+ },
+ {
+  "work_id": "w_R4QPX8P3YFJZ",
+  "campo": "sinopsis.es",
+  "valor": "Matininó cuenta la historia de la familia Villanueva-Rodríguez, una familia multigeneracional de mujeres puertorriqueñas que transforma sus experiencias de misoginia y violencia doméstica en una película de ciencia ficción sobre una isla habitada exclusivamente por mujeres guerreras.",
+  "motivo": "el original guardado NO está en la página de Tribeca; se toma el catálogo",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "Una familia puertorriqueña multigeneracional usa el cine como terapia, actuando y recreando historias de abuso y trauma. Los testimonios personales toman la forma de secuencias fantásticas donde las mujeres se convierten en guerreras.",
+   "tribeca-2026": "Una familia puertorriqueña multigeneracional usa el cine como terapia, actuando y recreando historias de abuso y trauma. Los testimonios personales toman la forma de secuencias fantásticas donde las mujeres se convierten en guerreras."
+  },
+  "vistas": [
+   "55da11bc4ebd"
+  ]
+ },
+ {
+  "work_id": "w_R4QPX8P3YFJZ",
+  "campo": "directores",
+  "valor": [
+   "Gabriela Díaz Arp"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Gabriela Díaz Arp",
+   "tribeca-2026": "Gabriela Díaz Arp"
+  }
+ },
+ {
+  "work_id": "w_R4QPX8P3YFJZ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "2026",
+   "tribeca-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4QPX8P3YFJZ",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Documental",
+   "tribeca-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4QPX8P3YFJZ",
+  "campo": "xref.tmdb",
+  "valor": 1676525,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1676525"
+  }
+ },
+ {
+  "work_id": "w_R4QPX8P3YFJZ",
+  "campo": "xref.letterboxd",
+  "valor": "matinino",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "matinino"
   }
  }
 ]

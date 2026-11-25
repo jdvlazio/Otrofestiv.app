@@ -2,15 +2,131 @@
  {
   "work_id": "w_5HER3M083MB8",
   "campo": "sinopsis.es",
-  "valor": "“Si la enfermedad no te mata, el sistema lo hará.” En un consultorio médico decadente, una sala de espera reúne a pacientes con mutaciones y enfermedades irreversibles, víctimas de un medicamento que alteró a la humanidad. Mientras el doctor y la enfermera intentan mantener el control en medio del caos, la realidad de este sistema enfermo se hace cada vez más evidente.",
-  "motivo": "se quita lo que no es sinopsis; nada se escribe",
-  "fecha": "2026-11-24",
-  "quien": "Juan (hoja del paso 6)",
+  "valor": "\"Si la enfermedad no te mata, el sistema lo hará.\" En un futuro donde un medicamento deformó a la humanidad, un consultorio médico se convierte en el último umbral entre la supervivencia y el abandono, revelando un sistema de salud corrupto y despiadado.",
+  "motivo": "la publicada pasa de 350; se usa el texto literal del catálogo",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "antes": {
    "ficfusa-2026": "“Si la enfermedad no te mata, el sistema lo hará.”\r En un consultorio médico decadente, una sala de espera reúne a pacientes con mutaciones y enfermedades irreversibles, víctimas de un medicamento que alteró a la humanidad. Mientras el doctor y la enfermera intentan mantener el control en medio del caos, la realidad de este sistema enfermo se hace cada vez más evidente."
   },
   "vistas": [
    "14b5d03e15a6"
-  ]
+  ],
+  "anteriores": [
+   {
+    "valor": "“Si la enfermedad no te mata, el sistema lo hará.” En un consultorio médico decadente, una sala de espera reúne a pacientes con mutaciones y enfermedades irreversibles, víctimas de un medicamento que alteró a la humanidad. Mientras el doctor y la enfermera intentan mantener el control en medio del caos, la realidad de este sistema enfermo se hace cada vez más evidente.",
+    "motivo": "se quita lo que no es sinopsis; nada se escribe",
+    "fecha": "2026-11-24",
+    "quien": "Juan (hoja del paso 6)",
+    "vistas": [
+     "14b5d03e15a6"
+    ]
+   }
+  ],
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
+ },
+ {
+  "work_id": "w_5HER3M083MB8",
+  "campo": "sinopsis.en",
+  "valor": "\"If the disease doesn't kill you, the system will.\" In a future where a drug has deformed humanity, a doctor's office becomes the last threshold between survival and abandonment, revealing a corrupt and ruthless health system.",
+  "motivo": "traducción exacta de la sinopsis en español",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_5HER3M083MB8",
+  "campo": "directores",
+  "valor": [
+   "Daniel Rodríguez Gaitán"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Daniel Rodríguez Gaitán"
+  }
+ },
+ {
+  "work_id": "w_5HER3M083MB8",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_5HER3M083MB8",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_5HER3M083MB8",
+  "campo": "generos",
+  "valor": [
+   "Ciencia ficción"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Ciencia ficción"
+  }
+ },
+ {
+  "work_id": "w_5HER3M083MB8",
+  "campo": "xref.tmdb",
+  "valor": 1559325,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1559325"
+  }
+ },
+ {
+  "work_id": "w_5HER3M083MB8",
+  "campo": "xref.letterboxd",
+  "valor": "salud-mutante",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "salud-mutante"
+  }
+ },
+ {
+  "work_id": "w_5HER3M083MB8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/salud-mutante.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "/assets/ficfusa-2026/salud-mutante.jpg"
+  }
  }
 ]

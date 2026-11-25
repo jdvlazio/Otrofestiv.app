@@ -3,13 +3,16 @@
  "titulo_original": "Framing her",
  "anio": 2025,
  "paises": [
-  "SE"
+  "BE",
+  "SE",
+  "GB",
+  "NO"
  ],
  "directores": [
-  "Coco Wouter"
+  "Coco Wouters"
  ],
  "sinopsis": {
-  "es": "Una joven cineasta recorre Asia para documentar el trabajo de directoras independientes, pero a medida que escucha sus historias, empiezan a aflorar recuerdos de su propio pasado. Un viaje que, además de acercarla a otras mujeres creadoras, la obligará a enfrentarse a sí misma.",
+  "es": "Una joven cineasta viaja por Asia para documentar a directoras independientes, pero sus historias hacen aflorar su propio pasado.",
   "en": "A young filmmaker travels across Asia to document independent women directors, but their stories bring her own past to the surface."
  },
  "generos": [
@@ -17,7 +20,8 @@
  ],
  "afiche": {
   "archivo": "/assets/ficfusa-2026/framing-her.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1531982,

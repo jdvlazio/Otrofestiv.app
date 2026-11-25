@@ -117,12 +117,13 @@
  {
   "work_id": "w_R4GWNQW119VA",
   "campo": "sinopsis.en",
-  "valor": "Pablo loves to play the top. He must rescue his friend Pascualina from the clutches of Don Chucho, the town's loan shark. To do this he will face Felipe, the best spinning top player in the region. However, winning is not enough. Pablo with the other children of the town will make this great feat in an act of solidarity, friendship and teamwork.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "Pablo needs to rescue his friend Pascualina, a laying hen kidnapped by the town shopkeeper after the boy broke the tray of eggs he was taking to him to pay off a family debt.",
+  "motivo": "traducción exacta de la sinopsis en español",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "titulo": "La gran hazaña",
   "antes": {
+   "festicineantioquia-2026": "Pablo loves to play the top. He must rescue his friend Pascualina from the clutches of Don Chucho, the town's loan shark. To do this he will face Felipe, the best spinning top player in the region. However, winning is not enough. Pablo with the other children of the town will make this great feat in an act of solidarity, friendship and teamwork.",
    "ficcali-2026": "A rescue with a spinning tops, feathers, eggs and friends.",
    "ficdeh-2026": "Pablo loves to play the top. He must rescue his friend Pascualina from the clutches of Don Chucho, the town's loan shark. To do this he will face Felipe, the best spinning top player in the region. However, winning is not enough. Pablo with the other children of the town will make this great feat in an act of solidarity, friendship and teamwork.",
    "ficfusa-2026": "A rescue with a spinning tops, feathers, eggs and friends.",
@@ -131,7 +132,16 @@
    "guatape-2026": "A rescue with a spinning tops, feathers, eggs and friends.",
    "popayan-2026": "A rescue with a spinning tops, feathers, eggs and friends.",
    "siembrafest-2026": "A rescue with a spinning tops, feathers, eggs and friends."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Pablo loves to play the top. He must rescue his friend Pascualina from the clutches of Don Chucho, the town's loan shark. To do this he will face Felipe, the best spinning top player in the region. However, winning is not enough. Pablo with the other children of the town will make this great feat in an act of solidarity, friendship and teamwork.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ],
+  "fuente": "fuentes/ficcali-2026/fichas/la-gran-hazana.html"
  },
  {
   "work_id": "w_R4GWNQW119VA",

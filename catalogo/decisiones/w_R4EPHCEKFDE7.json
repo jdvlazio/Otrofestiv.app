@@ -39,13 +39,107 @@
  {
   "work_id": "w_R4EPHCEKFDE7",
   "campo": "sinopsis.en",
-  "valor": "“Last Night at Midnight” is an experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, at a time when terror reigned in the Viceroyalty of New Granada. The poem recounts, with irony and cruelty, the night when Viceroy Juan Sámano fled from Santafé to Cartagena following the defeat of the royalist troops at the Battle of Boyacá. Far from a conventional historical reconstruction, the film fragments the poem and transforms it into a delirious visual machine: jungles, rituals, prayers, grotesque bodies, and ominous omens accompany the flight of a power that no longer rules. Characters emerging from sculpture, dance, and theater embody a sinister dramaturgy in which official history is dismantled and laid bare.",
-  "motivo": "se quita lo que no es sinopsis; nada se escribe",
-  "fecha": "2026-11-24",
-  "quien": "Juan (hoja del paso 6)",
+  "valor": "Experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, which recounts with irony and cruelty the night when Viceroy Juan Sámano fled from Santafé to Cartagena after the royalist defeat at the Battle of Boyacá.",
+  "motivo": "pasaba de 350; ahora equivale al español",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "antes": {
+   "cineautopsia-2026": "“Last Night at Midnight” is an experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, at a time when terror reigned in the Viceroyalty of New Granada. The poem recounts, with irony and cruelty, the night when Viceroy Juan Sámano fled from Santafé to Cartagena following the defeat of the royalist troops at the Battle of Boyacá. Far from a conventional historical reconstruction, the film fragments the poem and transforms it into a delirious visual machine: jungles, rituals, prayers, grotesque bodies, and ominous omens accompany the flight of a power that no longer rules. Characters emerging from sculpture, dance, and theater embody a sinister dramaturgy in which official history is dismantled and laid bare.",
    "festicinerio-2026": "“Last Night at Midnight” is an experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, at a time when terror reigned in the Viceroyalty of New Granada. The poem recounts, with irony and cruelty, the night when Viceroy Juan Sámano fled from Santafé to Cartagena following the defeat of the royalist troops at the Battle of Boyacá.  Far from a conventional historical reconstruction, the film fragments the poem and transforms it into a delirious visual machine: jungles, rituals, prayers, grotesque bodies, and ominous omens accompany the flight of a power that no longer rules. Characters emerging from sculpture, dance, and theater embody a sinister dramaturgy in which official history is dismantled and laid bare.",
    "ficfusa-2026": "“Last Night at Midnight” is an experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, at a time when terror reigned in the Viceroyalty of New Granada. The poem recounts, with irony and cruelty, the night when Viceroy Juan Sámano fled from Santafé to Cartagena following the defeat of the royalist troops at the Battle of Boyacá.  Far from a conventional historical reconstruction, the film fragments the poem and transforms it into a delirious visual machine: jungles, rituals, prayers, grotesque bodies, and ominous omens accompany the flight of a power that no longer rules. Characters emerging from sculpture, dance, and theater embody a sinister dramaturgy in which official history is dismantled and laid bare."
+  },
+  "anteriores": [
+   {
+    "valor": "“Last Night at Midnight” is an experimental short film based on an octosyllabic poem written by Gualberto Gutiérrez in 1819, at a time when terror reigned in the Viceroyalty of New Granada. The poem recounts, with irony and cruelty, the night when Viceroy Juan Sámano fled from Santafé to Cartagena following the defeat of the royalist troops at the Battle of Boyacá. Far from a conventional historical reconstruction, the film fragments the poem and transforms it into a delirious visual machine: jungles, rituals, prayers, grotesque bodies, and ominous omens accompany the flight of a power that no longer rules. Characters emerging from sculpture, dance, and theater embody a sinister dramaturgy in which official history is dismantled and laid bare.",
+    "motivo": "se quita lo que no es sinopsis; nada se escribe",
+    "fecha": "2026-11-24",
+    "quien": "Juan (hoja del paso 6)"
+   }
+  ],
+  "fuente": "https://letterboxd.com/film/last-night-at-midnight/"
+ },
+ {
+  "work_id": "w_R4EPHCEKFDE7",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "sin género publicado",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://letterboxd.com/film/last-night-at-midnight/ · festivals/staging/festicinerio-2026-catalogo.json",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4EPHCEKFDE7",
+  "campo": "directores",
+  "valor": [
+   "Ricardo Muñoz Izquierdo"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Ricardo Muñoz Izquierdo",
+   "festicinerio-2026": "Ricardo Muñoz Izquierdo",
+   "ficfusa-2026": "Ricardo Muñoz Izquierdo"
+  }
+ },
+ {
+  "work_id": "w_R4EPHCEKFDE7",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "2026",
+   "festicinerio-2026": "2026",
+   "ficfusa-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4EPHCEKFDE7",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "Colombia",
+   "festicinerio-2026": "Colombia",
+   "ficfusa-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4EPHCEKFDE7",
+  "campo": "xref.tmdb",
+  "valor": 1758042,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicinerio-2026": "1758042",
+   "ficfusa-2026": "1758042"
+  }
+ },
+ {
+  "work_id": "w_R4EPHCEKFDE7",
+  "campo": "xref.letterboxd",
+  "valor": "last-night-at-midnight",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicinerio-2026": "last-night-at-midnight",
+   "ficfusa-2026": "last-night-at-midnight"
   }
  }
 ]

@@ -84,5 +84,72 @@
    "cinemancia-2025": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city.",
    "ficfusa-2026": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city."
   }
+ },
+ {
+  "work_id": "w_R4ET8FVT5MKJ",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "FICFUSA Comedia; Al Este «tono de comedia dramática»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · festivals/staging/aleste-2026-catalogo.json",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4ET8FVT5MKJ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "aleste-2026": "2025",
+   "ficfusa-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4ET8FVT5MKJ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "aleste-2026": "Colombia",
+   "cinemancia-2025": "Colombia",
+   "ficfusa-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4ET8FVT5MKJ",
+  "campo": "xref.tmdb",
+  "valor": 1525925,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "aleste-2026": "1525925",
+   "ficfusa-2026": "1525925"
+  }
+ },
+ {
+  "work_id": "w_R4ET8FVT5MKJ",
+  "campo": "xref.letterboxd",
+  "valor": "transversal-30ff",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "aleste-2026": "transversal-30ff",
+   "ficfusa-2026": "transversal-30ff"
+  }
  }
 ]

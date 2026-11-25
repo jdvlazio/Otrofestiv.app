@@ -71,5 +71,81 @@
    "midbo-2026": "Colombia, Países Bajos",
    "siembrafest-2026": "Colombia"
   }
+ },
+ {
+  "work_id": "w_R4KZBSE3E8P3",
+  "campo": "sinopsis.en",
+  "valor": "A young woman who has always feared losing her freedom to motherhood grows anxious when her period is late. Her journey to get a pregnancy test proves revealing, thanks to the conversations she overhears and has with women who share unconventional stories about being a mother.",
+  "motivo": "la EN era otro texto; traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "fuentes/anibia-2026/fichas/3618.txt",
+  "antes": {
+   "anibia-2026": "Unlearning Motherhood is an animated documentary that tells the tearing and empowering stories of women with their unconventional motherhood experiences, through the journey of a fictional main character who is looking for answers about pregnancy.",
+   "ficfusa-2026": "Unlearning Motherhood is an animated documentary that tells the tearing and empowering stories of women with their unconventional motherhood experiences, through the journey of a fictional main character who is looking for answers about pregnancy.",
+   "midbo-2026": "Unlearning Motherhood is an animated documentary that tells the tearing and empowering stories of women with their unconventional motherhood experiences, through the journey of a fictional main character who is looking for answers about pregnancy.",
+   "siembrafest-2026": "Unlearning Motherhood is an animated documentary that tells the tearing and empowering stories of women with their unconventional motherhood experiences, through the journey of a fictional main character who is looking for answers about pregnancy."
+  }
+ },
+ {
+  "work_id": "w_R4KZBSE3E8P3",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "2025",
+   "ficfusa-2026": "2025",
+   "midbo-2026": "2025",
+   "siembrafest-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4KZBSE3E8P3",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Animación",
+   "ficfusa-2026": "Animación",
+   "midbo-2026": "Animación",
+   "siembrafest-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4KZBSE3E8P3",
+  "campo": "xref.tmdb",
+  "valor": 1574997,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "1574997",
+   "ficfusa-2026": "1574997",
+   "midbo-2026": "1574997"
+  }
+ },
+ {
+  "work_id": "w_R4KZBSE3E8P3",
+  "campo": "xref.letterboxd",
+  "valor": "unlearning-motherhood",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "unlearning-motherhood",
+   "ficfusa-2026": "unlearning-motherhood",
+   "midbo-2026": "unlearning-motherhood",
+   "siembrafest-2026": "unlearning-motherhood"
+  }
  }
 ]

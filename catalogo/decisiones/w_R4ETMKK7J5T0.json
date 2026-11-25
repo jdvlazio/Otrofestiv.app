@@ -25,10 +25,10 @@
  {
   "work_id": "w_R4ETMKK7J5T0",
   "campo": "sinopsis.es",
-  "valor": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2025, ficfusa-2026, ficica-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "Yulieth se enfrenta a la dificultad de crecer en un territorio salvaje, donde coexisten la belleza natural y la hostilidad del machismo. Su identidad en construcción se disputa entre las pulsiones de sus sueños y su realidad.",
+  "motivo": "ES y EN publicadas eran textos distintos; se unifica con el catálogo (sin la nota de edades)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "vistas": [
    "239bf3f98432",
    "b9e30e5f8a27"
@@ -38,7 +38,20 @@
    "ficfusa-2026": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta.",
    "ficica-2026": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta.",
    "popayan-2026": "Yulieth (11-13), se enfrenta a la dificultad de crecer en un territorio salvaje, donde coexiste la belleza natural y la hostilidad del machismo. Su identidad en construcción se disputa entre las pulsiones de sus sueños y su realidad."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2025, ficfusa-2026, ficica-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "239bf3f98432",
+     "b9e30e5f8a27"
+    ]
+   }
+  ],
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
  },
  {
   "work_id": "w_R4ETMKK7J5T0",
@@ -59,15 +72,103 @@
  {
   "work_id": "w_R4ETMKK7J5T0",
   "campo": "sinopsis.en",
-  "valor": "Sometimes one, orphaned of one's own lungs, feels that one is drowning. One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
-  "motivo": "se quita lo que no es sinopsis; nada se escribe",
-  "fecha": "2026-11-24",
-  "quien": "Juan (hoja del paso 6)",
+  "valor": "Yulieth faces the difficulty of growing up in a wild territory where natural beauty coexists with the hostility of machismo. Her identity, still taking shape, is torn between the drives of her dreams and her reality.",
+  "motivo": "traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "antes": {
    "cinemancia-2025": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
    "ficfusa-2026": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
    "ficica-2026": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
    "popayan-2026": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs."
+  },
+  "anteriores": [
+   {
+    "valor": "Sometimes one, orphaned of one's own lungs, feels that one is drowning. One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+    "motivo": "se quita lo que no es sinopsis; nada se escribe",
+    "fecha": "2026-11-24",
+    "quien": "Juan (hoja del paso 6)"
+   }
+  ],
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf"
+ },
+ {
+  "work_id": "w_R4ETMKK7J5T0",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2025": "2025",
+   "ficfusa-2026": "2025",
+   "ficica-2026": "2025",
+   "popayan-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4ETMKK7J5T0",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2025": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "ficica-2026": "Colombia",
+   "popayan-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4ETMKK7J5T0",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2025": "Documental",
+   "ficfusa-2026": "Documental",
+   "ficica-2026": "Documental",
+   "popayan-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4ETMKK7J5T0",
+  "campo": "xref.tmdb",
+  "valor": 1456186,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2025": "1456186",
+   "ficfusa-2026": "1456186",
+   "ficica-2026": "1456186",
+   "popayan-2026": "1456186"
+  }
+ },
+ {
+  "work_id": "w_R4ETMKK7J5T0",
+  "campo": "xref.letterboxd",
+  "valor": "chilapa-girl",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cinemancia-2025": "chilapa-girl",
+   "ficfusa-2026": "chilapa-girl",
+   "ficica-2026": "chilapa-girl",
+   "popayan-2026": "chilapa-girl"
   }
  }
 ]

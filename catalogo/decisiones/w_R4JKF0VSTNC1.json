@@ -56,5 +56,98 @@
    "filcmar-2026": "Sofia Alejandra Uzcátegui",
    "siembrafest-2026": "Sofía Alejandra Uzcátegui León"
   }
+ },
+ {
+  "work_id": "w_R4JKF0VSTNC1",
+  "campo": "sinopsis.en",
+  "valor": "A cicada named Chicha emerges from the soil for her metamorphosis and finds that the avocado tree where she was born has been cut down. Determined to create a forest, she pins her hopes on an avocado sprout, but must soon face the reality of her short life and learn to accept the present.",
+  "motivo": "traducción fiel del original español; a la EN le faltaba «aceptar el presente»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://www.themoviedb.org/movie/1483504?language=es-ES",
+  "antes": {
+   "anibia-2026": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish.",
+   "ficfusa-2026": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish.",
+   "filcmar-2026": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish.",
+   "siembrafest-2026": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish."
+  }
+ },
+ {
+  "work_id": "w_R4JKF0VSTNC1",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "2025",
+   "ficfusa-2026": "2025",
+   "filcmar-2026": "2025",
+   "siembrafest-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4JKF0VSTNC1",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "filcmar-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4JKF0VSTNC1",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Animación",
+   "ficfusa-2026": "Animación",
+   "filcmar-2026": "Animación",
+   "siembrafest-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4JKF0VSTNC1",
+  "campo": "xref.tmdb",
+  "valor": 1483504,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "1483504",
+   "ficfusa-2026": "1483504",
+   "filcmar-2026": "1483504"
+  }
+ },
+ {
+  "work_id": "w_R4JKF0VSTNC1",
+  "campo": "xref.letterboxd",
+  "valor": "chicha-la-chicharra",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "chicha-la-chicharra",
+   "ficfusa-2026": "chicha-la-chicharra",
+   "filcmar-2026": "chicha-la-chicharra",
+   "siembrafest-2026": "chicha-la-chicharra"
+  }
  }
 ]

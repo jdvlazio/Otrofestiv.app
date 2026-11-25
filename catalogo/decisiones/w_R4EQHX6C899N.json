@@ -3,15 +3,126 @@
   "work_id": "w_R4EQHX6C899N",
   "campo": "directores",
   "valor": [
-   "Huang Weipeng",
+   "Weipeng Huang",
    "Yajing Wang"
   ],
-  "motivo": "un dato por obra: el valor del almacén (tmdb:1572828)",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "motivo": "orden de nombre coherente (hoy mezcla apellido-nombre y nombre-apellido)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "antes": {
    "cineautopsia-2026": "Weipeng Huang, Yajing Wang",
    "ficfusa-2026": "Huang Weipeng, Yajing Wang"
+  },
+  "anteriores": [
+   {
+    "valor": [
+     "Huang Weipeng",
+     "Yajing Wang"
+    ],
+    "motivo": "un dato por obra: el valor del almacén (tmdb:1572828)",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)"
+   }
+  ],
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://www.bloomsdayfestival.ie/event/bloomsday-film-festival-experimental-shorts-2026/"
+ },
+ {
+  "work_id": "w_R4EQHX6C899N",
+  "campo": "sinopsis.es",
+  "valor": "Este mundo es sumamente caótico: injusticias y explotación, conflictos de género y agresiones, la ley de la selva y matanzas bélicas, luchas de ideales y sueños rotos. Debemos llamar a la equidad y la justicia, al amor y la paz, a la libertad y la esperanza, y animar a las personas a alcanzar la ilusión y la felicidad.",
+  "motivo": "acortada: pasaba de 350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "festivals/staging/cineautopsia-2026-crudo.json",
+  "antes": {
+   "cineautopsia-2026": "Este mundo es sumamente caótico, lleno de injusticias y explotación, conflictos de género y agresiones violentas, la ley de la selva y matanzas bélicas, luchas de ideales y sueños rotos. Debemos hacer un llamamiento a la equidad y la justicia, al amor y la paz, a la libertad y la esperanza, e incentivar a las personas a alcanzar la ilusión y la felicidad.",
+   "ficfusa-2026": "Este mundo es sumamente caótico, lleno de injusticias y explotación, conflictos de género y agresiones violentas, la ley de la selva y matanzas bélicas, luchas de ideales y sueños rotos. Debemos hacer un llamamiento a la equidad y la justicia, al amor y la paz, a la libertad y la esperanza, e incentivar a las personas a alcanzar la ilusión y la felicidad."
+  },
+  "vistas": [
+   "f3ef82c82e0b"
+  ]
+ },
+ {
+  "work_id": "w_R4EQHX6C899N",
+  "campo": "sinopsis.en",
+  "valor": "This world is utterly chaotic: injustice and exploitation, gender conflict and assault, the law of the jungle and the slaughter of war, clashing ideals and broken dreams. We must call for equity and justice, love and peace, freedom and hope, and encourage people to reach for dreams and happiness.",
+  "motivo": "traducción exacta de la sinopsis en español",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "festivals/staging/cineautopsia-2026-crudo.json",
+  "antes": {
+   "cineautopsia-2026": "The world and I are lost.",
+   "ficfusa-2026": "The world and I are lost."
+  }
+ },
+ {
+  "work_id": "w_R4EQHX6C899N",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "2025",
+   "ficfusa-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4EQHX6C899N",
+  "campo": "paises",
+  "valor": [
+   "CN"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "China",
+   "ficfusa-2026": "China"
+  }
+ },
+ {
+  "work_id": "w_R4EQHX6C899N",
+  "campo": "xref.tmdb",
+  "valor": 1572828,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "1572828",
+   "ficfusa-2026": "1572828"
+  }
+ },
+ {
+  "work_id": "w_R4EQHX6C899N",
+  "campo": "xref.letterboxd",
+  "valor": "allegory-of-the-cave",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "allegory-of-the-cave",
+   "ficfusa-2026": "allegory-of-the-cave"
+  }
+ },
+ {
+  "work_id": "w_R4EQHX6C899N",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cineautopsia/allegory-of-the-cave.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineautopsia-2026": "/assets/cineautopsia/allegory-of-the-cave.jpg",
+   "ficfusa-2026": "/assets/cineautopsia/allegory-of-the-cave.jpg"
   }
  }
 ]

@@ -2,20 +2,100 @@
  {
   "work_id": "w_R4NEB2HBPEKG",
   "campo": "sinopsis.es",
-  "valor": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo.",
-  "motivo": "la que ya publica otro festival: una sola por obra",
-  "fecha": "2026-11-24",
-  "quien": "regla de Juan: la sinopsis es de la obra",
+  "valor": "Han pasado muchas cosechas y kilómetros y Lucila Rodríguez sigue cultivando lo que le apasiona. Creció entre ciclistas que la impulsaron al pavimento, pero una mala temporada del ciclismo colombiano la bajó de la bicicleta. Hoy pedalea por sus propósitos, y una nueva semilla florece con los recuerdos de sus días de gloria.",
+  "motivo": "la publicada es un resumen nuestro; catálogo ajustado a 350",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "antes": {
+   "ficfusa-2026": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo.",
    "siembrafest-2026": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo.",
+    "motivo": "la que ya publica otro festival: una sola por obra",
+    "fecha": "2026-11-24",
+    "quien": "regla de Juan: la sinopsis es de la obra"
+   }
+  ],
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "vistas": [
+   "21bf044f7d6b"
+  ]
  },
  {
   "work_id": "w_R4NEB2HBPEKG",
   "campo": "sinopsis.en",
-  "valor": "The story of Lucila Rodríguez and her career in cycling, brought back to light.",
-  "motivo": "traducida de su española; verificada por otro agente",
-  "fecha": "2026-11-24",
-  "quien": "Juan («Aprobadas, sigue»)"
+  "valor": "Many harvests and kilometers have passed, and Lucila Rodríguez still cultivates what she loves. Raised among cyclists who urged her onto the road, she had to leave the bike after a bad spell for Colombian cycling. Today she pedals toward her goals, as a new seed blossoms with memories of her glory days.",
+  "motivo": "traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "anteriores": [
+   {
+    "valor": "The story of Lucila Rodríguez and her career in cycling, brought back to light.",
+    "motivo": "traducida de su española; verificada por otro agente",
+    "fecha": "2026-11-24",
+    "quien": "Juan («Aprobadas, sigue»)"
+   }
+  ],
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "The story of Lucila Rodríguez and her career in cycling, brought back to light.",
+   "siembrafest-2026": "The story of Lucila Rodríguez and her career in cycling, brought back to light."
+  }
+ },
+ {
+  "work_id": "w_R4NEB2HBPEKG",
+  "campo": "directores",
+  "valor": [
+   "Luber Yesid Zúñiga Ordóñez"
+  ],
+  "motivo": "catálogo y palmarés «Dir.» (IG: copia local del vigía); Idartes: «dirigidos por Luber Yesid Zúñiga»",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · https://www.instagram.com/p/Df90ZBgytZE · https://www.idartes.gov.co/es/noticias/cinemateca-al-parque-llega-ciudad-bolivar",
+  "antes": {
+   "siembrafest-2026": "Luber Yesid Zúñiga Ordóñez"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2HBPEKG",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "catálogo",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2HBPEKG",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo 2025; SiembraFest también (crudo local)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "siembrafest-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2HBPEKG",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "catálogo: Documental",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "siembrafest-2026": "Documental"
+  }
  }
 ]

@@ -28,5 +28,100 @@
   "antes": {
    "ficfusa-2026": "Karent looks into filmed memories while talking with her grandmother about a family tradition involving an Animist ritual in which they can break their spirit into several fragments. She prepares to do it."
   }
+ },
+ {
+  "work_id": "w_R4MSXMP0XT7Y",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "FICFUSA; el laurel del afiche dice Experimental",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf · /assets/ficfusa-2026/animista.jpg",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4MSXMP0XT7Y",
+  "campo": "sinopsis.es",
+  "valor": "Karent investiga memorias filmadas mientras conversa con su abuela acerca de una tradición familiar que conlleva un ritual animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
+  "motivo": "solo redacción; mismo contenido",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "https://www.themoviedb.org/movie/1817272",
+  "antes": {
+   "ficfusa-2026": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
+   "popayan-2026": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo."
+  },
+  "vistas": [
+   "e34ce667a116"
+  ]
+ },
+ {
+  "work_id": "w_R4MSXMP0XT7Y",
+  "campo": "directores",
+  "valor": [
+   "Sebastián Giraldo"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Sebastián Giraldo",
+   "popayan-2026": "Sebastián Giraldo"
+  }
+ },
+ {
+  "work_id": "w_R4MSXMP0XT7Y",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "2026",
+   "popayan-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4MSXMP0XT7Y",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Colombia",
+   "popayan-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4MSXMP0XT7Y",
+  "campo": "xref.tmdb",
+  "valor": 1817272,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1817272"
+  }
+ },
+ {
+  "work_id": "w_R4MSXMP0XT7Y",
+  "campo": "xref.letterboxd",
+  "valor": "animista",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "animista"
+  }
  }
 ]

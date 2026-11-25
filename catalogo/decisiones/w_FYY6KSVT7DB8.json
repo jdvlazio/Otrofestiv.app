@@ -1,0 +1,80 @@
+[
+ {
+  "work_id": "w_FYY6KSVT7DB8",
+  "campo": "sinopsis.en",
+  "valor": "Guided by intuition and the symbol of the spiral, I silently immerse myself in the depths of my unconscious.",
+  "motivo": "faltaba la pareja EN",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_FYY6KSVT7DB8",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "catálogo: «Animación Experimental», rotoscopia",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {}
+ },
+ {
+  "work_id": "w_FYY6KSVT7DB8",
+  "campo": "directores",
+  "valor": [
+   "Laura Alejandra Jiménez Ruiz"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Laura Alejandra Jiménez Ruiz",
+   "ficfusa-2026": "Laura Alejandra Jiménez Ruiz"
+  }
+ },
+ {
+  "work_id": "w_FYY6KSVT7DB8",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "2025",
+   "ficfusa-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_FYY6KSVT7DB8",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Colombia",
+   "ficfusa-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_FYY6KSVT7DB8",
+  "campo": "sinopsis.es",
+  "valor": "Guiada por la intuición y el símbolo de la espiral, me sumerjo en silencio en las profundidades de mi inconsciente.",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Guiada por la intuición y el símbolo de la espiral, me sumerjo en silencio en las profundidades de mi inconsciente.",
+   "ficfusa-2026": "Guiada por la intuición y el símbolo de la espiral, me sumerjo en silencio en las profundidades de mi inconsciente."
+  }
+ }
+]

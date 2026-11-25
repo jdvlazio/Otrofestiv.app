@@ -128,10 +128,10 @@
  {
   "work_id": "w_R4J7H92GTG6Q",
   "campo": "sinopsis.en",
-  "valor": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
-  "motivo": "alta desde festicineantioquia-2026",
-  "fecha": "2026-11-24",
-  "quien": "Claude (montaje festicineantioquia-2026)",
+  "valor": "La Mona is willing to make any sacrifice to secure her authority in La Hondura, even if the price she pays is loneliness.",
+  "motivo": "la EN era otro texto, con ideas que la ES no trae; traducción fiel del original",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
   "sembrada": true,
   "antes": {
    "festicineantioquia-2026": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
@@ -143,7 +143,16 @@
    "popayan-2026": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
    "siembrafest-2026": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
    "villadelcine-2026": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+    "motivo": "alta desde festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ],
+  "fuente": "fuentes/jardin-2026/la-mona.html"
  },
  {
   "work_id": "w_R4J7H92GTG6Q",

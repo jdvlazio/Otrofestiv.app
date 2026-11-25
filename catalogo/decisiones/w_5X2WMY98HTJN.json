@@ -1,0 +1,126 @@
+[
+ {
+  "work_id": "w_5X2WMY98HTJN",
+  "campo": "sinopsis.es",
+  "valor": "Eva, una madre soltera y conductora de camiones de larga distancia en Kenia, recorre las peligrosas carreteras de África Oriental mientras intenta equilibrar su trabajo con la maternidad. Cuando una avería durante un viaje entre Kenia y Sudán la obliga a enfrentar nuevos desafíos, debe reunir toda su fortaleza y replantearse su futuro.",
+  "motivo": "la publicada (367) pasa de 350; texto del catálogo",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "«Mi familia quedó en shock cuando supo que manejo», dice Eva, una mujer keniana, al volante de un camión y con un embarazo avanzado. Echó a perder sus años de colegio y fue la única de su familia que no se graduó. Una tontería, admite ahora, pero hoy se alegra de haber elegido un oficio del que puede sentirse orgullosa. Conoce más mundo que sus hermanos y hermanas."
+  },
+  "vistas": [
+   "ca8b989d808c"
+  ]
+ },
+ {
+  "work_id": "w_5X2WMY98HTJN",
+  "campo": "sinopsis.en",
+  "valor": "Eva, a single mother and long-haul truck driver in Kenya, travels the dangerous roads of East Africa while trying to balance her work with motherhood. When a breakdown on a trip between Kenya and Sudan forces her to face new challenges, she must gather all her strength and rethink her future.",
+  "motivo": "traducción fiel del original (la EN publicada, 401)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026, verificador independiente)",
+  "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "antes": {
+   "ficfusa-2026": "“My family was shocked when they found out that I'm driving,” says Eva, a Kenyan woman, as she sits behind the wheel of a truck, heavily pregnant. She botched up her school years and was the only one in her family not to graduate. Pretty foolish, she admits in hindsight, but now she is glad to have chosen a profession she can be proud of. She sees more of the world than her brothers and sisters do."
+  }
+ },
+ {
+  "work_id": "w_5X2WMY98HTJN",
+  "campo": "directores",
+  "valor": [
+   "Zippy Nyaruri"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Zippy Nyaruri"
+  }
+ },
+ {
+  "work_id": "w_5X2WMY98HTJN",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_5X2WMY98HTJN",
+  "campo": "paises",
+  "valor": [
+   "KE",
+   "NL",
+   "SA",
+   "ZA"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Kenia, Países Bajos, Arabia Saudita, Sudáfrica"
+  }
+ },
+ {
+  "work_id": "w_5X2WMY98HTJN",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_5X2WMY98HTJN",
+  "campo": "xref.tmdb",
+  "valor": 1568191,
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "1568191"
+  }
+ },
+ {
+  "work_id": "w_5X2WMY98HTJN",
+  "campo": "xref.letterboxd",
+  "valor": "truck-mama",
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "truck-mama"
+  }
+ },
+ {
+  "work_id": "w_5X2WMY98HTJN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/truck-mama.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde ficfusa-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración ficfusa-2026)",
+  "sembrada": true,
+  "antes": {
+   "ficfusa-2026": "/assets/ficfusa-2026/truck-mama.jpg"
+  }
+ }
+]
