@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_N2MKREHYZ5RA",
+  "campo": "directores",
+  "valor": [
+   "Alberto Tolaba"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Alberto Tolaba"
+  }
+ },
+ {
+  "work_id": "w_N2MKREHYZ5RA",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_N2MKREHYZ5RA",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_N2MKREHYZ5RA",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_N2MKREHYZ5RA",
+  "campo": "sinopsis.es",
+  "valor": "Las plazas se convierten en puntos de encuentro, el hip hop en una voz colectiva y el underground en una forma de vida. Un documental de Alberto Tolaba que nos acerca a la cultura urbana, sus protagonistas y el poder de construir comunidad a través del arte.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Las plazas se convierten en puntos de encuentro, el hip hop en una voz colectiva y el underground en una forma de vida. Un documental de Alberto Tolaba que nos acerca a la cultura urbana, sus protagonistas y el poder de construir comunidad a través del arte."
+  }
+ },
+ {
+  "work_id": "w_N2MKREHYZ5RA",
+  "campo": "sinopsis.en",
+  "valor": "Squares become meeting points, hip hop a collective voice and the underground a way of life. A documentary by Alberto Tolaba about urban culture, its protagonists and the power of building community through art.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Squares become meeting points, hip hop a collective voice and the underground a way of life. A documentary by Alberto Tolaba about urban culture, its protagonists and the power of building community through art."
+  }
+ },
+ {
+  "work_id": "w_N2MKREHYZ5RA",
+  "campo": "xref.tmdb",
+  "valor": 1828522,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "1828522"
+  }
+ },
+ {
+  "work_id": "w_N2MKREHYZ5RA",
+  "campo": "xref.letterboxd",
+  "valor": "uniendo-plazas-los-padres-del-under",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "uniendo-plazas-los-padres-del-under"
+  }
+ },
+ {
+  "work_id": "w_N2MKREHYZ5RA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/uniendo-plazas-los-padres-del-under.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/uniendo-plazas-los-padres-del-under.jpg"
+  }
+ }
+]

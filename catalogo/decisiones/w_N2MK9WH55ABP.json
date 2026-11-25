@@ -1,0 +1,129 @@
+[
+ {
+  "work_id": "w_N2MK9WH55ABP",
+  "campo": "directores",
+  "valor": [
+   "Abraham Escobedo-Salas"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Abraham Escobedo-Salas"
+  }
+ },
+ {
+  "work_id": "w_N2MK9WH55ABP",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_N2MK9WH55ABP",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_N2MK9WH55ABP",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_N2MK9WH55ABP",
+  "campo": "sinopsis.es",
+  "valor": "Seis jóvenes bailarines provenientes de distintas clases sociales y antecedentes son unidos por el poder del hip-hop. Su amistad y deseos de volverse profesionales los llevarán por un viaje vital y transformador filmado a lo largo de 8 años. A través de la paternidad, el amor, las batallas y decepciones, descubrirán qué tipo de hombres quieren ser.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Seis jóvenes bailarines provenientes de distintas clases sociales y antecedentes son unidos por el poder del hip-hop. Su amistad y deseos de volverse profesionales los llevarán por un viaje vital y transformador filmado a lo largo de 8 años. A través de la paternidad, el amor, las batallas y decepciones, descubrirán qué tipo de hombres quieren ser."
+  }
+ },
+ {
+  "work_id": "w_N2MK9WH55ABP",
+  "campo": "sinopsis.en",
+  "valor": "Six young dancers from different social classes and backgrounds are brought together by the power of hip-hop. Their friendship and their desire to turn professional take them on a vital, transformative journey filmed over eight years. Through fatherhood, love, battles and disappointments, they will discover what kind of men they want to be.",
+  "motivo": "segunda lectura",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración CUAFF, segunda lectura)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Six young Mexican dancers coming from different social classes and backgrounds get united by the power of Hip-Hop. Their friendship and desire to become professionals will take them on a life-changing road of eight years being filmed. Through parenthood, love, battles, and breakdowns, they will discover what type of man they want to become."
+  },
+  "anteriores": [
+   {
+    "valor": "Six young Mexican dancers coming from different social classes and backgrounds get united by the power of Hip-Hop. Their friendship and desire to become professionals will take them on a life-changing road of eight years being filmed. Through parenthood, love, battles, and breakdowns, they will discover what type of man they want to become.",
+    "motivo": "alta desde cuaff-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración cuaff-2026)"
+   }
+  ],
+  "fuente": "https://cinematecadebogota.gov.co/node/peliculas/4031"
+ },
+ {
+  "work_id": "w_N2MK9WH55ABP",
+  "campo": "xref.tmdb",
+  "valor": 654102,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "654102"
+  }
+ },
+ {
+  "work_id": "w_N2MK9WH55ABP",
+  "campo": "xref.letterboxd",
+  "valor": "breaking-la-vida",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "breaking-la-vida"
+  }
+ },
+ {
+  "work_id": "w_N2MK9WH55ABP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/breaking-la-vida.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/breaking-la-vida.jpg"
+  }
+ }
+]

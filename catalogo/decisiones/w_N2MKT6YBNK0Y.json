@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_N2MKT6YBNK0Y",
+  "campo": "directores",
+  "valor": [
+   "Juan Pablo Huston"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Juan Pablo Huston"
+  }
+ },
+ {
+  "work_id": "w_N2MKT6YBNK0Y",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_N2MKT6YBNK0Y",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_N2MKT6YBNK0Y",
+  "campo": "sinopsis.es",
+  "valor": "Una generación, muchas historias y nuevas formas de entender el mundo que habitamos. Un cortometraje de Juan Pablo Huston.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "Una generación, muchas historias y nuevas formas de entender el mundo que habitamos. Un cortometraje de Juan Pablo Huston."
+  }
+ },
+ {
+  "work_id": "w_N2MKT6YBNK0Y",
+  "campo": "sinopsis.en",
+  "valor": "A generation, many stories and new ways of understanding the world we live in. A short film by Juan Pablo Huston.",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "A generation, many stories and new ways of understanding the world we live in. A short film by Juan Pablo Huston."
+  }
+ },
+ {
+  "work_id": "w_N2MKT6YBNK0Y",
+  "campo": "xref.tmdb",
+  "valor": 1828512,
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "1828512"
+  }
+ },
+ {
+  "work_id": "w_N2MKT6YBNK0Y",
+  "campo": "xref.letterboxd",
+  "valor": "diario-de-los-nuevos-20s",
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "diario-de-los-nuevos-20s"
+  }
+ },
+ {
+  "work_id": "w_N2MKT6YBNK0Y",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cuaff-2026/diario-de-los-nuevos-20s.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cuaff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cuaff-2026)",
+  "sembrada": true,
+  "antes": {
+   "cuaff-2026": "/assets/cuaff-2026/diario-de-los-nuevos-20s.jpg"
+  }
+ }
+]
