@@ -84,6 +84,14 @@ def _correr(nombre, cmd, tiempo=TIEMPO, cwd=None):
     return r
 
 
+def _no_entra(fest, d):
+    sys.path.insert(0, os.path.join(REPO, 'pipeline'))
+    import no_entra
+    no = no_entra.revisar_festival(fest, d.get('films', []))
+    if no:
+        _parar('lo que no entra a la app', f'✗ esto no entra a la app ({fest}):\n  · ' + '\n  · '.join(no))
+
+
 def _control_funciones(fest, contenido):
     """0·b3. Sello de función, acceso con fuente e inventario cerrado: frenan la PRIMERA
     publicación; a un festival que ya está en el almacén solo le avisan."""
@@ -111,10 +119,7 @@ def guardianes(fest, ruta, contenido):
     if _v:
         _parar('fuentes vencidas', _v)
     # 0·b2. lo cerrado y lo dejado fuera no entran (también si el JSON se tocó a mano)
-    import no_entra
-    _no = no_entra.revisar_festival(fest, json.loads(contenido).get('films', []))
-    if _no:
-        _parar('lo que no entra a la app', f'✗ esto no entra a la app ({fest}):\n  · ' + '\n  · '.join(_no))
+    _no_entra(fest, json.loads(contenido))
     _control_funciones(fest, contenido)
     # 0·c. el catálogo al día: es DERIVADO de todos los festivales. Si un cambio no
     #      lo re-arma, el próximo --escribir arrastra 30 archivos ajenos (FICCALI
@@ -437,6 +442,8 @@ def main():
             sys.exit('✗ --desde-main es solo para el job de GitHub sobre main')
         print('  · desde main: los guardianes ya corrieron en el PR')
         _control_funciones(fest, contenido)
+        if '--alta' in sys.argv:      # esto no lo corre el CI del PR
+            _no_entra(fest, d)
     else:
         guardianes(fest, ruta, contenido)
     # e. los afiches que nombra el JSON ya están en la web (en los dos modos: desde
@@ -451,7 +458,11 @@ def main():
     # Desde main (el job), la ficha solo viaja si ese festival YA tiene una en el
     # almacén: una ficha entra de a una y a propósito, con este comando a mano.
     ficha = _ficha(fest)
-    if '--desde-main' in sys.argv and ficha and not _tiene_ficha(fest):
+    # El ALTA (--alta, 25 nov 2026) entra con la suya o no entra: sin ficha, ninguna
+    # corrida siguiente se la pondría.
+    if '--alta' in sys.argv and not ficha:
+        sys.exit(f'✗ {fest}: un alta sin ficha no entra')
+    if '--desde-main' in sys.argv and ficha and '--alta' not in sys.argv and not _tiene_ficha(fest):
         print('  · sin ficha en el almacén: entra a propósito con publicar-datos.py, no desde main'); ficha = {}
     # 3. publicar (commit + función; si otra corrida se cruza, se rehace sobre la punta nueva)
     sha, res = _publicar({ruta: contenido, **ficha}, f'datos({fest}): publicar {huella[:12]}',

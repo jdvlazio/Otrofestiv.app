@@ -2,15 +2,18 @@
 # La app lee los festivales del almacén (migración 0009). Si un festival cambia
 # por el camino de siempre (PR → main), este job lo republica al almacén. Los
 # guardianes ya corrieron en el PR (CI requerido), así que acá se publica tal cual.
-# Solo republica los festivales que YA están en el índice del almacén (Juan, 18
-# oct 2026): un festival entra al almacén A PROPÓSITO, de a uno, con
-# publicar-datos.py — nunca de golpe porque un PR tocó muchos JSON.
+# Republica lo que ya está en el almacén y da de ALTA (25 nov 2026) el festival visible y
+# sin terminar que falta: el acto a propósito es el merge que lo hace visible. Nunca de
+# golpe (Juan, 18 oct 2026): más de dos a la vez no entra ninguno y el job queda en rojo.
 name: Datos al almacén
 on:
   push:
     branches: [main]
     paths:
       - 'festivals/*.json'
+      - 'festivals/staging/*-sellos-funcion.json'   # un alta frenada se retoma al llegar lo que faltaba
+      - 'festivals/staging/*-acceso.json'
+      - 'festivals/staging/*-fuentes.json'
       - 'src/config.js'      # la FICHA de cada festival (Etapa 2·B1)
       - 'assets/keyart/**'
   workflow_dispatch:         # ponerlo al día a mano, sin otro merge
