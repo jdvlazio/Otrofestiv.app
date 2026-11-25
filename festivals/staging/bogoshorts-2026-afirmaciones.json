@@ -458,6 +458,96 @@
     "fecha": "2026-11-24"
    },
    "evidencia": "pág. 5, vista: «Acceso gratuito en las salas con pago: Cinemateca de Bogotá, Alianza Francesa y Centro Ático» (beneficio de acreditados)"
+  },
+  {
+   "funcion": "f_0f47ae4440",
+   "casilla": "time",
+   "valor": "11:00",
+   "contra": "14:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "pongamos la más temprano, para que la gente no llegue tarde en caso tal",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/006_imaginaton.html (1 oct), paso 5: CLAQUETEO, Teatro El Parque, de 11:00 a.m. a 6:00 p.m.; catálogo (pág. 14), bases (págs. 3 y 7) y grilla: 2:00 p.m. Mismo acto, sin corrección explícita; regla de Juan del 17 oct."
+  },
+  {
+   "funcion": "f_5ade8fa1d3",
+   "casilla": "time",
+   "valor": "19:00",
+   "contra": "20:00",
+   "fuente": {
+    "tipo": "juan",
+    "frase": "pongamos la más temprano, para que la gente no llegue tarde en caso tal",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf pág. 25 (prosa es y en): a las 7:00 p. m., la clave; escenarios y eventos del mismo catálogo, bases (págs. 3, 4, 7 y 8) y boletín 006: 8:00. Mismo acto, sin corrección explícita; regla de Juan del 17 oct."
+  },
+  {
+   "funcion": "f_5ade8fa1d3",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "boletín 006, pasos 2 a 5, y bases págs. 3 y 7: la clave se revela a quienes pagaron la inscripción e hicieron el claqueteo; un filminuto $20.000 aficionado, $50.000 profesional (bases pág. 5)"
+  },
+  {
+   "funcion": "f_5ade8fa1d3",
+   "casilla": "requires_registration",
+   "valor": true,
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "boletín 006, pasos 2 a 5, y bases págs. 3 y 7: la clave se revela a quienes pagaron la inscripción e hicieron el claqueteo; un filminuto $20.000 aficionado, $50.000 profesional (bases pág. 5)"
+  },
+  {
+   "funcion": "f_b6b7b90bd7",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "pág. 5: Ingreso gratuito a la Sala VR es beneficio de acreditados; sin cita de entrada libre al público, hereda la sede (Cinemateca, sala con pago)"
+  },
+  {
+   "funcion": "f_be5e5b4bdb",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "pág. 5: Ingreso gratuito a la Sala VR es beneficio de acreditados; sin cita de entrada libre al público, hereda la sede (Cinemateca, sala con pago)"
+  },
+  {
+   "funcion": "f_337f034282",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "pág. 5: Ingreso gratuito a la Sala VR es beneficio de acreditados; sin cita de entrada libre al público, hereda la sede (Cinemateca, sala con pago)"
+  },
+  {
+   "funcion": "f_3587c9ac67",
+   "casilla": "entrada",
+   "valor": "boleta",
+   "fuente": {
+    "tipo": "festival-pdf",
+    "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "pág. 5: Alianza Francesa está entre las salas con pago; ni el catálogo (pág. 32) da entrada libre, hereda la sede"
   }
  ]
 }

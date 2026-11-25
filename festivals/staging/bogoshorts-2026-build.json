@@ -2590,7 +2590,7 @@
    ],
    "_fid": "f_b6b7b90bd7",
    "id": "f_b6b7b90bd7",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2613,8 +2613,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-25",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -6177,7 +6178,7 @@
    "description_lang": "es",
    "_fid": "f_3587c9ac67",
    "id": "f_3587c9ac67",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -6196,8 +6197,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-25",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -9383,14 +9385,14 @@
    "title": "Claqueteo XVII IMAGINATÓN",
    "type": "event",
    "section": "🎥 Imaginatón",
-   "duration": "240 min",
+   "duration": "420 min",
    "_ancla": [
     "Teatro El Parque - Bogotá",
     "2026-12-04",
     "14:00"
    ],
    "day": "2026-12-04",
-   "time": "14:00",
+   "time": "11:00",
    "day_order": 3,
    "venue": "Teatro El Parque - Bogotá",
    "event_kind": "evento",
@@ -9399,7 +9401,7 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
-   "description": "El viernes 4 de diciembre, todos los participantes en Bogotá deberán reunirse en el Teatro El Parque para grabar sus claquetas oficiales y recibir, a las 8:00 p. m., la clave que dará inicio a la maratón. Desde este emblemático espacio del Parque Nacional se dará la partida para que los realizadores salgan a conquistar la ciudad con sus cámaras. Quienes participen desde otras regiones del país podrán acceder a la claqueta y la clave a través de los canales virtuales del festival, conectando distintas geografías en una misma experiencia de creación. Inscripción: $20.000 (aficionado) o $50.000 (profesional) por un filminuto, hasta el 2 de diciembre a las 11:59 p. m.",
+   "description": "El viernes 4 de diciembre, todos los participantes en Bogotá deberán reunirse en el Teatro El Parque para grabar sus claquetas oficiales y recibir, a las 7:00 p. m., la clave que dará inicio a la maratón. Desde este emblemático espacio del Parque Nacional se dará la partida para que los realizadores salgan a conquistar la ciudad con sus cámaras. Quienes participen desde otras regiones del país podrán acceder a la claqueta y la clave a través de los canales virtuales del festival, conectando distintas geografías en una misma experiencia de creación. Inscripción: $20.000 (aficionado) o $50.000 (profesional) por un filminuto, hasta el 2 de diciembre a las 11:59 p. m.",
    "description_lang": "es",
    "_fid": "f_0f47ae4440",
    "id": "f_0f47ae4440",
@@ -9411,8 +9413,9 @@
      "fecha": "2026-11-13"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "juan",
+     "fecha": "2026-11-25",
+     "frase": "pongamos la más temprano, para que la gente no llegue tarde en caso tal"
     },
     "venue": {
      "tipo": "festival-web",
@@ -12669,7 +12672,7 @@
    ],
    "_fid": "f_be5e5b4bdb",
    "id": "f_be5e5b4bdb",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -12692,8 +12695,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-25",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -21440,7 +21444,7 @@
    ],
    "_fid": "f_337f034282",
    "id": "f_337f034282",
-   "is_free": true,
+   "is_free": false,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -21463,8 +21467,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-13"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-25",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -22508,7 +22513,7 @@
     "20:00"
    ],
    "day": "2026-12-04",
-   "time": "20:00",
+   "time": "19:00",
    "day_order": 3,
    "venue": "Teatro El Parque - Bogotá",
    "event_kind": "evento",
@@ -22519,23 +22524,31 @@
    },
    "_fid": "f_5ade8fa1d3",
    "id": "f_5ade8fa1d3",
-   "is_free": true,
+   "is_free": false,
+   "requires_registration": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
      "fecha": "2026-11-18"
     },
     "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-18"
+     "tipo": "juan",
+     "fecha": "2026-11-25",
+     "frase": "pongamos la más temprano, para que la gente no llegue tarde en caso tal"
     },
     "venue": {
      "tipo": "festival-web",
      "fecha": "2026-11-18"
     },
     "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-18"
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-25",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf"
+    },
+    "requires_registration": {
+     "tipo": "festival-pdf",
+     "fecha": "2026-11-25",
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -22632,7 +22645,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-25T06:08:17",
+  "fecha": "2026-11-25T06:22:41",
   "plan_sha": "c7ef5255110fedd6",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"

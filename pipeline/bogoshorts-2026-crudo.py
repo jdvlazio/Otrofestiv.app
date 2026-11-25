@@ -316,8 +316,7 @@ def main():
                 if act.get('participantes'):     # boletín 027, 24 nov
                     f['descripcion'] += ' ' + act['participantes']
                 if act.get('nota'):
-                    # la clave es a las 8:00 p. m. (catálogo 14 y 19, bases de IMAGINATÓN); solo esta prosa (pág. 25) dice 7:00
-                    f['descripcion'] = f['descripcion'].replace('a las 7:00 p. m., la clave', 'a las 8:00 p. m., la clave') + ' ' + act['nota']
+                    f['descripcion'] += ' ' + act['nota']
                 if act.get('acceso'):
                     f['acceso'] = act['acceso']
                 if act.get('registration_url'):
@@ -348,10 +347,12 @@ def main():
             f['acceso'], f['ticket_url'] = 'Con boleta', b['ticket_url']
         elif b and b.get('entrada_libre'):
             f['acceso'] = 'Entrada libre'
-        elif e[2] == 'Cinemateca de Bogotá' and f['acceso'] == DESCONOCIDO and (f.get('type') == 'event' or f.get('codigo') == 'CVR'):
-            f['acceso'] = 'Entrada libre (no se anuncia pago)'   # charlas y VR: la agenda de la sala no les vende boleta
-        elif e[2] == 'Cinemateca de Bogotá' and f.get('codigo') and f['codigo'] != 'CVR':
-            f['acceso'] = 'Con boleta'       # sede que siempre cobra (funcion.py): CHI-ANCY, sin enlace todavía
+        elif e[2] == 'Cinemateca de Bogotá' and f['acceso'] == DESCONOCIDO and f.get('type') == 'event':
+            f['acceso'] = 'Entrada libre (no se anuncia pago)'   # charlas al tablero: gratis con inscripción (acceso.json)
+        elif e[2] == 'Cinemateca de Bogotá' and f.get('codigo'):
+            f['acceso'] = 'Con boleta'       # sede que siempre cobra (funcion.py): CHI-ANCY y la VR (el ingreso gratis es beneficio de acreditados, pág. 5), sin enlace todavía
+        elif f['titulo'].startswith('Andrósfera'):
+            f['acceso'] = 'Con boleta'       # ninguna fuente dice entrada libre: hereda la sede (Alianza, sala con pago)
         if f.get('codigo') in progs:
             f['obras'] = progs[f['codigo']]
         # KORINCO: está en la lista de la sala (CHI-KIDS, 6 obras) y en el texto del catálogo
@@ -378,11 +379,12 @@ def main():
     # La Entrega clave IMAGINATÓN no tiene celda: la grilla dice «IMAGINATÓN 2:00 - 8:00 p.m.».
     # El catálogo la trae aparte, y con dos horas: 7:00 p. m. (pág. 23) y 8:00 p. m. (escenarios
     # y eventos especiales). Las bases de IMAGINATÓN (págs. 3, 4, 7, 8 y 9) dicen 8:00:
-    # el 7:00 solo está en la prosa de la pág. 25 del PDF (24 nov).
+    # el 7:00 solo está en la prosa de la pág. 25 del PDF (24 nov). Se publica 7:00, la más temprana
+    # (bogoshorts-2026-afirmaciones.json); aquí queda el 8:00, que es el ancla del id.
     funciones.append({'dia': '2026-12-04', 'hora': '20:00', 'sede': 'Teatro El Parque', 'sala': '', 'ciudad': 'Bogotá',
                       'texto_grilla': 'IMAGINATÓN', 'titulo': 'Entrega clave IMAGINATÓN', 'seccion': 'IMAGINATÓN',
                       'tipo': 'evento', 'type': 'event', 'event_kind': 'evento', 'has_qa': False,
-                      'acceso': DESCONOCIDO, '_src': {'url': 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf', 'date': '2026-11-18'}})
+                      'acceso': 'Con boleta', '_src': {'url': 'https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf', 'date': '2026-11-18'}})
     # La Noche Sagitario: la grilla la trae en «Fiestas» sin lugar; el festival lo dio el 23 nov (IG).
     funciones.append({'dia': '2026-12-05', 'hora': '21:00', 'sede': 'MonkeyDo', 'sala': '', 'ciudad': 'Bogotá',
                       'texto_grilla': 'Noche Sagitario', 'titulo': 'Noche Sagitario', 'seccion': 'Eventos especiales',
