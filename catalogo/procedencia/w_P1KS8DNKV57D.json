@@ -1,18 +1,42 @@
 {
  "titulo_original": {
-  "fuente": "festival:festicinerio-2026",
+  "fuente": "festival:festicineantioquia-2026,festicinerio-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la forma completa, web y PDF del festival",
+  "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "generos": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la grafía 7000; verificada",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  }
 }

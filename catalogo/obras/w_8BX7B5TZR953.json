@@ -1,0 +1,43 @@
+{
+ "id": "w_8BX7B5TZR953",
+ "titulo_original": "Campeones",
+ "anio": 2018,
+ "paises": [
+  "ES"
+ ],
+ "directores": [
+  "Javier Fesser"
+ ],
+ "aliases": [
+  {
+   "titulo": "Champions",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Marco, un entrenador profesional de baloncesto, se encuentra un día, en medio de una crisis personal, entrenando a un equipo compuesto por personas con discapacidad intelectual. Lo que comienza como un problema se acaba convirtiendo en una lección de vida.",
+  "en": "Marco, a professional basketball coach, finds himself one day, in the middle of a personal crisis, coaching a team made up of people with intellectual disabilities. What begins as a problem ends up becoming a life lesson."
+ },
+ "generos": [
+  "Comedia"
+ ],
+ "afiche": {
+  "archivo": "/assets/festicineantioquia-2026/campeones.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 456929,
+  "letterboxd": "champions-2018"
+ },
+ "versiones": [
+  {
+   "etiqueta": "124 min",
+   "duracion_min": 124
+  }
+ ],
+ "presentaciones": [
+  "festicineantioquia-2026"
+ ]
+}

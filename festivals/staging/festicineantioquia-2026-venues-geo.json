@@ -1,0 +1,89 @@
+{
+ "_provenance": {
+  "fuente": "Google Maps (respuesta del buscador, sin navegador, 24 nov 2026); nombres del PDF de programación y su mapa de epicentros",
+  "capturado": "2026-11-24"
+ },
+ "Plaza Mayor Simón Bolívar - Santa Fe de Antioquia": {
+  "lat": 6.5564099,
+  "lng": -75.82796,
+  "_prec": "manual",
+  "_match": "Google Maps (24 nov 2026): «Plaza de Bolívar»",
+  "_maps": "https://www.google.com/maps/place/Plaza+de+Bolívar/@6.5564099,-75.82796,17z",
+  "address": "Parque principal",
+  "_matriz": "s_67489d27"
+ },
+ "Universidad de Antioquia Seccional Occidente - Santa Fe de Antioquia": {
+  "lat": 6.5550126,
+  "lng": -75.8264716,
+  "_prec": "manual",
+  "_match": "Google Maps (24 nov 2026): «Universidad de Antioquia - Campus Santa Fe de Antioquia»",
+  "_maps": "https://www.google.com/maps/place/Universidad+de+Antioquia+-+Campus+Santa+Fe+de+Antioquia/@6.5550126,-75.8264716,17z",
+  "_matriz": "s_26a2abce"
+ },
+ "Museo Juan del Corral - Santa Fe de Antioquia": {
+  "lat": 6.5578327,
+  "lng": -75.8276182,
+  "_prec": "manual",
+  "_match": "Google Maps (24 nov 2026): «Museo Juan Del Corral»",
+  "_maps": "https://www.google.com/maps/place/Museo+Juan+Del+Corral/@6.5578327,-75.8276182,17z",
+  "address": "Calle 11 # 9-77",
+  "_matriz": "s_b2da5f1d"
+ },
+ "Hotel Mariscal Robledo - Santa Fe de Antioquia": {
+  "lat": 6.5577989,
+  "lng": -75.8292281,
+  "_prec": "manual",
+  "_match": "Google Maps (24 nov 2026): «Hotel Mariscal Robledo»",
+  "_maps": "https://www.google.com/maps/place/Hotel+Mariscal+Robledo/@6.5577989,-75.8292281,17z",
+  "address": "Carrera 12 # 9-70",
+  "_matriz": "s_e1ed2a67"
+ },
+ "Cámara de Comercio de Medellín para Antioquia - Santa Fe de Antioquia": {
+  "lat": 6.556451,
+  "lng": -75.826457,
+  "_prec": "manual",
+  "_match": "Google Maps (24 nov 2026): «Cámara de Comercio de Medellín Centro Empresarial de Occidente»",
+  "_maps": "https://www.google.com/maps/place/Cámara+de+Comercio+de+Medellín+Centro+Empresarial+de+Occidente/@6.556451,-75.826457,17z",
+  "address": "Sede Santa Fe de Antioquia",
+  "_matriz": "s_9af60335"
+ },
+ "Sede de empleo y emprendimiento Comfenalco Antioquia - Santa Fe de Antioquia": {
+  "lat": 6.55798,
+  "lng": -75.82984,
+  "_prec": "manual",
+  "_match": "Google Maps (24 nov 2026): «Arzobispado Santa Fe de Antioquia»",
+  "_maps": "https://www.google.com/maps/place/Arzobispado+Santa+Fe+de+Antioquia/@6.55798,-75.82984,17z",
+  "address": "Parque de la Chinca, contiguo al Palacio Arzobispal",
+  "_nota": "PIN APROXIMADO: Google Maps no tiene la sede; el pin es el Arzobispado, al que el PDF la declara contigua",
+  "_matriz": "s_6b6f9da6"
+ },
+ "Barrio La Esmeralda - Santa Fe de Antioquia": {
+  "lat": 6.5153935,
+  "lng": -75.8179349,
+  "_prec": "manual",
+  "_match": "Google Maps (24 nov 2026): «El paso real»",
+  "_maps": "https://www.google.com/maps/place/El+paso+real/@6.5153935,-75.8179349,17z",
+  "address": "Vereda El Paso Real",
+  "_nota": "PIN APROXIMADO: el PDF solo da barrio y vereda; el pin es «El paso real» de Google Maps",
+  "_matriz": "s_8090daa6"
+ },
+ "Barrio Llano de Bolívar - Santa Fe de Antioquia": {
+  "lat": 6.5646701,
+  "lng": -75.824623,
+  "_prec": "manual",
+  "_match": "Google Maps (24 nov 2026): «Cl. 18 & Cra. 11»",
+  "_maps": "https://www.google.com/maps/place/Cl.+18+&+Cra.+11/@6.5646701,-75.824623,17z",
+  "address": "Sector calle 18 entre la carrera 11 y la vía al Tunal, diagonal al gimnasio al aire libre",
+  "_nota": "PIN APROXIMADO: la esquina calle 18 con carrera 11, extremo del tramo que da el PDF",
+  "_matriz": "s_7f1eac48"
+ },
+ "Catedral Basílica Metropolitana - Santa Fe de Antioquia": {
+  "lat": 6.5569862,
+  "lng": -75.8274309,
+  "_prec": "manual",
+  "_match": "Google Maps (24 nov 2026): «Catedral Metropolitana De La Inmaculada Concepción»",
+  "_maps": "https://www.google.com/maps/place/Catedral+Metropolitana+De+La+Inmaculada+Concepción/@6.5569862,-75.8274309,17z",
+  "address": "Plaza Mayor Simón Bolívar",
+  "_matriz": "s_901a0a59"
+ }
+}

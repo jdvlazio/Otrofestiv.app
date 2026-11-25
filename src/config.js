@@ -163,6 +163,17 @@ export const SECTION_EN = {
   '🎥 Imaginatón': 'One-Minute Marathon',
   '🧒 chiquiSHORTS': 'chiquiSHORTS',
   '😂 Noche de Humor': 'Comedy Night',
+  // Santa Fe de Antioquia (2026-11-24, alta-festival.py): del plan
+  '🎉 Inauguración': 'Opening',
+  '🎬 Película': 'Film',
+  '🎤 Conversando de…': 'Talking About…',
+  '☕ Tómate un Café con…': 'Coffee with…',
+  '🏆 Competencia Internacional de Óperas Primas': 'International First Feature Competition',
+  '🎞️ Muestra Especial y Conversación': 'Special Showcase and Talk',
+  '📦 Caja de Pandora': 'Pandora\'s Box',
+  '🧒 Película Familiar': 'Family Film',
+  '🎭 Conversando con los Actores': 'Talking with the Actors',
+  '🎶 Muestra Cultural': 'Cultural Showcase',
   // Provincia de Vélez (2026-11-24, alta-festival.py): del plan
   '🧒 Franja Infantil': 'Children\'s Program',
   // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan
@@ -406,6 +417,24 @@ export const FESTIVAL_CONFIG={
     dayShort:{'2026-12-01':'MAR 1','2026-12-02':'MIÉ 2','2026-12-03':'JUE 3','2026-12-04':'VIE 4','2026-12-05':'SÁB 5','2026-12-06':'DOM 6','2026-12-07':'LUN 7','2026-12-08':'MAR 8'},
     dayShort_en:{'2026-12-01':'TUE 1','2026-12-02':'WED 2','2026-12-03':'THU 3','2026-12-04':'FRI 4','2026-12-05':'SAT 5','2026-12-06':'SUN 6','2026-12-07':'MON 7','2026-12-08':'TUE 8'},
     dayLong:{'2026-12-01':'Martes 1 de diciembre','2026-12-02':'Miércoles 2 de diciembre','2026-12-03':'Jueves 3 de diciembre','2026-12-04':'Viernes 4 de diciembre','2026-12-05':'Sábado 5 de diciembre','2026-12-06':'Domingo 6 de diciembre','2026-12-07':'Lunes 7 de diciembre','2026-12-08':'Martes 8 de diciembre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+      films:null,posters:null,lbSlugs:{}
+    },
+  'festicineantioquia2026': {
+    // Alta con pipeline/alta-festival.py (2026-11-24): lo editorial sale de
+    // pipeline/festicineantioquia-2026.plan.json; los días, de festivalStartStr/festivalEndStr.
+    name:'Festicine Antioquia',displayName:'Festicine Antioquia',fullName:'27.º Festival de Cine de Santa Fe de Antioquia',shortName:'FESTICINE ANTIOQUIA',
+    city:'Santa Fe de Antioquia',country:'CO',
+    dates:'4–8 DIC',dates_en:'DEC 4–8',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/festicineantioquia2026.jpg',
+    tagline:'Festival de Cine de Santa Fe de Antioquia',
+    instagram:'festicineantioquia', storageKey:'festicineantioquia2026_',festivalStartStr:'2026-12-04T00:00:00',festivalEndStr:'2026-12-08T23:59:00',
+    festivalDates:{'2026-12-04':'2026-12-04','2026-12-05':'2026-12-05','2026-12-06':'2026-12-06','2026-12-07':'2026-12-07','2026-12-08':'2026-12-08'},
+    days:[{k:'2026-12-04',d:4,lbl:'VIE'},{k:'2026-12-05',d:5,lbl:'SÁB'},{k:'2026-12-06',d:6,lbl:'DOM'},{k:'2026-12-07',d:7,lbl:'LUN'},{k:'2026-12-08',d:8,lbl:'MAR'}],
+    dayKeys:['2026-12-04','2026-12-05','2026-12-06','2026-12-07','2026-12-08'],
+    dayShort:{'2026-12-04':'VIE 4','2026-12-05':'SÁB 5','2026-12-06':'DOM 6','2026-12-07':'LUN 7','2026-12-08':'MAR 8'},
+    dayShort_en:{'2026-12-04':'FRI 4','2026-12-05':'SAT 5','2026-12-06':'SUN 6','2026-12-07':'MON 7','2026-12-08':'TUE 8'},
+    dayLong:{'2026-12-04':'Viernes 4 de diciembre','2026-12-05':'Sábado 5 de diciembre','2026-12-06':'Domingo 6 de diciembre','2026-12-07':'Lunes 7 de diciembre','2026-12-08':'Martes 8 de diciembre'},
     prioLimit:5,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
@@ -1583,6 +1612,15 @@ export const SECTION_ARCHETYPES = {
   '🎥 Imaginatón': 'Especiales / Eventos',
   '🧒 chiquiSHORTS': 'Cortos / Programas',
   '😂 Noche de Humor': 'Especiales / Eventos',
+  // Santa Fe de Antioquia (2026-11-24, alta-festival.py): del plan
+  '🎤 Conversando de…': 'Charlas / Industria',
+  '☕ Tómate un Café con…': 'Charlas / Industria',
+  '🏆 Competencia Internacional de Óperas Primas': 'Competencia',
+  '🎞️ Muestra Especial y Conversación': 'Especiales / Eventos',
+  '📦 Caja de Pandora': 'Cortos / Programas',
+  '🧒 Película Familiar': 'Muestra / País',
+  '🎭 Conversando con los Actores': 'Charlas / Industria',
+  '🎶 Muestra Cultural': 'Especiales / Eventos',
   // Provincia de Vélez (2026-11-24, alta-festival.py): del plan
   '🧒 Franja Infantil': 'Muestra / País',
   // Festival de Cine de Cajicá (2026-11-20, alta-festival.py): del plan

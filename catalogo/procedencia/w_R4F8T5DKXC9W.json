@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:aleste-2026,cinemancia-2026,cinemancia-2026,ficidi-2026,ficmontanas-2026,girardota-2026,jardin-2026,miradas-2026,miradas-2026,miradas-2026,villadeleyvaiff-2026",
+  "fuente": "festival:aleste-2026,cinemancia-2026,cinemancia-2026,festicineantioquia-2026,ficidi-2026,ficmontanas-2026,girardota-2026,jardin-2026,miradas-2026,miradas-2026,miradas-2026,villadeleyvaiff-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -10,12 +10,16 @@
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1584776",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "tmdb:1584776",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  },
  "generos": {
   "fuente": "humano",
@@ -34,5 +38,23 @@
   "regla": "decisión",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aleste-2026, cinemancia-2026, ficica-2026, ficmontanas-2026 +5)",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  }
 }

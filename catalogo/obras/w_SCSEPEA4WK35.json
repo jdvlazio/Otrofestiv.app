@@ -6,13 +6,24 @@
   "CO"
  ],
  "directores": [
-  "Isabella Cárdenas"
+  "Isabella Cárdenas Marín"
  ],
  "sinopsis": {
-  "es": "Cortometraje documental que explora el arte, el contraste y la reconciliación a través del mundo drag."
+  "es": "Cortometraje documental que explora el arte, el contraste y la reconciliación a través del mundo drag.",
+  "en": "A short documentary that explores art, contrast and reconciliation through the world of drag."
  },
+ "generos": [
+  "Documental"
+ ],
  "xref": {},
+ "versiones": [
+  {
+   "etiqueta": "16 min",
+   "duracion_min": 16
+  }
+ ],
  "presentaciones": [
-  "cortoscali-2026"
+  "cortoscali-2026",
+  "festicineantioquia-2026"
  ]
 }

@@ -1,19 +1,33 @@
 {
  "id": "w_R4NEB0P5YBYH",
- "titulo_original": "Animero: son de la muerte",
+ "titulo_original": "Animero",
  "anio": 2025,
  "paises": [
   "CO"
  ],
  "directores": [
-  "Nadine Holguín"
+  "Nadine Holguín Urrego"
  ],
+ "aliases": [
+  {
+   "titulo": "Animero son de la muerte",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Animero: son de la muerte",
+   "tipo": "festival"
+  }
+ ],
+ "sinopsis": {
+  "es": "Tista, «el Animero» del pueblo, busca un sucesor para guiar a las ánimas en su recorrido nocturno de noviembre y convence a su hijo Efraín de acompañarlo. Incrédulo y curioso, Efraín desobedece la advertencia de no mirar atrás y es invitado a la danza que tanto temen los vivos: el son de la muerte.",
+  "en": "Tista, the village's “Animero,” seeks a successor to guide the souls on their night walk each November and persuades his son Efraín to come along. Skeptical and curious, Efraín disobeys the warning not to look back and is invited to the dance the living so fear: the “son de la muerte.”"
+ },
  "generos": [
   "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/siembrafest/animero-son-de-la-muerte.jpg",
-  "veredicto": "oficial"
+  "archivo": "https://otrofestiv.app/assets/siembrafest/animero-son-de-la-muerte.jpg",
+  "veredicto": "fotograma"
  },
  "xref": {},
  "versiones": [
@@ -23,6 +37,8 @@
   }
  ],
  "presentaciones": [
+  "fecibac-2026",
+  "festicineantioquia-2026",
   "siembrafest-2026"
  ]
 }

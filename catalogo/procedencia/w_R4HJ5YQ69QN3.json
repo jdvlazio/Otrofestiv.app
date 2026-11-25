@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficdeh-2026,ficdeh-2026,ficfusa-2026,ficica-2026,ficica-2026,popayan-2026,popayan-2026,siembrafest-2026",
+  "fuente": "festival:festicineantioquia-2026,ficdeh-2026,ficdeh-2026,ficfusa-2026,ficica-2026,ficica-2026,popayan-2026,popayan-2026,siembrafest-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -16,12 +16,16 @@
   "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
@@ -38,7 +42,19 @@
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "la que ya publica otro festival: una sola por obra",
+  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
   "fecha": "2026-11-24"
  }
 }
