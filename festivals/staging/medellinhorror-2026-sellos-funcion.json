@@ -1,0 +1,41 @@
+{
+ "_provenance": {
+  "capturado": "2026-11-25",
+  "fuente": "pipeline/sello_funcion.py --sellar"
+ },
+ "f_38aa1eaf0d": {
+  "contra": "https://medellin.comicconcolombia.com/es/agenda&h=&c=&f=&l=",
+  "fecha": "2026-11-25",
+  "huella": "d4741735f364",
+  "monta": "claude-onboarding",
+  "verifica": "agente abb95724fd081cd5a"
+ },
+ "f_be90bfee7c": {
+  "contra": "https://medellin.comicconcolombia.com/es/agenda&h=&c=&f=&l=",
+  "fecha": "2026-11-25",
+  "huella": "4abd75b0187d",
+  "monta": "claude-onboarding",
+  "verifica": "agente abb95724fd081cd5a"
+ },
+ "f_bea9ffbf53": {
+  "contra": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+  "fecha": "2026-11-25",
+  "huella": "eac5b1b88b8c",
+  "monta": "claude-onboarding",
+  "verifica": "agente abb95724fd081cd5a"
+ },
+ "f_e5f35fbe84": {
+  "contra": "https://www.voltaire.net/calendar",
+  "fecha": "2026-11-25",
+  "huella": "10f4f039bee1",
+  "monta": "claude-onboarding",
+  "verifica": "agente abb95724fd081cd5a"
+ },
+ "f_f50c789b68": {
+  "contra": "https://www.voltaire.net/calendar",
+  "fecha": "2026-11-25",
+  "huella": "7e22739994b3",
+  "monta": "claude-onboarding",
+  "verifica": "agente abb95724fd081cd5a"
+ }
+}
