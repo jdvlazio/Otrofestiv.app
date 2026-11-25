@@ -6,5 +6,77 @@
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24",
   "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_JTT49B2JV3A9",
+  "campo": "directores",
+  "valor": [
+   "Nelson Silva"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Nelson Silva",
+   "provinciadevelez-2026": "Nelson Silva"
+  }
+ },
+ {
+  "work_id": "w_JTT49B2JV3A9",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_JTT49B2JV3A9",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Documental",
+   "provinciadevelez-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_JTT49B2JV3A9",
+  "campo": "sinopsis.es",
+  "valor": "Edson Velandia tiene nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es descubrir qué quiere tocar cada estudiante.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Edson Velandia tiene nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es descubrir qué quiere tocar cada estudiante.",
+   "provinciadevelez-2026": "Edson Velandia tiene nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es descubrir qué quiere tocar cada estudiante."
+  }
+ },
+ {
+  "work_id": "w_JTT49B2JV3A9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg"
+  }
  }
 ]

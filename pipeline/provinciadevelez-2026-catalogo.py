@@ -182,11 +182,8 @@ SINOPSIS = {
         'camina por el monte con amigos, pero al quedarse solo, la soledad y los ruidos extraños lo llenan de terror. '
         'Luego de perder la conciencia, despierta en una habitación misteriosa donde un ser espiritual le revela '
         'realidades sobre el mundo y el desequilibrio que gobierna el universo.'),
-    # Texto pintado en el afiche oficial (lámina del festival), a falta de otra sinopsis hallada
-    'La Belleza': ('https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 12)', 'Un documental dedicado a La Belleza, Santander, en su '
-        'quincuagésimo aniversario de vida jurídica: un municipio de paisajes increíbles y gente tenaz, ejemplo de '
-        'progreso, paz y resiliencia en la provincia veleña.'),
-    'Sinfonía incompleta de oficios del Fonce': (FB25, 'En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven; las manos y los engranajes, el movimiento de las máquinas, los instrumentos musicales y su armonía.'),
+    'La Belleza': (FB25, 'La historia del municipio de La Belleza, Santander, es contada por sus propias voces. Desde lo poco que se sabe de sus habitantes precolombinos, los Tisquizoques, hasta nuestros días, se revela la historia fundacional del municipio, pasando por los capítulos más aciagos y de cómo al día de hoy es un remanso de paz de exuberante belleza.'),
+    'Sinfonía incompleta de oficios del Fonce': (FB25, 'En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares.'),
     'Pez azul': (FB25, 'Una niña emprende un viaje bastante conmovedor para sanar y para dejar ir. Su madre siempre la acompañará.'),
     'El dolor del vientre': (f'{IG}DgFiVrTEbh0/', 'Entre amores y tambores, una madre recuerda la partida de un hijo y las vivencias nostálgicas de su tambor.'),
     'El arte de inmortalizar mortales': ('https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 15)', 'Don Antonio: la memoria esculpida '
@@ -202,10 +199,10 @@ SINOPSIS = {
 
 # Sinopsis en inglés: traducción nuestra de la española publicada (24 nov 2026)
 SINOPSIS_EN = {
-    "Nueve jueves en Riachuelo": "Edson Velandia has nine Thursdays and a school's recesses to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
-    "Sinfonía incompleta de oficios del Fonce": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there; the hands and the gears, the movement of the machines, the musical instruments and their harmony.",
-    "Pez azul": "A girl sets out on a deeply moving journey to heal and to let go. Her mother will always be with her.",
-    "La Belleza": "A documentary devoted to La Belleza, Santander, on the fiftieth anniversary of its legal founding: a municipality of incredible landscapes and tenacious people, an example of progress, peace and resilience in the Vélez province.",
+    "Nueve jueves en Riachuelo": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
+    "Sinfonía incompleta de oficios del Fonce": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places.",
+    "Pez azul": "A girl sets out on a quite moving journey to heal and to let go. Her mother will always be with her.",
+    "La Belleza": "The story of the municipality of La Belleza, Santander, is told by its own voices. From the little that is known of its pre-Columbian inhabitants, the Tisquizoques, to the present day, its founding history is revealed, through its darkest chapters and on to how today it is an exuberantly beautiful haven of peace.",
     "De la tradición a la prohibición": "A documentary exploring the evolution of sacred plants of power, from ancestral rituals to their stigmatization and prohibition. In a Latin American context, it questions the official narratives that have criminalized this knowledge and reveals processes of cultural dispossession and the rupture of collective memory.",
     "El arte de inmortalizar mortales": "Don Antonio: the sculpted memory that bids welcome or the last farewell.",
     "El dolor del vientre": "Amid loves and drums, a mother remembers a son's departure and the nostalgic moments lived with his drum.",

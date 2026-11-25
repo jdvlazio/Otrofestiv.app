@@ -118,6 +118,9 @@
     {
      "festival": "cineparalapaz-2026",
      "titulo": "Nueve jueves en Riachuelo",
+     "poster": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
      "duration": "24 min",
      "genre": "Documental",
      "synopsis_en": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
@@ -127,10 +130,11 @@
    "_sinopsis_de": "ya publicada en cineparalapaz-2026",
    "_verificado": "ya publicada en cineparalapaz-2026: se reusa su sinopsis",
    "sinopsis": "Edson Velandia tiene nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es descubrir qué quiere tocar cada estudiante.",
+   "pais": "Colombia",
    "duracion_tmdb": 24,
    "genero": "Documental",
    "synopsis_en": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
-   "poster": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo.jpg",
+   "poster": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/06 (afiche recortado de la lámina del festival)"
   },
@@ -305,13 +309,13 @@
   },
   {
    "titulo": "La Belleza",
-   "poster": "/assets/provinciadevelez-2026/la-belleza.jpg",
+   "poster": "/assets/provinciadevelez-2026/la-belleza-v2.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/12 (afiche recortado de la lámina del festival)"
   },
   {
    "titulo": "Pez azul",
-   "poster": "/assets/provinciadevelez-2026/pez-azul.jpg",
+   "poster": "/assets/provinciadevelez-2026/pez-azul-v2.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/08 (afiche recortado de la lámina del festival)"
   }

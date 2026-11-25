@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_9M7GCAS0P0JM",
+  "campo": "directores",
+  "valor": [
+   "Nelson Silva"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Nelson Silva"
+  }
+ },
+ {
+  "work_id": "w_9M7GCAS0P0JM",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_9M7GCAS0P0JM",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_9M7GCAS0P0JM",
+  "campo": "sinopsis.es",
+  "valor": "La historia del municipio de La Belleza, Santander, es contada por sus propias voces. Desde lo poco que se sabe de sus habitantes precolombinos, los Tisquizoques, hasta nuestros días, se revela la historia fundacional del municipio, pasando por los capítulos más aciagos y de cómo al día de hoy es un remanso de paz de exuberante belleza.",
+  "motivo": "texto del festival (Facebook, 25 nov 2026)",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "antes": {
+   "provinciadevelez-2026": "La historia del municipio de La Belleza, Santander, es contada por sus propias voces. Desde lo poco que se sabe de sus habitantes precolombinos, los Tisquizoques, hasta nuestros días, se revela la historia fundacional del municipio, pasando por los capítulos más aciagos y de cómo al día de hoy es un remanso de paz de exuberante belleza."
+  }
+ },
+ {
+  "work_id": "w_9M7GCAS0P0JM",
+  "campo": "sinopsis.en",
+  "valor": "The story of the municipality of La Belleza, Santander, is told by its own voices. From the little that is known of its pre-Columbian inhabitants, the Tisquizoques, to the present day, its founding history is revealed, through its darkest chapters and on to how today it is an exuberantly beautiful haven of peace.",
+  "motivo": "texto del festival (Facebook, 25 nov 2026)",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "antes": {
+   "provinciadevelez-2026": "The story of the municipality of La Belleza, Santander, is told by its own voices. From the little that is known of its pre-Columbian inhabitants, the Tisquizoques, to the present day, its founding history is revealed, through its darkest chapters and on to how today it is an exuberantly beautiful haven of peace."
+  }
+ },
+ {
+  "work_id": "w_9M7GCAS0P0JM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/la-belleza-v2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/la-belleza-v2.jpg"
+  }
+ }
+]
