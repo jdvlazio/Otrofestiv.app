@@ -1,0 +1,1335 @@
+{
+ "_provenance": {
+  "fecha": "2026-11-15",
+  "metodo": "TMDB search/movie+tv por título y alternos, search/person + combined_credits del director, verificación movie/credits; búsqueda web de afiche (1 consulta por obra, poca profundidad: FilmFreeway/Short Film Depot/distribuidoras sin revisar caso a caso; Letterboxd 403 sin verificar). sin_afiche = no hallado, no = no existe. Videoclips marcados sin_afiche sin búsqueda de afiche propio."
+ },
+ "obras": [
+  {
+   "titulo": "2000",
+   "director": "Renata Lučić",
+   "estado": "ficha_existente",
+   "tmdb_id": 1712540,
+   "imdb": "tt47598353",
+   "lb": "https://letterboxd.com/tmdb/1712540",
+   "evidencia": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  {
+   "titulo": "Barcelona",
+   "director": "Segundo de Chomón",
+   "estado": "ficha_existente",
+   "tmdb_id": 356487,
+   "imdb": null,
+   "lb": "https://letterboxd.com/tmdb/356487",
+   "evidencia": "«Barcelone, principale ville de la Catalogne», Chomón 1912, 4 min"
+  },
+  {
+   "titulo": "Bus",
+   "director": "André Balbuena",
+   "estado": "ficha_existente",
+   "tmdb_id": 1274419,
+   "imdb": "tt35981867",
+   "lb": "https://letterboxd.com/tmdb/1274419",
+   "evidencia": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  {
+   "titulo": "Cuando retornen las garzas",
+   "director": "Robert Brand Ordóñez",
+   "estado": "ficha_existente",
+   "tmdb_id": 1575134,
+   "imdb": null,
+   "lb": "https://letterboxd.com/tmdb/1575134",
+   "evidencia": "ficha sin póster"
+  },
+  {
+   "titulo": "En el silencio después",
+   "director": "Sebastian Delascasas",
+   "estado": "ficha_existente",
+   "tmdb_id": 1724318,
+   "imdb": "tt43337293",
+   "lb": "https://letterboxd.com/tmdb/1724318",
+   "evidencia": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  {
+   "titulo": "Eri",
+   "director": "Honami Yano",
+   "estado": "ficha_existente",
+   "tmdb_id": 1118590,
+   "imdb": null,
+   "lb": "https://letterboxd.com/tmdb/1118590",
+   "evidencia": "título TMDB «エリ / Eri, The Cow», Honami Yano, FR/JP 2026, 12 min"
+  },
+  {
+   "titulo": "Fiction",
+   "director": "Ambroise Rateau",
+   "estado": "ficha_existente",
+   "tmdb_id": 1691015,
+   "imdb": null,
+   "lb": "https://letterboxd.com/tmdb/1691015",
+   "evidencia": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  {
+   "titulo": "Grounded",
+   "director": "Chris Callus",
+   "estado": "ficha_existente",
+   "tmdb_id": 1700763,
+   "imdb": "tt42070671",
+   "lb": "https://letterboxd.com/tmdb/1700763",
+   "evidencia": "DUPLICADO en TMDB: 1700763 (con IMDb) y 1702560, ambos Chris Callus 2026 4 min"
+  },
+  {
+   "titulo": "Idols",
+   "director": "Matt Halsall",
+   "estado": "ficha_existente",
+   "tmdb_id": 1654471,
+   "imdb": "tt39306417",
+   "lb": "https://letterboxd.com/tmdb/1654471",
+   "evidencia": "director en TMDB «Matthew Halsall» (programa: Matt Halsall)"
+  },
+  {
+   "titulo": "Klase s nuotrauka",
+   "director": "Arnas Balčiūnas",
+   "estado": "ficha_existente",
+   "tmdb_id": 1668922,
+   "imdb": "tt41815531",
+   "lb": "https://letterboxd.com/tmdb/1668922",
+   "evidencia": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  {
+   "titulo": "Mirage",
+   "director": "Naima Karim",
+   "estado": "ficha_existente",
+   "tmdb_id": 1705630,
+   "imdb": null,
+   "lb": "https://letterboxd.com/tmdb/1705630",
+   "evidencia": "TMDB 2025 SA/NL 8 min"
+  },
+  {
+   "titulo": "Raíces",
+   "director": "Mavie Beisheim, Felipe Cuartas",
+   "estado": "ficha_existente",
+   "tmdb_id": 1784652,
+   "imdb": null,
+   "lb": "https://letterboxd.com/tmdb/1784652",
+   "evidencia": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  {
+   "titulo": "Risorsero dalla tomba e fu... l’Apocalisse!",
+   "director": "Domenico Montixi",
+   "estado": "ficha_existente",
+   "tmdb_id": 1788289,
+   "imdb": null,
+   "lb": "https://letterboxd.com/tmdb/1788289",
+   "evidencia": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  {
+   "titulo": "Solos",
+   "director": "Gabriella Marsh",
+   "estado": "ficha_existente",
+   "tmdb_id": 758792,
+   "imdb": null,
+   "lb": "https://letterboxd.com/tmdb/758792",
+   "evidencia": "TMDB 758792 fecha 2019 (programa dice 2020), Gabriella Marsh ES/GB 5 min; hay duplicado 1223478 sin fecha"
+  },
+  {
+   "titulo": "The End",
+   "director": "Niki Lindroth von Bahr",
+   "estado": "ficha_existente",
+   "tmdb_id": 1472669,
+   "imdb": "tt42004481",
+   "lb": "https://letterboxd.com/tmdb/1472669",
+   "evidencia": "director + año + duración cuadran (TMDB search + movie/credits)"
+  },
+  {
+   "titulo": "Triangle",
+   "director": "Anaël Dang",
+   "estado": "ficha_existente",
+   "tmdb_id": 1567979,
+   "imdb": "tt38493587",
+   "lb": "https://letterboxd.com/tmdb/1567979",
+   "evidencia": "TMDB 2025, 31 min (programa 2026, 30)"
+  },
+  {
+   "titulo": "Da je kuća dobra i vuk bi je imao",
+   "director": "Hana Jušić",
+   "estado": "ficha_existente",
+   "tmdb_id": 367050,
+   "imdb": "tt4426442",
+   "lb": "https://letterboxd.com/tmdb/367050",
+   "evidencia": "No Wolf Has a House, Hana Jušić HR 2015, 25 min"
+  },
+  {
+   "titulo": "Pískoviště",
+   "director": "Kateřina Čupová",
+   "estado": "ficha_existente",
+   "tmdb_id": 1768658,
+   "imdb": null,
+   "lb": "https://letterboxd.com/tmdb/1768658",
+   "evidencia": "Sandbox, Kateřina Čupová CZ 2026, 3 min; ojo: segunda ficha 1805073 «Sandbox» 2026 de la misma directora"
+  },
+  {
+   "titulo": "Largo de cortos",
+   "director": null,
+   "estado": "no_es_obra",
+   "notas": "entrada de programa sin director/país/año en cortos.json; no es una obra individual"
+  },
+  {
+   "titulo": "A Body that Hurts",
+   "director": "David Espitia Calderón",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes."
+  },
+  {
+   "titulo": "Berzingue (Crache)",
+   "director": "Ewan Rosenstrauch, Cécile Montanès",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado en web (búsqueda parcial)"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes. Obra-videoclip: portada del sencillo no es afiche. Búsqueda solo parcial (lote no exhaustivo)."
+  },
+  {
+   "titulo": "Cartas a Daniel Apóstol",
+   "director": "David Suárez Muñetón",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes."
+  },
+  {
+   "titulo": "Complementarios",
+   "director": "Mar Triana García",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado en web (búsqueda parcial)"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes. Búsqueda solo parcial (lote no exhaustivo)."
+  },
+  {
+   "titulo": "El Alto de los Buitres",
+   "director": "Sebastian Felipe Villarraga Acosta",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado en web (búsqueda parcial)"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes. Búsqueda solo parcial (lote no exhaustivo)."
+  },
+  {
+   "titulo": "Elefante",
+   "director": "César Heredia Cruz",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes."
+  },
+  {
+   "titulo": "Fragmentos de una tarde en Pance (Sol Menguante)",
+   "director": "Daniel Candamil",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado en web (búsqueda parcial)"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes. Obra-videoclip: portada del sencillo no es afiche. Búsqueda solo parcial (lote no exhaustivo)."
+  },
+  {
+   "titulo": "Jazzed",
+   "director": "Anton Setola",
+   "estado": "sin_afiche",
+   "imdb": "tt1822238",
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director",
+    "IMDb",
+    "Sundance Collab"
+   ],
+   "notas": "IMDb tt1822238 (Anton Setola, 2008, animación BE/FR/NL); hay fichas en Annecy 2009, Curtas, Flanders Image (PDF), IFFR. No se halló afiche verificable en las búsquedas; revisar imágenes de IMDb/press kit Flanders Image."
+  },
+  {
+   "titulo": "La ciudad de las flores (Maleza y Los Floripondios)",
+   "director": "Rodrigo Torrijos",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado en web (búsqueda parcial)"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes. Obra-videoclip: portada del sencillo no es afiche. Búsqueda solo parcial (lote no exhaustivo)."
+  },
+  {
+   "titulo": "La suma de todas las partes",
+   "director": "Maite Lucía Valero",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes."
+  },
+  {
+   "titulo": "Lucha",
+   "director": "César Heredia Cruz",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Mencionado en cqnl.org (taller de guion 2019) como corto de César Heredia Cruz. Sin afiche hallado."
+  },
+  {
+   "titulo": "Mi barquito (Canalón de Timbiquí)",
+   "director": "Tilo Gómez",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado en web (búsqueda parcial)"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes. Obra-videoclip: portada del sencillo no es afiche. Búsqueda solo parcial (lote no exhaustivo)."
+  },
+  {
+   "titulo": "No todos los pájaros son aves",
+   "director": "Mateo Guerrero Quintero",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes."
+  },
+  {
+   "titulo": "On naît seul, on meurt seul",
+   "director": "Luna Martin",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes."
+  },
+  {
+   "titulo": "Pececín",
+   "director": "Sofía Uzcátegui León",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado en web (búsqueda parcial)"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes. Búsqueda solo parcial (lote no exhaustivo)."
+  },
+  {
+   "titulo": "Querido River Phoenix",
+   "director": "Emanuel Schulman",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director",
+    "IMDb",
+    "Sundance Collab"
+   ],
+   "notas": "Existe como 'Dear River Phoenix' en Sundance Collab (Emanuel Schulman Muniz). La imagen allí es thumbnail 1920x1080 horizontal (no afiche)."
+  },
+  {
+   "titulo": "Stadionul Dragostei",
+   "director": "José Andrés Canales",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes."
+  },
+  {
+   "titulo": "The Beat (Matías Aguayo)",
+   "director": "Lorea Arcelus, Francisco Schultz",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado en web (búsqueda parcial)"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes. Obra-videoclip: portada del sencillo no es afiche. Búsqueda solo parcial (lote no exhaustivo)."
+  },
+  {
+   "titulo": "Transastralisme",
+   "director": "Eva Ortega Puig",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Confirmado en ficha CCCB de Eva Ortega Puig (animación, L'Alternativa 2019/2021). Sin afiche hallado."
+  },
+  {
+   "titulo": "Varoncito",
+   "director": "Camilo Giraldo",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes."
+  },
+  {
+   "titulo": "¿Cómo se ama? (Jorge Drexler)",
+   "director": "Rodrigo Méndez, Joana Colomar",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403 con curl)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado en web (búsqueda parcial)"
+   ],
+   "notas": "Búsqueda web por título+director sin resultados relevantes. Obra-videoclip: portada del sencillo no es afiche. Búsqueda solo parcial (lote no exhaustivo)."
+  },
+  {
+   "titulo": "A los once",
+   "director": "Priscila Núñez",
+   "estado": "sin_afiche",
+   "imdb": "tt? (IMDb de Priscila Núñez nm10127019 lista 'A los once')",
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director",
+    "sensacine.com.mx/peliculas/pelicula-282732",
+    "moreliafilmfest.com/en/peliculas/a-los-once",
+    "cinemasouslesetoiles.org"
+   ],
+   "notas": "Hallazgos de un 'A los once' documental Ambulante 21 min (~2020) y ficha Morelia; no cuadran claramente con 2025/15 min. Sin afiche verificable."
+  },
+  {
+   "titulo": "Běi Huí Gu− Xiàn",
+   "director": "Alex Jiang",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "Cassandra",
+   "director": "Martín Arbeláez",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)",
+   "director": "Diego Blanco",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado a fondo: videoclip"
+   ],
+   "notas": "Videoclip: la portada del sencillo no es afiche; sin afiche propio."
+  },
+  {
+   "titulo": "El hombre del reloj",
+   "director": "Daniel Prieto Muriel",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "Escritorio",
+   "director": "Darío Vejarano Tafur",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "Has estado aquí",
+   "director": "Vivian Muñoz Rodríguez",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch",
+    "cccb.org/en/multimedia/videos/has-estado-aqui/241608"
+   ],
+   "notas": "Obra de la serie City Symphonies del CCCB/Dones Visuals (2023, ~10 min). Solo video y fotogramas; no se halló afiche."
+  },
+  {
+   "titulo": "Joychair",
+   "director": "Vanessa Sandre",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "La colère et après",
+   "director": "Nicolas Legendre",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "La vida de un hilo",
+   "director": "Guillermo Castañeda, Andrea Castillo",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "Marea (Lido Pimienta)",
+   "director": "Sísifo",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado a fondo: videoclip"
+   ],
+   "notas": "Videoclip: la portada del sencillo no es afiche; sin afiche propio."
+  },
+  {
+   "titulo": "Nancy resabiada (Cumbia) (El Kalvo & La Banda Resabiada)",
+   "director": "Valeria Martí, El Kalvo",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado a fondo: videoclip"
+   ],
+   "notas": "Videoclip: la portada del sencillo no es afiche; sin afiche propio."
+  },
+  {
+   "titulo": "Nothing Here is Lost",
+   "director": "Kathy Mitrani",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "Oui (Balming Tiger)",
+   "director": "Lee Suho, San Yawn, Lee Sohyun, Im Subin, Keem Dohyeong",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "no buscado a fondo: videoclip"
+   ],
+   "notas": "Videoclip: la portada del sencillo no es afiche; sin afiche propio."
+  },
+  {
+   "titulo": "Perjalanan Menuju Surga",
+   "director": "Kenny Gulardi",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "Raj’in",
+   "director": "Faiz Abu Rmeleh, Keren Manor",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch",
+    "labiennale.org Venice Immersive 2026",
+    "btselem.org/we-shall-return"
+   ],
+   "notas": "Obra inmersiva 360° (Venice Immersive 2026), coproducción B'Tselem/NowHere Media. Página Biennale sin og:image de afiche; no verificado afiche."
+  },
+  {
+   "titulo": "Summer",
+   "director": "Tara Attarzadeh",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch",
+    "animafest.hr 2023 end_of_summer",
+    "tehrantimes.com"
+   ],
+   "notas": "Posible coincidencia: 'End of Summer' (Payan-e Tabestan), Tara Attarzadeh, 3 min, U. de Tehrán, Animafest 2023 — mismo director/duración/año; título distinto. Sin afiche hallado."
+  },
+  {
+   "titulo": "The Waiting Palm",
+   "director": "Nazanin Zahra Rafiei",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "Un gallinazo sin suerte",
+   "director": "Jairo Pinilla Téllez",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "When the Flowers Bloom",
+   "director": "Shiue-Ying Wei, Chia-Wen Ko",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch",
+    "kff.tw/en/film/content/2339"
+   ],
+   "notas": "Es obra VR/XR (Kaohsiung VR Film Lab, Acorn Den Studio, ~2022). Sin afiche verificado."
+  },
+  {
+   "titulo": "¿El regreso pa’ cuándo?",
+   "director": "Antonia Bello Vélez",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director (sin resultados pertinentes)"
+   ],
+   "notas": "Búsqueda web sin resultados pertinentes; no se halló afiche."
+  },
+  {
+   "titulo": "Amará",
+   "director": "Manuela Ocampo",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch",
+    "portafolio.co (nota concurso Sony)"
+   ],
+   "notas": "Solo nota de prensa: proyecto estudiantil Javeriana (Manuela Ocampo Bustamante con Isabella Villalobos y Juan Camilo Mejía) en concurso Sony; sin afiche."
+  },
+  {
+   "titulo": "Bu",
+   "director": "Daniel Alemán Montero",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Clasificado personal",
+   "director": "Juan Pablo Melo",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch"
+   ],
+   "notas": "Sin rastro web del corto."
+  },
+  {
+   "titulo": "Cvijeće",
+   "director": "Judita Gamulin",
+   "estado": "alta_posible",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": "https://croatian.film/wp-content/uploads/2019/06/Flowers_poster20E2809320kopija.jpg",
+   "fuente": "https://croatian.film/en/films/2890",
+   "px": "1000x1400",
+   "donde_busque": [
+    "WebSearch",
+    "croatian.film (catálogo HAVC)"
+   ],
+   "notas": "Afiche oficial «Flowers» en el catálogo croatian.film (página nombra a Gamulin); 1000x1400, proporción 0,714. TMDB: la directora no la tiene en su filmografía. IMDb no verificado."
+  },
+  {
+   "titulo": "El mandado",
+   "director": "Ingrid Paola Bonilla Rodríguez",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch",
+    "cqnl.org/?p=13193 (bio directora)"
+   ],
+   "notas": "Bio confirma: proyecto ganador FDC 2024. Sin afiche publicado."
+  },
+  {
+   "titulo": "Espaciar",
+   "director": "Daniela Giraldo Suárez",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Herir al viento (Monopop, Monstera Delizziosa)",
+   "director": "David Rendón Peláez",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Videoclip: no se buscó afiche propio; portada de sencillo no es afiche. Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Kevin, el niño del espacio",
+   "director": "Edward Gómez Granada",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch",
+    "retazosdejuan.myportfolio.com/kevin-el-nino-del-espacio"
+   ],
+   "notas": "Ficha en portafolio de Juan José González (prod. Daniela Lazt, 13 min, 'en postproducción'); la página no trae afiche."
+  },
+  {
+   "titulo": "La culpa (Juliana Quédate Otro Día)",
+   "director": "Pablo Gaitán",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Videoclip: no se buscó afiche propio; portada de sencillo no es afiche. Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Liebe Caro",
+   "director": "Maximilien Mpoto",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Maria Lionza (Yajaira La Beyaca)",
+   "director": "Yajaira la Beyaca",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Videoclip: no se buscó afiche propio; portada de sencillo no es afiche. Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Ni aquí, ni allá",
+   "director": "Manuela Romero Samacá",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Némica",
+   "director": "Felipe Flórez Ramos",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Para Dani",
+   "director": "César Heredia Cruz",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Savia (Alfilera)",
+   "director": "Nadiela",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Videoclip: no se buscó afiche propio; portada de sencillo no es afiche. Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Susurros",
+   "director": "Marta Hincapié Uribe",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Todo río lloverá sobre nosotros",
+   "director": "César Heredia Cruz",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Un pájaro más",
+   "director": "Julián Gómez Reyes",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Who Are We Against God?",
+   "director": "Aimée Lavignac, Laura Adriana Weibel",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificado (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "WebSearch título+director"
+   ],
+   "notas": "Sin resultados que correspondan a la obra (solo homónimos)."
+  },
+  {
+   "titulo": "Argentina Is Daing (Marttein)",
+   "director": "Valentin Stefano Mutti, Bosco Cabello",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "criterio videoclip"
+   ],
+   "notas": "videoclip: portada del sencillo no es afiche"
+  },
+  {
+   "titulo": "Carta a un joven ladrón",
+   "director": "Daniel Quintero Correa",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch título+director",
+    "websearch título alterno"
+   ],
+   "notas": "Sin resultados indexados por título+director (es/en)."
+  },
+  {
+   "titulo": "Cocodrilo (Dillom)",
+   "director": "Rocío Gastaldi, Andrés Capasso",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "criterio videoclip"
+   ],
+   "notas": "videoclip"
+  },
+  {
+   "titulo": "El píxel y la parcela",
+   "director": "Hannah Meszaros Martin",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch título+director",
+    "websearch título alterno"
+   ],
+   "notas": "Sin resultados indexados por título+director (es/en)."
+  },
+  {
+   "titulo": "Fantasy Land",
+   "director": "Aitana Ahrens",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch",
+    "marvinwayne.com/en/fantasy-land",
+    "infoicaa"
+   ],
+   "notas": "Distribuye Marvin&Wayne (marvinwayne.com/en/fantasy-land); la ficha solo trae fotogramas, sin cartel. ICAA: Kabiria Films, 17'58\", directora Aitana Martínez Ortas."
+  },
+  {
+   "titulo": "I Carry Them",
+   "director": "Bram VanderMark",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch",
+    "retrospectiveofjupiter.com/films/i-carry-them",
+    "directorsnotes.com"
+   ],
+   "notas": "Dance film 2022 (Jamar Roberts). Solo fotogramas 16:9 en retrospectiveofjupiter.com, directorsnotes, onepointfour; sin afiche."
+  },
+  {
+   "titulo": "Kupljena sjecanja",
+   "director": "Franko Dujmić Lorger",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch hr/en",
+    "havc.hr",
+    "labocine"
+   ],
+   "notas": "Sin resultados por título ni 'Bought Memories'. Posible relación con '48,87€' (2024, Franko Dujmić, fotos compradas) pero no confirmada: no asimilar."
+  },
+  {
+   "titulo": "La luna y yo (Tabi Wav)",
+   "director": "Manuelita Rosero Méndez",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "criterio videoclip"
+   ],
+   "notas": "videoclip"
+  },
+  {
+   "titulo": "Lo entrañable",
+   "director": "Valentina Laverde Castillo",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch título+director",
+    "websearch título alterno"
+   ],
+   "notas": "Sin resultados indexados por título+director (es/en)."
+  },
+  {
+   "titulo": "Meyolotl",
+   "director": "Lorena R. Valencia",
+   "estado": "sin_afiche",
+   "imdb": "tt28704014",
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch",
+    "imdb tt28704014",
+    "nylatinofilmfestival.com",
+    "berlinale-talents"
+   ],
+   "notas": "IMDb tt28704014 (pro.imdb 'Primary photo' existe pero no verificable sin sesión; curl a imdb sin imágenes). NYLFF 2026, Berlinale Talents."
+  },
+  {
+   "titulo": "No te conozcas",
+   "director": "Andrés Isaza Giraldo",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch título+director",
+    "websearch título alterno"
+   ],
+   "notas": "Sin resultados indexados por título+director (es/en)."
+  },
+  {
+   "titulo": "O sigilo",
+   "director": "Andrés Ángel",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch título+director",
+    "websearch título alterno"
+   ],
+   "notas": "Sin resultados indexados por título+director (es/en)."
+  },
+  {
+   "titulo": "Paraíso",
+   "director": "Jairo Arcos",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch título+director",
+    "websearch título alterno"
+   ],
+   "notas": "Sin resultados indexados por título+director (es/en)."
+  },
+  {
+   "titulo": "Querida A.",
+   "director": "Elena Molina",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch",
+    "hamacaonline.net/titles/querida-a",
+    "cccb.org",
+    "imdb nm3878309"
+   ],
+   "notas": "Producción CCCB/Dones Visuals 2023; en IMDb dentro de filmografía de Elena Molina (nm3878309, tt no extraído). hamacaonline sin imagen de cartel; CCCB solo tráiler."
+  },
+  {
+   "titulo": "Skiladagur",
+   "director": "Margrét Seema Takyar",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch is/en 'Return Date'",
+    "stockfishfestival"
+   ],
+   "notas": "Nada indexado; la directora tiene IMDb (Feluleikur 2022) sin este título."
+  },
+  {
+   "titulo": "Szepty",
+   "director": "Zofia Zwiruk",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch",
+    "polishanimations.pl (403 Cloudflare)"
+   ],
+   "notas": "Perfil de Zofia Żwiruk en polishanimations.pl/en/films/2939/ (bloqueado por Cloudflare, no verificable)."
+  },
+  {
+   "titulo": "Torito",
+   "director": "Sebastian Cabrera",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch título+director",
+    "websearch título alterno"
+   ],
+   "notas": "Sin resultados indexados por título+director (es/en)."
+  },
+  {
+   "titulo": "Una carta supuesta",
+   "director": "Megumi Cardona",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "websearch título+director",
+    "websearch título alterno"
+   ],
+   "notas": "Sin resultados indexados por título+director (es/en)."
+  },
+  {
+   "titulo": "You get one (The Plot in You)",
+   "director": "George Gallardo Kattah",
+   "estado": "sin_afiche",
+   "imdb": null,
+   "letterboxd": "no verificable (403)",
+   "afiche_url": null,
+   "fuente": null,
+   "px": null,
+   "donde_busque": [
+    "criterio videoclip"
+   ],
+   "notas": "videoclip"
+  }
+ ]
+}

@@ -1,0 +1,194 @@
+{
+ "_provenance": {
+  "fuente": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf",
+  "capturado": "2026-11-24",
+  "metodo": "transcripción del catálogo 2026 (índice, escenarios, eventos especiales) y del programa del 10 BFM: título, sección, duración y acceso de las actividades, y sección y título de los programas que la leyenda de la grilla no trae. Al Tablero (24 nov): título, participantes y formulario de inscripción, del boletín 027"
+ },
+ "programas": {
+  "HOM-CESAR": [
+   "Especiales",
+   "Estrella Fugaz: Un homenaje a César Heredia"
+  ],
+  "HUMOR": [
+   "Noche de Humor",
+   "Humor en corto"
+  ],
+  "CI-VC/CN-VC": [
+   "Competencia Internacional",
+   "Competencia Internacional y Nacional Videoclip"
+  ]
+ },
+ "actividades": [
+  [
+   "Inauguración",
+   {
+    "seccion": "Eventos especiales",
+    "event_kind": "apertura",
+    "acceso": "Entrada con invitación"
+   }
+  ],
+  [
+   "Apertura BFM",
+   {
+    "seccion": "Eventos especiales",
+    "event_kind": "apertura",
+    "acceso": "Entrada con invitación (solo para acreditados de Industria BFM con registro previo)"
+   }
+  ],
+  [
+   "Al Tablero BFM ¿Qué género",
+   {
+    "titulo": "¿Qué género es tu corto? Un viaje por lo extraordinario",
+    "min": 120,
+    "texto": "genero",
+    "registration_url": "https://forms.gle/giFuNnas3qdxSzVP7",
+    "acceso": "Entrada libre con inscripción previa",
+    "src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+     "date": "2026-11-24"
+    }
+   }
+  ],
+  [
+   "Al Tablero BFM ¿El futuro",
+   {
+    "titulo": "¿El futuro es vertical? Cambian los formatos, cambia la mirada",
+    "min": 120,
+    "texto": "vertical",
+    "registration_url": "https://forms.gle/wwM7ajZHD2QeTQHa8",
+    "acceso": "Entrada libre con inscripción previa",
+    "participantes": "Modera: Carolina Cardona (Productora KARMA Cine). Con William Barragán (Dos Que Tres), Diego Arbeláe (Idilio TV) y Juan Páez (Director independiente).",
+    "src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+     "date": "2026-11-24"
+    }
+   }
+  ],
+  [
+   "Al Tablero BFM Los festivales",
+   {
+    "titulo": "Los festivales frente a la IA: Aceptar, rechazar, sobrevivir",
+    "min": 120,
+    "texto": "ia",
+    "registration_url": "https://forms.gle/AiRzKvKJRTKPUUkq5",
+    "acceso": "Entrada libre con inscripción previa",
+    "src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+     "date": "2026-11-24"
+    }
+   }
+  ],
+  [
+   "Al Tablero BFM Robert",
+   {
+    "titulo": "Robert Valley: Dibujar lo que todavía no existe. La creación de sus universos visuales",
+    "min": 120,
+    "texto": "robert",
+    "registration_url": "https://forms.gle/9AY1AT11fPHamZPf6",
+    "acceso": "Entrada libre con inscripción previa",
+    "src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+     "date": "2026-11-24"
+    }
+   }
+  ],
+  [
+   "Al Tablero De la viñeta",
+   {
+    "titulo": "De la viñeta a la pantalla: Novela gráfica que se vuelve cine",
+    "min": 90,
+    "texto": "vineta",
+    "registration_url": "https://forms.gle/iFk4NYpHsnYCdeiQ7",
+    "acceso": "Entrada libre con inscripción previa",
+    "participantes": "Modera: Juan David Quintero (Ilustrador e Historietista). Con Santiago Caicedo (Director de Cine - Virus tropical), Cindy Elefante (Ilustradora e Historietista) y Natalia Rojas Noy (Ilustradora y Animadora).",
+    "src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+     "date": "2026-11-24"
+    }
+   }
+  ],
+  [
+   "Al Tablero Croacia",
+   {
+    "titulo": "Croacia: Una cinematografía que crece desde el corto",
+    "min": 90,
+    "texto": "croacia",
+    "registration_url": "https://forms.gle/eNYFkiyFPp38k1WJA",
+    "acceso": "Entrada libre con inscripción previa",
+    "src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+     "date": "2026-11-24"
+    }
+   }
+  ],
+  [
+   "Al Tablero Cine y jazz",
+   {
+    "titulo": "Cine y Jazz: La hermandad improvisada",
+    "min": 90,
+    "texto": "jazz",
+    "registration_url": "https://forms.gle/s6ef97jB6xyGtx82A",
+    "acceso": "Entrada libre con inscripción previa",
+    "participantes": "Modera: Santiago Parra (Jefe de Programación de BOGOSHORTS). Con Sandro Romero (Escritor y dramaturgo) y Maria Fernanda Narvaez (Compositora de bandas sonoras).",
+    "src": {
+     "url": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+     "date": "2026-11-24"
+    }
+   }
+  ],
+  [
+   "Exposición Andrósfera",
+   {
+    "titulo": "Andrósfera: Hombres de verdad. Lectura dramatizada",
+    "seccion": "Expone",
+    "event_kind": "experiencia",
+    "texto": "androsfera",
+    "sala": "Sala Jules Verne"
+   }
+  ],
+  [
+   "IMAGINATÓN",
+   {
+    "titulo": "Claqueteo XVII IMAGINATÓN",
+    "seccion": "IMAGINATÓN",
+    "event_kind": "evento",
+    "texto": "imaginaton",
+    "franja": 420,
+    "nota": "Inscripción: $20.000 (aficionado) o $50.000 (profesional) por un filminuto, hasta el 2 de diciembre a las 11:59 p. m."
+   }
+  ],
+  [
+   "Estreno BFM-IV",
+   {
+    "titulo": "Estreno BFM-IV - Furia",
+    "seccion": "BFM"
+   }
+  ],
+  [
+   "BS degusta",
+   {
+    "titulo": "BOGOSHORTS degusta: Picnic Nocturno",
+    "seccion": "Eventos especiales",
+    "event_kind": "experiencia",
+    "acceso": "Entrada con invitación",
+    "texto": "picnic"
+   }
+  ],
+  [
+   "Ganadores",
+   {
+    "seccion": "Eventos especiales",
+    "event_kind": "awards"
+   }
+  ],
+  [
+   "Ceremonia de Clausura",
+   {
+    "titulo": "Ceremonia de premiación y clausura - Noche de Santa Lucía",
+    "seccion": "Eventos especiales",
+    "event_kind": "awards",
+    "acceso": "Entrada con invitación"
+   }
+  ]
+ ]
+}

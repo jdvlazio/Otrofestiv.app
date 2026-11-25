@@ -1,0 +1,43 @@
+{
+ "id": "w_4KH040RYQRDA",
+ "titulo_original": "Gitano",
+ "anio": 2026,
+ "paises": [
+  "ES"
+ ],
+ "directores": [
+  "Cristian Serrano Jiménez"
+ ],
+ "aliases": [
+  {
+   "titulo": "Gipsy",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Jesús, un niño gitano, afronta con ilusión su primer día de instituto, pero pronto choca con barreras invisibles que le hacen cuestionarse si ese camino está hecho para él. Entre prejuicios, su identidad comienza a tambalearse. Rubén, su profesor de Historia, le abrirá una posibilidad: cuestionar los estereotipos y construir su propio futuro.",
+  "en": "Jesús, a Roma boy, approaches his first day of high school with excitement, but soon encounters invisible barriers that make him question whether this path is truly meant for him. Caught between social expectations, prejudice, and the weight of his environment, his identity begins to falter. Through Rubén, his History teacher, he discovers a new perspective: the possibility of challenging stereotypes and shaping his own future."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/gitano.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1782360,
+  "letterboxd": "gitano-2026"
+ },
+ "versiones": [
+  {
+   "etiqueta": "20 min",
+   "duracion_min": 20
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

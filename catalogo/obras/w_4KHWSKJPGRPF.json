@@ -1,0 +1,43 @@
+{
+ "id": "w_4KHWSKJPGRPF",
+ "titulo_original": "Nachtschwärmer",
+ "anio": 2026,
+ "paises": [
+  "CH"
+ ],
+ "directores": [
+  "Lena von Döhren"
+ ],
+ "aliases": [
+  {
+   "titulo": "Bats & Bugs",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Al encenderse un farol, los insectos se arremolinan alrededor de la luz. Desde una cueva cercana, unos murciélagos hambrientos ven la oportunidad de cenar.",
+  "en": "When a lantern is lit, insects swarm around it. Hungry bats in a nearby cave see their chance to find dinner."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/nachtschwarmer.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1599776,
+  "letterboxd": "bats-bugs"
+ },
+ "versiones": [
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

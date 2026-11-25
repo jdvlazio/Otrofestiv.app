@@ -1,0 +1,1111 @@
+{
+ "_provenance": {
+  "fecha": "2026-11-15",
+  "tanda": 1
+ },
+ "obras": [
+  {
+   "titulo": "A Body that Hurts",
+   "director": "David Espitia Calderón",
+   "estado": "sin_afiche",
+   "datos_extra": {
+    "tmdb_persona": 5277545
+   },
+   "pasos": [
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=A%20Body%20that%20Hurts",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=A%20Body%20that%20Hurts&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=A%20Body%20that%20Hurts&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=A%20Body%20that%20Hurts",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Un%20cuerpo%20que%20duele",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Un%20cuerpo%20que%20duele&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Un%20cuerpo%20que%20duele&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Un%20cuerpo%20que%20duele",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Body%20that%20Hurts",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Body%20that%20Hurts&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Body%20that%20Hurts&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Body%20that%20Hurts",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cuerpo%20que%20duele",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cuerpo%20que%20duele&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cuerpo%20que%20duele&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Cuerpo%20que%20duele",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/5277545/combined_credits",
+     "resultado": "David Espitia Calderon (5277545, Directing): Over Seas 2025 movie#1441819"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/3806086/combined_credits",
+     "resultado": "David Espitia (3806086, Directing): Casa Invadida  movie#1054530"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/5277545/combined_credits",
+     "resultado": "David Espitia Calderon (5277545, Directing): Over Seas 2025 movie#1441819"
+    },
+    {
+     "donde": "Letterboxd /s/search/films/ (navegador)",
+     "url": "https://letterboxd.com/s/search/films/<q>/",
+     "resultado": "«A Body that Hurts» y «Un cuerpo que duele»: sin coincidencia"
+    },
+    {
+     "donde": "IMDb suggestion API (navegador, origen imdb.com)",
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/<q>.json",
+     "resultado": "título (en/es) y «david espitia»: sin coincidencia; TMDB tiene a David Espitia Calderon (5277545) solo con «Over Seas» 2025"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: \"Un cuerpo que duele\" David Espitia cortometraje animación",
+     "resultado": "nada atribuible"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: \"A Body that Hurts\" Espitia animation short",
+     "resultado": "nada"
+    }
+   ]
+  },
+  {
+   "titulo": "A los once",
+   "director": "Priscila Núñez",
+   "estado": "alta_posible",
+   "afiche_url": "https://m.media-amazon.com/images/M/MV5BMjc2OWY3YTktNjg3Ny00OTUzLTgwNWUtNmIyMjI5MTY0Y2EyXkEyXkFqcGc@._V1_.jpg",
+   "fuente": "IMDb tt35506134 (póster principal)",
+   "px": "2592x3840",
+   "verificado_como": "Afiche con título «a los once», «Un cortometraje de PRISCILA NÚÑEZ», elenco Shakti Tonantzin/Valentina Gallardo/Ivanna Garibay, logos PROCINE CDMX; descargado y leído",
+   "datos_extra": {
+    "imdb": "tt35506134",
+    "sinopsis_en": "When her mother mistakes a bloodstain for her first period, an eleven-year-old uncovers the devastating truth.",
+    "elenco": [
+     "Shakti Tonantzin (Pilar)",
+     "Valentina Martínez/Gallardo (Mamá)",
+     "Ivanna Garibay (Charo)",
+     "Inti Deus (Miguel)",
+     "Otzara Solis (Naye)"
+    ],
+    "apoyo": "PROCINE Ciudad de México, Instituto Nacional de Bellas Artes? (logos), Indie Centro de Estudios Cinematográficos"
+   },
+   "pasos": [
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=A%20los%20once",
+     "resultado": "19 res; 684089|At Eleven|2020; 1760678|Once Upon A Time In Los Santos|; 336|Duck, You Sucker|1971; 299|Ocean's Eleven|1960; 345915|Once Upon a Time in Venice|2017"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=A%20los%20once&year=2025",
+     "resultado": "1 res; 16123|100 Million BC|2008"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=A%20los%20once&year=2026",
+     "resultado": "1 res; 336|Duck, You Sucker|1971"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=A%20los%20once",
+     "resultado": "4 res; 5402|Once Upon a Time... The Discoverers|1994; 4213|Once Upon a Time... The Explorers|1996; 203226|Once Upon a Time in Londongrad|2022; 73319|90 Day Fiancé: Before the 90 Days|2017"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=At%20Eleven",
+     "resultado": "14 res; 310425|News at Eleven|1986; 1573080|Deadline at Eleven|1920; 1396219|Doomsday at Eleven|1962; 684089|At Eleven|2020; 784014|Tonight at Eleven|1937"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=At%20Eleven&year=2025",
+     "resultado": "1 res; 1327917|On a Sunday at Eleven|2024"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=At%20Eleven&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=At%20Eleven",
+     "resultado": "2 res; 43692|Seven at Eleven|1951; 26177|At the Eleventh Hour|1967"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=los%20once",
+     "resultado": "20 res; 684089|At Eleven|2020; 1819039|Los Once Hermanos|; 266001|The Gang of Eleven|1963; 1165470|Los once mil quinientos|1973; 1760678|Once Upon A Time In Los Santos|"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=los%20once&year=2025",
+     "resultado": "1 res; 16123|100 Million BC|2008"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=los%20once&year=2026",
+     "resultado": "1 res; 336|Duck, You Sucker|1971"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=los%20once",
+     "resultado": "4 res; 5402|Once Upon a Time... The Discoverers|1994; 4213|Once Upon a Time... The Explorers|1996; 203226|Once Upon a Time in Londongrad|2022; 73319|90 Day Fiancé: Before the 90 Days|2017"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/3121012/combined_credits",
+     "resultado": "Priscila Alegría Núñez (3121012, Camera): AIDS Diva: The Legend of Connie Norman 2021 movie#596490; Like Mother, Like Daughter 2018 movie#839122"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/3121012/combined_credits",
+     "resultado": "Priscila Alegría Núñez (3121012, Camera): AIDS Diva: The Legend of Connie Norman 2021 movie#596490; Like Mother, Like Daughter 2018 movie#839122"
+    },
+    {
+     "donde": "TMDB movie/684089",
+     "url": "https://api.themoviedb.org/3/movie/684089",
+     "resultado": "«A los once» 2020, 21 min, dir. Carolina Admirable García (Ambulante) — HOMÓNIMO, no es esta obra"
+    },
+    {
+     "donde": "Letterboxd /s/search/films/ (navegador)",
+     "url": "https://letterboxd.com/s/search/films/<q>/",
+     "resultado": "«at-eleven» (= TMDB 684089 homónimo); nada de Núñez"
+    },
+    {
+     "donde": "IMDb suggestion API (navegador, origen imdb.com)",
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/<q>.json",
+     "resultado": "tt35506134 «A los once» short, dir./guion Priscila Núñez, elenco Inti Deus, Ivanna Garibay — ES ESTA OBRA; tt36473685 es el homónimo 2020"
+    },
+    {
+     "donde": "IMDb title",
+     "url": "https://www.imdb.com/title/tt35506134/",
+     "resultado": "Sinopsis: «When her mother mistakes a bloodstain for her first period, an eleven-year-old uncovers the devastating truth.» México, español, rodada en CDMX, sin año"
+    },
+    {
+     "donde": "IMDb name",
+     "url": "https://www.imdb.com/name/nm10127019/",
+     "resultado": "filmografía incluye «A los once»"
+    }
+   ]
+  },
+  {
+   "titulo": "Amará",
+   "director": "Manuela Ocampo",
+   "estado": "sin_afiche",
+   "datos_extra": {
+    "creditos": "Manuela Ocampo Bustamante, Isabella Villalobos Figueroa, Juan Camilo Mejía Flórez (Pontificia Universidad Javeriana)",
+    "prensa": "https://www.portafolio.co/negocios/empresas/de-la-javeriana-a-hollywood-estudiantes-colombianos-destacan-en-concurso-mundial-de-sony-498245"
+   },
+   "pasos": [
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Amar%C3%A1",
+     "resultado": "20 res; 874517|Death in Amara|2024; 1795850|Amara|2025; 1783358|Nadie te amará|; 1023660|Amara|2021; 770561|Amara|2019"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Amar%C3%A1&year=2025",
+     "resultado": "3 res; 874517|Death in Amara|2024; 1795850|Amara|2025; 1419969|L'estate amara|2025"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Amar%C3%A1&year=2026",
+     "resultado": "2 res; 1795850|Amara|2025; 1688183|Amara:The Statue|2026"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Amara",
+     "resultado": "20 res; 1795850|Amara|2025; 1023660|Amara|2021; 770561|Amara|2019; 874517|Death in Amara|2024; 1571570|Amara Jyothi|1985"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Amara&year=2025",
+     "resultado": "5 res; 1795850|Amara|2025; 874517|Death in Amara|2024; 1419969|L'estate amara|2025; 1596454|Gaby Amarantos: Rock Doido - O Filme|2025; 1477701|Amaran|2025"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Amara&year=2026",
+     "resultado": "6 res; 1795850|Amara|2025; 1688183|Amara:The Statue|2026; 1637127|Amaravathiki Aahvanam|2026; 1695204|La Tarde Noche #4: Postales de Amaranta|2026; 1762055|Amaranth|2026"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Amar%C3%A1",
+     "resultado": "5 res; 20416|¿Quién amará a María?|; 82328|Bitter Lands|2018; 16413|Yeh Rishta Kya Kehlata Hai|2009; 273825|Amor amargo|2024; 222631|CNN This Morning Weekend|2013"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Amara",
+     "resultado": "11 res; 20416|¿Quién amará a María?|; 82328|Bitter Lands|2018; 16413|Yeh Rishta Kya Kehlata Hai|2009; 273825|Amor amargo|2024; 222631|CNN This Morning Weekend|2013"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Amara",
+     "resultado": "20 res; 1795850|Amara|2025; 1023660|Amara|2021; 770561|Amara|2019; 874517|Death in Amara|2024; 1571570|Amara Jyothi|1985"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Amara&year=2025",
+     "resultado": "5 res; 1795850|Amara|2025; 874517|Death in Amara|2024; 1419969|L'estate amara|2025; 1596454|Gaby Amarantos: Rock Doido - O Filme|2025; 1477701|Amaran|2025"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Amara&year=2026",
+     "resultado": "6 res; 1795850|Amara|2025; 1688183|Amara:The Statue|2026; 1637127|Amaravathiki Aahvanam|2026; 1695204|La Tarde Noche #4: Postales de Amaranta|2026; 1762055|Amaranth|2026"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Amara",
+     "resultado": "11 res; 20416|¿Quién amará a María?|; 82328|Bitter Lands|2018; 16413|Yeh Rishta Kya Kehlata Hai|2009; 273825|Amor amargo|2024; 222631|CNN This Morning Weekend|2013"
+    },
+    {
+     "donde": "TMDB search/person",
+     "url": "search/person?query=Manuela Ocampo",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/person",
+     "url": "search/person?query=Manuela Ocampo Bustamante",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB",
+     "url": "movie/1795850",
+     "resultado": "«Amara» 2025 es de Achmad Junaidi (Indonesia) — homónimo"
+    },
+    {
+     "donde": "Letterboxd /s/search/films/ (navegador)",
+     "url": "https://letterboxd.com/s/search/films/<q>/",
+     "resultado": "solo homónimos amara-2019/2021/2025"
+    },
+    {
+     "donde": "IMDb suggestion API (navegador, origen imdb.com)",
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/<q>.json",
+     "resultado": "sin coincidencia"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: \"Amará\" Manuela Ocampo cortometraje",
+     "resultado": "Portafolio: finalista Sony Future Filmmaker Awards 2026, estudiantes Javeriana (Manuela Ocampo Bustamante, Isabella Villalobos Figueroa, Juan Camilo Mejía Flórez); sin afiche"
+    }
+   ]
+  },
+  {
+   "titulo": "Argentina Is Daing (Marttein)",
+   "director": "Valentin Stefano Mutti, Bosco Cabello",
+   "estado": "sin_afiche",
+   "datos_extra": {
+    "nota": "videoclip; no se revisó canal YouTube oficial en esta tanda"
+   },
+   "pasos": [
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Argentina%20Is%20Daing",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Argentina%20Is%20Daing&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Argentina%20Is%20Daing&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Argentina%20Is%20Daing",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Argentina%20Is%20Dying",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Argentina%20Is%20Dying&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Argentina%20Is%20Dying&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Argentina%20Is%20Dying",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Marttein",
+     "resultado": "1 res; 1367304|MARTTEIN, UNA PELICULA ARGENTINA|2024"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Marttein&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Marttein&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Marttein",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/person",
+     "url": "search/person?query=Valentin Stefano Mutti",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/4308937/combined_credits",
+     "resultado": "Valentín Mutti (4308937, Camera): MARTTEIN, UNA PELICULA ARGENTINA 2024 movie#1367304; POST MORTEM: THE DOCUMENTARY 2023 movie#1188238"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/4718639/combined_credits",
+     "resultado": "Bosco Cabello (4718639, Camera): Cuando el reloj marque las treinta y seis 2024 movie#1291498; Hidden Beach 2025 movie#1714233; Humboldt 2024 movie#1337294; KUENTOS DE UN KONEJO PERDIDO | THE DOCUMENTARY  movie#1513476"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/5604969/combined_credits",
+     "resultado": "Bosco Cabello (5604969, Camera): KUENTOS DE UN KONEJO PERDIDO | THE DOCUMENTARY  movie#1513476"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/5604966/combined_credits",
+     "resultado": "Bosco Cabello (5604966, Visual Effects): KUENTOS DE UN KONEJO PERDIDO | THE DOCUMENTARY  movie#1513476"
+    },
+    {
+     "donde": "TMDB",
+     "url": "movie/1367304",
+     "resultado": "«MARTTEIN, UNA PELICULA ARGENTINA» 2024, 28 min, dir. Fogwill/Bruzzone — otra obra (Mutti figura en cámara)"
+    },
+    {
+     "donde": "Letterboxd /s/search/films/ (navegador)",
+     "url": "https://letterboxd.com/s/search/films/<q>/",
+     "resultado": "«Argentina Is Daing»: 0"
+    },
+    {
+     "donde": "IMDb suggestion API (navegador, origen imdb.com)",
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/<q>.json",
+     "resultado": "0"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: Marttein \"Argentina Is Daing\" videoclip",
+     "resultado": "sin resultado del clip"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: Marttein videoclip 2026 dirigido Valentín Mutti Bosco Cabello",
+     "resultado": "solo «Espectacular, el cortometraje» (TMDB 1520713, Mutti+Sisso, 2025) — otra obra"
+    }
+   ]
+  },
+  {
+   "titulo": "Berzingue (Crache)",
+   "director": "Ewan Rosenstrauch, Cécile Montanès",
+   "estado": "sin_afiche",
+   "datos_extra": {
+    "cancion": "Crache – Berzingue (EP Éclaircie Sauvage, 2024)"
+   },
+   "pasos": [
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Berzingue",
+     "resultado": "1 res; 234706|Lickety-Splat|1961"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Berzingue&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Berzingue&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Berzingue",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Crache",
+     "resultado": "17 res; 459584|Portrait Craché|2016; 361260|Raging Rose|2015; 1756701|Crache le morceau|; 662995|Cramé Craché|; 1000807|Sang craché des lèvres belles|"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Crache&year=2025",
+     "resultado": "1 res; 1588938|Biting the Hand that Feeds You|2025"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Crache&year=2026",
+     "resultado": "2 res; 1522039|Cracheurs|2026; 1588938|Biting the Hand that Feeds You|2025"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Crache",
+     "resultado": "1 res; 275464|Until You Burn|2024"
+    },
+    {
+     "donde": "TMDB search/person",
+     "url": "search/person?query=Ewan Rosenstrauch",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/4799473/combined_credits",
+     "resultado": "Cécile Montanès (4799473, Crew): Our Senses 2024 movie#1310093"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/4799473/combined_credits",
+     "resultado": "Cécile Montanès (4799473, Crew): Our Senses 2024 movie#1310093"
+    },
+    {
+     "donde": "Letterboxd /s/search/films/ (navegador)",
+     "url": "https://letterboxd.com/s/search/films/<q>/",
+     "resultado": "0 pertinentes"
+    },
+    {
+     "donde": "IMDb suggestion API (navegador, origen imdb.com)",
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/<q>.json",
+     "resultado": "Ewan Rosenstrauch nm13534838 (VFX: The Hunt, Madeleine, Option 4) — sin el clip"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: Crache \"Berzingue\" clip ...",
+     "resultado": "canción del EP «Éclaircie Sauvage» (oct 2024, Bandcamp crache.bandcamp.com); sin crédito de clip"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: Crache Berzingue clip officiel",
+     "resultado": "unifrance.org/movie/44115/berzingue aparece en resultados — no verificado (posible homónimo)"
+    }
+   ]
+  },
+  {
+   "titulo": "Běi Huí Gu− Xiàn",
+   "director": "Alex Jiang",
+   "estado": "alta_posible",
+   "afiche_url": "https://m.media-amazon.com/images/M/MV5BYjU5OWQ0ZDctYWE2My00YTk3LWJhNmMtMTlmMzM0M2U1YWQyXkEyXkFqcGc@._V1_.jpg",
+   "fuente": "IMDb tt38915889 (póster principal)",
+   "px": "5400x7200",
+   "verificado_como": "Afiche con «Tropic of Cancer», 北回歸線, «A film by Alex Jiang» y bloque de créditos; descargado y leído",
+   "datos_extra": {
+    "imdb": "tt38915889",
+    "sinopsis_en": "In a small-town lingerie factory, a young man's monotonous life is upended by an unexpected bond and his awakening queerness.",
+    "creditos": "Cast Linyu Zhong, Simin Zhang; prod. Shiyi Zheng, Ciao Xinyu Zhao; DF Tao Kio Qiu; montaje Martim David Gomes, Alex Jiang; música Cali Wang (según afiche)",
+    "titulo_original_hanzi": "北回歸線"
+   },
+   "pasos": [
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Bei%20Hui%20Gui%20Xian",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Bei%20Hui%20Gui%20Xian&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Bei%20Hui%20Gui%20Xian&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Bei%20Hui%20Gui%20Xian",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=%E5%8C%97%E5%9B%9E%E5%BD%92%E7%BA%BF",
+     "resultado": "5 res; 1579223|West by Northwest|2026; 613055|South of the Clouds|2014; 120817|Tropic of Cancer|1970; 150587|Without Apparent Motive|1971; 218331|Tropic Holiday|1938"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=%E5%8C%97%E5%9B%9E%E5%BD%92%E7%BA%BF&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=%E5%8C%97%E5%9B%9E%E5%BD%92%E7%BA%BF&year=2026",
+     "resultado": "2 res; 1579223|West by Northwest|2026; 150587|Without Apparent Motive|1971"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=%E5%8C%97%E5%9B%9E%E5%BD%92%E7%BA%BF",
+     "resultado": "1 res; 37893|Tropic of Cancer|2010"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Tropic%20of%20Cancer",
+     "resultado": "4 res; 120817|Tropic of Cancer|1970; 71538|Tropic of Cancer|1972; 1806642|The Tropic of Cancer|2025; 354426|Tropic of Cancer|2004"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Tropic%20of%20Cancer&year=2025",
+     "resultado": "1 res; 1806642|The Tropic of Cancer|2025"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Tropic%20of%20Cancer&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Tropic%20of%20Cancer",
+     "resultado": "1 res; 37893|Tropic of Cancer|2010"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Tropico%20de%20Cancer",
+     "resultado": "3 res; 354426|Tropic of Cancer|2004; 120817|Tropic of Cancer|1970; 71538|Tropic of Cancer|1972"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Tropico%20de%20Cancer&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Tropico%20de%20Cancer&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Tr%C3%B3pico%20de%20C%C3%A1ncer",
+     "resultado": "3 res; 354426|Tropic of Cancer|2004; 120817|Tropic of Cancer|1970; 71538|Tropic of Cancer|1972"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Tr%C3%B3pico%20de%20C%C3%A1ncer&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Tr%C3%B3pico%20de%20C%C3%A1ncer&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Tropico%20de%20Cancer",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Tr%C3%B3pico%20de%20C%C3%A1ncer",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/3467357/combined_credits",
+     "resultado": "Alex Jiang (3467357, Production): Anti-Venom for a Snake 2022 movie#949929; Lacuna 2026 movie#1713430; Rain Check  movie#1160062; The Hostage 2024 movie#1512035; When the Tide Rises 2021 movie#973403"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/297204/combined_credits",
+     "resultado": "Yau Gin-Gwok (297204, Acting): Angel Terminators 2 1992 movie#162455; Don't Fool Me 1991 movie#320993; Fist from Shaolin 1993 movie#75700; Forced Nightmare 1992 movie#173027; Madam City Hunter 1993 movie#45401; Once Upon a Time in China 1991 movie#10617; Revengence Superlady 1986 movie#466114; Rock N'Roll Cop 1994 movie#180897; The South Shaolin Master 1984 movie#56763; The South Shaolin Master Part II 1994 movie#335480; To Catch A Thief 1991 movie#401085; Wizard's Curse 1992 movie#106720"
+    },
+    {
+     "donde": "TMDB movie/1806642",
+     "url": "https://api.themoviedb.org/3/movie/1806642",
+     "resultado": "«The Tropic of Cancer» 2025, 36 min, Karolina Breguła — homónimo"
+    },
+    {
+     "donde": "Letterboxd /s/search/films/ (navegador)",
+     "url": "https://letterboxd.com/s/search/films/<q>/",
+     "resultado": "tropic-of-cancer (1970/1972/2004/2010), the-tropic-of-cancer — ninguno de Jiang"
+    },
+    {
+     "donde": "IMDb title",
+     "url": "https://www.imdb.com/title/tt38915889/",
+     "resultado": "Tropic of Cancer (Short 2025) 13 min, dir./guion Alex Jiang, Hong Kong/EE.UU., mandarín/hakka — ES ESTA OBRA"
+    },
+    {
+     "donde": "NYU Tisch First Run 2026",
+     "url": "https://tisch.nyu.edu/first-run-film-festival/more-2026/tropic-of-cancer",
+     "resultado": "tesis NYU; productores Xinyu Zhao, Shiyi Zheng, Shihan Tan; DF Tao Kio Qiu; imagen = fotograma (no afiche)"
+    },
+    {
+     "donde": "shortfilmwire",
+     "url": "https://shortfilmwire.com/en/embedded/film/200147197/toto",
+     "resultado": "ficha «Bei Hui Gui Xian», sin imagen"
+    }
+   ]
+  },
+  {
+   "titulo": "Bu",
+   "director": "Daniel Alemán Montero",
+   "estado": "sin_afiche",
+   "pasos": [
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Bu",
+     "resultado": "20 res; 589134|Bu|2019; 204529|BU・SU|1987; 603788|Kader Bu|1976; 883671|Xia Bu|2014; 313878|On the Coast|2010"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Bu&year=2025",
+     "resultado": "20 res; 1815737|Ta-Bu|; 1535676|Məktubda bu yox idi|2025; 1477930|Bu Bir Kültür Ürünüdür|2025; 1445213|bu dünyanın sonu değil|2025; 1544886|Never Back Down|2025"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Bu&year=2026",
+     "resultado": "20 res; 1823681|This Side|2026; 1681881|Bu Mutlu Günümüzde|2026; 1715596|Hal Bu Ki|2026; 1803906|Bu(n)Dir|2026; 1609689|Bu İşin Şakası Yok|2026"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Bu",
+     "resultado": "20 res; 302063|This Sea Will Overflow|2025; 223694|Wo Shi Bu Bai Chi|2019; 113460|Tonight with İbrahim Selim|2019; 54666|The 'Bu|2003; 210676|Ben Bu Cihana Sığmazam|2022"
+    },
+    {
+     "donde": "TMDB search/person",
+     "url": "search/person?query=Daniel Alemán Montero",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/3290854/combined_credits",
+     "resultado": "Daniel Alemán (3290854, Visual Effects): Gemini 2022 movie#1013680; Tundra 2021 movie#892142"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/6650373/combined_credits",
+     "resultado": "Daniel Aleman (6650373, Acting): Deportados 2019 movie#678528"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/3290854/combined_credits",
+     "resultado": "Daniel Alemán (3290854, Visual Effects): Gemini 2022 movie#1013680; Tundra 2021 movie#892142"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/6650373/combined_credits",
+     "resultado": "Daniel Aleman (6650373, Acting): Deportados 2019 movie#678528"
+    },
+    {
+     "donde": "TMDB search/movie year 2025/2026 + créditos de cada resultado",
+     "url": "search/movie?query=Bu&year=2026",
+     "resultado": "ningún director coincide"
+    },
+    {
+     "donde": "Letterboxd /s/search/films/ (navegador)",
+     "url": "https://letterboxd.com/s/search/films/<q>/",
+     "resultado": "«bu» genérico, no coincide"
+    },
+    {
+     "donde": "IMDb suggestion API (navegador, origen imdb.com)",
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/<q>.json",
+     "resultado": "Daniel Alemán nm11374414 VFX (Canción Bonita) — sin «Bu»"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: \"Bu\" cortometraje Daniel Alemán Montero Cuba \"Monstruo del Flash\"",
+     "resultado": "nada"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: \"Bu\" Daniel Alemán cortometraje 2026 Cuba España",
+     "resultado": "nada"
+    }
+   ],
+   "datos_extra": {}
+  },
+  {
+   "titulo": "Carta a un joven ladrón",
+   "director": "Daniel Quintero Correa",
+   "estado": "sin_afiche",
+   "datos_extra": {
+    "tmdb_persona": 4955475,
+    "imdb_persona": "nm18162452"
+   },
+   "pasos": [
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Carta%20a%20un%20joven%20ladron",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Carta%20a%20un%20joven%20ladron&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Carta%20a%20un%20joven%20ladron&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Carta%20a%20un%20joven%20ladr%C3%B3n",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Carta%20a%20un%20joven%20ladr%C3%B3n&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Carta%20a%20un%20joven%20ladr%C3%B3n&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Carta%20a%20un%20joven%20ladron",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Carta%20a%20un%20joven%20ladr%C3%B3n",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Letter%20to%20a%20Young%20Thief",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Letter%20to%20a%20Young%20Thief&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Letter%20to%20a%20Young%20Thief&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Letter%20to%20a%20Young%20Thief",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=joven%20ladron",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=joven%20ladron&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=joven%20ladron&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=joven%20ladron",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/4955475/combined_credits",
+     "resultado": "Daniel Quintero Correa (4955475, Production): Lo peor hasta el momento 2023 movie#1276535"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/2791562/combined_credits",
+     "resultado": "Daniel Quintero (2791562, Visual Effects): Strange Alloy 2015 movie#786777; Voyager 2016 movie#491931; Yona 2019 movie#644601"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/6438407/combined_credits",
+     "resultado": "Alexis Daniel Quintero (6438407, Acting): uncertainty  movie#1756842"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/4955475/combined_credits",
+     "resultado": "Daniel Quintero Correa (4955475, Production): Lo peor hasta el momento 2023 movie#1276535"
+    },
+    {
+     "donde": "Letterboxd /s/search/films/ (navegador)",
+     "url": "https://letterboxd.com/s/search/films/<q>/",
+     "resultado": "0"
+    },
+    {
+     "donde": "IMDb suggestion API (navegador, origen imdb.com)",
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/<q>.json",
+     "resultado": "Daniel Quintero Correa nm18162452: Esta es la Historia de Henry, Lo peor hasta el momento, El Sueño del Espejo — sin «Carta…»"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: \"Carta a un joven ladrón\" Daniel Quintero cortometraje",
+     "resultado": "nada"
+    }
+   ]
+  },
+  {
+   "titulo": "Cartas a Daniel Apóstol",
+   "director": "David Suárez Muñetón",
+   "estado": "sin_afiche",
+   "pasos": [
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cartas%20a%20Daniel%20Apostol",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cartas%20a%20Daniel%20Apostol&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cartas%20a%20Daniel%20Apostol&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cartas%20a%20Daniel%20Ap%C3%B3stol",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cartas%20a%20Daniel%20Ap%C3%B3stol&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cartas%20a%20Daniel%20Ap%C3%B3stol&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Cartas%20a%20Daniel%20Apostol",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Cartas%20a%20Daniel%20Ap%C3%B3stol",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Letters%20to%20Apostle%20Daniel",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Letters%20to%20Apostle%20Daniel&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Letters%20to%20Apostle%20Daniel&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Letters%20to%20Apostle%20Daniel",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Daniel%20Apostol",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Daniel%20Apostol&year=2025",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Daniel%20Apostol&year=2026",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Daniel%20Apostol",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/person",
+     "url": "search/person?query=David Suárez Muñetón",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/1006189/combined_credits",
+     "resultado": "David Suárez (1006189, Writing): Acosada 1994 movie#1497742; Antes de Morir 2000 movie#341712; Castañuela 70, el teatro prohibido 2006 movie#1229615; Con el Corazón en la Mano 1988 movie#323438; Cuchillos de fuego 1990 movie#160785; La Oveja Negra 1987 movie#370019; Pandemonium, the Hell's Capital City 1997 movie#292128; Passionate Mobile 1994 movie#339332; Shoot to kill 1990 movie#134178; Sicario 1994 movie#95700; Woman to Woman 1987 movie#323449"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/2589946/combined_credits",
+     "resultado": "David Suárez (2589946, Acting): Like a Fish out of the Water 2017 movie#689769; Llamadas obscenas 1996 movie#771908"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/2834541/combined_credits",
+     "resultado": "David Suarez (2834541, Acting): Breaking Up 2017 movie#758484"
+    },
+    {
+     "donde": "TMDB search/person",
+     "url": "search/person?query=David Suarez Muneton",
+     "resultado": "0 resultados"
+    },
+    {
+     "donde": "Letterboxd /s/search/films/ (navegador)",
+     "url": "https://letterboxd.com/s/search/films/<q>/",
+     "resultado": "0 (es y en)"
+    },
+    {
+     "donde": "IMDb suggestion API (navegador, origen imdb.com)",
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/<q>.json",
+     "resultado": "0; «Letters to Daniel» son homónimos"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: \"Cartas a Daniel Apóstol\" David Suárez",
+     "resultado": "nada"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: \"Letters to Apostle Daniel\" OR ... Suárez Muñetón",
+     "resultado": "nada"
+    }
+   ],
+   "datos_extra": {}
+  },
+  {
+   "titulo": "Cassandra",
+   "director": "Martín Arbeláez",
+   "estado": "sin_afiche",
+   "datos_extra": {
+    "nota": "la sinopsis del catálogo («Cassandra lujuria del río Fuego de la noche») parece listado de varias piezas; posible programa compuesto — a revisar en el catálogo"
+   },
+   "pasos": [
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cassandra",
+     "resultado": "20 res; 32037|The Cassandra Crossing|1976; 848104|Cassandra|2021; 831136|Cassandra|2008; 132843|Cassandra|1987; 424653|Cassandra|2013"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cassandra&year=2025",
+     "resultado": "4 res; 1568938|Cassandra|2025; 1556546|Cassandra Venice|2025; 1556537|Kevin & Cassandra|2025; 1503543|Nobody Believes Cassandra|2025"
+    },
+    {
+     "donde": "TMDB search/movie",
+     "url": "https://api.themoviedb.org/3/search/movie?query=Cassandra&year=2026",
+     "resultado": "1 res; 1766620|Cassandra|2026"
+    },
+    {
+     "donde": "TMDB search/tv",
+     "url": "https://api.themoviedb.org/3/search/tv?query=Cassandra",
+     "resultado": "7 res; 248982|Cassandra|2025; 58246|Cassandra: Warrior Angel|2013; 232102|Cassandra|2023; 288042|Cassandra|2025; 70290|Cassandra French's Finishing School|2017"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/2826921/combined_credits",
+     "resultado": "Martin Arbelaez (2826921, Directing): Heliconia 2020 movie#730269"
+    },
+    {
+     "donde": "TMDB search/person + combined_credits",
+     "url": "https://api.themoviedb.org/3/person/2826921/combined_credits",
+     "resultado": "Martin Arbelaez (2826921, Directing): Heliconia 2020 movie#730269"
+    },
+    {
+     "donde": "TMDB search/movie year 2023/2024 + créditos",
+     "url": "search/movie?query=Cassandra&year=2023",
+     "resultado": "Cassandra 2023 de Paula Granato y de Bea Santos — no coinciden; Martin Arbelaez (2826921) solo «Heliconia» 2020"
+    },
+    {
+     "donde": "Letterboxd /s/search/films/ (navegador)",
+     "url": "https://letterboxd.com/s/search/films/<q>/",
+     "resultado": "cassandra-2023 / -2023-1 = mismos homónimos TMDB"
+    },
+    {
+     "donde": "IMDb suggestion API (navegador, origen imdb.com)",
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/<q>.json",
+     "resultado": "«martin arbelaez»: sin coincidencia"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: \"Cassandra\" Martín Arbeláez cortometraje 2023",
+     "resultado": "nada"
+    },
+    {
+     "donde": "WebSearch",
+     "url": "query: Martín Arbeláez Cassandra short film 2023 Colombia France \"lujuria\"",
+     "resultado": "IMDb tt31037095 «Lujuria» 2023 corto colombiano 19 min — sin relación demostrada con Cassandra/Arbeláez; no verificado"
+    }
+   ]
+  }
+ ]
+}

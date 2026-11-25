@@ -1,0 +1,43 @@
+{
+ "id": "w_4KJEY9YSXMDN",
+ "titulo_original": "Le dérapage",
+ "anio": 2025,
+ "paises": [
+  "FR"
+ ],
+ "directores": [
+  "Aurélien Laplace"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Slip-Up",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En plena campaña, un diputado se entera por la radio de que está envuelto en un escándalo. Él y su esposa buscan en internet qué fue lo que pasó.",
+  "en": "In the middle of his campaign, a politician hears on the radio that he is caught up in a scandal. He and his wife go online to find out what happened."
+ },
+ "generos": [
+  "Comedia"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/le-derapage.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1417728,
+  "letterboxd": "le-derapage"
+ },
+ "versiones": [
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

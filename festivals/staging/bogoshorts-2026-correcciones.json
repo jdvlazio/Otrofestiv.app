@@ -1,0 +1,371 @@
+{
+ "_provenance": {
+  "fuente": "sondas TMDB por título, alternos y filmografía del director (movie/credits)",
+  "capturado": "2026-11-23"
+ },
+ "fichas": {
+  "2000": {
+   "tmdb": 1712540,
+   "_fuente": "https://www.themoviedb.org/movie/1712540",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1712540 «2000» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "A los once": {
+   "tmdb": 1826830,
+   "_fuente": "https://www.themoviedb.org/movie/1826830",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1826830 «A los once» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Barcelona": {
+   "tmdb": 356487,
+   "_fuente": "https://www.themoviedb.org/movie/356487",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 356487 «Barcelona, Main City of Catalonia» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Bus": {
+   "tmdb": 1274419,
+   "_fuente": "https://www.themoviedb.org/movie/1274419",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1274419 «Bus» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Eri": {
+   "tmdb": 1118590,
+   "_fuente": "https://www.themoviedb.org/movie/1118590",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1118590 «Eri, The Cow» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Fiction": {
+   "tmdb": 1691015,
+   "_fuente": "https://www.themoviedb.org/movie/1691015",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1691015 «Fiction» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Grounded": {
+   "tmdb": 1700763,
+   "_fuente": "https://www.themoviedb.org/movie/1700763",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1700763 «Grounded» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Idols": {
+   "tmdb": 1654471,
+   "_fuente": "https://www.themoviedb.org/movie/1654471",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1654471 «Idols» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Mirage": {
+   "tmdb": 1705630,
+   "_fuente": "https://www.themoviedb.org/movie/1705630",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1705630 «Mirage» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Raíces": {
+   "tmdb": 1784652,
+   "_fuente": "https://www.themoviedb.org/movie/1784652",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1784652 «Raíces» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Risorsero dalla tomba e fu... l’Apocalisse!": {
+   "tmdb": 1788289,
+   "_fuente": "https://www.themoviedb.org/movie/1788289",
+   "_por_que": "altas.py --sondar: tmdb_alternos: TMDB 1788289 «They Rose from the Grave and It Was… The Apocalypse!» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Solos": {
+   "tmdb": 758792,
+   "_fuente": "https://www.themoviedb.org/movie/758792",
+   "_por_que": "altas.py --sondar: tmdb_director: TMDB 758792 «Solos» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "End of Summer": {
+   "tmdb": 1256387,
+   "_fuente": "https://www.themoviedb.org/movie/1256387",
+   "_por_que": "altas.py --sondar: tmdb_director: TMDB 1256387 «END OF SUMMER» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "The End": {
+   "tmdb": 1472669,
+   "_fuente": "https://www.themoviedb.org/movie/1472669",
+   "_por_que": "altas.py --sondar: tmdb_titulo: TMDB 1472669 «The End» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Triangle": {
+   "tmdb": 1567979,
+   "_fuente": "https://www.themoviedb.org/movie/1567979",
+   "_por_que": "altas.py --sondar: tmdb_director: TMDB 1567979 «Triangle» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Cuando retornen las garzas": {
+   "tmdb": 1575134,
+   "_fuente": "https://www.themoviedb.org/movie/1575134",
+   "_por_que": "altas.py --ficha: TMDB 1575134 «When the Herons Return» (2025, 19 min) acreditada a Robert Brand Ordóñez (persona TMDB 4113226): coincide director, año 2025, duración 19'25'' y título inglés del catálogo BOGOSHORTS. Sin IMDb ni póster en TMDB.",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Elefante": {
+   "tmdb": 1826828,
+   "_fuente": "https://www.themoviedb.org/movie/1826828",
+   "_por_que": "altas.py --ficha: TMDB 1826828 'Elefante' dir. César Heredia, 15 min, sinopsis del Renault 4 y el padre = catálogo (Colombia 2014, 14'36''); coincide con IMDb tt4392972 y Proimágenes id 2344",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "En el silencio después": {
+   "tmdb": 1724318,
+   "_fuente": "https://www.themoviedb.org/movie/1724318",
+   "_por_que": "altas.py --ficha: TMDB 1724318 'In the Silence After' (2026, 17 min, QA/US/CO) dir./guion/foto/montaje Sebastian Delascasas = catálogo (Catar, EE.UU., Colombia 2026, 16'50'', mismos créditos); IMDb tt43337293 en external_ids",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Klasės nuotrauka": {
+   "tmdb": 1668922,
+   "_fuente": "https://www.themoviedb.org/movie/1668922",
+   "_por_que": "altas.py --ficha: TMDB 1668922 «Class Photo» (2026, 17 min, Lituania, dir. Arnas Balčiūnas) con sinopsis idéntica a la del catálogo (Ignas, escuela abandonada); imdb_id tt41815531 coincide con IMDb; LB class-photo alt. Klasės nuotrauka",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "No todos los pájaros son aves": {
+   "tmdb": 1827960,
+   "_fuente": "https://www.themoviedb.org/movie/1827960",
+   "_por_que": "altas.py --sondar: tmdb_director: TMDB 1827960 «No todos los pájaros son aves» — director ✓ y año/duración ✓",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Complementarios": {
+   "tmdb": 1841384,
+   "_fuente": "https://www.themoviedb.org/movie/1841384",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "El hombre del reloj": {
+   "tmdb": 1841385,
+   "_fuente": "https://www.themoviedb.org/movie/1841385",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Espaciar": {
+   "tmdb": 1841386,
+   "_fuente": "https://www.themoviedb.org/movie/1841386",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Joychair": {
+   "tmdb": 1841387,
+   "_fuente": "https://www.themoviedb.org/movie/1841387",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "La suma de todas las partes": {
+   "tmdb": 1841389,
+   "_fuente": "https://www.themoviedb.org/movie/1841389",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "La vida de un hilo": {
+   "tmdb": 1841390,
+   "_fuente": "https://www.themoviedb.org/movie/1841390",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Lo entrañable": {
+   "tmdb": 1841392,
+   "_fuente": "https://www.themoviedb.org/movie/1841392",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Ni aquí, ni allá": {
+   "tmdb": 1841393,
+   "_fuente": "https://www.themoviedb.org/movie/1841393",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Némica": {
+   "tmdb": 1841394,
+   "_fuente": "https://www.themoviedb.org/movie/1841394",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Querida A.": {
+   "tmdb": 1841395,
+   "_fuente": "https://www.themoviedb.org/movie/1841395",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Raj’in": {
+   "tmdb": 1841396,
+   "_fuente": "https://www.themoviedb.org/movie/1841396",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Un pájaro más": {
+   "tmdb": 1841397,
+   "_fuente": "https://www.themoviedb.org/movie/1841397",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Una carta supuesta": {
+   "tmdb": 1841398,
+   "_fuente": "https://www.themoviedb.org/movie/1841398",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Varoncito": {
+   "tmdb": 1841399,
+   "_fuente": "https://www.themoviedb.org/movie/1841399",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "¿El regreso pa’ cuándo?": {
+   "tmdb": 1841400,
+   "_fuente": "https://www.themoviedb.org/movie/1841400",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "No te conozcas": {
+   "tmdb": 1841401,
+   "_fuente": "https://www.themoviedb.org/movie/1841401",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Běi Huí Guī Xiàn": {
+   "tmdb": 1826831,
+   "_fuente": "https://www.themoviedb.org/movie/1826831",
+   "_por_que": "altas.py --ficha: TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Meyolotl": {
+   "tmdb": 1807233,
+   "_fuente": "https://www.themoviedb.org/movie/1807233",
+   "_por_que": "altas.py --ficha: mismo título, dirección Lorena R. Valencia en los créditos de TMDB (leídos 24 nov) y en el catálogo del festival",
+   "_registro": "bogoshorts-2026-altas.json"
+  }
+ },
+ "duracion_distinta": {
+  "L’uomo meccanico": {
+   "_por_que": "el catálogo da 26'00'': es la copia parcial que se conserva; TMDB registra 80 min, la duración original"
+  }
+ },
+ "sin_afiche": {
+  "A Body that Hurts": {
+   "_por_que": "Ninguna fuente (TMDB, IMDb, Letterboxd, búsqueda web, perfil del director) muestra afiche ni imagen de la obra"
+  },
+  "Argentina Is Daing (Marttein)": {
+   "_por_que": "Videoclip: solo miniatura (fotograma) en el canal oficial; sin afiche"
+  },
+  "Barcelona de Foc": {
+   "_por_que": "su ficha de TMDB (750788) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026); Wikipedia y búsqueda web sin afiche"
+  },
+  "Berzingue (Crache)": {
+   "_por_que": "Videoclip: solo miniatura de YouTube y portada del EP (no del clip); sin afiche"
+  },
+  "Cada día paso por aquí": {
+   "_por_que": "su ficha de TMDB (438251) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026); Annecy, Hamaca y búsqueda web sin afiche"
+  },
+  "Carta a un joven ladrón": {
+   "_por_que": "sin afiche tras catálogo, web/redes del director, plataformas y Bing Imágenes"
+  },
+  "Cassandra": {
+   "_por_que": "PACCPA y BOGOSHORTS solo tienen fotogramas apaisados; Bing Imágenes sin afiche"
+  },
+  "Clasificado personal": {
+   "_por_que": "sin afiche en catálogo, web ni Bing Imágenes"
+  },
+  "El gusano solitario": {
+   "_por_que": "su ficha de TMDB (1058527) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026)"
+  },
+  "Has estado aquí": {
+   "_por_que": "Ni D'A, ni CCCB, ni lamidanoimporta.cat, ni Bing Imágenes tienen afiche: solo fotogramas 16:9 y foto de la directora. Existe en IMDb tt27164701 pero no en TMDB"
+  },
+  "I Carry Them": {
+   "_por_que": "Dance film comisionado y lanzado en línea: el director, Films.Dance, Directors Notes y Onepointfour solo publican fotogramas horizontales; no se halló afiche vertical"
+  },
+  "La colère et après": {
+   "_por_que": "Estreno mundial en BOGOSHORTS sin presencia pública: ni Travelling ni ninguna otra fuente publica afiche o ficha de la obra"
+  },
+  "La primera estampilla de Korinco": {
+   "_por_que": "la ficha de la obra en la web del festival (corto/4335) no trae póster y el catálogo no le hizo ficha"
+  },
+  "Lucha": {
+   "_por_que": "Corto de 2019 de un director fallecido sin web, distribuidora ni perfil en plataformas; ni IMDb ni buscadores de imágenes tienen afiche."
+  },
+  "Métae": {
+   "_por_que": "su ficha de TMDB (1558794) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026); Unifrance (film/62960) y búsqueda web sin afiche"
+  },
+  "Nothing Here is Lost": {
+   "_por_que": "Gargantua (agencia) solo publica fotogramas; ficha BOGOSHORTS corto/4364 sin póster; Bing Imágenes sin afiche"
+  },
+  "O sigilo": {
+   "_por_que": "Ficha BOGOSHORTS corto/4361 sin póster (solo foto del director); sin web ni festivales previos; Bing Imágenes sin afiche"
+  },
+  "Oui (Balming Tiger)": {
+   "_por_que": "Videoclip: solo miniatura YouTube/Vimeo (fotograma) y portada del sencillo; ficha BOGOSHORTS corto/4349 sin póster"
+  },
+  "Para Dani": {
+   "_por_que": "Obra póstuma del homenaje a César Heredia (fallecido dic 2025); sin presencia web ni imagen"
+  },
+  "Robo macabro": {
+   "_por_que": "su ficha de TMDB (939823) no tiene afiche y su ficha en la web del festival tampoco trae uno (revisadas 23 nov 2026); la única imagen de TMDB es un fotograma ya rechazado en el catálogo; búsqueda web sin afiche"
+  },
+  "The Beat (Matías Aguayo)": {
+   "_por_que": "Videoclip sin afiche: la web del festival no trae póster y solo hay miniatura de YouTube y portada del sencillo"
+  },
+  "Todo río lloverá sobre nosotros": {
+   "_por_que": "Sin afiche en ninguna fuente: no está en la web del festival, sin prensa, sin festivales previos ni imágenes"
+  },
+  "Transastralisme": {
+   "_por_que": "Solo fotogramas apaisados (Catalan Films, MUBI); la web del festival y L'Alternativa no tienen afiche"
+  },
+  "Un gallinazo sin suerte": {
+   "_por_que": "Corto de 1979 sin afiche en Proimágenes, Cineaparte, la web del festival ni en imágenes"
+  },
+  "When the Flowers Bloom": {
+   "_por_que": "Experiencia VR: ficha del festival sin póster; Acorn Den, TAICCA, KFF y Bing Imágenes solo tienen fotogramas/capturas horizontales o cuadradas"
+  },
+  "¿Cómo se ama? (Jorge Drexler)": {
+   "_por_que": "Videoclip: ficha del festival sin póster; YouTube/VEVO, prensa y Bing Imágenes solo con fotogramas y fotos de prensa"
+  }
+ },
+ "sin_duracion": {
+  "Inauguración": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Encuentros Cercanos: Competencia Nacional Experimental": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Apertura BFM REFRESH Vol. 8": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Encuentros Cercanos: Competencia Nacional Animación": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Andrósfera: Hombres de verdad. Lectura dramatizada": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Encuentros Cercanos: Competencia Nacional Documental": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Encuentros Cercanos: Competencia Nacional Ficción 1": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Encuentros Cercanos: Competencia Nacional Ficción 2": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "BOGOSHORTS degusta: Picnic Nocturno": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Ganadores 24BOGOSHORTS": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Ceremonia de premiación y clausura - Noche de Santa Lucía": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Entrega clave IMAGINATÓN": {
+   "_por_que": "la grilla y el catálogo solo dan la hora de inicio"
+  },
+  "Noche Sagitario": {
+   "_por_que": "el post solo da la hora de inicio"
+  }
+ },
+ "sin_sinopsis": {
+  "La primera estampilla de Korinco": {
+   "_por_que": "el catálogo oficial (pág. 191) solo habla de la alianza entre festivales; Minikino dice que es stop motion hecho por niños de 10 a 12 años, sin argumento",
+   "fuentes": [
+    "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf#page=191",
+    "https://minikino.org/en/korinco-2026-en/"
+   ]
+  }
+ }
+}

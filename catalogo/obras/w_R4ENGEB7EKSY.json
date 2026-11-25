@@ -6,11 +6,22 @@
   "CO"
  ],
  "directores": [
-  "Hans Chispas"
+  "Juan Chispas"
+ ],
+ "aliases": [
+  {
+   "titulo": "Balcony’s Sorrows",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
  ],
  "sinopsis": {
-  "es": "Tiembla, tiembla. Se me derrama el café. El autobús de TransMilenio sobre la avenida Caracas desdibuja las luces en su torbellino. Esquivo el vómito. Múltiples pasajeros. Veo un perro e imagino que es Laika, pero sus rasgos criollos me contradicen. El orden mundial se desmorona en hilos más precarios que los que componen la realidad. Las imágenes en el teléfono móvil de la chica a mi lado se queman. Guaracha. No entiendo nada, nunca lo hice. Huele a marihuanera y a quitaesmalte. La mochila me pesa. Cada color de piel en este autobús me hace pensar en la salvación. En la luna que, indefectiblemente, sale por la noche. Me lleno los labios de masato para calmar la ardor. Quiero convertirme en una mazorca de maíz. Quiero que me metan una tusa de maíz por el culo. Quiero que mi cuerpo sea fibroso, velludo, y que mis ojos sean granos dorados. El autobús abandona la Caracas para tomar la calle 26, la avenida El Dorado. Allí, entre imágenes resplandecientes y perros periqueados, me aguarda una tregua. Un tubo volador que me elevará fuera de esta incertidumbre. El asfalto es un virus que lo invade todo. Lo llevo dentro de mí, desde Bogotá hasta las playas de Gaira."
+  "es": "Tiembla, tiembla. Se me derrama el café. El TransMilenio sobre la avenida Caracas desdibuja las luces. Esquivo el vómito. No entiendo nada, nunca lo hice. Quiero convertirme en una mazorca de maíz. Me aguarda una tregua. El asfalto es un virus que lo invade todo. Lo llevo dentro de mí, desde Bogotá hasta las playas de Gaira.",
+  "en": "Tremble, tremble. My coffee spills. The TransMilenio on Avenida Caracas blurs the lights. I dodge the vomit. I understand nothing, I never did. I want to become an ear of corn. A respite awaits me. The asphalt is a virus that invades everything. I carry it within me, from Bogotá to the beaches of Gaira."
  },
+ "generos": [
+  "Experimental"
+ ],
  "afiche": {
   "archivo": "/assets/cineautopsia/lamentos-de-un-balcon.jpg",
   "veredicto": "oficial"
@@ -26,6 +37,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "cineautopsia-2026",
   "cinemancia-2026",
   "cinetoro-2026"

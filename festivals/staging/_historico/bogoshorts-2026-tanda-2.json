@@ -1,0 +1,252 @@
+[
+ {
+  "titulo": "Clasificado personal",
+  "director": "Juan Pablo Melo",
+  "estado": "sin_afiche",
+  "pasos": [
+   {
+    "donde": "TMDB",
+    "url": "api.themoviedb.org/3/search",
+    "resultado": "0 resultados; persona sin resultados"
+   },
+   {
+    "donde": "Letterboxd (navegador)",
+    "url": "https://letterboxd.com/search/films/clasificado+personal/",
+    "resultado": "sin coincidencia de la obra"
+   },
+   {
+    "donde": "WebSearch",
+    "url": "\"Clasificado personal\" Juan Pablo Melo cortometraje",
+    "resultado": "sin ficha ni afiche pertinente"
+   }
+  ],
+  "datos_extra": {}
+ },
+ {
+  "titulo": "Cocodrilo (Dillom)",
+  "director": "Rocío Gastaldi, Andrés Capasso",
+  "estado": "sin_afiche",
+  "pasos": [
+   {
+    "donde": "TMDB",
+    "url": "api.themoviedb.org/3/search",
+    "resultado": "sin videoclip; Dillom (2607979) sin el clip; Gastaldi 6062297 y Capasso 6062208/6062237 sin créditos"
+   },
+   {
+    "donde": "Letterboxd (navegador)",
+    "url": "https://letterboxd.com/search/films/(no consultado: navegador compartido inestable)/",
+    "resultado": "sin coincidencia de la obra"
+   },
+   {
+    "donde": "WebSearch",
+    "url": "\"Cocodrilo\" Dillom videoclip Gastaldi Capasso",
+    "resultado": "sin ficha ni afiche pertinente"
+   }
+  ],
+  "datos_extra": {
+   "nota": "YouTube no verificado (pestaña compartida se pisó)"
+  }
+ },
+ {
+  "titulo": "Complementarios",
+  "director": "Mar Triana García",
+  "estado": "sin_afiche",
+  "pasos": [
+   {
+    "donde": "TMDB",
+    "url": "api.themoviedb.org/3/search",
+    "resultado": "solo «Cuerpos Complementarios» (1500055, Bruno Varela 2022) — no es"
+   },
+   {
+    "donde": "Letterboxd (navegador)",
+    "url": "https://letterboxd.com/search/films/complementarios/",
+    "resultado": "sin coincidencia de la obra"
+   },
+   {
+    "donde": "WebSearch",
+    "url": "\"Complementarios\" Mar Triana cortometraje",
+    "resultado": "sin ficha ni afiche pertinente"
+   }
+  ],
+  "datos_extra": {}
+ },
+ {
+  "titulo": "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)",
+  "director": "Diego Blanco",
+  "estado": "sin_afiche",
+  "pasos": [
+   {
+    "donde": "TMDB",
+    "url": "api.themoviedb.org/3/search",
+    "resultado": "0 resultados; varios «Diego Blanco» sin la obra"
+   },
+   {
+    "donde": "Letterboxd (navegador)",
+    "url": "https://letterboxd.com/search/films/(no consultado)/",
+    "resultado": "sin coincidencia de la obra"
+   },
+   {
+    "donde": "WebSearch",
+    "url": "Fuji Kurosawa \"Cumbia pa la luna\" Lina Remolina",
+    "resultado": "sin ficha ni afiche pertinente"
+   }
+  ],
+  "datos_extra": {
+   "nota": "YouTube no verificado"
+  }
+ },
+ {
+  "titulo": "El Alto de los Buitres",
+  "director": "Sebastian Felipe Villarraga Acosta",
+  "estado": "sin_afiche",
+  "pasos": [
+   {
+    "donde": "TMDB",
+    "url": "api.themoviedb.org/3/search",
+    "resultado": "0 resultados; persona 6147640 «Sebastían Villarraga» solo Norm. (2026, Animation) — posible mismo, sin la obra"
+   },
+   {
+    "donde": "Letterboxd (navegador)",
+    "url": "https://letterboxd.com/search/films/alto+de+los+buitres/",
+    "resultado": "sin coincidencia de la obra"
+   },
+   {
+    "donde": "WebSearch",
+    "url": "\"El Alto de los Buitres\" animación Villarraga",
+    "resultado": "sin ficha ni afiche pertinente"
+   }
+  ],
+  "datos_extra": {}
+ },
+ {
+  "titulo": "El hombre del reloj",
+  "director": "Daniel Prieto Muriel",
+  "estado": "sin_afiche",
+  "pasos": [
+   {
+    "donde": "TMDB",
+    "url": "api.themoviedb.org/3/search",
+    "resultado": "0 resultados; persona 6546793 (Relatos del Camino 2025) y 4069658 sin la obra"
+   },
+   {
+    "donde": "Letterboxd (navegador)",
+    "url": "https://letterboxd.com/search/films/hombre+del+reloj/",
+    "resultado": "sin coincidencia de la obra"
+   },
+   {
+    "donde": "WebSearch",
+    "url": "\"El hombre del reloj\" Daniel Prieto animación",
+    "resultado": "sin ficha ni afiche pertinente"
+   }
+  ],
+  "datos_extra": {}
+ },
+ {
+  "titulo": "El mandado",
+  "director": "Ingrid Paola Bonilla Rodríguez",
+  "estado": "sin_afiche",
+  "pasos": [
+   {
+    "donde": "TMDB",
+    "url": "api.themoviedb.org/3/search",
+    "resultado": "0 resultados; persona 6196306 con Chaika (2025) y La Gallina Saraviada (2026), sin El mandado"
+   },
+   {
+    "donde": "Letterboxd (navegador)",
+    "url": "https://letterboxd.com/search/films/el+mandado/",
+    "resultado": "sin coincidencia de la obra"
+   },
+   {
+    "donde": "WebSearch",
+    "url": "\"El mandado\" Ingrid Bonilla cortometraje",
+    "resultado": "sin ficha ni afiche pertinente"
+   }
+  ],
+  "datos_extra": {
+   "bio": "https://cqnl.org/?p=13193 (ganador FDC 2024)"
+  }
+ },
+ {
+  "titulo": "El píxel y la parcela",
+  "director": "Hannah Meszaros Martin",
+  "estado": "sin_afiche",
+  "pasos": [
+   {
+    "donde": "TMDB",
+    "url": "api.themoviedb.org/3/search",
+    "resultado": "0 resultados; persona sin resultados"
+   },
+   {
+    "donde": "Letterboxd (navegador)",
+    "url": "https://letterboxd.com/search/films/pixel+y+la+parcela/",
+    "resultado": "sin coincidencia de la obra"
+   },
+   {
+    "donde": "WebSearch",
+    "url": "\"The Pixel and the Plot\" Hannah Meszaros Martin",
+    "resultado": "sin ficha ni afiche pertinente"
+   }
+  ],
+  "datos_extra": {}
+ },
+ {
+  "titulo": "Elefante",
+  "director": "César Heredia Cruz",
+  "estado": "alta_posible",
+  "pasos": [
+   {
+    "donde": "TMDB",
+    "url": "api.themoviedb.org/3/search",
+    "resultado": "candidatos 1240215, 232759, 1702678, 1145974 descartados (otros directores); persona 2692496 solo Salvador (2021); /find tt4392972 vacío"
+   },
+   {
+    "donde": "Letterboxd (navegador)",
+    "url": "https://letterboxd.com/search/films/elefante+heredia/",
+    "resultado": "sin coincidencia de la obra"
+   },
+   {
+    "donde": "WebSearch",
+    "url": "\"Elefante\" César Heredia cortometraje 2014 Renault 4",
+    "resultado": "sin ficha ni afiche pertinente"
+   },
+   {
+    "donde": "IMDb (navegador)",
+    "url": "https://www.imdb.com/title/tt4392972/",
+    "resultado": "ficha Short 2014 15m, director Cesar Heredia; póster descargado y leído"
+   }
+  ],
+  "datos_extra": {
+   "imdb": "tt4392972",
+   "sinopsis_en": "Andres lives in the road, where he sells nick-nacks in his car, an old Renault 4. Meanwhile he barely can stand his old and senile father, who lives in the past of old locutions and family memories.",
+   "creditos": "Dir/guion César Heredia; Gustavo Angarita (Jorge), Juan Pablo Barragán (Andrés); montaje Gustavo Vasco; música Andrés Correa; DF Juana González",
+   "productora": "María Fernanda Barrientos y César Heredia, coproducción LAPOST Studio; asociada Diafragma; Río Doppler; apoyo Proimágenes FDC, Idartes"
+  },
+  "afiche_url": "https://m.media-amazon.com/images/M/MV5BY2Q0MGYyM2YtYzI4ZS00MTZkLTg1NjMtNDE2ODQ5NTQ3ZmI0XkEyXkFqcGc@._V1_.jpg",
+  "fuente": "IMDb tt4392972 (og:image)",
+  "px": "3500x5000",
+  "verificado_como": "afiche ilustrado con título ELEFANTE, «Un cortometraje de César Heredia», bloque de créditos coincide (Angarita, Barragán)"
+ },
+ {
+  "titulo": "Escritorio",
+  "director": "Darío Vejarano Tafur",
+  "estado": "sin_afiche",
+  "pasos": [
+   {
+    "donde": "TMDB",
+    "url": "api.themoviedb.org/3/search",
+    "resultado": "0 resultados pertinentes; persona 3140260 (26 créditos) sin Escritorio/Desk"
+   },
+   {
+    "donde": "Letterboxd (navegador)",
+    "url": "https://letterboxd.com/search/films/escritorio+vejarano/",
+    "resultado": "sin coincidencia de la obra"
+   },
+   {
+    "donde": "WebSearch",
+    "url": "\"Escritorio\" Darío Vejarano cortometraje afiche",
+    "resultado": "sin ficha ni afiche pertinente"
+   }
+  ],
+  "datos_extra": {}
+ }
+]

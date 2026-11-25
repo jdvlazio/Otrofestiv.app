@@ -1,0 +1,44 @@
+{
+ "id": "w_4KHRH5M6MZZP",
+ "titulo_original": "Lekcije",
+ "anio": 2025,
+ "paises": [
+  "HR",
+  "FR"
+ ],
+ "directores": [
+  "Daria Blažević"
+ ],
+ "aliases": [
+  {
+   "titulo": "Lessons",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Tres amigas pasan un día de verano en el barrio. Entre juegos y conversaciones intentan dejar atrás un encuentro incómodo con un hombre de la zona.",
+  "en": "Three girls spend a lazy summer day in their neighborhood, trying to forget an encounter with a local pervert."
+ },
+ "generos": [
+  "Comedia"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/lekcije.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1484951,
+  "letterboxd": "lessons-2025-1"
+ },
+ "versiones": [
+  {
+   "etiqueta": "10 min",
+   "duracion_min": 10
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

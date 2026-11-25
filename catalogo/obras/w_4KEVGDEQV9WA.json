@@ -1,0 +1,44 @@
+{
+ "id": "w_4KEVGDEQV9WA",
+ "titulo_original": "Eri",
+ "anio": 2026,
+ "paises": [
+  "FR",
+  "JP"
+ ],
+ "directores": [
+  "Honami Yano"
+ ],
+ "aliases": [
+  {
+   "titulo": "Eri, The Cow",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En un mundo donde las vacas lecheras deben parir para sobrevivir, Eri se enamora de otra vaca. Sus suspiros le hacen compañía en las noches de insomnio.",
+  "en": "In a world where dairy cows must bear calves to survive, Eri, a Holstein, falls in love with another cow. Her sighs linger through sleepless nights — will they find their way to the one she loves?"
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/eri.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1118590,
+  "letterboxd": "eri-the-cow"
+ },
+ "versiones": [
+  {
+   "etiqueta": "12 min",
+   "duracion_min": 12
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

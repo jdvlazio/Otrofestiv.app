@@ -1,0 +1,104 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-11-23"
+ },
+ "Alianza Francesa - Bogotá": {
+  "lat": 4.6026422,
+  "lng": -74.0686512,
+  "_prec": "matriz",
+  "_matriz": "s_1be38f20",
+  "_match": "almacén de sedes (manual)",
+  "address": "Cra. 3 #18-45",
+  "_nota": "Catálogo 2026: Carrera 3 # 18-45, Sede Centro, Sala Jules Verne."
+ },
+ "CEFE Chapinero - Bogotá": {
+  "lat": 4.6654518,
+  "lng": -74.0527949,
+  "_prec": "matriz",
+  "_matriz": "s_11667bea",
+  "_match": "almacén de sedes (manual)",
+  "address": "Calle 82 # 10-69",
+  "_nota": "Catálogo 2026 (Escenarios): «Centro Felicidad Chapinero CEFE», Calle 82 # 10-69."
+ },
+ "Cinemateca de Bogotá - Bogotá": {
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "_prec": "matriz",
+  "_matriz": "s_17a71d8b",
+  "_match": "almacén de sedes (maps)",
+  "address": "Cra. 3 #19-10, Bogotá"
+ },
+ "Cinemateca Fontanar del Río - Bogotá": {
+  "lat": 4.7561244,
+  "lng": -74.1110572,
+  "_prec": "matriz",
+  "_matriz": "s_c82c47d7",
+  "_match": "almacén de sedes (maps)",
+  "address": "Calle 146 # 138A-99"
+ },
+ "City U - Bogotá": {
+  "lat": 4.6032278,
+  "lng": -74.0672082,
+  "_prec": "matriz",
+  "_matriz": "s_54dc6bb5",
+  "_match": "almacén de sedes (manual)",
+  "address": "Cl. 19 #2A-10"
+ },
+ "Teatro Jorge Eliécer Gaitán - Bogotá": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro Municipal Jorge Eliécer Gaitán». · dirección del catálogo 2026 (Escenarios)",
+  "lat": 4.6086901,
+  "lng": -74.0707267,
+  "address": "Carrera 7 # 22-47",
+  "_matriz": "s_a4d046a3"
+ },
+ "Teatro El Parque - Bogotá": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro El Parque» (Parque Nacional). · dirección del catálogo 2026 (Escenarios)",
+  "lat": 4.6230409,
+  "lng": -74.0636956,
+  "address": "Carrera 5 # 36-05",
+  "_matriz": "s_9717417e"
+ },
+ "Centro Ático - Bogotá": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Centro Ático» (Pontificia Universidad Javeriana). · dirección del catálogo 2026 (Escenarios)",
+  "lat": 4.6269751,
+  "lng": -74.0650621,
+  "address": "Calle 40B # 6-23",
+  "_matriz": "s_5ce71f2b"
+ },
+ "Teatro Delia Zapata Olivella - Bogotá": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro Delia Zapata Olivella» (Centro Nacional de las Artes). · dirección del catálogo 2026 (Escenarios)",
+  "lat": 4.5974429,
+  "lng": -74.0745009,
+  "address": "Calle 11 # 5-60",
+  "_matriz": "s_c47407fc"
+ },
+ "Teatro al aire libre La Media Torta - Bogotá": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 23 oct 2026): «Teatro al Aire Libre La Media Torta». · dirección del catálogo 2026 (Escenarios)",
+  "lat": 4.6003444,
+  "lng": -74.0659169,
+  "address": "Calle 18 # 1-05 Este",
+  "_matriz": "s_9106c39d"
+ },
+ "Sala Gaitán Antigua Cinemateca - Bogotá": {
+  "_prec": "manual",
+  "_nota": "Catálogo 2026 (Escenarios): «Sala Gaitán (Antigua Cinemateca Distrital)», Carrera 7 # 22-47, la misma dirección del Teatro Jorge Eliécer Gaitán: sala del mismo predio, dos sedes reales. Pin del predio.",
+  "lat": 4.608881,
+  "lng": -74.0706722,
+  "address": "Carrera 7 # 22-47",
+  "_matriz": "s_a6295d2a"
+ },
+ "MonkeyDo - Bogotá": {
+  "_prec": "manual",
+  "_nota": "Google Maps (búsqueda en el navegador, 24 nov 2026): «Monkeydo / MKD», misma dirección que el post del festival DgGg1WOu3FA.",
+  "lat": 4.6147067,
+  "lng": -74.0818546,
+  "address": "Diagonal 19a #19b-66",
+  "_matriz": "s_e023fd68"
+ }
+}

@@ -11,12 +11,15 @@
   "Niki Lindroth von Bahr"
  ],
  "sinopsis": {
-  "es": "Ganadora en 2017 del premio al mejor cortometraje internacional por The Burden, Niki Lindroth von Bahr vuelve al festival con otra brillante comedia apocalíptica en stop-motion, donde unas criaturas varadas en un aeropuerto esperan el fin del mundo. Con las voces de Alexander Skarsgård, Denis Lavant y Noomi Rapace.",
-  "en": "In Niki Lindroth von Bahr’s brilliant stop-motion doomsday comedy, airport-bound creatures wait out the impending apocalypse. Featuring voices by Alexander Skarsgård, Denis Lavant, and Noomi Rapace."
+  "es": "Un relato sobre la muerte y la existencia situado en un gran aeropuerto internacional.",
+  "en": "A tale of death and existence set in a large, international airport."
  },
+ "generos": [
+  "Animación"
+ ],
  "afiche": {
-  "archivo": "https://images.ctfassets.net/22n7d68fswlw/7zobSrS7WoKexEoOrjW6Ja/d8da65b5679157332aab231d6ce212db/The-End_Still_06.jpg",
-  "veredicto": "fotograma"
+  "archivo": "/assets/bogoshorts-2026/the-end.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
   "tmdb": 1472669,
@@ -29,6 +32,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "tiff-2026"
  ]
 }

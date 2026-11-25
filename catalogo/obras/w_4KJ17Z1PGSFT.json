@@ -1,0 +1,43 @@
+{
+ "id": "w_4KJ17Z1PGSFT",
+ "titulo_original": "Ginoide",
+ "anio": 2025,
+ "paises": [
+  "ES"
+ ],
+ "directores": [
+  "Celia Galán"
+ ],
+ "aliases": [
+  {
+   "titulo": "Gynoid",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Dos desconocidas participan en un experimento de robótica en el que tendrán que determinar quién de las dos no es humana.",
+  "en": "Two strangers take part in a robotics experiment in which they will have to determine which of the two is not human."
+ },
+ "generos": [
+  "Ciencia ficción"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/ginoide.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1463767,
+  "letterboxd": "gynoid"
+ },
+ "versiones": [
+  {
+   "etiqueta": "20 min",
+   "duracion_min": 20
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

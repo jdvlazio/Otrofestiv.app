@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:tribeca-2026",
+  "fuente": "festival:bogoshorts-2026,bogoshorts-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -10,17 +10,51 @@
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1516110",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "tmdb:1516110",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
+ },
+ "generos": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "xref.tmdb": {
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "mismo afiche: queda el publicado",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
   "fecha": "2026-11-24"
  }
 }

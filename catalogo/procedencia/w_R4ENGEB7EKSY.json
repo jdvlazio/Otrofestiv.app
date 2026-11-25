@@ -1,32 +1,60 @@
 {
  "titulo_original": {
-  "fuente": "festival:cineautopsia-2026,cinemancia-2026,cinetoro-2026",
+  "fuente": "festival:bogoshorts-2026,bogoshorts-2026,cineautopsia-2026,cinemancia-2026,cinetoro-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "motivo": "fichas con biografía de Cinemancia y BOGOSHORTS, Retina Latina y CINETORO dicen Juan; el afiche, CineAutopsia y TMDB dicen Hans: parece la misma persona; TMDB queda igual",
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
+ },
+ "generos": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
-  "fecha": "2026-11-23"
+  "fecha": "2026-11-24"
  },
  "sinopsis.es": {
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "la de otro festival nuestro; la otra era ficha técnica",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  }
 }

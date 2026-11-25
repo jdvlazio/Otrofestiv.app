@@ -1,0 +1,45 @@
+{
+ "id": "w_4KFJW5DB2BZS",
+ "titulo_original": "Laser-Gato",
+ "anio": 2026,
+ "paises": [
+  "BR",
+  "US",
+  "GB"
+ ],
+ "directores": [
+  "Lucas Acher"
+ ],
+ "aliases": [
+  {
+   "titulo": "Laser-Cat",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Cuando una broma con un puntero láser sale terriblemente mal, un adolescente con ansiedad social recorre São Paulo durante una noche caótica para salvar al gato gravemente herido de la persona que le gusta. La culpa y la paranoia lo llevan al límite.",
+  "en": "After a laser pointer prank goes horribly wrong, a socially anxious teenager spends one chaotic night roaming São Paulo to save his crush’s critically injured cat, as guilt and paranoia push him toward a breaking point."
+ },
+ "generos": [
+  "Suspenso"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/laser-gato.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1678782,
+  "letterboxd": "laser-cat"
+ },
+ "versiones": [
+  {
+   "etiqueta": "22 min",
+   "duracion_min": 22
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

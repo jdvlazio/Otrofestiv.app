@@ -1,0 +1,41 @@
+{
+ "id": "w_4KFKDE46JK0D",
+ "titulo_original": "Braço Forte",
+ "anio": 2025,
+ "paises": [
+  "BR"
+ ],
+ "directores": [
+  "Rubens Fabricio Anzolin",
+  "João Fernando Chagas"
+ ],
+ "aliases": [
+  {
+   "titulo": "Night Shift",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En el antiguo puerto de Pelotas, en el sur de Brasil, los hombres trabajan mientras la noche se instala.",
+  "en": "In the old port of Pelotas, in the deep south of Brazil, men work while the night takes hold."
+ },
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/braco-forte.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1580205,
+  "letterboxd": "night-shift-2026-8"
+ },
+ "versiones": [
+  {
+   "etiqueta": "24 min",
+   "duracion_min": 24
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "id": "w_4KJ0NZFX2N91",
+ "titulo_original": "La Grande Rêvasion",
+ "anio": 2025,
+ "paises": [
+  "BE",
+  "FR"
+ ],
+ "directores": [
+  "Rémi Durin"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Great Dreamscape",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Andréa se queda paralizada antes de salir a escena en el espectáculo escolar. Un viaje a un palacio entre las nubes le da la oportunidad de reunir el valor para volver.",
+  "en": "Andréa freezes just before going onstage for the school show. A journey to a palace among the clouds gives her a chance to find the courage to return."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/la-grande-revasion.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1597412,
+  "letterboxd": "the-great-dreamscape"
+ },
+ "versiones": [
+  {
+   "etiqueta": "29 min",
+   "duracion_min": 29
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

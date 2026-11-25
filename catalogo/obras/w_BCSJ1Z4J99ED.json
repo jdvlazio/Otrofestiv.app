@@ -1,16 +1,22 @@
 {
  "id": "w_BCSJ1Z4J99ED",
- "titulo_original": "Robo Macabro",
+ "titulo_original": "Robo macabro",
  "anio": 1982,
  "paises": [
   "CO"
  ],
  "directores": [
-  "Jairo Pinilla"
+  "Jairo Pinilla Téllez"
+ ],
+ "aliases": [
+  {
+   "titulo": "Robo Macabro",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
-  "es": "Dos ladrones de tumbas están listos para cometer sus fechorías, sin esperar la pequeña sorpresa que les aguarda.",
-  "en": "Two grave robbers are ready to commit their misdeeds without expecting the little surprise that awaits them."
+  "es": "Durante el velorio de una mujer joven, dos ladrones descubren que el cadáver lleva un anillo valioso. Esperan a la noche para abrir el mausoleo, pero la joven abre los ojos, se levanta del ataúd y les pide ayuda para salir del cementerio.",
+  "en": "During a young woman’s funeral, two thieves discover that the body is wearing a valuable ring. They wait until nightfall to break into the mausoleum, but the young woman opens her eyes, rises from the coffin, and asks them to help her escape from the cemetery."
  },
  "generos": [
   "Terror"
@@ -23,9 +29,14 @@
   {
    "etiqueta": "10 min",
    "duracion_min": 10
+  },
+  {
+   "etiqueta": "11 min",
+   "duracion_min": 11
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "fantasmagoria-2026"
  ],
  "afiche": {
