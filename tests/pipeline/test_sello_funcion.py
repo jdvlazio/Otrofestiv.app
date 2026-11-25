@@ -1,5 +1,5 @@
 """La función publicada la releyó otro y su acceso tiene fuente (24 nov 2026, BOGOSHORTS)."""
-import contextlib, importlib.util, io, json, os, sys, tempfile, unittest
+import contextlib, importlib.util, io, json, os, subprocess, sys, tempfile, unittest
 from unittest import mock
 RAIZ = os.path.join(os.path.dirname(__file__), '..', '..')
 sys.path.insert(0, os.path.join(RAIZ, 'pipeline'))
@@ -13,7 +13,7 @@ CERRADO = {'_provenance': {'capturado': '2026-11-24T08:00'}, 'raices': {'web': '
 
 
 def fest(*a, **k):
-    return {'films': list(a) or [dict(F, **k)], 'venues': {'Sala - Bogotá': {'short': 'Sala'}}}
+    return {'ticketing_model': 'mixed', 'films': list(a) or [dict(F, **k)], 'venues': {'Sala - Bogotá': {'short': 'Sala'}}}
 
 
 def indice(*ids, roto=False):
@@ -68,11 +68,11 @@ class Primera(Base):
                 self.assertTrue(s.faltan(fest(**{c: 'otro'}), *s.sidecars(FID)))
         # y la lista misma: quitar un campo de CAMPOS tiene que romper el test
         self.assertEqual(set(s.CAMPOS), {'title', 'day', 'date', 'time', 'hasta', 'film_start', 'venue', 'sala', 'info', 'unscheduled',
-            'has_qa', 'qa_type', 'is_free', 'requires_registration', 'registration_url', 'ticket_url', 'by_invitation', 'online',
+            'has_qa', 'qa_type', 'premium', 'is_free', 'requires_registration', 'registration_url', 'ticket_url', 'by_invitation', 'online',
             'stream_url', 'stream_platform', 'audience'})
 
     def test_lo_heredado_entra_en_la_huella(self):
-        for c in s.ACCESO:
+        for c in ('short', 'address', 'city', 'lat', 'lng') + s.ACCESO:
             d = fest(); d['venues']['Sala - Bogotá'][c] = 'x'
             with self.subTest('sede ' + c):
                 self.assertTrue(s.faltan(d, *s.sidecars(FID)))
@@ -114,13 +114,48 @@ class Primera(Base):
 
     def test_gratis_por_omision_contra_pago_declarado(self):
         f = {k: v for k, v in F.items() if k != 'is_free'}
-        self.assertTrue(s.contradicciones(fest(f), [PAGO], HOY))
+        self.assertTrue(s.contradicciones(dict(fest(f), ticketing_model=None), [PAGO], HOY))
 
     def test_pago_o_invitacion_publicados_contra_gratis(self):
         for k in ({'is_free': False}, {'by_invitation': True}):
             self.assertTrue(s.contradicciones(fest(**k), [LIBRE], HOY))
-        d = fest({k: v for k, v in F.items() if k != 'is_free'}); d['venues']['Sala - Bogotá']['ticket_url'] = 'https://b'
-        self.assertTrue(s.contradicciones(d, [LIBRE], HOY))     # boleta heredada de la sede
+        for c, v in (('is_free', True), ('ticket_url', 'https://b')):     # la app NO hereda acceso de la sede
+            d = fest({k: v for k, v in F.items() if k != 'is_free'}); d['venues']['Sala - Bogotá'][c] = v
+            self.assertTrue(s.contradicciones(d, [LIBRE], HOY))
+
+    def test_pago_que_la_app_no_muestra(self):
+        for modelo in (None, 'free'):
+            d = dict(fest(is_free=False), ticketing_model=modelo)
+            for e in (PAGO, LIBRE, dict(PAGO, acceso='inscripción')):
+                self.assertTrue(s.contradicciones(d, [e], HOY))
+        for v in ('false', 1, 0):
+            for e in (PAGO, LIBRE):
+                self.assertTrue(s.contradicciones(fest(is_free=v), [e], HOY))
+        self.assertTrue(s.contradicciones(fest(ticket_url='https://b'), [LIBRE], HOY))     # gratis con enlace de compra
+
+    def test_avisos_dia_y_sesiones(self):
+        for d in (dict(fest(), avisos=[{'type': 'rescheduled', 'title': 'X', 'newTime': '09:00'}]),
+                  dict(fest(), avisos=[{'type': 'cancelled', 'cities': ['Bogotá']}]), dict(fest(), festivalDates={F['day']: '2026-12-02'})):
+            self.assertTrue(s.faltan(d, *s.sidecars(FID)))
+        self.assertEqual(s.faltan(dict(fest(), avisos=[{'title': 'Otra'}]), *s.sidecars(FID)), [])
+        self.assertTrue(s.contradicciones(fest(sessions=[{'id': 'z', 'day': '2020-01-01'}]), [PAGO], HOY))
+
+    def test_futura_no_se_esquiva(self):
+        for k in ({'hasta': '2020-01-01'}, {'day': '0000-00-00'}, {'day': 'TBD'}, {'day': None}, {'day': '2020-01-01', 'hasta': '2026-12-31', 'info': True}):
+            self.assertTrue(s.futura(dict(F, **k), HOY), k)
+        self.assertTrue(s.futura(s.explotar({'day': '2020-01-01', 'screenings': [{'date': '2026-12-01'}]})[0], HOY))
+
+    def test_explotar_igual_que_la_app(self):
+        base = dict(F, by_invitation=True, online=True, is_free=False, sala='9', ticket_url='https://b', registration_url='https://r', film_start='19:30', requires_registration=True, qa_type='team', hasta='2026-12-05', info=True)
+        films = [dict(F), dict(base, sessions=[{'id': 'z'}])] + [dict(o, screenings=[x]) for o in (F, base) for x in (
+            {'date': '2026-12-02', 'time': '1'}, {'day': '2026-12-02', 'is_free': None, 'by_invitation': False, 'online': False, 'title': 'no'},
+            {'id': 'f_9', 'venue': 'V', 'sala': '2', 'is_free': True, 'by_invitation': True, 'online': True, 'stream_url': 'u', 'film_start': '2', 'registration_url': 'h', 'ticket_url': '', 'has_qa': False, 'requires_registration': False, 'qa_type': 'guests', 'hasta': 'x', 'audience': 'press'})]
+        js = "const m=await import(process.argv[1]);process.stdout.write(JSON.stringify(m.explodeScreenings(JSON.parse(process.argv[2]))))"
+        r = subprocess.run(['node', '--input-type=module', '-e', js, os.path.abspath(os.path.join(RAIZ, 'src', 'domain', 'film.js')), json.dumps(films)], capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        for a, b in zip([g for f in films for g in s.explotar(f)], json.loads(r.stdout), strict=True):
+            for c in s.CAMPOS + ('id',):
+                self.assertEqual(a.get(c), b.get(c), c)
 
     def test_inscripcion_declarada_sin_publicar(self):
         e = dict(PAGO, acceso=['gratis', 'inscripción'])
@@ -157,6 +192,34 @@ class Primera(Base):
         self.frena(d, 'f_2: sin sello')
         self.assertEqual(self.control(d, FID), ([], []))
 
+    def test_acceso_de_otro_festival(self):
+        self.pon('acceso', [dict(LIBRE, nombre='otro-2025')])
+        self.frena(fest(), 'no es ' + FID)
+
+    def test_sin_aviso_con_inventario_vacio(self):
+        self.pon('fuentes', dict(CERRADO, items={}))
+        self.frena(fest(), 'inventario vacío')
+        self.pon('fuentes', dict(CERRADO, raices={'_sin_web': '', '_sin_bio': ''}))
+        self.frena(fest(), 'mal formado')
+
+    def test_dato_mal_formado_frena_la_primera_y_avisa_al_publicado(self):
+        for que, x in (('fuentes', []), ('fuentes', dict(CERRADO, items=[])), ('acceso', [{'alcance': []}]), ('acceso', {}), ('sellos-funcion', [])):
+            with self.subTest(que=que, x=x):
+                viejo = s._leer(s._ruta(FID, que), None)
+                self.pon(que, x)
+                self.assertTrue(self.control(fest())[0])
+                f, av = self.control(fest(), FID)
+                self.assertTrue(f == [] and av)
+                self.pon(que, viejo)
+        with open(s._ruta(FID, 'acceso'), 'w') as fh:
+            fh.write('{')
+        self.assertTrue('JSON' in self.control(fest())[0][0] and s.revisar(FID, None)[0])
+        self.assertEqual(self.control(fest(), FID)[0], [])
+        self.assertTrue(s.control(FID, {'films': [None]}, indice(), HOY, modelo=False)[0])
+
+    def test_invitacion_no_lleva_precio(self):
+        self.assertTrue(s.invalidas([dict(PAGO, acceso=['pago', 'invitación'])]))
+
     def test_nombre_que_no_existe(self):
         self.pon('acceso', [LIBRE, dict(PAGO, nombre='Salla')])
         self.frena(fest(), 'no existe en el programa')
@@ -190,7 +253,7 @@ class Publicado(Base):
 class Sellar(Base):
     def test_rechaza(self):
         d = fest(time='20:00')
-        for k in ({'verifica': ' A '}, {'contra': ''}, {'contra': 'el programa'}, {'monta': ''}, {'huella': 'x'}):
+        for k in ({'verifica': ' A '}, {'contra': ''}, {'contra': 'el programa'}, {'contra': 'n/a'}, {'monta': ''}, {'huella': 'x'}):
             with self.subTest(k), self.assertRaises(SystemExit):
                 self.sella(d, **k)
         self.assertTrue(s.faltan(d, *s.sidecars(FID)))

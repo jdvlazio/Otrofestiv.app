@@ -7397,7 +7397,10 @@ try:
         _d = _jsf.load(open(_p, encoding='utf-8')) if _osf.path.exists(_p) else None
         if _d is None and _fid not in _con_sf:
             continue
-        _m, _q = _sf.revisar(_fid, _d, todas=False)
+        try:
+            _m, _q = _sf.revisar(_fid, _d, todas=False)
+        except Exception as _e:     # dato ajeno a los sellos: lo frena su guardián
+            _m, _q = [], [f'no se pudo revisar: {type(_e).__name__} {_e}']
         _mal_sf += [f'{_fid}: {_x}' for _x in _m]
         if _q and _fid in _viv_sf:
             _pend_sf.append(f'{_fid} {len(_q)} (' + _q[0][:90] + ')')

@@ -34,6 +34,7 @@ import datetime
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 import urllib.request
@@ -46,7 +47,8 @@ INDICE = 'https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/dato
 ACCESO = ('is_free', 'requires_registration', 'registration_url', 'ticket_url', 'by_invitation',
           'online', 'stream_url', 'stream_platform', 'audience')
 CAMPOS = ('title', 'day', 'date', 'time', 'hasta', 'film_start', 'venue', 'sala', 'info', 'unscheduled',
-          'has_qa', 'qa_type') + ACCESO
+          'has_qa', 'qa_type', 'premium') + ACCESO
+DE_LA_SEDE = ('short', 'address', 'city', 'lat', 'lng') + ACCESO
 DEL_FESTIVAL = ('ticket_url', 'ticketing_model', 'acceso_por_defecto')
 FORMAS = ('gratis', 'pago', 'inscripción', 'invitación')
 
@@ -78,12 +80,34 @@ def con_modelo(fid, d):
     return dict(d, ticketing_model=funcion.ticketing_model_de(fid))
 
 
+DE_LA_FUNCION = ('has_qa', 'qa_type', 'ticket_url', 'requires_registration')
+
+
+def explotar(f):
+    """Las funciones de una obra, como las arma la app (explodeScreenings, src/domain/film.js;
+    la paridad la prueba el test corriendo ese JS)."""
+    ss = f.get('screenings')
+    if not isinstance(ss, list) or not ss:
+        return [f]
+    base, out = {k: v for k, v in f.items() if k not in ('screenings', 'id')}, []
+    for x in ss:
+        g = {**base, 'day': x.get('day') or x.get('date'), 'date': x.get('date') or x.get('day'), 'time': x.get('time'),
+             'venue': x.get('venue') or '', 'sala': x.get('sala') or ''}
+        g.update({k: x[k] for k in ('id', 'by_invitation', 'film_start', 'registration_url') if x.get(k)})
+        g.update({k: x[k] for k in DE_LA_FUNCION if x.get(k) not in (None, '')})
+        if x.get('is_free') is not None:
+            g['is_free'] = x['is_free']
+        if x.get('online'):
+            g.update(online=True, stream_url=x.get('stream_url') or '', stream_platform=x.get('stream_platform') or '')
+        out.append(g)
+    return out
+
+
 def funciones(d):
     """{clave estable: función}; las de `screenings`, con lo que heredan de su obra."""
     out = {}
     for f in d.get('films') or []:
-        for x in f.get('screenings') or f.get('sessions') or [None]:
-            g = f if x is None else {**{k: v for k, v in f.items() if k != 'id'}, **x}
+        for g in explotar(f):
             k = base = g.get('id') or '|'.join(str(g.get(c) or '') for c in ('title', 'day', 'date', 'time', 'venue', 'sala'))
             n = 2
             while k in out:
@@ -93,8 +117,11 @@ def funciones(d):
 
 
 def futura(f, hoy):
-    dia = str(f.get('hasta') or f.get('day') or f.get('date') or '')
-    return not (len(dia) == 10 and dia[4] == '-') or dia >= hoy     # sin fecha legible: cuenta
+    dias = [f.get('day') or f.get('date')] + ([f['hasta']] if f.get('hasta') else [])
+    try:
+        return any(datetime.date.fromisoformat(x).isoformat() >= hoy for x in dias)
+    except (TypeError, ValueError):
+        return True     # sin fecha legible: cuenta
 
 
 # ── 2. acceso ───────────────────────────────────────────────────────────────
@@ -114,16 +141,16 @@ def invalidas(acceso):
             continue
         n = f'{e.get("alcance")} «{e.get("nombre")}»'
         a = formas(e)
-        if e.get('alcance') not in ('función', 'sala', 'sede', 'festival') or not _t(e.get('nombre')) or (e.get('alcance') == 'sala') != bool(_t(e.get('sala'))):
+        if not isinstance(e.get('alcance'), str) or e['alcance'] not in ('función', 'sala', 'sede', 'festival') or not _t(e.get('nombre')) or (e.get('alcance') == 'sala') != bool(_t(e.get('sala'))):
             mal.append(f'{n}: alcance o nombre inválido')
-        if not a or a - set(FORMAS) or {'gratis', 'pago'} <= a:
+        if not a or a - set(FORMAS) or {'gratis', 'pago'} <= a or ('invitación' in a and a & {'gratis', 'pago'}):
             mal.append(f'{n}: acceso inválido ({e.get("acceso")})')
         if e.get('nivel') == 'declarado':
             if not _t(e.get('cita')) or not _t(e.get('url')).startswith('https://'):
                 mal.append(f'{n}: «declarado» sin cita o sin url')
         elif e.get('nivel') == 'sin-aviso':
             docs = e.get('documentos_revisados')
-            if not isinstance(docs, list) or not docs or not all(_t(x).startswith(('https://', 'http://')) for x in docs):
+            if not isinstance(docs, list) or not docs or not all(re.match(r'https?://[\w.-]+', _t(x)) for x in docs):
                 mal.append(f'{n}: «sin-aviso» sin documentos revisados (URL)')
             if a != {'gratis'}:
                 mal.append(f'{n}: «sin-aviso» solo puede ser gratis')
@@ -148,21 +175,26 @@ def entrada_de(clave, f, acceso):
 def heredado(clave, f, d, acceso):
     sede = (d.get('venues') or {}).get(f.get('venue')) or {}
     e = entrada_de(clave, f, acceso) or {}
-    return {'sede': {k: sede[k] for k in ACCESO if k in sede},
+    return {'sede': {k: sede[k] for k in DE_LA_SEDE if k in sede},
             'festival': {k: d[k] for k in DEL_FESTIVAL if d.get(k) is not None},
+            'dia': (d.get('festivalDates') or {}).get(f.get('day')),
+            'avisos': [a for a in d.get('avisos') or [] if isinstance(a, dict) and (a.get('cities') or a.get('title') == f.get('title'))],
             'entrada': {k: e[k] for k in ('nivel', 'acceso', 'cita', 'url') if k in e}}
 
 
 def publicado(f, d):
     """Cómo se entra según lo publicado (la regla de la app: funcionPaga, urlCompra)."""
-    f = {**((d.get('venues') or {}).get(f.get('venue')) or {}), **{k: v for k, v in f.items() if v is not None}}
-    out = set()
+    out, cobra = set(), d.get('ticketing_model') in ('paid', 'mixed')
     if f.get('by_invitation'):
         out.add('invitación')
+    elif f.get('is_free') not in (None, True, False) or isinstance(f.get('is_free'), int) and not isinstance(f['is_free'], bool):
+        out.add('is_free ilegible')
     elif f.get('is_free') is True:
-        out.add('gratis')
-    elif f.get('is_free') is False or f.get('ticket_url') or d.get('ticket_url') or d.get('ticketing_model'):
+        out |= {'gratis', 'pago'} if f.get('ticket_url') else {'gratis'}
+    elif cobra:
         out.add('pago')
+    elif f.get('is_free') is False or f.get('ticket_url') or d.get('ticket_url'):
+        out.add('pago que la app no muestra: falta ticketing_model')
     else:
         out.add('gratis')
     if f.get('requires_registration') or f.get('registration_url'):
@@ -177,7 +209,8 @@ def contradicciones(d, acceso, hoy=None):
         if not e:
             continue
         dice, pub = formas(e), publicado(f, d)
-        if any((x in dice) != (x in pub) for x in ('pago', 'invitación')) or ('inscripción' in dice and 'inscripción' not in pub):
+        # la inscripción va en un solo sentido: la de una función no desmiente a su sede
+        if any((x in dice) != (x in pub) for x in ('pago', 'invitación')) or ('inscripción' in dice and 'inscripción' not in pub) or any(' ' in x for x in pub):
             out.append(f'«{f.get("title")}» {k}: publica {"+".join(sorted(pub))} y su {e["alcance"]} dice {"+".join(sorted(dice))}')
     return out
 
@@ -200,6 +233,8 @@ def inventario(fid):
     d = _leer(p, {})
     if not (d.get('_provenance') or {}).get('capturado'):
         return ['inventario sin recorrer']
+    if not isinstance(d.get('items'), dict) or not isinstance(d.get('raices'), dict) or not all(_t(x) for x in d['raices'].values()):
+        return ['inventario mal formado: items o raíces']
     raros = [u for u, i in (d.get('items') or {}).items() if i.get('estado') not in ('usada', 'descartada', 'sin-revisar')]
     return fuentes_descubrir.problemas(d) + [f'estado desconocido: {u}' for u in raros]
 
@@ -208,7 +243,11 @@ def sin_leer(fid, acceso):
     """Lo inventariado (usado o descartado) que una entrada «sin-aviso» no dice haber leído:
     cualquiera de esos documentos puede decir que se paga."""
     import fuentes_descubrir as fd
+    if not any(e['nivel'] == 'sin-aviso' for e in acceso):
+        return []
     items = {fd.normal(u) for u in _leer(_ruta(fid, 'fuentes'), {}).get('items') or {}}
+    if not items:
+        return ['acceso «sin-aviso» con el inventario vacío']
     return [f'{e["alcance"]} «{e["nombre"]}»: «sin-aviso» sin leer {u}' for e in acceso if e['nivel'] == 'sin-aviso'
             for u in sorted(items - {fd.normal(x) for x in e['documentos_revisados']})]
 
@@ -226,7 +265,7 @@ def problema(s):
     q = lambda k: _t(s.get(k)).casefold()
     if not q('monta') or not q('verifica') or q('monta') == q('verifica'):
         return 'sello sin segundo lector'
-    if '/' not in q('contra'):
+    if not re.match(r'https?://\w|(fuentes|festivals|pipeline)/.', q('contra')):
         return 'sello sin fuente (URL o ruta)'
     return None if q('huella') and q('fecha') else 'sello sin huella o sin fecha'
 
@@ -248,8 +287,13 @@ def sidecars(fid):
 
 def revisar(fid, d, hoy=None, modelo=True, todas=True):
     """→ (archivo inválido, contradictorio o pendiente). Sin red. `todas`: sellos también de lo pasado."""
-    sellos, acceso = sidecars(fid)
+    try:
+        sellos, acceso = sidecars(fid)
+    except ValueError as e:
+        return [f'archivo de sellos o acceso que no es JSON: {e}'], []
     mal = invalidas(acceso)
+    if not mal:
+        mal = [f'festival «{e["nombre"]}»: no es {fid}' for e in acceso if e['alcance'] == 'festival' and e['nombre'] != fid]
     if mal or not isinstance(sellos, dict):
         return mal or ['el archivo de sellos no es un diccionario'], []
     mal = [f'sello {k}: {problema(s)}' for k, s in sellos.items() if problema(s)]
@@ -279,7 +323,10 @@ def control(fid, d, abrir=urllib.request.urlopen, hoy=None, modelo=True):
         ya = en_almacen(fid, abrir)
     except Exception as e:
         return [f'no se pudo leer el índice del almacén ({type(e).__name__}): no se sabe si {fid} ya está publicado'], []
-    mal, pend = revisar(fid, d, hoy, modelo, todas=not ya)
+    try:
+        mal, pend = revisar(fid, d, hoy, modelo, todas=not ya)
+    except Exception as e:      # dato mal formado: frena la primera, nunca a un publicado
+        mal, pend = [f'no se pudo revisar: {type(e).__name__} {e}'], []
     return ([], mal + pend) if ya else (mal + pend, [])
 
 
@@ -326,7 +373,7 @@ def autoprueba():
         mal.append('sello')
     if not faltan(d, {'f_1': dict(s['f_1'], verifica='A ')}, []):
         mal.append('mismo lector')
-    if not contradicciones(d, pago) or contradicciones({'films': [dict(f, is_free=False)]}, pago) or invalidas(pago):
+    if not contradicciones(d, pago) or contradicciones({'films': [dict(f, is_free=False)], 'ticketing_model': 'mixed'}, pago) or invalidas(pago):
         mal.append('pago declarado')
     if not invalidas([dict(pago[0], nivel='sin-aviso', acceso='gratis', documentos_revisados=[])]):
         mal.append('sin-aviso sin documentos')
