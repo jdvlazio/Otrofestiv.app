@@ -38,15 +38,27 @@
   "work_id": "w_R4E2C3970Y3M",
   "campo": "directores",
   "valor": [
-   "Jaime Osorio Márquez"
+   "Jaime Osorio Márquez",
+   "Federico Durán",
+   "José Luis Rugeles"
   ],
-  "motivo": "un dato por obra: el valor del almacén (tmdb:1657630)",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "motivo": "faltan codirectores: los tres los acreditan Fantasmagoría, The Hollywood Reporter y FilmAffinity; Osorio murió en 2021 y Durán terminó la película",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "antes": {
    "biff-2026": "Jaime Osorio Márquez",
    "fantasmagoria-2026": "Jaime Osorio Marquez, Federico Durán y José Luis Rugeles"
-  }
+  },
+  "anteriores": [
+   {
+    "valor": [
+     "Jaime Osorio Márquez"
+    ],
+    "motivo": "un dato por obra: el valor del almacén (tmdb:1657630)",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)"
+   }
+  ]
  },
  {
   "work_id": "w_R4E2C3970Y3M",

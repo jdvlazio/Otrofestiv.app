@@ -34,5 +34,11 @@
   "regla": "decisión",
   "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
   "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "El texto publicado es comentario del festival («fascinante película»); se traduce TMDB en.",
+  "fecha": "2026-11-25"
  }
 }

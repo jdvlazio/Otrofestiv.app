@@ -61,14 +61,26 @@
  {
   "work_id": "w_R4GBJ7SNPXDQ",
   "campo": "sinopsis.en",
-  "valor": "Mixed media Found footage film made by a Colombian Collective.",
-  "motivo": "se quita lo que no es sinopsis; nada se escribe",
-  "fecha": "2026-11-24",
-  "quien": "Juan (hoja del paso 6)",
+  "valor": "After being attacked, Luz tries to understand what happened to her: the Son of the Earth came to destroy humanity by stealing its saddest and happiest memories. But he landed in Suba, Bogotá's most remote district, where a strange addiction will change the course of history.",
+  "motivo": "el EN comenta el formato; no cuenta la sinopsis",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "antes": {
+   "bogoshorts-2026": "Mixed media Found footage film made by a Colombian Collective.",
+   "fantasmagoria-2026": "Mixed media Found footage film made by a Colombian Collective.",
    "festicinerio-2026": "Mixed media Found footage film made by a Colombian Collective",
-   "ficfusa-2026": "Mixed media Found footage film made by a Colombian Collective"
-  }
+   "ficfusa-2026": "Mixed media Found footage film made by a Colombian Collective",
+   "filcmar-2026": "Mixed media Found footage film made by a Colombian Collective.",
+   "siembrafest-2026": "Mixed media Found footage film made by a Colombian Collective."
+  },
+  "anteriores": [
+   {
+    "valor": "Mixed media Found footage film made by a Colombian Collective.",
+    "motivo": "se quita lo que no es sinopsis; nada se escribe",
+    "fecha": "2026-11-24",
+    "quien": "Juan (hoja del paso 6)"
+   }
+  ]
  },
  {
   "work_id": "w_R4GBJ7SNPXDQ",

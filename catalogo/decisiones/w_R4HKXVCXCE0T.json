@@ -70,5 +70,17 @@
   "fecha": "2026-11-24",
   "quien": "plan del almacén (Juan, «sigue con el plan»)",
   "fuente": "https://letterboxd.com/film/a-new-dawn-2024/"
+ },
+ {
+  "work_id": "w_R4HKXVCXCE0T",
+  "campo": "sinopsis.en",
+  "valor": "The story of five women whose lives were marked by war since childhood. One of them managed to change course and, years later, decides to seek out those who did take up arms, to rebuild with them a story of memory, friendship, love, sisterhood and hope.",
+  "motivo": "Decía cinco excombatientes: TMDB nombra a cuatro y la quinta, la directora, no se unió a la guerrilla.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "ficdeh-2026": "A documentary on five former women combatants who signed Colombia's peace accord, and what it meant to inhabit a woman's body through war and disarmament.",
+   "ficmontanas-2026": "A documentary on five former women combatants who signed Colombia's peace accord, and what it meant to inhabit a woman's body through war and disarmament."
+  }
  }
 ]

@@ -41,15 +41,23 @@
  {
   "work_id": "w_R4HHC3GR24M0",
   "campo": "sinopsis.en",
-  "valor": "A documentary on the search for the disappeared: the voices of those who search and the echo of an absence that lingers.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "In Colombia, the search for the disappeared has opened unexpected paths between those who suffer their absence and those who hold key information. This film reveals the role of information providers: people who took part, directly or indirectly, in the hostilities and have chosen to join the humanitarian search led by the Search Unit.",
+  "motivo": "El inglés no dice la idea central: los aportantes de información que participaron en las hostilidades.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "titulo": "Cuando la palabra se hace búsqueda",
   "antes": {
    "ficdeh-2026": "In Colombia, the search for missing persons has opened unexpected paths of connection between those who suffer their absence and those who hold key information about their whereabouts. This feature film reveals the fundamental role of information providers, through the voices of those who participated directly and indirectly in the hostilities and who, driven by commitment, have decided to join the humanitarian search process led by the Search Unit (UBPD).",
    "ficfusa-2026": "In Colombia, the search for missing persons has opened unexpected paths of connection between those who suffer their absence and those who hold key information about their whereabouts. This feature film reveals the fundamental role of information providers, through the voices of those who participated directly and indirectly in the hostilities and who, driven by commitment, have decided to join the humanitarian search process led by the Search Unit (UBPD).",
    "ficmontanas-2026": "A documentary on the search for the disappeared: the voices of those who search and the echo of an absence that lingers."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "A documentary on the search for the disappeared: the voices of those who search and the echo of an absence that lingers.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
  }
 ]

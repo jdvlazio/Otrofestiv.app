@@ -23,10 +23,10 @@
  {
   "work_id": "w_R4E4R74EAVJZ",
   "campo": "sinopsis.es",
-  "valor": "A medida que la Primera Guerra Mundial se prolonga, Pierre, un soldado recién llegado al frente, está deseando demostrar su valía. Detrás de las líneas, conoce a Francis, quien decide levantar el ánimo de sus compañeros organizando una obra de teatro. Mientras la violencia continúa, ambos intentan encontrar formas de escapar de la brutalidad de la guerra, aunque solo sea por un momento.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "A medida que la Primera Guerra Mundial se prolonga, Pierre, un soldado recién llegado al frente, quiere demostrar su valía. Detrás de las líneas conoce a Francis, que organiza espectáculos para levantar el ánimo de las tropas. En medio de la violencia, ambos buscan escapar de la brutalidad de la guerra, aunque sea por un momento.",
+  "motivo": "'Decide' levantar el ánimo contradice la sinopsis de Cannes (tiene ese encargo); TMDB dice 'organiza espectáculos'.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "1ce07f4f976c",
    "74ee60aba7d6",
@@ -36,7 +36,20 @@
    "biff-2026": "A medida que la Primera Guerra Mundial se prolonga, Pierre, un soldado recién llegado al frente, está deseando demostrar su valía. Detrás de las líneas, conoce a Francis, quien decide levantar el ánimo de sus compañeros organizando una obra de teatro. Mientras la violencia continúa, ambos intentan encontrar formas de escapar de la brutalidad de la guerra, aunque solo sea por un momento.",
    "mubibogota-2026": "Pierre llega al frente de batalla como un joven soldado deseoso de encontrar su lugar en un mundo consumido por la violencia. Todo cambia cuando conoce a Francis, un alma afín cuya visión de montar un espectáculo teatral en primera línea le revela un mundo que Pierre no sabía que existía.",
    "tiff-2026": "El conmovedor tercer largometraje del director belga Lukas Dhont celebra un amor que florece entre las penurias y los horrores de la Primera Guerra Mundial."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "A medida que la Primera Guerra Mundial se prolonga, Pierre, un soldado recién llegado al frente, está deseando demostrar su valía. Detrás de las líneas, conoce a Francis, quien decide levantar el ánimo de sus compañeros organizando una obra de teatro. Mientras la violencia continúa, ambos intentan encontrar formas de escapar de la brutalidad de la guerra, aunque solo sea por un momento.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "1ce07f4f976c",
+     "74ee60aba7d6",
+     "add8b86c4314"
+    ]
+   }
+  ]
  },
  {
   "work_id": "w_R4E4R74EAVJZ",
@@ -74,15 +87,23 @@
  {
   "work_id": "w_R4E4R74EAVJZ",
   "campo": "sinopsis.en",
-  "valor": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "As the First World War drags on, Pierre, a young Belgian soldier newly arrived at the front, wants to prove himself. Behind the lines he meets Francis, who puts on shows to lift the troops' spirits. Amid the violence, both look for ways to escape the brutality of war, if only for a moment.",
+  "motivo": "El inglés perdía la idea central (los espectáculos) y contradecía al español: 'is asked' frente a 'decide'.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "titulo": "Coward",
   "antes": {
    "biff-2026": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
    "mubibogota-2026": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
    "tiff-2026": "Belgian director Lukas Dhont’s poignant third feature celebrates a love that blooms amid the hardships and horrors of the First World War."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
  }
 ]

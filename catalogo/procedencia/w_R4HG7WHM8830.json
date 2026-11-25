@@ -20,5 +20,11 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Trae comentario («poignant and charming feature debut») y pasa de 350; se condensa TMDB en.",
+  "fecha": "2026-11-25"
  }
 }

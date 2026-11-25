@@ -24,7 +24,13 @@
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "traducida de su española; verificada por otro agente",
-  "fecha": "2026-11-24"
+  "motivo": "Mismo error que el español.",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "El texto es genérico e inventado ('viaje narrativo o documental'); la ficha oficial cuenta otra cosa.",
+  "fecha": "2026-11-25"
  }
 }

@@ -24,10 +24,10 @@
  {
   "work_id": "w_R4HHSYKXBWCD",
   "campo": "sinopsis.es",
-  "valor": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficfusa-2026, popayan-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "Separada de su madre al cruzar la selva entre Colombia y Panamá, Zuli, una pequeña migrante venezolana, deja atrás su infancia para sobrevivir y trabaja para un coyote que guía migrantes. En uno de sus viajes tropieza con un portal a una tierra mágica donde reconecta con su inocencia y su imaginación y aprende a ser niña otra vez.",
+  "motivo": "Coma entre sujeto y verbo, Zuli aparece sin presentar y pasa de 350.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "be8075d96be7",
    "f2d34d67c6ab"
@@ -37,7 +37,19 @@
    "ficfusa-2026": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
    "ficica-2026": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana se ve obligada a abandonar su infancia para sobrevivir. Zuli empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes descubre un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
    "popayan-2026": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficfusa-2026, popayan-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "be8075d96be7",
+     "f2d34d67c6ab"
+    ]
+   }
+  ]
  },
  {
   "work_id": "w_R4HHSYKXBWCD",

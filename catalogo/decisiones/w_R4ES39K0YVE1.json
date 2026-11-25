@@ -87,10 +87,10 @@
  {
   "work_id": "w_R4ES39K0YVE1",
   "campo": "sinopsis.en",
-  "valor": "Every year, 26-year-old Chena walks hundreds of kilometers to work as a day laborer on Colombian crops. Eight years in, she has saved nothing. Her body and her will are all she has.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "Every year, 26-year-old Chena travels hundreds of kilometers to work as a day laborer on Colombian crops. Eight years in, she has neither saved money nor gained independence. Her body and her will are all she has.",
+  "motivo": "'Walks' es inventado (la fuente dice que recorre); faltaba la independencia que sí trae el español.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "titulo": "Andariega",
   "antes": {
    "cinemancia-2025": "Every year, 26-year-old Chena walks hundreds of kilometers to work as a day laborer on Colombian crops. Eight years in, she has saved nothing. Her body and her will are all she has.",
@@ -99,6 +99,14 @@
    "ficma-2026": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom.",
    "filcmar-2026": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom.",
    "siembrafest-2026": "Each year, 26-year-old María Yessenia Herrera, best known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Every year, 26-year-old Chena walks hundreds of kilometers to work as a day laborer on Colombian crops. Eight years in, she has saved nothing. Her body and her will are all she has.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
  }
 ]

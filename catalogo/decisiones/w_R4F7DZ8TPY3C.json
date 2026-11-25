@@ -22,10 +22,10 @@
  {
   "work_id": "w_R4F7DZ8TPY3C",
   "campo": "sinopsis.es",
-  "valor": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, siembrafest-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "S. escribe a Juan, que duerme profundamente. El consejo de un director al que admira pone en duda todo su trabajo anterior. En busca de una idea detrás de sus imágenes, S. deambula entre su archivo, pestañas de internet, películas del Oeste y cuentos japoneses. Reúne sus hallazgos en una carta que espera entregarle a Juan cuando despierte.",
+  "motivo": "Mala traducción ('western films' no es 'películas occidentales') y concordancia ('carta… entregárselo').",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "6e2e9e9fd5af",
    "87c42e89aa99"
@@ -34,6 +34,18 @@
    "cinemancia-2026": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
    "cinetoro-2026": "S. le escribe a Juan, quien está profundamente dormido. S. reflexiona sobre las imágenes y el cine, y un consejo de un director al que admira la desafía a ella y a toda su obra anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre materiales, su propio archivo de imágenes y sonidos, las pestañas de su navegador de Internet, películas del oeste y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregársela a Juan cuando se despierte.",
    "siembrafest-2026": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, siembrafest-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "6e2e9e9fd5af",
+     "87c42e89aa99"
+    ]
+   }
+  ]
  }
 ]
