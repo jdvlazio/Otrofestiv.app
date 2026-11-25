@@ -133,6 +133,9 @@ def enriquecer_obra(f, key, alias):
     return None
 
 
+NEUTROS_TMDB = ('id', 'original_title', 'poster_path', 'release_date', 'runtime')
+
+
 def ficha_de_tmdb(cid, key, titulo):
     """(ficha TMDB cruda, campos extraídos). DUEÑO ÚNICO de qué se saca de una
     ficha: lo llaman la búsqueda automática y la declaración a mano, que
@@ -140,11 +143,14 @@ def ficha_de_tmdb(cid, key, titulo):
     # por id: vacía por la red ya no se arma (lib.tmdb_ficha, 14 oct 2026)
     det = tmdb_ficha(cid, key, language='es-ES', append_to_response='credits')
     det_en = tmdb_ficha(cid, key, language='en-US', append_to_response='credits')
-    # TMDB a veces responde 404 en un idioma y la ficha entera en el otro
-    # (1719717 «Chingona», 25 nov 2026): afiche, año y demás no dependen del idioma
+    # TMDB a veces da 404 en un idioma y la ficha entera en el otro (1719717 «Chingona»,
+    # 25 nov 2026). Solo lo que no cambia con el idioma: el género y el título irían en inglés.
     if not det.get('id') and det_en.get('id'):
-        det.update({k: v for k, v in det_en.items()
-                    if k not in ('title', 'overview', 'tagline', 'credits')})
+        det.update({k: det_en.get(k) for k in NEUTROS_TMDB})
+        from herencia import _pais_es
+        # todos o ninguno: un código sin nombre no deja el país a medias
+        nombres = _pais_es([c['iso_3166_1'] for c in det_en.get('production_countries') or []])
+        det['production_countries'] = [{'name': nombres}] if nombres else []
     # créditos de ambos idiomas: los en-US vienen romanizados
     # (宮崎吾朗 → «Goro Miyazaki») y sin ellos el director nunca casa
     det.setdefault('credits', {}).setdefault('crew', []).extend(

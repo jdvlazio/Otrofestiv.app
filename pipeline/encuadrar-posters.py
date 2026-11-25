@@ -73,11 +73,7 @@ FONDO_ES_ARTE = {'funeral-siniestro.jpg',
                  'sigilo.jpg', 'el-susurro.jpg', 'esquirlas-de-caracol.jpg',
                  # CINETORO 2026 (31 oct): el cielo gris de «Traducir lo propio» y el
                  # papel claro de «Um corpo sem cavalo?» llegan al borde; mirados, no hay marco
-                 'traducir-lo-propio-o-el-sintoma-de-recordar.jpg', 'um-corpo-sem-cavalo.jpg',
-                 # BOGOSHORTS 2026 (25 nov): el negro de «Complementarios» y el azul y verde de
-                 # «Varoncito» llegan al borde; dos corridas les comieron una franja y se
-                 # repusieron del original de TMDB. Mirados, no hay marco
-                 'complementarios.jpg', 'varoncito.jpg'}
+                 'traducir-lo-propio-o-el-sintoma-de-recordar.jpg', 'um-corpo-sem-cavalo.jpg'}
 
 
 # LO HECHO SE RECUERDA (24 nov 2026, «Complementarios» y «Varoncito» de BOGOSHORTS): decidir
@@ -97,11 +93,21 @@ def hechos(fid):
     if not os.path.exists(libro(fid)):
         return {}
     with open(libro(fid), encoding='utf-8') as fh:
-        return json.load(fh)
+        d = json.load(fh)
+    return {k: v for k, v in d.items() if k != '_provenance'}
 
 
 def anotar(fid, rutas):
-    d = {**hechos(fid), **{os.path.basename(x): huella(x) for x in rutas}}
+    antes = hechos(fid)
+    d = {**antes, **{os.path.basename(x): huella(x) for x in rutas}}
+    if not d:
+        return
+    if d == antes:
+        with open(libro(fid), encoding='utf-8') as fh:
+            if '_provenance' in json.load(fh):
+                return
+    from lib import provenance
+    d['_provenance'] = provenance('pipeline/encuadrar-posters.py')
     with open(libro(fid), 'w', encoding='utf-8') as fh:
         json.dump(d, fh, ensure_ascii=False, indent=1, sort_keys=True)
 
