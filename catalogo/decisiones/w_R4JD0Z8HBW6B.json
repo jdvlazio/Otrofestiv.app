@@ -55,5 +55,58 @@
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24",
   "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_R4JD0Z8HBW6B",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "2025",
+   "ficpa-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4JD0Z8HBW6B",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4JD0Z8HBW6B",
+  "campo": "xref.tmdb",
+  "valor": 1796536,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "1796536",
+   "ficpa-2026": "1796536"
+  }
+ },
+ {
+  "work_id": "w_R4JD0Z8HBW6B",
+  "campo": "xref.letterboxd",
+  "valor": "la-pandemia-del-feminicidio",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "la-pandemia-del-feminicidio",
+   "ficpa-2026": "la-pandemia-del-feminicidio"
+  }
  }
 ]

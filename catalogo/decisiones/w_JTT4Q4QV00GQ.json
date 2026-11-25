@@ -1,0 +1,40 @@
+[
+ {
+  "work_id": "w_JTT4Q4QV00GQ",
+  "campo": "directores",
+  "valor": [
+   "Mateo Ramirez"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Mateo Ramirez"
+  }
+ },
+ {
+  "work_id": "w_JTT4Q4QV00GQ",
+  "campo": "sinopsis.es",
+  "valor": "Un conductor y su ayudante transportan en silencio a un grupo de jóvenes. A bordo, los pasajeros creen que el viaje los acerca a un futuro mejor.",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Un conductor y su ayudante transportan en silencio a un grupo de jóvenes. A bordo, los pasajeros creen que el viaje los acerca a un futuro mejor."
+  }
+ },
+ {
+  "work_id": "w_JTT4Q4QV00GQ",
+  "campo": "sinopsis.en",
+  "valor": "A driver and his assistant transport a group of young people in silence. On board, the passengers believe the journey is bringing them closer to a better future.",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "A driver and his assistant transport a group of young people in silence. On board, the passengers believe the journey is bringing them closer to a better future."
+  }
+ }
+]

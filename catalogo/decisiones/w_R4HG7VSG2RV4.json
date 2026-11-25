@@ -17,5 +17,113 @@
    "cineparalapaz-2026": "/assets/cineparalapaz-2026/por-una-gota-de-leche.jpg",
    "ficdeh-2026": "/assets/ficdeh/por-una-gota-de-leche.jpg"
   }
+ },
+ {
+  "work_id": "w_R4HG7VSG2RV4",
+  "campo": "directores",
+  "valor": [
+   "Esteban J. Corzo"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Esteban J. Corzo",
+   "ficdeh-2026": "Esteban J. Corzo"
+  }
+ },
+ {
+  "work_id": "w_R4HG7VSG2RV4",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "2025",
+   "ficdeh-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HG7VSG2RV4",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Colombia",
+   "ficdeh-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HG7VSG2RV4",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4HG7VSG2RV4",
+  "campo": "sinopsis.es",
+  "valor": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia.",
+   "ficdeh-2026": "En 1985, varios jóvenes militantes del M-19 robaron un camión de leche para repartirla entre la población más vulnerable del sur de Bogotá. Fueron asesinados por las fuerzas del Estado colombiano tras haberse rendido. Cuarenta años después, sus familias y la comunidad cuentan su historia."
+  }
+ },
+ {
+  "work_id": "w_R4HG7VSG2RV4",
+  "campo": "sinopsis.en",
+  "valor": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story.",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story.",
+   "ficdeh-2026": "In 1985, several young militants of the M-19 hijacked a milk truck to hand out its cargo among the poorest people of southern Bogotá. They were killed by Colombian state forces after surrendering. Forty years on, their families and their community tell the story."
+  }
+ },
+ {
+  "work_id": "w_R4HG7VSG2RV4",
+  "campo": "xref.tmdb",
+  "valor": 1738896,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "1738896"
+  }
+ },
+ {
+  "work_id": "w_R4HG7VSG2RV4",
+  "campo": "xref.letterboxd",
+  "valor": "por-una-gota-de-leche",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "por-una-gota-de-leche",
+   "ficdeh-2026": "por-una-gota-de-leche"
+  }
  }
 ]

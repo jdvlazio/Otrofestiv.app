@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_JTT3HCM9C35R",
+  "campo": "directores",
+  "valor": [
+   "Juan Sebastián Arias Carvajal"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Juan Sebastián Arias Carvajal"
+  }
+ },
+ {
+  "work_id": "w_JTT3HCM9C35R",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_JTT3HCM9C35R",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_JTT3HCM9C35R",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_JTT3HCM9C35R",
+  "campo": "sinopsis.es",
+  "valor": "A los 75 años, Blanca sigue acompañando nacimientos en el Guaviare. En sus manos perdura un saber que ha sostenido a su comunidad entre la violencia y el abandono.",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "A los 75 años, Blanca sigue acompañando nacimientos en el Guaviare. En sus manos perdura un saber que ha sostenido a su comunidad entre la violencia y el abandono."
+  }
+ },
+ {
+  "work_id": "w_JTT3HCM9C35R",
+  "campo": "sinopsis.en",
+  "valor": "At 75, Blanca continues to attend births in Guaviare. In her hands lives on a knowledge that has sustained her community amid violence and neglect.",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "At 75, Blanca continues to attend births in Guaviare. In her hands lives on a knowledge that has sustained her community amid violence and neglect."
+  }
+ },
+ {
+  "work_id": "w_JTT3HCM9C35R",
+  "campo": "xref.tmdb",
+  "valor": 1537059,
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "1537059"
+  }
+ },
+ {
+  "work_id": "w_JTT3HCM9C35R",
+  "campo": "xref.letterboxd",
+  "valor": "manos-que-dan-vida",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "manos-que-dan-vida"
+  }
+ },
+ {
+  "work_id": "w_JTT3HCM9C35R",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cineparalapaz-2026/manos-que-dan-vida.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cineparalapaz-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "/assets/cineparalapaz-2026/manos-que-dan-vida.jpg"
+  }
+ }
+]

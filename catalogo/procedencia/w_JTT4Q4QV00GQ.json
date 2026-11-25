@@ -4,8 +4,10 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25"
  },
  "anio": {
   "fuente": "festival",
@@ -14,5 +16,17 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde cineparalapaz-2026",
+  "fecha": "2026-11-25"
  }
 }
