@@ -7,10 +7,10 @@ gratis («sin aviso de pago = gratis» sin abrir el PDF de acreditaciones) y 3 h
 Las obras tenían sello (sello_obra.py); las funciones no.
 
 TRES CONTROLES (archivos en festivals/staging/, nunca en el JSON publicado):
-  1. <id>-sellos-funcion.json  {clave: {huella, monta, verifica (distinto), contra, fecha}}.
+  1. <id>-sellos-funcion.json  {_provenance, clave: {huella, monta, verifica (distinto), contra, fecha}}.
      La huella es lo publicado de la función MÁS lo que hereda (acceso y enlace de su
      sede, del festival y de la entrada de acceso que la cubre). Cambia algo → se vuelve a leer.
-  2. <id>-acceso.json  [{alcance: función|sala|sede|festival, nombre, sala, nivel, acceso, cita, url,
+  2. <id>-acceso.json  {_provenance: {fuente, capturado}, entradas: […]}; cada entrada: [{alcance: función|sala|sede|festival, nombre, sala, nivel, acceso, cita, url,
      documentos_revisados}]. `nombre`: la clave de la función, la sede exacta (con «sala»,
      además `sala`) o el id del festival. `acceso`: gratis, pago, inscripción, invitación (uno o lista). «declarado»
      exige cita y url; «sin-aviso» solo puede ser gratis y exige inventario cerrado y,
@@ -288,7 +288,12 @@ def faltan(d, sellos, acceso):
 
 
 def sidecars(fid):
-    return _leer(_ruta(fid, 'sellos-funcion'), {}), _leer(_ruta(fid, 'acceso'), [])
+    sellos, acceso = _leer(_ruta(fid, 'sellos-funcion'), {}), _leer(_ruta(fid, 'acceso'), [])
+    if isinstance(sellos, dict):
+        sellos = {k: v for k, v in sellos.items() if k != '_provenance'}
+    if isinstance(acceso, dict) and 'entradas' in acceso:   # {_provenance, entradas}: [staging-provenance]
+        acceso = acceso['entradas']
+    return sellos, acceso
 
 
 def revisar(fid, d, hoy=None, modelo=True, todas=True):
@@ -401,7 +406,8 @@ def sellar(lt, d, fecha=None):
         sellos[k] = s
         n += 1
     with open(_ruta(fid, 'sellos-funcion'), 'w', encoding='utf-8') as fh:
-        json.dump(sellos, fh, ensure_ascii=False, indent=1, sort_keys=True)
+        json.dump({'_provenance': {'fuente': 'pipeline/sello_funcion.py --sellar', 'capturado': _hoy()}, **sellos},
+                  fh, ensure_ascii=False, indent=1, sort_keys=True)
     return n, no
 
 
