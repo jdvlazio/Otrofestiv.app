@@ -1,6 +1,6 @@
 {
  "id": "w_R4JB102F8QWB",
- "titulo_original": "Kueka, Memoria Ancestral",
+ "titulo_original": "Kueka, memoria ancestral",
  "anio": 2025,
  "paises": [
   "VE"
@@ -10,14 +10,18 @@
  ],
  "aliases": [
   {
+   "titulo": "Kueka, Memoria Ancestral",
+   "tipo": "festival"
+  },
+  {
    "titulo": "Kueka, Ancestral Memory",
    "idioma": "en",
    "tipo": "traduccion"
   }
  ],
  "sinopsis": {
-  "es": "En una comunidad al sur de Venezuela, tres generaciones del pueblo Pemón luchan por el retorno de su abuela ancestral Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas que fue sustraída y llevada hasta Alemania sin el consentimiento de la comunidad para que formara parte de una instalación artística. Los guardianes de la memoria ancestral emprenden un viaje de resistencia contra el memoricidio para la restitución del equilibrio natural.",
-  "en": "Three generations of the Pemón people fight to reclaim their ancestral grandmother. The spirit of Kowai Kueka, embodied in a sacred red jasper stone, was taken from Venezuela to Germany as art without their consent."
+  "es": "En una comunidad del sur de Venezuela, tres generaciones del pueblo pemón luchan por el retorno de su abuela ancestral, Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas, sustraída y llevada a Alemania sin el consentimiento de la comunidad para una instalación artística.",
+  "en": "In a community in southern Venezuela, three generations of the Pemón people fight for the return of their ancestral grandmother, Kowai Kueka. Her spirit is embodied in a red jasper stone of more than twenty tons, taken to Germany without the community's consent for an art installation."
  },
  "generos": [
   "Documental"
@@ -34,9 +38,14 @@
   {
    "etiqueta": "60 min",
    "duracion_min": 60
+  },
+  {
+   "etiqueta": "64 min",
+   "duracion_min": 64
   }
  ],
  "presentaciones": [
+  "festicine-antioquia-2026",
   "ficpa-2026"
  ]
 }

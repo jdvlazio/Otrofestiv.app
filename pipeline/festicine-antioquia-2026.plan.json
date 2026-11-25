@@ -1,19 +1,180 @@
 {
- "_nota": "Festicine Antioquia 2026 — 27.° Festival de Cine de Santa Fe de Antioquia (4–8 dic 2026). PRE-ONBOARDING: la selección de Caja de Pandora (21 cortos colombianos, post del 25 ago). Óperas Primas, otras secciones y la programación no están publicadas (20 oct). Cuando salga la parrilla se agregan crudo/enriquecer/ensamblar, en el modelo de la función (docs/FUNCION.md).",
+ "_nota": "27.° Festival de Cine de Santa Fe de Antioquia (4–8 dic 2026). MONTADO 24 nov, SIN PUBLICAR. Fuente: PDF de programación (2 páginas imagen, 24 nov), leído a ojo, por un segundo lector ciego y por OCR; Óperas Primas y Caja de Pandora también en texto (web) y en IG DgISGJ7ESMG. Solo días oficiales. Nombre, subtítulo y secciones: PROPUESTA para Juan.",
  "radar": 1034,
  "pasos": [
   {
    "cmd": "python3 pipeline/festicine-antioquia-2026-catalogo.py",
-   "que": "la tabla del post «Caja de Pandora 2026 — Seleccionados» (wp-json) → catálogo (21 cortos)"
+   "que": "el PDF transcrito → catálogo (88 obras) y parrilla (79)"
   },
   {
    "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/festicine-antioquia-2026-catalogo.json",
-   "que": "la cascada de TMDB (título + director; candado de enriquecer.py) y lo ya publicado → catálogo enriquecido"
+   "que": "la cascada de TMDB y lo ya publicado → catálogo enriquecido"
+  },
+  {
+   "cmd": "python3 pipeline/festicine-antioquia-2026-crudo.py",
+   "que": "catálogo → crudo (79)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py festicine-antioquia-2026 --posters",
+   "que": "TMDB + cascada + afiches declarados"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py festicine-antioquia-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py festicine-antioquia-2026 --aplicar --desde festivals/staging/festicine-antioquia-2026-build.json",
+   "que": "afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/festicine-antioquia-2026-verificar.py",
+   "que": "lectura ciega + OCR del PDF contra el build"
   }
  ],
+ "fuentes_vivas": [
+  {
+   "archivo": "fuentes/festicine-antioquia-2026/web/programa-vivo.html",
+   "url": "https://festicineantioquia.org/27-festival-de-cine-de-santa-fe-de-antioquia/",
+   "como": "pagina",
+   "debe_contener": "Programacion.web_.pdf",
+   "que": "el post con el PDF de programación"
+  }
+ ],
+ "_nota_fuentes_vivas": "Además el IG y el Facebook del festival, por el vigía.",
  "_fuentes_versionadas": {
-  "festivals/staging/festicine-antioquia-2026-catalogo.json": "la selección (21 obras); la leerá el crudo",
-  "festivals/staging/festicine-antioquia-2026-catalogo-enriquecido.json": "las fichas TMDB/cascada, que escribe el paso 2; el montaje las reusa cuando salga la parrilla",
-  "festivals/staging/festicine-antioquia-2026-correcciones.json": "sin_afiche: el porqué de las 9 obras sin afiche; lo leen pipeline/preonboarding.py y, con la parrilla, enriquecer.py/ensamblar.py"
+  "festivals/staging/festicine-antioquia-2026-catalogo.json": "88 obras y la parrilla transcrita",
+  "festivals/staging/festicine-antioquia-2026-catalogo-enriquecido.json": "fichas TMDB del catálogo",
+  "festivals/staging/festicine-antioquia-2026-correcciones.json": "alias, fichas, misma_obra, sin_afiche, sin_sinopsis, sin_duracion",
+  "festivals/staging/festicine-antioquia-2026-altas.json": "registro de altas (pipeline/altas.py)",
+  "festivals/staging/festicine-antioquia-2026-venues-geo.json": "sedes con pin de Google Maps",
+  "festivals/staging/festicine-antioquia-2026-afiches.json": "afiches oficiales de Óperas Primas",
+  "festivals/staging/festicine-antioquia-2026-crudo.json": "las 79 funciones y actividades",
+  "festivals/staging/festicine-antioquia-2026-sinopsis-cortas.json": "sinopsis cortas ES/EN y su original; las lee -catalogo.py",
+  "festivals/staging/festicine-antioquia-2026-duraciones.json": "duraciones que el PDF imprime mal",
+  "festivals/staging/festicine-antioquia-2026-sinopsis.json": "sinopsis oficiales con su URL"
+ },
+ "festival": {
+  "crudo": "festivals/staging/festicine-antioquia-2026-crudo.json",
+  "enriquecido": "festivals/staging/festicine-antioquia-2026-enriquecido.json",
+  "geo": "festivals/staging/festicine-antioquia-2026-venues-geo.json",
+  "_por_que_secciones": "Los rótulos del PDF, en Título. PROPUESTA para Juan.",
+  "secciones": {
+   "Inauguración": {
+    "emoji": "🎉",
+    "en": "Opening",
+    "archetype": "Apertura / Gala"
+   },
+   "Competencia Internacional de Óperas Primas": {
+    "emoji": "🏆",
+    "en": "International First Feature Competition",
+    "archetype": "Competencia"
+   },
+   "Caja de Pandora": {
+    "emoji": "📦",
+    "en": "Pandora's Box",
+    "archetype": "Cortos / Programas"
+   },
+   "Película": {
+    "emoji": "🎬",
+    "en": "Film",
+    "archetype": "Muestra / País"
+   },
+   "Película familiar": {
+    "emoji": "🧒",
+    "en": "Family Film",
+    "archetype": "Muestra / País"
+   },
+   "Muestra especial y conversación": {
+    "emoji": "🎞️",
+    "en": "Special Showcase and Talk",
+    "archetype": "Especiales / Eventos"
+   },
+   "Conversando de…": {
+    "emoji": "🎤",
+    "en": "Talking About…",
+    "archetype": "Charlas / Industria"
+   },
+   "Conversando con los actores": {
+    "emoji": "🎭",
+    "en": "Talking with the Actors",
+    "archetype": "Charlas / Industria"
+   },
+   "Tómate un café con…": {
+    "emoji": "☕",
+    "en": "Coffee with…",
+    "archetype": "Charlas / Industria"
+   },
+   "Taller": {
+    "emoji": "🛠️",
+    "en": "Workshop",
+    "archetype": "Charlas / Industria"
+   },
+   "Muestra cultural": {
+    "emoji": "🎶",
+    "en": "Cultural Showcase",
+    "archetype": "Especiales / Eventos"
+   },
+   "Clausura": {
+    "emoji": "🏁",
+    "en": "Closing",
+    "archetype": "Clausura"
+   }
+  },
+  "sedes": {
+   "Plaza Mayor Simón Bolívar": [
+    "Plaza Mayor Simón Bolívar - Santa Fe de Antioquia",
+    ""
+   ],
+   "Universidad de Antioquia Seccional Occidente": [
+    "Universidad de Antioquia Seccional Occidente - Santa Fe de Antioquia",
+    ""
+   ],
+   "Museo Juan del Corral": [
+    "Museo Juan del Corral - Santa Fe de Antioquia",
+    ""
+   ],
+   "Hotel Mariscal Robledo": [
+    "Hotel Mariscal Robledo - Santa Fe de Antioquia",
+    ""
+   ],
+   "Cámara de Comercio de Medellín para Antioquia": [
+    "Cámara de Comercio de Medellín para Antioquia - Santa Fe de Antioquia",
+    ""
+   ],
+   "Sede de empleo y emprendimiento Comfenalco Antioquia": [
+    "Sede de empleo y emprendimiento Comfenalco Antioquia - Santa Fe de Antioquia",
+    ""
+   ],
+   "Barrio La Esmeralda": [
+    "Barrio La Esmeralda - Santa Fe de Antioquia",
+    ""
+   ],
+   "Barrio Llano de Bolívar": [
+    "Barrio Llano de Bolívar - Santa Fe de Antioquia",
+    ""
+   ],
+   "Catedral Basílica Metropolitana": [
+    "Catedral Basílica Metropolitana - Santa Fe de Antioquia",
+    ""
+   ]
+  },
+  "name": "Santa Fe de Antioquia",
+  "displayName": "Santa Fe de Antioquia",
+  "fullName": "27.º Festival de Cine de Santa Fe de Antioquia",
+  "shortName": "FESTICINE ANTIOQUIA",
+  "tagline": "Festival de Cine",
+  "_por_que_copy": "las dos líneas del logo del afiche, sin repetirse (precedente Provincia de Vélez). Alternativa: «Festicine Antioquia» / «Festival de Cine de Santa Fe de Antioquia». PROPUESTA para Juan.",
+  "city": "Santa Fe de Antioquia",
+  "country": "CO",
+  "dates": "4–8 DIC",
+  "dates_en": "DEC 4–8",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "festicineantioquia2026_",
+  "festivalStartStr": "2026-12-04T00:00:00",
+  "festivalEndStr": "2026-12-08T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "diciembre",
+  "instagram": "festicineantioquia"
  }
 }

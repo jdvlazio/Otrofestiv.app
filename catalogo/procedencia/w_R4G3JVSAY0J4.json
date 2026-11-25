@@ -10,16 +10,22 @@
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1554728",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "tmdb:1554728",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
@@ -32,5 +38,23 @@
   "regla": "decisión",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026, fantasmagoria-2026, popayan-2026)",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "versión corta (350), redactor y verificador distintos; festicine-antioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  }
 }

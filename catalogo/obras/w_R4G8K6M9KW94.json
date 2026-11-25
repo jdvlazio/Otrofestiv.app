@@ -6,10 +6,17 @@
   "CO"
  ],
  "directores": [
-  "Julian Duque"
+  "Julián Camilo Duque"
+ ],
+ "aliases": [
+  {
+   "titulo": "La sinfonía de los bichos raros",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
-  "es": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos."
+  "es": "Macha, una cucaracha adolescente que sueña con ser cantante, vive con su padre, Verdinardo El Sapo, en Los Matorrales, un barrio separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de él corre el riesgo de desaparecer, reúne a sus amigos, otros «bichos raros», para ir a un reality de talentos humanos.",
+  "en": "Macha, a teenage cockroach who dreams of being a singer, lives with her father, Verdinardo the Toad, in Los Matorrales, a neighborhood cut off from the Big City by a huge wall. When his vegetable shop is at risk of disappearing, she gathers her friends, other “weird bugs,” to enter a human talent reality show."
  },
  "generos": [
   "Familia"
@@ -26,9 +33,14 @@
   {
    "etiqueta": "90 min",
    "duracion_min": 90
+  },
+  {
+   "etiqueta": "91 min",
+   "duracion_min": 91
   }
  ],
  "presentaciones": [
-  "fantasmagoria-2026"
+  "fantasmagoria-2026",
+  "festicine-antioquia-2026"
  ]
 }

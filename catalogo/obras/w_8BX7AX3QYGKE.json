@@ -1,0 +1,45 @@
+{
+ "id": "w_8BX7AX3QYGKE",
+ "titulo_original": "Fiebre",
+ "anio": 2022,
+ "paises": [
+  "CL",
+  "PE",
+  "BR"
+ ],
+ "directores": [
+  "Elisa Eliash"
+ ],
+ "aliases": [
+  {
+   "titulo": "Fever",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Nino es un niño consentido que, sumido en una fuerte fiebre, es absorbido por un cuadro misterioso. Aunque su mamá se lo había advertido, se desata el truco que lo hace caer presa de la pintura. Así, Nino no hace más que perderse en un laberinto de imágenes mientras intenta volver a casa.",
+  "en": "Nino is a spoiled child who, in the grip of a strong fever, is absorbed by a mysterious painting. Even though his mother had warned him, the trick that makes him prey to the painting is unleashed. And so Nino does nothing but get lost in a maze of images as he tries to return home."
+ },
+ "generos": [
+  "Familia"
+ ],
+ "afiche": {
+  "archivo": "/assets/festicine-antioquia-2026/fiebre.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 743512,
+  "letterboxd": "fever-2022-1"
+ },
+ "versiones": [
+  {
+   "etiqueta": "84 min",
+   "duracion_min": 84
+  }
+ ],
+ "presentaciones": [
+  "festicine-antioquia-2026"
+ ]
+}

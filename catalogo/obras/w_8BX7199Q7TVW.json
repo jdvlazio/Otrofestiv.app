@@ -1,0 +1,43 @@
+{
+ "id": "w_8BX7199Q7TVW",
+ "titulo_original": "Nueve reinas",
+ "anio": 2000,
+ "paises": [
+  "AR"
+ ],
+ "directores": [
+  "Fabián Bielinsky"
+ ],
+ "aliases": [
+  {
+   "titulo": "Nine Queens",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Buenos Aires. Juan y Marcos son dos estafadores a punto de dar el golpe de sus vidas, el que puede convertirlos, al fin, en millonarios. Solo disponen de 24 horas, pero si lo planean todo al detalle, nada puede salir mal… o eso creen.",
+  "en": "Buenos Aires. Juan and Marcos are two con artists about to pull off the job of their lives, the one that could finally make them millionaires. They have only 24 hours, but if they plan every detail, nothing can go wrong… or so they think."
+ },
+ "generos": [
+  "Crimen"
+ ],
+ "afiche": {
+  "archivo": "/assets/festicine-antioquia-2026/nueve-reinas.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 18079,
+  "letterboxd": "nine-queens"
+ },
+ "versiones": [
+  {
+   "etiqueta": "114 min",
+   "duracion_min": 114
+  }
+ ],
+ "presentaciones": [
+  "festicine-antioquia-2026"
+ ]
+}

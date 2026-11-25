@@ -10,16 +10,22 @@
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1418533",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "tmdb:1418533",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
@@ -36,7 +42,19 @@
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "motivo": "versión corta (350), redactor y verificador distintos; festicine-antioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
   "fecha": "2026-11-24"
  }
 }

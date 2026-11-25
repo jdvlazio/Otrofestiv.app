@@ -1,12 +1,22 @@
 {
  "id": "w_P1KWCFG616WE",
- "titulo_original": "No te Despiertes",
+ "titulo_original": "No te despiertes",
  "anio": 2025,
  "paises": [
   "CO"
  ],
  "directores": [
-  "Hernán Velásquez"
+  "Hernán Velásquez Villa"
+ ],
+ "aliases": [
+  {
+   "titulo": "No Te Despiertes",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "No te Despiertes",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
   "es": "Sara está dibujando en casa. Cuando su padre llega del trabajo, empiezan a jugar, sin saber que su tranquilo ambiente familiar se verá inmerso en una situación en la que un juego y la inocencia de Sara serán de vital importancia.",
@@ -25,11 +35,17 @@
  },
  "versiones": [
   {
+   "etiqueta": "8 min",
+   "duracion_min": 8
+  },
+  {
    "etiqueta": "9 min",
    "duracion_min": 9
   }
  ],
  "presentaciones": [
-  "festicinerio-2026"
+  "festicine-antioquia-2026",
+  "festicinerio-2026",
+  "leviza-2026"
  ]
 }

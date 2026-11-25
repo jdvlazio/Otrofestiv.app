@@ -1,0 +1,44 @@
+{
+ "id": "w_8BX7AMYKRQAV",
+ "titulo_original": "Los tortuga",
+ "anio": 2024,
+ "paises": [
+  "ES",
+  "CL"
+ ],
+ "directores": [
+  "Belén Funes"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Exiles",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Anabel, de 18 años, vive con su madre, Delia, una taxista chilena emigrada hace veinte años al barrio de Collblanc, y estudia en Barcelona la carrera a la que tanto le costó entrar. Su futuro está a punto de cambiar: una carta les anunciará que deben dejar el piso de alquiler donde han vivido siempre porque un fondo buitre compró el edificio.",
+  "en": "Anabel, 18, lives with her mother, Delia, a Chilean taxi driver who emigrated to the Collblanc neighborhood twenty years ago, and is studying in Barcelona for the degree she worked so hard to get into. Her future is about to change: a letter will tell them they must leave the flat they have always rented because a vulture fund bought the building."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/festicine-antioquia-2026/los-tortuga.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 800090,
+  "letterboxd": "the-exiles-2024"
+ },
+ "versiones": [
+  {
+   "etiqueta": "110 min",
+   "duracion_min": 110
+  }
+ ],
+ "presentaciones": [
+  "festicine-antioquia-2026"
+ ]
+}

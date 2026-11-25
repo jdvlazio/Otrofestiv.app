@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:anibia-2026,anibia-2026,cineautopsia-2026,cinemancia-2026,ficci-65,ficci-65,ficfusa-2026,ficica-2026,mamut-2026,mamut-2026,midbo-2026,midbo-2026,miradas-2026,miradas-2026",
+  "fuente": "festival:anibia-2026,anibia-2026,cineautopsia-2026,cinemancia-2026,festicine-antioquia-2026,ficci-65,ficci-65,ficfusa-2026,ficica-2026,mamut-2026,mamut-2026,midbo-2026,midbo-2026,miradas-2026,miradas-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -16,12 +16,16 @@
   "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "tmdb:1668881",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
@@ -33,6 +37,24 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
   "fecha": "2026-11-24"
  }
 }

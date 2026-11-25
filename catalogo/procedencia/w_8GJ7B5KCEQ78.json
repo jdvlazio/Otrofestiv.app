@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:cineparalapaz-2026,funza-2026,guatape-2026,mambe-2026",
+  "fuente": "festival:cineparalapaz-2026,festicine-antioquia-2026,funza-2026,guatape-2026,mambe-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -10,21 +10,51 @@
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1265716",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "tmdb:1265716",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "el orden ya publicado (TMDB)",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  },
  "afiche": {
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "misma imagen en varios festivales: la copia más completa",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicine-antioquia-2026",
+  "fecha": "2026-11-24"
  }
 }

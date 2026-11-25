@@ -1,0 +1,43 @@
+{
+ "id": "w_8BX6WRW7DYD5",
+ "titulo_original": "Cría cuervos",
+ "anio": 1976,
+ "paises": [
+  "ES"
+ ],
+ "directores": [
+  "Carlos Saura"
+ ],
+ "aliases": [
+  {
+   "titulo": "Cria!",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Ana, una niña de ocho años que vive en Madrid con su abuela y sus dos hermanas, llora la muerte de su madre.",
+  "en": "Ana, an eight-year-old girl living in Madrid with her grandmother and two sisters, mourns the death of her mother."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/festicine-antioquia-2026/cria-cuervos.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 51857,
+  "letterboxd": "cria"
+ },
+ "versiones": [
+  {
+   "etiqueta": "110 min",
+   "duracion_min": 110
+  }
+ ],
+ "presentaciones": [
+  "festicine-antioquia-2026"
+ ]
+}

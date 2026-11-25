@@ -1,0 +1,44 @@
+{
+ "id": "w_8BX7CTV11W15",
+ "titulo_original": "Casa en llamas",
+ "anio": 2024,
+ "paises": [
+  "ES",
+  "IT"
+ ],
+ "directores": [
+  "Dani de la Orden"
+ ],
+ "aliases": [
+  {
+   "titulo": "A House on Fire",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Montse, divorciada y con dos hijos que hace tiempo que la ignoran, se prepara para una reunión familiar en su casa de la Costa Brava.",
+  "en": "Montse, divorced and with two children who have long ignored her, prepares for a family reunion at her home on the Costa Brava."
+ },
+ "generos": [
+  "Comedia"
+ ],
+ "afiche": {
+  "archivo": "/assets/festicine-antioquia-2026/casa-en-llamas.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1218193,
+  "letterboxd": "a-house-on-fire-2024"
+ },
+ "versiones": [
+  {
+   "etiqueta": "105 min",
+   "duracion_min": 105
+  }
+ ],
+ "presentaciones": [
+  "festicine-antioquia-2026"
+ ]
+}
