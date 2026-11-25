@@ -60,15 +60,24 @@ test('T38 — JSON del festival tiene films', async ({ page }) => {
 // hallazgo era una petición que sale, y eso es lo que hay que ver salir.
 test('T136 — un visitante sin sesión solo pide el consenso público, una vez y sin 401', async ({ page }) => {
   const aSupabase = [];
-  page.on('response', r => {
+  // En el orden en que SALEN: las respuestas pueden llegar al revés (20 nov 2026, la del
+  // festival por defecto llegó de última y la prueba cayó; la app descarta esa respuesta).
+  // Solo las de la carga en curso: enterFestival recarga, y una petición de la carga
+  // anterior (respondida o cancelada) no es una lectura repetida.
+  page.on('request', r => {
+    if (r.isNavigationRequest() && r.frame() === page.mainFrame()) { aSupabase.length = 0; return; }
     const u = r.url();
-    if (u.includes('supabase.co') && u.includes('/rest/')) {
-      aSupabase.push({ status: r.status(), tabla: u.includes('screening_reports') ? 'screening_reports' : u.slice(-40),
-        fest: (() => { try { return JSON.parse(r.request().postData() || '{}').p_festival; } catch (e) { return null; } })() });
+    if (r.method() !== 'OPTIONS' && u.includes('supabase.co') && u.includes('/rest/')) {
+      const x = { status: null, tabla: u.includes('screening_reports') ? 'screening_reports' : u.slice(-40),
+        fest: (() => { try { return JSON.parse(r.postData() || '{}').p_festival; } catch (e) { return null; } })() };
+      aSupabase.push(x);
+      const fuera = () => { const i = aSupabase.indexOf(x); if (i >= 0) aSupabase.splice(i, 1); };
+      r.response().then(res => { if (res) x.status = res.status(); else fuera(); }).catch(fuera);
     }
   });
   await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00', { consensoReal: true });
   await page.waitForTimeout(3000);
+  await expect.poll(() => aSupabase.length > 0 && aSupabase.every(x => x.status !== null), { timeout: 15000 }).toBe(true);
   const conSesion = await page.evaluate(() => !!(typeof _sbUser !== 'undefined' && _sbUser));
   expect(conSesion, 'el visitante del test no tiene sesión — es el caso del bug').toBe(false);
   // Regla nueva (migración 0006, 10 oct 2026): sin sesión SÍ se lee el consenso

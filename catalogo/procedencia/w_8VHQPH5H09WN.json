@@ -24,5 +24,11 @@
   "regla": "decisión",
   "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
   "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "La inglesa de TMDB corresponde a otra versión del guion (París, Yena coreana, sin deportación) y contradice a la española, al festival, Caretas y Cine Las Americas (deportada de París a Lima).",
+  "fecha": "2026-11-25"
  }
 }
