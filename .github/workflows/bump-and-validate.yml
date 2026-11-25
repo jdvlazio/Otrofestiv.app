@@ -38,6 +38,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # HEAD^1 = la base del PR, para saber qué toca
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -52,6 +54,18 @@ jobs:
         run: |
           pip3 install --quiet pillow
           python3 validate.py
+
+      # La web muestra lo de main aunque el festival no esté en el almacén: un festival
+      # nuevo pasa acá el mismo control que en publicar-datos.py. Lee el índice, que es
+      # público. Va en este job porque corre siempre, también en un PR de solo datos.
+      - name: Sello de función (primera publicación)
+        if: github.event_name == 'pull_request'
+        run: |
+          if git diff --name-only HEAD^1 HEAD -- festivals src/config.js | grep -q .; then
+            python3 pipeline/sello_funcion.py --ci
+          else
+            echo 'El PR no toca festivals/ ni la config'
+          fi
 
       - name: Unit tests dominio
         run: node --test tests/unit/*.test.js

@@ -16,11 +16,12 @@ def fest(*a, **k):
     return {'ticketing_model': 'mixed', 'films': list(a) or [dict(F, **k)], 'venues': {'Sala - Bogotá': {'short': 'Sala'}}}
 
 
-def indice(*ids, roto=False):
+def indice(*ids, roto=False, pub=None, roto_festival=False):
     def abrir(url, timeout=None):
-        if roto:
+        if roto or (roto_festival and 'indice.json' not in url):
             raise OSError('sin red')
-        return io.BytesIO(json.dumps({'festivales': {i: {'archivo': 'x'} for i in ids or ('otro',)}}).encode())
+        x = {'festivales': {i: {'archivo': f'festivales/{i}/x.json'} for i in ids or ('otro',)}} if 'indice.json' in url else pub or {'films': [F]}
+        return io.BytesIO(json.dumps(x).encode())
     return abrir
 
 
@@ -141,7 +142,7 @@ class Primera(Base):
         self.assertTrue(s.contradicciones(fest(sessions=[{'id': 'z', 'day': '2020-01-01'}]), [PAGO], HOY))
 
     def test_futura_no_se_esquiva(self):
-        for k in ({'hasta': '2020-01-01'}, {'day': '0000-00-00'}, {'day': 'TBD'}, {'day': None}, {'day': '2020-01-01', 'hasta': '2026-12-31', 'info': True}):
+        for k in ({'hasta': '2020-01-01'}, {'day': '0000-00-00'}, {'day': 'TBD'}, {'day': '2020-01-01', 'hasta': '2026-12-31', 'info': True}):
             self.assertTrue(s.futura(dict(F, **k), HOY), k)
         self.assertTrue(s.futura(s.explotar({'day': '2020-01-01', 'screenings': [{'date': '2026-12-01'}]})[0], HOY))
 
@@ -190,7 +191,7 @@ class Primera(Base):
     def test_pasadas_solo_en_la_primera(self):
         d = fest(F, dict(F, id='f_2', day='2026-11-01'))
         self.frena(d, 'f_2: sin sello')
-        self.assertEqual(self.control(d, FID), ([], []))
+        self.assertEqual(self.control(d, FID, pub=d), ([], []))
 
     def test_acceso_de_otro_festival(self):
         self.pon('acceso', [dict(LIBRE, nombre='otro-2025')])
@@ -239,7 +240,7 @@ class Primera(Base):
     def test_indice_ilegible_frena(self):
         for abrir in (indice(roto=True), lambda u, timeout=None: io.BytesIO(b'{}'), lambda u, timeout=None: io.BytesIO(b'{"festivales": {}}')):
             f, _ = s.control(FID, fest(), abrir, HOY, modelo=False)
-            self.assertTrue('índice' in f[0])
+            self.assertTrue('almacén' in f[0])
 
 
 class Publicado(Base):
@@ -248,6 +249,68 @@ class Publicado(Base):
         f, av = self.control(fest(time='20:00'), FID)
         self.assertEqual(f, [])
         self.assertTrue(len(av) >= 3)
+
+
+    def test_lo_publicado_ilegible_frena(self):
+        self.assertIn('almacén', self.control(fest(), FID, roto_festival=True)[0][0])
+        for pub in ([], {'films': 3}):
+            f, _ = s.control(FID, fest(), lambda u, timeout=None: io.BytesIO(json.dumps({'festivales': {FID: {'archivo': 'x'}}} if 'indice' in u else pub).encode()), HOY, modelo=False)
+            self.assertTrue(f)
+
+    def test_catalogo_sin_fechas(self):
+        cat = fest({'title': 'X', 'unscheduled': True}, {'title': 'Y', 'day': ''})
+        self.pon('acceso', [])
+        self.assertEqual(self.control(cat), ([], []))
+        self.assertTrue(self.control(fest(), FID, pub=cat)[0])      # con el programa, es la primera
+        os.remove(s._ruta(FID, 'fuentes'))
+        self.frena(cat, 'sin inventario')
+
+    def test_programa_grande_despues(self):
+        otras = [dict(F, id=f'f_{n}') for n in range(2, 5)]
+        self.assertTrue(self.control(fest(F, *otras), FID)[0])              # 3 nuevas de 4
+        f, av = self.control(fest(F, *otras), FID, pub=fest(F, otras[0]))   # 2 de 4: justo la mitad, pasa
+        self.assertTrue(f == [] and av)
+        pas = [dict(x, day='2026-11-01') for x in otras]                    # las pasadas no cuentan
+        self.assertEqual(self.control(fest(F, *pas), FID)[0], [])
+        self.assertEqual(self.control(fest(F, *pas), FID)[1], [])
+        f, av = self.control(fest(dict(F, time='20:00'), *pas), FID)
+        self.assertTrue(f == [] and av)
+
+
+class CI(Base):
+    def correr(self, d, *ids, config=None, **k):
+        os.makedirs(os.path.join(s.STAGING, 'festivals'), exist_ok=True)
+        with open(os.path.join(s.STAGING, 'festivals', FID + '.json'), 'w', encoding='utf-8') as fh:
+            json.dump(d, fh)
+        with mock.patch.object(s, 'REPO', s.STAGING):
+            return s.ci({'prueba2026': '2026-12-31T23:59:00', 'sinarchivo2026': ''} if config is None else config, indice(*ids, **k), HOY, modelo=False)
+
+    def test_festival_nuevo_sin_sello_rojo_y_sellado_verde(self):
+        self.assertEqual(self.correr(fest()), {})
+        self.pon('sellos-funcion', {})
+        self.assertEqual(list(self.correr(fest())), [FID])
+        self.assertEqual(list(self.correr(fest(), config={'prueba2026': '2026-01-01'})), [FID])    # fuera del índice, aunque diga que terminó
+        self.assertEqual(self.correr(fest(), config={}), {})       # oculto: no está en la lista
+
+    def test_cambio_de_hora_en_publicado_verde(self):
+        self.assertEqual(self.correr(fest(time='20:00'), FID), {})
+
+    def test_terminado_y_publicado_no_se_baja(self):
+        self.assertEqual(self.correr(fest(), FID, config={'prueba2026': '2026-11-23'}, roto_festival=True), {})
+
+    def test_sin_red_falla_claro(self):
+        self.assertIn('no se pudo leer el índice', self.correr(fest(), roto=True)['almacén'][0])
+        self.assertIn('no se pudo leer el almacén', self.correr(fest(), FID, roto_festival=True)[FID][0])
+
+    def test_el_paso_esta_puesto_sin_secretos(self):
+        with open(os.path.join(RAIZ, '.github', 'workflows', 'bump-and-validate.yml'), encoding='utf-8') as fh:
+            yml = fh.read()
+        paso = yml.split('- name: Sello de función')[1].split('- name:')[0]
+        self.assertIn("if: github.event_name == 'pull_request'", paso)
+        self.assertIn('sello_funcion.py --ci', paso)
+        self.assertIn('fetch-depth: 2', yml)
+        self.assertNotIn('${{', paso)
+        self.assertNotIn('secrets.', yml)
 
 
 class Sellar(Base):

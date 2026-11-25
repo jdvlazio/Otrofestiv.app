@@ -19,9 +19,11 @@ TRES CONTROLES (archivos en festivals/staging/, nunca en el JSON publicado):
      entrada más específica.
   3. <id>-fuentes.json existe y no tiene nada sin revisar (fuentes_descubrir.py).
 
-CUÁNDO FRENA: en la PRIMERA publicación (el festival no está en el índice del almacén),
-por cualquiera y todas las funciones. Ya publicado: solo avisa, de las futuras, y se sella después. Si el índice no se puede
-leer, frena. validate.py ([sello-funcion]) no usa red: frena solo un archivo inválido
+CUÁNDO FRENA: en la PRIMERA publicación (lo que hay en el almacén no tiene funciones con
+fecha), por cualquiera y todas las funciones; y cuando más de la mitad de las futuras son
+nuevas. Ya publicado: solo avisa, de las futuras, y se sella después. Un catálogo sin fechas no
+pide sello ni acceso. Si el almacén no se puede leer, frena. `--ci` corre lo mismo en todo PR
+que toque festivals/ o la config: la web muestra lo de main aunque no esté en el almacén. validate.py ([sello-funcion]) no usa red: frena solo un archivo inválido
 y avisa contradicciones y pendientes. Lo que esto NO prueba: quién leyó de verdad.
 
 ORDEN: alta-festival.py (su config entra en la huella) → acceso.json → ensamblar/publicar → --lote → otro agente lee → --sellar → ensayo.
@@ -29,12 +31,14 @@ ORDEN: alta-festival.py (su config entra en la huella) → acceso.json → ensam
     python3 pipeline/sello_funcion.py informe <id>
     python3 pipeline/sello_funcion.py --lote <id> <archivo>     # lo no sellado, para el lector
     python3 pipeline/sello_funcion.py --sellar <lote.json>      # sella lo que tenga veredicto «fiel»
+    python3 pipeline/sello_funcion.py --ci
 """
 import datetime
 import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 import urllib.request
@@ -42,7 +46,7 @@ import urllib.request
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 STAGING = os.path.join(REPO, 'festivals', 'staging')
-INDICE = 'https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/indice.json'
+ALMACEN = 'https://eytxrvbnwzxuedbmnnqr.supabase.co/storage/v1/object/public/datos/'
 
 ACCESO = ('is_free', 'requires_registration', 'registration_url', 'ticket_url', 'by_invitation',
           'online', 'stream_url', 'stream_platform', 'audience')
@@ -104,10 +108,12 @@ def explotar(f):
 
 
 def funciones(d):
-    """{clave estable: función}; las de `screenings`, con lo que heredan de su obra."""
+    """{clave estable: función con fecha}; las de `screenings`, con lo que heredan de su obra."""
     out = {}
     for f in d.get('films') or []:
         for g in explotar(f):
+            if not (g.get('day') or g.get('date')):
+                continue     # catálogo sin programa
             k = base = g.get('id') or '|'.join(str(g.get(c) or '') for c in ('title', 'day', 'date', 'time', 'venue', 'sala'))
             n = 2
             while k in out:
@@ -308,26 +314,61 @@ def revisar(fid, d, hoy=None, modelo=True, todas=True):
     return mal, pend
 
 
-def en_almacen(fid, abrir=urllib.request.urlopen):
-    """¿Ya está publicado? Lo dice el índice del almacén; si no se puede leer, revienta."""
-    with abrir(f'{INDICE}?m={int(time.time())}', timeout=30) as r:
+def indice(abrir=urllib.request.urlopen):
+    """Lo publicado, según el almacén; si no se puede leer, revienta."""
+    with abrir(f'{ALMACEN}indice.json?m={int(time.time())}', timeout=30) as r:
         fs = json.loads(r.read())['festivales']
     if not isinstance(fs, dict) or not fs:
         raise ValueError('índice vacío')
-    return bool((fs.get(fid) or {}).get('archivo'))
+    return fs
 
 
-def control(fid, d, abrir=urllib.request.urlopen, hoy=None, modelo=True):
-    """Para publicar-datos.py → (frenos, avisos)."""
+def publicadas(fid, fs, abrir=urllib.request.urlopen):
+    """Las funciones con fecha que el festival ya publicó ({} si ninguna)."""
+    if fid not in fs:
+        return {}
+    with abrir(ALMACEN + fs[fid]['archivo'], timeout=30) as r:
+        return funciones(json.loads(r.read()))
+
+
+def control(fid, d, abrir=urllib.request.urlopen, hoy=None, modelo=True, fs=None):
+    """Para publicar-datos.py y el CI → (frenos, avisos)."""
     try:
-        ya = en_almacen(fid, abrir)
+        antes = publicadas(fid, indice(abrir) if fs is None else fs, abrir)
     except Exception as e:
-        return [f'no se pudo leer el índice del almacén ({type(e).__name__}): no se sabe si {fid} ya está publicado'], []
+        return [f'no se pudo leer el almacén ({type(e).__name__}): no se sabe qué tiene publicado {fid}'], []
+    frena = not antes
     try:
-        mal, pend = revisar(fid, d, hoy, modelo, todas=not ya)
+        futuras = [k for k, f in funciones(d).items() if futura(f, hoy or _hoy())]
+        frena = frena or 2 * sum(k not in antes for k in futuras) > len(futuras)
+        mal, pend = revisar(fid, d, hoy, modelo, todas=not antes)
     except Exception as e:      # dato mal formado: frena la primera, nunca a un publicado
         mal, pend = [f'no se pudo revisar: {type(e).__name__} {e}'], []
-    return ([], mal + pend) if ya else (mal + pend, [])
+    return (mal + pend, []) if frena else ([], mal + pend)
+
+
+def ci(config=None, abrir=urllib.request.urlopen, hoy=None, modelo=True):
+    """Todo festival visible: {id: frenos}. Los ya terminados y publicados no se bajan."""
+    if config is None:
+        js = ("const m=await import(process.argv[1]);const o={};for(const[k,c]of Object.entries(m.FESTIVAL_CONFIG))"
+              "if(c.group!=='test')o[k]=c.festivalEndStr||'';process.stdout.write(JSON.stringify(o))")
+        config = json.loads(subprocess.run(['node', '--input-type=module', '-e', js, os.path.join(REPO, 'src', 'config.js')],
+                                           capture_output=True, text=True, check=True, timeout=60).stdout)
+    try:
+        fs = indice(abrir)
+    except Exception as e:
+        return {'almacén': [f'no se pudo leer el índice ({type(e).__name__}): vuelve a correr el paso']}
+    out = {}
+    for k, fin in sorted(config.items()):
+        fid = re.sub(r'-?(\d+)$', r'-\1', k)
+        p = os.path.join(REPO, 'festivals', f'{fid}.json')
+        if not os.path.exists(p) or fid in fs and fin and fin[:10] < (hoy or _hoy()):
+            continue
+        with open(p, encoding='utf-8') as fh:
+            frenos, _ = control(fid, json.load(fh), abrir, hoy, modelo, fs)
+        if frenos:
+            out[fid] = frenos
+    return out
 
 
 def lote(fid, d):
@@ -402,6 +443,11 @@ def main(a):
         lt = _leer(a[1], None) or sys.exit(f'✗ no existe {a[1]}')
         n, no = sellar(lt, _festival(lt['festival']))
         print(n, 'selladas ·', len(no), 'sin veredicto «fiel»', *no[:10])
+    elif a == ['--ci']:
+        mal = ci()
+        for fid, xs in mal.items():
+            print(f'✗ {fid}: {len(xs)} pendiente(s) antes de publicarse (pipeline/sello_funcion.py informe {fid})', *xs[:8], sep='\n   · ')
+        sys.exit(1 if mal else print('✓ ningún festival visible sale sin sello de función, acceso e inventario') or 0)
     else:
         sys.exit(__doc__)
 
