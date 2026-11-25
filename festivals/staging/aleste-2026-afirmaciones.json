@@ -459,6 +459,102 @@
     "fecha": "2026-11-24"
    },
    "evidencia": "tres caminos coinciden (vigía 24 nov): HTML de la ficha de la Cinemateca («Noviembre 29 7:00 PM Sala 3»), texto renderizado de la misma ficha y TuBoleta («Cinemateca de Bogotá - Centro Sala 3 | 29.11.2026 - 19:00 | Retorno antes de las 3PM», productId=10230639424954). La web del festival dice Sala 2; mismo criterio que el jueves 26 (Juan, 24 nov: manda la Cinemateca)"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "16:00"
+   },
+   "funcion": "f_2654209d6c",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313353",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4038?sede=11",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 25 nov) con ese link; TuBoleta, abierta el 25 nov, dice «Sala 2 | 26.11.2026 - 16:00 | Ciudadano Havel»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-26",
+    "hora": "19:30"
+   },
+   "funcion": "f_a89c9c3153",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313357",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 25 nov) con ese link; TuBoleta, abierta el 25 nov, dice «Sala 2 | 26.11.2026 - 19:30 | Ino Moxo: El sueño del brujo». La ficha y la app dicen Sala 3 (Juan, 24 nov: manda la Cinemateca); la sala no se toca"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-27",
+    "hora": "14:30"
+   },
+   "funcion": "f_f099f216fa",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313358",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4043?sede=11",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 25 nov) con ese link; TuBoleta, abierta el 25 nov, dice «Sala 3 | 27.11.2026 - 14:30 | Historias de una mentira»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-27",
+    "hora": "16:00"
+   },
+   "funcion": "f_3a6030b537",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313359",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4044?sede=11",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 25 nov) con ese link; TuBoleta, abierta el 25 nov, dice «Sala 2 | 27.11.2026 - 16:00 | Aquí en otros lugares»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-28",
+    "hora": "16:00"
+   },
+   "funcion": "f_e91111ec2d",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313366",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4081?sede=11",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 25 nov) con ese link; TuBoleta, abierta el 25 nov, dice «Sala 2 | 28.11.2026 - 16:00 | Nadie a la vista»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "19:00"
+   },
+   "funcion": "f_4c38bc5347",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230639424954",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4116?sede=11",
+    "fecha": "2026-11-25"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 25 nov) con ese link; TuBoleta, abierta el 25 nov, dice «Sala 3 | 29.11.2026 - 19:00 | Retorno antes de las 3PM»"
   }
  ]
 }

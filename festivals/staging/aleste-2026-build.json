@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-24",
+  "capturado": "2026-11-25",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "16 nov 2026: las secciones son las de la web oficial (alestfestival.com/programa2026), tal cual. Se retiran «Al Este en el MAMM / en la Cinemateca», que eran rótulos nuestros por sede. «Fokus: Las grietas en el muro» (lámina IG) pasa a «del muro», como dice la web, que es la fuente más nueva. Emojis y nombres en inglés: propuesta, a confirmar con Juan.",
@@ -1349,6 +1349,7 @@
    "_fid": "f_2654209d6c",
    "id": "f_2654209d6c",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313353",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1373,6 +1374,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-25",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4038?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1587,6 +1593,7 @@
    "_fid": "f_a89c9c3153",
    "id": "f_a89c9c3153",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313357",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1614,6 +1621,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-25",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1753,6 +1765,7 @@
    "_fid": "f_f099f216fa",
    "id": "f_f099f216fa",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313358",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1777,6 +1790,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-25",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4043?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -1829,6 +1847,7 @@
    "_fid": "f_3a6030b537",
    "id": "f_3a6030b537",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313359",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -1853,6 +1872,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-25",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4044?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2302,6 +2326,7 @@
      "lbSlug": "liminal-6",
      "tmdb_id": 1743116,
      "synopsis": "¿Qué permanece en un lugar cuando nos vamos? En una travesía por diversos espacios liminales, entendidos como lugares de tránsito, ambigüedad y espera silenciosa, se explora la relación de los seres humanos con los lugares que han habitado y habitan, así como las sensaciones, los recuerdos y las emociones que estos espacios despiertan en los distintos momentos de sus vidas.",
+     "synopsis_en": "What remains in a place when we leave? A journey through liminal spaces, places of transit, ambiguity and silent waiting, explores the relationship between human beings and the places they have lived in and live in, and the sensations, memories and emotions those places awaken.",
      "genre": "Documental",
      "year": 2026,
      "synopsis_lang": "es"
@@ -2339,6 +2364,7 @@
      "poster": "/assets/aleste-2026/las-piedras-del-rio.jpg",
      "posterSource": "oficial",
      "synopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+     "synopsis_en": "On the banks of the Magdalena River, Esther guides the spirits of the disappeared, victims of violence, as they try to rebuild their interrupted stories and find their place between life and death.",
      "genre": "Drama",
      "year": 2026,
      "synopsis_lang": "es"
@@ -2379,8 +2405,7 @@
      "lbSlug": "a-brighter-future",
      "tmdb_id": 1603950,
      "synopsis_en": "In a strange, dark place, a colourful group of young people project their future.",
-     "title_en": "A Brighter Future",
-     "genre": "Ficción"
+     "title_en": "A Brighter Future"
     }
    ],
    "_fid": "f_1cbb3fe13a",
@@ -2476,6 +2501,7 @@
    "_fid": "f_e91111ec2d",
    "id": "f_e91111ec2d",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313366",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -2500,6 +2526,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-25",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4081?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -2547,6 +2578,7 @@
    },
    "lbSlug": "todas-las-canciones-del-mundo",
    "tmdb_id": 1744092,
+   "synopsis_en": "A narrative or documentary journey into the collective and emotional memory that songs build in people’s lives. It weaves together different stories around the creation, loss or preservation of music, showing how melodies define historical, geographical and personal moments in Colombia.",
    "_fid": "f_1c1639d27e",
    "id": "f_1c1639d27e",
    "is_free": false,
@@ -3012,6 +3044,7 @@
      "lbSlug": "sol-de-niebla",
      "tmdb_id": 1791609,
      "synopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
+     "synopsis_en": "A fragmented vision of frailejones that juxtaposes close-ups of the plant, like a morphological study, with scientific illustrations, official representations and discourses about it. Shot on photosensitive film, it shows the plant as a territory inhabited by diverse forms of life.",
      "year": 2026,
      "synopsis_lang": "es"
     },
@@ -3028,6 +3061,7 @@
      "poster": "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg",
      "posterSource": "oficial",
      "synopsis": "Julia atraviesa un momento decisivo en su vida. Lo que debería traerle felicidad se ve alterado por recuerdos dolorosos y la presencia de la muerte. Ante una vida que insiste en abrirse paso, deberá afrontar sus miedos más profundos antes de cruzar un umbral que lo cambiará todo.",
+     "synopsis_en": "Julia is going through a decisive moment in her life. What should bring her happiness is disturbed by painful memories and the presence of death. Faced with a life that insists on making its way, she will have to confront her deepest fears before crossing a threshold that will change everything.",
      "genre": "Familia",
      "year": 2026,
      "synopsis_lang": "es"
@@ -3069,7 +3103,8 @@
      "poster": "/assets/aleste-2026/transversal30ff.jpg",
      "posterSource": "tmdb",
      "lbSlug": "transversal-30ff",
-     "tmdb_id": 1525925
+     "tmdb_id": 1525925,
+     "synopsis_en": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city."
     }
    ],
    "_fid": "f_cb55e388f2",
@@ -3410,6 +3445,7 @@
    "_fid": "f_4c38bc5347",
    "id": "f_4c38bc5347",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230639424954",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3435,6 +3471,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-25",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4116?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -3532,7 +3573,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T09:18:19",
+  "fecha": "2026-11-25T07:40:55",
   "plan_sha": "504f5daa1302f309",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
