@@ -12159,16 +12159,27 @@
   "work_id": "w_R4ENGEB7EKSY",
   "campo": "directores",
   "valor": [
-   "Hans Chispas"
+   "Juan Chispas"
   ],
-  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "motivo": "fichas con biografía de Cinemancia y BOGOSHORTS, Retina Latina y CINETORO dicen Juan; el afiche, CineAutopsia y TMDB dicen Hans: parece la misma persona; TMDB queda igual",
   "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "quien": "Juan, 24 nov 2026",
   "antes": {
+   "bogoshorts-2026": "Hans Chispas",
    "cineautopsia-2026": "Hans Chispas",
    "cinemancia-2026": "Hans Chispas",
    "cinetoro-2026": "Juan Chispas"
-  }
+  },
+  "anteriores": [
+   {
+    "valor": [
+     "Hans Chispas"
+    ],
+    "motivo": "un dato por obra: el valor del almacén (festival)",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)"
+   }
+  ]
  },
  {
   "work_id": "w_R4EP71550W43",
