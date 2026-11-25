@@ -3662,6 +3662,9 @@ check = 'peso-repo'
 try:
     import subprocess as _sp
     TOPE_MB = 3.0
+    # Las decisiones del catálogo son producto, no material, y crecen con cada
+    # festival (2,1 → 3,04 MB con BOGOSHORTS, 25 nov 2026): su tope es propio.
+    TOPE_PROPIO = {'catalogo/decisiones.json': 6.0}
     EXT_TRABAJO = ('.pdf', '.xlsx', '.xls', '.docx', '.doc', '.numbers', '.pages', '.key', '.psd', '.ai')
     _out = _sp.run(['git', 'ls-files', '-s'], capture_output=True, text=True).stdout
     _pesados, _ofim = [], []
@@ -3674,7 +3677,7 @@ try:
             _mb = os.path.getsize(_f) / 1024 / 1024
         except OSError:
             continue
-        if _mb > TOPE_MB:
+        if _mb > TOPE_PROPIO.get(_f, TOPE_MB):
             _pesados.append(f'{_f} ({_mb:.1f} MB)')
     _prob = []
     if _ofim:
