@@ -5597,6 +5597,12 @@
       "url": "https://medellinhorrorfest.com",
       "fecha": "2026-11-25",
       "resultado": "encontro"
+     },
+     {
+      "url": "https://medellinhorrorfest.com/actividades/",
+      "fecha": "2026-11-25",
+      "resultado": "nada",
+      "nota": "sin programa: \"Muy pronto más información\"; la portada dice 27 al 29 nov"
      }
     ],
     "anfitrion": [
@@ -5610,42 +5616,54 @@
      {
       "url": "https://www.instagram.com/medellinhorrorfest/",
       "fecha": "2026-11-25",
-      "resultado": "encontro"
+      "resultado": "ilegible",
+      "nota": "perfil con restricción de edad; Facebook tampoco se lee (vigía 25 nov)"
      }
     ],
     "sede": [
      {
-      "url": "",
+      "url": "https://plazamayor.com.co/en/event/comic-con-2026/",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "nada",
+      "nota": "solo fechas y horario general de Comic Con; nada del festival"
+     },
+     {
+      "url": "https://www.eticketablanca.com/venue/la-house-of-demons/",
+      "fecha": "2026-11-25",
+      "resultado": "nada",
+      "nota": "solo la dirección de House of Demons"
      }
     ],
     "boleteria": [
      {
-      "url": "",
+      "url": "https://medellin.comicconcolombia.com/es/boleteria",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "nada",
+      "nota": "boletas de Comic Con, nada propio del festival"
      }
     ],
     "prensa": [
      {
-      "url": "",
+      "url": "búsqueda: Medellín Horror Fest 2026 programación cortometrajes internacionales Comic Con",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "nada",
+      "nota": "sin horas"
      }
     ],
     "obras": [
      {
-      "url": "",
+      "url": "búsqueda: \"Medellín Horror Fest\" official selection 2026 short film screening",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "nada",
+      "nota": "ningún anuncio de realizadores"
      }
     ],
     "convocatoria": [
      {
-      "url": "",
+      "url": "https://filmmakers.festhome.com/en/festival/medellin-horror-fest",
       "fecha": "2026-11-25",
-      "resultado": "no_mirada"
+      "resultado": "encontro",
+      "nota": "27 al 30 nov; plan general: día 2 cortos nacionales, día 3 internacionales y premiación, sin hora"
      }
     ]
    }
