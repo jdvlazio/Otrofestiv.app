@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-24"
+  "capturado": "2026-11-25"
  },
  "_origen": "provinciadevelez-2026-catalogo.json",
  "obras": [
@@ -121,7 +121,7 @@
    "genero": "Aventura",
    "anio_tmdb": 2009,
    "duracion_tmdb": 87,
-   "pais_tmdb": "United States of America",
+   "pais_tmdb": "United States",
    "lbSlug": "fantastic-mr-fox",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 10315 «Fantastic Mr. Fox» (2009) de Wes Anderson: la web la presenta como «El fantástico Sr. Fox · Wes Anderson · stop motion» y la lámina del 18 nov pinta el afiche francés «Fantastic Mr. Fox · un film de Wes Anderson» (Amalric, Huppert). Título en español de la obra"
   },
@@ -135,7 +135,7 @@
    "genero": "Drama",
    "anio_tmdb": 1989,
    "duracion_tmdb": 100,
-   "pais_tmdb": "United States of America",
+   "pais_tmdb": "United States",
    "lbSlug": "my-name-is-bill-w",
    "_verificado": "el catálogo ya la tiene (w_7JCW8RFWEPCG, provinciadevelez-2026)",
    "work_id": "w_7JCW8RFWEPCG"
@@ -286,7 +286,7 @@
    "genero": "Aventura",
    "anio_tmdb": 2009,
    "duracion_tmdb": 87,
-   "pais_tmdb": "United States of America",
+   "pais_tmdb": "United States",
    "lbSlug": "fantastic-mr-fox",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 10315 «Fantastic Mr. Fox» (2009) de Wes Anderson: la web la presenta como «El fantástico Sr. Fox · Wes Anderson · stop motion» y la lámina del 18 nov pinta el afiche francés «Fantastic Mr. Fox · un film de Wes Anderson» (Amalric, Huppert). Título en español de la obra"
   },
@@ -299,7 +299,7 @@
    "genero": "Drama",
    "anio_tmdb": 1989,
    "duracion_tmdb": 100,
-   "pais_tmdb": "United States of America",
+   "pais_tmdb": "United States",
    "lbSlug": "my-name-is-bill-w",
    "_verificado": "el catálogo ya la tiene (w_7JCW8RFWEPCG, provinciadevelez-2026)",
    "work_id": "w_7JCW8RFWEPCG"

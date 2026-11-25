@@ -6174,6 +6174,8 @@
     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
     "date": "2026-11-13"
    },
+   "registration_url": "https://forms.gle/NFtXok4cQYVq8miV9",
+   "requires_registration": true,
    "description": "Como extensión de esta experiencia, la lectura dramatizada propone una adaptación escénica y audiovisual del manga. A través de viñetas interpretadas en vivo, piezas audiovisuales que dan vida a los personajes y breves secuencias de animación, Pato León Conejo, David Vargas y Gabriela Pedraza transportarán al público al universo inquietante de la Andrósfera. La experiencia contará, además, con música en vivo y un intermedio a cargo de Tragedia Travesti, que presentará un espectáculo de horror drag. De esta manera, la narrativa gráfica trasciende sus páginas para convertirse en una experiencia escénica que articula teatro, cine, performance y música.",
    "description_lang": "es",
    "_fid": "f_3587c9ac67",
@@ -6200,6 +6202,14 @@
      "tipo": "festival-pdf",
      "fecha": "2026-11-25",
      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -9414,7 +9424,7 @@
     },
     "time": {
      "tipo": "juan",
-     "fecha": "2026-11-25",
+     "fecha": "2026-10-17",
      "frase": "pongamos la más temprano, para que la gente no llegue tarde en caso tal"
     },
     "venue": {
@@ -22533,7 +22543,7 @@
     },
     "time": {
      "tipo": "juan",
-     "fecha": "2026-11-25",
+     "fecha": "2026-10-17",
      "frase": "pongamos la más temprano, para que la gente no llegue tarde en caso tal"
     },
     "venue": {
@@ -22645,7 +22655,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-25T06:22:41",
+  "fecha": "2026-11-25T10:02:53",
   "plan_sha": "c7ef5255110fedd6",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"

@@ -1,5 +1,5 @@
 {
- "_nota": "9.º Festival de Cine Provincia de Vélez (Barbosa, Santander, 1–6 dic 2026). PRE-ONBOARDING, SIN PUBLICAR. Fuente: festivaldecineprovinciadevelez.com (landing.js: 29 obras de la selección oficial, convocatoria Saravita; franja infantil; muestra central de Rodrigo Dimaté) + IG @9_festcineprovinciadevelez por Bright Data (láminas con día, hora y sede: 1, 2, 3, 4 y 5 dic; faltan las dos de la muestra central). Acceso: «¡Entrada libre a todos los escenarios!» (IG Df4hzKXkYiP, 18 nov). MONTADO 24 nov con las 6 funciones publicadas. Nombre, subtítulo y secciones: PROPUESTA para Juan. 30 NOV FUERA: la función del SENA de Vélez (IG Df-DlZyERf2) no se monta porque el afiche oficial dice «del 1 al 6 de diciembre» (Juan, 24 nov 2026, solo días oficiales). No volver a sumarla.",
+ "_nota": "9.º Festival de Cine Provincia de Vélez (Barbosa, Santander, 1–6 dic 2026). PRE-ONBOARDING, SIN PUBLICAR. Fuente: festivaldecineprovinciadevelez.com (landing.js: 29 obras de la selección oficial, convocatoria Saravita; franja infantil; muestra central de Rodrigo Dimaté) + IG @9_festcineprovinciadevelez por Bright Data (láminas con día, hora y sede: 1, 2, 3, 4 y 5 dic; faltan las dos de la muestra central). Acceso: «¡Entrada libre a todos los escenarios!» (IG Df4hzKXkYiP, 18 nov). MONTADO 24 nov con 6 funciones; la 7.ª (Parque Central Cite, 2 dic) el 25 nov, de Facebook. Nombre, subtítulo y secciones: PROPUESTA para Juan. 30 NOV FUERA: la función del SENA de Vélez (IG Df-DlZyERf2) no se monta porque el afiche oficial dice «del 1 al 6 de diciembre» (Juan, 24 nov 2026, solo días oficiales). No volver a sumarla.",
  "pasos": [
   {
    "cmd": "python3 pipeline/provinciadevelez-2026-catalogo.py",
@@ -11,7 +11,7 @@
   },
   {
    "cmd": "python3 pipeline/provinciadevelez-2026-crudo.py",
-   "que": "catálogo → crudo (6 funciones)"
+   "que": "catálogo → crudo (7 funciones)"
   },
   {
    "cmd": "python3 pipeline/enriquecer.py provinciadevelez-2026 --posters",
@@ -48,7 +48,7 @@
   "festivals/staging/provinciadevelez-2026-altas.json": "registro de altas (pipeline/altas.py)",
   "festivals/staging/provinciadevelez-2026-venues-geo.json": "sedes con pin de Google Maps",
   "festivals/staging/provinciadevelez-2026-afiches.json": "afiches recortados de las láminas",
-  "festivals/staging/provinciadevelez-2026-crudo.json": "las 6 funciones"
+  "festivals/staging/provinciadevelez-2026-crudo.json": "las 7 funciones"
  },
  "festival": {
   "crudo": "festivals/staging/provinciadevelez-2026-crudo.json",
@@ -87,6 +87,10 @@
    ],
    "Parque Emilio Ulloa": [
     "Parque Emilio Ulloa - Barbosa",
+    ""
+   ],
+   "Parque Central Cite": [
+    "Parque Central Cite - Barbosa",
     ""
    ],
    "Casa Taller Palo de Mango": [

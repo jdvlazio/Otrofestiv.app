@@ -9,7 +9,8 @@ from ocr import leer  # noqa: E402
 
 IG = f'{REPO}/fuentes/provinciadevelez-2026/ig'
 # lo que la lámina imprime distinto, y la segunda lámina de la misma función
-POSTS = {'DfxyKI-S9LA': ['DfxyKI-S9LA', 'DfzhWP2x_sy']}
+FB = 'pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul'
+POSTS = {FB: ['fb-1581240617371136'], 'DfxyKI-S9LA': ['DfxyKI-S9LA', 'DfzhWP2x_sy']}
 IMPRESO = {'El pescador (videoclip)': 'El pescador', 'El fantástico Sr. Fox': 'Fantastic Mr Fox'}
 A_OJO = {'Saint Juanito'}   # título dibujado en el afiche (lámina 01 de Df7ZYXrEaXh)
 

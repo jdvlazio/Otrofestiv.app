@@ -41,9 +41,10 @@ from lib import slug  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = f'{REPO}/festivals/staging/provinciadevelez-2026-catalogo.json'
-FECHA = '2026-11-24'
+FECHA = '2026-11-25'
 WEB = 'https://festivaldecineprovinciadevelez.com/'
 IG = 'https://www.instagram.com/p/'
+FB25 = 'https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul'
 SO = 'Selección oficial'   # web: «Selección oficial» / «Convocatoria Saravita para nuevos realizadores»
 
 # La función del 30 nov (SENA, Vélez; IG Df-DlZyERf2) NO se monta: el afiche oficial dice
@@ -67,6 +68,9 @@ F4 = ('2026-12-04', '19:00', 'La Tante Boutique',
       f'{IG}Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» '
       '(la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … '
       'La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»')
+F6 = ('2026-12-02', '18:00', 'Parque Central Cite',
+      f'{FB25} (4 láminas, 25 nov): «CONVOCATORIA SARAVITA DOCUMENTAL · PARQUE CENTRAL CITE · MIÉRCOLES 2 DE DICIEMBRE · '
+      'DESDE LAS 6:00 P.M.» pintado en cada una')
 F4_IMAG = ('2026-12-04', '18:00', 'La Tante Boutique', F4[3])
 
 # (id web, título, categoría web, director, país, año, lámina IG, función, _corrige)
@@ -81,7 +85,7 @@ SEL = [
      'lámina: «ESCUELA KINÉ PRESENTA · Un cortometraje de Sergio Fernández y Nicolás Duque»'),
     ('paisaje-niebla', 'Paisaje / Niebla', 'Cortometraje', 'Fabián Chávez', 'Colombia', None, 'DfcpGHfoWWI/09', F4,
      'lámina: «Un documental de Fabián Chávez · INPROFILMS · con el apoyo de IDARTES y LA SINFÓNICA DE BOGOTÁ»'),
-    ('pez-azul', 'Pez azul', 'Cortometraje', 'J. Joel Gómez G.', 'Colombia', None, 'DfcpGHfoWWI/08', None,
+    ('pez-azul', 'Pez azul', 'Cortometraje', 'J. Joel Gómez G.', 'Colombia', None, 'DfcpGHfoWWI/08', F6,
      'lámina: «UN CORTOMETRAJE DE JOEL GÓMEZ»; laureles de 2019'),
     ('salvemos-el-agua', 'Salvemos el agua', 'Cortometraje', None, 'Colombia', None, 'DfcpGHfoWWI/07', F3,
      'lámina: «Cortometraje realizado en el marco de un proceso de cine comunitario en Palomino, La Guajira» '
@@ -94,7 +98,7 @@ SEL = [
      'lámina: solo el título; sin créditos en ninguna fuente'),
     ('titua-y-oro', 'Titua y oro', 'Documental', 'Daniela Herrera', 'Colombia', None, 'DfcqutroV1z/14', None,
      'lámina: «DIRECTED BY DANIELA HERRERA · FESTIVAL CINE PALOMINO»'),
-    ('la-belleza', 'La Belleza', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/12', None,
+    ('la-belleza', 'La Belleza', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/12', F6,
      'lámina: «UN DOCUMENTAL DE NELSON SILVA»'),
     ('dialogo-tierra', 'Un diálogo para sanar la Tierra', 'Documental', None, 'Colombia', None, 'DfcqutroV1z/08', F5,
      'lámina: «(Incluye el visionado del documental Tanuzanamu: Principio del Equilibrio - Dir. Ati Gündiwa '
@@ -102,13 +106,13 @@ SEL = [
     ('uma-unjirinaka', 'Uma Uñjirinaka · Alto Milluni', 'Documental', 'Left Hand Rotation', 'Bolivia', None, 'DfcqutroV1z/07', F5,
      'lámina: «Una serie documental de Left Hand Rotation · UMA UÑJIRINAKA · Alto Milluni (CUIDADORXS DEL '
      'AGUA)»; la web escribe «Unjirinaka» (sin ñ)'),
-    ('nueve-jueves', 'Nueve jueves en Riachuelo', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/06', None,
+    ('nueve-jueves', 'Nueve jueves en Riachuelo', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/06', F6,
      'lámina: «DIRIGIDO POR NELSON SILVA · Producción Edson Velandia»'),
     ('ecos-canaveral', 'Ecos del cañaveral', 'Documental', 'Juan Sebastián Parra', 'Colombia', None, 'DfcqutroV1z/05', None,
      'web: «Juan Sebastián Parra»; lámina: «DIRECCIÓN JUAN SEBASTIÁN PARRA»'),
     ('guali', 'Gualí', 'Documental', None, 'Colombia', 2025, 'DfcpGHfoWWI/13', None,
      'lámina: «Una producción de Los Pinos Films · 2025»; sin director nombrado'),
-    ('oficios-fonce', 'Sinfonía incompleta de oficios del Fonce', 'Documental', 'Nelson Silva', 'Colombia', 2024, 'DfcpGHfoWWI/05', None,
+    ('oficios-fonce', 'Sinfonía incompleta de oficios del Fonce', 'Documental', 'Nelson Silva', 'Colombia', 2024, 'DfcpGHfoWWI/05', F6,
      'lámina: «DIRECTOR Y PRODUCTOR EJECUTIVO NELSON SILVA»; web: «Nelson Silva · 2024»'),
     ('tradicion-prohibicion', 'De la tradición a la prohibición', 'Documental', None, None, None, 'DfcpGHfoWWI/04', F2,
      'lámina: «Producción: Charles Films / Dirección General: Lente Andino Films» — productora, no persona'),
@@ -182,6 +186,8 @@ SINOPSIS = {
     'La Belleza': ('https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 12)', 'Un documental dedicado a La Belleza, Santander, en su '
         'quincuagésimo aniversario de vida jurídica: un municipio de paisajes increíbles y gente tenaz, ejemplo de '
         'progreso, paz y resiliencia en la provincia veleña.'),
+    'Sinfonía incompleta de oficios del Fonce': (FB25, 'En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven; las manos y los engranajes, el movimiento de las máquinas, los instrumentos musicales y su armonía.'),
+    'Pez azul': (FB25, 'Una niña emprende un viaje bastante conmovedor para sanar y para dejar ir. Su madre siempre la acompañará.'),
     'El dolor del vientre': (f'{IG}DgFiVrTEbh0/', 'Entre amores y tambores, una madre recuerda la partida de un hijo y las vivencias nostálgicas de su tambor.'),
     'El arte de inmortalizar mortales': ('https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 15)', 'Don Antonio: la memoria esculpida '
         'que da la bienvenida o el último adiós.'),
@@ -196,6 +202,10 @@ SINOPSIS = {
 
 # Sinopsis en inglés: traducción nuestra de la española publicada (24 nov 2026)
 SINOPSIS_EN = {
+    "Nueve jueves en Riachuelo": "Edson Velandia has nine Thursdays and a school's recesses to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
+    "Sinfonía incompleta de oficios del Fonce": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there; the hands and the gears, the movement of the machines, the musical instruments and their harmony.",
+    "Pez azul": "A girl sets out on a deeply moving journey to heal and to let go. Her mother will always be with her.",
+    "La Belleza": "A documentary devoted to La Belleza, Santander, on the fiftieth anniversary of its legal founding: a municipality of incredible landscapes and tenacious people, an example of progress, peace and resilience in the Vélez province.",
     "De la tradición a la prohibición": "A documentary exploring the evolution of sacred plants of power, from ancestral rituals to their stigmatization and prohibition. In a Latin American context, it questions the official narratives that have criminalized this knowledge and reveals processes of cultural dispossession and the rupture of collective memory.",
     "El arte de inmortalizar mortales": "Don Antonio: the sculpted memory that bids welcome or the last farewell.",
     "El dolor del vientre": "Amid loves and drums, a mother remembers a son's departure and the nostalgic moments lived with his drum.",

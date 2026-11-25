@@ -351,8 +351,6 @@ def main():
             f['acceso'] = 'Entrada libre (no se anuncia pago)'   # charlas al tablero: gratis con inscripción (acceso.json)
         elif e[2] == 'Cinemateca de Bogotá' and f.get('codigo'):
             f['acceso'] = 'Con boleta'       # sede que siempre cobra (funcion.py): CHI-ANCY y la VR (el ingreso gratis es beneficio de acreditados, pág. 5), sin enlace todavía
-        elif f['titulo'].startswith('Andrósfera'):
-            f['acceso'] = 'Con boleta'       # ninguna fuente dice entrada libre: hereda la sede (Alianza, sala con pago)
         if f.get('codigo') in progs:
             f['obras'] = progs[f['codigo']]
         # KORINCO: está en la lista de la sala (CHI-KIDS, 6 obras) y en el texto del catálogo
