@@ -84,6 +84,19 @@ def _correr(nombre, cmd, tiempo=TIEMPO, cwd=None):
     return r
 
 
+def _control_funciones(fest, contenido):
+    """0·b3. Sello de función, acceso con fuente e inventario cerrado: frenan la PRIMERA
+    publicación; a un festival que ya está en el almacén solo le avisan."""
+    sys.path.insert(0, os.path.join(REPO, 'pipeline'))
+    import sello_funcion
+    frenos, avisos = sello_funcion.control(fest, json.loads(contenido))
+    if avisos:
+        print(f'  ⚠ {len(avisos)} pendiente(s) de función en {fest} (no frena; después: sello_funcion.py informe {fest}): ' + ' · '.join(avisos[:3]))
+    if frenos:
+        _parar(f'primera publicación: {len(frenos)} pendiente(s) de función, acceso o inventario (sello_funcion.py informe {fest})',
+               f'✗ {fest} no se publica por primera vez así:\n  · ' + '\n  · '.join(frenos[:12]))
+
+
 def guardianes(fest, ruta, contenido):
     # 0. con qué correr los tests de navegador: sin esto el guardián d fallaba con
     #    un MODULE_NOT_FOUND enterrado en el stack (worktree nuevo, 19 oct 2026).
@@ -102,6 +115,7 @@ def guardianes(fest, ruta, contenido):
     _no = no_entra.revisar_festival(fest, json.loads(contenido).get('films', []))
     if _no:
         _parar('lo que no entra a la app', f'✗ esto no entra a la app ({fest}):\n  · ' + '\n  · '.join(_no))
+    _control_funciones(fest, contenido)
     # 0·c. el catálogo al día: es DERIVADO de todos los festivales. Si un cambio no
     #      lo re-arma, el próximo --escribir arrastra 30 archivos ajenos (FICCALI
     #      #1218/#1219, 21 oct 2026). Con la caché de TMDB no usa la red (~60 s)
@@ -422,6 +436,7 @@ def main():
         if os.environ.get('GITHUB_ACTIONS') != 'true' or os.environ.get('GITHUB_REF') != 'refs/heads/main':
             sys.exit('✗ --desde-main es solo para el job de GitHub sobre main')
         print('  · desde main: los guardianes ya corrieron en el PR')
+        _control_funciones(fest, contenido)
     else:
         guardianes(fest, ruta, contenido)
     # e. los afiches que nombra el JSON ya están en la web (en los dos modos: desde
