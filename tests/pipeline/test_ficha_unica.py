@@ -20,7 +20,7 @@ class FichaUnica(unittest.TestCase):
         decs = [{'work_id': 'w_1', 'campo': 'directores', 'valor': ['Radu Jude']}, {'work_id': 'w_1', 'campo': 'anio', 'valor': 2025},
                 {'work_id': 'w_1', 'campo': 'paises', 'valor': ['RO']}, {'work_id': 'w_1', 'campo': 'generos', 'valor': ['Drama']}]
         fu.aplicar(d, decs)
-        self.assertEqual(d['films'][0], {'title': 'X', 'work_id': 'w_1', 'duration': '20 min', 'director': 'Radu Jude', 'year': 2025, 'country': 'Rumania', 'flags': '🇷🇴'})
+        self.assertEqual(d['films'][0], {'title': 'X', 'work_id': 'w_1', 'duration': '20 min', 'director': 'Radu Jude', 'year': 2025, 'country': 'Rumania', 'flags': '🇷🇴', 'genre': 'Drama'})
         self.assertEqual(d['films'][1:], [{'title': 'Y', 'work_id': 'w_2', 'year': 2000}, {'title': 'T', 'type': 'event', 'work_id': 'w_1'}])
         self.assertEqual(fu.aplicar(d, decs), [])
 
