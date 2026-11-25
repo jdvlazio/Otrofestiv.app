@@ -2696,20 +2696,20 @@
   "verifica": "primera lectura"
  },
  "w_8GJ7B5KCEQ78": {
-  "contra": "https://radionacional.co/cultura/cine/pelicula-colombiana-horizonte-historia-y-sinopsis",
+  "contra": "https://radionacional.co/cultura/cine/pelicula-colombiana-horizonte-historia-y-sinopsis · https://www.themoviedb.org/movie/1265716",
   "fecha": "2026-11-25",
-  "huella": "6c30c77209af",
-  "redacta": "primera lectura",
+  "huella": "16e637a972e9",
+  "redacta": "agente segunda lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "segunda lectura"
+  "verifica": "Claude (sesión App)"
  },
  "w_8GJ7S9JR04H8": {
   "contra": "https://www.themoviedb.org/movie/1627217",
   "fecha": "2026-11-25",
-  "huella": "cdb8139f9bab",
-  "redacta": "festival",
+  "huella": "82c2cef47ba9",
+  "redacta": "agente verificador (migración)",
   "veredicto": "fiel",
-  "verifica": "primera lectura"
+  "verifica": "agente segunda lectura (migración)"
  },
  "w_8GJ8PFFG53AE": {
   "contra": "https://www.themoviedb.org/movie/1478001",
@@ -6398,6 +6398,14 @@
   "redacta": "montador festicineantioquia-2026",
   "veredicto": "fiel",
   "verifica": "sellador de obras (agente)"
+ },
+ "w_SK216DYMW3MS": {
+  "contra": "https://www.proimagenescolombia.com/secciones/cine_colombiano/peliculas_colombianas/pelicula_plantilla.php?id_pelicula=3157",
+  "fecha": "2026-11-25",
+  "huella": "d17f0698769d",
+  "redacta": "agente verificador (migración)",
+  "veredicto": "fiel",
+  "verifica": "agente segunda lectura (migración)"
  },
  "w_X28H1T7D9C4G": {
   "contra": "https://www.themoviedb.org/movie/1484934",
