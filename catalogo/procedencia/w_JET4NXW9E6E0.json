@@ -18,5 +18,17 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "La publicada es comentario sobre la película, no sinopsis; traducida del overview de TMDB.",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Erratas: \"who set to step down\", \"two last days left\", \"highly appointed\".",
+  "fecha": "2026-11-25"
  }
 }
