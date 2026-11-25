@@ -7382,8 +7382,8 @@ except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
 # ── [sello-funcion] la función, releída y con acceso citado (pipeline/sello_funcion.py) ──
-# Juan, 24 nov 2026 (BOGOSHORTS). Sin red: frena lo inválido o contradictorio y avisa
-# lo pendiente; la primera publicación la frena publicar-datos.py.
+# Juan, 24 nov 2026 (BOGOSHORTS). Sin red: frena un archivo inválido y avisa
+# contradicciones y pendientes (un cambio urgente gratis→pago no se traba); la primera publicación la frena publicar-datos.py.
 check = 'sello-funcion'
 try:
     import glob as _gsf, json as _jsf, os as _osf
@@ -7397,14 +7397,14 @@ try:
         _d = _jsf.load(open(_p, encoding='utf-8')) if _osf.path.exists(_p) else None
         if _d is None and _fid not in _con_sf:
             continue
-        _m, _q = _sf.revisar(_fid, _d)
+        _m, _q = _sf.revisar(_fid, _d, todas=False)
         _mal_sf += [f'{_fid}: {_x}' for _x in _m]
         if _q and _fid in _viv_sf:
-            _pend_sf.append(f'{_fid} {len(_q)}')
+            _pend_sf.append(f'{_fid} {len(_q)} (' + _q[0][:90] + ')')
     if _ciega_sf:
         fail(check, 'regla ciega: ' + ' · '.join(_ciega_sf))
     elif _mal_sf:
-        fail(check, f'{len(_mal_sf)} sello(s) o acceso(s) inválidos o contradictorios: ' + ' · '.join(_mal_sf[:5]))
+        fail(check, f'{len(_mal_sf)} sello(s) o acceso(s) inválidos: ' + ' · '.join(_mal_sf[:5]))
     elif _pend_sf:
         warn(check, 'funciones por sellar, acceso o inventario pendientes (sello_funcion.py informe <id>): ' + ', '.join(_pend_sf))
     else:

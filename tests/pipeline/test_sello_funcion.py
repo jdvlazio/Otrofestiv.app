@@ -8,7 +8,7 @@ import sello_funcion as s
 HOY, FID = '2026-11-24', 'prueba-2026'
 F = {'id': 'f_1', 'title': 'X', 'day': '2026-12-01', 'time': '19:00', 'venue': 'Sala - Bogotá', 'is_free': True, 'has_qa': False}
 PAGO = {'alcance': 'sede', 'nombre': 'Sala - Bogotá', 'nivel': 'declarado', 'acceso': 'pago', 'cita': 'Boleta $10.000', 'url': 'https://x/a.pdf'}
-LIBRE = {'alcance': 'festival', 'nombre': FID, 'nivel': 'sin-aviso', 'acceso': 'gratis', 'documentos_revisados': ['https://x/acreditaciones.pdf']}
+LIBRE = {'alcance': 'festival', 'nombre': FID, 'nivel': 'sin-aviso', 'acceso': 'gratis', 'documentos_revisados': ['https://x/a.pdf']}
 CERRADO = {'_provenance': {'capturado': '2026-11-24T08:00'}, 'raices': {'web': 'https://x', 'bio': 'https://y'}, 'items': {'https://x/a.pdf': {'estado': 'usada'}}}
 
 
@@ -79,7 +79,7 @@ class Primera(Base):
         for c in ('ticket_url', 'ticketing_model', 'acceso_por_defecto'):
             with self.subTest('festival ' + c):
                 self.assertTrue(s.faltan(dict(fest(), **{c: 'x'}), *s.sidecars(FID)))
-        for c in ('nivel', 'acceso', 'cita', 'url', 'documentos_revisados'):
+        for c in ('nivel', 'acceso', 'cita', 'url'):
             with self.subTest('entrada ' + c):
                 self.assertTrue(s.faltan(fest(), s.sidecars(FID)[0], [dict(LIBRE, **{c: 'x'})]))
 
@@ -129,6 +129,33 @@ class Primera(Base):
 
     def test_la_funcion_manda_sobre_la_sede(self):
         self.assertFalse(s.contradicciones(fest(), [PAGO, dict(PAGO, alcance='función', nombre='f_1', acceso='gratis')], HOY))
+
+    def test_pdf_de_acreditaciones_descartado_sin_leer(self):   # el caso real de BOGOSHORTS
+        u = 'https://info.bogoshorts.com/24BSFF_acreditaciones2026.pdf'
+        self.pon('fuentes', dict(CERRADO, items={**CERRADO['items'], u: {'tipo': 'pdf', 'estado': 'descartada', '_por_que': 'bases de acreditación, sin programación'}}))
+        self.frena(fest(), '«sin-aviso» sin leer ' + u)
+        self.pon('acceso', [dict(LIBRE, documentos_revisados=['https://x/a.pdf', u])])
+        self.assertEqual(self.control(fest()), ([], []))
+
+    def test_sala(self):
+        sala = dict(PAGO, alcance='sala', sala='1')
+        d = fest(dict(F, sala='1'), dict(F, id='f_2', sala='2'))
+        c = s.contradicciones(d, [LIBRE, sala], HOY)
+        self.assertEqual(len(c), 1); self.assertIn('f_1', c[0])
+        self.assertEqual(s.sin_cubrir(d, [LIBRE, sala], HOY), [])
+        self.assertTrue(s.sin_cubrir(d, [LIBRE, dict(sala, sala='9')], HOY))
+        self.assertTrue(s.contradicciones(d, [dict(PAGO, acceso='gratis'), sala], HOY))     # la sala manda sobre la sede
+        self.assertTrue(s.invalidas([dict(sala, sala='')]) and s.invalidas([dict(PAGO, sala='1')]))
+
+    def test_contradiccion_no_es_archivo_invalido(self):    # en validate.py solo avisa
+        self.pon('acceso', [LIBRE, PAGO])
+        mal, pend = s.revisar(FID, fest(), HOY, modelo=False)
+        self.assertEqual(mal, []); self.assertIn('publica gratis', pend[0])
+
+    def test_pasadas_solo_en_la_primera(self):
+        d = fest(F, dict(F, id='f_2', day='2026-11-01'))
+        self.frena(d, 'f_2: sin sello')
+        self.assertEqual(self.control(d, FID), ([], []))
 
     def test_nombre_que_no_existe(self):
         self.pon('acceso', [LIBRE, dict(PAGO, nombre='Salla')])

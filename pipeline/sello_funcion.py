@@ -10,20 +10,21 @@ TRES CONTROLES (archivos en festivals/staging/, nunca en el JSON publicado):
   1. <id>-sellos-funcion.json  {clave: {huella, monta, verifica (distinto), contra, fecha}}.
      La huella es lo publicado de la función MÁS lo que hereda (acceso y enlace de su
      sede, del festival y de la entrada de acceso que la cubre). Cambia algo → se vuelve a leer.
-  2. <id>-acceso.json  [{alcance: función|sede|festival, nombre, nivel, acceso, cita, url,
-     documentos_revisados}]. `nombre`: la clave de la función, la sede exacta o el id del
-     festival. `acceso`: gratis, pago, inscripción, invitación (uno o lista). «declarado»
-     exige cita y url; «sin-aviso» solo puede ser gratis y exige documentos_revisados e
-     inventario cerrado. Toda función futura cubierta, y lo publicado no contradice la
+  2. <id>-acceso.json  [{alcance: función|sala|sede|festival, nombre, sala, nivel, acceso, cita, url,
+     documentos_revisados}]. `nombre`: la clave de la función, la sede exacta (con «sala»,
+     además `sala`) o el id del festival. `acceso`: gratis, pago, inscripción, invitación (uno o lista). «declarado»
+     exige cita y url; «sin-aviso» solo puede ser gratis y exige inventario cerrado y,
+     en documentos_revisados, la URL de TODO lo inventariado, también lo `descartada`: el PDF
+     de acreditaciones de BOGOSHORTS se descartó «sin programación» y ahí estaba el pago. Toda función futura cubierta, y lo publicado no contradice la
      entrada más específica.
   3. <id>-fuentes.json existe y no tiene nada sin revisar (fuentes_descubrir.py).
 
 CUÁNDO FRENA: en la PRIMERA publicación (el festival no está en el índice del almacén),
-por cualquiera. Ya publicado: solo avisa, y se sella después. Si el índice no se puede
-leer, frena. validate.py ([sello-funcion]) no usa red: frena solo lo inválido o
-contradictorio. Lo que esto NO prueba: quién leyó de verdad.
+por cualquiera y todas las funciones. Ya publicado: solo avisa, de las futuras, y se sella después. Si el índice no se puede
+leer, frena. validate.py ([sello-funcion]) no usa red: frena solo un archivo inválido
+y avisa contradicciones y pendientes. Lo que esto NO prueba: quién leyó de verdad.
 
-ORDEN: acceso.json → ensamblar/publicar → --lote → otro agente lee → --sellar → ensayo.
+ORDEN: alta-festival.py (su config entra en la huella) → acceso.json → ensamblar/publicar → --lote → otro agente lee → --sellar → ensayo.
 
     python3 pipeline/sello_funcion.py informe <id>
     python3 pipeline/sello_funcion.py --lote <id> <archivo>     # lo no sellado, para el lector
@@ -113,7 +114,7 @@ def invalidas(acceso):
             continue
         n = f'{e.get("alcance")} «{e.get("nombre")}»'
         a = formas(e)
-        if e.get('alcance') not in ('función', 'sede', 'festival') or not _t(e.get('nombre')):
+        if e.get('alcance') not in ('función', 'sala', 'sede', 'festival') or not _t(e.get('nombre')) or (e.get('alcance') == 'sala') != bool(_t(e.get('sala'))):
             mal.append(f'{n}: alcance o nombre inválido')
         if not a or a - set(FORMAS) or {'gratis', 'pago'} <= a:
             mal.append(f'{n}: acceso inválido ({e.get("acceso")})')
@@ -122,23 +123,24 @@ def invalidas(acceso):
                 mal.append(f'{n}: «declarado» sin cita o sin url')
         elif e.get('nivel') == 'sin-aviso':
             docs = e.get('documentos_revisados')
-            if not isinstance(docs, list) or not docs or not all(_t(x) for x in docs):
-                mal.append(f'{n}: «sin-aviso» sin documentos revisados')
+            if not isinstance(docs, list) or not docs or not all(_t(x).startswith(('https://', 'http://')) for x in docs):
+                mal.append(f'{n}: «sin-aviso» sin documentos revisados (URL)')
             if a != {'gratis'}:
                 mal.append(f'{n}: «sin-aviso» solo puede ser gratis')
         else:
             mal.append(f'{n}: nivel inválido ({e.get("nivel")})')
-        if (e.get('alcance'), e.get('nombre')) in vistos:
+        clave = (e.get('alcance'), str(e.get('nombre')), str(e.get('sala') or ''))
+        if clave in vistos:
             mal.append(f'{n}: repetida')
-        vistos.add((e.get('alcance'), e.get('nombre')))
+        vistos.add(clave)
     return mal
 
 
 def entrada_de(clave, f, acceso):
-    """La entrada más específica que cubre la función: función › sede › festival."""
-    for alcance, nombre in (('función', clave), ('sede', f.get('venue')), ('festival', None)):
+    """La entrada más específica que cubre la función: función › sala › sede › festival."""
+    for alcance, nombre in (('función', clave), ('sala', f.get('venue')), ('sede', f.get('venue')), ('festival', None)):
         for e in acceso:
-            if e.get('alcance') == alcance and (nombre is None or e.get('nombre') == nombre):
+            if e.get('alcance') == alcance and (nombre is None or e.get('nombre') == nombre) and (alcance != 'sala' or e.get('sala') == f.get('sala')):
                 return e
     return None
 
@@ -148,7 +150,7 @@ def heredado(clave, f, d, acceso):
     e = entrada_de(clave, f, acceso) or {}
     return {'sede': {k: sede[k] for k in ACCESO if k in sede},
             'festival': {k: d[k] for k in DEL_FESTIVAL if d.get(k) is not None},
-            'entrada': {k: e[k] for k in ('nivel', 'acceso', 'cita', 'url', 'documentos_revisados') if k in e}}
+            'entrada': {k: e[k] for k in ('nivel', 'acceso', 'cita', 'url') if k in e}}
 
 
 def publicado(f, d):
@@ -184,9 +186,9 @@ def sin_cubrir(d, acceso, hoy=None):
     fs = funciones(d)
     out = [f'«{f.get("title")}» {k}: sin acceso con fuente' for k, f in fs.items() if futura(f, hoy or _hoy()) and not entrada_de(k, f, acceso)]
     # un nombre mal escrito no cubre nada y la función cae a la regla general
-    hay = {'función': set(fs), 'sede': {f.get('venue') for f in fs.values()}}
+    hay = {('función', k, None) for k in fs} | {(a, f.get('venue'), f.get('sala') if a == 'sala' else None) for f in fs.values() for a in ('sala', 'sede')}
     return out + [f'{e["alcance"]} «{e["nombre"]}»: no existe en el programa' for e in acceso
-                  if e.get('alcance') in hay and e.get('nombre') not in hay[e['alcance']]]
+                  if e.get('alcance') != 'festival' and (e.get('alcance'), e.get('nombre'), e.get('sala') if e.get('alcance') == 'sala' else None) not in hay]
 
 
 # ── 3. inventario ───────────────────────────────────────────────────────────
@@ -200,6 +202,15 @@ def inventario(fid):
         return ['inventario sin recorrer']
     raros = [u for u, i in (d.get('items') or {}).items() if i.get('estado') not in ('usada', 'descartada', 'sin-revisar')]
     return fuentes_descubrir.problemas(d) + [f'estado desconocido: {u}' for u in raros]
+
+
+def sin_leer(fid, acceso):
+    """Lo inventariado (usado o descartado) que una entrada «sin-aviso» no dice haber leído:
+    cualquiera de esos documentos puede decir que se paga."""
+    import fuentes_descubrir as fd
+    items = {fd.normal(u) for u in _leer(_ruta(fid, 'fuentes'), {}).get('items') or {}}
+    return [f'{e["alcance"]} «{e["nombre"]}»: «sin-aviso» sin leer {u}' for e in acceso if e['nivel'] == 'sin-aviso'
+            for u in sorted(items - {fd.normal(x) for x in e['documentos_revisados']})]
 
 
 # ── 1. sellos ───────────────────────────────────────────────────────────────
@@ -235,8 +246,8 @@ def sidecars(fid):
     return _leer(_ruta(fid, 'sellos-funcion'), {}), _leer(_ruta(fid, 'acceso'), [])
 
 
-def revisar(fid, d, hoy=None, modelo=True):
-    """→ (inválido o contradictorio, pendiente). Sin red."""
+def revisar(fid, d, hoy=None, modelo=True, todas=True):
+    """→ (archivo inválido, contradictorio o pendiente). Sin red. `todas`: sellos también de lo pasado."""
     sellos, acceso = sidecars(fid)
     mal = invalidas(acceso)
     if mal or not isinstance(sellos, dict):
@@ -246,10 +257,11 @@ def revisar(fid, d, hoy=None, modelo=True):
         return mal, []
     d = con_modelo(fid, d) if modelo else d
     inv = inventario(fid)
-    pend = [f'«{f.get("title")}» {k}: {q}' for k, f, q in faltan(d, sellos, acceso)] + sin_cubrir(d, acceso, hoy) + inv
+    pend = [f'«{f.get("title")}» {k}: {q}' for k, f, q in faltan(d, sellos, acceso) if todas or futura(f, hoy or _hoy())]
+    pend = contradicciones(d, acceso, hoy) + pend + sin_cubrir(d, acceso, hoy) + inv + sin_leer(fid, acceso)
     if inv and any(e['nivel'] == 'sin-aviso' for e in acceso):
         pend.append('acceso «sin-aviso» con el inventario abierto')
-    return mal + contradicciones(d, acceso, hoy), pend
+    return mal, pend
 
 
 def en_almacen(fid, abrir=urllib.request.urlopen):
@@ -267,7 +279,7 @@ def control(fid, d, abrir=urllib.request.urlopen, hoy=None, modelo=True):
         ya = en_almacen(fid, abrir)
     except Exception as e:
         return [f'no se pudo leer el índice del almacén ({type(e).__name__}): no se sabe si {fid} ya está publicado'], []
-    mal, pend = revisar(fid, d, hoy, modelo)
+    mal, pend = revisar(fid, d, hoy, modelo, todas=not ya)
     return ([], mal + pend) if ya else (mal + pend, [])
 
 
