@@ -1,0 +1,130 @@
+[
+ {
+  "work_id": "w_9SSQYTHENZGT",
+  "campo": "directores",
+  "valor": [
+   "Benjamin Morehead"
+  ],
+  "motivo": "TMDB",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Benjamín Morehead"
+  },
+  "anteriores": [
+   {
+    "valor": [
+     "Benjamín Morehead"
+    ],
+    "motivo": "alta desde medellinhorror-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude"
+   }
+  ]
+ },
+ {
+  "work_id": "w_9SSQYTHENZGT",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_9SSQYTHENZGT",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_9SSQYTHENZGT",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_9SSQYTHENZGT",
+  "campo": "sinopsis.es",
+  "valor": "Una mujer busca vengarse del hombre que le hizo daño, con la ayuda de una muñeca maldita…",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Una mujer busca vengarse del hombre que le hizo daño, con la ayuda de una muñeca maldita…"
+  }
+ },
+ {
+  "work_id": "w_9SSQYTHENZGT",
+  "campo": "sinopsis.en",
+  "valor": "A woman seeks revenge on the man who wronged her, with the help of a cursed doll...",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "A woman seeks revenge on the man who wronged her, with the help of a cursed doll..."
+  }
+ },
+ {
+  "work_id": "w_9SSQYTHENZGT",
+  "campo": "xref.tmdb",
+  "valor": 1558184,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "1558184"
+  }
+ },
+ {
+  "work_id": "w_9SSQYTHENZGT",
+  "campo": "xref.letterboxd",
+  "valor": "bugaboo-2025",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "bugaboo-2025"
+  }
+ },
+ {
+  "work_id": "w_9SSQYTHENZGT",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/bugaboo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/bugaboo.jpg"
+  }
+ }
+]

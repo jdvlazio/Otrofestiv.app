@@ -1,13 +1,13 @@
 {
  "id": "w_ZR5EJJ44H4RP",
  "titulo_original": "Yatsi y el Espíritu del Río",
- "anio": 2024,
+ "anio": 2025,
  "paises": [
   "PE"
  ],
  "directores": [
-  "Rous Condori Arango",
-  "Valeria Salinas"
+  "Valeria Salinas Yábar",
+  "Rous Condori Arango"
  ],
  "aliases": [
   {
@@ -25,7 +25,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bhff-2026/yatsi-y-el-espiritu-del-rio.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1321232,

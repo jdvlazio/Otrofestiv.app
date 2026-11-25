@@ -1,0 +1,96 @@
+[
+ {
+  "work_id": "w_9SSS1PQVEJ3V",
+  "campo": "directores",
+  "valor": [
+   "Christian Stahlhofen"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Christian Stahlhofen"
+  }
+ },
+ {
+  "work_id": "w_9SSS1PQVEJ3V",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_9SSS1PQVEJ3V",
+  "campo": "paises",
+  "valor": [
+   "SE"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Suecia"
+  }
+ },
+ {
+  "work_id": "w_9SSS1PQVEJ3V",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_9SSS1PQVEJ3V",
+  "campo": "sinopsis.es",
+  "valor": "Un vigilante nocturno se sobresalta cuando su pantalla de seguridad detecta un movimiento. Su investigación lo lleva a un encuentro inquietante.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Un vigilante nocturno se sobresalta cuando su pantalla de seguridad detecta un movimiento. Su investigación lo lleva a un encuentro inquietante."
+  }
+ },
+ {
+  "work_id": "w_9SSS1PQVEJ3V",
+  "campo": "sinopsis.en",
+  "valor": "A night watchman is startled by a detected motion on his security screen. His investigation leads to an eerie encounter.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "A night watchman is startled by a detected motion on his security screen. His investigation leads to an eerie encounter."
+  }
+ },
+ {
+  "work_id": "w_9SSS1PQVEJ3V",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/borrowed-light.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/borrowed-light.jpg"
+  }
+ }
+]

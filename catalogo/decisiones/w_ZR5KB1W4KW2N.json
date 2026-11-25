@@ -1,0 +1,61 @@
+[
+ {
+  "work_id": "w_ZR5KB1W4KW2N",
+  "campo": "directores",
+  "valor": [
+   "Katerine Franco Garzón"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Katerine Franco Garzón",
+   "cortoscali-2026": "Katerine Franco Garzón"
+  }
+ },
+ {
+  "work_id": "w_ZR5KB1W4KW2N",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025",
+   "cortoscali-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5KB1W4KW2N",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "cortoscali-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5KB1W4KW2N",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/el-festin-de-las-moscas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/el-festin-de-las-moscas.jpg",
+   "cortoscali-2026": "/assets/bhff-2026/el-festin-de-las-moscas.jpg"
+  }
+ }
+]

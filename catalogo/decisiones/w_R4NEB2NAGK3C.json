@@ -17,5 +17,63 @@
    "bhff-2026": "/assets/bhff-2026/bajo-el-mismo-techo.jpg",
    "siembrafest-2026": "/assets/siembrafest/bajo-el-mismo-techo.jpg"
   }
+ },
+ {
+  "work_id": "w_R4NEB2NAGK3C",
+  "campo": "directores",
+  "valor": [
+   "Sophia Cadavid"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Sophia Cadavid",
+   "siembrafest-2026": "Sophia Cadavid"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2NAGK3C",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026",
+   "siembrafest-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2NAGK3C",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2NAGK3C",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Suspenso",
+   "siembrafest-2026": "Suspenso"
+  }
  }
 ]

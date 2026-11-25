@@ -25,5 +25,36 @@
    "bhff-2026": 2025,
    "fantasmagoria-2026": 2026
   }
+ },
+ {
+  "work_id": "w_R4GBJ7G60X1C",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "fantasmagoria-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4GBJ7G60X1C",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/vientre.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/vientre.jpg",
+   "fantasmagoria-2026": "/assets/bhff-2026/vientre.jpg"
+  }
  }
 ]

@@ -2151,6 +2151,14 @@
   "veredicto": "fiel",
   "verifica": "Onboarding"
  },
+ "w_6XS3AQYJD1FJ": {
+  "contra": "https://www.themoviedb.org/movie/1559987",
+  "fecha": "2026-11-25",
+  "huella": "a2073dee927b",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
  "w_6XS3BRDR0PG5": {
   "contra": "fuentes/miradas-2026/web/programacion-2026.txt",
   "fecha": "2026-11-25",
@@ -2720,12 +2728,12 @@
   "verifica": "primera lectura"
  },
  "w_8GJ9QKEV5RQC": {
-  "contra": "fuentes/villadelcine-2026/obras/sierra-el-album-mortuorio.html",
+  "contra": "https://www.themoviedb.org/movie/1789536",
   "fecha": "2026-11-25",
-  "huella": "8d185cd0be21",
-  "redacta": "festival",
+  "huella": "aa0d21cb33b3",
+  "redacta": "Claude (sesión onboarding)",
   "veredicto": "fiel",
-  "verifica": "primera lectura"
+  "verifica": "Claude (verificador acbdb802)"
  },
  "w_8VHN5NVVYV59": {
   "contra": "fuentes/aleste-2026/programa/cenizas-y-diamantes.html",
@@ -2790,6 +2798,94 @@
   "redacta": "Claude",
   "veredicto": "fiel",
   "verifica": "Claude (agente verificador)"
+ },
+ "w_9SSNH3J93F7H": {
+  "contra": "https://www.themoviedb.org/movie/1807136",
+  "fecha": "2026-11-25",
+  "huella": "80bcdd7c6bd6",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_9SSP0S7KT21W": {
+  "contra": "https://www.themoviedb.org/movie/1285208",
+  "fecha": "2026-11-25",
+  "huella": "807309ec2dd8",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_9SSPHV0AJVM3": {
+  "contra": "https://frightnights.eu/programm-2026/familier-familiar/",
+  "fecha": "2026-11-25",
+  "huella": "b12593e18a2e",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_9SSPJ6ESYZYE": {
+  "contra": "https://www.themoviedb.org/movie/1652309",
+  "fecha": "2026-11-25",
+  "huella": "244a6a52a5b7",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_9SSQ7877S0FV": {
+  "contra": "https://www.themoviedb.org/movie/1527240",
+  "fecha": "2026-11-25",
+  "huella": "fb94974075eb",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_9SSQHQVVM3W7": {
+  "contra": "https://filmfreeway.com/TENEBRIOS",
+  "fecha": "2026-11-25",
+  "huella": "564fa57e8421",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_9SSQJ24D62S8": {
+  "contra": "https://www.themoviedb.org/movie/1522505",
+  "fecha": "2026-11-25",
+  "huella": "26c15451f225",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_9SSQYTHENZGT": {
+  "contra": "https://www.themoviedb.org/movie/1558184",
+  "fecha": "2026-11-25",
+  "huella": "426f23f969dc",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_9SSRBSG8Q6M0": {
+  "contra": "https://www.themoviedb.org/movie/1533699",
+  "fecha": "2026-11-25",
+  "huella": "d4a5e3c4ea75",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_9SSRR9SNXWRP": {
+  "contra": "https://www.themoviedb.org/movie/1554064",
+  "fecha": "2026-11-25",
+  "huella": "c45041bedf17",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_9SSS1PQVEJ3V": {
+  "contra": "https://clawcleaverflicks.com/borrowed-light",
+  "fecha": "2026-11-25",
+  "huella": "9048a550c402",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
  },
  "w_B2TQJ9FSGSGK": {
   "contra": "https://www.themoviedb.org/movie/1399696",
@@ -4000,12 +4096,12 @@
   "verifica": "primera lectura"
  },
  "w_R4GTPWHY6Q7K": {
-  "contra": "fuentes/anibia-2026/fichas/3627.html",
+  "contra": "https://www.themoviedb.org/movie/1534530",
   "fecha": "2026-11-25",
-  "huella": "d40f30a1f082",
-  "redacta": "primera lectura",
+  "huella": "8571845de9d4",
+  "redacta": "Claude (sesión onboarding)",
   "veredicto": "fiel",
-  "verifica": "segunda lectura"
+  "verifica": "Claude (verificador acbdb802)"
  },
  "w_R4GTPYZRA4KK": {
   "contra": "https://www.themoviedb.org/movie/1633334",
@@ -6790,5 +6886,21 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "primera lectura"
+ },
+ "w_ZR5JWV8RRX0V": {
+  "contra": "https://www.themoviedb.org/movie/1567192",
+  "fecha": "2026-11-25",
+  "huella": "8d09c1b3c083",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
+ },
+ "w_ZR5KQY7KFG0J": {
+  "contra": "https://www.themoviedb.org/movie/1753034",
+  "fecha": "2026-11-25",
+  "huella": "415545814390",
+  "redacta": "Claude (sesión onboarding)",
+  "veredicto": "fiel",
+  "verifica": "Claude (verificador acbdb802)"
  }
 }

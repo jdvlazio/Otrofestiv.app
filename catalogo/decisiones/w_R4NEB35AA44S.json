@@ -31,5 +31,99 @@
    "bhff-2026": "Terror",
    "siembrafest-2026": "Ficción"
   }
+ },
+ {
+  "work_id": "w_R4NEB35AA44S",
+  "campo": "directores",
+  "valor": [
+   "Nicolás O. Segura"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Nicolás O. Segura",
+   "siembrafest-2026": "Nicolás O. Segura"
+  }
+ },
+ {
+  "work_id": "w_R4NEB35AA44S",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025",
+   "siembrafest-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4NEB35AA44S",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4NEB35AA44S",
+  "campo": "sinopsis.es",
+  "valor": "Durante la grabación de un supuesto exorcismo, el presentador de Muertos Que No Son Muertos, enfrenta su peor miedo: Un hogar campesino donde no pasa absolutamente nada.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Durante la grabación de un supuesto exorcismo, el presentador de Muertos Que No Son Muertos, enfrenta su peor miedo: Un hogar campesino donde no pasa absolutamente nada.",
+   "siembrafest-2026": "Durante la grabación de un supuesto exorcismo, el presentador de Muertos Que No Son Muertos, enfrenta su peor miedo: Un hogar campesino donde no pasa absolutamente nada."
+  }
+ },
+ {
+  "work_id": "w_R4NEB35AA44S",
+  "campo": "sinopsis.en",
+  "valor": "While filming a so-called exorcism, the host of the TV show \"Muertos Que No Son Muertos\" faces his worst fear: a rural house where absolutely nothing paranormal happens.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "While filming a so-called exorcism, the host of the TV show \"Muertos Que No Son Muertos\" faces his worst fear: a rural house where absolutely nothing paranormal happens.",
+   "siembrafest-2026": "While filming a so-called exorcism, the host of the TV show \"Muertos Que No Son Muertos\" faces his worst fear: a rural house where absolutely nothing paranormal happens."
+  }
+ },
+ {
+  "work_id": "w_R4NEB35AA44S",
+  "campo": "xref.tmdb",
+  "valor": 1506756,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1506756"
+  }
+ },
+ {
+  "work_id": "w_R4NEB35AA44S",
+  "campo": "xref.letterboxd",
+  "valor": "muertos-que-no-son-muertos",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "muertos-que-no-son-muertos",
+   "siembrafest-2026": "muertos-que-no-son-muertos"
+  }
  }
 ]

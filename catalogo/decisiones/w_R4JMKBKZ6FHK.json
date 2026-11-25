@@ -1,0 +1,61 @@
+[
+ {
+  "work_id": "w_R4JMKBKZ6FHK",
+  "campo": "directores",
+  "valor": [
+   "Santiago Franco"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Santiago Franco",
+   "filcmar-2026": "Santiago Franco"
+  }
+ },
+ {
+  "work_id": "w_R4JMKBKZ6FHK",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025",
+   "filcmar-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4JMKBKZ6FHK",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "filcmar-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4JMKBKZ6FHK",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/filcmar-2026/hush.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/filcmar-2026/hush.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/hush.jpg"
+  }
+ }
+]

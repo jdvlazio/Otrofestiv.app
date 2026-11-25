@@ -1,0 +1,521 @@
+{
+ "_etapa": "build generado por pipeline/ensamblar.py",
+ "_provenance": {
+  "fuente": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+  "capturado": "2026-11-25",
+  "ensamblador": "pipeline/ensamblar.py"
+ },
+ "name": "Medellín Horror Fest",
+ "displayName": "Medellín Horror Fest",
+ "fullName": "Medellín Horror Fest",
+ "shortName": "MHF",
+ "tagline": "Festival de Cine de Terror",
+ "city": "Medellín",
+ "country": "CO",
+ "dates": "26–29 NOV",
+ "dates_en": "NOV 26–29",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "storageKey": "medellinhorror2026_",
+ "instagram": "medellinhorrorfest",
+ "festivalStartStr": "2026-11-26T00:00:00",
+ "festivalEndStr": "2026-11-29T23:59:00",
+ "sharedSlotIsOneScreening": false,
+ "dias_vacios": [
+  "2026-11-28"
+ ],
+ "ticketing_model": "mixed",
+ "prioLimit": 3,
+ "dias": [
+  "2026-11-26",
+  "2026-11-27",
+  "2026-11-28",
+  "2026-11-29"
+ ],
+ "festivalDates": {
+  "2026-11-26": "2026-11-26",
+  "2026-11-27": "2026-11-27",
+  "2026-11-28": "2026-11-28",
+  "2026-11-29": "2026-11-29"
+ },
+ "days": [
+  {
+   "k": "2026-11-26",
+   "d": 26,
+   "lbl": "JUE"
+  },
+  {
+   "k": "2026-11-27",
+   "d": 27,
+   "lbl": "VIE"
+  },
+  {
+   "k": "2026-11-28",
+   "d": 28,
+   "lbl": "SÁB"
+  },
+  {
+   "k": "2026-11-29",
+   "d": 29,
+   "lbl": "DOM"
+  }
+ ],
+ "dayKeys": [
+  "2026-11-26",
+  "2026-11-27",
+  "2026-11-28",
+  "2026-11-29"
+ ],
+ "dayShort": {
+  "2026-11-26": "JUE 26",
+  "2026-11-27": "VIE 27",
+  "2026-11-28": "SÁB 28",
+  "2026-11-29": "DOM 29"
+ },
+ "dayShort_en": {
+  "2026-11-26": "THU 26",
+  "2026-11-27": "FRI 27",
+  "2026-11-28": "SAT 28",
+  "2026-11-29": "SUN 29"
+ },
+ "dayLong": {
+  "2026-11-26": "Jueves 26 de noviembre",
+  "2026-11-27": "Viernes 27 de noviembre",
+  "2026-11-28": "Sábado 28 de noviembre",
+  "2026-11-29": "Domingo 29 de noviembre"
+ },
+ "sections": {
+  "🎬 Largometrajes": {
+   "en": "Feature Films",
+   "archetype": "Muestra / País",
+   "order": 1
+  },
+  "👻 Selección Oficial": {
+   "en": "Official Selection",
+   "archetype": "Cortos / Programas",
+   "order": 2
+  }
+ },
+ "venues": {
+  "House of Demons - Medellín": {
+   "short": "House of Demons",
+   "city": "Medellín",
+   "lat": 6.2394033,
+   "lng": -75.6004126,
+   "address": "Cra. 80 #33-41, Laureles",
+   "_prec": "manual",
+   "_match": "Google Maps (18 nov 2026): «La House Of Demons» — https://www.google.com/maps/place/La+House+Of+Demons/@6.2394033,-75.6004126,17z",
+   "_maps": "https://www.google.com/maps/place/La+House+Of+Demons/@6.2394033,-75.6004126,17z"
+  },
+  "Plaza Mayor - Medellín": {
+   "short": "Plaza Mayor",
+   "city": "Medellín",
+   "lat": 6.2416086,
+   "lng": -75.5763781,
+   "_prec": "manual",
+   "_match": "Google Maps (18 nov 2026): «Centro de Convenciones Plaza Mayor» — https://www.google.com/maps/place/Centro+de+Convenciones+Plaza+Mayor/@6.2416086,-75.5763781,17z",
+   "_maps": "https://www.google.com/maps/place/Centro+de+Convenciones+Plaza+Mayor/@6.2416086,-75.5763781,17z",
+   "_nota": "Comic Con Medellín 2026 (27–29 nov) se hace en Plaza Mayor (medellin.comicconcolombia.com); ahí está Hero Academy, donde van los 13 cortos"
+  }
+ },
+ "_avisos_id": [],
+ "films": [
+  {
+   "title": "El Susurro",
+   "type": "film",
+   "section": "🎬 Largometrajes",
+   "director": "Gustavo Hernández",
+   "year": 2026,
+   "country": "Argentina, Uruguay",
+   "flags": "🇦🇷🇺🇾",
+   "duration": "89 min",
+   "genre": "Terror",
+   "_ancla": [
+    "House of Demons - Medellín",
+    "2026-11-26",
+    "20:00"
+   ],
+   "day": "2026-11-26",
+   "time": "20:00",
+   "day_order": 0,
+   "venue": "House of Demons - Medellín",
+   "has_qa": false,
+   "synopsis": "Lucía y Adrián huyen de su padre violento a una mansión. Descubren una red de snuff y una maldición familiar.",
+   "synopsis_lang": "es",
+   "poster": "/assets/medellinhorror-2026/el-susurro.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+    "lamina": "pág. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-programa"
+   },
+   "is_free": true,
+   "lbSlug": "the-whisper-2025",
+   "tmdb_id": 1534530,
+   "synopsis_en": "Fleeing from their violent father, siblings Lucía and Adrián take refuge in a remote mansion. With the help of a hidden micro-camera on a cat, Lucía uncovers a terrifying secret: their neighbors are part of a criminal network that kidnaps teenage girls to make snuff films, and they intend to get rid of the siblings. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their newfound sanctuary.",
+   "title_en": "The Whisper",
+   "_fid": "f_f50c789b68",
+   "id": "f_f50c789b68"
+  },
+  {
+   "title": "Demonatrix",
+   "type": "film",
+   "section": "🎬 Largometrajes",
+   "director": "Jeff Ferrell, Aurelio Voltaire",
+   "year": 2025,
+   "country": "United States",
+   "flags": "🇺🇸",
+   "duration": "90 min",
+   "genre": "Terror",
+   "_ancla": [
+    "House of Demons - Medellín",
+    "2026-11-26",
+    "22:00"
+   ],
+   "day": "2026-11-26",
+   "time": "22:00",
+   "day_order": 0,
+   "venue": "House of Demons - Medellín",
+   "has_qa": false,
+   "synopsis": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio.",
+   "synopsis_lang": "es",
+   "poster": "/assets/medellinhorror-2026/demonatrix.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+    "lamina": "pág. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-programa"
+   },
+   "is_free": true,
+   "lbSlug": "the-demonatrix",
+   "tmdb_id": 1567192,
+   "synopsis_en": "A dominatrix accidentally summons an incubus during a séance, requiring her to team up with the neighborhood priest to exorcise the demon.",
+   "_fid": "f_e5f35fbe84",
+   "id": "f_e5f35fbe84"
+  },
+  {
+   "title": "Sierra: El álbum mortuorio",
+   "type": "film",
+   "section": "🎬 Largometrajes",
+   "director": "Carlos Ortiz",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "88 min",
+   "genre": "Terror",
+   "_ancla": [
+    "House of Demons - Medellín",
+    "2026-11-27",
+    "22:00"
+   ],
+   "day": "2026-11-27",
+   "time": "22:00",
+   "day_order": 1,
+   "venue": "House of Demons - Medellín",
+   "has_qa": false,
+   "synopsis": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+   "synopsis_lang": "es",
+   "poster": "/assets/medellinhorror-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+    "lamina": "pág. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-programa"
+   },
+   "is_free": true,
+   "lbSlug": "sierra-el-album-mortuorio",
+   "tmdb_id": 1789536,
+   "synopsis_en": "The disappearance of Natalia, a 19-year-old, shakes Pueblo Blanco. In their search, the authorities reach a clandestine bar where two sisters survive the abuse of their uncle and a perverse clientele. When they decide to help a strange man found in the forest, they unleash a chain of violence and rituals in which the inspector, his partner and the townspeople themselves fall prey to death and to a dark sect. Amid the horror, one latent truth remains: what dwells in the darkness… once asked for help too.",
+   "_fid": "f_bea9ffbf53",
+   "id": "f_bea9ffbf53"
+  },
+  {
+   "title": "Medellín Horror Film Fest - Selección de cortos",
+   "type": "event",
+   "section": "👻 Selección Oficial",
+   "duration": "30 min",
+   "_ancla": [
+    "Plaza Mayor - Medellín",
+    "2026-11-27",
+    "10:30"
+   ],
+   "day": "2026-11-27",
+   "time": "10:30",
+   "day_order": 1,
+   "venue": "Plaza Mayor - Medellín",
+   "sala": "Salón Circo digital",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://medellin.comicconcolombia.com/es/agenda",
+    "date": "2026-11-25",
+    "tipo": "sala-agenda"
+   },
+   "ticket_url": "https://medellin.comicconcolombia.com/es/boleteria",
+   "is_free": false,
+   "description": "Selección de cortos del festival en Comic Con Medellín. Dura 30 minutos.",
+   "description_lang": "es",
+   "_fid": "f_be90bfee7c",
+   "id": "f_be90bfee7c"
+  },
+  {
+   "title": "Medellín Horror Film Fest - Selección de cortos",
+   "type": "event",
+   "section": "👻 Selección Oficial",
+   "duration": "30 min",
+   "_ancla": [
+    "Plaza Mayor - Medellín",
+    "2026-11-29",
+    "18:30"
+   ],
+   "day": "2026-11-29",
+   "time": "18:30",
+   "day_order": 3,
+   "venue": "Plaza Mayor - Medellín",
+   "sala": "Salón Circo digital",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://medellin.comicconcolombia.com/es/agenda",
+    "date": "2026-11-25",
+    "tipo": "sala-agenda"
+   },
+   "ticket_url": "https://medellin.comicconcolombia.com/es/boleteria",
+   "is_free": false,
+   "description": "Selección de cortos del festival en Comic Con Medellín. Dura 30 minutos.",
+   "description_lang": "es",
+   "_fid": "f_38aa1eaf0d",
+   "id": "f_38aa1eaf0d"
+  },
+  {
+   "title": "Cortometrajes Internacionales",
+   "type": "film",
+   "section": "👻 Selección Oficial",
+   "country": "España, Colombia, Francia, Estados Unidos, México, Argentina, Canadá, Países Bajos, Suecia",
+   "flags": "🇪🇸🇨🇴🇫🇷🇺🇸🇲🇽🇦🇷🇨🇦🇳🇱🇸🇪",
+   "duration": "106 min",
+   "has_qa": false,
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+    "lamina": "págs. 9–10",
+    "date": "2026-11-18",
+    "tipo": "festival-programa"
+   },
+   "ticket_url": "https://medellin.comicconcolombia.com/es/boleteria",
+   "is_cortos": true,
+   "unscheduled": true,
+   "is_free": false,
+   "film_list": [
+    {
+     "title": "Happy",
+     "director": "Victor Basallote",
+     "country": "España",
+     "flags": "🇪🇸",
+     "duration": "7 min",
+     "poster": "/assets/medellinhorror-2026/happy.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "happy-2026",
+     "tmdb_id": 1753034,
+     "synopsis": "Durante una aburrida visita a casa de su abuela, Cárol encuentra una muñeca singular con la que matar el tiempo. Pero pronto se da cuenta de que, en esa casa, ella no es la única que sabe divertirse.",
+     "synopsis_en": "During a boring visit to her grandmother's house, Cárol discovers a unique doll to kill time with. But she soon realizes that, in that house, she isn't the only one who knows how to have fun.",
+     "genre": "Terror",
+     "year": 2026,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Last Generation",
+     "director": "Silvia Conesa",
+     "country": "España",
+     "flags": "🇪🇸",
+     "duration": "9 min",
+     "poster": "/assets/medellinhorror-2026/last-generation.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "last-generation",
+     "tmdb_id": 1807136,
+     "synopsis": "Lucas un bebe desesperado por conseguir la atención de sus padres encuentra por fin la solución: el móvil de su madre. Lo que no imaginaba es que, al conseguir lo que tanto deseaba, cambiaría su futuro y el de la humanidad.",
+     "synopsis_en": "Lucas, a baby desperate for his parents' attention, finally finds the solution: his mother’s mobile phone. Little does he know that by getting what he so desired, he will open the door to a future no one could have foreseen.",
+     "genre": "Ciencia ficción",
+     "year": 2026,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Rewritten",
+     "director": "Andrés Molano Moncada",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "duration": "10 min",
+     "poster": "/assets/medellinhorror-2026/rewritten.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "reescrito",
+     "tmdb_id": 1285208,
+     "synopsis": "Santiago, un guionista en apuros, encuentra a su musa en el edificio de enfrente: una mujer a la que llama «Raquel». Su inspiración llega al límite cuando tiene que elegir entre escribir sobre Raquel o salvarla de la muerte.",
+     "synopsis_en": "Santiago is a struggling screenwriter who finds his muse, a woman he names “Raquel,” in the building across the street. His inspiration is pushed to the limit when he must choose between writing about Raquel or saving her from dying.",
+     "genre": "Suspense",
+     "year": 2022,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Familier / Familiar",
+     "director": "Julien Homère",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "year": 2025,
+     "duration": "11 min",
+     "poster": "/assets/medellinhorror-2026/familier-familiar.jpg",
+     "posterSource": "editorial",
+     "synopsis": "Élodie despierta en la noche, sola en la cama matrimonial. Mientras busca a su esposo, se encuentra de pronto frente a su silueta al final del pasillo. Tiene su voz, habla como él, pero… ¿de verdad es su esposo?",
+     "synopsis_en": "Élodie wakes up at night, alone in her marital bed. While looking for her husband, she suddenly finds herself facing his silhouette at the end of the hallway. He has his voice, he speaks like him, but… Is it really her husband?",
+     "genre": "Terror",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "House Rules",
+     "director": "Geri Courtney-Austein",
+     "country": "Estados Unidos",
+     "flags": "🇺🇸",
+     "duration": "10 min",
+     "poster": "/assets/medellinhorror-2026/house-rules.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "house-rules-2026",
+     "tmdb_id": 1652309,
+     "synopsis": "Una noche de juegos de mesa se convierte en un caos sangriento cuando un grupo de amigos juega, sin saberlo, un juego maldito. A medida que avanza la noche, afloran sin que se den cuenta sus impulsos más oscuros, que dejan al descubierto la naturaleza despiadada de las noches de juego y del capitalismo.",
+     "synopsis_en": "HOUSE RULES is about a game night that spirals into bloody chaos as a group of friends unknowingly play a cursed board game. As the night unfolds, their darkest impulses emerge subconsciously, exposing the ruthless nature of game night and capitalism.",
+     "genre": "Terror",
+     "year": 2026,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Forgetting",
+     "director": "Jesus Cazares",
+     "country": "México",
+     "flags": "🇲🇽",
+     "duration": "10 min",
+     "poster": "/assets/medellinhorror-2026/forgetting.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-olvido-1",
+     "tmdb_id": 1527240,
+     "synopsis": "Un hombre usa tecnología analógica para borrar un recuerdo doloroso de su pasado. Pero en “EL OLVIDO”, la manipulación de la memoria lo arrastra a una espiral de confusión, enfrentándolo a las inesperadas y perturbadoras consecuencias de reescribir su propia historia.",
+     "synopsis_en": "A man uses analog technology to erase a painful memory from his past. But in “EL OLVIDO”, manipulating memory drags him into a spiral of confusion, confronting him with the unexpected and disturbing consequences of rewriting his own story.",
+     "genre": "Ciencia ficción",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Tenebrios",
+     "director": "Tarik Antón Ferro",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2025,
+     "duration": "7 min",
+     "poster": "/assets/medellinhorror-2026/tenebrios.jpg",
+     "posterSource": "editorial",
+     "synopsis": "En plena crisis de salud, Jano ve cómo su cuerpo se deteriora sin explicación. Cautivado por la flauta hipnótica de su vecino, su obsesión crece mientras surgen gusanos de todo lo que lo rodea.",
+     "synopsis_en": "Jano, in the throes of a health crisis, watches his body inexplicably deteriorate. Enthralled by his neighbor's hypnotic flute, his obsession grows as worms emerge from his surroundings.",
+     "genre": "Terror",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "The Screaming",
+     "director": "Guillaume Boivin, Steve Villeneuve",
+     "country": "Canadá",
+     "flags": "🇨🇦",
+     "duration": "8 min",
+     "poster": "/assets/medellinhorror-2026/the-screaming.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-screaming-2025",
+     "tmdb_id": 1522505,
+     "synopsis": "Es el turno de noche en la morgue y Mara se prepara para lo que debería ser una velada tranquila de autopsias, sola en el edificio. O eso cree…",
+     "synopsis_en": "It's the graveyard shift at the morgue and Mara prepares for what should be a quiet evening of autopsy alone in the building. Or so she thinks...",
+     "genre": "Suspense",
+     "year": 2025,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "There Is Something Behind You",
+     "director": "Julián Andrés Gómez Reyes",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "6 min",
+     "poster": "/assets/medellinhorror-2026/there-is-something-behind-you.jpg",
+     "posterSource": "editorial",
+     "synopsis": "¿Alguna vez has sentido que algo te observa en la oscuridad? ¿Escuchas sonidos extraños en las noches? ¿Has querido despertar de un sueño y no has podido? Explora junto a Morgana, una astuta y enigmática gata negra, distintas historias de misterio vividas por niñas y niños en diferentes lugares y momentos de su vida.",
+     "synopsis_en": "Have you ever felt something watching you in the dark? Do you hear strange sounds at night? Have you wanted to wake from a dream and could not? Join Morgana, a clever and enigmatic black cat, as she explores mystery stories lived by girls and boys in different places and moments of their lives.",
+     "genre": "Animación",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Bugaboo",
+     "director": "Benjamín Morehead",
+     "country": "Estados Unidos",
+     "flags": "🇺🇸",
+     "duration": "5 min",
+     "poster": "/assets/medellinhorror-2026/bugaboo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "bugaboo-2025",
+     "tmdb_id": 1558184,
+     "synopsis": "Una mujer busca vengarse del hombre que le hizo daño, con la ayuda de una muñeca maldita…",
+     "synopsis_en": "A woman seeks revenge on the man who wronged her, with the help of a cursed doll...",
+     "genre": "Terror",
+     "year": 2025,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Snacktime",
+     "director": "Alphonse Ferrari",
+     "country": "Francia",
+     "flags": "🇫🇷",
+     "duration": "8 min",
+     "poster": "/assets/medellinhorror-2026/snacktime.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "snacktime",
+     "tmdb_id": 1533699,
+     "synopsis": "En el andén desierto de una estación de tren, bañado por una luz pálida, un joven espera el metro. El silencio es denso, solo roto por el soplo del viento y el crepitar de su reproductor de música. De repente, el dispositivo explota en sus manos, lanzando chispas en la oscuridad. Una tensión invisible se apodera del lugar, como si algo, en algún lugar, lo estuviera observando. En las sombras, aparece una máquina expendedora donde antes no había nada. Sus luces de neón parpadean débilmente, atrayendo su mirada y despertando un hambre repentina e incontrolable. Se acerca, introduce una moneda y espera lo que le corresponde… En un mundo esclavizado por el consumismo, algunos pagos exigen más que dinero…",
+     "synopsis_en": "On a deserted train station platform, bathed in a pale light, a young man waits for his subway. The silence is heavy, only broken by the wind’s breath and the crackle of his music player. Suddenly, the device explodes in his hands, throwing sparks into the darkness. An invisible tension settles, as if something, somewhere, is watching him.",
+     "genre": "Animación",
+     "year": 2025,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Closing Hour",
+     "director": "Tim Smink",
+     "country": "Países Bajos",
+     "flags": "🇳🇱",
+     "duration": "9 min",
+     "poster": "/assets/medellinhorror-2026/closing-hour.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "closing-hour",
+     "tmdb_id": 1554064,
+     "synopsis": "Mia trabaja el turno de noche en una gasolinera apartada. Sería una noche tranquila si no siguiera pensando en la pelea con su novio, Damon. El turno está por terminar cuando él entra de repente. Damon intenta hacer las paces, hasta que ve algo afuera y corre al baño. Antes de que Mia se dé cuenta, está frente a una figura enmascarada… con un arma. ¿Un asalto? ¿O no? ¿Y es Damon de verdad quien dice ser? Una sangrienta película de grado animada.",
+     "synopsis_en": "Mia works the night shift at a remote gas station. A quiet evening – if only her mind weren’t still on the quarrel with her boyfriend Damon. The shift is nearly over, when suddenly he walks in. Damon tries to make amends, until he sees something outside and rushes to the bathroom. Before Mia knows it, she’s face-to-face with a masked figure… holding a gun. A robbery. Or is it? And is Damon really who he pretends to be? A gory, animated graduation film.",
+     "genre": "Animación",
+     "year": 2025,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Borrowed Light",
+     "director": "Christian Stahlhofen",
+     "country": "Suecia",
+     "flags": "🇸🇪",
+     "year": 2025,
+     "duration": "6 min",
+     "poster": "/assets/medellinhorror-2026/borrowed-light.jpg",
+     "posterSource": "editorial",
+     "synopsis": "Un vigilante nocturno se sobresalta cuando su pantalla de seguridad detecta un movimiento. Su investigación lo lleva a un encuentro inquietante.",
+     "synopsis_en": "A night watchman is startled by a detected motion on his security screen. His investigation leads to an eerie encounter.",
+     "genre": "Terror",
+     "synopsis_lang": "es"
+    }
+   ]
+  }
+ ],
+ "_corrido": {
+  "por": "pipeline/correr.py",
+  "fecha": "2026-11-25T11:59:13",
+  "plan_sha": "6946398774daaac2",
+  "paso": 5,
+  "cmd": "python3 pipeline/medellinhorror-2026-verificar.py"
+ }
+}

@@ -1,0 +1,61 @@
+[
+ {
+  "work_id": "w_R4J76XTP6BB4",
+  "campo": "directores",
+  "valor": [
+   "Edwin Daniel Díaz"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Edwin Daniel Díaz",
+   "ficmontanas-2026": "Edwin Daniel Díaz"
+  }
+ },
+ {
+  "work_id": "w_R4J76XTP6BB4",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "ficmontanas-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4J76XTP6BB4",
+  "campo": "sinopsis.es",
+  "valor": "Helena, una joven atormentada por inquietantes visiones, se encuentra en una antigua habitación infantil donde es inundada por recuerdos aterradores. A través de las visiones, es testigo del sufrimiento de un niño llamado Gabriel, quien fue maltratado y asesinado por su padre violento y borracho. Elena descubre un diario que parece contar la trágica historia de Gabriel.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Helena, una joven atormentada por inquietantes visiones, se encuentra en una antigua habitación infantil donde es inundada por recuerdos aterradores. A través de las visiones, es testigo del sufrimiento de un niño llamado Gabriel, quien fue maltratado y asesinado por su padre violento y borracho. Elena descubre un diario que parece contar la trágica historia de Gabriel.",
+   "ficmontanas-2026": "Helena, una joven atormentada por inquietantes visiones, se encuentra en una antigua habitación infantil donde es inundada por recuerdos aterradores. A través de las visiones, es testigo del sufrimiento de un niño llamado Gabriel, quien fue maltratado y asesinado por su padre violento y borracho. Elena descubre un diario que parece contar la trágica historia de Gabriel."
+  }
+ },
+ {
+  "work_id": "w_R4J76XTP6BB4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/gabriel.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/gabriel.jpg",
+   "ficmontanas-2026": "/assets/bhff-2026/gabriel.jpg"
+  }
+ }
+]

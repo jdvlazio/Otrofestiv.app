@@ -1,0 +1,94 @@
+[
+ {
+  "work_id": "w_ZR5CVQKWY8HR",
+  "campo": "directores",
+  "valor": [
+   "Gabriela Vidal"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Gabriela Vidal"
+  }
+ },
+ {
+  "work_id": "w_ZR5CVQKWY8HR",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5CVQKWY8HR",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_ZR5CVQKWY8HR",
+  "campo": "sinopsis.es",
+  "valor": "Emilia y su hija Magui acaban de mudarse a una casa sin luz en las sierras de Córdoba. Emilia siente que no están solas, y ayudada por la Señora de la despensa hace un conjuro mágico con la intención de alejar al fantasma.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Emilia y su hija Magui acaban de mudarse a una casa sin luz en las sierras de Córdoba. Emilia siente que no están solas, y ayudada por la Señora de la despensa hace un conjuro mágico con la intención de alejar al fantasma."
+  }
+ },
+ {
+  "work_id": "w_ZR5CVQKWY8HR",
+  "campo": "xref.tmdb",
+  "valor": 1387484,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1387484"
+  }
+ },
+ {
+  "work_id": "w_ZR5CVQKWY8HR",
+  "campo": "xref.letterboxd",
+  "valor": "sigilo-1",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "sigilo-1"
+  }
+ },
+ {
+  "work_id": "w_ZR5CVQKWY8HR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/sigilo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/sigilo.jpg"
+  }
+ }
+]

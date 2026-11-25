@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_ZR5K8RMW62PJ",
+  "campo": "directores",
+  "valor": [
+   "Jeff Ruiz Rave"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Jeff Ruiz Rave"
+  }
+ },
+ {
+  "work_id": "w_ZR5K8RMW62PJ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5K8RMW62PJ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5K8RMW62PJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/prototipo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/prototipo.jpg"
+  }
+ }
+]

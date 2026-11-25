@@ -59,5 +59,61 @@
    "bhff-2026": 2025,
    "fantasmagoria-2026": 2024
   }
+ },
+ {
+  "work_id": "w_R4G651V5H1G6",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "fantasmagoria-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4G651V5H1G6",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Animación",
+   "fantasmagoria-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4G651V5H1G6",
+  "campo": "xref.tmdb",
+  "valor": 1368500,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1368500",
+   "fantasmagoria-2026": "1368500"
+  }
+ },
+ {
+  "work_id": "w_R4G651V5H1G6",
+  "campo": "xref.letterboxd",
+  "valor": "crystal-iris",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "crystal-iris",
+   "fantasmagoria-2026": "crystal-iris"
+  }
  }
 ]

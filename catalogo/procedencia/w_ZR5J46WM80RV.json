@@ -4,16 +4,22 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1718595",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
  },
  "anio": {
-  "fuente": "festival",
-  "regla": "único"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
  },
  "afiche": {
   "fuente": "humano",
@@ -32,5 +38,17 @@
   "regla": "decisión",
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
  }
 }

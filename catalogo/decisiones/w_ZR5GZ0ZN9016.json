@@ -1,0 +1,54 @@
+[
+ {
+  "work_id": "w_ZR5GZ0ZN9016",
+  "campo": "directores",
+  "valor": [
+   "Alvaro Pruneda"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Alvaro Pruneda"
+  }
+ },
+ {
+  "work_id": "w_ZR5GZ0ZN9016",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5GZ0ZN9016",
+  "campo": "paises",
+  "valor": [
+   "CL"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Chile"
+  }
+ },
+ {
+  "work_id": "w_ZR5GZ0ZN9016",
+  "campo": "sinopsis.es",
+  "valor": "Ingrid es una actriz de 37 años. Pierde todas sus solicitudes de trabajo ante Josefina, una actriz más joven y talentosa. ¿Cómo puede salir de este problema?",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Ingrid es una actriz de 37 años. Pierde todas sus solicitudes de trabajo ante Josefina, una actriz más joven y talentosa. ¿Cómo puede salir de este problema?"
+  }
+ }
+]

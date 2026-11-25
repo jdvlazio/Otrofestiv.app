@@ -8,11 +8,21 @@
  "directores": [
   "Víctor Basallote"
  ],
+ "sinopsis": {
+  "es": "Durante una aburrida visita a casa de su abuela, Cárol encuentra una muñeca singular con la que matar el tiempo. Pero pronto se da cuenta de que, en esa casa, ella no es la única que sabe divertirse.",
+  "en": "During a boring visit to her grandmother's house, Cárol discovers a unique doll to kill time with. But she soon realizes that, in that house, she isn't the only one who knows how to have fun."
+ },
+ "generos": [
+  "Terror"
+ ],
  "afiche": {
-  "archivo": "/assets/bhff-2026/happy.jpg",
+  "archivo": "/assets/medellinhorror-2026/happy.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1753034,
+  "letterboxd": "happy-2026"
+ },
  "versiones": [
   {
    "etiqueta": "7 min",
@@ -20,6 +30,7 @@
   }
  ],
  "presentaciones": [
-  "bhff-2026"
+  "bhff-2026",
+  "medellinhorror-2026"
  ]
 }

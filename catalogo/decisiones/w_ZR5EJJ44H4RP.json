@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_ZR5EJJ44H4RP",
+  "campo": "directores",
+  "valor": [
+   "Valeria Salinas Yábar",
+   "Rous Condori Arango"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Valeria Salinas Yábar, Rous Condori Arango"
+  }
+ },
+ {
+  "work_id": "w_ZR5EJJ44H4RP",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5EJJ44H4RP",
+  "campo": "paises",
+  "valor": [
+   "PE"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Perú"
+  }
+ },
+ {
+  "work_id": "w_ZR5EJJ44H4RP",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_ZR5EJJ44H4RP",
+  "campo": "sinopsis.es",
+  "valor": "En un futuro distópico donde todo está deforestado y contaminado, existe un pueblo donde vive Yatsi, una niña que junto a su abuelo sobreviven en medio de la Amazonía. Un día algo se quiebra en su abuelo y Yatsi tendrá que ir en búsqueda de un fruto misterioso que podría salvarlo. Ella hará un viaje a través de un río tóxico, pero en el camino se encontrará con seres fluviales que la persiguen. Yatsi tendrá que confiar en los símbolos de sus sueños para poder llegar a su destino.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "En un futuro distópico donde todo está deforestado y contaminado, existe un pueblo donde vive Yatsi, una niña que junto a su abuelo sobreviven en medio de la Amazonía. Un día algo se quiebra en su abuelo y Yatsi tendrá que ir en búsqueda de un fruto misterioso que podría salvarlo. Ella hará un viaje a través de un río tóxico, pero en el camino se encontrará con seres fluviales que la persiguen. Yatsi tendrá que confiar en los símbolos de sus sueños para poder llegar a su destino."
+  }
+ },
+ {
+  "work_id": "w_ZR5EJJ44H4RP",
+  "campo": "sinopsis.en",
+  "valor": "In a dystopian future where everything is deforested and polluted, there is a village where Yatsi lives, a girl who survives with her grandfather in the middle of the Amazon. One day something breaks in him and Yatsi will have to go in search of a mysterious fruit that could save him. She will journey through a toxic river, but on the way, she will meet river beings who pursue her. Yatsi will have to rely on the symbols of her dreams to reach her destination.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "In a dystopian future where everything is deforested and polluted, there is a village where Yatsi lives, a girl who survives with her grandfather in the middle of the Amazon. One day something breaks in him and Yatsi will have to go in search of a mysterious fruit that could save him. She will journey through a toxic river, but on the way, she will meet river beings who pursue her. Yatsi will have to rely on the symbols of her dreams to reach her destination."
+  }
+ },
+ {
+  "work_id": "w_ZR5EJJ44H4RP",
+  "campo": "xref.tmdb",
+  "valor": 1321232,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1321232"
+  }
+ },
+ {
+  "work_id": "w_ZR5EJJ44H4RP",
+  "campo": "xref.letterboxd",
+  "valor": "yatsi-and-the-spirit-of-the-river",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "yatsi-and-the-spirit-of-the-river"
+  }
+ },
+ {
+  "work_id": "w_ZR5EJJ44H4RP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/yatsi-y-el-espiritu-del-rio.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/yatsi-y-el-espiritu-del-rio.jpg"
+  }
+ }
+]

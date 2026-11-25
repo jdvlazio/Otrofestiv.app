@@ -331,7 +331,8 @@
    "sha1": "ef26dc9d9fe633df93246a502fc685cc927bae46",
    "veredicto": "afiche",
    "usado_en": [
-    "fantasofest-2026"
+    "fantasofest-2026",
+    "medellinhorror-2026"
    ]
   },
   "/assets/bhff-2026/esquirlas-de-caracol.jpg": {
@@ -360,6 +361,13 @@
    "veredicto": "afiche",
    "usado_en": [
     "fantasmagoria-2026"
+   ]
+  },
+  "/assets/bhff-2026/la-demonatrix.jpg": {
+   "sha1": "be38277e1a4a643105cb141c412b25907ec2a732",
+   "veredicto": "afiche",
+   "usado_en": [
+    "medellinhorror-2026"
    ]
   },
   "/assets/bhff-2026/la-habitacion-del-macho-cabrio.jpg": {
@@ -435,6 +443,7 @@
    "usado_en": [
     "ficpa-2026",
     "guatape-2026",
+    "medellinhorror-2026",
     "villadelcine-2026"
    ]
   },
@@ -1500,6 +1509,13 @@
     "cinemancia-2026"
    ]
   },
+  "/assets/ficica-2026/hay-algo-detras-de-ti.jpg": {
+   "sha1": "b3b1e41f1ba742f62672eab50f293fa116efaa5e",
+   "veredicto": "afiche",
+   "usado_en": [
+    "medellinhorror-2026"
+   ]
+  },
   "/assets/ficica-2026/la-mona.jpg": {
    "sha1": "6a9ebbecc1e67544220e08b7fe54dd2df75845d9",
    "veredicto": "afiche",
@@ -1917,6 +1933,13 @@
    "usado_en": [
     "cortoscali-2026",
     "midbo-2026"
+   ]
+  },
+  "/assets/medellinhorror-2026/happy.jpg": {
+   "sha1": "4cfe6b6870b1cc1a575bce9e01797be33515b321",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bhff-2026"
    ]
   },
   "/assets/midbo-2026/a-film-to-remind-us-of-utopia.jpg": {

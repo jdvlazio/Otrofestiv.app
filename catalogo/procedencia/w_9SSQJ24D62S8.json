@@ -1,0 +1,60 @@
+{
+ "titulo_original": {
+  "fuente": "festival:medellinhorror-2026",
+  "regla": "el título que más festivales imprimen"
+ },
+ "directores": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "anio": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "paises": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "generos": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ }
+}

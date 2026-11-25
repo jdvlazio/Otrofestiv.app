@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_9SSNH3J93F7H",
+  "campo": "directores",
+  "valor": [
+   "Silvia Conesa"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Silvia Conesa"
+  }
+ },
+ {
+  "work_id": "w_9SSNH3J93F7H",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_9SSNH3J93F7H",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_9SSNH3J93F7H",
+  "campo": "generos",
+  "valor": [
+   "Ciencia ficción"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Ciencia ficción"
+  }
+ },
+ {
+  "work_id": "w_9SSNH3J93F7H",
+  "campo": "sinopsis.es",
+  "valor": "Lucas, un bebé desesperado por conseguir la atención de sus padres, encuentra por fin la solución: el móvil de su madre. Lo que no imaginaba es que, al conseguir lo que tanto deseaba, cambiaría su futuro y el de la humanidad.",
+  "motivo": "la de TMDB, con tilde y comas",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Lucas un bebe desesperado por conseguir la atención de sus padres encuentra por fin la solución: el móvil de su madre. Lo que no imaginaba es que, al conseguir lo que tanto deseaba, cambiaría su futuro y el de la humanidad."
+  },
+  "anteriores": [
+   {
+    "valor": "Lucas un bebe desesperado por conseguir la atención de sus padres encuentra por fin la solución: el móvil de su madre. Lo que no imaginaba es que, al conseguir lo que tanto deseaba, cambiaría su futuro y el de la humanidad.",
+    "motivo": "alta desde medellinhorror-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude"
+   }
+  ],
+  "vistas": [
+   "a79e1da7515e"
+  ]
+ },
+ {
+  "work_id": "w_9SSNH3J93F7H",
+  "campo": "sinopsis.en",
+  "valor": "Lucas, a baby desperate for his parents' attention, finally finds the solution: his mother’s mobile phone. Little does he know that by getting what he so desired, he will open the door to a future no one could have foreseen.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Lucas, a baby desperate for his parents' attention, finally finds the solution: his mother’s mobile phone. Little does he know that by getting what he so desired, he will open the door to a future no one could have foreseen."
+  }
+ },
+ {
+  "work_id": "w_9SSNH3J93F7H",
+  "campo": "xref.tmdb",
+  "valor": 1807136,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "1807136"
+  }
+ },
+ {
+  "work_id": "w_9SSNH3J93F7H",
+  "campo": "xref.letterboxd",
+  "valor": "last-generation",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "last-generation"
+  }
+ },
+ {
+  "work_id": "w_9SSNH3J93F7H",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/last-generation.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/last-generation.jpg"
+  }
+ }
+]

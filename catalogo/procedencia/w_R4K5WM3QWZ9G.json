@@ -10,16 +10,22 @@
   "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1746614",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "tmdb:1746614",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
  },
  "afiche": {
   "fuente": "humano",
@@ -32,5 +38,17 @@
   "regla": "decisión",
   "motivo": "corrección de «habla del evento»: traducción nuestra del texto del festival",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
  }
 }

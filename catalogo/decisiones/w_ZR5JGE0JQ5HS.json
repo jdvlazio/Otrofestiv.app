@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_ZR5JGE0JQ5HS",
+  "campo": "directores",
+  "valor": [
+   "Daniel Riglos"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Daniel Riglos"
+  }
+ },
+ {
+  "work_id": "w_ZR5JGE0JQ5HS",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5JGE0JQ5HS",
+  "campo": "paises",
+  "valor": [
+   "PE"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Perú"
+  }
+ },
+ {
+  "work_id": "w_ZR5JGE0JQ5HS",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_ZR5JGE0JQ5HS",
+  "campo": "sinopsis.es",
+  "valor": "Luego de un accidente de tránsito, un hombre cae en un coma, quedando inmerso en un mundo onírico en donde la mujer que ama, y que perdió en el accidente, sigue con vida. A partir de entonces, empieza un viaje entre los sueños y la realidad, en el que el hombre debe decidir si quedarse con la mujer que ama, o dejarla ir y seguir con su vida.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Luego de un accidente de tránsito, un hombre cae en un coma, quedando inmerso en un mundo onírico en donde la mujer que ama, y que perdió en el accidente, sigue con vida. A partir de entonces, empieza un viaje entre los sueños y la realidad, en el que el hombre debe decidir si quedarse con la mujer que ama, o dejarla ir y seguir con su vida."
+  }
+ },
+ {
+  "work_id": "w_ZR5JGE0JQ5HS",
+  "campo": "sinopsis.en",
+  "valor": "A man plunged into grief connects through his dreams with the love he lost in a car accident.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "A man plunged into grief connects through his dreams with the love he lost in a car accident."
+  }
+ },
+ {
+  "work_id": "w_ZR5JGE0JQ5HS",
+  "campo": "xref.tmdb",
+  "valor": 1168428,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1168428"
+  }
+ },
+ {
+  "work_id": "w_ZR5JGE0JQ5HS",
+  "campo": "xref.letterboxd",
+  "valor": "where-dreams-sleep",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "where-dreams-sleep"
+  }
+ },
+ {
+  "work_id": "w_ZR5JGE0JQ5HS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/donde-duermen-los-suenos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/donde-duermen-los-suenos.jpg"
+  }
+ }
+]

@@ -1,0 +1,130 @@
+[
+ {
+  "work_id": "w_ZR5JWV8RRX0V",
+  "campo": "directores",
+  "valor": [
+   "Jeff Ferrell",
+   "Aurelio Voltaire"
+  ],
+  "motivo": "el nombre artistico es Aurelio Voltaire; asi lo da la revista de MHF",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "bhff-2026": "Jeff Ferrell, Aurelio Voltair",
+   "medellinhorror-2026": "Jeff Ferrell, Aurelio Voltaire"
+  }
+ },
+ {
+  "work_id": "w_ZR5JWV8RRX0V",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/la-demonatrix.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "afiche ya publicado de la obra",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/la-demonatrix.jpg",
+   "medellinhorror-2026": "/assets/medellinhorror-2026/demonatrix.jpg"
+  },
+  "vistas": [
+   "/assets/medellinhorror-2026/demonatrix.jpg"
+  ]
+ },
+ {
+  "work_id": "w_ZR5JWV8RRX0V",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025",
+   "medellinhorror-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5JWV8RRX0V",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Estados Unidos",
+   "medellinhorror-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_ZR5JWV8RRX0V",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Terror",
+   "medellinhorror-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_ZR5JWV8RRX0V",
+  "campo": "sinopsis.es",
+  "valor": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio.",
+   "medellinhorror-2026": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio."
+  }
+ },
+ {
+  "work_id": "w_ZR5JWV8RRX0V",
+  "campo": "sinopsis.en",
+  "valor": "A dominatrix accidentally summons an incubus during a séance, requiring her to team up with the neighborhood priest to exorcise the demon.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "A dominatrix accidentally summons an incubus during a séance, requiring her to team up with the neighborhood priest to exorcise the demon.",
+   "medellinhorror-2026": "A dominatrix accidentally summons an incubus during a séance, requiring her to team up with the neighborhood priest to exorcise the demon."
+  }
+ },
+ {
+  "work_id": "w_ZR5JWV8RRX0V",
+  "campo": "xref.tmdb",
+  "valor": 1567192,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1567192",
+   "medellinhorror-2026": "1567192"
+  }
+ },
+ {
+  "work_id": "w_ZR5JWV8RRX0V",
+  "campo": "xref.letterboxd",
+  "valor": "the-demonatrix",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "the-demonatrix",
+   "medellinhorror-2026": "the-demonatrix"
+  }
+ }
+]

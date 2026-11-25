@@ -21,7 +21,7 @@
  {
   "work_id": "w_R4GTPWHY6Q7K",
   "campo": "sinopsis.es",
-  "valor": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio.",
+  "valor": "Lucía y Adrián, hermanos que huyen de la oscura herencia de su padre vampiro, buscan refugio en una casona aislada en el bosque. Un gato les trae un dedo humano y revela que sus vecinos son de una red que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Lucía deberá enfrentar, además, una maldición familiar.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (fantasofest-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -32,6 +32,20 @@
   "antes": {
    "bhff-2026": "Lucía y Adrián huyen de su padre violento a una mansión. Descubren una red de snuff y una maldición familiar.",
    "fantasofest-2026": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio."
+  },
+  "original_de": [
+   "bhff-2026",
+   "fantasofest-2026",
+   "medellinhorror-2026"
+  ],
+  "titulo": "El Susurro",
+  "original": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio.",
+  "sintesis": {
+   "redacta": "Claude (sesión onboarding)",
+   "verifica": "Claude (verificador acbdb802)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-25",
+   "huella": "6563b0c9d6bf"
   }
  },
  {
@@ -51,14 +65,15 @@
  {
   "work_id": "w_R4GTPWHY6Q7K",
   "campo": "sinopsis.en",
-  "valor": "Lucía and Adrián, siblings fleeing the dark legacy of their vampire father, seek refuge in an isolated house in the woods. When a cat brings them a human finger, they discover that their neighbors belong to a ring that abducts teenagers to make snuff films. To protect her brother, Lucía must face a dark family curse.",
-  "motivo": "el EN contradice al ES; padre vampiro confirmado en Anibia y El Observador (red snuff: El Observador)",
+  "valor": "Lucía and Adrián, siblings fleeing the dark legacy of their vampire father, seek refuge in an isolated house in the woods. When a cat brings them a human finger, they discover that their neighbors belong to a ring that abducts teenagers to make snuff films and plans to get rid of them. To protect her brother, Lucía must face a dark family curse.",
+  "motivo": "paralelo a la española",
   "fecha": "2026-11-25",
-  "quien": "segunda lectura (sellos)",
+  "quien": "Claude",
   "titulo": "El Susurro",
   "antes": {
    "bhff-2026": "Fleeing from their violent father, siblings Lucía and Adrián take refuge in a remote mansion. With the help of a hidden micro-camera on a cat, Lucía uncovers a terrifying secret: their neighbors are part of a criminal network that kidnaps teenage girls to make snuff films, and they intend to get rid of the siblings. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their newfound sanctuary.",
-   "fantasofest-2026": "Lucía and Adrián, two siblings fleeing the dark legacy of their vampire father, arrive at an isolated house in the woods seeking refuge from the past. Their attempt to forget is shattered when a cat brings them a human finger, revealing a terrifying secret: their neighbors belong to a criminal ring that abducts teenagers to produce snuff films, and they plan to get rid of them too. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their supposed sanctuary."
+   "fantasofest-2026": "Lucía and Adrián, two siblings fleeing the dark legacy of their vampire father, arrive at an isolated house in the woods seeking refuge from the past. Their attempt to forget is shattered when a cat brings them a human finger, revealing a terrifying secret: their neighbors belong to a criminal ring that abducts teenagers to produce snuff films, and they plan to get rid of them too. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their supposed sanctuary.",
+   "medellinhorror-2026": "Lucía and Adrián, siblings fleeing the dark legacy of their vampire father, seek refuge in an isolated house in the woods. When a cat brings them a human finger, they discover that their neighbors belong to a ring that abducts teenagers to make snuff films. To protect her brother, Lucía must face a dark family curse."
   },
   "anteriores": [
    {
@@ -66,7 +81,86 @@
     "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
     "fecha": "2026-11-24",
     "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   },
+   {
+    "valor": "Lucía and Adrián, siblings fleeing the dark legacy of their vampire father, seek refuge in an isolated house in the woods. When a cat brings them a human finger, they discover that their neighbors belong to a ring that abducts teenagers to make snuff films. To protect her brother, Lucía must face a dark family curse.",
+    "motivo": "el EN contradice al ES; padre vampiro confirmado en Anibia y El Observador (red snuff: El Observador)",
+    "fecha": "2026-11-25",
+    "quien": "segunda lectura (sellos)"
    }
   ]
+ },
+ {
+  "work_id": "w_R4GTPWHY6Q7K",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "BHFF y FantasoFest ya la publicaron con 2025",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "bhff-2026": "2025",
+   "fantasofest-2026": "2025",
+   "medellinhorror-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4GTPWHY6Q7K",
+  "campo": "paises",
+  "valor": [
+   "UY",
+   "AR"
+  ],
+  "motivo": "orden ya publicado",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "bhff-2026": "Uruguay, Argentina",
+   "fantasofest-2026": "Uruguay, Argentina",
+   "medellinhorror-2026": "Argentina, Uruguay"
+  }
+ },
+ {
+  "work_id": "w_R4GTPWHY6Q7K",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Terror",
+   "fantasofest-2026": "Terror",
+   "medellinhorror-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_R4GTPWHY6Q7K",
+  "campo": "xref.tmdb",
+  "valor": 1534530,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1534530",
+   "fantasofest-2026": "1534530",
+   "medellinhorror-2026": "1534530"
+  }
+ },
+ {
+  "work_id": "w_R4GTPWHY6Q7K",
+  "campo": "xref.letterboxd",
+  "valor": "the-whisper-2025",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "the-whisper-2025",
+   "fantasofest-2026": "the-whisper-2025",
+   "medellinhorror-2026": "the-whisper-2025"
+  }
  }
 ]

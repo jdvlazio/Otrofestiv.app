@@ -36,5 +36,74 @@
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24",
   "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_ZR5J46WM80RV",
+  "campo": "directores",
+  "valor": [
+   "Manuel Alejandro Sánchez"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Manuel Alejandro Sánchez",
+   "villadeleyvaiff-2026": "Manuel Alejandro Sánchez"
+  }
+ },
+ {
+  "work_id": "w_ZR5J46WM80RV",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026",
+   "villadeleyvaiff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5J46WM80RV",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "villadeleyvaiff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5J46WM80RV",
+  "campo": "xref.tmdb",
+  "valor": 1718595,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1718595",
+   "villadeleyvaiff-2026": "1718595"
+  }
+ },
+ {
+  "work_id": "w_ZR5J46WM80RV",
+  "campo": "xref.letterboxd",
+  "valor": "esquirlas-de-caracol",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "esquirlas-de-caracol",
+   "villadeleyvaiff-2026": "esquirlas-de-caracol"
+  }
  }
 ]

@@ -3,8 +3,8 @@
  "titulo_original": "Nico",
  "anio": 2025,
  "paises": [
-  "AR",
-  "UY"
+  "UY",
+  "AR"
  ],
  "directores": [
   "Salomón Reyes"
@@ -18,7 +18,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bhff-2026/nico.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1182204,

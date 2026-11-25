@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_9SSPJ6ESYZYE",
+  "campo": "directores",
+  "valor": [
+   "Geri Courtney-Austein"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Geri Courtney-Austein"
+  }
+ },
+ {
+  "work_id": "w_9SSPJ6ESYZYE",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_9SSPJ6ESYZYE",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_9SSPJ6ESYZYE",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_9SSPJ6ESYZYE",
+  "campo": "sinopsis.es",
+  "valor": "Una noche de juegos de mesa se convierte en un caos sangriento cuando un grupo de amigos juega, sin saberlo, un juego maldito. A medida que avanza la noche, afloran sin que se den cuenta sus impulsos más oscuros, que dejan al descubierto la naturaleza despiadada de las noches de juego y del capitalismo.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Una noche de juegos de mesa se convierte en un caos sangriento cuando un grupo de amigos juega, sin saberlo, un juego maldito. A medida que avanza la noche, afloran sin que se den cuenta sus impulsos más oscuros, que dejan al descubierto la naturaleza despiadada de las noches de juego y del capitalismo."
+  }
+ },
+ {
+  "work_id": "w_9SSPJ6ESYZYE",
+  "campo": "sinopsis.en",
+  "valor": "HOUSE RULES is about a game night that spirals into bloody chaos as a group of friends unknowingly play a cursed board game. As the night unfolds, their darkest impulses emerge subconsciously, exposing the ruthless nature of game night and capitalism.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "HOUSE RULES is about a game night that spirals into bloody chaos as a group of friends unknowingly play a cursed board game. As the night unfolds, their darkest impulses emerge subconsciously, exposing the ruthless nature of game night and capitalism."
+  }
+ },
+ {
+  "work_id": "w_9SSPJ6ESYZYE",
+  "campo": "xref.tmdb",
+  "valor": 1652309,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "1652309"
+  }
+ },
+ {
+  "work_id": "w_9SSPJ6ESYZYE",
+  "campo": "xref.letterboxd",
+  "valor": "house-rules-2026",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "house-rules-2026"
+  }
+ },
+ {
+  "work_id": "w_9SSPJ6ESYZYE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/house-rules.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/house-rules.jpg"
+  }
+ }
+]
