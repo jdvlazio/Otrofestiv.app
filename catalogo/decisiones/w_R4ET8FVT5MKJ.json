@@ -23,18 +23,31 @@
  {
   "work_id": "w_R4ET8FVT5MKJ",
   "campo": "sinopsis.es",
-  "valor": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.",
-  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aleste-2026)",
-  "fecha": "2026-11-23",
-  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "valor": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos.",
+  "motivo": "Texto del catálogo FICFUSA 2026; «tono de comedia dramática» y «en la urbe» no tienen fuente y el catálogo dice Comedia",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
   "vistas": [
    "1969b71fa148",
    "e0d857d1de94"
   ],
   "antes": {
    "aleste-2026": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.",
+   "cinemancia-2025": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.",
    "ficfusa-2026": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "La trama sigue en tono de comedia dramática a dos amigos que, en medio de una mudanza, intentan encontrar la dirección del nuevo apartamento de uno de ellos, pero terminan completamente perdidos en la urbe.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (aleste-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "1969b71fa148",
+     "e0d857d1de94"
+    ]
+   }
+  ]
  },
  {
   "work_id": "w_R4ET8FVT5MKJ",
@@ -54,9 +67,22 @@
  {
   "work_id": "w_R4ET8FVT5MKJ",
   "campo": "sinopsis.en",
-  "valor": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city.",
-  "motivo": "traducida de su española; verificada por otro agente",
-  "fecha": "2026-11-24",
-  "quien": "Juan («Aprobadas, sigue»)"
+  "valor": "In the middle of a move, two friends look for the address of the new apartment one of them is moving into, but both are equally lost.",
+  "motivo": "Traducción de la del catálogo; mismo motivo",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "anteriores": [
+   {
+    "valor": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city.",
+    "motivo": "traducida de su española; verificada por otro agente",
+    "fecha": "2026-11-24",
+    "quien": "Juan («Aprobadas, sigue»)"
+   }
+  ],
+  "antes": {
+   "aleste-2026": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city.",
+   "cinemancia-2025": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city.",
+   "ficfusa-2026": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city."
+  }
  }
 ]

@@ -24,5 +24,11 @@
   "regla": "decisión",
   "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "La publicada es comentario de producción más que sinopsis y difiere de la española; traducción de la del festival.",
+  "fecha": "2026-11-25"
  }
 }
