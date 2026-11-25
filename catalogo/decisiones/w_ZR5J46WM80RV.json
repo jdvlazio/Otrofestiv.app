@@ -1,0 +1,40 @@
+[
+ {
+  "work_id": "w_ZR5J46WM80RV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/esquirlas-de-caracol.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bhff-2026/esquirlas-de-caracol.jpg",
+   "/assets/villadeleyvaiff-2026/esquirlas-de-caracol.jpg"
+  ],
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/esquirlas-de-caracol.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/esquirlas-de-caracol.jpg"
+  }
+ },
+ {
+  "work_id": "w_ZR5J46WM80RV",
+  "campo": "sinopsis.es",
+  "valor": "Roberto guarda un secreto que no puede compartir: un caracol de mar que les susurra verdades a quienes se atreven a escucharlas. En medio de una celebración íntima, el deseo de revelar ese misterio desata una ruptura sin vuelta atrás.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "villadeleyvaiff-2026": "Roberto guarda un secreto que no puede compartir: un caracol de mar que les susurra verdades a quienes se atreven a escucharlas. En medio de una celebración íntima, el deseo de revelar ese misterio desata una ruptura sin vuelta atrás."
+  }
+ },
+ {
+  "work_id": "w_ZR5J46WM80RV",
+  "campo": "sinopsis.en",
+  "valor": "Roberto keeps a secret that cannot be shared: a seashell that whispers truths to those who dare to listen. In the middle of an intimate celebration, the desire to reveal that mystery unleashes a rupture with no way back.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

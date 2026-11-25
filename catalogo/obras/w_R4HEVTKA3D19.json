@@ -1,11 +1,13 @@
 {
  "id": "w_R4HEVTKA3D19",
  "titulo_original": "Alborada en Cartagena",
- "anio": 1968,
+ "anio": 1966,
  "paises": [
   "CO"
  ],
- "directores": [],
+ "directores": [
+  "Sebastián Almeida"
+ ],
  "aliases": [
   {
    "titulo": "Dawn in Cartagena",
@@ -14,14 +16,16 @@
   }
  ],
  "sinopsis": {
-  "es": "Película colombiana de 1966 que reconstruye la historia colonial de Cartagena de Indias, primera producción de largo aliento rodada en la ciudad.",
-  "en": "A 1966 Colombian film that reconstructs the colonial history of Cartagena de Indias, the first major production shot in the city."
+  "es": "Una joven llega a Cartagena a reclamar una herencia ligada a esmeraldas y secretos familiares. La ciudad es puerto, espacio de tránsito y promesa de fortuna, un personaje silencioso desde donde la historia se abre hacia otros territorios. Melodrama que registra calles y ritmos de hace seis décadas, aún distantes de la presión turística.",
+  "en": "A young woman arrives in Cartagena to claim an inheritance linked to emeralds and family secrets. The city is a port, a space of transit and a promise of fortune, a silent character from which the story opens onto other territories. A melodrama that records the streets and rhythms of six decades ago, still distant from the pressures of tourism."
  },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w500/cDfDZHC6lwfqN5pp9Sa8TzftCn0.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1665568
+ },
  "versiones": [
   {
    "etiqueta": "84 min",

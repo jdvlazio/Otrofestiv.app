@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4NEB13RV6EZ",
+  "campo": "directores",
+  "valor": [
+   "Daniel Eduardo Calderón Arana"
+  ],
+  "motivo": "la forma completa, web y PDF del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "Daniel Eduardo Calderón Arana",
+   "siembrafest-2026": "Daniel Calderón"
+  }
+ },
+ {
+  "work_id": "w_R4NEB13RV6EZ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2025",
+   "siembrafest-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4NEB13RV6EZ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4NEB13RV6EZ",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama",
+   "siembrafest-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4NEB13RV6EZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://otrofestiv.app/assets/siembrafest/make-up-el-arte-de-amar.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "es la tarjeta de SiembraFest, no un afiche de la obra: SiembraFest la conserva y nadie la hereda",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026), por decisión de Juan",
+  "antes": {
+   "siembrafest-2026": "/assets/siembrafest/make-up-el-arte-de-amar.jpg"
+  },
+  "vistas": [
+   "/assets/siembrafest/make-up-el-arte-de-amar.jpg"
+  ]
+ }
+]

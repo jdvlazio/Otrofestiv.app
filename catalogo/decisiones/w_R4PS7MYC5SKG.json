@@ -1,0 +1,130 @@
+[
+ {
+  "work_id": "w_R4PS7MYC5SKG",
+  "campo": "xref.letterboxd",
+  "valor": "the-end-13",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "tiff-2026": [
+    "end-1992",
+    "the-end-2026-4"
+   ]
+  }
+ },
+ {
+  "work_id": "w_R4PS7MYC5SKG",
+  "campo": "sinopsis.en",
+  "valor": "A tale of death and existence set in a large, international airport.",
+  "motivo": "catálogo BOGOSHORTS: alineada con la española; pendiente de lector tercero",
+  "fecha": "2026-11-24",
+  "quien": "Claude, respuesta de App a la revisión (rama bogoshorts)",
+  "antes": {
+   "tiff-2026": "Winner of the 2017 Best International Short Film ( The Burden ), Niki Lindroth von Bahr returns to TIFF with another brilliant stop-motion doomsday comedy, in which airport-bound creatures wait out the impending apocalypse. Featuring voices by Alexander Skarsgård, Denis Lavant, and Noomi Rapace."
+  }
+ },
+ {
+  "work_id": "w_R4PS7MYC5SKG",
+  "campo": "xref.tmdb",
+  "valor": 1472669,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-end-2026-4/"
+ },
+ {
+  "work_id": "w_R4PS7MYC5SKG",
+  "campo": "sinopsis.es",
+  "valor": "Un relato sobre la muerte y la existencia situado en un gran aeropuerto internacional.",
+  "motivo": "catálogo BOGOSHORTS: cuenta la obra; la de TIFF habla de un premio de otra; pendiente de lector tercero",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "Un relato sobre la muerte y la existencia situado en un gran aeropuerto internacional.",
+   "tiff-2026": "Ganadora en 2017 del premio al mejor cortometraje internacional por The Burden, Niki Lindroth von Bahr vuelve al festival con otra brillante comedia apocalíptica en stop-motion, donde unas criaturas varadas en un aeropuerto esperan el fin del mundo. Con las voces de Alexander Skarsgård, Denis Lavant y Noomi Rapace."
+  },
+  "vistas": [
+   "782fd070836e",
+   "bb1bfa7593b0"
+  ]
+ },
+ {
+  "work_id": "w_R4PS7MYC5SKG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/the-end.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "afiche vertical contra fotograma apaisado (Vertical sobre still)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/the-end.jpg",
+   "tiff-2026": "https://images.ctfassets.net/22n7d68fswlw/7zobSrS7WoKexEoOrjW6Ja/d8da65b5679157332aab231d6ce212db/The-End_Still_06.jpg"
+  },
+  "vistas": [
+   "https://images.ctfassets.net/22n7d68fswlw/7zobSrS7WoKexEoOrjW6Ja/d8da65b5679157332aab231d6ce212db/The-End_Still_06.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4PS7MYC5SKG",
+  "campo": "directores",
+  "valor": [
+   "Niki Lindroth von Bahr"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Niki Lindroth von Bahr",
+   "tiff-2026": "Niki Lindroth von Bahr"
+  }
+ },
+ {
+  "work_id": "w_R4PS7MYC5SKG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "tiff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4PS7MYC5SKG",
+  "campo": "paises",
+  "valor": [
+   "SE",
+   "FR",
+   "DK"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suecia, Francia, Dinamarca",
+   "tiff-2026": "Suecia, Francia, Dinamarca"
+  }
+ },
+ {
+  "work_id": "w_R4PS7MYC5SKG",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación",
+   "tiff-2026": "Animación"
+  }
+ }
+]

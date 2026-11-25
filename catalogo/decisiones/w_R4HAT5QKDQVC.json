@@ -1,0 +1,120 @@
+[
+ {
+  "campo": "directores",
+  "valor": [
+   "Clemente Castor"
+  ],
+  "motivo": "la de mamut-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "mamut-2026": "Clemente Castor",
+   "ficci-65": "Clemente Castor Reyes"
+  },
+  "work_id": "w_R4HAT5QKDQVC"
+ },
+ {
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "la de mamut-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "mamut-2026": "2025",
+   "ficci-65": "2025"
+  },
+  "work_id": "w_R4HAT5QKDQVC"
+ },
+ {
+  "work_id": "w_R4HAT5QKDQVC",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 144",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=144",
+  "antes": {
+   "ficci-65": "México"
+  }
+ },
+ {
+  "campo": "sinopsis.es",
+  "valor": "Mario despierta sin memoria al oriente de la Ciudad de México. A la deriva, junto a Lázaro, aprende a habitar cuerpos ajenos a través de grietas en la tierra. Un viaje hipnótico donde el territorio atraviesa la piel y el paisaje se distorsiona al ritmo de los recuerdos.",
+  "motivo": "la de mamut-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "mamut-2026": "Mario despierta sin memoria al oriente de la Ciudad de México. A la deriva, junto a Lázaro, aprende a habitar cuerpos ajenos a través de grietas en la tierra. Un viaje hipnótico donde el territorio atraviesa la piel y el paisaje se distorsiona al ritmo de los recuerdos.",
+   "ficci-65": "¿Cómo escribir una historia que se desprende de la vida? Es decir, que queda colgando, como un pedazo de piel, un soporte fotosensible que lleva registrada en sus pliegues la luz."
+  },
+  "work_id": "w_R4HAT5QKDQVC"
+ },
+ {
+  "campo": "sinopsis.en",
+  "valor": "Mario wakes up with no memory in eastern Mexico City. Adrift alongside Lázaro, he learns to inhabit other people’s bodies through cracks in the earth. A hypnotic journey where the territory pierces the skin and the landscape warps to the rhythm of memories.",
+  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 145",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (lector independiente)",
+  "antes": {
+   "ficci-65": "How do you write a story that detaches from life? One that hangs loose, like a piece of skin—a photosensitive surface with light recorded in its folds.",
+   "mamut-2026": "Mario wakes up with no memory of his past life. His encounter with Lazare marks the beginning of a spatio-corporeal drift, from the eastern suburbs of Mexico City to the surrounding underground cavities, where bodies and landscapes crack in the same motion."
+  },
+  "work_id": "w_R4HAT5QKDQVC",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=145"
+ },
+ {
+  "campo": "generos",
+  "valor": [
+   "Fantasía"
+  ],
+  "motivo": "la de mamut-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "mamut-2026": "Fantasía"
+  },
+  "work_id": "w_R4HAT5QKDQVC"
+ },
+ {
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/mamut-2026/frio-metal.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "la de mamut-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "mamut-2026": "/assets/mamut-2026/frio-metal.jpg",
+   "ficci-65": "https://image.tmdb.org/t/p/w185/hs4fAhciulkzmE9Cdqw2YXxf7pm.jpg"
+  },
+  "work_id": "w_R4HAT5QKDQVC",
+  "vistas": [
+   "https://image.tmdb.org/t/p/w185/hs4fAhciulkzmE9Cdqw2YXxf7pm.jpg"
+  ]
+ },
+ {
+  "campo": "xref.letterboxd",
+  "valor": "cold-metal",
+  "motivo": "la de mamut-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "mamut-2026": "cold-metal"
+  },
+  "work_id": "w_R4HAT5QKDQVC"
+ },
+ {
+  "campo": "xref.tmdb",
+  "valor": 1493018,
+  "motivo": "la de mamut-2026, al unir las dos entradas de la obra",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (fusión con fuente)",
+  "antes": {
+   "mamut-2026": "1493018"
+  },
+  "work_id": "w_R4HAT5QKDQVC"
+ }
+]

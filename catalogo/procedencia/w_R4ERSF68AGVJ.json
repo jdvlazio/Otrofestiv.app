@@ -12,11 +12,31 @@
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "tmdb:1363770",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1363770)",
+  "fecha": "2026-11-24"
  },
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Texto cortado: faltaban el hijo enfermo y la rebelión, idea central.",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Texto cortado: faltaban el hijo enfermo y la rebelión, idea central.",
+  "fecha": "2026-11-25"
  }
 }

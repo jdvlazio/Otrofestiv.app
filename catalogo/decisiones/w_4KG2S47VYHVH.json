@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KG2S47VYHVH",
+  "campo": "directores",
+  "valor": [
+   "Ibrahim Omar"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ibrahim Omar"
+  }
+ },
+ {
+  "work_id": "w_4KG2S47VYHVH",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KG2S47VYHVH",
+  "campo": "paises",
+  "valor": [
+   "SD"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Sudán"
+  }
+ },
+ {
+  "work_id": "w_4KG2S47VYHVH",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KG2S47VYHVH",
+  "campo": "sinopsis.es",
+  "valor": "Ibrahim vuelve a la aldea que dejó atrás con la intención de proyectar películas. Entre trámites y resistencias, el estallido de la guerra en Sudán convierte su búsqueda de una pantalla en una lucha por sobrevivir.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ibrahim vuelve a la aldea que dejó atrás con la intención de proyectar películas. Entre trámites y resistencias, el estallido de la guerra en Sudán convierte su búsqueda de una pantalla en una lucha por sobrevivir."
+  }
+ },
+ {
+  "work_id": "w_4KG2S47VYHVH",
+  "campo": "sinopsis.en",
+  "valor": "Ibrahim goes back to the village he once left, hoping to screen films. But as he wrestles with custom and bureaucracy, war ignites across Sudan, turning his search for a screen into a battle to stay alive.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ibrahim goes back to the village he once left, hoping to screen films. But as he wrestles with custom and bureaucracy, war ignites across Sudan, turning his search for a screen into a battle to stay alive."
+  }
+ },
+ {
+  "work_id": "w_4KG2S47VYHVH",
+  "campo": "xref.tmdb",
+  "valor": 1670751,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1670751"
+  }
+ },
+ {
+  "work_id": "w_4KG2S47VYHVH",
+  "campo": "xref.letterboxd",
+  "valor": "nothing-happens-after-your-absence",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "nothing-happens-after-your-absence"
+  }
+ },
+ {
+  "work_id": "w_4KG2S47VYHVH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/nothing-happens-after-your-absence.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/nothing-happens-after-your-absence.jpg"
+  }
+ }
+]

@@ -1,0 +1,37 @@
+{
+ "id": "w_4KHN9ATNHM7W",
+ "titulo_original": "Sonnenstube",
+ "anio": 2022,
+ "paises": [
+  "IT",
+  "CH"
+ ],
+ "directores": [
+  "Davide Palella"
+ ],
+ "sinopsis": {
+  "es": "Desde el observatorio solar de Locarno, Sergio Cortesi dedicó décadas a observar el Sol y a dibujar las manchas de su superficie.",
+  "en": "From the solar observatory in Locarno, Sergio Cortesi spent decades watching the Sun and drawing the spots on its surface."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/sonnenstube.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 990591,
+  "letterboxd": "sonnenstube"
+ },
+ "versiones": [
+  {
+   "etiqueta": "8 min",
+   "duracion_min": 8
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HCND4SVDFZ",
+  "campo": "directores",
+  "valor": [
+   "Anselmo Duarte"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 332",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=332",
+  "antes": {
+   "ficci-65": "Ujkan Hysaj"
+  }
+ },
+ {
+  "work_id": "w_R4HCND4SVDFZ",
+  "campo": "anio",
+  "valor": 1962,
+  "motivo": "catálogo oficial de FICCI 65, p. 332",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=332",
+  "antes": {
+   "ficci-65": "2016"
+  }
+ },
+ {
+  "work_id": "w_R4HCND4SVDFZ",
+  "campo": "paises",
+  "valor": [
+   "BR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 332",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=332",
+  "antes": {
+   "ficci-65": "Brasil"
+  }
+ },
+ {
+  "work_id": "w_R4HCND4SVDFZ",
+  "campo": "sinopsis.es",
+  "valor": "Zé y Rosa, una pareja campesina, llegan de madrugada a la ciudad. Él carga una cruz que prometió poner en el altar de Santa Bárbara cuando su burro casi muere. El párroco se lo impide. Su tenacidad atrae a la prensa amarillista y el apoyo de grupos marginados, y el Estado lo ve como un provocador. Un melodrama de escisiones religiosas y políticas.",
+  "motivo": "catálogo oficial de FICCI 65, p. 332",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=332",
+  "antes": {
+   "ficci-65": "Zé y Rosa, una pareja campesina, arriban de madrugada a una ciudad intermedia. El hombre carga una cruz y ambos llevan horas de caminata."
+  }
+ },
+ {
+  "work_id": "w_R4HCND4SVDFZ",
+  "campo": "sinopsis.en",
+  "valor": "Zé and Rosa, a peasant couple, arrive in town before dawn. He carries a cross he promised to place on Saint Barbara's altar when his donkey nearly died. The priest stops him. His tenacity draws the tabloid press and the support of marginalized groups, and the state sees him as a provocateur. A melodrama of religious and political divisions.",
+  "motivo": "catálogo oficial de FICCI 65, p. 332",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=332",
+  "antes": {
+   "ficci-65": "Zé and Rosa, a peasant couple, arrive in a mid-sized city at dawn. The man carries a cross, and both have been walking for hours."
+  }
+ },
+ {
+  "work_id": "w_R4HCND4SVDFZ",
+  "campo": "xref.tmdb",
+  "valor": 59990,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/59990"
+ }
+]

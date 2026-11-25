@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4QSRPWTXWP9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/narrarelfuturo-2026/protegiendo-nuestro-territorio-v2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "con el título completo; la otra lo traía cortado",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/narrarelfuturo-2026/protegiendo-nuestro-territorio.jpg",
+   "/assets/villadelcine-2026/protecting-our-territory-360.jpg"
+  ],
+  "antes": {
+   "villadelcine-2026": "/assets/villadelcine-2026/protecting-our-territory-360.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4QSRPWTXWP9",
+  "campo": "sinopsis.es",
+  "valor": "El espectador se convierte en Cachufina, la compañera imaginaria de un grupo de estudiantes peruanos que transforma su entorno en una experiencia inmersiva. Creada con celulares y una cámara 360°, la obra invita a mirar y cuidar el territorio desde sus propias perspectivas.",
+  "motivo": "cuenta la obra y es la más corta; la otra describe la instalación",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "titulo": "Protecting Our Territory 360",
+  "vistas": [
+   "30b19d5e3e8e",
+   "99c1da1d3d53"
+  ],
+  "antes": {
+   "villadelcine-2026": "El espectador se convierte en Cachufina, la compañera imaginaria de un grupo de estudiantes peruanos que transforma su entorno en una experiencia inmersiva. Creada con celulares y una cámara 360°, la obra invita a mirar y cuidar el territorio desde sus propias perspectivas."
+  }
+ },
+ {
+  "work_id": "w_R4QSRPWTXWP9",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "villadelcine-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4QSRPWTXWP9",
+  "campo": "paises",
+  "valor": [
+   "PE",
+   "US"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "villadelcine-2026": "Perú y Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4QSRPWTXWP9",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "VR 360 es formato, no género; documental, como en Villa del Cine",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "villadelcine-2026": "Documental"
+  }
+ }
+]

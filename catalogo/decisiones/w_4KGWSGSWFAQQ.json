@@ -1,0 +1,119 @@
+[
+ {
+  "work_id": "w_4KGWSGSWFAQQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "c4245cb78ebe"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "The Getaway",
+  "valor": "En alguna carretera de Ucrania, Ana, cooperante de una ONG española, ayuda a Yrina a huir de los bombardeos junto a su hijo Yure. Con el niño febril e Yrina agotada, Ana convence a la joven madre de subir al coche de una desconocida para salir cuanto antes. Pero dentro, Yrina no tarda en sospechar de la mujer, que actúa de manera secreta.",
+  "original": "En alguna carretera de Ucrania, Ana, cooperante de una ONG española, ayuda a Yrina a huir de los bombardeos junto a su hijo Yure. Quieren llegar cuanto antes a la frontera y ponerse a salvo. Con Yure febril e Yrina absolutamente agotada, Ana convence a la joven madre para que suba al coche de una desconocida y salgan cuanto antes de allí. Pero dentro del coche Yrina no tarda mucho en sospechar de la mujer. En cada detalle ella ve señales ya que ésta mujer actúa de manera secreta.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "5e421dafeb05"
+  }
+ },
+ {
+  "work_id": "w_4KGWSGSWFAQQ",
+  "campo": "directores",
+  "valor": [
+   "Raquel Guerrero"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Raquel Guerrero"
+  }
+ },
+ {
+  "work_id": "w_4KGWSGSWFAQQ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGWSGSWFAQQ",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KGWSGSWFAQQ",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KGWSGSWFAQQ",
+  "campo": "sinopsis.en",
+  "valor": "On a road somewhere in Ukraine, Ana, an aid worker for a Spanish NGO, helps Yrina flee the bombings with her son Yure. They want to reach the border as soon as possible and get to safety. With Yure running a fever and Yrina completely exhausted, Ana convinces the young mother to get into a stranger’s car and leave as soon as possible. But once inside the car, it doesn’t take long for Yrina to become suspicious of the woman. She sees signs in every detail, as the woman acts in a secretive manner.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On a road somewhere in Ukraine, Ana, an aid worker for a Spanish NGO, helps Yrina flee the bombings with her son Yure. They want to reach the border as soon as possible and get to safety. With Yure running a fever and Yrina completely exhausted, Ana convinces the young mother to get into a stranger’s car and leave as soon as possible. But once inside the car, it doesn’t take long for Yrina to become suspicious of the woman. She sees signs in every detail, as the woman acts in a secretive manner."
+  }
+ },
+ {
+  "work_id": "w_4KGWSGSWFAQQ",
+  "campo": "xref.tmdb",
+  "valor": 1770853,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1770853"
+  }
+ },
+ {
+  "work_id": "w_4KGWSGSWFAQQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/the-getaway.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/the-getaway.jpg"
+  }
+ }
+]

@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KF31RFT9QMA",
+  "campo": "directores",
+  "valor": [
+   "Ana Cecilia Sandoval"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ana Cecilia Sandoval"
+  }
+ },
+ {
+  "work_id": "w_4KF31RFT9QMA",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KF31RFT9QMA",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_4KF31RFT9QMA",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KF31RFT9QMA",
+  "campo": "sinopsis.es",
+  "valor": "En el concurso de bandas de guerra, Fer ayuda a su mejor amiga a entrar en ritmo, pero se da cuenta que Bárbara va atrasada porque oculta algo. Al no poder hacer nada, Fer se aferra al sonido de su corneta.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En el concurso de bandas de guerra, Fer ayuda a su mejor amiga a entrar en ritmo, pero se da cuenta que Bárbara va atrasada porque oculta algo. Al no poder hacer nada, Fer se aferra al sonido de su corneta."
+  }
+ },
+ {
+  "work_id": "w_4KF31RFT9QMA",
+  "campo": "sinopsis.en",
+  "valor": "In the battle of the marching bands, Fer, the group’s commander, helps her best friend get into rhythm. But she realizes Bárbara is falling behind because she’s hiding something. Feeling helpless, Fer clings to her instrument, continuing to play.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the battle of the marching bands, Fer, the group’s commander, helps her best friend get into rhythm. But she realizes Bárbara is falling behind because she’s hiding something. Feeling helpless, Fer clings to her instrument, continuing to play."
+  }
+ },
+ {
+  "work_id": "w_4KF31RFT9QMA",
+  "campo": "xref.tmdb",
+  "valor": 1555688,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1555688"
+  }
+ },
+ {
+  "work_id": "w_4KF31RFT9QMA",
+  "campo": "xref.letterboxd",
+  "valor": "toque-reglamentario",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "toque-reglamentario"
+  }
+ },
+ {
+  "work_id": "w_4KF31RFT9QMA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/toque-reglamentario.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/toque-reglamentario.jpg"
+  }
+ }
+]

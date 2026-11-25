@@ -1,0 +1,118 @@
+[
+ {
+  "work_id": "w_4KHHPD0MAS3H",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "0a3239d770bb"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Ni aquí, ni allá",
+  "valor": "Salomé, una diseñadora de interiores venezolana en Nueva York, siente una atracción sobrenatural desde el núcleo de la Tierra, quizá vinculada con la muerte de su abuela o su creciente desconexión del entorno. Ese llamado la lleva a indagar en su vida y su propio ser. Una exploración atmosférica y surrealista del malestar urbano.",
+  "original": "Ni aquí, ni allá es una exploración atmosférica y surrealista del malestar urbano. Sigue a Salomé, una diseñadora de interiores venezolana que vive en Nueva York y siente una atracción sobrenatural desde el núcleo de la Tierra. La sensación podría estar vinculada con la reciente muerte de su abuela en su país natal o con su creciente desconexión del entorno. Ese llamado la lleva a explorar la materialidad de su vida en Nueva York y de su propio ser.",
+  "sintesis": {
+   "redacta": "Claude",
+   "verifica": "Juan (24 nov 2026)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9cdb4a889563"
+  }
+ },
+ {
+  "work_id": "w_4KHHPD0MAS3H",
+  "campo": "directores",
+  "valor": [
+   "Manuela Romero Samacá"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Manuela Romero Samacá"
+  }
+ },
+ {
+  "work_id": "w_4KHHPD0MAS3H",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHHPD0MAS3H",
+  "campo": "paises",
+  "valor": [
+   "US",
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos, Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KHHPD0MAS3H",
+  "campo": "sinopsis.en",
+  "valor": "Ni Aquí, Ni Allá is an ambient, surreal exploration of urban malaise. It follows Salomé, a Venezuelan interior designer living in NYC, who feels an otherworldly pull from the earth’s core. A sensation possibly tied to the recent death of her grandmother back home, or her own increasing disconnection from her surroundings. This calling unravels for her an exploration of the materiality of her life in New York and of her own self.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ni Aquí, Ni Allá is an ambient, surreal exploration of urban malaise. It follows Salomé, a Venezuelan interior designer living in NYC, who feels an otherworldly pull from the earth’s core. A sensation possibly tied to the recent death of her grandmother back home, or her own increasing disconnection from her surroundings. This calling unravels for her an exploration of the materiality of her life in New York and of her own self."
+  }
+ },
+ {
+  "work_id": "w_4KHHPD0MAS3H",
+  "campo": "xref.tmdb",
+  "valor": 1841393,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841393"
+  }
+ },
+ {
+  "work_id": "w_4KHHPD0MAS3H",
+  "campo": "xref.letterboxd",
+  "valor": "ni-aqui-ni-alla",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "ni-aqui-ni-alla"
+  }
+ },
+ {
+  "work_id": "w_4KHHPD0MAS3H",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/ni-aqui-ni-alla.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/ni-aqui-ni-alla.jpg"
+  }
+ }
+]

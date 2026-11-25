@@ -1,11 +1,17 @@
 {
  "id": "w_R4HCNCKBW0ZH",
  "titulo_original": "No les pedimos un viaje a la luna",
- "anio": null,
+ "anio": 1986,
  "paises": [
   "MX"
  ],
- "directores": [],
+ "directores": [
+  "Maricarmen de Lara"
+ ],
+ "sinopsis": {
+  "es": "El 19 de septiembre de 1985, un terremoto de magnitud 8,1 sacude la Ciudad de México. Talleres de costura, algunos clandestinos, colapsan con las trabajadoras dentro, y la catástrofe deja al descubierto sus condiciones de explotación. Quienes logran salir con vida se encuentran sin empleo ni protección.",
+  "en": "On September 19, 1985, an 8.1-magnitude earthquake strikes Mexico City. Sewing workshops, some of them clandestine, collapse with the workers inside, and the catastrophe lays bare their exploitative conditions. Those who make it out alive find themselves without jobs or protection."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/sf-poster-nolespedimos.jpg?itok=H8njrtBo",
   "veredicto": "oficial-festival"

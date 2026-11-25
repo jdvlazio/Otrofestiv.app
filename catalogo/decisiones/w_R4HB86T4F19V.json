@@ -1,0 +1,72 @@
+[
+ {
+  "work_id": "w_R4HB86T4F19V",
+  "campo": "directores",
+  "valor": [
+   "André Novais Oliveira"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 229",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=229",
+  "antes": {
+   "ficci-65": "Dmitry Peskov"
+  }
+ },
+ {
+  "work_id": "w_R4HB86T4F19V",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 229",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=229"
+ },
+ {
+  "work_id": "w_R4HB86T4F19V",
+  "campo": "paises",
+  "valor": [
+   "BR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 229",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=229",
+  "antes": {
+   "ficci-65": "Brasil"
+  }
+ },
+ {
+  "work_id": "w_R4HB86T4F19V",
+  "campo": "sinopsis.es",
+  "valor": "El amor de Jacira y Gilberto comienza en los bailes negros de un barrio periférico brasileño en los años 70. Entre drama y serenatas pasan décadas que parecen muy felices, y la pareja de ancianos comparte un afecto maduro. La ciencia ficción se insinúa con breves indicios hasta su punto álgido, en un homenaje del director a su difunta madre.",
+  "motivo": "catálogo oficial de FICCI 65, p. 229",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=229",
+  "antes": {
+   "ficci-65": "André Novais Oliveira construye una elegía familiar sobre la pérdida y la memoria a través de imágenes íntimas de su propia familia en Brasil."
+  }
+ },
+ {
+  "work_id": "w_R4HB86T4F19V",
+  "campo": "sinopsis.en",
+  "valor": "Jacira and Gilberto’s love begins at the Black dance halls of a Brazilian suburb in the 1970s. Amid drama and serenades, decades that seem very happy go by, and the elderly couple shares a mature affection. Science fiction is introduced with brief hints until it reaches its climax, in the director’s tribute to his late mother.",
+  "motivo": "catálogo oficial de FICCI 65, p. 229",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=229",
+  "antes": {
+   "ficci-65": "André Novais Oliveira constructs a family elegy about loss and memory through intimate images of his own family in Brazil."
+  }
+ },
+ {
+  "work_id": "w_R4HB86T4F19V",
+  "campo": "xref.tmdb",
+  "valor": 1616158,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1616158"
+ }
+]

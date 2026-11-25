@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS8HNEA3X",
+  "campo": "sinopsis.es",
+  "valor": "En un mundo donde la vida cotidiana revela en silencio los signos del colapso ambiental, una pequeña abeja recorre tres historias entrelazadas que exponen los dilemas de nuestra época: la alienación urbana, el consumismo desenfrenado y la escasez de recursos naturales. Sin diálogos, el cortometraje invita a pensar en nuestros hábitos y decisiones ante la crisis climática.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "6cc1a86331a6"
+  ],
+  "antes": {
+   "olhar-2026": "En un mundo donde lo cotidiano revela silenciosamente las señales del colapso ambiental, una pequeña abeja recorre tres historias entrelazadas que exponen los dilemas de nuestra era: la alienación urbana, el consumismo desenfrenado y la escasez de recursos naturales. Sin diálogos, el cortometraje Ecos del Mañana nos invita a reflexionar sobre nuestros hábitos y decisiones frente a la crisis climática. Más allá de la alerta, es una invitación a reflexionar sobre el presente y el futuro incierto."
+  }
+ },
+ {
+  "work_id": "w_R4MQS8HNEA3X",
+  "campo": "xref.tmdb",
+  "valor": 1688881,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/ecos-do-amanha/"
+ }
+]

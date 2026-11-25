@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KHTXKGSFBCN",
+  "campo": "directores",
+  "valor": [
+   "Priscila Núñez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Priscila Núñez"
+  }
+ },
+ {
+  "work_id": "w_4KHTXKGSFBCN",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KHTXKGSFBCN",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_4KHTXKGSFBCN",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KHTXKGSFBCN",
+  "campo": "sinopsis.es",
+  "valor": "Al cumplir 11 años, Pilar recibe un libro sobre la menstruación, pero lo que descubre entre sus páginas destapa una verdad dolorosa que nada tiene que ver con crecer.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Al cumplir 11 años, Pilar recibe un libro sobre la menstruación, pero lo que descubre entre sus páginas destapa una verdad dolorosa que nada tiene que ver con crecer."
+  }
+ },
+ {
+  "work_id": "w_4KHTXKGSFBCN",
+  "campo": "sinopsis.en",
+  "valor": "After turning 11 years old, Pilar receives a book about menstruation, but what she uncovers in its pages reveals a painful truth that has nothing to do with growing up.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS C",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After turning 11 years old, Pilar receives a book about menstruation, but what se uncovers in its pages reveals a painful truth that has nothing to do with growing up."
+  }
+ },
+ {
+  "work_id": "w_4KHTXKGSFBCN",
+  "campo": "xref.tmdb",
+  "valor": 1826830,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1826830"
+  }
+ },
+ {
+  "work_id": "w_4KHTXKGSFBCN",
+  "campo": "xref.letterboxd",
+  "valor": "a-los-once",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "a-los-once"
+  }
+ },
+ {
+  "work_id": "w_4KHTXKGSFBCN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/a-los-once.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/a-los-once.jpg"
+  }
+ }
+]

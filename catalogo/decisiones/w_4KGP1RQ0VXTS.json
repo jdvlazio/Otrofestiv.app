@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGP1RQ0VXTS",
+  "campo": "directores",
+  "valor": [
+   "Rana Roy"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rana Roy"
+  }
+ },
+ {
+  "work_id": "w_4KGP1RQ0VXTS",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGP1RQ0VXTS",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KGP1RQ0VXTS",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_4KGP1RQ0VXTS",
+  "campo": "sinopsis.es",
+  "valor": "Una madre se ahoga en la depresión posparto mientras una enfermera nocturna la pone nerviosa y la guerra inunda sus pantallas. ¿La locura está en su mente o en el mundo que la rodea?",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una madre se ahoga en la depresión posparto mientras una enfermera nocturna la pone nerviosa y la guerra inunda sus pantallas. ¿La locura está en su mente o en el mundo que la rodea?"
+  }
+ },
+ {
+  "work_id": "w_4KGP1RQ0VXTS",
+  "campo": "sinopsis.en",
+  "valor": "A mother drowns in postpartum as a night-nurse unnerves her and war floods her screens. Is the madness in her mind or the world around her?",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A mother drowns in postpartum as a night-nurse unnerves her and war floods her screens. Is the madness in her mind or the world around her?"
+  }
+ },
+ {
+  "work_id": "w_4KGP1RQ0VXTS",
+  "campo": "xref.tmdb",
+  "valor": 1436720,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1436720"
+  }
+ },
+ {
+  "work_id": "w_4KGP1RQ0VXTS",
+  "campo": "xref.letterboxd",
+  "valor": "night-feeds",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "night-feeds"
+  }
+ },
+ {
+  "work_id": "w_4KGP1RQ0VXTS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/night-feeds.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/night-feeds.jpg"
+  }
+ }
+]

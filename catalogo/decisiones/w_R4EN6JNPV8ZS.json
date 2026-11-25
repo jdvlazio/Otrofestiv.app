@@ -1,0 +1,52 @@
+[
+ {
+  "work_id": "w_R4EN6JNPV8ZS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/girardota-2026/los-anos-del-conejo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cineautopsia/los-anos-del-conejo.jpg",
+   "/assets/girardota-2026/los-anos-del-conejo.jpg",
+   "/assets/jardin-2026/los-anos-del-conejo.jpg"
+  ],
+  "antes": {
+   "cineautopsia-2026": "/assets/cineautopsia/los-anos-del-conejo.jpg",
+   "girardota-2026": "/assets/girardota-2026/los-anos-del-conejo.jpg",
+   "jardin-2026": "/assets/jardin-2026/los-anos-del-conejo.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4EN6JNPV8ZS",
+  "campo": "sinopsis.es",
+  "valor": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (girardota-2026, jardin-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "dadc983adf1f",
+   "f4fd476d9f57"
+  ],
+  "antes": {
+   "cineautopsia-2026": "Recuerdo muy poco de aquellos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña frente a mi casa, los rostros de mis amigos, los juegos con mis hermanas. Dejar mi vida en México de esa manera me borró la memoria. Coloreo estos recuerdos como un intento de reunirlos. Para siempre.",
+   "girardota-2026": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre.",
+   "jardin-2026": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre."
+  }
+ },
+ {
+  "work_id": "w_R4EN6JNPV8ZS",
+  "campo": "sinopsis.en",
+  "valor": "I remember very little from those years: the years of the rabbit. My favorite animal, my favorite color, the mountain in front of my house, my friends’ faces, the games with my sisters. Leaving my life in Mexico like that erased my memory. I color in these memories as an attempt to gather them. Forever.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "girardota-2026": "I remember very little from those years: the years of the rabbit. My favorite animal, my favorite color, the mountain in front of my house, my friends’ faces, the games with my sisters. Leaving my life in Mexico like that erased my memory. I color in these memories as an attempt to gather them. Forever.",
+   "jardin-2026": "I remember very little from those years: the years of the rabbit. My favorite animal, my favorite color, the mountain in front of my house, my friends’ faces, the games with my sisters. Leaving my life in Mexico like that erased my memory. I color in these memories as an attempt to gather them. Forever."
+  }
+ }
+]

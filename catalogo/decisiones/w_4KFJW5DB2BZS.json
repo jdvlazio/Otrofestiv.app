@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_4KFJW5DB2BZS",
+  "campo": "directores",
+  "valor": [
+   "Lucas Acher"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lucas Acher"
+  }
+ },
+ {
+  "work_id": "w_4KFJW5DB2BZS",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFJW5DB2BZS",
+  "campo": "paises",
+  "valor": [
+   "BR",
+   "US",
+   "GB"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Brasil, Estados Unidos, Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_4KFJW5DB2BZS",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suspenso"
+  }
+ },
+ {
+  "work_id": "w_4KFJW5DB2BZS",
+  "campo": "sinopsis.es",
+  "valor": "Cuando una broma con un puntero láser sale terriblemente mal, un adolescente con ansiedad social recorre São Paulo durante una noche caótica para salvar al gato gravemente herido de la persona que le gusta. La culpa y la paranoia lo llevan al límite.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Cuando una broma con un puntero láser sale terriblemente mal, un adolescente con ansiedad social recorre São Paulo durante una noche caótica para salvar al gato gravemente herido de la persona que le gusta. La culpa y la paranoia lo llevan al límite."
+  }
+ },
+ {
+  "work_id": "w_4KFJW5DB2BZS",
+  "campo": "sinopsis.en",
+  "valor": "After a laser pointer prank goes horribly wrong, a socially anxious teenager spends one chaotic night roaming São Paulo to save his crush’s critically injured cat, as guilt and paranoia push him toward a breaking point.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After a laser pointer prank goes horribly wrong, a socially anxious teenager spends one chaotic night roaming São Paulo to save his crush’s critically injured cat, as guilt and paranoia push him toward a breaking point."
+  }
+ },
+ {
+  "work_id": "w_4KFJW5DB2BZS",
+  "campo": "xref.tmdb",
+  "valor": 1678782,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1678782"
+  }
+ },
+ {
+  "work_id": "w_4KFJW5DB2BZS",
+  "campo": "xref.letterboxd",
+  "valor": "laser-cat",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "laser-cat"
+  }
+ },
+ {
+  "work_id": "w_4KFJW5DB2BZS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/laser-gato.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/laser-gato.jpg"
+  }
+ }
+]

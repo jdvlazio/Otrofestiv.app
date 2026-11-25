@@ -1,0 +1,125 @@
+[
+ {
+  "work_id": "w_R4QPX912QAQ8",
+  "campo": "xref.tmdb",
+  "valor": 1516110,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/because-today-is-saturday/"
+ },
+ {
+  "work_id": "w_R4QPX912QAQ8",
+  "campo": "directores",
+  "valor": [
+   "Alice Eça Guimarães"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4QPX912QAQ8",
+  "campo": "sinopsis.es",
+  "valor": "Es sábado, y una mujer lucha con la dificultad de conciliar su vida familiar y su necesidad de escapar.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "antes": {
+   "bogoshorts-2026": "Es sábado, y una mujer lucha con la dificultad de conciliar su vida familiar y su necesidad de escapar.",
+   "tribeca-2026": "Una mujer despierta temprano en su cumpleaños para robarse unas horas de escritura. Cada momento de inspiración es interrumpido por demandas domésticas hasta que la carga mental llega a un punto de quiebre."
+  },
+  "vistas": [
+   "63b52fa89ab3",
+   "cde96e5d7184"
+  ]
+ },
+ {
+  "work_id": "w_R4QPX912QAQ8",
+  "campo": "sinopsis.en",
+  "valor": "It’s Saturday, and a woman struggles with the difficulty of reconciling her home life and her need to escape.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "antes": {
+   "bogoshorts-2026": "It’s Saturday, and a woman struggles with the difficulty of reconciling her home life and her need to escape.",
+   "tribeca-2026": "A woman wakes early on her birthday to steal a few hours of writing time. Every inspiration is interrupted by domestic demands — laundry, children, meals — until the mental load reaches a breaking point."
+  }
+ },
+ {
+  "work_id": "w_R4QPX912QAQ8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/eLMlWlvZq6WY1yUg0wwJJJaTGhf.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "mismo afiche: queda el publicado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/porque-hoje-e-sabado.jpg",
+   "tribeca-2026": "https://image.tmdb.org/t/p/w500/eLMlWlvZq6WY1yUg0wwJJJaTGhf.jpg"
+  },
+  "vistas": [
+   "/assets/bogoshorts-2026/porque-hoje-e-sabado.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4QPX912QAQ8",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025",
+   "tribeca-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4QPX912QAQ8",
+  "campo": "paises",
+  "valor": [
+   "PT",
+   "FR",
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Portugal, Francia, España",
+   "tribeca-2026": "Portugal, Francia, España"
+  }
+ },
+ {
+  "work_id": "w_R4QPX912QAQ8",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación",
+   "tribeca-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4QPX912QAQ8",
+  "campo": "xref.letterboxd",
+  "valor": "because-today-is-saturday",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "because-today-is-saturday",
+   "tribeca-2026": "because-today-is-saturday"
+  }
+ }
+]

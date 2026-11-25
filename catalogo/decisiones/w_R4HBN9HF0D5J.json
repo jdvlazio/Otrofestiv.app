@@ -1,0 +1,110 @@
+[
+ {
+  "work_id": "w_R4HBN9HF0D5J",
+  "campo": "directores",
+  "valor": [
+   "Laura Chará"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 47",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=47"
+ },
+ {
+  "work_id": "w_R4HBN9HF0D5J",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 47",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=47"
+ },
+ {
+  "work_id": "w_R4HBN9HF0D5J",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "FR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 47",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=47",
+  "antes": {
+   "ficci-65": "Colombia, Francia"
+  }
+ },
+ {
+  "work_id": "w_R4HBN9HF0D5J",
+  "campo": "sinopsis.es",
+  "valor": "A raíz de la muerte de su madre, Laura Chará acude a la casa de su abuela y su tía para intentar reconstruir un relato que dé sentido a la pérdida. Ante el hermetismo de la abuela, la indagación de la nieta se desplaza hacia una contemplación más atenta del espacio y de un silencio significativo.",
+  "motivo": "catálogo oficial de FICCI 65, p. 47",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=47"
+ },
+ {
+  "work_id": "w_R4HBN9HF0D5J",
+  "campo": "sinopsis.en",
+  "valor": "Following her mother's death, Laura Chará goes to her grandmother's and aunt's house to try to piece together a narrative that gives meaning to the loss. Faced with her grandmother's reticence, the granddaughter's inquiry shifts toward a more attentive contemplation of the space and of a meaningful silence.",
+  "motivo": "catálogo oficial de FICCI 65, p. 47",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=47"
+ },
+ {
+  "work_id": "w_R4HBN9HF0D5J",
+  "campo": "xref.tmdb",
+  "valor": 1645142,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1645142"
+ },
+ {
+  "work_id": "w_R4HBN9HF0D5J",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/todas-las-manos-que-solte.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "mismo afiche, a mayor tamaño (780 contra 250)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/todas-las-manos-que-solte.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0"
+  },
+  "vistas": [
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-25%20155500.png?itok=liUEj-a0"
+  ]
+ },
+ {
+  "work_id": "w_R4HBN9HF0D5J",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental",
+   "ficci-65": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4HBN9HF0D5J",
+  "campo": "xref.letterboxd",
+  "valor": "all-the-hands-ive-let-go",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "all-the-hands-ive-let-go",
+   "ficci-65": "all-the-hands-ive-let-go"
+  }
+ }
+]

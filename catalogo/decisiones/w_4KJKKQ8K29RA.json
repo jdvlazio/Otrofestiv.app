@@ -1,0 +1,90 @@
+[
+ {
+  "work_id": "w_4KJKKQ8K29RA",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "a28e7208f831"
+  ],
+  "original_de": [],
+  "titulo": "La culpa (Juliana Quédate Otro Día)",
+  "valor": "Lucía vive atrapada en su rutina: despertar, ir a la oficina, volver a casa y ver televisión, su único refugio, que empieza a invadir sus sueños con una subasta por una silla vacía y máscaras de Luis Miguel. De estética onírica, este videoclip cuestiona la cultura de la productividad y la promesa vacía de la meritocracia.",
+  "original": "Lucía vive atrapada en su rutina: despertar, ir a la oficina, trabajar, volver a casa y ver televisión, cada día se parece al anterior, y eso la consume vez tras vez, siendo su único refugio la televisión, la cual empieza a invadir sus sueños con una subasta por una silla vacía y máscaras de Luis Miguel, ella gana pero cada vez que despierta se da cuenta que nada cambió. Este videoclip en su estética onírica cuestiona la cultura de la productividad y la promesa vacía de la meritocracia.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "27ea7edd1785"
+  }
+ },
+ {
+  "work_id": "w_4KJKKQ8K29RA",
+  "campo": "directores",
+  "valor": [
+   "Pablo Gaitán"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Pablo Gaitán"
+  }
+ },
+ {
+  "work_id": "w_4KJKKQ8K29RA",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJKKQ8K29RA",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJKKQ8K29RA",
+  "campo": "sinopsis.en",
+  "valor": "Lucía is trapped in her routine: waking up, going to the office, returning home and watching television, her only refuge, which begins to invade her dreams with an auction for an empty chair and Luis Miguel masks. Dreamlike in its aesthetic, this music video questions the culture of productivity and the empty promise of meritocracy.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lucía is trapped in her routine: waking up, going to the office, working, returning home and watching television, each day resembles the last, and that consumes her time after time, television being her only refuge, which begins to invade her dreams with an auction for an empty chair and Luis Miguel masks, she wins but every time she wakes up she realizes nothing has changed. This music video, in its dreamlike aesthetic, questions the culture of productivity and the empty promise of meritocracy."
+  }
+ },
+ {
+  "work_id": "w_4KJKKQ8K29RA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-culpa-juliana-quedate-otro-dia.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-culpa-juliana-quedate-otro-dia.jpg"
+  }
+ }
+]

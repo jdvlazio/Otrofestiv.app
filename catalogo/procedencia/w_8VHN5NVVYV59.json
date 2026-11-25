@@ -18,5 +18,17 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Texto del festival: Maciek es de la resistencia anticomunista, no ultranacionalista",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "\"academy soldier\" es mala traducción de AK (Armia Krajowa); además cuenta el desenlace. Traducción del festival.",
+  "fecha": "2026-11-25"
  }
 }

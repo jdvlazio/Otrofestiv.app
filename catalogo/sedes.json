@@ -263,12 +263,15 @@
    },
    "address": "Calle 82 # 10-69",
    "alias": [
+    "CEFE",
+    "CEFE Chapinero - Bogotá",
     "Centro Felicidad Chapinero"
    ],
    "festivales": [
     "anibia-2026",
     "bhff-2026",
-    "biff-2026"
+    "biff-2026",
+    "bogoshorts-2026"
    ],
    "salas": [
     "Teatro",
@@ -455,6 +458,7 @@
     "anibia-2026",
     "bhff-2026",
     "biff-2026",
+    "bogoshorts-2026",
     "cuaff-2026",
     "midbo-2026",
     "narrarelfuturo-2026"
@@ -471,7 +475,10 @@
     "Taller de la Imagen"
    ],
    "ciudad": "Bogotá",
-   "corto": "Cinemateca de Bogotá"
+   "corto": "Cinemateca de Bogotá",
+   "salas_alias": {
+    "Taller de la imagen": "Taller de la Imagen"
+   }
   },
   "s_180f653f": {
    "nombre": "I.E. San Andrés",
@@ -577,11 +584,15 @@
     "fuente": "midbo-2026-venues-geo.json"
    },
    "address": "Cra. 3 #18-45",
-   "alias": [],
+   "alias": [
+    "Alianza Francesa - Bogotá"
+   ],
    "festivales": [
+    "bogoshorts-2026",
     "midbo-2026"
    ],
    "salas": [
+    "Sala Jules Verne",
     "Sede Centro"
    ],
    "ciudad": "Bogotá",
@@ -879,6 +890,29 @@
    ],
    "ciudad": "Villa de Leyva",
    "corto": "Real Fábrica"
+  },
+  "s_26a2abce": {
+   "nombre": "Universidad de Antioquia Seccional Occidente",
+   "lat": 6.5550126,
+   "lng": -75.8264716,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Universidad+de+Antioquia+-+Campus+Santa+Fe+de+Antioquia/@6.5550126,-75.8264716,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [
+    "Universidad de Antioquia Seccional Occidente - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "salas": [
+    "Auditorio",
+    "Aula 201"
+   ],
+   "corto": "Universidad de Antioquia Seccional Occidente"
   },
   "s_274fbe5a": {
    "nombre": "Universidad del Magdalena",
@@ -1452,6 +1486,26 @@
    "ciudad": "Medellín",
    "corto": "Teatro UVA Tricentenario"
   },
+  "s_4c6ebcc5": {
+   "nombre": "Parque Central Cite",
+   "lat": 5.9646939,
+   "lng": -73.603604,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Parque+Central+De+Cite/@5.9646939,-73.603604,17z",
+    "fecha": "2026-11-25",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Corregimiento de Cite, Barbosa",
+   "alias": [
+    "Parque Central Cite - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "Parque Central Cite"
+  },
   "s_4cb9c1c2": {
    "nombre": "I.E. Juan Bautista La Salle",
    "lat": 1.6134841,
@@ -1551,11 +1605,15 @@
     "fuente": "biff-2026-venues-geo.json"
    },
    "address": "Cl. 19 #2A-10",
-   "alias": [],
+   "alias": [
+    "City U - Bogotá"
+   ],
    "festivales": [
-    "biff-2026"
+    "biff-2026",
+    "bogoshorts-2026"
    ],
    "salas": [
+    "Lounge BFM Plazoleta UHeart",
     "Plazoleta principal"
    ],
    "ciudad": "Bogotá",
@@ -1677,8 +1735,12 @@
     "fuente": "midbo-2026-venues-geo.json"
    },
    "address": "Cl. 40b #6-23",
-   "alias": [],
+   "alias": [
+    "Centro Ático",
+    "Centro Ático - Bogotá"
+   ],
    "festivales": [
+    "bogoshorts-2026",
     "midbo-2026"
    ],
    "ciudad": "Bogotá",
@@ -1867,6 +1929,26 @@
    "ciudad": "Caldas",
    "corto": "Casa Municipal de la Cultura"
   },
+  "s_67489d27": {
+   "nombre": "Plaza Mayor Simón Bolívar",
+   "lat": 6.5564099,
+   "lng": -75.82796,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Plaza+de+Bolívar/@6.5564099,-75.82796,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Parque principal",
+   "alias": [
+    "Plaza Mayor Simón Bolívar - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "corto": "Plaza Mayor Simón Bolívar"
+  },
   "s_67c78bba": {
    "nombre": "Comfama Otraparte",
    "lat": 6.1795206,
@@ -2001,6 +2083,26 @@
    "salas_alias": {
     "Cinemateca móvil, Laboratorio": "Cinemateca móvil, laboratorio"
    }
+  },
+  "s_6b6f9da6": {
+   "nombre": "Sede de empleo y emprendimiento Comfenalco Antioquia",
+   "lat": 6.55798,
+   "lng": -75.82984,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Arzobispado+Santa+Fe+de+Antioquia/@6.55798,-75.82984,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Parque de la Chinca, contiguo al Palacio Arzobispal",
+   "alias": [
+    "Sede de empleo y emprendimiento Comfenalco Antioquia - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "corto": "Sede de empleo y emprendimiento Comfenalco Antioquia"
   },
   "s_6badfe99": {
    "nombre": "Colombo",
@@ -2458,6 +2560,26 @@
    "ciudad": "Popayán",
    "corto": "Facultad de Artes Unicauca"
   },
+  "s_7f1eac48": {
+   "nombre": "Barrio Llano de Bolívar",
+   "lat": 6.5646701,
+   "lng": -75.824623,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cl.+18+&+Cra.+11/@6.5646701,-75.824623,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Sector calle 18 entre la carrera 11 y la vía al Tunal, diagonal al gimnasio al aire libre",
+   "alias": [
+    "Barrio Llano de Bolívar - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "corto": "Barrio Llano de Bolívar"
+  },
   "s_808cba64": {
    "nombre": "Universidad Jorge Tadeo Lozano",
    "lat": 4.606567,
@@ -2505,6 +2627,26 @@
    ],
    "ciudad": "Florencia",
    "corto": "Candela Café Bar"
+  },
+  "s_8090daa6": {
+   "nombre": "Barrio La Esmeralda",
+   "lat": 6.5153935,
+   "lng": -75.8179349,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/El+paso+real/@6.5153935,-75.8179349,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Vereda El Paso Real",
+   "alias": [
+    "Barrio La Esmeralda - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "corto": "Barrio La Esmeralda"
   },
   "s_80974dfb": {
    "nombre": "Coliseo Corregimiento de San Francisco",
@@ -2849,6 +2991,46 @@
    "ciudad": "Toro",
    "corto": "Mambo House"
   },
+  "s_901a0a59": {
+   "nombre": "Catedral Basílica Metropolitana",
+   "lat": 6.5569862,
+   "lng": -75.8274309,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Catedral+Metropolitana+De+La+Inmaculada+Concepción/@6.5569862,-75.8274309,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Plaza Mayor Simón Bolívar",
+   "alias": [
+    "Catedral Basílica Metropolitana - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "corto": "Catedral Basílica Metropolitana"
+  },
+  "s_9106c39d": {
+   "nombre": "Teatro al aire libre La Media Torta",
+   "lat": 4.6003444,
+   "lng": -74.0659169,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/?api=1&query=Teatro+al+Aire+Libre+La+Media+Torta+Bogota",
+    "fecha": "2026-11-23",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 18 # 1-05 Este",
+   "alias": [
+    "Teatro al aire libre La Media Torta - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Teatro al aire libre La Media Torta"
+  },
   "s_92850ca4": {
    "nombre": "Plaza Mayor",
    "lat": 5.6338197,
@@ -2866,6 +3048,25 @@
    ],
    "ciudad": "Villa de Leyva",
    "corto": "Plaza Mayor"
+  },
+  "s_928647f0": {
+   "nombre": "Parque Emilio Ulloa",
+   "lat": 5.9305215,
+   "lng": -73.6163535,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Parque+Emilio+Ulloa/@5.9305215,-73.6163535,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [
+    "Parque Emilio Ulloa - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "Parque Emilio Ulloa"
   },
   "s_936e7c22": {
    "nombre": "Silencio",
@@ -2930,6 +3131,26 @@
    ],
    "ciudad": "Guatapé",
    "corto": "Malecón"
+  },
+  "s_9717417e": {
+   "nombre": "Teatro El Parque",
+   "lat": 4.6230409,
+   "lng": -74.0636956,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/?api=1&query=Teatro+El+Parque+Bogota",
+    "fecha": "2026-11-23",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 5 # 36-05",
+   "alias": [
+    "Teatro El Parque - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Teatro El Parque"
   },
   "s_98028200": {
    "nombre": "Centro Cultural Brisas de Mayo",
@@ -3080,6 +3301,29 @@
    ],
    "ciudad": "Marinilla",
    "corto": "Galería San José"
+  },
+  "s_9af60335": {
+   "nombre": "Cámara de Comercio de Medellín para Antioquia",
+   "lat": 6.556451,
+   "lng": -75.826457,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cámara+de+Comercio+de+Medellín+Centro+Empresarial+de+Occidente/@6.556451,-75.826457,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Sede Santa Fe de Antioquia",
+   "alias": [
+    "Cámara de Comercio de Medellín para Antioquia - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "salas": [
+    "Auditorio"
+   ],
+   "corto": "Cámara de Comercio de Medellín para Antioquia"
   },
   "s_9b2fec9a": {
    "nombre": "Mikuna Casa Cultural",
@@ -3261,6 +3505,26 @@
    "ciudad": "Medellín",
    "corto": "Finca Agroturística El Encanto de Mis Abuelos"
   },
+  "s_a4d046a3": {
+   "nombre": "Teatro Jorge Eliécer Gaitán",
+   "lat": 4.6086901,
+   "lng": -74.0707267,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/?api=1&query=Teatro+Municipal+Jorge+Eliecer+Gaitan+Bogota",
+    "fecha": "2026-11-23",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 7 # 22-47",
+   "alias": [
+    "Teatro Jorge Eliécer Gaitán - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Teatro Jorge Eliécer Gaitán"
+  },
   "s_a4fd24e0": {
    "nombre": "Coliseo Institución Educativa Fray José Joaquín Escobar",
    "lat": 4.6092418,
@@ -3277,6 +3541,26 @@
    ],
    "ciudad": "Toro",
    "corto": "Coliseo Institución Educativa Fray José Joaquín Escobar"
+  },
+  "s_a6295d2a": {
+   "nombre": "Sala Gaitán Antigua Cinemateca",
+   "lat": 4.608881,
+   "lng": -74.0706722,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/?api=1&query=Carrera+7+%2322-47+Bogota",
+    "fecha": "2026-11-23",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 7 # 22-47",
+   "alias": [
+    "Sala Gaitán Antigua Cinemateca - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Sala Gaitán Antigua Cinemateca"
   },
   "s_a6e0e0b3": {
    "nombre": "Cine Colombia Multiplex Avenida Chile",
@@ -3394,6 +3678,26 @@
    "ciudad": "Yacuanquer",
    "corto": "Parque Principal de Yacuanquer"
   },
+  "s_ab15d573": {
+   "nombre": "Casa Taller Palo de Mango",
+   "lat": 5.9366303,
+   "lng": -73.6137388,
+   "evidencia": {
+    "nivel": "aproximado",
+    "url": "https://www.google.com/maps/place/Hotel+Moncada+Barbosa+Santander/@5.9366303,-73.6137388,17z",
+    "fecha": "2026-11-24",
+    "fuente": "PIN APROXIMADO: el Hotel Moncada, referencia de la lámina; Google Maps no tiene la casa taller"
+   },
+   "address": "Pasos arriba del Moncada, barrio Marsella",
+   "alias": [
+    "Casa Taller Palo de Mango - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "Casa Taller Palo de Mango"
+  },
   "s_ab39611a": {
    "nombre": "Hacienda El Novillero",
    "lat": 4.346874,
@@ -3462,6 +3766,26 @@
    "ciudad": "Manizales",
    "corto": "Aranjuez"
   },
+  "s_ad3086b0": {
+   "nombre": "Grupo Central AA",
+   "lat": 5.9283095,
+   "lng": -73.6178401,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cra.+7+%23+6-46,+Barbosa,+Santander/@5.9282983,-73.617872,17z",
+    "fecha": "2026-11-19",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 7 # 6-46, sótano",
+   "alias": [
+    "Grupo Central AA - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "Grupo Central AA"
+  },
   "s_ad9e5f5a": {
    "nombre": "Casa Páramo",
    "lat": 1.2131613,
@@ -3512,6 +3836,29 @@
    ],
    "ciudad": "Marinilla",
    "corto": "Teatro Regional Valerio Antonio Jiménez"
+  },
+  "s_b2da5f1d": {
+   "nombre": "Museo Juan del Corral",
+   "lat": 6.5578327,
+   "lng": -75.8276182,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Museo+Juan+Del+Corral/@6.5578327,-75.8276182,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 11 # 9-77",
+   "alias": [
+    "Museo Juan del Corral - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "salas": [
+    "Auditorio"
+   ],
+   "corto": "Museo Juan del Corral"
   },
   "s_b320c2e3": {
    "nombre": "Bodega Insurgesta",
@@ -3966,6 +4313,26 @@
    "ciudad": "Cali",
    "corto": "Cinemateca La Tertulia"
   },
+  "s_c47407fc": {
+   "nombre": "Teatro Delia Zapata Olivella",
+   "lat": 4.5974429,
+   "lng": -74.0745009,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/search/?api=1&query=Teatro+Delia+Zapata+Olivella+Bogota",
+    "fecha": "2026-11-23",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Calle 11 # 5-60",
+   "alias": [
+    "Teatro Delia Zapata Olivella - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Teatro Delia Zapata Olivella"
+  },
   "s_c4b65a07": {
    "nombre": "Casa de la Cultura",
    "lat": 5.598525,
@@ -3998,6 +4365,26 @@
    "ciudad": "Medellín",
    "corto": "La Pascasia"
   },
+  "s_c760d1fd": {
+   "nombre": "Casa Escuela Formación Musical Leo Olarte",
+   "lat": 5.9359462,
+   "lng": -73.6155809,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Leo+Olarte+Escuela+de+Formaci%C3%B3n+Musical/@5.9359462,-73.6155809,17z",
+    "fecha": "2026-11-19",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Al frente de la cancha del Marsella",
+   "alias": [
+    "Casa Escuela Formación Musical Leo Olarte - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "Casa Escuela Formación Musical Leo Olarte"
+  },
   "s_c82c47d7": {
    "nombre": "Cinemateca Fontanar del Río",
    "lat": 4.7561244,
@@ -4010,12 +4397,14 @@
    },
    "address": "Calle 146 # 138A-99",
    "alias": [
-    "Cinemateca Fontanar del Río - Bogotá"
+    "Cinemateca Fontanar del Río - Bogotá",
+    "Cinemateca de Bogotá Sede Fontanar del Río"
    ],
    "festivales": [
     "aleste-2026",
     "anibia-2026",
     "bhff-2026",
+    "bogoshorts-2026",
     "narrarelfuturo-2026"
    ],
    "ciudad": "Bogotá",
@@ -4221,6 +4610,25 @@
    ],
    "ciudad": "Cali",
    "corto": "Teatro al Aire Libre Los Cristales"
+  },
+  "s_d7c9ee58": {
+   "nombre": "La Tante Boutique",
+   "lat": 5.9327826,
+   "lng": -73.6159099,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/La+Tante+Boutique+Pastelera/@5.9327826,-73.6159099,17z",
+    "fecha": "2026-11-19",
+    "fuente": "verificado en Google Maps"
+   },
+   "alias": [
+    "La Tante Boutique - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "La Tante Boutique"
   },
   "s_d8147483": {
    "nombre": "Parque de los Periodistas",
@@ -4481,6 +4889,26 @@
    "ciudad": "Villa de Leyva",
    "corto": "Galería Pérez Rojas"
   },
+  "s_e023fd68": {
+   "nombre": "MonkeyDo",
+   "lat": 4.6147067,
+   "lng": -74.0818546,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Monkeydo+%2F+MKD/@4.6147067,-74.0818546,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f990010870ef1:0x9a6346d8d7ac6cbb!8m2!3d4.6147067!4d-74.0818546",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Diagonal 19a #19b-66",
+   "alias": [
+    "MonkeyDo - Bogotá"
+   ],
+   "festivales": [
+    "bogoshorts-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "MonkeyDo"
+  },
   "s_e046a622": {
    "nombre": "La Maloca Cultural",
    "lat": 10.9984824,
@@ -4545,6 +4973,29 @@
    ],
    "ciudad": "Medellín",
    "corto": "Antimateria Libros y Café"
+  },
+  "s_e1ed2a67": {
+   "nombre": "Hotel Mariscal Robledo",
+   "lat": 6.5577989,
+   "lng": -75.8292281,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Hotel+Mariscal+Robledo/@6.5577989,-75.8292281,17z",
+    "fecha": "2026-11-24",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Carrera 12 # 9-70",
+   "alias": [
+    "Hotel Mariscal Robledo - Santa Fe de Antioquia"
+   ],
+   "festivales": [
+    "festicineantioquia-2026"
+   ],
+   "ciudad": "Santa Fe de Antioquia",
+   "salas": [
+    "Auditorio"
+   ],
+   "corto": "Hotel Mariscal Robledo"
   },
   "s_e2717fd7": {
    "nombre": "Casa TEA",
@@ -4801,7 +5252,13 @@
    "festivales": [
     "cajica-2026"
    ],
-   "ciudad": "Cajicá"
+   "ciudad": "Cajicá",
+   "salas": [
+    "3.er piso, Biblioteca",
+    "Auditorio Múltiple",
+    "Auditorio Principal"
+   ],
+   "corto": "Centro Cultural y de Convenciones Fernando Botero"
   },
   "s_ee9c7bec": {
    "nombre": "CineQuanon",
@@ -5234,6 +5691,7 @@
   "s_c3221991": "s_11667bea",
   "s_c5c17b27": "s_e1907155",
   "s_dc769578": "s_b3c7c07a",
+  "s_e114d377": "s_5ce71f2b",
   "s_e4896ea4": "s_e1907155"
  },
  "decisiones": {
@@ -5277,6 +5735,11 @@
     "Antimateria Libros y Café",
     "Librería Antimateria",
     "Maps: «Antimateria», Calle 45E #72-09; librería y café son el mismo local"
+   ],
+   [
+    "Centro Ático",
+    "Centro Ático, Universidad Javeriana",
+    "el Centro Ático de la Javeriana, Calle 40B # 6-23 (catálogo BOGOSHORTS 2026)"
    ]
   ],
   "distintos": [
@@ -5389,6 +5852,11 @@
     "Centro Día Gerontológico",
     "Parque Principal",
     "mismo pin aproximado en el parque: revisar con Maps"
+   ],
+   [
+    "Sala Gaitán Antigua Cinemateca",
+    "Teatro Jorge Eliécer Gaitán",
+    "dos salas del mismo predio (Carrera 7 # 22-47): el teatro y la antigua Cinemateca Distrital"
    ]
   ]
  },

@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_4KESRS4KM01W",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "eac175d4e9bc"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Kupljena sjecanja",
+  "valor": "Es finales de 2025 y muy pronto seré padre por primera vez. Ya sé que no filmaré nuestros recuerdos juntos. Pero por el módico precio de 8,13 € puedo vivirlos, mostrarlos como nuestro posible futuro o como el pasado de otra persona. En este documental del futuro, utilizo memorias adquiridas para construir mis propios recuerdos del futuro.",
+  "original": "Es finales de 2025 y muy pronto me convertiré en padre por primera vez. Ya sé que no filmaré nuestros recuerdos juntos. Pero por el módico precio de 8,13 € (y con un poco de regateo en los mercadillos), puedo vivir nuestros recuerdos, mostrarlos como nuestro posible futuro o como el pasado de otra persona; o quizá como las tres cosas a la vez. En este documental del futuro, utilizo memorias adquiridas para construir mis propios recuerdos del futuro.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "5b7d4586d0de"
+  }
+ },
+ {
+  "work_id": "w_4KESRS4KM01W",
+  "campo": "directores",
+  "valor": [
+   "Franko Dujmić Lorger"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Franko Dujmić Lorger"
+  }
+ },
+ {
+  "work_id": "w_4KESRS4KM01W",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KESRS4KM01W",
+  "campo": "paises",
+  "valor": [
+   "HR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia"
+  }
+ },
+ {
+  "work_id": "w_4KESRS4KM01W",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KESRS4KM01W",
+  "campo": "sinopsis.en",
+  "valor": "It is the end of 2025, and very soon, for the first time, I will become a father. I already know that I won’t be filming our memories together. But for a small price of €8.13 (with a bit of haggling on flea markets) I could live out our memories, show them as our potential future or maybe someone else’s past; or, possibly, all three of these things combined. In this documentary from the future, I use bought-footage memories of unknown people to construct future memories of my own.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "It is the end of 2025, and very soon, for the first time, I will become a father. I already know that I won’t be filming our memories together. But for a small price of €8.13 (with a bit of haggling on flea markets) I could live out our memories, show them as our potential future or maybe someone else’s past; or, possibly, all three of these things combined. In this documentary from the future, I use bought-footage memories of unknown people to construct future memories of my own."
+  }
+ },
+ {
+  "work_id": "w_4KESRS4KM01W",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/kupljena-sjecanja.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/kupljena-sjecanja.jpg"
+  }
+ }
+]

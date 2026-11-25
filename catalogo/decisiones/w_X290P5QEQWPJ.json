@@ -1,0 +1,36 @@
+[
+ {
+  "work_id": "w_X290P5QEQWPJ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "19dfb5ef2d22"
+  ],
+  "original_de": [
+   "under-2026"
+  ],
+  "titulo": "Jubiladxs le enseñan",
+  "valor": "Cada miércoles, desde hace más de dos años, lxs jubiladxs marchan al Congreso contra la destrucción de sus ingresos. No los frenan los agravios, las vallas ni la represión. Con el testimonio de Zulema, Eduardo y Carlos, la marcha reconoce sus raíces en las luchas obreras y se proyecta como un faro hacia el futuro.",
+  "original": "Ni los agravios del presidente y los ministros ni las vallas policiales ni la represión sistemática. No hay nada que frene la marcha que, cada semana desde hace más de dos años, realizan los jubiladxs al Congreso contra la destrucción de sus ingresos. Allí están cada miércoles Zulema, Eduardo y Carlos. A través de su testimonio y su organización, la movilización de lxs jubilados reconoce sus raíces en una larga tradición de luchas obreras, y se proyecta hacia el futuro, como un faro para las peleas en defensa de las conquistas populares.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "d52934f7dc8c"
+  },
+  "antes": {
+   "under-2026": "Ni los agravios del presidente y los ministros ni las vallas policiales ni la represión sistemática. No hay nada que frene la marcha que, cada semana desde hace más de dos años, realizan los jubiladxs al Congreso contra la destrucción de sus ingresos. Allí están cada miércoles Zulema, Eduardo y Carlos. A través de su testimonio y su organización, la movilización de lxs jubilados reconoce sus raíces en una larga tradición de luchas obreras, y se proyecta hacia el futuro, como un faro para las peleas en defensa de las conquistas populares."
+  }
+ },
+ {
+  "work_id": "w_X290P5QEQWPJ",
+  "campo": "sinopsis.en",
+  "valor": "Every Wednesday, for more than two years, retirees have marched to Congress against the destruction of their income. Insults, barricades and repression do not stop them. Through the testimony of Zulema, Eduardo and Carlos, the march recognizes its roots in workers’ struggles and shines as a beacon toward the future.",
+  "motivo": "traducida de su española; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Aprobadas, sigue»)"
+ }
+]

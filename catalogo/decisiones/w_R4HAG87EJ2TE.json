@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HAG87EJ2TE",
+  "campo": "directores",
+  "valor": [
+   "Jorge Cadena"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 180",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=180"
+ },
+ {
+  "work_id": "w_R4HAG87EJ2TE",
+  "campo": "anio",
+  "valor": 2016,
+  "motivo": "catálogo oficial de FICCI 65, p. 180",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=180"
+ },
+ {
+  "work_id": "w_R4HAG87EJ2TE",
+  "campo": "paises",
+  "valor": [
+   "CH"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 180",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=180",
+  "antes": {
+   "ficci-65": "Suiza"
+  }
+ },
+ {
+  "work_id": "w_R4HAG87EJ2TE",
+  "campo": "sinopsis.es",
+  "valor": "Azotada por vientos incesantes, una comunidad recibe a Antonia con un ritual de despojo de las historias que encarna. Reacia a los órdenes establecidos y dotada de una belleza que desafía la pobreza generalizada, ella protagoniza un relato visionario para la Colombia contemporánea.",
+  "motivo": "catálogo oficial de FICCI 65, p. 180",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=180"
+ },
+ {
+  "work_id": "w_R4HAG87EJ2TE",
+  "campo": "sinopsis.en",
+  "valor": "Battered by incessant winds, a community welcomes Antonia with a ritual of stripping bare the stories she embodies. Resistant to established orders and endowed with a beauty that defies widespread poverty, she is the protagonist of a visionary tale for today's Colombia.",
+  "motivo": "catálogo oficial de FICCI 65, p. 180",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=180"
+ },
+ {
+  "work_id": "w_R4HAG87EJ2TE",
+  "campo": "xref.tmdb",
+  "valor": 436856,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/436856"
+ }
+]

@@ -1,0 +1,83 @@
+[
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "estreno en Locarno, 11 ago 2024",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "cinemancia-2025": "2018"
+  },
+  "fuente": "https://en.wikipedia.org/wiki/Invention_(film)"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "xref.tmdb",
+  "valor": 1315409,
+  "motivo": "misma dirección y duración",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "fuente": "https://www.themoviedb.org/movie/1315409"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "sinopsis.es",
+  "valor": "Tras la muerte repentina de su padre, un hombre dado a las conspiraciones, una hija hereda la patente de un aparato experimental de sanación.",
+  "motivo": "la anterior no contaba la obra",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "cinemancia-2025": "Película experimental de Courtney Stephens que explora los límites entre el documental y la ficción a través de un archivo familiar y la historia colonial."
+  },
+  "vistas": [
+   "d66f8c632574"
+  ],
+  "fuente": "https://www.themoviedb.org/movie/1315409"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "sinopsis.en",
+  "valor": "In the aftermath of a conspiracy-minded father’s sudden death, his daughter inherits his patent for an experimental healing device.",
+  "motivo": "la anterior no contaba la obra",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "cinemancia-2025": "An experimental film by Courtney Stephens exploring the boundaries between documentary and fiction through a family archive and colonial history."
+  },
+  "fuente": "https://www.themoviedb.org/movie/1315409"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/98JuYEy6GGxxvZeGOU914hRnm7S.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el anterior era de «The Invention» (2018)",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "cinemancia-2025": "https://image.tmdb.org/t/p/w185/3pXZBoTPM5Y0hXKBaAKkwrcC7ig.jpg"
+  },
+  "a_mano": true,
+  "vistas": [
+   "https://image.tmdb.org/t/p/w185/3pXZBoTPM5Y0hXKBaAKkwrcC7ig.jpg"
+  ],
+  "fuente": "https://www.themoviedb.org/movie/1315409"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "TMDB y Wikipedia; ninguna fuente da Experimental",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "cinemancia-2025": "Experimental"
+  },
+  "fuente": "https://www.themoviedb.org/movie/1315409"
+ }
+]

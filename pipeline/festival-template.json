@@ -32,7 +32,8 @@
  "fullName": "Nombre Completo del Festival — como lo publica el festival",
  "shortName": "NOMBRE",
  "_shortName_nota": "Nombre corto/simple para el selector del splash (regla selector-name-simplify). Siglas establecidas (FICCI/AFF) se conservan.",
- "city": "Ciudad",
+ "instagram": "cuenta sin @",
+  "city": "Ciudad",
  "ticketing_model": "paid | mixed — SOLO si el festival cobra en algo; se omite si todo es entrada libre",
  "country": "XX",
  "dates": "5–8 JUN",
@@ -325,6 +326,7 @@
   }
  ],
  "displayName": "",
+ "instagram": "usuario_sin_arroba",
  "tagline": "",
  "_displayName": "nombre corto para el selector del splash, cuando el oficial es largo",
  "_tagline": "el descriptor bajo el nombre; NUNCA repite el nombre (regla permanente)"

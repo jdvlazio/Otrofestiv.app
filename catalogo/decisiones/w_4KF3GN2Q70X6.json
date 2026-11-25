@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_4KF3GN2Q70X6",
+  "campo": "directores",
+  "valor": [
+   "Jairo Pinilla Téllez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Jairo Pinilla Téllez"
+  }
+ },
+ {
+  "work_id": "w_4KF3GN2Q70X6",
+  "campo": "anio",
+  "valor": 1979,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1979"
+  }
+ },
+ {
+  "work_id": "w_4KF3GN2Q70X6",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KF3GN2Q70X6",
+  "campo": "sinopsis.es",
+  "valor": "Un joven oficinista se dedica a pretender a todas sus compañeras y amigas, hasta que una de ellas le da una lección sentimental. Comedia moral en clave popular.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un joven oficinista se dedica a pretender a todas sus compañeras y amigas, hasta que una de ellas le da una lección sentimental. Comedia moral en clave popular, protagonizada por Gustavo de la Hoz y Rubiela Hurtado. Muestra al Pinilla menos conocido: el del humor y la fábula de costumbres."
+  },
+  "vistas": [
+   "4b725cabb545"
+  ]
+ },
+ {
+  "work_id": "w_4KF3GN2Q70X6",
+  "campo": "sinopsis.en",
+  "valor": "A young office worker spends his time trying to seduce all his female coworkers and friends, until one of them teaches him a lesson in love. A moral comedy with a popular twist.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A young office worker spends his time trying to seduce all his female coworkers and friends, until one of them teaches him a lesson in love. A moral comedy with a popular twist, starring Gustavo de la Hoz and Rubiela Hurtado. It showcases a lesser-known side of Pinilla: his sense of humor and his social satire."
+  }
+ }
+]

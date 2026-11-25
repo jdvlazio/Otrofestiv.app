@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_8BX74FRMJW0S",
+  "campo": "directores",
+  "valor": [
+   "Rodrigo Pérez-Castro"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Rodrigo Pérez-Castro"
+  }
+ },
+ {
+  "work_id": "w_8BX74FRMJW0S",
+  "campo": "anio",
+  "valor": 2021,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2021"
+  }
+ },
+ {
+  "work_id": "w_8BX74FRMJW0S",
+  "campo": "paises",
+  "valor": [
+   "MX",
+   "US"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "México, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_8BX74FRMJW0S",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_8BX74FRMJW0S",
+  "campo": "sinopsis.es",
+  "valor": "Tres héroes improbables, un coatí de espíritu libre, una intrépida mariposa monarca y una hiperactiva rana de cristal, se lanzan a una aventura para impedir que la malvada serpiente coral Zaina destruya su selva.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Tres héroes improbables, un coatí de espíritu libre, una intrépida mariposa monarca y una hiperactiva rana de cristal, se lanzan a una aventura para impedir que la malvada serpiente coral Zaina destruya su selva."
+  }
+ },
+ {
+  "work_id": "w_8BX74FRMJW0S",
+  "campo": "sinopsis.en",
+  "valor": "Three unlikely heroes, a free-spirited coati, a fearless monarch butterfly and a hyperactive glass frog, embark on an adventure to stop the wicked coral snake Zaina from destroying their rainforest homeland.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Three unlikely heroes, a free-spirited coati, a fearless monarch butterfly and a hyperactive glass frog, embark on an adventure to stop the wicked coral snake Zaina from destroying their rainforest homeland."
+  }
+ },
+ {
+  "work_id": "w_8BX74FRMJW0S",
+  "campo": "xref.tmdb",
+  "valor": 554594,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "554594"
+  }
+ },
+ {
+  "work_id": "w_8BX74FRMJW0S",
+  "campo": "xref.letterboxd",
+  "valor": "koati",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "koati"
+  }
+ },
+ {
+  "work_id": "w_8BX74FRMJW0S",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/koati.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/koati.jpg"
+  }
+ }
+]

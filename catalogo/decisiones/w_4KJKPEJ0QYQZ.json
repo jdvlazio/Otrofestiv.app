@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJKPEJ0QYQZ",
+  "campo": "directores",
+  "valor": [
+   "Sara Bermejo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Sara Bermejo"
+  }
+ },
+ {
+  "work_id": "w_4KJKPEJ0QYQZ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJKPEJ0QYQZ",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KJKPEJ0QYQZ",
+  "campo": "generos",
+  "valor": [
+   "Misterio"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Misterio"
+  }
+ },
+ {
+  "work_id": "w_4KJKPEJ0QYQZ",
+  "campo": "sinopsis.es",
+  "valor": "El tiempo que una mujer pasa en una clínica desencadena una cuenta atrás íntima y la lleva a reencontrarse con un antiguo amor.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "El tiempo que una mujer pasa en una clínica desencadena una cuenta atrás íntima y la lleva a reencontrarse con un antiguo amor."
+  }
+ },
+ {
+  "work_id": "w_4KJKPEJ0QYQZ",
+  "campo": "sinopsis.en",
+  "valor": "A woman’s time in a clinic sets off a private countdown and leads her to reconnect with a former love.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A woman’s time in a clinic sets off a private countdown and leads her to reconnect with a former love."
+  }
+ },
+ {
+  "work_id": "w_4KJKPEJ0QYQZ",
+  "campo": "xref.tmdb",
+  "valor": 1436823,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1436823"
+  }
+ },
+ {
+  "work_id": "w_4KJKPEJ0QYQZ",
+  "campo": "xref.letterboxd",
+  "valor": "lo-que-te-falta",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "lo-que-te-falta"
+  }
+ },
+ {
+  "work_id": "w_4KJKPEJ0QYQZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/lo-que-te-falta.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/lo-que-te-falta.jpg"
+  }
+ }
+]

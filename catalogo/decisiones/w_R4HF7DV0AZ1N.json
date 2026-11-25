@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HF7DV0AZ1N",
+  "campo": "directores",
+  "valor": [
+   "Ben Rivers"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 285",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=285"
+ },
+ {
+  "work_id": "w_R4HF7DV0AZ1N",
+  "campo": "anio",
+  "valor": 2006,
+  "motivo": "catálogo oficial de FICCI 65, p. 285",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=285"
+ },
+ {
+  "work_id": "w_R4HF7DV0AZ1N",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 285",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=285",
+  "antes": {
+   "ficci-65": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DV0AZ1N",
+  "campo": "sinopsis.es",
+  "valor": "Retrato de Jake Williams, que vive solo entre kilómetros de bosque en Aberdeenshire, Escocia. Siempre tiene muchas tareas, aprovecha todo, toca la mandolina, hace compost hace años y se mantiene con lo que cultiva. Tiene otra percepción del tiempo. Para él no se trata de nostalgia por un pasado preeléctrico, sino de un futuro muy real.",
+  "motivo": "catálogo oficial de FICCI 65, p. 285",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=285"
+ },
+ {
+  "work_id": "w_R4HF7DV0AZ1N",
+  "campo": "sinopsis.en",
+  "valor": "A portrait of Jake Williams, who lives alone within miles of forest in Aberdeenshire, Scotland. He always has many jobs on, finds a use for everything, plays the mandolin, has made compost for years, and sustains himself from what he grows. His sense of time is different. For him it isn't nostalgia for a pre-electric past, but a very real future.",
+  "motivo": "catálogo oficial de FICCI 65, p. 285",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=285"
+ },
+ {
+  "work_id": "w_R4HF7DV0AZ1N",
+  "campo": "xref.tmdb",
+  "valor": 260389,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/260389"
+ }
+]

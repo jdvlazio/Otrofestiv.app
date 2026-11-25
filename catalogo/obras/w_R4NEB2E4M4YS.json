@@ -1,27 +1,34 @@
 {
  "id": "w_R4NEB2E4M4YS",
- "titulo_original": "Sinfonía incompleta de oficios del fonce",
+ "titulo_original": "Sinfonía incompleta de oficios del Fonce",
  "anio": 2024,
  "paises": [
   "CO"
  ],
  "directores": [
-  "Nelson Omar Silva Sánchez"
+  "Nelson Silva"
  ],
  "aliases": [
   {
-   "titulo": "Sinfonía incompleta de oficios del Fonce",
+   "titulo": "Sinfonía incompleta de oficios del fonce",
    "tipo": "festival"
   }
  ],
+ "sinopsis": {
+  "es": "En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares.",
+  "en": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places."
+ },
  "generos": [
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/siembrafest/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+  "archivo": "/assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1817245,
+  "letterboxd": "sinfonia-incompleta-de-oficios-del-fonce"
+ },
  "versiones": [
   {
    "etiqueta": "16 min",
@@ -30,6 +37,7 @@
  ],
  "presentaciones": [
   "ficfusa-2026",
+  "provinciadevelez-2026",
   "siembrafest-2026"
  ]
 }

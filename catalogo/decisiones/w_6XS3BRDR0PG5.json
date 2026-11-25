@@ -1,0 +1,55 @@
+[
+ {
+  "work_id": "w_6XS3BRDR0PG5",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficica-2026/compraventa.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficica-2026/compraventa.jpg",
+   "/assets/miradas-2026/compraventa.jpg"
+  ],
+  "antes": {
+   "ficica-2026": "/assets/ficica-2026/compraventa.jpg",
+   "miradas-2026": "/assets/miradas-2026/compraventa.jpg"
+  }
+ },
+ {
+  "work_id": "w_6XS3BRDR0PG5",
+  "campo": "generos",
+  "valor": [
+   "Suspense"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "ficica-2026": "Suspense",
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_6XS3BRDR0PG5",
+  "campo": "sinopsis.en",
+  "valor": "In a merchant neighborhood of Buenos Aires, Yoni survives through smuggling and a few fleeting alliances. Under the shadow of his partner and mentor, Leon, he strives to advance in a world that judges him by his appearance. A promising business deal seems poised to change his fate, but an unexpected setback forces him to confront his limitation.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "ficica-2026": "In a merchant neighborhood of Buenos Aires, Yoni survives through smuggling and a few fleeting alliances. Under the shadow of his partner and mentor, Leon, he strives to advance in a world that judges him by his appearance. A promising business deal seems poised to change his fate, but an unexpected setback forces him to confront his limitation",
+   "miradas-2026": "In a merchant neighborhood of Buenos Aires, Yoni survives through smuggling and a few fleeting alliances. Under the shadow of his partner and mentor, Leon, he strives to advance in a world that judges him by his appearance. A promising business deal seems poised to change his fate, but an unexpected setback forces him to confront his limitation"
+  }
+ },
+ {
+  "work_id": "w_6XS3BRDR0PG5",
+  "campo": "sinopsis.es",
+  "valor": "En un barrio de comerciantes, un joven contrabandista aspira a progresar a la sombra de su mentor manipulador, pero un contratiempo inesperado lo lleva a cuestionarse hasta dónde debería llegar su lealtad.",
+  "motivo": "sinopsis oficial del festival o de Bogoshorts",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)"
+ }
+]

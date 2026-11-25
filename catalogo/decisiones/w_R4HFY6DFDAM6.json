@@ -1,0 +1,32 @@
+[
+ {
+  "work_id": "w_R4HFY6DFDAM6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/todos-los-dias.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/color-piel.jpg",
+   "/assets/popayan-2026/todos-los-dias.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/color-piel.jpg",
+   "popayan-2026": "/assets/popayan-2026/todos-los-dias.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HFY6DFDAM6",
+  "campo": "sinopsis.en",
+  "valor": "Ramiro is fired from his job after 19 years. As he goes through his solitary days, he meets Gustavo, Ernesto and Luis Eduardo, three unemployed men like him who get together to hang around and keep each other company, while they fantasize about taking revenge on their former employers, hoping to find their happiness one small triumph at a time, as a full-time job.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "ficdeh-2026": "Ramiro is fired from his job after 19 years. As he goes through his solitary days, he meets Gustavo, Ernesto and Luis Eduardo, three unemployed men like him who get together to hang around and keep each other company, while they fantasize about taking revenge on their former employers, hoping to find their happiness one small triumph at a time, as a full-time job."
+  }
+ }
+]

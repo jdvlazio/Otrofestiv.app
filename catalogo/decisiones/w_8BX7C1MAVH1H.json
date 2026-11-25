@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7C1MAVH1H",
+  "campo": "directores",
+  "valor": [
+   "María Gamboa Jaramillo"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "María Gamboa Jaramillo"
+  }
+ },
+ {
+  "work_id": "w_8BX7C1MAVH1H",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_8BX7C1MAVH1H",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_8BX7C1MAVH1H",
+  "campo": "generos",
+  "valor": [
+   "Romance"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Romance"
+  }
+ },
+ {
+  "work_id": "w_8BX7C1MAVH1H",
+  "campo": "sinopsis.es",
+  "valor": "A pesar de sus diferencias, dos ex mejores amigas se reencuentran para planear una boda de altísimo perfil, en la que nada ni nadie puede fallar.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "A pesar de sus diferencias, dos ex mejores amigas se reencuentran para planear una boda de altísimo perfil, en la que nada ni nadie puede fallar."
+  }
+ },
+ {
+  "work_id": "w_8BX7C1MAVH1H",
+  "campo": "sinopsis.en",
+  "valor": "Despite their differences, two former best friends reunite to plan a very high-profile wedding, in which nothing and no one can fail.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Despite their differences, two former best friends reunite to plan a very high-profile wedding, in which nothing and no one can fail."
+  }
+ },
+ {
+  "work_id": "w_8BX7C1MAVH1H",
+  "campo": "xref.tmdb",
+  "valor": 1580803,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1580803"
+  }
+ },
+ {
+  "work_id": "w_8BX7C1MAVH1H",
+  "campo": "xref.letterboxd",
+  "valor": "susana-and-elvira-no-plan-b",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "susana-and-elvira-no-plan-b"
+  }
+ },
+ {
+  "work_id": "w_8BX7C1MAVH1H",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/susana-y-elvira-sin-plan-b.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/susana-y-elvira-sin-plan-b.jpg"
+  }
+ }
+]

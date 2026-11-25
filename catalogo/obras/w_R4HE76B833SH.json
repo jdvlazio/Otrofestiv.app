@@ -1,7 +1,7 @@
 {
  "id": "w_R4HE76B833SH",
  "titulo_original": "La Raya",
- "anio": 2025,
+ "anio": 2024,
  "paises": [
   "MX"
  ],
@@ -23,10 +23,11 @@
   "Drama"
  ],
  "afiche": {
-  "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-29%20235923.png?itok=0Rlq5ukp",
+  "archivo": "/assets/ficdeh/la-raya.jpg",
   "veredicto": "oficial-festival"
  },
  "xref": {
+  "tmdb": 1280701,
   "letterboxd": "town-of-la-raya"
  },
  "versiones": [

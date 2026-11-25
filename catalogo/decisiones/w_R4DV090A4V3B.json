@@ -1,0 +1,100 @@
+[
+ {
+  "work_id": "w_R4DV090A4V3B",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/6-meses-en-el-edificio-rosa-con-azul.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/6-meses-en-el-edificio-rosa-con-azul.jpg",
+   "/assets/ficcali-2026/seis-meses-en-el-edificio-rosa-con-azul.jpg",
+   "/assets/miradas-2026/seis-meses-en-el-edificio-rosa-con-azul.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/6-meses-en-el-edificio-rosa-con-azul.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/seis-meses-en-el-edificio-rosa-con-azul.jpg",
+   "miradas-2026": "/assets/miradas-2026/seis-meses-en-el-edificio-rosa-con-azul.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DV090A4V3B",
+  "campo": "sinopsis.es",
+  "valor": "Ciudad de México, principios de los 90. El día que Bruno cumple 11 años, los sentimientos cada vez más intensos por su mejor amigo, Vladimir, chocan con el repentino anuncio de que su padre tiene el VIH. Como en las canciones de salsa, su familia intenta ahuyentar el dolor cantando y bailando. Treinta años después, Bruno rueda una película en la que reimagina el recuerdo de aquello que, de niño, no llegó a percibir con claridad.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "87b302fc0f89",
+   "b3aeae0bddac"
+  ],
+  "antes": {
+   "biff-2026": "Ciudad de México, principios de los 90. El día que Bruno cumple 11 años, los sentimientos cada vez más intensos por su mejor amigo, Vladimir, chocan con el repentino anuncio de que su padre tiene el VIH. Como en las canciones de salsa, su familia intenta ahuyentar el dolor cantando y bailando. Treinta años después, Bruno rueda una película en la que reimagina el recuerdo de aquello que, de niño, no llegó a percibir con claridad.",
+   "ficcali-2026": "Ciudad de México, principio de los años noventa. El día que Bruno cumple once años, se enamora de su mejor amigo, Vladimir. Esa noche, su padre recibe un diagnóstico de VIH positivo que transforma la vida familiar. Como en las canciones de salsa, la familia intenta cantar y bailar para espantar el dolor. Treinta años después, Bruno filma y revisa la memoria de aquello que no logró comprender del todo cuando era niño. Mediante una serie de cruces muy delicados entre el documental y la ficción, el director nos vincula con la profunda lucha de él y toda su familia contra todos los estigmas y prejuicios sociales ligados al sida y la homosexualidad.",
+   "miradas-2026": "Ciudad de México, principio de los años noventa. El día que Bruno cumple once años, se enamora de su mejor amigo, Vladimir. Esa noche, su padre recibe un diagnóstico de VIH positivo que transforma la vida familiar. Como en las canciones de salsa, la familia intenta cantar y bailar para espantar el dolor. Treinta años después, Bruno filma y revisa la memoria de aquello que no logró comprender del todo cuando era niño. Mediante una serie de cruces muy delicados entre el documental y la ficción, el director nos vincula con la profunda lucha de él y toda su familia contra todos los estigmas y prejuicios sociales ligados al sida y la homosexualidad."
+  }
+ },
+ {
+  "work_id": "w_R4DV090A4V3B",
+  "campo": "directores",
+  "valor": [
+   "Bruno Santamaría Razo"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "Bruno Santamaría Razo",
+   "ficcali-2026": "Bruno Santamaría",
+   "miradas-2026": "Bruno Santamaría Razo"
+  }
+ },
+ {
+  "work_id": "w_R4DV090A4V3B",
+  "campo": "paises",
+  "valor": [
+   "MX",
+   "BR",
+   "DK"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1025407)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "México",
+   "ficcali-2026": "México, Brasil, Dinamarca",
+   "miradas-2026": "México, Brasil, Dinamarca"
+  }
+ },
+ {
+  "work_id": "w_R4DV090A4V3B",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "biff-2026": "Drama",
+   "ficcali-2026": "Drama",
+   "miradas-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_R4DV090A4V3B",
+  "campo": "sinopsis.en",
+  "valor": "Mexico City, early 90s. The day Bruno turns 11, his growing feelings for his best friend Vladimir clash with the sudden announcement that his father has HIV. Like in salsa songs, his family tries to sing and dance their pain away. Thirty years later, Bruno films and reimagines the memory of what he could not quite perceive as a child.",
+  "motivo": "concordancia verbal",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "biff-2026": "Mexico City, early 90s. The day Bruno turns 11, his growing feelings for his best friend Vladimir clash with the sudden announcement that his father has HIV. Like in salsa songs, his family tries to sing and dance their pain away. Thirty years later, Bruno films and reimagine the memory of what he could not quite perceive as a child.",
+   "ficcali-2026": "Mexico City, early 90s. The day Bruno turns 11, his growing feelings for his best friend Vladimir clash with the sudden announcement that his father has HIV. Like in salsa songs, his family tries to sing and dance their pain away. Thirty years later, Bruno films and reimagine the memory of what he could not quite perceive as a child.",
+   "miradas-2026": "Mexico City, early 90s. The day Bruno turns 11, his growing feelings for his best friend Vladimir clash with the sudden announcement that his father has HIV. Like in salsa songs, his family tries to sing and dance their pain away. Thirty years later, Bruno films and reimagine the memory of what he could not quite perceive as a child."
+  }
+ }
+]

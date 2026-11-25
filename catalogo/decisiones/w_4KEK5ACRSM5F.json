@@ -1,0 +1,91 @@
+[
+ {
+  "work_id": "w_4KEK5ACRSM5F",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "9eedff7a4332"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Has estado aquí",
+  "valor": "Tras un camino migratorio de veinte años, la directora ve envejecer a su madre desde la distancia: su mente con demencia empieza a olvidar los pocos momentos que compartieron en Barcelona y Bogotá. Por teléfono, le brinda esos recuerdos para que los reviva y, al mismo tiempo, lucha por una reagrupación familiar y por estar presente para su hija.",
+  "original": "Después de un largo camino migratorio de veinte años, la directora se enfrenta a su época más difícil: ver envejecer a su madre desde la distancia y darse cuenta de cómo su mente con demencia empieza a olvidar esos pocos momentos que compartieron en Barcelona y Bogotá. A través de las conversaciones telefónicas que tiene con su madre le brinda esos recuerdos para que ella los reviva y al mismo tiempo lucha para intentar una reagrupación familiar y estar presente para su hija.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a2850e93842a"
+  }
+ },
+ {
+  "work_id": "w_4KEK5ACRSM5F",
+  "campo": "directores",
+  "valor": [
+   "Vivian Muñoz Rodríguez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Vivian Muñoz Rodríguez"
+  }
+ },
+ {
+  "work_id": "w_4KEK5ACRSM5F",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_4KEK5ACRSM5F",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KEK5ACRSM5F",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEK5ACRSM5F",
+  "campo": "sinopsis.en",
+  "valor": "After a long journey of migration lasting 20 years, the director faces her most difficult time: watching her mother age from afar and seeing how her dementia-ridden mind begins to forget those few moments they shared in Barcelona and Bogotá. Through the telephone conversations she has with her mother, she provides her with those memories so she can relive them, at the same time battling to bring the family back together again and be present for her daughter.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After a long journey of migration lasting 20 years, the director faces her most difficult time: watching her mother age from afar and seeing how her dementia-ridden mind begins to forget those few moments they shared in Barcelona and Bogotá. Through the telephone conversations she has with her mother, she provides her with those memories so she can relive them, at the same time battling to bring the family back together again and be present for her daughter."
+  }
+ }
+]

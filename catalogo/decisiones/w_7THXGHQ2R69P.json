@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_7THXGHQ2R69P",
+  "campo": "directores",
+  "valor": [
+   "Kate Voet",
+   "Victor Maes"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Kate Voet, Victor Maes"
+  }
+ },
+ {
+  "work_id": "w_7THXGHQ2R69P",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_7THXGHQ2R69P",
+  "campo": "paises",
+  "valor": [
+   "BE",
+   "LU",
+   "NL"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Bélgica, Luxemburgo, Países Bajos"
+  }
+ },
+ {
+  "work_id": "w_7THXGHQ2R69P",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_7THXGHQ2R69P",
+  "campo": "sinopsis.es",
+  "valor": "En esta experiencia de realidad virtual animada e interactiva nos ponemos en la piel de Ida, una pianista de 72 años que vive con demencia. A Long Goodbye es una experiencia poética sobre la larga despedida de dos amantes que compartieron una vida.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En esta experiencia de realidad virtual animada e interactiva nos ponemos en la piel de Ida, una pianista de 72 años que vive con demencia. A Long Goodbye es una experiencia poética sobre la larga despedida de dos amantes que compartieron una vida."
+  }
+ },
+ {
+  "work_id": "w_7THXGHQ2R69P",
+  "campo": "sinopsis.en",
+  "valor": "In this animated, interactive VR experience, we walk in Ida’s shoes, a 72-year-old pianist living with dementia. A Long Goodbye is a poetic experience about the long goodbye of two lovers who shared a life together.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In this animated, interactive VR experience, we walk in Ida’s shoes, a 72-year-old pianist living with dementia. A Long Goodbye is a poetic experience about the long goodbye of two lovers who shared a life together."
+  }
+ },
+ {
+  "work_id": "w_7THXGHQ2R69P",
+  "campo": "xref.tmdb",
+  "valor": 1547253,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1547253"
+  }
+ },
+ {
+  "work_id": "w_7THXGHQ2R69P",
+  "campo": "xref.letterboxd",
+  "valor": "a-long-goodbye-2025",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "a-long-goodbye-2025"
+  }
+ },
+ {
+  "work_id": "w_7THXGHQ2R69P",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/a-long-goodbye.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/a-long-goodbye.jpg"
+  }
+ }
+]

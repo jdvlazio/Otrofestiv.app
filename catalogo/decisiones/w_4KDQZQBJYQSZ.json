@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_4KDQZQBJYQSZ",
+  "campo": "directores",
+  "valor": [
+   "Andrés Ángel"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Andrés Ángel"
+  }
+ },
+ {
+  "work_id": "w_4KDQZQBJYQSZ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KDQZQBJYQSZ",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia, Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KDQZQBJYQSZ",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KDQZQBJYQSZ",
+  "campo": "sinopsis.es",
+  "valor": "El Sigilo, un meteorito que no refleja la luz, se dirige hacia la Tierra. Nadie lo vio venir. Mientras se acerca silenciosamente, alguien se dirige hacia un árbol para susurrarle un secreto.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "El Sigilo, un meteorito que no refleja la luz, se dirige hacia la Tierra. Nadie lo vio venir. Mientras se acerca silenciosamente, alguien se dirige hacia un árbol para susurrarle un secreto."
+  }
+ },
+ {
+  "work_id": "w_4KDQZQBJYQSZ",
+  "campo": "sinopsis.en",
+  "valor": "“El Sigilo,” a meteorite that doesn’t reflect light, is heading toward Earth. No one saw it coming. As it silently approaches, someone walks toward a tree to whisper a secret to it.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "“El Sigilo,” a meteorite that doesn’t reflect light, is heading toward Earth. No one saw it coming. As it silently approaches, someone walks toward a tree to whisper a secret to it."
+  }
+ }
+]

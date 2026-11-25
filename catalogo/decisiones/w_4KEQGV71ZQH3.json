@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KEQGV71ZQH3",
+  "campo": "directores",
+  "valor": [
+   "Dean Wei"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Dean Wei"
+  }
+ },
+ {
+  "work_id": "w_4KEQGV71ZQH3",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEQGV71ZQH3",
+  "campo": "paises",
+  "valor": [
+   "CN"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "China"
+  }
+ },
+ {
+  "work_id": "w_4KEQGV71ZQH3",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KEQGV71ZQH3",
+  "campo": "sinopsis.es",
+  "valor": "Retrato de una familia china corriente de hijo único en su hábitat: un apartamento corriente. A lo largo de cinco noches, sus vidas oscilan entre lo anodino y lo completamente banal, mientras los personajes entran y salen de sus respectivos papeles.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Retrato de una familia china corriente de hijo único en su hábitat: un apartamento corriente. A lo largo de cinco noches, sus vidas oscilan entre lo anodino y lo completamente banal, mientras los personajes entran y salen de sus respectivos papeles."
+  }
+ },
+ {
+  "work_id": "w_4KEQGV71ZQH3",
+  "campo": "sinopsis.en",
+  "valor": "A portrait of an ordinary “one child” Chinese family in their habitat: an ordinary apartment. Over the course of 5 nights their lives range from unremarkable to downright banal as the characters slip in and out of their respective roles.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A portrait of an ordinary “one child” Chinese family in their habitat an ordinary apartment. Over the course of 5 nights their lives range from unremarkable to downright banal as the characters slip in and out of their respective roles."
+  }
+ },
+ {
+  "work_id": "w_4KEQGV71ZQH3",
+  "campo": "xref.tmdb",
+  "valor": 1599912,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1599912"
+  }
+ },
+ {
+  "work_id": "w_4KEQGV71ZQH3",
+  "campo": "xref.letterboxd",
+  "valor": "the-apple-doesnt-fall",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-apple-doesnt-fall"
+  }
+ },
+ {
+  "work_id": "w_4KEQGV71ZQH3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/tmdb-1599912.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/tmdb-1599912.jpg"
+  }
+ }
+]

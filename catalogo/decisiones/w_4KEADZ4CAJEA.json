@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_4KEADZ4CAJEA",
+  "campo": "directores",
+  "valor": [
+   "Federico Luis"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Federico Luis"
+  }
+ },
+ {
+  "work_id": "w_4KEADZ4CAJEA",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEADZ4CAJEA",
+  "campo": "paises",
+  "valor": [
+   "MX",
+   "CL",
+   "FR",
+   "GB"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "México, Chile, Francia, Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_4KEADZ4CAJEA",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KEADZ4CAJEA",
+  "campo": "sinopsis.es",
+  "valor": "En el barrio bravo de Tepito, un niño se enfrenta al gran sueño mexicano: convertirse en campeón de boxeo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En el barrio bravo de Tepito, un niño se enfrenta al gran sueño mexicano: convertirse en campeón de boxeo."
+  }
+ },
+ {
+  "work_id": "w_4KEADZ4CAJEA",
+  "campo": "sinopsis.en",
+  "valor": "In the tough neighbourhood of Tepito, a young boy chases the great Mexican dream: to become a boxing champion.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the tough neighbourhood of Tepito, a young boy chases the great Mexican dream: to become a boxing champion."
+  }
+ },
+ {
+  "work_id": "w_4KEADZ4CAJEA",
+  "campo": "xref.tmdb",
+  "valor": 1455661,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1455661"
+  }
+ },
+ {
+  "work_id": "w_4KEADZ4CAJEA",
+  "campo": "xref.letterboxd",
+  "valor": "for-the-opponents",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "for-the-opponents"
+  }
+ },
+ {
+  "work_id": "w_4KEADZ4CAJEA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/para-los-contrincantes.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/para-los-contrincantes.jpg"
+  }
+ }
+]

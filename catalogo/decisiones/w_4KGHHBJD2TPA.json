@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_4KGHHBJD2TPA",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "e9f801414713"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Plan contraplan",
+  "valor": "Entre 1985 y 1987, el periodista estadounidense Edward Serotta fotografió la dura realidad de la Rumanía comunista. La policía secreta (Securitate) lo siguió y retrató en secreto mientras él tomaba sus fotografías. Cuarenta años después, reunimos ambos conjuntos de imágenes en un juego de plano y contraplano sobre el lado cómico de la Historia.",
+  "original": "Entre 1985 y 1987, el periodista estadounidense Edward Serotta visitó la Rumanía comunista y fotografió la dura realidad del país. La policía secreta (Securitate) lo siguió y retrató en secreto mientras él tomaba sus propias fotografías. Cuarenta años después, reunimos ambos conjuntos de imágenes en un juego de plano y contraplano sobre el lado cómico de la Historia.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a60c9fa11843"
+  }
+ },
+ {
+  "work_id": "w_4KGHHBJD2TPA",
+  "campo": "directores",
+  "valor": [
+   "Radu Jude",
+   "Adrian Cioflâncă"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Radu Jude, Adrian Cioflâncă"
+  }
+ },
+ {
+  "work_id": "w_4KGHHBJD2TPA",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGHHBJD2TPA",
+  "campo": "paises",
+  "valor": [
+   "RO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rumania"
+  }
+ },
+ {
+  "work_id": "w_4KGHHBJD2TPA",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KGHHBJD2TPA",
+  "campo": "sinopsis.en",
+  "valor": "In 1985-1987, the American journalist Edward Serotta visited the Communist Romania and took photos of the harsh realities of the country. The Secret Police (Securitate) followed him and secretly took photos of him taking photos. 40 years later, we put together the two sets of images, a shot-reverse shot about the comedic side of History.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS C",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In 1985-1987, the American journalist Edward Serotta visited the Communist Romania and took photos of the harsh realities of the country. The Secret Police (Securitate) followed him and secretly took photos of him taking photos. 40 year later, we put together the two sets of images, a shot-reverse shot about the comedic side of History."
+  }
+ },
+ {
+  "work_id": "w_4KGHHBJD2TPA",
+  "campo": "xref.tmdb",
+  "valor": 1614709,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1614709"
+  }
+ },
+ {
+  "work_id": "w_4KGHHBJD2TPA",
+  "campo": "xref.letterboxd",
+  "valor": "shot-reverse-shot-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "shot-reverse-shot-2026"
+  }
+ },
+ {
+  "work_id": "w_4KGHHBJD2TPA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/plan-contraplan.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/plan-contraplan.jpg"
+  }
+ }
+]

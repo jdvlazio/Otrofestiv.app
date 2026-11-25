@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_R4F1D2Q71DK4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/trizas-afiche.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "MIDBO trae el afiche con título y créditos; antes se guardaba un fotograma",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "https://image.tmdb.org/t/p/w500/6561nDr66xGl3MFVSMsVqGEKtn.jpg"
+  ],
+  "antes": {
+   "midbo-2026": "/assets/midbo-2026/trizas-afiche.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4F1D2Q71DK4",
+  "campo": "sinopsis.es",
+  "valor": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, ficci-65)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0a3d9bf1777d",
+   "f9679f11e402"
+  ],
+  "antes": {
+   "cinemancia-2026": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
+   "ficci-65": "Dos viajes se cruzan de forma anacrónica: el de un médico inglés en Bolivia en los años treinta y el de la cineasta en Londres en 2024. La película aborda los objetos como fragmentos inestables, restos de mundos más amplios, como espejos que solo se dejan entrever momentáneamente. El recorrido pasa por la colección de las Américas del Museo Británico, la colección de joyería y fotografía del V&A y una colección privada de arte latinoamericano en Londres.",
+   "midbo-2026": "Dos viajes se entrelazan anacrónicamente: el de un médico inglés en Bolivia durante la década los 30 y el de la cineasta en Londres en 2024. La película aborda la problemática del arte a través de fragmentos, entendidos como esquirlas de mundos más amplios: ventanas o espejos que se abren y se cierran, revelando brevemente lo que hay más allá. A través del cine, los objetos se abordan como rastros de trayectorias del pasado y del presente, proponiendo maneras sensibles y afectivas de relacionarse con ellos. La exploración se desarrolla desde la colección de arte boliviano del Museo Británico, pasando por la colección de joyas del Museo V&A, hasta una colección privada de arte latinoamericano, todo ello contextualizado en Londres."
+  }
+ },
+ {
+  "work_id": "w_R4F1D2Q71DK4",
+  "campo": "directores",
+  "valor": [
+   "Luciana Decker Orozco"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2026": "Luciana Decker",
+   "ficci-65": "Luciana Decker Orozco",
+   "midbo-2026": "Luciana Decker Orozco"
+  }
+ },
+ {
+  "work_id": "w_R4F1D2Q71DK4",
+  "campo": "paises",
+  "valor": [
+   "BO",
+   "GB"
+  ],
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2026": "Bolivia",
+   "ficci-65": "Bolivia/Inglaterra",
+   "midbo-2026": "Bolivia"
+  }
+ },
+ {
+  "work_id": "w_R4F1D2Q71DK4",
+  "campo": "sinopsis.en",
+  "valor": "Fragments of pottery. Gold, silver, jewelry. Contemporary art. Luciana Decker Orozco visits museums and collections in London, tracing a homegrown past present on another continent. Each piece is a window that opens and closes, briefly revealing what it hides.",
+  "motivo": "Errata gramatical ('Each piece are windows') y comentario ('magical editing').",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "cinemancia-2026": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
+   "ficci-65": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing.",
+   "midbo-2026": "Fragments of pottery. Gold, silver, jewellery. Contemporary art. Luciana Decker Orozco visits various museums and collections in London, tracing a homegrown past present on another continent. Each piece are windows that open and close, briefly revealing what they hide, a mystery that she encapsulates in her celluloid and magical editing."
+  }
+ }
+]

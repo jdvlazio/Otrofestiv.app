@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_R4KF7XH4C28M",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/jardin-2026/termina.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/jardin-2026/termina.jpg",
+   "/assets/villadeleyvaiff-2026/termina.jpg",
+   "https://image.tmdb.org/t/p/w500/2PxyvOX5x33ZVaqFb6yHqrMbVFZ.jpg"
+  ],
+  "antes": {
+   "jardin-2026": "/assets/jardin-2026/termina.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/2PxyvOX5x33ZVaqFb6yHqrMbVFZ.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/termina.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4KF7XH4C28M",
+  "campo": "sinopsis.es",
+  "valor": "Alex, un joven sumido en la depresión y consumido por la promesa de acabar con su propia vida, viaja a Bogotá con un único propósito: vengarse de su abusador, la persona que para él, es el causante de todo el camino de miseria que ha llevado hasta ahora, antes de poner fin a su propia vida.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (siembrafest-2026, villadeleyvaiff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "150e1ca8357e"
+  ],
+  "antes": {
+   "jardin-2026": "Alex, un jóven sumido en la depresión y consumido por la promesa de acabar con su propia vida, viaja a Bogotá con un único propósito: vengarse de su abusador, la persona que para él, es el causante de todo el camino de miseria que ha llevado hasta ahora, antes de poner fin a su propia vida.",
+   "siembrafest-2026": "Alex, un joven sumido en la depresión y consumido por la promesa de acabar con su propia vida, viaja a Bogotá con un único propósito: vengarse de su abusador, la persona que para él, es el causante de todo el camino de miseria que ha llevado hasta ahora, antes de poner fin a su propia vida.",
+   "villadeleyvaiff-2026": "Alex, un joven sumido en la depresión y consumido por la promesa de acabar con su propia vida, viaja a Bogotá con un único propósito: vengarse de su abusador, la persona que para él, es el causante de todo el camino de miseria que ha llevado hasta ahora, antes de poner fin a su propia vida."
+  }
+ },
+ {
+  "work_id": "w_R4KF7XH4C28M",
+  "campo": "directores",
+  "valor": [
+   "Juan José Guevara Ruiz"
+  ],
+  "motivo": "un dato por obra: la forma completa y bien escrita entre lo acreditado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "jardin-2026": "Juan José Guevara Ruiz",
+   "siembrafest-2026": "Juan José Guevara Ruiz",
+   "villadeleyvaiff-2026": "Juan José Guevara"
+  }
+ },
+ {
+  "work_id": "w_R4KF7XH4C28M",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "jardin-2026": "Ficción",
+   "siembrafest-2026": "Ficción",
+   "villadeleyvaiff-2026": "Drama"
+  }
+ }
+]

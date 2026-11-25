@@ -1,0 +1,86 @@
+[
+ {
+  "work_id": "w_R4HKXVCXCE0T",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "regla anio-mas-temprano; Priscila Padilla, sin ficha TMDB (las homónimas son de otros directores)",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "ficdeh-2026": 2024,
+   "ficmontanas-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4HKXVCXCE0T",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "BO",
+   "FR"
+  ],
+  "motivo": "regla pais-union (FICDEH: Colombia, Bolivia, Francia)",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "ficdeh-2026": "Colombia, Bolivia, Francia",
+   "ficmontanas-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HKXVCXCE0T",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficdeh/un-nuevo-amanecer.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/un-nuevo-amanecer.jpg",
+   "/assets/ficmontanas/un-nuevo-amanecer.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/un-nuevo-amanecer.jpg",
+   "ficmontanas-2026": "/assets/ficmontanas/un-nuevo-amanecer.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HKXVCXCE0T",
+  "campo": "sinopsis.es",
+  "valor": "Un Nuevo Amanecer narra la historia de cinco mujeres cuyos destinos fueron marcados por la guerra desde la infancia. Una de ellas logró cambiar el rumbo de su vida y, años después, decide reencontrarse con quienes sí empuñaron las armas para reconstruir, junto a ellas, un relato de memoria, amistad, amor, sororidad y esperanza. Hoy, al mirar el pasado, sus voces demuestran que la guerra dejó de ser una alternativa y que otro futuro es posible.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "7745b89968a0",
+   "9c0a9c84dcf2"
+  ],
+  "antes": {
+   "ficdeh-2026": "Un Nuevo Amanecer narra la historia de cinco mujeres cuyos destinos fueron marcados por la guerra desde la infancia. Una de ellas logró cambiar el rumbo de su vida y, años después, decide reencontrarse con quienes sí empuñaron las armas para reconstruir, junto a ellas, un relato de memoria, amistad, amor, sororidad y esperanza. Hoy, al mirar el pasado, sus voces demuestran que la guerra dejó de ser una alternativa y que otro futuro es posible.",
+   "ficmontanas-2026": "Documental sobre cinco mujeres excombatientes firmantes del acuerdo de paz, y lo que significó habitar un cuerpo femenino en la guerra y en el desarme."
+  }
+ },
+ {
+  "work_id": "w_R4HKXVCXCE0T",
+  "campo": "xref.tmdb",
+  "valor": 1369678,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/a-new-dawn-2024/"
+ },
+ {
+  "work_id": "w_R4HKXVCXCE0T",
+  "campo": "sinopsis.en",
+  "valor": "The story of five women whose lives were marked by war since childhood. One of them managed to change course and, years later, decides to seek out those who did take up arms, to rebuild with them a story of memory, friendship, love, sisterhood and hope.",
+  "motivo": "Decía cinco excombatientes: TMDB nombra a cuatro y la quinta, la directora, no se unió a la guerrilla.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "ficdeh-2026": "A documentary on five former women combatants who signed Colombia's peace accord, and what it meant to inhabit a woman's body through war and disarmament.",
+   "ficmontanas-2026": "A documentary on five former women combatants who signed Colombia's peace accord, and what it meant to inhabit a woman's body through war and disarmament."
+  }
+ }
+]

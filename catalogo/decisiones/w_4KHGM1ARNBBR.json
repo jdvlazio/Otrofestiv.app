@@ -1,0 +1,119 @@
+[
+ {
+  "work_id": "w_4KHGM1ARNBBR",
+  "campo": "directores",
+  "valor": [
+   "Luis de Jesús"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Luis de Jesús"
+  }
+ },
+ {
+  "work_id": "w_4KHGM1ARNBBR",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHGM1ARNBBR",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KHGM1ARNBBR",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KHGM1ARNBBR",
+  "campo": "sinopsis.es",
+  "valor": "Millo y Delia, una pareja puertorriqueña de edad avanzada que vive en Nueva York, deben afrontar la nueva realidad de la enfermedad progresiva de Millo mientras intentan conservar lo que queda de la vida que siempre han conocido.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Millo y Delia, una pareja puertorriqueña de edad avanzada que vive en Nueva York, deben afrontar la nueva realidad de la enfermedad progresiva de Millo mientras intentan conservar lo que queda de la vida que siempre han conocido."
+  }
+ },
+ {
+  "work_id": "w_4KHGM1ARNBBR",
+  "campo": "sinopsis.en",
+  "valor": "Millo and Delia, an elderly Puerto Rican couple living in New York, are forced to navigate the new reality of Millo’s progressing illness while trying to hold on to what remains of the life they’ve always known.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Millo and Delia, an elderly Puerto Rican couple living in New York, are forced to navigate the new reality of Millo’s progressing illness while trying to hold on to what remains of the life they’ve always known."
+  }
+ },
+ {
+  "work_id": "w_4KHGM1ARNBBR",
+  "campo": "xref.tmdb",
+  "valor": 1374604,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1374604"
+  }
+ },
+ {
+  "work_id": "w_4KHGM1ARNBBR",
+  "campo": "xref.letterboxd",
+  "valor": "cold-coffee-2024",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "cold-coffee-2024"
+  }
+ },
+ {
+  "work_id": "w_4KHGM1ARNBBR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/cold-coffee.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/cold-coffee.jpg"
+  }
+ }
+]

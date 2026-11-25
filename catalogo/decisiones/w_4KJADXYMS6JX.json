@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJADXYMS6JX",
+  "campo": "directores",
+  "valor": [
+   "Jerónimo Rocha"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Jerónimo Rocha"
+  }
+ },
+ {
+  "work_id": "w_4KJADXYMS6JX",
+  "campo": "anio",
+  "valor": 2013,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2013"
+  }
+ },
+ {
+  "work_id": "w_4KJADXYMS6JX",
+  "campo": "paises",
+  "valor": [
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KJADXYMS6JX",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_4KJADXYMS6JX",
+  "campo": "sinopsis.es",
+  "valor": "En el carguero y refinería espacial Dédalo, Siena lucha por sobrevivir a una infestación de criaturas que amenaza a la tripulación.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En el carguero y refinería espacial Dédalo, Siena lucha por sobrevivir a una infestación de criaturas que amenaza a la tripulación."
+  }
+ },
+ {
+  "work_id": "w_4KJADXYMS6JX",
+  "campo": "sinopsis.en",
+  "valor": "Aboard the space freighter and refinery Dédalo, Siena struggles to survive an infestation of creatures threatening the crew.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Aboard the space freighter and refinery Dédalo, Siena struggles to survive an infestation of creatures threatening the crew."
+  }
+ },
+ {
+  "work_id": "w_4KJADXYMS6JX",
+  "campo": "xref.tmdb",
+  "valor": 268421,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "268421"
+  }
+ },
+ {
+  "work_id": "w_4KJADXYMS6JX",
+  "campo": "xref.letterboxd",
+  "valor": "dedalo",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "dedalo"
+  }
+ },
+ {
+  "work_id": "w_4KJADXYMS6JX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/dedalo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/dedalo.jpg"
+  }
+ }
+]

@@ -1,16 +1,24 @@
 {
  "id": "w_R4HB85XVWANY",
  "titulo_original": "Ein Unfall",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "AT"
  ],
- "directores": [],
+ "directores": [
+  "Angelika Spangel"
+ ],
+ "sinopsis": {
+  "es": "En el dilatado tiempo de un pequeño pueblo, los caminos del juego y del incidente parecen intercambiarse sin aviso. Siempre hay algo importante casi pasando: un auto ardiendo en medio de la vía, una muerte que termina siendo un juego, altercados con motores y animales. Dureza y vulnerabilidad, con la pizca de tragedia que hay en toda diversión.",
+  "en": "In the slow time of a small town, the paths of play and incident seem to trade places without warning. Something important is always almost happening: a car burning in the road, a death that ends up being a game, altercations with engines and animals. Toughness and vulnerability, with the touch of tragedy found in all fun."
+ },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w92/mMwxovImXvfegUlzJWo37OuYcaN.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1614684
+ },
  "versiones": [
   {
    "etiqueta": "30 min",

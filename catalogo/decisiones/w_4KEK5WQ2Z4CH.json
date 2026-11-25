@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KEK5WQ2Z4CH",
+  "campo": "directores",
+  "valor": [
+   "Lucía Romero Castillo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lucía Romero Castillo"
+  }
+ },
+ {
+  "work_id": "w_4KEK5WQ2Z4CH",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEK5WQ2Z4CH",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KEK5WQ2Z4CH",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEK5WQ2Z4CH",
+  "campo": "sinopsis.es",
+  "valor": "Ana conduce de un lugar a otro, encadenando obligaciones. Atraviesa la ciudad sin acabar de llegar nunca, con un cansancio asumido pero lúcida. Su coche es una habitación en movimiento: un espacio mínimo pero propio desde donde la ciudad aparece fragmentada, intermitente, como si solo pudiera existir en la distancia.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ana conduce de un lugar a otro, encadenando obligaciones. Atraviesa la ciudad sin acabar de llegar nunca, con un cansancio asumido pero lúcida. Su coche es una habitación en movimiento: un espacio mínimo pero propio desde donde la ciudad aparece fragmentada, intermitente, como si solo pudiera existir en la distancia."
+  }
+ },
+ {
+  "work_id": "w_4KEK5WQ2Z4CH",
+  "campo": "sinopsis.en",
+  "valor": "Ana drives from one place to another, in a chain of obligations. She crosses the city without ever quite arriving anywhere, with an accepted weariness but lucid. Her car is a moving room: a very small space but her own, from which the city appears fragmented, intermittent, as if it could only exist from a distance.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ana drives from one place to another, in a chain of obligations. She crosses the city without ever quite arriving anywhere, with an accepted weariness but lucid. Her car is a moving room: a very small space but her own, from which the city appears fragmented, intermittent, as if it could only exist from a distance."
+  }
+ },
+ {
+  "work_id": "w_4KEK5WQ2Z4CH",
+  "campo": "xref.tmdb",
+  "valor": 1657664,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1657664"
+  }
+ },
+ {
+  "work_id": "w_4KEK5WQ2Z4CH",
+  "campo": "xref.letterboxd",
+  "valor": "llamame-llevame-avisame",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "llamame-llevame-avisame"
+  }
+ },
+ {
+  "work_id": "w_4KEK5WQ2Z4CH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/llamame-llevame-avisame.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/llamame-llevame-avisame.jpg"
+  }
+ }
+]

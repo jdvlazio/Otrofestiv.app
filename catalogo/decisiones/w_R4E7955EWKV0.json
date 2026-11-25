@@ -1,0 +1,33 @@
+[
+ {
+  "work_id": "w_R4E7955EWKV0",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "biff-2026": "Hong Kong"
+  }
+ },
+ {
+  "work_id": "w_R4E7955EWKV0",
+  "campo": "paises",
+  "valor": [
+   "TH",
+   "SG",
+   "FR",
+   "NO",
+   "CN",
+   "HK"
+  ],
+  "motivo": "el último país de la lista de BIFF se leyó como género: se recompone",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "biff-2026": "Tailandia, Singapur, Francia, Noruega, China,"
+  }
+ }
+]

@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_4KGK1EP1B55T",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "0fb1e30f930a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "They’re Here",
+  "valor": "Película de terror que sigue a Edén Villa (seudónimo) y a residentes anónimos de Minneapolis mientras evaden y resisten la ocupación paramilitar de su ciudad. Narrada al estilo del cine distópico, transcurre en un paisaje invernal donde ciclistas siguen los movimientos de una fuerza invasora y agentes enmascarados secuestran niños.",
+  "original": "They’re Here es una película de terror que sigue a Edén Villa (seudónimo) y a residentes anónimos de Minneapolis mientras evaden y resisten la ocupación paramilitar de su ciudad. Narrada al estilo del cine distópico, They’re Here se desarrolla en un paisaje invernal donde agentes enmascarados secuestran niños, los residentes viajan en los baúles de los carros, prisioneros encadenados son subidos a aviones a la vista de los turistas y ciclistas siguen los movimientos de una fuerza invasora.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "f07961d89ac5"
+  }
+ },
+ {
+  "work_id": "w_4KGK1EP1B55T",
+  "campo": "directores",
+  "valor": [
+   "Laura Poitras",
+   "Rachel Lauren Mueller"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Laura Poitras, Rachel Lauren Mueller"
+  }
+ },
+ {
+  "work_id": "w_4KGK1EP1B55T",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGK1EP1B55T",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KGK1EP1B55T",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KGK1EP1B55T",
+  "campo": "sinopsis.en",
+  "valor": "They’re Here is a horror film that follows Edén Villa (a pseudonym) and anonymous Minneapolis residents as they evade and resist the paramilitary occupation of their city. Told in the tradition of dystopian cinema, They’re Here is set in a winter landscape where masked agents abduct children, residents travel in trunks, shackled prisoners are loaded onto airplanes within eyesight of vacationers, and bicyclists track the movements of an invading force.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "They’re Here is a horror film that follows Edén Villa (a pseudonym) and anonymous Minneapolis residents as they evade and resist the paramilitary occupation of their city. Told in the tradition of dystopian cinema, They’re Here is set in a winter landscape where masked agents abduct children, residents travel in trunks, shackled prisoners are loaded onto airplanes within eyesight of vacationers, and bicyclists track the movements of an invading force."
+  }
+ },
+ {
+  "work_id": "w_4KGK1EP1B55T",
+  "campo": "xref.tmdb",
+  "valor": 1736525,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1736525"
+  }
+ },
+ {
+  "work_id": "w_4KGK1EP1B55T",
+  "campo": "xref.letterboxd",
+  "valor": "theyre-here-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "theyre-here-2026"
+  }
+ },
+ {
+  "work_id": "w_4KGK1EP1B55T",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/they-re-here.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/they-re-here.jpg"
+  }
+ }
+]

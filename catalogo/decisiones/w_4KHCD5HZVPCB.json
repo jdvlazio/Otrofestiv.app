@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_4KHCD5HZVPCB",
+  "campo": "directores",
+  "valor": [
+   "Zhenia Kazankina"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Zhenia Kazankina"
+  }
+ },
+ {
+  "work_id": "w_4KHCD5HZVPCB",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHCD5HZVPCB",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "DE",
+   "IT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia, Alemania, Italia"
+  }
+ },
+ {
+  "work_id": "w_4KHCD5HZVPCB",
+  "campo": "generos",
+  "valor": [
+   "Fantasía"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Fantasía"
+  }
+ },
+ {
+  "work_id": "w_4KHCD5HZVPCB",
+  "campo": "sinopsis.es",
+  "valor": "La última noche antes de marcharse, Vera acuesta a su hermana pequeña. Para ocultarle el verdadero motivo de su partida, le cuenta un cuento: la historia de una ciudad engullida por una noche eterna.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "La última noche antes de marcharse, Vera acuesta a su hermana pequeña. Para ocultarle el verdadero motivo de su partida, le cuenta un cuento: la historia de una ciudad engullida por una noche eterna."
+  }
+ },
+ {
+  "work_id": "w_4KHCD5HZVPCB",
+  "campo": "sinopsis.en",
+  "valor": "On the last evening before her departure, Vera is putting her small sister to bed. To hide the real reason of her leaving, she tells her a bedtime fairy tale instead. It’s the story of a city swallowed by an eternal night.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On the last evening before her departure, Vera is putting her small sister to bed. To hide the real reason of her leaving, she tells her a bedtime fairy tale instead. It’s the story of a city swallowed by an eternal night."
+  }
+ },
+ {
+  "work_id": "w_4KHCD5HZVPCB",
+  "campo": "xref.tmdb",
+  "valor": 1673938,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1673938"
+  }
+ },
+ {
+  "work_id": "w_4KHCD5HZVPCB",
+  "campo": "xref.letterboxd",
+  "valor": "city-of-owls",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "city-of-owls"
+  }
+ },
+ {
+  "work_id": "w_4KHCD5HZVPCB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/city-of-owls.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/city-of-owls.jpg"
+  }
+ }
+]

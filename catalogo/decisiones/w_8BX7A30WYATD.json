@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7A30WYATD",
+  "campo": "directores",
+  "valor": [
+   "Daniel Porto"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Daniel Porto"
+  }
+ },
+ {
+  "work_id": "w_8BX7A30WYATD",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_8BX7A30WYATD",
+  "campo": "paises",
+  "valor": [
+   "BR"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Brasil"
+  }
+ },
+ {
+  "work_id": "w_8BX7A30WYATD",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX7A30WYATD",
+  "campo": "sinopsis.es",
+  "valor": "Una exreina de belleza sueña con que su hija continúe la tradición familiar y gane un certamen. Sin embargo, ella no tiene ni la aptitud ni el interés para hacerlo. Por otro lado, su hijo parece tener más talento para conquistar la banda y la corona.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Una exreina de belleza sueña con que su hija continúe la tradición familiar y gane un certamen. Sin embargo, ella no tiene ni la aptitud ni el interés para hacerlo. Por otro lado, su hijo parece tener más talento para conquistar la banda y la corona."
+  }
+ },
+ {
+  "work_id": "w_8BX7A30WYATD",
+  "campo": "sinopsis.en",
+  "valor": "A former beauty queen dreams that her daughter will follow the family tradition and win a pageant. However, she has neither the aptitude nor the interest for it. Her son, on the other hand, seems to have more talent for winning the sash and crown.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "A former beauty queen dreams that her daughter will follow the family tradition and win a pageant. However, she has neither the aptitude nor the interest for it. Her son, on the other hand, seems to have more talent for winning the sash and crown."
+  }
+ },
+ {
+  "work_id": "w_8BX7A30WYATD",
+  "campo": "xref.tmdb",
+  "valor": 1265032,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1265032"
+  }
+ },
+ {
+  "work_id": "w_8BX7A30WYATD",
+  "campo": "xref.letterboxd",
+  "valor": "a-miss",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "a-miss"
+  }
+ },
+ {
+  "work_id": "w_8BX7A30WYATD",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/la-miss.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/la-miss.jpg"
+  }
+ }
+]

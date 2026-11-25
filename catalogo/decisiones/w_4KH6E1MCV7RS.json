@@ -1,0 +1,80 @@
+[
+ {
+  "work_id": "w_4KH6E1MCV7RS",
+  "campo": "directores",
+  "valor": [
+   "Bram VanderMark"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Bram VanderMark"
+  }
+ },
+ {
+  "work_id": "w_4KH6E1MCV7RS",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_4KH6E1MCV7RS",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KH6E1MCV7RS",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KH6E1MCV7RS",
+  "campo": "sinopsis.es",
+  "valor": "Una figura solitaria recorre una ciudad desolada. A través de la danza vuelve sobre sus triunfos y fracasos.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una figura solitaria recorre una ciudad desolada. A través de la danza vuelve sobre sus triunfos y fracasos."
+  }
+ },
+ {
+  "work_id": "w_4KH6E1MCV7RS",
+  "campo": "sinopsis.en",
+  "valor": "A solitary figure crosses a desolate city, revisiting his successes and failures through dance.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A solitary figure crosses a desolate city, revisiting his successes and failures through dance."
+  }
+ }
+]

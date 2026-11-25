@@ -1,22 +1,60 @@
 {
  "titulo_original": {
-  "fuente": "festival:mamut-2026",
+  "fuente": "festival:bogoshorts-2026,bogoshorts-2026,mamut-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "nombre completo: catálogo BOGOSHORTS y Cuadernos de Cine Colombiano n.º 8",
+  "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:939831",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Cuadernos de Cine Colombiano n.º 8 (Cinemateca, https://idartesencasa.gov.co/sites/default/files/libros_pdf/Cuadernos%20de%20cine%20colombiano%20Primera%20epoca%20No%208%20Jairo%20Pinilla%20Tellez.pdf); Univalle (https://cvisaacs.univalle.edu.co/cine/jairo-pinilla-tellez/); catálogo BOGOSHORTS 2026. Proimágenes dice 1974",
+  "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "sinopsis oficial del festival o de Bogoshorts",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "catálogo BOGOSHORTS: las frases que corresponden a la española decidida",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma imagen: queda la publicada; es un fotograma, no un afiche",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24"
  }
 }

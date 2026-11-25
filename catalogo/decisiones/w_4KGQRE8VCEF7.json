@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KGQRE8VCEF7",
+  "campo": "directores",
+  "valor": [
+   "Arturo Spano"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Arturo Spano"
+  }
+ },
+ {
+  "work_id": "w_4KGQRE8VCEF7",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGQRE8VCEF7",
+  "campo": "paises",
+  "valor": [
+   "AR",
+   "IT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Argentina, Italia"
+  }
+ },
+ {
+  "work_id": "w_4KGQRE8VCEF7",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KGQRE8VCEF7",
+  "campo": "sinopsis.es",
+  "valor": "Un día, Gustav oye el rumor de que será sustituido por otro mayordomo. La ansiedad y la incertidumbre crecen tanto que una noche decide escapar.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un día, Gustav oye el rumor de que será sustituido por otro mayordomo. La ansiedad y la incertidumbre crecen tanto que una noche decide escapar."
+  }
+ },
+ {
+  "work_id": "w_4KGQRE8VCEF7",
+  "campo": "sinopsis.en",
+  "valor": "One day, Gustav hears a rumor that he will be replaced by another butler —the anxiety and uncertainty grow so strong within him that one night he decides to escape.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "One day, Gustav hears a rumor that he will be replaced by another butler —the anxiety and uncertainty grow so strong within him that one night he decides to escape."
+  }
+ },
+ {
+  "work_id": "w_4KGQRE8VCEF7",
+  "campo": "xref.tmdb",
+  "valor": 1769648,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1769648"
+  }
+ },
+ {
+  "work_id": "w_4KGQRE8VCEF7",
+  "campo": "xref.letterboxd",
+  "valor": "an-impossible-word-of-praise",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "an-impossible-word-of-praise"
+  }
+ },
+ {
+  "work_id": "w_4KGQRE8VCEF7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/an-impossible-word-of-praise.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/an-impossible-word-of-praise.jpg"
+  }
+ }
+]

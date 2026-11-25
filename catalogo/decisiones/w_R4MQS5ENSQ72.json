@@ -1,0 +1,44 @@
+[
+ {
+  "work_id": "w_R4MQS5ENSQ72",
+  "campo": "sinopsis.es",
+  "valor": "La carretera parece seguir tranquila, en línea recta, por el desierto de Nevada. En 1959, es hacia allá que una profesora neoyorquina debe dirigirse para conseguir el divorcio de su marido. Contra lo esperado, aparece la atrevida Cay, que cambia el rumbo del destino a la velocidad de las grandes pasiones. Basada en el libro de Jane Rule.",
+  "motivo": "corrección de «en portugués, crédito de otra base»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "e96fd4ef2c48"
+  ],
+  "antes": {
+   "olhar-2026": "La carretera parece seguir tranquila en línea recta por el desierto de Nevada. En 1959, es en esa dirección que una profesora neoyorquina debe encaminarse para conseguir el divorcio de su marido. Y entonces, a contramano de lo esperado, aparece la audaz Cay, redirigiendo la ruta del destino a la alta velocidad típica de las grandes pasiones. En conmemoración de los 40 años de su estreno comercial, Olhar exhibe, en nueva copia restaurada, el filme debut de la directora Donna Deitch, basado en el libro de Jane Rule. Un clásico del cine lésbico que reimaginó las posibilidades narrativas del amor entre mujeres ante el gran público. (C.M.)"
+  }
+ },
+ {
+  "work_id": "w_R4MQS5ENSQ72",
+  "campo": "sinopsis.en",
+  "valor": "The road seems to stretch smoothly in a straight line through the Nevada desert. In 1959, this is the direction a New York teacher must head to get a divorce from her husband. But then, unexpectedly, the audacious Cay appears, redirecting the course of destiny with the high speed typical of great passions. Donna Deitch's debut film, based on Jane Rule's book, is a classic of lesbian cinema that reimagined the narrative possibilities of love between women for a wide audience.",
+  "motivo": "se quita el aviso del festival",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "olhar-2026": "The road seems to stretch smothly in a  straight line through the Nevada desert. In 1959, this is the direction a New York teacher must head to get a divorce from her husband. But then, unexpectedly, the audacious Cay appears, redirecting the course of destiny with the high speed typical of great passions. In celebration of the 40th anniversary of its commercial release, Olhar de Cinema presents director Donna Deitch's debut film, based on Jane Rule's book, in a new restored copy. A classic of lesbian cinema that reimagined the narrative possibilities of love between women for a wide audience (C.M.)"
+  }
+ },
+ {
+  "work_id": "w_R4MQS5ENSQ72",
+  "campo": "xref.tmdb",
+  "valor": 294,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/desert-hearts/"
+ },
+ {
+  "work_id": "w_R4MQS5ENSQ72",
+  "campo": "anio",
+  "valor": 1986,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

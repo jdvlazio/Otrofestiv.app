@@ -1,0 +1,89 @@
+[
+ {
+  "work_id": "w_R4DQKJA3BKS4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/the-man-i-love.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/the-man-i-love.jpg",
+   "https://image.tmdb.org/t/p/w500/qIZ8pQ5nQjRKDtmsl0DYGO1nCQ.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/the-man-i-love.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/qIZ8pQ5nQjRKDtmsl0DYGO1nCQ.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DQKJA3BKS4",
+  "campo": "sinopsis.es",
+  "valor": "Finales de la década de 1980 en Nueva York. Jimmy George, un carismático artista del Downtown, se rebela contra su propia mortalidad entregándose por completo a un nuevo papel, a un romance imprudente y al abrazo de su comunidad creativa.",
+  "motivo": "topónimo sin traducir",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "vistas": [
+   "73f89a203868",
+   "91b18104cae7"
+  ],
+  "antes": {
+   "biff-2026": "Finales de la década de 1980 en New York. Jimmy George, un carismático artista del Downtown, se rebela contra su propia mortalidad entregándose por completo a un nuevo papel, a un romance imprudente y al abrazo de su comunidad creativa.",
+   "tiff-2026": "La mirada de Ira Sachs sobre unos artistas neoyorquinos que viven bajo el fantasma del sida en los años ochenta se centra en la alegría y en la salvación que da la creación."
+  },
+  "anteriores": [
+   {
+    "valor": "Finales de la década de 1980 en New York. Jimmy George, un carismático artista del Downtown, se rebela contra su propia mortalidad entregándose por completo a un nuevo papel, a un romance imprudente y al abrazo de su comunidad creativa.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "73f89a203868",
+     "91b18104cae7"
+    ]
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4DQKJA3BKS4",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1458914)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": 2026,
+   "tiff-2026": 2027
+  }
+ },
+ {
+  "work_id": "w_R4DQKJA3BKS4",
+  "campo": "paises",
+  "valor": [
+   "US",
+   "FR"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1458914)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "Reino Unido",
+   "tiff-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4DQKJA3BKS4",
+  "campo": "sinopsis.en",
+  "valor": "In late 1980s New York, a theater artist living with AIDS takes on one possibly last great role.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "The Man I Love",
+  "antes": {
+   "biff-2026": "In late 1980s New York, a theater artist living with AIDS takes on one possibly last great role.",
+   "tiff-2026": "Ira Sachs’ vision of New York artists living under the spectre of AIDS in the ’80s focuses on the joy and salvation of creativity."
+  }
+ }
+]

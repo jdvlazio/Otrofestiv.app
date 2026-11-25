@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KHMSE8KDS1D",
+  "campo": "directores",
+  "valor": [
+   "Agustina Sánchez Gavier"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Agustina Sánchez Gavier"
+  }
+ },
+ {
+  "work_id": "w_4KHMSE8KDS1D",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_4KHMSE8KDS1D",
+  "campo": "paises",
+  "valor": [
+   "AR",
+   "DE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Argentina, Alemania"
+  }
+ },
+ {
+  "work_id": "w_4KHMSE8KDS1D",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KHMSE8KDS1D",
+  "campo": "sinopsis.es",
+  "valor": "Durante un eclipse solar en Misiones, los habitantes de una comunidad experimentan cambios inquietantes en un paisaje marcado por la devastación ambiental.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Durante un eclipse solar en Misiones, los habitantes de una comunidad experimentan cambios inquietantes en un paisaje marcado por la devastación ambiental."
+  }
+ },
+ {
+  "work_id": "w_4KHMSE8KDS1D",
+  "campo": "sinopsis.en",
+  "valor": "During a solar eclipse in Misiones, a community undergoes unsettling changes in a landscape marked by environmental devastation.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "During a solar eclipse in Misiones, a community undergoes unsettling changes in a landscape marked by environmental devastation."
+  }
+ },
+ {
+  "work_id": "w_4KHMSE8KDS1D",
+  "campo": "xref.tmdb",
+  "valor": 1275379,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1275379"
+  }
+ },
+ {
+  "work_id": "w_4KHMSE8KDS1D",
+  "campo": "xref.letterboxd",
+  "valor": "our-own-shadow",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "our-own-shadow"
+  }
+ },
+ {
+  "work_id": "w_4KHMSE8KDS1D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/nuestra-sombra.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/nuestra-sombra.jpg"
+  }
+ }
+]

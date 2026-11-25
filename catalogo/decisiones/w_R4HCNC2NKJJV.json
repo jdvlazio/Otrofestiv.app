@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HCNC2NKJJV",
+  "campo": "directores",
+  "valor": [
+   "Julian Radlmaier"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 150",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=150",
+  "antes": {
+   "ficci-65": "Julian Radlmaier"
+  }
+ },
+ {
+  "work_id": "w_R4HCNC2NKJJV",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 150",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=150",
+  "antes": {
+   "ficci-65": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HCNC2NKJJV",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 150",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=150",
+  "antes": {
+   "ficci-65": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_R4HCNC2NKJJV",
+  "campo": "sinopsis.es",
+  "valor": "En un paisaje dominado por la montaña y un verano que parece fuera del tiempo, se cruzan dos personajes solitarios: Úrsula, una mesera alemana, y Neda, una influenciadora iraní. Una búsqueda de fantasmas se transforma en un espacio de encuentro. Entre la sátira y el juego, una fábula sobre la solidaridad y los fantasmas internos.",
+  "motivo": "catálogo oficial de FICCI 65, p. 150",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=150",
+  "antes": {
+   "ficci-65": "Julian Radlmaier filma en un resort de lujo alemán una comedia de enredos marxista donde turistas, trabajadores y fantasmas coexisten en un verano que nunca termina."
+  }
+ },
+ {
+  "work_id": "w_R4HCNC2NKJJV",
+  "campo": "sinopsis.en",
+  "valor": "In a landscape dominated by mountains and a summer that seems outside time, two lonely characters cross paths: Ursula, a German waitress, and Neda, an Iranian influencer. A search for ghosts transforms into a meeting place. Between satire and playfulness, a fable about solidarity and inner ghosts.",
+  "motivo": "catálogo oficial de FICCI 65, p. 150",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=150",
+  "antes": {
+   "ficci-65": "Julian Radlmaier films at a German luxury resort a Marxist comedy of errors in which tourists, workers, and ghosts coexist in a summer that never ends."
+  }
+ },
+ {
+  "work_id": "w_R4HCNC2NKJJV",
+  "campo": "xref.tmdb",
+  "valor": 1426965,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1426965"
+ }
+]

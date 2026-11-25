@@ -1,0 +1,108 @@
+[
+ {
+  "work_id": "w_4KEVVG8XWVYG",
+  "campo": "directores",
+  "valor": [
+   "Mateo Guerrero Quintero"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mateo Guerrero Quintero"
+  }
+ },
+ {
+  "work_id": "w_4KEVVG8XWVYG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEVVG8XWVYG",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KEVVG8XWVYG",
+  "campo": "generos",
+  "valor": [
+   "Romance"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Romance"
+  }
+ },
+ {
+  "work_id": "w_4KEVVG8XWVYG",
+  "campo": "sinopsis.es",
+  "valor": "Jaco y Lila, dos jóvenes bogotanos, enfrentan el final de la relación más importante de sus veintes. Durante sus últimos dos días juntos, se adentran en los distintos lenguajes del amor mediante un diálogo íntimo y extenso que pone en palabras y sensaciones el dolor, la añoranza y la dificultad de amarse en medio de la condición humana.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Jaco y Lila, dos jóvenes bogotanos, enfrentan el final de la relación más importante de sus veintes. Durante sus últimos dos días juntos, se adentran en los distintos lenguajes del amor mediante un diálogo íntimo y extenso que pone en palabras y sensaciones el dolor, la añoranza y la dificultad de amarse en medio de la condición humana."
+  }
+ },
+ {
+  "work_id": "w_4KEVVG8XWVYG",
+  "campo": "sinopsis.en",
+  "valor": "Jaco and Lila, two young people, are going through the breakup of the most significant relationship of their twenties. Over the course of their final two days together, they explore the many languages of love through a long, heartfelt conversation that gives voice to pain, longing, and the profound difficulty of loving one another amid the complexity of the human experience.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Jaco and Lila, two young people, are going through the breakup of the most significant relationship of their twenties. Over the course of their final two days together, they explore the many languages of love through a long, heartfelt conversation that gives voice to pain, longing, and the profound difficulty of loving one another amid the complexity of the human experience."
+  }
+ },
+ {
+  "work_id": "w_4KEVVG8XWVYG",
+  "campo": "xref.tmdb",
+  "valor": 1827960,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1827960"
+  }
+ },
+ {
+  "work_id": "w_4KEVVG8XWVYG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/no-todos-los-pajaros-son-aves.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/no-todos-los-pajaros-son-aves.jpg"
+  }
+ }
+]

@@ -1,0 +1,576 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-11-25"
+ },
+ "obras": [
+  {
+   "titulo": "El fantástico Sr. Fox",
+   "tmdb_id": 10315,
+   "titulo_original": "Fantastic Mr. Fox",
+   "poster_path": "/2B2IcoSMpOa64Yw8DDtGzXdS4vl.jpg",
+   "synopsis_es": "Un astuto zorro llamado Fox (voz original de George Clooney) parece llevar una vida idílica con su esposa (Meryl Streep) y con su hijo Ash (Jason Schwartzman). Pero, por las noches, el señor Fox se dedica a robar gallinas, patos y pavos en las granjas vecinas. Los granjeros deciden acabar con la situación cazando a Mr. Fox. Basada en el famoso libro para niños de Roald Dahl.",
+   "synopsis_en": "The Fantastic Mr. Fox, bored with his current life, plans a heist against the three local farmers. The farmers, tired of sharing their chickens with the sly fox, seek revenge against him and his family.",
+   "genero": "Aventura",
+   "anio_tmdb": 2009,
+   "duracion_tmdb": 87,
+   "pais_tmdb": "United States",
+   "lbSlug": "fantastic-mr-fox",
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 10315 «Fantastic Mr. Fox» (2009) de Wes Anderson: la web la presenta como «El fantástico Sr. Fox · Wes Anderson · stop motion» y la lámina del 18 nov pinta el afiche francés «Fantastic Mr. Fox · un film de Wes Anderson» (Amalric, Huppert). Título en español de la obra",
+   "_director": "Wes Anderson",
+   "_sondeado": "2026-11-25",
+   "poster": "/assets/provinciadevelez-2026/el-fantastico-sr-fox.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_7JCWN3D9J5SV (provinciadevelez-2026)"
+   }
+  },
+  {
+   "titulo": "El pescador",
+   "tmdb_id": 1558138,
+   "titulo_original": "El Pescador",
+   "poster_path": "/2TGCFQDwFlJuSeWxDSeehya5F8q.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "El Pescador is an intimate portrait of the Caribbean through the lives of those who devote themselves to the sea. From the voice of a Puerto Rican fisherman to the bond between a father and his son in Colombia, the film reveals how fishing both unites and distinguishes, portraying a legacy shaped by tradition, struggle, and hope. Filmed in La Parguera, Lajas, Puerto Rico and Palomino, La Guajira, Colombia.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "el-pescador-1",
+   "_verificado": "el catálogo ya la tiene (w_7JCX65BM88M0, provinciadevelez-2026)",
+   "work_id": "w_7JCX65BM88M0",
+   "_director": "Juan Cruz",
+   "_sondeado": "2026-11-25",
+   "poster": "/assets/provinciadevelez-2026/el-pescador.jpg",
+   "posterSource": "tmdb",
+   "duracion_tmdb": 10,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_7JCX65BM88M0 (provinciadevelez-2026)"
+   }
+  },
+  {
+   "titulo": "Escisión de la cigarra",
+   "tmdb_id": 1753860,
+   "titulo_original": "Escisión de la Cigarra",
+   "poster_path": "/sMrwhM990f5E1pvwWuJ8IKRNBUr.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In an old carpentry shop, Estiven confronts the souls and the incessant echo of the cicadas. Between life and limbo, his spirit is trapped in a spiritual plane where unfinished work, memory, and the supernatural merge in a state of confusion.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "escision-de-la-cigarra",
+   "_verificado": "el catálogo ya la tiene (w_7JCXP98PJ2V9, provinciadevelez-2026)",
+   "work_id": "w_7JCXP98PJ2V9",
+   "_director": "Absalón Rincón Muñoz",
+   "_sondeado": "2026-11-25",
+   "poster": "/assets/provinciadevelez-2026/escision-de-la-cigarra.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La familia Bélier",
+   "tmdb_id": 304410,
+   "titulo_original": "La Famille Bélier",
+   "poster_path": "/3mU5y9kc6Zkg4FMf3KRzL1kCCzV.jpg",
+   "synopsis_es": "Todos los miembros de la familia Bélier son sordomudos, excepto Paula, de 16 años. Ella hace de intérprete para sus padres, especialmente en lo que respecta al funcionamiento de la granja de la familia. Un día, alentada por su profesor de música, que ha descubierto su talento para el canto, decide prepararse para la audición del Coro de Radio France, pero se trata de una elección que la obligará a distanciarse de su familia.",
+   "synopsis_en": "The whole Bélier family is deaf, except for sixteen year old Paula who is the important translator in her parents' day to day life especially when it comes to matters concerning the family farm. When her music teacher discovers she has a fantastic singing voice and she gets an opportunity to enter a big Radio France contest the whole family's future is set up for big changes.",
+   "genero": "Comedia",
+   "anio_tmdb": 2014,
+   "duracion_tmdb": 105,
+   "pais_tmdb": "France",
+   "title_en": "The Bélier Family",
+   "lbSlug": "the-belier-family",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Éric Lartigau",
+   "_sondeado": "2026-11-24",
+   "poster": "/assets/provinciadevelez-2026/la-familia-belier.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Francia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_7JCVTGAAS5A4 (provinciadevelez-2026)"
+   }
+  },
+  {
+   "titulo": "My Name Is Bill W.",
+   "tmdb_id": 15727,
+   "titulo_original": "My Name Is Bill W.",
+   "poster_path": "/54Ggd8vaWs7PzGuTKLDsWP38OAv.jpg",
+   "synopsis_es": "\"Mi nombre es Bill W.\" es la poderosa historia de Bill Wilson, acerca de su papel como fundador de uno de los más exitosos movimientos de auto ayuda en la historia, de \"Alcohólicos Anónimos\". James Woods estelariza al explosivo e impredecible Bill Wilson, incapaz de controlar su deseo por el alcohol. Jo Beth Williams estelariza a la sufrida esposa Louis, quién está separada de su esposo por su propia incapacidad para ayudarlo. Louis, desesperada, considera meterlo a un sanatorio, cuando Bill descubre ésto le da un ataque de alcoholismo y termina atado a una cama de hospital. Bill intenta dejar de beber pero le es imposible, así, que recurre a un amigo el Dr. Bob Smith con quien comparte la dependencia del vino. Es una historia verdadera que trata de la esperanza, coraje y amor.",
+   "synopsis_en": "Based on the true story of Bill W. (James Woods), a successful stock broker whose life falls apart after the stock crash of the 20's and how he comes to grips with his alcoholism. Along with a fellow alcoholic (James Garner) he forms a support group that would eventually become Alcoholics Anonymous.",
+   "genero": "Drama",
+   "anio_tmdb": 1989,
+   "duracion_tmdb": 100,
+   "pais_tmdb": "United States of America",
+   "lbSlug": "my-name-is-bill-w",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Daniel Petrie",
+   "_sondeado": "2026-11-24",
+   "poster": "/assets/provinciadevelez-2026/my-name-is-bill-w.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_7JCW8RFWEPCG (provinciadevelez-2026)"
+   }
+  },
+  {
+   "titulo": "Nueve jueves en Riachuelo",
+   "_ya_publicada": [
+    {
+     "festival": "cineparalapaz-2026",
+     "titulo": "Nueve jueves en Riachuelo",
+     "poster": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "duration": "24 min",
+     "genre": "Documental",
+     "synopsis_en": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
+     "sinopsis": "Edson Velandia tiene nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es descubrir qué quiere tocar cada estudiante."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cineparalapaz-2026",
+   "_verificado": "ya publicada en cineparalapaz-2026: se reusa su sinopsis",
+   "sinopsis": "Edson Velandia tiene nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es descubrir qué quiere tocar cada estudiante.",
+   "pais": "Colombia",
+   "duracion_tmdb": 24,
+   "genero": "Documental",
+   "synopsis_en": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
+   "poster": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/06 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Sinfonía incompleta de oficios del Fonce",
+   "tmdb_id": 1817245,
+   "titulo_original": "Sinfonía incompleta de oficios del Fonce",
+   "poster_path": "/1PJGLVtzmDg6WWCmf0ndhdLI3Lc.jpg",
+   "synopsis_es": "En un viaje de imágenes acompañadas con la música, la cámara revela el interior de algunos sitios inaccesibles al público donde se realizan oficios antiguos que aún persisten.",
+   "synopsis_en": "In a journey of images accompanied by music, the camera reveals the interior of places closed to the public where ancient crafts still persist.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Nelson Silva",
+   "_sondeado": "2026-11-25",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Sinfonía incompleta de oficios del Fonce",
+     "poster": "/assets/siembrafest/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "16 min",
+     "genre": "Documental"
+    },
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "Sinfonía incompleta de oficios del fonce",
+     "duration": "16 min"
+    }
+   ],
+   "poster": "/assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Anima Sola",
+   "poster": "/assets/provinciadevelez-2026/anima-sola.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/13 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Entre amigos",
+   "poster": "/assets/provinciadevelez-2026/entre-amigos.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/02 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Limones",
+   "poster": "/assets/provinciadevelez-2026/limones.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/12 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Paisaje / Niebla",
+   "poster": "/assets/provinciadevelez-2026/paisaje-niebla.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/09 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Salvemos el agua",
+   "poster": "/assets/provinciadevelez-2026/salvemos-el-agua.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/07 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Cicatrices",
+   "poster": "/assets/provinciadevelez-2026/cicatrices.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/02 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Creation of a Unicorn",
+   "poster": "/assets/provinciadevelez-2026/creation-of-a-unicorn.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/09 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Un diálogo para sanar la Tierra",
+   "poster": "/assets/provinciadevelez-2026/un-dialogo-para-sanar-la-tierra.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/08 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Uma Uñjirinaka · Alto Milluni",
+   "poster": "/assets/provinciadevelez-2026/uma-unjirinaka-alto-milluni.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/07 (afiche recortado de la lámina del festival)",
+   "duracion_tmdb": 13,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_7JCVS3BYWKV9 (provinciadevelez-2026)"
+   }
+  },
+  {
+   "titulo": "De la tradición a la prohibición",
+   "poster": "/assets/provinciadevelez-2026/de-la-tradicion-a-la-prohibicion.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/04 (afiche recortado de la lámina del festival)",
+   "director_heredado": "Lente Andino Films",
+   "_heredado": {
+    "director_heredado": "catálogo w_7JCWMS77BPSJ (provinciadevelez-2026)"
+   }
+  },
+  {
+   "titulo": "El dolor del vientre",
+   "poster": "/assets/provinciadevelez-2026/el-dolor-del-vientre.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/03 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Llantos del monte",
+   "poster": "/assets/provinciadevelez-2026/llantos-del-monte.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/11 (afiche recortado de la lámina del festival)",
+   "duracion_tmdb": 7,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_7JCXP0QJXXVH (provinciadevelez-2026)"
+   }
+  },
+  {
+   "titulo": "El pescador (videoclip)",
+   "poster": "/assets/provinciadevelez-2026/clip-el-pescador.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfhmCGsEZ84/03 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Saint Juanito",
+   "poster": "/assets/provinciadevelez-2026/saint-juanito.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfhmCGsEZ84/02 (afiche recortado de la lámina del festival)",
+   "duracion_tmdb": 6,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_7JCX3VRWQ5MD (provinciadevelez-2026)"
+   }
+  },
+  {
+   "titulo": "El cuarto",
+   "poster": "/assets/provinciadevelez-2026/el-cuarto.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/04 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "El arte de inmortalizar mortales",
+   "poster": "/assets/provinciadevelez-2026/el-arte-de-inmortalizar-mortales.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/15 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Olvidar a Miriam",
+   "poster": "/assets/provinciadevelez-2026/olvidar-a-miriam.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/10 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "El latir de la memoria",
+   "poster": "/assets/provinciadevelez-2026/el-latir-de-la-memoria.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/11 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "La imaginada",
+   "poster": "/assets/provinciadevelez-2026/la-imaginada.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/Df71yg2P6hF (afiche recortado de la lámina del festival)",
+   "duracion_tmdb": 20,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_7JCX3G2FWFFG (provinciadevelez-2026)"
+   }
+  },
+  {
+   "titulo": "La Belleza",
+   "poster": "/assets/provinciadevelez-2026/la-belleza-v2.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/12 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Pez azul",
+   "poster": "/assets/provinciadevelez-2026/pez-azul-v2.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/08 (afiche recortado de la lámina del festival)"
+  }
+ ],
+ "verificadas": {
+  "El fantástico Sr. Fox": {
+   "tmdb_id": 10315,
+   "titulo_original": "Fantastic Mr. Fox",
+   "poster_path": "/2B2IcoSMpOa64Yw8DDtGzXdS4vl.jpg",
+   "synopsis_es": "Un astuto zorro llamado Fox (voz original de George Clooney) parece llevar una vida idílica con su esposa (Meryl Streep) y con su hijo Ash (Jason Schwartzman). Pero, por las noches, el señor Fox se dedica a robar gallinas, patos y pavos en las granjas vecinas. Los granjeros deciden acabar con la situación cazando a Mr. Fox. Basada en el famoso libro para niños de Roald Dahl.",
+   "synopsis_en": "The Fantastic Mr. Fox, bored with his current life, plans a heist against the three local farmers. The farmers, tired of sharing their chickens with the sly fox, seek revenge against him and his family.",
+   "genero": "Aventura",
+   "anio_tmdb": 2009,
+   "duracion_tmdb": 87,
+   "pais_tmdb": "United States",
+   "lbSlug": "fantastic-mr-fox",
+   "_verificado": "declarada a mano: altas.py --ficha: TMDB 10315 «Fantastic Mr. Fox» (2009) de Wes Anderson: la web la presenta como «El fantástico Sr. Fox · Wes Anderson · stop motion» y la lámina del 18 nov pinta el afiche francés «Fantastic Mr. Fox · un film de Wes Anderson» (Amalric, Huppert). Título en español de la obra",
+   "_director": "Wes Anderson",
+   "_sondeado": "2026-11-25",
+   "poster": "/assets/provinciadevelez-2026/el-fantastico-sr-fox.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_7JCWN3D9J5SV (provinciadevelez-2026)"
+   }
+  },
+  "El pescador": {
+   "tmdb_id": 1558138,
+   "titulo_original": "El Pescador",
+   "poster_path": "/2TGCFQDwFlJuSeWxDSeehya5F8q.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "El Pescador is an intimate portrait of the Caribbean through the lives of those who devote themselves to the sea. From the voice of a Puerto Rican fisherman to the bond between a father and his son in Colombia, the film reveals how fishing both unites and distinguishes, portraying a legacy shaped by tradition, struggle, and hope. Filmed in La Parguera, Lajas, Puerto Rico and Palomino, La Guajira, Colombia.",
+   "genero": "Documental",
+   "anio_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "el-pescador-1",
+   "_verificado": "el catálogo ya la tiene (w_7JCX65BM88M0, provinciadevelez-2026)",
+   "work_id": "w_7JCX65BM88M0",
+   "_director": "Juan Cruz",
+   "_sondeado": "2026-11-25",
+   "poster": "/assets/provinciadevelez-2026/el-pescador.jpg",
+   "posterSource": "tmdb",
+   "duracion_tmdb": 10,
+   "_heredado": {
+    "duracion_tmdb": "catálogo w_7JCX65BM88M0 (provinciadevelez-2026)"
+   }
+  },
+  "Escisión de la cigarra": {
+   "tmdb_id": 1753860,
+   "titulo_original": "Escisión de la Cigarra",
+   "poster_path": "/sMrwhM990f5E1pvwWuJ8IKRNBUr.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In an old carpentry shop, Estiven confronts the souls and the incessant echo of the cicadas. Between life and limbo, his spirit is trapped in a spiritual plane where unfinished work, memory, and the supernatural merge in a state of confusion.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "escision-de-la-cigarra",
+   "_verificado": "el catálogo ya la tiene (w_7JCXP98PJ2V9, provinciadevelez-2026)",
+   "work_id": "w_7JCXP98PJ2V9",
+   "_director": "Absalón Rincón Muñoz",
+   "_sondeado": "2026-11-25",
+   "poster": "/assets/provinciadevelez-2026/escision-de-la-cigarra.jpg",
+   "posterSource": "tmdb"
+  },
+  "La familia Bélier": {
+   "tmdb_id": 304410,
+   "titulo_original": "La Famille Bélier",
+   "poster_path": "/3mU5y9kc6Zkg4FMf3KRzL1kCCzV.jpg",
+   "synopsis_es": "Todos los miembros de la familia Bélier son sordomudos, excepto Paula, de 16 años. Ella hace de intérprete para sus padres, especialmente en lo que respecta al funcionamiento de la granja de la familia. Un día, alentada por su profesor de música, que ha descubierto su talento para el canto, decide prepararse para la audición del Coro de Radio France, pero se trata de una elección que la obligará a distanciarse de su familia.",
+   "synopsis_en": "The whole Bélier family is deaf, except for sixteen year old Paula who is the important translator in her parents' day to day life especially when it comes to matters concerning the family farm. When her music teacher discovers she has a fantastic singing voice and she gets an opportunity to enter a big Radio France contest the whole family's future is set up for big changes.",
+   "genero": "Comedia",
+   "anio_tmdb": 2014,
+   "duracion_tmdb": 105,
+   "pais_tmdb": "France",
+   "title_en": "The Bélier Family",
+   "lbSlug": "the-belier-family",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Éric Lartigau",
+   "_sondeado": "2026-11-24",
+   "poster": "/assets/provinciadevelez-2026/la-familia-belier.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Francia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_7JCVTGAAS5A4 (provinciadevelez-2026)"
+   }
+  },
+  "My Name Is Bill W.": {
+   "tmdb_id": 15727,
+   "titulo_original": "My Name Is Bill W.",
+   "poster_path": "/54Ggd8vaWs7PzGuTKLDsWP38OAv.jpg",
+   "synopsis_es": "\"Mi nombre es Bill W.\" es la poderosa historia de Bill Wilson, acerca de su papel como fundador de uno de los más exitosos movimientos de auto ayuda en la historia, de \"Alcohólicos Anónimos\". James Woods estelariza al explosivo e impredecible Bill Wilson, incapaz de controlar su deseo por el alcohol. Jo Beth Williams estelariza a la sufrida esposa Louis, quién está separada de su esposo por su propia incapacidad para ayudarlo. Louis, desesperada, considera meterlo a un sanatorio, cuando Bill descubre ésto le da un ataque de alcoholismo y termina atado a una cama de hospital. Bill intenta dejar de beber pero le es imposible, así, que recurre a un amigo el Dr. Bob Smith con quien comparte la dependencia del vino. Es una historia verdadera que trata de la esperanza, coraje y amor.",
+   "synopsis_en": "Based on the true story of Bill W. (James Woods), a successful stock broker whose life falls apart after the stock crash of the 20's and how he comes to grips with his alcoholism. Along with a fellow alcoholic (James Garner) he forms a support group that would eventually become Alcoholics Anonymous.",
+   "genero": "Drama",
+   "anio_tmdb": 1989,
+   "duracion_tmdb": 100,
+   "pais_tmdb": "United States of America",
+   "lbSlug": "my-name-is-bill-w",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Daniel Petrie",
+   "_sondeado": "2026-11-24",
+   "poster": "/assets/provinciadevelez-2026/my-name-is-bill-w.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Estados Unidos",
+   "_heredado": {
+    "pais_heredado": "catálogo w_7JCW8RFWEPCG (provinciadevelez-2026)"
+   }
+  },
+  "Sinfonía incompleta de oficios del Fonce": {
+   "tmdb_id": 1817245,
+   "titulo_original": "Sinfonía incompleta de oficios del Fonce",
+   "poster_path": "/1PJGLVtzmDg6WWCmf0ndhdLI3Lc.jpg",
+   "synopsis_es": "En un viaje de imágenes acompañadas con la música, la cámara revela el interior de algunos sitios inaccesibles al público donde se realizan oficios antiguos que aún persisten.",
+   "synopsis_en": "In a journey of images accompanied by music, the camera reveals the interior of places closed to the public where ancient crafts still persist.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "sinfonia-incompleta-de-oficios-del-fonce",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Nelson Silva",
+   "_sondeado": "2026-11-25",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Sinfonía incompleta de oficios del Fonce",
+     "poster": "/assets/siembrafest/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "year": 2024,
+     "duration": "16 min",
+     "genre": "Documental"
+    },
+    {
+     "festival": "ficfusa-2026",
+     "titulo": "Sinfonía incompleta de oficios del fonce",
+     "duration": "16 min"
+    }
+   ],
+   "poster": "/assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+   "posterSource": "tmdb"
+  }
+ },
+ "sin_ficha": [
+  "Anima Sola",
+  "Cicatrices",
+  "Creation of a Unicorn",
+  "De la tradición a la prohibición",
+  "El arte de inmortalizar mortales",
+  "El cuarto",
+  "El dolor del vientre",
+  "El latir de la memoria",
+  "El pescador (videoclip)",
+  "Entre amigos",
+  "La Belleza",
+  "La imaginada",
+  "Limones",
+  "Llantos del monte",
+  "Nueve jueves en Riachuelo",
+  "Olvidar a Miriam",
+  "Paisaje / Niebla",
+  "Pez azul",
+  "Saint Juanito",
+  "Salvemos el agua",
+  "Uma Uñjirinaka · Alto Milluni",
+  "Un diálogo para sanar la Tierra"
+ ],
+ "_sin_ficha_sondeo": {
+  "Anima Sola": {
+   "director": "Freddy Sanchez",
+   "fecha": "2026-11-24"
+  },
+  "Cicatrices": {
+   "director": "Jhon Amado",
+   "fecha": "2026-11-24"
+  },
+  "Creation of a Unicorn": {
+   "director": "",
+   "fecha": "2026-11-24"
+  },
+  "De la tradición a la prohibición": {
+   "director": "",
+   "fecha": "2026-11-24"
+  },
+  "El arte de inmortalizar mortales": {
+   "director": "Javier Jiménez Corzo",
+   "fecha": "2026-11-24"
+  },
+  "El cuarto": {
+   "director": "María Candelaria Aldana",
+   "fecha": "2026-11-24"
+  },
+  "El dolor del vientre": {
+   "director": "María Candelaria Aldana",
+   "fecha": "2026-11-24"
+  },
+  "El latir de la memoria": {
+   "director": "Javier Jiménez Corzo",
+   "fecha": "2026-11-24"
+  },
+  "El pescador (videoclip)": {
+   "director": "Juan Cruz",
+   "fecha": "2026-11-24"
+  },
+  "Entre amigos": {
+   "director": "Edward Llanos, Simón Muñoz",
+   "fecha": "2026-11-24"
+  },
+  "La Belleza": {
+   "director": "Nelson Silva",
+   "fecha": "2026-11-25"
+  },
+  "La imaginada": {
+   "director": "Carolina Muñoz",
+   "fecha": "2026-11-24"
+  },
+  "Limones": {
+   "director": "Sergio Fernández, Nicolás Duque",
+   "fecha": "2026-11-24"
+  },
+  "Llantos del monte": {
+   "director": "",
+   "fecha": "2026-11-24"
+  },
+  "Nueve jueves en Riachuelo": {
+   "director": "Nelson Silva",
+   "fecha": "2026-11-25"
+  },
+  "Olvidar a Miriam": {
+   "director": "Tatiana Lobera",
+   "fecha": "2026-11-24"
+  },
+  "Paisaje / Niebla": {
+   "director": "Fabián Chávez",
+   "fecha": "2026-11-24"
+  },
+  "Pez azul": {
+   "director": "J. Joel Gómez G.",
+   "fecha": "2026-11-25"
+  },
+  "Saint Juanito": {
+   "director": "Sebastián Tapia",
+   "fecha": "2026-11-24"
+  },
+  "Salvemos el agua": {
+   "director": "",
+   "fecha": "2026-11-24"
+  },
+  "Uma Uñjirinaka · Alto Milluni": {
+   "director": "Left Hand Rotation",
+   "fecha": "2026-11-24"
+  },
+  "Un diálogo para sanar la Tierra": {
+   "director": "",
+   "fecha": "2026-11-24"
+  }
+ }
+}

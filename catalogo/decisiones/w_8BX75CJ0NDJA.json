@@ -1,0 +1,30 @@
+[
+ {
+  "work_id": "w_8BX75CJ0NDJA",
+  "campo": "directores",
+  "valor": [
+   "Miguel Solano J"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Miguel Solano J"
+  }
+ },
+ {
+  "work_id": "w_8BX75CJ0NDJA",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia"
+  }
+ }
+]

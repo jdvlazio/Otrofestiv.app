@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4E8ASRFPA5S",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/light-pillar.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/light-pillar.jpg",
+   "https://image.tmdb.org/t/p/w500/taet4dtOhKE4LZImCxPZuzeQwmb.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/light-pillar.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/taet4dtOhKE4LZImCxPZuzeQwmb.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4E8ASRFPA5S",
+  "campo": "sinopsis.es",
+  "valor": "Un estudio cinematográfico en quiebra yace abandonado y paralizado. Zha, un solitario conserje, escapa de su vida vacía a través de un vívido mundo virtual, donde comienza un romance en línea y sueña con viajar a la Luna. Cuando la ilusión se desvanece, la destrucción real del estudio se convierte en el set de una película de ciencia ficción.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "ccfc7fe48c26",
+   "ce7045057c1d"
+  ],
+  "antes": {
+   "biff-2026": "Un estudio cinematográfico en quiebra yace abandonado y paralizado. Zha, un solitario conserje, escapa de su vida vacía a través de un vívido mundo virtual, donde comienza un romance en línea y sueña con viajar a la Luna. Cuando la ilusión se desvanece, la destrucción real del estudio se convierte en el set de una película de ciencia ficción.",
+   "tiff-2026": "Un cuidador solitario, un estudio de cine agonizante y un seductor mundo virtual chocan en la ópera prima animada y formalmente arriesgada de Xu Zao: una parábola melancólica y visionaria sobre el cine, la tecnología, la alienación y la frágil promesa de empezar de nuevo."
+  }
+ },
+ {
+  "work_id": "w_R4E8ASRFPA5S",
+  "campo": "sinopsis.en",
+  "valor": "The future. Winter. Space travel is no longer a dream. A lonely janitor tends the grounds of a dilapidated bankrupt film studio with only a former cat actor for company until he embarks on a romantic journey with a female player in a beautiful virtual world.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Light Pillar",
+  "antes": {
+   "biff-2026": "The future. Winter. Space travel is no longer a dream. A lonely janitor tends the grounds of a dilapidated bankrupt film studio with only a former cat actor for company until he embarks on a romantic journey with a female player in a beautiful virtual world.",
+   "tiff-2026": "A lonely caretaker, a dying film studio, and a seductive virtual world collide in Xu Zao’s formally daring animated debut feature: a melancholic, visionary parable about cinema, technology, alienation, and the fragile promise of renewal."
+  }
+ }
+]

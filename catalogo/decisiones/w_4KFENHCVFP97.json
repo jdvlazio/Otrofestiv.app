@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KFENHCVFP97",
+  "campo": "directores",
+  "valor": [
+   "Rodrigo Blaas"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Rodrigo Blaas"
+  }
+ },
+ {
+  "work_id": "w_4KFENHCVFP97",
+  "campo": "anio",
+  "valor": 2009,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2009"
+  }
+ },
+ {
+  "work_id": "w_4KFENHCVFP97",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KFENHCVFP97",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KFENHCVFP97",
+  "campo": "sinopsis.es",
+  "valor": "Una niña descubre en el escaparate de una juguetería una muñeca idéntica a ella. Entra para verla de cerca, sin imaginar lo que le espera.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una niña descubre en el escaparate de una juguetería una muñeca idéntica a ella. Entra para verla de cerca, sin imaginar lo que le espera."
+  }
+ },
+ {
+  "work_id": "w_4KFENHCVFP97",
+  "campo": "sinopsis.en",
+  "valor": "A girl spots a doll that looks exactly like her in a toy shop window. She goes inside to take a closer look, unaware of what awaits her.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A girl spots a doll that looks exactly like her in a toy shop window. She goes inside to take a closer look, unaware of what awaits her."
+  }
+ },
+ {
+  "work_id": "w_4KFENHCVFP97",
+  "campo": "xref.tmdb",
+  "valor": 31160,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "31160"
+  }
+ },
+ {
+  "work_id": "w_4KFENHCVFP97",
+  "campo": "xref.letterboxd",
+  "valor": "alma",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "alma"
+  }
+ },
+ {
+  "work_id": "w_4KFENHCVFP97",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/alma.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/alma.jpg"
+  }
+ }
+]

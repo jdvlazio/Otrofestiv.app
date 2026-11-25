@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_R4HAT4J9F3W5",
+  "campo": "directores",
+  "valor": [
+   "Nicolás Cifuentes González"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 38",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=38"
+ },
+ {
+  "work_id": "w_R4HAT4J9F3W5",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 38",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=38"
+ },
+ {
+  "work_id": "w_R4HAT4J9F3W5",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 38",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=38",
+  "antes": {
+   "ficci-65": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HAT4J9F3W5",
+  "campo": "sinopsis.es",
+  "valor": "Un viaje a Teyuna, la Ciudad Perdida de los tayronas, que contrapone archivo institucional y un recorrido reciente con guardianes indígenas. Ellos comparten su visión de los ritos, la espiritualidad y las resistencias, ante la tensión con los intereses foráneos. Documental sensorial que cuestiona las apariencias con que se ha mostrado el lugar.",
+  "motivo": "catálogo oficial de FICCI 65, p. 38",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=38",
+  "antes": {
+   "ficci-65": "Esta película propone un viaje a Teyuna, la Ciudad Perdida de los tayronas, el sitio arqueológico más emblemático de Colombia. Se trata de un recorrido que se despliega en varios niveles: espacial, temporal y narrativo."
+  }
+ },
+ {
+  "work_id": "w_R4HAT4J9F3W5",
+  "campo": "sinopsis.en",
+  "valor": "A journey to Teyuna, the Lost City of the Tayrona, setting institutional archives against a recent trip with Indigenous guardians. They share their vision of its rituals, spirituality, and resistance, amid tension with outside interests. A sensory documentary that questions the appearances through which the place has been shown.",
+  "motivo": "catálogo oficial de FICCI 65, p. 38",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=38",
+  "antes": {
+   "ficci-65": "This film proposes a journey to Teyuna, the Lost City of the Tairona people, Colombia's most emblematic archaeological site. It unfolds across multiple levels: spatial, temporal, and narrative."
+  }
+ },
+ {
+  "work_id": "w_R4HAT4J9F3W5",
+  "campo": "xref.tmdb",
+  "valor": 1665551,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1665551"
+ }
+]

@@ -12,13 +12,18 @@
   {
    "titulo": "Transversal 30ff",
    "tipo": "festival"
+  },
+  {
+   "titulo": "Transversal30FF",
+   "tipo": "festival"
   }
  ],
  "sinopsis": {
-  "es": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos."
+  "es": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos.",
+  "en": "In the middle of a move, two friends look for the address of the new apartment one of them is moving into, but both are equally lost."
  },
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg",
+  "archivo": "/assets/aleste-2026/transversal30ff.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -32,6 +37,7 @@
   }
  ],
  "presentaciones": [
+  "aleste-2026",
   "cinemancia-2025",
   "ficfusa-2026"
  ]

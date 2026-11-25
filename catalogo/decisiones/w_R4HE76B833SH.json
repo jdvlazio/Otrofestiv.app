@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4HE76B833SH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficdeh/la-raya.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/la-raya.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-29%20235923.png?itok=0Rlq5ukp"
+  ],
+  "antes": {
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-29%20235923.png?itok=0Rlq5ukp",
+   "ficdeh-2026": "/assets/ficdeh/la-raya.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HE76B833SH",
+  "campo": "xref.tmdb",
+  "valor": 1280701,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/town-of-la-raya/"
+ },
+ {
+  "work_id": "w_R4HE76B833SH",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "Ficha FICM: 2024; estreno mundial oct 2024",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "anteriores": [
+   {
+    "valor": 2025,
+    "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+    "fecha": "2026-11-24",
+    "quien": "plan del almacén (revisión)"
+   }
+  ],
+  "antes": {
+   "ficci-65": "2025",
+   "ficdeh-2026": "2025"
+  }
+ }
+]

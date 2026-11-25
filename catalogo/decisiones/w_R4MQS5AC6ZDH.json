@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS5AC6ZDH",
+  "campo": "sinopsis.es",
+  "valor": "La película registra la vida cotidiana de una escuela pública de Filadelfia en los años sesenta. Wiseman investiga el sistema educativo de una sociedad en ebullición, tensionada entre los valores tradicionales y los vientos de transformación, y compone un mosaico de las normas y los valores del pensamiento estadounidense de la época.",
+  "motivo": "corrección de «en portugués, crédito de otra base»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "c3a36fdcfa3f"
+  ],
+  "antes": {
+   "olhar-2026": "El filme registra el cotidiano de una escuela pública en la Filadelfia de los años 1960. En uno de sus largometrajes más aclamados, Wiseman investiga el sistema educativo de una sociedad en ebullición, tensionada entre valores tradicionales y vientos de transformación. Con atención al espacio y a la red de relaciones que lo constituye, el filme registra una miríada de situaciones y sus protagonistas, elaborando un mosaico de normas y valores que estructuran el pensamiento estadounidense de la época, como una cápsula del tiempo que ilumina cuestiones de control, poder y libertad. (C.I.)"
+  }
+ },
+ {
+  "work_id": "w_R4MQS5AC6ZDH",
+  "campo": "xref.tmdb",
+  "valor": 60315,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/high-school/"
+ }
+]

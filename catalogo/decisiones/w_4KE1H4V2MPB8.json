@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KE1H4V2MPB8",
+  "campo": "directores",
+  "valor": [
+   "Elizabeth Hobbs"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Elizabeth Hobbs"
+  }
+ },
+ {
+  "work_id": "w_4KE1H4V2MPB8",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KE1H4V2MPB8",
+  "campo": "paises",
+  "valor": [
+   "GB",
+   "DE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Reino Unido, Alemania"
+  }
+ },
+ {
+  "work_id": "w_4KE1H4V2MPB8",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KE1H4V2MPB8",
+  "campo": "sinopsis.es",
+  "valor": "Tras la muerte de su padre, malhumorado y controlador, dos hermanas de mediana edad no saben qué hacer. Una visita inesperada les da valor para comenzar de nuevo. Daughters of the Late Colonel es una adaptación animada alegre, irreverente y lírica del cuento modernista homónimo que Katherine Mansfield escribió en 1920.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tras la muerte de su padre, malhumorado y controlador, dos hermanas de mediana edad no saben qué hacer. Una visita inesperada les da valor para comenzar de nuevo. Daughters of the Late Colonel es una adaptación animada alegre, irreverente y lírica del cuento modernista homónimo que Katherine Mansfield escribió en 1920."
+  }
+ },
+ {
+  "work_id": "w_4KE1H4V2MPB8",
+  "campo": "sinopsis.en",
+  "valor": "After the death of their ill-tempered and controlling father, two middle-aged sisters find themselves at a loss. An unexpected visitor sparks the courage in them to begin their lives anew. ‘Daughters of the Late Colonel’ is a merry, rude, and lyrical, animated adaptation of the modernist short story of the same name, written by Katherine Mansfield in 1920.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After the death of their ill-tempered and controlling father, two middle-aged sisters find themselves at a loss. An unexpected visitor sparks the courage in them to begin their lives anew. ‘Daughters of the Late Colonel’ is a merry, rude, and lyrical, animated adaptation of the modernist short story of the same name, written by Katherine Mansfield in 1920."
+  }
+ },
+ {
+  "work_id": "w_4KE1H4V2MPB8",
+  "campo": "xref.tmdb",
+  "valor": 1660299,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1660299"
+  }
+ },
+ {
+  "work_id": "w_4KE1H4V2MPB8",
+  "campo": "xref.letterboxd",
+  "valor": "daughters-of-the-late-colonel",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "daughters-of-the-late-colonel"
+  }
+ },
+ {
+  "work_id": "w_4KE1H4V2MPB8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/daughters-of-the-late-colonel.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/daughters-of-the-late-colonel.jpg"
+  }
+ }
+]

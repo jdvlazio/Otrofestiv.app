@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_4KJN38FH762B",
+  "campo": "directores",
+  "valor": [
+   "Avelina Prat"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Avelina Prat"
+  }
+ },
+ {
+  "work_id": "w_4KJN38FH762B",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJN38FH762B",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KJN38FH762B",
+  "campo": "sinopsis.es",
+  "valor": "Un hombre muere al caer por una ventana. La mujer que se queda en la casa intenta entender qué ocurrió.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un hombre muere al caer por una ventana. La mujer que se queda en la casa intenta entender qué ocurrió."
+  }
+ },
+ {
+  "work_id": "w_4KJN38FH762B",
+  "campo": "sinopsis.en",
+  "valor": "A man dies after falling from a window. The woman left in the house tries to understand what happened.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A man dies after falling from a window. The woman left in the house tries to understand what happened."
+  }
+ },
+ {
+  "work_id": "w_4KJN38FH762B",
+  "campo": "xref.tmdb",
+  "valor": 1637473,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1637473"
+  }
+ },
+ {
+  "work_id": "w_4KJN38FH762B",
+  "campo": "xref.letterboxd",
+  "valor": "principio-de-incendio-sobre-paisaje-desierto",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "principio-de-incendio-sobre-paisaje-desierto"
+  }
+ },
+ {
+  "work_id": "w_4KJN38FH762B",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/principio-de-incendio-sobre-paisaje-desierto.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/principio-de-incendio-sobre-paisaje-desierto.jpg"
+  }
+ }
+]

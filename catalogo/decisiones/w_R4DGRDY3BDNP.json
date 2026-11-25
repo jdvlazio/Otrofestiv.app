@@ -1,0 +1,68 @@
+[
+ {
+  "work_id": "w_R4DGRDY3BDNP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/filcmar-2026/la-misteriosa-mirada-del-flamenco.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/filcmar-2026/la-misteriosa-mirada-del-flamenco.jpg",
+   "https://image.tmdb.org/t/p/w500/xfPhni21LIEmuV8HiDfrLhcmTwr.jpg"
+  ],
+  "antes": {
+   "aff-2026": "https://image.tmdb.org/t/p/w500/xfPhni21LIEmuV8HiDfrLhcmTwr.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/la-misteriosa-mirada-del-flamenco.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DGRDY3BDNP",
+  "campo": "sinopsis.es",
+  "valor": "1982. Una enfermedad desconocida comienza a propagarse en un pueblo minero del desierto chileno. Se acusa a homosexuales de transmitirla a través de sus miradas. Lidia, 11 años, única niña de la comunidad, parte en busca de la verdad.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (filcmar-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0f6cf6a8f3ad",
+   "3eecd762bf53"
+  ],
+  "antes": {
+   "aff-2026": "1982. Una enfermedad desconocida en un pueblo minero chileno lleva a acusar a los hombres gay de transmitirla con la mirada. Lidia, de 12 años, busca la verdad.",
+   "filcmar-2026": "1982. Una enfermedad desconocida comienza a propagarse en un pueblo minero del desierto chileno. Se acusa a homosexuales de transmitirla a través de sus miradas. Lidia, 11 años, única niña de la comunidad, parte en busca de la verdad."
+  }
+ },
+ {
+  "work_id": "w_R4DGRDY3BDNP",
+  "campo": "paises",
+  "valor": [
+   "CL",
+   "FR",
+   "ES",
+   "BE",
+   "DE"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:896096)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "Chile/Francia/Alemania",
+   "filcmar-2026": "Chile"
+  }
+ },
+ {
+  "work_id": "w_R4DGRDY3BDNP",
+  "campo": "sinopsis.en",
+  "valor": "As an unknown and deadly disease begins to spread, legend has it that it is transmitted between two men, through a simple glance, when they fall in love. While people are accusing her family, Lidia must find out whether this myth is real or not.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "La misteriosa mirada del flamenco",
+  "antes": {
+   "aff-2026": "As an unknown and deadly disease begins to spread, legend has it that it is transmitted by the mysterious gaze of the flamingo. In a small coastal town, a community struggles to protect themselves while confronting fear, superstition, and the fragility of human connection.",
+   "filcmar-2026": "As an unknown and deadly disease begins to spread, legend has it that it is transmitted between two men, through a simple glance, when they fall in love. While people are accusing her family, Lidia must find out whether this myth is real or not."
+  }
+ }
+]

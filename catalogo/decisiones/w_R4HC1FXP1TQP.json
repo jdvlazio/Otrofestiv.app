@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HC1FXP1TQP",
+  "campo": "directores",
+  "valor": [
+   "Anja Dornieden",
+   "Juan David González Monroy"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 305",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=305"
+ },
+ {
+  "work_id": "w_R4HC1FXP1TQP",
+  "campo": "anio",
+  "valor": 2015,
+  "motivo": "catálogo oficial de FICCI 65, p. 305",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=305"
+ },
+ {
+  "work_id": "w_R4HC1FXP1TQP",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 305",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=305",
+  "antes": {
+   "ficci-65": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_R4HC1FXP1TQP",
+  "campo": "sinopsis.es",
+  "valor": "Las artes de la máscara de Indonesia, o wayang topeng, tienen miles de años. En los estratos más bajos de la sociedad javanesa existe una manifestación única de estas tradiciones. Sus practicantes no buscan simplemente divertir: su ambición es ser respetados y honrados, en un camino que saben que los llevará a una posición honorable y noble.",
+  "motivo": "catálogo oficial de FICCI 65, p. 305",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=305"
+ },
+ {
+  "work_id": "w_R4HC1FXP1TQP",
+  "campo": "sinopsis.en",
+  "valor": "Indonesia’s masked arts, or wayang topeng, are thousands of years old. In the lowest rungs of Javanese society there is a unique manifestation of these traditions. Its practitioners do not aim simply to amuse: their ambition is to be respected and honored, on a path they know will lead to an honorable and noble position.",
+  "motivo": "catálogo oficial de FICCI 65, p. 305",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=305"
+ },
+ {
+  "work_id": "w_R4HC1FXP1TQP",
+  "campo": "xref.tmdb",
+  "valor": 420180,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/420180"
+ }
+]

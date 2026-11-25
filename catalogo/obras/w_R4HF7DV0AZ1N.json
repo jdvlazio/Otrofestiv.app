@@ -1,16 +1,24 @@
 {
  "id": "w_R4HF7DV0AZ1N",
  "titulo_original": "This Is My Land",
- "anio": null,
+ "anio": 2006,
  "paises": [
   "GB"
  ],
- "directores": [],
+ "directores": [
+  "Ben Rivers"
+ ],
+ "sinopsis": {
+  "es": "Retrato de Jake Williams, que vive solo entre kilómetros de bosque en Aberdeenshire, Escocia. Siempre tiene muchas tareas, aprovecha todo, toca la mandolina, hace compost hace años y se mantiene con lo que cultiva. Tiene otra percepción del tiempo. Para él no se trata de nostalgia por un pasado preeléctrico, sino de un futuro muy real.",
+  "en": "A portrait of Jake Williams, who lives alone within miles of forest in Aberdeenshire, Scotland. He always has many jobs on, finds a use for everything, plays the mandolin, has made compost for years, and sustains himself from what he grows. His sense of time is different. For him it isn't nostalgia for a pre-electric past, but a very real future."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/this%20is%20my%20land%202.jpg?itok=o8AguBHA",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 260389
+ },
  "versiones": [
   {
    "etiqueta": "14 min",

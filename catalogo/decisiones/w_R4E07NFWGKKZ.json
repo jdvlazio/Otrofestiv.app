@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4E07NFWGKKZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/siempre-soy-tu-animal-materno.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/siempre-soy-tu-animal-materno.jpg",
+   "/assets/ficcali-2026/siempre-soy-tu-animal-materno.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/siempre-soy-tu-animal-materno.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/siempre-soy-tu-animal-materno.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4E07NFWGKKZ",
+  "campo": "sinopsis.es",
+  "valor": "Tras pasar varios años estudiando en Europa, Elsa regresa a Costa Rica para reunirse con su familia. Se encuentra a su hermana menor viviendo sola en la casa familiar, cada vez más distante y retraída, sumergida en un mundo propio. Sus padres, por su parte, están absortos en sus propias vidas. Su padre va de una aventura amorosa a otra, mientras que su madre está enfrascada en la reedición de los poemas eróticos de su juventud, sin que ninguno de los dos comprenda del todo la urgencia de la situación. El regreso de Elsa lleva a las tres mujeres a enfrentarse a lo que, a pesar de todo, aún las une.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "06c3b2ebf8f9",
+   "d2600deb7a02"
+  ],
+  "antes": {
+   "biff-2026": "Tras pasar varios años estudiando en Europa, Elsa regresa a Costa Rica para reunirse con su familia. Se encuentra a su hermana menor viviendo sola en la casa familiar, cada vez más distante y retraída, sumergida en un mundo propio. Sus padres, por su parte, están absortos en sus propias vidas. Su padre va de una aventura amorosa a otra, mientras que su madre está enfrascada en la reedición de los poemas eróticos de su juventud, sin que ninguno de los dos comprenda del todo la urgencia de la situación. El regreso de Elsa lleva a las tres mujeres a enfrentarse a lo que, a pesar de todo, aún las une.",
+   "ficcali-2026": "Después de años en Europa, Elsa regresa a Costa Rica. Su hermana vive sola en la casa familiar, cada vez más distante y recluida, como si se deslizara hacia un mundo propio. Sus padres están absortos en sus vidas: él va a la deriva en aventuras amorosas y ella está inmersa en la reedición de sus poemas eróticos de juventud. Ninguno comprende la urgencia de la situación. El regreso de Elsa arrastra a las mujeres a una confrontación con aquello que, pese a todo, aún las une. Una cámara vivaz, atenta y fluida muestra tres formas de asumir la vida y la capacidad de compartir dudas y emociones, de apoyarse y cuestionarse, de enfrentar la realidad juntas, cada una a su manera."
+  }
+ }
+]

@@ -1,0 +1,43 @@
+{
+ "id": "w_4KGTSVMJ3MF9",
+ "titulo_original": "Soñé con Zapata",
+ "anio": 2026,
+ "paises": [
+  "MX"
+ ],
+ "directores": [
+  "Tania de León Yong"
+ ],
+ "aliases": [
+  {
+   "titulo": "I Dreamt of Zapata",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Soñé con Zapata explora la experiencia migrante. Entre fragmentos oníricos y voz en off se articula la memoria, la identidad y el desplazamiento; es una mirada personal sobre los caminos que transforman a quienes habitan entre distintos lugares.",
+  "en": "Soñé con Zapata explores the migrant experience. Through dreamlike fragments and voice-over, it weaves together memory, identity, and displacement, offering a personal view of the paths that transform those who migrate."
+ },
+ "generos": [
+  "Experimental"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/sone-con-zapata.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1730588,
+  "letterboxd": "sone-con-zapata"
+ },
+ "versiones": [
+  {
+   "etiqueta": "10 min",
+   "duracion_min": 10
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

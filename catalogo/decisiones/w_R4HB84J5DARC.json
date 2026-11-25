@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HB84J5DARC",
+  "campo": "directores",
+  "valor": [
+   "Gabe Klinger"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 216",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=216",
+  "antes": {
+   "ficci-65": "Matthew Murdoch"
+  }
+ },
+ {
+  "work_id": "w_R4HB84J5DARC",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 216",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=216",
+  "antes": {
+   "ficci-65": "2019"
+  }
+ },
+ {
+  "work_id": "w_R4HB84J5DARC",
+  "campo": "paises",
+  "valor": [
+   "BR",
+   "FR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 216",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=216",
+  "antes": {
+   "ficci-65": "Brasil, Francia"
+  }
+ },
+ {
+  "work_id": "w_R4HB84J5DARC",
+  "campo": "sinopsis.es",
+  "valor": "Isabel, sommelière de un exclusivo restaurante de São Paulo, disfruta desafiar las reglas. Tras el deterioro de su relación con el jefe, que restringe su libertad creativa, su ambición es abrir un bar de vino natural que dé visibilidad a pequeños productores. La búsqueda de financiación y de un socio la lleva a deambular por la ciudad.",
+  "motivo": "catálogo oficial de FICCI 65, p. 216",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=216",
+  "antes": {
+   "ficci-65": "Rodeada por la sofisticada escena gastronómica de São Paulo, Isabel, una sommelière de un exclusivo restaurante, disfruta reinventar las normas, empujar los límites y desafiar las reglas establecidas. Una pasión que se desborda con la noche."
+  }
+ },
+ {
+  "work_id": "w_R4HB84J5DARC",
+  "campo": "sinopsis.en",
+  "valor": "Isabel, a sommelier at an exclusive São Paulo restaurant, relishes defying the rules. After her relationship with the boss, who restricts her creative freedom, deteriorates, her ambition is to open a natural wine bar that gives visibility to small producers. The search for funding and a partner leads her to wander the city.",
+  "motivo": "catálogo oficial de FICCI 65, p. 216",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=216",
+  "antes": {
+   "ficci-65": "Surrounded by São Paulo's sophisticated culinary scene, Isabel, a sommelier at an exclusive restaurant, thrives on reinventing norms, pushing limits, and defying established rules. A passion that overflows into the night."
+  }
+ },
+ {
+  "work_id": "w_R4HB84J5DARC",
+  "campo": "xref.tmdb",
+  "valor": 1434751,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1434751"
+ }
+]

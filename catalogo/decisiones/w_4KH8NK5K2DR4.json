@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_4KH8NK5K2DR4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "eac1c40088a2"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Ekobio",
+  "valor": "«Ekobio», amigo o compañero, es la palabra que Manuel Zapata Olivella adoptó para nombrar con fraternidad a los descendientes de la diáspora africana. A partir de una adaptación libre de fragmentos de su novela Changó, el gran putas, y con los ekobios de Bocachica, en Cartagena, la película construye puestas en escena y actuaciones improvisadas.",
+  "original": "EKOBIO toma su nombre de una palabra adoptada por el escritor afrocolombiano Manuel Zapata Olivella para nombrar a los descendientes de la diáspora africana desde una noción de cercanía y fraternidad. Ekobio significa literalmente «amigo» o «compañero». A partir de una adaptación libre de fragmentos de su novela Changó, el gran putas, y en colaboración con los ekobios de Bocachica, en Cartagena de Indias, la película construye una serie de puestas en escena y actuaciones improvisadas.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "6a3988238052"
+  }
+ },
+ {
+  "work_id": "w_4KH8NK5K2DR4",
+  "campo": "directores",
+  "valor": [
+   "Elkin Calderón Guevara",
+   "Diego Piñeros García"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Elkin Calderón Guevara, Diego Piñeros García"
+  }
+ },
+ {
+  "work_id": "w_4KH8NK5K2DR4",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_4KH8NK5K2DR4",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KH8NK5K2DR4",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KH8NK5K2DR4",
+  "campo": "sinopsis.en",
+  "valor": "EKOBIO takes its name from a word adopted by Afro-Colombian writer Manuel Zapata Olivella to refer to the descendants of the African diaspora through a sense of closeness and fraternity. Ekobio literally means “friend” or “companion.” Drawing on a free adaptation of excerpts from his novel Changó, el gran putas, and in collaboration with the ekobios of Bocachica, in the region of Cartagena de Indias, Colombia, the film brings together a series of staged scenes and improvised performances.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "EKOBIO takes its name from a word adopted by Afro-Colombian writer Manuel Zapata Olivella to refer to the descendants of the African diaspora through a sense of closeness and fraternity. Ekobio literally means “friend” or “companion.” Drawing on a free adaptation of excerpts from his novel Changó, el gran putas, and in collaboration with the ekobios of Bocachica, in the region of Cartagena de Indias, Colombia, the film brings together a series of staged scenes and improvised performances."
+  }
+ },
+ {
+  "work_id": "w_4KH8NK5K2DR4",
+  "campo": "xref.tmdb",
+  "valor": 924204,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "924204"
+  }
+ },
+ {
+  "work_id": "w_4KH8NK5K2DR4",
+  "campo": "xref.letterboxd",
+  "valor": "ekobio",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "ekobio"
+  }
+ },
+ {
+  "work_id": "w_4KH8NK5K2DR4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/ekobio.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/ekobio.jpg"
+  }
+ }
+]

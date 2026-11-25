@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_4KEZCS8XT06H",
+  "campo": "directores",
+  "valor": [
+   "Mahmoud Assi"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mahmoud Assi"
+  }
+ },
+ {
+  "work_id": "w_4KEZCS8XT06H",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEZCS8XT06H",
+  "campo": "paises",
+  "valor": [
+   "EG",
+   "FR",
+   "SE",
+   "CA"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Egipto, Francia, Suecia, Canadá"
+  }
+ },
+ {
+  "work_id": "w_4KEZCS8XT06H",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KEZCS8XT06H",
+  "campo": "sinopsis.es",
+  "valor": "En las pirámides de Guiza, Sayed, de 14 años, y su madre Ikram afrontan el destino de su camello moribundo, Khufu. Dividida entre venderlo y dejarlo atrás, Ikram se niega a rendirse y guía a su hijo en un viaje de dignidad y supervivencia.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En las pirámides de Guiza, Sayed, de 14 años, y su madre Ikram afrontan el destino de su camello moribundo, Khufu. Dividida entre venderlo y dejarlo atrás, Ikram se niega a rendirse y guía a su hijo en un viaje de dignidad y supervivencia."
+  }
+ },
+ {
+  "work_id": "w_4KEZCS8XT06H",
+  "campo": "sinopsis.en",
+  "valor": "At the Giza Pyramids, 14-year-old Sayed and his mother Ikram face the fate of their dying camel, Khufu. Torn between selling him and leaving him behind, Ikram refuses to surrender, leading her son through a journey of dignity and survival.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "At the Giza Pyramids, 14-year-old Sayed and his mother Ikram face the fate of their dying camel, Khufu. Torn between selling him and leaving him behind, Ikram refuses to surrender, leading her son through a journey of dignity and survival."
+  }
+ },
+ {
+  "work_id": "w_4KEZCS8XT06H",
+  "campo": "xref.tmdb",
+  "valor": 1726014,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1726014"
+  }
+ },
+ {
+  "work_id": "w_4KEZCS8XT06H",
+  "campo": "xref.letterboxd",
+  "valor": "khufu",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "khufu"
+  }
+ },
+ {
+  "work_id": "w_4KEZCS8XT06H",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/khufu.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/khufu.jpg"
+  }
+ }
+]

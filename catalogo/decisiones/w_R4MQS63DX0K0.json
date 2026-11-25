@@ -1,0 +1,36 @@
+[
+ {
+  "work_id": "w_R4MQS63DX0K0",
+  "campo": "sinopsis.es",
+  "valor": "La madre de Marcelo desapareció cuando él tenía diez años y le dejó un vacío sin fin. El niño se convirtió en un joven que vaga por cementerios y se refugia en recuerdos inventados para soportar la realidad. Un día, dos seres misteriosos se cruzan en su camino, y Marcelo emprende con ellos un viaje por las fronteras entre el mundo de los vivos y el de los muertos.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "bbea0a1419fa"
+  ],
+  "antes": {
+   "olhar-2026": "La madre de Marcelo desapareció cuando él tenía 10 años, dejándole un vacío sin fin. El niño se convirtió en un joven que vaga por cementerios y se refugia en memorias inventadas para soportar la realidad. Un día, dos seres misteriosos se cruzan en su camino. Marcelo emprende, con esa dupla, un viaje por las fronteras entre el mundo de los vivos y el mundo de los muertos."
+  }
+ },
+ {
+  "work_id": "w_R4MQS63DX0K0",
+  "campo": "xref.letterboxd",
+  "valor": "look-at-me-2026-3",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "olhar-2026": "olhe-para-mim-2026"
+  }
+ },
+ {
+  "work_id": "w_R4MQS63DX0K0",
+  "campo": "xref.tmdb",
+  "valor": 1688920,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/olhe-para-mim-2026/"
+ }
+]

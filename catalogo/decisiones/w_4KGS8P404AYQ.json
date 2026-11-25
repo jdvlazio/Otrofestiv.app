@@ -1,0 +1,133 @@
+[
+ {
+  "work_id": "w_4KGS8P404AYQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "8be4b1b5ec8a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Like Moths to Light",
+  "valor": "Una mujer nos habla desde una máquina que registra su actividad cerebral. Describe un laberinto mental que combina un antiguo parque de atracciones, fotografías de sueños del siglo XIX, descodificación mental mediante IA y una empresa que busca controlar los sueños. Una meditación sobre el futuro de lo onírico en la era del neurocapitalismo.",
+  "original": "Una mujer nos habla desde una máquina que registra su actividad cerebral. Describe un laberinto mental que combina un antiguo parque de atracciones llamado Dreamland, fotografías de sueños del siglo XIX, experimentos actuales de descodificación mental mediante IA y Prophetic, una empresa que busca controlar los sueños. Pero ¿qué ven nuestros sueños cuando nos devuelven la mirada? Una meditación sobre el futuro de nuestros mundos oníricos en la era del neurocapitalismo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9f27e3305a3d"
+  }
+ },
+ {
+  "work_id": "w_4KGS8P404AYQ",
+  "campo": "directores",
+  "valor": [
+   "Gala Hernández López"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Gala Hernández López"
+  }
+ },
+ {
+  "work_id": "w_4KGS8P404AYQ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KGS8P404AYQ",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "IT",
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España, Italia, Francia"
+  }
+ },
+ {
+  "work_id": "w_4KGS8P404AYQ",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KGS8P404AYQ",
+  "campo": "sinopsis.en",
+  "valor": "A woman talks to us from inside a machine that records her brain activity. She describes a mental labyrinth combining an old amusement park called Dreamland, 19th-century dream photographs, contemporary experiments in mental decoding using AI, and Prophetic, a start-up whose goal is to control dreams. But what do our dreams see when they look back at us? like moths to light is a meditation on the future of our dream worlds in the age of neurocapitalism.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A woman talks to us from inside a machine that records her brain activity. She describes a mental labyrinth combining an old amusement park called Dreamland, 19th-century dream photographs, contemporary experiments in mental decoding using AI, and Prophetic, a start-up whose goal is to control dreams. But what do our dreams see when they look back at us? like moths to light is a meditation on the future of our dream worlds in the age of neurocapitalism."
+  }
+ },
+ {
+  "work_id": "w_4KGS8P404AYQ",
+  "campo": "xref.tmdb",
+  "valor": 1599278,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1599278"
+  }
+ },
+ {
+  "work_id": "w_4KGS8P404AYQ",
+  "campo": "xref.letterboxd",
+  "valor": "like-moths-to-light",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "like-moths-to-light"
+  }
+ },
+ {
+  "work_id": "w_4KGS8P404AYQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/like-moths-to-light.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/like-moths-to-light.jpg"
+  }
+ }
+]

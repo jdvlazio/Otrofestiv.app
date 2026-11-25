@@ -4,19 +4,25 @@
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1027543",
-  "regla": "tmdb-manda"
+  "fuente": "festival",
+  "regla": "la grafía más completa que acreditan los festivales"
  },
  "anio": {
-  "fuente": "tmdb:1027543",
+  "fuente": "tmdb:1077693",
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "tmdb:1027543",
+  "fuente": "tmdb:1077693",
   "regla": "tmdb-manda"
  },
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Tiger Stripes, Amanda Nell Eu, 2023, 95 min; la anterior era «Grandpa Goes South»",
+  "fecha": "2026-11-24"
  }
 }

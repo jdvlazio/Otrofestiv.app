@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4K1F3E1D0Z4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/siembrafest/elementales-v2.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "la vertical gana al still; sin la marca de SiembraFest",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/jardin-2026/elementales.jpg",
+   "/assets/siembrafest/elementales.jpg"
+  ],
+  "antes": {
+   "jardin-2026": "/assets/jardin-2026/elementales.jpg",
+   "siembrafest-2026": "/assets/siembrafest/elementales.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4K1F3E1D0Z4",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "girardota-2026": "Documental",
+   "jardin-2026": "Documental",
+   "siembrafest-2026": "Familia"
+  }
+ }
+]

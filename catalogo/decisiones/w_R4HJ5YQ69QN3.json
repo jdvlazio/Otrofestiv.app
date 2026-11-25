@@ -1,0 +1,180 @@
+[
+ {
+  "work_id": "w_R4HJ5YQ69QN3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/cayenas-libertarias.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/bogota-underground-hip-hop.jpg",
+   "/assets/ficica-2026/cayenas-libertarias.jpg",
+   "/assets/popayan-2026/cayenas-libertarias.jpg",
+   "https://image.tmdb.org/t/p/w500/dQxbmxDq320B08UKcEOHgOkIy4b.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/bogota-underground-hip-hop.jpg",
+   "ficfusa-2026": "/assets/ficica-2026/cayenas-libertarias.jpg",
+   "ficica-2026": "/assets/ficica-2026/cayenas-libertarias.jpg",
+   "popayan-2026": "/assets/popayan-2026/cayenas-libertarias.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/dQxbmxDq320B08UKcEOHgOkIy4b.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5YQ69QN3",
+  "campo": "directores",
+  "valor": [
+   "Javier Camilo Aranguren Montañez"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": "Javier Camilo Aranguren Montañez",
+   "ficfusa-2026": "Javier Camilo Aranguren",
+   "ficica-2026": "Javier Camilo Aranguren",
+   "popayan-2026": "Javier Camilo Aranguren Montañez",
+   "siembrafest-2026": "Javier Camilo Aranguren Montañez"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5YQ69QN3",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1737961)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": 2025,
+   "ficfusa-2026": 2025,
+   "ficica-2026": 2025,
+   "popayan-2026": 2026,
+   "siembrafest-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4HJ5YQ69QN3",
+  "campo": "sinopsis.es",
+  "valor": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, cantos de trabajo del llano que durante generaciones interpretaron los hombres. Con sus cantos de vaquería resignifican su lugar en la tradición llanera y revelan su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026, ficfusa-2026, ficica-2026, siembrafest-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "50ba885872c9",
+   "9bee026fc247"
+  ],
+  "antes": {
+   "ficdeh-2026": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+   "ficfusa-2026": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+   "ficica-2026": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+   "popayan-2026": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos o cantos de trabajo de llano que durante generaciones fueron entonadas por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición Llanera, revelando su relación armónica con la naturaleza, y compleja con el arraigo llanero.",
+   "siembrafest-2026": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero."
+  },
+  "original_de": [
+   "festicineantioquia-2026",
+   "ficdeh-2026",
+   "ficfusa-2026",
+   "ficica-2026",
+   "popayan-2026",
+   "siembrafest-2026"
+  ],
+  "titulo": "Cayenas libertarias",
+  "original": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+  "sintesis": {
+   "redacta": "montador festicineantioquia-2026",
+   "verifica": "verificador de sinopsis (agente 2)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a6a886c8a8dc"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5YQ69QN3",
+  "campo": "sinopsis.en",
+  "valor": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life.",
+  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life.",
+   "ficdeh-2026": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life.",
+   "ficfusa-2026": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life.",
+   "ficica-2026": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life.",
+   "popayan-2026": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life.",
+   "siembrafest-2026": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life."
+  }
+ },
+ {
+  "work_id": "w_R4HJ5YQ69QN3",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia",
+   "ficdeh-2026": "Colombia",
+   "ficfusa-2026": "Colombia",
+   "ficica-2026": "Colombia",
+   "popayan-2026": "Colombia",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5YQ69QN3",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental",
+   "ficdeh-2026": "Documental",
+   "ficfusa-2026": "Documental",
+   "ficica-2026": "Documental",
+   "siembrafest-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5YQ69QN3",
+  "campo": "xref.tmdb",
+  "valor": 1737961,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1737961",
+   "ficdeh-2026": "1737961",
+   "ficfusa-2026": "1737961",
+   "ficica-2026": "1737961",
+   "popayan-2026": "1737961"
+  }
+ },
+ {
+  "work_id": "w_R4HJ5YQ69QN3",
+  "campo": "xref.letterboxd",
+  "valor": "cayenas-libertarias",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "cayenas-libertarias",
+   "ficdeh-2026": "cayenas-libertarias",
+   "ficfusa-2026": "cayenas-libertarias",
+   "ficica-2026": "cayenas-libertarias",
+   "popayan-2026": "cayenas-libertarias",
+   "siembrafest-2026": "cayenas-libertarias"
+  }
+ }
+]

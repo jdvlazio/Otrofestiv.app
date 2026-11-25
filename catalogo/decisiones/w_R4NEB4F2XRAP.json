@@ -1,0 +1,48 @@
+[
+ {
+  "work_id": "w_R4NEB4F2XRAP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficica-2026/memoria-de-un-pibe.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficica-2026/memoria-de-un-pibe.jpg",
+   "/assets/tercertiempo/memorias-de-infancia.jpg"
+  ],
+  "antes": {
+   "ficica-2026": "/assets/ficica-2026/memoria-de-un-pibe.jpg",
+   "tercertiempo-2026": "/assets/tercertiempo/memorias-de-infancia.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4NEB4F2XRAP",
+  "campo": "sinopsis.es",
+  "valor": "Durante el Mundial de 2006, un grupo de niños vive la magia del fútbol brasileño y la infancia en la periferia, donde los lazos de amistad fortalecen el acto de soñar.",
+  "motivo": "era un comentario, no la historia; se toma de la ficha de Kinoforum",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "ficica-2026": "Una mirada nostálgica a la infancia, los barrios y las experiencias que construyen la relación entre fútbol, identidad y memoria.",
+   "tercertiempo-2026": "Una mirada nostálgica a la infancia, los barrios y las experiencias que construyen la relación entre fútbol, identidad y memoria."
+  },
+  "vistas": [
+   "06fe34dab925"
+  ]
+ },
+ {
+  "work_id": "w_R4NEB4F2XRAP",
+  "campo": "sinopsis.en",
+  "valor": "During the 2006 World Cup, a group of children experience the magic of Brazilian football and childhood on the outskirts, where bonds of friendship strengthen the act of dreaming.",
+  "motivo": "era un comentario, no la historia; se toma de la ficha de Kinoforum",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "ficica-2026": "A nostalgic look at childhood, the neighborhoods and the experiences that build the relationship between football, identity and memory.",
+   "tercertiempo-2026": "A nostalgic look at childhood, the neighborhoods and the experiences that build the relationship between football, identity and memory."
+  }
+ }
+]

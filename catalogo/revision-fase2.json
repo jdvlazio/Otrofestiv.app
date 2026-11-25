@@ -27,6 +27,30 @@
  "identidad": [
   {
    "a": [
+    "ficfusa-2026",
+    "Sinfonía incompleta de oficios del fonce"
+   ],
+   "b": [
+    "provinciadevelez-2026",
+    "Sinfonía incompleta de oficios del Fonce"
+   ],
+   "misma": true,
+   "motivo": "mismo título y 16 min; FICFUSA no trae dirección; TMDB 1817245 de Nelson Silva (Nelson Omar Silva Sánchez en SiembraFest) es la única ficha (misma_obra, 19 nov 2026)"
+  },
+  {
+   "a": [
+    "guatape-2026",
+    "Cicatrices"
+   ],
+   "b": [
+    "provinciadevelez-2026",
+    "Cicatrices"
+   ],
+   "misma": false,
+   "motivo": "la de Guatapé (30 min) no trae dirección; la de Vélez es de Jhon Amado, Filipinas (Arauca) 2026, cine comunitario: no hay con qué casarlas (no_heredar, 24 nov 2026)"
+  },
+  {
+   "a": [
     "ficcali-2026",
     "Canción para mi tierra"
    ],
@@ -304,6 +328,232 @@
    "por_que": "mismo director, Ricardo Muñoz Izquierdo, mismo año y 15 min; cruce confirmado por Juan",
    "fecha": "2026-11-05",
    "quien": "Juan"
+  },
+  {
+   "a": [
+    "villadelcine-2026",
+    "Protecting Our Territory 360"
+   ],
+   "b": [
+    "narrarelfuturo-2026",
+    "Protegiendo nuestro territorio"
+   ],
+   "misma": true,
+   "por_que": "mismo director (Christopher Boulton), Perú y Estados Unidos, 8 min, VR 360 con estudiantes peruanos y la compañera imaginaria «Cachufina»; el título es la traducción",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "w_50XGVBRY17Z7"
+   ],
+   "b": [
+    "tiff-2026",
+    "The End",
+    "Niki Lindroth von Bahr"
+   ],
+   "misma": false,
+   "por_que": "dos cortos distintos con el mismo título en TIFF: Pelechian (Armenia, 1992, 8 min, Letterboxd end-1992) y Lindroth von Bahr (Suecia, 2026, 17 min, TMDB 1472669)",
+   "motivo": "dos cortos distintos con el mismo título en TIFF: Pelechian (Armenia, 1992, 8 min) y Lindroth von Bahr (2026, 17 min, TMDB 1472669)",
+   "fecha": "2026-11-23",
+   "quien": "Claude, por encargo de Juan"
+  },
+  {
+   "a": [
+    "ficci-65",
+    "Piedras preciosas"
+   ],
+   "b": [
+    "aff-2026",
+    "Piedras preciosas"
+   ],
+   "misma": true,
+   "por_que": "Simón Vélez, 2026, 70 min; el catálogo oficial de FICCI 65 corrige la dirección que las separaba",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "ficci-65",
+    "Frío metal"
+   ],
+   "b": [
+    "mamut-2026",
+    "Frío metal"
+   ],
+   "misma": true,
+   "por_que": "Clemente Castor, 2025, 102 y 105 min; el catálogo oficial de FICCI 65 corrige la dirección que las separaba",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "ficci-65",
+    "Puntos de fuga"
+   ],
+   "b": [
+    "ficfusa-2026",
+    "Puntos de fuga"
+   ],
+   "misma": true,
+   "por_que": "Lina Rodríguez, 2025, 72 min; el catálogo oficial de FICCI 65 corrige la dirección que las separaba",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "ficci-65",
+    "Crocodile"
+   ],
+   "b": [
+    "tribeca-2026",
+    "Crocodile"
+   ],
+   "misma": true,
+   "por_que": "The Critics y Pietra Brettkelly, 100 y 101 min; el catálogo oficial de FICCI 65 corrige la dirección que las separaba",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "ficci-65",
+    "Les Voyageurs"
+   ],
+   "b": [
+    "under-2026",
+    "Les Voyageurs"
+   ],
+   "misma": true,
+   "por_que": "David Bingong, 2025, 61 y 60 min; el catálogo oficial de FICCI 65 corrige la dirección que las separaba",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "ficci-65",
+    "Lo demás es ruido"
+   ],
+   "b": [
+    "filcmar-2026",
+    "Lo demás es ruido"
+   ],
+   "misma": true,
+   "por_que": "Nicolás Pereda, 2026, 70 min; el catálogo oficial de FICCI 65 corrige la dirección que las separaba",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "ficci-65",
+    "Como Nasce um Rio"
+   ],
+   "b": [
+    "anibia-2026",
+    "Cómo Nace un Río"
+   ],
+   "misma": true,
+   "por_que": "Luma Flôres, 2025, 8 y 9 min; el catálogo oficial de FICCI 65 corrige la dirección que las separaba",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "festicineantioquia-2026",
+    "Aitana"
+   ],
+   "b": [
+    "cortoscali-2026",
+    "Aitana"
+   ],
+   "misma": true,
+   "por_que": "Isabella Cárdenas (Marín), documental drag; mismo título y la misma persona con nombre más largo",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "festicineantioquia-2026",
+    "Make up: El arte de amar"
+   ],
+   "b": [
+    "siembrafest-2026",
+    "Make Up: el arte de amar"
+   ],
+   "misma": true,
+   "por_que": "Daniel (Eduardo) Calderón (Arana); 20 y 19 min",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "festicineantioquia-2026",
+    "Animero son de la muerte"
+   ],
+   "b": [
+    "siembrafest-2026",
+    "Animero: son de la muerte"
+   ],
+   "misma": true,
+   "por_que": "Nadine Holguín (Urrego); 11 min en las dos",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "festicineantioquia-2026",
+    "Suelo"
+   ],
+   "b": [
+    "festicinerio-2026",
+    "Suelo"
+   ],
+   "misma": true,
+   "por_que": "Eduar Yosniel Pájaro (Peña); animación colombiana 2026",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "festicineantioquia-2026",
+    "No te despiertes"
+   ],
+   "b": [
+    "leviza-2026",
+    "No Te Despiertes"
+   ],
+   "misma": true,
+   "por_que": "mismo título y Hernán Velásquez; TMDB 1536959",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
+  },
+  {
+   "a": [
+    "festicineantioquia-2026",
+    "Made to Shine"
+   ],
+   "b": [
+    "ficidi-2026",
+    "Made to Shine"
+   ],
+   "misma": false,
+   "por_que": "la de Festicine no trae dirección y dura 5 min (Débora Arango); la de FICIDI es de Mariana Gutiérrez, 8 min: ninguna fuente dice que sean la misma",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación",
+   "motivo": "la de Festicine no trae dirección y dura 5 min (Débora Arango); la de FICIDI es de Mariana Gutiérrez, 8 min: ninguna fuente dice que sean la misma"
+  },
+  {
+   "a": [
+    "festicineantioquia-2026",
+    "Animero son de la muerte"
+   ],
+   "b": [
+    "fecibac-2026",
+    "Animero"
+   ],
+   "misma": true,
+   "por_que": "Nadine Holguín, 2025, 11 min en las dos",
+   "fecha": "2026-11-24",
+   "quien": "Claude, recomendación"
   }
  ],
  "datos": [

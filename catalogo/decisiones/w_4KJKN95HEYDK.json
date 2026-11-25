@@ -1,0 +1,92 @@
+[
+ {
+  "work_id": "w_4KJKN95HEYDK",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "f0ea2db37b6e"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Mi barquito (Canalón de Timbiquí)",
+  "valor": "Este videoclip es un retrato generacional de Canalón de Timbiquí y un homenaje a doña Oliva y Valle, quienes partieron sin recibir en vida el reconocimiento que merecían. A través de su memoria, celebramos la cultura timbiqueña y la herencia viva del Pacífico colombiano, que encuentra en la música de marimba una forma de permanecer y trascender.",
+  "original": "Este videoclip es un retrato generacional de quienes hacen parte de Canalón de Timbiquí, un homenaje a doña Oliva y Valle, quienes partieron sin recibir en vida el reconocimiento que merecían. A través de su memoria, celebramos la cultura timbiqueña, el encuentro entre generaciones y la herencia viva de la tradición del Pacífico colombiano, que encuentra en la música de marimba una forma de permanecer y trascender.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "0eda9e795eca"
+  }
+ },
+ {
+  "work_id": "w_4KJKN95HEYDK",
+  "campo": "directores",
+  "valor": [
+   "Tilo Gómez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tilo Gómez"
+  }
+ },
+ {
+  "work_id": "w_4KJKN95HEYDK",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJKN95HEYDK",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJKN95HEYDK",
+  "campo": "sinopsis.en",
+  "valor": "This music video is a generational portrait of the people who make up Canalón de Timbiquí, paying tribute to Doña Oliva and Valle, who passed away without receiving the recognition they deserved during their lifetimes. Through their memory, we celebrate the culture of Timbiquí, the connection between generations, and the living heritage of Colombia’s Pacific coast, where marimba music keeps tradition alive and allows it to transcend time.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "This music video is a generational portrait of the people who make up Canalón de Timbiquí, paying tribute to Doña Oliva and Valle, who passed away without receiving the recognition they deserved during their lifetimes. Through their memory, we celebrate the culture of Timbiquí, the connection between generations, and the living heritage of Colombia’s Pacific coast, where marimba music keeps tradition alive and allows it to transcend time."
+  }
+ },
+ {
+  "work_id": "w_4KJKN95HEYDK",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/mi-barquito-canalon-de-timbiqui.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/mi-barquito-canalon-de-timbiqui.jpg"
+  }
+ }
+]

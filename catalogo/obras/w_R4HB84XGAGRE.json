@@ -1,16 +1,24 @@
 {
  "id": "w_R4HB84XGAGRE",
  "titulo_original": "Venezia Diorama",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "BE"
  ],
- "directores": [],
+ "directores": [
+  "Nicolas Piret"
+ ],
+ "sinopsis": {
+  "es": "Espacios vacíos de Venecia, observados por un director que mira una ciudad que no le pertenece. Frente a la inmediatez del turismo, la atención de un dibujante que se sienta durante horas a bocetar lo que ve. Un corto que es testigo y refugio de un tiempo que se resiste a la «experiencia» fugaz del turista.",
+  "en": "Empty spaces of Venice, observed by a director looking at a city that does not belong to him. Against the immediacy of tourism, the attention of a draftsman who sits for hours sketching what he sees. A short that is witness to and refuge for a time that resists the tourist's fleeting “experience.”"
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Screenshot%202026-04-05%20at%2000.35.2.png?itok=QQDpFBWe",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1593482
+ },
  "versiones": [
   {
    "etiqueta": "6 min",

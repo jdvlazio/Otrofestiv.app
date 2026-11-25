@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJHHYWY8JRM",
+  "campo": "directores",
+  "valor": [
+   "Simon Schares"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Simon Schares"
+  }
+ },
+ {
+  "work_id": "w_4KJHHYWY8JRM",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJHHYWY8JRM",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_4KJHHYWY8JRM",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KJHHYWY8JRM",
+  "campo": "sinopsis.es",
+  "valor": "En el funeral de una antigua compañera de escuela, Marla le cuenta a Rahel que quiere defecar sobre la tumba. Cuando Rahel trata de impedirlo, salen a la luz secretos que las dos habían guardado.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En el funeral de una antigua compañera de escuela, Marla le cuenta a Rahel que quiere defecar sobre la tumba. Cuando Rahel trata de impedirlo, salen a la luz secretos que las dos habían guardado."
+  }
+ },
+ {
+  "work_id": "w_4KJHHYWY8JRM",
+  "campo": "sinopsis.en",
+  "valor": "At a former classmate’s funeral, Marla tells Rahel she plans to defecate on the grave. Rahel tries to stop her, bringing secrets between them into the open.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "At a former classmate’s funeral, Marla tells Rahel she plans to defecate on the grave. Rahel tries to stop her, bringing secrets between them into the open."
+  }
+ },
+ {
+  "work_id": "w_4KJHHYWY8JRM",
+  "campo": "xref.tmdb",
+  "valor": 1598168,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1598168"
+  }
+ },
+ {
+  "work_id": "w_4KJHHYWY8JRM",
+  "campo": "xref.letterboxd",
+  "valor": "shit-happened",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "shit-happened"
+  }
+ },
+ {
+  "work_id": "w_4KJHHYWY8JRM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/shit-happened.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/shit-happened.jpg"
+  }
+ }
+]

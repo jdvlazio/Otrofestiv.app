@@ -1,0 +1,95 @@
+[
+ {
+  "work_id": "w_4KEQGAX2KCYS",
+  "campo": "directores",
+  "valor": [
+   "Maximilien Mpoto"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Maximilien Mpoto"
+  }
+ },
+ {
+  "work_id": "w_4KEQGAX2KCYS",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KEQGAX2KCYS",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KEQGAX2KCYS",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KEQGAX2KCYS",
+  "campo": "sinopsis.es",
+  "valor": "Cuando enfermaste, todo cambió y, en pocos días, el mundo se derrumbó. Como te prometí, aquí está la historia de esas semanas de angustia y desesperación, durante las que la palabra amor cobró todo su sentido.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Cuando enfermaste, todo cambió y, en pocos días, el mundo se derrumbó. Como te prometí, aquí está la historia de esas semanas de angustia y desesperación, durante las que la palabra amor cobró todo su sentido."
+  }
+ },
+ {
+  "work_id": "w_4KEQGAX2KCYS",
+  "campo": "sinopsis.en",
+  "valor": "When you got sick everything changed, and in the space of a few days the world collapsed. As promised, here is the story of these few weeks of anguish and despair, during which the word “love” took on its full meaning.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "When you got sick everything changed, and in the space of a few days the world collapsed. As promised, here is the story of these few weeks of anguish and despair, during which the word “love” took on its full meaning."
+  }
+ },
+ {
+  "work_id": "w_4KEQGAX2KCYS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/liebe-caro.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/liebe-caro.jpg"
+  }
+ }
+]

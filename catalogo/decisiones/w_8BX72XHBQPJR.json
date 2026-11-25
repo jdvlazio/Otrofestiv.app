@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_8BX72XHBQPJR",
+  "campo": "directores",
+  "valor": [
+   "Clara Roquet"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Clara Roquet"
+  }
+ },
+ {
+  "work_id": "w_8BX72XHBQPJR",
+  "campo": "anio",
+  "valor": 2021,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2021"
+  }
+ },
+ {
+  "work_id": "w_8BX72XHBQPJR",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "BE"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "España, Bélgica"
+  }
+ },
+ {
+  "work_id": "w_8BX72XHBQPJR",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX72XHBQPJR",
+  "campo": "sinopsis.es",
+  "valor": "La familia Vidal pasa sus últimas vacaciones en la casa de verano con la abuela Ángela, que sufre alzhéimer avanzado. A sus 14 años, Nora siente por primera vez que no encuentra su lugar. Todo cambia con la llegada de Libertad, de 15, hija de Rosana, la mujer colombiana que cuida a Ángela.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "La familia Vidal pasa sus últimas vacaciones en la casa de verano con la abuela Ángela, que sufre alzhéimer avanzado. A sus 14 años, Nora siente por primera vez que no encuentra su lugar. Todo cambia con la llegada de Libertad, de 15, hija de Rosana, la mujer colombiana que cuida a Ángela."
+  }
+ },
+ {
+  "work_id": "w_8BX72XHBQPJR",
+  "campo": "sinopsis.en",
+  "valor": "The Vidal family spends one last holiday at their summer house with grandmother Ángela, who has advanced Alzheimer's. At 14, Nora feels for the first time that she does not fit in. Everything changes when Libertad, 15, arrives: the daughter of Rosana, the Colombian woman who cares for Ángela.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "The Vidal family spends one last holiday at their summer house with grandmother Ángela, who has advanced Alzheimer's. At 14, Nora feels for the first time that she does not fit in. Everything changes when Libertad, 15, arrives: the daughter of Rosana, the Colombian woman who cares for Ángela."
+  }
+ },
+ {
+  "work_id": "w_8BX72XHBQPJR",
+  "campo": "xref.tmdb",
+  "valor": 655181,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "655181"
+  }
+ },
+ {
+  "work_id": "w_8BX72XHBQPJR",
+  "campo": "xref.letterboxd",
+  "valor": "libertad-2021",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "libertad-2021"
+  }
+ },
+ {
+  "work_id": "w_8BX72XHBQPJR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/libertad.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/libertad.jpg"
+  }
+ }
+]

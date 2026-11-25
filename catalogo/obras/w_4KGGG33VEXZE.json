@@ -1,0 +1,43 @@
+{
+ "id": "w_4KGGG33VEXZE",
+ "titulo_original": "Elefante",
+ "anio": 2014,
+ "paises": [
+  "CO"
+ ],
+ "directores": [
+  "César Heredia Cruz"
+ ],
+ "aliases": [
+  {
+   "titulo": "Elephant",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Andrés se gana la vida recorriendo carreteras en un Renault 4 lleno de objetos. Viaja con su padre, que se aferra a los recuerdos de la familia y a sus antiguas narraciones de ciclismo.",
+  "en": "Andrés makes a living travelling the roads in a Renault 4 filled with odds and ends. His father travels with him, holding on to family memories and his past as a cycling commentator."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/elefante.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1826828,
+  "letterboxd": "elefante-1"
+ },
+ "versiones": [
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

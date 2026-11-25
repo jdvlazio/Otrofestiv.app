@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGX9WSV20FJ",
+  "campo": "directores",
+  "valor": [
+   "Lur Olaizola Lizarralde"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lur Olaizola Lizarralde"
+  }
+ },
+ {
+  "work_id": "w_4KGX9WSV20FJ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KGX9WSV20FJ",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KGX9WSV20FJ",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KGX9WSV20FJ",
+  "campo": "sinopsis.es",
+  "valor": "Maite, Unai y Merche son los estudiantes de encuadernación de Alicia. Comparten un taller donde cortan, cosen y pegan hojas para alargar la vida de los libros. Mientras cada uno trabaja en su libro conversan sobre la vida, el duelo y sus variaciones.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Maite, Unai y Merche son los estudiantes de encuadernación de Alicia. Comparten un taller donde cortan, cosen y pegan hojas para alargar la vida de los libros. Mientras cada uno trabaja en su libro conversan sobre la vida, el duelo y sus variaciones."
+  }
+ },
+ {
+  "work_id": "w_4KGX9WSV20FJ",
+  "campo": "sinopsis.en",
+  "valor": "Maite, Unai and Merche are Alicia’s bookbinding students. They share a workshop where they cut, sew and glue sheets to extend the life of books. While each one works on their book, they talk about life, grief and its variations.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Maite, Unai and Merche are Alicia’s bookbinding students. They share a workshop where they cut, sew and glue sheets to extend the life of books. While each one works on their book, they talk about life, grief and its variations."
+  }
+ },
+ {
+  "work_id": "w_4KGX9WSV20FJ",
+  "campo": "xref.tmdb",
+  "valor": 1482137,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1482137"
+  }
+ },
+ {
+  "work_id": "w_4KGX9WSV20FJ",
+  "campo": "xref.letterboxd",
+  "valor": "variations-2025",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "variations-2025"
+  }
+ },
+ {
+  "work_id": "w_4KGX9WSV20FJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/bariazioak.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/bariazioak.jpg"
+  }
+ }
+]

@@ -1,0 +1,130 @@
+[
+ {
+  "work_id": "w_R4PYB3KEEXT2",
+  "campo": "xref.tmdb",
+  "valor": 1730056,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/2-love/"
+ },
+ {
+  "work_id": "w_R4PYB3KEEXT2",
+  "campo": "sinopsis.es",
+  "valor": "Cuando dos recogepelotas cruzan sus miradas en un prestigioso torneo de tenis, su rivalidad inicial se transforma poco a poco en una pasión magnética.",
+  "motivo": "catálogo BOGOSHORTS: cuenta la obra; la de TIFF es comentario curatorial",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "Cuando dos recogepelotas cruzan sus miradas en un prestigioso torneo de tenis, su rivalidad inicial se transforma poco a poco en una pasión magnética.",
+   "tiff-2026": "Una paleta de colores fluorescentes, imágenes angulosas y afiladas y un coro jubiloso se conjugan de forma exquisita hasta un crescendo épico, en el gozoso relato animado de Ronni Shalev sobre dos recogepelotas de una pista de tenis cuya rivalidad inicial se transforma en una pasión eléctrica y magnética."
+  },
+  "vistas": [
+   "190071d70a78",
+   "ae5b217a0f9c"
+  ]
+ },
+ {
+  "work_id": "w_R4PYB3KEEXT2",
+  "campo": "sinopsis.en",
+  "valor": "When two ball girls lock eyes on the court of a prestigious tennis tournament, their initial rivalry slowly transforms into a magnetic passion.",
+  "motivo": "catálogo BOGOSHORTS: cuenta la obra; la de TIFF es comentario curatorial",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "When two ball girls lock eyes on the court of a prestigious tennis tournament, their initial rivalry slowly transforms into a magnetic passion.",
+   "tiff-2026": "A fluorescent colour palette, sharp angular visuals, and a gleeful choir coalesce exquisitely, building up to an epic crescendo in Ronni Shalev’s joyful animated story of two ball girls on a tennis court whose initial rivalry transforms into an electric, magnetic passion."
+  }
+ },
+ {
+  "work_id": "w_R4PYB3KEEXT2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/2-love.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "afiche vertical contra fotograma apaisado (Vertical sobre still)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/2-love.jpg",
+   "tiff-2026": "https://images.ctfassets.net/22n7d68fswlw/HY5nFKcDn4IheITNho8z3/1a1af3e5e2ff1bc861150945ef85ac0d/2-Love_Still_03.webp"
+  },
+  "vistas": [
+   "https://images.ctfassets.net/22n7d68fswlw/HY5nFKcDn4IheITNho8z3/1a1af3e5e2ff1bc861150945ef85ac0d/2-Love_Still_03.webp"
+  ]
+ },
+ {
+  "work_id": "w_R4PYB3KEEXT2",
+  "campo": "directores",
+  "valor": [
+   "Ronni Shalev"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ronni Shalev",
+   "tiff-2026": "Ronni Shalev"
+  }
+ },
+ {
+  "work_id": "w_R4PYB3KEEXT2",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "tiff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4PYB3KEEXT2",
+  "campo": "paises",
+  "valor": [
+   "BE",
+   "FR",
+   "IL"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Bélgica, Francia, Israel",
+   "tiff-2026": "Bélgica, Francia, Israel"
+  }
+ },
+ {
+  "work_id": "w_R4PYB3KEEXT2",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación",
+   "tiff-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4PYB3KEEXT2",
+  "campo": "xref.letterboxd",
+  "valor": "2-love",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2-love",
+   "tiff-2026": "2-love"
+  }
+ }
+]

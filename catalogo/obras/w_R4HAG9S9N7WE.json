@@ -1,16 +1,24 @@
 {
  "id": "w_R4HAG9S9N7WE",
  "titulo_original": "Mapalé",
- "anio": null,
+ "anio": 2014,
  "paises": [
   "CH"
  ],
- "directores": [],
+ "directores": [
+  "Jorge Cadena"
+ ],
+ "sinopsis": {
+  "es": "El mapalé es un ritmo afrocolombiano, un paseo por el río, un encuentro, un discurso político. Distintos elementos que evocan mi intimidad y mi relación con la sexualidad.",
+  "en": "Mapalé is an Afro-Colombian rhythm, a stroll along the river, an encounter, a political speech. Different elements that evoke my intimacy and my relationship to sexuality."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Mapale%20-%20Yan%20Dec%20%281%29_0.png?itok=GhrVrm0p",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1668910
+ },
  "versiones": [
   {
    "etiqueta": "6 min",

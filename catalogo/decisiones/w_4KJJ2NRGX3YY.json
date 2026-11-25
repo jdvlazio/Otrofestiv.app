@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJJ2NRGX3YY",
+  "campo": "directores",
+  "valor": [
+   "Nacho Solana"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Nacho Solana"
+  }
+ },
+ {
+  "work_id": "w_4KJJ2NRGX3YY",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJJ2NRGX3YY",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KJJ2NRGX3YY",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_4KJJ2NRGX3YY",
+  "campo": "sinopsis.es",
+  "valor": "Luis y Ana van a conocer al bebé de sus amigos. La visita se vuelve incómoda cuando tanto los padres como el recién nacido empiezan a comportarse de manera extraña.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Luis y Ana van a conocer al bebé de sus amigos. La visita se vuelve incómoda cuando tanto los padres como el recién nacido empiezan a comportarse de manera extraña."
+  }
+ },
+ {
+  "work_id": "w_4KJJ2NRGX3YY",
+  "campo": "sinopsis.en",
+  "valor": "Luis and Ana go to meet their friends’ baby. The visit grows uncomfortable as both the parents and the newborn begin to behave strangely.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Luis and Ana go to meet their friends’ baby. The visit grows uncomfortable as both the parents and the newborn begin to behave strangely."
+  }
+ },
+ {
+  "work_id": "w_4KJJ2NRGX3YY",
+  "campo": "xref.tmdb",
+  "valor": 1576604,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1576604"
+  }
+ },
+ {
+  "work_id": "w_4KJJ2NRGX3YY",
+  "campo": "xref.letterboxd",
+  "valor": "teneis-que-verlo",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "teneis-que-verlo"
+  }
+ },
+ {
+  "work_id": "w_4KJJ2NRGX3YY",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/teneis-que-verlo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/teneis-que-verlo.jpg"
+  }
+ }
+]

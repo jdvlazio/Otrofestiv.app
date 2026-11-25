@@ -1,22 +1,23 @@
 {
  "id": "w_R4KP42K6WV2W",
  "titulo_original": "Minuto fatal",
- "anio": 2014,
+ "anio": 1977,
  "paises": [
   "CO"
  ],
  "directores": [
-  "Jairo Pinilla"
+  "Jairo Pinilla Téllez"
  ],
  "sinopsis": {
-  "en": "An abortion doctor confronts his family problems."
+  "es": "Una familia adinerada espera su cuarto hijo. El padre, ginecólogo, pretende practicarle un aborto a su esposa y esterilizarla, pero una serie de sucesos hace que los hijos vayan muriendo uno a uno.",
+  "en": "A wealthy family is expecting their fourth child. The father, a gynecologist, intends to perform an abortion on his wife and sterilize her, but a series of events causes the children to die one by one."
  },
  "generos": [
   "Drama"
  ],
  "afiche": {
   "archivo": "/assets/mamut-2026/minuto-fatal.jpg",
-  "veredicto": "oficial"
+  "veredicto": "fotograma"
  },
  "xref": {
   "tmdb": 939831,
@@ -26,9 +27,14 @@
   {
    "etiqueta": "38 min",
    "duracion_min": 38
+  },
+  {
+   "etiqueta": "40 min",
+   "duracion_min": 40
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "mamut-2026"
  ]
 }

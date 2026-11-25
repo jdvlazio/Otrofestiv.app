@@ -1,0 +1,79 @@
+[
+ {
+  "work_id": "w_R4DH1YW9PZS1",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/jardin-2026/la-reserva.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/jardin-2026/la-reserva.jpg",
+   "https://image.tmdb.org/t/p/w185/fMu0fMn9c9r7UJMu8CIsFSGmK6z.jpg"
+  ],
+  "antes": {
+   "aff-2026": "https://image.tmdb.org/t/p/w185/fMu0fMn9c9r7UJMu8CIsFSGmK6z.jpg",
+   "jardin-2026": "/assets/jardin-2026/la-reserva.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DH1YW9PZS1",
+  "campo": "sinopsis.es",
+  "valor": "Julia, una guardabosques de Monte Virgen, descubre que los talamontes están destruyendo la reserva natural que rodea su comunidad. Mientras intenta detenerlos y conseguir el apoyo de los habitantes del pueblo, se enfrenta al miedo, la indiferencia y las amenazas de quienes controlan la tala ilegal.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (jardin-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "471a8749bcd3",
+   "daa008135311"
+  ],
+  "antes": {
+   "aff-2026": "Una guardabosques convence a su comunidad de expulsar a un grupo de invasores de su reserva natural, provocando una amenaza mucho mayor.",
+   "jardin-2026": "Julia, una guardabosques de Monte Virgen, descubre que los talamontes están destruyendo la reserva natural que rodea su comunidad. Mientras intenta detenerlos y conseguir el apoyo de los habitantes del pueblo, se enfrenta al miedo, la indiferencia y las amenazas de quienes controlan la tala ilegal."
+  }
+ },
+ {
+  "work_id": "w_R4DH1YW9PZS1",
+  "campo": "paises",
+  "valor": [
+   "MX",
+   "QA"
+  ],
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "México/Qatar",
+   "jardin-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_R4DH1YW9PZS1",
+  "campo": "generos",
+  "valor": [
+   "Thriller"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "aff-2026": "Thriller",
+   "jardin-2026": "Thriller / drama / naturaleza"
+  }
+ },
+ {
+  "work_id": "w_R4DH1YW9PZS1",
+  "campo": "sinopsis.en",
+  "valor": "A park ranger convinces her community to expel a group of intruders from their nature reserve, only to trigger a far greater threat.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "La reserva",
+  "antes": {
+   "aff-2026": "A park ranger convinces her community to expel a group of intruders from their nature reserve, only to trigger a far greater threat.",
+   "jardin-2026": "While most of the inhabitants of Monte Virgen struggle to collect their coffee, the forest ranger Julia discovers that a group of illegal loggers is destroying the reserve. Determined to stop them, she looks for the support of a fearful and indifferent community that will soon turn its back on her. Alone on her quest, she will gradually lose the things she loves most except one thing: her dignity."
+  }
+ }
+]

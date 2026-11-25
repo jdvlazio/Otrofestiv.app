@@ -1,0 +1,119 @@
+[
+ {
+  "work_id": "w_4KH2FHZGP1WS",
+  "campo": "directores",
+  "valor": [
+   "Steven Woloshen"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Steven Woloshen"
+  }
+ },
+ {
+  "work_id": "w_4KH2FHZGP1WS",
+  "campo": "anio",
+  "valor": 2003,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2003"
+  }
+ },
+ {
+  "work_id": "w_4KH2FHZGP1WS",
+  "campo": "paises",
+  "valor": [
+   "CA"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Canadá"
+  }
+ },
+ {
+  "work_id": "w_4KH2FHZGP1WS",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KH2FHZGP1WS",
+  "campo": "sinopsis.es",
+  "valor": "Líneas y colores trabajados directamente sobre la película traducen al movimiento los ritmos de Take Five.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Líneas y colores trabajados directamente sobre la película traducen al movimiento los ritmos de Take Five."
+  }
+ },
+ {
+  "work_id": "w_4KH2FHZGP1WS",
+  "campo": "sinopsis.en",
+  "valor": "Lines and colors worked directly onto the film turn the rhythms of Take Five into movement.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lines and colors worked directly onto the film turn the rhythms of Take Five into movement."
+  }
+ },
+ {
+  "work_id": "w_4KH2FHZGP1WS",
+  "campo": "xref.tmdb",
+  "valor": 299661,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "299661"
+  }
+ },
+ {
+  "work_id": "w_4KH2FHZGP1WS",
+  "campo": "xref.letterboxd",
+  "valor": "cameras-take-five",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "cameras-take-five"
+  }
+ },
+ {
+  "work_id": "w_4KH2FHZGP1WS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/cameras-take-five.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/cameras-take-five.jpg"
+  }
+ }
+]

@@ -12,11 +12,19 @@
   "regla": "tmdb-manda"
  },
  "paises": {
-  "fuente": "tmdb:1529622",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1529622)",
+  "fecha": "2026-11-24"
  },
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "Trae comentario («poignant and charming feature debut») y pasa de 350; se condensa TMDB en.",
+  "fecha": "2026-11-25"
  }
 }

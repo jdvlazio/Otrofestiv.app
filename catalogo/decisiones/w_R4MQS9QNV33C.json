@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS9QNV33C",
+  "campo": "sinopsis.es",
+  "valor": "En el futuro, una androide viajera desembarca en una Habana desierta en busca de Las Vegas, un cabaré mítico fundado por un guerrillero.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "908378628cf2"
+  ],
+  "antes": {
+   "olhar-2026": "En el futuro, una androide viajera desembarca en una Habana desierta en busca de Las Vegas, un cabaré mítico fundado por un guerrillero."
+  }
+ },
+ {
+  "work_id": "w_R4MQS9QNV33C",
+  "campo": "xref.tmdb",
+  "valor": 1688847,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/las-vegas-cuba/"
+ }
+]

@@ -1,0 +1,160 @@
+[
+ {
+  "work_id": "w_R4K1F412E5VW",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/girardota-2026/maricones.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficidi-2026/maricones.jpg",
+   "/assets/girardota-2026/maricones.jpg"
+  ],
+  "antes": {
+   "ficidi-2026": "/assets/ficidi-2026/maricones.jpg",
+   "girardota-2026": "/assets/girardota-2026/maricones.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4K1F412E5VW",
+  "campo": "directores",
+  "valor": [
+   "María Paz Ruiz González"
+  ],
+  "motivo": "un dato por obra: la forma completa y bien escrita entre lo acreditado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficidi-2026": "Maria Paz Ruiz Gonzalez",
+   "girardota-2026": "Maria Paz Ruiz González"
+  }
+ },
+ {
+  "work_id": "w_R4K1F412E5VW",
+  "campo": "sinopsis.es",
+  "valor": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes queer enfrentan prejuicios que intentan limitar su forma de ser. Esa tensión los confronta con su identidad y los lleva a cuestionar la necesidad de validación externa. Así, usan moda y cuerpo para expresar y construir su identidad como un proceso fluido, libre y sin etiquetas.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (girardota-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0b58a5655ba4",
+   "957b2cfc56e7",
+   "ecc76f8bf152"
+  ],
+  "antes": {
+   "ficidi-2026": "Dos jóvenes queer exploran sus identidades a través del cuerpo, el arte y la expresión personal.",
+   "girardota-2026": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes Queer que, al habitar distintos espacios, enfrentan prejuicios sociales que intentan limitar su forma de ser. Esta tensión los confronta con su proceso identitario y los lleva a cuestionar la necesidad de validación externa. Así, deciden usar la moda y sus cuerpos como herramienta para expresar y construir su identidad como un proceso de constante fluidez, libre y sin etiquetas."
+  },
+  "original_de": [
+   "festicineantioquia-2026",
+   "ficidi-2026",
+   "girardota-2026"
+  ],
+  "titulo": "Maricones",
+  "original": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes Queer que, al habitar distintos espacios, enfrentan prejuicios sociales que intentan limitar su forma de ser. Esta tensión los confronta con su proceso identitario y los lleva a cuestionar la necesidad de validación externa. Así, deciden usar la moda y sus cuerpos como herramienta para expresar y construir su identidad como un proceso de constante fluidez, libre y sin etiquetas.",
+  "sintesis": {
+   "redacta": "corrector festicineantioquia-2026",
+   "verifica": "verificador de sinopsis (agente, 25 nov)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-25",
+   "huella": "8e27368b710c"
+  }
+ },
+ {
+  "work_id": "w_R4K1F412E5VW",
+  "campo": "sinopsis.en",
+  "valor": "Since childhood, Ginger and Louie knew they were different. Young and queer, they face prejudices that try to limit their way of being. This confronts them with their identity and leads them to question the need for external validation. So they use fashion and their bodies to express and build their identity as a fluid, free process without labels.",
+  "motivo": "versión corta (350) más fiel al original; redactor y verificador distintos (25 nov 2026)",
+  "fecha": "2026-11-25",
+  "quien": "Claude (festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "Since they were little, Ginger and Louie knew they were different. In the spaces they inhabit, two young queer people face social prejudices that try to limit their way of being. They decide to use fashion and their bodies to express and build their identity as a fluid process, free and without labels.",
+   "ficidi-2026": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels.",
+   "girardota-2026": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels."
+  },
+  "anteriores": [
+   {
+    "valor": "Since they were little, Ginger and Louie knew they were different. In the spaces they inhabit, two young queer people face social prejudices that try to limit their way of being. They decide to use fashion and their bodies to express and build their identity as a fluid process, free and without labels.",
+    "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4K1F412E5VW",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2026",
+   "ficidi-2026": "2026",
+   "girardota-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4K1F412E5VW",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia",
+   "ficidi-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4K1F412E5VW",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental",
+   "ficidi-2026": "Documental",
+   "girardota-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4K1F412E5VW",
+  "campo": "xref.tmdb",
+  "valor": 1756766,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1756766",
+   "ficidi-2026": "1756766",
+   "girardota-2026": "1756766"
+  }
+ },
+ {
+  "work_id": "w_R4K1F412E5VW",
+  "campo": "xref.letterboxd",
+  "valor": "maricones",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "maricones",
+   "ficidi-2026": "maricones",
+   "girardota-2026": "maricones"
+  }
+ }
+]

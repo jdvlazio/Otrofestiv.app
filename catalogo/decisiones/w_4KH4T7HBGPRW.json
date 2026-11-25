@@ -1,0 +1,96 @@
+[
+ {
+  "work_id": "w_4KH4T7HBGPRW",
+  "campo": "directores",
+  "valor": [
+   "Anton Setola"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Anton Setola"
+  }
+ },
+ {
+  "work_id": "w_4KH4T7HBGPRW",
+  "campo": "anio",
+  "valor": 2008,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2008"
+  }
+ },
+ {
+  "work_id": "w_4KH4T7HBGPRW",
+  "campo": "paises",
+  "valor": [
+   "BE",
+   "NL"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Bélgica, Países Bajos"
+  }
+ },
+ {
+  "work_id": "w_4KH4T7HBGPRW",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KH4T7HBGPRW",
+  "campo": "sinopsis.es",
+  "valor": "Jack se enfrenta a los excesos de su vida nocturna. La resaca da paso a un viaje interior en el que empieza a verse de otra manera.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Jack se enfrenta a los excesos de su vida nocturna. La resaca da paso a un viaje interior en el que empieza a verse de otra manera."
+  }
+ },
+ {
+  "work_id": "w_4KH4T7HBGPRW",
+  "campo": "sinopsis.en",
+  "valor": "Jack confronts the excesses of his nightlife. A hangover gives way to an inner journey that changes the way he sees himself.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Jack confronts the excesses of his nightlife. A hangover gives way to an inner journey that changes the way he sees himself."
+  }
+ },
+ {
+  "work_id": "w_4KH4T7HBGPRW",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/jazzed.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/jazzed.jpg"
+  }
+ }
+]

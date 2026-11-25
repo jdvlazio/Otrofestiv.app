@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KG3S25KGZSG",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "ad6f72ab971a"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "V.O por F.P",
+  "valor": "La directora Fernanda Pessoa pasa un fin de semana con la cineasta Vivian Ostrovsky, que acaba de cumplir 80 años, en la playa de Copacabana, escenario de muchas de sus películas. Ambas graban en Super 8 mm y hablan sobre la filmografía de Ostrovsky, su proceso creativo y las mujeres en el cine, entre otros temas.",
+  "original": "La directora Fernanda Pessoa pasa un fin de semana con la cineasta Vivian Ostrovsky, que acaba de cumplir 80 años, en la emblemática playa de Copacabana, escenario de muchas de sus películas. Ambas graban en Super 8 mm Kodak Ektachrome, la película preferida de Ostrovsky, y hablan sobre su filmografía, su proceso creativo y las mujeres en el cine, entre otros temas.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "85886b014764"
+  }
+ },
+ {
+  "work_id": "w_4KG3S25KGZSG",
+  "campo": "directores",
+  "valor": [
+   "Fernanda Pessoa"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Fernanda Pessoa"
+  }
+ },
+ {
+  "work_id": "w_4KG3S25KGZSG",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KG3S25KGZSG",
+  "campo": "paises",
+  "valor": [
+   "BR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Brasil"
+  }
+ },
+ {
+  "work_id": "w_4KG3S25KGZSG",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KG3S25KGZSG",
+  "campo": "sinopsis.en",
+  "valor": "Director Fernanda Pessoa spends a weekend with filmmaker Vivian Ostrovsky, who just turned 80, on the iconic Copacabana Beach, the setting for many of her films. They both shoot on Super 8mm Kodak Ektachrome, Ostrovsky’s preferred film stock, and discuss her filmography, creative process, women in cinema, among other things.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Director Fernanda Pessoa spends a weekend with filmmaker Vivian Ostrovsky, who just turned 80, on the iconic Copacabana Beach, the setting for many of her films. They both shoot on Super 8mm Kodak Ektachrome, Ostrovsky’s preferred film stock, and discuss her filmography, creative process, women in cinema, among other things."
+  }
+ },
+ {
+  "work_id": "w_4KG3S25KGZSG",
+  "campo": "xref.tmdb",
+  "valor": 1659154,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1659154"
+  }
+ },
+ {
+  "work_id": "w_4KG3S25KGZSG",
+  "campo": "xref.letterboxd",
+  "valor": "vo-por-fp",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "vo-por-fp"
+  }
+ },
+ {
+  "work_id": "w_4KG3S25KGZSG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/v-o-por-f-p.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/v-o-por-f-p.jpg"
+  }
+ }
+]

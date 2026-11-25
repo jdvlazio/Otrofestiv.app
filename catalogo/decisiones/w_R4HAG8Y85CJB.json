@@ -1,0 +1,78 @@
+[
+ {
+  "work_id": "w_R4HAG8Y85CJB",
+  "campo": "directores",
+  "valor": [
+   "Pedro Pinho"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 78",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=78",
+  "antes": {
+   "ficci-65": "Pedro Pinho"
+  }
+ },
+ {
+  "work_id": "w_R4HAG8Y85CJB",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 78",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=78",
+  "antes": {
+   "ficci-65": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HAG8Y85CJB",
+  "campo": "paises",
+  "valor": [
+   "PT",
+   "FR",
+   "BR",
+   "RO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 78",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=78",
+  "antes": {
+   "ficci-65": "Portugal, Francia, Brasil, Rumania"
+  }
+ },
+ {
+  "work_id": "w_R4HAG8Y85CJB",
+  "campo": "sinopsis.es",
+  "valor": "Sérgio, un ingeniero ambiental portugués, viaja a Guinea-Bissau para trabajar en la construcción de una carretera. Allí entabla con Diára y Gui una relación íntima y algo tormentosa. Cándido y a la deriva en un país que no logra comprender, se confronta con su posición de hombre blanco en la antigua colonia.",
+  "motivo": "catálogo oficial de FICCI 65, p. 78",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=78",
+  "antes": {
+   "ficci-65": "Pedro Filipe Marques construye un retrato íntimo de una familia portuguesa en Lisboa, observando con delicadeza las tensiones generacionales y los silencios que definen sus vínculos."
+  }
+ },
+ {
+  "work_id": "w_R4HAG8Y85CJB",
+  "campo": "sinopsis.en",
+  "valor": "Sérgio, a Portuguese environmental engineer, travels to Guinea-Bissau to work on building a road. There he begins an intimate, somewhat stormy relationship with Diára and Gui. Naive and adrift in a country he cannot understand, he is confronted with his position as a white man in the former colony.",
+  "motivo": "catálogo oficial de FICCI 65, p. 78",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=78",
+  "antes": {
+   "ficci-65": "Pedro Filipe Marques builds an intimate portrait of a Portuguese family in Lisbon, observing with delicacy the generational tensions and silences that define their bonds."
+  }
+ },
+ {
+  "work_id": "w_R4HAG8Y85CJB",
+  "campo": "xref.tmdb",
+  "valor": 1103551,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1103551"
+ }
+]

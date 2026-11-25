@@ -1,0 +1,83 @@
+[
+ {
+  "work_id": "w_7JCXNQ9V2YCC",
+  "campo": "directores",
+  "valor": [
+   "María Candelaria Aldana"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "María Candelaria Aldana"
+  }
+ },
+ {
+  "work_id": "w_7JCXNQ9V2YCC",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCXNQ9V2YCC",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_7JCXNQ9V2YCC",
+  "campo": "sinopsis.es",
+  "valor": "Entre amores y tambores, una madre recuerda la partida de un hijo y las vivencias nostálgicas de su tambor.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Entre amores y tambores, una madre recuerda la partida de un hijo y las vivencias nostálgicas de su tambor."
+  }
+ },
+ {
+  "work_id": "w_7JCXNQ9V2YCC",
+  "campo": "sinopsis.en",
+  "valor": "Amid loves and drums, a mother remembers a son's departure and the nostalgic moments lived with his drum.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Amid loves and drums, a mother remembers a son's departure and the nostalgic moments lived with his drum."
+  }
+ },
+ {
+  "work_id": "w_7JCXNQ9V2YCC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/el-dolor-del-vientre.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/el-dolor-del-vientre.jpg"
+  }
+ }
+]

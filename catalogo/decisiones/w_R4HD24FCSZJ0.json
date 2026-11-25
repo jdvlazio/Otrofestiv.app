@@ -1,0 +1,60 @@
+[
+ {
+  "work_id": "w_R4HD24FCSZJ0",
+  "campo": "directores",
+  "valor": [
+   "Juan Abello",
+   "Juan Olmos",
+   "Fiama Castro",
+   "Cindy Caffroni",
+   "Valeria Rua",
+   "Andrés Felipe Benavides",
+   "Felipe Moreno",
+   "Ron Márquez",
+   "Dante Hernández",
+   "Santiago Rodríguez"
+  ],
+  "motivo": "Colectivo Arteimaña, catálogo oficial FICCI 65",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "ficci-65": "Ron Márquez, Andrés Felipe Benavides, Fiama Castro, Cindy Caffroni, Juan Camilo Olmos, Valeria Rua, Felipe Moreno, Dante Hernández, Santiago Rodríguez, Laura Gabay García, Moises Busigo, Samuel Moreno Alvarez",
+   "ficica-2026": "Juan Abello, Felipe Moreno, Valeria Rúa, Andrés Benavides, German París, Santiago Rodriguez, Fiama Castor, Juan Olmos, Cindy Caffroni, Ronald Marquez",
+   "mamut-2026": "Ron Márquez, Andrés Felipe Benavides, Fiama Castro, Cindy Caffroni, Juan Camilo Olmos, Valeria Rua, Felipe Moreno, Dante Hernández, Santiago Rodríguez, Laura Gabay García, Moises Busigo, Samuel Moreno Alvarez"
+  },
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf"
+ },
+ {
+  "work_id": "w_R4HD24FCSZJ0",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficci-65": "Colombia",
+   "ficica-2026": "Colombia / Barranquilla",
+   "mamut-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HD24FCSZJ0",
+  "campo": "sinopsis.es",
+  "valor": "Diez realizadores piensan Barranquilla con una cámara Super 8mm: punk, dulzura, movimiento y estrépito. Cada uno aporta tres minutos montados en caliente, guiados por los cortes de la mirada y por la forma en que cada cuerpo percibe la ciudad. El arquetipo se desfigura, entre la extrañeza y el desmoronamiento de lo preconcebido.",
+  "motivo": "catálogo oficial de FICCI 65, p. 58",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=58"
+ },
+ {
+  "work_id": "w_R4HD24FCSZJ0",
+  "campo": "sinopsis.en",
+  "valor": "Ten filmmakers look at Barranquilla through a Super 8mm camera: punk, tenderness, movement and clamour. Each contributes three minutes of raw footage, guided by the cuts of the gaze and by how each body perceives the city. The archetype is distorted, amid strangeness and the crumbling of preconceptions.",
+  "motivo": "catálogo oficial de FICCI 65, p. 58",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=58"
+ }
+]

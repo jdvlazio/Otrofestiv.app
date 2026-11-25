@@ -1,0 +1,46 @@
+[
+ {
+  "work_id": "w_R4MQS7223HZA",
+  "campo": "sinopsis.es",
+  "valor": "Un extraño circo, compuesto básicamente por una ballena en descomposición, llega a un pequeño pueblo húngaro. La película construye una metáfora de cómo un líder puede aprovecharse del miedo y la paranoia de una colectividad hasta desatar la violencia y el caos.",
+  "motivo": "corrección de «en portugués, crédito de otra base»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "dd1d0e38ca84"
+  ],
+  "antes": {
+   "olhar-2026": "Con la llegada a un pequeño pueblo húngaro de un extraño circo, compuesto básicamente por una ballena en descomposición, el filme construye su metáfora visual y narrativa sobre la forma en que un líder puede aprovecharse del miedo y la paranoia de una colectividad hasta crear violencia y caos. En plena llegada del nuevo siglo, Béla Tarr y Ágnes Hranitzky utilizan su estética particular para hablar de las pesadillas de la historia húngara (y mundial, quizás), que los años siguientes comprobarían que no estaban lejos de renacer. (E.V.)"
+  }
+ },
+ {
+  "work_id": "w_R4MQS7223HZA",
+  "campo": "xref.tmdb",
+  "valor": 23160,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/werckmeister-harmonies/"
+ },
+ {
+  "work_id": "w_R4MQS7223HZA",
+  "campo": "directores",
+  "valor": [
+   "Béla Tarr",
+   "Ágnes Hranitzky"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4MQS7223HZA",
+  "campo": "paises",
+  "valor": [
+   "HU"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

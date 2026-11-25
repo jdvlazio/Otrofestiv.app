@@ -1,0 +1,66 @@
+[
+ {
+  "work_id": "w_R4HEVVQPTDC1",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/heroes-del-silencio.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficcali-2026/heroes-del-silencio.jpg",
+   "/assets/ficdeh/heroes-del-silencio.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_4_He%CC%81roes%20del%20Silencio_Po%CC%81ster%20-%20Santiago%20Alejandro%20Mu%C3%B1oz%20Marrugo.jpg?itok=NGH1UWzS"
+  ],
+  "antes": {
+   "ficcali-2026": "/assets/ficcali-2026/heroes-del-silencio.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_4_He%CC%81roes%20del%20Silencio_Po%CC%81ster%20-%20Santiago%20Alejandro%20Mu%C3%B1oz%20Marrugo.jpg?itok=NGH1UWzS",
+   "ficdeh-2026": "/assets/ficdeh/heroes-del-silencio.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HEVVQPTDC1",
+  "campo": "sinopsis.es",
+  "valor": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficci-65, ficdeh-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "171a63863cdf",
+   "a758bf1f35a5"
+  ],
+  "antes": {
+   "ficcali-2026": "En uno de los territorios más sagrados y vitales de Colombia, la Sierra Nevada de Gonawindua, los niños de la comunidad indígena Morotrwa alzan sus voces para narrar el territorio a través de un primer acercamiento a la creación audiovisual. Héroes del silencio es un viaje íntimo a la cotidianidad, un retrato auténtico, alejado de miradas externas, donde ellos deciden qué contar y cómo hacerlo.",
+   "ficci-65": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar.",
+   "ficdeh-2026": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar."
+  }
+ },
+ {
+  "work_id": "w_R4HEVVQPTDC1",
+  "campo": "directores",
+  "valor": [
+   "Atikeinis Durán Izquierdo"
+  ],
+  "motivo": "catálogo FICCI, afiche y FICCALI; solo TMDB sumaba a su productor",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "ficcali-2026": "Atikeinis Durán Izquierdo",
+   "ficci-65": "Santiago Alejandro Muñoz, Atikeinis Durán Izquierdo",
+   "ficdeh-2026": "Atikeinis Durán Izquierdo"
+  },
+  "anteriores": [
+   {
+    "valor": [
+     "Santiago Alejandro Muñoz",
+     "Atikeinis Durán Izquierdo"
+    ],
+    "motivo": "un dato por obra: el valor del almacén (festival)",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)"
+   }
+  ]
+ }
+]

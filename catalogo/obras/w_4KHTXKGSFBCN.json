@@ -1,0 +1,43 @@
+{
+ "id": "w_4KHTXKGSFBCN",
+ "titulo_original": "A los once",
+ "anio": 2025,
+ "paises": [
+  "MX"
+ ],
+ "directores": [
+  "Priscila Núñez"
+ ],
+ "aliases": [
+  {
+   "titulo": "At Eleven",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Al cumplir 11 años, Pilar recibe un libro sobre la menstruación, pero lo que descubre entre sus páginas destapa una verdad dolorosa que nada tiene que ver con crecer.",
+  "en": "After turning 11 years old, Pilar receives a book about menstruation, but what she uncovers in its pages reveals a painful truth that has nothing to do with growing up."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/a-los-once.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1826830,
+  "letterboxd": "a-los-once"
+ },
+ "versiones": [
+  {
+   "etiqueta": "15 min",
+   "duracion_min": 15
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

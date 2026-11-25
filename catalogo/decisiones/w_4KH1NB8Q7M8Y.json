@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KH1NB8Q7M8Y",
+  "campo": "directores",
+  "valor": [
+   "Steven Woloshen"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Steven Woloshen"
+  }
+ },
+ {
+  "work_id": "w_4KH1NB8Q7M8Y",
+  "campo": "anio",
+  "valor": 2014,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2014"
+  }
+ },
+ {
+  "work_id": "w_4KH1NB8Q7M8Y",
+  "campo": "paises",
+  "valor": [
+   "CA"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Canadá"
+  }
+ },
+ {
+  "work_id": "w_4KH1NB8Q7M8Y",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KH1NB8Q7M8Y",
+  "campo": "sinopsis.es",
+  "valor": "Un corto pintado y rayado a mano sobre película durante años, que celebra el viaje en automóvil al ritmo del jazz.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un corto pintado y rayado a mano sobre película durante años, que celebra el viaje en automóvil al ritmo del jazz."
+  }
+ },
+ {
+  "work_id": "w_4KH1NB8Q7M8Y",
+  "campo": "sinopsis.en",
+  "valor": "Painted and scratched directly onto film over several years, this short celebrates the experience of driving to the rhythms of jazz.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Painted and scratched directly onto film over several years, this short celebrates the experience of driving to the rhythms of jazz."
+  }
+ },
+ {
+  "work_id": "w_4KH1NB8Q7M8Y",
+  "campo": "xref.tmdb",
+  "valor": 299664,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "299664"
+  }
+ },
+ {
+  "work_id": "w_4KH1NB8Q7M8Y",
+  "campo": "xref.letterboxd",
+  "valor": "1000-plateaus",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1000-plateaus"
+  }
+ },
+ {
+  "work_id": "w_4KH1NB8Q7M8Y",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/1000-plateaus-2004-2014.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/1000-plateaus-2004-2014.jpg"
+  }
+ }
+]

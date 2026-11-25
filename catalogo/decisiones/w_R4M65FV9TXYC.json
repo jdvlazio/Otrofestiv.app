@@ -1,0 +1,61 @@
+[
+ {
+  "work_id": "w_R4M65FV9TXYC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/iniciacion-en-la-octava-dimension.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/iniciacion-en-la-octava-dimension.jpg",
+   "https://image.tmdb.org/t/p/w500/apQpk4kG29oQMpAJKYzeMC6aYhF.jpg"
+  ],
+  "antes": {
+   "midbo-2026": "/assets/midbo-2026/iniciacion-en-la-octava-dimension.jpg",
+   "qaff-2026": "https://image.tmdb.org/t/p/w500/apQpk4kG29oQMpAJKYzeMC6aYhF.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4M65FV9TXYC",
+  "campo": "sinopsis.es",
+  "valor": "Cinco personajes afro en medio de la ciudad de Bogotá, cinco destinos disparejos en medio de una ciudad hostil. Rubí Quejada, joven modelo, desplazada del Chocó; Shaka, rapero y champetúo que trabaja en un café internet; Makambile, cantante de champeta y mesero; Jah-Man, profeta autodidacta de Buenaventura; y Afreeway, joven “gangsta” que busca realizar un gran golpe. Cinco historias de vida que se cruzan, y crean un diálogo de espejos entre ellas. Así el filme viaja de vuelta al origen, al Pacífico colombiano, Quibdó y Guapi, donde asistimos a una lectura visual del «Nuevo Evangelio» de Jah-Man, la historia descolonizada del Pacífico colombiano desde tiempos antiguos hasta hoy. Destinos cruzados de guerreros en trance, entre lo urbano y lo rural, donde vemos cómo sus vidas se construyen entre recuerdos de un pasado conflictivo y sueños improbables en medio de la gran urbe de cemento.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "91d20d9993c8",
+   "c6d9f9ec764f"
+  ],
+  "antes": {
+   "midbo-2026": "Cinco personajes afro en medio de la ciudad de Bogotá, cinco destinos disparejos en medio de una ciudad hostil. Rubí Quejada, joven modelo, desplazada del Chocó; Shaka, rapero y champetúo que trabaja en un café internet; Makambile, cantante de champeta y mesero; Jah-Man, profeta autodidacta de Buenaventura; y Afreeway, joven “gangsta” que busca realizar un gran golpe. Cinco historias de vida que se cruzan, y crean un diálogo de espejos entre ellas. Así el filme viaja de vuelta al origen, al Pacífico colombiano, Quibdó y Guapi, donde asistimos a una lectura visual del «Nuevo Evangelio» de Jah-Man, la historia descolonizada del Pacífico colombiano desde tiempos antiguos hasta hoy. Destinos cruzados de guerreros en trance, entre lo urbano y lo rural, donde vemos cómo sus vidas se construyen entre recuerdos de un pasado conflictivo y sueños improbables en medio de la gran urbe de cemento.",
+   "qaff-2026": "Cinco personajes afrocolombianos en medio de Bogotá, cinco destinos dispares en una ciudad que les es hostil. Rubi Quejada, una joven modelo desplazada del Chocó; Shaka, un rapero y champetúo que trabaja en un cibercafé; Makambile, un cantante de champeta y mesero; Jah-Man, un profeta autodidacta de Buenaventura; y Afreeway, un joven pandillero que busca llegar lejos. 18"
+  }
+ },
+ {
+  "work_id": "w_R4M65FV9TXYC",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1742327)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "midbo-2026": 2026,
+   "qaff-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4M65FV9TXYC",
+  "campo": "sinopsis.en",
+  "valor": "Five Afro-Colombians in a Bogotá that is hostile to them: Rubí, a young model displaced from Chocó; Shaka, a rapper who works in an internet café; Makambile, a champeta singer and waiter; Jah-Man, a self-taught prophet from Buenaventura; and Afreeway, a young gangsta planning a big score. Their lives intersect.",
+  "motivo": "cortada: anuncia cinco y nombra una",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "midbo-2026": "Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó.",
+   "qaff-2026": "Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó."
+  }
+ }
+]

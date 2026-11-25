@@ -1,0 +1,75 @@
+[
+ {
+  "work_id": "w_R4HF7DNKZWPY",
+  "campo": "directores",
+  "valor": [
+   "Ben Rivers"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 278",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=278",
+  "antes": {
+   "ficci-65": "Ben Rivers"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DNKZWPY",
+  "campo": "anio",
+  "valor": 2015,
+  "motivo": "catálogo oficial de FICCI 65, p. 278",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=278",
+  "antes": {
+   "ficci-65": "2015"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DNKZWPY",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 278",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=278",
+  "antes": {
+   "ficci-65": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DNKZWPY",
+  "campo": "sinopsis.es",
+  "valor": "En los desiertos de Marruecos, el rodaje de una película dirigida por Oliver Laxe se despliega de forma inquietante. Un autor pierde el control, abandona el set y se interna en el desierto, donde lo secuestra un grupo de nómadas. Una fábula alucinatoria sobre la deshumanización, entre realidad y ficción, inspirada en un relato de Paul Bowles.",
+  "motivo": "catálogo oficial de FICCI 65, p. 278",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=278",
+  "antes": {
+   "ficci-65": "Ben Rivers filma en Marruecos durante el rodaje de una película de Arturo Ripstein, creando un ensayo sobre el cine, el poder y la mirada colonial."
+  }
+ },
+ {
+  "work_id": "w_R4HF7DNKZWPY",
+  "campo": "sinopsis.en",
+  "valor": "In the deserts of Morocco, the shooting of a film directed by Oliver Laxe unfolds in a disturbing manner. A filmmaker loses control, abandons the set and ventures into the desert, where a group of nomads kidnaps him. A hallucinatory fable about dehumanization, between reality and fiction, inspired by a Paul Bowles story.",
+  "motivo": "catálogo oficial de FICCI 65, p. 278",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=278",
+  "antes": {
+   "ficci-65": "Ben Rivers films in Morocco during the shooting of an Arturo Ripstein film, creating an essay about cinema, power, and the colonial gaze."
+  }
+ },
+ {
+  "work_id": "w_R4HF7DNKZWPY",
+  "campo": "xref.tmdb",
+  "valor": 348890,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/348890"
+ }
+]

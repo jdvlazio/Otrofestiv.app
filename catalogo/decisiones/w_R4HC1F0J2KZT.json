@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HC1F0J2KZT",
+  "campo": "directores",
+  "valor": [
+   "Anja Dornieden",
+   "Juan David González Monroy"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 303",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=303"
+ },
+ {
+  "work_id": "w_R4HC1F0J2KZT",
+  "campo": "anio",
+  "valor": 2014,
+  "motivo": "catálogo oficial de FICCI 65, p. 303",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=303"
+ },
+ {
+  "work_id": "w_R4HC1F0J2KZT",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 303",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=303",
+  "antes": {
+   "ficci-65": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_R4HC1F0J2KZT",
+  "campo": "sinopsis.es",
+  "valor": "Una breve historia del cine, de 1888, cuando George Eastman registró la palabra inventada «Kodak», a 2012, cuando Eastman Kodak se declaró en quiebra. En medio, los trabajadores que los Lumière filmaron saliendo de su fábrica, el elefante electrocutado que filmó Edison y unos enanos que bailan en un parque de atracciones en China.",
+  "motivo": "catálogo oficial de FICCI 65, p. 303",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=303"
+ },
+ {
+  "work_id": "w_R4HC1F0J2KZT",
+  "campo": "sinopsis.en",
+  "valor": "An abridged history of motion pictures, from 1888, when George Eastman registered the made-up word “Kodak,” to 2012, when Eastman Kodak filed for bankruptcy. In between: the workers the Lumières filmed leaving their factory, the electrocuted elephant Edison filmed, and dwarfs dancing at an amusement park in China.",
+  "motivo": "catálogo oficial de FICCI 65, p. 303",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=303"
+ },
+ {
+  "work_id": "w_R4HC1F0J2KZT",
+  "campo": "xref.tmdb",
+  "valor": 716029,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/716029"
+ }
+]

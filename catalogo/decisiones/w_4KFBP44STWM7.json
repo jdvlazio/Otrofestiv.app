@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KFBP44STWM7",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "96f1bafe28fa"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Una carta supuesta",
+  "valor": "Una mujer se dirige al padre que nunca conoció y cuya existencia desconoció durante años. Reconstruye su imagen con las fotos que su madre mantuvo ocultas. De ellas surgen preguntas sobre su abandono, sus decisiones y el parecido que aún la conecta con ese fantasma. Halla pistas que la hacen preguntarse si, quizás, él nunca la olvidó del todo.",
+  "original": "Una mujer se dirige al padre que nunca conoció y cuya existencia desconoció durante años. Reconstruye su imagen a través de las fotografías que su madre mantuvo ocultas durante años. A partir de esas imágenes surgen preguntas sobre su abandono, sus decisiones y el parecido que aún la conecta con ese fantasma. En su búsqueda, encuentra pistas que la hacen preguntarse si, quizás, él nunca la olvidó del todo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b3e17d101d26"
+  }
+ },
+ {
+  "work_id": "w_4KFBP44STWM7",
+  "campo": "directores",
+  "valor": [
+   "Megumi Cardona"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Megumi Cardona"
+  }
+ },
+ {
+  "work_id": "w_4KFBP44STWM7",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFBP44STWM7",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KFBP44STWM7",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KFBP44STWM7",
+  "campo": "sinopsis.en",
+  "valor": "A woman addresses the father she never knew and whose existence she was unaware of. She pieces him together through photographs her mother kept hidden for years. From those images arise questions about his abandonment, his choices, and the resemblance that still connects her to that ghost. In her search, she finds clues that make her wonder if, perhaps, he never truly forgot about her.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A woman addresses the father she never knew and whose existence she was unaware of. She pieces him together through photographs her mother kept hidden for years. From those images arise questions about his abandonment, his choices, and the resemblance that still connects her to that ghost. In her search, she finds clues that make her wonder if, perhaps, he never truly forgot about her."
+  }
+ },
+ {
+  "work_id": "w_4KFBP44STWM7",
+  "campo": "xref.tmdb",
+  "valor": 1841398,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841398"
+  }
+ },
+ {
+  "work_id": "w_4KFBP44STWM7",
+  "campo": "xref.letterboxd",
+  "valor": "una-carta-supuesta",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "una-carta-supuesta"
+  }
+ },
+ {
+  "work_id": "w_4KFBP44STWM7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/una-carta-supuesta.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/una-carta-supuesta.jpg"
+  }
+ }
+]

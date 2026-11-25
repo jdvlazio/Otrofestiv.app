@@ -1,0 +1,137 @@
+[
+ {
+  "work_id": "w_R4K253HAQJA6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/girardota-2026/maleza.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/girardota-2026/maleza.jpg",
+   "/assets/villadelcine-2026/maleza.jpg"
+  ],
+  "antes": {
+   "girardota-2026": "/assets/girardota-2026/maleza.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/maleza.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4K253HAQJA6",
+  "campo": "directores",
+  "valor": [
+   "Nicolle Estrada Díaz",
+   "Marcela Palacio Montoya"
+  ],
+  "motivo": "un dato por obra: la forma completa y bien escrita entre lo acreditado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "girardota-2026": "Nicolle Estrada Díaz",
+   "villadelcine-2026": "Nicolle Estrada y Marcela Palacio"
+  }
+ },
+ {
+  "work_id": "w_R4K253HAQJA6",
+  "campo": "sinopsis.es",
+  "valor": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
+  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
+   "girardota-2026": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
+   "villadelcine-2026": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino."
+  },
+  "vistas": [
+   "d617adda0a0f"
+  ]
+ },
+ {
+  "work_id": "w_R4K253HAQJA6",
+  "campo": "sinopsis.en",
+  "valor": "Alba, a solitary healer and midwife, has devoted her existence to preserving life. Guided by the spirit of her cat, one night she receives a desperate young woman whose request shakes her convictions. Amid pain and silence, she must understand that being there for someone also means letting each person choose their own path.",
+  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "festicineantioquia-2026": "Alba, a solitary healer and midwife, has devoted her existence to preserving life. Guided by the spirit of her cat, one night she receives a desperate young woman whose request shakes her convictions. Amid pain and silence, she must understand that being there for someone also means letting each person choose their own path."
+  }
+ },
+ {
+  "work_id": "w_R4K253HAQJA6",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2026",
+   "girardota-2026": "2026",
+   "villadelcine-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4K253HAQJA6",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia",
+   "girardota-2026": "Colombia",
+   "villadelcine-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4K253HAQJA6",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama",
+   "girardota-2026": "Drama",
+   "villadelcine-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4K253HAQJA6",
+  "campo": "xref.tmdb",
+  "valor": 1791678,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1791678",
+   "girardota-2026": "1791678",
+   "villadelcine-2026": "1791678"
+  }
+ },
+ {
+  "work_id": "w_R4K253HAQJA6",
+  "campo": "xref.letterboxd",
+  "valor": "maleza-2026",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "maleza-2026",
+   "girardota-2026": "maleza-2026",
+   "villadelcine-2026": "maleza-2026"
+  }
+ }
+]

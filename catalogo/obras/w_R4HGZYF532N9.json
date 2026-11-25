@@ -4,9 +4,9 @@
  "anio": 2022,
  "paises": [
   "CO",
+  "FR",
   "LU",
   "MX",
-  "FR",
   "NO"
  ],
  "directores": [
@@ -31,6 +31,7 @@
   "veredicto": "oficial-festival"
  },
  "xref": {
+  "tmdb": 848112,
   "letterboxd": "kings-of-the-world"
  },
  "versiones": [

@@ -1,6 +1,6 @@
 {
  "titulo_original": {
-  "fuente": "festival:aleste-2026",
+  "fuente": "festival:aleste-2026,aleste-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
@@ -18,5 +18,11 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23"
  }
 }

@@ -1,0 +1,47 @@
+[
+ {
+  "work_id": "w_R4HEVVW6AQR2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/kuagro.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficcali-2026/kuagro.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/poster%20KUAGRO%20FINAL_Mesa%20de%20trabajo%201%20-%20Diego%20Casseres.png?itok=qvukayHP"
+  ],
+  "antes": {
+   "ficcali-2026": "/assets/ficcali-2026/kuagro.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/poster%20KUAGRO%20FINAL_Mesa%20de%20trabajo%201%20-%20Diego%20Casseres.png?itok=qvukayHP"
+  }
+ },
+ {
+  "work_id": "w_R4HEVVW6AQR2",
+  "campo": "sinopsis.es",
+  "valor": "Makakito intenta escapar del castigo de su madre para jugar con sus amigos en un lugar mágico de Palenque. Su abuelo, narrador de historias, lo cautiva con un cuento tradicional, que se ve interrumpido por las aventuras que atrapan a Makakito.",
+  "motivo": "El español es una nota sobre el kuagro, larga y con erratas, y no cuenta la trama del inglés; se traduce TMDB en.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "ficcali-2026": "En palenque, un pueblo afrodescendiente en el departamento de Bolívar ubicado a una hora de Cartagena, se viven diariamente las tradiciones que gestaron nuestros ancestros. Los kuagros es una de ellas; siendo esta la forma organizacional que existe en el territorio. Se entiende el Kuagro como una segunda familia que nace gracias a los años de andanzas de un grupo de niños o jóvenes de una misma calle, barrio o sector.  La película KUAGRO cuenta como se da esta formación de grupo cuando no hay un rumbo seguro o fijo, solo la amistad y hermandad que nace del corazón y los amigos de infancia, esta película habla desde el relevo generacional, la lengua palenquera, el amor de mama y la libertad de ser niño en el palenque de Benko.",
+   "ficci-65": "En palenque, un pueblo afrodescendiente en el departamento de Bolívar ubicado a una hora de Cartagena, se viven diariamente las tradiciones que gestaron nuestros ancestros. Los kuagros es una de ellas; siendo esta la forma organizacional que existe en el territorio. Se entiende el Kuagro como una segunda familia que nace gracias a los años de andanzas de un grupo de niños o jóvenes de una misma calle, barrio o sector.  La película KUAGRO cuenta como se da esta formación de grupo cuando no hay un rumbo seguro o fijo, solo la amistad y hermandad que nace del corazón y los amigos de infancia, esta película habla desde el relevo generacional, la lengua palenquera, el amor de mama y la libertad de ser niño en el palenque de Benko."
+  },
+  "vistas": [
+   "c4899fdc1c5a"
+  ],
+  "anteriores": [
+   {
+    "valor": "En palenque, un pueblo afrodescendiente en el departamento de Bolívar ubicado a una hora de Cartagena, se viven diariamente las tradiciones que gestaron nuestros ancestros. Los kuagros es una de ellas; siendo esta la forma organizacional que existe en el territorio. Se entiende el Kuagro como una segunda familia que nace gracias a los años de andanzas de un grupo de niños o jóvenes de una misma calle, barrio o sector. La película KUAGRO cuenta como se da esta formación de grupo cuando no hay un rumbo seguro o fijo, solo la amistad y hermandad que nace del corazón y los amigos de infancia, esta película habla desde el relevo generacional, la lengua palenquera, el amor de mama y la libertad de ser niño en el palenque de Benko.",
+    "motivo": "se quita lo que no es sinopsis; nada se escribe",
+    "fecha": "2026-11-24",
+    "quien": "Juan (hoja del paso 6)",
+    "vistas": [
+     "c4899fdc1c5a"
+    ]
+   }
+  ]
+ }
+]

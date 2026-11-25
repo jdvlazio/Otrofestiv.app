@@ -18,8 +18,8 @@
   }
  ],
  "sinopsis": {
-  "es": "Decir “ternura” y que sean varias las cosas que salen de la boca: miel, abrazo, risa. Amiga, sangre, ardor. Paula y La Maestra tienen 16 años, ambas son nadadoras y se preparan para ir al Campeonato Panamericano de Natación Junior.",
-  "en": "Say 'tenderness' and many things come to mind: honey, embrace, laughter. Friend, blood, heat. Paula and La Maestra are both 16, both swimmers, preparing for the Junior Pan American Swimming Championship."
+  "es": "Paula y La Maestra tienen 16 años, son nadadoras y se preparan para el Campeonato Panamericano Junior. Después de una fiesta, algo se desplaza entre ellas: Paula se vuelve distante. Mientras intentan comprender lo ocurrido y decidir cómo nombrar la violencia, sus distintas formas de atravesarlo tensan y transforman su amistad.",
+  "en": "Paula and La Maestra are 16, both swimmers preparing for the Pan American Junior Championships. After a party, something shifts between them: Paula becomes distant. As they try to understand what happened and decide how to name the violence, their different ways of dealing with it strain and transform their friendship."
  },
  "generos": [
   "Drama"
@@ -28,7 +28,9 @@
   "archivo": "https://image.tmdb.org/t/p/w500/daj02QrJmvhLvmVUuoxa1Srq02y.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1536433
+ },
  "versiones": [
   {
    "etiqueta": "90 min",

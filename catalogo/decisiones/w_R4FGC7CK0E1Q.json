@@ -1,0 +1,163 @@
+[
+ {
+  "work_id": "w_R4FGC7CK0E1Q",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinetoro-2026/el-salto.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bogoshorts-2026/el-salto.jpg",
+   "/assets/cinetoro-2026/el-salto.jpg",
+   "/assets/midbo-2026/el-salto.jpg",
+   "https://image.tmdb.org/t/p/w500/3xkU5BM4aLULnvBZu0mVntXbHrA.jpg"
+  ],
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/el-salto.jpg",
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/3xkU5BM4aLULnvBZu0mVntXbHrA.jpg",
+   "cinetoro-2026": "/assets/cinetoro-2026/el-salto.jpg",
+   "midbo-2026": "/assets/midbo-2026/el-salto.jpg"
+  },
+  "a_mano": true
+ },
+ {
+  "work_id": "w_R4FGC7CK0E1Q",
+  "campo": "sinopsis.es",
+  "valor": "Según el mito muisca, la llanura de Bogotá fue inundada por arroyos que amenazaban con arrasarlo todo, hasta que el dios Bochica hirió la serranía con su bastón y abrió paso a las aguas: así se formó el Salto del Tequendama. Allí, el río Bogotá se estrella contra un banco de piedras y se arroja, en espumas y vapores, hacia el abismo que lo espera.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, midbo-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "73351c895829",
+   "ffa701289c58"
+  ],
+  "original_de": [
+   "bogoshorts-2026",
+   "cinemancia-2026",
+   "cinetoro-2026",
+   "midbo-2026"
+  ],
+  "titulo": "El salto",
+  "original": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "cbb6049f22d3"
+  },
+  "antes": {
+   "cinemancia-2026": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera.",
+   "cinetoro-2026": "Según el mito indígena muisca, la llanura de Bogotá estuvo alguna vez inundada por arroyos que amenazaban con arrasar con todo. El dios Bochica apareció y, con su bastón, golpeó la cordillera, abriendo un paso para las aguas represadas y formando las Cataratas de Tequendama. Al borde del precipicio, el río Bogotá se precipita sobre un banco de rocas. Allí se estrella y se hunde, entre neblina y espuma, en el abismo que lo espera.",
+   "midbo-2026": "Según el mito indígena Muisca, la llanura de Bogotá alguna vez fue inundada por arroyos que amenazaban con arrasarlo todo. Apareció entonces el dios Bochica, quien con su bastón hirió la serranía y abrió paso a sus aguas represadas, formando así el Salto del Tequendama. En la orilla del precipicio, el río Bogotá se lanza sobre un banco de piedras. Allí se estrella y se arroja en forma de espumas y vapores hacia el abismo que lo espera."
+  }
+ },
+ {
+  "work_id": "w_R4FGC7CK0E1Q",
+  "campo": "directores",
+  "valor": [
+   "Jerónimo Rincón"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Jerónimo Rincón",
+   "cinemancia-2026": "Jerónimo Rincón",
+   "cinetoro-2026": "Jerónimo Rincón",
+   "midbo-2026": "Jerónimo Rincón"
+  }
+ },
+ {
+  "work_id": "w_R4FGC7CK0E1Q",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "cinemancia-2026": "2026",
+   "cinetoro-2026": "2026",
+   "midbo-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4FGC7CK0E1Q",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia",
+   "cinemancia-2026": "Colombia",
+   "cinetoro-2026": "Colombia",
+   "midbo-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4FGC7CK0E1Q",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_R4FGC7CK0E1Q",
+  "campo": "sinopsis.en",
+  "valor": "According to the indigenous Muisca myth, the Bogotá plain was once flooded by streams that threatened to sweep everything away. The god Bochica appeared, and with his cane, he struck the mountain range, opening a passage for the dammed waters and forming the Tequendama Falls. At the edge of the precipice, the Bogotá River plunges over a bank of rocks. There it crashes and plunges in mist and foam into the abyss that awaits.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "According to the indigenous Muisca myth, the Bogotá plain was once flooded by streams that threatened to sweep everything away. The god Bochica appeared, and with his cane, he struck the mountain range, opening a passage for the dammed waters and forming the Tequendama Falls. At the edge of the precipice, the Bogotá River plunges over a bank of rocks. There it crashes and plunges in mist and foam into the abyss that awaits."
+  }
+ },
+ {
+  "work_id": "w_R4FGC7CK0E1Q",
+  "campo": "xref.tmdb",
+  "valor": 1686065,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1686065",
+   "cinemancia-2026": "1686065",
+   "cinetoro-2026": "1686065",
+   "midbo-2026": "1686065"
+  }
+ },
+ {
+  "work_id": "w_R4FGC7CK0E1Q",
+  "campo": "xref.letterboxd",
+  "valor": "el-salto-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "el-salto-1",
+   "cinemancia-2026": "el-salto-1",
+   "cinetoro-2026": "el-salto-1",
+   "midbo-2026": "el-salto-1"
+  }
+ }
+]

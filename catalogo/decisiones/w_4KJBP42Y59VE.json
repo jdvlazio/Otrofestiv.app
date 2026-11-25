@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_4KJBP42Y59VE",
+  "campo": "directores",
+  "valor": [
+   "Daniela Córdoba"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Daniela Córdoba"
+  }
+ },
+ {
+  "work_id": "w_4KJBP42Y59VE",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJBP42Y59VE",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJBP42Y59VE",
+  "campo": "sinopsis.es",
+  "valor": "Felipe se cuela a un toque y descubre que su novio Eduardo lo oculta por miedo a aceptar su homosexualidad. Entre un primer trance químico y un pogo, se liberan y desinhiben, hasta que un intento de beso amenaza con desatar violencia y sus peores miedos.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Felipe se cuela a un toque y descubre que su novio Eduardo lo oculta por miedo a aceptar su homosexualidad. Entre un primer trance químico y un pogo, se liberan y desinhiben, hasta que un intento de beso amenaza con desatar violencia y sus peores miedos."
+  }
+ },
+ {
+  "work_id": "w_4KJBP42Y59VE",
+  "campo": "sinopsis.en",
+  "valor": "Felipe sneaks into a gig and discovers that his boyfriend Eduardo is hiding him out of fear of accepting his own homosexuality. Amid a first chemical trip and a mosh pit, they let go and lose their inhibitions, until an attempted kiss threatens to unleash violence and their deepest fears.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Felipe sneaks into a gig and discovers that his boyfriend Eduardo is hiding him out of fear of accepting his own homosexuality. Amid a first chemical trip and a mosh pit, they let go and lose their inhibitions, until an attempted kiss threatens to unleash violence and their deepest fears."
+  }
+ },
+ {
+  "work_id": "w_4KJBP42Y59VE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/furia.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/furia.jpg"
+  }
+ }
+]

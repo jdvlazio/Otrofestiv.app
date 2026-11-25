@@ -1,0 +1,276 @@
+{
+ "_provenance": {
+  "fuente": "https://festival.bogoshorts.com/corto/<n>",
+  "capturado": "2026-11-25",
+  "metodo": "póster de la ficha de la obra en la web del festival y afiches del registro de altas; solo donde TMDB no tiene"
+ },
+ "afiches": {
+  "Fantasy Land": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/fantasy-land-tmdb.jpg",
+   "sobre_tmdb": true,
+   "url": "https://image.tmdb.org/t/p/w780/5bCC7cYdBmm9gTkyx6QqxZA6t6T.jpg",
+   "fuente": "afiche oficial de la ficha de TMDB 1840640 (acredita a Aitana Ahrens), sin el recorte del encuadre"
+  },
+  "Paraíso": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/paraiso-23nov.jpg",
+   "sobre_tmdb": true,
+   "url": "https://festival.bogoshorts.com/images/peliculas/6afcb1b54deb6__Paraiso_CVR04_Poster_24BSFF.jpeg",
+   "fuente": "afiche oficial de la obra (https://festival.bogoshorts.com/corto/4423)"
+  },
+  "Mañana": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/manana-23nov.jpg",
+   "sobre_tmdb": true,
+   "url": "https://apifront.shortfilmwire.com/DataServiceRestFull.svc/images-content/Origin/103376443",
+   "fuente": "afiche oficial de la obra (https://shortfilmwire.com/en/embedded/film/200122884/toto)"
+  },
+  "Cameras Take Five": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/cameras-take-five-23nov.jpg",
+   "sobre_tmdb": true,
+   "url": "https://m.media-amazon.com/images/M/MV5BM2Y5MmU5YzYtYmZkNS00ZmI0LWE3NjItYTJiYzNlZTlkNzllXkEyXkFqcGc@._V1_.jpg",
+   "fuente": "afiche oficial de la obra (https://www.imdb.com/title/tt0377583/)"
+  },
+  "Sunrise Meets Sunset": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/sunrise-meets-sunset-23nov.jpg",
+   "sobre_tmdb": true,
+   "url": "https://m.media-amazon.com/images/M/MV5BMWQ5MTA0ZDktNjIyZS00ZTU5LWE3MzYtMTNiYmM5ZDAzNWI3XkEyXkFqcGc@._V1_.jpg",
+   "fuente": "afiche oficial de la obra (https://www.imdb.com/title/tt20515956/)"
+  },
+  "Furia": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/furia-23nov.jpg",
+   "sobre_tmdb": true,
+   "url": "https://festival.bogoshorts.com/images/peliculas/6aff8ebb6807d__Furia_Poster_Cata__logo_v_3_pdf.jpg",
+   "fuente": "afiche oficial de la obra (https://festival.bogoshorts.com/corto/4436)"
+  },
+  "Jazzed": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/jazzed-23nov.jpg",
+   "sobre_tmdb": true,
+   "url": "https://pics.filmaffinity.com/jazzed-201890773-large.jpg",
+   "fuente": "afiche oficial de la obra (https://www.filmaffinity.com/es/film781501.html)"
+  },
+  "Escritorio": {
+   "archivo": "fuentes/bogoshorts-2026/altas/escritorio.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4319)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3d7ebca912__Escritorio_CN-FIC08_Afiche_24BSFF__1_.png"
+  },
+  "Cartas a Daniel Apóstol": {
+   "archivo": "fuentes/bogoshorts-2026/altas/cartas-a-daniel-apostol.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4274)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae37decb50e3__CartasDaniel_CNDOC05_Poster_Baja_24BSFF__1_.png"
+  },
+  "Pececín": {
+   "archivo": "fuentes/bogoshorts-2026/altas/pececin.jpg",
+   "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4323",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3dfa630941__Pececi__n_CN-ANI02_Po__ster_24BSFF__1_.png"
+  },
+  "El Alto de los Buitres": {
+   "archivo": "fuentes/bogoshorts-2026/altas/el-alto-de-los-buitres.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4324)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3e0376c7d2__ElAltoDeLosBuitres_CN-ANI04_Poster_24BSFF__1_.jpg"
+  },
+  "On naît seul, on meurt seul": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4326.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4326), 2480×3508",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3e333442ea__On_nai__t_seul__on_meurt_seul_CN-ANI06_Po__ster_24BSFF.jpg"
+  },
+  "You get one (The Plot in You)": {
+   "archivo": "fuentes/bogoshorts-2026/altas/you-get-one-the-plot-in-you.jpg",
+   "fuente": "Afiche en la ficha del festival (festival.bogoshorts.com/corto/4368), 300×450; no hay versión mayor",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4e30444da3__You_Get_One_CN-VC01_Afiche_24BSFF__1_.jpg"
+  },
+  "Fragmentos de una tarde en Pance (Sol Menguante)": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4369.png",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4369), 338×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4e87ab6f75__FragmentosDeUnaTardeEnPance_CN-VC03_P__sterPel__culaPNG_24BSFF.png"
+  },
+  "La culpa (Juliana Quédate Otro Día)": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4370.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4370), 300×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4e95c5c982__LaCulpa_CN-VC03_P__ster_24BSFF_page-0001__1_.jpg"
+  },
+  "Nancy resabiada (Cumbia) (El Kalvo & La Banda Resabiada)": {
+   "archivo": "fuentes/bogoshorts-2026/altas/nancy-resabiada-cumbia-el-kalvo-la-banda-resabiada.jpg",
+   "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4371 (con laurel de selección)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4eab15eccf__NancyResabiada_CN-CV04_Poster_24BSFF.jpg"
+  },
+  "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4372.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4372), 360×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4ebda5b212__Cumbiapa_laluna_CN-VC05_PosterPel__cula_24BSFF.jpg"
+  },
+  "Herir al viento (Monopop, Monstera Delizziosa)": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4373.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4373), 291×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4ecb00b243__Herir_al_viento_CN-VC06_POSTER_24BSFF_page-0001__1_.jpg"
+  },
+  "La luna y yo (Tabi Wav)": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4374.png",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4374), 360×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4ee0048122__La_Luna_y_Yo_CN-VC07_Poster_24BSFF__1_.png"
+  },
+  "Mi barquito (Canalón de Timbiquí)": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4375.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4375), 1587×2245",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4eefa1e005__Mi_barquito_CN-VC08_P__ster_24BSFF.jpg"
+  },
+  "La ciudad de las flores (Maleza y Los Floripondios)": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4376.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4376), 253×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4efb16ca5b__LA_CIUDAD_DE_LAS_FLORES_CNVC09_POSTER_24BSFF__1_.jpg"
+  },
+  "Marea (Lido Pimienta)": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4377.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4377), 2304×3456",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4f0de7350f__Marea_CN-VC10_poster_24BSFF.jpg"
+  },
+  "Maria Lionza (Yajaira La Beyaca)": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4378.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4378), 360×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae4fe6a1ddfb__marialionza_CN-VC11_poster_24BSFF_page-0001__1_.jpg"
+  },
+  "Skiladagur": {
+   "archivo": "fuentes/bogoshorts-2026/altas/skiladagur.jpg",
+   "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4188",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae2545b5044b__ReturnDate_CI-FIC04_PosterHQ_24BSFF__1_.jpg"
+  },
+  "Perjalanan Menuju Surga": {
+   "archivo": "fuentes/bogoshorts-2026/altas/perjalanan-menuju-surga.jpg",
+   "fuente": "Afiche oficial (Film Indo Source en X), con laurel Doha",
+   "url": "https://pbs.twimg.com/media/HVEWo1VbgAAVSom.jpg?name=orig"
+  },
+  "The Waiting Palm": {
+   "archivo": "fuentes/bogoshorts-2026/altas/the-waiting-palm.jpg",
+   "fuente": "pagina_del_festival: festival.bogoshorts.com/corto/4238 (póster oficial)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae2ae0862997__TheWaitingPalm_CI-DOC09_Poster_24BSFF_jpg__1_.jpg"
+  },
+  "Pískoviště": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4286.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4286), 450×636",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3862d48ffa__P__skovi__t___CI-ANI09_P__ster_24BSFF_pdf__1_.jpg"
+  },
+  "Mon Chat est mort": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4300.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4300), 2500×3539",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae399ca4e758__Mon_Chat_est_mort_CI-ANI19_P__ster_24BSFF.jpg"
+  },
+  "Who Are We Against God?": {
+   "archivo": "fuentes/bogoshorts-2026/altas/who-are-we-against-god.jpg",
+   "fuente": "Póster oficial en la ficha del festival (festival.bogoshorts.com/corto/4307), 450×643; no hay versión mayor en web/IMDb/Bing",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3b2816673a__WhoAreWeAgainstGod-CI-EXP04-Poster-24BSFF__1_.jpeg"
+  },
+  "Liebe Caro": {
+   "archivo": "fuentes/bogoshorts-2026/altas/liebe-caro.jpg",
+   "fuente": "Girona Film Festival 2026, ficha oficial de la obra (afiche con título Liebe Caro, «un film de Maximilien Mpoto», laurel de Girona)",
+   "url": "https://www.gironafilmfestival.com/wp-content/uploads/2026/09/GFF26389-urlImagenPortada-scaled.png"
+  },
+  "Ovu sobu ostavite zakopanu": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4312.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4312), 318×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3bbdcd92a8__OvuSobuOstaviteZakopanu_CI-EXP09_Poster_24BSFF__1_.jpg"
+  },
+  "Kupljena sjećanja": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4313.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4313), 450×630",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3bd69a3c22__BoughtMemories_CI-EXP10_Poster_24BSFF__1_.jpg"
+  },
+  "Torito": {
+   "archivo": "fuentes/bogoshorts-2026/altas/torito.jpg",
+   "fuente": "pagina_del_festival: festival.bogoshorts.com/corto/4343 (póster oficial)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae409297a5c5__Torito_CI-VC01_Poster_24BSFF__1_.png"
+  },
+  "Savia (Alfilera)": {
+   "archivo": "fuentes/bogoshorts-2026/altas/savia-alfilera.jpg",
+   "fuente": "Afiche del videoclip en ficha BOGOSHORTS corto/4344",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae409fe3ba90__SAVIA_CI-VC02_Poster_24BSFF__1_.jpg"
+  },
+  "Cocodrilo (Dillom)": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4346.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4346), 2592×3840",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae40c8f0e608__COCODRILO_CI-VC05_Poster_24BSFF_pdf.jpg"
+  },
+  "El píxel y la parcela": {
+   "archivo": "fuentes/bogoshorts-2026/altas/el-pixel-y-la-parcela.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4244)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3dd4ab0445__2026-10-29_-_Equipo__1_.jpg"
+  },
+  "La petite école": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4248.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4248), 450×637",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3de5eb5416__LaPetiteEcole_CI-CP05_poster_24BSFF__1_.jpg"
+  },
+  "Szepty": {
+   "archivo": "fuentes/bogoshorts-2026/altas/szepty.jpg",
+   "fuente": "pagina_del_festival: festival.bogoshorts.com/corto/4200 (póster oficial WHISPERS)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae378814f6f3__Whispers_ofi.jpg"
+  },
+  "Amará": {
+   "archivo": "fuentes/bogoshorts-2026/altas/amara.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4207)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3d076f2f89__Amara___F3-13_Poster_24BSFF_page-0001__1_.jpg"
+  },
+  "In Articulo Mortis": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4210.png",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4210), 318×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3d0eb9c784__In_Articulo_Mortis_F3-14_Po__ster_24BSFF__1_.png"
+  },
+  "Cold Coffee": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4195.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4195), 450×667",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae25deb5accc__ColdCoffee_CON-LTX02_POSTERB_24BSFF__1_.jpg"
+  },
+  "Meyolotl": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4197.png",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4197), 531×787",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae2603ae3621__Meyolotl_CON-LTX04_Poster_24BSFF.png"
+  },
+  "Kevin, el niño del espacio": {
+   "archivo": "fuentes/bogoshorts-2026/altas/kevin-el-nino-del-espacio.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4219)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae284457c52f__KevinElNi__oDelEspacio_CLC-ADO06_P__ster_24BSFF.png"
+  },
+  "Querido River Phoenix": {
+   "archivo": "fuentes/bogoshorts-2026/altas/querido-river-phoenix.jpg",
+   "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4229",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae294c338124__DearRiverPhoenix_CLC-CINE04_FilmPosterEspa__olLaurel_24BSFF.png"
+  },
+  "Běi Huí Guī Xiàn": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4259.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4259), 5400×7200",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae368174d310__Bei_Hui_Gui_Xian_CLC-DIVX02_Poster_24BSFF.jpg"
+  },
+  "Stadionul Dragostei": {
+   "archivo": "fuentes/bogoshorts-2026/altas/stadionul-dragostei.jpg",
+   "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4278",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae380ba4bd9c__TheStadiumofLove_CLC-FUT04_Afiche_2424BSFF_page-0001__1_.jpg"
+  },
+  "La línea del mar": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4140.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4140), 253×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae2bdaf743a2__La_li__nea_del_mar_PAC-FIC04_Afiche_page-0001__1_.jpg"
+  },
+  "Susurros": {
+   "archivo": "fuentes/bogoshorts-2026/altas/susurros.jpg",
+   "fuente": "Afiche oficial en ficha BOGOSHORTS corto/4240",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae2b06f38b3b__susurros_PAC-EXP03_Po__ster_24BSFF__1_.jpg"
+  },
+  "El cortejo": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4147.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4147), 2550×3300",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ada2907e69da__El_Cortejo_HUMOR03_Poster_24BSFF.jpg"
+  },
+  "Belladonna": {
+   "archivo": "fuentes/bogoshorts-2026/afiches-web/4252.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4252), 315×450",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6af2422c88421__Belladonna_WT-CR007_Poster_24BSFF__1_.jpg"
+  },
+  "Bu": {
+   "archivo": "fuentes/bogoshorts-2026/altas/bu.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4331)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3edad4579d__BU_CHI-KIDS01_Poster_espa__ol_24BSFF_jpg.jpg"
+  },
+  "El mandado": {
+   "archivo": "fuentes/bogoshorts-2026/altas/el-mandado.jpg",
+   "fuente": "póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4332)",
+   "url": "https://festival.bogoshorts.com/images/peliculas/6ae3ef61e311e__ELMANDADO_CHI-KIDS02_POSTER-TIFF_24BSFF__1_.png"
+  }
+ }
+}

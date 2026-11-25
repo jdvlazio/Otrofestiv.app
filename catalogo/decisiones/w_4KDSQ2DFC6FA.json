@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_4KDSQ2DFC6FA",
+  "campo": "directores",
+  "valor": [
+   "Alice Voisin"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alice Voisin"
+  }
+ },
+ {
+  "work_id": "w_4KDSQ2DFC6FA",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KDSQ2DFC6FA",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KDSQ2DFC6FA",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KDSQ2DFC6FA",
+  "campo": "sinopsis.es",
+  "valor": "La escuela de un alojamiento temporal para migrantes en Ivry-sur-Seine es el centro del mundo para los niños que viven allí. No es un lugar cualquiera: allí hacen amigos y encuentran un hogar lejos de casa. Este documental les da espacio para mostrar sus vidas en el exilio desde su propia perspectiva.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "La escuela de un alojamiento temporal para migrantes en Ivrysur-Seine es el centro del mundo para los niños que viven allí. No es un lugar cualquiera: allí hacen amigos y encuentran un hogar lejos de casa. Este documental les da espacio para mostrar sus vidas en el exilio desde su propia perspectiva."
+  },
+  "vistas": [
+   "535ebf82223c"
+  ]
+ },
+ {
+  "work_id": "w_4KDSQ2DFC6FA",
+  "campo": "sinopsis.en",
+  "valor": "The school at the temporary housing facility for migrants in the small town of Ivry-sur-Seine is the center of the world for the children who live there. To them, the school is not just any old place; it’s where they make new friends and find a home away from home. This heartwarming documentary gives children the space to portray their lives in exile from their own perspective.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "The school at the temporary housing facility for migrants in the small town of Ivry-sur-Seine is the center of the world for the children who live there. To them, the school is not just any old place; it’s where they make new friends and find a home away from home. This heartwarming documentary gives children the space to portray their lives in exile from their own perspective."
+  }
+ },
+ {
+  "work_id": "w_4KDSQ2DFC6FA",
+  "campo": "xref.tmdb",
+  "valor": 1724739,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1724739"
+  }
+ },
+ {
+  "work_id": "w_4KDSQ2DFC6FA",
+  "campo": "xref.letterboxd",
+  "valor": "the-little-school",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-little-school"
+  }
+ },
+ {
+  "work_id": "w_4KDSQ2DFC6FA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-petite-ecole.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-petite-ecole.jpg"
+  }
+ }
+]

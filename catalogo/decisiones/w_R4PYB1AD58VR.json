@@ -1,0 +1,32 @@
+[
+ {
+  "work_id": "w_R4PYB1AD58VR",
+  "campo": "xref.letterboxd",
+  "valor": "leftover-women-2026",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "tiff-2026": "leftover-women-1"
+  }
+ },
+ {
+  "work_id": "w_R4PYB1AD58VR",
+  "campo": "xref.tmdb",
+  "valor": 1744863,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/leftover-women-1/"
+ },
+ {
+  "work_id": "w_R4PYB1AD58VR",
+  "campo": "directores",
+  "valor": [
+   "Atalanta Swire"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

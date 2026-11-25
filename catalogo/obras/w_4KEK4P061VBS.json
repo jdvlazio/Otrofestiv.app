@@ -1,0 +1,43 @@
+{
+ "id": "w_4KEK4P061VBS",
+ "titulo_original": "Querida A.",
+ "anio": 2023,
+ "paises": [
+  "ES"
+ ],
+ "directores": [
+  "Elena Molina"
+ ],
+ "aliases": [
+  {
+   "titulo": "Dear A.",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "En la era del control y la hiperconectividad, todo parece dejar rastro, pero hay vidas que flotan por debajo del umbral de visibilidad. Durante cinco años, A. vive en las calles de Barcelona, sin documentos, y su familia no consigue localizarla, hasta que un mensaje por Facebook lo cambia todo. Una reflexión visual sobre la ciudad contemporánea.",
+  "en": "We live in an age of control and hyperconnectivity; all our gestures and movements seem to leave a trace and yet there are lives that float below the threshold of visibility. For 5 years A. has been living on the streets of Barcelona, without any official papers or fixed abode. Her family is unable to locate her until a Facebook message changes everything. A visual reflection on the city of today and its black holes."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/querida-a.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1841395,
+  "letterboxd": "querida-a"
+ },
+ "versiones": [
+  {
+   "etiqueta": "21 min",
+   "duracion_min": 21
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

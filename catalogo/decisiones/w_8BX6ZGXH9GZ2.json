@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_8BX6ZGXH9GZ2",
+  "campo": "directores",
+  "valor": [
+   "Lidia Duda"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Lidia Duda"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZGXH9GZ2",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZGXH9GZ2",
+  "campo": "paises",
+  "valor": [
+   "PL",
+   "CZ"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Polonia, República Checa"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZGXH9GZ2",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZGXH9GZ2",
+  "campo": "sinopsis.es",
+  "valor": "Asia y Marek crearon su propio paraíso en el bosque, cerca de la frontera oriental de Polonia, donde sus hijos crecerían seguros y lejos de los problemas del mundo de hoy. Un día, la creciente crisis humanitaria en la frontera de la Unión Europea, junto a su casa, los pone duramente a prueba.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Asia y Marek crearon su propio paraíso en el bosque, cerca de la frontera oriental de Polonia, donde sus hijos crecerían seguros y lejos de los problemas del mundo de hoy. Un día, la creciente crisis humanitaria en la frontera de la Unión Europea, junto a su casa, los pone duramente a prueba."
+  }
+ },
+ {
+  "work_id": "w_8BX6ZGXH9GZ2",
+  "campo": "sinopsis.en",
+  "valor": "Asia and Marek created their own paradise in the forest near Poland's eastern border, where their children would grow up safely, far from the problems of today's world. One day, their lives are put to a severe test by the growing humanitarian crisis on the EU border, right next to their home.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Asia and Marek created their own paradise in the forest near Poland's eastern border, where their children would grow up safely, far from the problems of today's world. One day, their lives are put to a severe test by the growing humanitarian crisis on the EU border, right next to their home."
+  }
+ },
+ {
+  "work_id": "w_8BX6ZGXH9GZ2",
+  "campo": "xref.tmdb",
+  "valor": 1258640,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1258640"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZGXH9GZ2",
+  "campo": "xref.letterboxd",
+  "valor": "forest-2024-1",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "forest-2024-1"
+  }
+ },
+ {
+  "work_id": "w_8BX6ZGXH9GZ2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/forest.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/forest.jpg"
+  }
+ }
+]

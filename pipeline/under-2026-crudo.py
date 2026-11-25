@@ -55,7 +55,10 @@ ACA = 'Actividad académica'
 F = [
     ('11-25', '18:30', PL, 'Apertura', DOC, 2,
      [('Borrachos mientras escuchamos las gotas caer', 'Santiago Gómez Ramírez', 'Colombia', 2026, 21),
-      ('The sight is a wound', 'Parham Ghalamdar', 'Irán', 2025, 7)], {}),
+      ('The sight is a wound', 'Parham Ghalamdar', 'Irán', 2025, 7)],
+     # Reel de @cineundermedellin, 22 nov (https://www.instagram.com/p/DgDZtCwP9sY/): portada «con presencia
+     # del realizador»; pie «un encuentro y diálogo alrededor de la película». El PDF no lo dice ni lo niega.
+     dict(has_qa=True)),
     ('11-25', '20:00', PL, 'Las muertes más bellas del mundo', DOC, 2,
      [('Las muertes más bellas del mundo', 'Quique Avilés, Ellie Walton', 'Estados Unidos', 2024, 71)], {}),
     ('11-25', '18:30', BB, 'Bisou ACAB + Memoria colectiva + 8 metros: La palabra subterránea', None, 2,
@@ -83,7 +86,7 @@ F = [
       ('Objectionable Fruit', 'Hogan Seidel, Gabby Follett', 'Estados Unidos', 2026, 15),
       ('Ser, no ser, ser muchas', 'Silbando bembas', 'Argentina', 2025, 13),
       ('Perros', 'Ezequiel Rossi, Facundo Salomón', 'Argentina', 2026, 10)],
-     dict(descripcion='Conversatorio con el Club de lectura y escritura de ciencia ficción anarco feminista.')),
+     dict(has_qa=True, descripcion='Conversatorio con el Club de lectura y escritura de ciencia ficción anarco feminista.')),
     ('11-27', '21:00', PL, 'Fiesta Under · El Vikingo Selektor', FEM, 6, [],
      # hasta la 1:30 a. m. (dato del festival que pasó Juan, 20 nov): 270 min
      dict(tipo='evento', event_kind='fiesta', acceso='Con boleta: aporte $10.000', duracion_min=270,
@@ -149,6 +152,14 @@ F = [
 ]
 
 
+# Título y sinopsis en inglés impresos en el catálogo oficial de BOGOSHORTS 2026 (misma obra, tmdb 1743109; 23 nov)
+EN = {'Borrachos mientras escuchamos las gotas caer': (
+    'Drunk Hearing the Rain Drops Fall',
+    'A hybrid documentary of denunciation and reflection about León Ramírez and Isabel Velásquez, an elderly couple worn down '
+    'by the land that once gave them joy and now slowly kills them through state abuse. At nearly 90, they still run a small '
+    'store to survive. Their land, ravaged by armed groups and state policies, is now a purgatory where fruit rots on the '
+    'ground. Powerless, they close their shop and bury themselves alive in their land, embodying old age, abandonment, '
+    'uprootedness and resistance.')}
 # Sinopsis traducidas por nosotros (solo había inglés): pipeline/under-2026-sinopsis.json
 _SIN = json.load(io.open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'under-2026-sinopsis.json'), encoding='utf-8'))
 
@@ -167,6 +178,8 @@ def main():
             o = {'titulo': t, 'director': d, 'pais': p, 'anio': a}
             if m:
                 o['duracion_min'] = m
+            if t in EN:
+                o['title_en'], o['sinopsis_en'] = EN[t]
             if t in _SIN['sinopsis']:
                 o['sinopsis'] = _SIN['sinopsis'][t]
                 o['_sinopsis_fuente'] = _SIN['_fuente']

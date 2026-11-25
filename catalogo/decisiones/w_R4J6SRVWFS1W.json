@@ -1,0 +1,117 @@
+[
+ {
+  "work_id": "w_R4J6SRVWFS1W",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "TMDB 1243032 (92 min, estreno 21 abr 2026); la «Nunkui» de 2022 es otro corto, «La historia de Nunkui»",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "ficmontanas-2026": 2026,
+   "qaff-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4J6SRVWFS1W",
+  "campo": "paises",
+  "valor": [
+   "EC",
+   "CL",
+   "DE"
+  ],
+  "motivo": "TMDB 1243032",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "ficmontanas-2026": "Ecuador-Chile-Alemania",
+   "qaff-2026": "Ecuador"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRVWFS1W",
+  "campo": "xref.tmdb",
+  "valor": 1243032,
+  "motivo": "TMDB",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "ficmontanas-2026": 1243032
+  }
+ },
+ {
+  "work_id": "w_R4J6SRVWFS1W",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/p61q7EcIjvKpfmd8tXDlDdXCTr8.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/qaff/nunkui.jpg",
+   "https://image.tmdb.org/t/p/w500/p61q7EcIjvKpfmd8tXDlDdXCTr8.jpg"
+  ],
+  "antes": {
+   "ficmontanas-2026": "https://image.tmdb.org/t/p/w500/p61q7EcIjvKpfmd8tXDlDdXCTr8.jpg",
+   "qaff-2026": "/assets/qaff/nunkui.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRVWFS1W",
+  "campo": "sinopsis.es",
+  "valor": "Nunkui, una joven shuar, descubre su conexión con el espíritu femenino del huerto mientras su comunidad amazónica enfrenta el avance de la minería y los desalojos.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficmontanas-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "39e20fd590e9",
+   "a9cccb4da8bc"
+  ],
+  "antes": {
+   "ficmontanas-2026": "Nunkui, una joven shuar, descubre su conexión con el espíritu femenino del huerto mientras su comunidad amazónica enfrenta el avance de la minería y los desalojos.",
+   "qaff-2026": "Nunkui vive en una comunidad shuar y sueña con el espíritu femenino de la huerta, llamado Nunkui, igual que ella. Mientras su tía le enseña cantos y secretos del cultivo, la vasta selva amazónica en la que viven es entregada a empresas mineras transnacionales y comienzan los desalojos en la zona. Los sueños premonitorios, la figura de su abuelo, un anciano líder shuar, y un mundo exuberante de plantas, animales y espíritus marcan su viaje hacia la adolescencia y la comprensión de su lugar en el mundo. 16"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRVWFS1W",
+  "campo": "directores",
+  "valor": [
+   "Verenice Benítez"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficmontanas-2026": "Verenice Benítez",
+   "qaff-2026": "Verenice Benitez"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRVWFS1W",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "ficmontanas-2026": "Drama",
+   "qaff-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_R4J6SRVWFS1W",
+  "campo": "sinopsis.en",
+  "valor": "Nunkui, the female spirit of the garden. Nunkui, the name of a Shuar girl in a lush world of plants, animals, spirits and an extended family. Between premonitory dreams and mining conflicts in the Amazonian Cóndor mountain range, Nunkui searches for her place in the world, influenced by her grandfather Yaunchu, an old Shuar leader.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Nunkui",
+  "antes": {
+   "ficmontanas-2026": "Nunkui, a young Shuar woman, discovers her bond with the garden's female spirit as her Amazonian community faces advancing mining and evictions.",
+   "qaff-2026": "Nunkui, the female spirit of the garden. Nunkui, the name of a Shuar girl in a lush world of plants, animals, spirits and an extended family. Between premonitory dreams and mining conflicts in the Amazonian Cóndor mountain range, Nunkui searches for her place in the world, influenced by her grandfather Yaunchu, an old Shuar leader."
+  }
+ }
+]

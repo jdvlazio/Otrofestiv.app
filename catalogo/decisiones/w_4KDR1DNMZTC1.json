@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KDR1DNMZTC1",
+  "campo": "directores",
+  "valor": [
+   "Mar Triana García"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mar Triana García"
+  }
+ },
+ {
+  "work_id": "w_4KDR1DNMZTC1",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KDR1DNMZTC1",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KDR1DNMZTC1",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KDR1DNMZTC1",
+  "campo": "sinopsis.es",
+  "valor": "El azul y el naranja se miran de frente en la rueda cromática, son colores COMPLEMENTARIOS. Al tocarse, se anulan. Desarrollado en un espacio abstracto, ambiguo y enrarecido, el extrañamiento de alguien se aproxima al síndrome de abstinencia. El amor es una droga dura. El amor y el recuerdo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "El azul y el naranja se miran de frente en la rueda cromática, son colores COMPLEMENTARIOS. Al tocarse, se anulan. Desarrollado en un espacio abstracto, ambiguo y enrarecido, el extrañamiento de alguien se aproxima al síndrome de abstinencia. El amor es una droga dura. El amor y el recuerdo."
+  }
+ },
+ {
+  "work_id": "w_4KDR1DNMZTC1",
+  "campo": "sinopsis.en",
+  "valor": "Blue and orange face one another on the color wheel; they are COMPLEMENTARY colors. When they touch, they cancel each other out. Set within an abstract, ambiguous, and rarefied space, one person’s estrangement begins to resemble withdrawal. Love is a hard drug. Love, and memory.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Blue and orange face one another on the color wheel; they are COMPLEMENTARY colors. When they touch, they cancel each other out. Set within an abstract, ambiguous, and rarefied space, one person’s estrangement begins to resemble withdrawal. Love is a hard drug. Love, and memory."
+  }
+ },
+ {
+  "work_id": "w_4KDR1DNMZTC1",
+  "campo": "xref.tmdb",
+  "valor": 1841384,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841384"
+  }
+ },
+ {
+  "work_id": "w_4KDR1DNMZTC1",
+  "campo": "xref.letterboxd",
+  "valor": "complementarios",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "complementarios"
+  }
+ },
+ {
+  "work_id": "w_4KDR1DNMZTC1",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/complementarios.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/complementarios.jpg"
+  }
+ }
+]

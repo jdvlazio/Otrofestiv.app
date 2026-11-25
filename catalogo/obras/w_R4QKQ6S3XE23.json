@@ -8,11 +8,16 @@
  "directores": [
   "John Smith"
  ],
+ "sinopsis": {
+  "es": "Después del estreno mundial de Being John Smith en Toronto, una experiencia extraña en el hotel del cineasta lo lleva a preguntarse por la naturaleza de la realidad.",
+  "en": "After the first screening of Being John Smith in Toronto, a strange experience in the filmmaker’s hotel causes him to ponder the nature of reality."
+ },
  "afiche": {
   "archivo": "https://images.ctfassets.net/22n7d68fswlw/1yjCZmLmS128oJSHcobzUd/956ea19343a80bf7c624b3ab85b40da6/Two-Pids_Still_HERO.jpg",
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 1663244,
   "letterboxd": "two-pids"
  },
  "versiones": [

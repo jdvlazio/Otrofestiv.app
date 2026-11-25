@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KH9W2JNR170",
+  "campo": "directores",
+  "valor": [
+   "Eduardo Braun Costa"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Eduardo Braun Costa"
+  }
+ },
+ {
+  "work_id": "w_4KH9W2JNR170",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KH9W2JNR170",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_4KH9W2JNR170",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KH9W2JNR170",
+  "campo": "sinopsis.es",
+  "valor": "Matías y su hermano menor Jaime están solos en un mundo de adultos. Cuando Jaime es atrapado robando, Matías debe convencer a un desconocido de hacerse pasar por su padre.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Matías y su hermano menor Jaime están solos en un mundo de adultos. Cuando Jaime es atrapado robando, Matías debe convencer a un desconocido de hacerse pasar por su padre."
+  }
+ },
+ {
+  "work_id": "w_4KH9W2JNR170",
+  "campo": "sinopsis.en",
+  "valor": "Matías and his younger brother Jaime are left to their own devices in an adult world. When Jaime is caught stealing, Matías must convince a stranger to act as their father.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Matías and his younger brother Jaime are left to their own devices in an adult world. When Jaime is caught stealing, Matías must convince a stranger to act as their father."
+  }
+ },
+ {
+  "work_id": "w_4KH9W2JNR170",
+  "campo": "xref.tmdb",
+  "valor": 1611789,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1611789"
+  }
+ },
+ {
+  "work_id": "w_4KH9W2JNR170",
+  "campo": "xref.letterboxd",
+  "valor": "the-liars-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-liars-2026"
+  }
+ },
+ {
+  "work_id": "w_4KH9W2JNR170",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/los-mentirosos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/los-mentirosos.jpg"
+  }
+ }
+]

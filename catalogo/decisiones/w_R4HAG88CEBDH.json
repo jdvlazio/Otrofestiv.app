@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HAG88CEBDH",
+  "campo": "directores",
+  "valor": [
+   "Jorge Cadena"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 183",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=183"
+ },
+ {
+  "work_id": "w_R4HAG88CEBDH",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "catálogo oficial de FICCI 65, p. 183",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=183"
+ },
+ {
+  "work_id": "w_R4HAG88CEBDH",
+  "campo": "paises",
+  "valor": [
+   "CH",
+   "CO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 183",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=183",
+  "antes": {
+   "ficci-65": "Suiza, Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HAG88CEBDH",
+  "campo": "sinopsis.es",
+  "valor": "En el norte de Colombia, un grupo de activistas queer utiliza acciones performativas extravagantes para denunciar la desastrosa explotación del mayor complejo carbonífero del país.",
+  "motivo": "catálogo oficial de FICCI 65, p. 183",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=183"
+ },
+ {
+  "work_id": "w_R4HAG88CEBDH",
+  "campo": "sinopsis.en",
+  "valor": "In the north of Colombia, a group of queer activists use extravagant performative actions to denounce the disastrous exploitation by the country's largest coal mine.",
+  "motivo": "catálogo oficial de FICCI 65, p. 183",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=183"
+ },
+ {
+  "work_id": "w_R4HAG88CEBDH",
+  "campo": "xref.tmdb",
+  "valor": 1073292,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1073292"
+ }
+]

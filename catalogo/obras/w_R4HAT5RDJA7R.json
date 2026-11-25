@@ -1,12 +1,12 @@
 {
  "id": "w_R4HAT5RDJA7R",
  "titulo_original": "Aro berria",
- "anio": 2014,
+ "anio": 2025,
  "paises": [
   "ES"
  ],
  "directores": [
-  "Farah Khan"
+  "Irati Gorostidi Agirretxe"
  ],
  "aliases": [
   {
@@ -16,14 +16,16 @@
   }
  ],
  "sinopsis": {
-  "es": "En un gesto de rebeldía y poética, un grupo de trabajadores inicia una huelga silenciosa. Sin embargo, el impacto de esta pequeña revolución no trasciende: el colectivo no comparte los ideales de los más jóvenes.",
-  "en": "In a gesture of rebellion and poetry, a group of workers begins a silent strike. Yet the impact of this small revolution goes unnoticed: the collective does not share the ideals of the younger generation."
+  "es": "Un grupo de trabajadores inicia una huelga silenciosa que no trasciende: el colectivo no comparte los ideales de los más jóvenes. Estos deciden transformar su vida e instalarse en una colorida comuna, donde ensayan un nuevo modelo de familia. Pero en lo cotidiano emergen tensiones. Del gris de la fábrica al color rural, una búsqueda de libertad.",
+  "en": "A group of workers begins a silent strike that goes no further: the collective does not share the ideals of its youngest. They decide to transform their lives and settle in a colorful commune, where they try out a new family model. But tensions emerge in daily life. From the gray of the factory to rural color, a quest for freedom."
  },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w185/5icULxLdWwkf05rdsXqpKNgAuro.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1025388
+ },
  "versiones": [
   {
    "etiqueta": "102 min",

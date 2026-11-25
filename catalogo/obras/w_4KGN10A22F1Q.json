@@ -1,0 +1,43 @@
+{
+ "id": "w_4KGN10A22F1Q",
+ "titulo_original": "Señuelo",
+ "anio": 2025,
+ "paises": [
+  "ES"
+ ],
+ "directores": [
+  "Martha G. Ayerbe"
+ ],
+ "aliases": [
+  {
+   "titulo": "Bait",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Martín, un niño tímido y sensible, acompaña a su padre y al jefe de éste durante un día de caza. La jornada sacará a la luz las tensiones y frustraciones de estos dos hombres, poniendo a prueba la valía de Martín.",
+  "en": "On a hunting trip, young Martín accompanies his father and his father’s boss. As the day progresses, each man’s inner tensions and frustrations come to light, putting Martín’s sensitivity and quiet strength to the test."
+ },
+ "generos": [
+  "Suspenso"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/senuelo.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1651912,
+  "letterboxd": "bait-2025-2"
+ },
+ "versiones": [
+  {
+   "etiqueta": "16 min",
+   "duracion_min": 16
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

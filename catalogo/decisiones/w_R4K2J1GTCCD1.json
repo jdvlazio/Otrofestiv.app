@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4K2J1GTCCD1",
+  "campo": "directores",
+  "valor": [
+   "Mateo Montoya Correa"
+  ],
+  "motivo": "nombre completo (Jardín lo abrevia «Mateo M. Correa»)",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "girardota-2026": "Mateo Montoya Correa",
+   "jardin-2026": "Mateo M. Correa"
+  }
+ },
+ {
+  "work_id": "w_R4K2J1GTCCD1",
+  "campo": "directores",
+  "valor": [
+   "Mateo Montoya"
+  ],
+  "motivo": "decisión de Juan (Girardota «Mateo Montoya Correa», Jardín «Mateo M. Correa»; un apellido)",
+  "fecha": "2026-10-14",
+  "quien": "Claude, por encargo de Juan (14 oct 2026: «aprueba así»)",
+  "reemplaza": 0,
+  "antes": {
+   "girardota-2026": "Mateo Montoya Correa",
+   "jardin-2026": "Mateo M. Correa"
+  }
+ },
+ {
+  "work_id": "w_R4K2J1GTCCD1",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/girardota-2026/deus-ex-necro-machina.jpg",
+   "veredicto": "oficial-festival"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/girardota-2026/deus-ex-necro-machina.jpg",
+   "/assets/jardin-2026/deus-ex-necro-machina.jpg"
+  ],
+  "antes": {
+   "girardota-2026": "/assets/girardota-2026/deus-ex-necro-machina.jpg",
+   "jardin-2026": "/assets/jardin-2026/deus-ex-necro-machina.jpg"
+  }
+ }
+]

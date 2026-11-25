@@ -1,0 +1,107 @@
+[
+ {
+  "work_id": "w_4KF4HG4N9S73",
+  "campo": "directores",
+  "valor": [
+   "Axelle Vinassac",
+   "Maël Caradec"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Axelle Vinassac, Maël Caradec"
+  }
+ },
+ {
+  "work_id": "w_4KF4HG4N9S73",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KF4HG4N9S73",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KF4HG4N9S73",
+  "campo": "sinopsis.es",
+  "valor": "París, junio de 2024. En plena Marcha del Orgullo, Maël se queda esperando a alguien que ha dejado de responderle y Émilie acaba de pasar por una ruptura. Los dos se encuentran entre la multitud.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "París, junio de 2024. En plena Marcha del Orgullo, Maël se queda esperando a alguien que ha dejado de responderle y Émilie acaba de pasar por una ruptura. Los dos se encuentran entre la multitud."
+  }
+ },
+ {
+  "work_id": "w_4KF4HG4N9S73",
+  "campo": "sinopsis.en",
+  "valor": "Paris, June 2024. It’s summer, it’s Pride, but Maël is getting ghosted and Emilie just got dumped. Luckily, somewhere in the crowd, Maël meets Emilie and Emilie meets Maël.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Paris, June 2024. It’s summer, it’s Pride, but Maël is getting ghosted and Emilie just got dumped. Luckily, somewhere in the crowd, Maël meets Emilie and Emilie meets Maël."
+  }
+ },
+ {
+  "work_id": "w_4KF4HG4N9S73",
+  "campo": "xref.tmdb",
+  "valor": 1782916,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1782916"
+  }
+ },
+ {
+  "work_id": "w_4KF4HG4N9S73",
+  "campo": "xref.letterboxd",
+  "valor": "sad-pride-generation",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "sad-pride-generation"
+  }
+ },
+ {
+  "work_id": "w_4KF4HG4N9S73",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/au-dessus-du-vacarme.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/au-dessus-du-vacarme.jpg"
+  }
+ }
+]

@@ -1,0 +1,123 @@
+[
+ {
+  "work_id": "w_4KFW0P7SZC6P",
+  "campo": "directores",
+  "valor": [
+   "Roddy Dextre"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Roddy Dextre"
+  }
+ },
+ {
+  "work_id": "w_4KFW0P7SZC6P",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFW0P7SZC6P",
+  "campo": "paises",
+  "valor": [
+   "PE",
+   "CO",
+   "ES",
+   "MX"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Perú, Colombia, España, México"
+  }
+ },
+ {
+  "work_id": "w_4KFW0P7SZC6P",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KFW0P7SZC6P",
+  "campo": "sinopsis.es",
+  "valor": "En las afueras de Lima, Chito, de once años, cuida las palomas mensajeras utilizadas en el negocio de drogas de su hermano. Cuando la violencia quiebra su infancia, el duelo y un frágil gesto de humanidad abren la posibilidad de otro destino.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En las afueras de Lima, Chito, de once años, cuida las palomas mensajeras utilizadas en el negocio de drogas de su hermano. Cuando la violencia quiebra su infancia, el duelo y un frágil gesto de humanidad abren la posibilidad de otro destino."
+  }
+ },
+ {
+  "work_id": "w_4KFW0P7SZC6P",
+  "campo": "sinopsis.en",
+  "valor": "In the outskirts of Lima, 11-year-old Chito cares for messenger pigeons used in his brother’s drug trade. After violence shatters his childhood, grief and a fragile gesture of humanity open the possibility of another destiny.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the outskirts of Lima, 11-year-old Chito cares for messenger pigeons used in his brother’s drug trade. After violence shatters his childhood, grief and a fragile gesture of humanity open the possibility of another destiny."
+  }
+ },
+ {
+  "work_id": "w_4KFW0P7SZC6P",
+  "campo": "xref.tmdb",
+  "valor": 1616197,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1616197"
+  }
+ },
+ {
+  "work_id": "w_4KFW0P7SZC6P",
+  "campo": "xref.letterboxd",
+  "valor": "nobody-knows-the-world",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "nobody-knows-the-world"
+  }
+ },
+ {
+  "work_id": "w_4KFW0P7SZC6P",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/alla-en-el-cielo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/alla-en-el-cielo.jpg"
+  }
+ }
+]

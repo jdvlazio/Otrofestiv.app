@@ -1,0 +1,49 @@
+[
+ {
+  "work_id": "w_R4QPX8P3YFJZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficfusa-2026/matinino.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficfusa-2026/matinino.jpg",
+   "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/6970/large_Matinino-Clean-16x9-01.jpg"
+  ],
+  "antes": {
+   "ficfusa-2026": "/assets/ficfusa-2026/matinino.jpg",
+   "tribeca-2026": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/6970/large_Matinino-Clean-16x9-01.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4QPX8P3YFJZ",
+  "campo": "paises",
+  "valor": [
+   "PR",
+   "DO"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1676525)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficfusa-2026": "Puerto Rico, República Dominicana",
+   "tribeca-2026": "Puerto Rico, Dominican Republic"
+  }
+ },
+ {
+  "work_id": "w_R4QPX8P3YFJZ",
+  "campo": "sinopsis.en",
+  "valor": "A multigenerational Puerto Rican family uses filmmaking as therapy, performing and reenacting stories of abuse and trauma. Personal testimonies take the form of fantastical sequences where the women become warriors.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Matininó",
+  "antes": {
+   "ficfusa-2026": "A multi-generational family of outspoken Puerto Rican women takes center stage as they conceive and perform fantastical film vignettes as a way to navigate painful pasts in this visually-arresting, kaleidoscopic documentary.",
+   "tribeca-2026": "A multigenerational Puerto Rican family uses filmmaking as therapy, performing and reenacting stories of abuse and trauma. Personal testimonies take the form of fantastical sequences where the women become warriors."
+  }
+ }
+]

@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HEVT9HBV05",
+  "campo": "directores",
+  "valor": [
+   "Víctor Aytor Iturralde Rúa"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 261",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=261"
+ },
+ {
+  "work_id": "w_R4HEVT9HBV05",
+  "campo": "anio",
+  "valor": 1958,
+  "motivo": "catálogo oficial de FICCI 65, p. 261",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=261"
+ },
+ {
+  "work_id": "w_R4HEVT9HBV05",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 261",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=261",
+  "antes": {
+   "ficci-65": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_R4HEVT9HBV05",
+  "campo": "sinopsis.es",
+  "valor": "Dibujos directos sobre el celuloide y efectos sonoros que acompasan una sucesión de imágenes fijas cuentan una historia libre, rigurosa y anárquica sobre el petróleo y la industrialización. Un corto experimental irreverente, lúdico y artesanal.",
+  "motivo": "catálogo oficial de FICCI 65, p. 261",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=261"
+ },
+ {
+  "work_id": "w_R4HEVT9HBV05",
+  "campo": "sinopsis.en",
+  "valor": "Direct drawings on celluloid and sound effects that punctuate a sequence of still images tell a free, rigorous and anarchic story about oil and industrialization. An irreverent, playful and artisanal experimental short.",
+  "motivo": "catálogo oficial de FICCI 65, p. 261",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=261"
+ },
+ {
+  "work_id": "w_R4HEVT9HBV05",
+  "campo": "xref.tmdb",
+  "valor": 477755,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/477755"
+ }
+]

@@ -1,0 +1,40 @@
+{
+ "id": "w_4KHF4CV8JNQ8",
+ "titulo_original": "Ici Azor",
+ "anio": 2026,
+ "paises": [
+  "FR"
+ ],
+ "directores": [
+  "Aliona Zagurovska"
+ ],
+ "aliases": [
+  {
+   "titulo": "Azor Here",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Azor es un perro abandonado por una familia ucraniana que huye de la guerra. El tiempo pasa y los drones sobrevuelan el lugar. Solo en el apartamento, Azor sueña.",
+  "en": "Azor is a dog abandoned by a Ukrainian family fleeing the war. Time passes and drones hover overhead. Alone in the apartment, Azor dreams."
+ },
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/ici-azor.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1561305,
+  "letterboxd": "ici-azor"
+ },
+ "versiones": [
+  {
+   "etiqueta": "24 min",
+   "duracion_min": 24
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

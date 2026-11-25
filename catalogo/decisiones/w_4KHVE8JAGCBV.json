@@ -1,0 +1,95 @@
+[
+ {
+  "work_id": "w_4KHVE8JAGCBV",
+  "campo": "directores",
+  "valor": [
+   "Marta Hincapié Uribe"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Marta Hincapié Uribe"
+  }
+ },
+ {
+  "work_id": "w_4KHVE8JAGCBV",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHVE8JAGCBV",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KHVE8JAGCBV",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KHVE8JAGCBV",
+  "campo": "sinopsis.es",
+  "valor": "Con imágenes que un director descartó de su película y la ayuda de una lupa digital, una cineasta las transforma y revela los secretos que guardan. Bajo la superficie visible, una imagen liberada.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Con imágenes que un director descartó de su película y la ayuda de una lupa digital, una cineasta las transforma y revela los secretos que guardan. Bajo la superficie visible, una imagen liberada."
+  }
+ },
+ {
+  "work_id": "w_4KHVE8JAGCBV",
+  "campo": "sinopsis.en",
+  "valor": "Using images that a director discarded from his film and with the help of a digital magnifying glass, a filmmaker recasts them and reveals the untold secrets they hold. Beneath the visible surface, an image is liberated.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Using images that a director discarded from his film and with the help of a digital magnifying glass, a filmmaker recasts them and reveals the untold secrets they hold. Beneath the visible surface, an image is liberated."
+  }
+ },
+ {
+  "work_id": "w_4KHVE8JAGCBV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/susurros.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/susurros.jpg"
+  }
+ }
+]

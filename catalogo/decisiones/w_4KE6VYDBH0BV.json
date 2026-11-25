@@ -1,0 +1,117 @@
+[
+ {
+  "work_id": "w_4KE6VYDBH0BV",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "142d9c4bf545"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Joychair",
+  "valor": "En un futurista sistema de salud controlado por la inteligencia artificial, a Theodora, una anciana solitaria, le diagnostican depresión y le recetan un tratamiento que incluye contacto físico. Su tierno vínculo con un «abrazador profesional» pronto revela la escalofriante visión de la industria tecnológica de sustituir la conexión humana.",
+  "original": "En un futurista sistema de salud controlado por la inteligencia artificial, a Theodora, una anciana solitaria, le diagnostican depresión y le recetan un plan de tratamiento en varias fases que incluye el contacto físico. Lo que comienza como un tierno vínculo con su «abrazador profesional» pronto pone de manifiesto la escalofriante visión de la industria tecnológica de sustituir la conexión humana.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "1de811ce681d"
+  }
+ },
+ {
+  "work_id": "w_4KE6VYDBH0BV",
+  "campo": "directores",
+  "valor": [
+   "Vanessa Sandre"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Vanessa Sandre"
+  }
+ },
+ {
+  "work_id": "w_4KE6VYDBH0BV",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KE6VYDBH0BV",
+  "campo": "paises",
+  "valor": [
+   "CA"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Canadá"
+  }
+ },
+ {
+  "work_id": "w_4KE6VYDBH0BV",
+  "campo": "sinopsis.en",
+  "valor": "In an AI-controlled healthcare future, Theodora, a lonely elderly woman, is diagnosed with depression and prescribed a multi-step treatment plan that includes human touch. What begins as a tender bond with her professional cuddlist soon exposes technology’s chilling vision of replacing human connection.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In an AI-controlled healthcare future, Theodora, a lonely elderly woman, is diagnosed with depression and prescribed a multi-step treatment plan that includes human touch. What begins as a tender bond with her professional cuddlist soon exposes technology’s chilling vision of replacing human connection."
+  }
+ },
+ {
+  "work_id": "w_4KE6VYDBH0BV",
+  "campo": "xref.tmdb",
+  "valor": 1841387,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841387"
+  }
+ },
+ {
+  "work_id": "w_4KE6VYDBH0BV",
+  "campo": "xref.letterboxd",
+  "valor": "joychair",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "joychair"
+  }
+ },
+ {
+  "work_id": "w_4KE6VYDBH0BV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/joychair.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/joychair.jpg"
+  }
+ }
+]

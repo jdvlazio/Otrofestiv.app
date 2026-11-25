@@ -1,0 +1,116 @@
+[
+ {
+  "work_id": "w_4KF85Q7RVCNR",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "95a6574990f9"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "In Articulo Mortis",
+  "valor": "Desde que se sometió a una mastectomía, Alice ha perdido el apetito. Finge que está bien, pero en el fondo se siente como en su lecho de muerte. Va a probar todo lo que pueda, incluida una inyección de ADN con un kit de uso doméstico que encontró en Internet. Si todo sale bien, sus pechos deberían volver a crecer por sí solos...",
+  "original": "Desde que se sometió a una mastectomía, Alice ha perdido el apetito. Finge que está bien, pero, en el fondo, se siente como si estuviera en su lecho de muerte. Lo tiene claro: va a probar todo lo que pueda, incluida una inyección de ADN con un kit de uso doméstico que ha encontrado en Internet. Si todo sale bien, sus pechos deberían volver a crecer por sí solos...",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "ddfec3cf6f6d"
+  }
+ },
+ {
+  "work_id": "w_4KF85Q7RVCNR",
+  "campo": "directores",
+  "valor": [
+   "Karine Winczura"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Karine Winczura"
+  }
+ },
+ {
+  "work_id": "w_4KF85Q7RVCNR",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KF85Q7RVCNR",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KF85Q7RVCNR",
+  "campo": "sinopsis.en",
+  "valor": "Since her mastectomy, Alice has lost her appetite. She pretends to be fine, but deep down, she feels like she’s on her deathbed. She’s made up her mind: she’s going to try everything she can, including a DNA injection using a do-it-yourself kit she found online. If all goes well, her breasts should grow back on their own...",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Since her mastectomy, Alice has lost her appetite. She pretends to be fine, but deep down, she feels like she’s on her deathbed. She’s made up her mind: she’s going to try everything she can, including a DNA injection using a do-it-yourself kit she found online. If all goes well, her breasts should grow back on their own..."
+  }
+ },
+ {
+  "work_id": "w_4KF85Q7RVCNR",
+  "campo": "xref.tmdb",
+  "valor": 1794479,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1794479"
+  }
+ },
+ {
+  "work_id": "w_4KF85Q7RVCNR",
+  "campo": "xref.letterboxd",
+  "valor": "in-articulo-mortis",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "in-articulo-mortis"
+  }
+ },
+ {
+  "work_id": "w_4KF85Q7RVCNR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/in-articulo-mortis.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/in-articulo-mortis.jpg"
+  }
+ }
+]

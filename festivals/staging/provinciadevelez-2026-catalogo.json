@@ -1,0 +1,894 @@
+{
+ "_provenance": {
+  "fuente": "https://festivaldecineprovinciadevelez.com/ (landing.js: 29 obras) + IG @9_festcineprovinciadevelez (Bright Data)",
+  "capturado": "2026-11-25",
+  "metodo": "arreglo de landing.js + OCR del sistema (pipeline/ocr.py) de 29+29 láminas + a ojo"
+ },
+ "obras": [
+  {
+   "titulo": "Anima Sola",
+   "director": "Freddy Sanchez",
+   "pais": "Francia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Cortometraje",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/anima-sola.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/13.jpg",
+   "_corrige": "lámina: «LA BRIQUE FILMS PRÉSENTE · UN FILM DE FREDDY SANCHEZ»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "afiche": "assets/provinciadevelez-2026/anima-sola.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/13 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Entre amigos",
+   "director": "Edward Llanos, Simón Muñoz",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Cortometraje",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/entre-amigos.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/02.jpg",
+   "_corrige": "lámina: «DIRECCIÓN EDWARD LLANOS Y SIMÓN MUÑOZ · SIERRA NEVADA · PALOMINO - COLOMBIA»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "sinopsis": "Buscando escapar de la rutina de la ciudad, un grupo de jóvenes visita a una amiga que vive sola en las montañas. Rodeados por la inmensidad del paisaje y el silencio del campo, escuchan los relatos que ella conoce sobre la región.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
+   "afiche": "assets/provinciadevelez-2026/entre-amigos.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/02 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "Seeking to escape the routine of the city, a group of young people visit a friend who lives alone in the mountains. Surrounded by the vastness of the landscape and the silence of the countryside, they listen to the stories she knows about the region."
+  },
+  {
+   "titulo": "Escisión de la cigarra",
+   "director": "Absalón Rincón Muñoz",
+   "pais": "Colombia",
+   "anio": 2025,
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Cortometraje",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/escision-cigarra.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/14.jpg",
+   "_corrige": "lámina: «GUION Y DIRECCIÓN ABSALON RINCON MUÑOZ» (OCR «MUÑO2»), «2025»; web: «PaloSeco · 2025»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "18:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+   },
+   "sinopsis": "Estiven, un joven aprendiz de carpintero, trabaja con dedicación en un taller donde conviven el eco de las herramientas y las advertencias de su maestro Orlando. Una noche, entre el polvo de la madera y ruidos inexplicables, un accidente lo sumerge en un tránsito incierto entre la vida y la muerte.",
+   "_sinopsis_de": "https://www.instagram.com/p/DgFiVrTEbh0/",
+   "afiche": "assets/provinciadevelez-2026/escision-de-la-cigarra.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/14 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Limones",
+   "director": "Sergio Fernández, Nicolás Duque",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Cortometraje",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/limones.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/12.jpg",
+   "_corrige": "lámina: «ESCUELA KINÉ PRESENTA · Un cortometraje de Sergio Fernández y Nicolás Duque»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "sinopsis": "Cristian y Andrés, dos niños wayuu de nueve años, recorren las calles de Palomino vendiendo limones. Mientras trabajan, escuchan y comentan en segundo plano la desaparición de Bartolo, ocurrida durante los recientes enfrentamientos armados en la Sierra Nevada. Al caer la noche, regresan a casa y entregan el producido a su madre.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
+   "afiche": "assets/provinciadevelez-2026/limones.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/12 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "Cristian and Andrés, two nine-year-old Wayuu boys, roam the streets of Palomino selling limes. As they work, they hear and comment on, in the background, the disappearance of Bartolo, which occurred during the recent armed clashes in the Sierra Nevada. At nightfall, they return home and hand over their earnings to their mother."
+  },
+  {
+   "titulo": "Paisaje / Niebla",
+   "director": "Fabián Chávez",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Cortometraje",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/paisaje-niebla.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/09.jpg",
+   "_corrige": "lámina: «Un documental de Fabián Chávez · INPROFILMS · con el apoyo de IDARTES y LA SINFÓNICA DE BOGOTÁ»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "sinopsis": "Este cortometraje, grabado en el Páramo de Sumapaz, es un acercamiento poético a la vida de este territorio, que observa su inmensidad pero también su lado más oscuro: la violencia que sufrió hace años.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
+   "afiche": "assets/provinciadevelez-2026/paisaje-niebla.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/09 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "This short film, shot in the Sumapaz páramo, is a poetic approach to life in this territory, looking at its vastness but also its darkest side: the violence it suffered years ago."
+  },
+  {
+   "titulo": "Pez azul",
+   "director": "J. Joel Gómez G.",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Cortometraje",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/pez-azul.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/08.jpg",
+   "_corrige": "lámina: «UN CORTOMETRAJE DE JOEL GÓMEZ»; laureles de 2019",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-02",
+    "hora": "18:00",
+    "sede": "Parque Central Cite",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul (4 láminas, 25 nov): «CONVOCATORIA SARAVITA DOCUMENTAL · PARQUE CENTRAL CITE · MIÉRCOLES 2 DE DICIEMBRE · DESDE LAS 6:00 P.M.» pintado en cada una"
+   },
+   "sinopsis": "Una niña emprende un viaje bastante conmovedor para sanar y para dejar ir. Su madre siempre la acompañará.",
+   "_sinopsis_de": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
+   "afiche": "assets/provinciadevelez-2026/pez-azul.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/08 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "A girl sets out on a quite moving journey to heal and to let go. Her mother will always be with her."
+  },
+  {
+   "titulo": "Salvemos el agua",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Cortometraje",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/salvemos-el-agua.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/07.jpg",
+   "_corrige": "lámina: «Cortometraje realizado en el marco de un proceso de cine comunitario en Palomino, La Guajira» · Escuela Kiné · Fundación Nukuba; sin director nombrado",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-03",
+    "hora": "18:00",
+    "sede": "Casa Taller Palo de Mango",
+    "_evidencia": "https://www.instagram.com/p/Df4hzKXkYiP/: «JUEVES 3 DE DICIEMBRE · 6 P.M. · EN CASA TALLER PALO DE MANGO · Pasos arriba del Moncada, Barrio Marsella»; la web: «Jueves 3 de diciembre · 6:00 p. m.»"
+   },
+   "sinopsis": "El cortometraje propone una aventura en la que la sabiduría ancestral y la creatividad infantil se encuentran para reflexionar sobre el cuidado de los ríos, la biodiversidad y la vida.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df4hzKXkYiP/",
+   "afiche": "assets/provinciadevelez-2026/salvemos-el-agua.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/07 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "The short film offers an adventure in which ancestral wisdom and children's creativity come together to reflect on caring for rivers, biodiversity and life."
+  },
+  {
+   "titulo": "Cicatrices",
+   "director": "Jhon Amado",
+   "pais": "Colombia",
+   "anio": 2026,
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Cortometraje",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/cicatrices.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/02.jpg",
+   "_corrige": "lámina: «DIRIGIDA POR JHON AMADO … FILIPINAS - ARAUCA 2026»; web: «Filipinas, Arauca»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "afiche": "assets/provinciadevelez-2026/cicatrices.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/02 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "El pescador",
+   "director": "Juan Cruz",
+   "pais": "Puerto Rico, Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Cortometraje",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/el-pescador.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/03.jpg",
+   "_corrige": "lámina: «DIRIGIDO POR JUAN CRUZ PARA TALLER TOCA PLENA & CASA DEL SOL» (OCR «CAUZ»)",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "sinopsis": "Un retrato íntimo del Caribe a través de la vida de quienes se dedican al mar. De la voz de un pescador puertorriqueño al vínculo entre un padre y su hijo en Colombia, la película muestra cómo la pesca une y distingue, y retrata un legado hecho de tradición, lucha y esperanza. Filmada en La Parguera (Lajas, Puerto Rico) y en Palomino (La Guajira, Colombia).",
+   "_sinopsis_de": "https://www.themoviedb.org/movie/1558138 (traducida del inglés)",
+   "afiche": "assets/provinciadevelez-2026/el-pescador.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/03 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Creation of a Unicorn",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Experimental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/creation-unicorn.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/09.jpg",
+   "_corrige": "lámina: solo el título; sin créditos en ninguna fuente",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "afiche": "assets/provinciadevelez-2026/creation-of-a-unicorn.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/09 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Titua y oro",
+   "director": "Daniela Herrera",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Documental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/titua-y-oro.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/14.jpg",
+   "_corrige": "lámina: «DIRECTED BY DANIELA HERRERA · FESTIVAL CINE PALOMINO»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "franja": "sin función en los días oficiales (1–6 dic)",
+   "sinopsis": "El levantamiento de un templo sagrado femenino y el regreso de un ritual antiguo musical.",
+   "_sinopsis_de": "https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 14)",
+   "afiche": "assets/provinciadevelez-2026/titua-y-oro.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/14 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "La Belleza",
+   "director": "Nelson Silva",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Documental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/la-belleza.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/12.jpg",
+   "_corrige": "lámina: «UN DOCUMENTAL DE NELSON SILVA»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-02",
+    "hora": "18:00",
+    "sede": "Parque Central Cite",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul (4 láminas, 25 nov): «CONVOCATORIA SARAVITA DOCUMENTAL · PARQUE CENTRAL CITE · MIÉRCOLES 2 DE DICIEMBRE · DESDE LAS 6:00 P.M.» pintado en cada una"
+   },
+   "sinopsis": "La historia del municipio de La Belleza, Santander, es contada por sus propias voces. Desde lo poco que se sabe de sus habitantes precolombinos, los Tisquizoques, hasta nuestros días, se revela la historia fundacional del municipio, pasando por los capítulos más aciagos y de cómo al día de hoy es un remanso de paz de exuberante belleza.",
+   "_sinopsis_de": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
+   "afiche": "assets/provinciadevelez-2026/la-belleza.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/12 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "The story of the municipality of La Belleza, Santander, is told by its own voices. From the little that is known of its pre-Columbian inhabitants, the Tisquizoques, to the present day, its founding history is revealed, through its darkest chapters and on to how today it is an exuberantly beautiful haven of peace."
+  },
+  {
+   "titulo": "Un diálogo para sanar la Tierra",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Documental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/dialogo-tierra.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/08.jpg",
+   "_corrige": "lámina: «(Incluye el visionado del documental Tanuzanamu: Principio del Equilibrio - Dir. Ati Gündiwa Villafaña Mejia)» · Palomino, La Guajira; el director de la obra no se nombra",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "18:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+   },
+   "sinopsis": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Gündiwa Villafaña Mejía.",
+   "_sinopsis_de": "https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 8)",
+   "afiche": "assets/provinciadevelez-2026/un-dialogo-para-sanar-la-tierra.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/08 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Gündiwa Villafaña Mejía."
+  },
+  {
+   "titulo": "Uma Uñjirinaka · Alto Milluni",
+   "director": "Left Hand Rotation",
+   "pais": "Bolivia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Documental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/uma-unjirinaka.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/07.jpg",
+   "_corrige": "lámina: «Una serie documental de Left Hand Rotation · UMA UÑJIRINAKA · Alto Milluni (CUIDADORXS DEL AGUA)»; la web escribe «Unjirinaka» (sin ñ)",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "18:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+   },
+   "sinopsis": "Muestra el testimonio y lucha de las comunidades indígenas afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Alto Milluni, cuya agua naciente es robada a diario para ser llevada a la mega-urbe El Alto, las mujeres proponen un proyecto de turismo comunitario local para la supervivencia.",
+   "_sinopsis_de": "https://www.instagram.com/p/DgFiVrTEbh0/",
+   "afiche": "assets/provinciadevelez-2026/uma-unjirinaka-alto-milluni.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/07 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "It shows the testimony and struggle of the Indigenous communities affected by water pollution in the Katari - Lake Titicaca basin in Bolivia. In Alto Milluni, whose spring water is stolen daily to be taken to the megacity of El Alto, the women propose a local community tourism project in order to survive."
+  },
+  {
+   "titulo": "Nueve jueves en Riachuelo",
+   "director": "Nelson Silva",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Documental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/nueve-jueves.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/06.jpg",
+   "_corrige": "lámina: «DIRIGIDO POR NELSON SILVA · Producción Edson Velandia»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-02",
+    "hora": "18:00",
+    "sede": "Parque Central Cite",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul (4 láminas, 25 nov): «CONVOCATORIA SARAVITA DOCUMENTAL · PARQUE CENTRAL CITE · MIÉRCOLES 2 DE DICIEMBRE · DESDE LAS 6:00 P.M.» pintado en cada una"
+   },
+   "sinopsis": "Edson Velandia tiene nueve jueves y los recreos de un colegio para formar una orquesta. En Riachuelo, Santander, el primer reto es descubrir qué quiere tocar cada estudiante.",
+   "_sinopsis_de": "festivals/cineparalapaz-2026.json (Cine para la Paz 2026)",
+   "afiche": "assets/provinciadevelez-2026/nueve-jueves-en-riachuelo.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/06 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play."
+  },
+  {
+   "titulo": "Ecos del cañaveral",
+   "director": "Juan Sebastián Parra",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Documental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/ecos-canaveral.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/05.jpg",
+   "_corrige": "web: «Juan Sebastián Parra»; lámina: «DIRECCIÓN JUAN SEBASTIÁN PARRA»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "franja": "sin función en los días oficiales (1–6 dic)",
+   "sinopsis": "En el corazón del trapiche, donde el sonido de la caña molida acompaña las jornadas de trabajo, Ecos del cañaveral retrata la vida de cinco campesinos hacedores de panela que han dedicado su existencia a un oficio ancestral.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df-DlZyERf2/",
+   "afiche": "assets/provinciadevelez-2026/ecos-del-canaveral.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/05 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Gualí",
+   "pais": "Colombia",
+   "anio": 2025,
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Documental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/guali.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/13.jpg",
+   "_corrige": "lámina: «Una producción de Los Pinos Films · 2025»; sin director nombrado",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "franja": "sin función en los días oficiales (1–6 dic)",
+   "sinopsis": "En el corazón de la sabana de Bogotá, el humedal Gualí es un santuario de biodiversidad. El documental se sumerge en su riqueza natural a través de una narrativa visual poética.",
+   "_sinopsis_de": "https://www.facebook.com/festivaldecinebarbosa (20 nov; el final del pie viene cortado)",
+   "afiche": "assets/provinciadevelez-2026/guali.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/13 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "In the heart of the Bogotá savanna, the Gualí wetland is a sanctuary of biodiversity. The documentary immerses itself in its natural wealth through a poetic visual narrative."
+  },
+  {
+   "titulo": "Sinfonía incompleta de oficios del Fonce",
+   "director": "Nelson Silva",
+   "pais": "Colombia",
+   "anio": 2024,
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Documental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/oficios-fonce.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/05.jpg",
+   "_corrige": "lámina: «DIRECTOR Y PRODUCTOR EJECUTIVO NELSON SILVA»; web: «Nelson Silva · 2024»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-02",
+    "hora": "18:00",
+    "sede": "Parque Central Cite",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul (4 láminas, 25 nov): «CONVOCATORIA SARAVITA DOCUMENTAL · PARQUE CENTRAL CITE · MIÉRCOLES 2 DE DICIEMBRE · DESDE LAS 6:00 P.M.» pintado en cada una"
+   },
+   "sinopsis": "En un viaje de imágenes acompasadas al ritmo de la música, nos adentramos en sitios emblemáticos pero inaccesibles de San Gil. La cámara revela el interior de las fábricas y los oficios que allí aún perviven: manos, engranajes, máquinas, instrumentos musicales y su armonía, en una sinfonía audiovisual que permite conocer estos lugares.",
+   "_sinopsis_de": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
+   "afiche": "assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/05 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places."
+  },
+  {
+   "titulo": "De la tradición a la prohibición",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Documental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/tradicion-prohibicion.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/04.jpg",
+   "_corrige": "lámina: «Producción: Charles Films / Dirección General: Lente Andino Films» — productora, no persona",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-02",
+    "hora": "19:00",
+    "sede": "Grupo Central AA",
+    "_evidencia": "https://www.instagram.com/p/Df2AcYNEbXC/: «MUESTRA ESPECIAL BARBOSA · MIÉRCOLES 2 DE DICIEMBRE · 7:00 P.M. · Carrera 7# 6-46 Sotano · Grupo Central AA»"
+   },
+   "sinopsis": "Es un documental que explora la evolución de las plantas sagradas de poder desde los rituales ancestrales hasta su estigmatización y prohibición en la sociedad contemporánea. La película se sitúa en un contexto latinoamericano para cuestionar los discursos oficiales que han criminalizado estos saberes, revelando procesos de despojo cultural y ruptura de la memoria colectiva.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df2AcYNEbXC/",
+   "afiche": "assets/provinciadevelez-2026/de-la-tradicion-a-la-prohibicion.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/04 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "A documentary exploring the evolution of sacred plants of power, from ancestral rituals to their stigmatization and prohibition. In a Latin American context, it questions the official narratives that have criminalized this knowledge and reveals processes of cultural dispossession and the rupture of collective memory."
+  },
+  {
+   "titulo": "El dolor del vientre",
+   "director": "María Candelaria Aldana",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Documental",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/dolor-vientre.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/03.jpg",
+   "_corrige": "lámina: «DIRIGIDA POR: MARÍA CANDELARIA ALDANA, PRODUCIDA POR: VALENTINA SANTOS»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "18:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+   },
+   "sinopsis": "Entre amores y tambores, una madre recuerda la partida de un hijo y las vivencias nostálgicas de su tambor.",
+   "_sinopsis_de": "https://www.instagram.com/p/DgFiVrTEbh0/",
+   "afiche": "assets/provinciadevelez-2026/el-dolor-del-vientre.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/03 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "Amid loves and drums, a mother remembers a son's departure and the nostalgic moments lived with his drum."
+  },
+  {
+   "titulo": "Llantos del monte",
+   "pais": "Argentina",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Videoclip",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/llantos-monte.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/11.jpg",
+   "_corrige": "lámina: «Oberá - Misiones - Argentina · Cine Joven Comunitario»; sin director nombrado",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "18:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+   },
+   "sinopsis": "Un joven camina por el monte con amigos, pero al quedarse solo, la soledad y los ruidos extraños lo llenan de terror. Luego de perder la conciencia, despierta en una habitación misteriosa donde un ser espiritual le revela realidades sobre el mundo y el desequilibrio que gobierna el universo.",
+   "_sinopsis_de": "https://www.youtube.com/watch?v=gy-JVJUkNUY (canal Cine Tiza, 19 oct 2026)",
+   "afiche": "assets/provinciadevelez-2026/llantos-del-monte.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/11 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "A young man walks through the woods with friends, but when he is left alone, solitude and strange noises fill him with terror. After losing consciousness, he wakes in a mysterious room where a spiritual being reveals to him realities about the world and the imbalance that governs the universe."
+  },
+  {
+   "titulo": "Coming from Hell",
+   "director": "Klonazepan & Mafa",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Videoclip",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/coming-from-hell.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/10.jpg",
+   "_corrige": "lámina: «KLONAZEPAN & MAFA» — artistas, no dirección",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "franja": "sin función en los días oficiales (1–6 dic)",
+   "afiche": "assets/provinciadevelez-2026/coming-from-hell.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/10 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "El pescador (videoclip)",
+   "director": "Juan Cruz",
+   "pais": "Puerto Rico, Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Videoclip",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/el-pescador-clip.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfhmCGsEZ84/03.jpg",
+   "_corrige": "pie de https://www.instagram.com/p/DfzhWP2x_sy/: «Dirección Juan Cruz, Puerto Rico»; lámina: «(PUERTO RICO FT COL) · TALLER TOCA PLENA x CASA DEL SOL»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfhmCGsEZ84/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-01",
+    "hora": "18:00",
+    "sede": "Casa Escuela Formación Musical Leo Olarte",
+    "_evidencia": "https://www.instagram.com/p/DfxyKI-S9LA/ + https://www.instagram.com/p/DfzhWP2x_sy/: «1 DE DICIEMBRE · CASA ESCUELA FORMACIÓN MUSICAL LEO OLARTE · AL FRENTE DE LA CANCHA DEL MARSELLA · 6:00 P.M.»; la web: «Casa de formación musical Leo el Arte, frente a la cancha del Marsella. Antes, cortos para niños.»"
+   },
+   "sinopsis": "Este videoclip relaciona la pesca del Caribe de Puerto Rico y La Guajira, y persigue los pasos de Neymar, un niño de La Guajira que aprende la pesca desde temprana edad.",
+   "_sinopsis_de": "https://www.instagram.com/p/DfzhWP2x_sy/",
+   "afiche": "assets/provinciadevelez-2026/clip-el-pescador.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfhmCGsEZ84/03 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "This music video links fishing in the Caribbean of Puerto Rico and La Guajira, following Neymar, a boy from La Guajira who learns to fish from an early age."
+  },
+  {
+   "titulo": "El empiezo",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Videoclip",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/el-empiezo.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/06.jpg",
+   "_corrige": "lámina y web: solo el título",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "franja": "sin función en los días oficiales (1–6 dic)",
+   "afiche": "assets/provinciadevelez-2026/el-empiezo.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/06 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Saint Juanito",
+   "director": "Sebastián Tapia",
+   "pais": "Perú",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Videoclip",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/saint-juanito.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfhmCGsEZ84/02.jpg",
+   "_corrige": "lámina: «(PERÚ) · CHRIS ANDREE» — el artista; dirige Sebastián Tapia (créditos del video oficial, youtube QQ1G_ps-A34); el pie del 19 nov: «Chris Andree explora…»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfhmCGsEZ84/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "sinopsis": "Desde lo más profundo de la selva peruana, donde la extraordinaria belleza natural convive con duras realidades, Saint Juanito nos invita a emprender un viaje a través de las luces y sombras de nuestra Amazonía.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
+   "afiche": "assets/provinciadevelez-2026/saint-juanito.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfhmCGsEZ84/02 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "From the depths of the Peruvian jungle, where extraordinary natural beauty coexists with harsh realities, Saint Juanito invites us on a journey through the lights and shadows of our Amazon."
+  },
+  {
+   "titulo": "El cuarto",
+   "director": "María Candelaria Aldana",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Filminuto",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/el-cuarto.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/04.jpg",
+   "_corrige": "lámina: «UNA PELÍCULA DE: MARÍA CANDELARIA ALDANA»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "afiche": "assets/provinciadevelez-2026/el-cuarto.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/04 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "El arte de inmortalizar mortales",
+   "director": "Javier Jiménez Corzo",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Filminuto",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/inmortalizar.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/15.jpg",
+   "_corrige": "lámina: «BARICHARA EN FOTOS · Un filminuto de Javier Jiménez Corzo»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "18:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+   },
+   "sinopsis": "Don Antonio: la memoria esculpida que da la bienvenida o el último adiós.",
+   "_sinopsis_de": "https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 15)",
+   "afiche": "assets/provinciadevelez-2026/el-arte-de-inmortalizar-mortales.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/15 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "Don Antonio: the sculpted memory that bids welcome or the last farewell."
+  },
+  {
+   "titulo": "Olvidar a Miriam",
+   "director": "Tatiana Lobera",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Filminuto",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/olvidar-a-miriam.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/10.jpg",
+   "_corrige": "lámina: «LA PARCA FILMS PRESENTS A TATIANA LOBERA FILM»; web: «La Parca Films»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "sinopsis": "El minuto recorre la tristeza de la vejez y a través del tango transmite el sentimiento de una lágrima por la nostalgia.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
+   "afiche": "assets/provinciadevelez-2026/olvidar-a-miriam.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/10 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "This one-minute film travels through the sadness of old age and, through tango, conveys the feeling of a tear shed out of nostalgia."
+  },
+  {
+   "titulo": "El latir de la memoria",
+   "director": "Javier Jiménez Corzo",
+   "pais": "Colombia",
+   "tipo": "corto",
+   "seccion": "Selección oficial",
+   "categoria": "Filminuto",
+   "imagen_web": "fuentes/provinciadevelez-2026/web/sel/latir-memoria.jpg",
+   "lamina_ig": "fuentes/provinciadevelez-2026/ig/DfcqutroV1z/11.jpg",
+   "_corrige": "lámina: «BARICHARA EN FOTOS · Un filminuto de Javier Jiménez Corzo»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "ig": "https://www.instagram.com/p/DfcqutroV1z/",
+    "date": "2026-11-25"
+   },
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "19:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "sinopsis": "Después de 15 años de ausencia, el reloj de la Inmaculada vuelve a latir en Barichara.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
+   "afiche": "assets/provinciadevelez-2026/el-latir-de-la-memoria.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/11 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "After 15 years of absence, the Inmaculada clock beats again in Barichara."
+  },
+  {
+   "titulo": "La familia Bélier",
+   "director": "Éric Lartigau",
+   "tipo": "largo",
+   "_evidencia": "web «Franja infantil» + lámina «MUESTRA ESPECIAL · FRANJA INFANTIL»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-25"
+   },
+   "seccion": "Franja infantil",
+   "funcion": {
+    "fecha": "2026-12-01",
+    "hora": "18:00",
+    "sede": "Casa Escuela Formación Musical Leo Olarte",
+    "_evidencia": "https://www.instagram.com/p/DfxyKI-S9LA/ + https://www.instagram.com/p/DfzhWP2x_sy/: «1 DE DICIEMBRE · CASA ESCUELA FORMACIÓN MUSICAL LEO OLARTE · AL FRENTE DE LA CANCHA DEL MARSELLA · 6:00 P.M.»; la web: «Casa de formación musical Leo el Arte, frente a la cancha del Marsella. Antes, cortos para niños.»"
+   },
+   "afiche": "assets/provinciadevelez-2026/la-familia-belier.jpg",
+   "_afiche_de": "cartelera de la web del festival"
+  },
+  {
+   "titulo": "El fantástico Sr. Fox",
+   "director": "Wes Anderson",
+   "tipo": "largo",
+   "_evidencia": "web «Franja infantil · Wes Anderson · stop motion» + lámina «MUESTRA ESPECIAL · FRANJA PARA NIÑOS»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-25"
+   },
+   "seccion": "Franja infantil",
+   "funcion": {
+    "fecha": "2026-12-03",
+    "hora": "18:00",
+    "sede": "Casa Taller Palo de Mango",
+    "_evidencia": "https://www.instagram.com/p/Df4hzKXkYiP/: «JUEVES 3 DE DICIEMBRE · 6 P.M. · EN CASA TALLER PALO DE MANGO · Pasos arriba del Moncada, Barrio Marsella»; la web: «Jueves 3 de diciembre · 6:00 p. m.»"
+   },
+   "afiche": "assets/provinciadevelez-2026/el-fantastico-sr-fox.jpg",
+   "_afiche_de": "cartelera de la web del festival"
+  },
+  {
+   "titulo": "My Name Is Bill W.",
+   "director": "Daniel Petrie",
+   "tipo": "largo",
+   "_evidencia": "lámina «MUESTRA ESPECIAL BARBOSA»; el afiche dice «My Name is Bill W.» (James Woods, JoBeth Williams, James Garner); el pie del 17 nov la presenta como «La caída»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-25"
+   },
+   "seccion": "Muestra especial",
+   "funcion": {
+    "fecha": "2026-12-02",
+    "hora": "19:00",
+    "sede": "Grupo Central AA",
+    "_evidencia": "https://www.instagram.com/p/Df2AcYNEbXC/: «MUESTRA ESPECIAL BARBOSA · MIÉRCOLES 2 DE DICIEMBRE · 7:00 P.M. · Carrera 7# 6-46 Sotano · Grupo Central AA»"
+   },
+   "afiche": "assets/provinciadevelez-2026/my-name-is-bill-w.jpg",
+   "_afiche_de": "cartelera de la web del festival"
+  },
+  {
+   "titulo": "La imaginada",
+   "director": "Carolina Muñoz",
+   "tipo": "corto",
+   "_evidencia": "pie Df7ZYXrEaXh: «película de 20 minutos inspirada en Barbosa, nominada a la India Catalina, que se presentó en el 2016 … presencia de la escritora y directora Carolina Muñoz»; lámina Df71yg2P6hF (y FB 19 nov): «MUESTRA ESPECIAL LA IMAGINADA 2016 – 2026 · DIRECTORA CAROLINA MUÑOZ · VIERNES 4 DE DICIEMBRE · DESDE LAS 6:00 P. M. · LA TANTE · BARBOSA»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-25"
+   },
+   "pais": "Colombia",
+   "seccion": "Muestra especial",
+   "funcion": {
+    "fecha": "2026-12-04",
+    "hora": "18:00",
+    "sede": "La Tante Boutique",
+    "_evidencia": "https://www.instagram.com/p/Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» (la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»"
+   },
+   "sinopsis": "A través de un diálogo íntimo entre el documental y la ficción, La imaginada recorre la memoria colectiva y los relatos orales de Barbosa, Santander, para revelar cómo sus habitantes han construido su identidad a lo largo del tiempo.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df7ZYXrEaXh/",
+   "afiche": "assets/provinciadevelez-2026/la-imaginada.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/Df71yg2P6hF (afiche recortado de la lámina del festival)",
+   "synopsis_en": "Through an intimate dialogue between documentary and fiction, La imaginada travels through the collective memory and oral stories of Barbosa, Santander, to reveal how its inhabitants have built their identity over time."
+  },
+  {
+   "titulo": "Uma Uñjirinaka · Puchucollo Alto",
+   "director": "Left Hand Rotation",
+   "tipo": "corto",
+   "_evidencia": "lámina Df-DlZyERf2/02: «CONVOCATORIA SARAVITA · DOCUMENTAL · Una serie documental de Left Hand Rotation · UMA UÑJIRINAKA · Puchucollo Alto (CUIDADORXS DEL AGUA) · SELECCIÓN OFICIAL 2026»; no está en las 29 de la web; el pie escribe «Puchukollo Alto»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-25"
+   },
+   "pais": "Bolivia",
+   "categoria": "Documental",
+   "seccion": "Selección oficial",
+   "franja": "sin función en los días oficiales (1–6 dic)",
+   "sinopsis": "Muestra el testimonio y lucha de las comunidades indígenas urbanas y rurales afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Puchukollo Alto, periferia de la mega-urbe El Alto, las familias de la comunidad defienden el acuífero allí situado contra la usurpación y contaminación de sus aguas.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df-DlZyERf2/",
+   "afiche": "assets/provinciadevelez-2026/uma-unjirinaka-puchucollo-alto.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/Df-DlZyERf2/02 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "It shows the testimony and struggle of the urban and rural Indigenous communities affected by water pollution in the Katari - Lake Titicaca basin in Bolivia. In Puchukollo Alto, on the outskirts of the megacity of El Alto, the families of the community defend the aquifer located there against the seizure and pollution of its waters."
+  },
+  {
+   "titulo": "Una mala chicha es un guarapo",
+   "director": "Wilson Beltrán, Wilson Valderrama",
+   "tipo": "corto",
+   "_evidencia": "lámina Df-DlZyERf2/04: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Un Film De Cine Club Barbosa & Celuloide · Realizado Por Wilson Beltran, Wilson Valderrama»",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-25"
+   },
+   "pais": "Colombia",
+   "seccion": "Muestra especial",
+   "franja": "sin función en los días oficiales (1–6 dic)",
+   "sinopsis": "A Eulalio se le presenta la tentación de vender las tierras que han pasado de generación en generación en su familia. Un poco de chicha le ayudará a tomar la mejor decisión.",
+   "_sinopsis_de": "https://www.instagram.com/p/Df-DlZyERf2/",
+   "afiche": "assets/provinciadevelez-2026/una-mala-chicha-es-un-guarapo.jpg",
+   "_afiche_de": "lámina https://www.instagram.com/p/Df-DlZyERf2/04 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "Eulalio is tempted to sell the land that has been in his family for generations. A little chicha will help him make the best decision."
+  },
+  {
+   "titulo": "Entre Ríos. Todos somos hermanos",
+   "tipo": "corto",
+   "_evidencia": "lámina Df-DlZyERf2/08: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Entre Ríos · Todos somos hermanos»; sin créditos; tipo supuesto por la portada (documental y cortometraje), sin duración",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-25"
+   },
+   "seccion": "Muestra especial",
+   "franja": "sin función en los días oficiales (1–6 dic)"
+  },
+  {
+   "titulo": "Tres lunas nuevas",
+   "director": "Rodrigo Dimaté",
+   "tipo": "largo",
+   "_evidencia": "web: «es una de las películas de la muestra central, y su director nos acompaña en el festival»; sin día ni hora",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-25"
+   },
+   "seccion": "Muestra central",
+   "franja": "sin función en los días oficiales (1–6 dic)",
+   "sinopsis": "Cuenta cómo abrir una pequeña puerta en la juventud puede traer problemas enormes: quien siembra vientos cosecha tempestades.",
+   "_sinopsis_de": "https://festivaldecineprovinciadevelez.com/"
+  },
+  {
+   "titulo": "Ayuno y cenizas",
+   "director": "Rodrigo Dimaté",
+   "tipo": "largo",
+   "_evidencia": "web: «también de Rodrigo Dimaté y estreno nacional, es la otra película de la muestra central»; sin día ni hora",
+   "_src": {
+    "url": "https://festivaldecineprovinciadevelez.com/",
+    "date": "2026-11-25"
+   },
+   "seccion": "Muestra central",
+   "franja": "sin función en los días oficiales (1–6 dic)",
+   "sinopsis": "Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy.",
+   "_sinopsis_de": "https://festivaldecineprovinciadevelez.com/"
+  }
+ ]
+}

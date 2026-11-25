@@ -1,0 +1,44 @@
+{
+ "id": "w_4KHMSE8KDS1D",
+ "titulo_original": "Nuestra sombra",
+ "anio": 2024,
+ "paises": [
+  "AR",
+  "DE"
+ ],
+ "directores": [
+  "Agustina Sánchez Gavier"
+ ],
+ "aliases": [
+  {
+   "titulo": "Our Own Shadow",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Durante un eclipse solar en Misiones, los habitantes de una comunidad experimentan cambios inquietantes en un paisaje marcado por la devastación ambiental.",
+  "en": "During a solar eclipse in Misiones, a community undergoes unsettling changes in a landscape marked by environmental devastation."
+ },
+ "generos": [
+  "Drama"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/nuestra-sombra.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1275379,
+  "letterboxd": "our-own-shadow"
+ },
+ "versiones": [
+  {
+   "etiqueta": "19 min",
+   "duracion_min": 19
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

@@ -1,0 +1,172 @@
+[
+ {
+  "work_id": "w_R4ENGEB7EKSY",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cineautopsia/lamentos-de-un-balcon.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bogoshorts-2026/lamentos-de-un-balcon.jpg",
+   "/assets/cineautopsia/lamentos-de-un-balcon.jpg",
+   "/assets/cinemancia/lamentos-de-un-balcon.jpg",
+   "/assets/cinetoro-2026/lamentos-de-un-balcon.jpg"
+  ],
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/lamentos-de-un-balcon.jpg",
+   "cineautopsia-2026": "/assets/cineautopsia/lamentos-de-un-balcon.jpg",
+   "cinemancia-2026": "/assets/cinemancia/lamentos-de-un-balcon.jpg",
+   "cinetoro-2026": "/assets/cinetoro-2026/lamentos-de-un-balcon.jpg"
+  },
+  "a_mano": true
+ },
+ {
+  "work_id": "w_R4ENGEB7EKSY",
+  "campo": "sinopsis.es",
+  "valor": "Tiembla, tiembla. Se me derrama el café. El TransMilenio sobre la avenida Caracas desdibuja las luces. Esquivo el vómito. No entiendo nada, nunca lo hice. Quiero convertirme en una mazorca de maíz. Me aguarda una tregua. El asfalto es un virus que lo invade todo. Lo llevo dentro de mí, desde Bogotá hasta las playas de Gaira.",
+  "motivo": "la de otro festival nuestro; la otra era ficha técnica",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "8a11a739ee69",
+   "bd1ff3f72c45"
+  ],
+  "original_de": [
+   "bogoshorts-2026",
+   "cineautopsia-2026",
+   "cinemancia-2026",
+   "cinetoro-2026"
+  ],
+  "titulo": "Lamentos de un balcón",
+  "original": "Tiembla, tiembla. Se me derrama el café. El autobús de TransMilenio sobre la avenida Caracas desdibuja las luces en su torbellino. Esquivo el vómito. Múltiples pasajeros. Veo un perro e imagino que es Laika, pero sus rasgos criollos me contradicen. El orden mundial se desmorona en hilos más precarios que los que componen la realidad. Las imágenes en el teléfono móvil de la chica a mi lado se queman. Guaracha. No entiendo nada, nunca lo hice. Huele a marihuanera y a quitaesmalte. La mochila me pesa. Cada color de piel en este autobús me hace pensar en la salvación. En la luna que, indefectiblemente, sale por la noche. Me lleno los labios de masato para calmar la ardor. Quiero convertirme en una mazorca de maíz. Quiero que me metan una tusa de maíz por el culo. Quiero que mi cuerpo sea fibroso, velludo, y que mis ojos sean granos dorados. El autobús abandona la Caracas para tomar la calle 26, la avenida El Dorado. Allí, entre imágenes resplandecientes y perros periqueados, me aguarda una tregua. Un tubo volador que me elevará fuera de esta incertidumbre. El asfalto es un virus que lo invade todo. Lo llevo dentro de mí, desde Bogotá hasta las playas de Gaira.",
+  "sintesis": {
+   "redacta": "Claude",
+   "verifica": "Juan (24 nov 2026)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "e966ace79e17"
+  },
+  "antes": {
+   "cineautopsia-2026": "Tiembla, tiembla. Se me derrama el café. El autobús de TransMilenio sobre la avenida Caracas desdibuja las luces en su torbellino. Esquivo el vómito. Múltiples pasajeros. Veo un perro e imagino que es Laika, pero sus rasgos criollos me contradicen. El orden mundial se desmorona en hilos más precarios que los que componen la realidad. Las imágenes en el teléfono móvil de la chica a mi lado se queman. Guaracha. No entiendo nada, nunca lo hice. Huele a marihuanera y a quitaesmalte. La mochila me pesa. Cada color de piel en este autobús me hace pensar en la salvación. En la luna que, indefectiblemente, sale por la noche. Me lleno los labios de masato para calmar la ardor. Quiero convertirme en una mazorca de maíz. Quiero que me metan una tusa de maíz por el culo. Quiero que mi cuerpo sea fibroso, velludo, y que mis ojos sean granos dorados. El autobús abandona la Caracas para tomar la calle 26, la avenida El Dorado. Allí, entre imágenes resplandecientes y perros periqueados, me aguarda una tregua. Un tubo volador que me elevará fuera de esta incertidumbre. El asfalto es un virus que lo invade todo. Lo llevo dentro de mí, desde Bogotá hasta las playas de Gaira.",
+   "cinemancia-2026": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos.",
+   "cinetoro-2026": "El RODADERO La localidad de Gaira lleva el nombre del pueblo prehispánico que la habitaba. En 1510, tuvo lugar la Batalla de Gaira, el primer enfrentamiento armado entre españoles e indígenas. En 1954, el gobierno militar de Rojas Pinilla, movido por un ánimo de modernización nacional, impulsa la construcción de la carretera Ziruma, y del primer hotel de la zona, el Hotel Tamacá. A partir de ahí, el asfalto se expande en espirales frenéticas."
+  }
+ },
+ {
+  "work_id": "w_R4ENGEB7EKSY",
+  "campo": "directores",
+  "valor": [
+   "Juan Chispas"
+  ],
+  "motivo": "fichas con biografía de Cinemancia y BOGOSHORTS, Retina Latina y CINETORO dicen Juan; el afiche, CineAutopsia y TMDB dicen Hans: parece la misma persona; TMDB queda igual",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026",
+  "antes": {
+   "bogoshorts-2026": "Hans Chispas",
+   "cineautopsia-2026": "Hans Chispas",
+   "cinemancia-2026": "Hans Chispas",
+   "cinetoro-2026": "Juan Chispas"
+  },
+  "anteriores": [
+   {
+    "valor": [
+     "Hans Chispas"
+    ],
+    "motivo": "un dato por obra: el valor del almacén (festival)",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)"
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4ENGEB7EKSY",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "cineautopsia-2026": "2026",
+   "cinemancia-2026": "2026",
+   "cinetoro-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4ENGEB7EKSY",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia",
+   "cineautopsia-2026": "Colombia",
+   "cinemancia-2026": "Colombia",
+   "cinetoro-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4ENGEB7EKSY",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_R4ENGEB7EKSY",
+  "campo": "sinopsis.en",
+  "valor": "Tremble, tremble. My coffee spills. The TransMilenio on Avenida Caracas blurs the lights. I dodge the vomit. I understand nothing, I never did. I want to become an ear of corn. A respite awaits me. The asphalt is a virus that invades everything. I carry it within me, from Bogotá to the beaches of Gaira.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lamentos de un balcón is an experimental film that explores the architecture of the Rodadero area (Santa Marta, Colombia) and its relationship to mass tourism."
+  }
+ },
+ {
+  "work_id": "w_R4ENGEB7EKSY",
+  "campo": "xref.tmdb",
+  "valor": 1744098,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1744098",
+   "cineautopsia-2026": "1744098",
+   "cinemancia-2026": "1744098",
+   "cinetoro-2026": "1744098"
+  }
+ },
+ {
+  "work_id": "w_R4ENGEB7EKSY",
+  "campo": "xref.letterboxd",
+  "valor": "lamentos-de-un-balcon",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "lamentos-de-un-balcon",
+   "cineautopsia-2026": "lamentos-de-un-balcon",
+   "cinemancia-2026": "lamentos-de-un-balcon",
+   "cinetoro-2026": "lamentos-de-un-balcon"
+  }
+ }
+]

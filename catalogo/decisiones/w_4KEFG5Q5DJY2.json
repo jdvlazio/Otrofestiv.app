@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_4KEFG5Q5DJY2",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "24e4928d6a0e"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "El final de los tiempos",
+  "valor": "En un centro de rehabilitación psicosocial para personas con esquizofrenia, los miembros de un taller de cine crean una película sobre el fin del mundo. Mientras intentan alertar de la llegada de un asteroide, enfrentan los desafíos de la autorrepresentación y, al improvisar, reflejan sus experiencias y reflexiones sobre la vida y la muerte.",
+  "original": "Los miembros de un taller de cine en un centro de rehabilitación psicosocial para personas con esquizofrenia se reúnen para crear una película sobre el fin del mundo. Mientras intentan alertar a las autoridades sobre la inminente llegada de un asteroide, este diverso grupo enfrenta los desafíos de la autorrepresentación en el cine. A través de la improvisación, reflejan sus propias experiencias, perspectivas y reflexiones sobre la vida y la muerte.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "ded35808ba36"
+  }
+ },
+ {
+  "work_id": "w_4KEFG5Q5DJY2",
+  "campo": "directores",
+  "valor": [
+   "Mao Osorio",
+   "Ismael Morales"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mao Osorio, Ismael Morales"
+  }
+ },
+ {
+  "work_id": "w_4KEFG5Q5DJY2",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEFG5Q5DJY2",
+  "campo": "paises",
+  "valor": [
+   "CL"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Chile"
+  }
+ },
+ {
+  "work_id": "w_4KEFG5Q5DJY2",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEFG5Q5DJY2",
+  "campo": "sinopsis.en",
+  "valor": "The members of a film workshop at a psychosocial rehabilitation center for people with schizophrenia come together to create a movie about the end of the world. As they try to alert the authorities about the imminent arrival of an asteroid, this diverse group faces the challenges of self-representation in cinema. Through improvisation, they reflect their own experiences, perspectives, and thoughts on life and death.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "The members of a film workshop at a psychosocial rehabilitation center for people with schizophrenia come together to create a movie about the end of the world. As they try to alert the authorities about the imminent arrival of an asteroid, this diverse group faces the challenges of self-representation in cinema. Through improvisation, they reflect their own experiences, perspectives, and thoughts on life and death."
+  }
+ },
+ {
+  "work_id": "w_4KEFG5Q5DJY2",
+  "campo": "xref.tmdb",
+  "valor": 1493304,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1493304"
+  }
+ },
+ {
+  "work_id": "w_4KEFG5Q5DJY2",
+  "campo": "xref.letterboxd",
+  "valor": "the-end-of-times-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-end-of-times-2026"
+  }
+ },
+ {
+  "work_id": "w_4KEFG5Q5DJY2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/el-final-de-los-tiempos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/el-final-de-los-tiempos.jpg"
+  }
+ }
+]

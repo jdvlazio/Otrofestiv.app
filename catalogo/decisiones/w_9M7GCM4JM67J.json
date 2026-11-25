@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_9M7GCM4JM67J",
+  "campo": "directores",
+  "valor": [
+   "J. Joel Gómez G."
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "J. Joel Gómez G."
+  }
+ },
+ {
+  "work_id": "w_9M7GCM4JM67J",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_9M7GCM4JM67J",
+  "campo": "sinopsis.es",
+  "valor": "Una niña emprende un viaje bastante conmovedor para sanar y para dejar ir. Su madre siempre la acompañará.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Una niña emprende un viaje bastante conmovedor para sanar y para dejar ir. Su madre siempre la acompañará."
+  }
+ },
+ {
+  "work_id": "w_9M7GCM4JM67J",
+  "campo": "sinopsis.en",
+  "valor": "A girl sets out on a quite moving journey to heal and to let go. Her mother will always be with her.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "A girl sets out on a quite moving journey to heal and to let go. Her mother will always be with her."
+  }
+ },
+ {
+  "work_id": "w_9M7GCM4JM67J",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/pez-azul-v2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude, 25 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/pez-azul-v2.jpg"
+  }
+ }
+]

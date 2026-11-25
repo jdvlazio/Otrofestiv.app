@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
-  "capturado": "2026-11-20",
+  "capturado": "2026-11-24",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "Under Medellín",
@@ -239,7 +239,7 @@
    "time": "18:30",
    "day_order": 0,
    "venue": "Perpetua Lab - Medellín",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
     "lamina": "p. 2",
@@ -256,11 +256,14 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "21 min",
+     "title_en": "Drunk Hearing the Rain Drops Fall",
+     "synopsis_en": "A hybrid documentary of denunciation and reflection about León Ramírez and Isabel Velásquez, an elderly couple worn down by the land that once gave them joy and now slowly kills them through state abuse. At nearly 90, they still run a small store to survive. Their land, ravaged by armed groups and state policies, is now a purgatory where fruit rots on the ground. Powerless, they close their shop and bury themselves alive in their land, embodying old age, abandonment, uprootedness and resistance.",
      "poster": "/assets/under-2026/borrachos-mientras-escuchamos-las-gotas-caer.jpg",
      "posterSource": "tmdb",
      "lbSlug": "borrachos-mientras-escuchamos-las-gotas-caer",
      "tmdb_id": 1743109,
      "synopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
+     "genre": "Documental híbrido",
      "synopsis_lang": "es"
     },
     {
@@ -355,7 +358,7 @@
      "synopsis": "Pierre va a encontrarse con Renaud para una jornada de manifestaciones en Marsella y se queda sin noticias de su amigo. Obligado a vagar solo por una ciudad paralizada por los bloqueos, poco a poco se deja arrastrar por el torbellino de los enfrentamientos.",
      "synopsis_lang": "es",
      "poster": "/assets/under-2026/bisou-acab.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "bisou-acab",
      "tmdb_id": 1788221
     },
@@ -646,7 +649,7 @@
    "time": "17:00",
    "day_order": 2,
    "venue": "Perpetua Lab - Medellín",
-   "has_qa": false,
+   "has_qa": true,
    "_src": {
     "url": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
     "lamina": "p. 3",
@@ -864,7 +867,7 @@
      "synopsis": "¡Del espíritu de la pesadez! Volverse fantasma al mediodía y abrir una deriva espectral sin término —fuga, deserción, exilio, nomadismo—: desde ese punto ya nadie puede quedar fijado en una identidad exacta e inmóvil, ni en el tiempo ni en unas coordenadas. Bajo la sombra de la máquina del Estado en funcionamiento perpetuo, la hauntología surge como método de supervivencia frente a una decadencia espiritual que todo lo invade, aunque al final todo esté destinado a fracasar.",
      "synopsis_lang": "es",
      "poster": "/assets/under-2026/ghost-noon.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "ghost-noon",
      "tmdb_id": 1781720,
      "synopsis_en": "Vom Geist der Schwere! Become a ghost at noon, open a spectral drift with no terminus—escape, defection, exile, nomadism—from this point on one cannot be pinned down by any exact and unshifting identification in time or in coordinates. Under the shadow of the state machine’s perpetual operation, hauntology emerges as a methodology of survival against a pervasive spiritual decline—even as it all is ultimately destined to fail."
@@ -1461,7 +1464,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-20T22:11:56",
+  "fecha": "2026-11-24T09:37:49",
   "plan_sha": "de4c503917909c23",
   "paso": 4,
   "cmd": "python3 pipeline/under-2026-verificar.py"

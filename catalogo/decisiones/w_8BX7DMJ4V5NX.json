@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7DMJ4V5NX",
+  "campo": "directores",
+  "valor": [
+   "Jon Gunn"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Jon Gunn"
+  }
+ },
+ {
+  "work_id": "w_8BX7DMJ4V5NX",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_8BX7DMJ4V5NX",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_8BX7DMJ4V5NX",
+  "campo": "generos",
+  "valor": [
+   "Familia"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Familia"
+  }
+ },
+ {
+  "work_id": "w_8BX7DMJ4V5NX",
+  "campo": "sinopsis.es",
+  "valor": "Cuando Scott y Teresa LeRette se enteran de que su hijo Austin es autista y padece la enfermedad de los huesos de cristal, al principio se preocupan por su futuro. Pero con la creciente fe de Scott y el increíble espíritu de Austin, se vuelven inquebrantables y encuentran alegría, gratitud y valentía.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Cuando Scott y Teresa LeRette se enteran de que su hijo Austin es autista y padece la enfermedad de los huesos de cristal, al principio se preocupan por su futuro. Pero con la creciente fe de Scott y el increíble espíritu de Austin, se vuelven inquebrantables y encuentran alegría, gratitud y valentía."
+  }
+ },
+ {
+  "work_id": "w_8BX7DMJ4V5NX",
+  "campo": "sinopsis.en",
+  "valor": "When Scott and Teresa LeRette learn that their son Austin is autistic and has brittle bone disease, they initially worry about his future. But with Scott's growing faith and Austin's incredible spirit, they become unbreakable and find joy, gratitude and courage.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "When Scott and Teresa LeRette learn that their son Austin is autistic and has brittle bone disease, they initially worry about his future. But with Scott's growing faith and Austin's incredible spirit, they become unbreakable and find joy, gratitude and courage."
+  }
+ },
+ {
+  "work_id": "w_8BX7DMJ4V5NX",
+  "campo": "xref.tmdb",
+  "valor": 765897,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "765897"
+  }
+ },
+ {
+  "work_id": "w_8BX7DMJ4V5NX",
+  "campo": "xref.letterboxd",
+  "valor": "the-unbreakable-boy",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "the-unbreakable-boy"
+  }
+ },
+ {
+  "work_id": "w_8BX7DMJ4V5NX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/the-unbreakable-boy.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/the-unbreakable-boy.jpg"
+  }
+ }
+]

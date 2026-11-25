@@ -1,16 +1,24 @@
 {
  "id": "w_R4HEVT9HBV05",
  "titulo_original": "Petrolita",
- "anio": null,
+ "anio": 1958,
  "paises": [
   "AR"
  ],
- "directores": [],
+ "directores": [
+  "Víctor Aytor Iturralde Rúa"
+ ],
+ "sinopsis": {
+  "es": "Dibujos directos sobre el celuloide y efectos sonoros que acompasan una sucesión de imágenes fijas cuentan una historia libre, rigurosa y anárquica sobre el petróleo y la industrialización. Un corto experimental irreverente, lúdico y artesanal.",
+  "en": "Direct drawings on celluloid and sound effects that punctuate a sequence of still images tell a free, rigorous and anarchic story about oil and industrialization. An irreverent, playful and artisanal experimental short."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-03-02%20a%20la%28s%29%2011.35.28%20-%20Adria%CC%81n%20Iturralde.png?itok=_QYZJ_UL",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 477755
+ },
  "versiones": [
   {
    "etiqueta": "2 min",

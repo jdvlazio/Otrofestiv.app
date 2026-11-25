@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KE6GK8FS60T",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "9cfd7b19a068"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Pískoviště",
+  "valor": "Un niño juega en un arenero con juguetes de madera; uno está roto. El juguete lo lleva a un mundo oculto bajo la arena, donde los juguetes cobran vida. Entre la niebla llega al taller luminoso de un anciano que fabrica juguetes mágicos. El niño juega feliz, pero el anciano sabe que no pertenece allí.",
+  "original": "Un niño juega con juguetes de madera en un arenero; uno está roto. El juguete lo lleva a un mundo oculto bajo la arena, donde los juguetes cobran vida. Entre la niebla llega al taller luminoso de un anciano que fabrica juguetes mágicos. El niño juega feliz, pero el anciano sabe que no pertenece allí y lo guía de vuelta con un regalo de despedida. Ya en el arenero soleado, encuentra su juguete reparado. Al pasar junto a un taller y viejas fotos, descubre que el anciano se parecía a su abuelo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a29ca9bdc3d0"
+  }
+ },
+ {
+  "work_id": "w_4KE6GK8FS60T",
+  "campo": "directores",
+  "valor": [
+   "Kateřina Čupová"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Kateřina Čupová"
+  }
+ },
+ {
+  "work_id": "w_4KE6GK8FS60T",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KE6GK8FS60T",
+  "campo": "paises",
+  "valor": [
+   "CZ"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "República Checa"
+  }
+ },
+ {
+  "work_id": "w_4KE6GK8FS60T",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KE6GK8FS60T",
+  "campo": "sinopsis.en",
+  "valor": "A little boy plays with wooden toys in a sandbox; one is broken. The toy draws him into a hidden world beneath the sand, where toys come alive. Through mist he reaches the glowing workshop of an old man who crafts magical toys. The boy plays happily, but the old man knows he doesn’t belong there.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A little boy plays with wooden toys in a sandbox; one is broken. The toy draws him into a hidden world beneath the sand, where toys come alive. Through mist he reaches the glowing workshop of an old man who crafts magical toys. The boy plays happily, but the old man knows he doesn’t belong there and gently guides him home with a farewell gift. Back in the sunny sandbox, the boy finds his toy mended. Passing a workshop and old family photos, he realizes the old man looked like his grandfather."
+  }
+ },
+ {
+  "work_id": "w_4KE6GK8FS60T",
+  "campo": "xref.tmdb",
+  "valor": 1805073,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1805073"
+  }
+ },
+ {
+  "work_id": "w_4KE6GK8FS60T",
+  "campo": "xref.letterboxd",
+  "valor": "sandbox-2026-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "sandbox-2026-1"
+  }
+ },
+ {
+  "work_id": "w_4KE6GK8FS60T",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/piskoviste.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/piskoviste.jpg"
+  }
+ }
+]

@@ -1,16 +1,24 @@
 {
  "id": "w_R4HAG88ZJKGZ",
  "titulo_original": "Les Trois Hirondelles",
- "anio": null,
+ "anio": 2016,
  "paises": [
   "CH"
  ],
- "directores": [],
+ "directores": [
+  "Jorge Cadena"
+ ],
+ "sinopsis": {
+  "es": "Tres espacios donde los hombres se encuentran y llenan el vacío de la vida cotidiana en Tiflis: los baños, la barbería y una casa vacía habitada por tres golondrinas. La palabra fluye en lugares cerrados y el director observa su intimidad, los gestos y lo imprevisible. Una metáfora de la libertad, sueño de la Georgia contemporánea.",
+  "en": "Three places where men meet and fill the emptiness of daily life in Tbilisi: the baths, the barber’s, and an empty house inhabited by three swallows. Speech flows in enclosed spaces, and the director observes its intimacy, the gestures, and the unexpected. A metaphor for freedom, the dream of contemporary Georgia."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Les_trois_hirondelles2%20-%20Yan%20Dec.jpg?itok=HNjh4Nx6",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 757890
+ },
  "versiones": [
   {
    "etiqueta": "17 min",

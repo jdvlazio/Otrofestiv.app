@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_4KFSPXY9EM48",
+  "campo": "directores",
+  "valor": [
+   "Sabah Machy"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Sabah Machy"
+  }
+ },
+ {
+  "work_id": "w_4KFSPXY9EM48",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFSPXY9EM48",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KFSPXY9EM48",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KFSPXY9EM48",
+  "campo": "sinopsis.es",
+  "valor": "Una persona joven encuentra a su gato muerto en la bañera. Decide cuidarlo a pesar de unas advertencias de su madre cuyo sentido todavía no comprende. A través de la muerte de su gato, toma conciencia del paso del tiempo.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una persona joven encuentra a su gato muerto en la bañera. Decide cuidarlo pese a las advertencias de su madre, que todavía no comprende. A través de la muerte de su gato, toma conciencia del paso del tiempo."
+  },
+  "vistas": [
+   "d5108cc94020"
+  ]
+ },
+ {
+  "work_id": "w_4KFSPXY9EM48",
+  "campo": "sinopsis.en",
+  "valor": "A young adult discovers their cat, dead in the bathtub. They decide to take care of him despite their mom’s warnings that they don’t understand yet. Through their cat’s death, the protagonist becomes aware of the passing time.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS B",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A young adult discovers their cat, dead in the bathtub. They decide to take care of him besides their mom’s warnings that they don’t understand yet. Through their cat’s death, the protagonist becomes aware of the passing time."
+  }
+ },
+ {
+  "work_id": "w_4KFSPXY9EM48",
+  "campo": "xref.tmdb",
+  "valor": 1820866,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1820866"
+  }
+ },
+ {
+  "work_id": "w_4KFSPXY9EM48",
+  "campo": "xref.letterboxd",
+  "valor": "mon-chat-est-mort",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "mon-chat-est-mort"
+  }
+ },
+ {
+  "work_id": "w_4KFSPXY9EM48",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/mon-chat-est-mort.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/mon-chat-est-mort.jpg"
+  }
+ }
+]

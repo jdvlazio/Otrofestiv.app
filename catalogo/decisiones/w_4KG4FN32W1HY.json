@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_4KG4FN32W1HY",
+  "campo": "directores",
+  "valor": [
+   "Emanuel Schulman"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Emanuel Schulman"
+  }
+ },
+ {
+  "work_id": "w_4KG4FN32W1HY",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KG4FN32W1HY",
+  "campo": "paises",
+  "valor": [
+   "BR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Brasil"
+  }
+ },
+ {
+  "work_id": "w_4KG4FN32W1HY",
+  "campo": "sinopsis.es",
+  "valor": "Brasil, 1991. Marina, 17 años, y sus amigas, obsesionadas con el cine, pasan su último año de secundaria rodando cortometrajes con una cámara VHS. A medida que se acerca la graduación y la separación se vuelve inevitable, deciden hacer una última película casera antes de que la vida las separe.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Brasil, 1991. Marina, 17 años, y sus amigas, obsesionadas con el cine, pasan su último año de secundaria rodando cortometrajes con una cámara VHS. A medida que se acerca la graduación y la separación se vuelve inevitable, deciden hacer una última película casera antes de que la vida las separe."
+  }
+ },
+ {
+  "work_id": "w_4KG4FN32W1HY",
+  "campo": "sinopsis.en",
+  "valor": "Brazil, 1991. Seventeen-year-old Marina and her movie-obsessed friends spend their final year of high school shooting short films with a VHS camera. As graduation nears and their separation becomes inevitable, they decide to make one last home movie before life pulls them apart.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Brazil, 1991. Seventeen-year-old Marina and her movie-obsessed friends spend their final year of high school shooting short films with a VHS camera. As graduation nears and their separation becomes inevitable, they decide to make one last home movie before life pulls them apart."
+  }
+ },
+ {
+  "work_id": "w_4KG4FN32W1HY",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/querido-river-phoenix.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/querido-river-phoenix.jpg"
+  }
+ }
+]

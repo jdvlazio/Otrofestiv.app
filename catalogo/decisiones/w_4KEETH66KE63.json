@@ -1,0 +1,133 @@
+[
+ {
+  "work_id": "w_4KEETH66KE63",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "a16cbe631472"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "跳房子",
+  "valor": "En una pequeña ciudad de Hunan, tras el colapso del auge inmobiliario, el Tío 3 decidió abandonar este mundo. Un documental familiar filmado durante siete años recorre los edificios inacabados de nuestra ciudad y reconstruye fragmentos de su vida. Su alma se funde con esas estructuras incompletas, suspendida en un tiempo detenido.",
+  "original": "En una pequeña ciudad de Hunan, tras el colapso del auge inmobiliario, el Tío 3 decidió abandonar este mundo. Un documental familiar filmado durante siete años recorre los edificios inacabados de nuestra ciudad y reconstruye fragmentos de su vida. Su alma se funde con esas estructuras incompletas, suspendida en un tiempo detenido, como si nada hubiera ocurrido.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "fc71e387f57d"
+  }
+ },
+ {
+  "work_id": "w_4KEETH66KE63",
+  "campo": "directores",
+  "valor": [
+   "Jingyuan Liang",
+   "Shizhao Ye"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Jingyuan Liang, Shizhao Ye"
+  }
+ },
+ {
+  "work_id": "w_4KEETH66KE63",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEETH66KE63",
+  "campo": "paises",
+  "valor": [
+   "CN",
+   "GB"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "China, Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_4KEETH66KE63",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEETH66KE63",
+  "campo": "sinopsis.en",
+  "valor": "In a small city in Hunan, after the collapse of the real estate boom, Uncle 3 chose to leave this world. A home documentary filmed over seven years haunts the unfinished buildings of our hometown, recounting fragments of his life. His soul merges with these incomplete structures, suspended in a stalled time, as if nothing had ever happened.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In a small city in Hunan, after the collapse of the real estate boom, Uncle 3 chose to leave this world. A home documentary filmed over seven years haunts the unfinished buildings of our hometown, recounting fragments of his life. His soul merges with these incomplete structures, suspended in a stalled time, as if nothing had ever happened."
+  }
+ },
+ {
+  "work_id": "w_4KEETH66KE63",
+  "campo": "xref.tmdb",
+  "valor": 1736821,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1736821"
+  }
+ },
+ {
+  "work_id": "w_4KEETH66KE63",
+  "campo": "xref.letterboxd",
+  "valor": "3-lost-in-towers",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "3-lost-in-towers"
+  }
+ },
+ {
+  "work_id": "w_4KEETH66KE63",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/tmdb-1736821.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/tmdb-1736821.jpg"
+  }
+ }
+]

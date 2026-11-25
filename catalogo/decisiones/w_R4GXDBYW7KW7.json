@@ -1,0 +1,62 @@
+[
+ {
+  "work_id": "w_R4GXDBYW7KW7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/i-built-a-rocket-imagining-your-arrival.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/7aeK8m8917SI0MFAfHtwWMnxVNG.jpg",
+   "/assets/ficcali-2026/i-built-a-rocket-imagining-your-arrival.jpg"
+  ],
+  "antes": {
+   "ficcali-2026": "/assets/ficcali-2026/i-built-a-rocket-imagining-your-arrival.jpg",
+   "olhar-2026": "/7aeK8m8917SI0MFAfHtwWMnxVNG.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4GXDBYW7KW7",
+  "campo": "sinopsis.es",
+  "valor": "Dentro de una máquina de resonancia magnética, a Rosa se le pide recordar un momento feliz. Reconstruye un viaje que nunca ocurrió con su madre, Dalva, una mujer de espíritu libre detenida por asesinar a un hombre a punto de cometer un feminicidio. Entre la vida y un recuerdo inventado, imagina un reencuentro que se vuelve intento de sanación.",
+  "motivo": "cierre de comentario del festival",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "vistas": [
+   "1a17114ee5ad",
+   "212695b7fa1a"
+  ],
+  "antes": {
+   "ficcali-2026": "Envuelta por el zumbido hipnótico de una máquina de resonancia magnética, a Rosa se le pide que recuerde un momento feliz de su vida. Revisa el pasado y reconstruye un acontecimiento que nunca ocurrió: un viaje con su madre, Dalva, una mujer de espíritu libre e irreverente que fue detenida por asesinar a un hombre que estaba a punto de cometer un feminicidio. Tras crecer sin su madre, Rosa carga con la culpa y el miedo derivados del episodio. Ahora, suspendida entre la vida y un recuerdo inventado, imagina un reencuentro que se transforma en un intento de sanación y reconciliación. La acompañamos en una película de carretera llena de saber hacer cinematográfico, que transmite plásticamente inquietudes y formas de experimentarlas.",
+   "olhar-2026": "Rodeada por el zumbido hipnótico de una máquina de resonancia magnética, a Rosa se le indica que piense en un momento feliz de su vida. Es dentro de esa odisea subconsciente que reencuentra a su madre, Dalva, con quien inventa memorias inexistentes."
+  },
+  "anteriores": [
+   {
+    "valor": "Envuelta por el zumbido hipnótico de una máquina de resonancia magnética, a Rosa se le pide que recuerde un momento feliz de su vida. Revisa el pasado y reconstruye un acontecimiento que nunca ocurrió: un viaje con su madre, Dalva, una mujer de espíritu libre e irreverente que fue detenida por asesinar a un hombre que estaba a punto de cometer un feminicidio. Tras crecer sin su madre, Rosa carga con la culpa y el miedo derivados del episodio. Ahora, suspendida entre la vida y un recuerdo inventado, imagina un reencuentro que se transforma en un intento de sanación y reconciliación. La acompañamos en una película de carretera llena de saber hacer cinematográfico, que transmite plásticamente inquietudes y formas de experimentarlas.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "1a17114ee5ad",
+     "212695b7fa1a"
+    ]
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4GXDBYW7KW7",
+  "campo": "sinopsis.en",
+  "valor": "Fifty-something Rosa, lying in an MRI scanner, is prompted to summon a happy memory. She plunges into a meandering, subconscious road trip with her indomitable mother, both queer, where wild imagination becomes a tender, unruly form of therapy.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Fiz Um Foguete Imaginando Que Você Vinha",
+  "antes": {
+   "ficcali-2026": "Fifty-something Rosa, lying in an MRI scanner, is prompted to summon a happy memory. She plunges into a meandering, subconscious road trip with her indomitable mother, both queer, where wild imagination becomes a tender, unruly form of therapy.",
+   "olhar-2026": "Surrounded by the hypnotic humming of a MRI machine, Rosa is told to think of a happy moment in her life. It is within this subconscious odyssey that she reencounters her mother, Dalva, with whom she invents non-existent memories."
+  }
+ }
+]

@@ -1,0 +1,133 @@
+[
+ {
+  "work_id": "w_4KE7BAXSYMKW",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "6e8880860fd8"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Raíces",
+  "valor": "Después de años sin contacto, Alex visita a su padre Frank, que vive aislado en una cabaña en el bosque. El silencio y la tensión marcan el reencuentro. Mientras intenta acercarse a él, Alex descubre el vínculo de Frank con una misteriosa planta que crece en el sótano, tras la que se esconde algo mucho más inquietante.",
+  "original": "Después de años sin contacto, Alex visita a su padre Frank, que vive aislado en una cabaña en el bosque. El reencuentro está marcado por el silencio y la tensión entre ambos. Mientras intenta acercarse a su padre, Alex descubre el vínculo de Frank con una misteriosa planta que crece en el sótano de la casa, tras la que se esconde algo mucho más inquietante.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "c0bf3a801c48"
+  }
+ },
+ {
+  "work_id": "w_4KE7BAXSYMKW",
+  "campo": "directores",
+  "valor": [
+   "Mavie Beisheim",
+   "Felipe Cuartas"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mavie Beisheim, Felipe Cuartas"
+  }
+ },
+ {
+  "work_id": "w_4KE7BAXSYMKW",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KE7BAXSYMKW",
+  "campo": "paises",
+  "valor": [
+   "DE",
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alemania, Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KE7BAXSYMKW",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_4KE7BAXSYMKW",
+  "campo": "sinopsis.en",
+  "valor": "After years without contact, Alex visits his father Frank, who lives in isolation in a cabin deep in the woods. Their encounter is marked by silence and tension. As Alex tries to reconnect with his father, he discovers Frank’s connection to a mysterious plant growing in the basement of the house, behind which something far more unsettling lies.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After years without contact, Alex visits his father Frank, who lives in isolation in a cabin deep in the woods. Their encounter is marked by silence and tension. As Alex tries to reconnect with his father, he discovers Frank’s connection to a mysterious plant growing in the basement of the house, behind which something far more unsettling lies."
+  }
+ },
+ {
+  "work_id": "w_4KE7BAXSYMKW",
+  "campo": "xref.tmdb",
+  "valor": 1784652,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1784652"
+  }
+ },
+ {
+  "work_id": "w_4KE7BAXSYMKW",
+  "campo": "xref.letterboxd",
+  "valor": "raices-2026-3",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "raices-2026-3"
+  }
+ },
+ {
+  "work_id": "w_4KE7BAXSYMKW",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/raices.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/raices.jpg"
+  }
+ }
+]

@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KFGVF4MR8N4",
+  "campo": "directores",
+  "valor": [
+   "Gabriella Marsh"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Gabriella Marsh"
+  }
+ },
+ {
+  "work_id": "w_4KFGVF4MR8N4",
+  "campo": "anio",
+  "valor": 2020,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2020"
+  }
+ },
+ {
+  "work_id": "w_4KFGVF4MR8N4",
+  "campo": "paises",
+  "valor": [
+   "GB",
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Reino Unido, España"
+  }
+ },
+ {
+  "work_id": "w_4KFGVF4MR8N4",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KFGVF4MR8N4",
+  "campo": "sinopsis.es",
+  "valor": "La vida cotidiana de la plaza de la Virreina, en Barcelona, se despliega a través de dibujos de sus visitantes y fragmentos de conversaciones. Un retrato animado de las personas que comparten y transforman este espacio.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "La vida cotidiana de la plaza de la Virreina, en Barcelona, se despliega a través de dibujos de sus visitantes y fragmentos de conversaciones. Un retrato animado de las personas que comparten y transforman este espacio."
+  }
+ },
+ {
+  "work_id": "w_4KFGVF4MR8N4",
+  "campo": "sinopsis.en",
+  "valor": "Everyday life in Barcelona’s Plaça de la Virreina unfolds through drawings of its visitors and snippets of conversation. An animated portrait of the people who share and transform this space.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Everyday life in Barcelona’s Plaça de la Virreina unfolds through drawings of its visitors and snippets of conversation. An animated portrait of the people who share and transform this space."
+  }
+ },
+ {
+  "work_id": "w_4KFGVF4MR8N4",
+  "campo": "xref.tmdb",
+  "valor": 758792,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "758792"
+  }
+ },
+ {
+  "work_id": "w_4KFGVF4MR8N4",
+  "campo": "xref.letterboxd",
+  "valor": "solos-2019",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "solos-2019"
+  }
+ },
+ {
+  "work_id": "w_4KFGVF4MR8N4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/solos.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/solos.jpg"
+  }
+ }
+]

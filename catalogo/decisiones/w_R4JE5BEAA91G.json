@@ -1,0 +1,78 @@
+[
+ {
+  "work_id": "w_R4JE5BEAA91G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/filcmar-2026/aquileo-venganza.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/filcmar-2026/aquileo-venganza.jpg",
+   "/assets/villadelcine-2026/aquileo-venganza.jpg"
+  ],
+  "antes": {
+   "filcmar-2026": "/assets/filcmar-2026/aquileo-venganza.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/aquileo-venganza.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4JE5BEAA91G",
+  "campo": "sinopsis.es",
+  "valor": "Comienzos del siglo veinte, años siguientes a la Guerra de los Mil Días que devastó los campos colombianos. Bandoleros al servicio de los grandes terratenientes atacan a los pequeños propietarios para quedarse con sus tierras. La familia Bernal es víctima de una de estas bandas, comandadas por el alcalde del pueblo. Aquileo es el único sobreviviente y jura vengarse. A ello se dedican él y la película.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (filcmar-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "025ecbf88bf5",
+   "b4e1df9fbc5e"
+  ],
+  "antes": {
+   "filcmar-2026": "Comienzos del siglo veinte, años siguientes a la Guerra de los Mil Días que devastó los campos colombianos. Bandoleros al servicio de los grandes terratenientes atacan a los pequeños propietarios para quedarse con sus tierras. La familia Bernal es víctima de una de estas bandas, comandadas por el alcalde del pueblo. Aquileo es el único sobreviviente y jura vengarse. A ello se dedican él y la película.",
+   "villadelcine-2026": "Filmada en Villa de Leyva y sus alrededores en 1967, esta renombrada película se presenta por primera vez en el lugar donde nació. A principios del siglo XX, tras la “Guerra de los Mil Días”, el país quedó devastado. Hombres armados al servicio de los terratenientes atacan a pequeños propietarios para apropiarse de sus tierras. Aquileo es el único que sobrevive, y promete vengarse de los asesinos."
+  }
+ },
+ {
+  "work_id": "w_R4JE5BEAA91G",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "VE"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:763505)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "filcmar-2026": "Colombia, Venezuela",
+   "villadelcine-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4JE5BEAA91G",
+  "campo": "generos",
+  "valor": [
+   "Western"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "filcmar-2026": "Western",
+   "villadelcine-2026": "Ficción / Drama / Wéstern"
+  }
+ },
+ {
+  "work_id": "w_R4JE5BEAA91G",
+  "campo": "sinopsis.en",
+  "valor": "In the early 20th century, after the Thousand Days' War devastated the country, gunmen in the service of big landowners attack smallholders to seize their land. Aquileo is the only survivor and vows revenge on the killers.",
+  "motivo": "erratas «begining», «to the service of land lords»",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "filcmar-2026": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
+   "villadelcine-2026": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers."
+  }
+ }
+]

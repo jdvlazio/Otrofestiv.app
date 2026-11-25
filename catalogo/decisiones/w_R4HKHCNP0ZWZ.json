@@ -1,0 +1,39 @@
+[
+ {
+  "work_id": "w_R4HKHCNP0ZWZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/y-el-rio-lloro.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficcali-2026/y-el-rio-lloro.jpg",
+   "/assets/ficdeh/mohanas-resistencias-memoria-y-paz.jpg",
+   "https://image.tmdb.org/t/p/w500/lcLH5ISLZg7WCDo0QKx0k1oH3fD.jpg"
+  ],
+  "antes": {
+   "ficcali-2026": "/assets/ficcali-2026/y-el-rio-lloro.jpg",
+   "ficdeh-2026": "/assets/ficdeh/mohanas-resistencias-memoria-y-paz.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/lcLH5ISLZg7WCDo0QKx0k1oH3fD.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HKHCNP0ZWZ",
+  "campo": "directores",
+  "valor": [
+   "Zumaya Mayers C.",
+   "Rodrigo Cuervo J."
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficcali-2026": "Zumaya Mayers",
+   "ficdeh-2026": "Zumaya Mayers C., Rodrigo Cuervo J.",
+   "siembrafest-2026": "Zumaya Mayers"
+  }
+ }
+]

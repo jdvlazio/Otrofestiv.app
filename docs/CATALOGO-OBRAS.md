@@ -104,7 +104,7 @@ Por campo: `{valor, fuente, referencia, fecha, regla}`, con `fuente ∈ {tmdb,
 wikidata, festival:<fid>, humano:juan, derivado}`. Vive aparte para que la obra se
 lea limpia. Responde «¿de dónde salió este año?» sin adivinar.
 
-### 3.5 Decisiones (`catalogo/decisiones.json`)
+### 3.5 Decisiones (`catalogo/decisiones/`)
 
 Una fila por decisión humana: `{work_id, campo, valor, motivo, fecha, reemplaza}`.
 Prioridad máxima en la supervivencia: ninguna regeneración la pisa. Incluye las
@@ -143,9 +143,23 @@ umbral con datos reales, no a ojo.
 | Sección, día/hora/sede, premiere, título impreso, Q&A | **Festival** | — |
 | Título original, año, director, país, idioma | **Decisión humana** > TMDB > Wikidata > festival | el festival puede *proponer* una corrección, que cae en candidatos |
 | Duración | **Versión proyectada** (festival) > TMDB | si difieren > 5 min, aviso |
-| Sinopsis ES / EN | **Oficial del festival** (verbatim) > traducción nuestra con contexto > TMDB | nunca una traducción como si fuera oficial |
-| Afiche | **Oficial de la obra** > oficial del festival > compuesto nuestro | regla ya vigente (jerarquía del póster compuesto) |
+| Sinopsis ES / EN | **Una por obra** (Juan, 23 nov 2026; antes ganaba la de cada festival): oficial de la obra > la mejor publicada por un festival > traducción nuestra con contexto > TMDB | lo del evento (invitados, charla) va en la función; nunca una traducción como si fuera oficial |
+| Afiche | **Uno por obra** (Juan, 23 nov 2026): oficial de la obra > del festival > editorial nuestro | la elección vive en `decisiones/` (campo `afiche`); uno nuevo se compara con `pipeline/afiches_unicos.py` (abajo) |
 | Emoji, arquetipo, EN de sección | Nuestra capa | nunca pisa el nombre verbatim |
+
+**Cuándo lo nuevo reemplaza lo del almacén** (Juan, 23 nov 2026: la campaña de
+una obra mejora con su distribución). Afiche, por imagen y no por etiqueta
+(`pipeline/afiches_unicos.py --revisar <festival>`): lo que no es afiche nunca
+entra; un afiche reemplaza a un fotograma; la misma imagen más completa o
+claramente más grande reemplaza; otra versión (idioma, laureles) u otro diseño
+**se revisa**, no se decide solo. Lo elegido a mano por Juan nunca se reemplaza
+solo. La sinopsis sigue el mismo principio: si falta, entra; si es el mismo texto
+o uno contenido en el otro, queda el completo; si es distinta, se revisa.
+**La que se lee es corta** (Juan, 23 nov 2026): máximo 350 caracteres, reescrita y
+no recortada. La decisión `sinopsis.es` guarda la síntesis en `valor` y el texto
+completo en `original`; la redacta uno y la verifica otro (`pipeline/SINOPSIS-CORTA.md`,
+`pipeline/sinopsis_cortas.py`, guardián `[sinopsis-larga]`).
+**La duración no es de la obra:** es de la copia que proyecta cada festival.
 
 Restricción dura: `titulo_original`, `directores` y `anio` no pueden quedar vacíos
 en una obra publicada. Si falta, va a la cola de excepciones; no se publica en
@@ -163,6 +177,8 @@ silencio (es la regla de «sin ficha no se publica», llevada a la obra).
 - `[tmdb-ficha-ruidosa]`: `lib.tmdb_ficha` (toda ficha pedida por id) distingue «llegó», «no existe» (34) y «no respondió»; la última para la corrida antes de escribir. Corre su autoprueba.
 - `[dato-que-no-viaja]`: por campo de obra (género, EN, sinopsis, año, país, duración, director, afiche, Letterboxd), las presentaciones vacías de una obra que otro festival nuestro sí publicó. Trinquete **por festival** sobre `catalogo/techo.json` (15 oct 2026; antes un techo global que un montaje nuevo con huecos obligaba a subir, y al subir tapaba los retrocesos de los demás): falla si un festival pasa SU techo —el de otro no lo cubre—, y uno que no está tiene techo 0. Entrar con huecos se declara midiendo: `python3 pipeline/catalogo.py --medir <fest>`; sin festival, el comando solo baja techos.
 - **Festivales sin pipeline** (montados a mano antes de la v2): `python3 pipeline/heredar.py <fest>` muestra lo que heredarían del catálogo sobre su JSON publicado, y `--escribir` lo guarda (anotado en `_src.heredado`; después `catalogo.py --medir`). Las reglas son las de `enriquecer.py`, no una copia: las dos llaman a `pipeline/herencia.py` (15 oct 2026). Lo publicado manda; un fotograma ya publicado no se pisa. Un festival CON pipeline se re-arma, no se hereda.
+- `[obra-unica]` (24 nov 2026): lo publicado de una obra —director, año, país, género, sinopsis ES y EN, afiche— es lo decidido, en todos los festivales; sin decisión, todos coinciden. Vacío no cuenta y la duración no entra. Qué diverge: `python3 pipeline/obra_unica.py`; decidirlo: `--decidir` (guarda en `antes` qué publicaba cada festival).
+- `[ficha-obra]` (24 nov 2026): cada campo entra por lista o por forma (`docs/OBRA.md`, `pipeline/ficha_obra.py`). Deuda por festival y regla en `pipeline/ficha-deuda.json`, que solo baja.
 - `[catalogo-autoprueba]`: cada uno de los anteriores tiene que atrapar un cebo en memoria; si alguno queda ciego, el push se bloquea.
 
 ## 5. Cómo encaja con el pipeline de hoy
@@ -195,7 +211,7 @@ silencio (es la regla de «sin ficha no se publica», llevada a la obra).
 |---|---|---|---|
 | **0. Diseño** | Este documento + esquema JSON del catálogo + los 5 guardianes escritos como tests que fallan | PR de docs, sin datos | 1 sesión |
 | **1. Censo → catálogo inicial** | Script `catalogo/construir.py` que lee los 32 festivales + sidecars, agrupa por xref/huella, asigna ids, escribe procedencia. Salida en **modo simulación**: lista de coincidencias, candidatos y contradicciones, sin publicar nada | `catalogo/` con ~2.500 obras + hoja de **candidatos** (estimo 100–200 pares) y de **contradicciones** (111 obras) para tu revisión | 1–2 sesiones + tu revisión |
-| **2. Resolver contradicciones** | Tú decides sobre la hoja (una vez por obra, no por festival): grafía del director, año, afiche que manda. Cada respuesta entra a `decisiones.json` | catálogo coherente; 58 decisiones duplicadas → 1 cada una | tu tiempo, por lotes |
+| **2. Resolver contradicciones** | Tú decides sobre la hoja (una vez por obra, no por festival): grafía del director, año, afiche que manda. Cada respuesta entra a `decisiones/` | catálogo coherente; 58 decisiones duplicadas → 1 cada una | tu tiempo, por lotes |
 | **3. Cablear el pipeline** | `cascada_obra`, escritura de vuelta, `work_id` en la vista, guardianes activos. Modo simulación: regenerar los 32 festivales y diffear contra producción, **cero cambios no explicados** | PR de pipeline | 1–2 sesiones |
 | **4. Probar con dos festivales** | MUBI Fest (8 obras ya en catálogo de 12) y FICICA (31 de 81) | onboarding sin volver a sondear lo conocido; hoja de contacto solo con lo nuevo | 1 sesión |
 | **5. Altas TMDB desde el catálogo** | La cola de altas sale del catálogo (obras sin xref, con afiche oficial ≥ 500 px, director y año) y se marca una vez | lotes de altas sin re-filtrar por festival | continuo |

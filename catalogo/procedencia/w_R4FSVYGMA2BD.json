@@ -18,5 +18,17 @@
  "generos": {
   "fuente": "festival",
   "regla": "todos los publicados, del más al menos frecuente"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026)",
+  "fecha": "2026-11-23"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "solo hay dos stills: el más claro y completo",
+  "fecha": "2026-11-24"
  }
 }

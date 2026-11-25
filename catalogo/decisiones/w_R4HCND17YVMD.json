@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HCND17YVMD",
+  "campo": "directores",
+  "valor": [
+   "Ben Rivers"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 279",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=279"
+ },
+ {
+  "work_id": "w_R4HCND17YVMD",
+  "campo": "anio",
+  "valor": 2019,
+  "motivo": "catálogo oficial de FICCI 65, p. 279",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=279"
+ },
+ {
+  "work_id": "w_R4HCND17YVMD",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 279",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=279",
+  "antes": {
+   "ficci-65": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_R4HCND17YVMD",
+  "campo": "sinopsis.es",
+  "valor": "Los «ghost strata» son los elementos ausentes de la roca que dan indicios de lo que una vez hubo allí. Filmada en diversos lugares del mundo y dividida en los meses en que se rodó, la película explora el impacto de la humanidad sobre la Tierra. Sonidos y textos encontrados crean una reflexión sobre el tiempo, la memoria, los restos y la extinción.",
+  "motivo": "catálogo oficial de FICCI 65, p. 279",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=279"
+ },
+ {
+  "work_id": "w_R4HCND17YVMD",
+  "campo": "sinopsis.en",
+  "valor": "“Ghost strata” are the elements missing from the rock that offer hints of what was once there. Filmed in various places over the globe and divided into the months of its shooting, the film explores humanity's impact on the Earth. Found sound and text create a meditation on time, memory, leftovers, and extinction.",
+  "motivo": "catálogo oficial de FICCI 65, p. 279",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=279"
+ },
+ {
+  "work_id": "w_R4HCND17YVMD",
+  "campo": "xref.tmdb",
+  "valor": 600173,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/600173"
+ }
+]

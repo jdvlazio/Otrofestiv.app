@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGD95CHJDSJ",
+  "campo": "directores",
+  "valor": [
+   "Roshanak Roshan"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Roshanak Roshan"
+  }
+ },
+ {
+  "work_id": "w_4KGD95CHJDSJ",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_4KGD95CHJDSJ",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KGD95CHJDSJ",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KGD95CHJDSJ",
+  "campo": "sinopsis.es",
+  "valor": "El olor y el sabor del pan devuelven a Shirin a su infancia en Teherán. Ya instalada en Francia, reconstruye su historia y la de Irán a través de la revolución, la guerra, la modernización y el embargo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "El olor y el sabor del pan devuelven a Shirin a su infancia en Teherán. Ya instalada en Francia, reconstruye su historia y la de Irán a través de la revolución, la guerra, la modernización y el embargo."
+  }
+ },
+ {
+  "work_id": "w_4KGD95CHJDSJ",
+  "campo": "sinopsis.en",
+  "valor": "The smell and taste of bread carry Shirin back to her childhood in Tehran. Now living in France, she retraces her own history and Iran’s through revolution, war, modernisation and the embargo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "The smell and taste of bread carry Shirin back to her childhood in Tehran. Now living in France, she retraces her own history and Iran’s through revolution, war, modernisation and the embargo."
+  }
+ },
+ {
+  "work_id": "w_4KGD95CHJDSJ",
+  "campo": "xref.tmdb",
+  "valor": 1300328,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1300328"
+  }
+ },
+ {
+  "work_id": "w_4KGD95CHJDSJ",
+  "campo": "xref.letterboxd",
+  "valor": "noon-the-bread-from-tehran",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "noon-the-bread-from-tehran"
+  }
+ },
+ {
+  "work_id": "w_4KGD95CHJDSJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/noon-le-pain-de-teheran.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/noon-le-pain-de-teheran.jpg"
+  }
+ }
+]

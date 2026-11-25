@@ -1,18 +1,23 @@
 {
  "id": "w_R4QPXBBV7YAP",
  "titulo_original": "Panther Pat",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "US"
  ],
  "directores": [
   "Ashley Brandon"
  ],
+ "sinopsis": {
+  "es": "En 1970, Patricia Palinkas se convirtió en la primera mujer en jugar fútbol americano profesional. La película recorre ese momento decisivo de la historia del deporte y la ruptura de la barrera de género en el juego de Estados Unidos.",
+  "en": "In 1970, Patricia Palinkas became the first woman to play professional football. Panther Pat traces this high-stakes moment in sports history and the shattering of the gender barrier in America’s game."
+ },
  "afiche": {
   "archivo": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/6872/large_Panther_Pat-Clean-16x9-01.jpg",
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 1626328,
   "letterboxd": "panther-pat"
  },
  "versiones": [

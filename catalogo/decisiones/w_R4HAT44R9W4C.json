@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HAT44R9W4C",
+  "campo": "directores",
+  "valor": [
+   "Sofia Tomic"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 157",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=157"
+ },
+ {
+  "work_id": "w_R4HAT44R9W4C",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 157",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=157"
+ },
+ {
+  "work_id": "w_R4HAT44R9W4C",
+  "campo": "paises",
+  "valor": [
+   "BR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 157",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=157",
+  "antes": {
+   "ficci-65": "Brasil"
+  }
+ },
+ {
+  "work_id": "w_R4HAT44R9W4C",
+  "campo": "sinopsis.es",
+  "valor": "De noche, en una cancha de pavimento iluminada por los postes de luz, una mujer juega en silencio con un balón. La registra una imagen digital austera. Entre el tedio y la hipnosis, la observación del juego ajeno lo prolonga hacia el espesor del mundo frondoso.",
+  "motivo": "catálogo oficial de FICCI 65, p. 157",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=157"
+ },
+ {
+  "work_id": "w_R4HAT44R9W4C",
+  "campo": "sinopsis.en",
+  "valor": "At night, on a paved court lit by streetlights, a woman plays in silence with a ball. An austere digital image records her. Between tedium and trance, observing this other's game extends it toward the depths of the lush world.",
+  "motivo": "catálogo oficial de FICCI 65, p. 157",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=157"
+ },
+ {
+  "work_id": "w_R4HAT44R9W4C",
+  "campo": "xref.tmdb",
+  "valor": 1625325,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1625325"
+ }
+]

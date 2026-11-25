@@ -1,0 +1,133 @@
+[
+ {
+  "work_id": "w_4KEWYZ24XRFH",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "0bebc35e1ae7"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "La vida de un hilo",
+  "valor": "Un guerrillero descubre una pequeña araña refugiada en el cañón de su fusil. Al día siguiente, cuando va a limpiar el arma, encuentra una fina red que crea un efecto caleidoscópico al ser atravesada por la luz. Fascinado por la belleza del universo tejido por la araña, experimenta un nuevo impulso: preservar la vida.",
+  "original": "Un guerrillero descubre una pequeña araña que se refugia en el interior del cañón de su fusil. Al día siguiente, cuando se dispone a limpiar su arma, encuentra una fina red que crea un efecto caleidoscópico al ser atravesada por la luz. Fascinado por la belleza del universo tejido por la araña en el interior de su fusil, el combatiente experimenta un nuevo impulso: preservar la vida.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "bf463fd4ca33"
+  }
+ },
+ {
+  "work_id": "w_4KEWYZ24XRFH",
+  "campo": "directores",
+  "valor": [
+   "Guillermo Castañeda",
+   "Andrea Castillo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Guillermo Castañeda, Andrea Castillo"
+  }
+ },
+ {
+  "work_id": "w_4KEWYZ24XRFH",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEWYZ24XRFH",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "NL"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia, Países Bajos"
+  }
+ },
+ {
+  "work_id": "w_4KEWYZ24XRFH",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KEWYZ24XRFH",
+  "campo": "sinopsis.en",
+  "valor": "A guerrilla combatant discovers a tiny spider that takes refuge inside the barrel of his rifle. The next day, as he prepares to clean his weapon, he notices a fine web that creates a kaleidoscopic effect when light passes through it. Fascinated by the beauty of the universe woven by the spider inside his rifle, the combatant experiences a new impulse: to preserve life.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A guerrilla combatant discovers a tiny spider that takes refuge inside the barrel of his rifle. The next day, as he prepares to clean his weapon, he notices a fine web that creates a kaleidoscopic effect when light passes through it. Fascinated by the beauty of the universe woven by the spider inside his rifle, the combatant experiences a new impulse: to preserve life."
+  }
+ },
+ {
+  "work_id": "w_4KEWYZ24XRFH",
+  "campo": "xref.tmdb",
+  "valor": 1841390,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841390"
+  }
+ },
+ {
+  "work_id": "w_4KEWYZ24XRFH",
+  "campo": "xref.letterboxd",
+  "valor": "la-vida-de-un-hilo",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "la-vida-de-un-hilo"
+  }
+ },
+ {
+  "work_id": "w_4KEWYZ24XRFH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-vida-de-un-hilo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-vida-de-un-hilo.jpg"
+  }
+ }
+]

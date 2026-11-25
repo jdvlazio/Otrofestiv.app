@@ -9,12 +9,17 @@
  "directores": [
   "James Richards"
  ],
+ "sinopsis": {
+  "es": "Un texto sobre fondo gris espectral da paso a un parpadeo irregular que desorienta. Zumbidos y motores dan un color amenazante a declaraciones febriles de amor indefinido. De la oscuridad surgen ojos que nos miran desde rostros tallados en roca.",
+  "en": "Text on a spectral gray background gives way to a disorienting irregular flicker. A foreboding soundtrack of buzzy drones and whirring motors lends a menacing color to febrile declarations of indefinite love. Eyes emerge from darkness, peering at us from faces carved in rock."
+ },
  "afiche": {
   "archivo": "https://images.ctfassets.net/22n7d68fswlw/5eSeZeW1X22Noizo1lqBeZ/48d2b452cd0db2c5d4d72590a85b0584/Fevers_Still_HERO.jpg",
   "veredicto": "fotograma"
  },
  "xref": {
-  "letterboxd": "fevers-2"
+  "tmdb": 1745772,
+  "letterboxd": "fevers-2026"
  },
  "versiones": [
   {

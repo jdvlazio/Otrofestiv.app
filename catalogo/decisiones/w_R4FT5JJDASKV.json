@@ -1,0 +1,71 @@
+[
+ {
+  "work_id": "w_R4FT5JJDASKV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/sB4dBAGzUomRRZ0CcJdcIqqeCCf.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/ya-se-ven-los-tigres-en-la-lluvia.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20202933.png?itok=fJ60ATsd",
+   "https://image.tmdb.org/t/p/w500/sB4dBAGzUomRRZ0CcJdcIqqeCCf.jpg"
+  ],
+  "antes": {
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/sB4dBAGzUomRRZ0CcJdcIqqeCCf.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20202933.png?itok=fJ60ATsd",
+   "midbo-2026": "/assets/midbo-2026/ya-se-ven-los-tigres-en-la-lluvia.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4FT5JJDASKV",
+  "campo": "sinopsis.es",
+  "valor": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, ficci-65)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "27ea2fe1dca7",
+   "a7cb216df4f4"
+  ],
+  "antes": {
+   "cinemancia-2026": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal.",
+   "ficci-65": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal.",
+   "midbo-2026": "Los desolados espacios de tránsito de un Montreal invernal y actual —callejones, carriles bici, pasos subterráneos, parques de skate— contrastan con las imágenes más animadas de vídeos caseros de hace décadas… Oscilando entre formatos de imagen en movimiento y collages de texturas locales y voces del pasado, la película de Oscar Ruiz Navia reflexiona sobre la pérdida y el duelo como experiencias de desplazamiento temporal."
+  }
+ },
+ {
+  "work_id": "w_R4FT5JJDASKV",
+  "campo": "directores",
+  "valor": [
+   "Óscar Ruiz Navia"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2026": "Óscar Ruiz Navia",
+   "ficci-65": "Óscar Ruiz Navia",
+   "midbo-2026": "Oscar Ruiz Navia"
+  }
+ },
+ {
+  "work_id": "w_R4FT5JJDASKV",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "CA"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1526866)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2026": "Colombia",
+   "ficci-65": "Colombia/Canadá",
+   "midbo-2026": "Colombia, Canadá"
+  }
+ }
+]

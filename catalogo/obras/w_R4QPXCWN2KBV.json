@@ -1,18 +1,23 @@
 {
  "id": "w_R4QPXCWN2KBV",
  "titulo_original": "Paving The Way",
- "anio": null,
+ "anio": 2026,
  "paises": [
   "US"
  ],
  "directores": [
   "Keelan Williams"
  ],
+ "sinopsis": {
+  "es": "En los paisajes inmensos de la Reserva Indígena Flathead, el skate crea comunidad, da confianza y desafía estereotipos. Un retrato vibrante de jóvenes que se levantan cada vez que caen.",
+  "en": "Set against the sweeping landscapes of the Flathead Indian Reservation, the film highlights skateboarding’s power to build community, foster confidence, and challenge stereotypes. More than a skateboarding film, it becomes a vibrant portrait of young people who get back up every time they fall."
+ },
  "afiche": {
   "archivo": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/7031/large_Paving_The_Way-Clean-16x9-01.jpg",
   "veredicto": "fotograma"
  },
  "xref": {
+  "tmdb": 1635850,
   "letterboxd": "paving-the-way"
  },
  "versiones": [

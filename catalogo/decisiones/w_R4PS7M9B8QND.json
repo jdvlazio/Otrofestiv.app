@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4PS7M9B8QND",
+  "campo": "xref.tmdb",
+  "valor": 44357,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-seasons-1975/"
+ },
+ {
+  "work_id": "w_R4PS7M9B8QND",
+  "campo": "sinopsis.es",
+  "valor": "Última colaboración de Artavazd Peleshian y el director de fotografía Mikhail Vartanov: un ensayo sobre los pastores de Armenia y sobre la contradicción y la armonía entre el ser humano y la naturaleza, con Las cuatro estaciones de Vivaldi.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/44357"
+ },
+ {
+  "work_id": "w_R4PS7M9B8QND",
+  "campo": "sinopsis.en",
+  "valor": "The last collaboration of Artavazd Peleshian and cinematographer Mikhail Vartanov is a film-essay about Armenia's shepherds, about the contradiction and the harmony between man and nature, scored to Vivaldi's Four Seasons.",
+  "motivo": "de su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/44357"
+ },
+ {
+  "work_id": "w_R4PS7M9B8QND",
+  "campo": "directores",
+  "valor": [
+   "Artavazd Pelechian"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4PS7M9B8QND",
+  "campo": "paises",
+  "valor": [
+   "AM",
+   "SU"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

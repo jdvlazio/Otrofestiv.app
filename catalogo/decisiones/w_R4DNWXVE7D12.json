@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4DNWXVE7D12",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/eklipse.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/eklipse.jpg",
+   "https://image.tmdb.org/t/p/w500/lUg40on46lGnLSvITablDllDQEc.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/eklipse.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/lUg40on46lGnLSvITablDllDQEc.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DNWXVE7D12",
+  "campo": "sinopsis.es",
+  "valor": "Tomy y su mejor amigo, Chris, pasan el verano de 1999 en una granja alpina. Ayudan al tío de Tomy con el ordeño, construyen una presa y exploran la naturaleza. Mientras los chicos descubren nuevos mundos, la madre de Tomy decide seguir ocultándole a su hijo la verdadera razón por la que su padre está en el hospital. Cuando Chris se entera de que el motivo es “la enfermedad de los gays”, se asusta, y Tomy se ve de repente enfrentado al rechazo y al silencio de su propia familia.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "4a890de03ea9",
+   "6d1ebb9ae71e"
+  ],
+  "antes": {
+   "biff-2026": "Tomy y su mejor amigo, Chris, pasan el verano de 1999 en una granja alpina. Ayudan al tío de Tomy con el ordeño, construyen una presa y exploran la naturaleza. Mientras los chicos descubren nuevos mundos, la madre de Tomy decide seguir ocultándole a su hijo la verdadera razón por la que su padre está en el hospital. Cuando Chris se entera de que el motivo es “la enfermedad de los gays”, se asusta, y Tomy se ve de repente enfrentado al rechazo y al silencio de su propia familia.",
+   "tiff-2026": "Mientras llega y pasa el esperadísimo eclipse solar de 1999, todo lo que estaba envuelto en oscuridad sale de pronto a la luz en Eklipse, ópera prima del guionista y director austriaco Manuel Wetscher, cuya inclinación por el realismo poético lleva la turbulencia emocional a un entorno bucólico."
+  }
+ },
+ {
+  "work_id": "w_R4DNWXVE7D12",
+  "campo": "sinopsis.en",
+  "valor": "Twelve-year-old Tomy spends the summer of the 1999 solar eclipse with his best friend Chris on an alpine pasture. When Chris learns that Tomy's father is in hospital with AIDS, their friendship falls apart – and Tomy suddenly finds himself torn between exclusion and the secrecy of his own family.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Eklipse",
+  "antes": {
+   "biff-2026": "Twelve-year-old Tomy spends the summer of the 1999 solar eclipse with his best friend Chris on an alpine pasture. When Chris learns that Tomy's father is in hospital with AIDS, their friendship falls apart – and Tomy suddenly finds himself torn between exclusion and the secrecy of his own family.",
+   "tiff-2026": "As the highly anticipated 1999 solar eclipse comes and goes, everything that was shrouded in darkness suddenly comes to light in Eklipse, the feature-length debut of Austrian writer-director Manuel Wetscher, whose penchant for poetic realism brings emotional turbulence to a bucolic setting."
+  }
+ }
+]

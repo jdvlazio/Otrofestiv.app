@@ -1,17 +1,19 @@
 {
  "_provenance": {
   "fuente": "pipeline/fuentes_descubrir.py",
-  "capturado": "2026-11-20T09:38",
+  "capturado": "2026-11-24T09:17",
   "paginas_leidas": 60,
   "errores": [
-   "https://www.alestfestival.com/profile/undefined/blog-comments: HTTP Error 404: Not Found",
-   "https://www.alestfestival.com/_api/members/v1/santa-members: HTTP Error 404: Not Found",
-   "https://www.alestfestival.com/_api/wix-code-public-dispatcher-ng/siteview: HTTP Error 404: Not Found",
-   "https://www.alestfestival.com/profile/undefined/profile: HTTP Error 404: Not Found",
    "https://www.alestfestival.com/_api/cloud-data: HTTP Error 404: Not Found",
-   "https://www.alestfestival.com/profile/undefined/blog-likes: HTTP Error 404: Not Found",
    "https://www.alestfestival.com/true: HTTP Error 404: Not Found",
-   "https://www.alestfestival.com/_api/dynamic-pages-router/v1: HTTP Error 404: Not Found"
+   "https://www.alestfestival.com/profile/undefined/profile: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/profile/undefined/blog-likes: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/_api/members/v1/santa-members: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/_api/dynamic-pages-router/v1: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/profile/undefined/blog-comments: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/_api/wix-code-public-dispatcher-ng/siteview: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/profile/cae1ba99f9fcb8f49f559082e1d31e5c320f666f6626a24d1fb59f22d11e5f3931c4b853084adfdb3ddc9e8dbebe5bf81e60994d53964e647acf431e4f798bcd063c535d43123c188fe645b7fd5899e7605fa71928b38623e5910c710afa083cb7ff876caf1493c882e12084c72010d0724a19d8dc3c2d9646049ab78bd3d918bad5481545c3c975ae5991adaf6f97e7/blog-comments: HTTP Error 404: Not Found",
+   "https://www.alestfestival.com/profile/cae1ba99f9fcb8f49f559082e1d31e5c320f666f6626a24d1fb59f22d11e5f3931c4b853084adfdb3ddc9e8dbebe5bf81e60994d53964e647acf431e4f798bcd063c535d43123c188fe645b7fd5899e7605fa71928b38623e5910c710afa083cb7ff876caf1493c882e12084c72010d0724a19d8dc3c2d9646049ab78bd3d918bad5481545c3c975ae5991adaf6f97e7/profile: HTTP Error 404: Not Found"
   ]
  },
  "raices": {
@@ -23,7 +25,7 @@
    "tipo": "pdf",
    "visto_en": "https://www.alestfestival.com/search?type=blogs&page=2",
    "primera_vez": "2026-11-12T14:58",
-   "ultima_vez": "2026-11-19T05:53",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "descartada",
    "_por_que": "Al Este Lima 2019",
    "revisado": "2026-11-12T14:58"
@@ -113,7 +115,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -122,7 +124,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -131,7 +133,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -140,7 +142,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -149,7 +151,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -158,7 +160,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -167,7 +169,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -176,7 +178,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -185,7 +187,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -194,7 +196,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -203,7 +205,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -212,7 +214,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -221,7 +223,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -230,7 +232,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -239,7 +241,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -248,7 +250,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -257,7 +259,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -266,7 +268,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -275,7 +277,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -284,7 +286,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -293,7 +295,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -302,7 +304,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -311,7 +313,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -320,7 +322,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -329,7 +331,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -338,7 +340,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -347,7 +349,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -356,7 +358,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -365,7 +367,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -374,7 +376,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -383,7 +385,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -392,7 +394,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -401,7 +403,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -410,7 +412,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -419,7 +421,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -428,7 +430,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -437,7 +439,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -446,7 +448,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -455,7 +457,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -464,7 +466,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -473,7 +475,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-16T09:41",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "programa oficial: 40 fichas leídas por aleste-2026-programa.py (secciones, obras, funciones de Bogotá)",
    "revisado": "2026-11-16T10:03"
@@ -482,7 +484,7 @@
    "tipo": "formulario",
    "visto_en": "https://linktr.ee/alestefestivalcolombia",
    "primera_vez": "2026-11-17T21:24",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "inscripción a la Noche inaugural de Medellín; ya es su registration_url",
    "revisado": "2026-11-17T21:24"
@@ -491,7 +493,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -500,7 +502,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -509,7 +511,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -518,7 +520,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -527,7 +529,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -536,7 +538,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -545,7 +547,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -554,7 +556,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -563,7 +565,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -572,7 +574,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -581,7 +583,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -590,7 +592,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -599,7 +601,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -608,7 +610,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -617,7 +619,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -626,7 +628,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -635,7 +637,7 @@
    "tipo": "boleteria",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "boletería oficial de Bogotá (Tuboleta): fechas cotejadas; Laguna el 28 y Wittgenstein el 29, a Juan con la contradicción de la Sala 3",
    "revisado": "2026-11-19T05:54"
@@ -644,7 +646,7 @@
    "tipo": "pdf",
    "visto_en": "https://www.alestfestival.com/co",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "catálogo oficial Bogotá+Medellín (18 nov): conversatorio de Los golfos aplicado; contradicciones Sala 3, Hecho en Colombia y Kluk preguntadas al festival por correo",
    "revisado": "2026-11-19T05:54"
@@ -653,10 +655,19 @@
    "tipo": "pagina-programa",
    "visto_en": "https://www.alestfestival.com/programa2026",
    "primera_vez": "2026-11-19T05:52",
-   "ultima_vez": "2026-11-20T09:38",
+   "ultima_vez": "2026-11-24T09:17",
    "estado": "usada",
    "_por_que": "ficha del corto inaugural: título aplicado en #1531",
    "revisado": "2026-11-19T05:54"
+  },
+  "https://www.alestfestival.com/_files/ugd/9df115_8c8d52967fb743b6b6604248e056a0df.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://www.alestfestival.com/programa2026",
+   "primera_vez": "2026-11-23T08:30",
+   "ultima_vez": "2026-11-24T09:17",
+   "estado": "usada",
+   "_por_que": "catálogo oficial del 20 nov, leído entero el 23 nov: en Bogotá coincide con la app salvo License to Live (17:00), La ciudad, el reparto de Hecho en Colombia y Kluk (solo colegios), que van a Juan; Medellín ya terminó",
+   "revisado": "2026-11-23T08:31"
   }
  }
 }

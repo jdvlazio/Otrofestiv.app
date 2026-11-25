@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS974J6XW",
+  "campo": "sinopsis.es",
+  "valor": "El mismo día de una audiencia decisiva en el tribunal y de una presentación importante, un discreto músico de bodas ve su vida privada expuesta al escrutinio público. Acusado de explotar su matrimonio, se mueve entre el tribunal, las calles y el escenario con el peso del juicio, la lealtad y una culpa callada. Ante una decisión irreversible, la película observa a un hombre cuya verdad interior se mantiene esquiva, atrapado entre la devoción, la dignidad y la pérdida.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "0d943f33d6e5"
+  ],
+  "antes": {
+   "olhar-2026": "El día de una audiencia decisiva en el tribunal y de una importante presentación en una boda, un discreto músico de bodas ve su vida privada expuesta al escrutinio público. Acusado de explotar su matrimonio, se mueve entre el tribunal, las calles de la ciudad y el escenario, cargando el peso del juicio, la lealtad y una culpa no dicha. Forzado a tomar una decisión contenida pero irreversible, la película observa a un hombre cuya verdad interior permanece elusiva, atrapado entre la devoción, la dignidad y la pérdida."
+  }
+ },
+ {
+  "work_id": "w_R4MQS974J6XW",
+  "campo": "xref.tmdb",
+  "valor": 1601507,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/whispers-of-a-burning-scent/"
+ }
+]

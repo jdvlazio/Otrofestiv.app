@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KJEY9YSXMDN",
+  "campo": "directores",
+  "valor": [
+   "Aurélien Laplace"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Aurélien Laplace"
+  }
+ },
+ {
+  "work_id": "w_4KJEY9YSXMDN",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJEY9YSXMDN",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KJEY9YSXMDN",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KJEY9YSXMDN",
+  "campo": "sinopsis.es",
+  "valor": "En plena campaña, un diputado se entera por la radio de que está envuelto en un escándalo. Él y su esposa buscan en internet qué fue lo que pasó.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En plena campaña, un diputado se entera por la radio de que está envuelto en un escándalo. Él y su esposa buscan en internet qué fue lo que pasó."
+  }
+ },
+ {
+  "work_id": "w_4KJEY9YSXMDN",
+  "campo": "sinopsis.en",
+  "valor": "In the middle of his campaign, a politician hears on the radio that he is caught up in a scandal. He and his wife go online to find out what happened.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the middle of his campaign, a politician hears on the radio that he is caught up in a scandal. He and his wife go online to find out what happened."
+  }
+ },
+ {
+  "work_id": "w_4KJEY9YSXMDN",
+  "campo": "xref.tmdb",
+  "valor": 1417728,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1417728"
+  }
+ },
+ {
+  "work_id": "w_4KJEY9YSXMDN",
+  "campo": "xref.letterboxd",
+  "valor": "le-derapage",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "le-derapage"
+  }
+ },
+ {
+  "work_id": "w_4KJEY9YSXMDN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/le-derapage.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/le-derapage.jpg"
+  }
+ }
+]

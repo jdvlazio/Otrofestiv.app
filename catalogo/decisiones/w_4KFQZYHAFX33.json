@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KFQZYHAFX33",
+  "campo": "directores",
+  "valor": [
+   "Katya Mikheeva"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Katya Mikheeva"
+  }
+ },
+ {
+  "work_id": "w_4KFQZYHAFX33",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFQZYHAFX33",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KFQZYHAFX33",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KFQZYHAFX33",
+  "campo": "sinopsis.es",
+  "valor": "Una historia sobre dejar atrás a quien fuimos. Gira en torno a dos personajes: el Yo Presente y el Yo Pasado.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una historia sobre dejar atrás a quien fuimos. Gira en torno a dos personajes: el Yo Presente y el Yo Pasado."
+  }
+ },
+ {
+  "work_id": "w_4KFQZYHAFX33",
+  "campo": "sinopsis.en",
+  "valor": "A story about letting go of one’s former self. It revolves around two characters: the Present Self and the Past Self.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A story about letting go of one’s former self. It revolves around two characters: the Present Self and the Past Self."
+  }
+ },
+ {
+  "work_id": "w_4KFQZYHAFX33",
+  "campo": "xref.tmdb",
+  "valor": 1689120,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1689120"
+  }
+ },
+ {
+  "work_id": "w_4KFQZYHAFX33",
+  "campo": "xref.letterboxd",
+  "valor": "shades-of-blue-2025-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "shades-of-blue-2025-1"
+  }
+ },
+ {
+  "work_id": "w_4KFQZYHAFX33",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/shades-of-blue.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/shades-of-blue.jpg"
+  }
+ }
+]

@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KEVGDEQV9WA",
+  "campo": "directores",
+  "valor": [
+   "Honami Yano"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Honami Yano"
+  }
+ },
+ {
+  "work_id": "w_4KEVGDEQV9WA",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEVGDEQV9WA",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "JP"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia, Japón"
+  }
+ },
+ {
+  "work_id": "w_4KEVGDEQV9WA",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KEVGDEQV9WA",
+  "campo": "sinopsis.es",
+  "valor": "En un mundo donde las vacas lecheras deben parir para sobrevivir, Eri se enamora de otra vaca. Sus suspiros le hacen compañía en las noches de insomnio.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En un mundo donde las vacas lecheras deben parir para sobrevivir, Eri se enamora de otra vaca. Sus suspiros le hacen compañía en las noches de insomnio."
+  }
+ },
+ {
+  "work_id": "w_4KEVGDEQV9WA",
+  "campo": "sinopsis.en",
+  "valor": "In a world where dairy cows must bear calves to survive, Eri, a Holstein, falls in love with another cow. Her sighs linger through sleepless nights — will they find their way to the one she loves?",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In a world where dairy cows must bear calves to survive, Eri, a Holstein, falls in love with another cow. Her sighs linger through sleepless nights — will they find their way to the one she loves?"
+  }
+ },
+ {
+  "work_id": "w_4KEVGDEQV9WA",
+  "campo": "xref.tmdb",
+  "valor": 1118590,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1118590"
+  }
+ },
+ {
+  "work_id": "w_4KEVGDEQV9WA",
+  "campo": "xref.letterboxd",
+  "valor": "eri-the-cow",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "eri-the-cow"
+  }
+ },
+ {
+  "work_id": "w_4KEVGDEQV9WA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/eri.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/eri.jpg"
+  }
+ }
+]

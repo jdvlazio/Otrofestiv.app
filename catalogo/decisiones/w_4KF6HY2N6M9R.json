@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KF6HY2N6M9R",
+  "campo": "directores",
+  "valor": [
+   "Ivan Grgur"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Ivan Grgur"
+  }
+ },
+ {
+  "work_id": "w_4KF6HY2N6M9R",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KF6HY2N6M9R",
+  "campo": "paises",
+  "valor": [
+   "HR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia"
+  }
+ },
+ {
+  "work_id": "w_4KF6HY2N6M9R",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KF6HY2N6M9R",
+  "campo": "sinopsis.es",
+  "valor": "En la localidad croata de Umag, el rumor de que alguien vio un oso en plena temporada de espárragos divide al pueblo. El incidente crece en las redes y pone en duda qué se vio y qué se inventó.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En la localidad croata de Umag, el rumor de que alguien vio un oso en plena temporada de espárragos divide al pueblo. El incidente crece en las redes y pone en duda qué se vio y qué se inventó."
+  }
+ },
+ {
+  "work_id": "w_4KF6HY2N6M9R",
+  "campo": "sinopsis.en",
+  "valor": "In the small, sleepy Mediterranean town of Umag, the unusual appearance of a bear in the midst of wild asparagus season sparks a conflict, dividing the community into skeptics and those who believe the bear truly exists. Following a small local event that spirals wildly out of proportion, the film explores the blurry lines between truth and lies in the age of social media.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the small, sleepy Mediterranean town of Umag, the unusual appearance of a bear in the midst of wild asparagus season sparks a conflict, dividing the community into skeptics and those who believe the bear truly exists. Following a small local event that spirals wildly out of proportion, the film explores the blurry lines between truth and lies in the age of social media."
+  }
+ },
+ {
+  "work_id": "w_4KF6HY2N6M9R",
+  "campo": "xref.tmdb",
+  "valor": 1529384,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1529384"
+  }
+ },
+ {
+  "work_id": "w_4KF6HY2N6M9R",
+  "campo": "xref.letterboxd",
+  "valor": "asparagus-bear",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "asparagus-bear"
+  }
+ },
+ {
+  "work_id": "w_4KF6HY2N6M9R",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/medo-u-sparugama.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/medo-u-sparugama.jpg"
+  }
+ }
+]

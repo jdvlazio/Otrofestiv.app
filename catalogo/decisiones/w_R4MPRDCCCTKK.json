@@ -1,0 +1,62 @@
+[
+ {
+  "work_id": "w_R4MPRDCCCTKK",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "regla anio-mas-temprano",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)",
+  "antes": {
+   "narrarelfuturo-2026": 2025,
+   "siembrafest-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4MPRDCCCTKK",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/narrarelfuturo-2026/6-de-diciembre.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/narrarelfuturo-2026/6-de-diciembre.jpg",
+   "/assets/siembrafest/6-de-diciembre.jpg"
+  ],
+  "antes": {
+   "narrarelfuturo-2026": "/assets/narrarelfuturo-2026/6-de-diciembre.jpg",
+   "siembrafest-2026": "/assets/siembrafest/6-de-diciembre.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4MPRDCCCTKK",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "US"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "narrarelfuturo-2026": "Colombia, Estados Unidos",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4MPRDCCCTKK",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "narrarelfuturo-2026": "Documental, Experimental",
+   "siembrafest-2026": "Documental"
+  }
+ }
+]

@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_7JCX5FCM9BEZ",
+  "campo": "directores",
+  "valor": [
+   "Sergio Fernández",
+   "Nicolás Duque"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Sergio Fernández, Nicolás Duque"
+  }
+ },
+ {
+  "work_id": "w_7JCX5FCM9BEZ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCX5FCM9BEZ",
+  "campo": "sinopsis.es",
+  "valor": "Cristian y Andrés, dos niños wayuu de nueve años, recorren las calles de Palomino vendiendo limones. Mientras trabajan, escuchan y comentan en segundo plano la desaparición de Bartolo, ocurrida durante los recientes enfrentamientos armados en la Sierra Nevada. Al caer la noche, regresan a casa y entregan el producido a su madre.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Cristian y Andrés, dos niños wayuu de nueve años, recorren las calles de Palomino vendiendo limones. Mientras trabajan, escuchan y comentan en segundo plano la desaparición de Bartolo, ocurrida durante los recientes enfrentamientos armados en la Sierra Nevada. Al caer la noche, regresan a casa y entregan el producido a su madre."
+  }
+ },
+ {
+  "work_id": "w_7JCX5FCM9BEZ",
+  "campo": "sinopsis.en",
+  "valor": "Cristian and Andrés, two nine-year-old Wayuu boys, roam the streets of Palomino selling limes. As they work, they hear and comment on, in the background, the disappearance of Bartolo, which occurred during the recent armed clashes in the Sierra Nevada. At nightfall, they return home and hand over their earnings to their mother.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Cristian and Andrés, two nine-year-old Wayuu boys, roam the streets of Palomino selling limes. As they work, they hear and comment on, in the background, the disappearance of Bartolo, which occurred during the recent armed clashes in the Sierra Nevada. At nightfall, they return home and hand over their earnings to their mother."
+  }
+ },
+ {
+  "work_id": "w_7JCX5FCM9BEZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/limones.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/limones.jpg"
+  }
+ }
+]

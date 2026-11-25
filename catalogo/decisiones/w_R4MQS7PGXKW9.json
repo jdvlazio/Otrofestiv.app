@@ -1,0 +1,33 @@
+[
+ {
+  "work_id": "w_R4MQS7PGXKW9",
+  "campo": "sinopsis.es",
+  "valor": "La desaparición del actor principal preocupa a Andrzej, el director de la película. Sale a buscarlo con otro joven actor, la esposa y la amante del desaparecido.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "24391548254f"
+  ],
+  "antes": {
+   "olhar-2026": "La desaparición del actor principal del set de la película preocupa a su director, Andrzej. Él emprende un viaje para buscar al actor junto con otro joven actor, la esposa y la amante del actor desaparecido."
+  }
+ },
+ {
+  "work_id": "w_R4MQS7PGXKW9",
+  "campo": "xref.tmdb",
+  "valor": 94527,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/everything-for-sale/"
+ },
+ {
+  "work_id": "w_R4MQS7PGXKW9",
+  "campo": "anio",
+  "valor": 1968,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

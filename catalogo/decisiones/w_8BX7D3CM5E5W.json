@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7D3CM5E5W",
+  "campo": "directores",
+  "valor": [
+   "Leo McCarey"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Leo McCarey"
+  }
+ },
+ {
+  "work_id": "w_8BX7D3CM5E5W",
+  "campo": "anio",
+  "valor": 1937,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1937"
+  }
+ },
+ {
+  "work_id": "w_8BX7D3CM5E5W",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_8BX7D3CM5E5W",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX7D3CM5E5W",
+  "campo": "sinopsis.es",
+  "valor": "Una pareja de ancianos se ve obligada a separarse cuando sus hijos se niegan a acoger a los dos en una misma casa.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Una pareja de ancianos se ve obligada a separarse cuando sus hijos se niegan a acoger a los dos en una misma casa."
+  }
+ },
+ {
+  "work_id": "w_8BX7D3CM5E5W",
+  "campo": "sinopsis.en",
+  "valor": "An elderly couple are forced to separate from each other when their children refuse to take both into one house.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "An elderly couple are forced to separate from each other when their children refuse to take both into one house."
+  }
+ },
+ {
+  "work_id": "w_8BX7D3CM5E5W",
+  "campo": "xref.tmdb",
+  "valor": 41059,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "41059"
+  }
+ },
+ {
+  "work_id": "w_8BX7D3CM5E5W",
+  "campo": "xref.letterboxd",
+  "valor": "make-way-for-tomorrow",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "make-way-for-tomorrow"
+  }
+ },
+ {
+  "work_id": "w_8BX7D3CM5E5W",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/make-way-for-tomorrow.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/make-way-for-tomorrow.jpg"
+  }
+ }
+]

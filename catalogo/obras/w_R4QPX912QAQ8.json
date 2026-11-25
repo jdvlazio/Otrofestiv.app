@@ -1,7 +1,7 @@
 {
  "id": "w_R4QPX912QAQ8",
- "titulo_original": "Because Today is Saturday",
- "anio": null,
+ "titulo_original": "Porque hoje é Sábado",
+ "anio": 2025,
  "paises": [
   "PT",
   "FR",
@@ -10,15 +10,30 @@
  "directores": [
   "Alice Eça Guimarães"
  ],
+ "aliases": [
+  {
+   "titulo": "Because Today is Saturday",
+   "tipo": "festival"
+  },
+  {
+   "titulo": "Because Today is Saturday",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
  "sinopsis": {
-  "es": "Una mujer despierta temprano en su cumpleaños para robarse unas horas de escritura. Cada momento de inspiración es interrumpido por demandas domésticas hasta que la carga mental llega a un punto de quiebre.",
-  "en": "A woman wakes early on her birthday to steal a few hours of writing time. Every inspiration is interrupted by domestic demands — laundry, children, meals — until the mental load reaches a breaking point."
+  "es": "Es sábado, y una mujer lucha con la dificultad de conciliar su vida familiar y su necesidad de escapar.",
+  "en": "It’s Saturday, and a woman struggles with the difficulty of reconciling her home life and her need to escape."
  },
+ "generos": [
+  "Animación"
+ ],
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w500/eLMlWlvZq6WY1yUg0wwJJJaTGhf.jpg",
   "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1516110,
   "letterboxd": "because-today-is-saturday"
  },
  "versiones": [
@@ -28,6 +43,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "tribeca-2026"
  ]
 }

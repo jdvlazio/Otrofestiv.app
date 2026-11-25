@@ -1,0 +1,105 @@
+[
+ {
+  "work_id": "w_4KH3SG7X0W0G",
+  "campo": "directores",
+  "valor": [
+   "Aram Atkinson"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Aram Atkinson"
+  }
+ },
+ {
+  "work_id": "w_4KH3SG7X0W0G",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_4KH3SG7X0W0G",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_4KH3SG7X0W0G",
+  "campo": "sinopsis.es",
+  "valor": "En los años sesenta, la llegada tardía de un músico a una sesión de jazz pone al descubierto tensiones dentro del grupo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En los años sesenta, la llegada tardía de un músico a una sesión de jazz pone al descubierto tensiones dentro del grupo."
+  }
+ },
+ {
+  "work_id": "w_4KH3SG7X0W0G",
+  "campo": "sinopsis.en",
+  "valor": "In the 1960s, a musician arrives late to a jazz session, exposing tensions within the group.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In the 1960s, a musician arrives late to a jazz session, exposing tensions within the group."
+  }
+ },
+ {
+  "work_id": "w_4KH3SG7X0W0G",
+  "campo": "xref.tmdb",
+  "valor": 1264445,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1264445"
+  }
+ },
+ {
+  "work_id": "w_4KH3SG7X0W0G",
+  "campo": "xref.letterboxd",
+  "valor": "sunrise-meets-sunset",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "sunrise-meets-sunset"
+  }
+ },
+ {
+  "work_id": "w_4KH3SG7X0W0G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/sunrise-meets-sunset.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/sunrise-meets-sunset.jpg"
+  }
+ }
+]

@@ -14,5 +14,17 @@
  "paises": {
   "fuente": "festival",
   "regla": "pais-union"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "faltan signos de apertura y tilde",
+  "fecha": "2026-11-25"
  }
 }

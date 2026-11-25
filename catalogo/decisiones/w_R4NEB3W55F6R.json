@@ -1,0 +1,21 @@
+[
+ {
+  "work_id": "w_R4NEB3W55F6R",
+  "campo": "xref.tmdb",
+  "valor": 1337075,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-end-of-times/"
+ },
+ {
+  "work_id": "w_R4NEB3W55F6R",
+  "campo": "directores",
+  "valor": [
+   "Diego Guareño"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

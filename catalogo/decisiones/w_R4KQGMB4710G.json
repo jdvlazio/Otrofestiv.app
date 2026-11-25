@@ -1,0 +1,48 @@
+[
+ {
+  "work_id": "w_R4KQGMB4710G",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/mambe-2026/la-memoria-de-las-mariposas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/mambe-2026/la-memoria-de-las-mariposas.jpg",
+   "/assets/mamut-2026/la-memoria-de-las-mariposas.jpg"
+  ],
+  "antes": {
+   "mambe-2026": "/assets/mambe-2026/la-memoria-de-las-mariposas.jpg",
+   "mamut-2026": "/assets/mamut-2026/la-memoria-de-las-mariposas.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4KQGMB4710G",
+  "campo": "paises",
+  "valor": [
+   "PT",
+   "PE"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1418601)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "mambe-2026": "Portugal, Peru",
+   "mamut-2026": "Perú, Portugal"
+  }
+ },
+ {
+  "work_id": "w_R4KQGMB4710G",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "estreno mundial Berlinale Forum 2025: https://www.berlinale.de/en/2025/programme/202512292.html",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "mambe-2026": "2026",
+   "mamut-2026": "2026"
+  }
+ }
+]

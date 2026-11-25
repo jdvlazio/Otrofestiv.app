@@ -1,0 +1,69 @@
+[
+ {
+  "work_id": "w_R4QPXC86G7NS",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "estreno en Tribeca 2024",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "tribeca-2026": "1996"
+  },
+  "fuente": "https://tribecafilm.com/films/ripe-2024"
+ },
+ {
+  "work_id": "w_R4QPXC86G7NS",
+  "campo": "xref.tmdb",
+  "valor": 1206695,
+  "motivo": "dirección Tusk, 18 min, España y Estados Unidos",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "fuente": "https://www.themoviedb.org/movie/1206695"
+ },
+ {
+  "work_id": "w_R4QPXC86G7NS",
+  "campo": "sinopsis.es",
+  "valor": "En la costa catalana, Sophie, estudiante estadounidense de intercambio, se une a Gloria, una chica local de pelo rubio decolorado, en un partido amistoso de fútbol. Y, justo cuando la rivalidad se convierte en un amor de verano, alguien termina rompiéndose el brazo.",
+  "motivo": "la anterior era de «Ripe» (1996)",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "tribeca-2026": "Dos gemelas que perdieron a sus abusivos padres huyen a Kentucky en busca de una vida mejor. Cuando se refugian con un vagabundo en una base militar abandonada, el enamoramiento de una destruye el vínculo entre ambas."
+  },
+  "vistas": [
+   "f57d87763001"
+  ],
+  "fuente": "https://frameline.org/films/frameline48/ripe"
+ },
+ {
+  "work_id": "w_R4QPXC86G7NS",
+  "campo": "sinopsis.en",
+  "valor": "On the Catalan coast, American exchange student Sophie joins bleach-blonde local Gloria for a friendly game of football. And just as friendly rivalry turns into a summer crush, someone ends up breaking an arm.",
+  "motivo": "la anterior era de «Ripe» (1996)",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "tribeca-2026": "Twin sisters who lost their abusive parents run away to Kentucky in search of a better life. When they take shelter with a drifter on a derelict army base, Violet falls for him — and Rosie's growing hostility destroys their bond forever."
+  },
+  "fuente": "https://frameline.org/films/frameline48/ripe"
+ },
+ {
+  "work_id": "w_R4QPXC86G7NS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/ms32hzMGRv4JpfqOsAMgX07ECoE.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el anterior era de otra obra",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "tribeca-2026": "https://image.tmdb.org/t/p/w500/eVJjg1IwSBwzBc3X4tpFpkCeIX4.jpg"
+  },
+  "a_mano": true,
+  "vistas": [
+   "https://image.tmdb.org/t/p/w500/eVJjg1IwSBwzBc3X4tpFpkCeIX4.jpg"
+  ],
+  "fuente": "https://www.themoviedb.org/movie/1206695"
+ }
+]

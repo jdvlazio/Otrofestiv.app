@@ -1,0 +1,56 @@
+[
+ {
+  "work_id": "w_R4J8Q0CCTKZ3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinetoro-2026/en-su-sombra-fertil.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cinetoro-2026/en-su-sombra-fertil.jpg",
+   "/assets/ficpa-2026/en-su-sombra-fertil.jpg",
+   "https://image.tmdb.org/t/p/w500/2eNN7S45048PDcKKz2uRmEnpkQr.jpg"
+  ],
+  "antes": {
+   "cinetoro-2026": "/assets/cinetoro-2026/en-su-sombra-fertil.jpg",
+   "ficpa-2026": "/assets/ficpa-2026/en-su-sombra-fertil.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/2eNN7S45048PDcKKz2uRmEnpkQr.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4J8Q0CCTKZ3",
+  "campo": "sinopsis.es",
+  "valor": "En el valle de Sibundoy, Mercedes Cuatindioy cultiva su chagra como un acto de resistencia y memoria. A través de la forma en que siembra, cuida e interactúa con sus plantas, transmite conocimientos indígenas que están en peligro de caer en el olvido y de ser desplazados por los monocultivos.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinetoro-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "3e59ca791f61",
+   "684a173b8454",
+   "f33c6dd58441"
+  ],
+  "antes": {
+   "cinetoro-2026": "En el valle de Sibundoy, Mercedes Cuatindioy cultiva su chagra como un acto de resistencia y memoria. A través de la forma en que siembra, cuida e interactúa con sus plantas, transmite conocimientos indígenas que están en peligro de caer en el olvido y de ser desplazados por los monocultivos.",
+   "ficpa-2026": "En el valle de Sibundoy, Mercedes Cuatindioy cultiva su chagra como un acto de resistencia y memoria. A través de la forma en que siembra, cuida e interactúa con sus plantas, transmite un conocimiento indígena que se ve amenazado por el olvido y el monocultivo.",
+   "siembrafest-2026": "Se acerca a la chagra de Mercedes Cuatindioy, donde el policultivo es cuidado, resistencia y transmisión de saberes."
+  }
+ },
+ {
+  "work_id": "w_R4J8Q0CCTKZ3",
+  "campo": "directores",
+  "valor": [
+   "Andrés Dávila"
+  ],
+  "motivo": "un dato por obra: la forma completa y bien escrita entre lo acreditado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinetoro-2026": "Andrés Dávila",
+   "ficpa-2026": "Andrés Rodrigo Dávila Argoty",
+   "siembrafest-2026": "Andrés Dávila"
+  }
+ }
+]

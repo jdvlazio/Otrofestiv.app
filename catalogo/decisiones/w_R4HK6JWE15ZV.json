@@ -1,0 +1,48 @@
+[
+ {
+  "work_id": "w_R4HK6JWE15ZV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/1982.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/1982.jpg",
+   "/assets/ficdeh/1982.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/1982.jpg",
+   "ficdeh-2026": "/assets/ficdeh/1982.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HK6JWE15ZV",
+  "campo": "directores",
+  "valor": [
+   "Juan Carlos García"
+  ],
+  "motivo": "un dato por obra: la forma completa y bien escrita entre lo acreditado",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aleste-2026": "Juan Carlos García",
+   "ficdeh-2026": "Garcia JC"
+  }
+ },
+ {
+  "work_id": "w_R4HK6JWE15ZV",
+  "campo": "sinopsis.en",
+  "valor": "In an Andean village in Peru, in 1982, Tato, a 12-year-old boy, is forced into exile when his family is threatened.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "1982",
+  "antes": {
+   "aleste-2026": "In an Andean village in Peru, in 1982, Tato, a 12-year-old boy is forced into exile when his family is threatened.",
+   "ficdeh-2026": "In an Andean village in Peru, in 1982, Tato, a 12-year-old boy, is forced into exile when his family is threatened."
+  }
+ }
+]

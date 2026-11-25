@@ -1,0 +1,32 @@
+[
+ {
+  "work_id": "w_R4PYB0DFX8A6",
+  "campo": "xref.tmdb",
+  "valor": 1678762,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-dream-is-a-snail/"
+ },
+ {
+  "work_id": "w_R4PYB0DFX8A6",
+  "campo": "directores",
+  "valor": [
+   "Thien An Nguyen"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4PYB0DFX8A6",
+  "campo": "paises",
+  "valor": [
+   "VN",
+   "KR"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

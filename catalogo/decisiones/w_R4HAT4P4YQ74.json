@@ -1,0 +1,80 @@
+[
+ {
+  "work_id": "w_R4HAT4P4YQ74",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/miradas-2026/ivan-hadoum.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/miradas-2026/ivan-hadoum.jpg",
+   "https://image.tmdb.org/t/p/w185/gqtBos9yGlMPFulwcGjdX53CZx8.jpg"
+  ],
+  "antes": {
+   "ficci-65": "https://image.tmdb.org/t/p/w185/gqtBos9yGlMPFulwcGjdX53CZx8.jpg",
+   "miradas-2026": "/assets/miradas-2026/ivan-hadoum.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HAT4P4YQ74",
+  "campo": "sinopsis.es",
+  "valor": "Iván se enamora de Hadoum en el invernadero donde trabajan. Sin embargo, su anhelado ascenso laboral interfiere en la relación, obligándole a decidir qué tipo de hombre quiere ser.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (miradas-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "1a13f73242d8",
+   "32e50ea469f6"
+  ],
+  "antes": {
+   "ficci-65": "Iván trabaja en una empresa agrícola y aspira a un ascenso que le permita mejorar la situación económica de su familia.",
+   "miradas-2026": "Iván se enamora de Hadoum en el invernadero donde trabajan. Sin embargo, su anhelado ascenso laboral interfiere en la relación, obligándole a decidir qué tipo de hombre quiere ser."
+  }
+ },
+ {
+  "work_id": "w_R4HAT4P4YQ74",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "DE",
+   "BE"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1514847)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficci-65": "España/Alemania/Bélgica",
+   "miradas-2026": "España, Alemania, Bélgica"
+  }
+ },
+ {
+  "work_id": "w_R4HAT4P4YQ74",
+  "campo": "sinopsis.en",
+  "valor": "Iván (33), a trans man, and Hadoum (30), a Spanish-Moroccan woman, fall in love at the industrial greenhouse they work in. While facing the opposition from their families and co-workers, Iván realizes he doesn’t need to be the man he is expected to be.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Iván & Hadoum",
+  "antes": {
+   "ficci-65": "Iván works at an agricultural company and aspires to a promotion that would improve his family's financial situation.",
+   "miradas-2026": "Iván (33), a trans man, and Hadoum (30), a Spanish-Moroccan woman, fall in love at the industrial greenhouse they work in. While facing the opposition from their families and co-workers, Iván realizes he doesn’t need to be the man he is expected to be."
+  }
+ },
+ {
+  "work_id": "w_R4HAT4P4YQ74",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "lo impreso no dice un género («Ficción»); el de su ficha de TMDB 1514847",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo esa regla»)",
+  "antes": {
+   "ficci-65": "Ficción",
+   "miradas-2026": "Ficción"
+  }
+ }
+]

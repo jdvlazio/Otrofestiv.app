@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4E2C3970Y3M",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/el-despertar.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/el-despertar.jpg",
+   "/assets/fantasmagoria-2026/el-despertar.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/el-despertar.jpg",
+   "fantasmagoria-2026": "/assets/fantasmagoria-2026/el-despertar.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4E2C3970Y3M",
+  "campo": "sinopsis.es",
+  "valor": "En lo más profundo de la selva amazónica, una unidad militar de élite es enviada a eliminar un objetivo estratégico, sin embargo, la operación se convierte en una pesadilla cuando se enfrentan a un enemigo para el que no estaban preparados. Mobuya, el espíritu protector de un territorio sagrado que no se puede cruzar, se cierra sobre el comando, desatando un terror milenario y sobrenatural. En el mismo infierno, separados por siglos, otra expedición de conquistadores españoles es consumida por la misma fuerza implacable. Al combatir la desconocida fuerza de Mobuya, ambas incursiones sólo podrán luchar por sus vidas.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (fantasmagoria-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "bce85f72994d",
+   "dd148759be3d"
+  ],
+  "antes": {
+   "biff-2026": "En lo más profundo de la selva una unidad militar de élite entra en territorio desconocido para eliminar un objetivo estratégico. La operación, calculada como una incursión táctica, cambia de naturaleza cuando el comando invade el dominio de Mobuya, una presencia ancestral vinculada a un lugar sagrado. La selva deja de ser escenario y se convierte en fuerza activa: los soldados ya no saben si están enfrentando a un enemigo, a una memoria que vuelve o a aquello que ellos mismos han despertado.",
+   "fantasmagoria-2026": "En lo más profundo de la selva amazónica, una unidad militar de élite es enviada a eliminar un objetivo estratégico, sin embargo, la operación se convierte en una pesadilla cuando se enfrentan a un enemigo para el que no estaban preparados. Mobuya, el espíritu protector de un territorio sagrado que no se puede cruzar, se cierra sobre el comando, desatando un terror milenario y sobrenatural. En el mismo infierno, separados por siglos, otra expedición de conquistadores españoles es consumida por la misma fuerza implacable. Al combatir la desconocida fuerza de Mobuya, ambas incursiones sólo podrán luchar por sus vidas."
+  }
+ },
+ {
+  "work_id": "w_R4E2C3970Y3M",
+  "campo": "directores",
+  "valor": [
+   "Jaime Osorio Márquez",
+   "Federico Durán",
+   "José Luis Rugeles"
+  ],
+  "motivo": "faltan codirectores: los tres los acreditan Fantasmagoría, The Hollywood Reporter y FilmAffinity; Osorio murió en 2021 y Durán terminó la película",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "biff-2026": "Jaime Osorio Márquez",
+   "fantasmagoria-2026": "Jaime Osorio Marquez, Federico Durán y José Luis Rugeles"
+  },
+  "anteriores": [
+   {
+    "valor": [
+     "Jaime Osorio Márquez"
+    ],
+    "motivo": "un dato por obra: el valor del almacén (tmdb:1657630)",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)"
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4E2C3970Y3M",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "biff-2026": "Acción",
+   "fantasmagoria-2026": "Terror"
+  }
+ }
+]

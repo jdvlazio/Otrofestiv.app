@@ -1,0 +1,65 @@
+[
+ {
+  "work_id": "w_R4HC1F248GT0",
+  "campo": "directores",
+  "valor": [
+   "Anja Dornieden",
+   "Juan David González Monroy"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 304",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=304"
+ },
+ {
+  "work_id": "w_R4HC1F248GT0",
+  "campo": "anio",
+  "valor": 2014,
+  "motivo": "catálogo oficial de FICCI 65, p. 304",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=304"
+ },
+ {
+  "work_id": "w_R4HC1F248GT0",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "DE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 304",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=304",
+  "antes": {
+   "ficci-65": "Colombia, Alemania"
+  }
+ },
+ {
+  "work_id": "w_R4HC1F248GT0",
+  "campo": "sinopsis.es",
+  "valor": "Basada en fragmentos del libro Gente perra, del escritor colombiano Gomati D. Wahn. 3000 años en el futuro, el Almirante busca la tierra de Gente perra y las riquezas que esta esconde. La historia se compone de textos existentes modificados: relatos históricos de la conquista de lo que en su día se conoció como el Nuevo Mundo.",
+  "motivo": "catálogo oficial de FICCI 65, p. 304",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=304"
+ },
+ {
+  "work_id": "w_R4HC1F248GT0",
+  "campo": "sinopsis.en",
+  "valor": "Based on fragments of the book Dog People by Colombian writer Gomati D. Wahn. 3000 years in the future, the Admiral searches for the land of the Dog People and the riches it hides. The story is assembled out of altered existing texts: historic accounts of the conquest of what was once known as the New World.",
+  "motivo": "catálogo oficial de FICCI 65, p. 304",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=304"
+ },
+ {
+  "work_id": "w_R4HC1F248GT0",
+  "campo": "xref.tmdb",
+  "valor": 298130,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/298130"
+ }
+]

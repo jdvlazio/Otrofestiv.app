@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGAQGXTF3WN",
+  "campo": "directores",
+  "valor": [
+   "Yegane Moghaddam"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Yegane Moghaddam"
+  }
+ },
+ {
+  "work_id": "w_4KGAQGXTF3WN",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_4KGAQGXTF3WN",
+  "campo": "paises",
+  "valor": [
+   "IR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Irán"
+  }
+ },
+ {
+  "work_id": "w_4KGAQGXTF3WN",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KGAQGXTF3WN",
+  "campo": "sinopsis.es",
+  "valor": "Una mujer iraní recorre los recuerdos de su infancia escolar a través de las telas y los pliegues de su uniforme. Al recordar la obligación de llevar hiyab, reflexiona sobre las normas de género y la construcción de su identidad.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una mujer iraní recorre los recuerdos de su infancia escolar a través de las telas y los pliegues de su uniforme. Al recordar la obligación de llevar hiyab, reflexiona sobre las normas de género y la construcción de su identidad."
+  }
+ },
+ {
+  "work_id": "w_4KGAQGXTF3WN",
+  "campo": "sinopsis.en",
+  "valor": "An Iranian woman revisits her schooldays through the fabric and folds of her uniform. Remembering the compulsory hijab, she reflects on gender rules and the formation of her own identity.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "An Iranian woman revisits her schooldays through the fabric and folds of her uniform. Remembering the compulsory hijab, she reflects on gender rules and the formation of her own identity."
+  }
+ },
+ {
+  "work_id": "w_4KGAQGXTF3WN",
+  "campo": "xref.tmdb",
+  "valor": 1140605,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1140605"
+  }
+ },
+ {
+  "work_id": "w_4KGAQGXTF3WN",
+  "campo": "xref.letterboxd",
+  "valor": "our-uniform",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "our-uniform"
+  }
+ },
+ {
+  "work_id": "w_4KGAQGXTF3WN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/our-uniform.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/our-uniform.jpg"
+  }
+ }
+]

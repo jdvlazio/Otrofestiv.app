@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS9137T5Y",
+  "campo": "sinopsis.es",
+  "valor": "Dos tribus enemigas esperan desde hace siglos la gran revelación del secreto sagrado. Pero la elegida por el Dios Supremo para recibirlo fue la princesa Sikán. Cuando los hombres de ambas tribus cometieron una injusticia con ella, el día se transformó en noche eterna.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "f4967b770ad8"
+  ],
+  "antes": {
+   "olhar-2026": "Dos tribus enemigas esperan desde hace siglos la gran revelación del secreto sagrado. Pero la elegida por el Dios Supremo para recibir el secreto fue la princesa Sikán. Al ser injusticiada por los hombres de ambas tribus, el día se transformó en noche eterna."
+  }
+ },
+ {
+  "work_id": "w_R4MQS9137T5Y",
+  "campo": "xref.tmdb",
+  "valor": 1642374,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-sacred-secret/"
+ }
+]

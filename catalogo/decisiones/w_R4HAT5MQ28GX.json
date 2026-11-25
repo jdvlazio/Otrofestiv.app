@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4HAT5MQ28GX",
+  "campo": "directores",
+  "valor": [
+   "Fernanda Tovar"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 70",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=70",
+  "antes": {
+   "ficci-65": "Fernanda Tovar"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5MQ28GX",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 70",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=70",
+  "antes": {
+   "ficci-65": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5MQ28GX",
+  "campo": "paises",
+  "valor": [
+   "MX",
+   "ES",
+   "FR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 70",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=70",
+  "antes": {
+   "ficci-65": "México, España, Francia"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5MQ28GX",
+  "campo": "sinopsis.es",
+  "valor": "Paula y La Maestra tienen 16 años, son nadadoras y se preparan para el Campeonato Panamericano Junior. Después de una fiesta, algo se desplaza entre ellas: Paula se vuelve distante. Mientras intentan comprender lo ocurrido y decidir cómo nombrar la violencia, sus distintas formas de atravesarlo tensan y transforman su amistad.",
+  "motivo": "catálogo oficial de FICCI 65, p. 70",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=70",
+  "antes": {
+   "ficci-65": "Decir “ternura” y que sean varias las cosas que salen de la boca: miel, abrazo, risa. Amiga, sangre, ardor. Paula y La Maestra tienen 16 años, ambas son nadadoras y se preparan para ir al Campeonato Panamericano de Natación Junior."
+  }
+ },
+ {
+  "work_id": "w_R4HAT5MQ28GX",
+  "campo": "sinopsis.en",
+  "valor": "Paula and La Maestra are 16, both swimmers preparing for the Pan American Junior Championships. After a party, something shifts between them: Paula becomes distant. As they try to understand what happened and decide how to name the violence, their different ways of dealing with it strain and transform their friendship.",
+  "motivo": "catálogo oficial de FICCI 65, p. 70",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=70",
+  "antes": {
+   "ficci-65": "Say 'tenderness' and many things come to mind: honey, embrace, laughter. Friend, blood, heat. Paula and La Maestra are both 16, both swimmers, preparing for the Junior Pan American Swimming Championship."
+  }
+ },
+ {
+  "work_id": "w_R4HAT5MQ28GX",
+  "campo": "xref.tmdb",
+  "valor": 1536433,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1536433"
+ }
+]

@@ -5,11 +5,311 @@
   "regla": "un afiche ajeno se publica solo con veredicto «afiche» y huella vigente"
  },
  "afiches": {
+  "/assets/aleste-2026/1982.jpg": {
+   "sha1": "b09cceeb826018b3cc30f8ae4424da8121b6950b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026"
+   ]
+  },
+  "/assets/aleste-2026/desde-aca-veo-la-tormenta.jpg": {
+   "sha1": "36e7e71ad679adb62da18614d1f11f83e39f661a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/aleste-2026/futuros-luminosos.jpg": {
+   "sha1": "f21c3a2bf3a02a1d352e3e6fb0cc648986079557",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026",
+    "cinetoro-2026",
+    "ficci-65",
+    "jardin-2026"
+   ]
+  },
+  "/assets/aleste-2026/la-tierra-prometida.jpg": {
+   "sha1": "742a22193c4235f08f3a81b4e84e2c10557bdc6b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "olhar-2026"
+   ]
+  },
+  "/assets/aleste-2026/las-piedras-del-rio.jpg": {
+   "sha1": "de62c40a437893f9e2ac541078278681d426f9c7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cortoscali-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/aleste-2026/lejania.jpg": {
+   "sha1": "a5b00eb1d2fc5f15657062b4024572451fece8d5",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026",
+    "ficci-65",
+    "jardin-2026"
+   ]
+  },
+  "/assets/aleste-2026/liminal.jpg": {
+   "sha1": "12197d915022afc9e75a60f497b183c66bc3458d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026"
+   ]
+  },
+  "/assets/aleste-2026/londres.jpg": {
+   "sha1": "fff57541eb4bbcb0f646a99b8542283e68cea70c",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/aleste-2026/los-inocentes-encantadores.jpg": {
+   "sha1": "3bf88adb2d8725a33607ac77c9c677d00386c8eb",
+   "veredicto": "afiche",
+   "usado_en": [
+    "olhar-2026"
+   ]
+  },
+  "/assets/aleste-2026/muchas-muchas-gracias.jpg": {
+   "sha1": "0d411f2ff5c773399db80604b4f7e70fb7fd971c",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinetoro-2026",
+    "ficcali-2026"
+   ]
+  },
+  "/assets/aleste-2026/refraccion.jpg": {
+   "sha1": "924b22a3b976e4774457f1da3b5857b49d8d1ec8",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026",
+    "festicineantioquia-2026",
+    "ficica-2026",
+    "ficidi-2026",
+    "ficmontanas-2026",
+    "girardota-2026",
+    "jardin-2026",
+    "miradas-2026",
+    "narrarelfuturo-2026",
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/aleste-2026/sol-de-niebla.jpg": {
+   "sha1": "dbb929754bb80c93fbd0533233bececb8845095c",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinetoro-2026",
+    "cortoscali-2026",
+    "ficfusa-2026",
+    "filcmar-2026",
+    "mamut-2026",
+    "midbo-2026"
+   ]
+  },
+  "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg": {
+   "sha1": "f898977cb6bcbcf6c9b9ff50270937024d1748f3",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026"
+   ]
+  },
+  "/assets/aleste-2026/todo-lo-que-pasara-manana.jpg": {
+   "sha1": "4bb24ea10dc984e5f177041128d14bd775adc03f",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicinerio-2026",
+    "ficidi-2026"
+   ]
+  },
+  "/assets/aleste-2026/transversal30ff.jpg": {
+   "sha1": "c6fae9b51a44eea62eafd83404561384e47aafd5",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2025",
+    "ficfusa-2026"
+   ]
+  },
+  "/assets/anibia-2026/anejo.jpg": {
+   "sha1": "d5e26794c8c4e9b18082df8d8d4d1ec5ae8624a9",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026"
+   ]
+  },
+  "/assets/anibia-2026/balada-de-peces-y-pajaros.jpg": {
+   "sha1": "bf2e04ff365a10eb459a3e29f1926b7520fa06e7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "aff-2026",
+    "fantasmagoria-2026",
+    "olhar-2026"
+   ]
+  },
+  "/assets/anibia-2026/caida-libre.jpg": {
+   "sha1": "073e52339ae8c3f248605c7a2892ed35e4d8b398",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026",
+    "qaff-2026"
+   ]
+  },
+  "/assets/anibia-2026/chicha-la-chicharra.jpg": {
+   "sha1": "9f01d5449f58b7ae199dd65085f8926af27801bd",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026",
+    "filcmar-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/anibia-2026/coffee-break.jpg": {
+   "sha1": "4e1cb001959f9f9209057b4ce70907006626950b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026"
+   ]
+  },
+  "/assets/anibia-2026/como-nace-un-rio.jpg": {
+   "sha1": "923efdc132bbc70b4497e92dcd9cec549848df94",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
   "/assets/anibia-2026/decaer.jpg": {
    "sha1": "bc33ea60755421c023080a40e5ed2928104b7336",
    "veredicto": "afiche",
    "usado_en": [
-    "ficfusa-2026"
+    "cineautopsia-2026",
+    "cinemancia-2026",
+    "festicineantioquia-2026",
+    "ficci-65",
+    "ficfusa-2026",
+    "ficica-2026",
+    "mamut-2026",
+    "midbo-2026",
+    "miradas-2026",
+    "popayan-2026"
+   ]
+  },
+  "/assets/anibia-2026/este-no-es-tu-jardin.jpg": {
+   "sha1": "2cf9dc21749a58dc6e75ba1acc16939a34dd2b17",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cineautopsia-2026"
+   ]
+  },
+  "/assets/anibia-2026/hacker-leonilia.jpg": {
+   "sha1": "b7091a662600ac71c2e7da93cba2ccd00e889594",
+   "veredicto": "afiche",
+   "usado_en": [
+    "qaff-2026"
+   ]
+  },
+  "/assets/anibia-2026/karten-der-wildnis.jpg": {
+   "sha1": "1ba42922c0bc967e6db89c194eba233c9f53e26e",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinetoro-2026"
+   ]
+  },
+  "/assets/anibia-2026/memoria-colectiva.jpg": {
+   "sha1": "cff6aa792b0fc3415549bf9e631d8c3f47fb5573",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026",
+    "ficmontanas-2026",
+    "under-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/anibia-2026/mukira.jpg": {
+   "sha1": "20d01719498025d870fe35e1b3c78afc4b3c7c75",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fantasmagoria-2026",
+    "festicineantioquia-2026",
+    "ficcali-2026",
+    "ficci-65",
+    "ficfusa-2026",
+    "ficmontanas-2026",
+    "filcmar-2026",
+    "miradas-2026",
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/anibia-2026/please.jpg": {
+   "sha1": "3b450d5dd7232867d62d8e6e3a5a8a6ccea16445",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026",
+    "tiff-2026"
+   ]
+  },
+  "/assets/anibia-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg": {
+   "sha1": "274dfeba4951636b79f752be3e0500e581f34e34",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cineautopsia-2026",
+    "cinetoro-2026",
+    "fantasmagoria-2026",
+    "ficfusa-2026",
+    "filcmar-2026",
+    "popayan-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/anibia-2026/relatos-del-camino.jpg": {
+   "sha1": "560eff02325524c33af2a1e2e8c5fb72ce217d94",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cortoscali-2026",
+    "ficfusa-2026",
+    "ficmontanas-2026",
+    "ficpa-2026",
+    "jardin-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/anibia-2026/replay.jpg": {
+   "sha1": "4b352fa1cb63f6c8aaf7363404cc1203d0c8c618",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bhff-2026",
+    "festicineantioquia-2026",
+    "ficica-2026"
+   ]
+  },
+  "/assets/anibia-2026/romu.jpg": {
+   "sha1": "4d3e13b49cd9592b96758c7c4ce76bee63b0bc90",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicinerio-2026"
+   ]
+  },
+  "/assets/anibia-2026/todo-es-culpa-de-la-sal.jpg": {
+   "sha1": "3058a0b5ff37dfaea5ffdbf6f79618e1cd56d08d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026"
+   ]
+  },
+  "/assets/anibia-2026/una-parvada-de-estruendo.jpg": {
+   "sha1": "dbc338263221eac64980ac21eec38986af5b2d70",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026"
+   ]
+  },
+  "/assets/bhff-2026/bajo-el-mismo-techo.jpg": {
+   "sha1": "2eaec4c8c619bad98ac0aee465ae43800b74fad0",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
    ]
   },
   "/assets/bhff-2026/el-festin-de-las-moscas.jpg": {
@@ -17,6 +317,28 @@
    "veredicto": "afiche",
    "usado_en": [
     "cortoscali-2026"
+   ]
+  },
+  "/assets/bhff-2026/el-ocaso-de-los-dioses.jpg": {
+   "sha1": "413ea6c1bbfb1ad6c0f003816695dbfcc9feb5a6",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicinerio-2026",
+    "filcmar-2026"
+   ]
+  },
+  "/assets/bhff-2026/el-susurro.jpg": {
+   "sha1": "ef26dc9d9fe633df93246a502fc685cc927bae46",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fantasofest-2026"
+   ]
+  },
+  "/assets/bhff-2026/esquirlas-de-caracol.jpg": {
+   "sha1": "399324e133db5564181a440ce5b9e64bd5ccc96d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "villadeleyvaiff-2026"
    ]
   },
   "/assets/bhff-2026/gabriel.jpg": {
@@ -33,6 +355,30 @@
     "guatape-2026"
    ]
   },
+  "/assets/bhff-2026/iris-de-cristal.jpg": {
+   "sha1": "5af1161e93eb11ecf4f0d6c03e1758b815f9e9ff",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fantasmagoria-2026"
+   ]
+  },
+  "/assets/bhff-2026/la-habitacion-del-macho-cabrio.jpg": {
+   "sha1": "a21e97bbcecdbe4953e19101a5ab66f18dc57e11",
+   "veredicto": "afiche",
+   "usado_en": [
+    "anibia-2026",
+    "fantasmagoria-2026",
+    "festicineantioquia-2026",
+    "popayan-2026"
+   ]
+  },
+  "/assets/bhff-2026/leonel.jpg": {
+   "sha1": "613427026d436cb259a5f39ce5e12930222f227e",
+   "veredicto": "afiche",
+   "usado_en": [
+    "itagui-2026"
+   ]
+  },
   "/assets/bhff-2026/los-lobo.jpg": {
    "sha1": "90076153f1d5e2de5b1aca1f32792e81cd0c6ce1",
    "veredicto": "afiche",
@@ -40,11 +386,303 @@
     "villadeleyvaiff-2026"
    ]
   },
+  "/assets/bhff-2026/muertos-que-no-son-muertos.jpg": {
+   "sha1": "6b40678c4c3958b96405a0285c29771ab905b6bf",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/bhff-2026/no-es-el-fin-del-mundo.jpg": {
+   "sha1": "130c0288fb1b9517daaf68a2b85c1d303afea752",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fantasmagoria-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/bhff-2026/quazar.jpg": {
+   "sha1": "e54399ece5f8d04cb2c997da29e8298e29cf850a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fantasmagoria-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/bhff-2026/que-el-cielo-nos-perdone.jpg": {
+   "sha1": "fabf9fb21d46b9dcd9c03708c825a005e75bddfd",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fantasmagoria-2026",
+    "festicinerio-2026",
+    "ficfusa-2026",
+    "ficica-2026",
+    "ficma-2026",
+    "siembrafest-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/bhff-2026/siempre-hay-un-monstruo.jpg": {
+   "sha1": "e58e0d32a214f584dbaf6e17f712f98c4578f952",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fantasmagoria-2026"
+   ]
+  },
+  "/assets/bhff-2026/sierra-el-album-mortuorio.jpg": {
+   "sha1": "48b4cd65785f6f87f75a023e1596996bf0e49b17",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficpa-2026",
+    "guatape-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/bhff-2026/ubicua.jpg": {
+   "sha1": "244dcc6cd10dacddd2b21370b0f145dc70c824e9",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fantasmagoria-2026"
+   ]
+  },
   "/assets/bhff-2026/vientre.jpg": {
    "sha1": "5a6c612d486e4863250ae60de8e91785e7c4de86",
    "veredicto": "afiche",
    "usado_en": [
     "fantasmagoria-2026"
+   ]
+  },
+  "/assets/biff-2026/6-meses-en-el-edificio-rosa-con-azul.jpg": {
+   "sha1": "45becec076a3b8933771f00ec618d75a045f9cff",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026",
+    "miradas-2026"
+   ]
+  },
+  "/assets/biff-2026/cobarde.jpg": {
+   "sha1": "e5054c4199c59d6ad9e412a7cf55aeb27510f410",
+   "veredicto": "afiche",
+   "usado_en": [
+    "mubibogota-2026",
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/como-todo-mortal.jpg": {
+   "sha1": "7ab8803ec87df04a385940d80a4290ce8dab972d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "olhar-2026"
+   ]
+  },
+  "/assets/biff-2026/donde-comienza-el-rio.jpg": {
+   "sha1": "3dda24f0999e48d16e3b416f4e9d0e995048dd2b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/eklipse.jpg": {
+   "sha1": "38ac31dbbc511bc42567d3c71dc619d43e69c9fc",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/el-deshielo.jpg": {
+   "sha1": "57c81d16f0a86185dcd857999053236a3a6a1f93",
+   "veredicto": "afiche",
+   "usado_en": [
+    "miradas-2026"
+   ]
+  },
+  "/assets/biff-2026/el-despertar.jpg": {
+   "sha1": "273685cba59c2dd8cecedb61d60c5116c4960457",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fantasmagoria-2026"
+   ]
+  },
+  "/assets/biff-2026/elephants-in-the-fog.jpg": {
+   "sha1": "cc02d2db6fe85325c27de9f702c5034e9d18a1ed",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/fjord.jpg": {
+   "sha1": "97f06bc32fcca7a7302bd1ad367ea9cf0a77d715",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/hermanas.jpg": {
+   "sha1": "6c4b7f19311e3341101488ed34dec0b67e2a65f5",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/iluminada.jpg": {
+   "sha1": "d3671eee8eb9d5918b94434eea7b2eeeccb3ed53",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026",
+    "miradas-2026"
+   ]
+  },
+  "/assets/biff-2026/la-bola-negra.jpg": {
+   "sha1": "3077821d062de8c452f69864f004c1d74b079abf",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026",
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/la-gradiva.jpg": {
+   "sha1": "0bbbefce9ab9fd215fcc5eeb97529672e032d9f7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/la-libertad-doble-v2.jpg": {
+   "sha1": "916895bffc8e4b4b03c676a7ae16ce9342d51740",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026",
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/light-pillar.jpg": {
+   "sha1": "7f17e8f5adc7d2e94db73dc3efaa33db3d0642ed",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/los-nuevos.jpg": {
+   "sha1": "09db430f5d94ba924f45dd039b994ae4a2a4ef8d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "miradas-2026"
+   ]
+  },
+  "/assets/biff-2026/luis-tercero.jpg": {
+   "sha1": "52178c2c3b06170822d846b594c5ff8754294a5a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026"
+   ]
+  },
+  "/assets/biff-2026/minotauro.jpg": {
+   "sha1": "81ddb3082ddce62dc2c547a07fb7a37c98e4da25",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026",
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/papaya.jpg": {
+   "sha1": "06f641eccdde89da7e5911ac68c151306301d347",
+   "veredicto": "afiche",
+   "usado_en": [
+    "miradas-2026",
+    "olhar-2026"
+   ]
+  },
+  "/assets/biff-2026/para-no-volver.jpg": {
+   "sha1": "0b570f0e42733763bc5ba476a71867d01d82eadd",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026",
+    "cortoscali-2026",
+    "filcmar-2026"
+   ]
+  },
+  "/assets/biff-2026/siempre-soy-tu-animal-materno.jpg": {
+   "sha1": "c5838687f72d18a7338c051e4480a7887781b5b7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026"
+   ]
+  },
+  "/assets/biff-2026/soumsoum-the-night-of-the-stars.jpg": {
+   "sha1": "1164054a3288a52346619298b2bebaedde92901d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/the-man-i-love.jpg": {
+   "sha1": "5047dddf28c498f9e4b54cd1c17cb9b94f107058",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/biff-2026/tierra-de-mi-padre.jpg": {
+   "sha1": "c7d9df23f46e0d3a89b1774240e959f9faf893e4",
+   "veredicto": "afiche",
+   "usado_en": [
+    "mubibogota-2026"
+   ]
+  },
+  "/assets/bogoshorts-2026/2-love.jpg": {
+   "sha1": "e5b440a9488756ce7bfde10958b6775b6f0e5c89",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/bogoshorts-2026/dear-upstairs-neighbors.jpg": {
+   "sha1": "0c2af328d8d64738361cdabc03a316a739029f6c",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tribeca-2026"
+   ]
+  },
+  "/assets/bogoshorts-2026/espaciar.jpg": {
+   "sha1": "f8e7edf013a4e4d5d544b32556dba273b663792f",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2025"
+   ]
+  },
+  "/assets/bogoshorts-2026/grounded.jpg": {
+   "sha1": "b3f1301c63aad0c77754d8309a7ec0bf8dc007e3",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tribeca-2026"
+   ]
+  },
+  "/assets/bogoshorts-2026/madrugada.jpg": {
+   "sha1": "2031819444afc9f5ba012b051911d272aac1d35d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/bogoshorts-2026/the-end.jpg": {
+   "sha1": "641de06bcb3ef8d4e8e520ed9e4d839780556aea",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/bogoshorts-2026/todas-las-manos-que-solte.jpg": {
+   "sha1": "bde6d9f5a16edbcc8034981946d8b7cd268d76e4",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
+  "/assets/bogoshorts-2026/un-pajaro-mas.jpg": {
+   "sha1": "3866fd6f0c1286cf94cf56aa23483f950953f871",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
    ]
   },
   "/assets/cineautopsia/abjad-hawaz.jpg": {
@@ -66,6 +704,15 @@
    "veredicto": "afiche",
    "usado_en": [
     "ficpa-2026"
+   ]
+  },
+  "/assets/cineautopsia/lamentos-de-un-balcon.jpg": {
+   "sha1": "a57906a8116cd5f350b28e69735a5a4424a8acff",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026",
+    "cinemancia-2026",
+    "cinetoro-2026"
    ]
   },
   "/assets/cineautopsia/mal-de-tierra.jpg": {
@@ -90,32 +737,357 @@
     "ficfusa-2026"
    ]
   },
-  "/assets/cinetoro-2026/una-vez-en-un-cuerpo.jpg": {
-   "sha1": "d1f7decf7183794d721d318176d1c7805816a76d",
+  "/assets/cinemancia/un-aparato-para-detectar-fantasmas.jpg": {
+   "sha1": "df6ea1687c5d73d3681dd0d93e4ba4c6a315599d",
    "veredicto": "afiche",
    "usado_en": [
-    "ficfusa-2026"
+    "jardin-2026"
+   ]
+  },
+  "/assets/cineparalapaz-2026/la-pandemia-del-feminicidio-en-colombia.jpg": {
+   "sha1": "9bd74c91f68493852b1a06c8efc6dcc517c40807",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficpa-2026"
+   ]
+  },
+  "/assets/cineparalapaz-2026/medellin-yo-te-saludo.jpg": {
+   "sha1": "b4fbf007b1f87909734969f5621422483a57c8fa",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026"
+   ]
+  },
+  "/assets/cineparalapaz-2026/por-una-gota-de-leche.jpg": {
+   "sha1": "93e5a83c7947112a75dc82ce18dee7746a7ff545",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026"
+   ]
+  },
+  "/assets/cineparalapaz-2026/refugiar-el-gesto.jpg": {
+   "sha1": "7787e583667fe0813c3ab1bcc5610843fb36fbe7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fecibac-2026",
+    "qaff-2026",
+    "siembrafest-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/cinetoro-2026/el-salto.jpg": {
+   "sha1": "5be6f0051cb349784e91d39a29ee3c0e5ea12ec4",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026",
+    "cinemancia-2026",
+    "midbo-2026"
+   ]
+  },
+  "/assets/cinetoro-2026/en-su-sombra-fertil.jpg": {
+   "sha1": "e592c097f03f600efd6ca3bee9eb1bbdbe42d65b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficpa-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/cinetoro-2026/esperando-a-los-barbaros.jpg": {
+   "sha1": "8bda8b575e7d3958af4c376ab5dbfb0e29ba11c5",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficpa-2026"
+   ]
+  },
+  "/assets/cinetoro-2026/la-garganta-del-diablo.jpg": {
+   "sha1": "b4120d9a4dbba7387459d885848b730d4af80050",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026",
+    "ficci-65"
+   ]
+  },
+  "/assets/cinetoro-2026/para-mi-ya-no-es-cualquier-bano.jpg": {
+   "sha1": "68e7b7144ba8f2f0fd105d2a31c18eb1f204e269",
+   "veredicto": "afiche",
+   "usado_en": [
+    "midbo-2026"
+   ]
+  },
+  "/assets/cinetoro-2026/preguntas-frecuentes.jpg": {
+   "sha1": "9da277e2fd64ee6fe505dff4729c99ba8d343887",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/cinetoro-2026/puro-andar.jpg": {
+   "sha1": "79d7988740263dd6b17d6888570ddd190e8be6be",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026"
+   ]
+  },
+  "/assets/cinetoro-2026/tres-gatos-parias-v2.jpg": {
+   "sha1": "e7b767dea25aa15eba68d7e03157dff90a5a7ab5",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/cinetoro-2026/um-corpo-sem-cavalo.jpg": {
+   "sha1": "87f2dfca71bec9f18d6ccbf8a6f552a454e4eb3e",
+   "veredicto": "afiche",
+   "usado_en": [
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/cortoscali-2026/agua-fria.jpg": {
+   "sha1": "2f77a4a78cac32eb4cfe8af56c35b20faed05ef0",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65",
+    "midbo-2026"
+   ]
+  },
+  "/assets/cortoscali-2026/akababuru-expresion-de-asombro.jpg": {
+   "sha1": "2cc805392bf941c937b3d9f3421167cc277edd11",
+   "veredicto": "afiche",
+   "usado_en": [
+    "aff-2026",
+    "festicineantioquia-2026",
+    "ficcali-2026",
+    "ficdeh-2026",
+    "ficfusa-2026",
+    "ficpa-2026",
+    "popayan-2026"
+   ]
+  },
+  "/assets/cortoscali-2026/el-mundo-de-humberto.jpg": {
+   "sha1": "39acbe9b971121784d102920bb3af6d03e27c069",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026",
+    "ficica-2026",
+    "ficpa-2026"
+   ]
+  },
+  "/assets/cortoscali-2026/sukua.jpg": {
+   "sha1": "f7033c4628bf13394e34dc57b13e5e542cf2eacb",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026",
+    "ficfusa-2026",
+    "ficmontanas-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/cortoscali-2026/when-the-tiger-roars.jpg": {
+   "sha1": "70394beb767bebcbf437960ebffcafb12ee84a0d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
+   ]
+  },
+  "/assets/fantasmagoria-2026/al-final-del-espectro.jpg": {
+   "sha1": "cd09c3398e8a52fe2307da071f92e4bfb688219c",
+   "veredicto": "afiche",
+   "usado_en": [
+    "girardota-2026"
+   ]
+  },
+  "/assets/fantasmagoria-2026/cuadecuc-vampir.jpg": {
+   "sha1": "3b5a234891a881b383eeb1e57d1629242634f0e8",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026"
+   ]
+  },
+  "/assets/fantasmagoria-2026/kondor-el-mago.jpg": {
+   "sha1": "7b9411af086da07431f01b9ba433fde3107678b7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026"
+   ]
+  },
+  "/assets/fantasmagoria-2026/la-sinfonia-de-los-bichos-raros.jpg": {
+   "sha1": "7e40b753cf581f9f4c589798ed6be960a7937fc4",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026"
+   ]
+  },
+  "/assets/fantasmagoria-2026/manual-para-invocar-fantasmas.jpg": {
+   "sha1": "cad8b59db8fbef710d8ad531d8ea069be85e8703",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65",
+    "mamut-2026"
+   ]
+  },
+  "/assets/fantasmagoria-2026/pura-sangre.jpg": {
+   "sha1": "16948e9e91f30fafc929cec88dd11916c89c13d9",
+   "veredicto": "afiche",
+   "usado_en": [
+    "girardota-2026"
+   ]
+  },
+  "/assets/fecibac-2026/brigitte-planeta-b.jpg": {
+   "sha1": "9f31f3e838bc2b21031d1f799f28b7a44459c933",
+   "veredicto": "afiche",
+   "usado_en": [
+    "aff-2026",
+    "ficma-2026"
+   ]
+  },
+  "/assets/fecibac-2026/el-juego-de-la-vida.jpg": {
+   "sha1": "bd8b1fc85ecf7de572374bb06ce72816fda1c2b7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026",
+    "ficdeh-2026",
+    "ficma-2026"
+   ]
+  },
+  "/assets/fecibac-2026/en-tierra.jpg": {
+   "sha1": "eadc3bd184e34452751c9a61729e0f4e0675d21d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficma-2026"
+   ]
+  },
+  "/assets/fecibac-2026/entre-2-aguas.jpg": {
+   "sha1": "eb31513cdc7a7cb0b1dabed5556214432aafab44",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/fecibac-2026/la-creciente.jpg": {
+   "sha1": "57993e6289e2691578ccf536189c4a788c7d4e4a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicinerio-2026",
+    "jardin-2026"
+   ]
+  },
+  "/assets/fecibac-2026/las-pesadillas-del-siervo.jpg": {
+   "sha1": "333a8a8c47421bd0cd1ff439c0509ed74701d7e4",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026",
+    "miradas-2026"
+   ]
+  },
+  "/assets/festicineantioquia-2026/a-las-9-es-la-cita.jpg": {
+   "sha1": "6e6cb3c64af627a4b09d1aa38d18fc403b629945",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficmontanas-2026"
+   ]
+  },
+  "/assets/festicineantioquia-2026/no-te-despiertes.jpg": {
+   "sha1": "0328d632eba48130dc5ad2d1766492217adf1c21",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicinerio-2026",
+    "leviza-2026"
    ]
   },
   "/assets/festicinerio-2026/anoche-a-la-media-noche.jpg": {
    "sha1": "a98b012a5b3af0fe8e0d1bb0a8ebe0ae22beb467",
    "veredicto": "afiche",
    "usado_en": [
+    "cineautopsia-2026",
     "ficfusa-2026"
    ]
   },
-  "/assets/festicinerio-2026/el-espejo-de-la-vida.jpg": {
-   "sha1": "7ead486e250e82f72dabaf6e8e96e3f6dccbded0",
+  "/assets/festicinerio-2026/arbol-en-pie.jpg": {
+   "sha1": "e5d2477cc4a019e05b92f864377200253216cfdd",
    "veredicto": "afiche",
    "usado_en": [
+    "ficcali-2026",
     "ficfusa-2026"
+   ]
+  },
+  "/assets/festicinerio-2026/hdlt.jpg": {
+   "sha1": "87f1c65ae784bfa406a16ebc8f280038b951b99d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026",
+    "fantasmagoria-2026",
+    "ficfusa-2026",
+    "filcmar-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/festicinerio-2026/independencia.jpg": {
+   "sha1": "a927fb9433c729ad852a9ebb7288528c5e4e4464",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cortoscali-2026",
+    "ficdeh-2026",
+    "ficica-2026",
+    "leviza-2026",
+    "siembrafest-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/festicinerio-2026/la-dama-de-las-mil-mascaras.jpg": {
+   "sha1": "31d18a3dbf402d99d8541d8fa3981d72e11228a2",
+   "veredicto": "afiche",
+   "usado_en": [
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/festicinerio-2026/la-gallina-saraviada.jpg": {
+   "sha1": "86743e2a085c4c27310a08f6869246c8ffbe2b74",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026",
+    "ficpa-2026",
+    "guatape-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/festicinerio-2026/paristopia.jpg": {
+   "sha1": "642e3a104c4e799655602f596174765885f034ef",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cineautopsia-2026"
+   ]
+  },
+  "/assets/festicinerio-2026/sirena-mecanica.jpg": {
+   "sha1": "07e497a6a1259660b37ccd31094f47143210dc9c",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65",
+    "jardin-2026",
+    "popayan-2026"
    ]
   },
   "/assets/ficcali-2026/alivios.jpg": {
    "sha1": "981065ccaed5f9b3fc4080b3d31b2b4a367dfd56",
    "veredicto": "afiche",
    "usado_en": [
-    "ficica-2026"
+    "ficica-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/ficcali-2026/an-incomplete-calendar.jpg": {
+   "sha1": "15166bc9334c6945fcc2769e63a5bf1c8752c1b4",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65",
+    "olhar-2026"
+   ]
+  },
+  "/assets/ficcali-2026/boato.jpg": {
+   "sha1": "d91fec213a51ff7bc3819841291b14d333484010",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicinerio-2026"
    ]
   },
   "/assets/ficcali-2026/despues-de-tanto-amor.jpg": {
@@ -123,6 +1095,13 @@
    "veredicto": "afiche",
    "usado_en": [
     "villadelcine-2026"
+   ]
+  },
+  "/assets/ficcali-2026/ecrire-la-vie-annie-ernaux-racontee-par-des-lyceennes-et-des.jpg": {
+   "sha1": "3aac86397f2697502d65fb6176cedfc7c39f81ae",
+   "veredicto": "afiche",
+   "usado_en": [
+    "midbo-2026"
    ]
   },
   "/assets/ficcali-2026/el-bitcoin-de-oro.jpg": {
@@ -139,6 +1118,29 @@
     "ficica-2026"
    ]
   },
+  "/assets/ficcali-2026/heroes-del-silencio.jpg": {
+   "sha1": "49a6ef4944f69a25ba784e64b229587ae9f585e7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65",
+    "ficdeh-2026"
+   ]
+  },
+  "/assets/ficcali-2026/historias-del-buen-valle.jpg": {
+   "sha1": "c82c7428ad40cef0ab69f8aec3ead37817db8722",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65",
+    "olhar-2026"
+   ]
+  },
+  "/assets/ficcali-2026/i-built-a-rocket-imagining-your-arrival.jpg": {
+   "sha1": "bdcee53eb54377b10f1774b06e35be38f368e292",
+   "veredicto": "afiche",
+   "usado_en": [
+    "olhar-2026"
+   ]
+  },
   "/assets/ficcali-2026/khazana.jpg": {
    "sha1": "b3145ac176b6dc4ea1ea0f3587280bf8ff656c05",
    "veredicto": "afiche",
@@ -146,11 +1148,77 @@
     "ficica-2026"
    ]
   },
+  "/assets/ficcali-2026/kuagro.jpg": {
+   "sha1": "7e76b54340f472de73c83ac9620f10f412e73a22",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
+  "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg": {
+   "sha1": "515029f89c75a9525b9c5aa5308d0ca5b26caeb7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
   "/assets/ficcali-2026/la-gran-hazana.jpg": {
    "sha1": "4c7c2e178325254dac6cd6de1526fd9cd82bc4f1",
    "veredicto": "afiche",
    "usado_en": [
-    "ficmontanas-2026"
+    "festicineantioquia-2026",
+    "ficdeh-2026",
+    "ficfusa-2026",
+    "ficica-2026",
+    "ficmontanas-2026",
+    "guatape-2026",
+    "popayan-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/ficcali-2026/la-mansion-de-araucaima.jpg": {
+   "sha1": "e12f0127695f99be52516f0cde99d7f018f9c2ec",
+   "veredicto": "afiche",
+   "usado_en": [
+    "girardota-2026"
+   ]
+  },
+  "/assets/ficcali-2026/la-tinaja.jpg": {
+   "sha1": "69f8f8bd3f854b574c6a7290af1113bcdbb48aa9",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65",
+    "popayan-2026",
+    "qaff-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/ficcali-2026/notre-corps.jpg": {
+   "sha1": "bd8c69b784a098a698b1ddcaebd41f1eb01eb1cc",
+   "veredicto": "afiche",
+   "usado_en": [
+    "midbo-2026"
+   ]
+  },
+  "/assets/ficcali-2026/nuestro-cuerpo-es-una-estrella-que-se-expande.jpg": {
+   "sha1": "ce372ac0c922adccf12544d85ccf11f0adb744bc",
+   "veredicto": "afiche",
+   "usado_en": [
+    "midbo-2026"
+   ]
+  },
+  "/assets/ficcali-2026/once-upon-a-time-in-harlem.jpg": {
+   "sha1": "a88943afc0f0b74b60b7bb764cf862d26da262fd",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/ficcali-2026/princesa-burro.jpg": {
+   "sha1": "6962d367bf0fbe646d44dbd9371ce3aa643f7e81",
+   "veredicto": "afiche",
+   "usado_en": [
+    "biff-2026"
    ]
   },
   "/assets/ficcali-2026/quinto-primera.jpg": {
@@ -160,13 +1228,100 @@
     "ficica-2026"
    ]
   },
-  "/assets/ficdeh/la-independencia.jpg": {
-   "sha1": "6a8bbb76f2544323cf8d07ee27a2c9870386dfd5",
+  "/assets/ficcali-2026/relicto.jpg": {
+   "sha1": "dd38ff780065ac72a57b4e69e769a21b83fcc1f4",
    "veredicto": "afiche",
    "usado_en": [
-    "cortoscali-2026",
-    "ficica-2026",
+    "midbo-2026",
+    "miradas-2026"
+   ]
+  },
+  "/assets/ficcali-2026/runa-simi.jpg": {
+   "sha1": "723241823571a99a27aabb5dd57bd6793db0046a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "aff-2026",
+    "ficci-65"
+   ]
+  },
+  "/assets/ficcali-2026/sirenas-en-la-niebla.jpg": {
+   "sha1": "da3a87b2cfd58e05f8ad75a3126c604361822375",
+   "veredicto": "afiche",
+   "usado_en": [
+    "girardota-2026"
+   ]
+  },
+  "/assets/ficcali-2026/somnolitico.jpg": {
+   "sha1": "7d789809ec6b9044040fe8afdac07a8d67339c26",
+   "veredicto": "afiche",
+   "usado_en": [
+    "filcmar-2026",
+    "jardin-2026"
+   ]
+  },
+  "/assets/ficcali-2026/y-el-rio-lloro.jpg": {
+   "sha1": "2a0b18b5edb79e55064257945add447f4b3fdebd",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026",
     "siembrafest-2026"
+   ]
+  },
+  "/assets/ficdeh/andariega.jpg": {
+   "sha1": "98a6e1fd9ee9b5ccc16db22040c4d247cd904e48",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2025",
+    "festicinerio-2026",
+    "ficma-2026",
+    "filcmar-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/ficdeh/bojaya-la-verdad-desde-adentro.jpg": {
+   "sha1": "aec8b6f6f322f219ee1b863b39856615cf322787",
+   "veredicto": "afiche",
+   "usado_en": [
+    "midbo-2026"
+   ]
+  },
+  "/assets/ficdeh/el-valor-de-la-palabra.jpg": {
+   "sha1": "222a697600246225add59ba1f7d2be44ffb0578d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65",
+    "midbo-2026"
+   ]
+  },
+  "/assets/ficdeh/guerreras.jpg": {
+   "sha1": "fc4acfd57d36778292820363f413d50a1f7c246e",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicinerio-2026",
+    "ficci-65",
+    "midbo-2026"
+   ]
+  },
+  "/assets/ficdeh/herencia-los-cantos-de-la-tierra.jpg": {
+   "sha1": "f6e5bee2958b854a94f8bbd8a95eae152c56e075",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/ficdeh/la-luz-por-primera-vez.jpg": {
+   "sha1": "e228af3f62a924f23562777686e4082b95db8906",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficfusa-2026",
+    "ficma-2026"
+   ]
+  },
+  "/assets/ficdeh/la-raya.jpg": {
+   "sha1": "9fc56bbc1a46419108858af6596332a3c53ff73f",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
    ]
   },
   "/assets/ficdeh/notas-sobre-un-destierro.jpg": {
@@ -183,26 +1338,296 @@
     "ficma-2026"
    ]
   },
-  "/assets/ficdeh/sukua.jpg": {
-   "sha1": "1fed047cf6ac3691001f1651b309bb43cbd76411",
+  "/assets/ficdeh/tierra-que-habla.jpg": {
+   "sha1": "080b9a0371f7c407d3b4a1861160070ab777ab96",
+   "veredicto": "afiche",
+   "usado_en": [
+    "finca-2026"
+   ]
+  },
+  "/assets/ficdeh/un-nuevo-amanecer.jpg": {
+   "sha1": "63c4ddaae323ff41558506ed4d1bb54aa9a7d866",
    "veredicto": "afiche",
    "usado_en": [
     "ficmontanas-2026"
    ]
   },
-  "/assets/ficdeh/tuktu-padre-maiz.jpg": {
-   "sha1": "eb464529f5096aef1984f9f771075085e918d637",
+  "/assets/ficdeh/xie-defensa-de-la-vida.jpg": {
+   "sha1": "0bf7f1e13ecbc6f22ca07d65a235b5bf94addc42",
+   "veredicto": "afiche",
+   "usado_en": [
+    "itagui-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/ficfusa-2026/animista.jpg": {
+   "sha1": "4c8980037c109ea99a07200866456087a375ffb7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "popayan-2026"
+   ]
+  },
+  "/assets/ficfusa-2026/como-el-agua-la-piedra-y-la-espuma.jpg": {
+   "sha1": "cd69f1b8dd0d45b1fd6b59308e410f637da006c8",
+   "veredicto": "afiche",
+   "usado_en": [
+    "popayan-2026"
+   ]
+  },
+  "/assets/ficfusa-2026/comparsa.jpg": {
+   "sha1": "cd10c0975ea203692c1308c1e8618a4db28bb88a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "midbo-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/ficfusa-2026/cuando-la-palabra-se-hace-busqueda-el-eco-de-sus-voces.jpg": {
+   "sha1": "94eb287d66f306a61beda0bbacb25672cce353a2",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026",
+    "ficmontanas-2026"
+   ]
+  },
+  "/assets/ficfusa-2026/entrelazadas.jpg": {
+   "sha1": "fd4cb8acf7c8890d709bf7fb887066fa21f07120",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cineautopsia-2026"
+   ]
+  },
+  "/assets/ficfusa-2026/kanekalon.jpg": {
+   "sha1": "ae9e8e31af607269fa8d4ccffd4395f20db6324a",
    "veredicto": "afiche",
    "usado_en": [
     "ficmontanas-2026",
-    "ficpa-2026"
+    "qaff-2026"
    ]
   },
-  "/assets/ficica-2026/cayenas-libertarias.jpg": {
-   "sha1": "58780ecd1d4804b7410129147a31094ad0290f8e",
+  "/assets/ficfusa-2026/madres-de-nacimiento.jpg": {
+   "sha1": "933038a987ed199af1f01e008281f47b050068ce",
    "veredicto": "afiche",
    "usado_en": [
-    "ficfusa-2026"
+    "cinemancia-2026",
+    "ficci-65",
+    "ficdeh-2026",
+    "ficmontanas-2026",
+    "jardin-2026",
+    "midbo-2026",
+    "miradas-2026",
+    "popayan-2026"
+   ]
+  },
+  "/assets/ficfusa-2026/matinino.jpg": {
+   "sha1": "2efdd84cac1ce4c9e78721e02367e22df4294c59",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tribeca-2026"
+   ]
+  },
+  "/assets/ficfusa-2026/nina-chilapa.jpg": {
+   "sha1": "44be523ad618995f0da2f64b81f755bfe2773de8",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2025",
+    "ficica-2026",
+    "popayan-2026"
+   ]
+  },
+  "/assets/ficfusa-2026/puntos-de-fuga.jpg": {
+   "sha1": "5fcf94b656a5b65b5743200d8096d1e13d51bf6a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
+  "/assets/ficfusa-2026/sobre-las-olas.jpg": {
+   "sha1": "d46ae09e0c643f8d39e62135db44061b0c194a73",
+   "veredicto": "afiche",
+   "usado_en": [
+    "guatape-2026"
+   ]
+  },
+  "/assets/ficica-2026/chaika.jpg": {
+   "sha1": "9432e7c2dc01e866842ef1f4391ca5b41b176401",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bhff-2026",
+    "cineautopsia-2026",
+    "fantasmagoria-2026",
+    "fantasofest-2026",
+    "festicineantioquia-2026",
+    "festicinerio-2026",
+    "ficfusa-2026",
+    "ficpa-2026",
+    "narrarelfuturo-2026",
+    "popayan-2026",
+    "under-2026",
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/ficica-2026/compraventa.jpg": {
+   "sha1": "53770488b4bc919e7846d55d9b8c5018ba6ea722",
+   "veredicto": "afiche",
+   "usado_en": [
+    "miradas-2026"
+   ]
+  },
+  "/assets/ficica-2026/desarraigo.jpg": {
+   "sha1": "1de4caf965ba94aadacf101f402335f0ddb84fa0",
+   "veredicto": "afiche",
+   "usado_en": [
+    "filcmar-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/ficica-2026/emechiche-el-renacer-de-los-cabeciblancos.jpg": {
+   "sha1": "4574b4cbc50b0387c703d33f0d6983b93db99805",
+   "veredicto": "afiche",
+   "usado_en": [
+    "anibia-2026",
+    "miradas-2026",
+    "popayan-2026",
+    "siembrafest-2026",
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/ficica-2026/gramatica-practica-italiana.jpg": {
+   "sha1": "c63806eae6724f46c877a3a9da2be2c4283382e4",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026"
+   ]
+  },
+  "/assets/ficica-2026/la-mona.jpg": {
+   "sha1": "6a9ebbecc1e67544220e08b7fe54dd2df75845d9",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026",
+    "ficfusa-2026",
+    "ficmontanas-2026",
+    "jardin-2026",
+    "miradas-2026",
+    "popayan-2026",
+    "siembrafest-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/ficica-2026/los-pliegues-de-la-falda.jpg": {
+   "sha1": "8268403a3b3ced535790e22f9de3367e5fb938ea",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026",
+    "popayan-2026"
+   ]
+  },
+  "/assets/ficica-2026/memoria-de-un-pibe.jpg": {
+   "sha1": "ca6b3bf5c05d26fdb539a04ceeb307e370f5f001",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tercertiempo-2026"
+   ]
+  },
+  "/assets/ficica-2026/pawa.jpg": {
+   "sha1": "b4e11ee475abfe67a0ce6cf34e9742ebfff7c1ad",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65",
+    "ficdeh-2026",
+    "leviza-2026"
+   ]
+  },
+  "/assets/ficica-2026/prueba-de-camara.jpg": {
+   "sha1": "9806d5d08eeb72db8ff12c3da3e0b74a5a38a47b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026",
+    "cinemancia-2026"
+   ]
+  },
+  "/assets/ficica-2026/sombras-en-la-niebla.jpg": {
+   "sha1": "0dd3228665054d07dd9b098aaa4be70b3c0791e9",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026",
+    "ficci-65",
+    "ficmontanas-2026",
+    "midbo-2026",
+    "popayan-2026"
+   ]
+  },
+  "/assets/ficica-2026/tuktu-padre-maiz.jpg": {
+   "sha1": "a2c7a2792636d3afd516d1e8859a33fbc6d8be94",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cortoscali-2026",
+    "ficdeh-2026",
+    "ficfusa-2026",
+    "ficmontanas-2026",
+    "ficpa-2026",
+    "popayan-2026",
+    "under-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/ficica-2026/una-torreta-en-llamas.jpg": {
+   "sha1": "cc8b19c5221eaeff126cbe98aedd6fb43db55426",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/ficidi-2026/mas-alla-de-la-corona.jpg": {
+   "sha1": "dea63f7581a1146b5da80657c8ece2896ebb78ae",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026"
+   ]
+  },
+  "/assets/ficma/desierto-verde.jpg": {
+   "sha1": "624b8c5e5013a5f946d48c16538bbed1a50a6067",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026"
+   ]
+  },
+  "/assets/ficma/el-principe-de-nanawa.jpg": {
+   "sha1": "c07cc03a521507f15985bfdd2d03b4aa36323ffc",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
+  "/assets/ficma/la-marcha-del-hambre.jpg": {
+   "sha1": "734a3b952ac1d60b31b0f24809e3fcb59aa98d23",
+   "veredicto": "afiche",
+   "usado_en": [
+    "jardin-2026"
+   ]
+  },
+  "/assets/ficma/llueve-sobre-babel.jpg": {
+   "sha1": "7790fd70e0ac2c85d08ed7a498aac70d0b0061bc",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026",
+    "girardota-2026",
+    "narrarelfuturo-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/ficma/soñé-su-nombre.jpg": {
+   "sha1": "5181197a067a17b053f669eb4781efd282baa449",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026",
+    "ficdeh-2026",
+    "jardin-2026",
+    "mambe-2026",
+    "narrarelfuturo-2026",
+    "qaff-2026",
+    "siembrafest-2026"
    ]
   },
   "/assets/ficmontanas/el-huaquero.jpg": {
@@ -212,25 +1637,66 @@
     "siembrafest-2026"
    ]
   },
-  "/assets/ficpa-2026/la-gallina-saraviada.jpg": {
-   "sha1": "86743e2a085c4c27310a08f6869246c8ffbe2b74",
+  "/assets/ficpa-2026/alla-cartas-al-corazon.jpg": {
+   "sha1": "74e621853f47d8faf6386e14659de416115e15a5",
    "veredicto": "afiche",
    "usado_en": [
+    "guatape-2026"
+   ]
+  },
+  "/assets/ficpa-2026/kueka-memoria-ancestral.jpg": {
+   "sha1": "a56d8a4c146025c1e97ee7128c3e4fed43373a67",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026"
+   ]
+  },
+  "/assets/ficpa-2026/lactar.jpg": {
+   "sha1": "4c26c8f4f92918e24514ed4a47432a3b8bee7580",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026",
+    "ficmontanas-2026",
+    "itagui-2026",
+    "mambe-2026",
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/filcmar-2026/agachar-el-rostro.jpg": {
+   "sha1": "60f1e593f61f3035bdd49d120345e6d07f86f631",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026",
+    "miradas-2026",
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/filcmar-2026/aquileo-venganza.jpg": {
+   "sha1": "06056c08a641957171b7441204ef9092e3f0e38b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/filcmar-2026/el-espejo-de-la-vida.jpg": {
+   "sha1": "510531e388b9a65a8ea060d571ace4d4fbcec530",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicinerio-2026",
     "ficfusa-2026"
    ]
   },
-  "/assets/ficpa-2026/relatos-del-camino.jpg": {
-   "sha1": "d80d0cd2b6870329c3e54ef6524a4ae10231168a",
+  "/assets/filcmar-2026/el-pesebre.jpg": {
+   "sha1": "268db771010a9c4f43011c894dd753df26857b04",
    "veredicto": "afiche",
    "usado_en": [
-    "ficmontanas-2026"
+    "ficica-2026"
    ]
   },
   "/assets/filcmar-2026/hdlt.jpg": {
    "sha1": "2508554fefc853d486e9908df659ca533cbdb955",
    "veredicto": "afiche",
    "usado_en": [
-    "fantasmagoria-2026",
     "popayan-2026"
    ]
   },
@@ -241,18 +1707,80 @@
     "bhff-2026"
    ]
   },
+  "/assets/filcmar-2026/la-corazonada.jpg": {
+   "sha1": "1d99b7df7829aaa47e082fa9d2d70c4700e6e080",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026"
+   ]
+  },
+  "/assets/filcmar-2026/la-danza-del-caos.jpg": {
+   "sha1": "7adf9eacecb3fc1ee4cd0ec11670f9e07cf1ed92",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinetoro-2026",
+    "festicinerio-2026"
+   ]
+  },
+  "/assets/filcmar-2026/la-misteriosa-mirada-del-flamenco.jpg": {
+   "sha1": "dbb4f622884346a07d3e28ccb6437c2735708a21",
+   "veredicto": "afiche",
+   "usado_en": [
+    "aff-2026"
+   ]
+  },
   "/assets/filcmar-2026/la-pecera.jpg": {
    "sha1": "367902f2cd8b877e8c3ff816dc07289a741c47f4",
    "veredicto": "afiche",
    "usado_en": [
-    "anibia-2026"
+    "anibia-2026",
+    "siembrafest-2026"
    ]
   },
-  "/assets/finca/mi-casa-es-su-casa.jpg": {
-   "sha1": "e1e1d8e2dc26e4d861cc9a7e0cd30f451939c17f",
+  "/assets/filcmar-2026/lo-demas-es-ruido.jpg": {
+   "sha1": "0fda95d988a98876a7a5faf62fe70ba6d647132c",
    "veredicto": "afiche",
    "usado_en": [
-    "ficmontanas-2026"
+    "ficci-65",
+    "tiff-2026"
+   ]
+  },
+  "/assets/filcmar-2026/merrimundi.jpg": {
+   "sha1": "c6fce116dce1c9311695752179723405d19d0d6b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/filcmar-2026/pude-ver-un-fantasma-desde-mi-ventana.jpg": {
+   "sha1": "d73b046ff5bb9c2a079029027991f7d95b9ab05e",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026"
+   ]
+  },
+  "/assets/filcmar-2026/si-no-ardemos-como-iluminar-la-noche.jpg": {
+   "sha1": "e196b3a8588aa0832a211eb3df1a5c0e503294a6",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
+  "/assets/funza-2026/basta-mama.jpg": {
+   "sha1": "bf14f466c144659b3b8c5a8c30628a11b5521cd7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "guatape-2026"
+   ]
+  },
+  "/assets/funza-2026/horizonte.jpg": {
+   "sha1": "d10b61a685d37f4f72dc69b14ccdb740fd3818ae",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cineparalapaz-2026",
+    "festicineantioquia-2026",
+    "guatape-2026",
+    "mambe-2026"
    ]
   },
   "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg": {
@@ -260,6 +1788,127 @@
    "veredicto": "afiche",
    "usado_en": [
     "ficfusa-2026"
+   ]
+  },
+  "/assets/girardota-2026/deus-ex-necro-machina.jpg": {
+   "sha1": "faa97b2f3b521d188de90936e932e31881b9cbb7",
+   "veredicto": "afiche",
+   "usado_en": [
+    "jardin-2026"
+   ]
+  },
+  "/assets/girardota-2026/los-anos-del-conejo.jpg": {
+   "sha1": "203a8a8db1329d2b42f1f1777cee97e1ea4626e2",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cineautopsia-2026",
+    "jardin-2026"
+   ]
+  },
+  "/assets/girardota-2026/maleza.jpg": {
+   "sha1": "9619a135c997c25006b46069117ab88165757311",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/girardota-2026/maricones.jpg": {
+   "sha1": "c82a190c59ec7de2650e3974d1f3ee97f2b0fc33",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026",
+    "ficidi-2026"
+   ]
+  },
+  "/assets/guatape-2026/planeta-fome.jpg": {
+   "sha1": "3d455ef598587f97df847c8c6b78ea25259c2e21",
+   "veredicto": "afiche",
+   "usado_en": [
+    "miradas-2026"
+   ]
+  },
+  "/assets/guatape-2026/un-poeta.jpg": {
+   "sha1": "1e228f29360642be88f63636a4fb286784dee5b3",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026",
+    "ficmontanas-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/guatape-2026/volar.jpg": {
+   "sha1": "e97202b181af4b52e2b43cbe7834387a15794c0d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/itagui-2026/estancia.jpg": {
+   "sha1": "699c0c5fdce38fab951f198e05df6e555ec22a81",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026"
+   ]
+  },
+  "/assets/itagui-2026/piedras-preciosas.jpg": {
+   "sha1": "76bd8a2ab1ff2fe31161feba57a6c22f00456639",
+   "veredicto": "afiche",
+   "usado_en": [
+    "aff-2026",
+    "ficci-65"
+   ]
+  },
+  "/assets/jardin-2026/de-saul.jpg": {
+   "sha1": "e930ddc74cd36d5619cdd5d0a3571be5c06c2ff0",
+   "veredicto": "afiche",
+   "usado_en": [
+    "miradas-2026"
+   ]
+  },
+  "/assets/jardin-2026/la-reserva.jpg": {
+   "sha1": "193d50aa7d13bfb187e55a39e406d0a1a82b41d6",
+   "veredicto": "afiche",
+   "usado_en": [
+    "aff-2026"
+   ]
+  },
+  "/assets/jardin-2026/termina.jpg": {
+   "sha1": "df91027186579855d7503f69ae139e5c246e5399",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026",
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/mambe-2026/la-memoria-de-las-mariposas.jpg": {
+   "sha1": "9d89624682e7733108b1e458aa621c2aca5fccfe",
+   "veredicto": "afiche",
+   "usado_en": [
+    "mamut-2026"
+   ]
+  },
+  "/assets/mamut-2026/frio-metal.jpg": {
+   "sha1": "3c9dc0eeae5fd74351eea81863b6ce0934797472",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
+  "/assets/mamut-2026/lolita-en-honda.jpg": {
+   "sha1": "f12619038ea5ac8ca8b7ee754b2d6c8701869e80",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026",
+    "ficci-65",
+    "midbo-2026"
+   ]
+  },
+  "/assets/mamut-2026/minuto-fatal.jpg": {
+   "sha1": "bb7181a16b4fc7b4aa938e9fabebde0d59d5203a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026"
    ]
   },
   "/assets/mamut-2026/no-menguara-el-fuego-de-esta-luna.jpg": {
@@ -270,11 +1919,161 @@
     "midbo-2026"
    ]
   },
+  "/assets/midbo-2026/a-film-to-remind-us-of-utopia.jpg": {
+   "sha1": "cb4d4ccab5b3a382917026d7ee156d0f28c6b24d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "olhar-2026"
+   ]
+  },
+  "/assets/midbo-2026/abortion-party.jpg": {
+   "sha1": "76218e427bd4746b29566e99e07d8c69db632555",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
+  "/assets/midbo-2026/bosque-arriba-en-la-montana.jpg": {
+   "sha1": "a7764e0aaa7f561c06b9ea2a0dbaff04bcfac872",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
   "/assets/midbo-2026/boyuna.jpg": {
    "sha1": "cb32dff758d9def387bf6695e94d3a12ba04b6d9",
    "veredicto": "afiche",
    "usado_en": [
     "cinetoro-2026"
+   ]
+  },
+  "/assets/midbo-2026/cartas-a-mis-padres-muertos.jpg": {
+   "sha1": "c052e426f4429dda98d97b5b0952af6619009b79",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2025",
+    "olhar-2026"
+   ]
+  },
+  "/assets/midbo-2026/colors-of-white-rock.jpg": {
+   "sha1": "2b4d2de6a970b19cfe2b6a77ecd6613a0f205f64",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tribeca-2026"
+   ]
+  },
+  "/assets/midbo-2026/el-coloquio-de-los-pajaros.jpg": {
+   "sha1": "b0e1cfed5871fe6d2d326c7d80eb8c6623a2e2f9",
+   "veredicto": "afiche",
+   "usado_en": [
+    "under-2026"
+   ]
+  },
+  "/assets/midbo-2026/el-leon-afiche.jpg": {
+   "sha1": "26e4f55757e574f63d1f435645e4aa49904825dd",
+   "veredicto": "afiche",
+   "usado_en": [
+    "miradas-2026"
+   ]
+  },
+  "/assets/midbo-2026/filme-pin.jpg": {
+   "sha1": "59615210ff8b5962decd720af1793d75df4771a0",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cineautopsia-2026",
+    "ficci-65",
+    "popayan-2026"
+   ]
+  },
+  "/assets/midbo-2026/geografia-espectral.jpg": {
+   "sha1": "c6ca5c2cc6ca057549e9013d2fd2242fc5785cd2",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026"
+   ]
+  },
+  "/assets/midbo-2026/iniciacion-en-la-octava-dimension.jpg": {
+   "sha1": "b0e4c4f404acbcfc7a5536bf4cd0abcbfe5791a2",
+   "veredicto": "afiche",
+   "usado_en": [
+    "qaff-2026"
+   ]
+  },
+  "/assets/midbo-2026/la-forma-y-la-raiz.jpg": {
+   "sha1": "e1724a4fb769b25507334c6a18d0b9dbfb774c06",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
+  "/assets/midbo-2026/las-almas-ni-los-ojos.jpg": {
+   "sha1": "d50615c66810694353cc02181eed1878aea8cbed",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026",
+    "ficci-65",
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/midbo-2026/las-formas-de-la-magia.jpg": {
+   "sha1": "5d219e702dc1225e7cce65e8d1593144bc0cbd02",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026",
+    "ficci-65",
+    "miradas-2026",
+    "villadeleyvaiff-2026"
+   ]
+  },
+  "/assets/midbo-2026/montana-luminosa.jpg": {
+   "sha1": "52f00a494de318b6bc767a8014c517ff09c7d928",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
+  "/assets/midbo-2026/o.jpg": {
+   "sha1": "17658fe656cc3c9907ae3925da3ab930f206080a",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2026"
+   ]
+  },
+  "/assets/midbo-2026/pacifico.jpg": {
+   "sha1": "806f4347b8996f5782e52c16675d7a0a7492de51",
+   "veredicto": "afiche",
+   "usado_en": [
+    "aff-2026"
+   ]
+  },
+  "/assets/midbo-2026/si-la-escombrera-hablara.jpg": {
+   "sha1": "52f0f798ebb82c20e4ab1d4afe26a46498db0485",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026"
+   ]
+  },
+  "/assets/midbo-2026/the-travelers.jpg": {
+   "sha1": "0836a059da8c52c598ddc7397e9ec5444df5b767",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65",
+    "qaff-2026",
+    "under-2026"
+   ]
+  },
+  "/assets/miradas-2026/el-tren-fluvial.jpg": {
+   "sha1": "729eb97b00b5c5d511682bdf0034daa3404bbb05",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
+   ]
+  },
+  "/assets/miradas-2026/ivan-hadoum.jpg": {
+   "sha1": "592655fe458bddd612c52fd843ff8cf4389171ad",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficci-65"
    ]
   },
   "/assets/miradas-2026/luis-antonio.jpg": {
@@ -285,11 +2084,126 @@
     "guatape-2026"
    ]
   },
+  "/assets/miradas-2026/mi-casa-es-su-casa.jpg": {
+   "sha1": "86b0704316da7a94797967dfab18188a7be92963",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficmontanas-2026",
+    "finca-2026"
+   ]
+  },
+  "/assets/miradas-2026/mi-viche-todo-el-dia.jpg": {
+   "sha1": "93c37f567a592aa147266632aa65a20ed6795dc1",
+   "veredicto": "afiche",
+   "usado_en": [
+    "popayan-2026",
+    "qaff-2026"
+   ]
+  },
+  "/assets/miradas-2026/moscas.jpg": {
+   "sha1": "ecbe8bdf3ea228d5611c4f6b060a4b319a200ce9",
+   "veredicto": "afiche",
+   "usado_en": [
+    "mubibogota-2026",
+    "tiff-2026"
+   ]
+  },
+  "/assets/narrarelfuturo-2026/6-de-diciembre.jpg": {
+   "sha1": "1a128d14a72ec83695ba9b6758b37fdeeb1c05b0",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/narrarelfuturo-2026/despues-del-frio.jpg": {
+   "sha1": "6db21a22e7419d4d9f9aa5a4f6817343dc6c5978",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026"
+   ]
+  },
+  "/assets/narrarelfuturo-2026/habitante.jpg": {
+   "sha1": "e6be654fb3b639f6d68d215f277a3d2dceaa5d9b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficma-2026",
+    "itagui-2026"
+   ]
+  },
+  "/assets/narrarelfuturo-2026/protegiendo-nuestro-territorio-v2.jpg": {
+   "sha1": "6ca9d70c5974b321d8daccfd756ba0c1a01bab47",
+   "veredicto": "afiche",
+   "usado_en": [
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg": {
+   "sha1": "44762c6b7261b08d6c6969562e49529ed5926974",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2025"
+   ]
+  },
+  "/assets/popayan-2026/cayenas-libertarias.jpg": {
+   "sha1": "b66663b1a909223fc347f60d49904b29e92d9f29",
+   "veredicto": "afiche",
+   "usado_en": [
+    "festicineantioquia-2026",
+    "ficdeh-2026",
+    "ficfusa-2026",
+    "ficica-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/popayan-2026/corazon-galvanico.jpg": {
+   "sha1": "9dc058a612c607087c9bed03a30f0c8a480d04f2",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/popayan-2026/el-patio-de-la-infancia.jpg": {
+   "sha1": "3c6c440c5ee90d2867bc40a981df86d911380ea1",
+   "veredicto": "afiche",
+   "usado_en": [
+    "anibia-2026"
+   ]
+  },
+  "/assets/popayan-2026/gladiolos.jpg": {
+   "sha1": "ef4a1d261a77a707ead19549afee6ef52ba60dea",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/popayan-2026/gris.jpg": {
+   "sha1": "5ea6c2d65363873584d3f621b38bdd8579df8720",
+   "veredicto": "afiche",
+   "usado_en": [
+    "aff-2026",
+    "villadeleyvaiff-2026"
+   ]
+  },
   "/assets/popayan-2026/la-asociacion.jpg": {
    "sha1": "733a83cfe94ba8d5bb5312f5d5c8278908534f3a",
    "veredicto": "afiche",
    "usado_en": [
-    "ficmontanas-2026"
+    "ficmontanas-2026",
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/popayan-2026/la-despedida-del-rio.jpg": {
+   "sha1": "e4dd676a37075b92a2a0247b4c6408d228f2aeb3",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/popayan-2026/la-guerra-de-los-tomates.jpg": {
+   "sha1": "f8cf238f7c30d6d2b3986f7e02424ac5753e1cb1",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
    ]
   },
   "/assets/popayan-2026/la-rebelion-de-un-fantasma.jpg": {
@@ -303,7 +2217,31 @@
    "sha1": "928792df65ff0e5b88353ccdc30e74ea1778ac33",
    "veredicto": "afiche",
    "usado_en": [
-    "ficfusa-2026"
+    "ficdeh-2026",
+    "ficfusa-2026",
+    "ficica-2026"
+   ]
+  },
+  "/assets/popayan-2026/sapos-por-todos-lados.jpg": {
+   "sha1": "df80752538aaa394d9e3f4a83be445b8f43e6305",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficdeh-2026"
+   ]
+  },
+  "/assets/popayan-2026/sonar-una-serpiente.jpg": {
+   "sha1": "2a524544d3de918fd0123f8a885ecf9534139c81",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cinemancia-2025"
+   ]
+  },
+  "/assets/popayan-2026/suite-intercontinental.jpg": {
+   "sha1": "af3f182d325c9a304536bccde143418e036cba4f",
+   "veredicto": "afiche",
+   "usado_en": [
+    "bogoshorts-2026",
+    "ficci-65"
    ]
   },
   "/assets/popayan-2026/tentado-de-difunto.jpg": {
@@ -313,11 +2251,79 @@
     "festicinerio-2026"
    ]
   },
-  "/assets/qaff/kanekalon.jpg": {
-   "sha1": "2885106a92de9f76e7d7efc8f05157b686cb7296",
+  "/assets/popayan-2026/todos-los-dias.jpg": {
+   "sha1": "7f4dbb43959ae7bed18697ef69c97294b461cc0a",
    "veredicto": "afiche",
    "usado_en": [
-    "ficmontanas-2026"
+    "ficdeh-2026"
+   ]
+  },
+  "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg": {
+   "sha1": "24e8fd4838f7aa008fa0555884404a767597fcec",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cineparalapaz-2026"
+   ]
+  },
+  "/assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg": {
+   "sha1": "12c255def3767e22d88ef11331750beb90673f98",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/qaff/bertha.jpg": {
+   "sha1": "fc75f3f9db792d460defdac2dbcb9ea417e47f34",
+   "veredicto": "afiche",
+   "usado_en": [
+    "biff-2026",
+    "ficcali-2026"
+   ]
+  },
+  "/assets/siembrafest/elementales-v2.jpg": {
+   "sha1": "f2d2880210c2d764e60c4087d78bdbfeae296bc2",
+   "veredicto": "afiche",
+   "usado_en": [
+    "jardin-2026"
+   ]
+  },
+  "/assets/tercertiempo/cantos-al-juego-de-bolar.jpg": {
+   "sha1": "7b167f0e9e639e784454c9d2e2cf027f309a932b",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/tercertiempo/entrenador-de-locos.jpg": {
+   "sha1": "7d06417d43202ac227c4847e6a54b2dbac5c6f24",
+   "veredicto": "afiche",
+   "usado_en": [
+    "qaff-2026"
+   ]
+  },
+  "/assets/under-2026/analogue-natives.jpg": {
+   "sha1": "fc72ab82740d31890b57ca5fbe49aab7b6bc7faa",
+   "veredicto": "afiche",
+   "usado_en": [
+    "cineautopsia-2026"
+   ]
+  },
+  "/assets/under-2026/borrachos-mientras-escuchamos-las-gotas-caer.jpg": {
+   "sha1": "76be477c06978cec64d1456bc43eeb6722b7ab06",
+   "veredicto": "afiche",
+   "usado_en": [
+    "biff-2026",
+    "bogoshorts-2026",
+    "cinemancia-2026",
+    "cinetoro-2026",
+    "villadelcine-2026"
+   ]
+  },
+  "/assets/under-2026/perros.jpg": {
+   "sha1": "d61f7d27399de33ba5362951a2d09db58efb81c5",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficidi-2026"
    ]
   },
   "/assets/villadelcine-2026/aguapanela.jpg": {
@@ -327,19 +2333,53 @@
     "ficcali-2026"
    ]
   },
-  "/assets/villadelcine-2026/collective-memory.jpg": {
-   "sha1": "0141c3bec8fc5fd9af2770e9bd52975dbb6977cc",
+  "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg": {
+   "sha1": "419c7814584f68da49f42af5f1543726de572aa5",
    "veredicto": "afiche",
    "usado_en": [
-    "ficmontanas-2026"
+    "siembrafest-2026"
    ]
   },
-  "/assets/villadelcine-2026/la-mona.jpg": {
-   "sha1": "da74bd576bbdaf21048e41691c1f2cb097048cde",
+  "/assets/villadeleyvaiff-2026/chaski-pacha.jpg": {
+   "sha1": "b33664cf90d3ccfbd9510e31dc9ce706485bff74",
    "veredicto": "afiche",
    "usado_en": [
-    "ficmontanas-2026",
-    "popayan-2026"
+    "ficdeh-2026"
+   ]
+  },
+  "/assets/villadeleyvaiff-2026/cielo-de-enero.jpg": {
+   "sha1": "9361bc3f553b550cb1c2fe18f40aabf959b47b63",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficidi-2026"
+   ]
+  },
+  "/assets/villadeleyvaiff-2026/el-corset.jpg": {
+   "sha1": "9e503d3b033ace042d82dea3eaa891b9c3f5b6a5",
+   "veredicto": "afiche",
+   "usado_en": [
+    "tiff-2026"
+   ]
+  },
+  "/assets/villadeleyvaiff-2026/las-zapatillas-magicas.jpg": {
+   "sha1": "0a7d2479a1fed5ffaa4f764a76a64c64cc029f8e",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficica-2026"
+   ]
+  },
+  "/assets/villadeleyvaiff-2026/malas-posturas.jpg": {
+   "sha1": "b7a1fb7d8a8dfb4a2bd4bbda51fd268078fd5276",
+   "veredicto": "afiche",
+   "usado_en": [
+    "jardin-2026"
+   ]
+  },
+  "/assets/villadeleyvaiff-2026/noche-de-vuelo.jpg": {
+   "sha1": "aaebe02634599421210d970fbd19c9de8047ade1",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
    ]
   }
  }

@@ -1,0 +1,55 @@
+[
+ {
+  "work_id": "w_R4DYRQFSTNJ7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/tierra-de-mi-padre.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/tierra-de-mi-padre.jpg",
+   "/assets/mubibogota-2026/tierra-de-mi-padre.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/tierra-de-mi-padre.jpg",
+   "mubibogota-2026": "/assets/mubibogota-2026/tierra-de-mi-padre.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DYRQFSTNJ7",
+  "campo": "sinopsis.es",
+  "valor": "En el verano de 1949, en pleno apogeo de la Guerra Fría, el escritor ganador del Premio Nobel, Thomas Mann, y su hija Erika, actriz, escritora y piloto de rallies, se embarcan en un desafiante y emotivo viaje por carretera en un Buick negro que les lleva a través de una Alemania en ruinas, desde Fráncfort, bajo dominio estadounidense, hasta Weimar, controlada por los soviéticos. Al regresar a casa tras dieciséis años de exilio en Estados Unidos, Thomas Mann tiene que enfrentarse no solo a una patria dividida, sino también a una profunda fractura dentro de su propia familia.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026 · corregida)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "d51aea1add79",
+   "fdf1a0640c01"
+  ],
+  "antes": {
+   "biff-2026": "En el verano de 1949, en pleno apogeo de la Guerra Fría, el escritor ganador del Premio Nobel, Thomas MANN, y su hija Erika, actriz, escritora y piloto de rallies, se embarcan en un desafiante y emotivo viaje por carretera en un Buick negro que les lleva a través de una Alemania en ruinas, desde Fráncfort, bajo dominio estadounidense, hasta Weimar, controlada por los soviéticos. Al regresar a casa tras dieciséis años de exilio en Estados Unidos, Thomas MANN tiene que enfrentarse no solo a una patria dividida, sino también a una profunda fractura dentro de su propia familia.",
+   "mubibogota-2026": "En pleno apogeo de la Guerra Fría, el escritor Thomas Mann y su hija Erika, emprenden un viaje a través de una Alemania dividida y en ruinas. Epílogo sonoro con Julio Victoria"
+  }
+ },
+ {
+  "work_id": "w_R4DYRQFSTNJ7",
+  "campo": "paises",
+  "valor": [
+   "PL",
+   "DE",
+   "FR",
+   "IT",
+   "GB"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1437696)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "Polonia, Alemania, Italia, Francia",
+   "mubibogota-2026": "Poland, Germany, France, Italy, United Kingdom"
+  }
+ }
+]

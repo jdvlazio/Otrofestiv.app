@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KENR5ENZQTB",
+  "campo": "directores",
+  "valor": [
+   "Daniela López Moreno"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Daniela López Moreno"
+  }
+ },
+ {
+  "work_id": "w_4KENR5ENZQTB",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KENR5ENZQTB",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KENR5ENZQTB",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KENR5ENZQTB",
+  "campo": "sinopsis.es",
+  "valor": "Janis es agredida por un extraño. Mientras intenta sobrellevar los días con sus amigas y las tablas de skate, un virus se apodera poco a poco de su cuerpo, despertando algo bestial que la impulsa a cazar a su agresor.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Janis es agredida por un extraño. Mientras intenta sobrellevar los días con sus amigas y las tablas de skate, un virus se apodera poco a poco de su cuerpo, despertando algo bestial que la impulsa a cazar a su agresor."
+  }
+ },
+ {
+  "work_id": "w_4KENR5ENZQTB",
+  "campo": "sinopsis.en",
+  "valor": "Janis is attacked by a stranger. While trying to get through the days with her friends and skateboards, a virus slowly takes over her body, awakening something beastly that drives her to hunt down her attacker.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Janis is attacked by a stranger. While trying to get through the days with her friends and skateboards, a virus slowly takes over her body, awakening something beastly that drives her to hunt down her attacker."
+  }
+ },
+ {
+  "work_id": "w_4KENR5ENZQTB",
+  "campo": "xref.tmdb",
+  "valor": 1724997,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1724997"
+  }
+ },
+ {
+  "work_id": "w_4KENR5ENZQTB",
+  "campo": "xref.letterboxd",
+  "valor": "la-rabia-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "la-rabia-2026"
+  }
+ },
+ {
+  "work_id": "w_4KENR5ENZQTB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-rabia.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-rabia.jpg"
+  }
+ }
+]

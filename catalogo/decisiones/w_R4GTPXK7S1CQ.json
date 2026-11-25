@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4GTPXK7S1CQ",
+  "campo": "xref.tmdb",
+  "valor": 1486078,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/el-chucur/"
+ },
+ {
+  "work_id": "w_R4GTPXK7S1CQ",
+  "campo": "sinopsis.es",
+  "valor": "El Chucur, una intrépida comadreja andina, se prepara para participar en la fiesta de la cosecha. Tendrá que llenarse de valor y enfrentar el rechazo de los humanos, que lo consideran un roedor desagradable, para sorprenderlos con sus habilidades como danzante.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/1486078"
+ },
+ {
+  "work_id": "w_R4GTPXK7S1CQ",
+  "campo": "sinopsis.en",
+  "valor": "An intrepid Andean weasel prepares to participate in the harvest festival. However, he will have to muster up his courage and face rejection from humans who consider him an unpleasant rodent in order to surprise them with his dancing skills.",
+  "motivo": "de su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/1486078"
+ },
+ {
+  "work_id": "w_R4GTPXK7S1CQ",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

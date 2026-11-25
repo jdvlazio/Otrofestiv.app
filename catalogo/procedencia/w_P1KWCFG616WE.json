@@ -1,22 +1,60 @@
 {
  "titulo_original": {
-  "fuente": "festival:festicinerio-2026",
+  "fuente": "festival:festicineantioquia-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1536959",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "la forma del PDF de Festicine, completa y con tildes",
+  "fecha": "2026-11-24"
  },
  "anio": {
-  "fuente": "tmdb:1536959",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "ShortFilmWire (https://shortfilmwire.com/en/embedded/film/200126864/toto): Colombia, 2023, 8'32\", dirección Hernán Velásquez Villa, la misma; el 2026-02-07 de TMDB 1536959 puede ser un estreno posterior",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "tmdb:1536959",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "el afiche completo (el de Leviza, 2500x3465) llevado a 780x1170 sin recortar; el de Rionegro corta los créditos",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "TMDB 1536959",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24"
  }
 }

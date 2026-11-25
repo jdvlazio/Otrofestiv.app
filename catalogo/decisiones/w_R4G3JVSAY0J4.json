@@ -1,0 +1,174 @@
+[
+ {
+  "work_id": "w_R4G3JVSAY0J4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/la-habitacion-del-macho-cabrio.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/anibia-2026/la-habitacion-del-macho-cabrio.jpg",
+   "/assets/bhff-2026/la-habitacion-del-macho-cabrio.jpg",
+   "/assets/fantasmagoria-2026/la-habitacion-del-macho-cabrio.jpg",
+   "/assets/popayan-2026/la-habitacion-del-macho-cabrio.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/la-habitacion-del-macho-cabrio.jpg",
+   "bhff-2026": "/assets/bhff-2026/la-habitacion-del-macho-cabrio.jpg",
+   "fantasmagoria-2026": "/assets/fantasmagoria-2026/la-habitacion-del-macho-cabrio.jpg",
+   "popayan-2026": "/assets/popayan-2026/la-habitacion-del-macho-cabrio.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4G3JVSAY0J4",
+  "campo": "directores",
+  "valor": [
+   "Duban Pinzón"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": "Duban Pizon",
+   "bhff-2026": "Duban Pinzón",
+   "fantasmagoria-2026": "Duban Pinzón",
+   "popayan-2026": "Duban Pinzon"
+  }
+ },
+ {
+  "work_id": "w_R4G3JVSAY0J4",
+  "campo": "sinopsis.es",
+  "valor": "En una habitación apartada del mundo real, Juan, de 10 años, vive con sus abuelos. Su abuelo expulsa grandes cantidades de materia por una extraña enfermedad y cada noche los visitan apariciones que se alimentan de su carne podrida. La abuela intenta ocultárselo, pero una noche Juan se escabulle para acercarse a ellas.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026, fantasmagoria-2026, popayan-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "4a684a1c5923",
+   "ab1b97255716"
+  ],
+  "antes": {
+   "anibia-2026": "Un niño vive con sus abuelos atrapados en una habitación, el abuelo esta cerca de su muerte lo cual atrae demonios y apariciones, la curiosidad hace que el niño se acerque y vea de cerca la muerte.",
+   "bhff-2026": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones.",
+   "fantasmagoria-2026": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones.",
+   "popayan-2026": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones."
+  },
+  "original_de": [
+   "anibia-2026",
+   "bhff-2026",
+   "fantasmagoria-2026",
+   "festicineantioquia-2026",
+   "popayan-2026"
+  ],
+  "titulo": "La habitación del macho cabrío",
+  "original": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones.",
+  "sintesis": {
+   "redacta": "montador festicineantioquia-2026",
+   "verifica": "verificador de sinopsis (agente 2)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "a2cf0d34db09"
+  }
+ },
+ {
+  "work_id": "w_R4G3JVSAY0J4",
+  "campo": "sinopsis.en",
+  "valor": "In a room isolated from the real world, 10-year-old Juan lives with his grandparents. A strange disease makes his grandfather expel large amounts of matter, and every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide it from him, but one night Juan sneaks out to approach them.",
+  "motivo": "versión corta (350), redactor y verificador distintos; festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "anibia-2026": "In a room isolated from the real world, Juan, a 10-year-old boy, lives with his grandparents. His grandfather has a strange disease that causes him to expel large amounts of matter, and because of this, every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide what is happening from the boy, but one night Juan decides to sneak out and approach the apparitions.",
+   "bhff-2026": "In a room isolated from the real world, Juan, a 10-year-old boy, lives with his grandparents. His grandfather has a strange disease that causes him to expel large amounts of matter, and because of this, every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide what is happening from the boy, but one night Juan decides to sneak out and approach the apparitions.",
+   "fantasmagoria-2026": "In a room isolated from the real world, Juan, a 10-year-old boy, lives with his grandparents. His grandfather has a strange disease that causes him to expel large amounts of matter, and because of this, every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide what is happening from the boy, but one night Juan decides to sneak out and approach the apparitions.",
+   "popayan-2026": "In a room isolated from the real world, Juan, a 10-year-old boy, lives with his grandparents. His grandfather has a strange disease that causes him to expel large amounts of matter, and because of this, every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide what is happening from the boy, but one night Juan decides to sneak out and approach the apparitions.",
+   "festicineantioquia-2026": "In a room isolated from the real world, 10-year-old Juan lives with his grandparents. A strange disease makes his grandfather expel large amounts of matter, and every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide it from him, but one night Juan sneaks out to approach them."
+  }
+ },
+ {
+  "work_id": "w_R4G3JVSAY0J4",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "2025",
+   "bhff-2026": "2025",
+   "fantasmagoria-2026": "2025",
+   "festicineantioquia-2026": "2025",
+   "popayan-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4G3JVSAY0J4",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Colombia",
+   "bhff-2026": "Colombia",
+   "fantasmagoria-2026": "Colombia",
+   "festicineantioquia-2026": "Colombia",
+   "popayan-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4G3JVSAY0J4",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "Animación",
+   "bhff-2026": "Animación",
+   "fantasmagoria-2026": "Animación",
+   "festicineantioquia-2026": "Animación",
+   "popayan-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_R4G3JVSAY0J4",
+  "campo": "xref.tmdb",
+  "valor": 1554728,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "1554728",
+   "bhff-2026": "1554728",
+   "fantasmagoria-2026": "1554728",
+   "festicineantioquia-2026": "1554728",
+   "popayan-2026": "1554728"
+  }
+ },
+ {
+  "work_id": "w_R4G3JVSAY0J4",
+  "campo": "xref.letterboxd",
+  "valor": "the-devil-room",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "anibia-2026": "the-devil-room",
+   "bhff-2026": "the-devil-room",
+   "fantasmagoria-2026": "the-devil-room",
+   "festicineantioquia-2026": "the-devil-room",
+   "popayan-2026": "the-devil-room"
+  }
+ }
+]

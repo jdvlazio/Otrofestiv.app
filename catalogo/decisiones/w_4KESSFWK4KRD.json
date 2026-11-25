@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KESSFWK4KRD",
+  "campo": "directores",
+  "valor": [
+   "Javi Espárrago"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Javi Espárrago"
+  }
+ },
+ {
+  "work_id": "w_4KESSFWK4KRD",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KESSFWK4KRD",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KESSFWK4KRD",
+  "campo": "generos",
+  "valor": [
+   "Romance"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Romance"
+  }
+ },
+ {
+  "work_id": "w_4KESSFWK4KRD",
+  "campo": "sinopsis.es",
+  "valor": "En una noche cualquiera, Manuel, un joven conservador de clase alta, se topa con Lucía, su exnovia, a la salida de una discoteca en Madrid. Ese encuentro casual desata una serie de recuerdos.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En una noche cualquiera, Manuel, un joven conservador de clase alta, se topa con Lucía, su exnovia, a la salida de una discoteca en Madrid. Ese encuentro casual desata una serie de recuerdos."
+  }
+ },
+ {
+  "work_id": "w_4KESSFWK4KRD",
+  "campo": "sinopsis.en",
+  "valor": "On an ordinary night in Madrid, Manuel, a young man from a conservative upper-class background, unexpectedly runs into Lucía, his ex-girlfriend, outside a nightclub. That brief encounter reopens old wounds and sets off a chain of memories.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On an ordinary night in Madrid, Manuel, a young man from a conservative upper-class background, unexpectedly runs into Lucía, his ex-girlfriend, outside a nightclub. That brief encounter reopens old wounds and sets off a chain of memories."
+  }
+ },
+ {
+  "work_id": "w_4KESSFWK4KRD",
+  "campo": "xref.tmdb",
+  "valor": 1495689,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1495689"
+  }
+ },
+ {
+  "work_id": "w_4KESSFWK4KRD",
+  "campo": "xref.letterboxd",
+  "valor": "the-language-of-the-unfaithful",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-language-of-the-unfaithful"
+  }
+ },
+ {
+  "work_id": "w_4KESSFWK4KRD",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/el-idioma-de-los-infieles.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/el-idioma-de-los-infieles.jpg"
+  }
+ }
+]

@@ -1,0 +1,33 @@
+[
+ {
+  "work_id": "w_P1KYDW0CF2VM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicinerio-2026/la-dama-de-las-mil-mascaras.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/festicinerio-2026/la-dama-de-las-mil-mascaras.jpg",
+   "/assets/villadeleyvaiff-2026/dama-de-las-mil-mascaras.jpg"
+  ],
+  "antes": {
+   "festicinerio-2026": "/assets/festicinerio-2026/la-dama-de-las-mil-mascaras.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/dama-de-las-mil-mascaras.jpg"
+  }
+ },
+ {
+  "work_id": "w_P1KYDW0CF2VM",
+  "campo": "sinopsis.en",
+  "valor": "Damaris Gonzales is a pioneer who defies tradition. In the town of Barva, Heredia—the birthplace of Costa Rican masquerades—she broke the mold by becoming the first female traditional mask maker, challenging a historically male-dominated profession. This documentary pays tribute to her contribution and career, showing how her workshop is much more than a workspace: it is a place where clay and spirit meet, where tradition comes to life anew through her hands.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "festicinerio-2026": "Damaris Gonzales is a pioneer who defies tradition. In the town of Barva, Heredia—the birthplace of Costa Rican masquerades—she broke the mold by becoming the first female traditional mask maker, challenging a historically male-dominated profession.  This documentary pays tribute to her contribution and career, showing how her workshop is much more than a workspace: it is a place where clay and spirit meet, where tradition comes to life anew through her hands.",
+   "villadeleyvaiff-2026": "Damaris Gonzales is a pioneer who defies tradition. In the town of Barva, Heredia—the birthplace of Costa Rican masquerades—she broke the mold by becoming the first female traditional mask maker, challenging a historically male-dominated profession.  This documentary pays tribute to her contribution and career, showing how her workshop is much more than a workspace: it is a place where clay and spirit meet, where tradition comes to life anew through her hands."
+  }
+ }
+]

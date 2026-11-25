@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KEJKEVVZHY3",
+  "campo": "directores",
+  "valor": [
+   "Alba Cros Pellisé"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alba Cros Pellisé"
+  }
+ },
+ {
+  "work_id": "w_4KEJKEVVZHY3",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_4KEJKEVVZHY3",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KEJKEVVZHY3",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEJKEVVZHY3",
+  "campo": "sinopsis.es",
+  "valor": "Anhel de llum es una exploración de Barcelona a través de la luz. Un viaje desde la intimidad de las habitaciones, las amigas y amantes que me rodean, pasando por los callejones del Raval, hasta la puesta de sol en la montaña de Montjuïc. De la urbe a la naturaleza urbana, las luces y sombras, sus personas y su poder ser y existir.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Anhel de llum es una exploración de Barcelona a través de la luz. Un viaje desde la intimidad de las habitaciones, las amigas y amantes que me rodean, pasando por los callejones del Raval, hasta la puesta de sol en la montaña de Montjuïc. De la urbe a la naturaleza urbana, las luces y sombras, sus personas y su poder ser y existir."
+  }
+ },
+ {
+  "work_id": "w_4KEJKEVVZHY3",
+  "campo": "sinopsis.en",
+  "valor": "Anhel de llum is an exploration of Barcelona through light. A journey from the intimacy of the rooms, friends and lovers that surround me, through the narrow streets of the Raval district to the sunset on the mountain of Montjuïc. From the city to urban nature, the lights and shadows, its people and their ability to be and exist.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Anhel de llum is an exploration of Barcelona through light. A journey from the intimacy of the rooms, friends and lovers that surround me, through the narrow streets of the Raval district to the sunset on the mountain of Montjuïc. From the city to urban nature, the lights and shadows, its people and their ability to be and exist."
+  }
+ },
+ {
+  "work_id": "w_4KEJKEVVZHY3",
+  "campo": "xref.tmdb",
+  "valor": 1203325,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1203325"
+  }
+ },
+ {
+  "work_id": "w_4KEJKEVVZHY3",
+  "campo": "xref.letterboxd",
+  "valor": "longing-for-light",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "longing-for-light"
+  }
+ },
+ {
+  "work_id": "w_4KEJKEVVZHY3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/anhel-de-llum.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/anhel-de-llum.jpg"
+  }
+ }
+]

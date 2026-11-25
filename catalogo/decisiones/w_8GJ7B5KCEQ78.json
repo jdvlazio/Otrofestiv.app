@@ -1,0 +1,168 @@
+[
+ {
+  "work_id": "w_8GJ7B5KCEQ78",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/funza-2026/horizonte.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cineparalapaz-2026/horizonte.jpg",
+   "/assets/funza-2026/horizonte.jpg",
+   "/assets/guatape-2026/horizonte.jpg",
+   "/assets/mambe-2026/horizonte.jpg"
+  ],
+  "antes": {
+   "cineparalapaz-2026": "/assets/cineparalapaz-2026/horizonte.jpg",
+   "funza-2026": "/assets/funza-2026/horizonte.jpg",
+   "guatape-2026": "/assets/guatape-2026/horizonte.jpg",
+   "mambe-2026": "/assets/mambe-2026/horizonte.jpg"
+  }
+ },
+ {
+  "work_id": "w_8GJ7B5KCEQ78",
+  "campo": "directores",
+  "valor": [
+   "César Augusto Acevedo"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cineparalapaz-2026": "César Acevedo",
+   "funza-2026": "César Augusto Acevedo",
+   "guatape-2026": "César Augusto Acevedo",
+   "mambe-2026": "César Augusto Acevedo"
+  }
+ },
+ {
+  "work_id": "w_8GJ7B5KCEQ78",
+  "campo": "paises",
+  "valor": [
+   "CL",
+   "CO",
+   "FR",
+   "DE",
+   "LU"
+  ],
+  "motivo": "el orden ya publicado (TMDB)",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "antes": {
+   "cineparalapaz-2026": "Chile, Colombia, Francia, Alemania, Luxemburgo",
+   "funza-2026": "Chile, Colombia, Francia, Alemania, Luxemburgo",
+   "guatape-2026": "Chile, Colombia, Francia, Alemania, Luxemburgo",
+   "mambe-2026": "Chile, Colombia, Francia, Alemania, Luxemburgo",
+   "festicineantioquia-2026": "Colombia, Chile, Francia, Alemania, Luxemburgo"
+  }
+ },
+ {
+  "work_id": "w_8GJ7B5KCEQ78",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "2025",
+   "festicineantioquia-2026": "2025",
+   "funza-2026": "2025",
+   "guatape-2026": "2025",
+   "mambe-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_8GJ7B5KCEQ78",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Drama",
+   "festicineantioquia-2026": "Drama",
+   "funza-2026": "Drama",
+   "guatape-2026": "Drama",
+   "mambe-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8GJ7B5KCEQ78",
+  "campo": "sinopsis.es",
+  "valor": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "festicineantioquia-2026": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "funza-2026": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "guatape-2026": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan.",
+   "mambe-2026": "Dos fantasmas, una madre y su hijo, buscan al padre desaparecido del muchacho en un viaje físico y espiritual por un mundo arrasado por la guerra. Basilio, que en vida fue un criminal, debe revivir sus actos con su madre como testigo. Solo a través de un gran sacrificio encontrarán la redención que buscan."
+  }
+ },
+ {
+  "work_id": "w_8GJ7B5KCEQ78",
+  "campo": "sinopsis.en",
+  "valor": "Two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+  "motivo": "frase agramatical",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "festicineantioquia-2026": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "funza-2026": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "guatape-2026": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+   "mambe-2026": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption."
+  },
+  "anteriores": [
+   {
+    "valor": "It is about two ghosts, a mother and son, search for the boy’s missing father on a journey, both physical and spiritual, through a world ravaged by war. Only through great sacrifice will they mend the fragile bonds that bind them and perhaps find redemption.",
+    "motivo": "alta desde festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
+ },
+ {
+  "work_id": "w_8GJ7B5KCEQ78",
+  "campo": "xref.tmdb",
+  "valor": 1265716,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "1265716",
+   "festicineantioquia-2026": "1265716",
+   "funza-2026": "1265716",
+   "guatape-2026": "1265716",
+   "mambe-2026": "1265716"
+  }
+ },
+ {
+  "work_id": "w_8GJ7B5KCEQ78",
+  "campo": "xref.letterboxd",
+  "valor": "horizon-2024-4",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "cineparalapaz-2026": "horizon-2024-4",
+   "festicineantioquia-2026": "horizon-2024-4",
+   "funza-2026": "horizon-2024-4",
+   "guatape-2026": "horizon-2024-4",
+   "mambe-2026": "horizon-2024-4"
+  }
+ }
+]

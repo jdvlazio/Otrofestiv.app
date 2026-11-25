@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HB85GSEN2Y",
+  "campo": "directores",
+  "valor": [
+   "Shayma' Awawdeh"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 133",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=133"
+ },
+ {
+  "work_id": "w_R4HB85GSEN2Y",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 133",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=133"
+ },
+ {
+  "work_id": "w_R4HB85GSEN2Y",
+  "campo": "paises",
+  "valor": [
+   "PS",
+   "FR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 133",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=133",
+  "antes": {
+   "ficci-65": "Palestina, Francia"
+  }
+ },
+ {
+  "work_id": "w_R4HB85GSEN2Y",
+  "campo": "sinopsis.es",
+  "valor": "Shayma' Awawdeh retoma archivos de su infancia filmados durante la Segunda Intifada palestina. 20 años después, los interroga. Su madre piensa que no recordar es una bendición; ella afirma recordarlo todo con gran claridad. Un retrato frontal e íntimo de la infancia bajo ocupación y de un pasado de ruinas, doloroso y también lleno de amor.",
+  "motivo": "catálogo oficial de FICCI 65, p. 133",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=133"
+ },
+ {
+  "work_id": "w_R4HB85GSEN2Y",
+  "campo": "sinopsis.en",
+  "valor": "Shayma' Awawdeh revisits footage of her childhood filmed during the Second Palestinian Intifada. Twenty years later, she questions it. Her mother believes not remembering is a blessing; she says she remembers everything with great clarity. A direct, intimate portrait of childhood under occupation and of a past of ruins, painful yet full of love.",
+  "motivo": "catálogo oficial de FICCI 65, p. 133",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=133"
+ },
+ {
+  "work_id": "w_R4HB85GSEN2Y",
+  "campo": "xref.tmdb",
+  "valor": 1567972,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1567972"
+ }
+]

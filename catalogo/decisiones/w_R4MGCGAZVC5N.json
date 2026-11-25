@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4MGCGAZVC5N",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinetoro-2026/para-mi-ya-no-es-cualquier-bano.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cinetoro-2026/para-mi-ya-no-es-cualquier-bano.jpg",
+   "/assets/midbo-2026/para-mi-ya-no-es-cualquier-bano.jpg"
+  ],
+  "antes": {
+   "cinetoro-2026": "/assets/cinetoro-2026/para-mi-ya-no-es-cualquier-bano.jpg",
+   "midbo-2026": "/assets/midbo-2026/para-mi-ya-no-es-cualquier-bano.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4MGCGAZVC5N",
+  "campo": "sinopsis.es",
+  "valor": "Meses después de haber vivido un abuso por parte de una mujer, Micaela (21) regresa al baño donde ocurrieron los hechos. En un intento por sanar su trauma, registra y revive el recorrido que realizó en el pasado, transformando su recuerdo en un acto artístico que revela cómo esa experiencia quedó grabada en su subconsciente.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0974b1d308df",
+   "6f42a427a751"
+  ],
+  "antes": {
+   "cinetoro-2026": "Meses después de sufrir abuso a manos de una mujer, Micaela (21) regresa al baño donde ocurrió todo. En un intento por sanar su trauma, documenta y vuelve a recorrer el camino que siguió en su momento, transformando su recuerdo en un acto artístico que revela cómo la experiencia permanece grabada en su subconsciente.",
+   "midbo-2026": "Meses después de haber vivido un abuso por parte de una mujer, Micaela (21) regresa al baño donde ocurrieron los hechos. En un intento por sanar su trauma, registra y revive el recorrido que realizó en el pasado, transformando su recuerdo en un acto artístico que revela cómo esa experiencia quedó grabada en su subconsciente."
+  }
+ }
+]

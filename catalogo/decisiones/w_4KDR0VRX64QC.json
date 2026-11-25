@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_4KDR0VRX64QC",
+  "campo": "directores",
+  "valor": [
+   "Kathy Mitrani"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Kathy Mitrani"
+  }
+ },
+ {
+  "work_id": "w_4KDR0VRX64QC",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KDR0VRX64QC",
+  "campo": "paises",
+  "valor": [
+   "CH",
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suiza, Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KDR0VRX64QC",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KDR0VRX64QC",
+  "campo": "sinopsis.es",
+  "valor": "En 2028, en un mundo dominado por el poder de las máquinas de datos, una montaña alpina atraviesa una crisis de identidad. Mientras tanto, un terrateniente del Tesino lucha en los tribunales para proteger la montaña de su industrialización total.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En 2028, en un mundo dominado por el poder de las máquinas de datos, una montaña alpina atraviesa una crisis de identidad. Mientras tanto, un terrateniente del Tesino lucha en los tribunales para proteger la montaña de su industrialización total."
+  }
+ },
+ {
+  "work_id": "w_4KDR0VRX64QC",
+  "campo": "sinopsis.en",
+  "valor": "In 2028, when the world has been dominated by data machine power, an Alpine mountain suffers a crisis of identity. Meanwhile, a Ticinese landowner fights in court to protect the mountain from total industrialization.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In 2028, when the world has been dominated by data machine power, an Alpine mountain suffers a crisis of identity. Meanwhile, a Ticinese landowner fights in court to protect the mountain from total industrialization."
+  }
+ }
+]

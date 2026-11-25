@@ -1,0 +1,72 @@
+[
+ {
+  "work_id": "w_R4GTPWHY6Q7K",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/el-susurro.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bhff-2026/el-susurro.jpg",
+   "/assets/fantasofest/el-susurro.jpg"
+  ],
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/el-susurro.jpg",
+   "fantasofest-2026": "/assets/fantasofest/el-susurro.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4GTPWHY6Q7K",
+  "campo": "sinopsis.es",
+  "valor": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (fantasofest-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "043cb57cf876",
+   "8771c8f64370"
+  ],
+  "antes": {
+   "bhff-2026": "Lucía y Adrián huyen de su padre violento a una mansión. Descubren una red de snuff y una maldición familiar.",
+   "fantasofest-2026": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio."
+  }
+ },
+ {
+  "work_id": "w_R4GTPWHY6Q7K",
+  "campo": "directores",
+  "valor": [
+   "Gustavo Hernández Ibáñez"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "bhff-2026": "Gustavo Hernández",
+   "fantasofest-2026": "Gustavo Hernández Ibáñez"
+  }
+ },
+ {
+  "work_id": "w_R4GTPWHY6Q7K",
+  "campo": "sinopsis.en",
+  "valor": "Lucía and Adrián, siblings fleeing the dark legacy of their vampire father, seek refuge in an isolated house in the woods. When a cat brings them a human finger, they discover that their neighbors belong to a ring that abducts teenagers to make snuff films. To protect her brother, Lucía must face a dark family curse.",
+  "motivo": "el EN contradice al ES; padre vampiro confirmado en Anibia y El Observador (red snuff: El Observador)",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "titulo": "El Susurro",
+  "antes": {
+   "bhff-2026": "Fleeing from their violent father, siblings Lucía and Adrián take refuge in a remote mansion. With the help of a hidden micro-camera on a cat, Lucía uncovers a terrifying secret: their neighbors are part of a criminal network that kidnaps teenage girls to make snuff films, and they intend to get rid of the siblings. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their newfound sanctuary.",
+   "fantasofest-2026": "Lucía and Adrián, two siblings fleeing the dark legacy of their vampire father, arrive at an isolated house in the woods seeking refuge from the past. Their attempt to forget is shattered when a cat brings them a human finger, revealing a terrifying secret: their neighbors belong to a criminal ring that abducts teenagers to produce snuff films, and they plan to get rid of them too. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their supposed sanctuary."
+  },
+  "anteriores": [
+   {
+    "valor": "Fleeing from their violent father, siblings Lucía and Adrián take refuge in a remote mansion. With the help of a hidden micro-camera on a cat, Lucía uncovers a terrifying secret: their neighbors are part of a criminal network that kidnaps teenage girls to make snuff films, and they intend to get rid of the siblings. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their newfound sanctuary.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
+ }
+]

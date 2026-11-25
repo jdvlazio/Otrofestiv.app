@@ -1,16 +1,24 @@
 {
  "id": "w_R4HEVTYSXYCK",
  "titulo_original": "Pajuyuk",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "EC"
  ],
- "directores": [],
+ "directores": [
+  "Ruby Chasi Cuñas"
+ ],
+ "sinopsis": {
+  "es": "Entre rezos, plantas y espíritus, un grupo de parteras naporunas de la Amazonía ecuatoriana se prepara para acompañar un nacimiento. Con una cámara cercana a su hacer, entre voces, pieles, pigmentos, cuerpos y tejidos, este documental indaga el parto como un acto de purificación, tanto para ellas como para el mundo.",
+  "en": "Amid prayers, plants, and spirits, a group of Naporuna midwives from the Ecuadorian Amazon prepares to accompany a birth. With a camera close to their work, amid voices, skin, pigments, bodies, and fabrics, this documentary explores childbirth as an act of purification, both for them and for the world."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER_PAJUYUK-LAURELES%20-%20A%20POSTERIORI%20ENTERTAINMENT.jpg?itok=PWKdk9HE",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1628159
+ },
  "versiones": [
   {
    "etiqueta": "18 min",

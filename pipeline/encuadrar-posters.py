@@ -25,7 +25,7 @@ casi blanca o casi negra. Con dos candados contra comerse la imagen:
 VERIFICACIÓN incluida: tras aplicar, vuelve a medir y reporta cuántos pósters
 quedan con borde detectable y cuántos fuera de 2:3. El objetivo es 0 y 0.
 """
-import json, os, struct, subprocess, sys, tempfile, zlib
+import hashlib, json, os, struct, subprocess, sys, tempfile, zlib
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LIENZO_W, LIENZO_H = 780, 1170          # 2:3 exacto
@@ -73,7 +73,47 @@ FONDO_ES_ARTE = {'funeral-siniestro.jpg',
                  'sigilo.jpg', 'el-susurro.jpg', 'esquirlas-de-caracol.jpg',
                  # CINETORO 2026 (31 oct): el cielo gris de «Traducir lo propio» y el
                  # papel claro de «Um corpo sem cavalo?» llegan al borde; mirados, no hay marco
-                 'traducir-lo-propio-o-el-sintoma-de-recordar.jpg', 'um-corpo-sem-cavalo.jpg'}
+                 'traducir-lo-propio-o-el-sintoma-de-recordar.jpg', 'um-corpo-sem-cavalo.jpg',
+                 # BOGOSHORTS 2026 (25 nov): el negro de «Complementarios» y el azul y verde de
+                 # «Varoncito» llegan al borde; dos corridas les comieron una franja y se
+                 # repusieron del original de TMDB. Mirados, no hay marco
+                 'complementarios.jpg', 'varoncito.jpg'}
+
+
+# LO HECHO SE RECUERDA (24 nov 2026, «Complementarios» y «Varoncito» de BOGOSHORTS): decidir
+# por los píxeles si un afiche ya se encuadró falla con cada fondo liso, y cada corrida se
+# comía otra franja. Este paso anota la huella de lo que dejó; esos bytes no se vuelven a
+# tocar. Un archivo nuevo tiene otra huella y se procesa.
+def huella(path):
+    with open(path, 'rb') as fh:
+        return hashlib.sha1(fh.read()).hexdigest()[:16]
+
+
+def libro(fid):
+    return f'{REPO}/festivals/staging/{fid}-encuadrados.json'
+
+
+def hechos(fid):
+    if not os.path.exists(libro(fid)):
+        return {}
+    with open(libro(fid), encoding='utf-8') as fh:
+        d = json.load(fh)
+    return {k: v for k, v in d.items() if k != '_provenance'}
+
+
+def anotar(fid, rutas):
+    antes = hechos(fid)
+    d = {**antes, **{os.path.basename(x): huella(x) for x in rutas}}
+    if not d:
+        return
+    if d == antes:
+        with open(libro(fid), encoding='utf-8') as fh:
+            if '_provenance' in json.load(fh):
+                return
+    from lib import provenance
+    d['_provenance'] = provenance('pipeline/encuadrar-posters.py')
+    with open(libro(fid), 'w', encoding='utf-8') as fh:
+        json.dump(d, fh, ensure_ascii=False, indent=1, sort_keys=True)
 
 
 def rejilla(path):
@@ -162,6 +202,7 @@ def main():
     d = json.load(open(ruta, encoding='utf-8'))
 
     vistos, plan, editorial = set(), [], []
+    recordados, ya_hechos = hechos(fid), 0
     # Los pósters viven en DOS niveles: la función (afiche de programa) y cada
     # obra dentro de film_list. Recorrer solo el primero dejaba los de obra sin
     # encuadrar — se vio en CineAutopsia, donde 40 afiches oficiales del
@@ -203,6 +244,9 @@ def main():
         # marco lo encuadra a 16/9 a propósito (docs/POSTERS.md §4).
         if f.get('posterSource') == 'editorial':
             editorial.append(os.path.basename(p)); continue
+        if recordados.get(os.path.basename(p)) == huella(real):
+            ya_hechos += 1
+            continue
         m = medir(real)
         if not m:
             continue
@@ -214,7 +258,8 @@ def main():
 
     con_marco = [x for x in plan if min(x[2], x[3]) > 0 or min(x[4], x[5]) > 0]
     print(f'{len(vistos)} pósters · con marco {len(con_marco)}'
-          + (f' · editorial 16:9 respetados {len(editorial)}' if editorial else ''))
+          + (f' · editorial 16:9 respetados {len(editorial)}' if editorial else '')
+          + (f' · ya encuadrados {ya_hechos}' if ya_hechos else ''))
     for real, n, t, b, l, r, aw, ah in con_marco[:40]:
         print(f'   {n[:46]:48} marco ↑{t} ↓{b} ←{l} →{r} (de {aw}×{ah})')
     if not aplicar:
@@ -330,27 +375,12 @@ def main():
         if (W, H) != (LIENZO_W, LIENZO_H):
             fuera.append(f'{n} {W}×{H}')
     # ── LA SEGUNDA PASADA NO PUEDE CAMBIAR NADA ─────────────────────────────
-    # Este paso REESCRIBE el archivo en el sitio, y eso lo obliga a ser
-    # idempotente. No lo era: el zoom del 4% y el recorte al centro se
-    # aplicaban en cada corrida sobre el resultado de la anterior, y montar un
-    # festival lleva una docena de corridas. Los afiches de TMDB de Jardín
-    # acabaron ampliados ~1,6× y sin su título —«La sed del viento» perdió
-    # entero «THE WIND'S THIRST»—. Lo vio Juan en la app, no el repo.
-    #
-    # Así que el paso se comprueba a sí mismo: vuelve a MEDIR lo que acaba de
-    # escribir y cuenta cuántos tocaría otra vez. Tiene que ser CERO. No es
-    # una opinión sobre el resultado, es la invariante de un paso que
-    # sobrescribe: correrlo dos veces = correrlo una.
-    repetiria = []
-    for real, n, *_ in plan:
-        m = medir(real)
-        t2, b2, l2, r2 = m[0] if m and n not in FONDO_ES_ARTE and n not in mirados else (0, 0, 0, 0)
-        W = int(subprocess.run(['sips', '-g', 'pixelWidth', real], capture_output=True)
-                .stdout.decode().split(':')[-1])
-        H = int(subprocess.run(['sips', '-g', 'pixelHeight', real], capture_output=True)
-                .stdout.decode().split(':')[-1])
-        if not ((W, H) == (LIENZO_W, LIENZO_H) and not (min(t2, b2) >= MIN_MARCO or min(l2, r2) >= MIN_MARCO)):
-            repetiria.append(f'{n} ({W}×{H}, marco ↑{t2} ↓{b2} ←{l2} →{r2})')
+    # Este paso REESCRIBE en el sitio y montar un festival lleva una docena de corridas:
+    # los afiches de Jardín acabaron ampliados ~1,6× y «La sed del viento» perdió su título.
+    # Lo que quedó al lienzo se anota por su huella; lo que no, se dice y no se anota.
+    anotar(fid, [real for real, n, *_ in plan if not any(x.startswith(n + ' ') for x in fuera)])
+    rec = hechos(fid)
+    repetiria = [n for real, n, *_ in plan if rec.get(n) != huella(real)]
 
     if ajenos:
         print(f'\n{len(ajenos)} afiche(s) de otro festival, reusado(s) y sin tocar: '

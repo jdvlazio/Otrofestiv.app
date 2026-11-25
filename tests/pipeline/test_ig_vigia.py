@@ -25,7 +25,8 @@ const FESTIVAL_CONFIG = {
 """
 CUENTAS = {'festivales': {'sinig': 'cuentaextra', 'vivo1': 'no_manda'},
            'preonboarding': [{'id': 'pre', 'cuenta': 'cuentapre', 'inicio': '2026-10-26', 'fin': '2026-10-30'},
-                             {'id': 'lejos', 'cuenta': 'cuentalejos', 'inicio': '2026-12-01', 'fin': '2026-12-05'}]}
+                             {'id': 'lejos', 'cuenta': 'cuentalejos', 'inicio': '2026-12-20', 'fin': '2026-12-22'},
+                             {'id': 'mes', 'cuenta': 'cuentames', 'inicio': '2026-12-01', 'fin': '2026-12-05'}]}
 AHORA = datetime(2026, 10, 21, 13, 0)
 
 
@@ -39,6 +40,12 @@ class Vigilados(unittest.TestCase):
         self.assertEqual(self.vig['pre']['tier'], 'camino')      # empieza en 5 días: una vez al día
         self.assertNotIn('viejo', self.vig)                      # terminó hace > 8 días
         self.assertNotIn('lejos', self.vig)
+        self.assertNotIn('mes', self.vig)                        # más de 7 días: no se gasta
+        self.assertTrue(self.vig['pre']['pre'])
+
+    def test_por_montar_trae_historial(self):
+        self.assertEqual(v.desde(['cuentames'], {}, AHORA, {'cuentames'})[:10], '2026-07-23')
+        self.assertEqual(v.desde(['cuentames'], {}, AHORA)[:10], '2026-10-18')
 
     def test_palmares_cerrado_deja_de_mirarse(self):
         vig = {x['id'] for x in v.vigilados(v.festivales_config(CONFIG), CUENTAS, AHORA, {'termino': {}})}

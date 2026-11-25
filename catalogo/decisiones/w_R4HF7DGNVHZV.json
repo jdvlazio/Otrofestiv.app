@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4HF7DGNVHZV",
+  "campo": "directores",
+  "valor": [
+   "Kristen Stewart"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 338",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=338",
+  "antes": {
+   "ficci-65": "Kristen Stewart"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DGNVHZV",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 338",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=338",
+  "antes": {
+   "ficci-65": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DGNVHZV",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "LV",
+   "US"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 338",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=338",
+  "antes": {
+   "ficci-65": "Francia, Letonia, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DGNVHZV",
+  "campo": "sinopsis.es",
+  "valor": "La exnadadora Lidia Yuknavitch carga con las cicatrices de una infancia atravesada por abusos y una juventud marcada por las adicciones y las relaciones fallidas. Por medio de la natación o la escritura, enfrenta sus traumas en un viaje angustiante. Adaptación fragmentada, sensorial y poética de su libro autobiográfico.",
+  "motivo": "catálogo oficial de FICCI 65, p. 338",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=338",
+  "antes": {
+   "ficci-65": "La ópera prima de la actriz Kristen Stewart es una adaptación del best seller autobiográfico de la exnadadora Lidia Yuknavitch, una mujer que carga con las cicatrices de una infancia atravesada por abusos y de una juventud marcada por la…"
+  }
+ },
+ {
+  "work_id": "w_R4HF7DGNVHZV",
+  "campo": "sinopsis.en",
+  "valor": "Former swimmer Lidia Yuknavitch bears the scars of a childhood marred by abuse and a youth marked by addiction and failed relationships. Through swimming or writing, she confronts her traumas on a harrowing journey. A fragmented, sensory, poetic adaptation of her autobiographical book.",
+  "motivo": "catálogo oficial de FICCI 65, p. 338",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=338",
+  "antes": {
+   "ficci-65": "Kristen Stewart's directorial debut adapts the autobiographical bestseller by former swimmer Lidia Yuknavitch — a woman carrying the scars of an abuse-marked childhood and a youth defined by addiction and loss, who finds her voice through literature."
+  }
+ },
+ {
+  "work_id": "w_R4HF7DGNVHZV",
+  "campo": "xref.tmdb",
+  "valor": 524635,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/524635"
+ }
+]

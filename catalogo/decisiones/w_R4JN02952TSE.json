@@ -1,0 +1,52 @@
+[
+ {
+  "work_id": "w_R4JN02952TSE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/el-ocaso-de-los-dioses.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bhff-2026/el-ocaso-de-los-dioses.jpg",
+   "/assets/festicinerio-2026/el-ocaso-de-los-dioses.jpg",
+   "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg"
+  ],
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/el-ocaso-de-los-dioses.jpg",
+   "festicinerio-2026": "/assets/festicinerio-2026/el-ocaso-de-los-dioses.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4JN02952TSE",
+  "campo": "sinopsis.es",
+  "valor": "Aurora, que forma parte de una secta religiosa junto a su madre, duda de Bernabé, el líder, y busca cómo hacerles entender a ella y a la comunidad que allí no está la verdad. Todo se vuelve caótico cuando empieza a tener conexiones con el ídolo sagrado y su objetivo cambia drásticamente.",
+  "motivo": "errata «a el resto» y verbo repetido",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "vistas": [
+   "9b6ba75dfa8c",
+   "b63954891a08"
+  ],
+  "antes": {
+   "bhff-2026": "Aurora, una joven que junto a su madre hace parte de una secta religiosa, duda de la veracidad de las palabras de Bernabé, el líder y busca la manera de hacerle entender tanto a su madre como a el resto de la comunidad que en ese lugar no está la verdad. Todo se torna caótico cuando Aurora comienza a tener conexiones con el ídolo sagrado y su objetivo cambia drásticamente, cambiando la normalidad de la comunidad.",
+   "festicinerio-2026": "Aurora, una joven que junto a su madre hace parte de una secta religiosa, duda de la veracidad de las palabras de Bernabé, el líder y busca la manera de hacerle entender tanto a su madre como a el resto de la comunidad que en ese lugar no está la verdad. Todo se torna caótico cuando Aurora comienza a tener conexiones con el ídolo sagrado y su objetivo cambia drásticamente, cambiando la normalidad de la comunidad.",
+   "filcmar-2026": "Aurora, una joven que forma parte de una secta religiosa junto a su madre, duda de la veracidad de las palabras de Bernabé, el líder, y busca la manera de hacerles comprender a ella y al resto de la comunidad que la verdad no está ahí. Todo se vuelve caótico cuando Aurora comienza a tener vínculos con el ídolo sagrado y su objetivo cambia drásticamente, alterando la normalidad de la comunidad."
+  },
+  "anteriores": [
+   {
+    "valor": "Aurora, una joven que junto a su madre hace parte de una secta religiosa, duda de la veracidad de las palabras de Bernabé, el líder y busca la manera de hacerle entender tanto a su madre como a el resto de la comunidad que en ese lugar no está la verdad. Todo se torna caótico cuando Aurora comienza a tener conexiones con el ídolo sagrado y su objetivo cambia drásticamente, cambiando la normalidad de la comunidad.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026, festicinerio-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "9b6ba75dfa8c",
+     "b63954891a08"
+    ]
+   }
+  ]
+ }
+]

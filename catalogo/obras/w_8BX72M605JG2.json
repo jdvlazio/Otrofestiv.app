@@ -1,0 +1,45 @@
+{
+ "id": "w_8BX72M605JG2",
+ "titulo_original": "Die Odyssee",
+ "anio": 2021,
+ "paises": [
+  "FR",
+  "DE",
+  "CZ"
+ ],
+ "directores": [
+  "Florence Miailhe"
+ ],
+ "aliases": [
+  {
+   "titulo": "The Crossing",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un pequeño pueblo saqueado, una familia obligada a huir. Los dos hijos mayores, Kyona y Adriel, son separados de sus padres y afrontan solos el exilio, un viaje heroico de la infancia a la adolescencia por un continente desgarrado por la guerra y la persecución a los migrantes, en busca de refugio y de su familia.",
+  "en": "A small village plundered, a family forced to flee. The two eldest children, Kyona and Adriel, are separated from their parents and face exile alone, a heroic journey from childhood to adolescence across a continent torn by war and the persecution of migrants, in search of refuge and their family."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/festicineantioquia-2026/die-odyssee.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 586945,
+  "letterboxd": "the-crossing-2021-1"
+ },
+ "versiones": [
+  {
+   "etiqueta": "84 min",
+   "duracion_min": 84
+  }
+ ],
+ "presentaciones": [
+  "festicineantioquia-2026"
+ ]
+}

@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KFBQM0ETHRP",
+  "campo": "directores",
+  "valor": [
+   "Segundo de Chomón"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Segundo de Chomón"
+  }
+ },
+ {
+  "work_id": "w_4KFBQM0ETHRP",
+  "campo": "anio",
+  "valor": 1912,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1912"
+  }
+ },
+ {
+  "work_id": "w_4KFBQM0ETHRP",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España, Francia"
+  }
+ },
+ {
+  "work_id": "w_4KFBQM0ETHRP",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KFBQM0ETHRP",
+  "campo": "sinopsis.es",
+  "valor": "Una mirada a la Barcelona de comienzos del siglo XX a través de imágenes de sus trabajadores, su puerto y su parque.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una mirada a la Barcelona de comienzos del siglo XX a través de imágenes de sus trabajadores, su puerto y su parque."
+  }
+ },
+ {
+  "work_id": "w_4KFBQM0ETHRP",
+  "campo": "sinopsis.en",
+  "valor": "A glimpse of early twentieth-century Barcelona through images of its workers, harbour and park.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A glimpse of early twentieth-century Barcelona through images of its workers, harbour and park."
+  }
+ },
+ {
+  "work_id": "w_4KFBQM0ETHRP",
+  "campo": "xref.tmdb",
+  "valor": 356487,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "356487"
+  }
+ },
+ {
+  "work_id": "w_4KFBQM0ETHRP",
+  "campo": "xref.letterboxd",
+  "valor": "barcelona-main-city-of-catalonia",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "barcelona-main-city-of-catalonia"
+  }
+ },
+ {
+  "work_id": "w_4KFBQM0ETHRP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/barcelona.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/barcelona.jpg"
+  }
+ }
+]

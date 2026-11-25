@@ -1,0 +1,65 @@
+[
+ {
+  "work_id": "w_R4HAT4QAVP51",
+  "campo": "directores",
+  "valor": [
+   "Anja Dornieden",
+   "Juan David González Monroy"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 301",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=301"
+ },
+ {
+  "work_id": "w_R4HAT4QAVP51",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "catálogo oficial de FICCI 65, p. 301",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=301"
+ },
+ {
+  "work_id": "w_R4HAT4QAVP51",
+  "campo": "paises",
+  "valor": [
+   "US",
+   "DE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 301",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=301",
+  "antes": {
+   "ficci-65": "Estados Unidos, Alemania"
+  }
+ },
+ {
+  "work_id": "w_R4HAT4QAVP51",
+  "campo": "sinopsis.es",
+  "valor": "Tres películas reproducen plano a plano la compilación Instant Life (1981). Cada parte de aquella era, a su vez, un remake de otra Instant Life (1941), una película muda hoy perdida. Al final de la proyección de 1941, los espectadores recibían un acertijo impreso; en la de 1981, ya sonora, el acertijo forma parte de la obra.",
+  "motivo": "catálogo oficial de FICCI 65, p. 301",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=301"
+ },
+ {
+  "work_id": "w_R4HAT4QAVP51",
+  "campo": "sinopsis.en",
+  "valor": "Three films reproduce, shot for shot, the compilation Instant Life (1981). Each part of it was in turn a remake of another Instant Life (1941), a silent film now lost. At the end of the 1941 screening, viewers received a printed riddle; in the 1981 version, which already has sound, the riddle is part of the work.",
+  "motivo": "catálogo oficial de FICCI 65, p. 301",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=301"
+ },
+ {
+  "work_id": "w_R4HAT4QAVP51",
+  "campo": "xref.tmdb",
+  "valor": 926872,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/926872"
+ }
+]

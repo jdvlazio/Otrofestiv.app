@@ -1,0 +1,141 @@
+[
+ {
+  "work_id": "w_R4HBN9AY1HWQ",
+  "campo": "no-es",
+  "valor": "w_R4HBN9AY1HWQ",
+  "motivo": "mismo título, Colombia, 15 min, pero no se pudo corroborar que sean la misma obra: FICCI 65 no da director y el nombre de su afiche nombra a «Juanita Urueña Barreto»; CINETORO y Festivalscope la acreditan a Mateo Ramírez (2026). Separadas hasta que Juan o el festival lo aclaren (podría ser la productora). (Claude, 31 oct 2026; la confirma Juan al aprobar el PR de CINETORO 2026)",
+  "fecha": "2026-10-12",
+  "quien": "Claude, por encargo de Juan («haz la revisión vos y toma la mejor decisión»)"
+ },
+ {
+  "work_id": "w_R4HBN9AY1HWQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinetoro-2026/la-garganta-del-diablo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/bogoshorts-2026/la-garganta-del-diablo.jpg",
+   "/assets/cinetoro-2026/la-garganta-del-diablo.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LaGargantadeDiablo%20-%20Juanita%20Urue%C3%B1a%20Barreto.png?itok=WsH78OYf"
+  ],
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-garganta-del-diablo.jpg",
+   "cinetoro-2026": "/assets/cinetoro-2026/la-garganta-del-diablo.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LaGargantadeDiablo%20-%20Juanita%20Urue%C3%B1a%20Barreto.png?itok=WsH78OYf"
+  },
+  "a_mano": true
+ },
+ {
+  "work_id": "w_R4HBN9AY1HWQ",
+  "campo": "sinopsis.es",
+  "valor": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "cinetoro-2026": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención."
+  }
+ },
+ {
+  "work_id": "w_R4HBN9AY1HWQ",
+  "campo": "sinopsis.en",
+  "valor": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "cinetoro-2026": "A man retraces his father’s fall into the Devil’s Throat through the footage he left behind. Between the water’s echo and the archive’s hollow silence, a void emerges, exposed only when the reflection in the water is no longer theirs but ours. A journey through time, between grief and redemption."
+  }
+ },
+ {
+  "work_id": "w_R4HBN9AY1HWQ",
+  "campo": "directores",
+  "valor": [
+   "Mateo Ramírez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Mateo Ramírez",
+   "cinetoro-2026": "Mateo Ramírez"
+  }
+ },
+ {
+  "work_id": "w_R4HBN9AY1HWQ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026",
+   "cinetoro-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HBN9AY1HWQ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia",
+   "cinetoro-2026": "Colombia",
+   "ficci-65": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HBN9AY1HWQ",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama",
+   "cinetoro-2026": "Drama",
+   "ficci-65": "Drama"
+  }
+ },
+ {
+  "work_id": "w_R4HBN9AY1HWQ",
+  "campo": "xref.tmdb",
+  "valor": 1641446,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1641446",
+   "cinetoro-2026": "1641446"
+  }
+ },
+ {
+  "work_id": "w_R4HBN9AY1HWQ",
+  "campo": "xref.letterboxd",
+  "valor": "the-devils-throat",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-devils-throat",
+   "cinetoro-2026": "the-devils-throat",
+   "ficci-65": "the-devils-throat"
+  }
+ }
+]

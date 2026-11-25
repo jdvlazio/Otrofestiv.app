@@ -18,14 +18,13 @@
  ],
  "sinopsis": {
   "es": "Machado, colombiano radicado en Francia, regresa a Medellín para robar una esmeralda. Mientras ejecuta el plan, se enreda en una serie de eventos que lo llevan a reconsiderar su misión.",
-  "en": "Machado, a Colombian living in France, returns to Medellín to steal an emerald. As he executes his plan, he becomes entangled in a series of events that force him to reconsider his mission."
+  "en": "Machado, a Colombian living in France, is hired to return to his hometown of Medellín and steal an emerald. During the risky execution of his plan, he becomes entangled in a series of events that lead him to reconsider the ultimate goal of his mission."
  },
  "generos": [
-  "Acción",
   "Crimen"
  ],
  "afiche": {
-  "archivo": "https://image.tmdb.org/t/p/w500/ufQVaCjHk7GdTPQLcjsBUS1gjjR.jpg",
+  "archivo": "/assets/itagui-2026/piedras-preciosas.jpg",
   "veredicto": "oficial"
  },
  "xref": {
@@ -40,6 +39,7 @@
  ],
  "presentaciones": [
   "aff-2026",
+  "ficci-65",
   "itagui-2026"
  ]
 }

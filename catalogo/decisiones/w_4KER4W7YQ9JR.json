@@ -1,0 +1,119 @@
+[
+ {
+  "work_id": "w_4KER4W7YQ9JR",
+  "campo": "directores",
+  "valor": [
+   "Iva Kraljevic"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Iva Kraljevic"
+  }
+ },
+ {
+  "work_id": "w_4KER4W7YQ9JR",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KER4W7YQ9JR",
+  "campo": "paises",
+  "valor": [
+   "HR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia"
+  }
+ },
+ {
+  "work_id": "w_4KER4W7YQ9JR",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KER4W7YQ9JR",
+  "campo": "sinopsis.es",
+  "valor": "Un viaje por imágenes personales y poesía fragmentada que recorre el duelo, la complicidad y la presencia en un mundo que se desmorona.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un viaje por imágenes personales y poesía fragmentada que recorre el duelo, la complicidad y la presencia en un mundo que se desmorona."
+  }
+ },
+ {
+  "work_id": "w_4KER4W7YQ9JR",
+  "campo": "sinopsis.en",
+  "valor": "A journey through personal imagery and broken poetry, tracing grief, complicity, and presence in a world coming apart.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A journey through personal imagery and broken poetry, tracing grief, complicity, and presence in a world coming apart."
+  }
+ },
+ {
+  "work_id": "w_4KER4W7YQ9JR",
+  "campo": "xref.tmdb",
+  "valor": 1737935,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1737935"
+  }
+ },
+ {
+  "work_id": "w_4KER4W7YQ9JR",
+  "campo": "xref.letterboxd",
+  "valor": "leave-this-room-buried",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "leave-this-room-buried"
+  }
+ },
+ {
+  "work_id": "w_4KER4W7YQ9JR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/ovu-sobu-ostavite-zakopanu.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/ovu-sobu-ostavite-zakopanu.jpg"
+  }
+ }
+]

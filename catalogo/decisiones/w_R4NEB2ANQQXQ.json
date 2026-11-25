@@ -1,0 +1,53 @@
+[
+ {
+  "work_id": "w_R4NEB2ANQQXQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/eETZnvE46E29uCsxpK3anseNfmy.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cortoscali-2026/pasta-negra.jpg",
+   "https://image.tmdb.org/t/p/w500/eETZnvE46E29uCsxpK3anseNfmy.jpg"
+  ],
+  "antes": {
+   "cortoscali-2026": "/assets/cortoscali-2026/pasta-negra.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/eETZnvE46E29uCsxpK3anseNfmy.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2ANQQXQ",
+  "campo": "paises",
+  "valor": [
+   "CA",
+   "CO",
+   "IT",
+   "VE"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1403488)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cortoscali-2026": "Canada, Colombia, Italy, Venezuela",
+   "siembrafest-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4NEB2ANQQXQ",
+  "campo": "sinopsis.es",
+  "valor": "Tres mujeres venezolanas cruzan la frontera hacia Colombia para comprar un paquete de pasta.",
+  "motivo": "era comentario de festival",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "cortoscali-2026": "Una fábula sobre migración, sacrificio y supervivencia protagonizada por tres mujeres venezolanas y estrenada mundialmente en el Sundance Film Festival 2025.",
+   "siembrafest-2026": "Una fábula sobre migración, sacrificio y supervivencia protagonizada por tres mujeres venezolanas y estrenada mundialmente en el Sundance Film Festival 2025."
+  },
+  "vistas": [
+   "4cd462d12d13"
+  ]
+ }
+]

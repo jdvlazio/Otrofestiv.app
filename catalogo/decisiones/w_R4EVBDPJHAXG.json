@@ -1,0 +1,56 @@
+[
+ {
+  "work_id": "w_R4EVBDPJHAXG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg",
+   "/assets/cinemancia/todas-las-canciones-del-mundo.jpg"
+  ],
+  "antes": {
+   "aleste-2026": "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg",
+   "cinemancia-2026": "/assets/cinemancia/todas-las-canciones-del-mundo.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4EVBDPJHAXG",
+  "campo": "sinopsis.en",
+  "valor": "Omar, an Andean music teacher with a 25-year career, faces the closure of the university program to which he has devoted his life and the indifference of students and authorities. Amid empty classrooms, concerts and rehearsals, he begins a silent process of mourning and transformation.",
+  "motivo": "Mismo error que el español.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "anteriores": [
+   {
+    "valor": "A narrative or documentary journey into the collective and emotional memory that songs build in people’s lives. It weaves together different stories around the creation, loss or preservation of music, showing how melodies define historical, geographical and personal moments in Colombia.",
+    "motivo": "traducida de su española; verificada por otro agente",
+    "fecha": "2026-11-24",
+    "quien": "Juan («Aprobadas, sigue»)"
+   }
+  ],
+  "antes": {
+   "aleste-2026": "A narrative or documentary journey into the collective and emotional memory that songs build in people’s lives. It weaves together different stories around the creation, loss or preservation of music, showing how melodies define historical, geographical and personal moments in Colombia.",
+   "cinemancia-2026": "A narrative or documentary journey into the collective and emotional memory that songs build in people’s lives. It weaves together different stories around the creation, loss or preservation of music, showing how melodies define historical, geographical and personal moments in Colombia."
+  }
+ },
+ {
+  "work_id": "w_R4EVBDPJHAXG",
+  "campo": "sinopsis.es",
+  "valor": "Omar, un maestro de música andina con 25 años de trayectoria, enfrenta el cierre del programa universitario al que ha dedicado su vida y la indiferencia de estudiantes y autoridades. Entre aulas vacías, conciertos y ensayos, emprende un silencioso proceso de duelo y transformación.",
+  "motivo": "El texto es genérico e inventado ('viaje narrativo o documental'); la ficha oficial cuenta otra cosa.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "aleste-2026": "La película sigue un viaje narrativo o documental que indaga en la memoria colectiva y afectiva que construyen las canciones en la vida de las personas. La trama teje diversas historias alrededor de la creación, la pérdida o la preservación musical, retratando cómo las melodías definen momentos históricos, geográficos y personales en Colombia.",
+   "cinemancia-2026": "La película sigue un viaje narrativo o documental que indaga en la memoria colectiva y afectiva que construyen las canciones en la vida de las personas. La trama teje diversas historias alrededor de la creación, la pérdida o la preservación musical, retratando cómo las melodías definen momentos históricos, geográficos y personales en Colombia."
+  },
+  "vistas": [
+   "5ccf3ca3285c"
+  ]
+ }
+]

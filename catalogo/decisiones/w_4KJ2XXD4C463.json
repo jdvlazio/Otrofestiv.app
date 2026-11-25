@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KJ2XXD4C463",
+  "campo": "directores",
+  "valor": [
+   "Víctor Orozco Ramírez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Víctor Orozco Ramírez"
+  }
+ },
+ {
+  "work_id": "w_4KJ2XXD4C463",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJ2XXD4C463",
+  "campo": "paises",
+  "valor": [
+   "DE",
+   "MX"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Alemania, México"
+  }
+ },
+ {
+  "work_id": "w_4KJ2XXD4C463",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KJ2XXD4C463",
+  "campo": "sinopsis.es",
+  "valor": "Inteligencia artificial, robots e ilusiones digitales. Mi búsqueda por innovar me lleva por un camino de delirios y adicción. Un ensayo animado expresionista acerca del cine y la tecnología.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Inteligencia artificial, robots e ilusiones digitales. Mi búsqueda por innovar me lleva por un camino de delirios y adicción. Un ensayo animado expresionista acerca del cine y la tecnología."
+  }
+ },
+ {
+  "work_id": "w_4KJ2XXD4C463",
+  "campo": "sinopsis.en",
+  "valor": "Artificial intelligence, robots, and digital illusions. My quest for innovation leads me down a path of delusions and addiction. An expressionist animated essay about cinema and technology.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Artificial intelligence, robots, and digital illusions. My quest for innovation leads me down a path of delusions and addiction. An expressionist animated essay about cinema and technology."
+  }
+ },
+ {
+  "work_id": "w_4KJ2XXD4C463",
+  "campo": "xref.tmdb",
+  "valor": 1821216,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1821216"
+  }
+ },
+ {
+  "work_id": "w_4KJ2XXD4C463",
+  "campo": "xref.letterboxd",
+  "valor": "gofrodita",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "gofrodita"
+  }
+ },
+ {
+  "work_id": "w_4KJ2XXD4C463",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/gofrodita.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/gofrodita.jpg"
+  }
+ }
+]

@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KFQG532F93Z",
+  "campo": "directores",
+  "valor": [
+   "Leto Meade",
+   "Jonathan Rockefeller"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Leto Meade, Jonathan Rockefeller"
+  }
+ },
+ {
+  "work_id": "w_4KFQG532F93Z",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFQG532F93Z",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_4KFQG532F93Z",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KFQG532F93Z",
+  "campo": "sinopsis.es",
+  "valor": "La paciencia de la Muerte se pone a prueba cuando su dulce y amable aprendiz parece incapaz de cumplir su tarea, por lo que busca ayuda profesional en el lugar más inesperado.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "La paciencia de la Muerte se pone a prueba cuando su dulce y amable aprendiz parece incapaz de cumplir su tarea, por lo que busca ayuda profesional en el lugar más inesperado."
+  }
+ },
+ {
+  "work_id": "w_4KFQG532F93Z",
+  "campo": "sinopsis.en",
+  "valor": "Death’s patience is tested as his sweet and gentle apprentice appears incapable of the task, leading him to seek professional help from the most unlikely of places.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Death’s patience is tested as his sweet and gentle apprentice appears incapable of the task, leading him to seek professional help from the most unlikely of places."
+  }
+ },
+ {
+  "work_id": "w_4KFQG532F93Z",
+  "campo": "xref.tmdb",
+  "valor": 1716965,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1716965"
+  }
+ },
+ {
+  "work_id": "w_4KFQG532F93Z",
+  "campo": "xref.letterboxd",
+  "valor": "a-little-death-2026-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "a-little-death-2026-1"
+  }
+ },
+ {
+  "work_id": "w_4KFQG532F93Z",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/a-little-death.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/a-little-death.jpg"
+  }
+ }
+]

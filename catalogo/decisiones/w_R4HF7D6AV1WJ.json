@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HF7D6AV1WJ",
+  "campo": "directores",
+  "valor": [
+   "Anja Dornieden",
+   "Juan David González Monroy"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 307",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=307"
+ },
+ {
+  "work_id": "w_R4HF7D6AV1WJ",
+  "campo": "anio",
+  "valor": 2012,
+  "motivo": "catálogo oficial de FICCI 65, p. 307",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=307"
+ },
+ {
+  "work_id": "w_R4HF7D6AV1WJ",
+  "campo": "paises",
+  "valor": [
+   "DE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 307",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=307",
+  "antes": {
+   "ficci-65": "Alemania"
+  }
+ },
+ {
+  "work_id": "w_R4HF7D6AV1WJ",
+  "campo": "sinopsis.es",
+  "valor": "En la República Democrática Alemana, los niños jugaban con casas de muñecas que reflejaban la vida que tendrían al crecer. Hoy muchas se venden en eBay o están en manos de coleccionistas, imágenes idealizadas de una época que ya no existe. Con las palabras de sus antiguos y nuevos dueños, un documental sobre los vestigios de un mundo perdido.",
+  "motivo": "catálogo oficial de FICCI 65, p. 307",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=307"
+ },
+ {
+  "work_id": "w_R4HF7D6AV1WJ",
+  "campo": "sinopsis.en",
+  "valor": "In the German Democratic Republic, children played with dollhouses that mirrored the life they would have when they grew up. Today many are for sale on eBay or in collectors' hands, idealized images of a time that no longer exists. Through the words of their past and new owners, a documentary on the remnants of a lost world.",
+  "motivo": "catálogo oficial de FICCI 65, p. 307",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=307"
+ },
+ {
+  "work_id": "w_R4HF7D6AV1WJ",
+  "campo": "xref.tmdb",
+  "valor": 647508,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/647508"
+ }
+]

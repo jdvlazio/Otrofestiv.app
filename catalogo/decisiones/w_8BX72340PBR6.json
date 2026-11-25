@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_8BX72340PBR6",
+  "campo": "directores",
+  "valor": [
+   "Jan-Willem van Ewijk"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Jan-Willem van Ewijk"
+  }
+ },
+ {
+  "work_id": "w_8BX72340PBR6",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_8BX72340PBR6",
+  "campo": "paises",
+  "valor": [
+   "NL",
+   "SI",
+   "CH"
+  ],
+  "motivo": "TMDB 1318803; el PDF solo da Países Bajos",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Países Bajos"
+  },
+  "anteriores": [
+   {
+    "valor": [
+     "NL"
+    ],
+    "motivo": "alta desde festicineantioquia-2026",
+    "fecha": "2026-11-24",
+    "quien": "Claude (montaje festicineantioquia-2026)"
+   }
+  ]
+ },
+ {
+  "work_id": "w_8BX72340PBR6",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX72340PBR6",
+  "campo": "sinopsis.es",
+  "valor": "Tras la muerte de su madre, un joven se muda a los Alpes en busca de paz interior. Su padre llega de visita y pronto lo eclipsa y coquetea con su nueva pareja. La tensión crece hasta que los dos salen solos de excursión por una montaña peligrosa, donde la naturaleza arremete con violencia.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Tras la muerte de su madre, un joven se muda a los Alpes en busca de paz interior. Su padre llega de visita y pronto lo eclipsa y coquetea con su nueva pareja. La tensión crece hasta que los dos salen solos de excursión por una montaña peligrosa, donde la naturaleza arremete con violencia."
+  }
+ },
+ {
+  "work_id": "w_8BX72340PBR6",
+  "campo": "sinopsis.en",
+  "valor": "After his mother's death, a young man moves to the Alps in search of inner peace. His father comes to visit and soon overshadows him and flirts with his new partner. The tension grows until the two go hiking alone on a dangerous mountain, where nature lashes out violently.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "After his mother's death, a young man moves to the Alps in search of inner peace. His father comes to visit and soon overshadows him and flirts with his new partner. The tension grows until the two go hiking alone on a dangerous mountain, where nature lashes out violently."
+  }
+ },
+ {
+  "work_id": "w_8BX72340PBR6",
+  "campo": "xref.tmdb",
+  "valor": 1318803,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1318803"
+  }
+ },
+ {
+  "work_id": "w_8BX72340PBR6",
+  "campo": "xref.letterboxd",
+  "valor": "alpha-2024-3",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "alpha-2024-3"
+  }
+ },
+ {
+  "work_id": "w_8BX72340PBR6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/alpha.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/alpha.jpg"
+  }
+ }
+]

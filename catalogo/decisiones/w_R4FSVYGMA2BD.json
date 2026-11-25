@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4FSVYGMA2BD",
+  "campo": "sinopsis.es",
+  "valor": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "cccf27449a50",
+   "f3549167704c"
+  ],
+  "antes": {
+   "cinemancia-2026": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe.",
+   "cinetoro-2026": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar las voces para terminar la posproducción de una película. La fantasía y la imaginación se entrecruzan bajo la sombra del bosque, donde el juego y la repetición invocan a fantasmas cómplices de la ficción."
+  }
+ },
+ {
+  "work_id": "w_R4FSVYGMA2BD",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinemancia/un-aparato-para-detectar-fantasmas.jpg",
+   "veredicto": "fotograma"
+  },
+  "motivo": "solo hay dos stills: el más claro y completo",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/jardin-2026/un-aparato-para-detectar-fantasmas.jpg"
+  ],
+  "antes": {
+   "cinemancia-2026": "/assets/cinemancia/un-aparato-para-detectar-fantasmas.jpg",
+   "jardin-2026": "/assets/jardin-2026/un-aparato-para-detectar-fantasmas.jpg"
+  }
+ }
+]

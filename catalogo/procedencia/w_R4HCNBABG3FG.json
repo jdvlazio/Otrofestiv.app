@@ -17,14 +17,28 @@
   "fuente": "tmdb:1668893",
   "regla": "tmdb-manda"
  },
- "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
- },
  "xref.tmdb": {
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "TMDB, misma directora",
   "fecha": "2026-10-12"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficci-65, ficdeh-2026, leviza-2026)",
+  "fecha": "2026-11-23"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "comprobado en Letterboxd por su ficha de TMDB",
+  "fecha": "2026-11-24"
  }
 }

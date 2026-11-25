@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KFRHPQVH43X",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "2c9de22c06a0"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Kutyafül",
+  "valor": "Berci, de once años, pasa una tarde a solas con su perro mientras lucha con las emociones que dejó la violenta pelea de sus padres el día anterior. A medida que afloran sus sentimientos reprimidos, descarga su ira y agresividad en interacciones tensas y emotivas con el animal, que terminan ayudándolo a descubrir la fuerza transformadora del perdón.",
+  "original": "Berci, de once años, pasa una tarde a solas con su perro mientras lucha con las emociones que dejó la violenta pelea de sus padres el día anterior. A medida que afloran sus sentimientos reprimidos, descarga su ira y agresividad en interacciones tensas y emotivas con el animal. Estas expresiones terminan ayudándolo a encontrar alivio y descubrir la fuerza silenciosa y transformadora del perdón.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "1177fa9b93a1"
+  }
+ },
+ {
+  "work_id": "w_4KFRHPQVH43X",
+  "campo": "directores",
+  "valor": [
+   "Péter Vácz"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Péter Vácz"
+  }
+ },
+ {
+  "work_id": "w_4KFRHPQVH43X",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KFRHPQVH43X",
+  "campo": "paises",
+  "valor": [
+   "HU"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Hungría"
+  }
+ },
+ {
+  "work_id": "w_4KFRHPQVH43X",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KFRHPQVH43X",
+  "campo": "sinopsis.en",
+  "valor": "Eleven-year-old Berci spends an afternoon alone with his dog, struggling with the emotions left behind after witnessing his parents’ violent fight the day before. As his suppressed feelings surface, he releases his anger and aggression in tense and emotional interactions with his dog. These raw expressions eventually help Berci find relief and discover the quiet, transformative strength of forgiveness.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Eleven-year-old Berci spends an afternoon alone with his dog, struggling with the emotions left behind after witnessing his parents’ violent fight the day before. As his suppressed feelings surface, he releases his anger and aggression in tense and emotional interactions with his dog. These raw expressions eventually help Berci find relief and discover the quiet, transformative strength of forgiveness."
+  }
+ },
+ {
+  "work_id": "w_4KFRHPQVH43X",
+  "campo": "xref.tmdb",
+  "valor": 1452373,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1452373"
+  }
+ },
+ {
+  "work_id": "w_4KFRHPQVH43X",
+  "campo": "xref.letterboxd",
+  "valor": "dog-ear",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "dog-ear"
+  }
+ },
+ {
+  "work_id": "w_4KFRHPQVH43X",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/kutyaful.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/kutyaful.jpg"
+  }
+ }
+]

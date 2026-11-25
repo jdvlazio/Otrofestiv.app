@@ -1,0 +1,68 @@
+[
+ {
+  "work_id": "w_R4R2NT9HKQCQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinetoro-2026/um-corpo-sem-cavalo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cinetoro-2026/um-corpo-sem-cavalo.jpg",
+   "/assets/villadelcine-2026/a-body-without-a-horse.jpg"
+  ],
+  "antes": {
+   "cinetoro-2026": "/assets/cinetoro-2026/um-corpo-sem-cavalo.jpg",
+   "villadelcine-2026": "/assets/villadelcine-2026/a-body-without-a-horse.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4R2NT9HKQCQ",
+  "campo": "sinopsis.es",
+  "valor": "Un cuerpo intenta reconocerse a través de aquello que le falta. Mientras mide sus contornos, se fragmenta y vuelve a componerse, la ausencia de un caballo abre una pregunta sobre el deseo, la memoria y la identidad.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (villadelcine-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "307c69bf58ab",
+   "b2c693f3cdd3"
+  ],
+  "antes": {
+   "cinetoro-2026": "En un intento por identificarse, un cuerpo sin caballo se desplaza a través de sus ausencias y vacíos.",
+   "villadelcine-2026": "Un cuerpo intenta reconocerse a través de aquello que le falta. Mientras mide sus contornos, se fragmenta y vuelve a componerse, la ausencia de un caballo abre una pregunta sobre el deseo, la memoria y la identidad."
+  }
+ },
+ {
+  "work_id": "w_R4R2NT9HKQCQ",
+  "campo": "paises",
+  "valor": [
+   "BR",
+   "BE",
+   "FI",
+   "PT"
+  ],
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinetoro-2026": "Brasil",
+   "villadelcine-2026": "Bélgica, Brasil, Finlandia y Portugal"
+  }
+ },
+ {
+  "work_id": "w_R4R2NT9HKQCQ",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "cinetoro-2026": "Fantasía",
+   "villadelcine-2026": "Experimental y Animación"
+  }
+ }
+]

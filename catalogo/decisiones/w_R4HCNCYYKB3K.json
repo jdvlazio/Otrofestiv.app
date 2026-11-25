@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HCNCYYKB3K",
+  "campo": "directores",
+  "valor": [
+   "Lina Rodríguez"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 320",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=320",
+  "antes": {
+   "ficci-65": "Fernando Méndez"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCYYKB3K",
+  "campo": "anio",
+  "valor": 2013,
+  "motivo": "catálogo oficial de FICCI 65, p. 320",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=320",
+  "antes": {
+   "ficci-65": "1959"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCYYKB3K",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "CA"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 320",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=320",
+  "antes": {
+   "ficci-65": "Colombia, Canadá"
+  }
+ },
+ {
+  "work_id": "w_R4HCNCYYKB3K",
+  "campo": "sinopsis.es",
+  "valor": "Alejandra, joven bogotana, habita su ciudad entre la intimidad del apartamento con su madre y la vida nocturna con un círculo cercano, intenso y a veces contradictorio. Entre salidas ruidosas, charlas en el carro y caminatas silenciosas ensaya su independencia. Las expectativas y la intensidad comienzan a desbordarse: algo en ella se transforma.",
+  "motivo": "catálogo oficial de FICCI 65, p. 320",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=320",
+  "antes": {
+   "ficci-65": "En Señoritas, Lina Rodríguez sigue a Alejandra, una joven bogotana que habita su ciudad entre la intimidad doméstica del apartamento junto a su madre y la vida nocturna compartida con un círculo cercano, intenso y a veces contradictorio."
+  }
+ },
+ {
+  "work_id": "w_R4HCNCYYKB3K",
+  "campo": "sinopsis.en",
+  "valor": "Alejandra, a young woman from Bogotá, inhabits her city between the intimacy of the apartment with her mother and nightlife with a close, intense, sometimes contradictory circle. Amid noisy outings, talks in the car, and silent walks she tests her independence. Expectations and intensity begin to overflow: something in her transforms.",
+  "motivo": "catálogo oficial de FICCI 65, p. 320",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=320",
+  "antes": {
+   "ficci-65": "In Señoritas, Lina Rodríguez follows Alejandra, a young woman from Bogotá who inhabits her city between the domestic intimacy of her apartment with her mother and a nocturnal life shared with a close, intense, and sometimes contradictory circle."
+  }
+ },
+ {
+  "work_id": "w_R4HCNCYYKB3K",
+  "campo": "xref.tmdb",
+  "valor": 203878,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/203878"
+ }
+]

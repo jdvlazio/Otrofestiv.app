@@ -1,0 +1,80 @@
+[
+ {
+  "work_id": "w_4KDR2J6G445C",
+  "campo": "directores",
+  "valor": [
+   "Juan Pablo Melo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Juan Pablo Melo"
+  }
+ },
+ {
+  "work_id": "w_4KDR2J6G445C",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KDR2J6G445C",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KDR2J6G445C",
+  "campo": "generos",
+  "valor": [
+   "Experimental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Experimental"
+  }
+ },
+ {
+  "work_id": "w_4KDR2J6G445C",
+  "campo": "sinopsis.es",
+  "valor": "En algún momento del siglo XX suena la radio. Por los cables de luz de Bogotá viajan anhelos perdidos y cartas sin destino.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En algún momento del siglo XX suena la radio. Por los cables de luz de Bogotá viajan anhelos perdidos y cartas sin destino."
+  }
+ },
+ {
+  "work_id": "w_4KDR2J6G445C",
+  "campo": "sinopsis.en",
+  "valor": "At some point in the twentieth century, the radio plays. Lost desires and undelivered letters travel through Bogotá’s electricity cables.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "At some point in the twentieth century, the radio plays. Lost desires and undelivered letters travel through Bogotá’s electricity cables."
+  }
+ }
+]

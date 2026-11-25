@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HEVTYSXYCK",
+  "campo": "directores",
+  "valor": [
+   "Ruby Chasi Cuñas"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 92",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=92"
+ },
+ {
+  "work_id": "w_R4HEVTYSXYCK",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 92",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=92"
+ },
+ {
+  "work_id": "w_R4HEVTYSXYCK",
+  "campo": "paises",
+  "valor": [
+   "EC"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 92",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=92",
+  "antes": {
+   "ficci-65": "Ecuador"
+  }
+ },
+ {
+  "work_id": "w_R4HEVTYSXYCK",
+  "campo": "sinopsis.es",
+  "valor": "Entre rezos, plantas y espíritus, un grupo de parteras naporunas de la Amazonía ecuatoriana se prepara para acompañar un nacimiento. Con una cámara cercana a su hacer, entre voces, pieles, pigmentos, cuerpos y tejidos, este documental indaga el parto como un acto de purificación, tanto para ellas como para el mundo.",
+  "motivo": "catálogo oficial de FICCI 65, p. 92",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=92"
+ },
+ {
+  "work_id": "w_R4HEVTYSXYCK",
+  "campo": "sinopsis.en",
+  "valor": "Amid prayers, plants, and spirits, a group of Naporuna midwives from the Ecuadorian Amazon prepares to accompany a birth. With a camera close to their work, amid voices, skin, pigments, bodies, and fabrics, this documentary explores childbirth as an act of purification, both for them and for the world.",
+  "motivo": "catálogo oficial de FICCI 65, p. 92",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=92"
+ },
+ {
+  "work_id": "w_R4HEVTYSXYCK",
+  "campo": "xref.tmdb",
+  "valor": 1628159,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1628159"
+ }
+]

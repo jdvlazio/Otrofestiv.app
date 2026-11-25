@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_R4ET8GEV16R0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/cartas-a-mis-padres-muertos.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/6zAG96fKKqm4QmYANLmXpVLa9JQ.jpg",
+   "/assets/midbo-2026/cartas-a-mis-padres-muertos.jpg",
+   "https://image.tmdb.org/t/p/w500/6zAG96fKKqm4QmYANLmXpVLa9JQ.jpg"
+  ],
+  "antes": {
+   "cinemancia-2025": "https://image.tmdb.org/t/p/w500/6zAG96fKKqm4QmYANLmXpVLa9JQ.jpg",
+   "midbo-2026": "/assets/midbo-2026/cartas-a-mis-padres-muertos.jpg",
+   "olhar-2026": "/6zAG96fKKqm4QmYANLmXpVLa9JQ.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4ET8GEV16R0",
+  "campo": "sinopsis.es",
+  "valor": "El cineasta se propone crear una forma de poner al día a sus padres sobre los asuntos íntimos de la familia y los acontecimientos sociopolíticos, desde la muerte de su padre, ocurrida pocos días después de la elección de Allende, hasta la actualidad. Cincuenta años de su vida y de la historia de Chile se entrelazan a partir de una combinación de material de archivo familiar y nuevas imágenes, dando lugar a un tejido íntimo y sociopolítico que mantiene la forma investigativa y exploratoria de las películas de Agüero, a la que él mismo denomina cine de la divagación.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "48824d5579a1",
+   "639c73ac0c1e",
+   "ee5934b4d416"
+  ],
+  "antes": {
+   "cinemancia-2025": "Ignacio Agüero realiza un viaje íntimo a través de las cartas de sus padres muertos, construyendo un documental sobre la memoria familiar y el tiempo.",
+   "midbo-2026": "El cineasta se propone crear una forma de poner al día a sus padres sobre los asuntos íntimos de la familia y los acontecimientos sociopolíticos, desde la muerte de su padre, ocurrida pocos días después de la elección de Allende, hasta la actualidad. Cincuenta años de su vida y de la historia de Chile se entrelazan a partir de una combinación de material de archivo familiar y nuevas imágenes, dando lugar a un tejido íntimo y sociopolítico que mantiene la forma investigativa y exploratoria de las películas de Agüero, a la que él mismo denomina cine de la divagación.",
+   "olhar-2026": "Raúl Ruiz, cineasta chileno como Ignacio Agüero, escribió en su texto Para un Cine Chamánico: “Aunque muchos filósofos hayan considerado contradictorios los conceptos de Sueño y Memoria […] si mezclamos esos dos términos, no debería sorprendernos que la persona con quien hablamos esté muerta hace años; ni debería conmocionarnos el asombro del muerto al descubrir que estamos vivos.”"
+  }
+ },
+ {
+  "work_id": "w_R4ET8GEV16R0",
+  "campo": "directores",
+  "valor": [
+   "Ignacio Agüero"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2025": "Ignacio Agüero",
+   "midbo-2026": "Ignacio Agüero",
+   "olhar-2026": "Ignacio Aguero"
+  }
+ },
+ {
+  "work_id": "w_R4ET8GEV16R0",
+  "campo": "sinopsis.en",
+  "valor": "What do you tell your dead parents? Combining family archives and glimpses of today, the filmmaker weaves together fifty years of his life and the socio-political history of Chile. The montage wanders through the ages, between light and shadow, without ever leaving the joy.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Cartas a mis padres muertos",
+  "antes": {
+   "cinemancia-2025": "Ignacio Agüero undertakes an intimate journey through the letters of his deceased parents, constructing a documentary about family memory and time.",
+   "midbo-2026": "What do you tell your dead parents? Combining family archives and glimpses of today, the filmmaker weaves together fifty years of his life and the socio-political history of Chile. The montage wanders through the ages, between light and shadow, without ever leaving the joy.",
+   "olhar-2026": "Raúl Ruiz, a Chilean filmmaker like Ignacio Agüero, wrote in his text For a Shamanic Cinema: “Although many philosophers have found the concepts of Dream and Memory to be contradictory […] if we blend these two terms, it should not surprise us that the person we are speaking to has been dead for years; nor should we be shocked by the dead person’s astonishment on discovering that we are alive.”"
+  }
+ }
+]

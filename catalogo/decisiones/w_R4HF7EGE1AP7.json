@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HF7EGE1AP7",
+  "campo": "directores",
+  "valor": [
+   "Ben Rivers"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 284",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=284"
+ },
+ {
+  "work_id": "w_R4HF7EGE1AP7",
+  "campo": "anio",
+  "valor": 2016,
+  "motivo": "catálogo oficial de FICCI 65, p. 284",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=284"
+ },
+ {
+  "work_id": "w_R4HF7EGE1AP7",
+  "campo": "paises",
+  "valor": [
+   "GB"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 284",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=284",
+  "antes": {
+   "ficci-65": "Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_R4HF7EGE1AP7",
+  "campo": "sinopsis.es",
+  "valor": "La última mujer en la Tierra. Filmada en el interior de Biosfera 2, en Arizona, y con un texto que se lee como las últimas entradas del diario de una mujer recluida en un entorno implacable, la película reflexiona sobre experimentos ambiciosos, entornos artificiales y la relación de la humanidad con el mundo natural.",
+  "motivo": "catálogo oficial de FICCI 65, p. 284",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=284"
+ },
+ {
+  "work_id": "w_R4HF7EGE1AP7",
+  "campo": "sinopsis.en",
+  "valor": "The last woman on Earth. Shot inside Biosphere 2 in Arizona, with a text that reads like the final diary entries of a woman confined within an unforgiving environment, the film reflects on ambitious experiments, artificial environments, and humanity's relationship with the natural world.",
+  "motivo": "catálogo oficial de FICCI 65, p. 284",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=284"
+ },
+ {
+  "work_id": "w_R4HF7EGE1AP7",
+  "campo": "xref.tmdb",
+  "valor": 478785,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/478785"
+ }
+]

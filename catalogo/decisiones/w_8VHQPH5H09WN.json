@@ -1,0 +1,38 @@
+[
+ {
+  "work_id": "w_8VHQPH5H09WN",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "7772a40d9f4d",
+   "c27aeb5a3fe1"
+  ],
+  "original_de": [],
+  "titulo": "Pucallpa la Europea",
+  "valor": "Elsa es una mujer trans que es deportada desde Francia al Perú. Una vez en su país, se ve envuelta en un triángulo amoroso con Aymeric, un ingeniero francés, y Yena, su esposa.",
+  "original": "Elsa es una mujer trans que es deportada desde Francia al Perú. Una vez en su país, se ve envuelta en un triángulo amoroso con el ingeniero francés Aymeric (Maxime Saint-Jean) y Yena (Gabriela Pastor), su esposa argentina.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "7b38c7e4312d"
+  },
+  "antes": {
+   "aleste-2026": "París 2007. Elsa, una mujer trans peruana, está cumpliendo una condena en una prisión de hombres. Sergio, un detenido, la convierte en su esclava sexual. Además, la administración rechaza su tratamiento hormonal. Cuando Elsa es Estrenada, comienza una nueva vida y conoce a Yena, una joven coreana que le presenta a Aymeric, su marido francés. La atracción entre Elsa y él es vertiginosa, poniendo en duda su identidad sexual. Sin embargo, el último obstáculo"
+  }
+ },
+ {
+  "work_id": "w_8VHQPH5H09WN",
+  "campo": "sinopsis.en",
+  "valor": "Elsa is a trans woman who is deported from France to Peru. Back in her country, she becomes caught up in a love triangle with Aymeric, a French engineer, and Yena, his wife.",
+  "motivo": "La inglesa de TMDB corresponde a otra versión del guion (París, Yena coreana, sin deportación) y contradice a la española, al festival, Caretas y Cine Las Americas (deportada de París a Lima).",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "aleste-2026": "Paris 2007. Elsa, a Peruvian trans woman, is serving a sentence in a men's prison. Sergio, a detainee, makes her his sex slave. Furthermore, the administration refuses her hormone treatment. When Elsa is released, she begins a new life and meets Yena, a young Korean woman who introduces her to Aymeric, her French husband. The attraction between Elsa and him is lightning-fast, calling into question her sexual identity. However, the final obstacle is Sergio. He has just escaped from prison."
+  }
+ }
+]

@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4HA3VAZEWQ3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficcali-2026/la-mansion-de-araucaima.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficcali-2026/la-mansion-de-araucaima.jpg",
+   "/assets/girardota-2026/la-mansion-de-araucaima.jpg"
+  ],
+  "antes": {
+   "ficcali-2026": "/assets/ficcali-2026/la-mansion-de-araucaima.jpg",
+   "girardota-2026": "/assets/girardota-2026/la-mansion-de-araucaima.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HA3VAZEWQ3",
+  "campo": "sinopsis.es",
+  "valor": "En una vieja y misteriosa casona tropical cohabitan el supuesto dueño, un fraile, un piloto convaleciente, el sirviente haitiano, el guardián mercenario y la Machiche, hembra madura y dominante. Allí llega una joven modelo para desatar todo tipo de pasiones.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "2aa97ca95aef",
+   "c51895d00f01"
+  ],
+  "antes": {
+   "ficcali-2026": "En una vieja y misteriosa casona tropical cohabitan el supuesto dueño, un fraile, un piloto convaleciente, el sirviente haitiano, el guardián mercenario y la Machiche, hembra madura y dominante. Allí llega una joven modelo para desatar todo tipo de pasiones.",
+   "girardota-2026": "En una vieja y misteriosa casona tropical cohabitan el supuesto dueño¸ un fraile¸ un piloto convaleciente¸ el sirviente haitiano¸ el guardián mercenario y la Machiche¸ hembra madura y dominante. Hasta allí llega una joven modelo para desatar todo tipo de pasiones."
+  }
+ }
+]

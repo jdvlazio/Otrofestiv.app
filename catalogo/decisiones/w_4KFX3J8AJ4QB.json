@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_4KFX3J8AJ4QB",
+  "campo": "directores",
+  "valor": [
+   "Gabriela Ortega"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Gabriela Ortega"
+  }
+ },
+ {
+  "work_id": "w_4KFX3J8AJ4QB",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFX3J8AJ4QB",
+  "campo": "paises",
+  "valor": [
+   "MX",
+   "US",
+   "DO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "México, Estados Unidos, República Dominicana"
+  }
+ },
+ {
+  "work_id": "w_4KFX3J8AJ4QB",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KFX3J8AJ4QB",
+  "campo": "sinopsis.es",
+  "valor": "Tras el asesinato de Selena Quintanilla en 1995, la vida de Marga da un giro inesperado a las veintiuna semanas de embarazo durante un viaje sorpresa a la Ciudad de México.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tras el asesinato de Selena Quintanilla en 1995, la vida de Marga da un giro inesperado a las veintiuna semanas de embarazo durante un viaje sorpresa a la Ciudad de México."
+  }
+ },
+ {
+  "work_id": "w_4KFX3J8AJ4QB",
+  "campo": "sinopsis.en",
+  "valor": "After the murder of Selena Quintanilla in 1995, Marga’s life and future take an unexpected turn at 21 weeks pregnant during a surprise visit to Mexico City.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After the murder of Selena Quintanilla in 1995, Marga’s life and future take an unexpected turn at 21 weeks pregnant during a surprise visit to Mexico City."
+  }
+ },
+ {
+  "work_id": "w_4KFX3J8AJ4QB",
+  "campo": "xref.tmdb",
+  "valor": 1598955,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1598955"
+  }
+ },
+ {
+  "work_id": "w_4KFX3J8AJ4QB",
+  "campo": "xref.letterboxd",
+  "valor": "marga-en-el-df",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "marga-en-el-df"
+  }
+ },
+ {
+  "work_id": "w_4KFX3J8AJ4QB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/marga-en-el-df.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/marga-en-el-df.jpg"
+  }
+ }
+]

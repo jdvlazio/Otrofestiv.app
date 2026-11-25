@@ -9,7 +9,7 @@ vigila. Mientras catalogo/obras/ esté vacío, los guardianes pasan sin más; co
 nunca falló no es de fiar).
 
     catalogo/obras/<id>.json     una obra por archivo
-    catalogo/decisiones.json     decisiones humanas (prioridad máxima)
+    catalogo/decisiones/w_*.json decisiones humanas (prioridad máxima)
     catalogo/fusiones.json       ids absorbidos → superviviente (nunca se borra)
     catalogo/procedencia/<id>.json  de dónde salió cada campo
 """
@@ -63,6 +63,21 @@ def apellido(director):
     return partes[-1] if partes else ''
 
 
+def misma_persona_larga(director, suyos):
+    """Un nombre está ENTERO y EN ORDEN dentro del otro, desde el mismo primer nombre:
+    «Isabella Cárdenas» en «Isabella Cárdenas Marín», «Ingrid Bonilla» en «Ingrid Paola
+    Bonilla Rodríguez». No casan hermanos, ni «Andrés Jiménez Quintero» con «Andrés
+    Quintero Campos» (24 nov 2026, dobles apellidos). Iniciales finales no cuentan."""
+    for x in re.split(r',|;|/|&|\s(?:y|e|and)\s', director or ''):
+        for y in suyos:
+            a, b = ([t for t in re.findall(r'[a-z0-9]+', sinacento(n).lower()) if len(t) > 1] for n in (x, y))
+            corto, largo = sorted((a, b), key=len)
+            resto = iter(largo)
+            if len(corto) > 1 and corto[0] == largo[0] and all(t in resto for t in corto):
+                return True
+    return False
+
+
 # ── lectura ──────────────────────────────────────────────────────────────────
 def obras(raiz=DIR):
     out = {}
@@ -79,13 +94,95 @@ def no_es_obra(f):
     return f.get('type') == 'event' or (bool(f.get('is_programa')) and not f.get('film_list'))
 
 
+def obras_de(f):
+    """Las obras de una función: ella misma o las de su programa. Dentro de un
+    EVENTO (inauguración, clausura, sala de VR) también hay obras (24 nov 2026: 83
+    sin enlazar; «La última ronda en Venecia» conservaba su sinopsis larga en la
+    noche inaugural de Al Este). Ahí cuenta la que trae dirección y año, o ya está
+    enlazada: un taller o un videomapping no tienen año y no entran."""
+    if f.get('type') == 'event':
+        return [o for o in f.get('film_list') or [] if o.get('title') and o.get('type') != 'event'
+                and (o.get('work_id') or (o.get('director') and o.get('year')))]
+    if no_es_obra(f):
+        return []
+    return [o for o in (f.get('film_list') or [f]) if o.get('type') != 'event']
+
+
 def _lista(raiz, nombre):
     p = os.path.join(raiz, nombre)
     return json.load(io.open(p, encoding='utf-8')) if os.path.exists(p) else []
 
 
+# decisiones que no son un valor de la obra
+SIN_VALOR = ('no-es', 'no-alta-tmdb', 'ficha-ok')
+
+
+# UN ARCHIVO POR OBRA (25 nov 2026): con todas en decisiones.json, dos ramas que
+# agregaban al final chocaban siempre, y BOGOSHORTS lo pasó de 3 MB. Este módulo es el
+# único que sabe dónde viven; todos leen y escriben por aquí. `reemplaza` es una posición:
+# en disco, dentro del archivo de su obra; en memoria, dentro de la lista entera.
+SIN_OBRA = '_sin-obra'          # ficha-ok no es de una obra
+
+
+def _nombre_dec(w):
+    if w and not re.fullmatch(r'w_[A-Z0-9]+', w):
+        raise ValueError(f'work_id inválido: {w!r}')
+    return w or SIN_OBRA
+
+
 def decisiones(raiz=DIR):
-    return _lista(raiz, 'decisiones.json')
+    if os.path.exists(os.path.join(raiz, 'decisiones.json')):
+        raise ValueError('catalogo/decisiones.json ya no existe: cada obra tiene su archivo en '
+                         'catalogo/decisiones/ (si vino de un merge, python3 pipeline/integrar.py lo reparte)')
+    if glob.glob(os.path.join(raiz, 'obras', '*.json')) and not os.path.isdir(os.path.join(raiz, 'decisiones')):
+        raise ValueError('falta catalogo/decisiones/: hay obras y ninguna decisión')
+    out = []
+    for p in sorted(glob.glob(os.path.join(raiz, 'decisiones', '*.json'))):
+        with io.open(p, encoding='utf-8') as fh:
+            xs = json.load(fh)
+        for x in xs:
+            if _nombre_dec(x['work_id']) != os.path.basename(p)[:-5]:
+                raise ValueError(f'{os.path.basename(p)} trae una decisión de {x["work_id"]}')
+        out += [dict(x, reemplaza=x['reemplaza'] + len(out)) if x.get('reemplaza') is not None else x for x in xs]
+    return out
+
+
+def archivos_decisiones(decs, raiz=DIR):
+    """{ruta: texto | None} de lo que deja la lista en disco (None = se borra)."""
+    por, lugar = {}, []
+    for d in decs:
+        xs = por.setdefault(_nombre_dec(d['work_id']), [])
+        lugar.append((d['work_id'], len(xs)))
+        xs.append(d)
+    for xs in por.values():
+        for i, d in enumerate(xs):
+            if d.get('reemplaza') is not None:
+                w, n = lugar[d['reemplaza']]
+                if w != d['work_id']:
+                    raise ValueError(f'{d["work_id"]} reemplaza una decisión de otra obra ({w})')
+                xs[i] = dict(d, reemplaza=n)
+    out = {os.path.join(raiz, 'decisiones', k + '.json'): json.dumps(v, ensure_ascii=False, indent=1) for k, v in por.items()}
+    for p in glob.glob(os.path.join(raiz, 'decisiones', '*.json')):
+        out.setdefault(p, None)
+    return out
+
+
+def escribir_decisiones(decs, raiz=DIR):
+    """Solo toca los archivos que cambian → cuántos."""
+    todo, n = archivos_decisiones(decs, raiz), 0
+    os.makedirs(os.path.join(raiz, 'decisiones'), exist_ok=True)
+    for p, t in todo.items():
+        if t is None:
+            os.remove(p)
+        else:
+            if os.path.exists(p):
+                with io.open(p, encoding='utf-8') as fh:
+                    if fh.read() == t:
+                        continue
+            with io.open(p, 'w', encoding='utf-8') as fh:
+                fh.write(t)
+        n += 1
+    return n
 
 
 def fusiones(raiz=DIR):
@@ -116,7 +213,7 @@ def indice(obs):
     return por_h, por_t
 
 
-def obra_de(obs, fid, titulo, tmdb=None, ix=None):
+def obra_de(obs, fid, titulo, tmdb=None, ix=None, director=''):
     """El work_id de una obra de un festival: la que lo lista en sus
     presentaciones y cuyo título (original o alias) tiene la misma huella; o la
     que lleva su tmdb. Ninguna o más de una → None (no se adivina)."""
@@ -126,12 +223,16 @@ def obra_de(obs, fid, titulo, tmdb=None, ix=None):
     # Anibia 2026: el artículo inicial no cuenta): desempata su tmdb, si lo hay
     if len(hits) > 1 and tmdb:
         hits = hits & (por_t.get(tmdb) or set())
+    # o su dirección: dos «The End» en TIFF (Pelechian y Lindroth von Bahr, 23 nov 2026)
+    elif len(hits) > 1 and apellido(director):
+        hits = {w for w in hits if apellido(director) in {apellido(d) for d in obs[w].get('directores') or []}}
     return next(iter(hits)) if len(hits) == 1 else None
 
 
 def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
     """Una obra que llega de un festival NUEVO → (work_id, 'coincide') o (None, None).
-    Las mismas reglas que el constructor (§4.1): misma huella de título (original
+    Las reglas del constructor (§4.1), más el mismo nombre con más o menos apellidos
+    (`misma_persona_larga`), que el constructor todavía no aplica: misma huella de título (original
     o alias) Y mismo apellido de director Y año ±1; o, si a un lado le falta
     director, la huella corroborada por año ±1 o duración ±3. Más de una obra
     posible = no se adivina. `excluir` deja fuera un festival (para probar
@@ -139,7 +240,7 @@ def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
     h, ap = huella(titulo), apellido(director)
     if not h:
         return None, None
-    hits = set()
+    hits, largos = set(), set()   # largos: la misma persona con más o menos apellidos, si nadie casa exacto
     for wid, o in obs.items():
         pres = [p for p in o.get('presentaciones') or [] if p != excluir]
         if not pres:
@@ -149,12 +250,20 @@ def reconocer(obs, titulo, director='', anio=None, duracion=None, excluir=None):
         a_ok = anio is None or o.get('anio') is None or abs(anio - o['anio']) <= 1
         aps = {apellido(d) for d in o.get('directores') or []}
         if ap and aps - {''}:
-            if ap in aps and a_ok:
+            if a_ok and ap in aps:
                 hits.add(wid)
+            elif a_ok and misma_persona_larga(director, o.get('directores') or []):
+                # con más o menos apellidos, la duración no puede contradecir
+                ds = [v['duracion_min'] for v in o.get('versiones') or [] if v.get('duracion_min')]
+                if not (duracion and ds) or any(abs(d - duracion) <= 3 for d in ds):
+                    largos.add(wid)
         elif (anio and o.get('anio') and abs(anio - o['anio']) <= 1) or \
                 (duracion and any(v.get('duracion_min') and abs(v['duracion_min'] - duracion) <= 3
                                   for v in o.get('versiones') or [])):
             hits.add(wid)
+    if largos and any(not misma_persona_larga(director, obs[w].get('directores') or []) for w in hits):   # no se adivina
+        return None, None
+    hits = hits or largos
     return (hits.pop(), 'coincide') if len(hits) == 1 else (None, None)
 
 
@@ -165,21 +274,75 @@ def enlazar(d, fid, obs, ix=None):
     ix = ix or indice(obs)
     faltan = []
     for f in d.get('films', []):
-        if no_es_obra(f):
-            continue
-        for o in (f.get('film_list') or [f]):
-            if o.get('type') == 'event' or not o.get('title'):
+        # en un evento se prueba también la que no trae año: si el festival ya la
+        # lista en otra función, es la misma; si no aparece, no falta (puede no ser obra)
+        propias = obras_de(f)
+        for o in ((f.get('film_list') or []) if f.get('type') == 'event' else propias):
+            if o.get('type') == 'event' or not o.get('title') or (f.get('type') == 'event' and not o.get('director')):
                 continue
             # un renombre (`titulos_anteriores`, PR #1040) sigue siendo la misma
             # obra: «También nuestra» → «También nosotras» (FICPA, 13 oct)
-            w = next((x for x in (obra_de(obs, fid, t, o.get('tmdb_id'), ix)
+            # LA IDENTIDAD YA DADA (24 nov 2026): si trae su id, es esa obra —salvo que la
+            # dirección diga otra cosa (dos obras del mismo título que se acaban de separar)
+            ya = o.get('work_id')
+            if ya in obs and fid in (obs[ya].get('presentaciones') or []):
+                aps = {apellido(x) for x in obs[ya].get('directores') or []} - {''}
+                suyos = {huella(t) for t in [obs[ya]['titulo_original']] + [x['titulo'] for x in obs[ya].get('aliases') or []]}
+                if huella(o['title']) in suyos and (not aps or not apellido(o.get('director') or '') or apellido(o['director']) in aps):
+                    continue
+            w = next((x for x in (obra_de(obs, fid, t, o.get('tmdb_id'), ix, o.get('director') or '')
                                   for t in [o['title']] + list(o.get('titulos_anteriores') or [])) if x), None)
             if w:
                 o['work_id'] = w
+            elif ya in obs and fid in (obs[ya].get('presentaciones') or []):
+                continue                          # no se pierde la identidad por no reconocer el texto
             else:
                 o.pop('work_id', None)
-                faltan.append(o['title'])
+                if any(o is x for x in propias) and (f.get('type') != 'event' or o.get('year')):
+                    faltan.append(o['title'])
     return faltan
+
+
+def heredar_ids(nuevo, viejo):
+    """Un rearmado llega sin `work_id`: los toma de lo ya publicado cuando la función es
+    inequívocamente la misma (24 nov 2026). Si solo cambió el texto de UNA obra de esa
+    función y la dirección coincide, sigue siendo la misma. Devuelve cuántos heredó."""
+    def fn(f):
+        return (f.get('day'), f.get('time'), f.get('venue'), f.get('sala'))
+
+    def items(f):
+        return [o for o in (f.get('film_list') or [f]) if isinstance(o, dict) and o.get('title')]
+    por_id, por_fn = {}, {}
+    for f in (viejo or {}).get('films') or []:
+        if f.get('id'):
+            por_id.setdefault(f['id'], []).append(f)
+        por_fn.setdefault(fn(f), []).append(f)
+    n = 0
+    for f in (nuevo or {}).get('films') or []:
+        c = por_id.get(f.get('id')) if f.get('id') else None
+        if not c and all(fn(f)[:3]):
+            c = por_fn.get(fn(f))
+        if not c or len(c) != 1:
+            continue
+        v = [o for o in items(c[0]) if o.get('work_id')]
+        faltan = []
+        for o in items(f):
+            if o.get('work_id'):
+                continue
+            hs = [x for x in v if huella(x['title']) == huella(o['title']) and (not apellido(x.get('director') or '') or not apellido(o.get('director') or '')
+                                                                                or apellido(x['director']) == apellido(o['director']))]
+            if len({x['work_id'] for x in hs}) == 1:
+                o['work_id'] = hs[0]['work_id']
+                n += 1
+            elif not hs:
+                faltan.append(o)
+        ya = {o.get('work_id') for o in items(f)}
+        libres = [x for x in v if x['work_id'] not in ya]
+        if len(faltan) == 1 and len({x['work_id'] for x in libres}) == 1 and apellido(faltan[0].get('director') or '') \
+                and apellido(faltan[0]['director']) == apellido(libres[0].get('director') or ''):
+            faltan[0]['work_id'] = libres[0]['work_id']
+            n += 1
+    return n
 
 
 # ── los cinco invariantes (funciones puras: datos → lista de problemas) ───────
@@ -212,7 +375,7 @@ def decision_pisada(obs, decs):
     reemplazadas = {d.get('reemplaza') for d in decs if d.get('reemplaza') is not None}
     prob = []
     for i, d in enumerate(decs):
-        if i in reemplazadas or d['campo'] in ('no-es', 'no-alta-tmdb') or 'valor' not in d:
+        if i in reemplazadas or d['campo'] in SIN_VALOR or 'valor' not in d:
             continue
         o = obs.get(d['work_id'])
         if o is None:
@@ -233,9 +396,7 @@ def presentacion_sin_obra(festivales, obs, fus, exigir=False):
     prob = []
     for fid, d in festivales.items():
         for f in d.get('films', []):
-            for o in (f.get('film_list') or [f]):
-                if o.get('type') == 'event' or no_es_obra(f):
-                    continue
+            for o in obras_de(f):
                 w = o.get('work_id')
                 if w is None:
                     if exigir:
@@ -303,10 +464,8 @@ def dato_que_no_viaja(festivales):
     por_obra = {}
     for fid, d in festivales.items():
         for f in (d or {}).get('films', []):
-            if no_es_obra(f):
-                continue
-            for o in (f.get('film_list') or [f]):
-                if o.get('work_id') and o.get('type') != 'event':
+            for o in obras_de(f):
+                if o.get('work_id'):
                     por_obra.setdefault(o['work_id'], []).append((fid, o))
     huecos = {c: [] for c in CAMPOS_QUE_VIAJAN}
     for regs in por_obra.values():

@@ -1,0 +1,95 @@
+[
+ {
+  "work_id": "w_4KEWXTPHYMZH",
+  "campo": "directores",
+  "valor": [
+   "Sofía Uzcátegui León"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Sofía Uzcátegui León"
+  }
+ },
+ {
+  "work_id": "w_4KEWXTPHYMZH",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEWXTPHYMZH",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KEWXTPHYMZH",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KEWXTPHYMZH",
+  "campo": "sinopsis.es",
+  "valor": "Una niña atraviesa la frontera entre el sueño y la realidad, la infancia se derrama y el futuro toma forma de pez.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una niña atraviesa la frontera entre el sueño y la realidad, la infancia se derrama y el futuro toma forma de pez."
+  }
+ },
+ {
+  "work_id": "w_4KEWXTPHYMZH",
+  "campo": "sinopsis.en",
+  "valor": "A girl crosses the threshold between dream and reality, childhood spills over and the future takes the form of a fish.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A girl crosses the threshold between dream and reality, childhood spills over and the future takes the form of a fish."
+  }
+ },
+ {
+  "work_id": "w_4KEWXTPHYMZH",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/pececin.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/pececin.jpg"
+  }
+ }
+]

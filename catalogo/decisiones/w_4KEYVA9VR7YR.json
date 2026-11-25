@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KEYVA9VR7YR",
+  "campo": "directores",
+  "valor": [
+   "Amer Nasser"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Amer Nasser"
+  }
+ },
+ {
+  "work_id": "w_4KEYVA9VR7YR",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEYVA9VR7YR",
+  "campo": "paises",
+  "valor": [
+   "PS"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Palestina"
+  }
+ },
+ {
+  "work_id": "w_4KEYVA9VR7YR",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KEYVA9VR7YR",
+  "campo": "sinopsis.es",
+  "valor": "En 2025, tras 471 días de guerra, durante un breve alto al fuego en Gaza, Firas regresa, solo, hacia el norte para rescatar a su hermana y a su familia de entre los escombros de su casa derrumbada.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En 2025, tras 471 días de guerra, durante un breve alto al fuego en Gaza, Firas regresa, solo, hacia el norte para rescatar a su hermana y a su familia de entre los escombros de su casa derrumbada."
+  }
+ },
+ {
+  "work_id": "w_4KEYVA9VR7YR",
+  "campo": "sinopsis.en",
+  "valor": "In 2025, after 471 days of war, during a brief ceasefire in Gaza, Firas returns alone to the north to recover his sister and her family from beneath their collapsed home.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In 2025, after 471 days of war, during a brief ceasefire in Gaza, Firas returns alone to the north to recover his sister and her family from beneath their collapsed home."
+  }
+ },
+ {
+  "work_id": "w_4KEYVA9VR7YR",
+  "campo": "xref.tmdb",
+  "valor": 1781062,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1781062"
+  }
+ },
+ {
+  "work_id": "w_4KEYVA9VR7YR",
+  "campo": "xref.letterboxd",
+  "valor": "to-the-north-2026",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "to-the-north-2026"
+  }
+ },
+ {
+  "work_id": "w_4KEYVA9VR7YR",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/to-the-north.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/to-the-north.jpg"
+  }
+ }
+]

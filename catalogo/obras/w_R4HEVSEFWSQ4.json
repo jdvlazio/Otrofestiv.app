@@ -1,16 +1,24 @@
 {
  "id": "w_R4HEVSEFWSQ4",
  "titulo_original": "Fuente alemana",
- "anio": null,
+ "anio": 2025,
  "paises": [
   "CL"
  ],
- "directores": [],
+ "directores": [
+  "Jeannette Muñoz Candia"
+ ],
+ "sinopsis": {
+  "es": "La colonia alemana regaló a Chile una fuente que conmemora el centenario de su independencia. En Santiago, ciudad de veranos de asfalto hirviendo, niñas, niños y familias se bañan en ella aunque es prohibido. Este cortometraje experimental recorre sus cuerpos, que contrastan con los estáticos héroes y diosas de acero.",
+  "en": "The German colony gave Chile a fountain commemorating the centennial of its independence. In Santiago, a city of summers with scorching asphalt, children and families bathe in it although it is forbidden. This experimental short traces their bodies, which contrast with the static steel heroes and goddesses."
+ },
  "afiche": {
   "archivo": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_fuente%20alemana2%20-%20Galleryr3.jpeg?itok=VmP1Zq8n",
   "veredicto": "oficial-festival"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1489480
+ },
  "versiones": [
   {
    "etiqueta": "15 min",

@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4JBDCRBA6DB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cinetoro-2026/esperando-a-los-barbaros.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cinetoro-2026/esperando-a-los-barbaros.jpg",
+   "/assets/ficpa-2026/esperando-a-los-barbaros.jpg"
+  ],
+  "antes": {
+   "cinetoro-2026": "/assets/cinetoro-2026/esperando-a-los-barbaros.jpg",
+   "ficpa-2026": "/assets/ficpa-2026/esperando-a-los-barbaros.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4JBDCRBA6DB",
+  "campo": "sinopsis.es",
+  "valor": "En una ciudad —que evoca, sin más detalles, una ciudad del Imperio Romano—, el poema describe un estado de espera: se ha anunciado la llegada de los «bárbaros», el propio emperador parece dispuesto a someterse a su autoridad, y todas las hipótesis sobre el futuro son posibles. La ciudad contiene la respiración a la espera… Pero, ¿quiénes son, exactamente, estos «bárbaros»? ¿Y si no llegan?",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinetoro-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "66396021a0b0",
+   "725552477831"
+  ],
+  "antes": {
+   "cinetoro-2026": "En una ciudad —que evoca, sin más detalles, una ciudad del Imperio Romano—, el poema describe un estado de espera: se ha anunciado la llegada de los «bárbaros», el propio emperador parece dispuesto a someterse a su autoridad, y todas las hipótesis sobre el futuro son posibles. La ciudad contiene la respiración a la espera… Pero, ¿quiénes son, exactamente, estos «bárbaros»? ¿Y si no llegan?",
+   "ficpa-2026": "Conteniendo la respiración, la ciudad aguarda la llegada de los «bárbaros». ¿Quiénes son? ¿Y qué se hará si no vienen?"
+  }
+ }
+]

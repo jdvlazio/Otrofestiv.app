@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HB84XGAGRE",
+  "campo": "directores",
+  "valor": [
+   "Nicolas Piret"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 254",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=254"
+ },
+ {
+  "work_id": "w_R4HB84XGAGRE",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 254",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=254"
+ },
+ {
+  "work_id": "w_R4HB84XGAGRE",
+  "campo": "paises",
+  "valor": [
+   "BE"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 254",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=254",
+  "antes": {
+   "ficci-65": "Bélgica"
+  }
+ },
+ {
+  "work_id": "w_R4HB84XGAGRE",
+  "campo": "sinopsis.es",
+  "valor": "Espacios vacíos de Venecia, observados por un director que mira una ciudad que no le pertenece. Frente a la inmediatez del turismo, la atención de un dibujante que se sienta durante horas a bocetar lo que ve. Un corto que es testigo y refugio de un tiempo que se resiste a la «experiencia» fugaz del turista.",
+  "motivo": "catálogo oficial de FICCI 65, p. 254",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=254"
+ },
+ {
+  "work_id": "w_R4HB84XGAGRE",
+  "campo": "sinopsis.en",
+  "valor": "Empty spaces of Venice, observed by a director looking at a city that does not belong to him. Against the immediacy of tourism, the attention of a draftsman who sits for hours sketching what he sees. A short that is witness to and refuge for a time that resists the tourist's fleeting “experience.”",
+  "motivo": "catálogo oficial de FICCI 65, p. 254",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=254"
+ },
+ {
+  "work_id": "w_R4HB84XGAGRE",
+  "campo": "xref.tmdb",
+  "valor": 1593482,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1593482"
+ }
+]

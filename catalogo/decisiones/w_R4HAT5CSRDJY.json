@@ -1,0 +1,65 @@
+[
+ {
+  "work_id": "w_R4HAT5CSRDJY",
+  "campo": "directores",
+  "valor": [
+   "Juliane Jaschnow",
+   "Stefanie Schroeder"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 159",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=159"
+ },
+ {
+  "work_id": "w_R4HAT5CSRDJY",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 159",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=159"
+ },
+ {
+  "work_id": "w_R4HAT5CSRDJY",
+  "campo": "paises",
+  "valor": [
+   "DE",
+   "GB"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 159",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=159",
+  "antes": {
+   "ficci-65": "Alemania, Reino Unido"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5CSRDJY",
+  "campo": "sinopsis.es",
+  "valor": "Otra cara de un video viral en el que activistas estrellan tomates contra una pintura de Monet abre un ensayo errático y lúcido entre grabaciones vistas hasta el cansancio: conferencias en línea sobre territorialidad y clima, imágenes científicas, paisajes desoladores de la industrialización. Un filme sobre lo que está siendo el futuro.",
+  "motivo": "catálogo oficial de FICCI 65, p. 159",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=159"
+ },
+ {
+  "work_id": "w_R4HAT5CSRDJY",
+  "campo": "sinopsis.en",
+  "valor": "Another side of a viral video in which activists hurl tomatoes at a Monet painting opens an erratic, lucid essay among footage seen ad nauseam: online conferences on territoriality and climate, scientific images, desolate landscapes of industrialization. A film about what the future is becoming.",
+  "motivo": "catálogo oficial de FICCI 65, p. 159",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=159"
+ },
+ {
+  "work_id": "w_R4HAT5CSRDJY",
+  "campo": "xref.tmdb",
+  "valor": 1616784,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1616784"
+ }
+]

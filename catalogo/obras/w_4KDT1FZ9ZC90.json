@@ -1,0 +1,43 @@
+{
+ "id": "w_4KDT1FZ9ZC90",
+ "titulo_original": "En pays froid",
+ "anio": 2025,
+ "paises": [
+  "CA"
+ ],
+ "directores": [
+  "Hervé Demers"
+ ],
+ "aliases": [
+  {
+   "titulo": "Land of Cold",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Migrantes de África subsahariana han decidido comenzar de nuevo al norte del paralelo 49. En las vastas extensiones del norte de Canadá, reflexionan sobre los desafíos y los esplendores de una estación que nunca han vivido: el invierno.",
+  "en": "Immigrants from Sub-Saharan Africa have chosen to start their lives over north of the 49th parallel. Here, in the vast expanses of Northern Canada, they reflect on the challenges and splendors of a season they’ve never yet experienced: winter."
+ },
+ "generos": [
+  "Documental"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/en-pays-froid.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1547983,
+  "letterboxd": "land-of-cold"
+ },
+ "versiones": [
+  {
+   "etiqueta": "17 min",
+   "duracion_min": 17
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

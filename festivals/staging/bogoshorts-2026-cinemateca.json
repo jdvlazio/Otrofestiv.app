@@ -1,0 +1,540 @@
+{
+ "_provenance": {
+  "fuente": "https://cinematecadebogota.gov.co/agenda/11?field_date_interval_value%5Bmin%5D%5Bdate%5D=2026-11-30&field_date_interval_value%5Bmax%5D%5Bdate%5D=2026-12-09",
+  "via": "https://www.instagram.com/p/DfsqgASTGnw/",
+  "capturado": "2026-11-25"
+ },
+ "funciones": [
+  {
+   "dia": "2026-12-02",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "CN-EXP | Competencia Nacional Experimental",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313379",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3709?sede=11"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "CI-CP | Competencia Internacional - Corto Periodís",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313380",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3710?sede=11"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo_sala": "PAC-FIC | Panorama Colombia: Ficción",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313381",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3711?sede=11"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo_sala": "CLC-FUT | Colecciones: Fútbol",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313382",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3713?sede=11"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo_sala": "CI-ANI1 | Competencia Internacional Animación 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313383",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3714?sede=11"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "CI-ANI1 | Competencia Internacional Animación 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313415",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3714?sede=11"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo_sala": "F3-02 | Fanático Freak Fantástico 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313384",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3715?sede=11"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo_sala": "F3-02 | Fanático Freak Fantástico 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313416",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3715?sede=11"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo_sala": "WT-CRO1 | World Tour: Croacia 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313385",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3716?sede=11"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "16:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CI-DOC1 | Competencia Internacional Documental 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313386",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3717?sede=11"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo_sala": "CI-DOC1 | Competencia Internacional Documental 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054067",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3717?sede=11"
+  },
+  {
+   "dia": "2026-12-02",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CI-DOC2 | Competencia Internacional Documental 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313396",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3718?sede=11"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "CN-ANI | Competencia Nacional Animación",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313395",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3719?sede=11"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "11:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CN-ANI | Competencia Nacional Animación",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313395",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3719?sede=11"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "CI-FIC1 | Competencia Internacional Ficción 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313397",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3720?sede=11"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo_sala": "F3-PINILLA | F3 Presenta: Especial Jairo Pinilla",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313398",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3721?sede=11"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo_sala": "CLC-DIVX | Colecciones: Disidencias",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313399",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3722?sede=11"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo_sala": "WT-CRO2 | World Tour: Croacia 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313400",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3723?sede=11"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo_sala": "F3-03 | Fanático Freak Fantástico 3",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313401",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3724?sede=11"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo_sala": "F3-03 | Fanático Freak Fantástico 3",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054061",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3724?sede=11"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CITY-BCN2 | Viva la ciudad: Barcelona 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313402",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3725?sede=11"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "16:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CON-BRA | Conexión: Brasil",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313403",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3726?sede=11"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CI-ANI2 | Competencia Internacional Animación 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313404",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3727?sede=11"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CI-ANI2 | Competencia Internacional Animación 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054070",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3727?sede=11"
+  },
+  {
+   "dia": "2026-12-03",
+   "hora": "11:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CN-DOC | Competencia Nacional Documental",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313405",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3728?sede=11"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "CN-DOC | Competencia Nacional Documental",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313405",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3728?sede=11"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "SO-FCO | Selección - Fuera de Competencia",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313406",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3729?sede=11"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo_sala": "F3-01 | Fanático Freak Fantástico 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313407",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3730?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo_sala": "F3-01 | Fanático Freak Fantástico 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054074",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3730?sede=11"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo_sala": "CLC-AMO | Colecciones: Amor",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313408",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3731?sede=11"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo_sala": "CI-EXP1 | Competencia Internacional Experimental 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313409",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3735?sede=11"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo_sala": "CON-ESP | Conexión: España",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313410",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3736?sede=11"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo_sala": "ES-MILES | Especial Miles Davis",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313411",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3737?sede=11"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "16:00",
+   "sala": "Sala 3",
+   "titulo_sala": "FES-LADRA | Festivaleando: El Perro que Ladra",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313412",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3738?sede=11"
+  },
+  {
+   "dia": "2026-12-04",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CI-FIC3 | Competencia Internacional Ficción 3",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313413",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3739?sede=11"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "CN-FIC1 | Competencia Nacional Ficción 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313414",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3740?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "11:00",
+   "sala": "Sala 2",
+   "titulo_sala": "CN-FIC1 | Competencia Nacional Ficción 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313414",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3740?sede=11"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo_sala": "CLC-CINE | Colecciones: Cine dentro del cine",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054052",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3741?sede=11"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo_sala": "CI-EXP2 | Competencia Internacional Experimental 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054053",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3742?sede=11"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo_sala": "ES-PER Especial Volviendo a Persépolis sin Marjane",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054054",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3743?sede=11"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CHI-ANCY | ChiquiSHORTS: BOGOSHORTS Kids",
+   "ticket_url": "",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3744?sede=11"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "16:00",
+   "sala": "Sala 3",
+   "titulo_sala": "ES-METRO | Especial Metrópolis: Cuerpos del Futuro",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054056",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3745?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "17:30",
+   "sala": "Sala 3",
+   "titulo_sala": "ES-METRO | Especial Metrópolis: Cuerpos del Futuro",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054078",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3745?sede=11"
+  },
+  {
+   "dia": "2026-12-05",
+   "hora": "19:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CI-FIC2 | Competencia Internacional Ficción 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054057",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3746?sede=11"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "11:30",
+   "sala": "Sala Capital",
+   "titulo_sala": "CHI-KIDS | Chiquishorts",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054058",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "15:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "CN-FIC2 | Competencia Nacional Ficción 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054059",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3748?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "15:30",
+   "sala": "Sala 3",
+   "titulo_sala": "CN-FIC2 | Competencia Nacional Ficción 2",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054059",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3748?sede=11"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "PAC-EXP | Panorama Colombia: Experimental",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054060",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3749?sede=11"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "13:00",
+   "sala": "Sala 2",
+   "titulo_sala": "CLC-ADO | Colecciones: Adolescencia",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054066",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3750?sede=11"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo_sala": "CITY-BCN1 | Viva la ciudad: Barcelona 1",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054068",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3751?sede=11"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo_sala": "CON-LATAM | Conexión: Latinoamérica",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054069",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3752?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "14:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "CI-VC/CN-VC | Competencia Nacional e Internacional",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054071",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3753?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "17:00",
+   "sala": "Sala Capital",
+   "titulo_sala": "PAC-DOC | Panorama Colombia: Documental",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054072",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3754?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "19:30",
+   "sala": "Sala Capital",
+   "titulo_sala": "Ganadores 24° BOGOSHORTS",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054073",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3755?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "15:30",
+   "sala": "Sala 2",
+   "titulo_sala": "CON-LTX | Conexión: Latinxs en Norteamérica",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054075",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3756?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "18:30",
+   "sala": "Sala 2",
+   "titulo_sala": "ES-NEXOS | Especial: Nexos femeninos",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054076",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3757?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "14:00",
+   "sala": "Sala 3",
+   "titulo_sala": "ES-ASTRO | Especial Astrológico",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054077",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3758?sede=11"
+  },
+  {
+   "dia": "2026-12-08",
+   "hora": "19:30",
+   "sala": "Sala 3",
+   "titulo_sala": "FI-LARGO | Cortofilia: Adorable humans",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230610054079",
+   "entrada_libre": false,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3759?sede=11"
+  },
+  {
+   "dia": "2026-12-06",
+   "hora": "17:00",
+   "sala": "Sala 3",
+   "titulo_sala": "Estreno BFM-IV - Furia",
+   "ticket_url": "",
+   "entrada_libre": true,
+   "pagina": "https://cinematecadebogota.gov.co/node/peliculas/3816?sede=11"
+  }
+ ]
+}

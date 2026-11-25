@@ -14,5 +14,11 @@
  "paises": {
   "fuente": "tmdb:407151",
   "regla": "tmdb-manda"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "errata",
+  "fecha": "2026-11-24"
  }
 }

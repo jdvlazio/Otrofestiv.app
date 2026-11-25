@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_R4DRKZWFVT9V",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/para-no-volver.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/para-no-volver.jpg",
+   "/assets/cortoscali-2026/para-no-volver.jpg",
+   "/assets/filcmar-2026/para-no-volver.jpg",
+   "https://image.tmdb.org/t/p/w500/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/para-no-volver.jpg",
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+   "cortoscali-2026": "/assets/cortoscali-2026/para-no-volver.jpg",
+   "filcmar-2026": "/assets/filcmar-2026/para-no-volver.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DRKZWFVT9V",
+  "campo": "sinopsis.es",
+  "valor": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026, cinemancia-2026, cortoscali-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "8f76a1015b86",
+   "e3f17b7de6cd"
+  ],
+  "antes": {
+   "biff-2026": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+   "cinemancia-2026": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+   "cortoscali-2026": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+   "filcmar-2026": "Cuando Karina descubre que está embarazada del bebé de Charlie, ella y su mejor amiga Eli emprenden un viaje para encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y sus propios sentimientos cambiantes."
+  }
+ },
+ {
+  "work_id": "w_R4DRKZWFVT9V",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": 2025,
+   "cinemancia-2026": 2026,
+   "cortoscali-2026": 2025,
+   "filcmar-2026": 2026
+  }
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4QPXCSFGXFE",
+  "campo": "xref.letterboxd",
+  "valor": "whale-52",
+  "motivo": "Letterboxd redirige ahí la dirección anterior",
+  "fecha": "2026-11-24",
+  "quien": "Juan («voy con las cinco»)",
+  "antes": {
+   "tribeca-2026": "whale-52-suite-for-man-boy-and-whale"
+  }
+ },
+ {
+  "work_id": "w_R4QPXCSFGXFE",
+  "campo": "xref.tmdb",
+  "valor": 1547878,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/whale-52-suite-for-man-boy-and-whale/"
+ },
+ {
+  "work_id": "w_R4QPXCSFGXFE",
+  "campo": "sinopsis.es",
+  "valor": "Un estudiante de tercer grado con mutismo selectivo y un voluntario escolar de 80 años, en duelo, descubren que algunas de las conversaciones más profundas requieren una sola palabra.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/1547878"
+ },
+ {
+  "work_id": "w_R4QPXCSFGXFE",
+  "campo": "sinopsis.en",
+  "valor": "A third-grade student who's selectively mute and a grieving 80-year-old school volunteer discover that some of the deepest conversations only require a single word.",
+  "motivo": "de su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/1547878"
+ },
+ {
+  "work_id": "w_R4QPXCSFGXFE",
+  "campo": "directores",
+  "valor": [
+   "Daniel Neiden"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

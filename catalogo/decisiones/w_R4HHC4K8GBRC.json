@@ -1,0 +1,67 @@
+[
+ {
+  "work_id": "w_R4HHC4K8GBRC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficica-2026/los-pliegues-de-la-falda.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/los-pliegues-de-la-falda.jpg",
+   "/assets/ficica-2026/los-pliegues-de-la-falda.jpg",
+   "/assets/popayan-2026/los-pliegues-de-la-falda.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/los-pliegues-de-la-falda.jpg",
+   "ficica-2026": "/assets/ficica-2026/los-pliegues-de-la-falda.jpg",
+   "popayan-2026": "/assets/popayan-2026/los-pliegues-de-la-falda.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HHC4K8GBRC",
+  "campo": "sinopsis.es",
+  "valor": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026, ficica-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0f93fb0d59da",
+   "71f9bbce7794"
+  ],
+  "antes": {
+   "ficdeh-2026": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
+   "ficica-2026": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
+   "popayan-2026": "Linda, Carlos y María son una familia convencional en la que casi todo encaja: el padre tiene la última palabra, la madre se encarga de la casa. Y Linda es una pequeña que se rehúsa a usar la falda. Ella no quiere ser la princesa de papá, solo quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que Linda interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla. Después de la función, nada será igual."
+  }
+ },
+ {
+  "work_id": "w_R4HHC4K8GBRC",
+  "campo": "directores",
+  "valor": [
+   "Blanca Muñoz Ávila"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": "Blanca Muñoz Avila",
+   "ficica-2026": "Blanca Muñoz Avila",
+   "popayan-2026": "Blanca Muñoz Ávila"
+  }
+ },
+ {
+  "work_id": "w_R4HHC4K8GBRC",
+  "campo": "sinopsis.en",
+  "valor": "Linda wants the lead in the school play, but when Carlos discovers the \"male\" role his daughter will perform, he tries to stop her. Moved by her daughter's sadness, María decides to help her, even if it means swimming against the current.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "ficdeh-2026": "Linda wants the lead in the school play, but when Carlos discovers the \"male\" role his daughter will perform, he tries to stop her. Moved by her daughter's sadness, María decides to help her, even if it means swimming against the current.",
+   "ficica-2026": "Linda wants the lead in the school play, but when Carlos discovers the \"male\" role his daughter will perform, he tries to stop her. Moved by her daughter's sadness, María decides to help her, even if it means swimming against the current."
+  }
+ }
+]

@@ -1,0 +1,73 @@
+[
+ {
+  "work_id": "w_R4NEB3MFVH9Q",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/fecibac-2026/entre-2-aguas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/fecibac-2026/entre-2-aguas.jpg",
+   "https://image.tmdb.org/t/p/w500/1sHXXkdwsKwrwSrfLmvCG9WL2EW.jpg"
+  ],
+  "antes": {
+   "fecibac-2026": "/assets/fecibac-2026/entre-2-aguas.jpg",
+   "siembrafest-2026": "https://image.tmdb.org/t/p/w500/1sHXXkdwsKwrwSrfLmvCG9WL2EW.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4NEB3MFVH9Q",
+  "campo": "directores",
+  "valor": [
+   "Carlos Gabriel Vergara Montiel"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1656180)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "fecibac-2026": "Carlos Gabriel Vergara",
+   "siembrafest-2026": "Carlos Gabriel Vergara M."
+  }
+ },
+ {
+  "work_id": "w_R4NEB3MFVH9Q",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1656180)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "fecibac-2026": 2026,
+   "siembrafest-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4NEB3MFVH9Q",
+  "campo": "generos",
+  "valor": [
+   "Thriller"
+  ],
+  "motivo": "un género por obra: el más preciso, sin genéricos ni secciones",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "antes": {
+   "fecibac-2026": "Thriller",
+   "siembrafest-2026": "Ficción"
+  }
+ },
+ {
+  "work_id": "w_R4NEB3MFVH9Q",
+  "campo": "sinopsis.en",
+  "valor": "When Moses discovers the network taking control of the water supply, he must choose between staying in the business that lifted him out of poverty… or exposing it and facing the consequences. In a country thirsty for truth, Moses will have to decide what he’s willing to risk: his comfort, his family, or the lives of millions. And he’ll have to do it before the current pulls him under. Between Two Waters is an environmental thriller about the planet’s most vital resource and the strategy of a powerful economic group determined to turn access to it into a multibillion-dollar business—no matter the cost.",
+  "motivo": "se quita lo que no es sinopsis; nada se escribe",
+  "fecha": "2026-11-24",
+  "quien": "Juan (hoja del paso 6)",
+  "antes": {
+   "fecibac-2026": "When Moses discovers the network taking control of the water supply, he must choose between staying in the business that lifted him out of poverty… or exposing it and facing the consequences. In a country thirsty for truth, Moses will have to decide what he’s willing to risk: his comfort, his family, or the lives of millions. And he’ll have to do it before the current pulls him under.  Between Two Waters is an environmental thriller about the planet’s most vital resource and the strategy of a powerful economic group determined to turn access to it into a multibillion-dollar business—no matter the cost.",
+   "siembrafest-2026": "When Moses discovers the network taking control of the water supply, he must choose between staying in the business that lifted him out of poverty… or exposing it and facing the consequences. In a country thirsty for truth, Moses will have to decide what he’s willing to risk: his comfort, his family, or the lives of millions. And he’ll have to do it before the current pulls him under.  Between Two Waters is an environmental thriller about the planet’s most vital resource and the strategy of a powerful economic group determined to turn access to it into a multibillion-dollar business—no matter the cost."
+  }
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "work_id": "w_R4PS7KMG3XBP",
+  "campo": "xref.tmdb",
+  "valor": 183714,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/the-land-of-the-people/"
+ },
+ {
+  "work_id": "w_R4PS7KMG3XBP",
+  "campo": "sinopsis.es",
+  "valor": "El descubrimiento continuo de la belleza del mundo, que cada persona hace en su vida y en su trabajo, contado en una jornada laboral de una gran ciudad. La película empieza y termina con la imagen giratoria de El pensador de Rodin, símbolo del pensamiento humano.",
+  "motivo": "de su ficha de TMDB; verificada por otro agente",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/183714"
+ },
+ {
+  "work_id": "w_R4PS7KMG3XBP",
+  "campo": "sinopsis.en",
+  "valor": "This is the subject of ongoing discovery of the beauty of the world, that man makes in his life and in his work, which is being developed as part of a big city, presented during a day's work. This film starts and ends with the rotating image of the sculpture of Rodin the Thinker; this famous sculpture has long since become the symbol of the unchanging expression of human thought.",
+  "motivo": "de su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Apruebo ambas»)",
+  "fuente": "https://www.themoviedb.org/movie/183714"
+ },
+ {
+  "work_id": "w_R4PS7KMG3XBP",
+  "campo": "directores",
+  "valor": [
+   "Artavazd Pelechian"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4PS7KMG3XBP",
+  "campo": "paises",
+  "valor": [
+   "AM",
+   "SU"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

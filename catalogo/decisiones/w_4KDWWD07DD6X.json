@@ -1,0 +1,118 @@
+[
+ {
+  "work_id": "w_4KDWWD07DD6X",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "dce4cb02ada1"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Le miracle",
+  "valor": "Después de que su hijo adulto, Mattia, interrumpiera su baño relajante, Angelica por fin puede dejarse llevar y se masturba delante del póster del futbolista Valenti, ídolo de su hijo. De repente, la mirada de Valenti se fija en ella. Se extiende una euforia absurda: el milagro se cristaliza en una lucha de poder e intimidad entre madre e hijo.",
+  "original": "Después de que su hijo adulto, Mattia, la interrumpiera mientras se daba un baño relajante, Angelica por fin puede dejarse llevar. Es entonces cuando empieza a masturbarse delante del póster del futbolista Valenti, el ídolo de su hijo. De repente, la mirada de Valenti se fija en ella... Se extiende una euforia absurda: el milagro se cristaliza en una lucha de poder e intimidad entre madre e hijo.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "79c77f56136a"
+  }
+ },
+ {
+  "work_id": "w_4KDWWD07DD6X",
+  "campo": "directores",
+  "valor": [
+   "Avril Lehmann",
+   "Yael Vallotton"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Avril Lehmann, Yael Vallotton"
+  }
+ },
+ {
+  "work_id": "w_4KDWWD07DD6X",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KDWWD07DD6X",
+  "campo": "paises",
+  "valor": [
+   "CH"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Suiza"
+  }
+ },
+ {
+  "work_id": "w_4KDWWD07DD6X",
+  "campo": "sinopsis.en",
+  "valor": "After being interrupted during her relaxing bath by her adult son Mattia, Angelica is finally able to let go. That’s when she begins to masturbate in front of a poster of soccer player Valenti, her son’s idol. Suddenly, Valenti’s gaze locks onto her... An absurd euphoria spreads: The miracle crystallizes into a struggle for power and intimacy between mother and son.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After being interrupted during her relaxing bath by her adult son Mattia, Angelica is finally able to let go. That’s when she begins to masturbate in front of a poster of soccer player Valenti, her son’s idol. Suddenly, Valenti’s gaze locks onto her... An absurd euphoria spreads: The miracle crystallizes into a struggle for power and intimacy between mother and son."
+  }
+ },
+ {
+  "work_id": "w_4KDWWD07DD6X",
+  "campo": "xref.tmdb",
+  "valor": 1717118,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1717118"
+  }
+ },
+ {
+  "work_id": "w_4KDWWD07DD6X",
+  "campo": "xref.letterboxd",
+  "valor": "le-miracle",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "le-miracle"
+  }
+ },
+ {
+  "work_id": "w_4KDWWD07DD6X",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/le-miracle.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/le-miracle.jpg"
+  }
+ }
+]

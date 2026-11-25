@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1397 — https://github.com/jdvlazio/Otrofestiv.app/issues/1397",
-  "capturado": "2026-11-20",
+  "capturado": "2026-11-24",
   "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 22
+  "comentarios": 29
  },
  "issue": 1397,
  "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
@@ -98,6 +98,34 @@
   {
    "fecha": "2026-11-20",
    "cuerpo": "Vigía 20 nov 17:20 — catálogo PDF oficial nuevo en la home (https://www.alestfestival.com/_files/ugd/9df115_8c8d52967fb743b6b6604248e056a0df.pdf, 32 págs., 20 nov). APLICADO (PR #1564): «Pucallpa la Europea» 21 nov 14:00→19:00 y «Gioia mia» 22 nov 14:00→14:30 (PDF + ficha web HTML + texto renderizado). CONTRADICCIÓN pendiente: el PDF y la web actual dicen «La salamandra» 27 nov 16:30 y «License to Live» 29 nov 17:00; la grilla IG del 19 nov (Df8iF1QFpzk) decía 17:00 y 16:30, y eso es lo publicado. Por la regla «la más temprana»: Salamandra → 16:30; License se queda en 16:30."
+  },
+  {
+   "fecha": "2026-11-21",
+   "cuerpo": "Vigía 21 nov 13:00 — catálogo PDF oficial nuevo (20 nov): https://www.alestfestival.com/_files/ugd/9df115_8c8d52967fb743b6b6604248e056a0df.pdf. Junto con la grilla IG del 17 nov (https://www.instagram.com/p/Df3D47hlulW/, lámina 01) da Pucallpa la Europea 21 nov 19:00 (app: 14:00) y Gioia mia 22 nov 14:30 (app: 14:00), Centro Colombo Americano Sala 1. Commit listo, sin publicar: falta marcar el PDF en el inventario. License to Live: PDF 29 nov 17:00 contra grilla del 19 nov 16:30; se deja 16:30."
+  },
+  {
+   "fecha": "2026-11-22",
+   "cuerpo": "**Salas vs app — corrida 22 nov 2026** (agenda de las salas contra el JSON publicado en el almacén)\n\n**Cinemateca de Bogotá** — fuente: https://cinematecadebogota.gov.co/agenda/11 (la agenda ya llega hasta el 8 dic, así que los días 25–29 nov están publicados)\n\n1. **«La retirada» (Havel), jue 26 nov** — sala: **7:00 p. m., Sala 2** (https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11). App: 19:30, Sala 3. Ojo: en la app la Sala 2 a las 19:00 la ocupa «Ino Moxo». Acción: confirmar con la web del festival cuál está bien y corregir.\n2. **6 funciones de la app que la Cinemateca no rotula como Al Este** (ni aparecen en ninguna categoría de su agenda): «Ciudadano Havel» (26 nov 16:00 S2), «Ino Moxo: El sueño del brujo» (26 nov 19:00 S2), «Historias de una mentira» (27 nov 14:30 S3), «Aquí, en otros lugares» (27 nov 16:00 S2), «Nadie a la vista» (28 nov 16:00 S2), «Retorno antes de las 3 p. m.» (29 nov 19:00 S2). Acción: verificar contra alestfestival.com/programa2026; puede ser que la Cinemateca aún no las cargue o que cambiaron.\n3. **«Shame and Money», mié 25 nov 18:30 Sala Capital — la sala dice «Entrada libre»** (https://cinematecadebogota.gov.co/node/peliculas/4037?sede=11). App: no la marca gratis. Acción: `is_free: true`.\n4. **Links de compra (TuBoleta) por función — la app no tiene ninguno (`ticket_url`)** para las 18 funciones que coinciden: The Souffleur (4039), Histeria (4040), La retirada (4041), 1982 (4076), La salamandra (4077), Labriego (4078), Padre (4079), Hecho en Colombia 1 (4080), Todas las canciones del mundo (4082), En la ciudad blanca (4083), Bright Future (4084), The Megalomaniacs (4085), Pulse (4086), Hecho en Colombia 2 (4087), License to Live (4088), Los golfos (4089), La última ronda en Venecia (4090), Laguna (4091). Cada ficha `/node/peliculas/<n>?sede=11` trae su `cinemateca.checkout.tuboleta.com/...productId=…`. Nota: Hecho en Colombia 2 usa el mismo productId que el bloque 1 (…313365): posible error de la sala.\n5. Coinciden día, hora y sala: las otras 18 funciones de Bogotá.\n\n**Colombo Americano (Medellín)** — https://www.colombomedellin.edu.co/programacion-por-salas/ : las 8 funciones coinciden (día, hora y sala). La sala dice boletería general $13.000; la app no trae precio (solo informativo; Medellín termina hoy).\n\n**MAMM** — https://www.elmamm.org/cine/ : las 4 funciones coinciden (The Souffleur 19, Padre 20, 1982 21, Londres 22). La app ya tiene el link de cada producto. Precio $14.000 (la app no lo trae).\n\n**Aparte (programación regular, no hallazgo):** la Cinemateca de Bogotá pasa «La tierra prometida» y «La caza de las moscas» (Wajda) en su categoría Clásicos (29 nov 11:00 S2 y 22 nov 11:00), sin rótulo de Al Este.\n"
+  },
+  {
+   "fecha": "2026-11-22",
+   "cuerpo": "Vigía 22 nov 09:00 — FUENTE NUEVA: catálogo PDF de Al Este, 9df115_8c8d52967fb743b6b6604248e056a0df.pdf (modificado el 20 nov a las 14:07; reemplaza al del 18 nov, 9df115_ee9f35…).\nCambios frente al del 18 nov: The Souffleur, Bogotá 26.11 a las 17:00 (antes 17:30); «En la ciudad blanca» pasa a Sala 3 el 29.11 a las 16:30 (antes 28.11 a las 17:00) y pierde el cineforo; sale «Wittgenstein» y entra «Laguna» (Sala 3, 28.11, 17:00, «presentada con el director»); Fontanar del Río reemplaza a El Tunal.\n**La app ya refleja todo eso**: nada que cambiar. El PDF dice «Gioia mia 22.11 | 14:30», pero la lámina de IG de hoy (DgC4rS3lvo0, lámina 02) confirma las 14:00 que tiene la app.\n"
+  },
+  {
+   "fecha": "2026-11-22",
+   "cuerpo": "Vigía 22 nov 13:00 — **FUENTE NUEVA: programa PDF** https://www.alestfestival.com/_files/ugd/9df115_8c8d52967fb743b6b6604248e056a0df.pdf (InDesign, modificado 20 nov 14:07).\n\n- **Hecho en Colombia (JUAN / Onboarding):** el PDF arma los bloques distinto a la web y a la app.\n  - PDF, Bloque 1 (sáb 28, 14:30, Sala 3, 73 min): Liminal, Refracción, Las piedras del río, Junio 25. Andréi Tarkovski…, **Futuros luminosos** (25').\n  - PDF, Bloque 2 (dom 29, 14:00, Sala 3, 75 min): Todo lo que pasará mañana, Lejanía, Sol de niebla, Desde acá veo la tormenta, Muchas, muchas gracias, **Transversal30FF** (6').\n  - Web programa2026 (hoy): B1 = Liminal, Refracción, Lejanía, Junio 25, Sol de niebla, Desde acá veo la tormenta; B2 = Todo lo que pasará mañana, Las piedras del río, Muchas, muchas gracias.\n  - App: B1 = Junio 25, Lejanía, Liminal, Refracción, Sol de niebla (55'); B2 = Desde acá veo la tormenta, Las piedras del río, Muchas, muchas gracias, Todo lo que pasará mañana (62').\n  - Ninguna regla decide entre PDF (20 nov) y web; «Futuros luminosos» y «Transversal30FF» no están en la app.\n- Horas que el PDF contradice y ya están decididas (no se tocan): Gioia mia dom 22 14:30 / Pucallpa sáb 21 19:00 (app 14:00, cartelera del Colombo, #1555/#1565); License to Live dom 29 17:00 (app 16:30, grilla del 19 nov, la más temprana).\n- Kluk «Cortometrajes de Altura»: el PDF dice «FUNCIONES EXCLUSIVAS PARA COLEGIOS» y no da fecha; la app la tiene dom 29 14:00 en Fontanar como función pública → revisar (JUAN).\n"
+  },
+  {
+   "fecha": "2026-11-23",
+   "cuerpo": "Vigía 23 nov 09:00. Hora contradictoria de «License to Live» (29 nov, Cinemateca de Bogotá, Sala 2). App: 16:30 (grilla IG del 19 nov, Df8iF1QFpzk).\n- 17:00: post nuevo de hoy, lámina 4 (https://www.instagram.com/p/DgFYkAyFnsa/), la ficha del festival (https://www.alestfestival.com/programa2026/license-to-live) y TuBoleta (productId=10230607313375, «Sala 2 | 29.11.2026 - 17:00»).\n- 16:30: ficha de la Cinemateca (node/peliculas/4088).\nNo se aplicó: Tesseract no leyó el título en la lámina (sí la hora y la sede); Vision y la mirada sí. Bright Future (28 nov 18:00) y Pulse (28 nov 20:00) coinciden con la app."
+  },
+  {
+   "fecha": "2026-11-23",
+   "cuerpo": "License to Live (29 nov, Cinemateca Sala 2): Juan decidió el 23 nov dejarla a las 16:30 (ficha de la Cinemateca 4088), conociendo que IG del 23 nov (DgFYkAyFnsa), web, PDF y TuBoleta dicen 17:00. No volver a proponer salvo fuente nueva."
+  },
+  {
+   "fecha": "2026-11-24",
+   "cuerpo": "Vigía 23 nov 21:30 — «Ino Moxo» (jue 26 nov): contradicción de hora y sala, sin aplicar.\n- Post nuevo del 23 nov 18:01, de @blond.indian.films con @aleste.colombia de coautor (https://www.instagram.com/p/DgGg1InlhGH/): 7:30 p. m., Sala 3. Solo en el pie; las 5 láminas no traen hora ni sala.\n- Ficha de la Cinemateca (https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11): 7:30 p. m., Sala 3.\n- Web del festival y la app: 19:00, Sala 2.\n- Choca con «La retirada», que TuBoleta vende hoy en Sala 3 a las 19:00 (la ficha 4041 la pone en Sala 2 a las 19:00; la web del festival, 19:30 en Sala 3). Las fuentes cruzan las salas de las dos. El link de TuBoleta de «Ino Moxo» da error 404.\n"
   }
  ]
 }

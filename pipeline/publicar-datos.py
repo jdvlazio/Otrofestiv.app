@@ -84,6 +84,27 @@ def _correr(nombre, cmd, tiempo=TIEMPO, cwd=None):
     return r
 
 
+def _no_entra(fest, d):
+    sys.path.insert(0, os.path.join(REPO, 'pipeline'))
+    import no_entra
+    no = no_entra.revisar_festival(fest, d.get('films', []))
+    if no:
+        _parar('lo que no entra a la app', f'✗ esto no entra a la app ({fest}):\n  · ' + '\n  · '.join(no))
+
+
+def _control_funciones(fest, contenido):
+    """0·b3. Sello de función, acceso con fuente e inventario cerrado: frenan la PRIMERA
+    publicación; a un festival que ya está en el almacén solo le avisan."""
+    sys.path.insert(0, os.path.join(REPO, 'pipeline'))
+    import sello_funcion
+    frenos, avisos = sello_funcion.control(fest, json.loads(contenido))
+    if avisos:
+        print(f'  ⚠ {len(avisos)} pendiente(s) de función en {fest} (no frena; después: sello_funcion.py informe {fest}): ' + ' · '.join(avisos[:3]))
+    if frenos:
+        _parar(f'primera publicación: {len(frenos)} pendiente(s) de función, acceso o inventario (sello_funcion.py informe {fest})',
+               f'✗ {fest} no se publica por primera vez así:\n  · ' + '\n  · '.join(frenos[:12]))
+
+
 def guardianes(fest, ruta, contenido):
     # 0. con qué correr los tests de navegador: sin esto el guardián d fallaba con
     #    un MODULE_NOT_FOUND enterrado en el stack (worktree nuevo, 19 oct 2026).
@@ -98,10 +119,8 @@ def guardianes(fest, ruta, contenido):
     if _v:
         _parar('fuentes vencidas', _v)
     # 0·b2. lo cerrado y lo dejado fuera no entran (también si el JSON se tocó a mano)
-    import no_entra
-    _no = no_entra.revisar_festival(fest, json.loads(contenido).get('films', []))
-    if _no:
-        _parar('lo que no entra a la app', f'✗ esto no entra a la app ({fest}):\n  · ' + '\n  · '.join(_no))
+    _no_entra(fest, json.loads(contenido))
+    _control_funciones(fest, contenido)
     # 0·c. el catálogo al día: es DERIVADO de todos los festivales. Si un cambio no
     #      lo re-arma, el próximo --escribir arrastra 30 archivos ajenos (FICCALI
     #      #1218/#1219, 21 oct 2026). Con la caché de TMDB no usa la red (~60 s)
@@ -280,8 +299,8 @@ def _publicar(archivos, mensaje, cuerpo):
             return sha, _llamar({**cuerpo, 'sha': sha})
         except Choque as e:
             if intento == REINTENTOS:
-                sys.exit(f'✗ {e}: {REINTENTOS} intentos, todos cruzados con otra publicación')
-            espera = 5 * intento
+                sys.exit(f'✗ {e}: {REINTENTOS} intentos sin lograrlo')
+            espera = 10 * intento
             print(f'· {e}; reintento {intento + 1}/{REINTENTOS} en {espera} s')
             time.sleep(espera)
 
@@ -367,9 +386,11 @@ def _llamar(cuerpo):
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
         cuerpo_err = e.read().decode(errors='replace')[:300]
-        if e.code == 409:
-            raise Choque(f'la función respondió 409 ({cuerpo_err})')
+        if e.code in (409, 429, 502, 503, 504):   # la punta se movió, o un fallo pasajero del otro lado
+            raise Choque(f'la función respondió {e.code} ({cuerpo_err})')
         sys.exit(f'✗ publicar-datos {e.code}: {cuerpo_err}')
+    except OSError as e:   # sin red, conexión cortada, tiempo agotado
+        raise Choque(f'la función no respondió ({e})')
 
 
 def interruptor(apagado):
@@ -420,11 +441,14 @@ def main():
         if os.environ.get('GITHUB_ACTIONS') != 'true' or os.environ.get('GITHUB_REF') != 'refs/heads/main':
             sys.exit('✗ --desde-main es solo para el job de GitHub sobre main')
         print('  · desde main: los guardianes ya corrieron en el PR')
+        _control_funciones(fest, contenido)
+        if '--alta' in sys.argv:      # esto no lo corre el CI del PR
+            _no_entra(fest, d)
     else:
         guardianes(fest, ruta, contenido)
     # e. los afiches que nombra el JSON ya están en la web (en los dos modos: desde
     #    main se espera hasta 10 min al deploy de Pages del mismo merge)
-    _afiches_en_la_web(fest, d, esperar=600 if '--desde-main' in sys.argv else 0)
+    _afiches_en_la_web(fest, d, esperar=int(os.environ.get('OTF_ESPERA_AFICHES', 600)) if '--desde-main' in sys.argv else 0)
     huella = hashlib.sha256(contenido).hexdigest()
     print(f'✓ guardianes OK · {len(d["films"])} obras · {len(contenido):,} bytes · {huella[:12]}')
     if '--probar' in sys.argv:
@@ -434,7 +458,11 @@ def main():
     # Desde main (el job), la ficha solo viaja si ese festival YA tiene una en el
     # almacén: una ficha entra de a una y a propósito, con este comando a mano.
     ficha = _ficha(fest)
-    if '--desde-main' in sys.argv and ficha and not _tiene_ficha(fest):
+    # El ALTA (--alta, 25 nov 2026) entra con la suya o no entra: sin ficha, ninguna
+    # corrida siguiente se la pondría.
+    if '--alta' in sys.argv and not ficha:
+        sys.exit(f'✗ {fest}: un alta sin ficha no entra')
+    if '--desde-main' in sys.argv and ficha and '--alta' not in sys.argv and not _tiene_ficha(fest):
         print('  · sin ficha en el almacén: entra a propósito con publicar-datos.py, no desde main'); ficha = {}
     # 3. publicar (commit + función; si otra corrida se cruza, se rehace sobre la punta nueva)
     sha, res = _publicar({ruta: contenido, **ficha}, f'datos({fest}): publicar {huella[:12]}',

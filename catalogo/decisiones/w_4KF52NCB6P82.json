@@ -1,0 +1,106 @@
+[
+ {
+  "work_id": "w_4KF52NCB6P82",
+  "campo": "directores",
+  "valor": [
+   "Camilo Giraldo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Camilo Giraldo"
+  }
+ },
+ {
+  "work_id": "w_4KF52NCB6P82",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KF52NCB6P82",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KF52NCB6P82",
+  "campo": "sinopsis.es",
+  "valor": "En un campamento guerrillero en las montañas colombianas, dos jóvenes combatientes mantienen una relación secreta que se ve amenazada por la violencia y la brutal masculinidad del grupo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En un campamento guerrillero en las montañas colombianas, dos jóvenes combatientes mantienen una relación secreta que se ve amenazada por la violencia y la brutal masculinidad del grupo."
+  }
+ },
+ {
+  "work_id": "w_4KF52NCB6P82",
+  "campo": "sinopsis.en",
+  "valor": "Deep in the Colombian mountains, two young recruits secretly fall in love in a place where loving each other could cost them their lives.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Deep in the Colombian mountains, two young recruits secretly fall in love in a place where loving each other could cost them their lives."
+  }
+ },
+ {
+  "work_id": "w_4KF52NCB6P82",
+  "campo": "xref.tmdb",
+  "valor": 1841399,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1841399"
+  }
+ },
+ {
+  "work_id": "w_4KF52NCB6P82",
+  "campo": "xref.letterboxd",
+  "valor": "varoncito",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "varoncito"
+  }
+ },
+ {
+  "work_id": "w_4KF52NCB6P82",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/varoncito.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/varoncito.jpg"
+  }
+ }
+]

@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4H881HQEE34",
+  "campo": "sinopsis.es",
+  "valor": "En un intento desesperado por escapar del aislamiento, un personaje sin rostro salta de una cornisa esperando encontrar su final, sin saber que en el fondo la ley de la gravedad no aplica para él: rebota. Frustrado, sigue intentándolo en distintos escenarios, en un ciclo constante, dentro de un paisaje desolado, contaminado y sin recursos.",
+  "motivo": "«cambiar su realidad» contradice «find his end» de TMDB; frase corrida",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "vistas": [
+   "001d279b547c",
+   "0c032cb50f0c"
+  ],
+  "antes": {
+   "anibia-2026": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
+   "ficcali-2026": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
+   "qaff-2026": "En un intento desesperado por escapar del aislamiento, un personaje sin rostro se lanza desde una cornisa esperando encontrar su final, sin saber que en el fondo de la caída las leyes de la gravedad no aplican para él: rebota. Frustrado por este hecho, sigue intentándolo en diferentes escenarios, en un ciclo constante. Todo esto, enmarcado en un paisaje desolado, contaminado y sin recursos. Nació en Bogotá, Colombia, en 1980. Después de graduarse como diseñador gráfico en 2003, ha estado creando imágenes para revistas y libros durante más de diez años. En animación, ha colaborado como artista conceptual y diseñador de personajes para proyectos de televisión y cine. Se graduó de la Maestría en Bellas Artes en el programa de Studio Art de la Universidad de Arkansas después de obtener una beca Fulbright en 2011. Actualmente, enseña cursos de ilustración y animación en el programa de diseño gráfico de la Universidad Nacional de Colombia. Su cortometraje más reciente, Reparations, fue galardonado con el premio Ciudad de Annecy en la sección Perspectives del Festival Internacional de Cine de Animación de Annecy 2022. 15"
+  },
+  "anteriores": [
+   {
+    "valor": "En el desesperado intento de escapar del aislamiento, un personaje sin rostro salta del borde esperando cambiar su realidad, sin saber que en el fondo de esa caída la ley de la gravedad no aplica para él, este personaje simplemente rebota.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (anibia-2026, ficcali-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "001d279b547c",
+     "0c032cb50f0c"
+    ]
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4H881HQEE34",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/anibia-2026/caida-libre.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el afiche completo; el de QAFF está recortado y con laurel",
+  "fecha": "2026-11-24",
+  "quien": "Juan, 24 nov 2026 («prioridad a la vertical… lo demás a tu criterio»)",
+  "a_mano": true,
+  "vistas": [
+   "/assets/ficcali-2026/caida-libre.jpg",
+   "/assets/qaff/free-fall.jpg"
+  ],
+  "antes": {
+   "anibia-2026": "/assets/anibia-2026/caida-libre.jpg",
+   "ficcali-2026": "/assets/ficcali-2026/caida-libre.jpg",
+   "qaff-2026": "/assets/qaff/free-fall.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4H881HQEE34",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "anibia-2026": 2025,
+   "ficcali-2026": 2024,
+   "qaff-2026": 2024
+  }
+ },
+ {
+  "work_id": "w_R4H881HQEE34",
+  "campo": "sinopsis.en",
+  "valor": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources.",
+  "motivo": "la que ya publica otro festival: una sola por obra",
+  "fecha": "2026-11-24",
+  "quien": "regla de Juan: la sinopsis es de la obra",
+  "antes": {
+   "anibia-2026": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources.",
+   "ficcali-2026": "In a desperate attempt to escape isolation, a faceless character jumps from a ledge hoping to meet his end, unaware that at the bottom of the fall, the laws of gravity do not apply: he bounces back. Frustrated by this fact, he keeps trying in different scenarios, in a constant cycle. All this takes place in a desolate, polluted landscape devoid of resources."
+  }
+ }
+]

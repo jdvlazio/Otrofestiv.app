@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_4KH944E3FVDN",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "fbef44189eac"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Yugo",
+  "valor": "Los testimonios de personas cercanas trazan el viaje de una pareja obligada a abandonar su pueblo natal para trabajar en la fabricación de piezas decorativas para vehículos pesados, en la periferia de Bogotá. A través de una vida, la obra cuestiona el desarrollo capitalista y liberal de América Latina y sus consecuencias para el ser humano.",
+  "original": "Los testimonios de personas cercanas trazan el viaje de una pareja obligada a abandonar el pueblo natal para trabajar en la fabricación industrial de piezas decorativas para vehículos pesados, en la periferia de Bogotá. A través de la trayectoria de una vida, YUGO cuestiona el desarrollo económico capitalista y liberal de América Latina y sus consecuencias para el ser humano.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "1de7f9c7fc54"
+  }
+ },
+ {
+  "work_id": "w_4KH944E3FVDN",
+  "campo": "directores",
+  "valor": [
+   "Carlos Gómez Salamanca"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Carlos Gómez Salamanca"
+  }
+ },
+ {
+  "work_id": "w_4KH944E3FVDN",
+  "campo": "anio",
+  "valor": 2021,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2021"
+  }
+ },
+ {
+  "work_id": "w_4KH944E3FVDN",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia, Francia"
+  }
+ },
+ {
+  "work_id": "w_4KH944E3FVDN",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KH944E3FVDN",
+  "campo": "sinopsis.en",
+  "valor": "Testimonies from family members trace the journey of a couple forced to leave their hometown to work in the industrial manufacture of decorative parts for heavy vehicles, on the outskirts of Bogotá. Through the trajectory of a single life, YUGO questions the capitalist and liberal economic development of Latin America and its consequences for human beings.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Testimonies from family members trace the journey of a couple forced to leave their hometown to work in the industrial manufacture of decorative parts for heavy vehicles, on the outskirts of Bogotá. Through the trajectory of a single life, YUGO questions the capitalist and liberal economic development of Latin America and its consequences for human beings."
+  }
+ },
+ {
+  "work_id": "w_4KH944E3FVDN",
+  "campo": "xref.tmdb",
+  "valor": 892198,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "892198"
+  }
+ },
+ {
+  "work_id": "w_4KH944E3FVDN",
+  "campo": "xref.letterboxd",
+  "valor": "yugo",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "yugo"
+  }
+ },
+ {
+  "work_id": "w_4KH944E3FVDN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/yugo.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/yugo.jpg"
+  }
+ }
+]

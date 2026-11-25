@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HAT4KM66Y8",
+  "campo": "directores",
+  "valor": [
+   "Milagros Mumenthaler"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 74",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=74",
+  "antes": {
+   "ficci-65": "Zhedan Deng"
+  }
+ },
+ {
+  "work_id": "w_R4HAT4KM66Y8",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 74",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=74",
+  "antes": {
+   "ficci-65": "2024"
+  }
+ },
+ {
+  "work_id": "w_R4HAT4KM66Y8",
+  "campo": "paises",
+  "valor": [
+   "CH",
+   "AR"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 74",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=74",
+  "antes": {
+   "ficci-65": "Suiza, Argentina"
+  }
+ },
+ {
+  "work_id": "w_R4HAT4KM66Y8",
+  "campo": "sinopsis.es",
+  "valor": "Lina, diseñadora de moda de 34 años, acaba de recibir un premio. Poco después de la ceremonia se encierra en un baño, sale corriendo y se lanza a un río helado. Sobrevive, pero algo en su vida se desplaza: queda como suspendida entre dos nombres y dos vidas posibles, y lo cotidiano se abre hacia zonas de extrañeza y misterio.",
+  "motivo": "catálogo oficial de FICCI 65, p. 74",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=74",
+  "antes": {
+   "ficci-65": "Lina tiene 34 años, es diseñadora de moda y acaba de recibir un premio. Poco después de la ceremonia, se encierra en un baño, sale corriendo y se lanza a un río helado. Sobrevive."
+  }
+ },
+ {
+  "work_id": "w_R4HAT4KM66Y8",
+  "campo": "sinopsis.en",
+  "valor": "Lina, a 34-year-old fashion designer, has just received an award. Shortly after the ceremony she locks herself in a bathroom, runs out, and jumps into a frozen river. She survives, but something in her life shifts: she seems suspended between two names and two possible lives, and the everyday opens up into strangeness and mystery.",
+  "motivo": "catálogo oficial de FICCI 65, p. 74",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=74",
+  "antes": {
+   "ficci-65": "Lina is 34, a fashion designer who has just received an award. Shortly after the ceremony, she locks herself in a bathroom, runs out, and throws herself into an icy river. She survives."
+  }
+ },
+ {
+  "work_id": "w_R4HAT4KM66Y8",
+  "campo": "xref.tmdb",
+  "valor": 1031084,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1031084"
+ }
+]

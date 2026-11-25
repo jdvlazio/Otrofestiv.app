@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_4KE9K3XEVDCP",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "5f74a7f58b19"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Niska trava",
+  "valor": "Una tarde de principios de verano comienza con un juego. Un niño cuenta hasta tres mil y los demás se esconden entre los jardines de los suburbios. Entretanto, un padre joven pasa la tarde con el hijo de otra persona, un anciano aguarda una llamada que cambiará su vida y el futuro de una amistad se ve amenazado.",
+  "original": "Una tarde de principios de verano comienza con un juego. Mientras un niño cuenta hasta tres mil, los demás se esconden entre los jardines de las casas de los suburbios. Entretanto, un padre joven pasa la tarde con el hijo de otra persona, un anciano aguarda una llamada que cambiará su vida y el futuro de una amistad se ve amenazado. El juego termina cuando los mosquitos empiezan a surgir de la hierba.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "749724a2072a"
+  }
+ },
+ {
+  "work_id": "w_4KE9K3XEVDCP",
+  "campo": "directores",
+  "valor": [
+   "David Gašo"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "David Gašo"
+  }
+ },
+ {
+  "work_id": "w_4KE9K3XEVDCP",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_4KE9K3XEVDCP",
+  "campo": "paises",
+  "valor": [
+   "HR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Croacia"
+  }
+ },
+ {
+  "work_id": "w_4KE9K3XEVDCP",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KE9K3XEVDCP",
+  "campo": "sinopsis.en",
+  "valor": "An early summer evening starts with a game. As one kid counts to three thousand, the others hide in a row of suburban gardens. Meanwhile, a young father spends the evening with someone else’s child, an old man awaits a call that will change his life, and the future of a friendship is threatened.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS A",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "An early summer evening starts with a game. As one kid counts to three thousand, the others hide in a row of suburban gardens. Meanwhile, a young father spends the evening with someone else’s child, an old man awaits a call that will change his life, and the future of a friendship is threatened. The game ends when mosquitoes start rising from the grass."
+  }
+ },
+ {
+  "work_id": "w_4KE9K3XEVDCP",
+  "campo": "xref.tmdb",
+  "valor": 1042224,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1042224"
+  }
+ },
+ {
+  "work_id": "w_4KE9K3XEVDCP",
+  "campo": "xref.letterboxd",
+  "valor": "short-cut-grass",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "short-cut-grass"
+  }
+ },
+ {
+  "work_id": "w_4KE9K3XEVDCP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/niska-trava.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/niska-trava.jpg"
+  }
+ }
+]

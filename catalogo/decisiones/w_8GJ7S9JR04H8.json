@@ -1,0 +1,49 @@
+[
+ {
+  "work_id": "w_8GJ7S9JR04H8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/funza-2026/basta-mama.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/funza-2026/basta-mama.jpg",
+   "/assets/guatape-2026/basta-mama.jpg"
+  ],
+  "antes": {
+   "funza-2026": "/assets/funza-2026/basta-mama.jpg",
+   "guatape-2026": "/assets/guatape-2026/basta-mama.jpg"
+  }
+ },
+ {
+  "work_id": "w_8GJ7S9JR04H8",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "4e9e5b30c453"
+  ],
+  "original_de": [
+   "funza-2026",
+   "guatape-2026"
+  ],
+  "titulo": "Basta Mamá",
+  "valor": "Fernando, de 45 años, aún vive con su sobreprotectora madre e intenta ocultárselo a su moderna novia, quien además es su jefa. La pequeña mentira, que empieza en una cena de cumpleaños, se convierte en un divertido enredo de secretos y choques generacionales: tendrá que elegir entre la comodidad de mamá y el amor de su vida.",
+  "original": "Fernando, un hombre de 45 años que aún vive con su sobreprotectora madre, intenta ocultarle ese secreto a su moderna novia, quien además es su jefa. Lo que comienza como una pequeña mentira durante una cena de cumpleaños se convierte en un enredo de secretos, choques generacionales y divertidas situaciones que lo obligarán a elegir entre la comodidad de mamá y el amor de su vida.",
+  "sintesis": {
+   "redacta": "sesión App",
+   "verifica": "agente verificador independiente",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "05554f3c5583"
+  },
+  "antes": {
+   "funza-2026": "Fernando, un hombre de 45 años que aún vive con su sobreprotectora madre, intenta ocultarle ese secreto a su moderna novia, quien además es su jefa. Lo que comienza como una pequeña mentira durante una cena de cumpleaños se convierte en un enredo de secretos, choques generacionales y divertidas situaciones que lo obligarán a elegir entre la comodidad de mamá y el amor de su vida.",
+   "guatape-2026": "Fernando, un hombre de 45 años que aún vive con su sobreprotectora madre, intenta ocultarle ese secreto a su moderna novia, quien además es su jefa. Lo que comienza como una pequeña mentira durante una cena de cumpleaños se convierte en un enredo de secretos, choques generacionales y divertidas situaciones que lo obligarán a elegir entre la comodidad de mamá y el amor de su vida."
+  }
+ }
+]

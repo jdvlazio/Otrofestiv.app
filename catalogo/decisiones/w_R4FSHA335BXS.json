@@ -1,0 +1,72 @@
+[
+ {
+  "work_id": "w_R4FSHA335BXS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/las-formas-de-la-magia.jpg",
+   "/assets/miradas-2026/las-formas-de-la-magia.jpg",
+   "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LFM_poster_Ficci_595x842%20-%20Maria%20Paula%20Lorgia.jpg?itok=5XCaIr83",
+   "https://image.tmdb.org/t/p/w500/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg"
+  ],
+  "antes": {
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg",
+   "ficci-65": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_LFM_poster_Ficci_595x842%20-%20Maria%20Paula%20Lorgia.jpg?itok=5XCaIr83",
+   "midbo-2026": "/assets/midbo-2026/las-formas-de-la-magia.jpg",
+   "miradas-2026": "/assets/miradas-2026/las-formas-de-la-magia.jpg",
+   "villadeleyvaiff-2026": "https://image.tmdb.org/t/p/w500/lEWolBB40mm3KON8u2dWnPk0cVJ.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4FSHA335BXS",
+  "campo": "sinopsis.es",
+  "valor": "Del archivo de Betamax que conservó el famoso mago Gustavo Lorgia, su hija recopila imágenes de sus espectáculos en televisión y de la vida en familia, cuando ella era apenas un bebé. Entre el mago deslumbrante y el padre cariñoso, la directora busca conciliar a ambos para dar forma a su duelo, con una intervención mínima y breves apuntes escritos.",
+  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 45",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (lector independiente)",
+  "vistas": [
+   "b187c6306c8c",
+   "d48921a1faa1"
+  ],
+  "antes": {
+   "cinemancia-2026": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+   "ficci-65": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+   "midbo-2026": "Un año después de la muerte de su padre, el mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+   "miradas-2026": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición.",
+   "villadeleyvaiff-2026": "Un año después de la muerte de su padre, el reconocido mago colombiano Gustavo Lorgia, la directora realiza una exploración por sus archivos de video que revelan su trayectoria como artista, su rol como padre y la estética televisiva de una época. Una película que acude al archivo como medio para atravesar el duelo y a la memoria como forma de resistir a la desaparición."
+  },
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=45"
+ },
+ {
+  "work_id": "w_R4FSHA335BXS",
+  "campo": "directores",
+  "valor": [
+   "María Paula Lorgia Garnica"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2026": "María Paula Lorgia Garnica",
+   "ficci-65": "María Paula Lorgia",
+   "midbo-2026": "Maria Paula Lorgia Garnica",
+   "miradas-2026": "María Paula Lorgia Garnica",
+   "villadeleyvaiff-2026": "María Paula Lorgia"
+  }
+ },
+ {
+  "work_id": "w_R4FSHA335BXS",
+  "campo": "sinopsis.en",
+  "valor": "From the Betamax archive kept by the famous magician Gustavo Lorgia, his daughter gathers footage of his television shows and of family life, when she was a baby. Between the dazzling magician and the loving father, the director seeks to reconcile the two to give shape to her grief, with minimal intervention and brief written notes.",
+  "motivo": "catálogo oficial de FICCI 65, p. 45",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=45"
+ }
+]

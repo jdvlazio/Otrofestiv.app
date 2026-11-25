@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KG27FNAT85F",
+  "campo": "directores",
+  "valor": [
+   "Robert Brand Ordóñez"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Robert Brand Ordóñez"
+  }
+ },
+ {
+  "work_id": "w_4KG27FNAT85F",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KG27FNAT85F",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KG27FNAT85F",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KG27FNAT85F",
+  "campo": "sinopsis.es",
+  "valor": "El fuerte clamor de la madre de un desaparecido mueve, a través del llamado de la tierra, a “Caín” (33) un victimario amnésico, a emprender un viaje hasta el lugar en medio de la selva donde asesinó y enterró a Marcos (30) su última víctima y quien lo acompaña en el viaje.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "El fuerte clamor de la madre de un desaparecido mueve, a través del llamado de la tierra, a “Caín” (33) un victimario amnésico, a emprender un viaje hasta el lugar en medio de la selva donde asesinó y enterró a Marcos (30) su última víctima y quien lo acompaña en el viaje."
+  }
+ },
+ {
+  "work_id": "w_4KG27FNAT85F",
+  "campo": "sinopsis.en",
+  "valor": "The strong clamor of the mother of a missing person moves, through the call of the earth, to “Cain” (33) an amnesiac victimizer, to undertake a journey to the place in the middle of the jungle where he murdered and buried Marcos (30) his last victim and who accompanies him on the journey.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "The strong clamor of the mother of a missing person moves, through the call of the earth, to “Cain” (33) an amnesiac victimizer, to undertake a journey to the place in the middle of the jungle where he murdered and buried Marcos (30) his last victim and who accompanies him on the journey."
+  }
+ },
+ {
+  "work_id": "w_4KG27FNAT85F",
+  "campo": "xref.tmdb",
+  "valor": 1575134,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1575134"
+  }
+ },
+ {
+  "work_id": "w_4KG27FNAT85F",
+  "campo": "xref.letterboxd",
+  "valor": "cuando-retornen-las-garzas",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "cuando-retornen-las-garzas"
+  }
+ },
+ {
+  "work_id": "w_4KG27FNAT85F",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/cuando-retornen-las-garzas.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/cuando-retornen-las-garzas.jpg"
+  }
+ }
+]

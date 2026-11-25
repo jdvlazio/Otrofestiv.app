@@ -1,0 +1,40 @@
+[
+ {
+  "work_id": "w_JET703J1X8Y5",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-23",
+  "quien": "Juan",
+  "vistas": [
+   "4e3d22f46261",
+   "97590f69b110"
+  ],
+  "original_de": [
+   "aleste-2026"
+  ],
+  "titulo": "Aquí, en otros lugares",
+  "valor": "Julio de 2023. Nagorno-Karabaj lleva siete meses bajo el asedio de Azerbaiyán. Ante la inminencia de la guerra, el realizador pide a su amigo Artsiv que filme su vida cotidiana con su familia. De esas imágenes tiernas emerge la resistencia silenciosa de un pueblo al borde de abandonar su hogar para siempre.",
+  "original": "En julio de 2023, Nagorno-Karabaj lleva siete meses bajo el asedio de Azerbaiyán. Ante la inminencia de la guerra, la realizadora pide a su amigo Artsiv que filme su vida cotidiana junto a su esposa Tatev y sus cinco hijos. A través de imágenes de gran ternura emerge una forma silenciosa de resistencia: la de un pueblo que se encuentra al borde de tener que abandonar su hogar para siempre.",
+  "sintesis": {
+   "redacta": "primera lectura",
+   "verifica": "segunda lectura",
+   "veredicto": "fiel",
+   "fecha": "2026-11-25",
+   "huella": "1ba27c1eff60"
+  },
+  "antes": {
+   "aleste-2026": "En julio de 2023, Nagorno-Karabaj lleva siete meses bajo el asedio de Azerbaiyán. Ante la inminencia de la guerra, la realizadora pide a su amigo Artsiv que filme su vida cotidiana junto a su esposa Tatev y sus cinco hijos. A través de imágenes de gran ternura emerge una forma silenciosa de resistencia: la de un pueblo que se encuentra al borde de tener que abandonar su hogar para siempre."
+  }
+ },
+ {
+  "work_id": "w_JET703J1X8Y5",
+  "campo": "sinopsis.en",
+  "valor": "July 2023. Nagorno-Karabakh has been under siege by Azerbaijan for seven months. As war draws nearer, Comes Chahbazian asks his friend Artziv to film his daily life with his wife Tatev and their five children.",
+  "motivo": "Errata \"f ilm\".",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "antes": {
+   "aleste-2026": "July 2023. Nagorno-Karabakh has been under siege by Azerbaijan for seven months. As war draws nearer, Comes Chahbazian asks his friend Artziv to f ilm his daily life with his wife Tatev and their five children."
+  }
+ }
+]

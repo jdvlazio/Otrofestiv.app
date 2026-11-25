@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4FJFY7626WB",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/las-almas-ni-los-ojos.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/las-almas-ni-los-ojos.jpg",
+   "/assets/villadeleyvaiff-2026/las-almas-ni-los-ojos.jpg",
+   "https://image.tmdb.org/t/p/w500/1qEi6ZaKPyVOEilZYdRdMK4MVJj.jpg",
+   "https://image.tmdb.org/t/p/w500/k5qYkuNLpN07AtXJ9nudLIifPQ5.jpg"
+  ],
+  "antes": {
+   "cinemancia-2026": "https://image.tmdb.org/t/p/w500/1qEi6ZaKPyVOEilZYdRdMK4MVJj.jpg",
+   "ficci-65": "https://image.tmdb.org/t/p/w500/k5qYkuNLpN07AtXJ9nudLIifPQ5.jpg",
+   "midbo-2026": "/assets/midbo-2026/las-almas-ni-los-ojos.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/las-almas-ni-los-ojos.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4FJFY7626WB",
+  "campo": "sinopsis.es",
+  "valor": "Tras huir de la violencia a los 15 años, Pacho pasa cuatro décadas lejos de Anserma. Ahora una fotografía activa el deseo de regresar y, en su retorno, imaginado como viaje interestelar, busca aquello que dejó atrás. Las huellas persistentes de la muerte se entrelazan con un paisaje de expresionismo rural, memoria e historia.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026, villadeleyvaiff-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "a04fd19dba68",
+   "ddaf97543ecd",
+   "e39e98fb2f24"
+  ],
+  "antes": {
+   "cinemancia-2026": "Tras huir de la violencia a los 15 años, Pacho pasa cuatro décadas lejos de Anserma. Ahora una fotografía activa el deseo de regresar y, en su retorno, imaginado como viaje interestelar, busca aquello que dejó atrás. Las huellas persistentes de la muerte se entrelazan con un paisaje de expresionismo rural, memoria e historia.",
+   "ficci-65": "Lejos de Anserma, Pacho continuó su vida escapando de la violencia. A sus 15 años, su única alternativa lo obligó a desconectarse de su origen.",
+   "midbo-2026": "Pacho salió de su pueblo por hechos violentos hace más de 50 años y nunca pudo regresar. Al ver una vieja fotografía que se parece al último recuerdo que guarda de su tierra, siente el deseo de volver y encontrarse con los que allí dejó. Ante la imposibilidad de hacerlo, inventa un regreso imaginario para reencontrarse con su historia y sanar las huellas que la violencia dejó en su vida. En ese pueblo que parece solitario, lo reciben unos rostros que lo han estado esperando. Desde el pasado, con sus miradas, lo acompañan a recorrer las calles. Mediante el juego y la imaginación, Pacho le da vida una imagen de archivo de hace 70 años, la misma que se convirtió en símbolo inaugural de la violencia en Colombia. En su retorno imaginado, la fotografía se transforma en territorio vivo y la imaginación en un acto de resistencia y sanación, frente a un trauma colectivo de un país entero que ha plasmado su violencia una y otra vez en una misma imagen.",
+   "villadeleyvaiff-2026": "Tras huir de la violencia a los 15 años, Pacho pasa cuatro décadas lejos de Anserma. Ahora una fotografía activa el deseo de regresar y, en su retorno, imaginado como viaje interestelar, busca aquello que dejó atrás. Las huellas persistentes de la muerte se entrelazan con un paisaje de expresionismo rural, memoria e historia."
+  }
+ },
+ {
+  "work_id": "w_R4FJFY7626WB",
+  "campo": "directores",
+  "valor": [
+   "María Canela Reyes",
+   "César Alejandro Jaimes"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cinemancia-2026": "Canela Reyes y César Jaimes",
+   "ficci-65": "María Canela Reyes, César Alejandro Jaimes",
+   "midbo-2026": "Cesar Jaimes y Canela Reyes",
+   "villadeleyvaiff-2026": "Canela Reyes, César Jaimes"
+  }
+ },
+ {
+  "work_id": "w_R4FJFY7626WB",
+  "campo": "sinopsis.en",
+  "valor": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Las almas ni los ojos",
+  "antes": {
+   "cinemancia-2026": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
+   "ficci-65": "Far from Anserma, Pacho continued his life fleeing violence. At 15, his only alternative forced him to sever ties with his origins.",
+   "midbo-2026": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history",
+   "villadeleyvaiff-2026": "After fleeing violence at age 15, Pacho spends four decades away from Anserma. Now a photograph sparks a desire to return, and on his journey home —imagined as an interstellar voyage— he searches for what he left behind. The lingering traces of death intertwine with a landscape of rural expressionism, memory, and history"
+  }
+ }
+]

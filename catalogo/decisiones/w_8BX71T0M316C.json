@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_8BX71T0M316C",
+  "campo": "directores",
+  "valor": [
+   "Rolando Gil"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Rolando Gil"
+  }
+ },
+ {
+  "work_id": "w_8BX71T0M316C",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_8BX71T0M316C",
+  "campo": "paises",
+  "valor": [
+   "PR"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Puerto Rico"
+  }
+ },
+ {
+  "work_id": "w_8BX71T0M316C",
+  "campo": "sinopsis.es",
+  "valor": "Esther, una mujer con síndrome de Down, enfrenta por primera vez la vida de manera independiente tras perder a su madre sobreprotectora. Inspirada en un caso real ocurrido en Puerto Rico, la historia explora la soledad, la superación y el descubrimiento personal.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Esther, una mujer con síndrome de Down, enfrenta por primera vez la vida de manera independiente tras perder a su madre sobreprotectora. Inspirada en un caso real ocurrido en Puerto Rico, la historia explora la soledad, la superación y el descubrimiento personal."
+  }
+ },
+ {
+  "work_id": "w_8BX71T0M316C",
+  "campo": "sinopsis.en",
+  "valor": "Esther, a woman with Down syndrome, faces life on her own for the first time after losing her overprotective mother. Inspired by a true case in Puerto Rico, the story explores loneliness, overcoming hardship and self-discovery.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Esther, a woman with Down syndrome, faces life on her own for the first time after losing her overprotective mother. Inspired by a true case in Puerto Rico, the story explores loneliness, overcoming hardship and self-discovery."
+  }
+ },
+ {
+  "work_id": "w_8BX71T0M316C",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/ma-despierta.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/ma-despierta.jpg"
+  }
+ }
+]

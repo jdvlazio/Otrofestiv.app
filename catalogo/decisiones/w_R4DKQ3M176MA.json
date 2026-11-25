@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_R4DKQ3M176MA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/gris.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/popayan-2026/gris.jpg",
+   "/assets/villadeleyvaiff-2026/gris.jpg",
+   "https://admin.alternativa.film/uploads/Gris_Poster_Eng_Loren_Escandon_62e9c1d610.jpg"
+  ],
+  "antes": {
+   "aff-2026": "https://admin.alternativa.film/uploads/Gris_Poster_Eng_Loren_Escandon_62e9c1d610.jpg",
+   "popayan-2026": "/assets/popayan-2026/gris.jpg",
+   "villadeleyvaiff-2026": "/assets/villadeleyvaiff-2026/gris.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4DKQ3M176MA",
+  "campo": "sinopsis.es",
+  "valor": "Sofía, una niña curiosa e imaginativa, enfrenta desafíos en la escuela mientras comienza a navegar las complejidades de su identidad multirracial. Sus dibujos cobran vida en animaciones llenas de fantasía y la acompañan en un viaje de autoconocimiento, marcado por dudas, resiliencia y aprendizajes sobre el sentido de pertenencia. Sofía aprende a abrazar los matices que la definen, fusionando amor, cultura e individualidad en una narrativa única.",
+  "motivo": "corrección de «texto roto»: texto del festival, corregido",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "9daff19e7d97"
+  ],
+  "antes": {
+   "aff-2026": "Sofía; una niña curiosa e imaginativa; enfrenta desafíos en la escuela mientras comienza a navegar las complejidades de su identidad multirracial. Sus dibujos cobran vida en animaciones llenas de fantasía y la acompañan en un viaje de autoconocimiento; marcado por dudas; resiliencia y aprendizajes sobre el sentido de pertenencia. Sofía aprende a abrazar los matices que la definen; fusionando amor; cultura e individualidad en una narrativa única.",
+   "popayan-2026": "Sofía; una niña curiosa e imaginativa; enfrenta desafíos en la escuela mientras comienza a navegar las complejidades de su identidad multirracial. Sus dibujos cobran vida en animaciones llenas de fantasía y la acompañan en un viaje de autoconocimiento; marcado por dudas; resiliencia y aprendizajes sobre el sentido de pertenencia. Sofía aprende a abrazar los matices que la definen; fusionando amor; cultura e individualidad en una narrativa única.",
+   "villadeleyvaiff-2026": "Sofía; una niña curiosa e imaginativa; enfrenta desafíos en la escuela mientras comienza a navegar las complejidades de su identidad multirracial. Sus dibujos cobran vida en animaciones llenas de fantasía y la acompañan en un viaje de autoconocimiento; marcado por dudas; resiliencia y aprendizajes sobre el sentido de pertenencia. Sofía aprende a abrazar los matices que la definen; fusionando amor; cultura e individualidad en una narrativa única."
+  }
+ },
+ {
+  "work_id": "w_R4DKQ3M176MA",
+  "campo": "directores",
+  "valor": [
+   "Loren Escandón"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "Loren Escandón",
+   "popayan-2026": "Loren Escandon",
+   "villadeleyvaiff-2026": "Loren Escandón"
+  }
+ },
+ {
+  "work_id": "w_R4DKQ3M176MA",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "US"
+  ],
+  "motivo": "un dato por obra: la coproducción completa que publica un festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "aff-2026": "Colombia/EEUU",
+   "popayan-2026": "Colombia",
+   "villadeleyvaiff-2026": "Colombia"
+  }
+ }
+]

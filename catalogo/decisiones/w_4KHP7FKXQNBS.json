@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KHP7FKXQNBS",
+  "campo": "directores",
+  "valor": [
+   "Agnès Patron",
+   "Morgane Le Péchon"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Agnès Patron, Morgane Le Péchon"
+  }
+ },
+ {
+  "work_id": "w_4KHP7FKXQNBS",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_4KHP7FKXQNBS",
+  "campo": "paises",
+  "valor": [
+   "FR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia"
+  }
+ },
+ {
+  "work_id": "w_4KHP7FKXQNBS",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KHP7FKXQNBS",
+  "campo": "sinopsis.es",
+  "valor": "Cuatro niños se escabullen de sus camas y descubren que las estrellas empiezan a caer del cielo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Cuatro niños se escabullen de sus camas y descubren que las estrellas empiezan a caer del cielo."
+  }
+ },
+ {
+  "work_id": "w_4KHP7FKXQNBS",
+  "campo": "sinopsis.en",
+  "valor": "Four children slip out of bed and discover that stars are starting to fall from the sky.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Four children slip out of bed and discover that stars are starting to fall from the sky."
+  }
+ },
+ {
+  "work_id": "w_4KHP7FKXQNBS",
+  "campo": "xref.tmdb",
+  "valor": 1212653,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1212653"
+  }
+ },
+ {
+  "work_id": "w_4KHP7FKXQNBS",
+  "campo": "xref.letterboxd",
+  "valor": "meteores-2023",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "meteores-2023"
+  }
+ },
+ {
+  "work_id": "w_4KHP7FKXQNBS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/meteores.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/meteores.jpg"
+  }
+ }
+]

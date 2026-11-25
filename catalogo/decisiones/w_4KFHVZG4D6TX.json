@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KFHVZG4D6TX",
+  "campo": "directores",
+  "valor": [
+   "Segundo de Chomón"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Segundo de Chomón"
+  }
+ },
+ {
+  "work_id": "w_4KFHVZG4D6TX",
+  "campo": "anio",
+  "valor": 1902,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1902"
+  }
+ },
+ {
+  "work_id": "w_4KFHVZG4D6TX",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KFHVZG4D6TX",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KFHVZG4D6TX",
+  "campo": "sinopsis.es",
+  "valor": "La reconstrucción de un choque ferroviario combina imágenes de trenes reales con escenas realizadas mediante maquetas.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "La reconstrucción de un choque ferroviario combina imágenes de trenes reales con escenas realizadas mediante maquetas."
+  }
+ },
+ {
+  "work_id": "w_4KFHVZG4D6TX",
+  "campo": "sinopsis.en",
+  "valor": "A reconstruction of a railway collision combines footage of real trains with scenes created using miniature models.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A reconstruction of a railway collision combines footage of real trains with scenes created using miniature models."
+  }
+ },
+ {
+  "work_id": "w_4KFHVZG4D6TX",
+  "campo": "xref.tmdb",
+  "valor": 1657113,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1657113"
+  }
+ },
+ {
+  "work_id": "w_4KFHVZG4D6TX",
+  "campo": "xref.letterboxd",
+  "valor": "choque-de-trenes",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "choque-de-trenes"
+  }
+ },
+ {
+  "work_id": "w_4KFHVZG4D6TX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/choque-de-trenes.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/choque-de-trenes.jpg"
+  }
+ }
+]

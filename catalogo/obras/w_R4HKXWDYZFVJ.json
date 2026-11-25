@@ -22,10 +22,11 @@
   "Documental"
  ],
  "afiche": {
-  "archivo": "/assets/ficdeh/floresmiro.jpg",
-  "veredicto": "oficial-festival"
+  "archivo": "https://image.tmdb.org/t/p/w500/946mgZZneD5dezapP1PcPwoUlfu.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1738416,
   "letterboxd": "floresmiro"
  },
  "versiones": [

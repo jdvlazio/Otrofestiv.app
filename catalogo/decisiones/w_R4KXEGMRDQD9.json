@@ -1,0 +1,65 @@
+[
+ {
+  "work_id": "w_R4KXEGMRDQD9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/midbo-2026/colors-of-white-rock.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/midbo-2026/colors-of-white-rock.jpg",
+   "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/6930/large_COLORSOFWHITEROCK_PETITE_MAISON_PRODUCTION_1_clean_16x9.jpg"
+  ],
+  "antes": {
+   "midbo-2026": "/assets/midbo-2026/colors-of-white-rock.jpg",
+   "tribeca-2026": "https://d13jj08vfqimqg.cloudfront.net/uploads/film/photo_1/6930/large_COLORSOFWHITEROCK_PETITE_MAISON_PRODUCTION_1_clean_16x9.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4KXEGMRDQD9",
+  "campo": "sinopsis.es",
+  "valor": "Maikhuu es una de las pocas mujeres que trabajan como conductoras de camiones en las rutas del carbón de Mongolia, en medio del auge minero que atraviesa el país. Día tras día, enfrenta la peligrosa tarea de transportar carbón a través del implacable desierto del Gobi. Atrapada en un convoy interminable de camiones con destino a la frontera con China, lucha por mantener a su familia, mientras su recorrido revela los costos humanos y ambientales de «Minegolia».",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "0bd6b7a31f14",
+   "a6ce26e034a4"
+  ],
+  "antes": {
+   "midbo-2026": "Maikhuu es una de las pocas mujeres que trabajan como conductoras de camiones en las rutas del carbón de Mongolia, en medio del auge minero que atraviesa el país. Día tras día, enfrenta la peligrosa tarea de transportar carbón a través del implacable desierto del Gobi. Atrapada en un convoy interminable de camiones con destino a la frontera con China, lucha por mantener a su familia, mientras su recorrido revela los costos humanos y ambientales de «Minegolia».",
+   "tribeca-2026": "Maikhuu es una de las pocas mujeres conductoras de camiones que transporta carbón por el desierto del Gobi de Mongolia. Una madre soltera que navega sequías severas, accidentes mortales y una competencia masculina incesante."
+  }
+ },
+ {
+  "work_id": "w_R4KXEGMRDQD9",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "MN"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "midbo-2026": "Francia, Mongolia",
+   "tribeca-2026": "France, Mongolia"
+  }
+ },
+ {
+  "work_id": "w_R4KXEGMRDQD9",
+  "campo": "sinopsis.en",
+  "valor": "Maikhuu is one of the only female truck drivers hauling coal through Mongolia's Gobi desert during the country's mining boom. A single mother navigating severe droughts, deadly accidents, and relentless male competition.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Colors of White Rock",
+  "antes": {
+   "midbo-2026": "Ever since its shift toward liberalism after the Cold War, Mongolia has opened up its mines in the Gobi desert for exploitation – resulting in an onslaught of truck convoys transporting Mongolian coal to China. Within this arduous, predominantly-male line of work, Maikhuu – a former taxi driver and hairdresser —– stands alone as one of the only female truck drivers working the mining boom.",
+   "tribeca-2026": "Maikhuu is one of the only female truck drivers hauling coal through Mongolia's Gobi desert during the country's mining boom. A single mother navigating severe droughts, deadly accidents, and relentless male competition."
+  }
+ }
+]

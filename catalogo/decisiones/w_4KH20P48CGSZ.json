@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KH20P48CGSZ",
+  "campo": "directores",
+  "valor": [
+   "Daniel Pérez Silva"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Daniel Pérez Silva"
+  }
+ },
+ {
+  "work_id": "w_4KH20P48CGSZ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KH20P48CGSZ",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_4KH20P48CGSZ",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KH20P48CGSZ",
+  "campo": "sinopsis.es",
+  "valor": "Cuatro músicos de jazz se reúnen en un club de A Coruña. Los sonidos y ritmos de la ciudad se mezclan con los de su música.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Cuatro músicos de jazz se reúnen en un club de A Coruña. Los sonidos y ritmos de la ciudad se mezclan con los de su música."
+  }
+ },
+ {
+  "work_id": "w_4KH20P48CGSZ",
+  "campo": "sinopsis.en",
+  "valor": "Four jazz musicians meet at a club in A Coruña. The city’s sounds and rhythms blend with their music.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Four jazz musicians meet at a club in A Coruña. The city’s sounds and rhythms blend with their music."
+  }
+ },
+ {
+  "work_id": "w_4KH20P48CGSZ",
+  "campo": "xref.tmdb",
+  "valor": 1555898,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1555898"
+  }
+ },
+ {
+  "work_id": "w_4KH20P48CGSZ",
+  "campo": "xref.letterboxd",
+  "valor": "a-voz-de-todas-as-cousas",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "a-voz-de-todas-as-cousas"
+  }
+ },
+ {
+  "work_id": "w_4KH20P48CGSZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/a-voz-de-todas-as-cousas.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/a-voz-de-todas-as-cousas.jpg"
+  }
+ }
+]

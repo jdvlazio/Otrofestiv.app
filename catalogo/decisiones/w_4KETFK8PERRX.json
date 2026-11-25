@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_4KETFK8PERRX",
+  "campo": "directores",
+  "valor": [
+   "Adrien Lagier",
+   "Roman Bellity"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Adrien Lagier, Roman Bellity"
+  }
+ },
+ {
+  "work_id": "w_4KETFK8PERRX",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KETFK8PERRX",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "US"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Francia, Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_4KETFK8PERRX",
+  "campo": "generos",
+  "valor": [
+   "Romance"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Romance"
+  }
+ },
+ {
+  "work_id": "w_4KETFK8PERRX",
+  "campo": "sinopsis.es",
+  "valor": "Cuando Mila le dice que está con otra persona, Adam se refugia en recuerdos y fantasías. Intenta aferrarse a un amor que nunca terminó de comprender.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Cuando Mila le dice que está con otra persona, Adam se refugia en recuerdos y fantasías. Intenta aferrarse a un amor que nunca terminó de comprender."
+  }
+ },
+ {
+  "work_id": "w_4KETFK8PERRX",
+  "campo": "sinopsis.en",
+  "valor": "When Mila tells him she’s seeing someone else, Adam’s world collapses. He drifts through his memories and fantasies, trying to hold on to a love he never truly knew how to see, and which now slips away from him.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "When Mila tells him she’s seeing someone else, Adam’s world collapses. He drifts through his memories and fantasies, trying to hold on to a love he never truly knew how to see, and which now slips away from him."
+  }
+ },
+ {
+  "work_id": "w_4KETFK8PERRX",
+  "campo": "xref.tmdb",
+  "valor": 1764849,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1764849"
+  }
+ },
+ {
+  "work_id": "w_4KETFK8PERRX",
+  "campo": "xref.letterboxd",
+  "valor": "a-goldfishs-memory",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "a-goldfishs-memory"
+  }
+ },
+ {
+  "work_id": "w_4KETFK8PERRX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/la-memoire-des-poissons.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/la-memoire-des-poissons.jpg"
+  }
+ }
+]

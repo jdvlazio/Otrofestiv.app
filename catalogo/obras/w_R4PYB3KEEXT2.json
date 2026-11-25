@@ -10,15 +10,25 @@
  "directores": [
   "Ronni Shalev"
  ],
+ "aliases": [
+  {
+   "titulo": "2:LOVE",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "Una paleta de colores fluorescentes, imágenes angulosas y afiladas y un coro jubiloso se conjugan de forma exquisita hasta un crescendo épico, en el gozoso relato animado de Ronni Shalev sobre dos recogepelotas de una pista de tenis cuya rivalidad inicial se transforma en una pasión eléctrica y magnética.",
-  "en": "A fluorescent colour palette, sharp angular visuals, and a gleeful choir coalesce exquisitely, building up to an epic crescendo in Ronni Shalev’s joyful animated story of two ball girls on a tennis court whose initial rivalry transforms into an electric, magnetic passion."
+  "es": "Cuando dos recogepelotas cruzan sus miradas en un prestigioso torneo de tenis, su rivalidad inicial se transforma poco a poco en una pasión magnética.",
+  "en": "When two ball girls lock eyes on the court of a prestigious tennis tournament, their initial rivalry slowly transforms into a magnetic passion."
  },
+ "generos": [
+  "Animación"
+ ],
  "afiche": {
-  "archivo": "https://images.ctfassets.net/22n7d68fswlw/HY5nFKcDn4IheITNho8z3/1a1af3e5e2ff1bc861150945ef85ac0d/2-Love_Still_03.webp",
-  "veredicto": "fotograma"
+  "archivo": "/assets/bogoshorts-2026/2-love.jpg",
+  "veredicto": "oficial"
  },
  "xref": {
+  "tmdb": 1730056,
   "letterboxd": "2-love"
  },
  "versiones": [
@@ -28,6 +38,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "tiff-2026"
  ]
 }

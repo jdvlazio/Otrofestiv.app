@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4HAG9AYGDFW",
+  "campo": "directores",
+  "valor": [
+   "Jorge Cadena",
+   "Lucía Martínez García"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 188",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=188"
+ },
+ {
+  "work_id": "w_R4HAG9AYGDFW",
+  "campo": "anio",
+  "valor": 2017,
+  "motivo": "catálogo oficial de FICCI 65, p. 188",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=188"
+ },
+ {
+  "work_id": "w_R4HAG9AYGDFW",
+  "campo": "paises",
+  "valor": [
+   "CH"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 188",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=188",
+  "antes": {
+   "ficci-65": "Suiza"
+  }
+ },
+ {
+  "work_id": "w_R4HAG9AYGDFW",
+  "campo": "sinopsis.es",
+  "valor": "Sonali, una hijra, sale del barrio de Versova, en Bombay, y se dirige al club donde cada noche ofrece su espectáculo bajo las miradas del público.",
+  "motivo": "catálogo oficial de FICCI 65, p. 188",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=188"
+ },
+ {
+  "work_id": "w_R4HAG9AYGDFW",
+  "campo": "sinopsis.en",
+  "valor": "Sonali, a hijra, leaves the neighborhood of Versova, in Mumbai, and heads to the club where every night she performs her show under the gaze of the audience.",
+  "motivo": "catálogo oficial de FICCI 65, p. 188",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=188"
+ },
+ {
+  "work_id": "w_R4HAG9AYGDFW",
+  "campo": "xref.tmdb",
+  "valor": 1668907,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1668907"
+ }
+]

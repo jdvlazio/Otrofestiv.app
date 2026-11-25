@@ -1,0 +1,130 @@
+[
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Claude",
+  "vistas": [
+   "4b8db26dff5e"
+  ],
+  "original_de": [
+   "provinciadevelez-2026"
+  ],
+  "titulo": "El fantástico Sr. Fox",
+  "valor": "Un astuto zorro, el señor Fox, parece llevar una vida idílica con su esposa y su hijo Ash. Pero, por las noches, se dedica a robar gallinas, patos y pavos en las granjas vecinas. Los granjeros deciden acabar con la situación cazándolo. Basada en el famoso libro para niños de Roald Dahl.",
+  "original": "Un astuto zorro llamado Fox (voz original de George Clooney) parece llevar una vida idílica con su esposa (Meryl Streep) y con su hijo Ash (Jason Schwartzman). Pero, por las noches, el señor Fox se dedica a robar gallinas, patos y pavos en las granjas vecinas. Los granjeros deciden acabar con la situación cazando a Mr. Fox. Basada en el famoso libro para niños de Roald Dahl.",
+  "sintesis": {
+   "redacta": "Claude (montaje provinciadevelez)",
+   "verifica": "agente verificador independiente (Sonnet)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "18683a7cca1d"
+  }
+ },
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "sinopsis.en",
+  "valor": "A cunning fox, Mr. Fox, seems to lead an idyllic life with his wife and his son Ash. But at night he steals chickens, ducks and turkeys from the neighboring farms. The farmers decide to put an end to it by hunting him down. Based on the famous children's book by Roald Dahl.",
+  "motivo": "traducción de la sinopsis en español",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "The Fantastic Mr. Fox, bored with his current life, plans a heist against the three local farmers. The farmers, tired of sharing their chickens with the sly fox, seek revenge against him and his family."
+  }
+ },
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "directores",
+  "valor": [
+   "Wes Anderson"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Wes Anderson"
+  }
+ },
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "anio",
+  "valor": 2009,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "2009"
+  }
+ },
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "generos",
+  "valor": [
+   "Aventura"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Aventura"
+  }
+ },
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "xref.tmdb",
+  "valor": 10315,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "10315"
+  }
+ },
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "xref.letterboxd",
+  "valor": "fantastic-mr-fox",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "fantastic-mr-fox"
+  }
+ },
+ {
+  "work_id": "w_7JCWN3D9J5SV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/el-fantastico-sr-fox.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/el-fantastico-sr-fox.jpg"
+  }
+ }
+]

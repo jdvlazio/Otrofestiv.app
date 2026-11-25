@@ -1,12 +1,12 @@
 {
  "id": "w_R4HCND4SVDFZ",
  "titulo_original": "El pagador de promesas",
- "anio": 2016,
+ "anio": 1962,
  "paises": [
   "BR"
  ],
  "directores": [
-  "Ujkan Hysaj"
+  "Anselmo Duarte"
  ],
  "aliases": [
   {
@@ -16,14 +16,16 @@
   }
  ],
  "sinopsis": {
-  "es": "Zé y Rosa, una pareja campesina, arriban de madrugada a una ciudad intermedia. El hombre carga una cruz y ambos llevan horas de caminata.",
-  "en": "Zé and Rosa, a peasant couple, arrive in a mid-sized city at dawn. The man carries a cross, and both have been walking for hours."
+  "es": "Zé y Rosa, una pareja campesina, llegan de madrugada a la ciudad. Él carga una cruz que prometió poner en el altar de Santa Bárbara cuando su burro casi muere. El párroco se lo impide. Su tenacidad atrae a la prensa amarillista y el apoyo de grupos marginados, y el Estado lo ve como un provocador. Un melodrama de escisiones religiosas y políticas.",
+  "en": "Zé and Rosa, a peasant couple, arrive in town before dawn. He carries a cross he promised to place on Saint Barbara's altar when his donkey nearly died. The priest stops him. His tenacity draws the tabloid press and the support of marginalized groups, and the state sees him as a provocateur. A melodrama of religious and political divisions."
  },
  "afiche": {
   "archivo": "https://image.tmdb.org/t/p/w185/3lOrYyD6N4cNY9WcXGYiOqWtVLt.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 59990
+ },
  "versiones": [
   {
    "etiqueta": "87 min",

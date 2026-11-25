@@ -1,0 +1,63 @@
+[
+ {
+  "work_id": "w_R4HEVVFT6VKS",
+  "campo": "directores",
+  "valor": [
+   "Henry Laserna Bermeo"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 165",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=165"
+ },
+ {
+  "work_id": "w_R4HEVVFT6VKS",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "catálogo oficial de FICCI 65, p. 165",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=165"
+ },
+ {
+  "work_id": "w_R4HEVVFT6VKS",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 165",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=165",
+  "antes": {
+   "ficci-65": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HEVVFT6VKS",
+  "campo": "sinopsis.es",
+  "valor": "Los adolescentes del barrio La María, en Cartagena, se animan a hacer un reportaje sobre quienes hacen piruetas con bicicleta en su barrio. Escuchan las visiones de los deportistas, sus preocupaciones por la estigmatización y su pedido de apertura a sus formas de pensar y vivir la ciudad.",
+  "motivo": "catálogo oficial de FICCI 65, p. 165",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=165"
+ },
+ {
+  "work_id": "w_R4HEVVFT6VKS",
+  "campo": "sinopsis.en",
+  "valor": "Teenagers from the La María neighborhood, in Cartagena, set out to make a report on those who perform bicycle tricks in their neighborhood. They listen to the athletes' perspectives, their concerns about stigmatization, and their call for openness to their ways of thinking and living the city.",
+  "motivo": "catálogo oficial de FICCI 65, p. 165",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=165"
+ },
+ {
+  "work_id": "w_R4HEVVFT6VKS",
+  "campo": "xref.tmdb",
+  "valor": 1668931,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/1668931"
+ }
+]

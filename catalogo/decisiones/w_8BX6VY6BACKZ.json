@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_8BX6VY6BACKZ",
+  "campo": "directores",
+  "valor": [
+   "Michael Koch"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Michael Koch"
+  }
+ },
+ {
+  "work_id": "w_8BX6VY6BACKZ",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_8BX6VY6BACKZ",
+  "campo": "paises",
+  "valor": [
+   "CH",
+   "DE"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Suiza, Alemania"
+  }
+ },
+ {
+  "work_id": "w_8BX6VY6BACKZ",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX6VY6BACKZ",
+  "campo": "sinopsis.es",
+  "valor": "Marco viene de las tierras bajas y trabaja en la granja de un pueblo alpino suizo, donde poco a poco se gana a los locales y a Anna, que tiene una hija de una relación anterior. Se casan y expresan su amor con sencillez. Todo va bien hasta que él empieza a perder el control de sus impulsos.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Marco viene de las tierras bajas y trabaja en la granja de un pueblo alpino suizo, donde poco a poco se gana a los locales y a Anna, que tiene una hija de una relación anterior. Se casan y expresan su amor con sencillez. Todo va bien hasta que él empieza a perder el control de sus impulsos."
+  }
+ },
+ {
+  "work_id": "w_8BX6VY6BACKZ",
+  "campo": "sinopsis.en",
+  "valor": "Marco, a lowlander, works on a farm in a remote Swiss alpine village, where he slowly wins over the locals and Anna, who has a daughter from a previous relationship. They marry and express their love in simple words. All goes well until Marco begins to lose control of his impulses.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Marco, a lowlander, works on a farm in a remote Swiss alpine village, where he slowly wins over the locals and Anna, who has a daughter from a previous relationship. They marry and express their love in simple words. All goes well until Marco begins to lose control of his impulses."
+  }
+ },
+ {
+  "work_id": "w_8BX6VY6BACKZ",
+  "campo": "xref.tmdb",
+  "valor": 728499,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "728499"
+  }
+ },
+ {
+  "work_id": "w_8BX6VY6BACKZ",
+  "campo": "xref.letterboxd",
+  "valor": "a-piece-of-sky-2022",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "a-piece-of-sky-2022"
+  }
+ },
+ {
+  "work_id": "w_8BX6VY6BACKZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/a-piece-of-sky.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/a-piece-of-sky.jpg"
+  }
+ }
+]

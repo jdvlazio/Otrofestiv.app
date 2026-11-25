@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_4KH835JPV8Z2",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "62ce99efd1d5"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Abrir monte",
+  "valor": "En 1929, en Colombia, un grupo de zapateros, “Los Bolcheviques del Líbano, Tolima”, luchó por mejorar las condiciones de vida y de trabajo en el país. Su revolución duró solo un día e intentaron borrar sus rastros. Las mujeres de la vereda se encuentran con Aura, abuela anarquista, en la sensación de que su rebelión aún sigue sucediendo.",
+  "original": "El 19 de julio de 1929, en un pueblo de Colombia, un grupo de zapateros luchó por mejorar las condiciones de vida y de trabajo en el país. Se llamaron “Los Bolcheviques del Líbano, Tolima”. Su revolución duró solo un día e intentaron borrar sus rastros. Las mujeres de esta vereda se encuentran con Aura, una abuela anarquista, en la sensación de que su rebelión aún sigue sucediendo.",
+  "sintesis": {
+   "redacta": "Claude",
+   "verifica": "Juan (24 nov 2026)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "16845e1f85db"
+  }
+ },
+ {
+  "work_id": "w_4KH835JPV8Z2",
+  "campo": "directores",
+  "valor": [
+   "María Rojas Arias"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "María Rojas Arias"
+  }
+ },
+ {
+  "work_id": "w_4KH835JPV8Z2",
+  "campo": "anio",
+  "valor": 2021,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2021"
+  }
+ },
+ {
+  "work_id": "w_4KH835JPV8Z2",
+  "campo": "paises",
+  "valor": [
+   "CO",
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia, Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KH835JPV8Z2",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KH835JPV8Z2",
+  "campo": "sinopsis.en",
+  "valor": "On July 19, 1929, in a small town in Colombia, a group of shoemakers fought to improve living and working conditions in the country. They called themselves “The Bolsheviks of Líbano, Tolima.” Their revolution lasted only one day, and they tried to cover their tracks. The women of this village find themselves in agreement with Aura, an anarchist grandmother, in the sense that their rebellion is still ongoing.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "On July 19, 1929, in a small town in Colombia, a group of shoemakers fought to improve living and working conditions in the country. They called themselves “The Bolsheviks of Líbano, Tolima.” Their revolution lasted only one day, and they tried to cover their tracks. The women of this village find themselves in agreement with Aura, an anarchist grandmother, in the sense that their rebellion is still ongoing."
+  }
+ },
+ {
+  "work_id": "w_4KH835JPV8Z2",
+  "campo": "xref.tmdb",
+  "valor": 862430,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "862430"
+  }
+ },
+ {
+  "work_id": "w_4KH835JPV8Z2",
+  "campo": "xref.letterboxd",
+  "valor": "open-mountain",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "open-mountain"
+  }
+ },
+ {
+  "work_id": "w_4KH835JPV8Z2",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/abrir-monte.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/abrir-monte.jpg"
+  }
+ }
+]

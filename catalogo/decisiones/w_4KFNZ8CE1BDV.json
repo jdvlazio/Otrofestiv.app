@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_4KFNZ8CE1BDV",
+  "campo": "directores",
+  "valor": [
+   "Marcy Page"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Marcy Page"
+  }
+ },
+ {
+  "work_id": "w_4KFNZ8CE1BDV",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KFNZ8CE1BDV",
+  "campo": "paises",
+  "valor": [
+   "CA",
+   "PT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Canadá, Portugal"
+  }
+ },
+ {
+  "work_id": "w_4KFNZ8CE1BDV",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KFNZ8CE1BDV",
+  "campo": "sinopsis.es",
+  "valor": "Un corto musical realizado con una novedosa técnica de azulejos animados, en el que una María rebelde une su voz a la de célebres mujeres de la historia en la lucha por la igualdad.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Un corto musical realizado con una novedosa técnica de azulejos animados, en el que una María rebelde une su voz a la de célebres mujeres de la historia en la lucha por la igualdad."
+  }
+ },
+ {
+  "work_id": "w_4KFNZ8CE1BDV",
+  "campo": "sinopsis.en",
+  "valor": "A short musical, using a novel technique of animated azulejos (painted tiles), that features a rebellious Mary joining her voice to celebrated women of history in the struggle for equality.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A short musical, using a novel technique of animated azulejos (painted tiles), that features a rebellious Mary joining her voice to celebrated women of history in the struggle for equality."
+  }
+ },
+ {
+  "work_id": "w_4KFNZ8CE1BDV",
+  "campo": "xref.tmdb",
+  "valor": 1655978,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1655978"
+  }
+ },
+ {
+  "work_id": "w_4KFNZ8CE1BDV",
+  "campo": "xref.letterboxd",
+  "valor": "virgin-fandango",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "virgin-fandango"
+  }
+ },
+ {
+  "work_id": "w_4KFNZ8CE1BDV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/virgin-fandango.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/virgin-fandango.jpg"
+  }
+ }
+]

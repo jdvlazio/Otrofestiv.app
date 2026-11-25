@@ -1,0 +1,135 @@
+[
+ {
+  "work_id": "w_4KJ27QNHW320",
+  "campo": "sinopsis.es",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS C",
+  "vistas": [
+   "1962db9e9b69",
+   "9a806bf0d364"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "L’uomo meccanico",
+  "valor": "La criminal Mado es arrestada por matar a un científico al que había robado el diseño de un robot. Su estancia en el presidio durará poco: tras inyectarse una droga que la sume en un aparente estado catatónico, escapará de la enfermería después de provocar un incendio. Una vez en libertad, utiliza el robot para llevar a cabo sus planes criminales.",
+  "original": "Una criminal llamada Mado es arrestada por matar a un científico al que previamente había robado el diseño de un robot. Sin embargo, su estancia en el presidio durará poco; tras inyectarse una droga que la sume en un aparente estado catatónico, escapará de la enfermería de la prisión tras provocar un incendio. Una vez en libertad, Mado utiliza el robot para llevar a cabo sus planes criminales.",
+  "sintesis": {
+   "redacta": "lector BOGOSHORTS C",
+   "verifica": "lector BOGOSHORTS E",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "9fd033640459"
+  },
+  "antes": {
+   "bogoshorts-2026": "La criminal Mado es arrestada por matar a un científico al que había robado el diseño de un robot. Su estancia en el presidio durará poco: tras inyectarse una droga que la sume en un aparente estado catatónico, escapará de la enfermería provocando un incendio. Una vez en libertad, utiliza el robot para llevar a cabo sus planes criminales."
+  }
+ },
+ {
+  "work_id": "w_4KJ27QNHW320",
+  "campo": "directores",
+  "valor": [
+   "André Deed"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "André Deed"
+  }
+ },
+ {
+  "work_id": "w_4KJ27QNHW320",
+  "campo": "anio",
+  "valor": 1921,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1921"
+  }
+ },
+ {
+  "work_id": "w_4KJ27QNHW320",
+  "campo": "paises",
+  "valor": [
+   "IT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Italia"
+  }
+ },
+ {
+  "work_id": "w_4KJ27QNHW320",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_4KJ27QNHW320",
+  "campo": "sinopsis.en",
+  "valor": "A criminal named Mado is arrested for murdering a scientist whose robot design she had previously stolen. However, her time in prison will be short-lived. After injecting herself with a drug that induces an apparent catatonic state, she escapes from the prison infirmary after starting a fire. Once free, Mado uses the robot to carry out her criminal schemes.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A criminal named Mado is arrested for murdering a scientist whose robot design she had previously stolen. However, her time in prison will be short-lived. After injecting herself with a drug that induces an apparent catatonic state, she escapes from the prison infirmary after starting a fire. Once free, Mado uses the robot to carry out her criminal schemes."
+  }
+ },
+ {
+  "work_id": "w_4KJ27QNHW320",
+  "campo": "xref.tmdb",
+  "valor": 94814,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "94814"
+  }
+ },
+ {
+  "work_id": "w_4KJ27QNHW320",
+  "campo": "xref.letterboxd",
+  "valor": "the-mechanical-man",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-mechanical-man"
+  }
+ },
+ {
+  "work_id": "w_4KJ27QNHW320",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/l-uomo-meccanico.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/l-uomo-meccanico.jpg"
+  }
+ }
+]

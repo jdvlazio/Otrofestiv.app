@@ -1,0 +1,37 @@
+[
+ {
+  "work_id": "w_R4MQS5J703HM",
+  "campo": "sinopsis.es",
+  "valor": "Bouchra, una coyote marroquí de 35 años que vive en Nueva York, documenta la relación a distancia con su madre, que vive en Casablanca, mientras exploran juntas el amor, el dolor y los secretos que las unen, entre llamadas y conversaciones íntimas.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "ae80f1dc967e"
+  ],
+  "antes": {
+   "olhar-2026": "Bouchra, una coyote marroquí de 35 años en Nueva York, documenta su relación a distancia con su madre, que vive en Casablanca, mientras exploran juntas el amor, el dolor y los secretos que las unen a través de llamadas y conversaciones íntimas."
+  }
+ },
+ {
+  "work_id": "w_R4MQS5J703HM",
+  "campo": "xref.tmdb",
+  "valor": 1517206,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/bouchra/"
+ },
+ {
+  "work_id": "w_R4MQS5J703HM",
+  "campo": "paises",
+  "valor": [
+   "IT",
+   "MA",
+   "US"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

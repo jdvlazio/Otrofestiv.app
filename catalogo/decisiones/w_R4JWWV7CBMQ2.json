@@ -1,0 +1,24 @@
+[
+ {
+  "work_id": "w_R4JWWV7CBMQ2",
+  "campo": "xref.tmdb",
+  "valor": 1476874,
+  "motivo": "Tuktuit: Caribou, Lindsay McIntyre, 2025, 15 min; la anterior era «The South Wind», de la misma directora",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (plan aprobado por Juan)",
+  "antes": {
+   "finca-2026": 1175870
+  }
+ },
+ {
+  "work_id": "w_R4JWWV7CBMQ2",
+  "campo": "xref.letterboxd",
+  "valor": "tuktuit-caribou",
+  "motivo": "era «The South Wind»; el propio, comprobado en Letterboxd por su ficha de TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (plan aprobado por Juan)",
+  "antes": {
+   "finca-2026": "the-south-wind"
+  }
+ }
+]

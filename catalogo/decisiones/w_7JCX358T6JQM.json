@@ -1,0 +1,55 @@
+[
+ {
+  "work_id": "w_7JCX358T6JQM",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7JCX358T6JQM",
+  "campo": "sinopsis.es",
+  "valor": "El cortometraje propone una aventura en la que la sabiduría ancestral y la creatividad infantil se encuentran para reflexionar sobre el cuidado de los ríos, la biodiversidad y la vida.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "El cortometraje propone una aventura en la que la sabiduría ancestral y la creatividad infantil se encuentran para reflexionar sobre el cuidado de los ríos, la biodiversidad y la vida."
+  }
+ },
+ {
+  "work_id": "w_7JCX358T6JQM",
+  "campo": "sinopsis.en",
+  "valor": "The short film offers an adventure in which ancestral wisdom and children's creativity come together to reflect on caring for rivers, biodiversity and life.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "The short film offers an adventure in which ancestral wisdom and children's creativity come together to reflect on caring for rivers, biodiversity and life."
+  }
+ },
+ {
+  "work_id": "w_7JCX358T6JQM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/salvemos-el-agua.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/salvemos-el-agua.jpg"
+  }
+ }
+]

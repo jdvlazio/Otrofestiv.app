@@ -1,0 +1,29 @@
+[
+ {
+  "work_id": "w_R4NEB32QWB1A",
+  "campo": "xref.tmdb",
+  "valor": 1719802,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/el-rey-puma/"
+ },
+ {
+  "work_id": "w_R4NEB32QWB1A",
+  "campo": "directores",
+  "valor": [
+   "Fernando Ureña"
+  ],
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ },
+ {
+  "work_id": "w_R4NEB32QWB1A",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "lo acreditado por los festivales; TMDB dice otra cosa y no lo reemplaza sin fuente",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (revisión)"
+ }
+]

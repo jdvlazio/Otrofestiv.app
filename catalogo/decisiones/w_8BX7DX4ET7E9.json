@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_8BX7DX4ET7E9",
+  "campo": "directores",
+  "valor": [
+   "Jorge Forero"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Jorge Forero"
+  }
+ },
+ {
+  "work_id": "w_8BX7DX4ET7E9",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_8BX7DX4ET7E9",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_8BX7DX4ET7E9",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX7DX4ET7E9",
+  "campo": "sinopsis.es",
+  "valor": "Ana viaja por unos días a la casa de su abuela en el campo. Su madre también está, pero la relación es incómoda: Ana siente que sus cuidados fueron relegados a su abuela. Un aborto secreto, tras un embarazo no planeado, cambia su perspectiva de la maternidad y la lleva a entender la vida de su propia madre.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Ana viaja por unos días a la casa de su abuela en el campo. Su madre también está, pero la relación es incómoda: Ana siente que sus cuidados fueron relegados a su abuela. Un aborto secreto, tras un embarazo no planeado, cambia su perspectiva de la maternidad y la lleva a entender la vida de su propia madre."
+  }
+ },
+ {
+  "work_id": "w_8BX7DX4ET7E9",
+  "campo": "sinopsis.en",
+  "valor": "Ana travels to her grandmother's house in the countryside for a few days. Her mother is there too, but things are awkward: Ana feels that caring for her was left to her grandmother. A secret abortion after an unplanned pregnancy changes her view of motherhood and leads her to understand her own mother's life.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Ana travels to her grandmother's house in the countryside for a few days. Her mother is there too, but things are awkward: Ana feels that caring for her was left to her grandmother. A secret abortion after an unplanned pregnancy changes her view of motherhood and leads her to understand her own mother's life."
+  }
+ },
+ {
+  "work_id": "w_8BX7DX4ET7E9",
+  "campo": "xref.tmdb",
+  "valor": 1307759,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1307759"
+  }
+ },
+ {
+  "work_id": "w_8BX7DX4ET7E9",
+  "campo": "xref.letterboxd",
+  "valor": "matrioshka-2024",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "matrioshka-2024"
+  }
+ },
+ {
+  "work_id": "w_8BX7DX4ET7E9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/matrioshka.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/matrioshka.jpg"
+  }
+ }
+]

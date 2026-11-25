@@ -1,0 +1,43 @@
+{
+ "id": "w_4KE6GK8FS60T",
+ "titulo_original": "Pískoviště",
+ "anio": 2026,
+ "paises": [
+  "CZ"
+ ],
+ "directores": [
+  "Kateřina Čupová"
+ ],
+ "aliases": [
+  {
+   "titulo": "Sandbox",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Un niño juega en un arenero con juguetes de madera; uno está roto. El juguete lo lleva a un mundo oculto bajo la arena, donde los juguetes cobran vida. Entre la niebla llega al taller luminoso de un anciano que fabrica juguetes mágicos. El niño juega feliz, pero el anciano sabe que no pertenece allí.",
+  "en": "A little boy plays with wooden toys in a sandbox; one is broken. The toy draws him into a hidden world beneath the sand, where toys come alive. Through mist he reaches the glowing workshop of an old man who crafts magical toys. The boy plays happily, but the old man knows he doesn’t belong there."
+ },
+ "generos": [
+  "Animación"
+ ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/piskoviste.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1805073,
+  "letterboxd": "sandbox-2026-1"
+ },
+ "versiones": [
+  {
+   "etiqueta": "3 min",
+   "duracion_min": 3
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

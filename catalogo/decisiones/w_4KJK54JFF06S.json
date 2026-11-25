@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_4KJK54JFF06S",
+  "campo": "directores",
+  "valor": [
+   "Sebastian Cabrera"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Sebastian Cabrera"
+  }
+ },
+ {
+  "work_id": "w_4KJK54JFF06S",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KJK54JFF06S",
+  "campo": "paises",
+  "valor": [
+   "GT"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Guatemala"
+  }
+ },
+ {
+  "work_id": "w_4KJK54JFF06S",
+  "campo": "sinopsis.es",
+  "valor": "En un bosque, un grupo de entidades inicia un ritual. De repente, un misterioso portal los sumerge en un trance y se lleva el incensario con el que realizan el rito. Bajo el control del portal, las entidades lo atraviesan y son transportadas a una dimensión donde el ritual y la música adquieren una nueva forma.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En un bosque, un grupo de entidades inicia un ritual. De repente, un misterioso portal los sumerge en un trance y se lleva el incensario con el que realizan el rito. Bajo el control del portal, las entidades lo atraviesan y son transportadas a una dimensión donde el ritual y la música adquieren una nueva forma."
+  }
+ },
+ {
+  "work_id": "w_4KJK54JFF06S",
+  "campo": "sinopsis.en",
+  "valor": "In a forest, a group of entities begins a ritual. Suddenly, a mysterious portal plunges them into a trance and takes the censer used in the ceremony. Under the portal’s control, the entities cross through it and are transported to a dimension where the ritual and the music take on a new form.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In a forest, a group of entities begins a ritual. Suddenly, a mysterious portal plunges them into a trance and takes the censer used in the ceremony. Under the portal’s control, the entities cross through it and are transported to a dimension where the ritual and the music take on a new form."
+  }
+ },
+ {
+  "work_id": "w_4KJK54JFF06S",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/torito.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/torito.jpg"
+  }
+ }
+]

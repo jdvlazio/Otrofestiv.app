@@ -1,0 +1,89 @@
+[
+ {
+  "work_id": "w_R4HHSYKXBWCD",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/popayan-2026/mas-alla.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/ficdeh/pasta-negra.jpg",
+   "/assets/ficica-2026/mas-alla.jpg",
+   "/assets/popayan-2026/mas-alla.jpg"
+  ],
+  "antes": {
+   "ficdeh-2026": "/assets/ficdeh/pasta-negra.jpg",
+   "ficfusa-2026": "/assets/popayan-2026/mas-alla.jpg",
+   "ficica-2026": "/assets/ficica-2026/mas-alla.jpg",
+   "popayan-2026": "/assets/popayan-2026/mas-alla.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4HHSYKXBWCD",
+  "campo": "sinopsis.es",
+  "valor": "Separada de su madre al cruzar la selva entre Colombia y Panamá, Zuli, una pequeña migrante venezolana, deja atrás su infancia para sobrevivir y trabaja para un coyote que guía migrantes. En uno de sus viajes tropieza con un portal a una tierra mágica donde reconecta con su inocencia y su imaginación y aprende a ser niña otra vez.",
+  "motivo": "Coma entre sujeto y verbo, Zuli aparece sin presentar y pasa de 350.",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "vistas": [
+   "be8075d96be7",
+   "f2d34d67c6ab"
+  ],
+  "antes": {
+   "ficdeh-2026": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana se ve obligada a abandonar su infancia para sobrevivir. Zuli empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes descubre un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+   "ficfusa-2026": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+   "ficica-2026": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana se ve obligada a abandonar su infancia para sobrevivir. Zuli empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes descubre un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+   "popayan-2026": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez."
+  },
+  "anteriores": [
+   {
+    "valor": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficfusa-2026, popayan-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "be8075d96be7",
+     "f2d34d67c6ab"
+    ]
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4HHSYKXBWCD",
+  "campo": "directores",
+  "valor": [
+   "Bettina López Mendoza"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": "Bettina López Mendoza",
+   "ficfusa-2026": "Bettina López Mendoza",
+   "ficica-2026": "Bettina Lopez Mendoza",
+   "popayan-2026": "Bettina López Mendoza"
+  }
+ },
+ {
+  "work_id": "w_R4HHSYKXBWCD",
+  "campo": "paises",
+  "valor": [
+   "VE",
+   "CO",
+   "US",
+   "CA"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (festival)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "ficdeh-2026": "Venezuela, Colombia, Estados Unidos, Canadá",
+   "ficfusa-2026": "Colombia",
+   "ficica-2026": "Venezuela/US/Canada/Colombia",
+   "popayan-2026": "Colombia"
+  }
+ }
+]

@@ -1,0 +1,81 @@
+[
+ {
+  "work_id": "w_7THXFNZWT9HX",
+  "campo": "directores",
+  "valor": [
+   "Jairo Arcos"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Jairo Arcos"
+  }
+ },
+ {
+  "work_id": "w_7THXFNZWT9HX",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_7THXFNZWT9HX",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_7THXFNZWT9HX",
+  "campo": "sinopsis.es",
+  "valor": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Desde los páramos andinos hasta la selva amazónica, Colombia es un mosaico de ecosistemas únicos que albergan miles de especies... Un verdadero “PARAÍSO”"
+  }
+ },
+ {
+  "work_id": "w_7THXFNZWT9HX",
+  "campo": "sinopsis.en",
+  "valor": "From the Andean highlands to the Amazon rainforest, Colombia is a mosaic of unique ecosystems that are home to thousands of species... A true “PARADISE.”",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "From the Andean highlands to the Amazon rainforest, Colombia is a mosaic of unique ecosystems that are home to thousands of species... A true “PARADISE.”"
+  }
+ },
+ {
+  "work_id": "w_7THXFNZWT9HX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/paraiso.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/paraiso.jpg"
+  }
+ }
+]

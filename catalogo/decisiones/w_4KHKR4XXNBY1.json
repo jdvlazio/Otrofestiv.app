@@ -1,0 +1,132 @@
+[
+ {
+  "work_id": "w_4KHKR4XXNBY1",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Juan",
+  "vistas": [
+   "261d761d56f1"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "The Tide Inside",
+  "valor": "Una adolescente colombiana en Los Ángeles comienza a desmoronarse ante la amenaza de deportación. Criada para sentirse fuerte, siente crecer una incomodidad, mientras el miedo la aleja de lo que la hacía sentir a salvo. Entre recuerdos de infancia y de un amor seguro, enfrenta la marea que lleva dentro, en un mundo que amenaza con borrarla.",
+  "original": "Una adolescente colombiana en Los Ángeles comienza a desmoronarse cuando la amenaza de deportación ensombrece su mundo. Criada para sentirse siempre fuerte, una incomodidad silenciosa crece en su interior, mientras el miedo la aleja de todo lo que antes la hacía sentir a salvo. Al reconstruir recuerdos que irrumpen en el presente, fragmentos de infancia y de un amor seguro, enfrenta el ritmo de las olas y la marea que lleva dentro, en un mundo que amenaza con borrarla.",
+  "sintesis": {
+   "redacta": "Claude (redactor)",
+   "verifica": "Claude (verificador distinto)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "b89fc8ee62c6"
+  }
+ },
+ {
+  "work_id": "w_4KHKR4XXNBY1",
+  "campo": "directores",
+  "valor": [
+   "Lorena Villanueva"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Lorena Villanueva"
+  }
+ },
+ {
+  "work_id": "w_4KHKR4XXNBY1",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KHKR4XXNBY1",
+  "campo": "paises",
+  "valor": [
+   "US",
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Estados Unidos, Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KHKR4XXNBY1",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_4KHKR4XXNBY1",
+  "campo": "sinopsis.en",
+  "valor": "A Colombian teenage girl in Los Angeles begins to unravel as the threat of deportation creeps into her world. Though raised to believe herself strong, a quiet unease grows inside her, as fear pulls her away from everything that once felt safe. As she struggles to piece together memories that bleed into the present, fragments of childhood, and fleeting love, she confronts the rhythm of the waves and the tide inside her in a world that threatens to erase her.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A Colombian teenage girl in Los Angeles begins to unravel as the threat of deportation creeps into her world. Though raised to believe herself strong, a quiet unease grows inside her, as fear pulls her away from everything that once felt safe. As she struggles to piece together memories that bleed into the present, fragments of childhood, and fleeting love, she confronts the rhythm of the waves and the tide inside her in a world that threatens to erase her."
+  }
+ },
+ {
+  "work_id": "w_4KHKR4XXNBY1",
+  "campo": "xref.tmdb",
+  "valor": 1759427,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1759427"
+  }
+ },
+ {
+  "work_id": "w_4KHKR4XXNBY1",
+  "campo": "xref.letterboxd",
+  "valor": "the-tide-inside",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "the-tide-inside"
+  }
+ },
+ {
+  "work_id": "w_4KHKR4XXNBY1",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/the-tide-inside.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/the-tide-inside.jpg"
+  }
+ }
+]

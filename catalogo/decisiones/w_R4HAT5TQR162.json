@@ -1,0 +1,76 @@
+[
+ {
+  "work_id": "w_R4HAT5TQR162",
+  "campo": "directores",
+  "valor": [
+   "Juan Cáceres"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 98",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=98",
+  "antes": {
+   "ficci-65": "Juan Cáceres"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5TQR162",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "catálogo oficial de FICCI 65, p. 98",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=98",
+  "antes": {
+   "ficci-65": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5TQR162",
+  "campo": "paises",
+  "valor": [
+   "CL",
+   "IT"
+  ],
+  "motivo": "catálogo oficial de FICCI 65, p. 98",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=98",
+  "antes": {
+   "ficci-65": "Chile, Italia"
+  }
+ },
+ {
+  "work_id": "w_R4HAT5TQR162",
+  "campo": "sinopsis.es",
+  "valor": "En Cartagena, Chile, Yeka, de 12 años, admira a su hermano, cantante emergente de reguetón que promete sacar a la familia de la precariedad. Cuando su mejor amiga muere por una bala perdida en un concierto, Yeka carga con la culpa y el duelo. Un relato musical de crecimiento, entre música urbana, cumbia y vallenato.",
+  "motivo": "catálogo oficial de FICCI 65, p. 98",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=98",
+  "antes": {
+   "ficci-65": "Yeka, de 12 años, ama y admira a su hermano, un cantante emergente de reguetón que le promete a ella y a su familia sacarlos del contexto precario en el que viven."
+  }
+ },
+ {
+  "work_id": "w_R4HAT5TQR162",
+  "campo": "sinopsis.en",
+  "valor": "In Cartagena, Chile, 12-year-old Yeka admires her brother, an up-and-coming reggaeton singer who promises to lift the family out of precariousness. When her best friend is killed by a stray bullet at a concert, Yeka bears the guilt and grief. A musical coming-of-age story amid urban music, cumbia, and vallenato.",
+  "motivo": "catálogo oficial de FICCI 65, p. 98",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, publica»)",
+  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=98",
+  "antes": {
+   "ficci-65": "Twelve-year-old Yeka loves and admires her brother, an emerging reggaeton singer who promises her and their family a way out of the precarious conditions they live in."
+  }
+ },
+ {
+  "work_id": "w_R4HAT5TQR162",
+  "campo": "xref.tmdb",
+  "valor": 977288,
+  "motivo": "misma dirección que el catálogo de FICCI 65, año y duración compatibles",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «Sí, publica»)",
+  "fuente": "https://www.themoviedb.org/movie/977288"
+ }
+]

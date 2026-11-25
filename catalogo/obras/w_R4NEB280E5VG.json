@@ -8,14 +8,28 @@
  "directores": [
   "Julián Gómez Reyes"
  ],
+ "aliases": [
+  {
+   "titulo": "Just Another Bird",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Raquelita, una torcaza herida tras un accidente en la ciudad de Bogotá, encuentra refugio en la ventana de Tomás, un niño que la acompaña mientras sana. A partir de ese encuentro, Raquelita inicia un viaje poético por la ciudad, descubriendo personajes, vidas, detalles invisibles para los demás y su lugar en el mundo.",
+  "en": "After an accident in Bogotá, Raquelita, an injured dove, finds refuge on the windowsill of Tomás, a young boy who watches over her as she heals. From this unexpected encounter, Raquelita embarks on a poetic journey through the city, discovering extraordinary characters, hidden lives, and the little wonders that often go unnoticed, while slowly finding her own place in the world."
+ },
  "generos": [
   "Animación"
  ],
  "afiche": {
-  "archivo": "/assets/siembrafest/un-pajaro-mas.jpg",
+  "archivo": "/assets/bogoshorts-2026/un-pajaro-mas.jpg",
   "veredicto": "oficial"
  },
- "xref": {},
+ "xref": {
+  "tmdb": 1841397,
+  "letterboxd": "un-pajaro-mas"
+ },
  "versiones": [
   {
    "etiqueta": "17 min",
@@ -23,6 +37,7 @@
   }
  ],
  "presentaciones": [
+  "bogoshorts-2026",
   "siembrafest-2026"
  ]
 }

@@ -1,0 +1,41 @@
+{
+ "id": "w_4KG026GYZBXS",
+ "titulo_original": "Pelotón Trueno",
+ "anio": 2026,
+ "paises": [
+  "CO",
+  "FR"
+ ],
+ "directores": [
+  "Theo Montoya"
+ ],
+ "aliases": [
+  {
+   "titulo": "Thunder Platoon",
+   "idioma": "en",
+   "tipo": "traduccion"
+  }
+ ],
+ "sinopsis": {
+  "es": "Principios de los años 2000, Colombia. El comandante Montoya, al frente de la lucha contra las FARC, reúne a sus tropas para celebrar su ascenso a general. Pero, al caer la noche, una violenta tormenta interrumpe la fiesta.",
+  "en": "Early 2000s, Colombia. Commander Montoya, at the forefront of the fight against the FARC, gathered his troops to celebrate his promotion to General. But as night fell, the party is interrupted by a violent storm."
+ },
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/peloton-trueno.jpg",
+  "veredicto": "oficial",
+  "fuente": "tmdb"
+ },
+ "xref": {
+  "tmdb": 1678770,
+  "letterboxd": "thunder-platoon"
+ },
+ "versiones": [
+  {
+   "etiqueta": "16 min",
+   "duracion_min": 16
+  }
+ ],
+ "presentaciones": [
+  "bogoshorts-2026"
+ ]
+}

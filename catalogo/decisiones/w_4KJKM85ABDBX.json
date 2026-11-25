@@ -1,0 +1,96 @@
+[
+ {
+  "work_id": "w_4KJKM85ABDBX",
+  "campo": "sinopsis.es",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "vistas": [
+   "4621c3bf8120",
+   "5e6b8d9e736d"
+  ],
+  "original_de": [
+   "bogoshorts-2026"
+  ],
+  "titulo": "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)",
+  "valor": "Un campesino del Lago de Tota va a la fiesta de cumpleaños de una amistad. Allí se encuentra con su expareja y descubre que tiene un nuevo amorío. Despechado, decide ir a la playa y embriagarse. Allí se encuentra con la luna, que desde el cielo toma la forma de su amada.",
+  "original": "Un campesino del Lago de Tota se dirige a la fiesta de cumpleaños de una amistad. En la celebración se encuentra con su ex pareja, descubriendo que tiene un nuevo amorío. Despechado, el hombre decide ir a la playa y embriagarse. Allí se encuentra con la luna, quién desde el cielo toma la forma de su amada. Entre la confusión y la oscuridad el campesino termina nadando en las olas y descendiendo al fondo del lago.",
+  "sintesis": {
+   "redacta": "lector BOGOSHORTS D",
+   "verifica": "lector BOGOSHORTS E",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "d94045a17e58"
+  },
+  "antes": {
+   "bogoshorts-2026": "Un campesino del Lago de Tota va a la fiesta de cumpleaños de una amistad. Allí se encuentra con su expareja y descubre que tiene un nuevo amorío. Despechado, decide ir a la playa y embriagarse. La luna, desde el cielo, toma la forma de su amada y, entre la confusión y la oscuridad, el campesino se adentra en las olas."
+  }
+ },
+ {
+  "work_id": "w_4KJKM85ABDBX",
+  "campo": "directores",
+  "valor": [
+   "Diego Blanco"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Diego Blanco"
+  }
+ },
+ {
+  "work_id": "w_4KJKM85ABDBX",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_4KJKM85ABDBX",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_4KJKM85ABDBX",
+  "campo": "sinopsis.en",
+  "valor": "A farmer from Lake Tota heads to a friend’s birthday party. There, he runs into his ex-partner and discovers she has a new lover. Heartbroken, he decides to go to the beach and get drunk. There, he encounters the moon, which takes the form of his beloved from the sky.",
+  "motivo": "corrección de lectura contra la fuente",
+  "fecha": "2026-11-24",
+  "quien": "lector BOGOSHORTS D",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "A farmer from Tota Lake heads to a friend’s birthday party. At the celebration, he runs into his ex-partner and discovers she has a new lover. Heartbroken, the man decides to go to the beach and get drunk. There, he encounters the moon, which takes the form of his beloved from the sky. Between confusion and darkness, the farmer ends up swimming in the waves and descending to the bottom of the lake."
+  }
+ },
+ {
+  "work_id": "w_4KJKM85ABDBX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/cumbia-pa-la-luna-fuji-kurosawa-ft-lina-remolina.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/cumbia-pa-la-luna-fuji-kurosawa-ft-lina-remolina.jpg"
+  }
+ }
+]

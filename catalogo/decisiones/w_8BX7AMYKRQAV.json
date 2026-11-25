@@ -1,0 +1,121 @@
+[
+ {
+  "work_id": "w_8BX7AMYKRQAV",
+  "campo": "directores",
+  "valor": [
+   "Belén Funes"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Belén Funes"
+  }
+ },
+ {
+  "work_id": "w_8BX7AMYKRQAV",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2024"
+  }
+ },
+ {
+  "work_id": "w_8BX7AMYKRQAV",
+  "campo": "paises",
+  "valor": [
+   "ES",
+   "CL"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "España, Chile"
+  }
+ },
+ {
+  "work_id": "w_8BX7AMYKRQAV",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_8BX7AMYKRQAV",
+  "campo": "sinopsis.es",
+  "valor": "Anabel, de 18 años, vive con su madre, Delia, una taxista chilena emigrada hace veinte años al barrio de Collblanc, y estudia en Barcelona la carrera a la que tanto le costó entrar. Su futuro está a punto de cambiar: una carta les anunciará que deben dejar el piso de alquiler donde han vivido siempre porque un fondo buitre compró el edificio.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Anabel, de 18 años, vive con su madre, Delia, una taxista chilena emigrada hace veinte años al barrio de Collblanc, y estudia en Barcelona la carrera a la que tanto le costó entrar. Su futuro está a punto de cambiar: una carta les anunciará que deben dejar el piso de alquiler donde han vivido siempre porque un fondo buitre compró el edificio."
+  }
+ },
+ {
+  "work_id": "w_8BX7AMYKRQAV",
+  "campo": "sinopsis.en",
+  "valor": "Anabel, 18, lives with her mother, Delia, a Chilean taxi driver who emigrated to the Collblanc neighborhood twenty years ago, and is studying in Barcelona for the degree she worked so hard to get into. Her future is about to change: a letter will tell them they must leave the flat they have always rented because a vulture fund bought the building.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Anabel, 18, lives with her mother, Delia, a Chilean taxi driver who emigrated to the Collblanc neighborhood twenty years ago, and is studying in Barcelona for the degree she worked so hard to get into. Her future is about to change: a letter will tell them they must leave the flat they have always rented because a vulture fund bought the building."
+  }
+ },
+ {
+  "work_id": "w_8BX7AMYKRQAV",
+  "campo": "xref.tmdb",
+  "valor": 800090,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "800090"
+  }
+ },
+ {
+  "work_id": "w_8BX7AMYKRQAV",
+  "campo": "xref.letterboxd",
+  "valor": "the-exiles-2024",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "the-exiles-2024"
+  }
+ },
+ {
+  "work_id": "w_8BX7AMYKRQAV",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/los-tortuga.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/los-tortuga.jpg"
+  }
+ }
+]

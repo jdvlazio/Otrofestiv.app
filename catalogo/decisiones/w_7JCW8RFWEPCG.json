@@ -1,0 +1,134 @@
+[
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-24",
+  "quien": "Claude",
+  "vistas": [
+   "81ac370f5f50",
+   "987739cd3119"
+  ],
+  "original_de": [
+   "provinciadevelez-2026"
+  ],
+  "titulo": "My Name Is Bill W.",
+  "valor": "La historia verdadera de Bill Wilson, fundador de Alcohólicos Anónimos: un hombre explosivo e impredecible, incapaz de controlar su deseo de alcohol. Su propia incapacidad para ayudarlo separa de él a su sufrida esposa, Lois. Bill intenta dejar de beber, no lo logra y recurre a su amigo el Dr. Bob Smith. Una historia de esperanza, coraje y amor.",
+  "original": "\"Mi nombre es Bill W.\" es la poderosa historia de Bill Wilson, acerca de su papel como fundador de uno de los más exitosos movimientos de auto ayuda en la historia, de \"Alcohólicos Anónimos\". James Woods estelariza al explosivo e impredecible Bill Wilson, incapaz de controlar su deseo por el alcohol. Jo Beth Williams estelariza a la sufrida esposa Louis, quién está separada de su esposo por su propia incapacidad para ayudarlo. Louis, desesperada, considera meterlo a un sanatorio, cuando Bill descubre ésto le da un ataque de alcoholismo y termina atado a una cama de hospital. Bill intenta dejar de beber pero le es imposible, así, que recurre a un amigo el Dr. Bob Smith con quien comparte la dependencia del vino. Es una historia verdadera que trata de la esperanza, coraje y amor.",
+  "sintesis": {
+   "redacta": "subagente montaje Vélez",
+   "verifica": "subagente verificador 3 (a149ac8e4b846d881)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-24",
+   "huella": "6ff76cc448a2",
+   "permitido": {
+    "nombre que el original no trae: Lois": "la esposa es Lois Wilson (créditos de TMDB 15727 y Wikipedia); «Louis» es errata de la sinopsis de TMDB"
+   }
+  }
+ },
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "sinopsis.en",
+  "valor": "The true story of Bill Wilson, founder of Alcoholics Anonymous: an explosive and unpredictable man, unable to control his craving for alcohol. Her own inability to help him separates his long-suffering wife, Lois, from him. Bill tries to quit drinking, fails, and turns to his friend Dr. Bob Smith. A story of hope, courage and love.",
+  "motivo": "traducción de la sinopsis en español; la de TMDB contaba otra parte",
+  "fecha": "2026-11-24",
+  "quien": "Claude (verificador de sellos)",
+  "antes": {
+   "provinciadevelez-2026": "Based on the true story of Bill W. (James Woods), a successful stock broker whose life falls apart after the stock crash of the 20's and how he comes to grips with his alcoholism. Along with a fellow alcoholic (James Garner) he forms a support group that would eventually become Alcoholics Anonymous."
+  }
+ },
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "directores",
+  "valor": [
+   "Daniel Petrie"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Daniel Petrie"
+  }
+ },
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "anio",
+  "valor": 1989,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1989"
+  }
+ },
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "paises",
+  "valor": [
+   "US"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Estados Unidos"
+  }
+ },
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "xref.tmdb",
+  "valor": 15727,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "15727"
+  }
+ },
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "xref.letterboxd",
+  "valor": "my-name-is-bill-w",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "my-name-is-bill-w"
+  }
+ },
+ {
+  "work_id": "w_7JCW8RFWEPCG",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/my-name-is-bill-w.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-24",
+  "quien": "Juan («Sí, así»)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/my-name-is-bill-w.jpg"
+  }
+ }
+]

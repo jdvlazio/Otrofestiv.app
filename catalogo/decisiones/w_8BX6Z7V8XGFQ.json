@@ -1,0 +1,122 @@
+[
+ {
+  "work_id": "w_8BX6Z7V8XGFQ",
+  "campo": "directores",
+  "valor": [
+   "Lina Soualem"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Lina Soualem"
+  }
+ },
+ {
+  "work_id": "w_8BX6Z7V8XGFQ",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_8BX6Z7V8XGFQ",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "BE",
+   "PS"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Francia, Bélgica, Palestina"
+  }
+ },
+ {
+  "work_id": "w_8BX6Z7V8XGFQ",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_8BX6Z7V8XGFQ",
+  "campo": "sinopsis.es",
+  "valor": "Años después de abandonar su pueblo palestino para ser actriz en Francia, Hiam Abbass regresa a casa con su hija, en este íntimo documental sobre cuatro generaciones de mujeres y su legado común de separación.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Años después de abandonar su pueblo palestino para ser actriz en Francia, Hiam Abbass regresa a casa con su hija, en este íntimo documental sobre cuatro generaciones de mujeres y su legado común de separación."
+  }
+ },
+ {
+  "work_id": "w_8BX6Z7V8XGFQ",
+  "campo": "sinopsis.en",
+  "valor": "Years after leaving her Palestinian village to become an actress in France, Hiam Abbass returns home with her daughter in this intimate documentary about four generations of women and their shared legacy of separation.",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "Years after leaving her Palestinian village to become an actress in France, Hiam Abbass returns home with her daughter in this intimate documentary about four generations of women and their shared legacy of separation."
+  }
+ },
+ {
+  "work_id": "w_8BX6Z7V8XGFQ",
+  "campo": "xref.tmdb",
+  "valor": 1156646,
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "1156646"
+  }
+ },
+ {
+  "work_id": "w_8BX6Z7V8XGFQ",
+  "campo": "xref.letterboxd",
+  "valor": "bye-bye-tiberias",
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "bye-bye-tiberias"
+  }
+ },
+ {
+  "work_id": "w_8BX6Z7V8XGFQ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicineantioquia-2026/bye-bye-tiberias.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde festicineantioquia-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje festicineantioquia-2026)",
+  "sembrada": true,
+  "antes": {
+   "festicineantioquia-2026": "/assets/festicineantioquia-2026/bye-bye-tiberias.jpg"
+  }
+ }
+]

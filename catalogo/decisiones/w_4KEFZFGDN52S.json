@@ -1,0 +1,95 @@
+[
+ {
+  "work_id": "w_4KEFZFGDN52S",
+  "campo": "directores",
+  "valor": [
+   "Nazanin Zahra Rafiei"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Nazanin Zahra Rafiei"
+  }
+ },
+ {
+  "work_id": "w_4KEFZFGDN52S",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_4KEFZFGDN52S",
+  "campo": "paises",
+  "valor": [
+   "IR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Irán"
+  }
+ },
+ {
+  "work_id": "w_4KEFZFGDN52S",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_4KEFZFGDN52S",
+  "campo": "sinopsis.es",
+  "valor": "En una tierra donde el crimen, la cárcel y la ejecución marcan el destino de muchos hombres, Marzieh lucha por salvar a su marido de la muerte: intenta convencer a un pueblo silencioso de que atestigüe su inocencia mientras mantiene unida a su familia.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "En una tierra donde el crimen, la cárcel y la ejecución marcan el destino de muchos hombres, Marzieh lucha por salvar a su marido de la muerte: intenta convencer a un pueblo silencioso de que atestigüe su inocencia mientras mantiene unida a su familia."
+  }
+ },
+ {
+  "work_id": "w_4KEFZFGDN52S",
+  "campo": "sinopsis.en",
+  "valor": "In a land where crime, prison, and execution shape the fate of many men, Marzieh fights to save her husband from death— persuading a silent village to testify to his innocence while holding her family together.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "In a land where crime, prison, and execution shape the fate of many men, Marzieh fights to save her husband from death— persuading a silent village to testify to his innocence while holding her family together."
+  }
+ },
+ {
+  "work_id": "w_4KEFZFGDN52S",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/the-waiting-palm.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/the-waiting-palm.jpg"
+  }
+ }
+]

@@ -1,0 +1,25 @@
+[
+ {
+  "work_id": "w_R4MQS5AZVCH8",
+  "campo": "sinopsis.es",
+  "valor": "Literalmente encontramos nuestra película junto a un basurero. Era una bolsa con 36 rollos de negativos expuestos, de los años sesenta a los ochenta, de un fotógrafo desconocido. Lo llamamos Anton, el hijo de la tía Emma. Al examinar sus proyectos, llenos de imprecisiones —falta de nitidez, elementos fortuitos, exposiciones accidentales y dobles—, intentamos imaginar cómo serían nuestras vidas si esas fueran nuestras fotos.",
+  "motivo": "corrección de «en portugués»: traducción nuestra del texto del festival",
+  "fecha": "2026-11-23",
+  "quien": "Claude, por encargo de Juan («Corregir defectuosas»)",
+  "vistas": [
+   "68b8024b32b8"
+  ],
+  "antes": {
+   "olhar-2026": "Literalmente encontramos nuestra película junto a un cesto de basura. Era una bolsa con 36 rollos de negativos fotográficos expuestos entre los años 1960 y 1980 por un fotógrafo desconocido. Lo nombramos Anton, el hijo de la Tía Emma. Al examinar sus proyectos (con muchas imprecisiones: nitidez indistinta, elementos aleatorios en las tomas, transiciones en wipe, exposiciones accidentales y dobles, etc.), intentamos imaginar cómo serían nuestras vidas si esas fueran nuestras fotos."
+  }
+ },
+ {
+  "work_id": "w_R4MQS5AZVCH8",
+  "campo": "xref.tmdb",
+  "valor": 1567724,
+  "motivo": "la lleva su página de Letterboxd; dirección comprobada contra TMDB",
+  "fecha": "2026-11-24",
+  "quien": "plan del almacén (Juan, «sigue con el plan»)",
+  "fuente": "https://letterboxd.com/film/cat-on-my-mind/"
+ }
+]

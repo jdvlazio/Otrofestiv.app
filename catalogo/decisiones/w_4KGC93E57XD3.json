@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_4KGC93E57XD3",
+  "campo": "directores",
+  "valor": [
+   "Tara Attarzadeh"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Tara Attarzadeh"
+  }
+ },
+ {
+  "work_id": "w_4KGC93E57XD3",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_4KGC93E57XD3",
+  "campo": "paises",
+  "valor": [
+   "IR"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Irán"
+  }
+ },
+ {
+  "work_id": "w_4KGC93E57XD3",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_4KGC93E57XD3",
+  "campo": "sinopsis.es",
+  "valor": "Una niña juega en un columpio en la azotea de su casa hasta que la cuerda se rompe. Mientras observa unas palomas, imagina que vuela libremente sobre la ciudad; al volver a la realidad, la amenaza de la guerra irrumpe en su mundo.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "Una niña juega en un columpio en la azotea de su casa hasta que la cuerda se rompe. Mientras observa unas palomas, imagina que vuela libremente sobre la ciudad; al volver a la realidad, la amenaza de la guerra irrumpe en su mundo."
+  }
+ },
+ {
+  "work_id": "w_4KGC93E57XD3",
+  "campo": "sinopsis.en",
+  "valor": "After her rooftop swing breaks, a little girl watches a flock of pigeons and imagines flying freely above the city. When her daydream ends, the threat of war intrudes on her world.",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "After her rooftop swing breaks, a little girl watches a flock of pigeons and imagines flying freely above the city. When her daydream ends, the threat of war intrudes on her world."
+  }
+ },
+ {
+  "work_id": "w_4KGC93E57XD3",
+  "campo": "xref.tmdb",
+  "valor": 1256387,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1256387"
+  }
+ },
+ {
+  "work_id": "w_4KGC93E57XD3",
+  "campo": "xref.letterboxd",
+  "valor": "end-of-summer-2023-1",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "end-of-summer-2023-1"
+  }
+ },
+ {
+  "work_id": "w_4KGC93E57XD3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/end-of-summer.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-24",
+  "quien": "Claude (montaje BOGOSHORTS)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/end-of-summer.jpg"
+  }
+ }
+]

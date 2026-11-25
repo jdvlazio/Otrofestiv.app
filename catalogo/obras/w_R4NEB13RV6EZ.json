@@ -1,28 +1,39 @@
 {
  "id": "w_R4NEB13RV6EZ",
- "titulo_original": "Make Up: el arte de amar",
+ "titulo_original": "Make up: El arte de amar",
  "anio": 2025,
  "paises": [
   "CO"
  ],
  "directores": [
-  "Daniel Calderón"
+  "Daniel Eduardo Calderón Arana"
+ ],
+ "aliases": [
+  {
+   "titulo": "Make Up: el arte de amar",
+   "tipo": "festival"
+  }
  ],
  "generos": [
   "Drama"
  ],
  "afiche": {
-  "archivo": "/assets/siembrafest/make-up-el-arte-de-amar.jpg",
-  "veredicto": "oficial"
+  "archivo": "https://otrofestiv.app/assets/siembrafest/make-up-el-arte-de-amar.jpg",
+  "veredicto": "fotograma"
  },
  "xref": {},
  "versiones": [
   {
    "etiqueta": "19 min",
    "duracion_min": 19
+  },
+  {
+   "etiqueta": "20 min",
+   "duracion_min": 20
   }
  ],
  "presentaciones": [
+  "festicineantioquia-2026",
   "siembrafest-2026"
  ]
 }

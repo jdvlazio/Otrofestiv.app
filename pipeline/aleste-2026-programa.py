@@ -55,16 +55,15 @@ def leer(path):
     dirección, [año], país, «N min», sinopsis, funciones."""
     L = [l for l in lineas(path) if l != '.']   # 16 nov: la web cierra la ficha con un «.» suelto
     nom = os.path.basename(path)
-    k = next(i for i, l in enumerate(L) if re.fullmatch(r'\d{1,3} min', l))
-    cab = L[:k]
-    if len(cab) == 6:
-        sec, tit, orig, dire, anio, pais = cab
-    elif len(cab) == 5:                       # los cortos de «Hecho en Colombia»: sin año
-        (sec, tit, orig, dire, pais), anio = cab, None
-    else:
-        sys.exit(f'✗ {nom}: cabecera de {len(cab)} líneas: {cab}')
-    # 16 nov: la línea de país pasó a «País, 2025. 103 min» (y el «N min» sigue aparte)
-    pais = re.sub(r',\s*\d{4}\.\s*\d{1,3} min$', '', pais).strip()
+    # La duración va en la línea de país: «País, 2025. 103 min», «País. 11 min» o «País, 2026, 7 min»;
+    # la línea suelta «N min» que la repetía desapareció de la web (24 nov).
+    k = next((i for i, l in enumerate(L) if re.search(r'[.,]\s*\d{1,3} min$', l)), None)
+    if k != 4:
+        sys.exit(f'✗ {nom}: la línea «País, año. N min» no está donde va: {L[:7]}')
+    sec, tit, orig, dire = L[:4]
+    pais, anio, dur = re.fullmatch(r'(.+?)(?:,\s*(\d{4}))?[.,]\s*(\d{1,3}) min', L[k]).groups()
+    if len(L) > k + 1 and re.fullmatch(r'\d{4}|\d{1,3} min', L[k + 1]):
+        sys.exit(f'✗ {nom}: otra vez una línea suelta de año o duración: «{L[k + 1]}»')
     if anio is not None and not re.fullmatch(r'\d{4}', anio):
         sys.exit(f'✗ {nom}: año raro «{anio}»')
     funcs, sinopsis = [], []
@@ -86,7 +85,7 @@ def leer(path):
         sys.exit(f'✗ {nom}: sin funciones')
     return {'pagina': nom[:-5], 'seccion': sec, 'titulo': tit, 'titulo_original': orig,
             'director': None if dire == 'Varios' else dire, 'anio': int(anio) if anio else None,
-            'pais': pais, 'duracion_min': int(L[k].split()[0]), 'sinopsis': ' '.join(sinopsis),
+            'pais': pais, 'duracion_min': int(dur), 'sinopsis': ' '.join(sinopsis),
             'funciones': funcs}
 
 

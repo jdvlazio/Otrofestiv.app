@@ -1,0 +1,51 @@
+[
+ {
+  "work_id": "w_R4EMV4XQKMVA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/festicinerio-2026/paristopia.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "un solo afiche por obra: el sugerido de la hoja comparativa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/cineautopsia/paristopia.jpg",
+   "/assets/festicinerio-2026/paristopia.jpg"
+  ],
+  "antes": {
+   "cineautopsia-2026": "/assets/cineautopsia/paristopia.jpg",
+   "festicinerio-2026": "/assets/festicinerio-2026/paristopia.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4EMV4XQKMVA",
+  "campo": "sinopsis.es",
+  "valor": "Un filme de despedida, realizado con imágenes creadas y recopiladas como piezas de equipaje a lo largo de los últimos años del cineasta en París, junto a una docena de artistas de cinco continentes que intentan pertenecer e integrarse en un territorio extranjero. Sin embargo, las exclusiones y las estratificaciones sociales ponen de relieve su condición de extranjeros y evidencian el fenómeno de la migración masiva en Europa.",
+  "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cineautopsia-2026)",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+  "vistas": [
+   "2181341701a8",
+   "7a5fc96da937"
+  ],
+  "antes": {
+   "cineautopsia-2026": "Un filme de despedida, realizado con imágenes creadas y recopiladas como piezas de equipaje a lo largo de los últimos años del cineasta en París, junto a una docena de artistas de cinco continentes que intentan pertenecer e integrarse en un territorio extranjero. Sin embargo, las exclusiones y las estratificaciones sociales ponen de relieve su condición de extranjeros y evidencian el fenómeno de la migración masiva en Europa.",
+   "festicinerio-2026": "Una despedida tejida en imágenes, recogidas como vestigios de una vida en París. Voces y miradas llegadas desde los confines del mundo se entrelazan en busca de pertenencia, entre calles que prometen refugio, pero murmuran lejanía, emergen escenas espontáneas, en busca de libertad, sin papeles ni fronteras. Un poema visual que reflexiona sobre el arraigo y la levedad de ser extranjero."
+  }
+ },
+ {
+  "work_id": "w_R4EMV4XQKMVA",
+  "campo": "directores",
+  "valor": [
+   "Emanuel Rojas Gutierrez"
+  ],
+  "motivo": "la forma más completa que acreditan los festivales (Juan, 24 nov 2026)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "cineautopsia-2026": "Emanuel Rojas Gutierrez",
+   "festicinerio-2026": "Emanuel Rojas G."
+  }
+ }
+]

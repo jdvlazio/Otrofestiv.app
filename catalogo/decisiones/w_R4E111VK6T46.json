@@ -1,0 +1,77 @@
+[
+ {
+  "work_id": "w_R4E111VK6T46",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/biff-2026/soumsoum-the-night-of-the-stars.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "misma imagen en varios festivales: la copia más completa",
+  "fecha": "2026-11-23",
+  "quien": "Juan, 23 nov 2026 («unificar por este que dice sugerido»)",
+  "vistas": [
+   "/assets/biff-2026/soumsoum-the-night-of-the-stars.jpg",
+   "https://image.tmdb.org/t/p/w500/dsVB83xtAhdQ0DIjmomXwfH68Ro.jpg"
+  ],
+  "antes": {
+   "biff-2026": "/assets/biff-2026/soumsoum-the-night-of-the-stars.jpg",
+   "tiff-2026": "https://image.tmdb.org/t/p/w500/dsVB83xtAhdQ0DIjmomXwfH68Ro.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4E111VK6T46",
+  "campo": "sinopsis.es",
+  "valor": "En el desierto de Ennedi, en Chad, unas montañas milenarias guardan el recuerdo de un pasado olvidado. Kellou, una joven atormentada por visiones que la aíslan, conoce a Aya, una marginada. Mientras el pueblo se opone a su creciente hermandad, Kellou debe defender a Aya, enfrentarse a la hostilidad de su gente y luchar por su libertad.",
+  "motivo": "errata «aislan»; condensada a 350",
+  "fecha": "2026-11-25",
+  "quien": "segunda lectura (sellos)",
+  "vistas": [
+   "7ba154b497e0",
+   "c3659720520b"
+  ],
+  "antes": {
+   "biff-2026": "En el desierto de Ennedi, en Chad, se alzan entre la arena montañas milenarias. Estas guardan el recuerdo de un pasado olvidado y susurran antiguas leyendas. Kellou, una joven de un pueblo cercano, se ve atormentada por visiones inquietantes que la aislan de quienes la rodean. Su mundo da un vuelco el día en que conoce a Aya, una marginada rechazada por la comunidad. Mientras los habitantes del pueblo se ponen en contra de su creciente hermandad, Kellou debe defender a Aya y enfrentarse a la hostilidad de su propia gente, al tiempo que lucha por su libertad.",
+   "tiff-2026": "Cinco años después de Lingui, los lazos sagrados, el director chadiano Mahamat-Saleh Haroun vuelve al festival con su nueva película, ganadora del Premio FIPRESCI en la Berlinale de 2026."
+  },
+  "anteriores": [
+   {
+    "valor": "En el desierto de Ennedi, en Chad, se alzan entre la arena montañas milenarias. Estas guardan el recuerdo de un pasado olvidado y susurran antiguas leyendas. Kellou, una joven de un pueblo cercano, se ve atormentada por visiones inquietantes que la aislan de quienes la rodean. Su mundo da un vuelco el día en que conoce a Aya, una marginada rechazada por la comunidad. Mientras los habitantes del pueblo se ponen en contra de su creciente hermandad, Kellou debe defender a Aya y enfrentarse a la hostilidad de su propia gente, al tiempo que lucha por su libertad.",
+    "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026)",
+    "fecha": "2026-11-23",
+    "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
+    "vistas": [
+     "7ba154b497e0",
+     "c3659720520b"
+    ]
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4E111VK6T46",
+  "campo": "paises",
+  "valor": [
+   "FR",
+   "TD"
+  ],
+  "motivo": "un dato por obra: el valor del almacén (tmdb:1376457)",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con director, año y país»)",
+  "antes": {
+   "biff-2026": "Francia, Chad",
+   "tiff-2026": "Chad, Francia"
+  }
+ },
+ {
+  "work_id": "w_R4E111VK6T46",
+  "campo": "sinopsis.en",
+  "valor": "Seventeen-year-old Kellou has been gifted with supernatural powers she does not understand. Her disquiet and uncertainty only change when she meets Aya. It is an encounter with destiny that forges a mystical world where the visible and invisible converge.",
+  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+  "fecha": "2026-11-24",
+  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "titulo": "Soumsoum, The Night of the Stars",
+  "antes": {
+   "biff-2026": "Seventeen-year-old Kellou has been gifted with supernatural powers she does not understand. Her disquiet and uncertainty only change when she meets Aya. It is an encounter with destiny that forges a mystical world where the visible and invisible converge.",
+   "tiff-2026": "Five years after Lingui, the Sacred Bonds, Chadian director Mahamat-Saleh Haroun returns to TIFF with his latest feature, winner of the FIPRESCI Award at the 2026 Berlinale."
+  }
+ }
+]
