@@ -140,6 +140,11 @@ def ficha_de_tmdb(cid, key, titulo):
     # por id: vacía por la red ya no se arma (lib.tmdb_ficha, 14 oct 2026)
     det = tmdb_ficha(cid, key, language='es-ES', append_to_response='credits')
     det_en = tmdb_ficha(cid, key, language='en-US', append_to_response='credits')
+    # TMDB a veces responde 404 en un idioma y la ficha entera en el otro
+    # (1719717 «Chingona», 25 nov 2026): afiche, año y demás no dependen del idioma
+    if not det.get('id') and det_en.get('id'):
+        det.update({k: v for k, v in det_en.items()
+                    if k not in ('title', 'overview', 'tagline', 'credits')})
     # créditos de ambos idiomas: los en-US vienen romanizados
     # (宮崎吾朗 → «Goro Miyazaki») y sin ellos el director nunca casa
     det.setdefault('credits', {}).setdefault('crew', []).extend(

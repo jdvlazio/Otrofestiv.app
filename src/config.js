@@ -399,7 +399,7 @@ export const FESTIVAL_CONFIG={
     dates:'1–8 DIC',dates_en:'DEC 1–8',year:2026,timezoneOffset:'-05:00',
     keyArt:'/assets/keyart/bogoshorts2026.jpg',
     tagline:'Festival de Cortos de Bogotá',
-    instagram:'bogoshorts', storageKey:'bogoshorts2026_',festivalStartStr:'2026-12-01T00:00:00',festivalEndStr:'2026-12-08T23:59:00',
+    instagram:'bogoshorts', ticketing_model:'mixed', storageKey:'bogoshorts2026_',festivalStartStr:'2026-12-01T00:00:00',festivalEndStr:'2026-12-08T23:59:00',
     festivalDates:{'2026-12-01':'2026-12-01','2026-12-02':'2026-12-02','2026-12-03':'2026-12-03','2026-12-04':'2026-12-04','2026-12-05':'2026-12-05','2026-12-06':'2026-12-06','2026-12-07':'2026-12-07','2026-12-08':'2026-12-08'},
     days:[{k:'2026-12-01',d:1,lbl:'MAR'},{k:'2026-12-02',d:2,lbl:'MIÉ'},{k:'2026-12-03',d:3,lbl:'JUE'},{k:'2026-12-04',d:4,lbl:'VIE'},{k:'2026-12-05',d:5,lbl:'SÁB'},{k:'2026-12-06',d:6,lbl:'DOM'},{k:'2026-12-07',d:7,lbl:'LUN'},{k:'2026-12-08',d:8,lbl:'MAR'}],
     dayKeys:['2026-12-01','2026-12-02','2026-12-03','2026-12-04','2026-12-05','2026-12-06','2026-12-07','2026-12-08'],

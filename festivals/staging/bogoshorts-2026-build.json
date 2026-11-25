@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-  "capturado": "2026-11-24",
+  "capturado": "2026-11-25",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 575,
@@ -25,6 +25,7 @@
  "sharedSlotIsOneScreening": false,
  "dias_vacios": [],
  "instagram": "bogoshorts",
+ "ticketing_model": "mixed",
  "prioLimit": 4,
  "dias": [
   "2026-12-01",
@@ -19374,7 +19375,7 @@
      "posterSource": "tmdb",
      "lbSlug": "tamara-flores-chingona",
      "tmdb_id": 1719717,
-     "genre": "Música"
+     "genre": "Music"
     },
     {
      "title": "¿Cómo se ama? (Jorge Drexler)",
@@ -21312,14 +21313,14 @@
    "section": "🥽 Competencia VR (Realidad Virtual)",
    "country": "Países Bajos, Bangladés, Arabia Saudita, Taiwán, Alemania, Palestina, Colombia, Bélgica, Luxemburgo",
    "flags": "🇳🇱🇧🇩🇸🇦🇹🇼🇩🇪🇵🇸🇨🇴🇧🇪🇱🇺",
-   "duration": "240 min",
+   "duration": "420 min",
    "_ancla": [
     "Cinemateca de Bogotá - Bogotá",
     "2026-12-08",
     "11:00"
    ],
    "day": "2026-12-08",
-   "time": "14:00",
+   "time": "11:00",
    "day_order": 7,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Taller de la imagen",
@@ -21446,10 +21447,8 @@
      "fecha": "2026-11-13"
     },
     "time": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "publicado": "2026-11-18",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf"
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
     },
     "venue": {
      "tipo": "festival-web",
@@ -21460,10 +21459,8 @@
      "fecha": "2026-11-13"
     },
     "duration": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "publicado": "2026-11-18",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf"
+     "tipo": "festival-web",
+     "fecha": "2026-11-13"
     },
     "entrada": {
      "tipo": "festival-web",
@@ -22635,8 +22632,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T20:03:06",
-  "plan_sha": "9d351ae0eb82b4eb",
+  "fecha": "2026-11-25T06:08:17",
+  "plan_sha": "c7ef5255110fedd6",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"
  }
