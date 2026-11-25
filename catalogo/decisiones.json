@@ -37439,6 +37439,203 @@
   "fuente": "https://www.instagram.com/p/Df2AcYNEbXC/"
  },
  {
+  "work_id": "w_R4DM15TX08G9",
+  "campo": "directores",
+  "valor": [
+   "Rafaela Camelo"
+  ],
+  "motivo": "la ficha decía otra persona",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "aff-2026": "Matías Rojas Valencia"
+  },
+  "fuente": "https://www.themoviedb.org/movie/1403855"
+ },
+ {
+  "work_id": "w_R4DM15TX08G9",
+  "campo": "xref.tmdb",
+  "valor": 1403855,
+  "motivo": "misma trama, año y duración",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "fuente": "https://www.themoviedb.org/movie/1403855"
+ },
+ {
+  "work_id": "w_R4QPXC86G7NS",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "estreno en Tribeca 2024",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "tribeca-2026": "1996"
+  },
+  "fuente": "https://tribecafilm.com/films/ripe-2024"
+ },
+ {
+  "work_id": "w_R4QPXC86G7NS",
+  "campo": "xref.tmdb",
+  "valor": 1206695,
+  "motivo": "dirección Tusk, 18 min, España y Estados Unidos",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "fuente": "https://www.themoviedb.org/movie/1206695"
+ },
+ {
+  "work_id": "w_R4QPXC86G7NS",
+  "campo": "sinopsis.es",
+  "valor": "En la costa catalana, Sophie, estudiante estadounidense de intercambio, se une a Gloria, una chica local de pelo rubio decolorado, en un partido amistoso de fútbol. Y, justo cuando la rivalidad se convierte en un amor de verano, alguien termina rompiéndose el brazo.",
+  "motivo": "la anterior era de «Ripe» (1996)",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "tribeca-2026": "Dos gemelas que perdieron a sus abusivos padres huyen a Kentucky en busca de una vida mejor. Cuando se refugian con un vagabundo en una base militar abandonada, el enamoramiento de una destruye el vínculo entre ambas."
+  },
+  "vistas": [
+   "f57d87763001"
+  ],
+  "fuente": "https://frameline.org/films/frameline48/ripe"
+ },
+ {
+  "work_id": "w_R4QPXC86G7NS",
+  "campo": "sinopsis.en",
+  "valor": "On the Catalan coast, American exchange student Sophie joins bleach-blonde local Gloria for a friendly game of football. And just as friendly rivalry turns into a summer crush, someone ends up breaking an arm.",
+  "motivo": "la anterior era de «Ripe» (1996)",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "tribeca-2026": "Twin sisters who lost their abusive parents run away to Kentucky in search of a better life. When they take shelter with a drifter on a derelict army base, Violet falls for him — and Rosie's growing hostility destroys their bond forever."
+  },
+  "fuente": "https://frameline.org/films/frameline48/ripe"
+ },
+ {
+  "work_id": "w_R4QPXC86G7NS",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/ms32hzMGRv4JpfqOsAMgX07ECoE.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el anterior era de otra obra",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "tribeca-2026": "https://image.tmdb.org/t/p/w500/eVJjg1IwSBwzBc3X4tpFpkCeIX4.jpg"
+  },
+  "a_mano": true,
+  "vistas": [
+   "https://image.tmdb.org/t/p/w500/eVJjg1IwSBwzBc3X4tpFpkCeIX4.jpg"
+  ],
+  "fuente": "https://www.themoviedb.org/movie/1206695"
+ },
+ {
+  "work_id": "w_FNRENZ48DM59",
+  "campo": "sinopsis.en",
+  "valor": "Represented as herons, a daughter travels to a small, faraway town in Colombia to visit her father. On this journey to the mountains, both will have to come face to face with nature. At times they will feel strong; at others, filled with fear. Out of fear and the lack of a voice, one of them will turn into a monster condemned to the deepest solitude.",
+  "motivo": "la de TMDB no cuenta esta obra; traducida de la española",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "ficcali-2026": "In Bogota's noisy and violent big city machine people carry their nature only limply in their hands, surrendering without resistance to disconcerting rituals."
+  },
+  "fuente": "https://www.themoviedb.org/movie/644419"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "anio",
+  "valor": 2024,
+  "motivo": "estreno en Locarno, 11 ago 2024",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "cinemancia-2025": "2018"
+  },
+  "fuente": "https://en.wikipedia.org/wiki/Invention_(film)"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "xref.tmdb",
+  "valor": 1315409,
+  "motivo": "misma dirección y duración",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "fuente": "https://www.themoviedb.org/movie/1315409"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "sinopsis.es",
+  "valor": "Tras la muerte repentina de su padre, un hombre dado a las conspiraciones, una hija hereda la patente de un aparato experimental de sanación.",
+  "motivo": "la anterior no contaba la obra",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "cinemancia-2025": "Película experimental de Courtney Stephens que explora los límites entre el documental y la ficción a través de un archivo familiar y la historia colonial."
+  },
+  "vistas": [
+   "d66f8c632574"
+  ],
+  "fuente": "https://www.themoviedb.org/movie/1315409"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "sinopsis.en",
+  "valor": "In the aftermath of a conspiracy-minded father’s sudden death, his daughter inherits his patent for an experimental healing device.",
+  "motivo": "la anterior no contaba la obra",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "cinemancia-2025": "An experimental film by Courtney Stephens exploring the boundaries between documentary and fiction through a family archive and colonial history."
+  },
+  "fuente": "https://www.themoviedb.org/movie/1315409"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "https://image.tmdb.org/t/p/w500/98JuYEy6GGxxvZeGOU914hRnm7S.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "el anterior era de «The Invention» (2018)",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "cinemancia-2025": "https://image.tmdb.org/t/p/w185/3pXZBoTPM5Y0hXKBaAKkwrcC7ig.jpg"
+  },
+  "a_mano": true,
+  "vistas": [
+   "https://image.tmdb.org/t/p/w185/3pXZBoTPM5Y0hXKBaAKkwrcC7ig.jpg"
+  ],
+  "fuente": "https://www.themoviedb.org/movie/1315409"
+ },
+ {
+  "work_id": "w_R4ES38CFST8D",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "TMDB y Wikipedia; ninguna fuente da Experimental",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "cinemancia-2025": "Experimental"
+  },
+  "fuente": "https://www.themoviedb.org/movie/1315409"
+ },
+ {
+  "work_id": "w_FNRENZ48DM59",
+  "campo": "directores",
+  "valor": [
+   "Carla Melo Gampert"
+  ],
+  "motivo": "forma completa: afiche y TMDB",
+  "fecha": "2026-11-24",
+  "quien": "Juan («arregla las cuatro»)",
+  "antes": {
+   "ficcali-2026": "Carla Melo"
+  },
+  "fuente": "https://www.themoviedb.org/movie/644419"
+ },
+ {
   "work_id": "w_4KDR096SGAQ9",
   "campo": "sinopsis.es",
   "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
@@ -44559,10 +44756,10 @@
  {
   "work_id": "w_7THWF5492V4Y",
   "campo": "sinopsis.es",
-  "valor": "Mirage es una historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, recibe la invitación a apoyarla en sus desafíos. La obra busca generar empatía hacia realidades frecuentemente incomprendidas.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, es invitado a apoyarla en sus desafíos. Busca generar empatía hacia realidades frecuentemente incomprendidas.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Mirage es una historia interactiva de realidad virtual sobre una joven que enfrenta depresión y ansiedad, basada en las experiencias de Naima Karim y su hija. El público recorre la mente de la joven y, mediante la interacción y un chaleco háptico, recibe la invitación a apoyarla en sus desafíos. La obra busca generar empatía hacia realidades frecuentemente incomprendidas."
@@ -44571,10 +44768,10 @@
  {
   "work_id": "w_7THWF5492V4Y",
   "campo": "sinopsis.en",
-  "valor": "Mirage is an interactive Virtual Reality story of a young girl who is battling depression and anxiety, based on the artist Naima Karim and her daughter’s lived experience. The audience embarks on an immersive journey through the young girl’s mind. Using interactivity and a haptic vest, they will be encouraged to support her through her challenges. Mirage sheds light on the often misunderstood realities of depression and anxiety, inspiring empathy.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "An interactive virtual reality story of a young girl battling depression and anxiety, based on the lived experience of Naima Karim and her daughter. The audience journeys through the girl’s mind and, through interactivity and a haptic vest, is encouraged to support her through her challenges. It inspires empathy for often misunderstood realities.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Mirage is an interactive Virtual Reality story of a young girl who is battling depression and anxiety, based on the artist Naima Karim and her daughter’s lived experience. The audience embarks on an immersive journey through the young girl’s mind. Using interactivity and a haptic vest, they will be encouraged to support her through her challenges. Mirage sheds light on the often misunderstood realities of depression and anxiety, inspiring empathy."
@@ -44664,10 +44861,10 @@
  {
   "work_id": "w_7THWZ6NHS6J9",
   "campo": "sinopsis.es",
-  "valor": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "En una ciudad subterránea posapocalíptica, una investigadora halla un diente de león capaz de sobrevivir en la superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR, se guían haces de luz entre las sombras y descubren recuerdos olvidados, en busca del camino a la superficie.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie."
@@ -44676,10 +44873,10 @@
  {
   "work_id": "w_7THWZ6NHS6J9",
   "campo": "sinopsis.en",
-  "valor": "In a post-apocalyptic underground city, a lone researcher discovers a dandelion capable of surviving the harsh surface climate. Hoping to restore life to the barren world, she sets out to replant the seedling above ground. In this picture-book-inspired VR experience, players guide beams of light through the darkness, uncovering illustrated illusions and forgotten memories as they search for a path back to the surface.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "In a post-apocalyptic underground city, a lone researcher discovers a dandelion capable of surviving the harsh surface. Hoping to restore life to a barren world, she sets out to replant it above ground. In this VR experience, players guide beams of light through the darkness, uncovering forgotten memories as they seek a path back to the surface.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "In a post-apocalyptic underground city, a lone researcher discovers a dandelion capable of surviving the harsh surface climate. Hoping to restore life to the barren world, she sets out to replant the seedling above ground. In this picture-book-inspired VR experience, players guide beams of light through the darkness, uncovering illustrated illusions and forgotten memories as they search for a path back to the surface."
@@ -44744,10 +44941,10 @@
  {
   "work_id": "w_7THX058RWMDS",
   "campo": "sinopsis.es",
-  "valor": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno.",
-  "motivo": "alta desde bogoshorts-2026",
+  "valor": "Documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de 20 comunidades con tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes en 360° de un paisaje que desaparece con otras de celular.",
+  "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
-  "quien": "Claude (montaje BOGOSHORTS)",
+  "quien": "lector BOGOSHORTS D",
   "sembrada": true,
   "antes": {
    "bogoshorts-2026": "Raj’in es un documental inmersivo sobre la limpieza étnica de palestinos en Cisjordania por milicias de colonos y autoridades israelíes. Filmado durante tres años, sigue el desplazamiento de más de veinte comunidades a través de tres protagonistas que testimonian la violencia diaria y sistemática. Combina imágenes de 360 grados de un paisaje palestino que desaparece con grabaciones de celular de los hechos sobre el terreno."
@@ -44756,7 +44953,7 @@
  {
   "work_id": "w_7THX058RWMDS",
   "campo": "sinopsis.en",
-  "valor": "Raj’in (We Shall Return) is an immersive documentary capturing the ongoing ethnic cleansing of Palestinians in the West Bank by settler militias and Israeli authorities. Filmed over the last three years, the cinematic experience follows the displacement of over 20 communities, with three protagonists bearing witness to the systematic, daily violence. The film weaves 360º footage, placing viewers inside a vanishing Palestinian landscape, and phone footage recording events on the ground, unfiltered.",
+  "valor": "Immersive documentary on the ongoing ethnic cleansing of Palestinians in the West Bank by settler militias and Israeli authorities. Filmed over three years, it follows the displacement of over 20 communities, with three protagonists bearing witness to systematic, daily violence. It weaves 360º footage of a vanishing landscape with phone footage.",
   "motivo": "corrección de lectura contra la fuente",
   "fecha": "2026-11-24",
   "quien": "lector BOGOSHORTS D",
@@ -55879,7 +56076,7 @@
   "work_id": "w_4KG9RKS99545",
   "campo": "afiche",
   "valor": {
-   "archivo": "/assets/bogoshorts-2026/klase-s-nuotrauka.jpg",
+   "archivo": "/assets/bogoshorts-2026/klases-nuotrauka.jpg",
    "veredicto": "oficial",
    "fuente": "tmdb"
   },
@@ -55888,7 +56085,7 @@
   "quien": "Claude (montaje BOGOSHORTS)",
   "sembrada": true,
   "antes": {
-   "bogoshorts-2026": "/assets/bogoshorts-2026/klase-s-nuotrauka.jpg"
+   "bogoshorts-2026": "/assets/bogoshorts-2026/klases-nuotrauka.jpg"
   }
  },
  {

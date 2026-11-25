@@ -111,7 +111,7 @@ MEZCLADAS_EN = {'Red Elephant': (
 SIN_INGLES = {'They’re Here', 'A Body that Hurts', 'O sigilo', 'Nothing Here is Lost', 'To the North', 'Virgin Fandango',
               'If Only', 'Night Feeds', 'I Wanna Go Home', 'The Getaway', 'The Birthday Gift', 'The Tide Inside', 'See You in the Morning',
               'Fiction', 'Transastralisme', 'Grounded', 'Cat Me If You Can', 'Au-dessus du vacarme'}
-INGLES = {'L’uomo meccanico': 'The Mechanical Man',
+INGLES = {'环岛': 'The Apple Doesn’t Fall...', 'L’uomo meccanico': 'The Mechanical Man',
           # el PDF imprime el artista en el título inglés también; el título es lo de antes
           'La ciudad de las flores (Maleza y Los Floripondios)': 'City of Flowers'}
 

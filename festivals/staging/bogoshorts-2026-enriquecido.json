@@ -1990,7 +1990,7 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Klase s nuotrauka",
+   "titulo": "Klasės nuotrauka",
    "tmdb_id": 1668922,
    "titulo_original": "Class Photo",
    "poster_path": "/JuDcylbg8S3wZ3GEBaFC0RrIIc.jpg",
@@ -2004,7 +2004,7 @@
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1668922 «Class Photo» (2026, 17 min, Lituania, dir. Arnas Balčiūnas) con sinopsis idéntica a la del catálogo (Ignas, escuela abandonada); imdb_id tt41815531 coincide con IMDb; LB class-photo alt. Klasės nuotrauka",
    "_director": "Arnas Balčiūnas",
    "_sondeado": "2026-11-24",
-   "poster": "/assets/bogoshorts-2026/klase-s-nuotrauka.jpg",
+   "poster": "/assets/bogoshorts-2026/klases-nuotrauka.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -5265,7 +5265,7 @@
    "_afiche": "declarado: Girona Film Festival 2026, ficha oficial de la obra (afiche con título Liebe Caro, «un film de Maximilien Mpoto», laurel de Girona)"
   },
   {
-   "titulo": "Kupljena sjecanja",
+   "titulo": "Kupljena sjećanja",
    "poster": "/assets/bogoshorts-2026/kupljena-sjecanja.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4313), 450×630"
@@ -7245,7 +7245,7 @@
    "poster": "/assets/bogoshorts-2026/khufu.jpg",
    "posterSource": "tmdb"
   },
-  "Klase s nuotrauka": {
+  "Klasės nuotrauka": {
    "tmdb_id": 1668922,
    "titulo_original": "Class Photo",
    "poster_path": "/JuDcylbg8S3wZ3GEBaFC0RrIIc.jpg",
@@ -7259,7 +7259,7 @@
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1668922 «Class Photo» (2026, 17 min, Lituania, dir. Arnas Balčiūnas) con sinopsis idéntica a la del catálogo (Ignas, escuela abandonada); imdb_id tt41815531 coincide con IMDb; LB class-photo alt. Klasės nuotrauka",
    "_director": "Arnas Balčiūnas",
    "_sondeado": "2026-11-24",
-   "poster": "/assets/bogoshorts-2026/klase-s-nuotrauka.jpg",
+   "poster": "/assets/bogoshorts-2026/klases-nuotrauka.jpg",
    "posterSource": "tmdb"
   },
   "Kondor, el mago": {
@@ -10242,7 +10242,7 @@
   "I Carry Them",
   "Jazzed",
   "Kevin, el niño del espacio",
-  "Kupljena sjecanja",
+  "Kupljena sjećanja",
   "La ciudad de las flores (Maleza y Los Floripondios)",
   "La colère et après",
   "La culpa (Juliana Quédate Otro Día)",
@@ -10368,7 +10368,7 @@
    "director": "Edward Gómez Granada",
    "fecha": "2026-11-23"
   },
-  "Kupljena sjecanja": {
+  "Kupljena sjećanja": {
    "director": "Franko Dujmić Lorger",
    "fecha": "2026-11-23"
   },

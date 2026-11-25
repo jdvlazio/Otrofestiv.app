@@ -236,9 +236,6 @@ def main():
             # un título sin letras latinas (跳房子) no casa al ensamblar: su género va en el crudo
             if g and (not x.get('genero') or not _hu(o['titulo']) or 'genero' in (x.get('_heredado') or {})):
                 o['genero'] = g
-            if x.get('title_en') and 'title_en' not in (x.get('_heredado') or {}) \
-                    and _hu(x['title_en']) == _hu(o.get('title_en')):
-                o.pop('title_en')
     progs['CI-VC/CN-VC'] = progs['CI-VC'] + progs['CN-VC']
     funciones, descartadas = [], []
     for e, col, ws_ in sorted(celdas, key=lambda k: (k[1], k[0][0], k[2][0][1])):

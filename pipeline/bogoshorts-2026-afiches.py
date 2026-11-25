@@ -20,7 +20,7 @@ DIR = f'{REPO}/fuentes/bogoshorts-2026/afiches-web'
 NO = {}
 # la web titula la ficha en español o con el artista delante (misma obra: dirección y programa)
 ALIAS = {'Idols': '4205', 'Cold Coffee': '4195', 'Cvijeće': '4249', 'On naît seul, on meurt seul': '4326',
-         'The Waiting Palm': '4238', 'Savia (Alfilera)': '4344', 'Kupljena sjecanja': '4313',
+         'The Waiting Palm': '4238', 'Savia (Alfilera)': '4344', 'Kupljena sjećanja': '4313',
          'Nothing Here is Lost': '4364', 'Raj’in': '4381', 'When the Flowers Bloom': '4380',
          'Berzingue (Crache)': '4345', 'The Beat (Matías Aguayo)': '4347', 'Cocodrilo (Dillom)': '4346',
          'Argentina Is Daing (Marttein)': '4348', 'Oui (Balming Tiger)': '4349', 'Běi Huí Guī Xiàn': '4259'}
