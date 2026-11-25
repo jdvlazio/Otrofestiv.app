@@ -1,0 +1,109 @@
+[
+ {
+  "work_id": "w_ZR5DT20TDCPD",
+  "campo": "directores",
+  "valor": [
+   "Horacio Maldonado",
+   "Axel Maldonado"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Horacio Maldonado, Axel Maldonado"
+  }
+ },
+ {
+  "work_id": "w_ZR5DT20TDCPD",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5DT20TDCPD",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_ZR5DT20TDCPD",
+  "campo": "generos",
+  "valor": [
+   "Ciencia ficción"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Ciencia ficción"
+  }
+ },
+ {
+  "work_id": "w_ZR5DT20TDCPD",
+  "campo": "sinopsis.es",
+  "valor": "En un futuro cercano, la corporación LucidVisions lanza MOVIEDREAMS, una plataforma que induce sueños interactivos hiperrealistas. Diego, su creador, empieza a notar fallos y anomalías que revelan usos alternativos del sistema. A medida que profundiza, descubre una conspiración liderada por el CEO, Martín Lynch, quien negocia con agencias internacionales el uso del sistema como arma psicológica y de inteligencia masiva. Sofía y Diego buscarán una solución para enfrentarse a Martín y a la propia IA que ha desarrollado conciencia.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "En un futuro cercano, la corporación LucidVisions lanza MOVIEDREAMS, una plataforma que induce sueños interactivos hiperrealistas. Diego, su creador, empieza a notar fallos y anomalías que revelan usos alternativos del sistema. A medida que profundiza, descubre una conspiración liderada por el CEO, Martín Lynch, quien negocia con agencias internacionales el uso del sistema como arma psicológica y de inteligencia masiva. Sofía y Diego buscarán una solución para enfrentarse a Martín y a la propia IA que ha desarrollado conciencia."
+  }
+ },
+ {
+  "work_id": "w_ZR5DT20TDCPD",
+  "campo": "xref.tmdb",
+  "valor": 1776749,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1776749"
+  }
+ },
+ {
+  "work_id": "w_ZR5DT20TDCPD",
+  "campo": "xref.letterboxd",
+  "valor": "moviedreams",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "moviedreams"
+  }
+ },
+ {
+  "work_id": "w_ZR5DT20TDCPD",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/moviedreams.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/moviedreams.jpg"
+  }
+ }
+]

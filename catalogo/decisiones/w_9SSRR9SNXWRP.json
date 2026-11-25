@@ -1,0 +1,135 @@
+[
+ {
+  "work_id": "w_9SSRR9SNXWRP",
+  "campo": "directores",
+  "valor": [
+   "Tim Smink"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Tim Smink"
+  }
+ },
+ {
+  "work_id": "w_9SSRR9SNXWRP",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_9SSRR9SNXWRP",
+  "campo": "paises",
+  "valor": [
+   "NL"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Países Bajos"
+  }
+ },
+ {
+  "work_id": "w_9SSRR9SNXWRP",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_9SSRR9SNXWRP",
+  "campo": "sinopsis.es",
+  "valor": "Mia trabaja el turno de noche en una gasolinera apartada, sin dejar de pensar en la pelea con su novio, Damon. Él entra de repente e intenta hacer las paces, hasta que ve algo afuera y corre al baño. Mia queda frente a una figura enmascarada con un arma. ¿Un asalto? ¿Y es Damon quien dice ser? Sangrienta película de grado animada.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Mia trabaja el turno de noche en una gasolinera apartada. Sería una noche tranquila si no siguiera pensando en la pelea con su novio, Damon. El turno está por terminar cuando él entra de repente. Damon intenta hacer las paces, hasta que ve algo afuera y corre al baño. Antes de que Mia se dé cuenta, está frente a una figura enmascarada… con un arma. ¿Un asalto? ¿O no? ¿Y es Damon de verdad quien dice ser? Una sangrienta película de grado animada."
+  },
+  "vistas": [
+   "467d4fe9bdc6"
+  ],
+  "original_de": [
+   "medellinhorror-2026"
+  ],
+  "titulo": "Closing Hour",
+  "original": "Mia trabaja el turno de noche en una gasolinera apartada. Sería una noche tranquila si no siguiera pensando en la pelea con su novio, Damon. El turno está por terminar cuando él entra de repente. Damon intenta hacer las paces, hasta que ve algo afuera y corre al baño. Antes de que Mia se dé cuenta, está frente a una figura enmascarada… con un arma. ¿Un asalto? ¿O no? ¿Y es Damon de verdad quien dice ser? Una sangrienta película de grado animada.",
+  "sintesis": {
+   "redacta": "Claude (sesión onboarding)",
+   "verifica": "Claude (verificador acbdb802)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-25",
+   "huella": "1aa9eadc0b40"
+  }
+ },
+ {
+  "work_id": "w_9SSRR9SNXWRP",
+  "campo": "sinopsis.en",
+  "valor": "Mia works the night shift at a remote gas station. A quiet evening – if only her mind weren’t still on the quarrel with her boyfriend Damon. The shift is nearly over, when suddenly he walks in. Damon tries to make amends, until he sees something outside and rushes to the bathroom. Before Mia knows it, she’s face-to-face with a masked figure… holding a gun. A robbery. Or is it? And is Damon really who he pretends to be? A gory, animated graduation film.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Mia works the night shift at a remote gas station. A quiet evening – if only her mind weren’t still on the quarrel with her boyfriend Damon. The shift is nearly over, when suddenly he walks in. Damon tries to make amends, until he sees something outside and rushes to the bathroom. Before Mia knows it, she’s face-to-face with a masked figure… holding a gun. A robbery. Or is it? And is Damon really who he pretends to be? A gory, animated graduation film."
+  }
+ },
+ {
+  "work_id": "w_9SSRR9SNXWRP",
+  "campo": "xref.tmdb",
+  "valor": 1554064,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "1554064"
+  }
+ },
+ {
+  "work_id": "w_9SSRR9SNXWRP",
+  "campo": "xref.letterboxd",
+  "valor": "closing-hour",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "closing-hour"
+  }
+ },
+ {
+  "work_id": "w_9SSRR9SNXWRP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/closing-hour.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/closing-hour.jpg"
+  }
+ }
+]

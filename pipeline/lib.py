@@ -1085,7 +1085,8 @@ def cargar_crudo(path):
     assert isinstance(fs, list) and fs, f'{path}: falta la lista funciones[] (o programas[])'
     OBLIG = {'titulo', 'dia', 'hora', 'sede'}
     for i, f in enumerate(fs):
-        faltan = OBLIG - set(f)
+        # un bloque `unscheduled` (SCHEMA § Bloques) no tiene día, hora ni sede
+        faltan = ({'titulo'} if f.get('unscheduled') else OBLIG) - set(f)
         assert not faltan, f'{path}: funciones[{i}] sin {sorted(faltan)}'
     # La casilla de acceso no puede quedar MUDA. Basta con que el festival lo
     # diga una vez para todas sus funciones (FICMA: «entrada libre a todo el

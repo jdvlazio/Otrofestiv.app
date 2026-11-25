@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_ZR5NGEKXA4TM",
+  "campo": "directores",
+  "valor": [
+   "Saeed García Pérez"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Saeed García Pérez"
+  }
+ },
+ {
+  "work_id": "w_ZR5NGEKXA4TM",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5NGEKXA4TM",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5NGEKXA4TM",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/los-lobo.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/los-lobo.jpg"
+  }
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "work_id": "w_ZR5G6V2HFN58",
+  "campo": "directores",
+  "valor": [
+   "Diego Mezarina"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Diego Mezarina"
+  }
+ },
+ {
+  "work_id": "w_ZR5G6V2HFN58",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5G6V2HFN58",
+  "campo": "paises",
+  "valor": [
+   "PE"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Perú"
+  }
+ }
+]

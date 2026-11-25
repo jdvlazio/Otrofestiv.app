@@ -424,15 +424,18 @@ def ids_del_montaje(funciones, registro, decisiones):
     Un montaje sin _ancla (build viejo) no recibe id: sin ancla no hay con qué
     casar, y uno inventado se rompería en el siguiente montaje."""
     registro = registro or {'funciones': {}}
+    # un bloque `unscheduled` no es una función: no tiene ancla ni lleva id
+    bloques = [f for f in funciones if f.get('unscheduled')]
+    funciones = [f for f in funciones if not f.get('unscheduled')]
     sin = sum(1 for f in funciones if not f.get('_ancla'))
     if not funciones or sin:
-        return funciones, registro, ([f'{sin} función(es) sin _ancla: este montaje no recibe id'] if sin else [])
+        return funciones + bloques, registro, ([f'{sin} función(es) sin _ancla: este montaje no recibe id'] if sin else [])
     out, registro, avisos = asignar_ids(funciones, registro, decisiones)
     for f in out:
         f['id'] = f['_fid']
         if f.get('_ids_anteriores'):          # §11.4: partida / fusión, para que la app migre
             f['ids_anteriores'] = f['_ids_anteriores']
-    return out, registro, avisos
+    return out + bloques, registro, avisos
 
 
 def ids_para_publicado(films, registro):
@@ -788,7 +791,8 @@ def sin_entrada(festival):
     """Títulos de las funciones publicadas que no dicen cómo se entra. La
     inscripción no es una entrada (C8)."""
     return [f.get('title') for f in festival.get('films') or []
-            if not (f.get('is_free') in (True, False) or f.get('ticket_url') or f.get('by_invitation') or f.get('online'))]
+            if not f.get('unscheduled')   # bloque sin horario: no es una función
+            and not (f.get('is_free') in (True, False) or f.get('ticket_url') or f.get('by_invitation') or f.get('online'))]
 
 
 def conflictos_abiertos(raiz=REPO):

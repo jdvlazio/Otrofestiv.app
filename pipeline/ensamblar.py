@@ -434,14 +434,16 @@ def ensamblar(fid, escribir=True):
     films, venues, secciones = [], {}, {}
     rep = collections.Counter()
     for f in crudo['funciones']:
-        sede, sala = lib.sede_sala(f['sede'], SEDES)
+        # bloque sin sesión (SCHEMA § Bloques): las obras sin día, hora ni sede
+        sin_sesion = bool(f.get('unscheduled'))
+        sede, sala = ('', '') if sin_sesion else lib.sede_sala(f['sede'], SEDES)
         # La sala es de la FUNCIÓN, como dice PROTOCOLO §3 y §4 —«la sala va
         # fuera del nombre, campo `sala`»—. Esta línea la ignoraba y la tomaba
         # solo de la tabla de sedes, así que quien seguía la doc la perdía en
         # silencio. La tabla sigue mandando en el NOMBRE de la sede; la sala
         # que la función trae gana sobre la que la tabla adivina.
         sala = f.get('sala') or sala
-        if sede not in geo and f['sede'] not in geo and sede not in venues:
+        if not sin_sesion and sede not in geo and f['sede'] not in geo and sede not in venues:
             rep['sede sin geo'] += 1
         sec_pub, sec_meta = _seccion(_seccion_de(f, cfg), SECS)
         if sec_pub not in secciones:
@@ -457,7 +459,7 @@ def ensamblar(fid, escribir=True):
             # «Encuentro Colombia Experimental Contemporánea» de CineAutopsia
             # llevaba años así, contado como obra en las coberturas mientras el
             # planificador lo excluía (8 sep 2026, lo cazó [info-solo-evento]).
-            'type': f.get('type') or ('event' if (f.get('event_kind') or f.get('info')) else 'film'),
+            'type': f.get('type') or ('film' if sin_sesion else 'event' if (f.get('event_kind') or f.get('info')) else 'film'),
             'section': sec_pub,
             'director': f.get('director') or None,
             'year': f.get('anio') or None,
@@ -477,7 +479,7 @@ def ensamblar(fid, escribir=True):
             # EL ANCLA de la función (docs/FUNCION.md §3.1): el venue PUBLICADO (con
             # su ciudad: «Cinema Local» existe en Bogotá y en Cali, FICDEH), día y
             # hora tal como los dio la fuente principal
-            '_ancla': (sede, f.get('dia'), f.get('hora')),
+            '_ancla': None if sin_sesion else (sede, f.get('dia'), f.get('hora')),
             'day': f.get('dia'), 'time': f.get('hora'), 'day_order': orden.get(f.get('dia')),
             'venue': sede, 'sala': sala or None,
             'event_kind': f.get('event_kind') or None,
@@ -671,6 +673,8 @@ def ensamblar(fid, escribir=True):
         # publicada hacía que el pin no llegara nunca, y sin ruido: Jardín salió
         # a producción con sus SIETE sedes sin coordenadas teniendo el sidecar
         # completo al lado. Lo destapó Itagüí, que hizo exactamente lo mismo.
+        if sin_sesion:
+            continue
         _v = {'short': sede.split(' - ')[0], 'city': sede.split(' - ')[-1]}
         _v.update(_desde_almacen(geo.get(sede) or geo.get(f['sede']) or {}))
         venues[sede] = _v

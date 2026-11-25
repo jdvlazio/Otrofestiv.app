@@ -1,0 +1,131 @@
+[
+ {
+  "work_id": "w_9SSP0S7KT21W",
+  "campo": "directores",
+  "valor": [
+   "Andrés Molano Moncada"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Andrés Molano Moncada"
+  }
+ },
+ {
+  "work_id": "w_9SSP0S7KT21W",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "2022"
+  }
+ },
+ {
+  "work_id": "w_9SSP0S7KT21W",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_9SSP0S7KT21W",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Suspenso"
+  }
+ },
+ {
+  "work_id": "w_9SSP0S7KT21W",
+  "campo": "sinopsis.es",
+  "valor": "Santiago, un guionista en apuros, encuentra a su musa en el edificio de enfrente: una mujer a la que llama \"Raquel\". Su inspiración llega al límite cuando tiene que elegir entre escribir sobre Raquel o salvarla de la muerte.",
+  "motivo": "comillas rectas",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Santiago, un guionista en apuros, encuentra a su musa en el edificio de enfrente: una mujer a la que llama «Raquel». Su inspiración llega al límite cuando tiene que elegir entre escribir sobre Raquel o salvarla de la muerte."
+  },
+  "anteriores": [
+   {
+    "valor": "Santiago, un guionista en apuros, encuentra a su musa en el edificio de enfrente: una mujer a la que llama «Raquel». Su inspiración llega al límite cuando tiene que elegir entre escribir sobre Raquel o salvarla de la muerte.",
+    "motivo": "alta desde medellinhorror-2026",
+    "fecha": "2026-11-25",
+    "quien": "Claude"
+   }
+  ],
+  "vistas": [
+   "2d47cdf3b412"
+  ]
+ },
+ {
+  "work_id": "w_9SSP0S7KT21W",
+  "campo": "sinopsis.en",
+  "valor": "Santiago is a struggling screenwriter who finds his muse, a woman he names “Raquel,” in the building across the street. His inspiration is pushed to the limit when he must choose between writing about Raquel or saving her from dying.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Santiago is a struggling screenwriter who finds his muse, a woman he names “Raquel,” in the building across the street. His inspiration is pushed to the limit when he must choose between writing about Raquel or saving her from dying."
+  }
+ },
+ {
+  "work_id": "w_9SSP0S7KT21W",
+  "campo": "xref.tmdb",
+  "valor": 1285208,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "1285208"
+  }
+ },
+ {
+  "work_id": "w_9SSP0S7KT21W",
+  "campo": "xref.letterboxd",
+  "valor": "reescrito",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "reescrito"
+  }
+ },
+ {
+  "work_id": "w_9SSP0S7KT21W",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/rewritten.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/rewritten.jpg"
+  }
+ }
+]

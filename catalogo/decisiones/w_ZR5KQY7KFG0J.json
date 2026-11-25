@@ -1,0 +1,124 @@
+[
+ {
+  "work_id": "w_ZR5KQY7KFG0J",
+  "campo": "directores",
+  "valor": [
+   "Víctor Basallote"
+  ],
+  "motivo": "mismo autor; grafía con tilde, la castellana de BHFF (TMDB y la revista omiten la tilde)",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "bhff-2026": "Víctor Basallote",
+   "medellinhorror-2026": "Victor Basallote"
+  }
+ },
+ {
+  "work_id": "w_ZR5KQY7KFG0J",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/happy.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "mismo afiche en los dos festivales; este está completo, el de BHFF recortado",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/happy.jpg",
+   "medellinhorror-2026": "/assets/medellinhorror-2026/happy.jpg"
+  },
+  "vistas": [
+   "/assets/bhff-2026/happy.jpg"
+  ]
+ },
+ {
+  "work_id": "w_ZR5KQY7KFG0J",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026",
+   "medellinhorror-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5KQY7KFG0J",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "España",
+   "medellinhorror-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_ZR5KQY7KFG0J",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_ZR5KQY7KFG0J",
+  "campo": "sinopsis.es",
+  "valor": "Durante una aburrida visita a casa de su abuela, Cárol encuentra una muñeca singular con la que matar el tiempo. Pero pronto se da cuenta de que, en esa casa, ella no es la única que sabe divertirse.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Durante una aburrida visita a casa de su abuela, Cárol encuentra una muñeca singular con la que matar el tiempo. Pero pronto se da cuenta de que, en esa casa, ella no es la única que sabe divertirse."
+  }
+ },
+ {
+  "work_id": "w_ZR5KQY7KFG0J",
+  "campo": "sinopsis.en",
+  "valor": "During a boring visit to her grandmother's house, Cárol discovers a unique doll to kill time with. But she soon realizes that, in that house, she isn't the only one who knows how to have fun.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "During a boring visit to her grandmother's house, Cárol discovers a unique doll to kill time with. But she soon realizes that, in that house, she isn't the only one who knows how to have fun."
+  }
+ },
+ {
+  "work_id": "w_ZR5KQY7KFG0J",
+  "campo": "xref.tmdb",
+  "valor": 1753034,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "1753034"
+  }
+ },
+ {
+  "work_id": "w_ZR5KQY7KFG0J",
+  "campo": "xref.letterboxd",
+  "valor": "happy-2026",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "happy-2026"
+  }
+ }
+]

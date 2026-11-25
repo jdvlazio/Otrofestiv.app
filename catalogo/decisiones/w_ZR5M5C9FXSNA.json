@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_ZR5M5C9FXSNA",
+  "campo": "directores",
+  "valor": [
+   "Lorena Toscano"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Lorena Toscano"
+  }
+ },
+ {
+  "work_id": "w_ZR5M5C9FXSNA",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5M5C9FXSNA",
+  "campo": "paises",
+  "valor": [
+   "MX"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_ZR5M5C9FXSNA",
+  "campo": "generos",
+  "valor": [
+   "Fantasía"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Fantasía"
+  }
+ },
+ {
+  "work_id": "w_ZR5M5C9FXSNA",
+  "campo": "sinopsis.es",
+  "valor": "Fernanda se ve obligada a volver al apartamento donde ocurrió una tragedia familiar. Al llegar al Interior 8, empiezan a desatarse sucesos sobrenaturales.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Fernanda se ve obligada a volver al apartamento donde ocurrió una tragedia familiar. Al llegar al Interior 8, empiezan a desatarse sucesos sobrenaturales."
+  }
+ },
+ {
+  "work_id": "w_ZR5M5C9FXSNA",
+  "campo": "sinopsis.en",
+  "valor": "Fernanda is forced to return to the apartment where a family tragedy occurred. Upon arriving at Unit 8, supernatural events begin to unfold.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Fernanda is forced to return to the apartment where a family tragedy occurred. Upon arriving at Unit 8, supernatural events begin to unfold."
+  }
+ },
+ {
+  "work_id": "w_ZR5M5C9FXSNA",
+  "campo": "xref.tmdb",
+  "valor": 1713410,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1713410"
+  }
+ },
+ {
+  "work_id": "w_ZR5M5C9FXSNA",
+  "campo": "xref.letterboxd",
+  "valor": "unit-8",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "unit-8"
+  }
+ },
+ {
+  "work_id": "w_ZR5M5C9FXSNA",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/interior-8.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/interior-8.jpg"
+  }
+ }
+]

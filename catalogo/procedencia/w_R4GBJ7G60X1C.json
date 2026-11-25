@@ -16,7 +16,15 @@
   "fecha": "2026-11-24"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25"
  }
 }

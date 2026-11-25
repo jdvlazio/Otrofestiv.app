@@ -51,5 +51,79 @@
    "fantasmagoria-2026": "Terror",
    "villadelcine-2026": "Terror / Drama"
   }
+ },
+ {
+  "work_id": "w_R4GB4F3T5DWZ",
+  "campo": "directores",
+  "valor": [
+   "Sebastián Flórez"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Sebastián Flórez",
+   "fantasmagoria-2026": "Sebastián Flórez",
+   "villadelcine-2026": "Sebastián Flórez"
+  }
+ },
+ {
+  "work_id": "w_R4GB4F3T5DWZ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025",
+   "fantasmagoria-2026": "2025",
+   "villadelcine-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_R4GB4F3T5DWZ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "fantasmagoria-2026": "Colombia",
+   "villadelcine-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4GB4F3T5DWZ",
+  "campo": "xref.tmdb",
+  "valor": 1786249,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1786249",
+   "fantasmagoria-2026": "1786249",
+   "villadelcine-2026": "1786249"
+  }
+ },
+ {
+  "work_id": "w_R4GB4F3T5DWZ",
+  "campo": "xref.letterboxd",
+  "valor": "no-es-el-fin-del-mundo",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "no-es-el-fin-del-mundo",
+   "fantasmagoria-2026": "no-es-el-fin-del-mundo",
+   "villadelcine-2026": "no-es-el-fin-del-mundo"
+  }
  }
 ]

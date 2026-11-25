@@ -8,8 +8,15 @@
  "directores": [
   "Julián Gómez Reyes"
  ],
+ "aliases": [
+  {
+   "titulo": "There Is Something Behind You",
+   "tipo": "festival"
+  }
+ ],
  "sinopsis": {
-  "es": "¿Alguna vez has sentido que algo te observa en la oscuridad?¿Escuchas sonidos extraños en las noches? ¿Has querido despertar de un sueño y no has podido? Explora junto a Morgana, una astuta y enigmática gata negra, distintas historias de misterio vividas por niñas y niños en diferentes lugares y momentos de su vida."
+  "es": "¿Alguna vez has sentido que algo te observa en la oscuridad? ¿Escuchas sonidos extraños en las noches? ¿Has querido despertar de un sueño y no has podido? Explora junto a Morgana, una astuta y enigmática gata negra, distintas historias de misterio vividas por niñas y niños en diferentes lugares y momentos de su vida.",
+  "en": "Have you ever felt something watching you in the dark? Do you hear strange sounds at night? Have you wanted to wake from a dream and could not? Join Morgana, a clever and enigmatic black cat, as she explores mystery stories lived by girls and boys in different places and moments of their lives."
  },
  "generos": [
   "Animación"
@@ -24,11 +31,16 @@
  },
  "versiones": [
   {
+   "etiqueta": "6 min",
+   "duracion_min": 6
+  },
+  {
    "etiqueta": "7 min",
    "duracion_min": 7
   }
  ],
  "presentaciones": [
-  "ficica-2026"
+  "ficica-2026",
+  "medellinhorror-2026"
  ]
 }

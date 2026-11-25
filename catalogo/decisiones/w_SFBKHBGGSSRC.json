@@ -9,5 +9,112 @@
   "antes": {
    "bhff-2026": "On the third anniversary of Nico's death, Florencia organizes a family reunion in the same forest where lightning struck the boy's head. Under the pretext of holding a ceremony to remember Nico, she invites her two daughters, with whom she has a complicated relationship, and her ex-husband, from whom she separated after the family tragedy.  When Lita, the youngest daughter, discovers some esoteric elements in one of the boxes that Florencia has brought, she realizes that her mother has not told the truth about the ceremony and suspects, upon seeing a strange healer appear, that what her mother really intends is to carry out an invocation ritual to bring the child back to life.  Florencia's macabre decision will cause the supernatural situation to spiral out of control and endanger her entire family."
   }
+ },
+ {
+  "work_id": "w_SFBKHBGGSSRC",
+  "campo": "directores",
+  "valor": [
+   "Salomón Reyes"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Salomón Reyes"
+  }
+ },
+ {
+  "work_id": "w_SFBKHBGGSSRC",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_SFBKHBGGSSRC",
+  "campo": "paises",
+  "valor": [
+   "UY",
+   "AR"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Uruguay, Argentina"
+  }
+ },
+ {
+  "work_id": "w_SFBKHBGGSSRC",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_SFBKHBGGSSRC",
+  "campo": "sinopsis.es",
+  "valor": "Una madre desesperada reúne a su familia en el mismo bosque donde falleció su hijo tres años atrás, sin revelar que los ha reunido para llevar a cabo un ritual de invocación que le devuelva la vida al niño.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Una madre desesperada reúne a su familia en el mismo bosque donde falleció su hijo tres años atrás, sin revelar que los ha reunido para llevar a cabo un ritual de invocación que le devuelva la vida al niño."
+  }
+ },
+ {
+  "work_id": "w_SFBKHBGGSSRC",
+  "campo": "xref.tmdb",
+  "valor": 1182204,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1182204"
+  }
+ },
+ {
+  "work_id": "w_SFBKHBGGSSRC",
+  "campo": "xref.letterboxd",
+  "valor": "nico-2025",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "nico-2025"
+  }
+ },
+ {
+  "work_id": "w_SFBKHBGGSSRC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/nico.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/nico.jpg"
+  }
  }
 ]

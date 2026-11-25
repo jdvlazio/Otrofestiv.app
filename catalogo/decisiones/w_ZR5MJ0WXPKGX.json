@@ -1,0 +1,31 @@
+[
+ {
+  "work_id": "w_ZR5MJ0WXPKGX",
+  "campo": "directores",
+  "valor": [
+   "Nicolás Bernal"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Nicolás Bernal"
+  }
+ },
+ {
+  "work_id": "w_ZR5MJ0WXPKGX",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/el-teatro.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/el-teatro.jpg"
+  }
+ }
+]

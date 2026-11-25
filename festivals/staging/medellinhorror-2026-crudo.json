@@ -1,0 +1,213 @@
+{
+ "_provenance": {
+  "fuente": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+  "capturado": "2026-11-25",
+  "metodo": "revista (texto + lámina a ojo) y agenda oficial de Comic Con (HTML)",
+  "que_aporta": "día, hora, sede y acceso"
+ },
+ "funciones": [
+  {
+   "titulo": "El Susurro",
+   "director": "Gustavo Hernández",
+   "dia": "2026-11-26",
+   "hora": "20:00",
+   "sede": "House of Demons",
+   "acceso": "Entrada gratis",
+   "seccion": "Largometrajes",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+    "lamina": "pág. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-programa"
+   }
+  },
+  {
+   "titulo": "Demonatrix",
+   "director": "Jeff Ferrell, Aurelio Voltaire",
+   "dia": "2026-11-26",
+   "hora": "22:00",
+   "sede": "House of Demons",
+   "acceso": "Entrada gratis",
+   "seccion": "Largometrajes",
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+    "lamina": "pág. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-programa"
+   }
+  },
+  {
+   "titulo": "Sierra: El álbum mortuorio",
+   "director": "Carlos Ortiz",
+   "dia": "2026-11-27",
+   "hora": "22:00",
+   "sede": "House of Demons",
+   "acceso": "Entrada gratis",
+   "seccion": "Largometrajes",
+   "duracion_min": 88,
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+    "lamina": "pág. 4",
+    "date": "2026-11-18",
+    "tipo": "festival-programa"
+   }
+  },
+  {
+   "titulo": "Medellín Horror Film Fest - Selección de cortos",
+   "dia": "2026-11-27",
+   "hora": "10:30",
+   "sede": "Plaza Mayor",
+   "sala": "Salón Circo digital",
+   "duracion_min": 30,
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Selección Oficial",
+   "acceso": "Con boleta: entrada a Comic Con Medellín ($36.000 + $3.000 de servicio)",
+   "ticket_url": "https://medellin.comicconcolombia.com/es/boleteria",
+   "descripcion": "Selección de cortos del festival en Comic Con Medellín. Dura 30 minutos.",
+   "_src": {
+    "url": "https://medellin.comicconcolombia.com/es/agenda",
+    "date": "2026-11-25",
+    "tipo": "sala-agenda"
+   }
+  },
+  {
+   "titulo": "Medellín Horror Film Fest - Selección de cortos",
+   "dia": "2026-11-29",
+   "hora": "18:30",
+   "sede": "Plaza Mayor",
+   "sala": "Salón Circo digital",
+   "duracion_min": 30,
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Selección Oficial",
+   "acceso": "Con boleta: entrada a Comic Con Medellín ($44.000 + $3.000 de servicio)",
+   "ticket_url": "https://medellin.comicconcolombia.com/es/boleteria",
+   "descripcion": "Selección de cortos del festival en Comic Con Medellín. Dura 30 minutos.",
+   "_src": {
+    "url": "https://medellin.comicconcolombia.com/es/agenda",
+    "date": "2026-11-25",
+    "tipo": "sala-agenda"
+   }
+  },
+  {
+   "titulo": "Cortometrajes Internacionales",
+   "seccion": "Selección Oficial",
+   "tipo": "programa",
+   "is_cortos": true,
+   "unscheduled": true,
+   "acceso": "Con boleta: entrada a Comic Con Medellín",
+   "ticket_url": "https://medellin.comicconcolombia.com/es/boleteria",
+   "obras": [
+    {
+     "titulo": "Happy",
+     "director": "Victor Basallote",
+     "pais": "España",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Last Generation",
+     "director": "Silvia Conesa",
+     "pais": "España",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Rewritten",
+     "director": "Andrés Molano Moncada",
+     "pais": "Colombia",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Familier / Familiar",
+     "director": "Julien Homère",
+     "pais": "Francia",
+     "duracion_min": 11,
+     "poster": "/assets/medellinhorror-2026/familier-familiar.jpg",
+     "posterSource": "editorial",
+     "sinopsis": "Élodie despierta en la noche, sola en la cama matrimonial. Mientras busca a su esposo, se encuentra de pronto frente a su silueta al final del pasillo. Tiene su voz, habla como él, pero… ¿de verdad es su esposo?",
+     "sinopsis_en": "Élodie wakes up at night, alone in her marital bed. While looking for her husband, she suddenly finds herself facing his silhouette at the end of the hallway. He has his voice, he speaks like him, but… Is it really her husband?",
+     "anio": 2025,
+     "genero": "Terror"
+    },
+    {
+     "titulo": "House Rules",
+     "director": "Geri Courtney-Austein",
+     "pais": "Estados Unidos",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Forgetting",
+     "director": "Jesus Cazares",
+     "pais": "México",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Tenebrios",
+     "director": "Tarik Antón Ferro",
+     "pais": "Argentina",
+     "duracion_min": 7,
+     "poster": "/assets/medellinhorror-2026/tenebrios.jpg",
+     "posterSource": "editorial",
+     "sinopsis": "En plena crisis de salud, Jano ve cómo su cuerpo se deteriora sin explicación. Cautivado por la flauta hipnótica de su vecino, su obsesión crece mientras surgen gusanos de todo lo que lo rodea.",
+     "sinopsis_en": "Jano, in the throes of a health crisis, watches his body inexplicably deteriorate. Enthralled by his neighbor's hypnotic flute, his obsession grows as worms emerge from his surroundings.",
+     "anio": 2025,
+     "genero": "Terror"
+    },
+    {
+     "titulo": "The Screaming",
+     "director": "Guillaume Boivin, Steve Villeneuve",
+     "pais": "Canadá",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "There Is Something Behind You",
+     "director": "Julián Andrés Gómez Reyes",
+     "pais": "Colombia",
+     "duracion_min": 6,
+     "poster": "/assets/medellinhorror-2026/there-is-something-behind-you.jpg",
+     "posterSource": "editorial",
+     "sinopsis": "¿Alguna vez has sentido que algo te observa en la oscuridad? ¿Escuchas sonidos extraños en las noches? ¿Has querido despertar de un sueño y no has podido? Explora junto a Morgana, una astuta y enigmática gata negra, distintas historias de misterio vividas por niñas y niños en diferentes lugares y momentos de su vida.",
+     "sinopsis_en": "Have you ever felt something watching you in the dark? Do you hear strange sounds at night? Have you wanted to wake from a dream and could not? Join Morgana, a clever and enigmatic black cat, as she explores mystery stories lived by girls and boys in different places and moments of their lives.",
+     "anio": 2025,
+     "genero": "Animación"
+    },
+    {
+     "titulo": "Bugaboo",
+     "director": "Benjamín Morehead",
+     "pais": "Estados Unidos",
+     "duracion_min": 5
+    },
+    {
+     "titulo": "Snacktime",
+     "director": "Alphonse Ferrari",
+     "pais": "Francia",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Closing Hour",
+     "director": "Tim Smink",
+     "pais": "Países Bajos",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Borrowed Light",
+     "director": "Christian Stahlhofen",
+     "pais": "Suecia",
+     "duracion_min": 6,
+     "poster": "/assets/medellinhorror-2026/borrowed-light.jpg",
+     "posterSource": "editorial",
+     "sinopsis": "Un vigilante nocturno se sobresalta cuando su pantalla de seguridad detecta un movimiento. Su investigación lo lleva a un encuentro inquietante.",
+     "sinopsis_en": "A night watchman is startled by a detected motion on his security screen. His investigation leads to an eerie encounter.",
+     "anio": 2025,
+     "genero": "Terror"
+    }
+   ],
+   "_src": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Revista-Digital-edicion-01-Medellin-Horror-Fest-2026.pdf",
+    "lamina": "págs. 9–10",
+    "date": "2026-11-18",
+    "tipo": "festival-programa"
+   }
+  }
+ ]
+}

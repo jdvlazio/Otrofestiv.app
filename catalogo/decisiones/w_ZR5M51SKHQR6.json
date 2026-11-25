@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_ZR5M51SKHQR6",
+  "campo": "directores",
+  "valor": [
+   "Anita Serrano"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Anita Serrano"
+  }
+ },
+ {
+  "work_id": "w_ZR5M51SKHQR6",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5M51SKHQR6",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_ZR5M51SKHQR6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/el-diente-negro.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/el-diente-negro.jpg"
+  }
+ }
+]

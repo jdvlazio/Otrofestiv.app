@@ -1,13 +1,19 @@
 {
  "id": "w_ZR5JWV8RRX0V",
- "titulo_original": "La Demonatrix",
+ "titulo_original": "Demonatrix",
  "anio": 2025,
  "paises": [
   "US"
  ],
  "directores": [
-  "Aurelio Voltaire",
-  "Jeff Ferrell"
+  "Jeff Ferrell",
+  "Aurelio Voltaire"
+ ],
+ "aliases": [
+  {
+   "titulo": "La Demonatrix",
+   "tipo": "festival"
+  }
  ],
  "sinopsis": {
   "es": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio.",
@@ -31,6 +37,7 @@
   }
  ],
  "presentaciones": [
-  "bhff-2026"
+  "bhff-2026",
+  "medellinhorror-2026"
  ]
 }

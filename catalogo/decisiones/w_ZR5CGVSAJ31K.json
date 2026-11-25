@@ -1,0 +1,107 @@
+[
+ {
+  "work_id": "w_ZR5CGVSAJ31K",
+  "campo": "directores",
+  "valor": [
+   "Juan Manuel Buenaventura"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Juan Manuel Buenaventura"
+  }
+ },
+ {
+  "work_id": "w_ZR5CGVSAJ31K",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5CGVSAJ31K",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5CGVSAJ31K",
+  "campo": "generos",
+  "valor": [
+   "Comedia"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Comedia"
+  }
+ },
+ {
+  "work_id": "w_ZR5CGVSAJ31K",
+  "campo": "sinopsis.es",
+  "valor": "La vida de Pol se desmorona al descubrir una traición personal. A partir de ese momento, sus metas y creencias se ven puestas a prueba, enfrentándose a un entorno peligroso y conspirativo.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "La vida de Pol se desmorona al descubrir una traición personal. A partir de ese momento, sus metas y creencias se ven puestas a prueba, enfrentándose a un entorno peligroso y conspirativo."
+  }
+ },
+ {
+  "work_id": "w_ZR5CGVSAJ31K",
+  "campo": "xref.tmdb",
+  "valor": 1662539,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1662539"
+  }
+ },
+ {
+  "work_id": "w_ZR5CGVSAJ31K",
+  "campo": "xref.letterboxd",
+  "valor": "parapeto",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "parapeto"
+  }
+ },
+ {
+  "work_id": "w_ZR5CGVSAJ31K",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/parapeto.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/parapeto.jpg"
+  }
+ }
+]

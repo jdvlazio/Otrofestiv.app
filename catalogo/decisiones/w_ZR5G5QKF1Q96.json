@@ -1,0 +1,57 @@
+[
+ {
+  "work_id": "w_ZR5G5QKF1Q96",
+  "campo": "directores",
+  "valor": [
+   "Valeria Lopera Salas"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Valeria Lopera Salas"
+  }
+ },
+ {
+  "work_id": "w_ZR5G5QKF1Q96",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_ZR5G5QKF1Q96",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_ZR5G5QKF1Q96",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/eco.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/eco.jpg"
+  }
+ }
+]

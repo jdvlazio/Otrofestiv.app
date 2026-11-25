@@ -46,5 +46,74 @@
    "bhff-2026": "Simón Ceballos Escobar",
    "itagui-2026": "Simón Ceballos"
   }
+ },
+ {
+  "work_id": "w_R4K5WM3QWZ9G",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026",
+   "itagui-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4K5WM3QWZ9G",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "itagui-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4K5WM3QWZ9G",
+  "campo": "generos",
+  "valor": [
+   "Suspenso"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Suspenso",
+   "itagui-2026": "Suspenso"
+  }
+ },
+ {
+  "work_id": "w_R4K5WM3QWZ9G",
+  "campo": "sinopsis.en",
+  "valor": "Leonel wakes up with no memory in an isolated farmhouse. Outside, something is watching him. As he tries to discover who he is and how he got there, strange events begin to reveal fragments of a past he would rather forget. Soon, the answers become more disturbing than the darkness surrounding him.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Leonel wakes up with no memory in an isolated farmhouse. Outside, something is watching him. As he tries to discover who he is and how he got there, strange events begin to reveal fragments of a past he would rather forget. Soon, the answers become more disturbing than the darkness surrounding him.",
+   "itagui-2026": "Leonel wakes up with no memory in an isolated farmhouse. Outside, something is watching him. As he tries to discover who he is and how he got there, strange events begin to reveal fragments of a past he would rather forget. Soon, the answers become more disturbing than the darkness surrounding him."
+  }
+ },
+ {
+  "work_id": "w_R4K5WM3QWZ9G",
+  "campo": "xref.tmdb",
+  "valor": 1746614,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1746614",
+   "itagui-2026": "1746614"
+  }
  }
 ]

@@ -9,5 +9,111 @@
   "antes": {
    "bhff-2026": "night-walk-1"
   }
+ },
+ {
+  "work_id": "w_ZR5G77KD1JQP",
+  "campo": "directores",
+  "valor": [
+   "Víctor Martín León"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Víctor Martín León"
+  }
+ },
+ {
+  "work_id": "w_ZR5G77KD1JQP",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_ZR5G77KD1JQP",
+  "campo": "paises",
+  "valor": [
+   "ES"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "España"
+  }
+ },
+ {
+  "work_id": "w_ZR5G77KD1JQP",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_ZR5G77KD1JQP",
+  "campo": "sinopsis.es",
+  "valor": "Laura no puede volver a dormir después de tener una pesadilla y saca a su perro de paseo por el parque.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Laura no puede volver a dormir después de tener una pesadilla y saca a su perro de paseo por el parque."
+  }
+ },
+ {
+  "work_id": "w_ZR5G77KD1JQP",
+  "campo": "sinopsis.en",
+  "valor": "Laura cannot sleep after a nightmare, so she goes for a walk with her dog.",
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Laura cannot sleep after a nightmare, so she goes for a walk with her dog."
+  }
+ },
+ {
+  "work_id": "w_ZR5G77KD1JQP",
+  "campo": "xref.tmdb",
+  "valor": 1744980,
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1744980"
+  }
+ },
+ {
+  "work_id": "w_ZR5G77KD1JQP",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bhff-2026/paseo-nocturno.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde bhff-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "/assets/bhff-2026/paseo-nocturno.jpg"
+  }
  }
 ]

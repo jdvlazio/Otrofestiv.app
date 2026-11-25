@@ -1,12 +1,12 @@
 {
  "id": "w_ZR5GKACCC5D4",
  "titulo_original": "Necrosectos",
- "anio": 2026,
+ "anio": 2025,
  "paises": [
   "ES"
  ],
  "directores": [
-  "Javier Lozano Sánchez"
+  "Javier Lozano"
  ],
  "sinopsis": {
   "es": "Insectos astutos invaden una casa y perturban la vida de sus habitantes.",
@@ -17,7 +17,8 @@
  ],
  "afiche": {
   "archivo": "/assets/bhff-2026/necrosectos.jpg",
-  "veredicto": "oficial"
+  "veredicto": "oficial",
+  "fuente": "tmdb"
  },
  "xref": {
   "tmdb": 1580595,

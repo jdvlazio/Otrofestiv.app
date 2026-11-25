@@ -1,0 +1,110 @@
+[
+ {
+  "work_id": "w_9SSQHQVVM3W7",
+  "campo": "directores",
+  "valor": [
+   "Tarik Antón Ferro"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Tarik Antón Ferro"
+  }
+ },
+ {
+  "work_id": "w_9SSQHQVVM3W7",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_9SSQHQVVM3W7",
+  "campo": "paises",
+  "valor": [
+   "AR"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Argentina"
+  }
+ },
+ {
+  "work_id": "w_9SSQHQVVM3W7",
+  "campo": "generos",
+  "valor": [
+   "Terror"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Terror"
+  }
+ },
+ {
+  "work_id": "w_9SSQHQVVM3W7",
+  "campo": "sinopsis.es",
+  "valor": "En plena crisis de salud, Jano ve cómo su cuerpo se deteriora sin explicación. Cautivado por la flauta hipnótica de su vecino, su obsesión crece mientras surgen gusanos de todo lo que lo rodea.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "En plena crisis de salud, Jano ve cómo su cuerpo se deteriora sin explicación. Cautivado por la flauta hipnótica de su vecino, su obsesión crece mientras surgen gusanos de todo lo que lo rodea."
+  }
+ },
+ {
+  "work_id": "w_9SSQHQVVM3W7",
+  "campo": "sinopsis.en",
+  "valor": "Jano, in the throes of a health crisis, watches his body inexplicably deteriorate. Enthralled by his neighbor's hypnotic flute, his obsession grows as worms emerge from his surroundings.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "Jano, in the throes of a health crisis, watches his body inexplicably deteriorate. Enthralled by his neighbor's hypnotic flute, his obsession grows as worms emerge from his surroundings."
+  }
+ },
+ {
+  "work_id": "w_9SSQHQVVM3W7",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/medellinhorror-2026/tenebrios.jpg",
+   "veredicto": "oficial",
+   "elegido": true
+  },
+  "motivo": "afiche con título y dirección",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "/assets/medellinhorror-2026/tenebrios.jpg"
+  },
+  "vistas": [],
+  "anteriores": [
+   {
+    "valor": {
+     "archivo": "/assets/medellinhorror-2026/tenebrios.jpg",
+     "veredicto": "fotograma",
+     "elegido": true
+    },
+    "motivo": "es el afiche con título y dirección",
+    "fecha": "2026-11-25",
+    "quien": "Claude",
+    "vistas": []
+   }
+  ]
+ }
+]

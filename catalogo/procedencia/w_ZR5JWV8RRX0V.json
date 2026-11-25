@@ -1,22 +1,60 @@
 {
  "titulo_original": {
-  "fuente": "festival:bhff-2026",
+  "fuente": "festival:medellinhorror-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "tmdb:1567192",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "el nombre artistico es Aurelio Voltaire; asi lo da la revista de MHF",
+  "fecha": "2026-11-25"
  },
  "anio": {
-  "fuente": "tmdb:1567192",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "afiche ya publicado de la obra",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
+ },
+ "xref.letterboxd": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25"
  }
 }

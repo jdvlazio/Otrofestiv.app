@@ -1,0 +1,515 @@
+{
+ "obras": {
+  "Borrowed Light": {
+   "titulo": "Borrowed Light",
+   "director": "Christian Stahlhofen",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Borrowed%20Light",
+     "fecha": "2026-11-25",
+     "resultado": "«Borrowed Light»: 2 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=borrowed%20light",
+     "fecha": "2026-11-25",
+     "resultado": "«borrowed light»: 2 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Christian%20Stahlhofen",
+     "fecha": "2026-11-25",
+     "resultado": "Christian Stahlhofen: sin perfil en TMDB"
+    },
+    "pagina_del_festival": {
+     "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Borrowed-Light.webp",
+     "fecha": "2026-11-18",
+     "resultado": "póster oficial en el carrusel de la Selección 2026 de medellinhorrorfest.com (14 nov); revista ed. 01 págs. 9–10 con dirección, país y duración"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt38551470/",
+     "fecha": "2026-11-18",
+     "resultado": "tt38551470 «Borrowed Light» (2025, short, con Jerome Lippelt — productor y actor del póster). Sin ficha TMDB."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/borrowed%20light/",
+     "fecha": "2026-11-18",
+     "resultado": "ninguna de 2025 con Stahlhofen (Letterboxd importa de TMDB)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.google.com/search?q=%22Borrowed+Light%22+Christian+Stahlhofen",
+     "fecha": "2026-11-18",
+     "resultado": "sin web propia hallada; el póster nombra a Christian Stahlhofen (director y fotógrafo) y Jerome Lippelt"
+    },
+    "busqueda_imagenes": {
+     "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Borrowed-Light.webp",
+     "fecha": "2026-11-18",
+     "resultado": "el afiche oficial está en la web del festival (600×800, con título y créditos)"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmfreeway.com/MedellinHorrorFest",
+     "fecha": "2026-11-18",
+     "resultado": "llegó por la convocatoria de FilmFreeway del festival; sin página pública propia hallada"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "corto independiente inscrito por su realizador en FilmFreeway; ningún póster ni fuente nombra distribuidora",
+     "fecha": "2026-11-18"
+    },
+    "festivales_previos": {
+     "url": "https://www.google.com/search?q=%22Borrowed+Light%22+short+film+festival",
+     "fecha": "2026-11-18",
+     "resultado": "búsqueda web sin selecciones previas halladas"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Suecia: el Svenska Filminstitutet no cataloga cortos independientes sin apoyo; sin rastro",
+     "fecha": "2026-11-18"
+    }
+   },
+   "afiche": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Borrowed-Light.webp",
+    "fuente": "carrusel Selección 2026, medellinhorrorfest.com/seleccion-2026/",
+    "archivo": "fuentes/medellinhorror-2026/altas/borrowed-light.jpg",
+    "px": [
+     533,
+     800
+    ],
+    "ratio": 0.6663,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_posible"
+  },
+  "Familier / Familiar": {
+   "titulo": "Familier / Familiar",
+   "director": "Julien Homère",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Familier%20/%20Familiar",
+     "fecha": "2026-11-25",
+     "resultado": "«Familier / Familiar»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=familier%20familiar",
+     "fecha": "2026-11-25",
+     "resultado": "«familier familiar»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Julien%20Hom%C3%A8re",
+     "fecha": "2026-11-25",
+     "resultado": "Julien Homère: sin perfil en TMDB"
+    },
+    "pagina_del_festival": {
+     "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Familiar.webp",
+     "fecha": "2026-11-18",
+     "resultado": "póster oficial en el carrusel de la Selección 2026 de medellinhorrorfest.com (14 nov); revista ed. 01 págs. 9–10 con dirección, país y duración"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/familier.json",
+     "fecha": "2026-11-18",
+     "resultado": "ninguna obra «Familier» de Julien Homère en la sugerencia de IMDb"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/familier/",
+     "fecha": "2026-11-18",
+     "resultado": "sin resultado de Homère"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.google.com/search?q=%22Familier%22+Julien+Hom%C3%A8re",
+     "fecha": "2026-11-18",
+     "resultado": "sin web hallada (búsqueda web; Unifrance no la lista)"
+    },
+    "busqueda_imagenes": {
+     "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Familiar.webp",
+     "fecha": "2026-11-18",
+     "resultado": "afiche oficial en la web del festival («FAMILIER · written and directed by JULIEN HOMÈRE»)"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmfreeway.com/MedellinHorrorFest",
+     "fecha": "2026-11-18",
+     "resultado": "llegó por la convocatoria de FilmFreeway del festival; sin página pública propia hallada"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "corto independiente inscrito por su realizador en FilmFreeway; ningún póster ni fuente nombra distribuidora",
+     "fecha": "2026-11-18"
+    },
+    "festivales_previos": {
+     "url": "https://www.google.com/search?q=%22Familier+/+Familiar%22+short+film+festival",
+     "fecha": "2026-11-18",
+     "resultado": "búsqueda web sin selecciones previas halladas"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Francia: Unifrance no la lista (búsqueda web)",
+     "fecha": "2026-11-18"
+    }
+   },
+   "afiche": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Familiar.webp",
+    "fuente": "carrusel Selección 2026, medellinhorrorfest.com/seleccion-2026/",
+    "archivo": "fuentes/medellinhorror-2026/altas/familier-familiar.jpg",
+    "px": [
+     527,
+     790
+    ],
+    "ratio": 0.6671,
+    "recorte": {
+     "de": [
+      527,
+      800
+     ],
+     "caja": [
+      0,
+      5,
+      527,
+      795
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_posible"
+  },
+  "Forgetting": {
+   "titulo": "Forgetting",
+   "director": "Jesus Cazares",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Forgetting",
+     "fecha": "2026-11-18",
+     "resultado": "«Forgetting»: 20 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=forgetting",
+     "fecha": "2026-11-18",
+     "resultado": "«forgetting»: 20 resultado(s); «El olvido»: 20 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/5614732",
+     "fecha": "2026-11-18",
+     "resultado": "Jesús Cázares (5614732): dirige 1"
+    },
+    "pagina_del_festival": {
+     "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Forgetting.webp",
+     "fecha": "2026-11-18",
+     "resultado": "póster oficial en el carrusel de la Selección 2026 de medellinhorrorfest.com (14 nov); revista ed. 01 págs. 9–10 con dirección, país y duración"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/el-olvido-1/",
+     "fecha": "2026-11-18",
+     "resultado": "letterboxd.com/tmdb/1527240 → /film/el-olvido-1/"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/el_olvido.json",
+     "fecha": "2026-11-18",
+     "resultado": "solo tt8783064 «El olvido» (2018, short) sin créditos visibles: no se puede atar a Cazares"
+    }
+   },
+   "afiche": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Forgetting.webp",
+    "fuente": "carrusel Selección 2026, medellinhorrorfest.com/seleccion-2026/",
+    "archivo": "fuentes/medellinhorror-2026/altas/forgetting.jpg",
+    "px": [
+     510,
+     755
+    ],
+    "ratio": 0.6755,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1527240,
+   "evidencia": "TMDB 1527240 «El Olvido», único crédito de dirección de Jesús Cázares (5614732): el póster oficial del festival se titula «EL OLVIDO · un cortometraje de J. Cazares V.»",
+   "respaldo": [
+    "letterboxd",
+    "pagina_del_festival"
+   ],
+   "ficha_fecha": "2026-11-18"
+  },
+  "Happy": {
+   "titulo": "Happy",
+   "director": "Victor Basallote",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Happy",
+     "fecha": "2026-11-18",
+     "resultado": "«Happy»: 20 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=happy",
+     "fecha": "2026-11-18",
+     "resultado": "«happy»: 20 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/4440179",
+     "fecha": "2026-11-18",
+     "resultado": "Victor Basallote (4440179): dirige 2 → tmdb_director: TMDB 1753034 «Happy» — director ✓ y año/duración ✓"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1753034
+  },
+  "Rewritten": {
+   "titulo": "Rewritten",
+   "director": "Andrés Molano Moncada",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Rewritten",
+     "fecha": "2026-11-18",
+     "resultado": "«Rewritten»: 8 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=rewritten",
+     "fecha": "2026-11-18",
+     "resultado": "«rewritten»: 8 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/3516325",
+     "fecha": "2026-11-18",
+     "resultado": "Andres Molano Moncada (3516325): dirige 5"
+    },
+    "pagina_del_festival": {
+     "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Rewritten.webp",
+     "fecha": "2026-11-18",
+     "resultado": "póster oficial en el carrusel de la Selección 2026 de medellinhorrorfest.com (14 nov); revista ed. 01 págs. 9–10 con dirección, país y duración"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt28152479/",
+     "fecha": "2026-11-18",
+     "resultado": "tt28152479 «Reescrito» (2022, short, con Jaime Cardona y Eduardo Castro, del póster)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/reescrito/",
+     "fecha": "2026-11-18",
+     "resultado": "letterboxd.com/tmdb/1285208 → /film/reescrito/"
+    }
+   },
+   "afiche": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/Rewritten.webp",
+    "fuente": "carrusel Selección 2026, medellinhorrorfest.com/seleccion-2026/",
+    "archivo": "fuentes/medellinhorror-2026/altas/rewritten.jpg",
+    "px": [
+     533,
+     800
+    ],
+    "ratio": 0.6663,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1285208,
+   "evidencia": "TMDB 1285208 «Reescrito» (Colombia, 2022, 12 min) en la filmografía de Andres Molano Moncada (3516325): mismo director, el título traducido, 12 vs 10 min (±3), Colombia. IMDb tt28152479 con los actores del póster",
+   "respaldo": [
+    "imdb",
+    "letterboxd"
+   ],
+   "ficha_fecha": "2026-11-18"
+  },
+  "Tenebrios": {
+   "titulo": "Tenebrios",
+   "director": "Tarik Antón Ferro",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=Tenebrios",
+     "fecha": "2026-11-25",
+     "resultado": "«Tenebrios»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=tenebrios",
+     "fecha": "2026-11-25",
+     "resultado": "«tenebrios»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/person/6680533 https://www.themoviedb.org/person/6686201",
+     "fecha": "2026-11-25",
+     "resultado": "Tarik Antón Ferro (6680533): dirige 0; Tarik Anton Ferro (6686201): dirige 1"
+    },
+    "pagina_del_festival": {
+     "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/TENEBRIOS.webp",
+     "fecha": "2026-11-18",
+     "resultado": "póster oficial en el carrusel de la Selección 2026 de medellinhorrorfest.com (14 nov); revista ed. 01 págs. 9–10 con dirección, país y duración"
+    },
+    "imdb": {
+     "url": "https://www.imdb.com/title/tt50995851/",
+     "fecha": "2026-11-18",
+     "resultado": "tt50995851 «Tenebrios» (2025, short, con Martin Gastón Cruz y Natalia Mastroianni — los del póster). Sin ficha TMDB."
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/tenebrios/",
+     "fecha": "2026-11-18",
+     "resultado": "sin resultado (Letterboxd importa de TMDB)"
+    },
+    "web_director_o_productora": {
+     "url": "https://www.google.com/search?q=%22Tenebrios%22+Tarik+Ant%C3%B3n+Ferro",
+     "fecha": "2026-11-18",
+     "resultado": "sin web hallada; el póster dice «BARRO» (productora) y «Dirigido por Tarik Antón Ferro». Su único crédito TMDB es «Occiso» (1829225), otra obra"
+    },
+    "busqueda_imagenes": {
+     "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/TENEBRIOS.webp",
+     "fecha": "2026-11-18",
+     "resultado": "afiche oficial en la web del festival"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmfreeway.com/MedellinHorrorFest",
+     "fecha": "2026-11-18",
+     "resultado": "llegó por la convocatoria de FilmFreeway del festival; sin página pública propia hallada"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "corto independiente inscrito por su realizador en FilmFreeway; ningún póster ni fuente nombra distribuidora",
+     "fecha": "2026-11-18"
+    },
+    "festivales_previos": {
+     "url": "https://www.google.com/search?q=%22Tenebrios%22+short+film+festival",
+     "fecha": "2026-11-18",
+     "resultado": "búsqueda web sin selecciones previas halladas"
+    },
+    "organismo_nacional": {
+     "na": true,
+     "por_que": "Argentina: INCAA no lista cortos independientes sin subsidio; sin rastro",
+     "fecha": "2026-11-18"
+    }
+   },
+   "afiche": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/TENEBRIOS.webp",
+    "fuente": "carrusel Selección 2026",
+    "archivo": "fuentes/medellinhorror-2026/altas/tenebrios.jpg",
+    "px": [
+     533,
+     800
+    ],
+    "ratio": 0.6663,
+    "recorte": {
+     "de": [
+      600,
+      800
+     ],
+     "caja": [
+      33,
+      0,
+      566,
+      800
+     ],
+     "centrado": true,
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_posible"
+  },
+  "There Is Something Behind You": {
+   "titulo": "There Is Something Behind You",
+   "director": "Julián Andrés Gómez Reyes",
+   "fuentes": {
+    "tmdb_titulo": {
+     "url": "https://www.themoviedb.org/search/movie?query=There%20Is%20Something%20Behind%20You",
+     "fecha": "2026-11-25",
+     "resultado": "«There Is Something Behind You»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_alternos": {
+     "url": "https://www.themoviedb.org/search/movie?query=there%20is%20something%20behind%20you",
+     "fecha": "2026-11-25",
+     "resultado": "«there is something behind you»: 0 resultado(s) → ninguna verifica"
+    },
+    "tmdb_director": {
+     "url": "https://www.themoviedb.org/search/person?query=Juli%C3%A1n%20Andr%C3%A9s%20G%C3%B3mez%20Reyes",
+     "fecha": "2026-11-25",
+     "resultado": "Julián Andrés Gómez Reyes: sin perfil en TMDB"
+    },
+    "pagina_del_festival": {
+     "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/There-is-Something-Behind-You.webp",
+     "fecha": "2026-11-18",
+     "resultado": "póster oficial en el carrusel de la Selección 2026 de medellinhorrorfest.com (14 nov); revista ed. 01 págs. 9–10 con dirección, país y duración"
+    },
+    "imdb": {
+     "url": "https://v3.sg.media-imdb.com/suggestion/x/there_is_something_behind_you.json",
+     "fecha": "2026-11-18",
+     "resultado": "sin resultado en IMDb (tampoco «Hay algo detrás de ti»)"
+    },
+    "letterboxd": {
+     "url": "https://letterboxd.com/search/films/there%20is%20something%20behind%20you/",
+     "fecha": "2026-11-18",
+     "resultado": "sin resultado"
+    },
+    "web_director_o_productora": {
+     "url": "https://canaltrece.com.co/noticias/cortometraje-no-hay-nadie-aqui-ganador-estimulo-historias-del-cambio-logra-premio-festival-divercine-uruguay/",
+     "fecha": "2026-11-18",
+     "resultado": "Julián Gómez Reyes, director creativo de su productora (Canal Trece); no habla de esta obra"
+    },
+    "plataformas_festivales": {
+     "url": "https://filmfreeway.com/ThereisSomethingBehindYou",
+     "fecha": "2026-11-18",
+     "resultado": "FilmFreeway: «There is Something Behind You» / «Hay Algo Detrás de Ti», animación, dir. Julián Andrés Gómez Reyes"
+    },
+    "busqueda_imagenes": {
+     "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/There-is-Something-Behind-You.webp",
+     "fecha": "2026-11-18",
+     "resultado": "afiche oficial en la web del festival"
+    },
+    "distribuidora_o_agencia": {
+     "na": true,
+     "por_que": "corto independiente inscrito por su realizador en FilmFreeway; ningún póster ni fuente nombra distribuidora",
+     "fecha": "2026-11-18"
+    },
+    "festivales_previos": {
+     "url": "https://www.google.com/search?q=%22There+Is+Something+Behind+You%22+short+film+festival",
+     "fecha": "2026-11-18",
+     "resultado": "búsqueda web sin selecciones previas halladas"
+    },
+    "organismo_nacional": {
+     "url": "https://www.proimagenescolombia.com/secciones/cine_colombiano/peliculas_colombianas/",
+     "fecha": "2026-11-18",
+     "resultado": "sin resultado en Proimágenes"
+    }
+   },
+   "afiche": {
+    "url": "https://medellinhorrorfest.com/wp-content/uploads/2026/11/There-is-Something-Behind-You.webp",
+    "fuente": "carrusel Selección 2026, medellinhorrorfest.com/seleccion-2026/",
+    "archivo": "fuentes/medellinhorror-2026/altas/there-is-something-behind-you.jpg",
+    "px": [
+     541,
+     800
+    ],
+    "ratio": 0.6763,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-18"
+   },
+   "estado": "alta_posible"
+  },
+  "The Screaming": {
+   "titulo": "The Screaming",
+   "fuentes": {
+    "letterboxd": {
+     "url": "https://letterboxd.com/film/the-screaming-2025/",
+     "fecha": "2026-11-25",
+     "resultado": "existe, enlazada a TMDB 1522505"
+    },
+    "festivales_previos": {
+     "url": "https://rue-morgue.com/?p=153222",
+     "fecha": "2026-11-25",
+     "resultado": "Fantasia 2025: mejor dirección de corto, Boivin y Villeneuve"
+    }
+   },
+   "estado": "ficha_existente",
+   "tmdb_id": 1522505,
+   "evidencia": "mismos directores (Boivin y Villeneuve), 8 min, 2025, que el póster del festival y la revista pág. 10",
+   "respaldo": [
+    "festivales_previos",
+    "letterboxd"
+   ],
+   "ficha_fecha": "2026-11-25"
+  }
+ },
+ "_provenance": {
+  "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
+  "capturado": "2026-11-25"
+ },
+ "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano."
+}

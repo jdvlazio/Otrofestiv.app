@@ -25,7 +25,7 @@
  {
   "work_id": "w_8GJ9QKEV5RQC",
   "campo": "sinopsis.es",
-  "valor": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+  "valor": "La desaparición de Natalia, de 19 años, sacude a Pueblo Blanco. La búsqueda lleva a las autoridades a un bar clandestino donde dos hermanas sobreviven al abuso de su tío y de una clientela perversa. Cuando ellas ayudan a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales, y el pueblo cae presa de una oscura secta.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (bhff-2026, guatape-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -39,6 +39,22 @@
    "ficpa-2026": "En Pueblo Blanco, la desaparición de una joven desata una cadena de violencia, fanatismo y corrupción. Entre secretos ocultos y una secta ancestral que resurge, la comunidad se enfrenta a una fuerza implacable que arrasa todo a su paso… porque lo que habita en la oscuridad alguna vez pidió ayuda. Largometraje Colombiano Documental",
    "guatape-2026": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
    "villadelcine-2026": "La desaparición de Natalia rompe el silencio de Pueblo Blanco. Su búsqueda conduce a las autoridades hasta un bar clandestino, dos hermanas sometidas por su tío y un hombre herido hallado en el bosque. Pronto, la violencia, el fanatismo y una secta ancestral convertirán a todo el pueblo en un territorio de caza."
+  },
+  "original_de": [
+   "bhff-2026",
+   "ficpa-2026",
+   "guatape-2026",
+   "medellinhorror-2026",
+   "villadelcine-2026"
+  ],
+  "titulo": "Sierra: El álbum mortuorio",
+  "original": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+  "sintesis": {
+   "redacta": "Claude (sesión onboarding)",
+   "verifica": "Claude (verificador acbdb802)",
+   "veredicto": "fiel",
+   "fecha": "2026-11-25",
+   "huella": "2070cba9f822"
   }
  },
  {
@@ -71,6 +87,84 @@
    "ficpa-2026": "Terror",
    "guatape-2026": "Terror",
    "villadelcine-2026": "Thriller Psicológico"
+  }
+ },
+ {
+  "work_id": "w_8GJ9QKEV5RQC",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "2026",
+   "ficpa-2026": "2026",
+   "guatape-2026": "2026",
+   "medellinhorror-2026": "2026",
+   "villadelcine-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_8GJ9QKEV5RQC",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "Colombia",
+   "ficpa-2026": "Colombia",
+   "guatape-2026": "Colombia",
+   "medellinhorror-2026": "Colombia",
+   "villadelcine-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_8GJ9QKEV5RQC",
+  "campo": "sinopsis.en",
+  "valor": "The disappearance of Natalia, a 19-year-old, shakes Pueblo Blanco. In their search, the authorities reach a clandestine bar where two sisters survive the abuse of their uncle and a perverse clientele. When they decide to help a strange man found in the forest, they unleash a chain of violence and rituals in which the inspector, his partner and the townspeople themselves fall prey to death and to a dark sect. Amid the horror, one latent truth remains: what dwells in the darkness… once asked for help too.",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "medellinhorror-2026": "The disappearance of Natalia, a 19-year-old, shakes Pueblo Blanco. In their search, the authorities reach a clandestine bar where two sisters survive the abuse of their uncle and a perverse clientele. When they decide to help a strange man found in the forest, they unleash a chain of violence and rituals in which the inspector, his partner and the townspeople themselves fall prey to death and to a dark sect. Amid the horror, one latent truth remains: what dwells in the darkness… once asked for help too."
+  }
+ },
+ {
+  "work_id": "w_8GJ9QKEV5RQC",
+  "campo": "xref.tmdb",
+  "valor": 1789536,
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "1789536",
+   "ficpa-2026": "1789536",
+   "guatape-2026": "1789536",
+   "medellinhorror-2026": "1789536",
+   "villadelcine-2026": "1789536"
+  }
+ },
+ {
+  "work_id": "w_8GJ9QKEV5RQC",
+  "campo": "xref.letterboxd",
+  "valor": "sierra-el-album-mortuorio",
+  "motivo": "alta desde medellinhorror-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude",
+  "sembrada": true,
+  "antes": {
+   "bhff-2026": "sierra-el-album-mortuorio",
+   "ficpa-2026": "sierra-el-album-mortuorio",
+   "guatape-2026": "sierra-el-album-mortuorio",
+   "medellinhorror-2026": "sierra-el-album-mortuorio",
+   "villadelcine-2026": "sierra-el-album-mortuorio"
   }
  }
 ]
