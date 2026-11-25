@@ -1,20 +1,26 @@
 {
  "_provenance": {
   "fuente": "pipeline/fuentes_descubrir.py",
-  "capturado": "2026-11-24T17:25",
+  "capturado": "2026-11-25T05:45",
   "paginas_leidas": 60,
-  "errores": []
+  "errores": [
+   "https://festival.bogoshorts.com/categoria/www.retinalatina.com: HTTP Error 404: Not Found"
+  ]
  },
  "raices": {
   "web": "https://festival.bogoshorts.com/",
-  "_sin_bio": "el perfil de @bogoshorts no se pudo leer sin sesión; los enlaces de sus posts (bit.ly) van a la web"
+  "_sin_bio": "el perfil de @bogoshorts no se pudo leer sin sesión; los enlaces de sus posts (bit.ly) van a la web",
+  "web_2": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+  "web_3": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/006_imaginaton.html",
+  "web_4": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/004_acreditaciones_24bsff.html",
+  "web_5": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/022_catalogo.html"
  },
  "items": {
   "https://docs.google.com/forms/d/e/1FAIpQLScwgnwNCQ2vuggHzQW3cXasg8z_JCie-lTQiKEeBNEYz9UGrQ/viewform": {
    "tipo": "formulario",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-24T17:25",
+   "ultima_vez": "2026-11-25T05:45",
    "estado": "descartada",
    "_por_que": "suscripción al newsletter, no es inscripción a una actividad",
    "revisado": "2026-11-23T10:11"
@@ -23,7 +29,7 @@
    "tipo": "drive",
    "visto_en": "https://festival.bogoshorts.com/prensa",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-24T17:25",
+   "ultima_vez": "2026-11-25T05:45",
    "estado": "descartada",
    "_por_que": "catálogo de la edición 23 (2025)",
    "revisado": "2026-11-23T10:11"
@@ -32,7 +38,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/escenarios",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-24T17:25",
+   "ultima_vez": "2026-11-25T05:45",
    "estado": "descartada",
    "_por_que": "escenarios de 2025; sedes 2026 en el catálogo",
    "revisado": "2026-11-23T10:11"
@@ -41,7 +47,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/prensa",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-24T17:25",
+   "ultima_vez": "2026-11-25T05:45",
    "estado": "usada",
    "_por_que": "textos de Al Tablero BFM y sinopsis de Furia",
    "revisado": "2026-11-23T10:54"
@@ -50,7 +56,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/interna/9",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-24T17:25",
+   "ultima_vez": "2026-11-25T05:45",
    "estado": "usada",
    "_por_que": "duración de Al Tablero BFM (10:00 a.m. - 12:00 m.); el resto es industria con acreditación",
    "revisado": "2026-11-23T10:11"
@@ -59,7 +65,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-24T17:25",
+   "ultima_vez": "2026-11-25T05:45",
    "estado": "descartada",
    "_por_que": "bases de acreditación, sin programación",
    "revisado": "2026-11-23T10:11"
@@ -68,7 +74,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-24T17:25",
+   "ultima_vez": "2026-11-25T05:45",
    "estado": "usada",
    "_por_que": "cortos, sinopsis, actividades, sedes y acceso",
    "revisado": "2026-11-23T10:11"
@@ -77,7 +83,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-24T17:25",
+   "ultima_vez": "2026-11-25T05:45",
    "estado": "usada",
    "_por_que": "la grilla",
    "revisado": "2026-11-23T10:11"
@@ -86,10 +92,108 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-24T17:25",
+   "ultima_vez": "2026-11-25T05:45",
    "estado": "descartada",
    "_por_que": "términos de la web",
    "revisado": "2026-11-23T10:11"
+  },
+  "https://docs.google.com/forms/d/e/1FAIpQLScTJwul1LOM1F2VuVFPQtF2io-oA8OLyHQ4Fj-__e1pwVZSzg/viewform": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/universo/004_actividades_bam.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://drive.google.com/file/d/1o6L1s8h3Sr5FN-wN9ncBS-XmEiDKmbMQ/view": {
+   "tipo": "drive",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/003_poster_oficial.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://forms.gle/5RNdcxgQKziJYCKK9": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/004_acreditaciones_24bsff.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://forms.gle/7PfKGzndgZUtrDZaA": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/004_acreditaciones_24bsff.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://forms.gle/9AY1AT11fPHamZPf6": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://forms.gle/AiRzKvKJRTKPUUkq5": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://forms.gle/TkVdbVXhr6vsJp8z5": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/004_acreditaciones_24bsff.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://forms.gle/eNYFkiyFPp38k1WJA": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://forms.gle/giFuNnas3qdxSzVP7": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://forms.gle/iFk4NYpHsnYCdeiQ7": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://forms.gle/s6ef97jB6xyGtx82A": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://forms.gle/wwM7ajZHD2QeTQHa8": {
+   "tipo": "formulario",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/014_seleccion_oficial_esp.html": {
+   "tipo": "pagina-programa",
+   "visto_en": "https://festival.bogoshorts.com/",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
+  },
+  "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf": {
+   "tipo": "pdf",
+   "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
+   "primera_vez": "2026-11-25T05:45",
+   "ultima_vez": "2026-11-25T05:45",
+   "estado": "sin-revisar"
   }
  }
 }
