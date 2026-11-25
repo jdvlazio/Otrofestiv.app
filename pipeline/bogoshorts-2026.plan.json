@@ -82,7 +82,8 @@
     "festivals/staging/bogoshorts-2026-correcciones.json": "fichas TMDB verificadas",
     "festivals/staging/bogoshorts-2026-afiches.json": "afiches oficiales que TMDB no tiene",
     "festivals/staging/bogoshorts-2026-sinopsis.json": "sinopsis declaradas con su fuente",
-    "festivals/staging/bogoshorts-2026-actividades.json": "actividades y programas fuera de la leyenda, del catálogo; lo lee el crudo"
+    "festivals/staging/bogoshorts-2026-titulos-impresos.json": "título impreso donde el PDF lo trae roto",
+  "festivals/staging/bogoshorts-2026-actividades.json": "actividades y programas fuera de la leyenda, del catálogo; lo lee el crudo"
   },
   "festival": {
     "radar": 575,

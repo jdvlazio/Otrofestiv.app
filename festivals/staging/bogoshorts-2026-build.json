@@ -22577,8 +22577,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-24T19:05:38",
-  "plan_sha": "ffb90333f9801666",
+  "fecha": "2026-11-24T19:11:47",
+  "plan_sha": "9d351ae0eb82b4eb",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"
  }

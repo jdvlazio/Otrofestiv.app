@@ -118,8 +118,14 @@ INGLES = {'L’uomo meccanico': 'The Mechanical Man',
 
 # el título como está IMPRESO, donde el PDF lo trae roto como texto: un glifo suelto (北回归线, Berlinale Talents
 # 405774: Běi Huí Guī Xiàn) y un título persa cuya línea inglesa se parte («پایان تابستان / End of Summer», pág. 163, vista)
-TITULO = {'Summer': 'End of Summer'}
-GLIFO = {'Gu− Xiàn': 'Guī Xiàn'}
+IMPRESO = json.load(open(f'{REPO}/festivals/staging/bogoshorts-2026-titulos-impresos.json', encoding='utf-8'))['titulos']
+
+
+def impreso(t):
+    for x in IMPRESO:
+        if t == x['pdf'] or (x.get('parte') and x['pdf'] in t):
+            return t.replace(x['pdf'], x['impreso'])
+    return t
 
 
 def solo_es(t):
@@ -216,7 +222,7 @@ def leer():
                     if sig and not ROL.search(' ' + linea.split('dirección / direction', 1)[1]) and not re.search(r'/|\d|^(Premier|Estreno)', sig[0][4][0]):
                         linea = unir([linea] + sig[0][4])
                 d = m['dir'] or dir_previa or (director(linea) if dr else '')
-                partes = [s.strip() for s in re.split(r'\s+/\s*|\s*/\s+', TITULO.get(unir(tit), unir(tit).replace('Gu− Xiàn', GLIFO['Gu− Xiàn'])))]
+                partes = [s.strip() for s in re.split(r'\s+/\s*|\s*/\s+', impreso(unir(tit)))]
                 obra = {'titulo': partes[0], 'director': d.strip(), 'pais': m['pais'].strip(),
                         'anio': int(m['anio'])}
                 if partes[1:]:
