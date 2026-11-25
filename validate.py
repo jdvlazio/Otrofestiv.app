@@ -7488,9 +7488,12 @@ except Exception as _e:
 # atrapadas, 15 oct 2026). La autoprueba repite lo esencial en memoria.
 check = 'funcion-tests'
 try:
-    import subprocess as _spf
+    import os as _osf, subprocess as _spf
     _rf = _spf.run([_sysc.executable, '-m', 'unittest', 'discover', '-s', 'tests/pipeline'],
-                   capture_output=True, text=True, timeout=120)
+                   capture_output=True, text=True, timeout=120,
+                   # como en CI, sin la configuración global de quien corre: dos tests pasaban
+                   # aquí y caían allá por el usuario de git (25 nov 2026)
+                   env={**_osf.environ, 'GIT_CONFIG_GLOBAL': '/dev/null', 'GIT_CONFIG_NOSYSTEM': '1'})
     if _rf.returncode:
         fail(check, 'tests del modelo de la función en rojo: ' + (_rf.stderr.strip().splitlines() or ['?'])[-1])
     else:
