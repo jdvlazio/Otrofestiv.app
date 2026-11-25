@@ -185,6 +185,8 @@
    "pais": "Colombia",
    "anio": 2026,
    "duracion_min": 86,
+   "poster": "/assets/ficma/soñé-su-nombre.jpg",
+   "posterSource": "oficial",
    "has_qa": true,
    "qa_type": "team"
   },
@@ -205,7 +207,9 @@
    "pais": "Colombia",
    "anio": 2025,
    "duracion_min": 80,
-   "title_en": "Three Sisters"
+   "title_en": "Three Sisters",
+   "poster": "https://image.tmdb.org/t/p/w500/g4ibgfPUUcDjFQM3gPI377Z847p.jpg",
+   "posterSource": "oficial"
   },
   {
    "titulo": "TV Cámaras | Microhistorias digitales",
@@ -262,6 +266,8 @@
    "pais": "Colombia",
    "anio": 2026,
    "duracion_min": 75,
+   "poster": "/assets/ficpa-2026/lactar.jpg",
+   "posterSource": "oficial",
    "has_qa": true,
    "qa_type": "team"
   },
@@ -373,7 +379,9 @@
    "director": "Andrés Carmona Rivera",
    "pais": "Colombia",
    "anio": 2024,
-   "duracion_min": 85
+   "duracion_min": 85,
+   "poster": "/assets/itagui-2026/estancia.jpg",
+   "posterSource": "oficial"
   },
   {
    "titulo": "Noviembre",
@@ -453,7 +461,9 @@
      "duracion_min": 14,
      "sinopsis": "Kari, una niña indígena emberá, teme reír. Kera, una joven mestiza, le cuenta el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo, y lo reinterpreta: la risa, en realidad, la liberó. Inspirada, Kari decide confrontar con la risa a los niños que las oprimen a ella y a sus amigas.",
      "synopsis_en": "Kari, an Emberá Indigenous girl, is afraid to laugh. Kera, a young mestiza, tells her the myth of Kiraparamia, a woman who, the elders say, was punished by the gods for laughing at her husband, and reinterprets it: laughter actually set her free. Inspired, Kari decides to confront with laughter the children who oppress her and her friends.",
-     "title_en": "Akababuru: Expression of Astonishment"
+     "title_en": "Akababuru: Expression of Astonishment",
+     "poster": "/assets/cortoscali-2026/akababuru-expresion-de-asombro.jpg",
+     "posterSource": "oficial"
     },
     {
      "titulo": "Cayenas libertarias",
@@ -462,6 +472,8 @@
      "duracion_min": 17,
      "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, cantos de trabajo del llano que durante generaciones interpretaron los hombres. Con sus cantos de vaquería resignifican su lugar en la tradición llanera y revelan su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
      "synopsis_en": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life.",
+     "poster": "/assets/popayan-2026/cayenas-libertarias.jpg",
+     "posterSource": "oficial",
      "genero": "Documental",
      "genre": "Documental"
     },
@@ -470,6 +482,8 @@
      "director": "Juan Camilo González",
      "pais": "Colombia",
      "duracion_min": 7,
+     "poster": "/assets/anibia-2026/decaer.jpg",
+     "posterSource": "oficial",
      "genero": "Animación",
      "genre": "Animación"
     },
@@ -489,6 +503,8 @@
      "duracion_min": 12,
      "sinopsis": "En una habitación apartada del mundo real, Juan, de 10 años, vive con sus abuelos. Su abuelo expulsa grandes cantidades de materia por una extraña enfermedad y cada noche los visitan apariciones que se alimentan de su carne podrida. La abuela intenta ocultárselo, pero una noche Juan se escabulle para acercarse a ellas.",
      "synopsis_en": "In a room isolated from the real world, 10-year-old Juan lives with his grandparents. A strange disease makes his grandfather expel large amounts of matter, and every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide it from him, but one night Juan sneaks out to approach them.",
+     "poster": "/assets/bhff-2026/la-habitacion-del-macho-cabrio.jpg",
+     "posterSource": "oficial",
      "genero": "Animación",
      "genre": "Animación"
     },
@@ -496,7 +512,9 @@
      "titulo": "La Mona",
      "director": "Laura Gutiérrez Ardila",
      "pais": "Colombia",
-     "duracion_min": 18
+     "duracion_min": 18,
+     "poster": "/assets/ficica-2026/la-mona.jpg",
+     "posterSource": "oficial"
     },
     {
      "titulo": "Make up: El arte de amar",
@@ -642,7 +660,9 @@
    "anio": 2025,
    "duracion_min": 64,
    "sinopsis": "En una comunidad del sur de Venezuela, tres generaciones del pueblo pemón luchan por el retorno de su abuela ancestral, Kowai Kueka. Su espíritu está encarnado en una piedra de jaspe rojo de más de veinte toneladas, sustraída y llevada a Alemania sin el consentimiento de la comunidad para una instalación artística.",
-   "synopsis_en": "In a community in southern Venezuela, three generations of the Pemón people fight for the return of their ancestral grandmother, Kowai Kueka. Her spirit is embodied in a red jasper stone of more than twenty tons, taken to Germany without the community's consent for an art installation."
+   "synopsis_en": "In a community in southern Venezuela, three generations of the Pemón people fight for the return of their ancestral grandmother, Kowai Kueka. Her spirit is embodied in a red jasper stone of more than twenty tons, taken to Germany without the community's consent for an art installation.",
+   "poster": "/assets/ficpa-2026/kueka-memoria-ancestral.jpg",
+   "posterSource": "oficial"
   },
   {
    "titulo": "La unión hace la industria",
@@ -795,7 +815,9 @@
    "director": "Estefanía Piñeres",
    "pais": "Colombia, España",
    "anio": 2026,
-   "duracion_min": 81
+   "duracion_min": 81,
+   "poster": "/assets/anibia-2026/mukira.jpg",
+   "posterSource": "oficial"
   },
   {
    "titulo": "Conversando con los actores: María Helena Doering, Patricia Ércole, Ángela Cano, Viviana Santos, Gastón Pauls y Julio Sánchez Coccaro, con Samuel Castro",
@@ -871,6 +893,8 @@
    "duracion_min": 91,
    "sinopsis": "Macha, una cucaracha adolescente que sueña con ser cantante, vive con su padre, Verdinardo El Sapo, en Los Matorrales, un barrio separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de él corre el riesgo de desaparecer, reúne a sus amigos, otros «bichos raros», para ir a un reality de talentos humanos.",
    "synopsis_en": "Macha, a teenage cockroach who dreams of being a singer, lives with her father, Verdinardo the Toad, in Los Matorrales, a neighborhood cut off from the Big City by a huge wall. When his vegetable shop is at risk of disappearing, she gathers her friends, other “weird bugs,” to enter a human talent reality show.",
+   "poster": "/assets/fantasmagoria-2026/la-sinfonia-de-los-bichos-raros.jpg",
+   "posterSource": "oficial",
    "has_qa": true,
    "qa_type": "team"
   },
@@ -909,6 +933,8 @@
    "pais": "Colombia",
    "anio": 2026,
    "duracion_min": 75,
+   "poster": "/assets/ficpa-2026/lactar.jpg",
+   "posterSource": "oficial",
    "has_qa": true,
    "qa_type": "team"
   },
@@ -939,7 +965,9 @@
      "titulo": "Chaika",
      "director": "Ingrid Paola Bonilla Rodríguez",
      "pais": "Colombia, Cuba",
-     "duracion_min": 15
+     "duracion_min": 15,
+     "poster": "/assets/ficica-2026/chaika.jpg",
+     "posterSource": "oficial"
     },
     {
      "titulo": "El amor no olvida",
@@ -951,7 +979,9 @@
      "titulo": "La gran hazaña",
      "director": "Luber Yesid Zúñiga Ordóñez",
      "pais": "Colombia",
-     "duracion_min": 15
+     "duracion_min": 15,
+     "poster": "/assets/ficcali-2026/la-gran-hazana.jpg",
+     "posterSource": "oficial"
     },
     {
      "titulo": "Maleza",
@@ -959,7 +989,9 @@
      "pais": "Colombia",
      "duracion_min": 11,
      "sinopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
-     "synopsis_en": "Alba, a solitary healer and midwife, has devoted her existence to preserving life. Guided by the spirit of her cat, one night she receives a desperate young woman whose request shakes her convictions. Amid pain and silence, she must understand that being there for someone also means letting each person choose their own path."
+     "synopsis_en": "Alba, a solitary healer and midwife, has devoted her existence to preserving life. Guided by the spirit of her cat, one night she receives a desperate young woman whose request shakes her convictions. Amid pain and silence, she must understand that being there for someone also means letting each person choose their own path.",
+     "poster": "/assets/girardota-2026/maleza.jpg",
+     "posterSource": "oficial"
     },
     {
      "titulo": "Maricones",
@@ -968,6 +1000,8 @@
      "duracion_min": 14,
      "sinopsis": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes queer enfrentan, en los espacios que habitan, prejuicios sociales que intentan limitar su forma de ser. Deciden usar la moda y sus cuerpos para expresar y construir su identidad como un proceso fluido, libre y sin etiquetas.",
      "synopsis_en": "Since they were little, Ginger and Louie knew they were different. In the spaces they inhabit, two young queer people face social prejudices that try to limit their way of being. They decide to use fashion and their bodies to express and build their identity as a fluid process, free and without labels.",
+     "poster": "/assets/girardota-2026/maricones.jpg",
+     "posterSource": "oficial",
      "genero": "Documental",
      "genre": "Documental"
     },
@@ -976,7 +1010,9 @@
      "director": "Hernán Velásquez",
      "pais": "Colombia",
      "anio": 2025,
-     "duracion_min": 8
+     "duracion_min": 8,
+     "poster": "/assets/festicinerio-2026/no-te-despiertes.jpg",
+     "posterSource": "oficial"
     },
     {
      "titulo": "Persiguiendo sueños",
@@ -989,13 +1025,17 @@
      "director": "Isabella Palacio Mesa",
      "pais": "Colombia",
      "duracion_min": 11,
-     "title_en": "Refracción"
+     "title_en": "Refracción",
+     "poster": "/assets/aleste-2026/refraccion.jpg",
+     "posterSource": "oficial"
     },
     {
      "titulo": "Replay",
      "director": "Simón Matallana Nossa",
      "pais": "Colombia",
      "duracion_min": 6,
+     "poster": "/assets/anibia-2026/replay.jpg",
+     "posterSource": "oficial",
      "genero": "Animación",
      "genre": "Animación"
     },
@@ -1297,6 +1337,8 @@
    "pais": "Colombia, Chile, Francia, Alemania, Luxemburgo",
    "anio": 2025,
    "duracion_min": 125,
+   "poster": "/assets/funza-2026/horizonte.jpg",
+   "posterSource": "oficial",
    "has_qa": true,
    "qa_type": "team"
   },
@@ -1409,6 +1451,8 @@
    "duracion_min": 111,
    "sinopsis": "En el bar Babel, donde vivos y muertos se mezclan, Dante busca recordar su pasado antes de que la Flaca, la Muerte en esta ciudad, cobre su deuda. Jacob oculta a su padre, cura fanático, su deseo de ser drag queen, y Uma, una gitana, intenta engañar a la Flaca para salvar a su hija. Sus destinos chocan en una lucha contra lo inevitable.",
    "synopsis_en": "At the Babel bar, where the living and the dead mingle, Dante tries to recall his past before la Flaca, Death in this city, collects her debt. Jacob hides from his fanatical priest father his wish to be a drag queen, and Uma, a Gypsy woman, tries to trick la Flaca to save her daughter. Their destinies collide in a fight against the inevitable.",
+   "poster": "/assets/ficma/llueve-sobre-babel.jpg",
+   "posterSource": "oficial",
    "has_qa": true,
    "qa_type": "team"
   },
@@ -1642,7 +1686,9 @@
    "director": "Simón Mesa Soto",
    "pais": "Colombia, Alemania, Suecia",
    "anio": 2025,
-   "duracion_min": 124
+   "duracion_min": 124,
+   "poster": "/assets/guatape-2026/un-poeta.jpg",
+   "posterSource": "oficial"
   },
   {
    "titulo": "Socios en las buenas y en las malas: el vínculo entre el mánager y el artista",
@@ -1733,7 +1779,9 @@
    "anio": 2025,
    "duracion_min": 95,
    "sinopsis": "Un documentalista sigue durante 14 años a cinco familias colombianas que enfrentan las desigualdades de un país donde el origen influye en las oportunidades. Sus decisiones, frustraciones, resiliencia y logros revelan que, aunque las reglas no son iguales para todos, persiste la voluntad de transformar el propio destino.",
-   "synopsis_en": "For 14 years, a documentary filmmaker follows five Colombian families facing the inequalities of a country where origins shape opportunity. Their decisions, frustrations, resilience and achievements reveal that, although the rules are not the same for everyone, the will to change one's own destiny persists."
+   "synopsis_en": "For 14 years, a documentary filmmaker follows five Colombian families facing the inequalities of a country where origins shape opportunity. Their decisions, frustrations, resilience and achievements reveal that, although the rules are not the same for everyone, the will to change one's own destiny persists.",
+   "poster": "/assets/fecibac-2026/el-juego-de-la-vida.jpg",
+   "posterSource": "oficial"
   },
   {
    "titulo": "Matrioshka",

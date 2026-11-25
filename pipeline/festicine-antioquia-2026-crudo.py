@@ -29,6 +29,7 @@ KIND = {'Conversando de…': 'conversatorio', 'Tómate un café con…': 'encuen
         'Conversando con los actores': 'conversatorio', 'Muestra cultural': 'evento'}
 INSCRIPCION = 'Taller con inscripción previa'
 PROGRAMA = {'Subterráneo + Pacífico': ['Subterráneo', 'Pacífico']}
+ALMACEN = json.load(io.open(f'{REPO}/festivals/staging/festicine-antioquia-2026-afiches.json', encoding='utf-8'))['del_almacen']
 # «Made to Shine» (5 min, Débora Arango, sin dirección en el PDF): con sus minutos el almacén la
 # casaría con la de FICIDI (Mariana Gutiérrez, 8 min) y ninguna fuente dice que sean la misma.
 TITLE_EN = {'Tres hermanas': 'Three Sisters', 'Akababuru': 'Akababuru: Expression of Astonishment',
@@ -41,6 +42,8 @@ def obra(o):
     d = {'titulo': o['titulo'], **{k: o[k] for k in CAMPOS if o.get(k)}}
     if o['titulo'] in TITLE_EN:
         d['title_en'] = TITLE_EN[o['titulo']]
+    if o['titulo'] in ALMACEN:   # la obra ya está en el almacén: su afiche es ese
+        d['poster'], d['posterSource'] = ALMACEN[o['titulo']], 'oficial'
     if o['titulo'] in SIN_MIN:
         d.pop('duracion_min')
     g = {'Documental': 'Documental', 'Animación': 'Animación'}.get(o.get('categoria'))
