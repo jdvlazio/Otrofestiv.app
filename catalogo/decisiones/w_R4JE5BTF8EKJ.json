@@ -1,0 +1,64 @@
+[
+ {
+  "work_id": "w_R4JE5BTF8EKJ",
+  "campo": "directores",
+  "valor": [
+   "Mauro Andrade"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Mauro Andrade",
+   "ficpa-2026": "Mauro Andrade"
+  }
+ },
+ {
+  "work_id": "w_R4JE5BTF8EKJ",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4JE5BTF8EKJ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Colombia",
+   "ficpa-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4JE5BTF8EKJ",
+  "campo": "sinopsis.es",
+  "valor": "Tras la muerte de su madre y motivado por una última carta, Tomás, un niño huérfano, emprende la búsqueda de su padre junto a su mascota Milú. En su recorrido por Pueblo Bello y los paisajes de La Guajira enfrenta retos que convierten su travesía en una reflexión sobre la pérdida, el lazo familiar y la esperanza.",
+  "motivo": "no tenía; argumento publicado en prensa",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración Cajicá)",
+  "fuente": "https://www.pulzo.com/entretenimiento/buscando-a-papa-cortometraje-de-valledupar-triunfa-en-smartfilms-2026-colombia-PP5305101A",
+  "antes": {}
+ },
+ {
+  "work_id": "w_R4JE5BTF8EKJ",
+  "campo": "sinopsis.en",
+  "valor": "After his mother’s death, and moved by one last letter, Tomás, an orphaned boy, sets out to find his father with his pet, Milú. On his way through Pueblo Bello and the landscapes of La Guajira he faces challenges that turn his journey into a reflection on loss, family bonds and hope.",
+  "motivo": "no tenía; argumento publicado en prensa",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración Cajicá)",
+  "fuente": "https://www.pulzo.com/entretenimiento/buscando-a-papa-cortometraje-de-valledupar-triunfa-en-smartfilms-2026-colombia-PP5305101A",
+  "antes": {}
+ }
+]

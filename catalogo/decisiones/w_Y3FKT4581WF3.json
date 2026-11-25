@@ -6,5 +6,112 @@
   "motivo": "traducida de su española; verificada por otro agente",
   "fecha": "2026-11-24",
   "quien": "Juan («Aprobadas, sigue»)"
+ },
+ {
+  "work_id": "w_Y3FKT4581WF3",
+  "campo": "directores",
+  "valor": [
+   "Diego Yaya",
+   "Edison Yaya"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Diego Yaya, Edison Yaya"
+  }
+ },
+ {
+  "work_id": "w_Y3FKT4581WF3",
+  "campo": "anio",
+  "valor": 2020,
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "2020"
+  }
+ },
+ {
+  "work_id": "w_Y3FKT4581WF3",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_Y3FKT4581WF3",
+  "campo": "generos",
+  "valor": [
+   "Animación"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Animación"
+  }
+ },
+ {
+  "work_id": "w_Y3FKT4581WF3",
+  "campo": "sinopsis.es",
+  "valor": "A comienzos del siglo XVI un cacique valeroso enfrenta la devastadora llegada de los españoles a sus territorios; dos niños que buscan a su hermana raptada quedan en medio de este conflicto de culturas, que desencadena batallas en las que se descubren sentimientos y actos de valentía, traición, amor y codicia.",
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "A comienzos del siglo XVI un cacique valeroso enfrenta la devastadora llegada de los españoles a sus territorios; dos niños que buscan a su hermana raptada quedan en medio de este conflicto de culturas, que desencadena batallas en las que se descubren sentimientos y actos de valentía, traición, amor y codicia."
+  }
+ },
+ {
+  "work_id": "w_Y3FKT4581WF3",
+  "campo": "xref.tmdb",
+  "valor": 764925,
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "764925"
+  }
+ },
+ {
+  "work_id": "w_Y3FKT4581WF3",
+  "campo": "xref.letterboxd",
+  "valor": "tundama",
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "tundama"
+  }
+ },
+ {
+  "work_id": "w_Y3FKT4581WF3",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cajica-2026/tundama.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "/assets/cajica-2026/tundama.jpg"
+  }
  }
 ]

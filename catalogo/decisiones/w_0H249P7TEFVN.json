@@ -24,5 +24,111 @@
   "antes": {
    "cajica-2026": "Itzia es una mujer sorda que asegura haber comenzado a escuchar una música peculiar que siempre proviene del mismo punto cardinal. En el pueblo donde vive la gente cree que está enloqueciendo y la intentan convencer para que vaya al médico. Pero Itzia está segura que esas melodías no son producto de su imaginación. Para demostrar que no está loca, deberá emprender un viaje para encontrar la fuente de la música."
   }
+ },
+ {
+  "work_id": "w_0H249P7TEFVN",
+  "campo": "directores",
+  "valor": [
+   "Flora Martínez"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Flora Martínez"
+  }
+ },
+ {
+  "work_id": "w_0H249P7TEFVN",
+  "campo": "anio",
+  "valor": 2023,
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "2023"
+  }
+ },
+ {
+  "work_id": "w_0H249P7TEFVN",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_0H249P7TEFVN",
+  "campo": "generos",
+  "valor": [
+   "Drama"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Drama"
+  }
+ },
+ {
+  "work_id": "w_0H249P7TEFVN",
+  "campo": "sinopsis.en",
+  "valor": "Itzia is a deaf woman who claims to have started hearing a peculiar music that always comes from the same cardinal point. In her village, people believe she is going crazy and try to convince her to see a doctor. To prove she is not crazy, she will have to embark on a journey to find the source of the music.",
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Itzia is a deaf woman who claims to have started hearing a peculiar music that always comes from the same cardinal point. In her village, people believe she is going crazy and try to convince her to see a doctor. To prove she is not crazy, she will have to embark on a journey to find the source of the music."
+  }
+ },
+ {
+  "work_id": "w_0H249P7TEFVN",
+  "campo": "xref.tmdb",
+  "valor": 1170350,
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "1170350"
+  }
+ },
+ {
+  "work_id": "w_0H249P7TEFVN",
+  "campo": "xref.letterboxd",
+  "valor": "itzia-tango-cacao",
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "itzia-tango-cacao"
+  }
+ },
+ {
+  "work_id": "w_0H249P7TEFVN",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/cajica-2026/itzia-tango-y-cacao.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "/assets/cajica-2026/itzia-tango-y-cacao.jpg"
+  }
  }
 ]

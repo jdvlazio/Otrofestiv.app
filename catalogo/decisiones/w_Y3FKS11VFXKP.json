@@ -1,0 +1,28 @@
+[
+ {
+  "work_id": "w_Y3FKS11VFXKP",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_Y3FKS11VFXKP",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Colombia"
+  }
+ }
+]

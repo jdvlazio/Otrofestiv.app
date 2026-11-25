@@ -1,0 +1,42 @@
+[
+ {
+  "work_id": "w_Y3FKWHXWKP0F",
+  "campo": "directores",
+  "valor": [
+   "David Eduardo Caicedo Rodríguez"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "David Eduardo Caicedo Rodríguez"
+  }
+ },
+ {
+  "work_id": "w_Y3FKWHXWKP0F",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_Y3FKWHXWKP0F",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25",
+  "quien": "Claude (migración cajica-2026)",
+  "sembrada": true,
+  "antes": {
+   "cajica-2026": "Colombia"
+  }
+ }
+]

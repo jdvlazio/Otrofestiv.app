@@ -12,7 +12,9 @@
   "regla": "único"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde cajica-2026",
+  "fecha": "2026-11-25"
  }
 }
