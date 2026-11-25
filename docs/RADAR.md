@@ -242,3 +242,16 @@ El radar ya no depende solo del calendario de Proimágenes. Dos archivos version
 - `docs/radar-ancla.json`: **la fuente única** del mapa nacional de festivales (desde el 28 oct 2026). Cada festival UNA vez, con `estado` (`en_app` / `radar` / `pasado_2026` / `descartado`), `id_config` (FESTIVAL_CONFIG), `issue` (radar), `apoyo` (FDC o ICPA con monto), `departamento`/`region`, `verificado_el`, `fuente` y `discrepancias`. Lo no confirmado lo dice el campo. Festival nuevo → entrada nueva aquí **y** su issue; festival que entra a la app → `estado: en_app` + `id_config`. `copias` guarda los registros originales de la fusión del 28 oct. La copia `~/Developer/Otrofestiv-fuentes/radar/lista-ancla.json` quedó **obsoleta** (renombrada `lista-ancla.json.obsoleto`, no se borra): no se edita ni se lee.
 - Historia: todo festival que conocemos, con su **mes habitual**. Si se acerca el mes de un festival y no hay señales, es alerta («sin señales este año»), no silencio. Nació porque Miradas Medellín (3–8 nov) no estaba en ningún lado y porque el primer barrido (7 oct) usó una lista que se perdió en un scratchpad.
 - `docs/radar-fuentes.json`: las webs (Proimágenes completo, cinematecas, agendas de cultura de las alcaldías, MinCulturas, Festhome, FilmFreeway) y las cuentas de Instagram **paraguas** (entidades que anuncian festivales ajenos), cada una con cómo se lee.
+
+## Varias fuentes, por escrito (25 nov 2026)
+
+Medellín Horror Fest llevaba meses en el radar y a un día de abrir no estaba montado: sus
+horas estaban en la revista de su web y en la agenda de Comic Con, el evento anfitrión.
+Desde entonces cada festival lleva en el ancla `inicio_2026`, `fuentes_miradas` (ocho clases:
+web, redes, sede, anfitrión, boletería, prensa, obras, convocatoria) y `conclusion`.
+
+- `python3 pipeline/radar_fuentes.py` corre **cada día** en el vigía: nombra lo que empieza en 21 días con fuentes sin mirar o lecturas de más de 7 días, y lo que a 14 días no está premontado.
+- "Sin información" solo se puede concluir con las ocho clases miradas y un canal propio leído. Si no, es `esperando`.
+- `ilegible` no es `nada`. Lo no mirado se anota `no_mirada`.
+- Con dos fechas posibles se anota la más temprana.
+- La forma la vigila `tests/pipeline/test_radar_fuentes.py`.

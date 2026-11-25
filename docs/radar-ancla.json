@@ -4830,10 +4830,10 @@
    "region": "Orinoquía",
    "mes": 11,
    "mes_texto": null,
-   "fechas_2026": "sin confirmar (5.ª fue 6–9 NOV 2025)",
+   "fechas_2026": "5–8 NOV 2026",
    "web": null,
    "ig": null,
-   "estado": "radar",
+   "estado": "pasado_2026",
    "id_config": null,
    "issue": [
     1270
@@ -4842,7 +4842,7 @@
    "fuente": [
     "https://github.com/jdvlazio/Otrofestiv.app/issues/1270"
    ],
-   "nota": null,
+   "nota": "Pasó. Web https://festivaldecinedevillavicenciocrisol.com/2026/ con palmarés y calendario. Anotado el 25 nov 2026: no se llegó a montar.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
@@ -4853,7 +4853,8 @@
    "copias": {
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
-   }
+   },
+   "conclusion": "paso"
   },
   {
    "clave": "cuaff",
@@ -4970,10 +4971,10 @@
    "region": "Andina",
    "mes": 11,
    "mes_texto": null,
-   "fechas_2026": "3–8 NOV 2026 (dato del barrido, sin fuente propia)",
+   "fechas_2026": "3–8 NOV 2026",
    "web": null,
    "ig": null,
-   "estado": "radar",
+   "estado": "pasado_2026",
    "id_config": null,
    "issue": [
     1329
@@ -4990,7 +4991,7 @@
     "https://github.com/jdvlazio/Otrofestiv.app/issues/1329",
     "ICPA Antioquia — Resolución 422 de 2026 (18 ago 2026), Convocatoria Cinematografía y Audiovisuales"
    ],
-   "nota": null,
+   "nota": "Pasó (Mi Oriente, El Páramo). Anotado el 25 nov 2026: no se llegó a montar.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
@@ -5001,7 +5002,8 @@
    "copias": {
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
-   }
+   },
+   "conclusion": "paso"
   },
   {
    "clave": "feciso",
@@ -5528,9 +5530,9 @@
    "region": "Andina",
    "mes": 11,
    "mes_texto": "noviembre",
-   "fechas_2026": "27–29/30 NOV 2026 (6ª)",
-   "web": null,
-   "ig": null,
+   "fechas_2026": "26–29 NOV 2026 (6ª)",
+   "web": "https://medellinhorrorfest.com",
+   "ig": "@medellinhorrorfest",
    "estado": "en_app",
    "id_config": [
     "medellinhorror2026"
@@ -5544,7 +5546,7 @@
     "https://festhome.com/en/blog-article/34339",
     "https://github.com/jdvlazio/Otrofestiv.app/issues/1033"
    ],
-   "nota": "Solo fuentes de convocatoria; sin web/IG verificados. Relevancia baja.",
+   "nota": "26–29 NOV. Horas y sedes en la revista de su web y en la agenda de Comic Con Medellín, el evento anfitrión (25 nov 2026).",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
@@ -5584,6 +5586,66 @@
      ],
      "notas": "Solo fuentes de convocatoria; sin web/IG verificados. Relevancia baja."
     }
+   },
+   "inicio_2026": "2026-11-26",
+   "conclusion": "montado",
+   "fuentes_miradas": {
+    "web": [
+     {
+      "url": "https://medellinhorrorfest.com",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "https://medellin.comicconcolombia.com/es/agenda",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ],
+    "redes": [
+     {
+      "url": "https://www.instagram.com/medellinhorrorfest/",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ],
+    "sede": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "obras": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ]
    }
   },
   {
@@ -5695,10 +5757,10 @@
    "region": "Andina",
    "mes": 11,
    "mes_texto": null,
-   "fechas_2026": "13–14 NOV 2026 (Vanguardia, 28 oct; sin fuente propia)",
+   "fechas_2026": "13–14 NOV 2026",
    "web": null,
    "ig": null,
-   "estado": "radar",
+   "estado": "pasado_2026",
    "id_config": null,
    "issue": [
     1328
@@ -5707,7 +5769,7 @@
    "fuente": [
     "https://github.com/jdvlazio/Otrofestiv.app/issues/1328"
    ],
-   "nota": null,
+   "nota": "Pasó (Vanguardia, 11 nov). Anotado el 25 nov 2026: no se llegó a montar.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
@@ -5718,7 +5780,8 @@
    "copias": {
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
-   }
+   },
+   "conclusion": "paso"
   },
   {
    "clave": "bogoshorts",
@@ -5794,7 +5857,8 @@
      ],
      "notas": "Programación aún no publicada; «Noche de la Revelación» (anuncio de selección) el 23 OCT."
     }
-   }
+   },
+   "inicio_2026": "2026-12-01"
   },
   {
    "clave": "fecsine",
@@ -5867,6 +5931,68 @@
      ],
      "notas": "3ª edición fue 11–15 DIC 2025."
     }
+   },
+   "conclusion": "esperando",
+   "fuentes_miradas": {
+    "web": [
+     {
+      "url": "https://festivaldecinesierranevada.com",
+      "fecha": "2026-11-25",
+      "resultado": "ilegible",
+      "nota": "el dominio no resuelve"
+     }
+    ],
+    "redes": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada",
+      "nota": "@fecsine"
+     }
+    ],
+    "sede": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "búsqueda: alcaldía y Unimagdalena",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "Radio Nacional",
+      "fecha": "2026-11-25",
+      "resultado": "nada",
+      "nota": "ediciones anteriores"
+     }
+    ],
+    "obras": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ]
    }
   },
   {
@@ -5950,7 +6076,8 @@
      ],
      "notas": "Fechas 2026 de la convocatoria Festhome; la web aún muestra la 26ª (5–8 DIC 2025)."
     }
-   }
+   },
+   "inicio_2026": "2026-12-04"
   },
   {
    "clave": "mal-de-ojo",
@@ -5983,7 +6110,7 @@
     "https://github.com/jdvlazio/Otrofestiv.app/issues/1272",
     "FDC 2026 — Lista de beneficiarios, modalidad «Circulación de películas a través de muestras y festivales de cine»"
    ],
-   "nota": "Ninguna búsqueda lo encuentra fuera del listado de Proimágenes. No pude confirmar que exista. 2ª edición fue 2–10 DIC 2025.",
+   "nota": "Ninguna búsqueda lo encuentra fuera del listado de Proimágenes. No pude confirmar que exista. 2ª edición fue 2–10 DIC 2025. Anunciado \"Diciembre 2026\", sin días (vista previa de su web). Pistas: IG @fundacion_cinerama_cc, FB cineramacclub.",
    "discrepancias": "El ancla decía «no pude confirmar que exista»; existe: es beneficiario FDC 2026 (Fundación Cinerama Contracultural) y el issue #1272 cita su 2.ª edición 2–10 DIC 2025 (El Heraldo).",
    "motivo_descarte": null,
    "importancia": 1,
@@ -6030,6 +6157,67 @@
      ],
      "notas": "2ª edición fue 2–10 DIC 2025."
     }
+   },
+   "conclusion": "esperando",
+   "fuentes_miradas": {
+    "web": [
+     {
+      "url": "https://aguileracogollo-cell.github.io/mal-de-ojo-preview-2026/",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ],
+    "redes": [
+     {
+      "url": "https://www.instagram.com/fundacion_cinerama_cc/",
+      "fecha": "2026-11-25",
+      "resultado": "nada",
+      "nota": "sin posts nuevos desde el 22 nov; FB no mirado"
+     }
+    ],
+    "sede": [
+     {
+      "url": "https://cinematecadelcaribe.com",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "El Heraldo",
+      "fecha": "2026-11-25",
+      "resultado": "nada",
+      "nota": "solo 2025"
+     }
+    ],
+    "obras": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ]
    }
   },
   {
@@ -6508,7 +6696,8 @@
    "copias": {
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
-   }
+   },
+   "conclusion": "esperando"
   },
   {
    "clave": "ficgo",
@@ -6532,7 +6721,7 @@
     "https://filmmakers.festhome.com/festival/festival-internacional-de-cine-golfo-de-morrosquillo-ficgo",
     "https://ficgofestival.com"
    ],
-   "nota": "Itinerante al aire libre: Tolú, Coveñas, San Onofre, Berrugas, Rincón del Mar y San Antero. Su blog decía «noviembre 2026».",
+   "nota": "Itinerante al aire libre: Tolú, Coveñas, San Onofre, Berrugas, Rincón del Mar y San Antero. Su blog decía «noviembre 2026». Dos fechas: 9–12 DIC (Festhome, leída) y 28 NOV–1 DIC (FilmFreeway, solo en extracto del buscador). Se anota la más temprana para vigilar. IG sin posts nuevos desde el 22 nov.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
@@ -6543,6 +6732,68 @@
    "copias": {
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
+   },
+   "inicio_2026": "2026-11-28",
+   "conclusion": "esperando",
+   "fuentes_miradas": {
+    "web": [
+     {
+      "url": "https://ficgofestival.com",
+      "fecha": "2026-11-25",
+      "resultado": "ilegible",
+      "nota": "desafío anti-bot"
+     }
+    ],
+    "redes": [
+     {
+      "url": "https://www.instagram.com/ficgo_oficial/",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "sede": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada",
+      "nota": "itinerante"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "búsqueda: alcaldías y gobernación",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "búsqueda: El Meridiano",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "obras": [
+     {
+      "url": "búsqueda: seleccionado FICGO 2026",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "https://filmmakers.festhome.com/f/6205/1/1",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ]
    }
   },
   {
@@ -6577,6 +6828,68 @@
    "copias": {
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
+   },
+   "inicio_2026": "2026-12-17",
+   "conclusion": "esperando",
+   "fuentes_miradas": {
+    "web": [
+     {
+      "url": "https://changuitovisual.wixsite.com/changuitovisual",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "redes": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada",
+      "nota": "IG @changuitofilmfestival, FB changuitovisual"
+     }
+    ],
+    "sede": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "búsqueda: cali.gov.co",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "búsqueda: prensa",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "obras": [
+     {
+      "url": "búsqueda: realizadores",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "https://filmmakers.festhome.com/festival/10141",
+      "fecha": "2026-11-25",
+      "resultado": "encontro",
+      "nota": "notifica 8 dic"
+     }
+    ]
    }
   },
   {
@@ -6613,7 +6926,8 @@
    "copias": {
     "ancla_2026-10-11": null,
     "fuentes_lista_2026-10-20": null
-   }
+   },
+   "inicio_2026": "2026-12-01"
   },
   {
    "clave": "cineparalapaz",
@@ -6756,7 +7070,7 @@
     "https://x.com/china_embajada/status/2120885782831354174",
     "http://spanish.peopledaily.com.cn/n3/2026/1122/c92122-20521900.html"
    ],
-   "nota": "Juan, 23 nov 2026: anotarlo para 2027. Conocido con el festival en curso; la edición 2025 fue en julio: vigilar desde mayo.",
+   "nota": "Juan, 23 nov 2026: anotarlo para 2027. Conocido con el festival en curso; la edición 2025 fue en julio: vigilar desde mayo. Sigue hasta el 2 dic; Juan ya decidió dejarlo para 2027.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
@@ -6787,13 +7101,76 @@
     "https://noticiascoopercom.co/con-un-celular-y-una-historia-tengo-fe-film-festival-abre-convocatoria-y-entregara-10-millones-en-premios/",
     "https://www.radionacional.co/noticias-colombia/festival-de-cine-hecho-con-celular-entregara-premios-de-10-millones"
    ],
-   "nota": "Cine hecho con celular, máximo 30 cortos. Convocatoria abierta hasta el 30 nov: sin selección ni programación al 23 nov.",
+   "nota": "Cine hecho con celular, máximo 30 cortos. Convocatoria abierta hasta el 30 nov: sin selección ni programación al 23 nov. 9–13 DIC (El Heraldo, Coopercom) o 8–12 (Radio Nacional, 22 nov); convocatoria abierta hasta el 30 nov. Sede: Cinépolis VIP Barranquilla y barrios.",
    "discrepancias": "El Heraldo y Coopercom: 9–13 dic; Radio Nacional: 8–12 dic",
    "motivo_descarte": null,
    "importancia": null,
    "verificado_el": "2026-11-23",
    "origen": null,
-   "copias": null
+   "copias": null,
+   "inicio_2026": "2026-12-08",
+   "conclusion": "esperando",
+   "fuentes_miradas": {
+    "web": [
+     {
+      "url": "https://tengofefilms.com",
+      "fecha": "2026-11-25",
+      "resultado": "ilegible",
+      "nota": "desafío anti-bot"
+     }
+    ],
+    "redes": [
+     {
+      "url": "https://www.instagram.com/p/DgJTDdhqcbC/",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "sede": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada",
+      "nota": "agenda de Cinépolis"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "El Heraldo, Coopercom y Radio Nacional",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ],
+    "obras": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada",
+      "nota": "la selección aún no existe"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ]
+   }
   },
   {
    "clave": "cine-chicu",
@@ -6804,7 +7181,7 @@
    "region": "Andina",
    "mes": 12,
    "mes_texto": null,
-   "fechas_2026": "7–12 DIC 2026 (7ª; sin confirmar: solo Festhome)",
+   "fechas_2026": "7–12 DIC 2026 (7ª; Resolución 131 del IMCTT)",
    "web": null,
    "ig": null,
    "estado": "radar",
@@ -6816,13 +7193,75 @@
    "fuente": [
     "https://filmmakers.festhome.com/f/9087/0"
    ],
-   "nota": "Presencial. Organiza el Instituto Municipal de Cultura y Turismo de Tenjo. Seleccionados: 26 nov.",
+   "nota": "Presencial. Organiza el Instituto Municipal de Cultura y Turismo de Tenjo. Seleccionados: 26 nov. 7–12 DIC confirmado por la Resolución 131 de 2026 del IMCTT. Seleccionados el 26 nov en https://tenjoculturayturismo.gov.co/normativa-entidad.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
    "verificado_el": "2026-11-23",
    "origen": null,
-   "copias": null
+   "copias": null,
+   "inicio_2026": "2026-12-07",
+   "conclusion": "esperando",
+   "fuentes_miradas": {
+    "web": [
+     {
+      "url": "https://tenjoculturayturismo.gov.co/normativa-entidad",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ],
+    "redes": [
+     {
+      "url": "https://www.instagram.com/imct.tenjo/",
+      "fecha": "2026-11-25",
+      "resultado": "nada",
+      "nota": "posts nuevos desde el 22 nov; sin programa"
+     }
+    ],
+    "sede": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada",
+      "nota": "la resolución no la nombra"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "https://tenjoculturayturismo.gov.co/sites/default/files/2026-10/RESOLUCION%20CINE%20CHICU%202026%20-131.pdf",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "obras": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "ficha en Festhome",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ]
+   }
   },
   {
    "clave": "diverso-cinema",
@@ -6849,7 +7288,68 @@
    "importancia": null,
    "verificado_el": "2026-11-23",
    "origen": null,
-   "copias": null
+   "copias": null,
+   "conclusion": "esperando",
+   "fuentes_miradas": {
+    "web": [
+     {
+      "url": "https://diversocinema.com",
+      "fecha": "2026-11-25",
+      "resultado": "ilegible",
+      "nota": "no resuelve"
+     }
+    ],
+    "redes": [
+     {
+      "url": "búsqueda: IG y FB",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "sede": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "búsqueda: prensa",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "obras": [
+     {
+      "url": "https://selectedfilms.com/109032-diverso-cinema-festival-internacional-de-cine-lgbt-es/",
+      "fecha": "2026-11-25",
+      "resultado": "encontro",
+      "nota": "un título"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "https://festhome.com/es/blog-article/25308",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ]
+   }
   },
   {
    "clave": "fnicc",
@@ -7026,7 +7526,7 @@
    "region": "Andina",
    "mes": 2,
    "mes_texto": null,
-   "fechas_2026": "27–28 FEB 2026 (UMNG y Maloka); 28–29 NOV sin confirmar",
+   "fechas_2026": "27–28 FEB 2026 (UMNG y Maloka); 28–29 NOV 2026 (Maloka)",
    "web": "https://bogota.siggraph.org/",
    "ig": null,
    "estado": "radar",
@@ -7036,13 +7536,77 @@
    "fuente": [
     "https://bogota.siggraph.org/"
    ],
-   "nota": "Las fechas 28–29 nov no aparecen en su web (febrero, y 9 may en Colombia 5.0) ni en la agenda de la Cinemateca.",
+   "nota": "Las fechas 28–29 nov no aparecen en su web (febrero, y 9 may en Colombia 5.0) ni en la agenda de la Cinemateca. 28 NOV 17:00 y 29 NOV 11:00 en Maloka, gratis con inscripción https://forms.gle/ZoKFxLh7YXMVvymb9; sin títulos publicados. La selección de su web es la de febrero: no usarla.",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
    "verificado_el": "2026-11-23",
    "origen": null,
-   "copias": null
+   "copias": null,
+   "inicio_2026": "2026-11-28",
+   "conclusion": "esperando",
+   "fuentes_miradas": {
+    "web": [
+     {
+      "url": "https://bogota.siggraph.org/festival-animacion/",
+      "fecha": "2026-11-25",
+      "resultado": "nada",
+      "nota": "edición de febrero"
+     }
+    ],
+    "redes": [
+     {
+      "url": "https://www.instagram.com/p/DgF7vljTKK6/",
+      "fecha": "2026-11-25",
+      "resultado": "encontro",
+      "nota": "selección del Electronic Theater, sin títulos"
+     }
+    ],
+    "sede": [
+     {
+      "url": "https://maloka.org/noticias/agenda-cultural-y-cientifica-noviembre-2026/",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_aplica",
+      "nota": "la sede es Maloka"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "https://forms.gle/ZoKFxLh7YXMVvymb9",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "https://bogota.gov.co/mi-ciudad/cultura-recreacion-y-deporte/2026-11/planes-en-bogota-conoce-programacion-maloka-durante-noviembre-de-2026",
+      "fecha": "2026-11-25",
+      "resultado": "encontro",
+      "nota": "leída: confirma 28 NOV 17:00 y 29 NOV 11:00, gratis con inscripción; sin títulos. Pulzo, leída: sin horas ni títulos"
+     }
+    ],
+    "obras": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_mirada"
+     }
+    ]
+   }
   },
   {
    "clave": "cortos-tiempos-largos",
@@ -7064,13 +7628,76 @@
     "https://filmmakers.festhome.com/en/festival/5733",
     "https://filmfreeway.com/FestivalcortosparaTiemposLargos"
    ],
-   "nota": "Virtual según su ficha de FilmFreeway (leída solo en el resumen de búsqueda; la página no abre); Festhome da las fechas.",
+   "nota": "Virtual según su ficha de FilmFreeway (leída solo en el resumen de búsqueda; la página no abre); Festhome da las fechas. Virtual por el terremoto (Festhome). 55 obras con ficha en la web, sin horas; los enlaces \"Ver corto\" probados dan 404 el 25 nov. Solo con hora: dos charlas por Zoom, 26 nov 16:00 y 27 nov 17:00 (IG).",
    "discrepancias": null,
    "motivo_descarte": null,
    "importancia": null,
    "verificado_el": "2026-11-23",
    "origen": null,
-   "copias": null
+   "copias": null,
+   "inicio_2026": "2026-11-26",
+   "conclusion": "esperando",
+   "fuentes_miradas": {
+    "web": [
+     {
+      "url": "https://festivalcortosparatiemposlargos.com/seleccionoficial/",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ],
+    "redes": [
+     {
+      "url": "https://www.instagram.com/p/DgGkx7wNZf5/",
+      "fecha": "2026-11-25",
+      "resultado": "encontro",
+      "nota": "charlas por Zoom"
+     }
+    ],
+    "sede": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_aplica",
+      "nota": "virtual"
+     }
+    ],
+    "anfitrion": [
+     {
+      "url": "búsqueda: MinCultura",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "boleteria": [
+     {
+      "url": "",
+      "fecha": "2026-11-25",
+      "resultado": "no_aplica",
+      "nota": "gratis y virtual"
+     }
+    ],
+    "prensa": [
+     {
+      "url": "búsqueda: prensa con horas",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "obras": [
+     {
+      "url": "búsqueda: realizadores",
+      "fecha": "2026-11-25",
+      "resultado": "nada"
+     }
+    ],
+    "convocatoria": [
+     {
+      "url": "https://filmmakers.festhome.com/en/festival/festival-de-cortos-para-tiempos-largos",
+      "fecha": "2026-11-25",
+      "resultado": "encontro"
+     }
+    ]
+   }
   },
   {
    "clave": "caribetoons",
