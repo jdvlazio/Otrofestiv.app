@@ -19,6 +19,14 @@ no se publica hasta que alguien la vuelva a leer.
   · pipeline/sello-obra-deuda.json  lo publicado sin sello el día que nació la regla,
     con su huella. Solo baja: si cambia, necesita sello.
 
+COMPROBADO POR MÁQUINA (25 nov 2026; una auditoría halló 118 de 896 sellos con un
+original que no estaba en la fuente citada): --sellar abre la fuente y busca el original
+letra por letra (sello_fuente.py), y exige ES y EN publicadas, de 350 caracteres o menos.
+Si la fuente no se deja leer (un catálogo impreso, una web que bloquea), el lote dice dónde
+lo leyó una persona: `literal_a_mano: «catálogo impreso, p. 12»`. El sello guarda cómo se
+comprobó. --auditar repasa los sellos que ya existen; --retirar los quita con su motivo y
+la obra vuelve a la deuda (sin bajar su vara: hay que releerla para sellarla).
+
 ORDEN: publicar → catalogo_construir.py --escribir (da los ids) → otro agente lee →
 --sellar → push. Fusionar dos obras es releer: el sello de la absorbida no se hereda.
 Una función urgente de una obra nueva puede salir sin sinopsis y sellarse después.
@@ -30,6 +38,9 @@ Además: un mismo texto en dos obras no se publica (`gemelas` anotadas: solo baj
     python3 pipeline/sello_obra.py --sellar <lote.json>                # [{work_id, redacta, verifica, contra, veredicto: "fiel"}]
     python3 pipeline/sello_obra.py --original <lote.json>              # [{work_id, texto, idioma, fuente}], una vez por obra
     python3 pipeline/sello_obra.py --congelar                          # bajar la deuda
+    python3 pipeline/sello_obra.py --auditar [<salida.json>]           # ¿cada original está en su fuente?
+    python3 pipeline/sello_obra.py --retirar <lista.json>              # [{work_id, motivo}]
+    python3 pipeline/sello_obra.py --corregir-original <lote.json>     # [{work_id, texto, idioma, fuente, motivo}]
 """
 import hashlib
 import json
@@ -96,10 +107,13 @@ def huella(v, original=None):
     return hashlib.sha1(json.dumps(x, ensure_ascii=False).encode()).hexdigest()[:12]
 
 
-def problema(s):
-    """Qué le falta a un sello para valer, o None."""
+def problema(s, viejo=False):
+    """Qué le falta a un sello para valer, o None. `viejo`: sellado antes de que la máquina
+    comprobara (lista congelada `sin_comprobar` de la deuda, que solo baja)."""
     if not isinstance(s, dict):
         return 'sello ilegible'
+    if not viejo and not str(s.get('comprobado') or '').startswith(('máquina:', 'a mano:')):
+        return 'sello sin comprobar contra su fuente (sello_obra.py --sellar)'
     q = lambda k: s[k].strip().casefold() if isinstance(s.get(k), str) else ''
     if not q('redacta') or not q('verifica') or q('redacta') == q('verifica'):
         return 'sello sin segundo lector'
@@ -114,9 +128,10 @@ def faltan(festivales, sel=None, deuda=None, orig=None, exentas=None):
     """→ [(obra, título, qué)]: sin sello válido ni anotada."""
     sel, deuda, orig = (sellos() if sel is None else sel), (_leer(DEUDA).get('obras', {}) if deuda is None else deuda), (originales() if orig is None else orig)
     sin_orig, out = set(_leer(DEUDA).get('sin_original', [])), []
+    viejos = set(_leer(DEUDA).get('sin_comprobar', []))
     for w, v in sorted(publicadas(festivales).items()):
         if w in sel:
-            q = problema(sel[w]) or ('sellada sin guardar el original' if w not in orig and w not in sin_orig and w not in (exentas or ()) else None) or (None if sel[w].get('huella') == huella(v, orig.get(w)) else 'cambió después del sello')
+            q = problema(sel[w], w in viejos) or ('sellada sin guardar el original' if w not in orig and w not in sin_orig and w not in (exentas or ()) else None) or (None if sel[w].get('huella') == huella(v, orig.get(w)) else 'cambió después del sello')
         else:
             q = None if deuda.get(w) == huella(v) else 'cambió y nadie la releyó' if w in deuda else 'nueva, sin sello (¿es la misma que otra?: fusionar)'
         if q:
@@ -145,7 +160,7 @@ def autoprueba():
     o = {'type': 'film', 'title': 'X', 'work_id': 'w_1', 'director': 'A', 'year': 2025, 'synopsis': 'Una mujer vuelve a su pueblo y encuentra un hotel.', 'synopsis_en': 'A woman.'}
     f = lambda **k: {'a': {'films': [dict(o, **k)]}}
     h = huella(publicadas(f())['w_1'])
-    s = {'w_1': {'huella': h, 'redacta': 'a', 'verifica': 'b', 'contra': 'https://x', 'veredicto': 'fiel', 'fecha': '2026-11-24'}}
+    s = {'w_1': {'huella': h, 'redacta': 'a', 'verifica': 'b', 'contra': 'https://x', 'veredicto': 'fiel', 'fecha': '2026-11-24', 'comprobado': 'máquina: x'}}
     mal = []
     if faltan(f(), s, {}, {}, {'w_1'}) or not faltan(f(), s, {}, {}) or faltan(f(), {}, {'w_1': h}, {}):
         mal.append('frena lo que está bien')
@@ -161,8 +176,29 @@ def autoprueba():
     return mal
 
 
-def sellar(lote, festivales=None, fecha=None):
+LARGO = 350
+
+
+def ficha(w, publicada=None):
+    """Lo que ata un texto a la obra: títulos, dirección y número de TMDB (catalogo/obras)."""
+    p = os.path.join(REPO, 'catalogo', 'obras', w + '.json')
+    o = _leer(p) if os.path.exists(p) else {}
+    titulos = [t for t in [o.get('titulo_original'), *(o.get('titulos') or []), (publicada or {}).get('titulo')] if t]
+    return {'titulos': titulos, 'directores': o.get('directores') or sorted((publicada or {}).get('director') or []),
+            'tmdb': (o.get('xref') or {}).get('tmdb')}
+
+
+def idiomas(v):
+    """Qué le falta a lo publicado para sellar: los dos idiomas, cortos."""
+    mal = [f'sin sinopsis en {n}' for k, n in (('es', 'español'), ('en', 'inglés')) if not v[k]]
+    mal += [f'{n} de {len(t)} caracteres (máximo {LARGO})' for k, n in (('es', 'español'), ('en', 'inglés')) for t in v[k] if len(t) > LARGO]
+    return mal
+
+
+def sellar(lote, festivales=None, fecha=None, comprobar=None):
     import datetime
+    if comprobar is None:
+        from sello_fuente import comprobar
     if festivales is None:
         from obra_unica import _festivales
         festivales = _festivales()
@@ -173,12 +209,95 @@ def sellar(lote, festivales=None, fecha=None):
             raise SystemExit(f'✗ {w} no publica sinopsis')
         s = {'huella': huella(pub[w], orig.get(w)), **{k: e.get(k) for k in ('redacta', 'verifica', 'contra', 'veredicto')},
              'fecha': fecha or datetime.date.today().isoformat()}
-        if w not in orig and w not in set(_leer(DEUDA).get('sin_original', [])):
-            raise SystemExit(f'✗ {w}: primero el original (--original)')
-        if problema(s):
-            raise SystemExit(f'✗ {w}: {problema(s)}')
+        if w not in orig:
+            raise SystemExit(f'✗ {w}: primero el original (--original): sin él no hay contra qué comprobar')
+        if problema(s, viejo=True):           # la forma; `comprobado` se pone abajo
+            raise SystemExit(f'✗ {w}: {problema(s, viejo=True)}')
+        if idiomas(pub[w]):
+            raise SystemExit(f'✗ {w}: ' + '; '.join(idiomas(pub[w])))
+        if w in orig:
+            a_mano = str(e.get('literal_a_mano') or '').strip()
+            from sello_fuente import SinLeer
+            try:
+                estado, donde = comprobar(orig[w], obra=ficha(w, pub[w]))
+            except SinLeer as x:
+                raise SystemExit(f'✗ {w}: no se pudo consultar la fuente ({x}); no se sella')
+            if estado == 'literal':
+                s['comprobado'] = f'máquina: {donde}'
+            elif estado == 'ilegible' and a_mano:
+                s['comprobado'] = f'a mano: {a_mano}'
+            else:
+                raise SystemExit(f'✗ {w}: el original «{estado}» en su fuente ({donde})'
+                                 + ('; si la fuente no se deja leer, el lote dice dónde se leyó: literal_a_mano' if estado == 'ilegible' else ''))
         sel[w] = s
     _escribir(SELLOS, sel)
+    return len(lote)
+
+
+def auditar(comprobar=None):
+    """→ [{work_id, estado, donde}] de cada sello: ¿su original está en su fuente?"""
+    from concurrent.futures import ThreadPoolExecutor
+    if comprobar is None:
+        from sello_fuente import comprobar
+    from obra_unica import _festivales
+    from sello_fuente import SinLeer
+    sel, orig, pub = sellos(), originales(), publicadas(_festivales())
+
+    def uno(w):
+        if w not in orig:
+            return {'work_id': w, 'estado': 'sin original', 'donde': ''}
+        try:
+            e, d = comprobar(orig[w], obra=ficha(w, pub.get(w)))
+        except SinLeer as x:
+            e, d = 'sin leer', str(x)
+        except Exception as x:          # pdftotext ausente, un PDF colgado: esa obra, no la auditoría
+            e, d = 'sin leer', f'{type(x).__name__}: {x}'
+        return {'work_id': w, 'estado': e, 'donde': d}
+    with ThreadPoolExecutor(8) as ex:
+        return list(ex.map(uno, sorted(sel)))
+
+
+def retirar(lista, festivales=None):
+    """Quita sellos con su motivo; la obra vuelve a la deuda con su huella de hoy."""
+    if festivales is None:
+        from obra_unica import _festivales
+        festivales = _festivales()
+    pub, sel, deuda = publicadas(festivales), sellos(), _leer(DEUDA)
+    for e in lista:
+        w, m = e['work_id'], str(e.get('motivo') or '').strip()
+        if not m:
+            raise SystemExit(f'✗ {w}: retirar un sello lleva motivo')
+        if w not in sel:
+            raise SystemExit(f'✗ {w} no está sellada')
+        del sel[w]
+        if w in deuda.get('sin_comprobar', []):
+            deuda['sin_comprobar'] = sorted(set(deuda['sin_comprobar']) - {w})
+        if w in pub:
+            deuda.setdefault('obras', {})[w] = huella(pub[w])
+        deuda.setdefault('retirados', {})[w] = m
+    _escribir(SELLOS, sel)
+    _escribir(DEUDA, deuda)
+    return len(lista)
+
+
+def corregir_original(lote, comprobar=None):
+    """El original citado no estaba en su fuente: se pone el verdadero, que la máquina
+    encuentra letra por letra. El anterior queda en `anteriores`. Rompe el sello (cambia la huella)."""
+    if comprobar is None:
+        from sello_fuente import comprobar
+    orig = originales()
+    for e in lote:
+        w, o = e['work_id'], {k: e.get(k) for k in ('texto', 'idioma', 'fuente')}
+        if not all(o.values()) or not str(e.get('motivo') or '').strip():
+            raise SystemExit(f'✗ {w}: lleva texto, idioma, fuente y motivo')
+        estado, donde = comprobar(o, obra=ficha(w))
+        if estado != 'literal':
+            raise SystemExit(f'✗ {w}: el original nuevo {estado} en su fuente ({donde})')
+        viejo = orig.get(w)
+        if viejo:
+            o['anteriores'] = (viejo.pop('anteriores', None) or []) + [{**viejo, 'motivo': e['motivo']}]
+        orig[w] = o
+    _escribir(ORIGINALES, orig)
     return len(lote)
 
 
@@ -205,13 +324,30 @@ if __name__ == '__main__':
     elif a[:1] == ['--original']:
         with open(a[1], encoding='utf-8') as fh:
             print(guardar_originales(json.load(fh)), 'originales')
+    elif a[:1] == ['--auditar']:
+        r = auditar()
+        from collections import Counter
+        print(len(r), 'sellos ·', dict(Counter(x['estado'] for x in r)))
+        for x in r:
+            if x['estado'] != 'literal':
+                print(x['work_id'], x['estado'], x['donde'][:100], sep=' · ')
+        if len(a) > 1:
+            _escribir(a[1], r)
+    elif a[:1] == ['--retirar']:
+        with open(a[1], encoding='utf-8') as fh:
+            print(retirar(json.load(fh), fs), 'sellos retirados')
+    elif a[:1] == ['--corregir-original']:
+        with open(a[1], encoding='utf-8') as fh:
+            print(corregir_original(json.load(fh)), 'originales corregidos')
     elif a[:1] == ['--congelar']:
         if faltan(fs) or gemelas(fs):
             sys.exit('✗ la deuda solo baja; sin sello: ' + ', '.join(f'{t} ({q})' for _, t, q in faltan(fs)[:8]))
         sel, g = sellos(), gemelas(fs, [])
         obras = {w: huella(v) for w, v in publicadas(fs).items() if w not in sel}
         _escribir(DEUDA, {'_nota': 'Obras publicadas sin sello de verificación (pipeline/sello_obra.py). Solo baja.', 'obras': obras, 'gemelas': sorted(g),
-                          'sin_original': sorted(set(_leer(DEUDA).get('sin_original', [])) - set(originales()))})
+                          'sin_original': sorted(set(_leer(DEUDA).get('sin_original', [])) - set(originales())),
+                          'sin_comprobar': sorted(w for w in _leer(DEUDA).get('sin_comprobar', []) if w in sel and not sel[w].get('comprobado')),
+                          **({'retirados': {w: m for w, m in _leer(DEUDA)['retirados'].items() if w not in sel}} if _leer(DEUDA).get('retirados') else {})})
         print(len(obras), 'sin sello ·', len(sel), 'selladas ·', len(g), 'textos gemelos')
     else:
         n = len(publicadas(fs))
