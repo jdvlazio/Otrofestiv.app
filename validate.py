@@ -7477,7 +7477,7 @@ try:
     _sub += [f'obras sin sello: {_w} (sin retirar su sello de main con motivo)'
              for _w in sorted(set(_b.get('obras') or {}) - set(_a.get('obras') or {})) if not (_w in _ret and _w in _sel_main)]
     _sub += [f'obras sin sello: {_w} cambió de huella' for _w, _h in sorted((_b.get('obras') or {}).items())
-             if _w in (_a.get('obras') or {}) and _a['obras'][_w] != _h]
+             if _w in (_a.get('obras') or {}) and _a['obras'][_w] != _h and not (_w in _ret and _w in _sel_main)]
     _sub += [f'sin_original: {_w}' for _w in sorted(set(_b.get('sin_original') or []) - set(_a.get('sin_original') or []))]
     # un original de main no se edita: se corrige con sello_obra.py --corregir-original, que guarda el anterior
     _om, _oa = _de_main('catalogo/originales.json') or {}, _aqui('catalogo/originales.json')
