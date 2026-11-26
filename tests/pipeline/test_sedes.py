@@ -195,6 +195,88 @@ class Resolver(Base):
         self.assertEqual(e['_ciudad_dudosa'], 'Bogotá')
 
 
+class Encontrar(Base):
+    """Como se le dice al lugar (26 nov 2026): «Colombo», «Sala del Colombo», «la Tadeo»."""
+    def setUp(self):
+        super().setUp()
+        self.geo('viejo-2026', {'Centro Colombo Americano - Medellín': {'lat': 6.2500, 'lng': -75.5626, '_prec': 'manual'},
+                                'Cinemateca de Bogotá - Bogotá': {'lat': 4.6105, 'lng': -74.0705, '_prec': 'manual'},
+                                'Cinemateca Fontanar del Río - Bogotá': {'lat': 4.7600, 'lng': -74.0900, '_prec': 'manual'},
+                                'Universidad Jorge Tadeo Lozano - Bogotá': {'lat': 4.6060, 'lng': -74.0690, '_prec': 'manual'},
+                                'Colombo - Manizales': {'lat': 5.0600, 'lng': -75.4900, '_prec': 'manual'}})
+        os.makedirs(f'{self.r}/festivals', exist_ok=True)
+        json.dump({'films': [{'venue': 'Centro Colombo Americano - Medellín', 'sala': 'Sala 2'},
+                             {'venue': 'Centro Colombo Americano - Medellín', 'sala': 'Sala 20'}]},
+                  open(f'{self.r}/festivals/viejo-2026.json', 'w'))
+        S.construir(self.r)
+        self.sid = lambda n: next(s for s, e in S.leer(self.r)['sedes'].items() if e['nombre'] == n)
+
+    def uno(self, texto, ciudad):
+        r = S.encontrar(texto, ciudad=ciudad, raiz=self.r)
+        return [(x['nombre'], x['nivel'], x.get('sala'), x['firme']) for x in r]
+
+    def test_las_formas_de_decirle_a_un_lugar(self):
+        for texto in ('Colombo', 'el Colombo', 'Sala del Colombo', 'Colombo Americano'):
+            r = self.uno(texto, 'Medellín')
+            self.assertEqual([(x[0], x[3]) for x in r], [('Centro Colombo Americano', True)], texto)
+
+    def test_la_sala_sale_aparte_y_entera(self):
+        self.assertEqual(self.uno('Colombo Americano sala 2', 'Medellín'), [('Centro Colombo Americano', 'sin ciudad', 'Sala 2', True)])
+        self.assertEqual(self.uno('Colombo Americano sala 20', 'Medellín')[0][2], 'Sala 20')    # «sala 2» no se come «sala 20»
+        self.assertIsNone(self.uno('Colombo Americano sala 7', 'Medellín')[0][2])               # sala que el lugar no conoce
+
+    def test_la_ciudad_acota_y_no_cruza(self):
+        self.assertEqual([x[0] for x in self.uno('Colombo', 'Manizales')], ['Colombo'])
+        self.assertEqual(self.uno('Colombo', 'Bogotá'), [])
+
+    def test_dos_candidatos_del_mismo_peso_no_son_firmes(self):
+        self.geo('otro-2026', {'Cinemateca Sur - Bogotá': {'lat': 4.5600, 'lng': -74.1300, '_prec': 'manual'}})
+        S.construir(self.r)
+        r = self.uno('Cinemateca', 'Bogotá')
+        self.assertEqual(r[0], ('Cinemateca de Bogotá', 'sin ciudad', None, True))      # quitando la ciudad, es ese
+        self.assertEqual(sorted(x[0] for x in r[1:]), ['Cinemateca Fontanar del Río', 'Cinemateca Sur'])
+        r = self.uno('la Cinemateca del Río', 'Bogotá')
+        self.assertEqual([(x[0], x[3]) for x in r][:1], [('Cinemateca Fontanar del Río', True)])
+        r = self.uno('Fontanar o Sur, alguna Cinemateca', 'Bogotá')
+        self.assertFalse(any(x[3] for x in r))
+
+    def test_una_palabra_corta_o_vacia_no_encuentra(self):
+        self.assertEqual(self.uno('la sala del centro', 'Medellín'), [])
+        self.assertEqual(self.uno('Río', 'Bogotá'), [])                                   # 3 letras sola: demasiado poco
+
+    def test_parecida_es_pista_nunca_firme(self):
+        r = self.uno('Universidad Tadeo Lozanno', 'Bogotá')
+        self.assertEqual([(x[0], x[1], x[3]) for x in r], [('Universidad Jorge Tadeo Lozano', 'parecida', False)])
+
+    def test_nombrar_guarda_la_variante_y_sobrevive_al_reconstruir(self):
+        sid = self.sid('Universidad Jorge Tadeo Lozano')
+        self.assertIsNone(S.buscar('Utadeo', (4.606, -74.069), raiz=self.r))
+        S.nombrar(sid, 'Utadeo', 'así se firma la universidad', self.r)
+        S.construir(self.r)
+        self.assertEqual(S.buscar('Utadeo', (4.606, -74.069), raiz=self.r)['_matriz'], sid)
+        self.assertEqual(S.leer(self.r)['decisiones']['nombrado'], [[sid, 'Utadeo', 'así se firma la universidad']])
+
+    def test_nombrar_no_roba_el_nombre_de_un_vecino_ni_va_sin_motivo(self):
+        sid = self.sid('Cinemateca Fontanar del Río')
+        with self.assertRaises(SystemExit):
+            S.nombrar(sid, 'Cinemateca de Bogotá', 'x', self.r)
+        with self.assertRaises(SystemExit):
+            S.nombrar(sid, 'Fontanar', '', self.r)
+        with self.assertRaises(SystemExit):
+            S.nombrar('s_noexiste', 'Fontanar', 'x', self.r)
+
+    def test_resolver_propone_con_sala_y_al_aceptar_la_escribe(self):
+        json.dump({'funciones': [{'sede': 'Colombo sala 2'}]}, open(f'{self.r}/festivals/staging/nuevo-2026-crudo.json', 'w'))
+        json.dump({'festival': {'city': 'Medellín', 'festivalEndStr': '2099-12-31T23:59:00', 'sedes': {}}},
+                  open(f'{self.r}/pipeline/nuevo-2026.plan.json', 'w'))
+        r = S.resolver('nuevo-2026', self.r)
+        self.assertEqual((r['conocida'], [c for c, _ in r['parecida']]), ([], ['Colombo sala 2']))   # no entra sola
+        self.assertEqual(r['parecida'][0][1][0][2], 'Centro Colombo Americano / Sala 2')
+        S.resolver('nuevo-2026', self.r, escribir=True, aceptar={'Colombo sala 2': self.sid('Centro Colombo Americano')})
+        plan = json.load(open(f'{self.r}/pipeline/nuevo-2026.plan.json'))['festival']['sedes']
+        self.assertEqual(plan['Colombo sala 2'], ['Centro Colombo Americano - Medellín', 'Sala 2'])
+
+
 class Normalizar(Base):
     def test_salas_compuestas_fuera_y_variantes_juntas(self):
         e = {'nombre': 'MAMM', 'corto': 'MAMM'}
