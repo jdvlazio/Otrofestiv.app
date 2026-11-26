@@ -23,19 +23,34 @@
  {
   "work_id": "w_R4HQ9NNQ5PNF",
   "campo": "sinopsis.es",
-  "valor": "Dar una vuelta al mundo y filmar. Habitante emerge de los archivos del fotógrafo José Alejandro González, quien por dos décadas retrató conversaciones con desconocidos mientras deambulaba por callejones sin nombre, ciudades famosas, rincones apartados y continentes. Los fragmentos de viaje reúnen encuentros fugaces: la emoción de los comienzos inesperados y también la amargura de las inevitables despedidas. Se comparten voces y silencios, algunos de ellos incómodos, otros enigmáticos y felices que revelan preguntas comunes sobre migración, desarraigo y soledad, sobre cómo habitar el mundo. En su diario, el fotógrafo mira hacia fuera, observa a otros mientras se descubre a sí mismo, registra con su cámara aquello que el afán de los días impide ver.",
+  "valor": "José Alejandro González recorrió el mundo con una cámara, retratando a desconocidos. Trabajando como aseador en un hotel del norte, la cámara se volvió hacia él. De ahí nace esta bitácora íntima de archivos y fragmentos de viaje sobre la migración, el desarraigo y el deseo, a veces imposible, de pertenecer.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (narrarelfuturo-2026 · corregida)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
   "vistas": [
    "2cec8e353a29",
    "6ae911509a4e",
+   "be6f119bdf98",
    "c92a162d05d8"
   ],
   "antes": {
    "ficma-2026": "José Alejandro González traveled the world with a camera, capturing faces, voices, and fleeting encounters with strangers. On one of those trips, while working as a cleaner in a hotel in the north, the camera turned on itself. Habitante was born from that gesture: an intimate logbook made up of personal archives, fragments of travel, and shared silences. Through a sensitive and fragmented montage, the film explores the resonances between the filmmaker's life and those he encountered along the way, revealing common echoes of migration, uprooting, and searching. More than a portrait of the other, Habitante is a question about how we inhabit the world, about the sometimes impossible desire to belong. Between tenderness and discomfort, between observation and self-exploration, the film becomes an emotional diary that, by looking outward, ends up revealing the inner landscape of the filmmaker.",
    "itagui-2026": "Invitados: José Alejandro González.",
    "narrarelfuturo-2026": "Dar una vuelta al mundo y filmar. Habitante emerge de los archivos del fotógrafo José Alejandro González, quien por dos décadas retrató conversaciones con desconocidos mientras deambulaba por callejones sin nombre, ciudades famosas, rincones apartados y continentes. Los fragmentos de viaje reúnen encuentros fugaces: la emoción de los comienzos inesperados y también la amargura de las inevitables despedidas. Se comparten voces y silencios, algunos de ellos incómodos, otros enigmáticos y felices que revelan preguntas comunes sobre migración, desarraigo y soledad, sobre cómo habitar el mundo. En su diario, el fotógrafo mira hacia fuera, observa a otros mientras se descubre así mismo, registra con su cámara aquello que el afán de los días impide ver."
+  },
+  "original_de": [
+   "ficma-2026",
+   "itagui-2026",
+   "narrarelfuturo-2026"
+  ],
+  "titulo": "Habitante",
+  "original": "Dar una vuelta al mundo y filmar. Habitante emerge de los archivos del fotógrafo José Alejandro González, quien por dos décadas retrató conversaciones con desconocidos mientras deambulaba por callejones sin nombre, ciudades famosas, rincones apartados y continentes. Los fragmentos de viaje reúnen encuentros fugaces: la emoción de los comienzos inesperados y también la amargura de las inevitables despedidas. Se comparten voces y silencios, algunos de ellos incómodos, otros enigmáticos y felices que revelan preguntas comunes sobre migración, desarraigo y soledad, sobre cómo habitar el mundo. En su diario, el fotógrafo mira hacia fuera, observa a otros mientras se descubre a sí mismo, registra con su cámara aquello que el afán de los días impide ver.",
+  "sintesis": {
+   "redacta": "verificador A 26 nov",
+   "verifica": "verificador B 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "6588fb99aba5"
   }
  },
  {
@@ -64,6 +79,19 @@
    "ficma-2026": 2026,
    "itagui-2026": 2025,
    "narrarelfuturo-2026": 2026
+  }
+ },
+ {
+  "work_id": "w_R4HQ9NNQ5PNF",
+  "campo": "sinopsis.en",
+  "valor": "José Alejandro González traveled the world with a camera, capturing strangers. While working as a hotel cleaner in the north, he turned the camera on himself. From there comes this intimate logbook of archives and travel fragments about migration, uprooting and the sometimes impossible desire to belong.",
+  "motivo": "síntesis del original verificado (aprobada por Juan 26 nov)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "antes": {
+   "ficma-2026": "José Alejandro González traveled the world with a camera, capturing faces, voices, and fleeting encounters with strangers. On one of those trips, while working as a cleaner in a hotel in the north, the camera turned on itself. Habitante was born from that gesture: an intimate logbook made up of personal archives, fragments of travel, and shared silences. Through a sensitive and fragmented montage, the film explores the resonances between the filmmaker's life and those he encountered along the way, revealing common echoes of migration, uprooting, and searching. More than a portrait of the other, Habitante is a question about how we inhabit the world, about the sometimes impossible desire to belong. Between tenderness and discomfort, between observation and self-exploration, the film becomes an emotional diary that, by looking outward, ends up revealing the inner landscape of the filmmaker.",
+   "itagui-2026": "José Alejandro González traveled the world with a camera, capturing faces, voices, and fleeting encounters with strangers. On one of those trips, while working as a cleaner in a hotel in the north, the camera turned on itself. Habitante was born from that gesture: an intimate logbook made up of personal archives, fragments of travel, and shared silences. Through a sensitive and fragmented montage, the film explores the resonances between the filmmaker's life and those he encountered along the way, revealing common echoes of migration, uprooting, and searching. More than a portrait of the other, Habitante is a question about how we inhabit the world, about the sometimes impossible desire to belong. Between tenderness and discomfort, between observation and self-exploration, the film becomes an emotional diary that, by looking outward, ends up revealing the inner landscape of the filmmaker.",
+   "narrarelfuturo-2026": "José Alejandro González traveled the world with a camera, capturing faces, voices, and fleeting encounters with strangers. On one of those trips, while working as a cleaner in a hotel in the north, the camera turned on itself. Habitante was born from that gesture: an intimate logbook made up of personal archives, fragments of travel, and shared silences. Through a sensitive and fragmented montage, the film explores the resonances between the filmmaker's life and those he encountered along the way, revealing common echoes of migration, uprooting, and searching. More than a portrait of the other, Habitante is a question about how we inhabit the world, about the sometimes impossible desire to belong. Between tenderness and discomfort, between observation and self-exploration, the film becomes an emotional diary that, by looking outward, ends up revealing the inner landscape of the filmmaker."
   }
  }
 ]
