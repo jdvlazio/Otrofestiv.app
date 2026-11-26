@@ -38,6 +38,9 @@ Dónde se busca la fuente de una sinopsis lo decide el código (`pipeline/buscar
 fuentes guardadas, Instagram guardado, TMDB, Letterboxd, IMDb, web oficial, Filmaffinity y
 consultas web fijas) y queda escrito en `catalogo/busquedas/`. Una obra se declara sin fuente
 (`catalogo/sin-fuente.json`) solo con la búsqueda completa: `[busqueda-completa]`.
+Una obra sin ningún texto también se busca, por título y dirección (TMDB por título con la
+dirección de los créditos; cada archivo que la nombra queda por leer): «no aplica» en todas las
+clases no es una búsqueda.
 
 Que sea el **mismo** en todos los festivales: `[obra-unica]`. Que sea **verdad**:
 la identidad contra su fuente (en construcción, paso 2 y 3 del plan).

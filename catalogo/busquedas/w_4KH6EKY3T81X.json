@@ -77,7 +77,32 @@
    "no aplica": "la obra no tiene ficha TMDB"
   },
   "tmdb": {
-   "no aplica": "la obra no tiene ficha TMDB"
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Cassandra»",
+     "nota": "5 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Cassandra\" Arbeláez"
+    },
+    {
+     "consulta": "\"Cassandra\" sinopsis"
+    },
+    {
+     "consulta": "\"Cassandra\" synopsis Arbeláez"
+    },
+    {
+     "consulta": "\"Cassandra lujuria del río Fuego de la noche\""
+    },
+    {
+     "consulta": "site:info.bogoshorts.com \"Cassandra\""
+    }
+   ]
   }
  },
  "fecha": "2026-11-26",

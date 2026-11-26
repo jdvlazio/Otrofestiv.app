@@ -82,7 +82,32 @@
    "no aplica": "la obra no tiene ficha TMDB"
   },
   "tmdb": {
-   "no aplica": "la obra no tiene ficha TMDB"
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Kevin, el niño del espacio»",
+     "nota": "0 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Kevin, el niño del espacio\" Granada"
+    },
+    {
+     "consulta": "\"Kevin, el niño del espacio\" sinopsis"
+    },
+    {
+     "consulta": "\"Kevin, el niño del espacio\" synopsis Granada"
+    },
+    {
+     "consulta": "\"Junto a su grupo de amigxs una adolescente documenta\""
+    },
+    {
+     "consulta": "site:info.bogoshorts.com \"Kevin, el niño del espacio\""
+    }
+   ]
   }
  },
  "fecha": "2026-11-26",

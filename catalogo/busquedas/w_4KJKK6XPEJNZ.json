@@ -72,7 +72,32 @@
    "no aplica": "la obra no tiene ficha TMDB"
   },
   "tmdb": {
-   "no aplica": "la obra no tiene ficha TMDB"
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «You get one (The Plot in You)»",
+     "nota": "0 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"You get one (The Plot in You)\" Kattah"
+    },
+    {
+     "consulta": "\"You get one (The Plot in You)\" sinopsis"
+    },
+    {
+     "consulta": "\"You get one (The Plot in You)\" synopsis Kattah"
+    },
+    {
+     "consulta": "\"Tras esnifar las cenizas de su padre muerto un\""
+    },
+    {
+     "consulta": "site:info.bogoshorts.com \"You get one (The Plot in You)\""
+    }
+   ]
   }
  },
  "fecha": "2026-11-26",
