@@ -206,7 +206,8 @@ class Encontrar(Base):
                                 'Colombo - Manizales': {'lat': 5.0600, 'lng': -75.4900, '_prec': 'manual'}})
         os.makedirs(f'{self.r}/festivals', exist_ok=True)
         json.dump({'films': [{'venue': 'Centro Colombo Americano - Medellín', 'sala': 'Sala 2'},
-                             {'venue': 'Centro Colombo Americano - Medellín', 'sala': 'Sala 20'}]},
+                             {'venue': 'Centro Colombo Americano - Medellín', 'sala': 'Sala 20'},
+                             {'venue': 'Centro Colombo Americano - Medellín', 'sala': 'Aula'}]},
                   open(f'{self.r}/festivals/viejo-2026.json', 'w'))
         S.construir(self.r)
         self.sid = lambda n: next(s for s, e in S.leer(self.r)['sedes'].items() if e['nombre'] == n)
@@ -224,6 +225,8 @@ class Encontrar(Base):
         self.assertEqual(self.uno('Colombo Americano sala 2', 'Medellín'), [('Centro Colombo Americano', 'sin ciudad', 'Sala 2', True)])
         self.assertEqual(self.uno('Colombo Americano sala 20', 'Medellín')[0][2], 'Sala 20')    # «sala 2» no se come «sala 20»
         self.assertIsNone(self.uno('Colombo Americano sala 7', 'Medellín')[0][2])               # sala que el lugar no conoce
+        self.assertEqual(self.uno('Colombo Americano Aula', 'Medellín')[0][2], 'Aula')
+        self.assertFalse([x for x in self.uno('Colombo Paula', 'Medellín') if x[2]])             # «aula» dentro de otra palabra no es la sala
 
     def test_la_ciudad_acota_y_no_cruza(self):
         self.assertEqual([x[0] for x in self.uno('Colombo', 'Manizales')], ['Colombo'])
@@ -237,8 +240,11 @@ class Encontrar(Base):
         self.assertEqual(sorted(x[0] for x in r[1:]), ['Cinemateca Fontanar del Río', 'Cinemateca Sur'])
         r = self.uno('la Cinemateca del Río', 'Bogotá')
         self.assertEqual([(x[0], x[3]) for x in r][:1], [('Cinemateca Fontanar del Río', True)])
-        r = self.uno('Fontanar o Sur, alguna Cinemateca', 'Bogotá')
-        self.assertFalse(any(x[3] for x in r))
+        self.geo('cali-2026', {'Cine Norte Azul - Cali': {'lat': 3.4500, 'lng': -76.5300, '_prec': 'manual'},
+                               'Cine Norte Verde - Cali': {'lat': 3.4700, 'lng': -76.5200, '_prec': 'manual'}})
+        S.construir(self.r)
+        r = self.uno('Norte', 'Cali')
+        self.assertEqual((len(r), [x[1] for x in r], any(x[3] for x in r)), (2, ['contenida', 'contenida'], False))
 
     def test_una_palabra_corta_o_vacia_no_encuentra(self):
         self.assertEqual(self.uno('la sala del centro', 'Medellín'), [])

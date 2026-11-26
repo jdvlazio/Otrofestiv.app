@@ -757,7 +757,7 @@ def encontrar(texto, ciudad=None, centro=None, radio_m=30000, raiz=REPO, n=6):
         noms = [x for x in [e['nombre'], e.get('corto')] + e.get('alias', []) if x]
         salas = [(sa, sa) for sa in e.get('salas', [])] + list((e.get('salas_alias') or {}).items())
         mejor = None
-        for escrita, sala in [(None, None)] + sorted(salas, key=lambda x: -len(x[0])):
+        for escrita, sala in [(None, None)] + salas:
             resto = pq if escrita is None else _sin(pq, _pal(escrita))
             if resto is None or (escrita is not None and not peso(resto)):
                 continue
