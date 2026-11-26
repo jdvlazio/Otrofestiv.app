@@ -291,7 +291,8 @@ def corregir_original(lote, comprobar=None):
         if not all(o.values()) or not str(e.get('motivo') or '').strip():
             raise SystemExit(f'✗ {w}: lleva texto, idioma, fuente y motivo')
         estado, donde = comprobar(o, obra=ficha(w))
-        if estado != 'literal':
+        # misma vara que --sellar: una fuente que la máquina no lee la confirma un segundo lector
+        if estado != 'literal' and not (estado == 'ilegible' and str(e.get('literal_a_mano') or '').strip()):
             raise SystemExit(f'✗ {w}: el original nuevo {estado} en su fuente ({donde})')
         viejo = orig.get(w)
         if viejo:

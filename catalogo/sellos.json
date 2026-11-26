@@ -3210,12 +3210,22 @@
   "verifica": "lector BOGOSHORTS E"
  },
  "w_FBZA6DCNBRHR": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/anibia-2026/fichas/3593.txt — texto inmediatamente después del encabezado/ficha de Todo es culpa de la sal (María Cristina Pérez)",
   "contra": "fuentes/anibia-2026/fichas/3593.txt",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "2d36ae75bd06",
   "redacta": "primera lectura",
   "veredicto": "fiel",
-  "verifica": "segunda lectura"
+  "verifica": "verificador + segundo lector 26 nov"
+ },
+ "w_FBZAYPJF5MVD": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/anibia-2026/fichas/3593.txt, tras 'Coffee Break (Dir. María Cristina Pérez, Mauricio Cuervo, 2018) 9 min.'",
+  "contra": "fuentes/anibia-2026/fichas/3593.txt",
+  "fecha": "2026-11-26",
+  "huella": "5614dc9c4925",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_FBZBB0HHEKH8": {
   "comprobado": "máquina: TMDB 535612",
@@ -3227,12 +3237,13 @@
   "verifica": "Onboarding"
  },
  "w_FYY029D75X7Z": {
-  "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=224",
-  "fecha": "2026-11-24",
-  "huella": "3b913d556872",
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/anibia-2026/fichas/3591.txt — texto inmediatamente después del encabezado/ficha de Cómo Nace un Río (Luma Flôres)",
+  "contra": "fuentes/anibia-2026/fichas/3591.txt",
+  "fecha": "2026-11-26",
+  "huella": "1a95c9e32b78",
   "redacta": "Claude (sesión almacén)",
   "veredicto": "fiel",
-  "verifica": "agente lector (14 obras)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_FYY6K19T8M1Q": {
   "contra": "fuentes/anibia-2026/fichas/3594.txt",
@@ -3243,12 +3254,13 @@
   "verifica": "primera lectura"
  },
  "w_FYY6KSVT7DB8": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/anibia-2026/fichas/3594.txt — texto inmediatamente después del encabezado/ficha de Ir hacia adentro (Laura Alejandra Jiménez Ruiz)",
   "contra": "fuentes/anibia-2026/fichas/3594.txt",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "0948c2b5f1fc",
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "agente segunda lectura (migración)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_FYY7ZBQQR162": {
   "comprobado": "máquina: TMDB 1704468",
@@ -3663,12 +3675,22 @@
   "verifica": "primera lectura"
  },
  "w_R4DG4ATFHW7W": {
-  "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=34",
-  "fecha": "2026-11-24",
-  "huella": "55191bf70622",
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/ficci-65/catalogo/catalogo.pdf#page=35 — texto bajo el título Piedras preciosas; director Simón Vélez en la misma página",
+  "contra": "fuentes/ficci-65/catalogo/catalogo.pdf#page=35",
+  "fecha": "2026-11-26",
+  "huella": "45e0be6f69b4",
   "redacta": "Claude (sesión almacén)",
   "veredicto": "fiel",
-  "verifica": "agente lector (14 obras)"
+  "verifica": "verificador + segundo lector 26 nov"
+ },
+ "w_R4DGRDY3BDNP": {
+  "comprobado": "máquina: fuentes/filcmar-2026/matriz/gid-47146740.csv",
+  "contra": "fuentes/filcmar-2026/matriz/gid-47146740.csv",
+  "fecha": "2026-11-26",
+  "huella": "d85923341bf6",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
  },
  "w_R4DH1YW9PZS1": {
   "comprobado": "máquina: TMDB 1537613",
@@ -3678,6 +3700,15 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "primera lectura"
+ },
+ "w_R4DHSYGCHRN0": {
+  "comprobado": "máquina: TMDB 1465974",
+  "contra": "https://www.themoviedb.org/movie/1465974",
+  "fecha": "2026-11-26",
+  "huella": "1b76573673b5",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
  },
  "w_R4DJ5XYQ7SV3": {
   "comprobado": "máquina: TMDB 1640216",
@@ -3698,12 +3729,13 @@
   "verifica": "primera lectura"
  },
  "w_R4DJH9SYECN9": {
-  "contra": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
-  "fecha": "2026-11-25",
-  "huella": "4fa6278acef0",
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/jardin-2026/una-vez-en-un-cuerpo.html — ficha 'Una vez en un cuerpo', sección Sinopsis",
+  "contra": "fuentes/jardin-2026/una-vez-en-un-cuerpo.html",
+  "fecha": "2026-11-26",
+  "huella": "fe4b696288c7",
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "agente segunda lectura (migración)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4DJX92V1WS5": {
   "comprobado": "máquina: http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
@@ -3742,12 +3774,13 @@
   "verifica": "agente lector (cuatro mezcladas)"
  },
  "w_R4DM15XCMX8J": {
-  "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=87",
-  "fecha": "2026-11-24",
-  "huella": "a0f6bf8fedae",
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/ficci-65/catalogo/catalogo.pdf#page=87 — tras la ficha técnica de Samba Infinito (Dir. Leonardo Martinelli)",
+  "contra": "fuentes/ficci-65/catalogo/catalogo.pdf#page=87",
+  "fecha": "2026-11-26",
+  "huella": "4f766d7e950d",
   "redacta": "Claude (sesión almacén)",
   "veredicto": "fiel",
-  "verifica": "agente lector (14 obras)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4DN2AHQDB30": {
   "contra": "https://www.themoviedb.org/movie/1635457",
@@ -3776,12 +3809,13 @@
   "verifica": "primera lectura"
  },
  "w_R4DQKJA3BKS4": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/biff-2026/web/pel-039.html — tras «THE MAN I LOVE DIRECCIÓN: Ira SACHS»",
   "contra": "fuentes/biff-2026/web/pel-039.html",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "8b645fc6cb1f",
   "redacta": "primera lectura",
   "veredicto": "fiel",
-  "verifica": "segunda lectura"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4DQY4JKPW0V": {
   "comprobado": "máquina: TMDB 1655419",
@@ -3855,12 +3889,13 @@
   "verifica": "primera lectura"
  },
  "w_R4E111VK6T46": {
-  "contra": "https://www.unifrance.org/film/61747/",
-  "fecha": "2026-11-25",
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/biff-2026/Programacion_BIFF_12_DIGITAL.pdf#page=15 — tras el título SOUMSOUM, dir. Mahamat-Saleh Haroun",
+  "contra": "fuentes/biff-2026/Programacion_BIFF_12_DIGITAL.pdf#page=15",
+  "fecha": "2026-11-26",
   "huella": "97c308a62ad4",
   "redacta": "primera lectura",
   "veredicto": "fiel",
-  "verifica": "segunda lectura"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4E2TNFGZSCY": {
   "comprobado": "máquina: TMDB 848700",
@@ -4265,12 +4300,13 @@
   "verifica": "primera lectura"
  },
  "w_R4F6PRDSYXCP": {
-  "contra": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf#page=154",
-  "fecha": "2026-11-24",
-  "huella": "4a0df3e488a7",
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/bogoshorts-2026/web-cortos/4168.html — ficha Prueba de Cámara / Camera Test, David Correa F.; sinopsis (sin espacio tras 'inconexas,', se tolera)",
+  "contra": "fuentes/bogoshorts-2026/web-cortos/4168.html",
+  "fecha": "2026-11-26",
+  "huella": "3426bf535168",
   "redacta": "Claude, por regla de docs/OBRA.md (rama bogoshorts)",
   "veredicto": "fiel",
-  "verifica": "lector BOGOSHORTS A"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4F7DZ8TPY3C": {
   "comprobado": "máquina: TMDB 1592609",
@@ -4315,6 +4351,15 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "primera lectura"
+ },
+ "w_R4FBMPTV0JG2": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/jardin-2026/futuros-luminosos.html — ficha Futuros luminosos, Ismael García Ramírez; Sinopsis",
+  "contra": "fuentes/jardin-2026/futuros-luminosos.html",
+  "fecha": "2026-11-26",
+  "huella": "63a523ef9076",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4FBYJM4E9CV": {
   "comprobado": "máquina: TMDB 198915",
@@ -4413,13 +4458,32 @@
   "veredicto": "fiel",
   "verifica": "agente lector (14 obras)"
  },
+ "w_R4FT5JJDASKV": {
+  "comprobado": "máquina: TMDB 1526866",
+  "contra": "https://www.themoviedb.org/movie/1526866",
+  "fecha": "2026-11-26",
+  "huella": "0e284cd92d35",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
+ },
  "w_R4G1R6GM6QWF": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/anibia-2026/fichas/3513.txt — ficha MU-KI-RA, Estefanía Piñeres; sinopsis",
   "contra": "fuentes/anibia-2026/fichas/3513.txt",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "e359ca129d7e",
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "agente segunda lectura (migración)"
+  "verifica": "verificador + segundo lector 26 nov"
+ },
+ "w_R4G3JVSAY0J4": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/bogoshorts-2026/web-cortos/3870.html — ficha La habitación del macho cabrio / The Devil Room, Duban Pinzon; sinopsis tras créditos",
+  "contra": "fuentes/bogoshorts-2026/web-cortos/3870.html",
+  "fecha": "2026-11-26",
+  "huella": "6d101e5b116d",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4G7B5FD31JG": {
   "comprobado": "máquina: fuentes/fantasmagoria-2026/largometrajes.txt",
@@ -4429,6 +4493,15 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "primera lectura"
+ },
+ "w_R4G8K6M9KW94": {
+  "comprobado": "máquina: TMDB 1776754",
+  "contra": "https://www.themoviedb.org/movie/1776754",
+  "fecha": "2026-11-26",
+  "huella": "bfe9c233e0f3",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
  },
  "w_R4GB4F3T5DWZ": {
   "comprobado": "máquina: TMDB 1786249",
@@ -4475,6 +4548,15 @@
   "veredicto": "fiel",
   "verifica": "segunda lectura"
  },
+ "w_R4GJYFY7T1RA": {
+  "comprobado": "máquina: TMDB 1558429",
+  "contra": "https://www.themoviedb.org/movie/1558429",
+  "fecha": "2026-11-26",
+  "huella": "baddd28e3c31",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
+ },
  "w_R4GNQ1TN3A5H": {
   "comprobado": "máquina: TMDB 1794456",
   "contra": "https://www.themoviedb.org/movie/1794456",
@@ -4485,12 +4567,13 @@
   "verifica": "primera lectura"
  },
  "w_R4GP49AWA2ZH": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/bogoshorts-2026/web-cortos/3988.html — ficha Que El Cielo Nos Perdone, Andrés Buitrago; sinopsis tras créditos",
   "contra": "fuentes/bogoshorts-2026/web-cortos/3988.html",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "e698893f598c",
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "agente segunda lectura (migración)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4GR2FGPV8X4": {
   "comprobado": "máquina: TMDB 1665528",
@@ -4519,12 +4602,13 @@
   "verifica": "agente segunda lectura (migración)"
  },
  "w_R4GXDBYW7KW7": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/ficcali-2026/fichas/i-built-a-rocket-imagining-your-arrival.html, ficha bajo 'Construí un cohete imaginando tu llegada' (Brasil 2026, 92 min)",
   "contra": "fuentes/ficcali-2026/fichas/i-built-a-rocket-imagining-your-arrival.html",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "9f05993dca4a",
   "redacta": "segunda lectura",
   "veredicto": "fiel",
-  "verifica": "Onboarding"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4GY6YGMWCSK": {
   "comprobado": "máquina: fuentes/ficcali-2026/fichas/a-fabulosa-maquina-do-tempo.html",
@@ -4561,6 +4645,15 @@
   "redacta": "primera lectura",
   "veredicto": "fiel",
   "verifica": "segunda lectura"
+ },
+ "w_R4H0CA0SCZ7K": {
+  "comprobado": "máquina: fuentes/midbo-2026/fichas/writing-life-annie-ernaux-through-the-eyes-of-high-school-students.html",
+  "contra": "fuentes/midbo-2026/fichas/writing-life-annie-ernaux-through-the-eyes-of-high-school-students.html",
+  "fecha": "2026-11-26",
+  "huella": "36efd9beafb7",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
  },
  "w_R4H0RZRPW59X": {
   "contra": "fuentes/ficcali-2026/fichas/nuestro-cuerpo-es-una-estrella-que-se-expande.html",
@@ -4650,6 +4743,15 @@
   "veredicto": "fiel",
   "verifica": "primera lectura"
  },
+ "w_R4H7YA470PAF": {
+  "comprobado": "máquina: fuentes/ficcali-2026/fichas/notre-corps.html",
+  "contra": "fuentes/ficcali-2026/fichas/notre-corps.html",
+  "fecha": "2026-11-26",
+  "huella": "9aa5e6212cb9",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
+ },
  "w_R4H8812VN6A2": {
   "comprobado": "máquina: TMDB 1457842",
   "contra": "https://www.themoviedb.org/movie/1457842",
@@ -4676,6 +4778,15 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "primera lectura"
+ },
+ "w_R4HA3VAZEWQ3": {
+  "comprobado": "máquina: fuentes/ficcali-2026/fichas/la-mansion-de-araucaima.html",
+  "contra": "fuentes/ficcali-2026/fichas/la-mansion-de-araucaima.html",
+  "fecha": "2026-11-26",
+  "huella": "ae82737b735b",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
  },
  "w_R4HAG82W8EJY": {
   "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=336",
@@ -4914,12 +5025,13 @@
   "verifica": "agente verificador (FICCI 65)"
  },
  "w_R4HAT5QKDQVC": {
-  "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=144",
-  "fecha": "2026-11-24",
-  "huella": "b6a10efbb933",
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/ficci-65/catalogo/catalogo.pdf#page=145, 2º párrafo bajo 'Frío metal / Cold Metal', Clemente Castor",
+  "contra": "fuentes/ficci-65/catalogo/catalogo.pdf#page=145",
+  "fecha": "2026-11-26",
+  "huella": "6be093ac21e1",
   "redacta": "Claude (sesión almacén)",
   "veredicto": "fiel",
-  "verifica": "agente lector (14 obras)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4HAT5RDJA7R": {
   "comprobado": "máquina: https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=192",
@@ -5146,6 +5258,15 @@
   "veredicto": "fiel",
   "verifica": "primera lectura"
  },
+ "w_R4HBN9AY1HWQ": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/cinetoro-2026/curvas-interlineadas-competencia-oficial-emergente.html — tras «La garganta del diablo · Mateo Ramírez 2026»",
+  "contra": "fuentes/cinetoro-2026/curvas-interlineadas-competencia-oficial-emergente.html",
+  "fecha": "2026-11-26",
+  "huella": "50269be80746",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
+ },
  "w_R4HBN9HF0D5J": {
   "comprobado": "máquina: https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=47",
   "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=47",
@@ -5198,12 +5319,13 @@
   "verifica": "agente verificador (FICCI 65)"
  },
  "w_R4HC1FD68XAQ": {
-  "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=49",
-  "fecha": "2026-11-24",
-  "huella": "bacce4007343",
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/ficci-65/catalogo/catalogo.pdf#page=49, bajo 'La forma y la raíz', Dirección Quimbay Cadena y Moraima Berríos",
+  "contra": "fuentes/ficci-65/catalogo/catalogo.pdf#page=49",
+  "fecha": "2026-11-26",
+  "huella": "e8e61f1c6b00",
   "redacta": "Claude (sesión almacén)",
   "veredicto": "fiel",
-  "verifica": "agente lector (14 obras)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4HC1FG5Y5N5": {
   "comprobado": "máquina: TMDB 1574074",
@@ -5231,13 +5353,23 @@
   "veredicto": "fiel",
   "verifica": "agente lector (14 obras)"
  },
+ "w_R4HCNBABG3FG": {
+  "comprobado": "máquina: TMDB 1668893",
+  "contra": "https://www.themoviedb.org/movie/1668893",
+  "fecha": "2026-11-26",
+  "huella": "57363bb0c4cc",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
+ },
  "w_R4HCNBFVSZ6V": {
-  "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=225",
-  "fecha": "2026-11-24",
-  "huella": "30594eb140f2",
+  "comprobado": "a mano: segundo lector 26 nov: https://tribecafilm.com/films/crocodile-2026, logline; dirección The Critics and Pietra Brettkelly",
+  "contra": "https://tribecafilm.com/films/crocodile-2026",
+  "fecha": "2026-11-26",
+  "huella": "5dc7179acdd8",
   "redacta": "Claude (sesión almacén)",
   "veredicto": "fiel",
-  "verifica": "agente lector (14 obras)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4HCNBK7QVN6": {
   "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=120",
@@ -5399,12 +5531,13 @@
   "verifica": "agente lector (14 obras)"
  },
  "w_R4HD24FCSZJ0": {
-  "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=58",
-  "fecha": "2026-11-24",
-  "huella": "2bac88a8996f",
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/ficci-65/catalogo/catalogo.pdf#page=58, bajo 'Belleza letal', Colectivo Arteimaña (10 directores)",
+  "contra": "fuentes/ficci-65/catalogo/catalogo.pdf#page=58",
+  "fecha": "2026-11-26",
+  "huella": "2bdf9b8f3df6",
   "redacta": "Claude (sesión almacén)",
   "veredicto": "fiel",
-  "verifica": "agente lector (14 obras)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4HD24M9AR8Q": {
   "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=59",
@@ -5651,6 +5784,15 @@
   "veredicto": "fiel",
   "verifica": "agente verificador (FICCI 65)"
  },
+ "w_R4HEVVQPTDC1": {
+  "comprobado": "máquina: fuentes/ficcali-2026/fichas/heroes-del-silencio.html",
+  "contra": "fuentes/ficcali-2026/fichas/heroes-del-silencio.html",
+  "fecha": "2026-11-26",
+  "huella": "f8eb0c1e1c33",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
+ },
  "w_R4HEVVW6AQR2": {
   "comprobado": "máquina: TMDB 1668919",
   "contra": "https://www.themoviedb.org/movie/1668919",
@@ -5824,12 +5966,13 @@
   "verifica": "agente verificador (FICCI 65)"
  },
  "w_R4HF7EVH2VC7": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/bogoshorts-2026/web-cortos/4084.html, tras créditos de John Agudelo Suárez",
   "contra": "fuentes/bogoshorts-2026/web-cortos/4084.html",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "0caf2660dccd",
   "redacta": "primera lectura",
   "veredicto": "fiel",
-  "verifica": "segunda lectura"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4HFH16BHR3J": {
   "comprobado": "máquina: fuentes/midbo-2026/pelicula.json",
@@ -5850,12 +5993,13 @@
   "verifica": "primera lectura"
  },
  "w_R4HG7VSG2RV4": {
+  "comprobado": "a mano: segundo lector 26 nov: https://www.ficdeh.com/peliculas/por-una-gota-de-leche, sinopsis; Director Esteban J. Corzo",
   "contra": "https://www.ficdeh.com/peliculas/por-una-gota-de-leche",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "deb928e89ff8",
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "agente segunda lectura (migración)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4HG7WHM8830": {
   "comprobado": "máquina: TMDB 1529622",
@@ -5955,6 +6099,15 @@
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
   "verifica": "agente segunda lectura (migración)"
+ },
+ "w_R4HJFE6HF274": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/popayan-2026/cinecorto/post-15578.json (cinecorto.co/tuktu-padre-maiz-2/) — Dirección Mauricio Prieto; sinopsis tras créditos",
+  "contra": "fuentes/popayan-2026/cinecorto/post-15578.json",
+  "fecha": "2026-11-26",
+  "huella": "500f0b1a4143",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4HJV3PTGZH0": {
   "comprobado": "máquina: http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
@@ -6101,12 +6254,13 @@
   "verifica": "Claude (sesión App)"
  },
  "w_R4J7H92GTG6Q": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/jardin-2026/la-mona.html — ficha La Mona, Laura Gutiérrez Ardila; Sinopsis",
   "contra": "fuentes/jardin-2026/la-mona.html",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "b4a469eb32a6",
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "agente segunda lectura (migración)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4J7WZMZG6CQ": {
   "comprobado": "máquina: http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
@@ -6145,12 +6299,13 @@
   "verifica": "primera lectura"
  },
  "w_R4J8Q0CCTKZ3": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/cinetoro-2026/vector-imaginado-competencia-oficial-nacional.html, tras 'En su sombra fértil / Andrés Dávila / Pasto 2025'",
   "contra": "fuentes/cinetoro-2026/vector-imaginado-competencia-oficial-nacional.html",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "e7ae20739d30",
   "redacta": "festival",
   "veredicto": "fiel",
-  "verifica": "primera lectura"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4JAHWBVRVWG": {
   "comprobado": "máquina: TMDB 1130565",
@@ -6195,20 +6350,22 @@
   "verifica": "segunda lectura"
  },
  "w_R4JE5BTF8EKJ": {
+  "comprobado": "a mano: segundo lector 26 nov: pulzo.com artículo Buscando a papá, párrafo 'La historia de Buscando a papá...' (director Mauro Andrade)",
   "contra": "https://www.pulzo.com/entretenimiento/buscando-a-papa-cortometraje-de-valledupar-triunfa-en-smartfilms-2026-colombia-PP5305101A",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "1ca3795ec976",
   "redacta": "Claude (sesión App)",
   "veredicto": "fiel",
-  "verifica": "agente segunda lectura (migración)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4JEHJ841VTC": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/filcmar-2026/matriz/gid-1846105446.csv, fila COMPETENCIA LATAM 'Presépio', DIRECCIÓN Felipe Bibian",
   "contra": "fuentes/filcmar-2026/matriz/gid-1846105446.csv",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "de893af5a6f6",
   "redacta": "festival",
   "veredicto": "fiel",
-  "verifica": "primera lectura"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4JFQPYNC87A": {
   "comprobado": "máquina: TMDB 1510204",
@@ -6247,12 +6404,13 @@
   "verifica": "primera lectura"
  },
  "w_R4JJ9W6S4FCQ": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/filcmar-2026/matriz/gid-0.csv, fila PROGRAMA 2 'El espejo de la vida', DIRECCIÓN Simón Sánchez Plazas",
   "contra": "fuentes/filcmar-2026/matriz/gid-0.csv",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "e71467844626",
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "agente segunda lectura (migración)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4JJP199HTF8": {
   "comprobado": "máquina: TMDB 1791655",
@@ -6281,12 +6439,13 @@
   "verifica": "agente segunda lectura (migración)"
  },
  "w_R4JMKBFQW5V3": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/cinetoro-2026/curvas-interlineadas-competencia-oficial-emergente.html, tras 'Sol de niebla / María José Ibarra y Florentino Vargas'",
   "contra": "fuentes/cinetoro-2026/curvas-interlineadas-competencia-oficial-emergente.html",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "0d09652fc53b",
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "agente segunda lectura (migración)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4JN02952TSE": {
   "comprobado": "máquina: TMDB 1526356",
@@ -6464,12 +6623,13 @@
   "verifica": "Onboarding"
  },
  "w_R4KV6C5S5CP9": {
-  "contra": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=198",
-  "fecha": "2026-11-24",
-  "huella": "dd981428f786",
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/midbo-2026/fichas/the-travelers.html, sección Sinopsis de The Travelers / Les Voyageurs",
+  "contra": "fuentes/midbo-2026/fichas/the-travelers.html",
+  "fecha": "2026-11-26",
+  "huella": "8180c055a82d",
   "redacta": "Claude (sesión almacén)",
   "veredicto": "fiel",
-  "verifica": "agente lector (14 obras)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4KVMWEFWT24": {
   "contra": "fuentes/midbo-2026/fichas/el-leon.html",
@@ -6488,12 +6648,13 @@
   "verifica": "primera lectura"
  },
  "w_R4KZBSE3E8P3": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/anibia-2026/fichas/3618.txt, tras 'Unlearning Motherhood (Dir. Juliana Erazo Gómez...) 11 min.'",
   "contra": "fuentes/anibia-2026/fichas/3618.txt",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "0571039b6a86",
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
-  "verifica": "agente segunda lectura (migración)"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4M1E4Z3TM9E": {
   "comprobado": "máquina: fuentes/villadelcine-2026/obras/comparsa.html",
@@ -6530,6 +6691,24 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "primera lectura"
+ },
+ "w_R4MGCGAZVC5N": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/midbo-2026/fichas/para-mi-ya-no-es-cualquier-bano.html — ficha propia, sección Sinopsis",
+  "contra": "fuentes/midbo-2026/fichas/para-mi-ya-no-es-cualquier-bano.html",
+  "fecha": "2026-11-26",
+  "huella": "b018214fe011",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
+ },
+ "w_R4MMFQPBNEZM": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/midbo-2026/fichas/el-coloquio-de-los-pajaros.html — ficha propia, sección Sinopsis",
+  "contra": "fuentes/midbo-2026/fichas/el-coloquio-de-los-pajaros.html",
+  "fecha": "2026-11-26",
+  "huella": "b591f4150f39",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4MQS6F8FRJP": {
   "comprobado": "máquina: TMDB 80324",
@@ -6603,6 +6782,24 @@
   "veredicto": "fiel",
   "verifica": "agente segunda lectura (migración)"
  },
+ "w_R4MX6E365FH2": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/popayan-2026/cinecorto/post-15579.json — texto inmediatamente después del encabezado/ficha de Corazón galvánico (Valentina Valencia Giraldo)",
+  "contra": "fuentes/popayan-2026/cinecorto/post-15579.json",
+  "fecha": "2026-11-26",
+  "huella": "5e8af7bb92e5",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
+ },
+ "w_R4MXGDRFW189": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/miradas-2026/web/paginas/p54.txt — tras la ficha de Emechiche, dir. Juan Camilo González",
+  "contra": "fuentes/miradas-2026/web/paginas/p54.txt",
+  "fecha": "2026-11-26",
+  "huella": "db2e1a73e4ca",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
+ },
  "w_R4MYH1FJ6Q71": {
   "comprobado": "máquina: TMDB 1753830",
   "contra": "https://www.themoviedb.org/movie/1753830",
@@ -6611,6 +6808,15 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "primera lectura"
+ },
+ "w_R4MZH086RT3E": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/popayan-2026/cinecorto/post-15128.json — texto inmediatamente después del encabezado/ficha de Gladiolos (Mónica Juanita Hernández Duquino)",
+  "contra": "fuentes/popayan-2026/cinecorto/post-15128.json",
+  "fecha": "2026-11-26",
+  "huella": "4badf7ea4a9b",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4N0HGWXHYB2": {
   "contra": "fuentes/popayan-2026/cinecorto/post-15611.json",
@@ -6621,12 +6827,13 @@
   "verifica": "primera lectura"
  },
  "w_R4N0XYA9F83D": {
-  "contra": "fuentes/aleste-2026/programa/las-piedras-del-río.html",
-  "fecha": "2026-11-25",
+  "comprobado": "a mano: segundo lector 26 nov: https://cinecorto.co/las-piedras-del-rio/ vía copia local fuentes/popayan-2026/cinecorto/post-15621.json — Dirección Edna Sierra; sinopsis tras reparto",
+  "contra": "https://cinecorto.co/las-piedras-del-rio/ (fuentes/popayan-2026/cinecorto/post-15621.json)",
+  "fecha": "2026-11-26",
   "huella": "85914c714166",
   "redacta": "festival",
   "veredicto": "fiel",
-  "verifica": "primera lectura"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4N19E2TVK1Y": {
   "comprobado": "máquina: fuentes/popayan-2026/cinecorto/post-15612.json",
@@ -6636,6 +6843,15 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "primera lectura"
+ },
+ "w_R4N1K526BMQ6": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/anibia-2026/fichas/3592.txt — tras «Hacker Leonilia (Dir. Gustavo Fontele Dourado, 2025)»",
+  "contra": "fuentes/anibia-2026/fichas/3592.txt",
+  "fecha": "2026-11-26",
+  "huella": "a73df9cd96c6",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4NDXCTSBP86": {
   "contra": "https://watch.eventive.org/sjff2026/play/69c414932af66540ad90ef46/698ba2b9023a0c7c1cd99fe4",
@@ -6664,12 +6880,13 @@
   "verifica": "sellador de obras (agente)"
  },
  "w_R4NEB1TRDBS1": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/anibia-2026/fichas/3618.txt, tras 'Tres gatos parias (Dir. Iván Sierra, 2025) 7:05 min.'",
   "contra": "fuentes/anibia-2026/fichas/3618.txt",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "8da9c5fb2261",
   "redacta": "festival",
   "veredicto": "fiel",
-  "verifica": "primera lectura"
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4NEB25EY9VN": {
   "comprobado": "máquina: TMDB 1732655",
@@ -6752,12 +6969,22 @@
   "verifica": "primera lectura"
  },
  "w_R4NEB4F2XRAP": {
+  "comprobado": "a mano: segundo lector 26 nov: https://2025.kinoforum.org/en/filme/397551/boyhood-memory, sinopsis seguida de 'Director: Pedro Santi' (literal, verificado con curl)",
   "contra": "https://2025.kinoforum.org/en/filme/397551/boyhood-memory",
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "huella": "d6003a0055c7",
   "redacta": "primera lectura",
   "veredicto": "fiel",
-  "verifica": "segunda lectura"
+  "verifica": "verificador + segundo lector 26 nov"
+ },
+ "w_R4P0Y63Z4GYV": {
+  "comprobado": "máquina: fuentes/mubibogota-2026/bogota.html",
+  "contra": "fuentes/mubibogota-2026/bogota.html",
+  "fecha": "2026-11-26",
+  "huella": "ba42149342f6",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
  },
  "w_R4PA4FJ1YYX6": {
   "comprobado": "máquina: TMDB 947493",
@@ -6767,6 +6994,15 @@
   "redacta": "primera lectura",
   "veredicto": "fiel",
   "verifica": "segunda lectura"
+ },
+ "w_R4PFW7GTQ56A": {
+  "comprobado": "máquina: fuentes/aleste-2026/programa/londres.html",
+  "contra": "fuentes/aleste-2026/programa/londres.html",
+  "fecha": "2026-11-26",
+  "huella": "38b25b359ec3",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
  },
  "w_R4PS7MYC5SKG": {
   "comprobado": "máquina: https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf#page=95 (copia guardada: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json)",
@@ -7229,5 +7465,41 @@
   "redacta": "primera lectura (migración)",
   "veredicto": "fiel",
   "verifica": "agente segunda lectura (migración)"
+ },
+ "w_ZR5FE4J5AM6C": {
+  "comprobado": "a mano: segundo lector 26 nov: fuentes/anibia-2026/fichas/3617.html — tras «Replay (Dir. Simón Matallana Nossa, 2026)»",
+  "contra": "fuentes/anibia-2026/fichas/3617.html",
+  "fecha": "2026-11-26",
+  "huella": "34280cea23e7",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador + segundo lector 26 nov"
+ },
+ "w_ZR5J46WM80RV": {
+  "comprobado": "máquina: fuentes/anibia-2026/fichas/3627.html",
+  "contra": "fuentes/anibia-2026/fichas/3627.html",
+  "fecha": "2026-11-26",
+  "huella": "5e5378df2328",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
+ },
+ "w_ZR5JWV8RRX0V": {
+  "comprobado": "máquina: TMDB 1567192",
+  "contra": "https://www.themoviedb.org/movie/1567192",
+  "fecha": "2026-11-26",
+  "huella": "b108472730d0",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
+ },
+ "w_ZR5KQY7KFG0J": {
+  "comprobado": "máquina: TMDB 1753034",
+  "contra": "https://www.themoviedb.org/movie/1753034",
+  "fecha": "2026-11-26",
+  "huella": "23891a07d01c",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "verificador 26 nov"
  }
 }

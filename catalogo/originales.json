@@ -1875,7 +1875,15 @@
   "texto": "La hija menor de una familia de osos perezosos, reconstruye los recuerdos con sus padres y sus tres hermanos. Tras lo humano de una familia normal, el espíritu salvaje se asoma en los detalles de la cotidianidad que se vuelven indomables en la memoria."
  },
  "w_FBZAYPJF5MVD": {
-  "fuente": "https://www.themoviedb.org/movie/784163",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/784163",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Programa Anibia: tras 'Coffee Break (Dir. María Cristina Pérez, Mauricio Cuervo, 2018) Colombia. 9 min.' Idéntico al guardado; solo cambia la fuente (",
+    "texto": "Cada día hábil durante décadas, a las cuatro de la tarde, Pepe, un ciervo oficinista, toma café. La rutina se instala en su vida. Las expectativas se siguen de desencantos, mientras Pepe gana canas y pierde el entusiasmo."
+   }
+  ],
+  "fuente": "fuentes/anibia-2026/fichas/3593.txt",
   "idioma": "es",
   "texto": "Cada día hábil durante décadas, a las cuatro de la tarde, Pepe, un ciervo oficinista, toma café. La rutina se instala en su vida. Las expectativas se siguen de desencantos, mientras Pepe gana canas y pierde el entusiasmo."
  },
@@ -1888,6 +1896,11 @@
   "fuente": "festivals/ficcali-2026.json (FICCALI 2026)",
   "idioma": "es",
   "texto": "Representados por garzas, una hija viaja a un pequeño y lejano pueblo de Colombia para visitar a su padre. Durante este viaje a la montaña, ambos deberán enfrentarse cara a cara con la naturaleza. Por momentos se sentirán fuertes, pero en otros se llenarán de temor. A causa del miedo y de la falta de voz, uno de los dos terminará transformándose en un monstruo condenado a vivir en la más profunda soledad."
+ },
+ "w_FYY029D75X7Z": {
+  "fuente": "fuentes/anibia-2026/fichas/3591.txt",
+  "idioma": "es",
+  "texto": "Ayla se despierta en un paisaje montañoso, rodeada únicamente por vegetación y un río. Impulsada por la curiosidad y el deseo de conocer el lugar, se embarca en un viaje de descubrimiento y de inmersión. A medida que descubre dónde está, también se descubre a sí misma."
  },
  "w_FYY6K19T8M1Q": {
   "fuente": "fuentes/anibia-2026/fichas/3594.txt",
@@ -2149,8 +2162,21 @@
   "idioma": "en",
   "texto": "Clara is a teenager growing up in a small indigenous community high in the Andes. Her adoptive mother, a midwife who took her in as a baby, has taught her the ancient songs used to guide women through childbirth, melodies passed down for generations, believed to bring new life safely into the world. But while her voice carries on this tradition, her dreams lie elsewhere: she longs to leave the mountains behind and become a folkloric music star in the big city."
  },
+ "w_R4DG4ATFHW7W": {
+  "fuente": "fuentes/ficci-65/catalogo/catalogo.pdf#page=35",
+  "idioma": "es",
+  "texto": "Machado, un joven inmigrante colombiano, trabaja cosechando uvas en la campiña francesa. También parece tener un pasado delictivo, pues la jefa de una banda criminal lo contrata para robar, disfrazado de sacerdote, una valiosa esmeralda de una famosa iglesia cerca de Medellín. Su plan infalible se tuerce rápidamente. A través de imágenes y momentos entretejidos con delicadeza el director Simón Vélez reconfigura el género de las películas de mafiosos."
+ },
  "w_R4DGRDY3BDNP": {
-  "fuente": "https://www.themoviedb.org/movie/896096",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/896096",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — Matriz FILCMAR: fila 'La misteriosa mirada del flamenco', DIRECCIÓN: Diego Céspedes, Chile, 2025. Idéntico al guardado; solo cambia la fuente (no TMDB",
+    "texto": "1982. Una enfermedad desconocida comienza a propagarse en un pueblo minero del desierto chileno. Se acusa a homosexuales de transmitirla a través de sus miradas. Lidia, 11 años, única niña de la comunidad, parte en busca de la verdad."
+   }
+  ],
+  "fuente": "fuentes/filcmar-2026/matriz/gid-47146740.csv",
   "idioma": "es",
   "texto": "1982. Una enfermedad desconocida comienza a propagarse en un pueblo minero del desierto chileno. Se acusa a homosexuales de transmitirla a través de sus miradas. Lidia, 11 años, única niña de la comunidad, parte en busca de la verdad."
  },
@@ -2160,9 +2186,17 @@
   "texto": "While most of the inhabitants of Monte Virgen struggle to collect their coffee, the forest ranger Julia discovers that a group of illegal loggers is destroying the reserve. Determined to stop them, she looks for the support of a fearful and indifferent community that will soon turn its back on her. Alone on her quest, she will gradually lose the things she loves most except one thing: her dignity."
  },
  "w_R4DHSYGCHRN0": {
-  "fuente": "https://www.documentaries.org/films/runa-simi/",
+  "anteriores": [
+   {
+    "fuente": "https://www.documentaries.org/films/runa-simi/",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — Misma obra (Zegarra, doblaje de El Rey León al quechua). La publicada es una condensación, no está verbatim en ninguna fuente; el original guardado ta",
+    "texto": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo."
+   }
+  ],
+  "fuente": "https://www.themoviedb.org/movie/1465974",
   "idioma": "es",
-  "texto": "Un actor de doblaje peruano busca convencer a Disney de doblar El Rey León al quechua. El viaje se convierte en una odisea personal de paternidad y activismo."
+  "texto": "Fernando Valencia, actor de doblaje cusqueño, sueña con doblar El Rey León al quechua. Este viaje lo llevará a replantearse su compromiso con su lengua, su cultura y su rol como padre, con su hijo de 8 años, Dylan, como su compañero esencial en esta aventura. A través de la historia de Fernando exploramos temas como la cultura quechua, la paternidad, el racismo estructural en el Perú, la discriminación lingüística y la supervivencia de las lenguas indígenas en la actualidad."
  },
  "w_R4DJ5XYQ7SV3": {
   "fuente": "https://www.themoviedb.org/movie/1640216",
@@ -2175,9 +2209,17 @@
   "texto": "The birth of a young black couple's first child brings with it happiness, but also agony. The newborn's father experiences and expresses his dilemmas regarding the arrival, coexistence and departure of his beloved firstborn."
  },
  "w_R4DJH9SYECN9": {
-  "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+  "anteriores": [
+   {
+    "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Ficha Jardín con título y 'Dirección: María Cristina Pérez', estreno 2025. El mismo texto está en fuentes/filcmar-2026/matriz/html-1846105446.html. El",
+    "texto": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias compartidas a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+   }
+  ],
+  "fuente": "fuentes/jardin-2026/una-vez-en-un-cuerpo.html",
   "idioma": "es",
-  "texto": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias compartidas a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+  "texto": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
  },
  "w_R4DJX92V1WS5": {
   "fuente": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
@@ -2198,6 +2240,11 @@
   "fuente": "https://www.themoviedb.org/movie/1403855",
   "idioma": "en",
   "texto": "Gloria, a 10-year-old girl, is spending her vacation in the hospital with her mother, a working-hard nurse. While exploring the facility, Gloria meets Sofia, a girl convinced that her great-grandmother’s worsening health is a result of her hospital admission. Bonding over their shared desire to leave, the two girls find solace in each other’s company. As departure becomes inevitable, the girls and their mothers head to a countryside retreat to spend the final days of an unforgettable summer."
+ },
+ "w_R4DM15XCMX8J": {
+  "fuente": "fuentes/ficci-65/catalogo/catalogo.pdf#page=87",
+  "idioma": "es",
+  "texto": "El revés del carnaval no es la tristeza, la pulcritud y el silencio, porque el carnaval no es solamente alegría, desorden y ruido. Un limpiador de las calles de Río de Janeiro encara los pliegues de esta fiesta. Vemos el anochecer de la samba y la pérdida en la vida de este trabajador, quien deambula hasta la madrugada junto a un niño con alas, extraviado de su madre. Martinelli nos pone a 45 grados de su historia. Logra fabricar una ingenuidad radical en la construcción de los personajes y sus relaciones. Estrenado en la Semana de la Crítica de Cannes, un corto hecho con frescura, inteligencia y una apuesta autoral de la fantasía."
  },
  "w_R4DN2AHQDB30": {
   "fuente": "fuentes/biff-2026/cinemateca/3322-11.html",
@@ -2265,7 +2312,15 @@
   "texto": "After years studying in Europe, Elsa returns to Costa Rica to reunite with her family. She finds her younger sister living alone in the family home, growing increasingly distant and reclusive, as if slipping into a world of her own. Their parents, meanwhile, are absorbed in their own lives. Her father drifts through a series of affairs, while her mother is immersed in republishing the erotic poems of her youth, neither fully grasping the urgency of the situation. Elsa’s return draws the three women into a confrontation with what still binds them, despite everything."
  },
  "w_R4E111VK6T46": {
-  "fuente": "https://www.unifrance.org/film/61747/",
+  "anteriores": [
+   {
+    "fuente": "https://www.unifrance.org/film/61747/",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: unifrance responde 403 (Cloudflare). El mismo texto está verbatim en el programa BIFF p.15 bajo SOUMSOUM, THE NIGHT OF THE STARS (Mahamat-Saleh Haroun",
+    "texto": "En el desierto de Ennedi, en Chad, se alzan entre la arena montañas milenarias. Estas guardan el recuerdo de un pasado olvidado y susurran antiguas leyendas. Kellou, una joven de un pueblo cercano, se ve atormentada por visiones inquietantes que la aislan de quienes la rodean. Su mundo da un vuelco el día en que conoce a Aya, una marginada rechazada por la comunidad. Mientras los habitantes del pueblo se ponen en contra de su creciente hermandad, Kellou debe defender a Aya y enfrentarse a la hostilidad de su propia gente, al tiempo que lucha por su libertad."
+   }
+  ],
+  "fuente": "fuentes/biff-2026/Programacion_BIFF_12_DIGITAL.pdf#page=15",
   "idioma": "es",
   "texto": "En el desierto de Ennedi, en Chad, se alzan entre la arena montañas milenarias. Estas guardan el recuerdo de un pasado olvidado y susurran antiguas leyendas. Kellou, una joven de un pueblo cercano, se ve atormentada por visiones inquietantes que la aislan de quienes la rodean. Su mundo da un vuelco el día en que conoce a Aya, una marginada rechazada por la comunidad. Mientras los habitantes del pueblo se ponen en contra de su creciente hermandad, Kellou debe defender a Aya y enfrentarse a la hostilidad de su propia gente, al tiempo que lucha por su libertad."
  },
@@ -2500,9 +2555,17 @@
   "texto": "A woman invents a story to evoke a lost friendship. Along with her friends, they imagine a fable: the story of two birds that one day became human — an Ornithologist and his friend, The Architect."
  },
  "w_R4F6PRDSYXCP": {
-  "fuente": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf#page=154",
+  "anteriores": [
+   {
+    "fuente": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf#page=154",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Ficha 'Prueba de Cámara / Camera Test, Colombia 2026, David Correa F.'. Única diferencia con el guardado: la fuente no lleva espacio después de 'incon",
+    "texto": "Un padre canta tangos mientras una cámara antigua lo retrata en una serie de puestas en escena aparentemente inconexas, ruidos y fotos familiares. Su hijo, desde el otro lado del lente, escucha fragmentos de una cotidianeidad que no volverá. En ese breve instante convertido en película, la familia se vuelve memoria."
+   }
+  ],
+  "fuente": "fuentes/bogoshorts-2026/web-cortos/4168.html",
   "idioma": "es",
-  "texto": "Un padre canta tangos mientras una cámara antigua lo retrata en una serie de puestas en escena aparentemente inconexas, ruidos y fotos familiares. Su hijo, desde el otro lado del lente, escucha fragmentos de una cotidianeidad que no volverá. En ese breve instante convertido en película, la familia se vuelve memoria."
+  "texto": "Un padre canta tangos mientras una cámara antigua lo retrata en una serie de puestas en escena aparentemente inconexas,ruidos y fotos familiares. Su hijo, desde el otro lado del lente, escucha fragmentos de una cotidianeidad que no volverá. En ese breve instante convertido en película, la familia se vuelve memoria."
  },
  "w_R4F7DZ8TPY3C": {
   "fuente": "https://www.themoviedb.org/movie/1592609",
@@ -2530,7 +2593,15 @@
   "texto": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo."
  },
  "w_R4FBMPTV0JG2": {
-  "fuente": "https://www.themoviedb.org/movie/1603950",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1603950",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Ficha Caleidoscopio 2026 de Jardín, Dir. Ismael García Ramírez; también en fuentes/cinetoro-2026/vector-imaginado-competencia-oficial-nacional.html. T",
+    "texto": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
+   }
+  ],
+  "fuente": "fuentes/jardin-2026/futuros-luminosos.html",
   "idioma": "es",
   "texto": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas."
  },
@@ -2595,9 +2666,17 @@
   "texto": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe."
  },
  "w_R4FT5JJDASKV": {
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1526866",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — publicada_en = TMDB en-US verbatim. El español guardado no está en TMDB; MIDBO (fuentes/midbo-2026/fichas/ya-se-ven-los-tigres-en-la-lluvia.html) trae",
+    "texto": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal."
+   }
+  ],
   "fuente": "https://www.themoviedb.org/movie/1526866",
-  "idioma": "es",
-  "texto": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal."
+  "idioma": "en",
+  "texto": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation."
  },
  "w_R4G1R6GM6QWF": {
   "fuente": "fuentes/anibia-2026/fichas/3513.txt",
@@ -2605,9 +2684,17 @@
   "texto": "En una tierra acechada por monstruos hechos de vegetación, Cleo se adentra en la selva para rescatar a su hermano Martín. Acompañada por Iolo, una anciana mágica, y una divertida osa hormiguera, deberá atrapar al monstruo que se lo llevó, pero pronto descubrirá que estas criaturas esconden un sorprendente secreto."
  },
  "w_R4G3JVSAY0J4": {
-  "fuente": "https://www.themoviedb.org/movie/1554728",
-  "idioma": "es y en",
-  "texto": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones.\n\nIn a room isolated from the real world, Juan, a 10-year-old boy, lives with his grandparents. His grandfather has a strange disease that causes him to expel large amounts of matter, and because of this, every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide what is happening from the boy, but one night Juan decides to sneak out and approach the apparitions."
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1554728",
+    "idioma": "es y en",
+    "motivo": "verificación 26 nov, dos lectores: Bogoshorts, Duban Pinzon 2025. Coincide con el guardado salvo 'aparta' (sic en fuente) vs 'apartada'; el inglés guardado es el de TMDB en-US, no el de",
+    "texto": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones.\n\nIn a room isolated from the real world, Juan, a 10-year-old boy, lives with his grandparents. His grandfather has a strange disease that causes him to expel large amounts of matter, and because of this, every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide what is happening from the boy, but one night Juan decides to sneak out and approach the apparitions."
+   }
+  ],
+  "fuente": "fuentes/bogoshorts-2026/web-cortos/3870.html",
+  "idioma": "es",
+  "texto": "En una habitación aparta del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones."
  },
  "w_R4G7B5FD31JG": {
   "fuente": "fuentes/fantasmagoria-2026/largometrajes.txt",
@@ -2615,9 +2702,17 @@
   "texto": "Tras una fuerte experiencia traumática por la que empieza a ser víctima de una fuerte agorafobia, Vega se ve obligada a pasar un tiempo alejada de su trabajo y, por recomendación de su Padre, decide mudarse a un nuevo apartamento, en donde prácticamente comienza a vivir como una ermitaña; su vida cambia radicalmente, ve cosas que no se pueden explicar y escucha voces que no puede ignorar. A medida que unas horribles visiones se intensifican, Vega empieza a comprender un oscuro rompecabezas, y a conocer el poder maligno de lo sobrenatural."
  },
  "w_R4G8K6M9KW94": {
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1776754",
+    "idioma": "es y en",
+    "motivo": "verificación 26 nov: texto y fuente releídos — No ubiqué el español guardado ('La trama sigue a Macha...') en fuentes/ ni en TMDB (solo en-US). La publicada es de la misma obra. Falta fuente del es",
+    "texto": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos.\n\nIn the extraordinary neighborhood of Los Matorrales, hidden behind a massive wall in the city, lives Macha, a kind-hearted and dreamy cockroach who sings while helping at her father's legume shop. Everything changes when the business faces imminent closure. To save the store, protect her community, and fulfill her dream of becoming a singer, Macha convinces her group of friends—fellow misfits like a spider, a centipede, a vulture, and an opossum—to form a band of \"weird bugs\" and enter a human reality TV show. Through music, humor, and adventure, they discover the true power of friendship and self-acceptance."
+   }
+  ],
   "fuente": "https://www.themoviedb.org/movie/1776754",
-  "idioma": "es y en",
-  "texto": "La trama sigue a Macha, una cucaracha adolescente que sueña con convertirse en cantante. La joven vive junto a su padre, Verdinardo El Sapo, en el barrio Los Matorrales, un lugar separado de la Gran Ciudad por un enorme muro. Cuando la legumbrería de su padre está en riesgo de desaparecer, Macha decide reunir a su grupo de amigos, otros \"bichos raros\" como ella, para participar en un reality de talentos humanos.\n\nIn the extraordinary neighborhood of Los Matorrales, hidden behind a massive wall in the city, lives Macha, a kind-hearted and dreamy cockroach who sings while helping at her father's legume shop. Everything changes when the business faces imminent closure. To save the store, protect her community, and fulfill her dream of becoming a singer, Macha convinces her group of friends—fellow misfits like a spider, a centipede, a vulture, and an opossum—to form a band of \"weird bugs\" and enter a human reality TV show. Through music, humor, and adventure, they discover the true power of friendship and self-acceptance."
+  "idioma": "en",
+  "texto": "In the extraordinary neighborhood of Los Matorrales, hidden behind a massive wall in the city, lives Macha, a kind-hearted and dreamy cockroach who sings while helping at her father's legume shop. Everything changes when the business faces imminent closure. To save the store, protect her community, and fulfill her dream of becoming a singer, Macha convinces her group of friends—fellow misfits like a spider, a centipede, a vulture, and an opossum—to form a band of \"weird bugs\" and enter a human reality TV show. Through music, humor, and adventure, they discover the true power of friendship and self-acceptance."
  },
  "w_R4GB4F3T5DWZ": {
   "fuente": "https://www.themoviedb.org/movie/1786249",
@@ -2645,9 +2740,17 @@
   "texto": "Roberto Hurtado, potentado azucarero del Valle del Cauca, padece una extraña enfermedad que lo obliga a permanentes transfusiones sanguíneas para sobrevivir. La sangre proviene de jóvenes cazados por el macabro grupo que integran Florencia, Perfecto y Ever, bajo la dirección de Adolfo, hijo del magnate enfermo. Las víctimas mueren desangradas, no sin antes verse sometidas a terribles vejaciones por parte de sus desalmados captores. El terror reina en la ciudad.  Está película está dedicada a la memoria de Andrés Caicedo."
  },
  "w_R4GJYFY7T1RA": {
-  "fuente": "https://www.cartelerafantasmagoria.fan/",
+  "anteriores": [
+   {
+    "fuente": "https://www.cartelerafantasmagoria.fan/",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — TMDB es-MX trae el párrafo verbatim (con '¸' en lugar de comas); el guardado coincide salvo esas comas. Cartelera Fantasmagoría solo lista el título.",
+    "texto": "En el Parque Nacional de Bogotá, pasean unos sujetos que se cruzan con los integrantes de un paseo, posteriormente se encuentran con una niña que desea hacer una llamada y pide a los sujetos le cambien una moneda, se dirige al teléfono y llama, entre tanto los del paseo pasan frente a unos enamorados que se besan burlándose de ellos. Los enamorados disgustados se retiran mientras los del paseo siguen su trayectoria para realizar su piquete. Entre tanto un raponero se da cuenta que la niña que llama por teléfono posee un bolso, acercándose lo rapta y sale a toda velocidad y ella detrás gritando: pasan frente a un mago que se encuentra leyendo una de sus magias y pone en práctica una de ellas deteniendo al raponero y haciéndolo retroceder, se incorpora y devuelve el bolso a la niña, en ese instante se acercan los sujetos que antes habían cambiado la moneda a la niña y felicitan al mago por su oportuna acción."
+   }
+  ],
+  "fuente": "https://www.themoviedb.org/movie/1558429",
   "idioma": "es",
-  "texto": "En el Parque Nacional de Bogotá, pasean unos sujetos que se cruzan con los integrantes de un paseo, posteriormente se encuentran con una niña que desea hacer una llamada y pide a los sujetos le cambien una moneda, se dirige al teléfono y llama, entre tanto los del paseo pasan frente a unos enamorados que se besan burlándose de ellos. Los enamorados disgustados se retiran mientras los del paseo siguen su trayectoria para realizar su piquete. Entre tanto un raponero se da cuenta que la niña que llama por teléfono posee un bolso, acercándose lo rapta y sale a toda velocidad y ella detrás gritando: pasan frente a un mago que se encuentra leyendo una de sus magias y pone en práctica una de ellas deteniendo al raponero y haciéndolo retroceder, se incorpora y devuelve el bolso a la niña, en ese instante se acercan los sujetos que antes habían cambiado la moneda a la niña y felicitan al mago por su oportuna acción."
+  "texto": "En el Parque Nacional de Bogotá¸ pasean unos sujetos que se cruzan con los integrantes de un paseo¸ posteriormente se encuentran con una niña que desea hacer una llamada y pide a los sujetos le cambien una moneda¸ se dirige al teléfono y llama¸ entre tanto los del paseo pasan frente a unos enamorados que se besan burlándose de ellos. Los enamorados disgustados se retiran mientras los del paseo siguen su trayectoria para realizar su piquete. Entre tanto un raponero se da cuenta que la niña que llama por teléfono posee un bolso¸ acercándose lo rapta y sale a toda velocidad y ella detrás gritando: pasan frente a un mago que se encuentra leyendo una de sus magias y pone en práctica una de ellas deteniendo al raponero y haciéndolo retroceder¸ se incorpora y devuelve el bolso a la niña¸ en ese instante se acercan los sujetos que antes habían cambiado la moneda a la niña y felicitan al mago por su oportuna acción."
  },
  "w_R4GNQ1TN3A5H": {
   "fuente": "https://www.themoviedb.org/movie/1794456",
@@ -2710,9 +2813,17 @@
   "texto": "En algún lugar del norte de la Amazonía colombiana se encuentra el viejo Sixto Muñoz, también conocido como el «último indio tinigua». Según dicen, en la región donde ha vivido las últimas décadas, a sus 105 años, Sixto ha decidido dejar su casa en la laguna de Yarumales para emprender su «último viaje» a la selva. En un viaje a lo largo del río Guayabero, desde La Macarena hasta el Guaviare, sigo su rastro con la esperanza de encontrarlo antes de su muerte."
  },
  "w_R4H0CA0SCZ7K": {
-  "fuente": "https://www.themoviedb.org/movie/1518673",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1518673",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — Misma obra. Ni publicada ni guardado están verbatim en ninguna fuente (TMDB es tiene otro texto; ficha FICCALI sin sinopsis). Párrafo 1 de la sinopsis",
+    "texto": "Con una mirada atenta, la cineasta Claire Simon enfrenta estudiantes y profesores de bachillerato a los libros de Annie Ernaux, primera mujer francesa en recibir el Premio Nobel de Literatura."
+   }
+  ],
+  "fuente": "fuentes/midbo-2026/fichas/writing-life-annie-ernaux-through-the-eyes-of-high-school-students.html",
   "idioma": "es",
-  "texto": "Con una mirada atenta, la cineasta Claire Simon enfrenta estudiantes y profesores de bachillerato a los libros de Annie Ernaux, primera mujer francesa en recibir el Premio Nobel de Literatura."
+  "texto": "Figura fundamental del feminismo contemporáneo y primera francesa en recibir el Premio Nobel de Literatura, Annie Ernaux es considerada por muchos una fuente de emancipación individual y colectiva, al entrelazar lo íntimo con lo universal. La cineasta Claire Simon le dedica un retrato original en el que da voz a estudiantes y profesores. ¿Cómo se enseña la obra de Ernaux en escuelas secundarias y universidades? ¿Cómo se recibe, se estudia y se aprende? ¿Cómo se acercan los jóvenes franceses de hoy a sus escritos?"
  },
  "w_R4H0RZRPW59X": {
   "fuente": "fuentes/ficcali-2026/fichas/nuestro-cuerpo-es-una-estrella-que-se-expande.html",
@@ -2775,7 +2886,15 @@
   "texto": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente."
  },
  "w_R4H7YA470PAF": {
-  "fuente": "https://www.themoviedb.org/movie/1000495",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1000495",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — Verbatim en FICCALI (MIDBO trae variante). TMDB sin overview es.",
+    "texto": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, mediante la filmación de su diversidad, singularidad y belleza en todas las etapas de la vida. Se relatan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta."
+   }
+  ],
+  "fuente": "fuentes/ficcali-2026/fichas/notre-corps.html",
   "idioma": "es",
   "texto": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, mediante la filmación de su diversidad, singularidad y belleza en todas las etapas de la vida. Se relatan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta."
  },
@@ -2795,7 +2914,15 @@
   "texto": "Una década después de su muerte, el cineasta William Greaves tiene un último truco bajo la manga con lo que consideró el evento más importante que capturó en cine: una fiesta de 1972, ideada por él, junto a las luminarias vivas del Renacimiento de Harlem. Durante cuatro horas, este extraordinario grupo —muchos de sus miembros no se habían visto en cincuenta años— recordó, criticó, argumentó, rio y bebió mientras luchaba con su lugar en un panorama cultural que cambiaba rápidamente. Filmada en 16 mm y recientemente restaurada bajo la dirección de su hijo David, esta película histórica es, a la vez, una autoexploración y una indagación en el corazón de esa masa crítica de energía creativa."
  },
  "w_R4HA3VAZEWQ3": {
-  "fuente": "https://www.themoviedb.org/movie/327176",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/327176",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — Verbatim en FICCALI. TMDB es difiere ('Hasta allí llega').",
+    "texto": "En una vieja y misteriosa casona tropical cohabitan el supuesto dueño, un fraile, un piloto convaleciente, el sirviente haitiano, el guardián mercenario y la Machiche, hembra madura y dominante. Allí llega una joven modelo para desatar todo tipo de pasiones."
+   }
+  ],
+  "fuente": "fuentes/ficcali-2026/fichas/la-mansion-de-araucaima.html",
   "idioma": "es",
   "texto": "En una vieja y misteriosa casona tropical cohabitan el supuesto dueño, un fraile, un piloto convaleciente, el sirviente haitiano, el guardián mercenario y la Machiche, hembra madura y dominante. Allí llega una joven modelo para desatar todo tipo de pasiones."
  },
@@ -2950,9 +3077,17 @@
   "texto": "Decir «ternura» y que sean varias las cosas que salen de la boca: miel, abrazo, risa. Amiga, sangre, ardor. Paula y La Maestra tienen 16 años, ambas son nadadoras y se preparan para ir al Campeonato Panamericano de Natación Junior. Después de una fiesta, algo se desplaza entre ellas: Paula se vuelve distante. Mientras intentan comprender lo ocurrido y decidir cómo nombrarlo, sus distintas formas de atravesarlo tensan y transforman su amistad. Lejos de ser condescendiente, esta película le da un lugar fundamental a esa fricción con el mundo; ese cansancio prolongado, ese no saber qué nombre ponerle a la violencia desde la vivencia de un grupo de adolescentes, poniendo en el centro el cuidado y la vida. En el reciente Festival Internacional de Cine de Berlín, este impresionante primer largometraje fue galardonado con el Oso de Cristal a la Mejor Película, otorgado por el jurado juvenil de Generation 14plus, y con el Gran Premio, otorgado por el jurado internacional de Generation 14plus. Chicas tristes, abrazo largo, mano abierta sobre la cual descansar el mareo del mundo, canción de amor a las amigas.\n\nSaying “tenderness” and having several things come out of your mouth: honey, hug, laughter. Friend, blood, ardor. Paula and La Maestra are 16-years-old, both are swimmers and are preparing to go to the Pan American Junior Swimming Championships. After a party, something shifts between them: Paula becomes distant. As they try to understand what happened and decide how to name it, their different ways of dealing with it strain and transform their friendship. Far from being condescending, this film gives a fundamental place to that friction with the world; that prolonged exhaustion, that not knowing what to call the violence from the experience of a group of teenagers, putting care and life at the center. At the recent Berlin International Film Festival this stunning first feature film was awarded the Crystal Bear for Best Film from the Generation 14plus Youth Jury and the Grand Prix from the Generation 14plus International Jury. Sad Girlz, a long hug, an open hand on which to rest the dizziness of the world, a love song to girlfriends."
  },
  "w_R4HAT5QKDQVC": {
-  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=144",
-  "idioma": "es y en",
-  "texto": "¿Cómo escribir una historia que se desprende de la vida? Es decir, que queda colgando, como un pedazo de piel, un soporte fotosensible que lleva registrado en sus pliegues la luz. Un pedazo de piel que queda colgando al viento, como una rama apenas sujetada del árbol. Un pedazo que sigue siendo parte de un cuerpo pero que, al mismo tiempo, se desprende para formar otro. Al oriente de Ciudad de México vive Mario, quien un día despierta sin tener recuerdos sobre su vida anterior. Tanteando de nuevo la vida, conoce a Lázaro, quien le enseña sobre portales subterráneos que le permitirán entrar en los cuerpos de otras personas. La memoria empieza a tomar una forma extraña, como cayendo en vértigo a un paisaje quebrado por un cuerpo desprovisto de recuerdos, casi como recién nacido. Seleccionada para la sección Concurso Internacional del FIDMarseille, Frío metal se acerca desde los bordes a la fabulación de las formas de la ciudad, que como cuerpo paralelo es periférica y radical.\n\nHow do you write a story that detaches itself from life? That is, one that remains hanging, like a piece of skin, a photosensitive medium that records light in its folds. A piece of skin that hangs in the wind, like a branch barely attached to the tree. A piece that remains part of one body but at the same time detaches itself to form another. East of Mexico City lives Mario, who one day wakes up with no memories of his previous life. Feeling his way through life again, he meets Lázaro, who teaches him about underground portals that will allow him to enter other people’s bodies. Memory begins to take on a strange form, as if falling vertiginously into a landscape broken by a body devoid of memories, almost like a newborn. Cold Metal—which was invited to the International Competition section of FIDMarseille—approaches from the edges the fabulation of the city’s forms, which, like a parallel body, is peripheral and radical."
+  "anteriores": [
+   {
+    "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=144",
+    "idioma": "es y en",
+    "motivo": "verificación 26 nov, dos lectores: Catálogo FICCI 65, Frío metal (Clemente Castor, México 2025). El guardado incluye el párrafo ensayístico inicial («¿Cómo escribir una historia...»), q",
+    "texto": "¿Cómo escribir una historia que se desprende de la vida? Es decir, que queda colgando, como un pedazo de piel, un soporte fotosensible que lleva registrado en sus pliegues la luz. Un pedazo de piel que queda colgando al viento, como una rama apenas sujetada del árbol. Un pedazo que sigue siendo parte de un cuerpo pero que, al mismo tiempo, se desprende para formar otro. Al oriente de Ciudad de México vive Mario, quien un día despierta sin tener recuerdos sobre su vida anterior. Tanteando de nuevo la vida, conoce a Lázaro, quien le enseña sobre portales subterráneos que le permitirán entrar en los cuerpos de otras personas. La memoria empieza a tomar una forma extraña, como cayendo en vértigo a un paisaje quebrado por un cuerpo desprovisto de recuerdos, casi como recién nacido. Seleccionada para la sección Concurso Internacional del FIDMarseille, Frío metal se acerca desde los bordes a la fabulación de las formas de la ciudad, que como cuerpo paralelo es periférica y radical.\n\nHow do you write a story that detaches itself from life? That is, one that remains hanging, like a piece of skin, a photosensitive medium that records light in its folds. A piece of skin that hangs in the wind, like a branch barely attached to the tree. A piece that remains part of one body but at the same time detaches itself to form another. East of Mexico City lives Mario, who one day wakes up with no memories of his previous life. Feeling his way through life again, he meets Lázaro, who teaches him about underground portals that will allow him to enter other people’s bodies. Memory begins to take on a strange form, as if falling vertiginously into a landscape broken by a body devoid of memories, almost like a newborn. Cold Metal—which was invited to the International Competition section of FIDMarseille—approaches from the edges the fabulation of the city’s forms, which, like a parallel body, is peripheral and radical."
+   }
+  ],
+  "fuente": "fuentes/ficci-65/catalogo/catalogo.pdf#page=145",
+  "idioma": "es",
+  "texto": "Al oriente de Ciudad de México vive Mario, quien un día despierta sin tener recuerdos sobre su vida anterior. Tanteando de nuevo la vida, conoce a Lázaro, quien le enseña sobre portales subterráneos que le permitirán entrar en los cuerpos de otras personas. La memoria empieza a tomar una forma extraña, como cayendo en vértigo a un paisaje quebrado por un cuerpo desprovisto de recuerdos, casi como recién nacido. Seleccionada para la sección Concurso Internacional del FIDMarseille, Frío metal se acerca desde los bordes a la fabulación de las formas de la ciudad, que como cuerpo paralelo es periférica y radical."
  },
  "w_R4HAT5RDJA7R": {
   "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=192",
@@ -3100,7 +3235,15 @@
   "texto": "Con la frontera de Nanawa-Clorinda como escenario, el documental fue construido con los diarios cotidianos que Ángel filma desde los 10 años, combinados con imágenes de diferentes registros que dialogan entre sí y vienen acompañando desde hace tiempo los encuentros entre la realizadora y el protagonista."
  },
  "w_R4HBN9AY1HWQ": {
-  "fuente": "fuentes/bogoshorts-2026/web-cortos/4142.html",
+  "anteriores": [
+   {
+    "fuente": "fuentes/bogoshorts-2026/web-cortos/4142.html",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Verbatim en Cinetoro. La web de Bogoshorts (4142.html) trae otra versión ('Un hombre revisita la caída...').",
+    "texto": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención."
+   }
+  ],
+  "fuente": "fuentes/cinetoro-2026/curvas-interlineadas-competencia-oficial-emergente.html",
   "idioma": "es",
   "texto": "Un hombre recorre el camino que llevó a su padre a caer en la Garganta del Diablo a través de las imágenes que este dejó. Entre el eco del agua y el silencio hueco del archivo, surge un vacío que solo se revela cuando el reflejo en el agua ya no es el de ellos, sino el nuestro. Un viaje a través del tiempo, entre el duelo y la redención."
  },
@@ -3139,6 +3282,11 @@
   "idioma": "es y en",
   "texto": "«Dao es el movimiento perpetuo y circular que fluye en todo y une al mundo». La película comienza con la presentación del concepto que le da nombre, introduciendo al espectador en el ritmo de la experiencia audiovisual que propone a continuación. Un casting —¿o sería la imitación de un casting?— selecciona a personas que actuarán como familia en dos rituales: una boda en Francia y un velatorio en Guinea-Bissau. Alain Gomis demuestra un gran conocimiento y poco compromiso con los límites entre el documental y la ficción, transitando entre ambos con notable fluidez. En uno de los muchos momentos en los que nos cuestionamos la realidad de lo que vemos en pantalla, una anciana acepta que se filme un rito, siempre y cuando sea solo la representación del mismo y no el rito en sí; una alegoría de este cine híbrido que entiende la importancia de documentar existencias históricamente infrarrepresentadas y marginadas, al tiempo que respeta lo tradicional y lo sagrado. Dao formó parte de la sección Competencia del Festival Internacional de Cine de Berlín 2026.\n\n“Dao is the perpetual, circular movement that flows through everything and unites the world.” The film begins by presenting the concept that gives it its name, introducing the viewer to the rhythm of the audiovisual experience that follows. A casting call—or is it a mock casting call?—selects people to act as a family in two rituals: a wedding in France and a wake in Guinea-Bissau. Alain Gomis demonstrates a deep understanding of—and little regard for—the boundaries between documentary form and fiction, moving between them with remarkable fluidity. In one of the many moments when we question the reality of what we see on screen, an elderly woman agrees to have a ritual filmed, provided it is only a representation of the ritual and not the ritual itself; an allegory of this hybrid cinema that understands the importance of documenting historically underrepresented and marginalized lives, while respecting the traditional and the sacred. Dao was part of the Competition section at the 2026 Berlin International Film Festival."
  },
+ "w_R4HC1FD68XAQ": {
+  "fuente": "fuentes/ficci-65/catalogo/catalogo.pdf#page=49",
+  "idioma": "es",
+  "texto": "La forma y la raíz elabora su propio tiempo con delicadeza y paciencia, lo que ofrece al espectador la posibilidad de vivir una aventura de la mirada. Si se acepta la invitación, la pausa del sonido y de la contemplación de la vida en el campo, va revelando con naturalidad un ritmo que parece que uno ya conociera. Sospecho que es el pulso de lo vivo. Los paisajes se vuelven personajes sin «yo», dentro de los que se va anunciando la insistencia de la muerte, que es a su vez la forma del principio: la raíz."
+ },
  "w_R4HC1FG5Y5N5": {
   "fuente": "https://www.themoviedb.org/movie/1574074",
   "idioma": "en",
@@ -3150,14 +3298,30 @@
   "texto": "Las artes de la máscara de Indonesia cuentan con miles de años de antigüedad. Se conocen comúnmente como wayang topeng —wayang: sombra o marioneta; topeng: máscara—. Se cree que el wayang topeng tiene su origen en los ritos funerarios tribales, en los que los bailarines enmascarados eran considerados los intérpretes de los dioses. En los estratos más bajos de la sociedad javanesa se puede encontrar una manifestación única de estas tradiciones enmascaradas. Sus practicantes son artistas, pero no son meros animadores. Su objetivo no es simplemente divertir. Su ambición es ser respetados, ser honrados, tener éxito. Se han embarcado en un camino que saben que les llevará a un estado superior, a una posición honorable y noble.\n\nThe masked arts of Indonesia are thousands of years old. They are commonly referred to as wayang topeng—wayang: shadow or puppet; topeng: mask—. It is believed that wayang topeng originated from tribal death rites, where masked dancers were considered the interpreters of the gods. In the lowest rungs of Javanese society a unique manifestation of these masked traditions can be found. Its practitioners are performers, but they are not merely entertainers. Their aim is not simply to amuse. Their ambition is to be respected, to be honored, to be successful. They have embarked on a path they know will lead to a higher state, to an honorable and noble position."
  },
  "w_R4HCNBABG3FG": {
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1668893",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — Misma obra. El guardado corrige/recorta el overview TMDB es (API es-CO), no verbatim.",
+    "texto": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida."
+   }
+  ],
   "fuente": "https://www.themoviedb.org/movie/1668893",
   "idioma": "es",
-  "texto": "En una tranquila mañana en una ranchería de La Guajira, Indira da de comer a los pavos y las gallinas. Ante la sequía y el inicio de clases, Josefa, abuela de Indira, emprende un viaje junto a su nieta por las comunidades aledañas con la esperanza de vender a Taata, el pavo más grande, para comprar útiles escolares y comida."
+  "texto": "En una mañana tranquila en una ranchería en La Guajira, Indira (9) da de comer a los pavos y gallinas, debido a la sequía e inicio de clases Josefa, (60) abuela de Indira, emprende un viaje junto a su nieta a las comunidades aledañas, para tratar de vender a Taata, el Pavo más grande y así poder comprar útiles escolares y comida.  En su travesía, en una parada de tienda en medio del desierto, se encuentran a su único cliente del día, un chofer de un volteo que les pide descuento para comprarles el pavo, en medio de la burla por no saber hablar bien el español."
  },
  "w_R4HCNBFVSZ6V": {
-  "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=225",
-  "idioma": "es y en",
-  "texto": "Unos primos que viven en Kaduna, en el interior de Nigeria, se enamoran del cine comercial estadounidense durante su infancia. A partir de sus interpretaciones de las obras y con los recursos a su alcance, realizan reinterpretaciones que se vuelven virales en las redes. De ahí surgen muchas oportunidades y, lo que era un juego de niños, se convierte en su trabajo bajo el nombre de The Critics. A pesar de retratar una historia de éxito específica, la película no aboga por la meritocracia y se empeña en arrojar luz sobre los contratiempos que vivieron, incluso tras su éxito; al tiempo, se asegura de no encerrar a los personajes en un papel de víctimas de las circunstancias, de su nacionalidad o posición social. El montaje se sirve del ritmo frenético utilizado por el colectivo en sus más de 50 películas —varias disponibles en línea— para organizar los registros de los 13 años su existencia: el día a día en su ciudad natal, las relaciones familiares, la reestructuración de su forma de trabajo, las experiencias en Lagos y más tarde en Berlín. Pietra Brettkelly se une al proyecto para dar forma a la inmensa cantidad de material producido durante la emocionante trayectoria del grupo. El resultado es una oda a la rebeldía de crear bajo cualquier circunstancia.\n\nA pair of cousins living in Kaduna, in the Nigerian interior, fall in love with American commercial cinema during their childhood. Drawing on their interpretations of these works and using whatever resources are at their disposal, they create reinterpretations that go viral online. From there, many opportunities arise, and what began as a child’s game becomes their livelihood, under the name The Critics. Despite portraying a specific success story, the film does not advocate for meritocracy and strives to shed light on the setbacks they experienced, even after their success. At the same time, it takes care not to confine them to the role of victims of circumstance, of their nationality, or of their social status. The editing draws on the frenetic pace used by the collective in its more than 50 films—several of which are available online—to organize the footage spanning the collective’s 13-years existence: daily life in their hometown, family relationships, the restructuring of their working methods, their experiences in Lagos, and later in Berlin. Pietra Brettkelly joins the project to give shape to the immense amount of material produced during the group’s exciting journey. The result is an ode to the defiance of creating under any circumstances."
+  "anteriores": [
+   {
+    "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=225",
+    "idioma": "es y en",
+    "motivo": "verificación 26 nov, dos lectores: La publicada_es traduce este logline de Tribeca, no el texto FICCI guardado (misma película, también Kaduna/The Critics). La publicada_en sale de la d",
+    "texto": "Unos primos que viven en Kaduna, en el interior de Nigeria, se enamoran del cine comercial estadounidense durante su infancia. A partir de sus interpretaciones de las obras y con los recursos a su alcance, realizan reinterpretaciones que se vuelven virales en las redes. De ahí surgen muchas oportunidades y, lo que era un juego de niños, se convierte en su trabajo bajo el nombre de The Critics. A pesar de retratar una historia de éxito específica, la película no aboga por la meritocracia y se empeña en arrojar luz sobre los contratiempos que vivieron, incluso tras su éxito; al tiempo, se asegura de no encerrar a los personajes en un papel de víctimas de las circunstancias, de su nacionalidad o posición social. El montaje se sirve del ritmo frenético utilizado por el colectivo en sus más de 50 películas —varias disponibles en línea— para organizar los registros de los 13 años su existencia: el día a día en su ciudad natal, las relaciones familiares, la reestructuración de su forma de trabajo, las experiencias en Lagos y más tarde en Berlín. Pietra Brettkelly se une al proyecto para dar forma a la inmensa cantidad de material producido durante la emocionante trayectoria del grupo. El resultado es una oda a la rebeldía de crear bajo cualquier circunstancia.\n\nA pair of cousins living in Kaduna, in the Nigerian interior, fall in love with American commercial cinema during their childhood. Drawing on their interpretations of these works and using whatever resources are at their disposal, they create reinterpretations that go viral online. From there, many opportunities arise, and what began as a child’s game becomes their livelihood, under the name The Critics. Despite portraying a specific success story, the film does not advocate for meritocracy and strives to shed light on the setbacks they experienced, even after their success. At the same time, it takes care not to confine them to the role of victims of circumstance, of their nationality, or of their social status. The editing draws on the frenetic pace used by the collective in its more than 50 films—several of which are available online—to organize the footage spanning the collective’s 13-years existence: daily life in their hometown, family relationships, the restructuring of their working methods, their experiences in Lagos, and later in Berlin. Pietra Brettkelly joins the project to give shape to the immense amount of material produced during the group’s exciting journey. The result is an ode to the defiance of creating under any circumstances."
+   }
+  ],
+  "fuente": "https://tribecafilm.com/films/crocodile-2026",
+  "idioma": "en",
+  "texto": "In Kaduna, Nigeria, a group of kids turn a backyard into a sci-fi universe using a single phone and boundless imagination. Filmed over thirteen years, Crocodile follows their homemade film collective as creativity becomes a lifeline and a bold act of rewriting their futures."
  },
  "w_R4HCNBK7QVN6": {
   "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=120",
@@ -3268,6 +3432,11 @@
   "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=185",
   "idioma": "es y en",
   "texto": "Obscure Night - Ain’t I a Child? se abre con imágenes a color filmadas con un teléfono celular: jóvenes celebran efusivamente la inminencia de su llegada a Europa en una embarcación precaria. Son los únicos destellos cromáticos antes de que la película se hunda en la noche. Estando en París, Malik, Mehdi y Hassan, menores migrantes marroquíes, sobreviven en la calle. Se reúnen sobre una rejilla del metro, con la Torre Eiffel al fondo, compartiendo cigarrillos e historias a escasos metros de un mundo que los rechaza. Esta última película de la trilogía de Sylvain George sobre las biopolíticas de la migración del sur al norte nos habla de una larga historia de violencia que habita los cuerpos y los gestos cotidianos. Filmada mayoritariamente de noche, la calle se convierte en un espacio otro, en una heterotopía de deriva y ocupación, donde los cuerpos marginados adquieren presencia y visibilidad en la oscuridad. Con una cámara siempre cerca de los cuerpos, Sylvain George se sumerge en la amistad y en los estallidos de violencia, proponiendo una poética y una política del cotidiano. Obscure Night - Ain’t I a Child? traza así el recorrido de una juventud exiliada que afirma su potencia de existir.\n\nObscure Night - Ain’t I a Child? opens with color images filmed with a cell phone: young people effusively celebrate their imminent arrival in Europe on a precarious boat. These are the only flashes of color before the film sinks into the night. In Paris, Malik, Mehdi, and Hassan, Moroccan migrant minors, survive on the streets. They gather on a subway grate, with the Eiffel Tower in the background, sharing cigarettes and stories just a few meters away from a world that rejects them. This latest film in Sylvain George's trilogy on the biopolitics of migration from south to north tells us of a long history of violence that inhabits bodies and everyday gestures. Filmed mostly at night, the street becomes another space, a heterotopia of drift and occupation, where marginalized bodies acquire presence and visibility in the darkness. With a camera always close to the bodies, Sylvain George immerses himself in friendship and outbreaks of violence, proposing the poetics and politics of everyday life. Obscure Night - Ain’t I a Child? thus traces the journey of an exiled youth that affirms its power to exist."
+ },
+ "w_R4HD24FCSZJ0": {
+  "fuente": "fuentes/ficci-65/catalogo/catalogo.pdf#page=58",
+  "idioma": "es",
+  "texto": "Diez realizadores piensan Barranquilla con una cámara Super 8mm: punk, dulzura, movimiento y estrépito. Cada uno aporta tres minutos de imágenes montadas en caliente, guiadas apenas por los cortes de la mirada y por una proximidad a la ciudad mediada por la forma en que cada cuerpo la percibe. Uno pensaría: esto no parece Barranquilla. Y ahí está, justamente, la victoria de tantas manos: en la desfiguración del arquetipo, en la extrañeza y en el desmoronamiento de lo preconcebido. Ese emplazamiento irreverente es también el principio de toda creación."
  },
  "w_R4HD24M9AR8Q": {
   "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=59",
@@ -3420,9 +3589,17 @@
   "texto": "En la cultura etíope, «wax & gold» refiere a la ambigüedad del lenguaje: el significado literal y su dimensión simbólica. En el nuevo documental de Ruth Beckermann, esta tensión se convierte en un dispositivo poético para reflexionar sobre el presente etíope. Desde un hotel, la cineasta devela las capas del colonialismo y los efectos persistentes del proyecto de nación impulsado por el emperador Haile Selassie. Estrenada en la Berlinale y presentada por primera vez en Latinoamérica, Wax & Gold se configura como un ensayo documental que remite al trabajo de Eduardo Coutinho y, en ciertos momentos, al de Frederick Wiseman. La cámara se instala con rigor en un único espacio y, desde allí, construye una metonimia del país y su tejido social.\n\nLa elección de uno de los hoteles más emblemáticos de Etiopía, ligado a la figura del emperador, abre un campo de testimonios entre trabajadores, turistas y migrantes de retorno. En ese cruce de voces se tensan pasado y presente, lo visible y lo latente, revelando las fisuras de los proyectos de nación.\n\nIn Ethiopian culture, “wax & gold” refers to the ambiguity of language: its literal meaning and its symbolic dimension. In Ruth Beckermann’s new documentary, this tension becomes a poetic device for reflecting on Ethiopia’s present. From a hotel, the filmmaker unravels the layers of colonialism and the lingering effects of the nation-building project spearheaded by Emperor Haile Selassie. Premiered at the Berlinale and presented for the first time in Latin America, Wax & Gold takes the form of a documentary essay reminiscent of the work of Eduardo Coutinho and, at times, that of Frederick Wiseman. The camera is rigorously stationed in a single space and, from there, constructs a metonymy of the country and its social fabric.\n\nThe choice of one of Ethiopia’s most iconic hotels, linked to the figure of the emperor, opens up a field of testimonies among workers, tourists, and returning migrants. In this intersection of voices, past and present, the visible and the latent, come into tension, revealing the fissures in nation-building projects."
  },
  "w_R4HEVVQPTDC1": {
+  "anteriores": [
+   {
+    "fuente": "fuentes/ficcali-2026/fichas/heroes-del-silencio.html",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — La ficha de FICCALI dice esto; lo guardado es una paráfrasis (rodado / niñas / vídeos). Es la misma obra. TMDB y el catálogo FICCI traen otros textos.",
+    "texto": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar."
+   }
+  ],
   "fuente": "fuentes/ficcali-2026/fichas/heroes-del-silencio.html",
   "idioma": "es",
-  "texto": "Cortometraje rodado por los niños y niñas de la comunidad indígena de Morotrwa, en la Sierra Nevada de Gonawindua. A través de sus propias fotografías y vídeos, documentan sus vidas y su territorio, eligiendo libremente qué mostrar."
+  "texto": "Cortometraje grabado por los niños de la comunidad indígena morotrwa, en la Sierra Nevada de Gonawindua. Mediante sus propias fotografías y videos documentan su vida y territorio, y eligen libremente qué mostrar."
  },
  "w_R4HEVVW6AQR2": {
   "fuente": "https://www.themoviedb.org/movie/1668919",
@@ -3620,7 +3797,15 @@
   "texto": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero."
  },
  "w_R4HJFE6HF274": {
-  "fuente": "festivals/staging/popayan-2026-catalogo.json",
+  "anteriores": [
+   {
+    "fuente": "festivals/staging/popayan-2026-catalogo.json",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Ficha Cinecorto de Tuktu, Padre Maíz (Mauricio Prieto). FICCALI trae una versión más larga distinta.",
+    "texto": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra."
+   }
+  ],
+  "fuente": "fuentes/popayan-2026/cinecorto/post-15578.json",
   "idioma": "es",
   "texto": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra."
  },
@@ -3929,6 +4114,11 @@
   "idioma": "es",
   "texto": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones."
  },
+ "w_R4KV6C5S5CP9": {
+  "fuente": "fuentes/midbo-2026/fichas/the-travelers.html",
+  "idioma": "es",
+  "texto": "En la frontera entre Marruecos y España, aguardamos impacientes el boza – la travesía a Europa. Entre los sucesivos intentos fallidos, sobrevivimos, y yo, como el «artista», debo mantener viva la llama de la esperanza del grupo. Con una cámara y un puñado de canciones, hicimos juntos esta película."
+ },
  "w_R4KVMWEFWT24": {
   "fuente": "fuentes/midbo-2026/fichas/el-leon.html",
   "idioma": "es",
@@ -3965,7 +4155,15 @@
   "texto": "Marsella, 2135. Tras la desaparición de la mayoría de los ecosistemas de la Tierra, la empresa Boyuna abre un pasaje hacia el pasado, donde los subrevivientes pueden habitar sus sueños entre animales extintos. Creada en colaboración con participantes privados de libertad que asisten a un programa de formación audiovisual en la prisión de Baumettes, Marsella."
  },
  "w_R4MGCGAZVC5N": {
-  "fuente": "https://www.themoviedb.org/movie/1689497",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1689497",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: La sinopsis de MIDBO es idéntica a lo guardado. TMDB es-ES está vacío.",
+    "texto": "Meses después de haber vivido un abuso por parte de una mujer, Micaela (21) regresa al baño donde ocurrieron los hechos. En un intento por sanar su trauma, registra y revive el recorrido que realizó en el pasado, transformando su recuerdo en un acto artístico que revela cómo esa experiencia quedó grabada en su subconsciente."
+   }
+  ],
+  "fuente": "fuentes/midbo-2026/fichas/para-mi-ya-no-es-cualquier-bano.html",
   "idioma": "es",
   "texto": "Meses después de haber vivido un abuso por parte de una mujer, Micaela (21) regresa al baño donde ocurrieron los hechos. En un intento por sanar su trauma, registra y revive el recorrido que realizó en el pasado, transformando su recuerdo en un acto artístico que revela cómo esa experiencia quedó grabada en su subconsciente."
  },
@@ -3975,7 +4173,15 @@
   "texto": "En los registros cinematográficos de Esdras Baptista, guardados durante décadas en su residencia, se puede sentir el fervor de quienes creían en un nuevo día. Filmadas en Brasil a principios de la década de 1960, en pleno auge de una política libertaria en movimiento, las imágenes del cineasta materializan la incandescencia de los deseos colectivos en el momento histórico de su eclosión. La utopía, aunque inalcanzable, nunca es una mera abstracción. Fuerza que moviliza las acciones y los sentimientos, constituye el ímpetu necesario para la existencia del ser humano."
  },
  "w_R4MMFQPBNEZM": {
-  "fuente": "https://www.themoviedb.org/movie/1657856",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1657856",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Sinopsis de la ficha de MIDBO. TMDB hoy trae otro texto.",
+    "texto": "Un buen día, no amaneció más. En ese reino de oscuridad que inevitablemente atrajo plagas, persecución, devastación y muerte, un grupo de viejos anarco-poetas se ve obligado a vivir en la clandestinidad y, durante sus aquelarres y secretas reuniones, buscan adoptar identidades no humanas. En esta fábula documental, que utiliza como alegoría el mito sufí del mismo nombre, la poesía, la danza y la amistad se erigen como armas de insubordinación al orden actual de las cosas."
+   }
+  ],
+  "fuente": "fuentes/midbo-2026/fichas/el-coloquio-de-los-pajaros.html",
   "idioma": "es",
   "texto": "Un buen día, no amaneció más. En ese reino de oscuridad que inevitablemente atrajo plagas, persecución, devastación y muerte, un grupo de viejos anarco-poetas se ve obligado a vivir en la clandestinidad y, durante sus aquelarres y secretas reuniones, buscan adoptar identidades no humanas. En esta fábula documental, que utiliza como alegoría el mito sufí del mismo nombre, la poesía, la danza y la amistad se erigen como armas de insubordinación al orden actual de las cosas."
  },
@@ -4020,14 +4226,30 @@
   "texto": "LEGADO es una serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas."
  },
  "w_R4MX6E365FH2": {
-  "fuente": "https://www.themoviedb.org/movie/1376037",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1376037",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Ficha Cinecorto de Corazón galvánico (Valentina Valencia Giraldo). TMDB es-ES/MX es igual sin 'y trascender su forma humana'.",
+    "texto": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella y trascender su forma humana."
+   }
+  ],
+  "fuente": "fuentes/popayan-2026/cinecorto/post-15579.json",
   "idioma": "es",
   "texto": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella y trascender su forma humana."
  },
  "w_R4MXGDRFW189": {
-  "fuente": "https://www.themoviedb.org/movie/1592964",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1592964",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Programa Miradas, Juan Camilo González 2025. Difiere del guardado en puntuación, 'colombianos' y 'con su entorno'. TMDB es-MX tiene otra redacción.",
+    "texto": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
+   }
+  ],
+  "fuente": "fuentes/miradas-2026/web/paginas/p54.txt",
   "idioma": "es",
-  "texto": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
+  "texto": "En los Montes de María colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción: observamos las complejas relaciones con sus crías y con su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
  },
  "w_R4MY7A5DRW76": {
   "fuente": "https://www.themoviedb.org/movie/1593596",
@@ -4040,7 +4262,15 @@
   "texto": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival."
  },
  "w_R4MZH086RT3E": {
-  "fuente": "https://www.themoviedb.org/movie/898817",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/898817",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Ficha Cinecorto de Gladiolos, guion Mónica Juanita Hernández; verbatim.",
+    "texto": "Waldina, la vendedora de flores del pequeño pueblo de Arcabuco, ha fallecido. Su hijo Humberto llega desde la gran ciudad y decide hacer la última entrega de flores a sus clientes sin saber que tras una de esas puertas podría encontrar su felicidad."
+   }
+  ],
+  "fuente": "fuentes/popayan-2026/cinecorto/post-15128.json",
   "idioma": "es",
   "texto": "Waldina, la vendedora de flores del pequeño pueblo de Arcabuco, ha fallecido. Su hijo Humberto llega desde la gran ciudad y decide hacer la última entrega de flores a sus clientes sin saber que tras una de esas puertas podría encontrar su felicidad."
  },
@@ -4050,7 +4280,15 @@
   "texto": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto."
  },
  "w_R4N0XYA9F83D": {
-  "fuente": "fuentes/popayan-2026/cinecorto/post-15621.json",
+  "anteriores": [
+   {
+    "fuente": "fuentes/popayan-2026/cinecorto/post-15621.json",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: La fuente sí es legible: es la ficha de Cinecorto de 'Las piedras del río' (link en el JSON), Dirección Edna Sierra, 2026; el párrafo de sinopsis está",
+    "texto": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte."
+   }
+  ],
+  "fuente": "https://cinecorto.co/las-piedras-del-rio/ (fuentes/popayan-2026/cinecorto/post-15621.json)",
   "idioma": "es",
   "texto": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte."
  },
@@ -4060,7 +4298,15 @@
   "texto": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.\nEntre los regaños y el aburrimiento, Luis Antonio espera ansioso junto a la ventana, anhelando el regreso de su madre."
  },
  "w_R4N1K526BMQ6": {
-  "fuente": "https://www.themoviedb.org/movie/1539677",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1539677",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Texto idéntico en la ficha de ANIBIA (Dir. Gustavo Fontele Dourado, 2025). TMDB solo tiene inglés.",
+    "texto": "En el futuro, una anciana hacker y bordadora deberá enfrentar a sus problemas y usar las habilidades para escapar de una realidad virtual. Esta historia es basada en la vida de mi abuela, Leonilia Ferreira."
+   }
+  ],
+  "fuente": "fuentes/anibia-2026/fichas/3592.txt",
   "idioma": "es",
   "texto": "En el futuro, una anciana hacker y bordadora deberá enfrentar a sus problemas y usar las habilidades para escapar de una realidad virtual. Esta historia es basada en la vida de mi abuela, Leonilia Ferreira."
  },
@@ -4140,9 +4386,17 @@
   "texto": "During the 2006 World Cup, a group of children experience the magic of Brazilian football and ghetto childhood, where bonds of friendship strengthen the act of dreaming."
  },
  "w_R4P0Y63Z4GYV": {
-  "fuente": "https://www.themoviedb.org/movie/1437703",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1437703",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: La web de MUBI Bogotá trae este texto; lo guardado le añade «Q&A con el director», que es una nota de la función y no parte de la sinopsis. TMDB es-MX",
+    "texto": "Olga vive en un enorme multifamiliar en donde lleva una existencia solitaria, regida por hábitos inalterables. Pero cuando, por necesidad económica, renta un cuarto de su departamento a un hombre quien a escondidas mete también a su hijo de nueve años, Olga se enfrenta a lo que más miedo le tiene, la conexión emocional. Q&A con el director"
+   }
+  ],
+  "fuente": "fuentes/mubibogota-2026/bogota.html",
   "idioma": "es",
-  "texto": "Olga vive en un enorme multifamiliar en donde lleva una existencia solitaria, regida por hábitos inalterables. Pero cuando, por necesidad económica, renta un cuarto de su departamento a un hombre quien a escondidas mete también a su hijo de nueve años, Olga se enfrenta a lo que más miedo le tiene, la conexión emocional. Q&A con el director"
+  "texto": "Olga vive en un enorme multifamiliar en donde lleva una existencia solitaria, regida por hábitos inalterables. Pero cuando, por necesidad económica, renta un cuarto de su departamento a un hombre quien a escondidas mete también a su hijo de nueve años, Olga se enfrenta a lo que más miedo le tiene, la conexión emocional."
  },
  "w_R4PA4FJ1YYX6": {
   "fuente": "https://www.themoviedb.org/movie/947493",
@@ -4150,7 +4404,15 @@
   "texto": "11-year-old Christophe tries to live up to his rigid and distant father on the family farm in rural France. But the young boy starts to lean over and collapse without warning — on the tractor, at school, at dinner... A doctor finds the solution: Christophe must wear an iron corset to keep himself upright. Forced to reinvent his life away from the farm, Christophe discovers a new passion for music, meets a new friend, and follows her into his first mischief."
  },
  "w_R4PFW7GTQ56A": {
-  "fuente": "https://www.themoviedb.org/movie/1599764",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1599764",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — Ficha Al Este (Londres/London, Brameshuber, Austria 2026). TMDB 1599764 no tiene sinopsis en español, solo en inglés (coincide con publicada_en). Camb",
+    "texto": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan."
+   }
+  ],
+  "fuente": "fuentes/aleste-2026/programa/londres.html",
   "idioma": "es",
   "texto": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan."
  },
@@ -4425,23 +4687,55 @@
   "texto": "A comienzos del siglo XVI un cacique valeroso enfrenta la devastadora llegada de los españoles a sus territorios; dos niños que buscan a su hermana raptada quedan en medio de este conflicto de culturas, que desencadena batallas en las que se descubren sentimientos y actos de valentía, traición, amor y codicia."
  },
  "w_ZR5FE4J5AM6C": {
-  "fuente": "https://www.themoviedb.org/movie/1677190",
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1677190",
+    "idioma": "es",
+    "motivo": "verificación 26 nov, dos lectores: Programa de la Cinemateca: Replay (Dir. Simón Matallana Nossa, 2026). La versión es-MX de TMDB tiene otra redacción, por eso falló el cotejo.",
+    "texto": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
+   }
+  ],
+  "fuente": "fuentes/anibia-2026/fichas/3617.html",
   "idioma": "es",
   "texto": "En medio del espacio, una misteriosa criatura asalta una nave y se enfrenta a una banda de lagartos robot, para así obtener un extraño artefacto con forma de disco."
  },
  "w_ZR5J46WM80RV": {
+  "anteriores": [
+   {
+    "fuente": "fuentes/anibia-2026/fichas/3627.html",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — Misma obra (programa El Susurro / Esquirlas de Caracol, BHFF en la Cinemateca). El texto publicado y guardado parafrasea este; la versión 'Roberto gua",
+    "texto": "Roberto guarda un secreto que no puede compartir: un caracol de mar que les susurra verdades a quienes se atreven a escucharlas. En medio de una celebración íntima, el deseo de revelar ese misterio desata una ruptura sin vuelta atrás."
+   }
+  ],
   "fuente": "fuentes/anibia-2026/fichas/3627.html",
   "idioma": "es",
-  "texto": "Roberto guarda un secreto que no puede compartir: un caracol de mar que les susurra verdades a quienes se atreven a escucharlas. En medio de una celebración íntima, el deseo de revelar ese misterio desata una ruptura sin vuelta atrás."
+  "texto": "Roberto carga con un secreto que no puede compartir: un caracol marino que susurra verdades a quienes se atreven a escucharlo. En medio de una celebración íntima, el deseo de compartir esa revelación provoca una fractura irreversible."
  },
  "w_ZR5JWV8RRX0V": {
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1567192",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — TMDB 1567192 (The Demonatrix, 2025) solo tiene inglés; la publicada_es es una traducción fiel. Las fuentes de BHFF solo traen metadatos.",
+    "texto": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio."
+   }
+  ],
   "fuente": "https://www.themoviedb.org/movie/1567192",
-  "idioma": "es",
-  "texto": "Durante una sesión espiritista, una dominatrix invoca por accidente a un íncubo y tiene que unir fuerzas con el cura del barrio para exorcizar al demonio."
+  "idioma": "en",
+  "texto": "A dominatrix accidentally summons an incubus during a séance, requiring her to team up with the neighborhood priest to exorcise the demon."
  },
  "w_ZR5KQY7KFG0J": {
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1753034",
+    "idioma": "es",
+    "motivo": "verificación 26 nov: texto y fuente releídos — TMDB 1753034 (Happy, Basallote, 2026) solo tiene inglés; la publicada_es es una traducción. BHFF y la revista de Medellín Horror solo traen título, di",
+    "texto": "Durante una aburrida visita a casa de su abuela, Cárol encuentra una muñeca singular con la que matar el tiempo. Pero pronto se da cuenta de que, en esa casa, ella no es la única que sabe divertirse."
+   }
+  ],
   "fuente": "https://www.themoviedb.org/movie/1753034",
-  "idioma": "es",
-  "texto": "Durante una aburrida visita a casa de su abuela, Cárol encuentra una muñeca singular con la que matar el tiempo. Pero pronto se da cuenta de que, en esa casa, ella no es la única que sabe divertirse."
+  "idioma": "en",
+  "texto": "During a boring visit to her grandmother's house, Cárol discovers a unique doll to kill time with. But she soon realizes that, in that house, she isn't the only one who knows how to have fun."
  }
 }
