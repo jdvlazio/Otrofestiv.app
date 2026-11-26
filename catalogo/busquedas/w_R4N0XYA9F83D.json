@@ -197,7 +197,13 @@
    "no aplica": "la obra no tiene ficha TMDB"
   },
   "tmdb": {
-   "no aplica": "la obra no tiene ficha TMDB"
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Las piedras del río»",
+     "nota": "0 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
   },
   "web": {
    "consultas": [
@@ -226,6 +232,10 @@
   "popayan-2026",
   "siembrafest-2026"
  ],
- "hallazgo": null,
+ "hallazgo": {
+  "a_mano": true,
+  "clase": "fuentes",
+  "donde": "fuentes/popayan-2026/cinecorto/post-15621.json"
+ },
  "work_id": "w_R4N0XYA9F83D"
 }

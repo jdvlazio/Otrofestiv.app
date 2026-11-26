@@ -492,6 +492,11 @@ guardadas, Instagram guardado, TMDB, Letterboxd, IMDb, web oficial, Filmaffinity
 las consultas web exactas; quien busca las corre tal cual (`--pendiente <id>`) y anota una
 por una (`--anotar`). Todo queda en `catalogo/busquedas/<id>.json`. «No hay fuente» solo con
 el registro completo: `--sin-fuente`, y `[busqueda-completa]` lo exige.
+Si la obra **no tiene ninguna sinopsis**, el mismo comando la busca por título y dirección:
+`--pendiente` da los archivos guardados que la nombran (con lo que sigue al título) y las
+consultas web; cada uno se anota «sin resultado» o con el texto hallado (`texto` + `donde`/`url`),
+que la máquina comprueba ahí mismo. TMDB se consulta por título y la dirección se confirma en
+los créditos; si la obra no tiene ese número, el hallazgo lo confirma una persona.
 
 **La función y su acceso** (24 nov 2026): después de `alta-festival.py` (su
 config entra en la huella) y antes de la primera publicación, (1) el inventario

@@ -19,7 +19,7 @@
    ]
   },
   "imdb": {
-   "no aplica": "la obra no tiene ficha TMDB"
+   "no aplica": "TMDB no da número de IMDb"
   },
   "instagram": {
    "consultas": [
@@ -31,13 +31,25 @@
    ]
   },
   "letterboxd": {
-   "no aplica": "la obra no tiene ficha TMDB"
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1796534/",
+     "nota": "es: https://letterboxd.com/tmdb/1796534/",
+     "resultado": "no está"
+    }
+   ]
   },
   "productora": {
-   "no aplica": "la obra no tiene ficha TMDB"
+   "no aplica": "TMDB no da página oficial"
   },
   "tmdb": {
-   "no aplica": "la obra no tiene ficha TMDB"
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1796534",
+     "nota": "es: TMDB 1796534",
+     "resultado": "no está"
+    }
+   ]
   },
   "web": {
    "consultas": [

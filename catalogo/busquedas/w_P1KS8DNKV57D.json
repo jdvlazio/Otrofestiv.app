@@ -77,7 +77,13 @@
    "no aplica": "la obra no tiene ficha TMDB"
   },
   "tmdb": {
-   "no aplica": "la obra no tiene ficha TMDB"
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Suelo»",
+     "nota": "5 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
   },
   "web": {
    "consultas": [
