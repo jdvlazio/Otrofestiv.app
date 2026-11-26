@@ -2936,6 +2936,15 @@
   "veredicto": "fiel",
   "verifica": "sellador de obras (agente)"
  },
+ "w_8BX7A30WYATD": {
+  "comprobado": "máquina: TMDB 1265032",
+  "contra": "https://www.themoviedb.org/movie/1265032",
+  "fecha": "2026-11-26",
+  "huella": "6a2eb8976da2",
+  "redacta": "redactor anterior",
+  "veredicto": "fiel",
+  "verifica": "verificador independiente 26 nov"
+ },
  "w_8BX7AMYKRQAV": {
   "comprobado": "máquina: TMDB 800090",
   "contra": "https://en.wikipedia.org/wiki/The_Exiles_(2024_film)",
@@ -6409,6 +6418,15 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "primera lectura"
+ },
+ "w_R4J76X7421YH": {
+  "comprobado": "máquina: TMDB 1663705",
+  "contra": "https://www.themoviedb.org/movie/1663705",
+  "fecha": "2026-11-26",
+  "huella": "588aa814930b",
+  "redacta": "Claude 26 nov",
+  "veredicto": "fiel",
+  "verifica": "verificador independiente 26 nov"
  },
  "w_R4J76XVZ2FFX": {
   "comprobado": "máquina: https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",

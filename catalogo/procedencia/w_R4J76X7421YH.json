@@ -26,5 +26,17 @@
   "regla": "decisión",
   "motivo": "misma imagen en varios festivales: la copia más completa",
   "fecha": "2026-11-23"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-26"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis del original verificado (aprobada por Juan 26 nov)",
+  "fecha": "2026-11-26"
  }
 }
