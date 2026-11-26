@@ -1,0 +1,97 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Anima%20Sola",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "anima sola alta_posible fuentes provinciadevelez 2026 altas anima sola jpg anima sola director francia director freddy sanchez",
+     "donde": "fuentes/provinciadevelez-2026/altas/anima-sola.tmdb.json",
+     "nota": "solo título, dirección y afiche; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "anima sola entre amigos escision cigarra limones paisaje niebla pez azul salvemos el agua cicatrices el pescador creation unicorn titua y oro la belleza dialogo tierra uma unjirinaka nueve jueves ecos canaveral guali oficios fonce tradicion prohibicion dolor vientre llantos monte coming from hell el pescador clip el empiezo saint juanito el cuarto inmortalizar olvidar a miriam latir memoria",
+     "donde": "fuentes/provinciadevelez-2026/web/posters.txt",
+     "nota": "solo título, dirección y afiche; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Anima Sola»",
+     "nota": "3 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Anima Sola\" Sanchez",
+     "nota": "Solo Anima Sola 2015 (Brasil, Roberto Jabor), figura devocional y otras ajenas; nada de Freddy Sanchez",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Anima Sola\" sinopsis",
+     "nota": "Solo Anima Sola 2015 (Brasil, Roberto Jabor), figura devocional y otras ajenas; nada de Freddy Sanchez",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Anima Sola\" synopsis Sanchez",
+     "nota": "Solo Anima Sola 2015 (Brasil, Roberto Jabor), figura devocional y otras ajenas; nada de Freddy Sanchez",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Anima Sola\" Sanchez cortometraje",
+     "nota": "Solo Anima Sola 2015 (Brasil, Roberto Jabor), figura devocional y otras ajenas; nada de Freddy Sanchez",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Anima Sola\" Sanchez filmfreeway",
+     "nota": "Solo Anima Sola 2015 (Brasil, Roberto Jabor), figura devocional y otras ajenas; nada de Freddy Sanchez",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Anima Sola\" Sanchez vimeo OR youtube",
+     "nota": "Solo Anima Sola 2015 (Brasil, Roberto Jabor), figura devocional y otras ajenas; nada de Freddy Sanchez",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "provinciadevelez-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_7JCXN5ZGRBNY"
+}

@@ -1,0 +1,97 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Cicatrices",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "cicatrices alta_posible fuentes provinciadevelez 2026 altas cicatrices jpg cicatrices director colombia director jhon amado provinciadevelez 2026",
+     "donde": "fuentes/provinciadevelez-2026/altas/cicatrices.tmdb.json",
+     "nota": "solo título, dirección y afiche; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "cicatrices el pescador creation unicorn titua y oro la belleza dialogo tierra uma unjirinaka nueve jueves ecos canaveral guali oficios fonce tradicion prohibicion dolor vientre llantos monte coming from hell el pescador clip el empiezo saint juanito el cuarto inmortalizar olvidar a miriam latir memoria",
+     "donde": "fuentes/provinciadevelez-2026/web/posters.txt",
+     "nota": "solo título, dirección y afiche; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Cicatrices»",
+     "nota": "5 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Cicatrices\" Amado",
+     "nota": "Varias Cicatrices ajenas (España 2013 Aguirre, Serbia, México, Costa Rica, filmfreeway CicatricesShort 403 sin vínculo); nada de Jhon Amado",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Cicatrices\" sinopsis",
+     "nota": "Varias Cicatrices ajenas (España 2013 Aguirre, Serbia, México, Costa Rica, filmfreeway CicatricesShort 403 sin vínculo); nada de Jhon Amado",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Cicatrices\" synopsis Amado",
+     "nota": "Varias Cicatrices ajenas (España 2013 Aguirre, Serbia, México, Costa Rica, filmfreeway CicatricesShort 403 sin vínculo); nada de Jhon Amado",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Cicatrices\" Amado cortometraje",
+     "nota": "Varias Cicatrices ajenas (España 2013 Aguirre, Serbia, México, Costa Rica, filmfreeway CicatricesShort 403 sin vínculo); nada de Jhon Amado",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Cicatrices\" Amado filmfreeway",
+     "nota": "Varias Cicatrices ajenas (España 2013 Aguirre, Serbia, México, Costa Rica, filmfreeway CicatricesShort 403 sin vínculo); nada de Jhon Amado",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Cicatrices\" Amado vimeo OR youtube",
+     "nota": "Varias Cicatrices ajenas (España 2013 Aguirre, Serbia, México, Costa Rica, filmfreeway CicatricesShort 403 sin vínculo); nada de Jhon Amado",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "provinciadevelez-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_7JCXNE70VBK6"
+}

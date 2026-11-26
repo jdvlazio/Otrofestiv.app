@@ -1,0 +1,110 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=El%20cuarto",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "el cuarto alta_posible fuentes provinciadevelez 2026 altas el cuarto jpg el cuarto director colombia director maría candelaria aldana",
+     "donde": "fuentes/provinciadevelez-2026/altas/el-cuarto.tmdb.json",
+     "nota": "solo título, dirección y afiche; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "el cuarto inmortalizar olvidar a miriam latir memoria",
+     "donde": "fuentes/provinciadevelez-2026/web/posters.txt",
+     "nota": "solo título, dirección y afiche; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "contexto": "el cuarto día de fantasmagoría 2026 estuvo lleno de historias misterios y cine fantástico disfrutamos de cortos colombianos clásicos como río bravo la proyección de coração das trevas y un conversatorio sobre the x files además seguimos explorando el universo de cristian ponce con historia de lo oculto el asedio continúa fantasmagoría2026 asedios medellin cinefantástico cinedeterror fantasmagoría2",
+     "donde": "fuentes/ig-vigia/DesQfYPBRDQ.json",
+     "nota": "post de otro festival: «el cuarto día»",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "el cuarto día de la midbo estuvo atravesado por acercamientos al cine documental las conversaciones que nacen después de una proyección los espacios para compartir experiencias entre realizadorxs y una celebración de la música y el cine desliza para revivir estos momentos maravillosos del día 4 cien niños esperando un tren la proyección de cien niños esperando un tren de ignacio agüero dio paso a ",
+     "donde": "fuentes/ig-vigia/DfN9ykWCTy9.json",
+     "nota": "post de otro festival: «el cuarto día»",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "el cuarto día en qué momento pasó y es que uno quisiera que un festival como el festivaldecine bc no se acabara nunca lo bueno es que aún nos queda mucha programación por disfrutar esta es nuestra agenda para hoy y les recomiendo que por nada del mundo se pierdan las proyecciones del día selección oficial de cortos de la canoa dorada en tierra 28 de mayo paloquemao y una sorpresa que nos trae jefe",
+     "donde": "fuentes/ig-vigia/Dfr4AUjh0Cf.json",
+     "nota": "post de otro festival: «el cuarto día»",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «El cuarto»",
+     "nota": "5 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"El cuarto\" Aldana",
+     "nota": "Solo obras ajenas (El cuarto 2008 col., corto IMDb tt29493800 sin crédito; pro.imdb 403); nada vincula a María Candelaria Aldana",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El cuarto\" sinopsis",
+     "nota": "Solo obras ajenas (El cuarto 2008 col., corto IMDb tt29493800 sin crédito; pro.imdb 403); nada vincula a María Candelaria Aldana",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El cuarto\" synopsis Aldana",
+     "nota": "Solo obras ajenas (El cuarto 2008 col., corto IMDb tt29493800 sin crédito; pro.imdb 403); nada vincula a María Candelaria Aldana",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El cuarto\" Aldana cortometraje",
+     "nota": "Solo obras ajenas (El cuarto 2008 col., corto IMDb tt29493800 sin crédito; pro.imdb 403); nada vincula a María Candelaria Aldana",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El cuarto\" Aldana filmfreeway",
+     "nota": "Solo obras ajenas (El cuarto 2008 col., corto IMDb tt29493800 sin crédito; pro.imdb 403); nada vincula a María Candelaria Aldana",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El cuarto\" Aldana vimeo OR youtube",
+     "nota": "Solo obras ajenas (El cuarto 2008 col., corto IMDb tt29493800 sin crédito; pro.imdb 403); nada vincula a María Candelaria Aldana",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "provinciadevelez-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_7JCXMHJ72T8H"
+}
