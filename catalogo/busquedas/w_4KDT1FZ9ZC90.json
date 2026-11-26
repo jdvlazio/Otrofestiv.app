@@ -1,0 +1,89 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=En%20pays%20froid",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3710.html",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3710.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3710.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3710.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3710.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca/pelicula-3710.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4418.html",
+     "nota": "en: fuentes/bogoshorts-2026/web-cortos/4418.html",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1547983/",
+     "nota": "en: https://letterboxd.com/tmdb/1547983/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1547983",
+     "nota": "en: TMDB 1547983",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bogoshorts-2026"
+ ],
+ "hallazgo": {
+  "clase": "fuentes",
+  "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json"
+ },
+ "work_id": "w_4KDT1FZ9ZC90"
+}

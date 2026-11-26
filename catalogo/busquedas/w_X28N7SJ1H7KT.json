@@ -1,0 +1,69 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Cyclotron",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+     "nota": "original: fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/under-2026/correo-2026-11-20/mensaje.txt",
+     "nota": "original: fuentes/under-2026/correo-2026-11-20/mensaje.txt",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DgLHzJtCQpK.json",
+     "nota": "original: fuentes/ig-vigia/DgLHzJtCQpK.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1821440/",
+     "nota": "original: https://letterboxd.com/tmdb/1821440/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1821440",
+     "nota": "original: TMDB 1821440",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "under-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1821440"
+ },
+ "work_id": "w_X28N7SJ1H7KT"
+}

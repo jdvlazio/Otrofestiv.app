@@ -1,0 +1,170 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=So%C3%B1ar%20una%20serpiente",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/busca-diente-x-diente.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/busca-diente-x-diente.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/busca-mas-alla.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/busca-mas-alla.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/busca-sonar-una-serpiente.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/busca-sonar-una-serpiente.json",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/post-15573.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/post-15573.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/post-15588.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/post-15588.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/post-15604.json",
+     "nota": "es: fuentes/popayan-2026/cinecorto/post-15604.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/post-15610.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/post-15610.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/post-15624.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/post-15624.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/post-15633.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/post-15633.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.29sep.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.29sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.30sep.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.30sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.txt",
+     "nota": "original: fuentes/popayan-2026/programacion2026.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/seleccion-oficial-2026.28sep.json",
+     "nota": "original: fuentes/popayan-2026/seleccion-oficial-2026.28sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/seleccion-oficial-2026.json",
+     "nota": "original: fuentes/popayan-2026/seleccion-oficial-2026.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DdVUiEagOj2.json",
+     "nota": "original: fuentes/ig-vigia/DdVUiEagOj2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De0eYhTNXPb.json",
+     "nota": "original: fuentes/ig-vigia/De0eYhTNXPb.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2m9YiSClG.json",
+     "nota": "original: fuentes/ig-vigia/De2m9YiSClG.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De4MNF1yHu4.json",
+     "nota": "original: fuentes/ig-vigia/De4MNF1yHu4.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De4w_O_mYax.json",
+     "nota": "original: fuentes/ig-vigia/De4w_O_mYax.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7mm-IFTd_.json",
+     "nota": "original: fuentes/ig-vigia/De7mm-IFTd_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DezkojZmplm.json",
+     "nota": "original: fuentes/ig-vigia/DezkojZmplm.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfHkJIgOK2P.json",
+     "nota": "original: fuentes/ig-vigia/DfHkJIgOK2P.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1538892/",
+     "nota": "en: https://letterboxd.com/tmdb/1538892/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1538892",
+     "nota": "original: TMDB 1538892",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cinemancia-2025",
+  "popayan-2026"
+ ],
+ "hallazgo": {
+  "clase": "fuentes",
+  "donde": "fuentes/popayan-2026/cinecorto/post-15604.json"
+ },
+ "work_id": "w_R4ETZY9VSZMZ"
+}

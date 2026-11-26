@@ -1,0 +1,484 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Sirena%20mec%C3%A1nica",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.pdf",
+     "nota": "es: fuentes/ficci-65/catalogo/catalogo.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.txt",
+     "nota": "es: fuentes/ficci-65/catalogo/catalogo.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/jardin-2026/mupa.html",
+     "nota": "es: fuentes/jardin-2026/mupa.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/jardin-2026/post-sitemap.xml",
+     "nota": "es: fuentes/jardin-2026/post-sitemap.xml",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/jardin-2026/sirena-mecanica.html",
+     "nota": "es: fuentes/jardin-2026/sirena-mecanica.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/busca-sirena-mecanica.json",
+     "nota": "es: fuentes/popayan-2026/cinecorto/busca-sirena-mecanica.json",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/post-15605.json",
+     "nota": "es: fuentes/popayan-2026/cinecorto/post-15605.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.29sep.json",
+     "nota": "es: fuentes/popayan-2026/programacion2026.29sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.30sep.json",
+     "nota": "es: fuentes/popayan-2026/programacion2026.30sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.json",
+     "nota": "es: fuentes/popayan-2026/programacion2026.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.txt",
+     "nota": "es: fuentes/popayan-2026/programacion2026.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/seleccion-oficial-2026.28sep.json",
+     "nota": "es: fuentes/popayan-2026/seleccion-oficial-2026.28sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/seleccion-oficial-2026.json",
+     "nota": "es: fuentes/popayan-2026/seleccion-oficial-2026.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/tulpa-13179.json",
+     "nota": "es: fuentes/popayan-2026/tulpa-13179.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt41723277/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De-AuZuIc1w.json",
+     "nota": "es: fuentes/ig-vigia/De-AuZuIc1w.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De0V1lFDU4D.json",
+     "nota": "es: fuentes/ig-vigia/De0V1lFDU4D.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De22AqJMs6g.json",
+     "nota": "es: fuentes/ig-vigia/De22AqJMs6g.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7K0NkCT9s.json",
+     "nota": "es: fuentes/ig-vigia/De7K0NkCT9s.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7jI5tp9n3.json",
+     "nota": "es: fuentes/ig-vigia/De7jI5tp9n3.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DerwqxjlMye.json",
+     "nota": "es: fuentes/ig-vigia/DerwqxjlMye.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DesQfYPBRDQ.json",
+     "nota": "es: fuentes/ig-vigia/DesQfYPBRDQ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DeslqRAFLMP.json",
+     "nota": "es: fuentes/ig-vigia/DeslqRAFLMP.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexiGIsDr3j.json",
+     "nota": "es: fuentes/ig-vigia/DexiGIsDr3j.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df-MpZQkcdR.json",
+     "nota": "es: fuentes/ig-vigia/Df-MpZQkcdR.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df2ud_5G0Gl.json",
+     "nota": "es: fuentes/ig-vigia/Df2ud_5G0Gl.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df8XqDTjDkw.json",
+     "nota": "es: fuentes/ig-vigia/Df8XqDTjDkw.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df8iF1QFpzk.json",
+     "nota": "es: fuentes/ig-vigia/Df8iF1QFpzk.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df9ojn0OieW.json",
+     "nota": "es: fuentes/ig-vigia/Df9ojn0OieW.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfAAArWkTlJ.json",
+     "nota": "es: fuentes/ig-vigia/DfAAArWkTlJ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfAJ26KRvfc.json",
+     "nota": "es: fuentes/ig-vigia/DfAJ26KRvfc.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfAYrImlYJX.json",
+     "nota": "es: fuentes/ig-vigia/DfAYrImlYJX.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfAzifIj8zZ.json",
+     "nota": "es: fuentes/ig-vigia/DfAzifIj8zZ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfBGEyRGaKG.json",
+     "nota": "es: fuentes/ig-vigia/DfBGEyRGaKG.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfDlyoFEdJD.json",
+     "nota": "es: fuentes/ig-vigia/DfDlyoFEdJD.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfHy8m7EawM.json",
+     "nota": "es: fuentes/ig-vigia/DfHy8m7EawM.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfIOLhBloOw.json",
+     "nota": "es: fuentes/ig-vigia/DfIOLhBloOw.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfKqcEAERcs.json",
+     "nota": "es: fuentes/ig-vigia/DfKqcEAERcs.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfLBeQ6IHuO.json",
+     "nota": "es: fuentes/ig-vigia/DfLBeQ6IHuO.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfLqmwhjVTi.json",
+     "nota": "es: fuentes/ig-vigia/DfLqmwhjVTi.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfN-KrejLiM.json",
+     "nota": "es: fuentes/ig-vigia/DfN-KrejLiM.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfN9ykWCTy9.json",
+     "nota": "es: fuentes/ig-vigia/DfN9ykWCTy9.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfVgTfHptHE.json",
+     "nota": "es: fuentes/ig-vigia/DfVgTfHptHE.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfVi6yjPcX_.json",
+     "nota": "es: fuentes/ig-vigia/DfVi6yjPcX_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfXptadyU4C.json",
+     "nota": "es: fuentes/ig-vigia/DfXptadyU4C.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfYxORGuVS9.json",
+     "nota": "es: fuentes/ig-vigia/DfYxORGuVS9.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfaMlZRR1Jo.json",
+     "nota": "es: fuentes/ig-vigia/DfaMlZRR1Jo.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfaNEWSERxC.json",
+     "nota": "es: fuentes/ig-vigia/DfaNEWSERxC.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfaRmoMPROr.json",
+     "nota": "es: fuentes/ig-vigia/DfaRmoMPROr.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfahectRQTZ.json",
+     "nota": "es: fuentes/ig-vigia/DfahectRQTZ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfbEPvcIZBO.json",
+     "nota": "es: fuentes/ig-vigia/DfbEPvcIZBO.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfbQ1Huxyw3.json",
+     "nota": "es: fuentes/ig-vigia/DfbQ1Huxyw3.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfczvapJnbQ.json",
+     "nota": "es: fuentes/ig-vigia/DfczvapJnbQ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfdB21So3TD.json",
+     "nota": "es: fuentes/ig-vigia/DfdB21So3TD.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dff7g10EXSd.json",
+     "nota": "es: fuentes/ig-vigia/Dff7g10EXSd.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DffPV-2xDoh.json",
+     "nota": "es: fuentes/ig-vigia/DffPV-2xDoh.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfhVjPnkSez.json",
+     "nota": "es: fuentes/ig-vigia/DfhVjPnkSez.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfiatfQRxTV.json",
+     "nota": "es: fuentes/ig-vigia/DfiatfQRxTV.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfil_-mgP5G.json",
+     "nota": "es: fuentes/ig-vigia/Dfil_-mgP5G.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfkQ2myhpOh.json",
+     "nota": "es: fuentes/ig-vigia/DfkQ2myhpOh.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfkS3CukdJ7.json",
+     "nota": "es: fuentes/ig-vigia/DfkS3CukdJ7.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DflgSQ8FDce.json",
+     "nota": "es: fuentes/ig-vigia/DflgSQ8FDce.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfmWXM9OpR_.json",
+     "nota": "es: fuentes/ig-vigia/DfmWXM9OpR_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfoPJtPOFq6.json",
+     "nota": "es: fuentes/ig-vigia/DfoPJtPOFq6.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfpOTfWFarG.json",
+     "nota": "es: fuentes/ig-vigia/DfpOTfWFarG.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfpm6jYAKV7.json",
+     "nota": "es: fuentes/ig-vigia/Dfpm6jYAKV7.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfuXH73uo8j.json",
+     "nota": "es: fuentes/ig-vigia/DfuXH73uo8j.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfxNw4GgQve.json",
+     "nota": "es: fuentes/ig-vigia/DfxNw4GgQve.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfyfsrDAuTO.json",
+     "nota": "es: fuentes/ig-vigia/DfyfsrDAuTO.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgD_o5zkapD.json",
+     "nota": "es: fuentes/ig-vigia/DgD_o5zkapD.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgF7vljTKK6.json",
+     "nota": "es: fuentes/ig-vigia/DgF7vljTKK6.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgGGzCxmpDs.json",
+     "nota": "es: fuentes/ig-vigia/DgGGzCxmpDs.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgI6vLvljq-.json",
+     "nota": "es: fuentes/ig-vigia/DgI6vLvljq-.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgLaK8Alvkk.json",
+     "nota": "es: fuentes/ig-vigia/DgLaK8Alvkk.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1146084508287316.json",
+     "nota": "es: fuentes/ig-vigia/fb-1146084508287316.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1457717599892280.json",
+     "nota": "es: fuentes/ig-vigia/fb-1457717599892280.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1458626373134736.json",
+     "nota": "es: fuentes/ig-vigia/fb-1458626373134736.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1460002319663808.json",
+     "nota": "es: fuentes/ig-vigia/fb-1460002319663808.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1461153646215342.json",
+     "nota": "es: fuentes/ig-vigia/fb-1461153646215342.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1668871/",
+     "nota": "es: https://letterboxd.com/tmdb/1668871/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1668871",
+     "nota": "es: TMDB 1668871",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Sirena mecánica\" Vivares Sato",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Sirena mecánica\" sinopsis",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Sirena mecánica\" synopsis Vivares Sato",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Con máscara de esgrimista y espada forrada con terciopelo\"",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:festicinejardin.com \"Sirena mecánica\"",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:festicinepopayan.com \"Sirena mecánica\"",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicinerio-2026",
+  "ficci-65",
+  "jardin-2026",
+  "popayan-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4HD241JZEE7"
+}

@@ -1,0 +1,148 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Lamentos%20de%20un%20balc%C3%B3n",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3749.html",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3749.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3749.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3749.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3749.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca/pelicula-3749.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/ig-apify-2026-10-23.json",
+     "nota": "original: fuentes/bogoshorts-2026/ig-apify-2026-10-23.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4243.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4243.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/cineautopsia-2026/ca-2848.html",
+     "nota": "original: fuentes/cineautopsia-2026/ca-2848.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/cinetoro-2026/programas-2.html",
+     "nota": "original: fuentes/cinetoro-2026/programas-2.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/cinetoro-2026/vector-imaginado-competencia-oficial-nacional.html",
+     "nota": "original: fuentes/cinetoro-2026/vector-imaginado-competencia-oficial-nacional.html",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1744098/",
+     "nota": "original: https://letterboxd.com/tmdb/1744098/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1744098",
+     "nota": "original: TMDB 1744098",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Lamentos de un balcón\" Chispas",
+     "nota": "libros Chispas (Rivas/Goytisolo), poemas; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Lamentos de un balcón\" sinopsis",
+     "nota": "Genet El balcón, MUBI On the empty balcony; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Lamentos de un balcón\" synopsis Chispas",
+     "nota": "El nuevo barrio, libros Chispas; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Tiembla tiembla Se me derrama el café El autobús\"",
+     "nota": "letras de canciones; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:bogotaexperimental.com \"Lamentos de un balcón\"",
+     "nota": "sin páginas de bogotaexperimental.com; PDFs Idartes",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:cinetoro.org \"Lamentos de un balcón\"",
+     "nota": "sin páginas de cinetoro.org; En el balcón vacío",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:info.bogoshorts.com \"Lamentos de un balcón\"",
+     "nota": "catálogos Bogoshorts sin el título",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bogoshorts-2026",
+  "cineautopsia-2026",
+  "cinemancia-2026",
+  "cinetoro-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4ENGEB7EKSY"
+}

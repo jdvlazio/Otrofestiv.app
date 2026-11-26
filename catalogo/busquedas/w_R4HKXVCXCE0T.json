@@ -1,0 +1,99 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Un%20nuevo%20amanecer",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt36721291/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/Deu5eX1G4gQ.json",
+     "nota": "original: fuentes/ig-vigia/Deu5eX1G4gQ.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1369678/",
+     "nota": "original: https://letterboxd.com/tmdb/1369678/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1369678",
+     "nota": "original: TMDB 1369678",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Un nuevo amanecer\" Padilla",
+     "nota": "telenovela Nuevo amanecer 1988, personas Padilla",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Un nuevo amanecer\" sinopsis",
+     "nota": "serie Atresplayer 2024, película 1942, novela Sandra Brown",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Un nuevo amanecer\" synopsis Padilla",
+     "nota": "IMDb del documental de Priscila Padilla sin sinopsis; serie Atresplayer · máquina: original: https://www.imdb.com/pt/title/tt36721291",
+     "resultado": "ilegible",
+     "url": "https://www.imdb.com/pt/title/tt36721291"
+    },
+    {
+     "consulta": "\"Un Nuevo Amanecer narra la historia de cinco mujeres\"",
+     "nota": "radionica (redirige, no se leyó), boxofficemojo, cinelatino.fr · máquina: original: http://www.radionica.rocks/cine/documental-un-nuevo-amanecer-mujeres-firmantes-paz",
+     "resultado": "no está",
+     "url": "http://www.radionica.rocks/cine/documental-un-nuevo-amanecer-mujeres-firmantes-paz"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficdeh-2026",
+  "ficmontanas-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4HKXVCXCE0T"
+}

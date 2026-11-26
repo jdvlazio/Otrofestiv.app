@@ -1,0 +1,787 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=El%20cazador",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3711.html",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3711.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3719.html",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3719.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3756.html",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3756.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/altas/el-alto-de-los-buitres.tmdb.json",
+     "nota": "original: fuentes/bogoshorts-2026/altas/el-alto-de-los-buitres.tmdb.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/catalogo-bfm2026.pdf",
+     "nota": "original: fuentes/bogoshorts-2026/catalogo-bfm2026.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3711.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3711.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3719.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3719.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3756.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3756.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3711.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca/pelicula-3711.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3719.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca/pelicula-3719.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3756.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca/pelicula-3756.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/enlaces/10BFM_catalogo2026-2026-11-24.pdf",
+     "nota": "original: fuentes/bogoshorts-2026/enlaces/10BFM_catalogo2026-2026-11-24.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/ig-apify-2026-10-23.json",
+     "nota": "original: fuentes/bogoshorts-2026/ig-apify-2026-10-23.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/nueva/bfm.pdf",
+     "nota": "original: fuentes/bogoshorts-2026/nueva/bfm.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3801.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3801.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3803.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3803.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3807.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3807.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3843.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3843.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3852.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3852.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3895.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3895.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3897.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3897.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3901.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3901.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3911.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3911.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3913.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3913.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3932.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3932.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3934.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3934.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3992.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3992.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3997.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3997.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4008.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4008.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4030.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4030.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4035.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4035.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4061.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4061.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4083.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4083.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4084.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4084.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4086.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4086.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4106.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4106.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4111.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4111.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4112.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4112.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4130.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4130.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4139.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4139.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4153.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4153.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4179.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4179.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4199.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4199.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4207.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4207.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4214.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4214.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4219.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4219.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4220.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4220.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4238.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4238.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4278.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4278.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4324.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4324.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4326.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4326.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.pdf",
+     "nota": "original: fuentes/ficci-65/catalogo/catalogo.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.txt",
+     "nota": "original: fuentes/ficci-65/catalogo/catalogo.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/filcmar-2026/matriz/gid-1846105446.csv",
+     "nota": "original: fuentes/filcmar-2026/matriz/gid-1846105446.csv",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/filcmar-2026/matriz/html-1846105446.html",
+     "nota": "original: fuentes/filcmar-2026/matriz/html-1846105446.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/filcmar-2026/matriz/posters-links.json",
+     "nota": "original: fuentes/filcmar-2026/matriz/posters-links.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De-T6EFmZkZ.json",
+     "nota": "original: fuentes/ig-vigia/De-T6EFmZkZ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De-XK0IkfZK.json",
+     "nota": "original: fuentes/ig-vigia/De-XK0IkfZK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De0G3IuDh69.json",
+     "nota": "original: fuentes/ig-vigia/De0G3IuDh69.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De12_5euMuu.json",
+     "nota": "original: fuentes/ig-vigia/De12_5euMuu.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De177TUEbMw.json",
+     "nota": "original: fuentes/ig-vigia/De177TUEbMw.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De1llbkRzhJ.json",
+     "nota": "original: fuentes/ig-vigia/De1llbkRzhJ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2JXcsFQFK.json",
+     "nota": "original: fuentes/ig-vigia/De2JXcsFQFK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2XRXYD4bp.json",
+     "nota": "original: fuentes/ig-vigia/De2XRXYD4bp.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2lEBXj_lV.json",
+     "nota": "original: fuentes/ig-vigia/De2lEBXj_lV.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2tvC3iXox.json",
+     "nota": "original: fuentes/ig-vigia/De2tvC3iXox.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De4w_O_mYax.json",
+     "nota": "original: fuentes/ig-vigia/De4w_O_mYax.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De5nhiFMzEy.json",
+     "nota": "original: fuentes/ig-vigia/De5nhiFMzEy.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7K0NkCT9s.json",
+     "nota": "original: fuentes/ig-vigia/De7K0NkCT9s.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7mm-IFTd_.json",
+     "nota": "original: fuentes/ig-vigia/De7mm-IFTd_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DeX-9haDCkP.json",
+     "nota": "original: fuentes/ig-vigia/DeX-9haDCkP.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DeuRufbq5TX.json",
+     "nota": "original: fuentes/ig-vigia/DeuRufbq5TX.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DeulVaTJnnK.json",
+     "nota": "original: fuentes/ig-vigia/DeulVaTJnnK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DevBEdkFzfd.json",
+     "nota": "original: fuentes/ig-vigia/DevBEdkFzfd.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DewrPm2RkKa.json",
+     "nota": "original: fuentes/ig-vigia/DewrPm2RkKa.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DewzIRKkVLp.json",
+     "nota": "original: fuentes/ig-vigia/DewzIRKkVLp.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexDMqhFWPR.json",
+     "nota": "original: fuentes/ig-vigia/DexDMqhFWPR.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexQDbhD7dN.json",
+     "nota": "original: fuentes/ig-vigia/DexQDbhD7dN.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexQygZiaId.json",
+     "nota": "original: fuentes/ig-vigia/DexQygZiaId.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexbiInD2sM.json",
+     "nota": "original: fuentes/ig-vigia/DexbiInD2sM.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dexix0wja0O.json",
+     "nota": "original: fuentes/ig-vigia/Dexix0wja0O.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DezOYLLEaQ6.json",
+     "nota": "original: fuentes/ig-vigia/DezOYLLEaQ6.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DezWCmQEdHT.json",
+     "nota": "original: fuentes/ig-vigia/DezWCmQEdHT.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DezYmVTETbA.json",
+     "nota": "original: fuentes/ig-vigia/DezYmVTETbA.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dezk8-CFSyI.json",
+     "nota": "original: fuentes/ig-vigia/Dezk8-CFSyI.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DezmbH7FUrs.json",
+     "nota": "original: fuentes/ig-vigia/DezmbH7FUrs.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dezyk_Rjyr_.json",
+     "nota": "original: fuentes/ig-vigia/Dezyk_Rjyr_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df-JuHokT6M.json",
+     "nota": "original: fuentes/ig-vigia/Df-JuHokT6M.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df1wRCNRiwB.json",
+     "nota": "original: fuentes/ig-vigia/Df1wRCNRiwB.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df2f8PYm_rp.json",
+     "nota": "original: fuentes/ig-vigia/Df2f8PYm_rp.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfASiVIkW3R.json",
+     "nota": "original: fuentes/ig-vigia/DfASiVIkW3R.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfAWF0dRPvy.json",
+     "nota": "original: fuentes/ig-vigia/DfAWF0dRPvy.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "nota": "original: fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfCxk41kavP.json",
+     "nota": "original: fuentes/ig-vigia/DfCxk41kavP.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfDa48rGRlA.json",
+     "nota": "original: fuentes/ig-vigia/DfDa48rGRlA.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfFhCmgEQBb.json",
+     "nota": "original: fuentes/ig-vigia/DfFhCmgEQBb.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfFqnSABLSy.json",
+     "nota": "original: fuentes/ig-vigia/DfFqnSABLSy.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfHkJIgOK2P.json",
+     "nota": "original: fuentes/ig-vigia/DfHkJIgOK2P.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfInDELCdns.json",
+     "nota": "original: fuentes/ig-vigia/DfInDELCdns.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfNVixGB-0F.json",
+     "nota": "original: fuentes/ig-vigia/DfNVixGB-0F.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfQNTBSoxc4.json",
+     "nota": "original: fuentes/ig-vigia/DfQNTBSoxc4.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfS_5anic5o.json",
+     "nota": "original: fuentes/ig-vigia/DfS_5anic5o.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfUvTyQETc0.json",
+     "nota": "original: fuentes/ig-vigia/DfUvTyQETc0.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfVmnhSiRvF.json",
+     "nota": "original: fuentes/ig-vigia/DfVmnhSiRvF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfbPq5Fkewj.json",
+     "nota": "original: fuentes/ig-vigia/DfbPq5Fkewj.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfbbhoeESLg.json",
+     "nota": "original: fuentes/ig-vigia/DfbbhoeESLg.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfbeSV0Fqs_.json",
+     "nota": "original: fuentes/ig-vigia/DfbeSV0Fqs_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfc1k7tmVBs.json",
+     "nota": "original: fuentes/ig-vigia/Dfc1k7tmVBs.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfceG38kZDH.json",
+     "nota": "original: fuentes/ig-vigia/DfceG38kZDH.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfd32kSjRKC.json",
+     "nota": "original: fuentes/ig-vigia/Dfd32kSjRKC.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfe33vAxLYs.json",
+     "nota": "original: fuentes/ig-vigia/Dfe33vAxLYs.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfhyu_fmw4p.json",
+     "nota": "original: fuentes/ig-vigia/Dfhyu_fmw4p.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfkomnaGQZw.json",
+     "nota": "original: fuentes/ig-vigia/DfkomnaGQZw.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfnPWCWgXmF.json",
+     "nota": "original: fuentes/ig-vigia/DfnPWCWgXmF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfs0m5_mU1g.json",
+     "nota": "original: fuentes/ig-vigia/Dfs0m5_mU1g.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfsP6SBmVnb.json",
+     "nota": "original: fuentes/ig-vigia/DfsP6SBmVnb.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfuYkaYG2Zz.json",
+     "nota": "original: fuentes/ig-vigia/DfuYkaYG2Zz.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfuZLQ9xk9a.json",
+     "nota": "original: fuentes/ig-vigia/DfuZLQ9xk9a.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfuaQARmyfi.json",
+     "nota": "original: fuentes/ig-vigia/DfuaQARmyfi.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfv0IawEaHy.json",
+     "nota": "original: fuentes/ig-vigia/Dfv0IawEaHy.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfvkfVVxDvx.json",
+     "nota": "original: fuentes/ig-vigia/DfvkfVVxDvx.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfx0fksmSp3.json",
+     "nota": "original: fuentes/ig-vigia/Dfx0fksmSp3.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfxAMKckb4u.json",
+     "nota": "original: fuentes/ig-vigia/DfxAMKckb4u.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfxNw4GgQve.json",
+     "nota": "original: fuentes/ig-vigia/DfxNw4GgQve.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfxTUFYG243.json",
+     "nota": "original: fuentes/ig-vigia/DfxTUFYG243.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfxWNv8m1ya.json",
+     "nota": "original: fuentes/ig-vigia/DfxWNv8m1ya.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfxWVwjGzPB.json",
+     "nota": "original: fuentes/ig-vigia/DfxWVwjGzPB.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfxYHqgR-6X.json",
+     "nota": "original: fuentes/ig-vigia/DfxYHqgR-6X.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfxnZ7BmYry.json",
+     "nota": "original: fuentes/ig-vigia/DfxnZ7BmYry.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfyfOMcktyg.json",
+     "nota": "original: fuentes/ig-vigia/DfyfOMcktyg.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfzcCpZm2Uq.json",
+     "nota": "original: fuentes/ig-vigia/DfzcCpZm2Uq.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1165859796385869.json",
+     "nota": "original: fuentes/ig-vigia/fb-1165859796385869.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1451743740489666.json",
+     "nota": "original: fuentes/ig-vigia/fb-1451743740489666.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1453264573670916.json",
+     "nota": "original: fuentes/ig-vigia/fb-1453264573670916.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1453360106994696.json",
+     "nota": "original: fuentes/ig-vigia/fb-1453360106994696.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1455764013420972.json",
+     "nota": "original: fuentes/ig-vigia/fb-1455764013420972.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1458626373134736.json",
+     "nota": "original: fuentes/ig-vigia/fb-1458626373134736.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1461141569549883.json",
+     "nota": "original: fuentes/ig-vigia/fb-1461141569549883.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1461153646215342.json",
+     "nota": "original: fuentes/ig-vigia/fb-1461153646215342.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1463250682672305.json",
+     "nota": "original: fuentes/ig-vigia/fb-1463250682672305.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1619609796860976.json",
+     "nota": "original: fuentes/ig-vigia/fb-1619609796860976.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1622118789943410.json",
+     "nota": "original: fuentes/ig-vigia/fb-1622118789943410.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1622850303203592.json",
+     "nota": "original: fuentes/ig-vigia/fb-1622850303203592.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1623177046504251.json",
+     "nota": "original: fuentes/ig-vigia/fb-1623177046504251.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1668874/",
+     "nota": "original: https://letterboxd.com/tmdb/1668874/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1668874",
+     "nota": "original: TMDB 1668874",
+     "resultado": "no está"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bogoshorts-2026",
+  "cinemancia-2026",
+  "ficci-65",
+  "filcmar-2026"
+ ],
+ "hallazgo": {
+  "clase": "fuentes",
+  "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json"
+ },
+ "work_id": "w_R4FS61XPY9M6"
+}

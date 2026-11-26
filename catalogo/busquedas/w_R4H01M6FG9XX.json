@@ -1,0 +1,416 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Relicto",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficcali-2026/directores.json",
+     "nota": "original: fuentes/ficcali-2026/directores.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/ficha-ejemplo.html",
+     "nota": "original: fuentes/ficcali-2026/ficha-ejemplo.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/borrador-automatico-8.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/borrador-automatico-8.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/futuros-luminosos.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/futuros-luminosos.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/la-maria.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/la-maria.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/las-pesadillas-del-siervo.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/las-pesadillas-del-siervo.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/luis-tercero.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/luis-tercero.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/no-me-devoro-pc6-la-gula.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/no-me-devoro-pc6-la-gula.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/relicto.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/relicto.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/todo-comenzo-por-el-fin.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/todo-comenzo-por-el-fin.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/media-posters.json",
+     "nota": "original: fuentes/ficcali-2026/media-posters.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/pelicula.json",
+     "nota": "original: fuentes/ficcali-2026/pelicula.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/programacion-ficcali-2026-20261006.html",
+     "nota": "original: fuentes/ficcali-2026/programacion-ficcali-2026-20261006.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/programacion-ficcali-2026.html",
+     "nota": "original: fuentes/ficcali-2026/programacion-ficcali-2026.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/programacion-ficcali-20261018.json",
+     "nota": "original: fuentes/ficcali-2026/programacion-ficcali-20261018.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/programacion-ficcali.json",
+     "nota": "original: fuentes/ficcali-2026/programacion-ficcali.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/programacion.json",
+     "nota": "original: fuentes/ficcali-2026/programacion.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/seleccion-secciones.json",
+     "nota": "original: fuentes/ficcali-2026/seleccion-secciones.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/boyuna.html",
+     "nota": "original: fuentes/midbo-2026/fichas/boyuna.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar.html",
+     "nota": "original: fuentes/midbo-2026/fichas/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/el-valor-de-la-palabra.html",
+     "nota": "original: fuentes/midbo-2026/fichas/el-valor-de-la-palabra.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/las-almas-ni-los-ojos.html",
+     "nota": "original: fuentes/midbo-2026/fichas/las-almas-ni-los-ojos.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/lolita-en-honda.html",
+     "nota": "original: fuentes/midbo-2026/fichas/lolita-en-honda.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/muchedumbre.html",
+     "nota": "original: fuentes/midbo-2026/fichas/muchedumbre.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/relicto.html",
+     "nota": "original: fuentes/midbo-2026/fichas/relicto.html",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/midbo-2026/pelicula-2.json",
+     "nota": "original: fuentes/midbo-2026/pelicula-2.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/midbo-2026/pelicula.json",
+     "nota": "original: fuentes/midbo-2026/pelicula.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/midbo-2026/seccion.json",
+     "nota": "original: fuentes/midbo-2026/seccion.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/lecturas/A-prosa.json",
+     "nota": "original: fuentes/miradas-2026/lecturas/A-prosa.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/lecturas/B-grillas.json",
+     "nota": "original: fuentes/miradas-2026/lecturas/B-grillas.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/lecturas/C-web.json",
+     "nota": "original: fuentes/miradas-2026/lecturas/C-web.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/pdf-programacion/agenda.txt",
+     "nota": "original: fuentes/miradas-2026/pdf-programacion/agenda.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/pdf-programacion/prog.txt",
+     "nota": "original: fuentes/miradas-2026/pdf-programacion/prog.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/pdf-programacion/programacion-miradas-2026-liviano.pdf",
+     "nota": "original: fuentes/miradas-2026/pdf-programacion/programacion-miradas-2026-liviano.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/web/paginas/p110.txt",
+     "nota": "original: fuentes/miradas-2026/web/paginas/p110.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/web/paginas/p14.txt",
+     "nota": "original: fuentes/miradas-2026/web/paginas/p14.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/web/paginas/p20.txt",
+     "nota": "original: fuentes/miradas-2026/web/paginas/p20.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/web/paginas/p86.txt",
+     "nota": "original: fuentes/miradas-2026/web/paginas/p86.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/web/paginas/p91.txt",
+     "nota": "original: fuentes/miradas-2026/web/paginas/p91.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/web/programacion-2026.pdf",
+     "nota": "original: fuentes/miradas-2026/web/programacion-2026.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/miradas-2026/web/programacion-2026.txt",
+     "nota": "original: fuentes/miradas-2026/web/programacion-2026.txt",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De-XK0IkfZK.json",
+     "nota": "original: fuentes/ig-vigia/De-XK0IkfZK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De0G3IuDh69.json",
+     "nota": "original: fuentes/ig-vigia/De0G3IuDh69.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De177TUEbMw.json",
+     "nota": "original: fuentes/ig-vigia/De177TUEbMw.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2JXcsFQFK.json",
+     "nota": "original: fuentes/ig-vigia/De2JXcsFQFK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2XRXYD4bp.json",
+     "nota": "original: fuentes/ig-vigia/De2XRXYD4bp.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2lEBXj_lV.json",
+     "nota": "original: fuentes/ig-vigia/De2lEBXj_lV.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2tvC3iXox.json",
+     "nota": "original: fuentes/ig-vigia/De2tvC3iXox.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7jI5tp9n3.json",
+     "nota": "original: fuentes/ig-vigia/De7jI5tp9n3.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De9xNesDC2Y.json",
+     "nota": "original: fuentes/ig-vigia/De9xNesDC2Y.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DejoeT9MGWt.json",
+     "nota": "original: fuentes/ig-vigia/DejoeT9MGWt.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DevBEdkFzfd.json",
+     "nota": "original: fuentes/ig-vigia/DevBEdkFzfd.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DewzIRKkVLp.json",
+     "nota": "original: fuentes/ig-vigia/DewzIRKkVLp.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexDMqhFWPR.json",
+     "nota": "original: fuentes/ig-vigia/DexDMqhFWPR.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexQDbhD7dN.json",
+     "nota": "original: fuentes/ig-vigia/DexQDbhD7dN.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexbiInD2sM.json",
+     "nota": "original: fuentes/ig-vigia/DexbiInD2sM.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dexix0wja0O.json",
+     "nota": "original: fuentes/ig-vigia/Dexix0wja0O.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DezYmVTETbA.json",
+     "nota": "original: fuentes/ig-vigia/DezYmVTETbA.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dezk8-CFSyI.json",
+     "nota": "original: fuentes/ig-vigia/Dezk8-CFSyI.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dezyk_Rjyr_.json",
+     "nota": "original: fuentes/ig-vigia/Dezyk_Rjyr_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "nota": "original: fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfGHtjUCR3C.json",
+     "nota": "original: fuentes/ig-vigia/DfGHtjUCR3C.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfGZ9voBxPp.json",
+     "nota": "original: fuentes/ig-vigia/DfGZ9voBxPp.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfInDELCdns.json",
+     "nota": "original: fuentes/ig-vigia/DfInDELCdns.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfL3mvUjhXa.json",
+     "nota": "original: fuentes/ig-vigia/DfL3mvUjhXa.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfM62ZOIG6R.json",
+     "nota": "original: fuentes/ig-vigia/DfM62ZOIG6R.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfOL4Z_iWKB.json",
+     "nota": "original: fuentes/ig-vigia/DfOL4Z_iWKB.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfPT4i1jXbI.json",
+     "nota": "original: fuentes/ig-vigia/DfPT4i1jXbI.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfQ2bZsDdIr.json",
+     "nota": "original: fuentes/ig-vigia/DfQ2bZsDdIr.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfVmnhSiRvF.json",
+     "nota": "original: fuentes/ig-vigia/DfVmnhSiRvF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfaS9rJtMGf.json",
+     "nota": "original: fuentes/ig-vigia/DfaS9rJtMGf.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgDtxqZFIck.json",
+     "nota": "original: fuentes/ig-vigia/DgDtxqZFIck.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1633353/",
+     "nota": "en: https://letterboxd.com/tmdb/1633353/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1633353",
+     "nota": "en: TMDB 1633353",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficcali-2026",
+  "midbo-2026",
+  "miradas-2026"
+ ],
+ "hallazgo": {
+  "clase": "fuentes",
+  "donde": "fuentes/midbo-2026/fichas/relicto.html"
+ },
+ "work_id": "w_R4H01M6FG9XX"
+}

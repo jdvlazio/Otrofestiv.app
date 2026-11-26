@@ -1,0 +1,92 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Cassandra",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bogoshorts-2026/009_festivales.html",
+     "nota": "original: fuentes/bogoshorts-2026/009_festivales.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3738.html",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3738.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3738.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3738.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3738.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca/pelicula-3738.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/ig-apify-2026-10-23.json",
+     "nota": "original: fuentes/bogoshorts-2026/ig-apify-2026-10-23.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3929.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3929.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4162.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4162.html",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "tmdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bogoshorts-2026"
+ ],
+ "hallazgo": {
+  "clase": "fuentes",
+  "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json"
+ },
+ "work_id": "w_4KH6EKY3T81X"
+}

@@ -1,0 +1,136 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=XIE.%20Defensa%20de%20la%20vida",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-eventos.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-eventos.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De5K81pgW8P.json",
+     "nota": "original: fuentes/ig-vigia/De5K81pgW8P.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7TIV4tH4G.json",
+     "nota": "original: fuentes/ig-vigia/De7TIV4tH4G.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DesniqmgHp3.json",
+     "nota": "original: fuentes/ig-vigia/DesniqmgHp3.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexNwY_GzS8.json",
+     "nota": "original: fuentes/ig-vigia/DexNwY_GzS8.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfGJx9SmFq7.json",
+     "nota": "original: fuentes/ig-vigia/DfGJx9SmFq7.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfLqmwhjVTi.json",
+     "nota": "original: fuentes/ig-vigia/DfLqmwhjVTi.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfbbhoeESLg.json",
+     "nota": "original: fuentes/ig-vigia/DfbbhoeESLg.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfhs3XxIel6.json",
+     "nota": "original: fuentes/ig-vigia/Dfhs3XxIel6.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfs7Bm9FBXh.json",
+     "nota": "original: fuentes/ig-vigia/Dfs7Bm9FBXh.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfuXH73uo8j.json",
+     "nota": "original: fuentes/ig-vigia/DfuXH73uo8j.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1452909343706439.json",
+     "nota": "original: fuentes/ig-vigia/fb-1452909343706439.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1453264573670916.json",
+     "nota": "original: fuentes/ig-vigia/fb-1453264573670916.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1455764013420972.json",
+     "nota": "original: fuentes/ig-vigia/fb-1455764013420972.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1739023/",
+     "nota": "original: https://letterboxd.com/tmdb/1739023/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1739023",
+     "nota": "original: TMDB 1739023",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficdeh-2026",
+  "itagui-2026",
+  "siembrafest-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1739023"
+ },
+ "work_id": "w_R4HJ5XDMDM6F"
+}

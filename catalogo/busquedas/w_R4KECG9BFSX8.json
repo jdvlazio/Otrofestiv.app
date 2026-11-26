@@ -1,0 +1,136 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Malas%20posturas",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficica-2026/programas.html",
+     "nota": "original: fuentes/ficica-2026/programas.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficica-2026/seleccion-oficial.html",
+     "nota": "original: fuentes/ficica-2026/seleccion-oficial.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/jardin-2026/malas-posturas.html",
+     "nota": "original: fuentes/jardin-2026/malas-posturas.html",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/jardin-2026/post-sitemap.xml",
+     "nota": "original: fuentes/jardin-2026/post-sitemap.xml",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/villadeleyvaiff-2026/apify-2026-10-25.json",
+     "nota": "original: fuentes/villadeleyvaiff-2026/apify-2026-10-25.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/villadeleyvaiff-2026/cortos-colombia.pdf",
+     "nota": "original: fuentes/villadeleyvaiff-2026/cortos-colombia.pdf",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/villadeleyvaiff-2026/largos-documental.pdf",
+     "nota": "original: fuentes/villadeleyvaiff-2026/largos-documental.pdf",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/villadeleyvaiff-2026/programa-11nov.pdf",
+     "nota": "original: fuentes/villadeleyvaiff-2026/programa-11nov.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/villadeleyvaiff-2026/programa-12nov.pdf",
+     "nota": "original: fuentes/villadeleyvaiff-2026/programa-12nov.pdf",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De22AqJMs6g.json",
+     "nota": "original: fuentes/ig-vigia/De22AqJMs6g.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2m9YiSClG.json",
+     "nota": "original: fuentes/ig-vigia/De2m9YiSClG.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7fypHsu9U.json",
+     "nota": "original: fuentes/ig-vigia/De7fypHsu9U.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DehzQHCJACu.json",
+     "nota": "original: fuentes/ig-vigia/DehzQHCJACu.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfAJ26KRvfc.json",
+     "nota": "original: fuentes/ig-vigia/DfAJ26KRvfc.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfNO6eex__m.json",
+     "nota": "original: fuentes/ig-vigia/DfNO6eex__m.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfr7PaIscWe.json",
+     "nota": "original: fuentes/ig-vigia/Dfr7PaIscWe.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1595060/",
+     "nota": "en: https://letterboxd.com/tmdb/1595060/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1595060",
+     "nota": "en: TMDB 1595060",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficica-2026",
+  "jardin-2026",
+  "villadeleyvaiff-2026"
+ ],
+ "hallazgo": {
+  "clase": "fuentes",
+  "donde": "fuentes/jardin-2026/malas-posturas.html"
+ },
+ "work_id": "w_R4KECG9BFSX8"
+}

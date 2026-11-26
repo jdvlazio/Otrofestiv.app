@@ -1,0 +1,96 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Pasta%20negra",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/cortoscali-2026/lect-De4VP9xkaMd.json",
+     "nota": "original: fuentes/cortoscali-2026/lect-De4VP9xkaMd.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/cortoscali-2026/lect-DekHORfGunw.json",
+     "nota": "original: fuentes/cortoscali-2026/lect-DekHORfGunw.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt33092232/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De27RQ3O9VF.json",
+     "nota": "original: fuentes/ig-vigia/De27RQ3O9VF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De4l0EWCciW.json",
+     "nota": "original: fuentes/ig-vigia/De4l0EWCciW.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7K0NkCT9s.json",
+     "nota": "original: fuentes/ig-vigia/De7K0NkCT9s.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfDlyoFEdJD.json",
+     "nota": "original: fuentes/ig-vigia/DfDlyoFEdJD.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfzeOb2lq6q.json",
+     "nota": "original: fuentes/ig-vigia/DfzeOb2lq6q.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1403488/",
+     "nota": "original: https://letterboxd.com/tmdb/1403488/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1403488",
+     "nota": "original: TMDB 1403488",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cortoscali-2026",
+  "siembrafest-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1403488"
+ },
+ "work_id": "w_R4NEB2ANQQXQ"
+}

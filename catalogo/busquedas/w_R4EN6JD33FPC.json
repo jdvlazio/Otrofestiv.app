@@ -1,0 +1,84 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=AtmoSphaira",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/cineautopsia-2026/ca-2848.html",
+     "nota": "es: fuentes/cineautopsia-2026/ca-2848.html",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/fb-1461153646215342.json",
+     "nota": "es: fuentes/ig-vigia/fb-1461153646215342.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "tmdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"AtmoSphaira\" Rengifo",
+     "nota": "solo perfil IMDb de Sandra Rengifo (nm5653494) que lista AtmoSphaira 2024; sin página de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"AtmoSphaira\" sinopsis",
+     "nota": "webtoon AtmoSPHAIRA, ajeno",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"AtmoSphaira\" synopsis Rengifo",
+     "nota": "webtoon AtmoSPHAIRA, ajeno",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"AtmoSphaira se subdivide en cartas de enfrentamiento con la\"",
+     "nota": "cartas de Hearthstone, ajeno",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:bogotaexperimental.com \"AtmoSphaira\"",
+     "nota": "Atmos Sphaerae de Tamiko Thiel; nada de bogotaexperimental.com",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:ficpa.co \"AtmoSphaira\"",
+     "nota": "empresas Atmo*; nada de ficpa.co",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cineautopsia-2026",
+  "ficpa-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4EN6JD33FPC"
+}

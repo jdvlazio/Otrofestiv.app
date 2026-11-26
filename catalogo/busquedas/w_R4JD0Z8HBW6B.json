@@ -1,0 +1,101 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20Pandemia%20del%20Feminicidio",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/cineparalapaz-2026, fuentes/ficpa-2026",
+     "nota": "ningún archivo nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De4ZQNox4cr.json",
+     "nota": "original: fuentes/ig-vigia/De4ZQNox4cr.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexDMqhFWPR.json",
+     "nota": "original: fuentes/ig-vigia/DexDMqhFWPR.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfVjEn_PGUs.json",
+     "nota": "original: fuentes/ig-vigia/DfVjEn_PGUs.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1796536/",
+     "nota": "original: https://letterboxd.com/tmdb/1796536/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1796536",
+     "nota": "original: TMDB 1796536",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"La Pandemia del Feminicidio\" Hernández",
+     "nota": "artículos académicos sobre feminicidio en México; ninguna obra con ese título",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La Pandemia del Feminicidio\" sinopsis",
+     "nota": "solo artículos/tesis sobre feminicidio; ninguna ficha de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La Pandemia del Feminicidio\" synopsis Hernández",
+     "nota": "solo artículos académicos; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Detrás de cada cifra hay un nombre Mujeres organizadas\"",
+     "nota": "informes ONU Mujeres, cartillas Icesi; frase no encontrada",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:ficpa.co \"La Pandemia del Feminicidio\"",
+     "nota": "sin páginas de ficpa.co; Radio Nacional 'La pandemia del feminicidio en Colombia' (artículo, no la obra)",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cineparalapaz-2026",
+  "ficpa-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4JD0Z8HBW6B"
+}

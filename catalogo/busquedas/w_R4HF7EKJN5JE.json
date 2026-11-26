@@ -1,0 +1,156 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=El%20juego%20de%20la%20vida",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "original: fuentes/festicineantioquia-2026/lectura-2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt41979504/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De5K81pgW8P.json",
+     "nota": "original: fuentes/ig-vigia/De5K81pgW8P.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7TIV4tH4G.json",
+     "nota": "original: fuentes/ig-vigia/De7TIV4tH4G.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexNwY_GzS8.json",
+     "nota": "original: fuentes/ig-vigia/DexNwY_GzS8.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfGJx9SmFq7.json",
+     "nota": "original: fuentes/ig-vigia/DfGJx9SmFq7.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfLqmwhjVTi.json",
+     "nota": "original: fuentes/ig-vigia/DfLqmwhjVTi.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfbbhoeESLg.json",
+     "nota": "original: fuentes/ig-vigia/DfbbhoeESLg.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfp9n0mBMyU.json",
+     "nota": "original: fuentes/ig-vigia/Dfp9n0mBMyU.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfs7Bm9FBXh.json",
+     "nota": "original: fuentes/ig-vigia/Dfs7Bm9FBXh.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfuXH73uo8j.json",
+     "nota": "original: fuentes/ig-vigia/DfuXH73uo8j.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfurLU_m2-F.json",
+     "nota": "original: fuentes/ig-vigia/DfurLU_m2-F.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1562450/",
+     "nota": "original: https://letterboxd.com/tmdb/1562450/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1562450",
+     "nota": "original: TMDB 1562450",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"El juego de la vida\" Zuluaga",
+     "nota": "autómata de Conway y PDFs académicos; LinkedIn que menciona la película sin ficha",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El juego de la vida\" sinopsis",
+     "nota": "novela de Hamsun, telenovela Televisa, juego de mesa",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El juego de la vida\" synopsis Zuluaga",
+     "nota": "vanguardia, eltiempo, lafm, boxofficemojo; solo primera frase verbatim · máquina: original: https://www.vanguardia.com/entretenimiento/cultura/2026/05/22/el-juego-de-la-vida-el-documental-de-andres-ruiz-zuluaga-sobre-desigualdad-y-movilidad-social-en-colombia/",
+     "resultado": "no está",
+     "texto_otro": "La película El Juego de la Vida, dirigida por Andrés Ruiz Zuluaga, acompaña durante 14 años a cinco familias colombianas.",
+     "url": "https://www.vanguardia.com/entretenimiento/cultura/2026/05/22/el-juego-de-la-vida-el-documental-de-andres-ruiz-zuluaga-sobre-desigualdad-y-movilidad-social-en-colombia/"
+    },
+    {
+     "consulta": "\"Un documentalista sigue durante 14 años a cinco familias\"",
+     "nota": "Papirosen, 14 Up, Frontline; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:laficma.com \"El juego de la vida\"",
+     "nota": "ningún resultado de laficma.com",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "fecibac-2026",
+  "festicineantioquia-2026",
+  "ficdeh-2026",
+  "ficma-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4HF7EKJN5JE"
+}

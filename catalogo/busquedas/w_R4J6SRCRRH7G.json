@@ -1,0 +1,74 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=El%20huaquero",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficmontanas-2026, fuentes/siembrafest-2026",
+     "nota": "ningún archivo nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DfPqTNTRdBM.json",
+     "nota": "es: fuentes/ig-vigia/DfPqTNTRdBM.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "tmdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"El huaquero\" Vasten",
+     "nota": "canción El Huaquero y Huaquero de Donoso Gómez; nada de Vasten",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El huaquero\" sinopsis",
+     "nota": "Huaquero de Juan Carlos Donoso Gómez (IDFA, Cineuropa); otro director",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El huaquero\" synopsis Vasten",
+     "nota": "Huaquero de Donoso Gómez; nada de Vasten",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Manuel quiere vender su cosecha de maíz para costear\"",
+     "nota": "préstamos Kiva y foros de maíz",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficmontanas-2026",
+  "siembrafest-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4J6SRCRRH7G"
+}

@@ -1,0 +1,86 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Happy",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bhff-2026/ojos-seleccion.json",
+     "nota": "original: fuentes/bhff-2026/ojos-seleccion.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bhff-2026/programacion.html",
+     "nota": "original: fuentes/bhff-2026/programacion.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bhff-2026/programacion.json",
+     "nota": "original: fuentes/bhff-2026/programacion.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/medellinhorror-2026/revista-01.txt",
+     "nota": "original: fuentes/medellinhorror-2026/revista-01.txt",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt33742152/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1753034/",
+     "nota": "original: https://letterboxd.com/tmdb/1753034/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1753034",
+     "nota": "original: TMDB 1753034",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bhff-2026",
+  "medellinhorror-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1753034"
+ },
+ "work_id": "w_ZR5KQY7KFG0J"
+}

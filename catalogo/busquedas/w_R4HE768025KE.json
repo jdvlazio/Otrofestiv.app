@@ -1,0 +1,101 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20noche%20est%C3%A1%20march%C3%A1ndose%20ya",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.pdf",
+     "nota": "original: fuentes/ficci-65/catalogo/catalogo.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.txt",
+     "nota": "original: fuentes/ficci-65/catalogo/catalogo.txt",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt38689439/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1554544/",
+     "nota": "original: https://letterboxd.com/tmdb/1554544/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1554544",
+     "nota": "original: TMDB 1554544",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"La noche está marchándose ya\" Sonzini Salinas",
+     "nota": "Micropsia tag Ramiro Sonzini con crítica de la obra (Sonzini y Salinas); crítica, no sinopsis completa; fragmento: proyeccionista convertido en sereno de un cine · máquina: original: https://www.micropsiacine.com/2025/11/fuera-de-campo-critica-de-la-noche-esta-marchandose-ya-de-ramiro-sonzini-y-ezequiel-salinas/",
+     "resultado": "no está",
+     "url": "https://www.micropsiacine.com/2025/11/fuera-de-campo-critica-de-la-noche-esta-marchandose-ya-de-ramiro-sonzini-y-ezequiel-salinas/"
+    },
+    {
+     "consulta": "\"La noche está marchándose ya\" sinopsis",
+     "nota": "cinemateca.org.uy, seminci, mirage, labocine, indiehoy; abierta cinemateca (sinopsis en inglés, no se dejó copiar verbatim) · máquina: original: https://festival.cinemateca.org.uy/en/peliculas/9096",
+     "resultado": "no está",
+     "url": "https://festival.cinemateca.org.uy/en/peliculas/9096"
+    },
+    {
+     "consulta": "\"La noche está marchándose ya\" synopsis Sonzini Salinas",
+     "nota": "cinemateca.org.uy, otroscines, micropsia, seminci, labocine · máquina: original: https://www.labocine.com/films/la-noche-esta-marchandose-ya-the-night-is-fading-away",
+     "resultado": "no está",
+     "url": "https://www.labocine.com/films/la-noche-esta-marchandose-ya-the-night-is-fading-away"
+    },
+    {
+     "consulta": "\"Pelu treintañero es el humilde proyeccionista de un cineclub\"",
+     "nota": "mubi, zinemaetagiza, tiff.ro, caligari; abierta mubi (sinopsis en inglés, no verbatim) · máquina: original: https://mubi.com/pt/us/films/the-night-is-fading-away",
+     "resultado": "no está",
+     "url": "https://mubi.com/pt/us/films/the-night-is-fading-away"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficci-65",
+  "olhar-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4HE768025KE"
+}

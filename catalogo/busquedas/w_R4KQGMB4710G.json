@@ -1,0 +1,108 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20memoria%20de%20las%20mariposas",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/mambe-2026/mambe-2026-laminas-ojos-v2.json",
+     "nota": "original: fuentes/mambe-2026/mambe-2026-laminas-ojos-v2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/mambe-2026/mambe-2026-laminas-ojos.json",
+     "nota": "original: fuentes/mambe-2026/mambe-2026-laminas-ojos.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt35440114/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DfXa-lvlTP1.json",
+     "nota": "original: fuentes/ig-vigia/DfXa-lvlTP1.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfaxKL2FvjY.json",
+     "nota": "original: fuentes/ig-vigia/DfaxKL2FvjY.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1418601/",
+     "nota": "en: https://letterboxd.com/tmdb/1418601/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1418601",
+     "nota": "en: TMDB 1418601",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"La memoria de las mariposas\" Sadowski",
+     "nota": "mirror Wikipedia The Memory of Butterflies (Tatiana Fuentes Sadowski) y ficha Berlinale; la herramienta solo dio paráfrasis de la sinopsis, no verbatim · máquina: original: https://berlinale.de/en/2025/programme/202512292.html",
+     "resultado": "no está",
+     "url": "https://berlinale.de/en/2025/programme/202512292.html"
+    },
+    {
+     "consulta": "\"La memoria de las mariposas\" sinopsis",
+     "nota": "Cinemanía/La Higuera ficha 'La memoria de las mariposas' (título catalán La memòria de les papallones, posible otra obra); no abierta · máquina: original: https://www.lahiguera.net/cinemania/pelicula/12339/sinopsis.php",
+     "resultado": "no está",
+     "url": "https://www.lahiguera.net/cinemania/pelicula/12339/sinopsis.php"
+    },
+    {
+     "consulta": "\"La memoria de las mariposas\" synopsis Sadowski",
+     "nota": "ficha Berlinale 2025 de Fuentes Sadowski con sinopsis (Omarino y Aredomi, caucho); solo paráfrasis disponible · máquina: original: https://berlinale.de/en/2025/programme/202512292.html",
+     "resultado": "no está",
+     "url": "https://berlinale.de/en/2025/programme/202512292.html"
+    },
+    {
+     "consulta": "\"Emergiendo de la era del caucho las historias perdidas\"",
+     "nota": "libros y artículos sobre la época del caucho; frase no encontrada",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "mambe-2026",
+  "mamut-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1418601"
+ },
+ "work_id": "w_R4KQGMB4710G"
+}

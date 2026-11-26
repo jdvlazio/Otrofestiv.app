@@ -1,0 +1,69 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=HDLT",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bogoshorts-2026, fuentes/fantasmagoria-2026, fuentes/festicinerio-2026, fuentes/ficfusa-2026, fuentes/filcmar-2026, fuentes/siembrafest-2026",
+     "nota": "ningún archivo nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1796013/",
+     "nota": "original: https://letterboxd.com/tmdb/1796013/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1796013",
+     "nota": "original: TMDB 1796013",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bogoshorts-2026",
+  "fantasmagoria-2026",
+  "festicinerio-2026",
+  "ficfusa-2026",
+  "filcmar-2026",
+  "siembrafest-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1796013"
+ },
+ "work_id": "w_R4GBJ7SNPXDQ"
+}

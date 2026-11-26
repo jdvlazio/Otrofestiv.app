@@ -6262,6 +6262,15 @@
   "veredicto": "fiel",
   "verifica": "verificador + segundo lector 26 nov"
  },
+ "w_R4J7WZ1AZR2D": {
+  "comprobado": "máquina: TMDB 1562336",
+  "contra": "https://www.themoviedb.org/movie/1562336",
+  "fecha": "2026-11-26",
+  "huella": "d20a5c1b4c5a",
+  "redacta": "onboarding",
+  "veredicto": "fiel",
+  "verifica": "buscar_sinopsis + máquina 26 nov"
+ },
  "w_R4J7WZMZG6CQ": {
   "comprobado": "máquina: http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
   "contra": "http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",

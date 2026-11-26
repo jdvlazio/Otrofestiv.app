@@ -1,0 +1,148 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Comparsa",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficfusa-2026/programa-ficfusa-2026.pdf",
+     "nota": "original: fuentes/ficfusa-2026/programa-ficfusa-2026.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/bucan-tu-rhachhidu.html",
+     "nota": "original: fuentes/midbo-2026/fichas/bucan-tu-rhachhidu.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/comparsa.html",
+     "nota": "original: fuentes/midbo-2026/fichas/comparsa.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/no-menguara-el-fuego-de-esta-luna.html",
+     "nota": "original: fuentes/midbo-2026/fichas/no-menguara-el-fuego-de-esta-luna.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/pelicula-1.json",
+     "nota": "original: fuentes/midbo-2026/pelicula-1.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/pelicula-2.json",
+     "nota": "original: fuentes/midbo-2026/pelicula-2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/pelicula.json",
+     "nota": "original: fuentes/midbo-2026/pelicula.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/villadelcine-2026/obras/comparsa.html",
+     "nota": "original: fuentes/villadelcine-2026/obras/comparsa.html",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/villadelcine-2026/obras/cuba-imagenes-del-futuro.html",
+     "nota": "original: fuentes/villadelcine-2026/obras/cuba-imagenes-del-futuro.html: el texto está, pero ni el título ni la dirección cerca",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/villadelcine-2026/obras/sitemap-pages.xml",
+     "nota": "original: fuentes/villadelcine-2026/obras/sitemap-pages.xml",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/villadelcine-2026/programacion-2026.pdf",
+     "nota": "original: fuentes/villadelcine-2026/programacion-2026.pdf: el texto está, pero ni el título ni la dirección cerca",
+     "resultado": "ilegible"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt36870657/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De5C6JDuiLp.json",
+     "nota": "original: fuentes/ig-vigia/De5C6JDuiLp.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DesY4jnEYeF.json",
+     "nota": "original: fuentes/ig-vigia/DesY4jnEYeF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DezmbH7FUrs.json",
+     "nota": "original: fuentes/ig-vigia/DezmbH7FUrs.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgBU4AhyBbw.json",
+     "nota": "original: fuentes/ig-vigia/DgBU4AhyBbw.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1577225037772694.json",
+     "nota": "original: fuentes/ig-vigia/fb-1577225037772694.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1480404/",
+     "nota": "original: https://letterboxd.com/tmdb/1480404/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "consultas": [
+    {
+     "donde": "https://www.comparsafilm.com/",
+     "nota": "original: https://www.comparsafilm.com/",
+     "resultado": "ilegible"
+    }
+   ]
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1480404",
+     "nota": "original: TMDB 1480404",
+     "resultado": "no está"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficfusa-2026",
+  "midbo-2026",
+  "villadelcine-2026"
+ ],
+ "hallazgo": {
+  "clase": "fuentes",
+  "donde": "fuentes/villadelcine-2026/obras/comparsa.html"
+ },
+ "work_id": "w_R4M1E4Z3TM9E"
+}

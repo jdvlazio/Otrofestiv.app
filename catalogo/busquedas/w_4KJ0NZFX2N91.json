@@ -1,0 +1,345 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20Grande%20R%C3%AAvasion",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3744.html",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3744.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/catalogo-bfm2026.pdf",
+     "nota": "original: fuentes/bogoshorts-2026/catalogo-bfm2026.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3744.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3744.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3744.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca/pelicula-3744.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/enlaces/10BFM_catalogo2026-2026-11-24.pdf",
+     "nota": "original: fuentes/bogoshorts-2026/enlaces/10BFM_catalogo2026-2026-11-24.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/nueva/bfm.pdf",
+     "nota": "original: fuentes/bogoshorts-2026/nueva/bfm.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3812.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3812.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3855.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3855.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3864.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3864.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3873.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3873.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3886.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3886.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3902.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3902.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3915.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3915.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3918.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3918.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3961.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3961.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3967.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3967.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3976.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3976.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3981.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3981.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3983.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3983.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3989.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3989.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4005.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4005.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4019.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4019.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4023.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4023.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4043.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4043.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4053.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4053.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4084.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4084.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4090.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4090.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4096.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4096.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4100.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4100.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4104.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4104.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4109.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4109.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4120.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4120.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4130.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4130.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4157.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4157.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4171.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4171.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4172.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4172.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4175.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4175.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4183.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4183.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4187.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4187.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4189.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4189.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4208.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4208.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4216.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4216.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4261.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4261.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4268.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4268.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4295.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4295.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4300.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4300.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4310.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4310.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4322.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4322.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4329.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4329.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4330.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4330.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4342.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4342.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4375.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4375.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4409.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4409.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4411.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4411.html",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt42440609/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1597412/",
+     "nota": "original: https://letterboxd.com/tmdb/1597412/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1597412",
+     "nota": "original: TMDB 1597412",
+     "resultado": "no está"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bogoshorts-2026"
+ ],
+ "hallazgo": {
+  "clase": "fuentes",
+  "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json"
+ },
+ "work_id": "w_4KJ0NZFX2N91"
+}

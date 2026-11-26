@@ -1,0 +1,76 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20hija%20c%C3%B3ndor",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt37813097/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De2tyXPSnFk.json",
+     "nota": "original: fuentes/ig-vigia/De2tyXPSnFk.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1459062/",
+     "nota": "original: https://letterboxd.com/tmdb/1459062/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1459062",
+     "nota": "original: TMDB 1459062",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "aff-2026",
+  "ficdeh-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1459062"
+ },
+ "work_id": "w_R4DFQP21H99Z"
+}

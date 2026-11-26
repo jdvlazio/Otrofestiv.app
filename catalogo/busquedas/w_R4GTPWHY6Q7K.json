@@ -1,0 +1,110 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=El%20Susurro",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bhff-2026/programacion.html",
+     "nota": "original: fuentes/bhff-2026/programacion.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bhff-2026/programacion.json",
+     "nota": "original: fuentes/bhff-2026/programacion.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt35956182/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1534530/",
+     "nota": "original: https://letterboxd.com/tmdb/1534530/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1534530",
+     "nota": "original: TMDB 1534530",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"El Susurro\" Ibáñez",
+     "nota": "Groover/El Susurro plataforma musical, Chicho y Polito Ibáñez, Un susurro en la tormenta; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El Susurro\" sinopsis",
+     "nota": "FilmAffinity, Latido Films, Ámbito, cinenacional de El susurro (Hernández Ibáñez); Latido abierta, sinopsis solo parafraseada (Lucía y Adrián huyen del padre) · máquina: original: https://latidofilms.com/films/the-whisper/",
+     "resultado": "no está",
+     "url": "https://latidofilms.com/films/the-whisper/"
+    },
+    {
+     "consulta": "\"El Susurro\" synopsis Ibáñez",
+     "nota": "Latido Films, FilmAffinity UK, Filmow; Latido trae sinopsis, no se obtuvo verbatim · máquina: original: https://latidofilms.com/films/the-whisper/",
+     "resultado": "no está",
+     "url": "https://latidofilms.com/films/the-whisper/"
+    },
+    {
+     "consulta": "\"Lucía y Adrián dos hermanos que huyen de la\"",
+     "nota": "Wattpad, Lucía Lucía; frase no encontrada",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:bogotahorrorfilmfest.com \"El Susurro\"",
+     "nota": "sin páginas de bogotahorrorfilmfest.com; FilmFreeway del festival, fichas externas del film",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:medellinhorrorfest.com \"El Susurro\"",
+     "nota": "sin páginas de medellinhorrorfest.com; FilmFreeway/Festhome del festival, fichas externas del film",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bhff-2026",
+  "fantasofest-2026",
+  "medellinhorror-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4GTPWHY6Q7K"
+}

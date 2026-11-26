@@ -101,6 +101,17 @@ def _bajar(u):
     return _pdf(b) if b[:4] == b'%PDF' else _de_html(b.decode(errors='replace'))
 
 
+def _cadenas(x):
+    if isinstance(x, str):
+        yield x
+    elif isinstance(x, dict):
+        for v in x.values():
+            yield from _cadenas(v)
+    elif isinstance(x, list):
+        for v in x:
+            yield from _cadenas(v)
+
+
 def leer_local(p):
     for q in (os.path.join(REPO, p), os.path.join(FUENTES, re.sub(r'^fuentes/', '', p))):
         q = os.path.realpath(q)
@@ -109,6 +120,11 @@ def leer_local(p):
         if os.path.isfile(q):
             with open(q, 'rb') as fh:
                 b = fh.read()
+            if q.lower().endswith('.json'):     # «río» no es «río»: el JSON se lee decodificado
+                try:
+                    return _de_html('\n'.join(_cadenas(json.loads(b.decode(errors='replace')))))
+                except ValueError:
+                    pass
             return _pdf(b) if b[:4] == b'%PDF' else _de_html(b.decode(errors='replace'))
     return ''
 

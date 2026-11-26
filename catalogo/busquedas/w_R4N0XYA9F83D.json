@@ -1,0 +1,231 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Las%20piedras%20del%20r%C3%ADo",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/aleste-2026/altas/las-piedras-del-rio.tmdb.json",
+     "nota": "original: fuentes/aleste-2026/altas/las-piedras-del-rio.tmdb.json",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/aleste-2026/programa/las-piedras-del-río.html",
+     "nota": "original: fuentes/aleste-2026/programa/las-piedras-del-río.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/aleste-2026/programa/programa2026.html",
+     "nota": "original: fuentes/aleste-2026/programa/programa2026.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/cortoscali-2026/lect-De4VP9xkaMd.json",
+     "nota": "original: fuentes/cortoscali-2026/lect-De4VP9xkaMd.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/cortoscali-2026/lect-DefFt5bmetD.json",
+     "nota": "original: fuentes/cortoscali-2026/lect-DefFt5bmetD.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/busca-gris.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/busca-gris.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/busca-las-piedras-del-rio.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/busca-las-piedras-del-rio.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/post-15621.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/post-15621.json: el texto está, pero ni el título ni la dirección cerca",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.29sep.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.29sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.30sep.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.30sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.txt",
+     "nota": "original: fuentes/popayan-2026/programacion2026.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/seleccion-oficial-2026.28sep.json",
+     "nota": "original: fuentes/popayan-2026/seleccion-oficial-2026.28sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/seleccion-oficial-2026.json",
+     "nota": "original: fuentes/popayan-2026/seleccion-oficial-2026.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De0KumCCYk6.json",
+     "nota": "original: fuentes/ig-vigia/De0KumCCYk6.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2T9PFC7v8.json",
+     "nota": "original: fuentes/ig-vigia/De2T9PFC7v8.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De4VP9xkaMd.json",
+     "nota": "original: fuentes/ig-vigia/De4VP9xkaMd.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De798kODW5H.json",
+     "nota": "original: fuentes/ig-vigia/De798kODW5H.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7jI5tp9n3.json",
+     "nota": "original: fuentes/ig-vigia/De7jI5tp9n3.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7mm-IFTd_.json",
+     "nota": "original: fuentes/ig-vigia/De7mm-IFTd_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De94cEFhbCv.json",
+     "nota": "original: fuentes/ig-vigia/De94cEFhbCv.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DesOocQCe2u.json",
+     "nota": "original: fuentes/ig-vigia/DesOocQCe2u.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DeslqRAFLMP.json",
+     "nota": "original: fuentes/ig-vigia/DeslqRAFLMP.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DeuGsgJBUCl.json",
+     "nota": "original: fuentes/ig-vigia/DeuGsgJBUCl.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfH7R8Skfa4.json",
+     "nota": "original: fuentes/ig-vigia/DfH7R8Skfa4.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfHt3aVxGfv.json",
+     "nota": "original: fuentes/ig-vigia/DfHt3aVxGfv.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfKfJAJxW5Y.json",
+     "nota": "original: fuentes/ig-vigia/DfKfJAJxW5Y.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfN9ykWCTy9.json",
+     "nota": "original: fuentes/ig-vigia/DfN9ykWCTy9.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DffD63uADjQ.json",
+     "nota": "original: fuentes/ig-vigia/DffD63uADjQ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfn9dPeN3TN.json",
+     "nota": "original: fuentes/ig-vigia/Dfn9dPeN3TN.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgFiVrTEbh0.json",
+     "nota": "original: fuentes/ig-vigia/DgFiVrTEbh0.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgKj98cNk8o.json",
+     "nota": "original: fuentes/ig-vigia/DgKj98cNk8o.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgLaK8Alvkk.json",
+     "nota": "original: fuentes/ig-vigia/DgLaK8Alvkk.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1461866432810730.json",
+     "nota": "original: fuentes/ig-vigia/fb-1461866432810730.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "tmdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Las piedras del río\" Sierra"
+    },
+    {
+     "consulta": "\"Las piedras del río\" sinopsis"
+    },
+    {
+     "consulta": "\"Las piedras del río\" synopsis Sierra"
+    },
+    {
+     "consulta": "\"En las orillas del río Magdalena Esther guía a\""
+    },
+    {
+     "consulta": "site:festicinepopayan.com \"Las piedras del río\""
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "aleste-2026",
+  "cortoscali-2026",
+  "popayan-2026",
+  "siembrafest-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4N0XYA9F83D"
+}

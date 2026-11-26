@@ -1,0 +1,166 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Bertha",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/biff-2026/Programacion_BIFF_12_DIGITAL.pdf",
+     "nota": "original: fuentes/biff-2026/Programacion_BIFF_12_DIGITAL.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/biff-2026/web/pel-018.html",
+     "nota": "original: fuentes/biff-2026/web/pel-018.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/biff-2026/web/pel-027.html",
+     "nota": "original: fuentes/biff-2026/web/pel-027.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/directores.json",
+     "nota": "original: fuentes/ficcali-2026/directores.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/ficha-ejemplo.html",
+     "nota": "original: fuentes/ficcali-2026/ficha-ejemplo.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/ahumadora.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/ahumadora.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/bertha.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/bertha.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/despues-de-tanto-amor.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/despues-de-tanto-amor.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/emechiche-el-renacer-de-los-cabeciblancos.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/emechiche-el-renacer-de-los-cabeciblancos.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/freddy-eusebio-rincon-el-coloso.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/freddy-eusebio-rincon-el-coloso.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/futuros-luminosos.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/futuros-luminosos.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/iluminada.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/iluminada.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/la-linea-del-mar.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/la-linea-del-mar.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/muiyukuna-relatos-de-la-chagra-viva.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/muiyukuna-relatos-de-la-chagra-viva.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/once-upon-a-time-in-harlem.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/once-upon-a-time-in-harlem.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/primer-amor.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/primer-amor.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/tuktu-padre-maiz.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/tuktu-padre-maiz.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/y-el-rio-lloro.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/y-el-rio-lloro.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/media-posters.json",
+     "nota": "original: fuentes/ficcali-2026/media-posters.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/pelicula.json",
+     "nota": "original: fuentes/ficcali-2026/pelicula.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/seleccion-secciones.json",
+     "nota": "original: fuentes/ficcali-2026/seleccion-secciones.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1742324/",
+     "nota": "original: https://letterboxd.com/tmdb/1742324/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1742324",
+     "nota": "original: TMDB 1742324",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "biff-2026",
+  "ficcali-2026",
+  "qaff-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1742324"
+ },
+ "work_id": "w_R4DRYZAJJNS8"
+}

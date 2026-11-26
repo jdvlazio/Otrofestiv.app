@@ -1,0 +1,219 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Gabriel",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bhff-2026/ojos-seleccion.json",
+     "nota": "es: fuentes/bhff-2026/ojos-seleccion.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bhff-2026/programacion.html",
+     "nota": "es: fuentes/bhff-2026/programacion.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bhff-2026/programacion.json",
+     "nota": "es: fuentes/bhff-2026/programacion.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De-T6EFmZkZ.json",
+     "nota": "es: fuentes/ig-vigia/De-T6EFmZkZ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De4eFWWxml9.json",
+     "nota": "es: fuentes/ig-vigia/De4eFWWxml9.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De5Hl0QJmx4.json",
+     "nota": "es: fuentes/ig-vigia/De5Hl0QJmx4.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7_QLjCTdz.json",
+     "nota": "es: fuentes/ig-vigia/De7_QLjCTdz.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DeuGsgJBUCl.json",
+     "nota": "es: fuentes/ig-vigia/DeuGsgJBUCl.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexiGIsDr3j.json",
+     "nota": "es: fuentes/ig-vigia/DexiGIsDr3j.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfAJ26KRvfc.json",
+     "nota": "es: fuentes/ig-vigia/DfAJ26KRvfc.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "nota": "es: fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfCz8oPH5cH.json",
+     "nota": "es: fuentes/ig-vigia/DfCz8oPH5cH.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfDy1xsDez5.json",
+     "nota": "es: fuentes/ig-vigia/DfDy1xsDez5.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfFziTFiUtU.json",
+     "nota": "es: fuentes/ig-vigia/DfFziTFiUtU.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfGHtjUCR3C.json",
+     "nota": "es: fuentes/ig-vigia/DfGHtjUCR3C.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfI_UB_jePu.json",
+     "nota": "es: fuentes/ig-vigia/DfI_UB_jePu.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfKdzHMEUck.json",
+     "nota": "es: fuentes/ig-vigia/DfKdzHMEUck.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfPT4i1jXbI.json",
+     "nota": "es: fuentes/ig-vigia/DfPT4i1jXbI.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfQSHo2JDab.json",
+     "nota": "es: fuentes/ig-vigia/DfQSHo2JDab.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfZvpXHxods.json",
+     "nota": "es: fuentes/ig-vigia/DfZvpXHxods.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfbBzArNOCr.json",
+     "nota": "es: fuentes/ig-vigia/DfbBzArNOCr.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfevdufN-4c.json",
+     "nota": "es: fuentes/ig-vigia/DfevdufN-4c.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfgGTqZNBKj.json",
+     "nota": "es: fuentes/ig-vigia/DfgGTqZNBKj.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfh19QHznuh.json",
+     "nota": "es: fuentes/ig-vigia/Dfh19QHznuh.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfk8gSdBTMS.json",
+     "nota": "es: fuentes/ig-vigia/Dfk8gSdBTMS.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfnhg8hhpgu.json",
+     "nota": "es: fuentes/ig-vigia/Dfnhg8hhpgu.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfsfHIqIIDl.json",
+     "nota": "es: fuentes/ig-vigia/DfsfHIqIIDl.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfvYX5-BP0X.json",
+     "nota": "es: fuentes/ig-vigia/DfvYX5-BP0X.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfxNw4GgQve.json",
+     "nota": "es: fuentes/ig-vigia/DfxNw4GgQve.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgLaK8Alvkk.json",
+     "nota": "es: fuentes/ig-vigia/DgLaK8Alvkk.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "tmdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Gabriel\" Díaz",
+     "nota": "personas llamadas Gabriel Díaz (IMDb, futbolistas)",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Gabriel\" sinopsis",
+     "nota": "varias películas Gabriel ajenas",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Gabriel\" synopsis Díaz",
+     "nota": "perfiles Gabriel Díaz, series ajenas",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Helena una joven atormentada por inquietantes visiones se encuentra\"",
+     "nota": "The Haunting of Helena, El llanto de Helena; ajenas",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:bogotahorrorfilmfest.com \"Gabriel\"",
+     "nota": "sin páginas del festival; cortos Gabriel ajenos (curtas.org zombi, Oren Gerner)",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bhff-2026",
+  "ficmontanas-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4J76XTP6BB4"
+}
