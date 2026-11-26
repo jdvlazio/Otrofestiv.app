@@ -1,0 +1,114 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20primera%20estampilla%20de%20Korinco",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "la primera estampilla de korinco dir varios 2026 colombia indonesia corea del sur 5 min mudanza dir laura gutiérrez ardila 2026 colombia 14 min cinemateca de bogotá centro diciembre 06 11 30 am ffffff sala capital https cinemateca checkout tuboleta com selection event date productid 1023061 sesión de preguntas y respuestas presentación conversatorio diálogo con el público idioma spanish cinemateca",
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3747.html",
+     "nota": "ficha con país, año, duración y funciones; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "la primera estampilla de korinco dir varios 2026 colombia indonesia corea del sur 5 min mudanza dir laura gutiérrez ardila 2026 colombia 14 min cinemateca de bogotá centro diciembre 06 11 30 am ffffff sala capital https cinemateca checkout tuboleta com selection event date productid 1023061 sesión de preguntas y respuestas presentación conversatorio diálogo con el público idioma spanish cinemateca",
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3747.html",
+     "nota": "ficha con país, año, duración y funciones; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "la primera estampilla de korinco dir varios 2026 colombia indonesia corea del sur 5 min mudanza dir laura gutiérrez ardila 2026 colombia 14 min cinemateca de bogotá centro diciembre 06 11 30 am ffffff sala capital https cinemateca checkout tuboleta com selection event date productid 1023061 sesión de preguntas y respuestas presentación conversatorio diálogo con el público idioma spanish cinemateca",
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3747.html",
+     "nota": "ficha con país, año, duración y funciones; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "la primera estampilla de korinco bogoshorts festival festival de cortos de bogotá document createelement header document createelement footer document createelement section document createelement nav document createelement article document createelement figure document createelement figcaption document createelement aside inscríbete a nuestro newsletter festival de cortos de bogotá short film fest",
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4335.html",
+     "nota": "ficha con país, año, duración y funciones; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «La primera estampilla de Korinco»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"La primera estampilla de Korinco\"",
+     "nota": "Solo filatelia ajena.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La primera estampilla de Korinco\" sinopsis",
+     "nota": "Filatelia y un episodio del Chapulin Colorado (no es esta obra).",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La primera estampilla de Korinco\" synopsis",
+     "nota": "Igual que la anterior; ninguna sinopsis de la obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La primera estampilla de Korinco\"  cortometraje",
+     "nota": "Aparece minikino.org/en/korinco-2026-en/: describe el programa/taller KORINCO 2026 'The First Stamps', sin sinopsis de la pelicula.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La primera estampilla de Korinco\"  filmfreeway",
+     "nota": "Aparece minikino.org/filmweek/korinco/ (programa); sin sinopsis de la obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La primera estampilla de Korinco\"  vimeo OR youtube",
+     "nota": "Sin video ni ficha de la obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:info.bogoshorts.com \"La primera estampilla de Korinco\"",
+     "nota": "Ningun resultado de info.bogoshorts.com.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bogoshorts-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_4KJ4AKF6H2TK"
+}
