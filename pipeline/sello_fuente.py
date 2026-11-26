@@ -258,7 +258,9 @@ def comprobar(original, leer=None, obra=None):
         ts = leer['tmdb'](i)
         if ts:
             visto.append(f'TMDB {i}')
-        if any(_en(fr, plano(t)) for _, t in ts):
+        # un original «es y en» trae un párrafo por idioma: cada párrafo, entero, en alguna traducción
+        parrafos = [fragmentos(x) for x in re.split(r'\n\s*\n|\n', original.get('texto') or '') if fragmentos(x)]
+        if parrafos and all(any(_en(q, plano(t)) for _, t in ts) for q in parrafos):
             if obra.get('tmdb'):
                 return 'literal', f'TMDB {i}'
             suelto.append(f'TMDB {i}, sin número de TMDB en la obra para atarlo')
@@ -276,14 +278,19 @@ def comprobar(original, leer=None, obra=None):
         if 'themoviedb.org' in u:
             continue
         m = re.search(r'instagram\.com/(?:p|reel)/([\w-]+)', u)
-        t = leer['instagram'](m[1]) if m else leer['web'](u)
+        dom = re.sub(r'^https?://(www\.)?([^/]+).*', r'\2', u)
+        try:
+            t = leer['instagram'](m[1]) if m else leer['web'](u)
+        except SinLeer:
+            if dom not in COPIAS:                # sin copia guardada, no hay con qué
+                raise
+            t = ''                               # la web no responde: se mira la copia
         if t and mirar(t, u):
             return 'literal', u
         # Instagram: el texto suele estar en una lámina (imagen) del carrusel, que esto no lee
         if len(plano(t)) >= MINIMO and not m and not any(b in plano(t)[:3000] for b in BLOQUEO) \
                 and not any(d in u for d in DETRAS_DE_SESION):
             visto.append(u)
-        dom = re.sub(r'^https?://(www\.)?([^/]+).*', r'\2', u)
         if dom in COPIAS and 'copia' in leer:
             c = leer['copia'](COPIAS[dom])
             for archivo, x in sorted(c.items()):
@@ -345,6 +352,14 @@ def autoprueba():
         mal.append('no ve que el texto no está en la copia')
     if c('https://info.bogoshorts.com/x', dict(copia, copia=lambda q: {'b.html': plano('Evadir. ' + T)}), {'titulos': ['Eva'], 'ajenas': set()}) == 'literal':
         mal.append('casa el título a mitad de palabra')
+    dos = 'Una mujer vuelve a su pueblo y encuentra un hotel.\n\nA woman goes back to her town and finds a hotel.'
+    if c('https://www.themoviedb.org/movie/1', dict(L, tmdb=lambda i: [('es', o['texto']), ('en', 'A woman goes back to her town and finds a hotel.')]), texto=dos) != 'literal':
+        mal.append('no admite un original con un párrafo por idioma')
+    if c('https://www.themoviedb.org/movie/1', dict(L, tmdb=lambda i: [('es', o['texto'])]), texto=dos) == 'literal':
+        mal.append('acepta un párrafo que TMDB no tiene')
+    caida = dict(copia, web=lambda u: (_ for _ in ()).throw(SinLeer('curl 28')))
+    if c('https://info.bogoshorts.com/x', caida) != 'literal':
+        mal.append('si la web no responde, no mira la copia guardada')
     try:
         c('https://www.themoviedb.org/movie/1', dict(L, tmdb=lambda i: (_ for _ in ()).throw(SinLeer('x'))))
         mal.append('sin clave o sin red responde en vez de parar')
