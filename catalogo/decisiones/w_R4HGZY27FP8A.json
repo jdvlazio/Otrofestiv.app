@@ -21,29 +21,51 @@
  {
   "work_id": "w_R4HGZY27FP8A",
   "campo": "sinopsis.es",
-  "valor": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y abrazan la identidad negra como una fuente viva de conexión, creación y renovación.",
+  "valor": "¿Puede la negritud escapar de la violencia de sus orígenes? Tres hombres negros recorren a la inversa la ruta transatlántica de la esclavitud, de Los Ángeles a Salvador de Bahía y a Accra, para redefinir la negritud, sanar el trauma histórico e imaginar caminos de liberación más allá de la supremacía blanca.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026 · corregida)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
   "vistas": [
+   "8c5f88833c01",
    "e70bc72264d2",
    "ee0bb1308079"
   ],
   "antes": {
    "ficdeh-2026": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y brazan la identidad negra como una fuente viva de conexión, creación y renovación.",
    "qaff-2026": "¿Puede la negritud escapar de la violencia de sus orígenes? Tres hombres negros emprenden un viaje transformador a lo largo de la ruta de la esclavitud transatlántica en sentido inverso, explorando la resistencia, la liberación y una nueva comprensión de la negritud. Su épica travesía los lleva desde Los Ángeles hasta Salvador de Bahía en Brasil, y finalmente a Acra en Ghana. Su misión es redefinir la negritud, sanar el trauma histórico y vislumbrar nuevos caminos hacia la liberación más allá de las ataduras de la supremacía blanca. Sienna McLean-LoGreco es una cineasta estadounidense con créditos como guionista y productora para HBO, Showtime, Discovery y RSA Films de Ridley Scott. Su primer cortometraje, Still Revolutionaries, se estrenó en Sundance."
+  },
+  "original_de": [
+   "ficdeh-2026",
+   "qaff-2026"
+  ],
+  "titulo": "Three black men",
+  "original": "¿Puede un viaje hacia el pasado abrir nuevas posibilidades para la Negritud? Tres hombres negros recorren a la inversa la ruta transatlántica del comercio de esclavos, de Los Ángeles (California) a Salvador de Bahía (Brasil) y, finalmente, a Accra (Ghana). En este recorrido exploran aspectos fundamentales de la historia negra y las representaciones de la migración forzosa, la supervivencia y la desaparición de los millones de personas que cruzaron el Atlántico; y abrazan la identidad negra como una fuente viva de conexión, creación y renovación.",
+  "sintesis": {
+   "redacta": "verificador A 26 nov",
+   "verifica": "verificador B 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "916ffaf1605c"
   }
  },
  {
   "work_id": "w_R4HGZY27FP8A",
   "campo": "sinopsis.en",
-  "valor": "Can blackness escape the violence of its origins? Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness. Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
-  "motivo": "se quita lo que no es sinopsis; nada se escribe",
-  "fecha": "2026-11-24",
-  "quien": "Juan (hoja del paso 6)",
+  "valor": "Can Blackness escape the violence of its origins? Three Black men travel the transatlantic slave route in reverse, from Los Angeles to Salvador da Bahia and Accra, to redefine Blackness, heal from historical trauma and envision paths to liberation beyond white supremacy.",
+  "motivo": "síntesis del original verificado (aprobada por Juan 26 nov)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
   "antes": {
    "ficdeh-2026": "Can blackness escape the violence of its origins?  Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness.  Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
    "qaff-2026": "Can blackness escape the violence of its origins?  Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness.  Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Can blackness escape the violence of its origins? Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness. Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
+    "motivo": "se quita lo que no es sinopsis; nada se escribe",
+    "fecha": "2026-11-24",
+    "quien": "Juan (hoja del paso 6)"
+   }
+  ]
  }
 ]

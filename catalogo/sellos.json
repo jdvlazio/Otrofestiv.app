@@ -4798,6 +4798,15 @@
   "veredicto": "fiel",
   "verifica": "agente segunda lectura (migración)"
  },
+ "w_R4H50AY1TEJ8": {
+  "comprobado": "máquina: fuentes/ficcali-2026/fichas/alivios.html",
+  "contra": "fuentes/ficcali-2026/fichas/alivios.html",
+  "fecha": "2026-11-26",
+  "huella": "9bdf8099f3ed",
+  "redacta": "redactor 26 nov",
+  "veredicto": "fiel",
+  "verifica": "verificador A 26 nov"
+ },
  "w_R4H5CBRA8FJZ": {
   "comprobado": "máquina: fuentes/ficcali-2026/fichas/el-bitcoin-de-oro.html",
   "contra": "fuentes/ficcali-2026/fichas/el-bitcoin-de-oro.html",
@@ -6131,6 +6140,15 @@
   "veredicto": "fiel",
   "verifica": "segunda lectura"
  },
+ "w_R4HGZY27FP8A": {
+  "comprobado": "máquina: TMDB 1616280",
+  "contra": "https://www.themoviedb.org/movie/1616280",
+  "fecha": "2026-11-26",
+  "huella": "954a0e030609",
+  "redacta": "verificador A 26 nov",
+  "veredicto": "fiel",
+  "verifica": "verificador B 26 nov"
+ },
  "w_R4HGZYH4PDB2": {
   "comprobado": "máquina: fuentes/midbo-2026/pelicula.json",
   "contra": "fuentes/midbo-2026/fichas/si-la-escombrera-hablara.html",
@@ -6310,6 +6328,15 @@
   "redacta": "redactor 2 26 nov",
   "veredicto": "fiel",
   "verifica": "verificador 2 26 nov"
+ },
+ "w_R4HQ9NNQ5PNF": {
+  "comprobado": "máquina: TMDB 1571285",
+  "contra": "https://www.themoviedb.org/movie/1571285",
+  "fecha": "2026-11-26",
+  "huella": "93fa4d22725f",
+  "redacta": "verificador A 26 nov",
+  "veredicto": "fiel",
+  "verifica": "verificador B 26 nov"
  },
  "w_R4HYZHZ2WVRG": {
   "comprobado": "máquina: TMDB 1567732",
@@ -6752,12 +6779,13 @@
   "verifica": "lector BOGOSHORTS A"
  },
  "w_R4KQGMB4710G": {
-  "contra": "https://www.berlinale.de/en/2025/programme/202512292.html",
-  "fecha": "2026-11-25",
-  "huella": "c67c1673a0e1",
-  "redacta": "segunda lectura",
+  "comprobado": "máquina: TMDB 1418601",
+  "contra": "https://www.themoviedb.org/movie/1418601",
+  "fecha": "2026-11-26",
+  "huella": "32fdfc7bf2d3",
+  "redacta": "verificador A 26 nov",
   "veredicto": "fiel",
-  "verifica": "Onboarding"
+  "verifica": "verificador B 26 nov"
  },
  "w_R4KV6C5S5CP9": {
   "comprobado": "a mano: segundo lector 26 nov: fuentes/midbo-2026/fichas/the-travelers.html, sección Sinopsis de The Travelers / Les Voyageurs",

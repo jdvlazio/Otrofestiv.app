@@ -37,7 +37,7 @@
  {
   "work_id": "w_R4H50AY1TEJ8",
   "campo": "sinopsis.es",
-  "valor": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
+  "valor": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo calman las aguas cálidas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos pasen a un lugar mejor. Sobre el amor, la esperanza y el alivio.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026, ficica-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -49,6 +49,20 @@
    "ficcali-2026": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
    "ficica-2026": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
    "villadelcine-2026": "Carlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo dolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un sacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de encontrar juntos otra forma de alivio."
+  },
+  "original_de": [
+   "ficcali-2026",
+   "ficica-2026",
+   "villadelcine-2026"
+  ],
+  "titulo": "Alivios",
+  "original": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
+  "sintesis": {
+   "redacta": "redactor 26 nov",
+   "verifica": "verificador A 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "0e22d076dd44"
   }
  },
  {
@@ -65,6 +79,19 @@
    "ficcali-2026": "México, Venezuela",
    "ficica-2026": "México, Venezuela",
    "villadelcine-2026": "México"
+  }
+ },
+ {
+  "work_id": "w_R4H50AY1TEJ8",
+  "campo": "sinopsis.en",
+  "valor": "Carlos is approaching middle age, trapped in a personal crisis that has gone on too long. Rosa, his mother, suffers disabling pain that only the warm waters of hydrotherapy ease. One night, she offers to make the ultimate sacrifice so that they can both move on to a better place. About love, hope and relief.",
+  "motivo": "síntesis del original verificado (aprobada por Juan 26 nov)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "antes": {
+   "ficcali-2026": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "ficica-2026": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "villadelcine-2026": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for."
   }
  }
 ]

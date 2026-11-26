@@ -44,5 +44,46 @@
    "mambe-2026": "2026",
    "mamut-2026": "2026"
   }
+ },
+ {
+  "work_id": "w_R4KQGMB4710G",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "vistas": [
+   "5e144924fad7"
+  ],
+  "original_de": [
+   "mambe-2026",
+   "mamut-2026"
+  ],
+  "titulo": "La memoria de las mariposas",
+  "valor": "La foto de dos niños indígenas llevados a la fuerza a Europa abre una indagación en el pasado, en la que quien filma reflexiona sobre su propia familia con imágenes analógicas de textura áspera. Un monumento a las víctimas indígenas de la explotación del caucho en Perú.",
+  "original": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
+  "sintesis": {
+   "redacta": "verificador A 26 nov",
+   "verifica": "verificador B 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "329ab69d2684",
+   "permitido": {
+    "nombre que el original no trae: Europa": "la corta sale del original verificado en su fuente (aprobada por Juan 26 nov)",
+    "nombre que el original no trae: Perú": "la corta sale del original verificado en su fuente (aprobada por Juan 26 nov)",
+    "cifra que el original no trae: 2": "la corta sale del original verificado en su fuente (aprobada por Juan 26 nov)"
+   }
+  }
+ },
+ {
+  "work_id": "w_R4KQGMB4710G",
+  "campo": "sinopsis.en",
+  "valor": "A photo of two Indigenous boys taken to Europe by force opens an inquiry into the past, with reflections on the filmmaker's own family in roughly textured analogue footage. A monument to the Indigenous victims of the rubber trade in Peru.",
+  "motivo": "síntesis del original verificado (aprobada por Juan 26 nov)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "antes": {
+   "mambe-2026": "A photo of two indigenous boys brought by force to Europe opens an investigation of the past with meditations on the filmmaker’s own family using roughly textured analogue footage. A monument for the indigenous victims of the rubber trade in Peru.",
+   "mamut-2026": "A photo of two indigenous boys brought by force to Europe opens an investigation of the past with meditations on the filmmaker’s own family using roughly textured analogue footage. A monument for the indigenous victims of the rubber trade in Peru."
+  }
  }
 ]
