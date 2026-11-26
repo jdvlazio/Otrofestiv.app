@@ -29,7 +29,11 @@ Dueño: `pipeline/ficha_obra.py`; guardián `[ficha-obra]`.
 
 **Tres sinopsis por obra:** la original (`catalogo/originales.json`: texto, idioma y
 fuente; no se edita), la corta en español y la corta en inglés. Que sean de ESA
-película: `[sello-obra]`.
+película: `[sello-obra]`. El sello lo comprueba una máquina (`pipeline/sello_fuente.py`): el
+original tiene que estar letra por letra en su fuente, y la fuente tiene que ser de esa obra
+(su ficha de TMDB, o su título o su dirección cerca del texto). El almacén no es fuente de sí
+mismo. Lo publicado de cada obra es lo que dice la obra: `[obra-al-dia]` (el legado, solo baja).
+Las listas de lo pendiente no crecen a mano: `[deuda-solo-baja]` las compara con main.
 
 Que sea el **mismo** en todos los festivales: `[obra-unica]`. Que sea **verdad**:
 la identidad contra su fuente (en construcción, paso 2 y 3 del plan).

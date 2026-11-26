@@ -5745,7 +5745,7 @@ try:
     else:
         ok(check, 'ningún par de sedes a <60 m sin _nota')
 except Exception as _e:
-    warn(check, f'no se pudo verificar sedes-apiladas: {_e}')
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 check = 'sala-en-sede'
 try:
@@ -5775,7 +5775,7 @@ try:
     else:
         ok(check, 'ninguna sede activa lleva la sala en el nombre')
 except Exception as _e:
-    warn(check, f'no se pudo verificar sala-en-sede: {_e}')
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 # ── [boleteria-muda] un festival entero sin una palabra sobre cómo se entra ──
 # EL HUECO QUE TAPA. Los guardianes de boletería que ya teníamos vigilan la
@@ -6174,7 +6174,7 @@ try:
         warn(check, 'ningún sidecar de pósters registra `_medida_original`: '
                     'sin original no hay deformación que medir')
 except Exception as _e:
-    warn(check, f'no se pudo verificar afiche-origen-apaisado: {_e}')
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 # ── [afiche-es-afiche] lo que se publica como afiche ES un afiche ────────────
 # Auditoría del 7 oct 2026: 10 imágenes en producción que no eran afiches, y
@@ -6227,7 +6227,7 @@ try:
         ok(check, f'{_vistos} afiches locales medidos, ninguno tarjeta de texto; '
                   f'{len(_reg)} ajenos con veredicto vigente')
 except Exception as _e:
-    warn(check, f'no se pudo verificar afiche-es-afiche: {_e}')
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 # ── [sin-handler-inline] ningún on*="…" nuevo en el HTML (CSP, 26 oct 2026) ──
 # La CSP no puede dejar 'unsafe-inline' mientras haya handlers escritos en el
@@ -6563,7 +6563,7 @@ try:
     else:
         warn(check, 'ningún sidecar de pósters declara `_cobertura`')
 except Exception as _e:
-    warn(check, f'no se pudo verificar afiche-cobertura: {_e}')
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 
 # ── [sinopsis-cobertura] ninguna obra sin sinopsis en español en silencio ─────
@@ -6618,7 +6618,7 @@ try:
     else:
         ok(check, f'sinopsis: ninguna obra empeora la deuda congelada ({_total} pendientes heredadas)')
 except Exception as _e:
-    warn(check, f'no se pudo verificar sinopsis-cobertura: {_e}')
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 
 
@@ -7383,7 +7383,8 @@ except Exception as _e:
 check = 'sello-obra'
 try:
     import sello_obra as _se
-    _ciega, _fal, _gem = _se.autoprueba(), _se.faltan(_fests), _se.gemelas(_fests)
+    import sello_fuente as _sfu
+    _ciega, _fal, _gem = _se.autoprueba() + _sfu.autoprueba(), _se.faltan(_fests), _se.gemelas(_fests)
     if _ciega:
         fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
     elif _fal or _gem:
@@ -7447,6 +7448,72 @@ try:
         fail(check, 'en el legado y sin publicar, quitar: ' + ', '.join(_de_mas[:5]))
     else:
         ok(check, f'{len(set(_fests) - _of.legado())} festival(es) se arman desde el almacén; {len(_of.legado())} en el legado')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [deuda-solo-baja] las listas de lo pendiente no crecen a mano (revisión senior, 25 nov 2026) ──
+# Agregar una obra a `sin_comprobar` o a la deuda de sellos, o una diferencia a la de obra-al-dia,
+# era la forma de colar un sello sin comprobar o un dato distinto. Se compara contra main.
+check = 'deuda-solo-baja'
+try:
+    import subprocess as _spd, json as _jsd
+    if _spd.run(['git', 'rev-parse', '-q', '--verify', 'origin/main'], capture_output=True).returncode:
+        raise RuntimeError('no hay origin/main con qué comparar (en CI: traer main en el checkout)')
+
+    def _de_main(_p):
+        _r = _spd.run(['git', 'show', f'origin/main:{_p}'], capture_output=True, text=True)
+        return _jsd.loads(_r.stdout) if _r.returncode == 0 and _r.stdout.strip() else None
+
+    def _aqui(_p):
+        with open(_p, encoding='utf-8') as _fh:
+            return _jsd.load(_fh)
+    _sub = []
+    _a, _b = _de_main('pipeline/sello-obra-deuda.json') or {}, _aqui('pipeline/sello-obra-deuda.json')
+    _sel_main = _de_main('catalogo/sellos.json') or {}
+    if 'sin_comprobar' in _a:
+        _sub += [f'sin_comprobar: {_w}' for _w in sorted(set(_b.get('sin_comprobar') or []) - set(_a['sin_comprobar']))]
+    # una obra entra a la deuda solo si se le retiró el sello que tenía en main, con su motivo
+    _ret = {_w for _w, _m in (_b.get('retirados') or {}).items() if str(_m).strip()}
+    _sub += [f'obras sin sello: {_w} (sin retirar su sello de main con motivo)'
+             for _w in sorted(set(_b.get('obras') or {}) - set(_a.get('obras') or {})) if not (_w in _ret and _w in _sel_main)]
+    _sub += [f'obras sin sello: {_w} cambió de huella' for _w, _h in sorted((_b.get('obras') or {}).items())
+             if _w in (_a.get('obras') or {}) and _a['obras'][_w] != _h]
+    _sub += [f'sin_original: {_w}' for _w in sorted(set(_b.get('sin_original') or []) - set(_a.get('sin_original') or []))]
+    # un original de main no se edita: se corrige con sello_obra.py --corregir-original, que guarda el anterior
+    _om, _oa = _de_main('catalogo/originales.json') or {}, _aqui('catalogo/originales.json')
+    for _w, _o in sorted(_om.items()):
+        _n = _oa.get(_w)
+        _base = {k: _o.get(k) for k in ('texto', 'idioma', 'fuente')}
+        if _n is None:
+            _sub.append(f'original de {_w}: desapareció')
+        elif {k: _n.get(k) for k in ('texto', 'idioma', 'fuente')} != _base:
+            _ult = (_n.get('anteriores') or [{}])[-1]
+            if {k: _ult.get(k) for k in ('texto', 'idioma', 'fuente')} != _base or not str(_ult.get('motivo') or '').strip():
+                _sub.append(f'original de {_w}: editado a mano (se corrige con --corregir-original)')
+    _c, _d = _de_main('pipeline/obra-al-dia-deuda.json'), _aqui('pipeline/obra-al-dia-deuda.json')
+    if _c and _c.get('diferencias') is not None:
+        _sub += [f'obra-al-dia: {_x[:80]}' for _x in sorted(set(_d.get('diferencias') or []) - set(_c['diferencias']))]
+    if _sub:
+        fail(check, f'{len(_sub)} entrada(s) nuevas o editadas en lo que solo baja: ' + ' · '.join(_sub[:5]))
+    else:
+        ok(check, 'las deudas de sellos y de obra-al-dia no crecieron y ningún original se editó a mano, frente a main')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [obra-al-dia] lo publicado de una obra es lo que dice la obra (pipeline/obra_al_dia.py) ──
+# Revisión senior, 25 nov 2026: un país falso o el afiche de otra obra pasaban todo validate.py.
+check = 'obra-al-dia'
+try:
+    import obra_al_dia as _oad
+    _ciega = _oad.autoprueba()
+    _mal = _oad.problemas(_fests)
+    if _ciega:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
+    elif _mal:
+        fail(check, f'{len(_mal)} festival(es) publican datos de obra distintos de su obra — decidir con obra_unica.py --decidir '
+             'y aplicar, o arreglar el festival: ' + ' · '.join(_mal[:5]))
+    else:
+        ok(check, 'ningún festival publica de una obra más diferencias que las anotadas (solo bajan)')
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 

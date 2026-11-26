@@ -6,6 +6,8 @@ Uso:
   python3 pipeline/publicar-datos.py <festival> --probar   # valida y muestra; no sube nada
   python3 pipeline/publicar-datos.py <festival> --ensayo   # TODOS los guardianes hasta el final; lista todo lo que falta
   (--desde-main: solo lo usa el job «Datos al almacén» de GitHub, tras un merge a main)
+  --urgente "<motivo>"  publicar lo que todavía no está en main (corrección de último momento);
+                        sin esto, el commit tiene que estar ya en origin/main (25 nov 2026)
 
 Qué hace, en orden (si un paso falla, no sigue). Los GUARDIANES son los mismos
 que protegen hoy un PR de datos — publicar aparte no se salta ninguno (Juan, 18 oct):
@@ -404,7 +406,8 @@ def interruptor(apagado):
 def main():
     if '--apagar' in sys.argv or '--encender' in sys.argv:
         return interruptor('--apagar' in sys.argv)
-    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    _u = sys.argv.index('--urgente') + 1 if '--urgente' in sys.argv else -1      # el motivo no es un festival
+    args = [a for i, a in enumerate(sys.argv) if i and i != _u and not a.startswith('--')]
     if len(args) != 1:
         sys.exit(__doc__)
     fest = args[0]
@@ -419,6 +422,20 @@ def main():
         sys.exit(f'✗ {ruta} no es JSON: {e}')
     if not d.get('films'):
         sys.exit(f'✗ {ruta} no tiene films: no se publica un festival vacío')
+    # DESDE MAIN (revisión senior, 25 nov 2026): publicar desde una rama sin mergear dejaba al
+    # almacén sirviendo datos que main no tenía. Ahora el commit publicado tiene que estar en
+    # main, o la urgencia se declara y queda en el mensaje de la rama `datos`.
+    urgente = sys.argv[sys.argv.index('--urgente') + 1].strip() if '--urgente' in sys.argv and sys.argv.index('--urgente') + 1 < len(sys.argv) else ''
+    if '--urgente' in sys.argv and (len(urgente) < 10 or urgente.startswith('--')):
+        sys.exit('✗ --urgente lleva el motivo entre comillas, en una frase: --urgente "el festival cambió la sala hoy"')
+    if not any(x in sys.argv for x in ('--ensayo', '--probar', '--desde-main')):
+        git('fetch', '-q', 'origin', '+refs/heads/main:refs/remotes/origin/main')
+        # el CONTENIDO, no la ascendencia: un commit viejo de main también es ancestro
+        en_main = subprocess.run(['git', '-C', REPO, 'show', f'origin/main:{ruta}'], capture_output=True).stdout
+        sucio = subprocess.run(['git', '-C', REPO, 'status', '--porcelain', '--', ruta], capture_output=True, text=True).stdout.strip()
+        if contenido != en_main and not urgente:
+            sys.exit(f'✗ {ruta} no es lo que hay en main ({"sin commitear" if sucio else "distinto de origin/main"}).\n'
+                     '  Mergeá el PR y publica desde main, o declara la urgencia: --urgente "<motivo>"')
 
     if '--ensayo' in sys.argv:
         global _ENS
@@ -465,7 +482,7 @@ def main():
     if '--desde-main' in sys.argv and ficha and '--alta' not in sys.argv and not _tiene_ficha(fest):
         print('  · sin ficha en el almacén: entra a propósito con publicar-datos.py, no desde main'); ficha = {}
     # 3. publicar (commit + función; si otra corrida se cruza, se rehace sobre la punta nueva)
-    sha, res = _publicar({ruta: contenido, **ficha}, f'datos({fest}): publicar {huella[:12]}',
+    sha, res = _publicar({ruta: contenido, **ficha}, f'datos({fest}): publicar {huella[:12]}' + (f' · URGENTE fuera de main: {urgente}' if urgente else ''),
                          {'festival': fest, 'por': os.environ.get('OTF_POR') or git('config', 'user.name') or 'comando'})
     if not res.get('ok'):
         sys.exit(f'✗ publicar-datos: {res}')
