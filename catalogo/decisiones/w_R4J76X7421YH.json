@@ -31,5 +31,42 @@
    "popayan-2026": 2026,
    "siembrafest-2026": 2023
   }
+ },
+ {
+  "work_id": "w_R4J76X7421YH",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "vistas": [
+   "e5453952fda1"
+  ],
+  "original_de": [
+   "ficmontanas-2026",
+   "popayan-2026"
+  ],
+  "titulo": "La asociación",
+  "valor": "En el Macizo Colombiano, mujeres indígenas y campesinas se unieron a su comunidad para enfrentar con alegría y valentía la explotación e injusticias de las multinacionales lecheras y superarlas entre la neblina y el conflicto armado. Todo el resguardo de Pancitara participa en el documental sobre asociarse para construir desde su propia economía.",
+  "original": "En las altas montañas del imponente y vital Macizo Colombiano, mujeres indígenas y campesinas se unieron junto a su comunidad para enfrentar con alegría y valentía a las multinacionales del comercio lechero en Colombia, y lograr entre la neblina y el conflicto armado que transita a diario por estos territorios, una unión de fuerzas y convicciones para superar la explotación y las injusticias de estas empresas lecheras. Toda la comunidad en el resguardo indígena de Pancitara participa en este documental para mostrarle al mundo desde paramos y cerros como es asociarse para construir un mundo desde sus propias economías.",
+  "sintesis": {
+   "redacta": "Claude 26 nov",
+   "verifica": "verificador independiente 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "46e5468024fb"
+  }
+ },
+ {
+  "work_id": "w_R4J76X7421YH",
+  "campo": "sinopsis.en",
+  "valor": "In the Colombian Massif, Indigenous and peasant women joined their community to face the dairy multinationals with joy and courage and, amid the mist and armed conflict, overcome the companies' exploitation and injustice. The whole Indigenous reserve of Pancitara takes part in this documentary about joining forces to build from their own economies.",
+  "motivo": "síntesis del original verificado (aprobada por Juan 26 nov)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "antes": {
+   "ficmontanas-2026": "In the Colombian Massif, Indigenous and peasant women joined their community to face the dairy multinationals with joy and courage and, amid the mist and armed conflict, overcome the companies' exploitation and injustice. The whole Indigenous reserve of Pancitara takes part in this documentary about joining forces to build from their own economies.",
+   "popayan-2026": "In the Colombian Massif, Indigenous and peasant women joined their community to face the dairy multinationals with joy and courage and, amid the mist and armed conflict, overcome the companies' exploitation and injustice. The whole Indigenous reserve of Pancitara takes part in this documentary about joining forces to build from their own economies.",
+   "siembrafest-2026": "In the Colombian Massif, Indigenous and peasant women joined their community to face the dairy multinationals with joy and courage and, amid the mist and armed conflict, overcome the companies' exploitation and injustice. The whole Indigenous reserve of Pancitara takes part in this documentary about joining forces to build from their own economies."
+  }
  }
 ]

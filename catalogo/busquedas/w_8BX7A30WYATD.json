@@ -1,0 +1,97 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20Miss",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "original: fuentes/festicineantioquia-2026/lectura-2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/op.html",
+     "nota": "original: fuentes/festicineantioquia-2026/web/op.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/pages.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/pages.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/posts.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/posts.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DeslqRAFLMP.json",
+     "nota": "original: fuentes/ig-vigia/DeslqRAFLMP.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfSov7MI4xg.json",
+     "nota": "original: fuentes/ig-vigia/DfSov7MI4xg.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1265032/",
+     "nota": "original: https://letterboxd.com/tmdb/1265032/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1265032",
+     "nota": "original: TMDB 1265032",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"La Miss\" Porto"
+    },
+    {
+     "consulta": "\"La Miss\" sinopsis"
+    },
+    {
+     "consulta": "\"La Miss\" synopsis Porto"
+    },
+    {
+     "consulta": "\"Una ex reina de belleza sueña con que su\""
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_8BX7A30WYATD"
+}

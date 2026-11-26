@@ -1675,9 +1675,17 @@
   "texto": "Andrés, un barbero aferrado a su rutina, lleva semanas escuchando todos los días a las 9:00 p.m. un golpe seco que proviene del cuarto del fondo. El sonido solo aparece en el silencio y ninguno de sus clientes parece notarlo, quebrando su percepción de la realidad. Una noche, cuando está por cerrar, atiende a Jairo, un cliente de años. Durante el afeitado, el golpe vuelve a sonar y, por primera vez, alguien más lo escucha. Los ruidos se intensifican y parecen acercarse a ellos. De pronto, las luces se apagan. Al regresar la luz, Andrés está solo. Jairo ha desaparecido. El reloj marca las 9:00 p.m. Y el golpe vuelve."
  },
  "w_8BX7A30WYATD": {
+  "anteriores": [
+   {
+    "fuente": "https://www.themoviedb.org/movie/1265032",
+    "idioma": "es y en",
+    "motivo": "el texto guardado no estaba en la fuente; se usa el literal de TMDB (26 nov, aprobado por Juan)",
+    "texto": "Una ex reina de belleza sueña con que su hija continúe la tradición familiar y gane un certamen de belleza. Sin embargo, ella no tiene ni la aptitud ni el interés para hacerlo. Por otro lado, su hijo parece tener más talento para conquistar la banda y la corona.\n\nA former beauty pageant winner dreams that her daughter will follow the family tradition and win a Miss contest. However, she has neither the aptitude nor the interest for it. On the other hand, her son seems to have more talent to claim the sash and crown."
+   }
+  ],
   "fuente": "https://www.themoviedb.org/movie/1265032",
-  "idioma": "es y en",
-  "texto": "Una ex reina de belleza sueña con que su hija continúe la tradición familiar y gane un certamen de belleza. Sin embargo, ella no tiene ni la aptitud ni el interés para hacerlo. Por otro lado, su hijo parece tener más talento para conquistar la banda y la corona.\n\nA former beauty pageant winner dreams that her daughter will follow the family tradition and win a Miss contest. However, she has neither the aptitude nor the interest for it. On the other hand, her son seems to have more talent to claim the sash and crown."
+  "idioma": "en",
+  "texto": "A former beauty pageant winner dreams that her daughter will follow the family tradition and win a Miss contest. However, she has neither the aptitude nor the interest for it. On the other hand, her son seems to have more talent to claim the sash and crown."
  },
  "w_8BX7AMYKRQAV": {
   "fuente": "https://www.themoviedb.org/movie/800090",
@@ -4035,6 +4043,11 @@
   "fuente": "https://www.themoviedb.org/movie/1243032",
   "idioma": "es",
   "texto": "Nunkui vive en una comunidad Shuar con sus abuelos, tías y primos y sueña con el espíritu femenino de la huerta, llamado Nunkui como ella. Mientras su tía abuela le enseña cantos mágicos y secretos para el cultivo, la extensa selva amazónica en la que viven es entregada a compañías mineras y comienzan desalojos en la zona. Los sueños premonitorios, la figura del abuelo, un líder Shuar que lucha por la defensa del territorio, y la complejidad de un mundo exuberante de plantas, animales y espíritus, marcan su entrada a la adolescencia y la comprensión de su lugar en el mundo."
+ },
+ "w_R4J76X7421YH": {
+  "fuente": "https://www.themoviedb.org/movie/1663705",
+  "idioma": "es",
+  "texto": "En las altas montañas del imponente y vital Macizo Colombiano, mujeres indígenas y campesinas se unieron junto a su comunidad para enfrentar con alegría y valentía a las multinacionales del comercio lechero en Colombia, y lograr entre la neblina y el conflicto armado que transita a diario por estos territorios, una unión de fuerzas y convicciones para superar la explotación y las injusticias de estas empresas lecheras. Toda la comunidad en el resguardo indígena de Pancitara participa en este documental para mostrarle al mundo desde paramos y cerros como es asociarse para construir un mundo desde sus propias economías."
  },
  "w_R4J76XVZ2FFX": {
   "fuente": "https://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",
