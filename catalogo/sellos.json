@@ -7039,6 +7039,15 @@
   "veredicto": "fiel",
   "verifica": "verificador + segundo lector 26 nov"
  },
+ "w_R4N5JQDH0WFG": {
+  "comprobado": "máquina: TMDB 1713804",
+  "contra": "https://www.themoviedb.org/movie/1713804",
+  "fecha": "2026-11-26",
+  "huella": "fbf0b7e8f328",
+  "redacta": "Claude 26 nov",
+  "veredicto": "fiel",
+  "verifica": "verificador independiente 26 nov"
+ },
  "w_R4NDXCTSBP86": {
   "contra": "https://watch.eventive.org/sjff2026/play/69c414932af66540ad90ef46/698ba2b9023a0c7c1cd99fe4",
   "fecha": "2026-11-25",
@@ -7102,12 +7111,13 @@
   "verifica": "segunda lectura"
  },
  "w_R4NEB2E4M4YS": {
-  "contra": "https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul",
-  "fecha": "2026-11-25",
+  "comprobado": "a mano: atribución 26 nov aprobada por Juan",
+  "contra": "fuentes/provinciadevelez-2026/fb/post-25nov.txt",
+  "fecha": "2026-11-26",
   "huella": "050a54e1ab73",
-  "redacta": "agente segunda lectura (migración)",
+  "redacta": "redactor anterior",
   "veredicto": "fiel",
-  "verifica": "Claude (sesión App)"
+  "verifica": "verificador independiente 26 nov"
  },
  "w_R4NEB2HBPEKG": {
   "comprobado": "máquina: http://ficfusa.com/catalogo/seleccion-oficial-2026.pdf",

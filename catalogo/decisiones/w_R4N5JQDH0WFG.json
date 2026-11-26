@@ -56,7 +56,7 @@
  {
   "work_id": "w_R4N5JQDH0WFG",
   "campo": "sinopsis.es",
-  "valor": "Jóvenes bailarines recuperan la Danza de las Tabliteras a partir de los movimientos y ritmos transmitidos por los últimos mayores que conservaban esta tradición de San Antonio, Bolívar. En cada gesto, el cuerpo se vuelve refugio de una memoria colectiva que encuentra nuevas formas de permanecer.",
+  "valor": "Un grupo de jóvenes bailarines vio desaparecer poco a poco la tradicional Danza de las Tabliteras. Decididos a revivirla, aprendieron sus ritmos y su coreografía de los cuatro mayores que aún la llevaban en el cuerpo. Hoy esos gestos vuelven a evocar los que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a San Antonio, Bolívar.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (villadelcine-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -72,6 +72,26 @@
    "qaff-2026": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar. Tragaluz es un colectivo colombiano centrado en el cine documental y las artes audiovisuales comunitarias. Está liderado por Adrián Villa-Dávila (Quito, 1982) , cineasta y artista visual formado en Colombia y Alemania, y Andrés Prado Rojas (Bogotá, 1988) , cineasta y director de fotografía con amplia experiencia en cine documental. Su obra profundiza en la memoria, el territorio y los procesos sociales desde una mirada poética y colaborativa.",
    "siembrafest-2026": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
    "villadelcine-2026": "Jóvenes bailarines recuperan la Danza de las Tabliteras a partir de los movimientos y ritmos transmitidos por los últimos mayores que conservaban esta tradición de San Antonio, Bolívar. En cada gesto, el cuerpo se vuelve refugio de una memoria colectiva que encuentra nuevas formas de permanecer."
+  },
+  "original_de": [
+   "cineparalapaz-2026",
+   "fecibac-2026",
+   "qaff-2026",
+   "siembrafest-2026",
+   "villadelcine-2026"
+  ],
+  "titulo": "Refugiar el Gesto",
+  "original": "Jóvenes bailarines recuperan la Danza de las Tabliteras a partir de los movimientos y ritmos transmitidos por los últimos mayores que conservaban esta tradición de San Antonio, Bolívar. En cada gesto, el cuerpo se vuelve refugio de una memoria colectiva que encuentra nuevas formas de permanecer.",
+  "sintesis": {
+   "redacta": "Claude 26 nov",
+   "verifica": "verificador independiente 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "6bf6cbca080f",
+   "permitido": {
+    "no es más corta que el original": "la corta sale del original verificado de TMDB (aprobada por Juan 26 nov)",
+    "cifra que el original no trae: 4": "la corta sale del original verificado de TMDB (aprobada por Juan 26 nov)"
+   }
   }
  },
  {
@@ -94,10 +114,10 @@
  {
   "work_id": "w_R4N5JQDH0WFG",
   "campo": "sinopsis.en",
-  "valor": "Young dancers reclaim the Danza de las Tabliteras through the movements and rhythms passed on by the last elders who kept this tradition of San Antonio, Bolívar, alive. In each gesture, the body becomes a refuge for a collective memory that finds new ways to endure.",
-  "motivo": "la inglesa contaba otra cosa y pasaba de 350",
-  "fecha": "2026-11-25",
-  "quien": "Claude (migración Cine para la Paz, verificador independiente)",
+  "valor": "A group of young dancers watched the traditional Danza de las Tabliteras slowly disappear. Determined to revive it, they learned its rhythms and choreography from the four remaining elders who still carried it in their bodies. Again, these gestures echo those that decades ago filled San Antonio, Bolívar, with pride, vitality and collective spirit.",
+  "motivo": "síntesis del original de TMDB (aprobada por Juan 26 nov)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
   "antes": {
    "cineparalapaz-2026": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
    "fecibac-2026": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
@@ -111,6 +131,13 @@
     "motivo": "la que ya publica otro festival: una sola por obra",
     "fecha": "2026-11-24",
     "quien": "regla de Juan: la sinopsis es de la obra"
+   },
+   {
+    "valor": "Young dancers reclaim the Danza de las Tabliteras through the movements and rhythms passed on by the last elders who kept this tradition of San Antonio, Bolívar, alive. In each gesture, the body becomes a refuge for a collective memory that finds new ways to endure.",
+    "motivo": "la inglesa contaba otra cosa y pasaba de 350",
+    "fecha": "2026-11-25",
+    "quien": "Claude (migración Cine para la Paz, verificador independiente)",
+    "fuente": "catálogo PDF de Villa del Cine 2026"
    }
   ],
   "fuente": "catálogo PDF de Villa del Cine 2026"
