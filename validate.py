@@ -5692,6 +5692,9 @@ try:
         _se = _sm.sin_enlace()
         if _se:   # desde #1507 todo pin vivo está enlazado: uno nuevo sin enlace frena
             _p.append(f'{len(_se)} pin(es) de festivales vivos sin enlace al almacén (python3 pipeline/sedes.py --construir && --enlazar): ' + ', '.join(f'{a}:{b}' for a, b in _se[:5]))
+        _hu = _sm.huerfanas()
+        if _hu:
+            _p.append(f'{len(_hu)} lugar(es) que apuntan a una institución que no existe (sedes.py --instituciones): ' + ', '.join(_hu[:5]))
         _sc = [x['nombre'] for x in _S.values() if not _sm.limpia_ciudad(x.get('ciudad'))]
         if _sc:
             _p.append(f'{len(_sc)} lugar(es) sin ciudad válida (python3 pipeline/sedes.py --completar-ciudades): ' + ', '.join(_sc[:5]))
