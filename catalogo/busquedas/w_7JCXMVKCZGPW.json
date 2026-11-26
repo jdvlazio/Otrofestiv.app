@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Creation%20of%20a%20Unicorn",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "creation of a unicorn alta_posible fuentes provinciadevelez 2026 altas creation of a unicorn jpg creation of a unicorn",
+     "donde": "fuentes/provinciadevelez-2026/altas/creation-of-a-unicorn.tmdb.json",
+     "nota": "solo título, dirección y afiche; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Creation of a Unicorn»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Creation of a Unicorn\"",
+     "nota": "Solo artículos y obras ajenas sobre unicornios; ninguna obra con ese título",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Creation of a Unicorn\" sinopsis",
+     "nota": "Solo artículos y obras ajenas sobre unicornios; ninguna obra con ese título",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Creation of a Unicorn\" synopsis",
+     "nota": "Solo artículos y obras ajenas sobre unicornios; ninguna obra con ese título",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Creation of a Unicorn\"  cortometraje",
+     "nota": "Solo artículos y obras ajenas sobre unicornios; ninguna obra con ese título",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Creation of a Unicorn\"  filmfreeway",
+     "nota": "Solo artículos y obras ajenas sobre unicornios; ninguna obra con ese título",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Creation of a Unicorn\"  vimeo OR youtube",
+     "nota": "Solo artículos y obras ajenas sobre unicornios; ninguna obra con ese título",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "provinciadevelez-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_7JCXMVKCZGPW"
+}
