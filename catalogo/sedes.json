@@ -4,6 +4,180 @@
   "construido_por": "pipeline/sedes.py --construir",
   "regla": "mismo lugar: mismo nombre (o declarado) a <2000 m; divergencia: pines a >120 m; cerca: lugares a <40 m sin declarar"
  },
+ "instituciones": {
+  "i_0b12d8c2": {
+   "nombre": "Comfama",
+   "alias": [
+    "Caja de Compensación Familiar de Antioquia"
+   ],
+   "decisiones": [
+    {
+     "sedes": [
+      "s_1347d668",
+      "s_25caf24a",
+      "s_4a79ccdf",
+      "s_4f01e23d",
+      "s_67c78bba",
+      "s_72770c6f",
+      "s_8d191328",
+      "s_e8c35b78",
+      "s_f7766586"
+     ],
+     "por_que": "aprobado por Juan el 26 nov 2026 (fase 3: institución → sede → sala)",
+     "fecha": "2026-11-26"
+    }
+   ]
+  },
+  "i_1cc90d2b": {
+   "nombre": "Fundación Diego Echavarría Misas",
+   "alias": [],
+   "decisiones": [
+    {
+     "sedes": [
+      "s_12ebb5ae",
+      "s_5f0c609d"
+     ],
+     "por_que": "aprobado por Juan el 26 nov 2026 (fase 3: institución → sede → sala)",
+     "fecha": "2026-11-26"
+    }
+   ]
+  },
+  "i_22f00e34": {
+   "nombre": "Universidad Nacional de Colombia",
+   "alias": [
+    "UNAL",
+    "Universidad Nacional"
+   ],
+   "decisiones": [
+    {
+     "sedes": [
+      "s_03bcfa6f",
+      "s_11433c3f",
+      "s_2635c36c",
+      "s_891e8481",
+      "s_b7930658",
+      "s_ce9371b5"
+     ],
+     "por_que": "aprobado por Juan el 26 nov 2026 (fase 3: institución → sede → sala)",
+     "fecha": "2026-11-26"
+    }
+   ]
+  },
+  "i_4a303e29": {
+   "nombre": "Valerio Antonio Jiménez",
+   "alias": [],
+   "decisiones": [
+    {
+     "sedes": [
+      "s_b14cf4f4",
+      "s_ea18aa85"
+     ],
+     "por_que": "aprobado por Juan el 26 nov 2026 (fase 3: institución → sede → sala)",
+     "fecha": "2026-11-26"
+    }
+   ]
+  },
+  "i_6ff39c43": {
+   "nombre": "Universidad Jorge Tadeo Lozano",
+   "alias": [
+    "La Tadeo",
+    "Utadeo"
+   ],
+   "decisiones": [
+    {
+     "sedes": [
+      "s_808cba64",
+      "s_86f5f95f",
+      "s_bf5c6a6a",
+      "s_bf8a2fa2"
+     ],
+     "por_que": "aprobado por Juan el 26 nov 2026 (fase 3: institución → sede → sala)",
+     "fecha": "2026-11-26"
+    }
+   ]
+  },
+  "i_7fb48a56": {
+   "nombre": "Universidad de la Amazonia",
+   "alias": [
+    "Uniamazonia"
+   ],
+   "decisiones": [
+    {
+     "sedes": [
+      "s_19daa131",
+      "s_b9e0404b"
+     ],
+     "por_que": "aprobado por Juan el 26 nov 2026 (fase 3: institución → sede → sala)",
+     "fecha": "2026-11-26"
+    }
+   ]
+  },
+  "i_b40f78bd": {
+   "nombre": "Universidad de Antioquia",
+   "alias": [
+    "UdeA"
+   ],
+   "decisiones": [
+    {
+     "sedes": [
+      "s_26a2abce",
+      "s_526f7636",
+      "s_7dac69ba",
+      "s_febabd56"
+     ],
+     "por_que": "aprobado por Juan el 26 nov 2026 (fase 3: institución → sede → sala)",
+     "fecha": "2026-11-26"
+    }
+   ]
+  },
+  "i_c67c61eb": {
+   "nombre": "Pontificia Universidad Javeriana",
+   "alias": [
+    "La Javeriana"
+   ],
+   "decisiones": [
+    {
+     "sedes": [
+      "s_0655bb7b",
+      "s_5ce71f2b"
+     ],
+     "por_que": "aprobado por Juan el 26 nov 2026 (fase 3: institución → sede → sala)",
+     "fecha": "2026-11-26"
+    }
+   ]
+  },
+  "i_d0c6d3d1": {
+   "nombre": "Cinemateca de Bogotá",
+   "alias": [],
+   "decisiones": [
+    {
+     "sedes": [
+      "s_17a71d8b",
+      "s_c82c47d7"
+     ],
+     "por_que": "aprobado por Juan el 26 nov 2026 (fase 3: institución → sede → sala)",
+     "fecha": "2026-11-26"
+    }
+   ]
+  },
+  "i_eac0636e": {
+   "nombre": "Comfenalco Antioquia",
+   "alias": [
+    "Comfenalco"
+   ],
+   "decisiones": [
+    {
+     "sedes": [
+      "s_6b6f9da6",
+      "s_be408f33",
+      "s_d6693f43"
+     ],
+     "por_que": "aprobado por Juan el 26 nov 2026 (fase 3: institución → sede → sala)",
+     "fecha": "2026-11-26"
+    }
+   ]
+  }
+ },
  "sedes": {
   "s_03bcfa6f": {
    "nombre": "Universidad Nacional · El Cable",
@@ -21,7 +195,8 @@
     "Aula 007"
    ],
    "ciudad": "Manizales",
-   "corto": "Universidad Nacional · El Cable"
+   "corto": "Universidad Nacional · El Cable",
+   "institucion": "i_22f00e34"
   },
   "s_05f4d981": {
    "nombre": "Madame Blue",
@@ -59,7 +234,8 @@
     "Ed. Ático"
    ],
    "ciudad": "Bogotá",
-   "corto": "Pontificia Universidad Javeriana"
+   "corto": "Pontificia Universidad Javeriana",
+   "institucion": "i_c67c61eb"
   },
   "s_065b13d4": {
    "nombre": "House of Demons",
@@ -235,7 +411,8 @@
     "Bloque C, Auditorio 422"
    ],
    "ciudad": "Bogotá",
-   "corto": "Universidad Nacional, Edificio 303 (NEA)"
+   "corto": "Universidad Nacional, Edificio 303 (NEA)",
+   "institucion": "i_22f00e34"
   },
   "s_11519c26": {
    "nombre": "Parque Fundadores",
@@ -351,7 +528,8 @@
    "festivales": [
     "cinemancia-2026"
    ],
-   "ciudad": "Itagüí"
+   "ciudad": "Itagüí",
+   "institucion": "i_1cc90d2b"
   },
   "s_1311c9f4": {
    "nombre": "Centro de Memoria, Paz y Reconciliación",
@@ -390,7 +568,8 @@
     "Mediateca"
    ],
    "ciudad": "Medellín",
-   "corto": "Comfama San Ignacio"
+   "corto": "Comfama San Ignacio",
+   "institucion": "i_0b12d8c2"
   },
   "s_148dd95b": {
    "nombre": "Calimateca",
@@ -470,7 +649,6 @@
    ],
    "salas": [
     "Calle Museo",
-    "Lab 1",
     "Laboratorio 1",
     "Sala 2",
     "Sala 3",
@@ -482,8 +660,10 @@
    "ciudad": "Bogotá",
    "corto": "Cinemateca de Bogotá",
    "salas_alias": {
+    "Lab 1": "Laboratorio 1",
     "Taller de la imagen": "Taller de la Imagen"
-   }
+   },
+   "institucion": "i_d0c6d3d1"
   },
   "s_180f653f": {
    "nombre": "I.E. San Andrés",
@@ -541,7 +721,8 @@
     "Edificio Yapura - Sala 17, piso 7"
    ],
    "ciudad": "Florencia",
-   "corto": "Uniamazonia Sede Centro"
+   "corto": "Uniamazonia Sede Centro",
+   "institucion": "i_7fb48a56"
   },
   "s_1b1244a2": {
    "nombre": "I.E San Antonio",
@@ -855,7 +1036,8 @@
    "corto_decidido": {
     "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
     "fecha": "2026-11-26"
-   }
+   },
+   "institucion": "i_0b12d8c2"
   },
   "s_2635c36c": {
    "nombre": "Universidad Nacional",
@@ -876,7 +1058,8 @@
     "Plazoleta de la Luz"
    ],
    "ciudad": "Medellín",
-   "corto": "Universidad Nacional"
+   "corto": "Universidad Nacional",
+   "institucion": "i_22f00e34"
   },
   "s_26861d1b": {
    "nombre": "Real Fábrica",
@@ -921,7 +1104,8 @@
     "Auditorio",
     "Aula 201"
    ],
-   "corto": "Universidad de Antioquia Seccional Occidente"
+   "corto": "Universidad de Antioquia Seccional Occidente",
+   "institucion": "i_b40f78bd"
   },
   "s_274fbe5a": {
    "nombre": "Universidad del Magdalena",
@@ -1475,7 +1659,8 @@
     "cinemancia-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Teatro Comfama Alfonso Restrepo Moreno"
+   "corto": "Teatro Comfama Alfonso Restrepo Moreno",
+   "institucion": "i_0b12d8c2"
   },
   "s_4bf2bfa4": {
    "nombre": "Teatro UVA Tricentenario",
@@ -1570,7 +1755,8 @@
     "Auditorio"
    ],
    "ciudad": "Medellín",
-   "corto": "Comfama Aranjuez"
+   "corto": "Comfama Aranjuez",
+   "institucion": "i_0b12d8c2"
   },
   "s_526f7636": {
    "nombre": "Universidad de Antioquia",
@@ -1586,7 +1772,8 @@
     "midbo-2026"
    ],
    "ciudad": "Medellín",
-   "_ciudad_fijada": "lugar vecino del almacén a 0 m"
+   "_ciudad_fijada": "lugar vecino del almacén a 0 m",
+   "institucion": "i_b40f78bd"
   },
   "s_54536669": {
    "nombre": "Por definir",
@@ -1757,7 +1944,8 @@
    "corto_decidido": {
     "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
     "fecha": "2026-11-26"
-   }
+   },
+   "institucion": "i_c67c61eb"
   },
   "s_5d1ff362": {
    "nombre": "Universidad del Atlántico, sede Norte",
@@ -1791,7 +1979,8 @@
     "itagui-2026"
    ],
    "ciudad": "Itagüí",
-   "corto": "Auditorio Cultural Diego Echavarría Misas"
+   "corto": "Auditorio Cultural Diego Echavarría Misas",
+   "institucion": "i_1cc90d2b"
   },
   "s_5f50f1dc": {
    "nombre": "Universidad Simón Bolívar, sede 1",
@@ -1979,7 +2168,8 @@
     "miradas-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Comfama Otraparte"
+   "corto": "Comfama Otraparte",
+   "institucion": "i_0b12d8c2"
   },
   "s_67e7a9bd": {
    "nombre": "Bebop Bar",
@@ -2115,7 +2305,8 @@
     "festicineantioquia-2026"
    ],
    "ciudad": "Santa Fe de Antioquia",
-   "corto": "Sede de empleo y emprendimiento Comfenalco Antioquia"
+   "corto": "Sede de empleo y emprendimiento Comfenalco Antioquia",
+   "institucion": "i_eac0636e"
   },
   "s_6badfe99": {
    "nombre": "Colombo",
@@ -2305,7 +2496,8 @@
     "miradas-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Biblioteca Comfama Caldas"
+   "corto": "Biblioteca Comfama Caldas",
+   "institucion": "i_0b12d8c2"
   },
   "s_72e761e5": {
    "nombre": "Finca La Manuela",
@@ -2552,7 +2744,8 @@
     "Plazoleta central"
    ],
    "ciudad": "Caucasia",
-   "corto": "UdeA Campus Caucasia"
+   "corto": "UdeA Campus Caucasia",
+   "institucion": "i_b40f78bd"
   },
   "s_7ecef455": {
    "nombre": "Facultad de Artes Unicauca",
@@ -2622,7 +2815,8 @@
     "Sala Oval"
    ],
    "ciudad": "Bogotá",
-   "corto": "Universidad Jorge Tadeo Lozano"
+   "corto": "Universidad Jorge Tadeo Lozano",
+   "institucion": "i_6ff39c43"
   },
   "s_80902cf9": {
    "nombre": "Candela Café Bar",
@@ -2838,7 +3032,8 @@
     "Auditorio Fabio Lozano"
    ],
    "ciudad": "Bogotá",
-   "corto": "Universidad Jorge Tadeo Lozano, Ed. Biblioteca"
+   "corto": "Universidad Jorge Tadeo Lozano, Ed. Biblioteca",
+   "institucion": "i_6ff39c43"
   },
   "s_882ae757": {
    "nombre": "Universidad de Nariño, Sede Torobajo",
@@ -2897,7 +3092,8 @@
     "Cinemateca Sala Alterna, Auditorio 105, edificio 301"
    ],
    "ciudad": "Bogotá",
-   "corto": "Universidad Nacional de Colombia"
+   "corto": "Universidad Nacional de Colombia",
+   "institucion": "i_22f00e34"
   },
   "s_895d2add": {
    "nombre": "Plaza de Bolivar",
@@ -2965,7 +3161,8 @@
     "guatape-2026"
    ],
    "ciudad": "Guatapé",
-   "corto": "Comfama"
+   "corto": "Comfama",
+   "institucion": "i_0b12d8c2"
   },
   "s_8d5d66e1": {
    "nombre": "Perpetua Lab",
@@ -3852,7 +4049,8 @@
     "Foso"
    ],
    "ciudad": "Marinilla",
-   "corto": "Teatro Regional Valerio Antonio Jiménez"
+   "corto": "Teatro Regional Valerio Antonio Jiménez",
+   "institucion": "i_4a303e29"
   },
   "s_b2da5f1d": {
    "nombre": "Museo Juan del Corral",
@@ -4006,7 +4204,8 @@
     "Cinemateca Sala Alterna UNAL - Auditorio 105"
    ],
    "ciudad": "Bogotá",
-   "corto": "Universidad Nacional, Edificio 301"
+   "corto": "Universidad Nacional, Edificio 301",
+   "institucion": "i_22f00e34"
   },
   "s_b7e0f2f4": {
    "nombre": "Torre del Cable",
@@ -4059,7 +4258,8 @@
     "Auditorio Angel Cuniberti"
    ],
    "ciudad": "Florencia",
-   "corto": "Uniamazonia Sede Porvenir"
+   "corto": "Uniamazonia Sede Porvenir",
+   "institucion": "i_7fb48a56"
   },
   "s_b9fca4a4": {
    "nombre": "Parque Principal",
@@ -4174,7 +4374,8 @@
    "festivales": [
     "jardin-2026"
    ],
-   "ciudad": "Jardín"
+   "ciudad": "Jardín",
+   "institucion": "i_eac0636e"
   },
   "s_bf32b45a": {
    "nombre": "Fábrica de la Cultura 2",
@@ -4209,7 +4410,8 @@
     "Aula Máxima Luís Cordoba Mariño"
    ],
    "ciudad": "Bogotá",
-   "corto": "Universidad Jorge Tadeo Lozano, Módulo 4"
+   "corto": "Universidad Jorge Tadeo Lozano, Módulo 4",
+   "institucion": "i_6ff39c43"
   },
   "s_bf8a2fa2": {
    "nombre": "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano",
@@ -4228,7 +4430,8 @@
     "Auditorio Fabio Lozano"
    ],
    "ciudad": "Bogotá",
-   "corto": "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano"
+   "corto": "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano",
+   "institucion": "i_6ff39c43"
   },
   "s_bfb2e06b": {
    "nombre": "Cine Club El Ventanal",
@@ -4429,7 +4632,8 @@
     "narrarelfuturo-2026"
    ],
    "ciudad": "Bogotá",
-   "corto": "Cinemateca Fontanar del Río"
+   "corto": "Cinemateca Fontanar del Río",
+   "institucion": "i_d0c6d3d1"
   },
   "s_c85c8e31": {
    "nombre": "Cine Colombia Unicentro",
@@ -4497,7 +4701,8 @@
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "_ciudad_fijada": "lugar vecino del almacén a 202 m"
+   "_ciudad_fijada": "lugar vecino del almacén a 202 m",
+   "institucion": "i_22f00e34"
   },
   "s_cf6efa76": {
    "nombre": "Museo Arqueológico Jaime Hincapié Santa María",
@@ -4614,7 +4819,8 @@
     "fantasmagoria-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Biblioteca Comfenalco Castilla"
+   "corto": "Biblioteca Comfenalco Castilla",
+   "institucion": "i_eac0636e"
   },
   "s_d686ed25": {
    "nombre": "Teatro al Aire Libre Los Cristales",
@@ -4872,11 +5078,13 @@
     "ficica-2026"
    ],
    "salas": [
-    "Sede Combarranquilla Country",
-    "Sede Combarranquilla Country, primer piso"
+    "Sede Combarranquilla Country"
    ],
    "ciudad": "Barranquilla",
-   "corto": "Cinemateca del Caribe"
+   "corto": "Cinemateca del Caribe",
+   "salas_alias": {
+    "Sede Combarranquilla Country, primer piso": "Sede Combarranquilla Country"
+   }
   },
   "s_dfae17a9": {
    "nombre": "Alianza Francesa",
@@ -5108,7 +5316,8 @@
     "girardota-2026"
    ],
    "ciudad": "Girardota",
-   "corto": "Comfama"
+   "corto": "Comfama",
+   "institucion": "i_0b12d8c2"
   },
   "s_e94299cf": {
    "nombre": "SES Hospital Universitario de Caldas",
@@ -5142,7 +5351,8 @@
     "Hall"
    ],
    "ciudad": "Marinilla",
-   "corto": "Casa Cultural Valerio Antonio Jiménez"
+   "corto": "Casa Cultural Valerio Antonio Jiménez",
+   "institucion": "i_4a303e29"
   },
   "s_eb2718df": {
    "nombre": "Morning",
@@ -5480,7 +5690,8 @@
    "corto_decidido": {
     "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
     "fecha": "2026-11-26"
-   }
+   },
+   "institucion": "i_0b12d8c2"
   },
   "s_f95d634b": {
    "nombre": "Universidad Católica Luis Amigó",
@@ -5674,7 +5885,8 @@
     "miradas-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Paraninfo Universidad de Antioquia"
+   "corto": "Paraninfo Universidad de Antioquia",
+   "institucion": "i_b40f78bd"
   },
   "s_ff62cf6a": {
    "nombre": "Teatro Otraparte",
@@ -5890,6 +6102,20 @@
     "Sala Gaitán Antigua Cinemateca",
     "Teatro Jorge Eliécer Gaitán",
     "dos salas del mismo predio (Carrera 7 # 22-47): el teatro y la antigua Cinemateca Distrital"
+   ]
+  ],
+  "sala_igual": [
+   [
+    "s_17a71d8b",
+    "Lab 1",
+    "Laboratorio 1",
+    "abreviatura de la misma sala; aprobado por Juan el 26 nov 2026"
+   ],
+   [
+    "s_dfa5f4a5",
+    "Sede Combarranquilla Country, primer piso",
+    "Sede Combarranquilla Country",
+    "el piso es cómo llegar, no otra sala; aprobado por Juan el 26 nov 2026"
    ]
   ]
  },
