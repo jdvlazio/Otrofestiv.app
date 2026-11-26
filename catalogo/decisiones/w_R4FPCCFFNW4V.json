@@ -21,7 +21,7 @@
  {
   "work_id": "w_R4FPCCFFNW4V",
   "campo": "sinopsis.es",
-  "valor": "Kelly, una maestra joven, empieza a trabajar en una escuela pública de las afueras de Contagem. Idealista, intenta empujar un cambio y termina yendo demasiado lejos. Durante una clase discute con Nicolas, un alumno. De la pelea sale un aprendizaje: Kelly entiende que en la periferia de Brasil la excepción es la regla, y Nicolas, que solo derribando el presente se alcanza a ver el futuro.",
+  "valor": "Kelly, una joven maestra idealista, empieza a trabajar en una escuela pública de las afueras de Contagem. Intenta impulsar un cambio, pero va demasiado lejos y discute en clase con Nicolas, un alumno. Ella aprende que en la periferia de Brasil la excepción es la regla; él, que solo derribando el presente se ve el futuro.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -32,20 +32,41 @@
   "antes": {
    "cinemancia-2026": "Kelly, una maestra joven, empieza a trabajar en una escuela pública de las afueras de Contagem. Idealista, intenta empujar un cambio y termina yendo demasiado lejos. Durante una clase discute con Nicolas, un alumno. De la pelea sale un aprendizaje: Kelly entiende que en la periferia de Brasil la excepción es la regla, y Nicolas, que solo derribando el presente se alcanza a ver el futuro.",
    "olhar-2026": "Kelly, joven profesora de Portugués, empieza a dar clases en una escuela pública. En una clase discute con Nicolas, un joven alumno de segundo año, y ambos deben resolver el conflicto ante el director. La discusión deja enseñanzas: Kelly aprende que en la periferia de Brasil la excepción es la regla; y Nicolas aprende que hay que reconstruir el presente para ver el futuro."
+  },
+  "original_de": [
+   "cinemancia-2026",
+   "olhar-2026"
+  ],
+  "titulo": "Disciplina",
+  "original": "Kelly, una maestra joven, empieza a trabajar en una escuela pública de las afueras de Contagem. Idealista, intenta empujar un cambio y termina yendo demasiado lejos. Durante una clase discute con Nicolas, un alumno. De la pelea sale un aprendizaje: Kelly entiende que en la periferia de Brasil la excepción es la regla, y Nicolas, que solo derribando el presente se alcanza a ver el futuro.",
+  "sintesis": {
+   "redacta": "redactor 1 26 nov",
+   "verifica": "verificador 1 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "0a8f91a9a875"
   }
  },
  {
   "work_id": "w_R4FPCCFFNW4V",
   "campo": "sinopsis.en",
-  "valor": "Kelly, a young teacher, starts working at a public school on the outskirts of Contagem. Idealistic, she tries to push for a change, but ends up going too far. During a lesson, she gets into an argument with Nicolas, a young student. The quarrel brings some learning: Kelly learns that, on the outskirts of Brazil, the exception is the rule; and Nicolas learns that only by tearing down the present can the future be seen.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "Kelly, a young idealistic teacher, starts working at a public school on the outskirts of Contagem. She tries to push for change but goes too far and argues in class with Nicolas, a student. She learns that on the outskirts of Brazil the exception is the rule; he learns that only by tearing down the present can the future be seen.",
+  "motivo": "síntesis 26 nov (redactor 1 26 nov; verifica verificador 1 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
   "titulo": "Disciplina",
   "antes": {
    "cinemancia-2026": "Kelly, a young teacher, starts working at a public school on the outskirts of Contagem. Idealistic, she tries to push for a change, but ends up going too far. During a lesson, she gets into an argument with Nicolas, a young student. The quarrel brings some learning: Kelly learns that, on the outskirts of Brazil, the exception is the rule; and Nicolas learns that only by tearing down the present can the future be seen.",
    "olhar-2026": "Kelly, a young Portuguese language teacher, starts working at a public school. During a class, she gets into an argument with Nicolas, a young sophomore student, and the two have to resolve the conflict in front of the principal. The quarrel brings some learning: Kelly understands that on the outskirts of Brazil the exception is the rule; and Nicolas learns that is necessary to rebuild the present in order to see the future."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Kelly, a young teacher, starts working at a public school on the outskirts of Contagem. Idealistic, she tries to push for a change, but ends up going too far. During a lesson, she gets into an argument with Nicolas, a young student. The quarrel brings some learning: Kelly learns that, on the outskirts of Brazil, the exception is the rule; and Nicolas learns that only by tearing down the present can the future be seen.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
  },
  {
   "work_id": "w_R4FPCCFFNW4V",

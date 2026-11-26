@@ -25,7 +25,7 @@
  {
   "work_id": "w_R4HDSRY0KBZB",
   "campo": "sinopsis.es",
-  "valor": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanías del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
+  "valor": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi, en la alta Guajira, trata de recuperar el tejido y la unión familiar que rompió el «desarrollo sostenible» invasivo. Con pocas esperanzas de sobrevivir en su territorio desolado, la familia anhela quedarse, frente a los cambios económicos que golpean al pueblo wayuu.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficci-65, ficdeh-2026 · corregida)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -38,6 +38,21 @@
    "ficci-65": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
    "ficdeh-2026": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanias del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
    "midbo-2026": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi, ubicada en cercanías del Cerro de La Teta en la alta Guajira Colombiana, trata de recuperar el tejido y unión familiar que ocasionó el «desarrollo sostenible» invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer en el territorio, enfrentando las dificultades y los cambios económicos que afectan al pueblo wayuu."
+  },
+  "original_de": [
+   "festicinerio-2026",
+   "ficci-65",
+   "ficdeh-2026",
+   "midbo-2026"
+  ],
+  "titulo": "Apotnojushi La Casa del viento",
+  "original": "Ana Rosa Jusayu (mi madre), lideresa ancestral de la comunidad Apotnojushi ubicada en cercanías del cerro de la teta en la alta Guajira colombiana, trata de recuperar el tejido y la unión familiar que se vieron alterados por el “desarrollo sostenible” invasivo. En medio de las pocas esperanzas de sobrevivir en lo desolado de su territorio ancestral, la familia comparte su añoranza de permanecer allí, enfrentándose a las dificultades y los cambios económicos que afectan al pueblo wayuu.",
+  "sintesis": {
+   "redacta": "redactor 2 26 nov",
+   "verifica": "verificador 2 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "fe6b3331c6b2"
   }
  },
  {
@@ -73,16 +88,24 @@
  {
   "work_id": "w_R4HDSRY0KBZB",
   "campo": "sinopsis.en",
-  "valor": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "Ana Rosa Jusayu (my mother), an ancestral leader of the Apotnojushi community in Colombia's upper Guajira, tries to restore the family fabric and unity broken by invasive \"sustainable development\". With little hope of surviving in their desolate territory, the family shares its longing to stay, facing the economic changes hitting the Wayuu people.",
+  "motivo": "síntesis 26 nov (redactor 2 26 nov; verifica verificador 2 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
   "titulo": "Apotnojushi: la casa del viento",
   "antes": {
    "festicinerio-2026": "In this expressive and community-centered work, Wayuú director Marbel Vanegas Jusayu documents the social, spiritual, and environmental impacts of the installation of a wind farm in Apotnojushi, a historically marginalized community that remains committed to its sovereignty. Women leaders such as Ana Rosa Jusayu, the director’s mother, work to strengthen the social fabric, activate historical memory, and assert their right to determine their future. Through the voices and living portraits of community members, the piece reflects in its vignettes the community’s deep connection to its ancestral territory.",
    "ficci-65": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people.",
    "ficdeh-2026": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people.",
    "midbo-2026": "In this expressive and community-centered work, Wayuú director Marbel Vanegas Jusayu documents the social, spiritual, and environmental impacts of the installation of a wind farm in Apotnojushi, a historically marginalized community that remains committed to its sovereignty. Women leaders such as Ana Rosa Jusayu, the director’s mother, work to strengthen the social fabric, activate historical memory, and assert their right to determine their future. Through the voices and living portraits of community members, the piece reflects in its vignettes the community’s deep connection to its ancestral territory."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Ana Rosa Jusayu (My Mother), an ancestral leader of the Apotnojushi community located near Cerro de la Teta in the upper Guajira region of Colombia, is trying to rebuild the family fabric and unity that was disrupted by invasive “sustainable development.” Amidst the slim hopes of surviving in the desolation of their ancestral territory, the family shares their longing to remain there, facing the hardships and economic changes that affect the Wayuu people.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
  }
 ]

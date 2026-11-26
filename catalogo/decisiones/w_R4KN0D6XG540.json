@@ -2,7 +2,7 @@
  {
   "work_id": "w_R4KN0D6XG540",
   "campo": "sinopsis.es",
-  "valor": "Busco y hablo con los muertos. Le escribo a una mujer que ya no está: Soraya Cataño, asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen. Su voz emerge mientras una comparsa avanza por la ladera. El archivo revela su risa, sus gestos y yo decido invocarla. Yo también crecí en este valle. Yo también creí. Creo. Esta película no es sobre la muerte. Es una carta fílmica, un diálogo entre quien narra y quien resiste desde la ausencia. Es un fuego que no se apaga.",
+  "valor": "Busco y hablo con los muertos. Le escribo a Soraya Cataño, asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen; el archivo revela su risa, sus gestos, y decido invocarla. Yo también crecí en este valle. Esta película no es sobre la muerte: es una carta fílmica a quien resiste desde la ausencia. Un fuego que no se apaga.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -13,6 +13,20 @@
    "cortoscali-2026": "Busco y hablo con los muertos. Le escribo a una mujer que ya no está: Soraya Cataño; asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen. Su voz emerge mientras una comparsa avanza por la ladera. El archivo revela su risa; sus gestos y yo decido invocarla. Yo también crecí en este valle. Yo también creí. Creo. Esta película no es sobre la muerte. Es una carta fílmica; un diálogo entre quien narra y quien resiste desde la ausencia. Es un fuego que no se apaga.",
    "mamut-2026": "Busco y hablo con los muertos. Le escribo a una mujer que ya no está: Soraya Cataño; asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen. Su voz emerge mientras una comparsa avanza por la ladera. El archivo revela su risa; sus gestos y yo decido invocarla. Yo también crecí en este valle. Yo también creí. Creo. Esta película no es sobre la muerte. Es una carta fílmica; un diálogo entre quien narra y quien resiste desde la ausencia. Es un fuego que no se apaga.",
    "midbo-2026": "Busco y hablo con los muertos. Le escribo a una mujer que ya no está: Soraya Cataño, asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen. Su voz emerge mientras una comparsa avanza por la ladera. El archivo revela su risa, sus gestos y yo decido invocarla. Yo también crecí en este valle. Yo también creí. Creo. Esta película no es sobre la muerte. Es una carta fílmica, un diálogo entre quien narra y quien resiste desde la ausencia. Es un fuego que no se apaga."
+  },
+  "original_de": [
+   "cortoscali-2026",
+   "mamut-2026",
+   "midbo-2026"
+  ],
+  "titulo": "No menguará el fuego de esta luna",
+  "original": "Busco y hablo con los muertos. Le escribo a una mujer que ya no está: Soraya Cataño, asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen. Su voz emerge mientras una comparsa avanza por la ladera. El archivo revela su risa, sus gestos y yo decido invocarla. Yo también crecí en este valle. Yo también creí. Creo. Esta película no es sobre la muerte. Es una carta fílmica, un diálogo entre quien narra y quien resiste desde la ausencia. Es un fuego que no se apaga.",
+  "sintesis": {
+   "redacta": "redactor 3 26 nov",
+   "verifica": "verificador 3 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "345b55ad418d"
   }
  },
  {
@@ -33,10 +47,10 @@
  {
   "work_id": "w_R4KN0D6XG540",
   "campo": "sinopsis.en",
-  "valor": "I seek out and speak with the dead. I write to a woman no longer here: Soraya Cataño, murdered in Medellín in 1991. Thirty years later, I find her in an image. Her voice rises as a parade climbs the hillside. The archive reveals her laughter, her gesture, and I choose to call her forth. I too was raised in this valley. I too believed. I believe. This film is not about death. It is a dialogue between the one who narrates and the one who resists through absence. It is a fire that does not fade.",
-  "motivo": "errata «forth.I»",
-  "fecha": "2026-11-25",
-  "quien": "segunda lectura (sellos)",
+  "valor": "I seek out and speak with the dead. I write to Soraya Cataño, murdered in Medellín in 1991. Thirty years later I find her in an image; the archive reveals her laughter, her gestures, and I decide to invoke her. I too grew up in this valley. This film is not about death: it is a filmic letter to one who resists from absence. A fire that never dies.",
+  "motivo": "síntesis 26 nov (redactor 3 26 nov; verifica verificador 3 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
   "antes": {
    "cortoscali-2026": "I seek out and speak with the dead. I write to a woman no longer here: Soraya Cataño, murdered in Medellín in 1991. Thirty years later, I find her in an image. Her voice rises as a parade climbs the hillside. The archive reveals her laughter, her gesture, and I choose to call her forth.I too was raised in this valley.  I too believed. I believe. This film is not about death. It is a dialogue between the one who narrates and the one who resists through absence. It is a fire that does not fade.",
    "mamut-2026": "I seek out and speak with the dead. I write to a woman no longer here: Soraya Cataño, murdered in Medellín in 1991. Thirty years later, I find her in an image. Her voice rises as a parade climbs the hillside. The archive reveals her laughter, her gesture, and I choose to call her forth.I too was raised in this valley.  I too believed. I believe. This film is not about death. It is a dialogue between the one who narrates and the one who resists through absence. It is a fire that does not fade.",
@@ -48,6 +62,12 @@
     "motivo": "se quita lo que no es sinopsis; nada se escribe",
     "fecha": "2026-11-24",
     "quien": "Juan (hoja del paso 6)"
+   },
+   {
+    "valor": "I seek out and speak with the dead. I write to a woman no longer here: Soraya Cataño, murdered in Medellín in 1991. Thirty years later, I find her in an image. Her voice rises as a parade climbs the hillside. The archive reveals her laughter, her gesture, and I choose to call her forth. I too was raised in this valley. I too believed. I believe. This film is not about death. It is a dialogue between the one who narrates and the one who resists through absence. It is a fire that does not fade.",
+    "motivo": "errata «forth.I»",
+    "fecha": "2026-11-25",
+    "quien": "segunda lectura (sellos)"
    }
   ]
  }

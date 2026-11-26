@@ -24,7 +24,13 @@
  "sinopsis.en": {
   "fuente": "humano",
   "regla": "decisión",
-  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 50",
-  "fecha": "2026-11-24"
+  "motivo": "síntesis 26 nov (redactor 2 26 nov; verifica verificador 2 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-26"
  }
 }

@@ -2,7 +2,7 @@
  {
   "work_id": "w_R4FSVYGMA2BD",
   "campo": "sinopsis.es",
-  "valor": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe.",
+  "valor": "Un director de casting regresa a la ladera de la ciudad para volver a grabar voces con un actor no profesional. Bajo la sombra del bosque, el juego y la repetición convocan fantasmas, y el encuentro de trabajo se vuelve casi un trance: una búsqueda de presencias, un ejercicio de observación y fe.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinemancia-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -13,6 +13,20 @@
   "antes": {
    "cinemancia-2026": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe.",
    "cinetoro-2026": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar las voces para terminar la posproducción de una película. La fantasía y la imaginación se entrecruzan bajo la sombra del bosque, donde el juego y la repetición invocan a fantasmas cómplices de la ficción."
+  },
+  "original_de": [
+   "cinemancia-2026",
+   "cinetoro-2026",
+   "jardin-2026"
+  ],
+  "titulo": "Un aparato para detectar fantasmas",
+  "original": "Un director de casting regresa a la ladera de la ciudad para reunirse con un actor no profesional y volver a grabar voces para terminar la posproducción de una película. La fantasía y la imaginación chocan bajo la sombra del bosque, donde el juego y la repetición convocan a fantasmas cómplices de la ficción. El encuentro de trabajo con el actor rápidamente se vuelve otra cosa: una experiencia casi de trance, una búsqueda de presencias, un ejercicio de observación y fe.",
+  "sintesis": {
+   "redacta": "redactor 1 26 nov",
+   "verifica": "verificador 1 26 nov + ajuste de Juan",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "aa3ef2f58a4f"
   }
  },
  {
@@ -32,6 +46,19 @@
   "antes": {
    "cinemancia-2026": "/assets/cinemancia/un-aparato-para-detectar-fantasmas.jpg",
    "jardin-2026": "/assets/jardin-2026/un-aparato-para-detectar-fantasmas.jpg"
+  }
+ },
+ {
+  "work_id": "w_R4FSVYGMA2BD",
+  "campo": "sinopsis.en",
+  "valor": "A casting director returns to the city's hillside to re-record voices with a non-professional actor. In the shade of the forest, play and repetition summon ghosts, and the work session becomes almost a trance: a search for presences, an exercise in observation and faith.",
+  "motivo": "síntesis 26 nov (redactor 1 26 nov; verifica verificador 1 26 nov + ajuste de Juan): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
+  "antes": {
+   "cinemancia-2026": "A casting director reunites with a young non-professional actor with the mission of re-recording some dialogues to complete the post-production of a film. Surrounded by a forest, in the sway of flickering lights, fantasy, imagination, and play collide in an exercise of repetition and hypnosis, where ghosts wander, complicit in the fiction.",
+   "cinetoro-2026": "A casting director reunites with a young non-professional actor with the mission of re-recording some dialogues to complete the post-production of a film. Surrounded by a forest, in the sway of flickering lights, fantasy, imagination, and play collide in an exercise of repetition and hypnosis, where ghosts wander, complicit in the fiction.",
+   "jardin-2026": "A casting director reunites with a young non-professional actor with the mission of re-recording some dialogues to complete the post-production of a film. Surrounded by a forest, in the sway of flickering lights, fantasy, imagination, and play collide in an exercise of repetition and hypnosis, where ghosts wander, complicit in the fiction."
   }
  }
 ]

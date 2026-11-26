@@ -33,5 +33,41 @@
    "jardin-2026": "Documental",
    "siembrafest-2026": "Familia"
   }
+ },
+ {
+  "work_id": "w_R4K1F3E1D0Z4",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "vistas": [
+   "198d66ecc07d"
+  ],
+  "original_de": [
+   "girardota-2026",
+   "jardin-2026"
+  ],
+  "titulo": "Elementales",
+  "valor": "Rodado en 16mm entre 1954 y 1961, ELEMENTALES despierta en el espectador memorias primitivas y emotivas de la infancia, en las que momentos cotidianos se revelan como marcas poderosas de la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
+  "original": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
+  "sintesis": {
+   "redacta": "redactor 3 26 nov",
+   "verifica": "verificador 3 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "518f336aaea5"
+  }
+ },
+ {
+  "work_id": "w_R4K1F3E1D0Z4",
+  "campo": "sinopsis.en",
+  "valor": "Shot on 16mm between 1954 and 1961, ELEMENTALES awakens in the viewer primal, emotional childhood memories, in which everyday moments reveal themselves as powerful marks of the first time we saw, felt or learned something. ELEMENTAL moments, actions, discoveries.",
+  "motivo": "síntesis 26 nov (redactor 3 26 nov; verifica verificador 3 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
+  "antes": {
+   "girardota-2026": "Shot on 16mm between 1954 and 1961, ELEMENTALES awakens in the viewer primal, emotional childhood memories, in which everyday moments reveal themselves as powerful marks of the first time we saw, felt or learned something. ELEMENTAL moments, actions, discoveries.",
+   "jardin-2026": "Shot on 16mm between 1954 and 1961, ELEMENTALES awakens in the viewer primal, emotional childhood memories, in which everyday moments reveal themselves as powerful marks of the first time we saw, felt or learned something. ELEMENTAL moments, actions, discoveries."
+  }
  }
 ]

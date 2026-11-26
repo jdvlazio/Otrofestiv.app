@@ -21,7 +21,7 @@
  {
   "work_id": "w_R4MHXTCP637M",
   "campo": "sinopsis.es",
-  "valor": "En los registros cinematográficos de Esdras Baptista, guardados durante décadas en su residencia, se puede sentir el fervor de quienes creían en un nuevo día. Filmadas en Brasil a principios de la década de 1960, en pleno auge de una política libertaria en movimiento, las imágenes del cineasta materializan la incandescencia de los deseos colectivos en el momento histórico de su eclosión. La utopía, aunque inalcanzable, nunca es una mera abstracción. Fuerza que moviliza las acciones y los sentimientos, constituye el ímpetu necesario para la existencia del ser humano.",
+  "valor": "En los registros de Esdras Baptista, guardados décadas en su casa, se siente el fervor de quienes creían en un nuevo día. Filmadas en Brasil a principios de los sesenta, en pleno auge de una política libertaria, sus imágenes materializan la incandescencia de los deseos colectivos. La utopía, aunque inalcanzable, nunca es una mera abstracción.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (midbo-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -32,6 +32,34 @@
   "antes": {
    "midbo-2026": "En los registros cinematográficos de Esdras Baptista, guardados durante décadas en su residencia, se puede sentir el fervor de quienes creían en un nuevo día. Filmadas en Brasil a principios de la década de 1960, en pleno auge de una política libertaria en movimiento, las imágenes del cineasta materializan la incandescencia de los deseos colectivos en el momento histórico de su eclosión. La utopía, aunque inalcanzable, nunca es una mera abstracción. Fuerza que moviliza las acciones y los sentimientos, constituye el ímpetu necesario para la existencia del ser humano.",
    "olhar-2026": "En los registros cinematográficos de Esdras Baptista, guardados durante décadas en su casa, es posible sentir el fervor de quienes creyeron en un nuevo mañana. Filmadas en el Brasil de principios de los años 1960, al calor de una política libertaria en movimiento, las imágenes del cineasta materializan la incandescencia de los deseos colectivos en el instante de su eclosión. La utopía, aun inalcanzable, nunca es mera abstracción. Fuerza que moviliza acciones y sentimientos, constituye el ímpetu necesario para la existencia."
+  },
+  "original_de": [
+   "midbo-2026",
+   "olhar-2026"
+  ],
+  "titulo": "A Film to Remind Us of Utopia",
+  "original": "En los registros cinematográficos de Esdras Baptista, guardados durante décadas en su residencia, se puede sentir el fervor de quienes creían en un nuevo día. Filmadas en Brasil a principios de la década de 1960, en pleno auge de una política libertaria en movimiento, las imágenes del cineasta materializan la incandescencia de los deseos colectivos en el momento histórico de su eclosión. La utopía, aunque inalcanzable, nunca es una mera abstracción. Fuerza que moviliza las acciones y los sentimientos, constituye el ímpetu necesario para la existencia del ser humano.",
+  "sintesis": {
+   "redacta": "redactor 3 26 nov",
+   "verifica": "verificador 3 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "f6f7f119fafa",
+   "permitido": {
+    "cifra que el original no trae: 60": "equivalencia revisada 26 nov: «los sesenta» = «la década de 1960»"
+   }
+  }
+ },
+ {
+  "work_id": "w_R4MHXTCP637M",
+  "campo": "sinopsis.en",
+  "valor": "In Esdras Baptista's footage, kept for decades at his home, one can feel the fervor of those who believed in a new day. Filmed in Brazil in the early sixties, at the height of a libertarian politics, his images give form to the incandescence of collective desires. Utopia, though unattainable, is never a mere abstraction.",
+  "motivo": "síntesis 26 nov (redactor 3 26 nov; verifica verificador 3 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
+  "antes": {
+   "midbo-2026": "In Esdras Baptista's film archives, kept at his home for decades, one can feel the fervor of those who believed in a new tomorrow. Filmed in Brazil in the early 1960s, in the heat of a libertarian political movement, the filmmaker's images materialize the incandescence of collective desires at the historic moment of their emergence. Utopia, though unattainable, is never a mere abstraction. A force that mobilizes actions and feelings, it constitutes the impetus necessary for human existence.",
+   "olhar-2026": "In Esdras Baptista's film archives, kept at his home for decades, one can feel the fervor of those who believed in a new tomorrow. Filmed in Brazil in the early 1960s, in the heat of a libertarian political movement, the filmmaker's images materialize the incandescence of collective desires at the historic moment of their emergence. Utopia, though unattainable, is never a mere abstraction. A force that mobilizes actions and feelings, it constitutes the impetus necessary for human existence."
   }
  }
 ]

@@ -23,7 +23,7 @@
  {
   "work_id": "w_R4HBNA1T7S2G",
   "campo": "sinopsis.es",
-  "valor": "La historia de Ángel María Torres y Napoleón Torres, líderes arhuacos de la Sierra Nevada de Santa Marta, asesinados por el ejército en 1990. A través de archivos y testimonios íntimos, el documental retrata el vacío que dejaron en sus familias y comunidad, mientras revela la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra un vínculo esencial. Más que narrar una tragedia, la película es un acto de resistencia y memoria frente a la violencia colonial persistente.",
+  "valor": "Ángel María y Napoleón Torres, líderes arhuacos de la Sierra Nevada de Santa Marta, fueron secuestrados y asesinados por el ejército en 1990. Con archivo y testimonios íntimos, el documental explora el impacto de su ausencia en sus familias y su comunidad, y la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra sostiene la vida.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -36,6 +36,20 @@
    "ficci-65": "La larga trayectoria de la cineasta colombiana Marta Rodríguez demuestra un compromiso por documentar la historia de represión y lucha de  los pueblos originarios y marginalizados.",
    "ficdeh-2026": "La historia de Ángel María Torres y Napoleón Torres, líderes arhuacos de la Sierra Nevada de Santa Marta, asesinados por el ejército en 1990. A través de archivos y testimonios íntimos, el documental retrata el vacío que dejaron en sus familias y comunidad, mientras revela la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra un vínculo esencial. Más que narrar una tragedia, la película es un acto de resistencia y memoria frente a la violencia colonial persistente.",
    "midbo-2026": "«El valor de la palabra» es la historia de Ángel María y Napoleón Torres, dos líderes indígenas arhuacos de la Sierra Nevada de Santa Marta, en Colombia, que fueron secuestrados y asesinados por el ejército en 1990. A través de material de archivo y testimonios íntimos, el documental explora el impacto de su ausencia en sus familias y en la comunidad, al mismo tiempo que introduce al espectador en la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra hablada es un hilo vital que sostiene la vida. Más allá de relatar un episodio trágico de la historia reciente de Colombia, la película se erige como un acto de resistencia frente a la violencia colonial y militar que persiste. Ofrece una reflexión sobre el liderazgo, la supervivencia cultural y el legado perdurable que estos líderes dejaron a las generaciones futuras."
+  },
+  "original_de": [
+   "ficci-65",
+   "ficdeh-2026",
+   "midbo-2026"
+  ],
+  "titulo": "El valor de la palabra",
+  "original": "La historia de Ángel María Torres y Napoleón Torres, líderes arhuacos de la Sierra Nevada de Santa Marta, asesinados por el ejército en 1990. A través de archivos y testimonios íntimos, el documental retrata el vacío que dejaron en sus familias y comunidad, mientras revela la cosmovisión arhuaca, donde el territorio es un ser vivo y la palabra un vínculo esencial. Más que narrar una tragedia, la película es un acto de resistencia y memoria frente a la violencia colonial persistente.",
+  "sintesis": {
+   "redacta": "redactor 2 26 nov",
+   "verifica": "verificador 2 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "34c913de5bd1"
   }
  },
  {
@@ -57,15 +71,23 @@
  {
   "work_id": "w_R4HBNA1T7S2G",
   "campo": "sinopsis.en",
-  "valor": "The story of Ángel María Torres and Napoleón Torres, Arhuaco leaders from Colombia’s Sierra Nevada de Santa Marta, killed by the army in 1990. Through archival footage and intimate testimonies, the documentary explores grief, memory, and resistance, while revealing an Indigenous worldview in which the land is alive and spoken word sustains life, culture, and the legacy left for future generations.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "Ángel María and Napoleón Torres, Arhuaco leaders from the Sierra Nevada de Santa Marta were kidnapped and killed by the army in 1990. Through archives and intimate testimonies, the documentary explores the impact of their absence on their families and community, and the Arhuaco worldview, where the land is alive and the spoken word sustains life.",
+  "motivo": "síntesis 26 nov (redactor 2 26 nov; verifica verificador 2 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
   "titulo": "El valor de la palabra",
   "antes": {
    "ficci-65": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples.",
    "ficdeh-2026": "The story of Ángel María Torres and Napoleón Torres, Arhuaco leaders from Colombia’s Sierra Nevada de Santa Marta, killed by the army in 1990. Through archival footage and intimate testimonies, the documentary explores grief, memory, and resistance, while revealing an Indigenous worldview in which the land is alive and spoken word sustains life, culture, and the legacy left for future generations.",
    "midbo-2026": "The long career of Colombian filmmaker Marta Rodríguez demonstrates a commitment to documenting the history of repression and struggle of indigenous and marginalized peoples."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "The story of Ángel María Torres and Napoleón Torres, Arhuaco leaders from Colombia’s Sierra Nevada de Santa Marta, killed by the army in 1990. Through archival footage and intimate testimonies, the documentary explores grief, memory, and resistance, while revealing an Indigenous worldview in which the land is alive and spoken word sustains life, culture, and the legacy left for future generations.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
  }
 ]

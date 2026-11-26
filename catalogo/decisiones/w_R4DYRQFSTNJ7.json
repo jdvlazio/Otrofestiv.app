@@ -21,7 +21,7 @@
  {
   "work_id": "w_R4DYRQFSTNJ7",
   "campo": "sinopsis.es",
-  "valor": "En el verano de 1949, en pleno apogeo de la Guerra Fría, el escritor ganador del Premio Nobel, Thomas Mann, y su hija Erika, actriz, escritora y piloto de rallies, se embarcan en un desafiante y emotivo viaje por carretera en un Buick negro que les lleva a través de una Alemania en ruinas, desde Fráncfort, bajo dominio estadounidense, hasta Weimar, controlada por los soviéticos. Al regresar a casa tras dieciséis años de exilio en Estados Unidos, Thomas Mann tiene que enfrentarse no solo a una patria dividida, sino también a una profunda fractura dentro de su propia familia.",
+  "valor": "Verano de 1949, en plena Guerra Fría. Thomas Mann y su hija Erika, actriz, escritora y piloto de rallies, recorren en un Buick negro una Alemania en ruinas, de Fráncfort a Weimar. De vuelta tras dieciséis años de exilio en Estados Unidos, Mann enfrenta una patria dividida y una profunda fractura en su propia familia.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (biff-2026 · corregida)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -32,6 +32,19 @@
   "antes": {
    "biff-2026": "En el verano de 1949, en pleno apogeo de la Guerra Fría, el escritor ganador del Premio Nobel, Thomas MANN, y su hija Erika, actriz, escritora y piloto de rallies, se embarcan en un desafiante y emotivo viaje por carretera en un Buick negro que les lleva a través de una Alemania en ruinas, desde Fráncfort, bajo dominio estadounidense, hasta Weimar, controlada por los soviéticos. Al regresar a casa tras dieciséis años de exilio en Estados Unidos, Thomas MANN tiene que enfrentarse no solo a una patria dividida, sino también a una profunda fractura dentro de su propia familia.",
    "mubibogota-2026": "En pleno apogeo de la Guerra Fría, el escritor Thomas Mann y su hija Erika, emprenden un viaje a través de una Alemania dividida y en ruinas. Epílogo sonoro con Julio Victoria"
+  },
+  "original_de": [
+   "biff-2026",
+   "mubibogota-2026"
+  ],
+  "titulo": "Tierra de Mi Padre",
+  "original": "En el verano de 1949, en pleno apogeo de la Guerra Fría, el escritor ganador del Premio Nobel, Thomas Mann, y su hija Erika, actriz, escritora y piloto de rallies, se embarcan en un desafiante y emotivo viaje por carretera en un Buick negro que les lleva a través de una Alemania en ruinas, desde Fráncfort, bajo dominio estadounidense, hasta Weimar, controlada por los soviéticos. Al regresar a casa tras dieciséis años de exilio en Estados Unidos, Thomas Mann tiene que enfrentarse no solo a una patria dividida, sino también a una profunda fractura dentro de su propia familia.",
+  "sintesis": {
+   "redacta": "redactor 1 26 nov",
+   "verifica": "verificador 1 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "c87c767cf4a1"
   }
  },
  {
@@ -50,6 +63,18 @@
   "antes": {
    "biff-2026": "Polonia, Alemania, Italia, Francia",
    "mubibogota-2026": "Poland, Germany, France, Italy, United Kingdom"
+  }
+ },
+ {
+  "work_id": "w_R4DYRQFSTNJ7",
+  "campo": "sinopsis.en",
+  "valor": "Summer 1949, at the height of the Cold War. Thomas Mann and his daughter Erika, an actress, writer and rally driver, travel in a black Buick across a Germany in ruins, from Frankfurt to Weimar. Back after sixteen years of exile in the United States, Mann faces a divided homeland and a deep rift within his own family.",
+  "motivo": "síntesis 26 nov (redactor 1 26 nov; verifica verificador 1 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
+  "antes": {
+   "biff-2026": "In 1949, German writer Thomas Mann and his daughter Erika embark on a road trip across a Germany in ruins, from US-dominated Frankfurt to Soviet-controlled Weimar.",
+   "mubibogota-2026": "In 1949, German writer Thomas Mann and his daughter Erika embark on a road trip across a Germany in ruins, from US-dominated Frankfurt to Soviet-controlled Weimar."
   }
  }
 ]

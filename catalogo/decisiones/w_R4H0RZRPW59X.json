@@ -21,7 +21,7 @@
  {
   "work_id": "w_R4H0RZRPW59X",
   "campo": "sinopsis.es",
-  "valor": "Semillites y Tania, dos hermanos queer unidos por una poderosa amistad, recorren el terreno pardo de sus propios cuerpos: tierras que alguna vez rechazaron. Atraviesan paisajes de piel, sueños y vísceras, y se adentran en lugares que laten con la memoria de sus antepasados. En el camino, se encuentran con una constelación de flores, saltamontes y fósiles. Por medio del collage, la animación, el manifiesto, la danza y la intimidad, la película transita entre las escalas del cuerpo y del territorio, para imaginar la identidad más allá de las narrativas coloniales de México.",
+  "valor": "Semillites y Tania, dos hermanos queer, recorren el terreno pardo de sus cuerpos, tierras que alguna vez rechazaron: paisajes de piel, sueños y vísceras que laten con la memoria de sus antepasados. Con collage, animación, manifiesto y danza, la película imagina la identidad más allá de las narrativas coloniales de México.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026 · corregida)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -32,6 +32,19 @@
   "antes": {
    "ficcali-2026": "Semillites y Tania, dos hermanos queer unidos por una poderosa amistad, recorren el terreno pardo de sus propios cuerpos: tierras que alguna vez rechazaron. Atraviesan paisajes de piel, sueños y vísceras, y se adentran en lugares que laten con la memoria de sus antepasados. En el camino, se encuentran con una constelación de flores, saltamontes y fósiles. Por medio del collage, la animación, el manifiesto, la danza y la intimidad, la película transita entre las escalas del cuerpo y del territorio, para imaginar la identidad más allá de las narrativas coloniales de México",
    "midbo-2026": "Dos hermanos se adentran en los paisajes de sus cuerpos morenos y queer, donde los encuentros con familiares y ancestros iluminan nuevas posibilidades de su identidad. Semilites y Tania, dos hermanos queer unidos por una poderosa amistad, recorren el terreno moreno de sus propios cuerpos, tierras que alguna vez rechazaron. Atraviesan paisajes de piel, sueños y vísceras, llegando a lugares que palpitan con la memoria familiar. En el camino, se encuentran con una constelación de familiares y ancestros —su madre, padre, abuela, pero también flores, saltamontes y fósiles— que los guían en la reinvención de su identidad más allá de las narrativas coloniales de México. A través del collage, la animación, el manifiesto, la danza y momentos íntimos de documental, la película transita por las escalas del cuerpo y el territorio, trazando la silenciosa fuerza de la transformación y la ternura de la hermandad."
+  },
+  "original_de": [
+   "ficcali-2026",
+   "midbo-2026"
+  ],
+  "titulo": "Nuestro cuerpo es una estrella que se expande",
+  "original": "Semillites y Tania, dos hermanos queer unidos por una poderosa amistad, recorren el terreno pardo de sus propios cuerpos: tierras que alguna vez rechazaron. Atraviesan paisajes de piel, sueños y vísceras, y se adentran en lugares que laten con la memoria de sus antepasados. En el camino, se encuentran con una constelación de flores, saltamontes y fósiles. Por medio del collage, la animación, el manifiesto, la danza y la intimidad, la película transita entre las escalas del cuerpo y del territorio, para imaginar la identidad más allá de las narrativas coloniales de México.",
+  "sintesis": {
+   "redacta": "redactor 2 26 nov",
+   "verifica": "verificador 2 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "aff6585e1e7e"
   }
  },
  {
@@ -47,6 +60,18 @@
   "antes": {
    "ficcali-2026": "Semillites Hernández, Tania Hernández",
    "midbo-2026": "Semillites Hernández Velasco y Tania Hernández Velasco"
+  }
+ },
+ {
+  "work_id": "w_R4H0RZRPW59X",
+  "campo": "sinopsis.en",
+  "valor": "Semillites and Tania, two queer siblings, travel the brown terrain of their own bodies, lands they once rejected: landscapes of skin, dreams and viscera that pulse with the memory of their ancestors. Through collage, animation, manifesto and dance, the film imagines identity beyond Mexico's colonial narratives.",
+  "motivo": "síntesis 26 nov (redactor 2 26 nov; verifica verificador 2 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
+  "antes": {
+   "ficcali-2026": "Two siblings, their queer bodies and the deep bond they share. They read the brown skin they once wished they didn’t have as a landscape. Associatively, with extreme close-ups, animations, projections or razor-sharp nature photography, pores become desert landscapes, skin cells become salt flats.",
+   "midbo-2026": "Two siblings, their queer bodies and the deep bond they share. They read the brown skin they once wished they didn’t have as a landscape. Associatively, with extreme close-ups, animations, projections or razor-sharp nature photography, pores become desert landscapes, skin cells become salt flats."
   }
  }
 ]

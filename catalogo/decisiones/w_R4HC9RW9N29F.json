@@ -21,14 +21,47 @@
  {
   "work_id": "w_R4HC9RW9N29F",
   "campo": "sinopsis.en",
-  "valor": "In La Jagua, a riverside town in Huila, the men who come to open the earth for a dam disturb the territory’s pulse. Nidia, 55, a peasant and fique artisan, awaits the departure of her only son. As anxiety and insomnia set in, an unsettling presence grows within her, until she moves toward a revelation that holds the antidote to her pain.",
-  "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 50",
-  "fecha": "2026-11-24",
-  "quien": "plan del almacén (lector independiente)",
+  "valor": "In La Jagua, a riverside town in Huila, the men who come to open the earth for a dam disturb the territory's pulse. Nidia, a peasant woman and fique artisan, sadly awaits the departure of her only son. With anxiety and insomnia, an unsettling presence she cannot name grows inside her, and she wavers between expelling it and embracing it.",
+  "motivo": "síntesis 26 nov (redactor 2 26 nov; verifica verificador 2 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
   "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=50",
   "antes": {
    "ficci-65": "Textual layers grow from the center to the summit of a mountain. The tensions surrounding the treasures of the earth's womb and the woman's womb trace a delicate map of stratigraphies, opaque and dark, yet of very intense life. In this experimental short, bodies pulse like an incantation against the world's pains.",
    "midbo-2026": "Textual layers grow from the center to the summit of a mountain. The tensions surrounding the treasures of the earth's womb and the woman's womb trace a delicate map of stratigraphies, opaque and dark, yet of very intense life. In this experimental short, bodies pulse like an incantation against the world's pains."
+  },
+  "anteriores": [
+   {
+    "valor": "In La Jagua, a riverside town in Huila, the men who come to open the earth for a dam disturb the territory’s pulse. Nidia, 55, a peasant and fique artisan, awaits the departure of her only son. As anxiety and insomnia set in, an unsettling presence grows within her, until she moves toward a revelation that holds the antidote to her pain.",
+    "motivo": "español e inglés dicen lo mismo; catálogo de FICCI 65, p. 50",
+    "fecha": "2026-11-24",
+    "quien": "plan del almacén (lector independiente)",
+    "fuente": "https://ficcifestival.com/sites/default/files/2026-05/Catalogo_Oficial_FICCI_65.pdf#page=50"
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4HC9RW9N29F",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "vistas": [
+   "dccb5cff5e45"
+  ],
+  "original_de": [
+   "ficci-65",
+   "midbo-2026"
+  ],
+  "titulo": "Montaña luminosa",
+  "valor": "En La Jagua, pueblo ribereño del Huila, los hombres que llegan a abrir la tierra para una represa alteran el pulso del territorio. Nidia, campesina y artesana del fique, espera con tristeza la partida de su único hijo. Con la ansiedad y el insomnio crece en ella una presencia inquietante que no logra nombrar, y duda entre expulsarla o abrazarla.",
+  "original": "En La Jagua, un pequeño pueblo ribereño del Huila, la llegada de los hombres que vienen a abrir la tierra para construir una represa hidroeléctrica altera el delicado pulso del territorio. Nidia (55), una mujer campesina y maestra artesana del fique, espera con silenciosa tristeza la partida de su único hijo, quien se marcha en busca de un futuro «mejor». A medida que la ansiedad y el insomnio se instalan en su vida, una extraña sensación comienza a crecer en su interior: una presencia inquietante que no logra nombrar. Mientras la tierra es abierta y herida, Nidia se debate entre expulsar o abrazar aquello que la rodea, aquello que se filtra en su cuerpo. Entre el barro, el viento, las lágrimas y las alucinantes e intoxicantes flores del borrachero, avanza hacia una revelación: una que contiene el antídoto para su dolor y el último aliento necesario para que la montaña dé a luz.",
+  "sintesis": {
+   "redacta": "redactor 2 26 nov",
+   "verifica": "verificador 2 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "a0aa34599874"
   }
  }
 ]

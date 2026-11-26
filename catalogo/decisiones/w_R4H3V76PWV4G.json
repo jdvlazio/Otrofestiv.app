@@ -23,7 +23,7 @@
  {
   "work_id": "w_R4H3V76PWV4G",
   "campo": "sinopsis.es",
-  "valor": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
+  "valor": "Un ser extraño pierde el rumbo en el caos del sistema de transporte y pasa de un lugar a otro sin encontrar salida. Transeúntes sin identidad se mueven en automático y arman un laberinto de rutas sin fin. Personas dormidas y agotadas se funden con el entorno y, mientras el bus sigue su marcha, el ser logra descubrirse a sí mismo.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficcali-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -36,6 +36,20 @@
    "ficcali-2026": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
    "filcmar-2026": "Un ser extraño se pierde en el caos del sistema de transporte, moviéndose de un lugar a otro sin encontrar salida. Los caminos están saturados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, sin rostro, se mueven automáticamente, creando un laberinto donde las rutas parecen interminables. La gente adormecida se funde con el entorno, y mientras el autobús continúa su camino, el ser finalmente se encuentra a sí mismo.",
    "jardin-2026": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, pasando de un lugar a otro sin encontrar una salida. Los caminos se ven invadidos por recorridos acelerados que van y vuelven como cascadas humanas. Los transeúntes, sin identidad, se mueven automáticamente, creando un laberinto en el que las rutas parecen no tener fin. Personas dormidas y agotadas parecen fusionarse con el entorno y, mientras el bus sigue su marcha, el ser finalmente logra descubrirse a si mismx."
+  },
+  "original_de": [
+   "ficcali-2026",
+   "filcmar-2026",
+   "jardin-2026"
+  ],
+  "titulo": "Somnolítico",
+  "original": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
+  "sintesis": {
+   "redacta": "redactor 2 26 nov",
+   "verifica": "verificador 2 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "b01892e19c72"
   }
  },
  {
@@ -64,6 +78,19 @@
    "ficcali-2026": 2026,
    "filcmar-2026": 2026,
    "jardin-2026": 2025
+  }
+ },
+ {
+  "work_id": "w_R4H3V76PWV4G",
+  "campo": "sinopsis.en",
+  "valor": "A strange being loses its way in the chaos of the transport system, moving from place to place without finding a way out. Passersby without identity move automatically, forming a maze of endless routes. Sleeping, exhausted people merge with their surroundings and, as the bus keeps going, the being manages to discover itself.",
+  "motivo": "síntesis 26 nov (redactor 2 26 nov; verifica verificador 2 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
+  "antes": {
+   "ficcali-2026": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
+   "filcmar-2026": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
+   "jardin-2026": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself."
   }
  }
 ]

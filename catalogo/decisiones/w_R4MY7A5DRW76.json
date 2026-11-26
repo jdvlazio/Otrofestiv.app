@@ -23,11 +23,12 @@
  {
   "work_id": "w_R4MY7A5DRW76",
   "campo": "sinopsis.es",
-  "valor": "En el Medio Atrato chocoano, Ana Panesso y su comunidad cultivan la caña de azúcar y fabrican el viche, bebida ancestral antes prohibida y ahora en boga. A través de la comida, los viajes en río y la música, el viche y sus saberes no solo configuran el día a día de las personas, sino que también plantean la pregunta por un futuro justo, donde el viche sea alimento, sustento e identidad de las familias negras.",
+  "valor": "En el Medio Atrato chocoano, Ana Panesso y su comunidad cultivan caña y fabrican el viche, bebida ancestral antes prohibida y ahora en boga. Entre comida, viajes en río y música, el viche y sus saberes configuran el día a día y plantean la pregunta por un futuro justo, donde sea alimento, sustento e identidad de las familias negras.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (miradas-2026, popayan-2026 · corregida)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
   "vistas": [
+   "b9fc0a18bb8a",
    "bfae81543daf",
    "d938d52385e0"
   ],
@@ -35,19 +36,41 @@
    "miradas-2026": "En el Medio Atrato chocoano; Ana Panesso y su comunidad cultivan la caña de azúcar y fabrican el viche; bebida ancestral antes prohibida y ahora en boga. A través de la comida; los viajes en río y la música; el viche y sus saberes no sólo configuran el día a día de las personas; sino que también plantea la pregunta por un futuro justo; donde el viche sea alimento; sustento e identidad de las familias negras.",
    "popayan-2026": "En el Medio Atrato chocoano; Ana Panesso y su comunidad cultivan la caña de azúcar y fabrican el viche; bebida ancestral antes prohibida y ahora en boga. A través de la comida; los viajes en río y la música; el viche y sus saberes no sólo configuran el día a día de las personas; sino que también plantea la pregunta por un futuro justo; donde el viche sea alimento; sustento e identidad de las familias negras.",
    "qaff-2026": "En el Medio Atrato chocoano, Ana Panesso y su comunidad cultivan la caña de azúcar y fabrican el viche, bebida ancestral antes prohibida y ahora en boga. A través de la comida, los viajes en río y lamúsica, el viche y sus saberes no sólo configuran el día a día de las personas, sino que también plantea la pregunta por un futuro donde el viche sea alimento, sustento e identidad de las familias negras. Realizador y montajista de cine. Realizó los cortos de vanguardia Junio 25 Andréi Tarkovski visita a su tumba, Teatro eléctrico, Vacans, El soplo de sal. Dirigió el corto de ficción Venus en llamas y el documental Mi viche todo el día. Editor del largo La piel mordida (post), y de los cortos Los hermanos Calavera y Cabeza de torpedo. Desde 2012 codirige Playtime Cineclub, un espacio dedicado a la celebración del cine mundial. En 2022 junto a sus socios funda la productora Vértigo Cine."
+  },
+  "original_de": [
+   "miradas-2026",
+   "popayan-2026",
+   "qaff-2026"
+  ],
+  "titulo": "Mi viche todo el día",
+  "original": "En el Medio Atrato chocoano, Ana Panesso y su comunidad cultivan la caña de azúcar y fabrican el viche, bebida ancestral antes prohibida y ahora en boga. A través de la comida, los viajes en río y la música, el viche y sus saberes no solo configuran el día a día de las personas, sino que también plantean la pregunta por un futuro justo, donde el viche sea alimento, sustento e identidad de las familias negras.",
+  "sintesis": {
+   "redacta": "redactor 3 26 nov",
+   "verifica": "verificador 3 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "ffa24c7d4f6f"
   }
  },
  {
   "work_id": "w_R4MY7A5DRW76",
   "campo": "sinopsis.en",
-  "valor": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people's daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families.",
-  "motivo": "errata",
-  "fecha": "2026-11-25",
-  "quien": "segunda lectura (sellos)",
+  "valor": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral drink once banned and now in vogue. Through food, river trips and music, viche and its knowledge shape daily life and raise the question of a just future, where it is food, livelihood and identity for Black families.",
+  "motivo": "síntesis 26 nov (redactor 3 26 nov; verifica verificador 3 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
   "antes": {
    "miradas-2026": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people s daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families.",
    "popayan-2026": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people s daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families.",
    "qaff-2026": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people s daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people's daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families.",
+    "motivo": "errata",
+    "fecha": "2026-11-25",
+    "quien": "segunda lectura (sellos)"
+   }
+  ]
  }
 ]
