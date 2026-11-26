@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Subterr%C3%A1neo",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "subterráneo dirección david berrío alejandro alzate colombia 2026 13 min con presencia de los participantes del taller crea con contenido película inaugural pacífico dirección riccardo gabrielli colombia 2026 95 min con presencia del director riccardo gabrielli subterráneo david berrío alejandro alzate colombia pacífico riccardo gabrielli colombia 2026 12 05 09 00 auditorio universidad de antioqui",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Subterráneo»",
+     "nota": "5 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Subterráneo\" Berrío Alzate",
+     "nota": "Solo otras películas homónimas y el metro de Medellín.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Subterráneo\" sinopsis",
+     "nota": "Solo otras películas homónimas y el metro de Medellín.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Subterráneo\" synopsis Berrío Alzate",
+     "nota": "Solo otras películas homónimas y el metro de Medellín.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Subterráneo\" Berrío Alzate cortometraje",
+     "nota": "Solo otras películas homónimas y el metro de Medellín.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Subterráneo\" Berrío Alzate filmfreeway",
+     "nota": "Solo otras películas homónimas y el metro de Medellín.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Subterráneo\" Berrío Alzate vimeo OR youtube",
+     "nota": "Solo otras películas homónimas y el metro de Medellín.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX6VC2ZPDCY"
+}

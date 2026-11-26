@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Made%20to%20Shine",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "made to shine 5 min mi caballo 2 min vástago 9 min banda paniagua 200 años legado y tradición el ritmo de un círculo la barbería la sombra del zaguán mácula los ignorantes donde todo termina gente de bien la máquina de los sueños made to shine mi caballo vástago 2026 12 07 12 00 auditorio hotel mariscal robledo película familiar koatí dirección rodrigo pérez castro méxico estados unidos 2021 92 mi",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Made to Shine»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Made to Shine\"",
+     "nota": "Solo campaña de joyería homónima.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Made to Shine\" sinopsis",
+     "nota": "Solo campaña de joyería homónima.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Made to Shine\" synopsis",
+     "nota": "Solo campaña de joyería homónima.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Made to Shine\"  cortometraje",
+     "nota": "Solo campaña de joyería homónima.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Made to Shine\"  filmfreeway",
+     "nota": "Solo campaña de joyería homónima.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Made to Shine\"  vimeo OR youtube",
+     "nota": "Solo campaña de joyería homónima.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX7943QQCSD"
+}

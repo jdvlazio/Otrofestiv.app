@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=%C2%BFPor%20qu%C3%A9%20me%20olvidaste%3F",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "por qué me olvidaste 3 min rescatar por amor 3 min entre patas y sentimientos dos realidades una oportunidad una segunda oportunidad por qué me olvidaste rescatar por amor 2026 12 05 15 00 auditorio cámara de comercio de medellín para antioquia película lactar dirección harold trompetero colombia 2026 75 min con presencia de la actriz maría helena doering lactar harold trompetero colombia 2026 12 ",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «¿Por qué me olvidaste?»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"¿Por qué me olvidaste?\"",
+     "nota": "1er puesto Realizadores en Mascotiando (solo elogio); Kinobox lista un corto colombiano 2025 de Sofía Cadavid Ocampo, sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"¿Por qué me olvidaste?\" sinopsis",
+     "nota": "1er puesto Realizadores en Mascotiando (solo elogio); Kinobox lista un corto colombiano 2025 de Sofía Cadavid Ocampo, sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"¿Por qué me olvidaste?\" synopsis",
+     "nota": "1er puesto Realizadores en Mascotiando (solo elogio); Kinobox lista un corto colombiano 2025 de Sofía Cadavid Ocampo, sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"¿Por qué me olvidaste?\"  cortometraje",
+     "nota": "1er puesto Realizadores en Mascotiando (solo elogio); Kinobox lista un corto colombiano 2025 de Sofía Cadavid Ocampo, sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"¿Por qué me olvidaste?\"  filmfreeway",
+     "nota": "1er puesto Realizadores en Mascotiando (solo elogio); Kinobox lista un corto colombiano 2025 de Sofía Cadavid Ocampo, sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"¿Por qué me olvidaste?\"  vimeo OR youtube",
+     "nota": "1er puesto Realizadores en Mascotiando (solo elogio); Kinobox lista un corto colombiano 2025 de Sofía Cadavid Ocampo, sin sinopsis.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX6YD5J9VH3"
+}

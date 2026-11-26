@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Banda%20Paniagua%3A%20200%20a%C3%B1os%2C%20legado%20y%20tradici%C3%B3n",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "banda paniagua 200 años legado y tradición 9 min el ritmo de un círculo 8 min la barbería 7 min la sombra del zaguán 6 min mácula 7 min los ignorantes 8 min donde todo termina 2 min gente de bien 8 min la máquina de los sueños 8 min made to shine 5 min mi caballo 2 min vástago 9 min banda paniagua 200 años legado y tradición el ritmo de un círculo la barbería la sombra del zaguán mácula los ignora",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Banda Paniagua: 200 años, legado y tradición»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Banda Paniagua: 200 años, legado y tradición\"",
+     "nota": "Solo reseñas de la banda (El Colombiano, El Tiempo), sin sinopsis del corto.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Banda Paniagua: 200 años, legado y tradición\" sinopsis",
+     "nota": "Solo reseñas de la banda (El Colombiano, El Tiempo), sin sinopsis del corto.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Banda Paniagua: 200 años, legado y tradición\" synopsis",
+     "nota": "Solo reseñas de la banda (El Colombiano, El Tiempo), sin sinopsis del corto.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Banda Paniagua: 200 años, legado y tradición\"  cortometraje",
+     "nota": "Solo reseñas de la banda (El Colombiano, El Tiempo), sin sinopsis del corto.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Banda Paniagua: 200 años, legado y tradición\"  filmfreeway",
+     "nota": "Solo reseñas de la banda (El Colombiano, El Tiempo), sin sinopsis del corto.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Banda Paniagua: 200 años, legado y tradición\"  vimeo OR youtube",
+     "nota": "Solo reseñas de la banda (El Colombiano, El Tiempo), sin sinopsis del corto.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX76QT5SRT7"
+}

@@ -1,0 +1,115 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Una%20mujer%20de%20rostro%20ya%20olvidado",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "una mujer de rostro ya olvidado miguel solano j ficción la selección está conformada por 21 cortometrajes de ficción documental y animación que representan distintas miradas territorios búsquedas y formas de entender el cine en colombia y que serán exhibidas durante el 27 festival de cine de santa fe de antioquia del 4 al 8 de diciembre de 2026 siguiente etapa evaluación de los jurados con esta se",
+     "donde": "fuentes/festicineantioquia-2026/caja-de-pandora-2026.html",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "una mujer de rostro ya olvidado miguel solano j ficción 2026 12 06 22 00 plaza mayor simón bolívar parque principal película los iniciados dirección juan felipe orozco colombia 2023 111 min con presencia de cristina echeverri productora ejecutiva de la película los iniciados juan felipe orozco colombia 2026 12 07 09 00 auditorio universidad de antioquia seccional occidente película stop zemlia dir",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "una mujer de rostro ya olvidado miguel solano j ficción la selección está conformada por 21 cortometrajes de ficción documental y animación que representan distintas miradas territorios búsquedas y formas de entender el cine en colombia y que serán exhibidas durante el 27 festival de cine de santa fe de antioquia del 4 al 8 de diciembre de 2026 siguiente etapa evaluación de los jurados con esta se",
+     "donde": "fuentes/festicineantioquia-2026/seleccionados.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "una mujer de rostro ya olvidado miguel solano j ficción la selección está conformada por 21 cortometrajes de ficción documental y animación que representan distintas miradas territorios búsquedas y formas de entender el cine en colombia y que serán exhibidas durante el 27 festival de cine de santa fe de antioquia del 4 al 8 de diciembre de 2026 siguiente etapa evaluación de los jurados con esta se",
+     "donde": "fuentes/festicineantioquia-2026/web/pages.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "una mujer de rostro ya olvidado miguel solano j ficción la selección está conformada por 21 cortometrajes de ficción documental y animación que representan distintas miradas territorios búsquedas y formas de entender el cine en colombia y que serán exhibidas durante el 27 festival de cine de santa fe de antioquia del 4 al 8 de diciembre de 2026 siguiente etapa evaluación de los jurados con esta se",
+     "donde": "fuentes/festicineantioquia-2026/web/posts.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Una mujer de rostro ya olvidado»",
+     "nota": "0 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Una mujer de rostro ya olvidado\" J",
+     "nota": "Listada en Caja de Pandora 2026 (antioquiacritica.com/caja-de-pandora-2026-cortometrajes/) con título, director y categoría, sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Una mujer de rostro ya olvidado\" sinopsis",
+     "nota": "Listada en Caja de Pandora 2026 (antioquiacritica.com/caja-de-pandora-2026-cortometrajes/) con título, director y categoría, sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Una mujer de rostro ya olvidado\" synopsis J",
+     "nota": "Listada en Caja de Pandora 2026 (antioquiacritica.com/caja-de-pandora-2026-cortometrajes/) con título, director y categoría, sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Una mujer de rostro ya olvidado\" J cortometraje",
+     "nota": "Listada en Caja de Pandora 2026 (antioquiacritica.com/caja-de-pandora-2026-cortometrajes/) con título, director y categoría, sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Una mujer de rostro ya olvidado\" J filmfreeway",
+     "nota": "Listada en Caja de Pandora 2026 (antioquiacritica.com/caja-de-pandora-2026-cortometrajes/) con título, director y categoría, sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Una mujer de rostro ya olvidado\" J vimeo OR youtube",
+     "nota": "Listada en Caja de Pandora 2026 (antioquiacritica.com/caja-de-pandora-2026-cortometrajes/) con título, director y categoría, sin sinopsis.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX75CJ0NDJA"
+}

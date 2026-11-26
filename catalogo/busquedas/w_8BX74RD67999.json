@@ -1,0 +1,115 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=El%20amor%20no%20olvida",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "el amor no olvida anselmo calvo ficción la gran hazaña luber yesid zúñiga ordóñez ficción la habitación del macho cabrío duban pinzón animación la mona laura gutiérrez ardila ficción make up el arte de amar daniel eduardo calderón arana ficción maleza nicolle estrada y marcela palacio ficción maricones maría paz ruiz gonzález documental no te despiertes hernán velásquez villa ficción persiguiendo ",
+     "donde": "fuentes/festicineantioquia-2026/caja-de-pandora-2026.html",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "el amor no olvida anselmo calvo ficción la gran hazaña luber yesid zúñiga ordóñez ficción maleza nicolle estrada marcela palacio ficción maricones maría paz ruiz gonzález documental no te despiertes hernán velásquez villa ficción persiguiendo sueños chhamber lexx ficción refracción isabella palacio mesa ficción replay simón matallana nossa animación suelo eduar yosniel pájaro peña animación una mu",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "el amor no olvida anselmo calvo ficción la gran hazaña luber yesid zúñiga ordóñez ficción la habitación del macho cabrío duban pinzón animación la mona laura gutiérrez ardila ficción make up el arte de amar daniel eduardo calderón arana ficción maleza nicolle estrada y marcela palacio ficción maricones maría paz ruiz gonzález documental no te despiertes hernán velásquez villa ficción persiguiendo ",
+     "donde": "fuentes/festicineantioquia-2026/seleccionados.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "el amor no olvida anselmo calvo ficción la gran hazaña luber yesid zúñiga ordóñez ficción la habitación del macho cabrío duban pinzón animación la mona laura gutiérrez ardila ficción make up el arte de amar daniel eduardo calderón arana ficción maleza nicolle estrada y marcela palacio ficción maricones maría paz ruiz gonzález documental no te despiertes hernán velásquez villa ficción persiguiendo ",
+     "donde": "fuentes/festicineantioquia-2026/web/pages.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "el amor no olvida anselmo calvo ficción la gran hazaña luber yesid zúñiga ordóñez ficción la habitación del macho cabrío duban pinzón animación la mona laura gutiérrez ardila ficción make up el arte de amar daniel eduardo calderón arana ficción maleza nicolle estrada y marcela palacio ficción maricones maría paz ruiz gonzález documental no te despiertes hernán velásquez villa ficción persiguiendo ",
+     "donde": "fuentes/festicineantioquia-2026/web/posts.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «El amor no olvida»",
+     "nota": "1 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"El amor no olvida\" Calvo",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El amor no olvida\" sinopsis",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El amor no olvida\" synopsis Calvo",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El amor no olvida\" Calvo cortometraje",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El amor no olvida\" Calvo filmfreeway",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"El amor no olvida\" Calvo vimeo OR youtube",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX74RD67999"
+}

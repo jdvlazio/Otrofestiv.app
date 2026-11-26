@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=V%C3%A1stago",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "vástago 9 min banda paniagua 200 años legado y tradición el ritmo de un círculo la barbería la sombra del zaguán mácula los ignorantes donde todo termina gente de bien la máquina de los sueños made to shine mi caballo vástago 2026 12 07 12 00 auditorio hotel mariscal robledo película familiar koatí dirección rodrigo pérez castro méxico estados unidos 2021 92 min koatí rodrigo pérez castro méxico e",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Vástago»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Vástago\"",
+     "nota": "Corto español 2022 de David Luque, no es esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Vástago\" sinopsis",
+     "nota": "Corto español 2022 de David Luque, no es esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Vástago\" synopsis",
+     "nota": "Corto español 2022 de David Luque, no es esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Vástago\"  cortometraje",
+     "nota": "Corto español 2022 de David Luque, no es esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Vástago\"  filmfreeway",
+     "nota": "Corto español 2022 de David Luque, no es esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Vástago\"  vimeo OR youtube",
+     "nota": "Corto español 2022 de David Luque, no es esta obra.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX79N8XD450"
+}

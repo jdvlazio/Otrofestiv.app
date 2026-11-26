@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Los%20ignorantes",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "los ignorantes 8 min donde todo termina 2 min gente de bien 8 min la máquina de los sueños 8 min made to shine 5 min mi caballo 2 min vástago 9 min banda paniagua 200 años legado y tradición el ritmo de un círculo la barbería la sombra del zaguán mácula los ignorantes donde todo termina gente de bien la máquina de los sueños made to shine mi caballo vástago 2026 12 07 12 00 auditorio hotel marisca",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Los ignorantes»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Los ignorantes\"",
+     "nota": "Novela gráfica de Davodeau, banda y programa de TV; nada de esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Los ignorantes\" sinopsis",
+     "nota": "Novela gráfica de Davodeau, banda y programa de TV; nada de esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Los ignorantes\" synopsis",
+     "nota": "Novela gráfica de Davodeau, banda y programa de TV; nada de esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Los ignorantes\"  cortometraje",
+     "nota": "Novela gráfica de Davodeau, banda y programa de TV; nada de esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Los ignorantes\"  filmfreeway",
+     "nota": "Novela gráfica de Davodeau, banda y programa de TV; nada de esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Los ignorantes\"  vimeo OR youtube",
+     "nota": "Novela gráfica de Davodeau, banda y programa de TV; nada de esta obra.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX781RHSKGP"
+}
