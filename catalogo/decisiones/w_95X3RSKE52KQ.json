@@ -1,0 +1,38 @@
+[
+ {
+  "work_id": "w_95X3RSKE52KQ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "vistas": [
+   "8f4bc1290c1d"
+  ],
+  "original_de": [],
+  "titulo": "El Canto de Las Aves",
+  "valor": "Harrison y Mateo, dos jóvenes apasionados por las aves, forman parte de los Bird Guardians en Colombia, uno de los países con mayor biodiversidad del planeta. A través de su viaje, el film muestra cómo la observación de aves puede convertirse en una herramienta de conservación, educación y futuro sostenible.",
+  "original": "Harrison y Mateo, dos jóvenes apasionados por las aves, forman parte de los Bird Guardians en Colombia, uno de los países con mayor biodiversidad del planeta. A través de su viaje, el film muestra cómo la observación de aves puede convertirse en una herramienta de conservación, educación y futuro sostenible.",
+  "sintesis": {
+   "redacta": "Claude 26 nov",
+   "verifica": "verificador independiente 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "45b81b21e4c9",
+   "permitido": {
+    "no es más corta que el original": "obra sin sinopsis previa; la corta sale del original verificado (aprobada por Juan 26 nov)"
+   }
+  }
+ },
+ {
+  "work_id": "w_95X3RSKE52KQ",
+  "campo": "sinopsis.en",
+  "valor": "Harrison and Mateo, two young bird lovers, are part of the Bird Guardians in Colombia, one of the most biodiverse countries on the planet. Through their journey, the film shows how birdwatching can become a tool for conservation, education and a sustainable future.",
+  "motivo": "síntesis del original verificado (aprobada por Juan 26 nov)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "antes": {
+   "ficmontanas-2026": "Harrison and Mateo, two young bird lovers, are part of the Bird Guardians in Colombia, one of the most biodiverse countries on the planet. Through their journey, the film shows how birdwatching can become a tool for conservation, education and a sustainable future.",
+   "mambe-2026": "Harrison and Mateo, two young bird lovers, are part of the Bird Guardians in Colombia, one of the most biodiverse countries on the planet. Through their journey, the film shows how birdwatching can become a tool for conservation, education and a sustainable future."
+  }
+ }
+]

@@ -3133,6 +3133,15 @@
   "veredicto": "fiel",
   "verifica": "segunda lectura"
  },
+ "w_95X3RSKE52KQ": {
+  "comprobado": "a mano: investigador 26 nov: overview es-ES de TMDB 1837628, cuya dirección (Muriel Barra) confirma /credits; coincide con la obra",
+  "contra": "https://www.themoviedb.org/movie/1837628",
+  "fecha": "2026-11-26",
+  "huella": "c5b9218b566b",
+  "redacta": "Claude 26 nov",
+  "veredicto": "fiel",
+  "verifica": "verificador independiente 26 nov"
+ },
  "w_9K5ZAA4ZNBV7": {
   "comprobado": "máquina: https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf#page=105 (copia guardada: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json)",
   "contra": "https://www.themoviedb.org/movie/1602532",
@@ -4860,6 +4869,15 @@
   "redacta": "festival",
   "veredicto": "fiel",
   "verifica": "primera lectura"
+ },
+ "w_R4H881DDBHFD": {
+  "comprobado": "a mano: lectura 26 nov: fuentes/ficcali-2026/fichas/tapir-memories.html, el texto sigue al título «Tapir Memories» y a Animá Ve, en la ficha de Pedro Nel Cabrera",
+  "contra": "fuentes/ficcali-2026/fichas/tapir-memories.html",
+  "fecha": "2026-11-26",
+  "huella": "1d8ba476a06f",
+  "redacta": "Claude 26 nov",
+  "veredicto": "fiel",
+  "verifica": "verificador independiente 26 nov"
  },
  "w_R4H881HQEE34": {
   "comprobado": "máquina: TMDB 1487969",
