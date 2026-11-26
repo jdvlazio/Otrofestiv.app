@@ -328,6 +328,84 @@ class Corto(Base):
             S.lugar.__defaults__ = (orig, None)
 
 
+class Institucion(Base):
+    """Institución → sede → sala (fase 3, 26 nov 2026)."""
+    def setUp(self):
+        super().setUp()
+        self.geo('a-2026', {'Comfama Aranjuez - Medellín': {'lat': 6.2800, 'lng': -75.5560, '_prec': 'manual'},
+                            'Comfama San Ignacio - Medellín': {'lat': 6.2470, 'lng': -75.5640, '_prec': 'manual'},
+                            'Biblioteca Comfama Bello - Bello': {'lat': 6.3370, 'lng': -75.5580, '_prec': 'manual'},
+                            'Comfama - Girardota': {'lat': 6.3780, 'lng': -75.4460, '_prec': 'manual'},
+                            'Cinemateca de Bogotá - Bogotá': {'lat': 4.6105, 'lng': -74.0705, '_prec': 'manual'},
+                            'Cinemateca Fontanar del Río - Bogotá': {'lat': 4.7600, 'lng': -74.0900, '_prec': 'manual'}})
+        os.makedirs(f'{self.r}/festivals', exist_ok=True)
+        json.dump({'films': [{'venue': 'Cinemateca de Bogotá - Bogotá', 'sala': 'Lab 1'},
+                             {'venue': 'Cinemateca de Bogotá - Bogotá', 'sala': 'Laboratorio 1'},
+                             {'venue': 'Cinemateca de Bogotá - Bogotá', 'sala': 'Laboratorio 1'}]},
+                  open(f'{self.r}/festivals/a-2026.json', 'w'))
+        S.construir(self.r)
+        self.sid = lambda n: next(s for s, e in S.leer(self.r)['sedes'].items() if e['nombre'] == n)
+
+    def comfama(self):
+        return S.institucion('Comfama', [self.sid('Comfama Aranjuez'), self.sid('Comfama San Ignacio'), self.sid('Biblioteca Comfama Bello'), self.sid('Comfama')],
+                             'caja de compensación con varias sedes', alias=['Caja de Compensación Familiar de Antioquia'], raiz=self.r)
+
+    def test_agrupa_y_sobrevive_al_reconstruir(self):
+        iid = self.comfama()
+        S.construir(self.r)
+        m = S.leer(self.r)
+        self.assertEqual(m['instituciones'][iid]['nombre'], 'Comfama')
+        self.assertEqual(len(S.sedes_de(iid, self.r)), 4)
+        self.assertEqual(m['instituciones'][iid]['decisiones'][0]['por_que'], 'caja de compensación con varias sedes')
+
+    def test_encontrar_por_la_institucion_y_su_alias(self):
+        self.comfama()
+        r = S.encontrar('Caja de Compensación Familiar de Antioquia', ciudad='Medellín', raiz=self.r)
+        self.assertEqual(sorted(x['nombre'] for x in r), ['Comfama Aranjuez', 'Comfama San Ignacio'])
+        self.assertTrue(all(x['nivel'] == 'institución' and x['institucion'] == 'Comfama' and not x['firme'] for x in r))
+        r = S.encontrar('Caja de Compensación Familiar de Antioquia', ciudad='Bello', raiz=self.r)
+        self.assertEqual([(x['nombre'], x['firme']) for x in r], [('Biblioteca Comfama Bello', True)])   # una sola sede en la ciudad
+        r = S.encontrar('Comfama San Ignacio', ciudad='Medellín', raiz=self.r)
+        self.assertEqual((r[0]['nombre'], r[0]['nivel'], r[0]['firme']), ('Comfama San Ignacio', 'igual', True))   # lo exacto gana
+        r = S.encontrar('Comfama', ciudad='Girardota', raiz=self.r)
+        self.assertEqual([(x['nombre'], x['nivel'], x['institucion']) for x in r], [('Comfama', 'igual', 'Comfama')])   # el nombre exacto no baja a institución
+
+    def test_una_sede_no_cambia_de_institucion_sin_querer(self):
+        self.comfama()
+        with self.assertRaises(SystemExit):
+            S.institucion('Cajas de Antioquia', [self.sid('Comfama Aranjuez')], 'x', raiz=self.r)
+        iid2 = S.institucion('Comfama', [self.sid('Comfama Aranjuez')], 'otra vez', raiz=self.r)   # la misma, por nombre: suma
+        self.assertEqual(len(S.sedes_de(iid2, self.r)), 4)
+
+    def test_sin_motivo_sede_inexistente_o_sin_nombre_no(self):
+        for args in (('Comfama', [self.sid('Comfama Aranjuez')], ''), ('Comfama', ['s_00000000'], 'x'), ('  ', [self.sid('Comfama Aranjuez')], 'x'),
+                     ('Comfama', [], 'x')):
+            with self.assertRaises(SystemExit):
+                S.institucion(*args, raiz=self.r)
+
+    def test_huerfana(self):
+        m = S.leer(self.r)
+        m['sedes'][self.sid('Comfama Aranjuez')]['institucion'] = 'i_noexiste'
+        S._escribir(m, self.r)
+        self.assertEqual(S.huerfanas(self.r), [self.sid('Comfama Aranjuez')])
+
+    def test_sala_igual_junta_y_sobrevive(self):
+        sid = self.sid('Cinemateca de Bogotá')
+        self.assertEqual(sorted(S.leer(self.r)['sedes'][sid]['salas']), ['Lab 1', 'Laboratorio 1'])
+        S.sala_igual(sid, 'Lab 1', 'Laboratorio 1', 'abreviatura', self.r)
+        S.construir(self.r)
+        e = S.leer(self.r)['sedes'][sid]
+        self.assertEqual((e['salas'], e['salas_alias']['Lab 1']), (['Laboratorio 1'], 'Laboratorio 1'))
+        r = S.encontrar('Cinemateca Lab 1', ciudad='Bogotá', raiz=self.r)
+        self.assertEqual(r[0]['sala'], 'Laboratorio 1')
+
+    def test_sala_igual_pide_salas_que_existen(self):
+        sid = self.sid('Cinemateca de Bogotá')
+        for v, c, pq in (('Lab 9', 'Laboratorio 1', 'x'), ('Lab 1', 'Lab 1', 'x'), ('Lab 1', 'Laboratorio 1', '')):
+            with self.assertRaises(SystemExit):
+                S.sala_igual(sid, v, c, pq, self.r)
+
+
 class Normalizar(Base):
     def test_salas_compuestas_fuera_y_variantes_juntas(self):
         e = {'nombre': 'MAMM', 'corto': 'MAMM'}

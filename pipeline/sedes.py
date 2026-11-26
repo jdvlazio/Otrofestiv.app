@@ -32,6 +32,9 @@ fusionados con `--mismo`.
     python3 pipeline/sedes.py --buscar "MAMM" 6.24,-75.57
     python3 pipeline/sedes.py --encontrar "Sala del Colombo" --ciudad Medellín   # como se le dice: candidatos, sala y cuál es firme
     python3 pipeline/sedes.py --corto <sid> "MAMM" --por-que TXT                 # el nombre con que sale en la app, en todo festival
+    python3 pipeline/sedes.py --institucion "Comfama" s_aaa s_bbb … [--alias "Caja de Compensación Familiar"] --por-que TXT
+    python3 pipeline/sedes.py --instituciones                                    # las instituciones y sus sedes
+    python3 pipeline/sedes.py --sala-igual <sid> "Lab 1" "Laboratorio 1" --por-que TXT   # dos nombres de la misma sala
     python3 pipeline/sedes.py --nombrar <sid> "el Colombo" --por-que TXT         # una forma de decirle que ningún programa trajo
     python3 pipeline/sedes.py --mismo "MAMM" "Museo de Arte Moderno de Medellín" --por-que TXT
     python3 pipeline/sedes.py --distintos "Comfama San Ignacio" "Teatro Comfama…" --por-que TXT
@@ -292,6 +295,25 @@ def normalizar_salas(conteo, e):
     return sorted(canon), dict(sorted(variantes.items()))
 
 
+def _aplicar_salas(e, sid, dec):
+    """Las salas que una persona juntó (--sala-igual) siguen juntas al reconstruir:
+    «Lab 1» y «Laboratorio 1» no las une la normalización, que solo ve grafías."""
+    for s_, var, can, *_ in dec.get('sala_igual') or []:
+        if s_ != sid:
+            continue
+        salas = set(e.get('salas', []))
+        if var in salas or var in (e.get('salas_alias') or {}) or can in salas:
+            salas.discard(var)
+            salas.add(can)
+            e['salas'] = sorted(salas)
+            va = e.setdefault('salas_alias', {})
+            va[var] = can
+            for k, v in list(va.items()):
+                if v == var:
+                    va[k] = can
+            e['salas_alias'] = dict(sorted(va.items()))
+
+
 def construir(raiz=REPO):
     """Arma/actualiza el almacén desde los venues-geo. Lo que ya está —id,
     evidencia, divergencia elegida— se conserva: el almacén es la fuente, los
@@ -354,6 +376,7 @@ def construir(raiz=REPO):
         e['alias'] = sorted((set(e.get('alias', [])) | alias) - {e['nombre']})
         e['festivales'] = sorted(set(e.get('festivales', [])) | {x[0] for x in g})
         _ficha(e, g, ctx)
+        _aplicar_salas(e, sid, dec)
         tol = e.get('campus', {}).get('radio_m', TOLERANCIA_M)
         lejos = [x for x in g if metros((e['lat'], e['lng']), (x[3]['lat'], x[3]['lng'])) > tol]
         # un pin verificado en Maps (o elegido a mano) MANDA: los que se apartan
@@ -384,6 +407,8 @@ def construir(raiz=REPO):
                 for k in ('salas',):
                     if eb.get(k):
                         ea[k] = sorted(set(ea.get(k, [])) | set(eb[k]))
+                if eb.get('institucion') and not ea.get('institucion'):
+                    ea['institucion'] = eb['institucion']
                 redir[b_] = a_
                 div.pop(b_, None)
                 del sedes[b_]
@@ -415,6 +440,7 @@ def construir(raiz=REPO):
                          'construido_por': 'pipeline/sedes.py --construir',
                          'regla': f'mismo lugar: mismo nombre (o declarado) a <{MISMO_LUGAR_M} m; '
                                   f'divergencia: pines a >{TOLERANCIA_M} m; cerca: lugares a <{CERCA_M} m sin declarar'},
+         'instituciones': dict(sorted((previa.get('instituciones') or {}).items())),
          'sedes': dict(sorted(sedes.items())), 'redirecciones': dict(sorted(redir.items())), 'decisiones': dec, '_divergentes': div, '_deuda': deuda}
     _escribir(d, raiz)
     return d
@@ -732,6 +758,72 @@ def _sin(pal, tramo):
     return None
 
 
+def _id_inst(nombre):
+    return 'i_' + hashlib.sha1(plano(nombre).encode()).hexdigest()[:8]
+
+
+def institucion(nombre, sids, por_que, alias=(), raiz=REPO):
+    """Varias sedes de una misma institución (fase 3, 26 nov 2026): Comfama tiene nueve,
+    la Tadeo cuatro edificios, la Cinemateca de Bogotá dos sedes. La institución no es un
+    lugar —no tiene pin—: agrupa lugares para encontrarlos y, después, para mostrarlos juntos.
+    Una sede está en una sola institución; cambiarla de una a otra se hace a propósito."""
+    if not (por_que or '').strip():
+        sys.exit('--institucion necesita --por-que')
+    nombre = (nombre or '').strip()
+    if not _pal(nombre) or not sids:
+        sys.exit('--institucion: faltan el nombre o las sedes')
+    m = leer(raiz)
+    I = m.setdefault('instituciones', {})
+    iid = next((i for i, x in I.items() if plano(nombre) in {plano(n) for n in [x['nombre']] + x.get('alias', [])}), None) or _id_inst(nombre)
+    for sid in sids:
+        e = (m.get('sedes') or {}).get(sid)
+        if not e:
+            sys.exit(f'--institucion: {sid} no existe')
+        if e.get('institucion') and e['institucion'] != iid:
+            sys.exit(f"--institucion: {sid} {e['nombre']} ya es de {I.get(e['institucion'], {}).get('nombre', e['institucion'])}")
+    x = I.setdefault(iid, {'nombre': nombre, 'alias': []})
+    x['alias'] = sorted((set(x.get('alias', [])) | {a.strip() for a in alias if a.strip()}) - {x['nombre']})
+    x.setdefault('decisiones', []).append({'sedes': sorted(sids), 'por_que': por_que.strip(), 'fecha': date.today().isoformat()})
+    for sid in sids:
+        m['sedes'][sid]['institucion'] = iid
+    _escribir(m, raiz)
+    return iid
+
+
+def sedes_de(iid, raiz=REPO, _m=None):
+    m = _m or leer(raiz)
+    return sorted(s for s, e in (m.get('sedes') or {}).items() if e.get('institucion') == iid)
+
+
+def sala_igual(sid, variante, canonica, por_que, raiz=REPO):
+    """Dos nombres de la MISMA sala que la normalización no junta («Lab 1» / «Laboratorio 1»)."""
+    if not (por_que or '').strip():
+        sys.exit('--sala-igual necesita --por-que')
+    m = leer(raiz)
+    e = (m.get('sedes') or {}).get(sid)
+    if not e:
+        sys.exit(f'--sala-igual: {sid} no existe')
+    conocidas = set(e.get('salas', [])) | set(e.get('salas_alias') or {})
+    for s_ in (variante, canonica):
+        if s_ not in conocidas:
+            sys.exit(f'--sala-igual: «{s_}» no es una sala de {e["nombre"]}')
+    if variante == canonica:
+        sys.exit('--sala-igual: son la misma grafía')
+    dec = m.setdefault('decisiones', {}).setdefault('sala_igual', [])
+    if not any(x[:3] == [sid, variante, canonica] for x in dec):
+        dec.append([sid, variante, canonica, por_que.strip()])
+    _aplicar_salas(e, sid, m['decisiones'])
+    _escribir(m, raiz)
+    return e
+
+
+def huerfanas(raiz=REPO):
+    """Sedes que apuntan a una institución que no existe."""
+    m = leer(raiz)
+    I = m.get('instituciones') or {}
+    return sorted(s for s, e in (m.get('sedes') or {}).items() if e.get('institucion') and e['institucion'] not in I)
+
+
 def encontrar(texto, ciudad=None, centro=None, radio_m=30000, raiz=REPO, n=6):
     """Cómo se le dice a un lugar → los lugares del almacén que pueden ser, del más al menos firme.
 
@@ -778,6 +870,26 @@ def encontrar(texto, ciudad=None, centro=None, radio_m=30000, raiz=REPO, n=6):
         if mejor:
             out.append({'sid': sid, 'nombre': e['nombre'], 'ciudad': e.get('ciudad'), 'puntaje': mejor[0], 'nivel': mejor[1],
                         'por': mejor[3], **({'sala': mejor[2]} if mejor[2] else {})})
+    I = leer(raiz).get('instituciones') or {}
+    for iid, ins in I.items():
+        nomi = [ins['nombre']] + ins.get('alias', [])
+        a = {w for w in pq if w not in _VACIAS and (len(w) > 2 or w.isdigit())}
+        if not a or not any(a <= {w for w in _pal(n) if w not in _VACIAS} or ''.join(pq) == ''.join(_pal(n)) for n in nomi):
+            continue
+        for sid in sedes_de(iid, raiz):
+            e = S[sid]
+            if (ciudad and plano(e.get('ciudad')) != plano(ciudad)) or (centro and metros(centro, (e['lat'], e['lng'])) > radio_m):
+                continue
+            hay = next((x for x in out if x['sid'] == sid), None)
+            if hay and hay['puntaje'] >= 0.85:
+                continue
+            if hay:
+                out.remove(hay)
+            out.append({'sid': sid, 'nombre': e['nombre'], 'ciudad': e.get('ciudad'), 'puntaje': 0.85,
+                        'nivel': 'institución', 'por': ins['nombre']})
+    for x in out:
+        if S[x['sid']].get('institucion') in I:
+            x['institucion'] = I[S[x['sid']]['institucion']]['nombre']
     vistos = {x['sid'] for x in out}
     centro_p = centro
     for p, sid, e in _parecidos(texto, centro_p, raiz, radio_m, n=n):
@@ -972,8 +1084,25 @@ def main():
         r = encontrar(_arg('--encontrar'), ciudad=ciu, centro=c)
         for x in r:
             print(f"  {'FIRME ' if x['firme'] else '      '}{x['sid']}  {x['nombre']} ({x['ciudad'] or '?'})"
+                  f"{' · de ' + x['institucion'] if x.get('institucion') else ''}"
                   f"{' · sala: ' + x['sala'] if x.get('sala') else ''} · {x['nivel']} por «{x['por']}»")
         print(f'{len(r)} candidatos' + ('' if any(x['firme'] for x in r) else ' · ninguno firme: elegir a mano') if r else 'no está en el almacén')
+    elif '--institucion' in a:
+        i = a.index('--institucion')
+        nom = a[i + 1]
+        sids = [x for x in a[i + 2:] if re.fullmatch(r's_[0-9a-f]{8}', x)]
+        al = [a[j + 1] for j, x in enumerate(a) if x == '--alias' and j + 1 < len(a)]
+        iid = institucion(nom, sids, pq, al)
+        print(f'✓ {iid} {nom}: ' + ', '.join(leer()['sedes'][s]['nombre'] for s in sedes_de(iid)))
+    elif '--instituciones' in a:
+        m = leer()
+        for iid, x in (m.get('instituciones') or {}).items():
+            print(f"{iid}  {x['nombre']}" + (f" (también: {', '.join(x['alias'])})" if x.get('alias') else ''))
+            for s in sedes_de(iid, _m=m):
+                print(f"    {s}  {m['sedes'][s]['nombre']} ({m['sedes'][s].get('ciudad') or '?'})")
+    elif '--sala-igual' in a:
+        sid, v, c = _arg('--sala-igual', 3)
+        print('✓ salas:', ', '.join(sala_igual(sid, v, c, pq)['salas']))
     elif '--corto' in a:
         sid, txt = _arg('--corto', 2)
         print(f"✓ {sid} sale como «{fijar_corto(sid, txt, pq)['corto']}»")
