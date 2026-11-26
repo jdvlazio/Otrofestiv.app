@@ -93,6 +93,11 @@ class Sello(unittest.TestCase):
             s.corregir_original([nuevo], comprobar=lambda o, obra=None: ('no está', 'y'))
         with self.assertRaises(SystemExit):
             s.corregir_original([dict(nuevo, motivo='')], comprobar=LIT)
+        ILE = lambda o, obra=None: ('ilegible', 'y')
+        with self.assertRaises(SystemExit):            # ilegible sin segundo lector: no
+            s.corregir_original([nuevo], comprobar=ILE)
+        with self.assertRaises(SystemExit):            # «no está» no se arregla a mano
+            s.corregir_original([dict(nuevo, literal_a_mano='p. 3')], comprobar=lambda o, obra=None: ('no está', 'y'))
         s.corregir_original([nuevo], comprobar=LIT)
         o = s.originales()['w_1']
         self.assertEqual((o['texto'], o['anteriores'][0]['texto'], o['anteriores'][0]['motivo']), ('u', 't', 'el anterior no estaba'))
