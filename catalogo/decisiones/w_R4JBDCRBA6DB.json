@@ -21,7 +21,7 @@
  {
   "work_id": "w_R4JBDCRBA6DB",
   "campo": "sinopsis.es",
-  "valor": "En una ciudad —que evoca, sin más detalles, una ciudad del Imperio Romano—, el poema describe un estado de espera: se ha anunciado la llegada de los «bárbaros», el propio emperador parece dispuesto a someterse a su autoridad, y todas las hipótesis sobre el futuro son posibles. La ciudad contiene la respiración a la espera… Pero, ¿quiénes son, exactamente, estos «bárbaros»? ¿Y si no llegan?",
+  "valor": "En una ciudad que evoca, sin más detalles, una del Imperio romano, el poema describe una espera: se anuncia la llegada de los «bárbaros», el propio emperador parece dispuesto a someterse y todo futuro es posible. La ciudad contiene la respiración… Pero ¿quiénes son estos «bárbaros»? ¿Y si no llegan?",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinetoro-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -32,6 +32,31 @@
   "antes": {
    "cinetoro-2026": "En una ciudad —que evoca, sin más detalles, una ciudad del Imperio Romano—, el poema describe un estado de espera: se ha anunciado la llegada de los «bárbaros», el propio emperador parece dispuesto a someterse a su autoridad, y todas las hipótesis sobre el futuro son posibles. La ciudad contiene la respiración a la espera… Pero, ¿quiénes son, exactamente, estos «bárbaros»? ¿Y si no llegan?",
    "ficpa-2026": "Conteniendo la respiración, la ciudad aguarda la llegada de los «bárbaros». ¿Quiénes son? ¿Y qué se hará si no vienen?"
+  },
+  "original_de": [
+   "cinetoro-2026",
+   "ficpa-2026"
+  ],
+  "titulo": "Esperando a los bárbaros",
+  "original": "En una ciudad —que evoca, sin más detalles, una ciudad del Imperio Romano—, el poema describe un estado de espera: se ha anunciado la llegada de los «bárbaros», el propio emperador parece dispuesto a someterse a su autoridad, y todas las hipótesis sobre el futuro son posibles. La ciudad contiene la respiración a la espera… Pero, ¿quiénes son, exactamente, estos «bárbaros»? ¿Y si no llegan?",
+  "sintesis": {
+   "redacta": "redactor 2 26 nov",
+   "verifica": "verificador 2 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "d88459173fd4"
+  }
+ },
+ {
+  "work_id": "w_R4JBDCRBA6DB",
+  "campo": "sinopsis.en",
+  "valor": "In a city that evokes, without further detail, one of the Roman Empire, the poem describes a state of waiting: the arrival of the \"barbarians\" is announced, the emperor himself seems ready to submit, and any future is possible. The city holds its breath… But who are these \"barbarians\"? And what if they don't come?",
+  "motivo": "síntesis 26 nov (redactor 2 26 nov; verifica verificador 2 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
+  "antes": {
+   "cinetoro-2026": "In a city - evoking, without specificity, a city of the Roman Empire - the poem depicts a state of waiting: the arrival of the ‘Barbarians’ has been announced. The city holds its breath in anticipation… But who, exactly, are these “Barbarians”? And what if they do not come?",
+   "ficpa-2026": "In a city - evoking, without specificity, a city of the Roman Empire - the poem depicts a state of waiting: the arrival of the ‘Barbarians’ has been announced. The city holds its breath in anticipation… But who, exactly, are these “Barbarians”? And what if they do not come?"
   }
  }
 ]

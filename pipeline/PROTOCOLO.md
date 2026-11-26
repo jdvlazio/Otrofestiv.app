@@ -486,6 +486,13 @@ español e inglés contra la fuente y los sella (`python3 pipeline/sello_obra.py
 lote.json`). Sin sello, o si algo cambia después, `[sello-obra]` no deja publicar. El texto
 que llegó se guarda entero en `catalogo/originales.json` y no se edita.
 
+**Buscar la fuente de una sinopsis** (26 nov 2026): nunca a criterio del agente.
+`python3 pipeline/buscar_sinopsis.py <work_id>` recorre siempre los mismos lugares (fuentes
+guardadas, Instagram guardado, TMDB, Letterboxd, IMDb, web oficial, Filmaffinity) y escribe
+las consultas web exactas; quien busca las corre tal cual (`--pendiente <id>`) y anota una
+por una (`--anotar`). Todo queda en `catalogo/busquedas/<id>.json`. «No hay fuente» solo con
+el registro completo: `--sin-fuente`, y `[busqueda-completa]` lo exige.
+
 **La función y su acceso** (24 nov 2026): después de `alta-festival.py` (su
 config entra en la huella) y antes de la primera publicación, (1) el inventario
 de fuentes sin nada `sin-revisar`; (2) `festivals/staging/<id>-acceso.json`: cómo se entra por

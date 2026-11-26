@@ -21,7 +21,7 @@
  {
   "work_id": "w_R4HAG9H5XRYK",
   "campo": "sinopsis.es",
-  "valor": "Laura, una joven introvertida de trece años, llega a un pueblo rodeado de plantaciones de palma y de un imponente bosque. Mientras se ajusta a la nueva configuración de su familia, Laura empieza a entrever un mundo oculto en donde circula la historia de una bestia que habita en el bosque y se alimenta de mujeres. Al principio, lo descarta como una fantasía infantil, pero cuando conoce a la magnética Daniela, su amistad la lleva en un viaje que revela la verdadera naturaleza de la bestia.",
+  "valor": "Laura, una introvertida de trece años, llega a un pueblo rodeado de plantaciones de palma y de un imponente bosque. Mientras se ajusta a su nueva familia, entrevé un mundo oculto donde circula la historia de una bestia del bosque que se alimenta de mujeres. Lo cree una fantasía infantil, pero su amistad con la magnética Daniela la lleva a un viaje.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (filcmar-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -32,6 +32,19 @@
   "antes": {
    "ficci-65": "Este coming of age que transita entre fábula y crónica, sigue a Laura, adolescente de 13 años que se muda a una zona rural de Costa Rica.",
    "filcmar-2026": "Laura, una joven introvertida de trece años, llega a un pueblo rodeado de plantaciones de palma y de un imponente bosque. Mientras se ajusta a la nueva configuración de su familia, Laura empieza a entrever un mundo oculto en donde circula la historia de una bestia que habita en el bosque y se alimenta de mujeres. Al principio, lo descarta como una fantasía infantil, pero cuando conoce a la magnética Daniela, su amistad la lleva en un viaje que revela la verdadera naturaleza de la bestia."
+  },
+  "original_de": [
+   "ficci-65",
+   "filcmar-2026"
+  ],
+  "titulo": "Si no ardemos, cómo iluminar la noche",
+  "original": "Laura, una joven introvertida de trece años, llega a un pueblo rodeado de plantaciones de palma y de un imponente bosque. Mientras se ajusta a la nueva configuración de su familia, Laura empieza a entrever un mundo oculto en donde circula la historia de una bestia que habita en el bosque y se alimenta de mujeres. Al principio, lo descarta como una fantasía infantil, pero cuando conoce a la magnética Daniela, su amistad la lleva en un viaje que revela la verdadera naturaleza de la bestia.",
+  "sintesis": {
+   "redacta": "redactor 2 26 nov",
+   "verifica": "verificador 2 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "b0a51f9426fa"
   }
  },
  {
@@ -65,14 +78,22 @@
  {
   "work_id": "w_R4HAG9H5XRYK",
   "campo": "sinopsis.en",
-  "valor": "13-year-old Laura feels adrift in her newly stitched-together family. Just as the forests and endless palm plantations begin to feel like home, she uncovers a lurking secret that threatens the women she holds close.",
-  "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
-  "fecha": "2026-11-24",
-  "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)",
+  "valor": "Laura, an introverted thirteen-year-old, arrives in a town surrounded by palm plantations and an imposing forest. As she adjusts to her new family, she glimpses a hidden world where a story circulates about a forest beast that feeds on women. She dismisses it as a childish fantasy, but her friendship with magnetic Daniela takes her on a journey.",
+  "motivo": "síntesis 26 nov (redactor 2 26 nov; verifica verificador 2 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
   "titulo": "Si no ardemos, cómo iluminar la noche",
   "antes": {
    "ficci-65": "This coming-of-age story that moves between fable and chronicle follows Laura, a 13-year-old who moves to a rural area of Costa Rica.",
    "filcmar-2026": "13-year-old Laura feels adrift in her newly stitched-together family. Just as the forests and endless palm plantations begin to feel like home, she uncovers a lurking secret that threatens the women she holds close."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "13-year-old Laura feels adrift in her newly stitched-together family. Just as the forests and endless palm plantations begin to feel like home, she uncovers a lurking secret that threatens the women she holds close.",
+    "motivo": "una sinopsis en inglés por obra: la que cuenta la historia, completa y corta; no el comentario del festival",
+    "fecha": "2026-11-24",
+    "quien": "Claude, recomendación (Juan: «sigue con género y sinopsis en inglés»)"
+   }
+  ]
  }
 ]

@@ -21,7 +21,7 @@
  {
   "work_id": "w_R4HKXWTB17A2",
   "campo": "sinopsis.es",
-  "valor": "En 2016, Colombia firmó un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. ‘Después del frío’ narra las historias de tres personas: un ganadero uribista que fue secuestrado, un coronel implicado en ‘falsos positivos’ y un líder social de Siloé, en Cali. A través de entrevistas cercanas y humanas, este documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto.",
+  "valor": "Tras el acuerdo de paz de 2016 con las FARC, retrato íntimo de un país en busca de sanación: un ganadero secuestrado que confronta a sus captores, un coronel retirado que arroja luz sobre los «falsos positivos» y un líder social de Cali ante la violencia persistente. Una apuesta por la reconciliación y la justicia frente a las frías narrativas.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (ficdeh-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -32,6 +32,19 @@
   "antes": {
    "ficdeh-2026": "En 2016, Colombia firmó un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. ‘Después del frío’ narra las historias de tres personas: un ganadero uribista que fue secuestrado, un coronel implicado en ‘falsos positivos’ y un líder social de Siloé, en Cali. A través de entrevistas cercanas y humanas, este documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto.",
    "narrarelfuturo-2026": "En 2016, Colombia firma un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. 'Después del frío' narra las historias de tres personas: un ganadero que fue secuestrado, un coronel implicado en 'falsos positivos' y un líder social. A través de sus experiencias, el documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto."
+  },
+  "original_de": [
+   "ficdeh-2026",
+   "narrarelfuturo-2026"
+  ],
+  "titulo": "Después del frío",
+  "original": "En 2016, Colombia firmó un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. ‘Después del frío’ narra las historias de tres personas: un ganadero uribista que fue secuestrado, un coronel implicado en ‘falsos positivos’ y un líder social de Siloé, en Cali. A través de entrevistas cercanas y humanas, este documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto.",
+  "sintesis": {
+   "redacta": "redactor 2 26 nov",
+   "verifica": "verificador 2 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "1177b14bbe5b"
   }
  },
  {
@@ -49,12 +62,21 @@
  {
   "work_id": "w_R4HKXWTB17A2",
   "campo": "sinopsis.en",
-  "valor": "In 2016 Colombia signed a historic peace agreement with the FARC, ending a 60-year war. Después del frío follows three lives: a cattle rancher and Uribe supporter who was kidnapped, a colonel implicated in the \"false positives\" killings, and a community leader from Siloé, in Cali. Through close, humane interviews, the film reveals the difficulties and the small victories on the road to reconciliation and justice in a country still shadowed by the conflict.",
-  "motivo": "la que ya publica otro festival: una sola por obra",
-  "fecha": "2026-11-24",
-  "quien": "regla de Juan: la sinopsis es de la obra",
+  "valor": "After the 2016 peace agreement with the FARC, an intimate portrait of a country seeking healing: a kidnapped rancher who confronts his captors, a retired colonel who sheds light on the \"false positives\", and a community leader from Cali facing persistent violence. A case for reconciliation and justice against the cold narratives of the conflict.",
+  "motivo": "síntesis 26 nov (redactor 2 26 nov; verifica verificador 2 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
   "antes": {
-   "ficdeh-2026": "In 2016 Colombia signed a historic peace agreement with the FARC, ending a 60-year war. Después del frío follows three lives: a cattle rancher and Uribe supporter who was kidnapped, a colonel implicated in the \"false positives\" killings, and a community leader from Siloé, in Cali. Through close, humane interviews, the film reveals the difficulties and the small victories on the road to reconciliation and justice in a country still shadowed by the conflict."
-  }
+   "ficdeh-2026": "In 2016 Colombia signed a historic peace agreement with the FARC, ending a 60-year war. Después del frío follows three lives: a cattle rancher and Uribe supporter who was kidnapped, a colonel implicated in the \"false positives\" killings, and a community leader from Siloé, in Cali. Through close, humane interviews, the film reveals the difficulties and the small victories on the road to reconciliation and justice in a country still shadowed by the conflict.",
+   "narrarelfuturo-2026": "In 2016 Colombia signed a historic peace agreement with the FARC, ending a 60-year war. Después del frío follows three lives: a cattle rancher and Uribe supporter who was kidnapped, a colonel implicated in the \"false positives\" killings, and a community leader from Siloé, in Cali. Through close, humane interviews, the film reveals the difficulties and the small victories on the road to reconciliation and justice in a country still shadowed by the conflict."
+  },
+  "anteriores": [
+   {
+    "valor": "In 2016 Colombia signed a historic peace agreement with the FARC, ending a 60-year war. Después del frío follows three lives: a cattle rancher and Uribe supporter who was kidnapped, a colonel implicated in the \"false positives\" killings, and a community leader from Siloé, in Cali. Through close, humane interviews, the film reveals the difficulties and the small victories on the road to reconciliation and justice in a country still shadowed by the conflict.",
+    "motivo": "la que ya publica otro festival: una sola por obra",
+    "fecha": "2026-11-24",
+    "quien": "regla de Juan: la sinopsis es de la obra"
+   }
+  ]
  }
 ]

@@ -21,7 +21,7 @@
  {
   "work_id": "w_R4F0RZFVZ94C",
   "campo": "sinopsis.es",
-  "valor": "Un viaje al inframundo comienza en nuestras propias entrañas, formadas por la carne que consumimos y las bolitas de migajas ablandadas por la saliva de las madres. Esta película explora el devenir de distintos tiempos, desde el ritmo íntimo de la digestión hasta la vasta extensión de las eras geológicas: estalagmitas que se forman en milenios, huellas fosilizadas de dinosaurios y los ecos de movimientos primigenios, similares a los gruñidos. Inspirada en el capítulo “Puro Andar” de El Pez de Oro de Gamaliel Churata, donde dice que “todos llevamos vivos a los muertos, que los muertos viven”.",
+  "valor": "Un viaje al inframundo comienza en nuestras propias entrañas. La película recorre distintos tiempos, del ritmo íntimo de la digestión a las eras geológicas: estalagmitas de milenios, huellas fosilizadas de dinosaurios. Inspirada en «Puro Andar» de Gamaliel Churata: «todos llevamos vivos a los muertos, que los muertos viven».",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (cinetoro-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
@@ -32,18 +32,39 @@
   "antes": {
    "cinemancia-2026": "La artista y cineasta boliviana Luciana Decker Orozco indaga en actos ancestrales y esenciales: comer, masticar y digerir. Su sugerente celuloide se cuela por bocas, intestinos y entrañas, así como por experimentos en las catacumbas del ser humano y la Tierra. (Miquel Martí Freixas)",
    "cinetoro-2026": "Un viaje al inframundo comienza en nuestras propias entrañas, formadas por la carne que consumimos y las bolitas de migajas ablandadas por la saliva de las madres. Esta película explora el devenir de distintos tiempos, desde el ritmo íntimo de la digestión hasta la vasta extensión de las eras geológicas: estalagmitas que se forman en milenios, huellas fosilizadas de dinosaurios y los ecos de movimientos primigenios, similares a los gruñidos. Inspirada en el capítulo “Puro Andar” de El Pez de Oro de Gamaliel Churata, donde dice que “todos llevamos vivos a los muertos, que los muertos viven”."
+  },
+  "original_de": [
+   "cinemancia-2026",
+   "cinetoro-2026"
+  ],
+  "titulo": "Puro andar",
+  "original": "Un viaje al inframundo comienza en nuestras propias entrañas, formadas por la carne que consumimos y las bolitas de migajas ablandadas por la saliva de las madres. Esta película explora el devenir de distintos tiempos, desde el ritmo íntimo de la digestión hasta la vasta extensión de las eras geológicas: estalagmitas que se forman en milenios, huellas fosilizadas de dinosaurios y los ecos de movimientos primigenios, similares a los gruñidos. Inspirada en el capítulo “Puro Andar” de El Pez de Oro de Gamaliel Churata, donde dice que “todos llevamos vivos a los muertos, que los muertos viven”.",
+  "sintesis": {
+   "redacta": "redactor 1 26 nov",
+   "verifica": "verificador 1 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "9affe6348161"
   }
  },
  {
   "work_id": "w_R4F0RZFVZ94C",
   "campo": "sinopsis.en",
-  "valor": "Bolivian artist and filmmaker Luciana Decker Orozco delves into ancient and essential acts: eating, chewing and digesting. The film moves through mouths, intestines and entrails and the catacombs of the Earth. Inspired by the Peruvian writer Gamaliel Churata, it merges the surface and the underground, the real and the extraordinary.",
-  "motivo": "Errata 'Chumata' por Churata y comentario ('Her suggestive celluloid').",
-  "fecha": "2026-11-25",
-  "quien": "segunda lectura (sellos)",
+  "valor": "A journey to the underworld begins in our own entrails. The film moves through different times, from the intimate rhythm of digestion to geological eras: millennia-old stalagmites, fossilized dinosaur footprints. Inspired by \"Puro Andar\" by Gamaliel Churata: \"we all carry the dead alive, the dead live.\"",
+  "motivo": "síntesis 26 nov (redactor 1 26 nov; verifica verificador 1 26 nov): equivale a la corta en español",
+  "fecha": "2026-11-26",
+  "quien": "Juan (aprobó la muestra 26 nov)",
   "antes": {
    "cinemancia-2026": "Bolivian artist and filmmaker Luciana Decker Orozco delves into ancient and essential acts: eating, masticating and digesting. Her suggestive celluloid slips through mouths, intestines and entrails, as well as experiments in the catacombs of the human being and the Earth. Inspired by the avant-gardist and indigenist Peruvian writer Gamaliel Chumata, the surface and the underground, the real and the extraordinary, mysteriously merge together.",
    "cinetoro-2026": "Bolivian artist and filmmaker Luciana Decker Orozco delves into ancient and essential acts: eating, masticating and digesting. Her suggestive celluloid slips through mouths, intestines and entrails, as well as experiments in the catacombs of the human being and the Earth. Inspired by the avant-gardist and indigenist Peruvian writer Gamaliel Chumata, the surface and the underground, the real and the extraordinary, mysteriously merge together."
-  }
+  },
+  "anteriores": [
+   {
+    "valor": "Bolivian artist and filmmaker Luciana Decker Orozco delves into ancient and essential acts: eating, chewing and digesting. The film moves through mouths, intestines and entrails and the catacombs of the Earth. Inspired by the Peruvian writer Gamaliel Churata, it merges the surface and the underground, the real and the extraordinary.",
+    "motivo": "Errata 'Chumata' por Churata y comentario ('Her suggestive celluloid').",
+    "fecha": "2026-11-25",
+    "quien": "segunda lectura (sellos)"
+   }
+  ]
  }
 ]
