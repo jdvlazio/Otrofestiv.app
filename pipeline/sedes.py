@@ -30,6 +30,8 @@ fusionados con `--mismo`.
 
     python3 pipeline/sedes.py --construir                 # arma/actualiza desde los venues-geo
     python3 pipeline/sedes.py --buscar "MAMM" 6.24,-75.57
+    python3 pipeline/sedes.py --encontrar "Sala del Colombo" --ciudad Medellín   # como se le dice: candidatos, sala y cuál es firme
+    python3 pipeline/sedes.py --nombrar <sid> "el Colombo" --por-que TXT         # una forma de decirle que ningún programa trajo
     python3 pipeline/sedes.py --mismo "MAMM" "Museo de Arte Moderno de Medellín" --por-que TXT
     python3 pipeline/sedes.py --distintos "Comfama San Ignacio" "Teatro Comfama…" --por-que TXT
     python3 pipeline/sedes.py --evidencia <sid> --maps URL [--pin LAT,LNG]   # verificado en Google Maps
@@ -713,6 +715,107 @@ def _con_sala(cruda, centro, raiz, radio_m=30000):
     return None
 
 
+_VACIAS = {'de', 'del', 'la', 'el', 'los', 'las', 'y', 'en', 'sala', 'sede', 'centro'}
+
+
+def _pal(s):
+    return re.findall(r'[a-z0-9]+', unicodedata.normalize('NFD', (s or '').lower()).encode('ascii', 'ignore').decode())
+
+
+def _sin(pal, tramo):
+    """`pal` sin el tramo contiguo `tramo`; None si no lo trae."""
+    n = len(tramo)
+    for i in range(len(pal) - n + 1):
+        if n and pal[i:i + n] == tramo:
+            return pal[:i] + pal[i + n:]
+    return None
+
+
+def encontrar(texto, ciudad=None, centro=None, radio_m=30000, raiz=REPO, n=6):
+    """Cómo se le dice a un lugar → los lugares del almacén que pueden ser, del más al menos firme.
+
+    «Colombo», «el Colombo Americano», «Sala del Colombo», «Colombo Americano sala 2», «la Tadeo»:
+    nadie escribe el nombre oficial. Niveles:
+      igual      — es el nombre o una variante guardada (lo que ya hacía --buscar);
+      sin ciudad — igual, quitando la ciudad («Cinemateca» en Bogotá);
+      contenida  — todas sus palabras de peso están en un nombre del lugar («Tadeo»);
+      parecida   — se parece por palabras o por letras: es una pista, no un hallazgo.
+    Si el texto trae una sala que el lugar conoce, sale aparte en `sala`.
+    `firme` solo cuando no hay otro candidato del mismo peso: «Cinemateca» en Bogotá
+    devuelve la de Bogotá, la de Fontanar y la Sala Gaitán, y ninguna es firme.
+    Se acota con `ciudad` (nombre) o con `centro` + `radio_m`."""
+    S = leer(raiz).get('sedes') or {}
+    pq = _pal(nombre_de(texto))
+    out = []
+    for sid, e in S.items():
+        if ciudad and plano(e.get('ciudad')) != plano(ciudad):
+            continue
+        if centro and metros(centro, (e['lat'], e['lng'])) > radio_m:
+            continue
+        de_ciudad = set(_pal(e.get('ciudad')))
+        peso = lambda ps: {w for w in ps if w not in _VACIAS and w not in de_ciudad and (len(w) > 2 or w.isdigit())}
+        noms = [x for x in [e['nombre'], e.get('corto')] + e.get('alias', []) if x]
+        salas = [(sa, sa) for sa in e.get('salas', [])] + list((e.get('salas_alias') or {}).items())
+        mejor = None
+        for escrita, sala in [(None, None)] + salas:
+            resto = pq if escrita is None else _sin(pq, _pal(escrita))
+            if resto is None or (escrita is not None and not peso(resto)):
+                continue
+            for nom in noms:
+                pn = _pal(nombre_de(nom))
+                a, b = peso(resto), peso(pn)
+                if ''.join(resto) == ''.join(pn):
+                    c = (1.0, 'igual')
+                elif a and a == b:
+                    c = (0.9, 'sin ciudad')
+                elif a and a <= b and (len(a) > 1 or len(next(iter(a))) >= 4):
+                    c = (0.8, 'contenida')
+                else:
+                    continue
+                if not mejor or (c[0], bool(sala)) > (mejor[0], bool(mejor[2])):
+                    mejor = (c[0], c[1], sala, nom)
+        if mejor:
+            out.append({'sid': sid, 'nombre': e['nombre'], 'ciudad': e.get('ciudad'), 'puntaje': mejor[0], 'nivel': mejor[1],
+                        'por': mejor[3], **({'sala': mejor[2]} if mejor[2] else {})})
+    vistos = {x['sid'] for x in out}
+    centro_p = centro
+    for p, sid, e in _parecidos(texto, centro_p, raiz, radio_m, n=n):
+        if sid in vistos or (ciudad and plano(e.get('ciudad')) != plano(ciudad)):
+            continue
+        out.append({'sid': sid, 'nombre': e['nombre'], 'ciudad': e.get('ciudad'), 'puntaje': round(min(p, 1) * 0.7, 2),
+                    'nivel': 'parecida', 'por': e['nombre']})
+    out.sort(key=lambda x: (-x['puntaje'], -len(S[x['sid']].get('festivales', [])), x['nombre']))
+    for i, x in enumerate(out):
+        x['firme'] = i == 0 and x['nivel'] != 'parecida' and not any(y['puntaje'] >= x['puntaje'] for y in out[1:])
+    return out[:n]
+
+
+def nombrar(sid, texto, por_que, raiz=REPO):
+    """Una forma de decirle al lugar que ningún programa trajo todavía («el Colombo», «la Tadeo»).
+    Queda como variante: desde ahí --buscar y --resolver la reconocen sin preguntar."""
+    if not (por_que or '').strip():
+        sys.exit('--nombrar necesita --por-que')
+    m = leer(raiz)
+    e = (m.get('sedes') or {}).get(sid)
+    if not e:
+        sys.exit(f'--nombrar: {sid} no existe')
+    texto = texto.strip()
+    if not _pal(texto):
+        sys.exit('--nombrar: falta el texto')
+    otro = [f"{s} {o['nombre']}" for s, o in m['sedes'].items() if s != sid
+            and metros((e['lat'], e['lng']), (o['lat'], o['lng'])) <= 30000
+            and plano(nombre_de(texto)) in {plano(nombre_de(x)) for x in [o['nombre']] + o.get('alias', [])}]
+    if otro:
+        sys.exit(f'--nombrar: «{texto}» ya nombra a otro lugar cercano: {", ".join(otro)}')
+    if plano(texto) != plano(e['nombre']) and texto not in e.get('alias', []):
+        e['alias'] = sorted(set(e.get('alias', [])) | {texto})
+    dec = m.setdefault('decisiones', {}).setdefault('nombrado', [])
+    if not any(x[:2] == [sid, texto] for x in dec):
+        dec.append([sid, texto, por_que.strip()])
+    _escribir(m, raiz)
+    return e['alias']
+
+
 def resolver(fid, raiz=REPO, escribir=False, aceptar=None, centro=None):
     """Las sedes del crudo de un festival, una por una:
       ya        — el plan ya la mapea y su pin está;
@@ -744,6 +847,7 @@ def resolver(fid, raiz=REPO, escribir=False, aceptar=None, centro=None):
             sid = aceptar[cr]
             if sid not in S:
                 sys.exit(f'--aceptar: {sid} no existe')
+            sala = next((x.get('sala', '') for x in encontrar(cr, centro=centro, raiz=raiz, n=99) if x['sid'] == sid), '')
         else:
             hit = buscar(cr, centro, raiz=raiz) if centro else None
             if hit:
@@ -753,11 +857,11 @@ def resolver(fid, raiz=REPO, escribir=False, aceptar=None, centro=None):
                 if cs:
                     sid, sala = cs
         if not sid:
-            par = _parecidos(cr, centro, raiz)
+            par = encontrar(cr, centro=centro, raiz=raiz)
             if par:
-                out['parecida'].append((cr, [(p, s_, e['nombre'], e.get('ciudad'),
-                                              round(metros(centro, (e['lat'], e['lng']))) if centro else None)
-                                             for p, s_, e in par]))
+                out['parecida'].append((cr, [(x['puntaje'], x['sid'], x['nombre'] + (f" / {x['sala']}" if x.get('sala') else ''), x['ciudad'],
+                                              round(metros(centro, (S[x['sid']]['lat'], S[x['sid']]['lng']))) if centro else None)
+                                             for x in par]))
             else:
                 ciudad = F.get('city') or ''
                 q = re.sub(r'\s+', '+', f'{cr} {ciudad}'.strip())
@@ -818,6 +922,17 @@ def main():
     elif '--buscar' in a:
         n, c = _arg('--buscar', 2)
         print(json.dumps(buscar(n, tuple(map(float, c.split(',')))), ensure_ascii=False, indent=1))
+    elif '--encontrar' in a:
+        ciu = _arg('--ciudad') if '--ciudad' in a else None
+        c = tuple(map(float, _arg('--centro').split(','))) if '--centro' in a else None
+        r = encontrar(_arg('--encontrar'), ciudad=ciu, centro=c)
+        for x in r:
+            print(f"  {'FIRME ' if x['firme'] else '      '}{x['sid']}  {x['nombre']} ({x['ciudad'] or '?'})"
+                  f"{' · sala: ' + x['sala'] if x.get('sala') else ''} · {x['nivel']} por «{x['por']}»")
+        print(f'{len(r)} candidatos' + ('' if any(x['firme'] for x in r) else ' · ninguno firme: elegir a mano') if r else 'no está en el almacén')
+    elif '--nombrar' in a:
+        sid, txt = _arg('--nombrar', 2)
+        print('✓ variantes:', ', '.join(nombrar(sid, txt, pq)))
     elif '--mismo' in a:
         declarar('mismo', *_arg('--mismo', 2), pq)
         print('✓ declarados el mismo lugar')
