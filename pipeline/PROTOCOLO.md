@@ -493,6 +493,10 @@ las consultas web exactas; quien busca las corre tal cual (`--pendiente <id>`) y
 por una (`--anotar`). Todo queda en `catalogo/busquedas/<id>.json`. «No hay fuente» solo con
 el registro completo: `--sin-fuente`, y `[busqueda-completa]` lo exige.
 
+**El primer inglés de una obra** que solo publica español: `python3 pipeline/obra_unica.py
+--decidir <work_id> sinopsis.en "<texto>" --motivo "…" --quien "…"` y `ficha_unica.py --aplicar
+--escribir`. Nunca escribiendo `synopsis_en` en el JSON del festival a mano.
+
 **La función y su acceso** (24 nov 2026): después de `alta-festival.py` (su
 config entra en la huella) y antes de la primera publicación, (1) el inventario
 de fuentes sin nada `sin-revisar`; (2) `festivals/staging/<id>-acceso.json`: cómo se entra por

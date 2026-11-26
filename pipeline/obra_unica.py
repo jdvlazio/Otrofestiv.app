@@ -17,6 +17,8 @@ es de la copia de cada festival.
     y después: ficha_unica.py / sinopsis_unicas.py / afiches_unicos.py --aplicar --escribir,
     y catalogo_construir.py --escribir
 La decisión guarda en `antes` qué publicaba cada festival.
+El primer inglés de una obra que solo publica español se decide igual (sinopsis.en):
+ficha_unica.py --aplicar --escribir lo lleva a cada festival.
 """
 import os
 import sys
@@ -154,8 +156,12 @@ def decidir(decs, vals, w, campo, valor, motivo, quien, fecha, veredicto=None):
         if not _pais_es(v):
             raise SystemExit(f'✗ código de país desconocido en {v}')
     antes = {f: a for a, fs in vals.get(w, {}).get(pub, {}).items() for f in fs}
-    if not antes:
-        raise SystemExit(f'✗ {w} no publica {pub} en ningún festival')
+    # El PRIMER inglés: una obra que solo publica español no tiene `antes` en inglés. Negarlo
+    # obligó (26 nov 2026) a escribir el inglés en los festivales con un script suelto y
+    # registrarlo después. La decisión entra y ficha_unica --aplicar lo completa en cada festival.
+    primero = campo == 'sinopsis.en' and not antes and bool(vals.get(w, {}).get('synopsis'))
+    if not antes and not primero:
+        raise SystemExit(f'✗ {w} no publica {pub} en ningún festival' + (' (ni sinopsis en español de la que salga el inglés)' if campo == 'sinopsis.en' else ''))
     if d is None:
         d = {'work_id': w, 'campo': campo}
         decs.append(d)

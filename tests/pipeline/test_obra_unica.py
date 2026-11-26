@@ -103,5 +103,34 @@ class Decidir(unittest.TestCase):
                 self._d(decs, campo, valor)
 
 
+
+class PrimerIngles(unittest.TestCase):
+    """26 nov 2026: decidir negaba el inglés de una obra que solo publicaba español; cuatro obras
+    lo recibieron con un script suelto. Ahora la decisión entra y ficha_unica lo lleva."""
+    O = {'type': 'film', 'title': 'La tinaja', 'work_id': 'w_T1', 'director': 'Ana Pérez', 'synopsis': 'Una mujer vuelve a su pueblo.'}
+
+    def _fs(self):
+        return {'a': {'films': [dict(self.O)]}, 'b': {'films': [{'type': 'program', 'title': 'P', 'film_list': [dict(self.O)]}]}}
+
+    def test_entra_y_llega_a_cada_festival(self):
+        import ficha_unica
+        fs, decs = self._fs(), []
+        d = ou.decidir(decs, ou.publicado(fs)[0], 'w_T1', 'sinopsis.en', 'A woman returns to her town.', 'síntesis', 'Juan', '2026-11-26')
+        self.assertEqual((d['valor'], d['antes']), ('A woman returns to her town.', {}))
+        for f in fs.values():
+            ficha_unica.aplicar(f, decs)
+        self.assertEqual(sorted(ou.publicado(fs)[0]['w_T1']['synopsis_en'].items()), [('A woman returns to her town.', ['a', 'b'])])
+        self.assertEqual([x for x in ou.divergencias(fs, decs, {}) if x[0] == 'w_T1'], [])
+
+    def test_sin_espanol_no_hay_de_donde(self):
+        fs = {'a': {'films': [dict(self.O, synopsis='')]}}
+        with self.assertRaises(SystemExit):
+            ou.decidir([], ou.publicado(fs)[0], 'w_T1', 'sinopsis.en', 'A woman returns.', 'm', 'Juan', '2026-11-26')
+
+    def test_otros_campos_siguen_pidiendo_que_se_publique(self):
+        with self.assertRaises(SystemExit):
+            ou.decidir([], ou.publicado(self._fs())[0], 'w_T1', 'generos', 'Drama', 'm', 'Juan', '2026-11-26')
+
+
 if __name__ == '__main__':
     unittest.main()
