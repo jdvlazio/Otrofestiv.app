@@ -31,6 +31,7 @@ fusionados con `--mismo`.
     python3 pipeline/sedes.py --construir                 # arma/actualiza desde los venues-geo
     python3 pipeline/sedes.py --buscar "MAMM" 6.24,-75.57
     python3 pipeline/sedes.py --encontrar "Sala del Colombo" --ciudad Medellín   # como se le dice: candidatos, sala y cuál es firme
+    python3 pipeline/sedes.py --corto <sid> "MAMM" --por-que TXT                 # el nombre con que sale en la app, en todo festival
     python3 pipeline/sedes.py --nombrar <sid> "el Colombo" --por-que TXT         # una forma de decirle que ningún programa trajo
     python3 pipeline/sedes.py --mismo "MAMM" "Museo de Arte Moderno de Medellín" --por-que TXT
     python3 pipeline/sedes.py --distintos "Comfama San Ignacio" "Teatro Comfama…" --por-que TXT
@@ -816,6 +817,49 @@ def nombrar(sid, texto, por_que, raiz=REPO):
     return e['alias']
 
 
+def fijar_corto(sid, corto, por_que, raiz=REPO, fecha=None):
+    """El nombre con que el lugar sale en la app, decidido por una persona (fase 2, 26 nov 2026).
+    El MAMM salía «MAMM», «Cine MAMM» o «Museo de Arte Moderno de Medellín» según el festival.
+    Desde aquí ensamblar.py publica este nombre en todo festival que se arme; los otros
+    quedan como variantes para que la búsqueda los siga encontrando."""
+    if not (por_que or '').strip():
+        sys.exit('--corto necesita --por-que')
+    corto = (corto or '').strip()
+    if not corto:
+        sys.exit('--corto: falta el nombre')
+    m = leer(raiz)
+    e = (m.get('sedes') or {}).get(sid)
+    if not e:
+        sys.exit(f'--corto: {sid} no existe')
+    viejo = e.get('corto')
+    if viejo and viejo != corto and viejo != e['nombre']:
+        e['alias'] = sorted(set(e.get('alias', [])) | {viejo})
+    e['alias'] = sorted(set(e.get('alias', [])) - {corto})
+    e['corto'] = corto
+    e['corto_decidido'] = {'por_que': por_que.strip(), 'fecha': fecha or date.today().isoformat()}
+    _escribir(m, raiz)
+    return e
+
+
+def cortos_distintos(raiz=REPO, solo_vivos=True):
+    """Venues publicados con otro nombre que el decidido para su lugar: [(fid, clave, publicado, decidido)]."""
+    S_ = leer(raiz).get('sedes') or {}
+    out = []
+    for p in sorted(glob.glob(f'{raiz}/festivals/staging/*-venues-geo.json')):
+        fid = os.path.basename(p)[:-len('-venues-geo.json')]
+        pj = f'{raiz}/festivals/{fid}.json'
+        if (solo_vivos and not vivo(fid, raiz)) or not os.path.exists(pj):
+            continue
+        g = json.load(open(p, encoding='utf-8'))
+        ven = (json.load(open(pj, encoding='utf-8')) or {}).get('venues') or {}
+        for k, v in ven.items():
+            x = g.get(k) or g.get(nombre_de(k)) or {}
+            e = S_.get(x.get('_matriz') or '')
+            if e and e.get('corto_decidido') and isinstance(v, dict) and v.get('short') != e['corto']:
+                out.append((fid, k, v.get('short'), e['corto']))
+    return out
+
+
 def resolver(fid, raiz=REPO, escribir=False, aceptar=None, centro=None):
     """Las sedes del crudo de un festival, una por una:
       ya        — el plan ya la mapea y su pin está;
@@ -930,6 +974,9 @@ def main():
             print(f"  {'FIRME ' if x['firme'] else '      '}{x['sid']}  {x['nombre']} ({x['ciudad'] or '?'})"
                   f"{' · sala: ' + x['sala'] if x.get('sala') else ''} · {x['nivel']} por «{x['por']}»")
         print(f'{len(r)} candidatos' + ('' if any(x['firme'] for x in r) else ' · ninguno firme: elegir a mano') if r else 'no está en el almacén')
+    elif '--corto' in a:
+        sid, txt = _arg('--corto', 2)
+        print(f"✓ {sid} sale como «{fijar_corto(sid, txt, pq)['corto']}»")
     elif '--nombrar' in a:
         sid, txt = _arg('--nombrar', 2)
         print('✓ variantes:', ', '.join(nombrar(sid, txt, pq)))
