@@ -72,5 +72,38 @@
   "vistas": [
    "/assets/siembrafest/make-up-el-arte-de-amar.jpg"
   ]
+ },
+ {
+  "work_id": "w_R4NEB13RV6EZ",
+  "campo": "sinopsis.es",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "vistas": [
+   "9c5c738b3149"
+  ],
+  "original_de": [],
+  "titulo": "Make up: El arte de amar",
+  "valor": "Gerardo y Leticia son una pareja cuya conexión inquebrantable será puesta a prueba. Gerardo, un hombre de corazón gigante, decide devolverle a Leticia la alegría y la seguridad que siempre la caracterizaron, y se embarca en un viaje al mundo del maquillaje. Con Milex, reconocida influencer, descubrirán que la belleza va más allá de lo superficial.",
+  "original": "¿Qué harías cuando la vida te presenta un giro inesperado? En MAKE UP: El arte de amar, conocerás a Gerardo y Leticia, una pareja cuya conexión inquebrantable será puesta a prueba. Gerardo, un hombre con un corazón gigante, está decidido a devolverle a Leticia la alegría y la seguridad que siempre la han caracterizado.\n\nCon una sorprendente dedicación, Gerardo se embarca en un viaje al mundo del maquillaje, buscando herramientas para reavivar el brillo de su amada. En este camino, encontrarán una aliada como Milex, una reconocida influencer que los ayudará a descubrir que la belleza va más allá de lo superficial.",
+  "sintesis": {
+   "redacta": "Claude 26 nov",
+   "verifica": "verificador independiente 26 nov",
+   "veredicto": "fiel",
+   "fecha": "2026-11-26",
+   "huella": "848cfe4d2eff"
+  }
+ },
+ {
+  "work_id": "w_R4NEB13RV6EZ",
+  "campo": "sinopsis.en",
+  "valor": "Gerardo and Leticia are a couple whose unbreakable bond is about to be tested. Gerardo, a man with a huge heart, sets out to give Leticia back the joy and confidence that always defined her, and embarks on a journey into the world of makeup. With Milex, a well-known influencer, they will discover that beauty goes beyond the surface.",
+  "motivo": "síntesis del original verificado (aprobada por Juan 26 nov)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
+  "antes": {
+   "festicineantioquia-2026": "Gerardo and Leticia are a couple whose unbreakable bond is about to be tested. Gerardo, a man with a huge heart, sets out to give Leticia back the joy and confidence that always defined her, and embarks on a journey into the world of makeup. With Milex, a well-known influencer, they will discover that beauty goes beyond the surface.",
+   "siembrafest-2026": "Gerardo and Leticia are a couple whose unbreakable bond is about to be tested. Gerardo, a man with a huge heart, sets out to give Leticia back the joy and confidence that always defined her, and embarks on a journey into the world of makeup. With Milex, a well-known influencer, they will discover that beauty goes beyond the surface."
+  }
  }
 ]
