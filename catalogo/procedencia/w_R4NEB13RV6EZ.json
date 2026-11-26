@@ -32,5 +32,17 @@
   "regla": "decisión",
   "motivo": "es la tarjeta de SiembraFest, no un afiche de la obra: SiembraFest la conserva y nadie la hereda",
   "fecha": "2026-11-25"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis de la sinopsis (sinopsis_cortas.py)",
+  "fecha": "2026-11-26"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis del original verificado (aprobada por Juan 26 nov)",
+  "fecha": "2026-11-26"
  }
 }
