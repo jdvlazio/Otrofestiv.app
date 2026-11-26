@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Medell%C3%ADn%2C%20yo%20te%20saludo",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/cinemancia-2026, fuentes/cineparalapaz-2026",
+     "nota": "ningún archivo nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DfNgnlahooO.json",
+     "nota": "original: fuentes/ig-vigia/DfNgnlahooO.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfRH9PlvSfr.json",
+     "nota": "original: fuentes/ig-vigia/DfRH9PlvSfr.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1740554/",
+     "nota": "original: https://letterboxd.com/tmdb/1740554/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1740554",
+     "nota": "original: TMDB 1740554",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Medellín, yo te saludo\" Cataño",
+     "nota": "páginas Alcaldía de Medellín; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Medellín, yo te saludo\" sinopsis",
+     "nota": "artículos sobre Medellín; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Medellín, yo te saludo\" synopsis Cataño",
+     "nota": "noticias Medellín, Unifrance otra obra; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Imágenes de archivo de guerras lejanas se cruzan con\"",
+     "nota": "artículos académicos sobre imágenes de guerra; nada de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cinemancia-2026",
+  "cineparalapaz-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4F7ST1C6JNH"
+}

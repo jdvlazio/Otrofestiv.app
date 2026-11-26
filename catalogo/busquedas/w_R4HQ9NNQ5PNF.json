@@ -1,0 +1,177 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Habitante",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficma-2026, fuentes/itagui-2026, fuentes/narrarelfuturo-2026",
+     "nota": "ningún archivo nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De2T605mkZV.json",
+     "nota": "original: fuentes/ig-vigia/De2T605mkZV.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2lEBXj_lV.json",
+     "nota": "original: fuentes/ig-vigia/De2lEBXj_lV.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2tyXPSnFk.json",
+     "nota": "original: fuentes/ig-vigia/De2tyXPSnFk.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De4ZQNox4cr.json",
+     "nota": "original: fuentes/ig-vigia/De4ZQNox4cr.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De4w_O_mYax.json",
+     "nota": "original: fuentes/ig-vigia/De4w_O_mYax.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7mm-IFTd_.json",
+     "nota": "original: fuentes/ig-vigia/De7mm-IFTd_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dexix0wja0O.json",
+     "nota": "original: fuentes/ig-vigia/Dexix0wja0O.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfBFvNHm8we.json",
+     "nota": "original: fuentes/ig-vigia/DfBFvNHm8we.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfC9pUpJM7R.json",
+     "nota": "original: fuentes/ig-vigia/DfC9pUpJM7R.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfDa48rGRlA.json",
+     "nota": "original: fuentes/ig-vigia/DfDa48rGRlA.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfid8XkibLV.json",
+     "nota": "original: fuentes/ig-vigia/Dfid8XkibLV.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfyMU5KEahz.json",
+     "nota": "original: fuentes/ig-vigia/DfyMU5KEahz.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgKoX6FER7q.json",
+     "nota": "original: fuentes/ig-vigia/DgKoX6FER7q.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgLlT2vFsaX.json",
+     "nota": "original: fuentes/ig-vigia/DgLlT2vFsaX.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1581240617371136.json",
+     "nota": "original: fuentes/ig-vigia/fb-1581240617371136.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1571285/",
+     "nota": "en: https://letterboxd.com/tmdb/1571285/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1571285",
+     "nota": "en: TMDB 1571285",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Habitante\" Vargas",
+     "nota": "estado Vargas Venezuela, apellido",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Habitante\" sinopsis",
+     "nota": "El habitante 2017 México, Los habitantes",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Habitante\" synopsis Vargas",
+     "nota": "themoviebrowser (sinopsis en inglés, no verbatim), unletterboxd · máquina: en: https://themoviebrowser.com/movie/1571285/habitante",
+     "resultado": "literal",
+     "url": "https://themoviebrowser.com/movie/1571285/habitante"
+    },
+    {
+     "consulta": "\"Dar una vuelta al mundo y filmar Habitante emerge\"",
+     "nota": "agregadores TMDB 1571285 (oktaycolakoglu, followthecredits) · máquina: en: https://movies.oktaycolakoglu.com/movie/1571285",
+     "resultado": "literal",
+     "url": "https://movies.oktaycolakoglu.com/movie/1571285"
+    },
+    {
+     "consulta": "site:institutoitagui.gov.co \"Habitante\"",
+     "nota": "solo PDFs de itagui.gov.co",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:laficma.com \"Habitante\"",
+     "nota": "ningún resultado de laficma.com",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:narrarelfuturo.com \"Habitante\"",
+     "nota": "ningún resultado de narrarelfuturo.com",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficma-2026",
+  "itagui-2026",
+  "narrarelfuturo-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1571285"
+ },
+ "work_id": "w_R4HQ9NNQ5PNF"
+}

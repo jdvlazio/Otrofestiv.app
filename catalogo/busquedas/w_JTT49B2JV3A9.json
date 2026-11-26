@@ -1,0 +1,134 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Nueve%20jueves%20en%20Riachuelo",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/provinciadevelez-2026/altas/la-belleza.tmdb.json",
+     "nota": "original: fuentes/provinciadevelez-2026/altas/la-belleza.tmdb.json",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/provinciadevelez-2026/altas/nueve-jueves-en-riachuelo.tmdb.json",
+     "nota": "original: fuentes/provinciadevelez-2026/altas/nueve-jueves-en-riachuelo.tmdb.json",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/provinciadevelez-2026/fb/post-25nov.txt",
+     "nota": "original: fuentes/provinciadevelez-2026/fb/post-25nov.txt",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De2JXcsFQFK.json",
+     "nota": "original: fuentes/ig-vigia/De2JXcsFQFK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7Ur_dTgS0.json",
+     "nota": "original: fuentes/ig-vigia/De7Ur_dTgS0.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DehzQHCJACu.json",
+     "nota": "original: fuentes/ig-vigia/DehzQHCJACu.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DejoeT9MGWt.json",
+     "nota": "original: fuentes/ig-vigia/DejoeT9MGWt.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfFaawVF5fK.json",
+     "nota": "original: fuentes/ig-vigia/DfFaawVF5fK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfNlEO1hGy1.json",
+     "nota": "original: fuentes/ig-vigia/DfNlEO1hGy1.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfU_6nOIw4e.json",
+     "nota": "original: fuentes/ig-vigia/DfU_6nOIw4e.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfdSh_XFLWK.json",
+     "nota": "original: fuentes/ig-vigia/DfdSh_XFLWK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfvhEtnAq-m.json",
+     "nota": "original: fuentes/ig-vigia/DfvhEtnAq-m.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgKoX6FER7q.json",
+     "nota": "original: fuentes/ig-vigia/DgKoX6FER7q.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1581240617371136.json",
+     "nota": "original: fuentes/ig-vigia/fb-1581240617371136.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "tmdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Nueve jueves en Riachuelo\" Silva",
+     "nota": "Riachuelo Buenos Aires; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Nueve jueves en Riachuelo\" sinopsis",
+     "nota": "Riachuelo, noticias; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Nueve jueves en Riachuelo\" synopsis Silva",
+     "nota": "libro de H. R. Silva, Riachuelo; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Edson Velandia tiene nueve jueves y los recreos de\"",
+     "nota": "artículos sobre Edson Velandia sin la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cineparalapaz-2026",
+  "provinciadevelez-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_JTT49B2JV3A9"
+}

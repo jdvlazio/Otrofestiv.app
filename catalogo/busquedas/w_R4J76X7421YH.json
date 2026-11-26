@@ -1,0 +1,270 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20asociaci%C3%B3n",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/post-15585.json",
+     "nota": "es: fuentes/popayan-2026/cinecorto/post-15585.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.29sep.json",
+     "nota": "es: fuentes/popayan-2026/programacion2026.29sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.30sep.json",
+     "nota": "es: fuentes/popayan-2026/programacion2026.30sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.json",
+     "nota": "es: fuentes/popayan-2026/programacion2026.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.txt",
+     "nota": "es: fuentes/popayan-2026/programacion2026.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/seleccion-oficial-2026.28sep.json",
+     "nota": "es: fuentes/popayan-2026/seleccion-oficial-2026.28sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/seleccion-oficial-2026.json",
+     "nota": "es: fuentes/popayan-2026/seleccion-oficial-2026.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De-XK0IkfZK.json",
+     "nota": "es: fuentes/ig-vigia/De-XK0IkfZK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De0G3IuDh69.json",
+     "nota": "es: fuentes/ig-vigia/De0G3IuDh69.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De177TUEbMw.json",
+     "nota": "es: fuentes/ig-vigia/De177TUEbMw.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2JXcsFQFK.json",
+     "nota": "es: fuentes/ig-vigia/De2JXcsFQFK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2XRXYD4bp.json",
+     "nota": "es: fuentes/ig-vigia/De2XRXYD4bp.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2lEBXj_lV.json",
+     "nota": "es: fuentes/ig-vigia/De2lEBXj_lV.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2tvC3iXox.json",
+     "nota": "es: fuentes/ig-vigia/De2tvC3iXox.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7jI5tp9n3.json",
+     "nota": "es: fuentes/ig-vigia/De7jI5tp9n3.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De9xNesDC2Y.json",
+     "nota": "es: fuentes/ig-vigia/De9xNesDC2Y.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DejoeT9MGWt.json",
+     "nota": "es: fuentes/ig-vigia/DejoeT9MGWt.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DevBEdkFzfd.json",
+     "nota": "es: fuentes/ig-vigia/DevBEdkFzfd.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DewzIRKkVLp.json",
+     "nota": "es: fuentes/ig-vigia/DewzIRKkVLp.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexDMqhFWPR.json",
+     "nota": "es: fuentes/ig-vigia/DexDMqhFWPR.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexQDbhD7dN.json",
+     "nota": "es: fuentes/ig-vigia/DexQDbhD7dN.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DexbiInD2sM.json",
+     "nota": "es: fuentes/ig-vigia/DexbiInD2sM.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dexix0wja0O.json",
+     "nota": "es: fuentes/ig-vigia/Dexix0wja0O.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DezYmVTETbA.json",
+     "nota": "es: fuentes/ig-vigia/DezYmVTETbA.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dezk8-CFSyI.json",
+     "nota": "es: fuentes/ig-vigia/Dezk8-CFSyI.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dezyk_Rjyr_.json",
+     "nota": "es: fuentes/ig-vigia/Dezyk_Rjyr_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "nota": "es: fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfGHtjUCR3C.json",
+     "nota": "es: fuentes/ig-vigia/DfGHtjUCR3C.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfGZ9voBxPp.json",
+     "nota": "es: fuentes/ig-vigia/DfGZ9voBxPp.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfInDELCdns.json",
+     "nota": "es: fuentes/ig-vigia/DfInDELCdns.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfL3mvUjhXa.json",
+     "nota": "es: fuentes/ig-vigia/DfL3mvUjhXa.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfM62ZOIG6R.json",
+     "nota": "es: fuentes/ig-vigia/DfM62ZOIG6R.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfOL4Z_iWKB.json",
+     "nota": "es: fuentes/ig-vigia/DfOL4Z_iWKB.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfPT4i1jXbI.json",
+     "nota": "es: fuentes/ig-vigia/DfPT4i1jXbI.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfVmnhSiRvF.json",
+     "nota": "es: fuentes/ig-vigia/DfVmnhSiRvF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfaS9rJtMGf.json",
+     "nota": "es: fuentes/ig-vigia/DfaS9rJtMGf.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgDtxqZFIck.json",
+     "nota": "es: fuentes/ig-vigia/DgDtxqZFIck.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1663705/",
+     "nota": "es: https://letterboxd.com/tmdb/1663705/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1663705",
+     "nota": "es: TMDB 1663705",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"La asociación\" Quintero",
+     "nota": "personas Quintero y asociaciones; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La asociación\" sinopsis",
+     "nota": "otras obras (IMDb, libros); nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La asociación\" synopsis Quintero",
+     "nota": "noticias colombianas sobre Quintero; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"En las altas montañas del imponente y vital Macizo\"",
+     "nota": "páginas turísticas de macizos; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:festicinepopayan.com \"La asociación\"",
+     "nota": "sin páginas del dominio; programa LASA (PDF, no abierto) lista La Asociación Colombia 2025 18'",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficmontanas-2026",
+  "popayan-2026",
+  "siembrafest-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1663705"
+ },
+ "work_id": "w_R4J76X7421YH"
+}

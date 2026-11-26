@@ -1,0 +1,160 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Iris%20de%20Cristal",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bhff-2026/ojos-seleccion.json",
+     "nota": "es: fuentes/bhff-2026/ojos-seleccion.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bhff-2026/programacion.html",
+     "nota": "es: fuentes/bhff-2026/programacion.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bhff-2026/programacion.json",
+     "nota": "es: fuentes/bhff-2026/programacion.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/fantasmagoria-2026/cartelera/publicada-v2.json",
+     "nota": "es: fuentes/fantasmagoria-2026/cartelera/publicada-v2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/fantasmagoria-2026/cartelera/publicada-v26.json",
+     "nota": "es: fuentes/fantasmagoria-2026/cartelera/publicada-v26.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/fantasmagoria-2026/cartelera/publicada.json",
+     "nota": "es: fuentes/fantasmagoria-2026/cartelera/publicada.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/fantasmagoria-2026/programacion.json",
+     "nota": "es: fuentes/fantasmagoria-2026/programacion.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/fantasmagoria-2026/programacion.txt",
+     "nota": "es: fuentes/fantasmagoria-2026/programacion.txt",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DezVbZHRunB.json",
+     "nota": "es: fuentes/ig-vigia/DezVbZHRunB.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfAYrImlYJX.json",
+     "nota": "es: fuentes/ig-vigia/DfAYrImlYJX.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfZyigQRh4R.json",
+     "nota": "es: fuentes/ig-vigia/DfZyigQRh4R.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfbeSV0Fqs_.json",
+     "nota": "es: fuentes/ig-vigia/DfbeSV0Fqs_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfkS3CukdJ7.json",
+     "nota": "es: fuentes/ig-vigia/DfkS3CukdJ7.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfsMyayDyoh.json",
+     "nota": "es: fuentes/ig-vigia/DfsMyayDyoh.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1368500/",
+     "nota": "es: https://letterboxd.com/tmdb/1368500/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1368500",
+     "nota": "es: TMDB 1368500",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Iris de Cristal\" Nieto",
+     "nota": "Carla Nieto actriz, TheTVDB; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Iris de Cristal\" sinopsis",
+     "nota": "Annecy Crystal Iris (Diego Gaviria Nieto) y MUBI; Annecy da 404, MUBI legible pero el lector solo devolvió paráfrasis · máquina: es: https://mubi.com/en/us/films/crystal-iris",
+     "resultado": "no está",
+     "url": "https://mubi.com/en/us/films/crystal-iris"
+    },
+    {
+     "consulta": "\"Iris de Cristal\" synopsis Nieto",
+     "nota": "Annecy Crystal Iris (Diego Gaviria Nieto) da 404 al abrir · máquina: es: https://www.annecyfestival.com/en/the-festival/official-selection/competition/2025/midnight-specials/crystal-iris",
+     "resultado": "ilegible",
+     "url": "https://www.annecyfestival.com/en/the-festival/official-selection/competition/2025/midnight-specials/crystal-iris"
+    },
+    {
+     "consulta": "\"Iris es una niña de 11 años que vive\"",
+     "nota": "historias de niñas llamadas Iris; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:bogotahorrorfilmfest.com \"Iris de Cristal\"",
+     "nota": "sin páginas del dominio; Annecy/Sitges/MUBI de la obra (Annecy 404) · máquina: es: https://www.annecyfestival.com/en/the-festival/official-selection/competition/2025/midnight-specials/crystal-iris",
+     "resultado": "ilegible",
+     "url": "https://www.annecyfestival.com/en/the-festival/official-selection/competition/2025/midnight-specials/crystal-iris"
+    },
+    {
+     "consulta": "site:festivalfantasmagoriamedellin.com \"Iris de Cristal\"",
+     "nota": "sin páginas del dominio; Annecy/Sitges/MUBI de la obra (Annecy 404) · máquina: es: https://www.annecyfestival.com/en/the-festival/official-selection/competition/2025/midnight-specials/crystal-iris",
+     "resultado": "ilegible",
+     "url": "https://www.annecyfestival.com/en/the-festival/official-selection/competition/2025/midnight-specials/crystal-iris"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bhff-2026",
+  "fantasmagoria-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4G651V5H1G6"
+}

@@ -1,0 +1,80 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Amor%20en%20los%20tiempos%20de%20como%20sea%20que%20se%20llame%20el%20presente",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.29sep.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.29sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.30sep.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.30sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.txt",
+     "nota": "original: fuentes/popayan-2026/programacion2026.txt",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1450727/",
+     "nota": "original: https://letterboxd.com/tmdb/1450727/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1450727",
+     "nota": "original: TMDB 1450727",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cinemancia-2025",
+  "popayan-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1450727"
+ },
+ "work_id": "w_R4ESTGJG9KWF"
+}

@@ -1,0 +1,70 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Salman%20Wants%20to%20Go",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+     "nota": "original: fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1569734/",
+     "nota": "original: https://letterboxd.com/tmdb/1569734/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "consultas": [
+    {
+     "donde": "https://shortsfit.com/portfolio-item/salman-wants-to-go/",
+     "nota": "original: https://shortsfit.com/portfolio-item/salman-wants-to-go/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1569734",
+     "nota": "original: TMDB 1569734",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "under-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1569734"
+ },
+ "work_id": "w_X296PDSGZHVQ"
+}

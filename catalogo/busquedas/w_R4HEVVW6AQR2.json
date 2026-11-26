@@ -1,0 +1,135 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Kuagro",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficcali-2026/fichas/flamencoterapia.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/flamencoterapia.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/kuagro-2.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/kuagro-2.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/kuagro-3.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/kuagro-3.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/kuagro-4.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/kuagro-4.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/kuagro-6.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/kuagro-6.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/kuagro-7.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/kuagro-7.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/kuagro-8.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/kuagro-8.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/kuagro-9.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/kuagro-9.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/kuagro.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/kuagro.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/namtrik-fogones-linguisticos.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/namtrik-fogones-linguisticos.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/media-posters.json",
+     "nota": "original: fuentes/ficcali-2026/media-posters.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/pelicula.json",
+     "nota": "original: fuentes/ficcali-2026/pelicula.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/seleccion-secciones.json",
+     "nota": "original: fuentes/ficcali-2026/seleccion-secciones.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.pdf",
+     "nota": "original: fuentes/ficci-65/catalogo/catalogo.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.txt",
+     "nota": "original: fuentes/ficci-65/catalogo/catalogo.txt",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1668919/",
+     "nota": "original: https://letterboxd.com/tmdb/1668919/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1668919",
+     "nota": "original: TMDB 1668919",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficcali-2026",
+  "ficci-65"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1668919"
+ },
+ "work_id": "w_R4HEVVW6AQR2"
+}

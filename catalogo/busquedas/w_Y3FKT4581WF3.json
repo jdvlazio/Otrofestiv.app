@@ -1,0 +1,79 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Tundama",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/cajica-2026/festival-de-cine-2026.html",
+     "nota": "original: fuentes/cajica-2026/festival-de-cine-2026.html",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/Deu-xjGAL8H.json",
+     "nota": "original: fuentes/ig-vigia/Deu-xjGAL8H.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dez6bCKBLfG.json",
+     "nota": "original: fuentes/ig-vigia/Dez6bCKBLfG.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfPT4i1jXbI.json",
+     "nota": "original: fuentes/ig-vigia/DfPT4i1jXbI.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgC3-jQRpF8.json",
+     "nota": "original: fuentes/ig-vigia/DgC3-jQRpF8.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/764925/",
+     "nota": "original: https://letterboxd.com/tmdb/764925/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/764925",
+     "nota": "original: TMDB 764925",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cajica-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/764925"
+ },
+ "work_id": "w_Y3FKT4581WF3"
+}

@@ -1,0 +1,85 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Estancia",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "original: fuentes/festicineantioquia-2026/lectura-2.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De7jI5tp9n3.json",
+     "nota": "original: fuentes/ig-vigia/De7jI5tp9n3.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "nota": "original: fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfFwKdnh-4I.json",
+     "nota": "original: fuentes/ig-vigia/DfFwKdnh-4I.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1458626373134736.json",
+     "nota": "original: fuentes/ig-vigia/fb-1458626373134736.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1461153646215342.json",
+     "nota": "original: fuentes/ig-vigia/fb-1461153646215342.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1278956/",
+     "nota": "en: https://letterboxd.com/tmdb/1278956/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1278956",
+     "nota": "original: TMDB 1278956",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026",
+  "itagui-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1278956"
+ },
+ "work_id": "w_R4K8TWSK1FYV"
+}

@@ -1,0 +1,284 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20maleza",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/bogoshorts-2026/009_festivales.html",
+     "nota": "original: fuentes/bogoshorts-2026/009_festivales.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-crudo.json",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3735.html",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3735.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3751.html",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3751.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3757.html",
+     "nota": "original: fuentes/bogoshorts-2026/_anterior-15nov/cinemateca/pelicula-3757.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/altas/el-mandado.tmdb.json",
+     "nota": "original: fuentes/bogoshorts-2026/altas/el-mandado.tmdb.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/catalogo-bfm2026.pdf",
+     "nota": "original: fuentes/bogoshorts-2026/catalogo-bfm2026.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3735.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3735.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3751.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3751.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3757.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca-2026-11-23/pelicula-3757.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3735.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca/pelicula-3735.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3751.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca/pelicula-3751.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/cinemateca/pelicula-3757.html",
+     "nota": "original: fuentes/bogoshorts-2026/cinemateca/pelicula-3757.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/enlaces/10BFM_catalogo2026-2026-11-24.pdf",
+     "nota": "original: fuentes/bogoshorts-2026/enlaces/10BFM_catalogo2026-2026-11-24.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/nueva/bfm.pdf",
+     "nota": "original: fuentes/bogoshorts-2026/nueva/bfm.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3802.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3802.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3811.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3811.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3814.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3814.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3894.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3894.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3895.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3895.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3919.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3919.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3933.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3933.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3935.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3935.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3940.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3940.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3951.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3951.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3990.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3990.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/3992.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/3992.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4095.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4095.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4105.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4105.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4264.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4264.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4303.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4303.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4356.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4356.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/bogoshorts-2026/web-cortos/4390.html",
+     "nota": "original: fuentes/bogoshorts-2026/web-cortos/4390.html",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De1_fb1iWY1.json",
+     "nota": "original: fuentes/ig-vigia/De1_fb1iWY1.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De2tyXPSnFk.json",
+     "nota": "original: fuentes/ig-vigia/De2tyXPSnFk.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7XZ6bOqiH.json",
+     "nota": "original: fuentes/ig-vigia/De7XZ6bOqiH.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfFziTFiUtU.json",
+     "nota": "original: fuentes/ig-vigia/DfFziTFiUtU.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfSov7MI4xg.json",
+     "nota": "original: fuentes/ig-vigia/DfSov7MI4xg.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfU_6nOIw4e.json",
+     "nota": "original: fuentes/ig-vigia/DfU_6nOIw4e.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfYP30yh0qa.json",
+     "nota": "original: fuentes/ig-vigia/DfYP30yh0qa.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfnCTE8v9J6.json",
+     "nota": "original: fuentes/ig-vigia/DfnCTE8v9J6.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgLHzJtCQpK.json",
+     "nota": "original: fuentes/ig-vigia/DgLHzJtCQpK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1449541247376582.json",
+     "nota": "original: fuentes/ig-vigia/fb-1449541247376582.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1452909343706439.json",
+     "nota": "original: fuentes/ig-vigia/fb-1452909343706439.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1453264573670916.json",
+     "nota": "original: fuentes/ig-vigia/fb-1453264573670916.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1701420/",
+     "nota": "original: https://letterboxd.com/tmdb/1701420/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1701420",
+     "nota": "original: TMDB 1701420",
+     "resultado": "no está"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "bogoshorts-2026"
+ ],
+ "hallazgo": {
+  "clase": "fuentes",
+  "donde": "fuentes/bogoshorts-2026/_anterior-15nov/bogoshorts-2026-cortos.json"
+ },
+ "work_id": "w_4KJM3PC14GH5"
+}

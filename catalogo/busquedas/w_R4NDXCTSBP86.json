@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Entrenador%20de%20locos",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/qaff-2026, fuentes/tercertiempo-2026",
+     "nota": "ningún archivo nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1675697/",
+     "nota": "original: https://letterboxd.com/tmdb/1675697/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1675697",
+     "nota": "original: TMDB 1675697",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Entrenador de locos\" Liberatore",
+     "nota": "fútbol argentino, IMDb de Valerio/Venturino Liberatore; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Entrenador de locos\" sinopsis",
+     "nota": "IMDb de otras películas; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Entrenador de locos\" synopsis Liberatore",
+     "nota": "Mis 500 locos y otras; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"En Dakar un entrenador reúne a un equipo de\"",
+     "nota": "noticias de fútbol en Senegal; frase no encontrada",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:quibdoafricafilmfestival.com \"Entrenador de locos\"",
+     "nota": "FilmFreeway del QAFF y programas PDF; sin mención de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "qaff-2026",
+  "tercertiempo-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4NDXCTSBP86"
+}

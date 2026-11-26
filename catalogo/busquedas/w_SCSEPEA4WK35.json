@@ -1,0 +1,114 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Aitana",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/cortoscali-2026/lect-De4VP9xkaMd.json",
+     "nota": "original: fuentes/cortoscali-2026/lect-De4VP9xkaMd.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/cortoscali-2026/lect-Deb8SgNkckw.json",
+     "nota": "original: fuentes/cortoscali-2026/lect-Deb8SgNkckw.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/caja-de-pandora-2026.html",
+     "nota": "original: fuentes/festicineantioquia-2026/caja-de-pandora-2026.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "original: fuentes/festicineantioquia-2026/lectura-2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/seleccionados.json",
+     "nota": "original: fuentes/festicineantioquia-2026/seleccionados.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/pages.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/pages.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/posts.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/posts.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De4dTj1CAsR.json",
+     "nota": "original: fuentes/ig-vigia/De4dTj1CAsR.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dff7g10EXSd.json",
+     "nota": "original: fuentes/ig-vigia/Dff7g10EXSd.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfhVjPnkSez.json",
+     "nota": "original: fuentes/ig-vigia/DfhVjPnkSez.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "tmdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Aitana\" Marín",
+     "nota": "cantante Aitana, futbolista Aitana Martín",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Aitana\" sinopsis",
+     "nota": "Aitana de Marina Alberti (2023), docuserie Netflix; ninguna de Marín",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Aitana\" synopsis Marín",
+     "nota": "Aitana de Marina Alberti (Biennale, Huesca); ninguna de Marín",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Cortometraje documental que explora el arte el contraste y\"",
+     "nota": "artículos académicos, Filmin, FilmFreeway Contrastes; ajenos",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cortoscali-2026",
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_SCSEPEA4WK35"
+}

@@ -1,0 +1,109 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Feito%20Pipa",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.pdf",
+     "nota": "original: fuentes/ficci-65/catalogo/catalogo.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.txt",
+     "nota": "original: fuentes/ficci-65/catalogo/catalogo.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt11826250/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1393615/",
+     "nota": "original: https://letterboxd.com/tmdb/1393615/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1393615",
+     "nota": "original: TMDB 1393615",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Feito Pipa\" Deberton",
+     "nota": "tiendas de cometas y itch.io; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Feito Pipa\" sinopsis",
+     "nota": "Omelete, Filmow, AdoroCinema, Wikipedia Gugu's World (Allan Deberton); no abiertas · máquina: original: https://www.omelete.com.br/filmes/ficha/feito-pipa",
+     "resultado": "no está",
+     "url": "https://www.omelete.com.br/filmes/ficha/feito-pipa"
+    },
+    {
+     "consulta": "\"Feito Pipa\" synopsis Deberton",
+     "nota": "Teddy Award, Filmow, Omelete, filmfestival.be, Labocine; Teddy abierta, sinopsis solo parafraseada · máquina: original: https://www.teddyaward.org/en/archive/feito-pipa/",
+     "resultado": "no está",
+     "url": "https://www.teddyaward.org/en/archive/feito-pipa/"
+    },
+    {
+     "consulta": "\"Gugu es un niño soñador y apasionado por el\"",
+     "nota": "Cocoland, Angelito, Gugu Liberato; frase no encontrada",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficci-65",
+  "ficdeh-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4HAG78W53PV"
+}

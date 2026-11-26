@@ -1,0 +1,69 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Cosmopo%C3%A9tica%3A%20el%20ciclo%20de%20vida%20de%20una%20estrella%20masiva",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/under-2026/altas/cosmopoetica-el-ciclo-de-vida-de-una-estrella-masiva.tmdb.json",
+     "nota": "original: fuentes/under-2026/altas/cosmopoetica-el-ciclo-de-vida-de-una-estrella-masiva.tmdb.json",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+     "nota": "original: fuentes/under-2026/correo-2026-11-18/Programa_UNDER_Medellin_2026_def.pdf",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DgLHzJtCQpK.json",
+     "nota": "original: fuentes/ig-vigia/DgLHzJtCQpK.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1829504/",
+     "nota": "original: https://letterboxd.com/tmdb/1829504/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1829504",
+     "nota": "original: TMDB 1829504",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "under-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1829504"
+ },
+ "work_id": "w_X28X0P9S0PEQ"
+}

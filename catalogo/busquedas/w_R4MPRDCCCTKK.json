@@ -1,0 +1,94 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=6%20de%20diciembre",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/narrarelfuturo-2026, fuentes/siembrafest-2026",
+     "nota": "ningún archivo nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De4-JjCiZi7.json",
+     "nota": "es: fuentes/ig-vigia/De4-JjCiZi7.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De__tEzka_W.json",
+     "nota": "es: fuentes/ig-vigia/De__tEzka_W.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df-UjuUKJvh.json",
+     "nota": "es: fuentes/ig-vigia/Df-UjuUKJvh.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgH2LBXRHKM.json",
+     "nota": "es: fuentes/ig-vigia/DgH2LBXRHKM.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "tmdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"6 de diciembre\" Tequia",
+     "nota": "resultados de tequila",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"6 de diciembre\" sinopsis",
+     "nota": "Diciembre 2001, Seis días de diciembre; ajenos",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"6 de diciembre\" synopsis Tequia",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Mientras busca archivos familiares en casa de su madre\"",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:narrarelfuturo.com \"6 de diciembre\"",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "narrarelfuturo-2026",
+  "siembrafest-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4MPRDCCCTKK"
+}

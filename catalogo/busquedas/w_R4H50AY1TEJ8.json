@@ -1,0 +1,358 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Alivios",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficcali-2026/directores.json",
+     "nota": "original: fuentes/ficcali-2026/directores.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/alivios.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/alivios.html",
+     "resultado": "literal"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/azotea.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/azotea.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/bertha.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/bertha.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/borrador-automatico-3.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/borrador-automatico-3.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/borrador-automatico-4.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/borrador-automatico-4.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/borrador-automatico-6.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/borrador-automatico-6.html: el texto está, pero ni el título ni la dirección cerca",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/borrador-automatico-7.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/borrador-automatico-7.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/borrador-automatico-8.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/borrador-automatico-8.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/chaika.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/chaika.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/el-maestro-de-la-piqueria.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/el-maestro-de-la-piqueria.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/el-viaje.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/el-viaje.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/emechiche-el-renacer-de-los-cabeciblancos.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/emechiche-el-renacer-de-los-cabeciblancos.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/kuagro-6.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/kuagro-6.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/la-bola-negra.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/la-bola-negra.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/la-fuga.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/la-fuga.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/nuestro-cuerpo-es-una-estrella-que-se-expande.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/nuestro-cuerpo-es-una-estrella-que-se-expande.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/ona.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/ona.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/sentenciados.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/sentenciados.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/todo-comenzo-por-el-fin.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/todo-comenzo-por-el-fin.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/fichas/vertigo.html",
+     "nota": "original: fuentes/ficcali-2026/fichas/vertigo.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/media-posters.json",
+     "nota": "original: fuentes/ficcali-2026/media-posters.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/pelicula.json",
+     "nota": "original: fuentes/ficcali-2026/pelicula.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficcali-2026/seleccion-secciones.json",
+     "nota": "original: fuentes/ficcali-2026/seleccion-secciones.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficica-2026/programacion-general.html",
+     "nota": "original: fuentes/ficica-2026/programacion-general.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficica-2026/programas.html",
+     "nota": "original: fuentes/ficica-2026/programas.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/villadelcine-2026/obras/alivios.html",
+     "nota": "original: fuentes/villadelcine-2026/obras/alivios.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/villadelcine-2026/obras/sitemap-pages.xml",
+     "nota": "original: fuentes/villadelcine-2026/obras/sitemap-pages.xml",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/villadelcine-2026/programacion-2026.pdf",
+     "nota": "original: fuentes/villadelcine-2026/programacion-2026.pdf",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt35228569/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De-f88xlKpl.json",
+     "nota": "original: fuentes/ig-vigia/De-f88xlKpl.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De177TUEbMw.json",
+     "nota": "original: fuentes/ig-vigia/De177TUEbMw.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De4ZQNox4cr.json",
+     "nota": "original: fuentes/ig-vigia/De4ZQNox4cr.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7mm-IFTd_.json",
+     "nota": "original: fuentes/ig-vigia/De7mm-IFTd_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dep4ZLfAKcJ.json",
+     "nota": "original: fuentes/ig-vigia/Dep4ZLfAKcJ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df-UjuUKJvh.json",
+     "nota": "original: fuentes/ig-vigia/Df-UjuUKJvh.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfBFvNHm8we.json",
+     "nota": "original: fuentes/ig-vigia/DfBFvNHm8we.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfBJOJrDaKy.json",
+     "nota": "original: fuentes/ig-vigia/DfBJOJrDaKy.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfC0cvMlEO4.json",
+     "nota": "original: fuentes/ig-vigia/DfC0cvMlEO4.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfDlyoFEdJD.json",
+     "nota": "original: fuentes/ig-vigia/DfDlyoFEdJD.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfFqnSABLSy.json",
+     "nota": "original: fuentes/ig-vigia/DfFqnSABLSy.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfKjCGXR5Dq.json",
+     "nota": "original: fuentes/ig-vigia/DfKjCGXR5Dq.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfLBeQ6IHuO.json",
+     "nota": "original: fuentes/ig-vigia/DfLBeQ6IHuO.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfOL4Z_iWKB.json",
+     "nota": "original: fuentes/ig-vigia/DfOL4Z_iWKB.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfSov7MI4xg.json",
+     "nota": "original: fuentes/ig-vigia/DfSov7MI4xg.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfXAFIkleCA.json",
+     "nota": "original: fuentes/ig-vigia/DfXAFIkleCA.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfaNEWSERxC.json",
+     "nota": "original: fuentes/ig-vigia/DfaNEWSERxC.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfda1bMx088.json",
+     "nota": "original: fuentes/ig-vigia/Dfda1bMx088.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dff7g10EXSd.json",
+     "nota": "original: fuentes/ig-vigia/Dff7g10EXSd.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfhVjPnkSez.json",
+     "nota": "original: fuentes/ig-vigia/DfhVjPnkSez.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1463185959345444.json",
+     "nota": "original: fuentes/ig-vigia/fb-1463185959345444.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1469210/",
+     "nota": "en: https://letterboxd.com/tmdb/1469210/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1469210",
+     "nota": "en: TMDB 1469210",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Alivios\" González",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Alivios\" sinopsis",
+     "nota": "ficha espejo de TMDB de Alivios (2025) con overview en inglés; también ecartelera Alivio 2014 (otra obra) · máquina: en: https://movies.oktaycolakoglu.com/movie/1469210",
+     "resultado": "literal",
+     "texto_otro": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+     "url": "https://movies.oktaycolakoglu.com/movie/1469210"
+    },
+    {
+     "consulta": "\"Alivios\" synopsis González",
+     "nota": "cgiii Reliefs (Juan Manuel González), sinopsis en inglés solo parcial; también oktaycolakoglu y kicktraq · máquina: en: https://www.cgiii.com/cgiiibase/item/reliefs: el texto está, pero ni el título ni la dirección cerca",
+     "resultado": "ilegible",
+     "texto_otro": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long.",
+     "url": "https://www.cgiii.com/cgiiibase/item/reliefs"
+    },
+    {
+     "consulta": "\"Carlos se acerca a la mediana edad atrapado en\"",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:ficcali.com \"Alivios\"",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:ficica.cinealacalle.org \"Alivios\"",
+     "nota": "ningún resultado de ficica; LesGaiCineMad programa Alivios pero devuelve 404 · máquina: original: https://lesgaicinemad.com.fundaciontriangulo.org/programacion/6909c03faeb9b203848cf213-alivios",
+     "resultado": "ilegible",
+     "url": "https://lesgaicinemad.com.fundaciontriangulo.org/programacion/6909c03faeb9b203848cf213-alivios"
+    },
+    {
+     "consulta": "site:villadelcine.com \"Alivios\"",
+     "nota": "ningún resultado de villadelcine; oktaycolakoglu, cgiii y lesgaicinemad con Alivios · máquina: en: https://movies.oktaycolakoglu.com/movie/1469210",
+     "resultado": "literal",
+     "texto_otro": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+     "url": "https://movies.oktaycolakoglu.com/movie/1469210"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficcali-2026",
+  "ficica-2026",
+  "villadelcine-2026"
+ ],
+ "hallazgo": {
+  "clase": "fuentes",
+  "donde": "fuentes/ficcali-2026/fichas/alivios.html"
+ },
+ "work_id": "w_R4H50AY1TEJ8"
+}

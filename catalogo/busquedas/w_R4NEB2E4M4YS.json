@@ -1,0 +1,156 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Sinfon%C3%ADa%20incompleta%20de%20oficios%20del%20Fonce",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficfusa-2026/ig.json",
+     "nota": "original: fuentes/ficfusa-2026/ig.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/provinciadevelez-2026/altas/la-belleza.tmdb.json",
+     "nota": "original: fuentes/provinciadevelez-2026/altas/la-belleza.tmdb.json",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/provinciadevelez-2026/altas/nueve-jueves-en-riachuelo.tmdb.json",
+     "nota": "original: fuentes/provinciadevelez-2026/altas/nueve-jueves-en-riachuelo.tmdb.json",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/provinciadevelez-2026/fb/post-25nov.txt",
+     "nota": "original: fuentes/provinciadevelez-2026/fb/post-25nov.txt: el texto está, pero ni el título ni la dirección cerca",
+     "resultado": "ilegible"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De2JXcsFQFK.json",
+     "nota": "original: fuentes/ig-vigia/De2JXcsFQFK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7Ur_dTgS0.json",
+     "nota": "original: fuentes/ig-vigia/De7Ur_dTgS0.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DehzQHCJACu.json",
+     "nota": "original: fuentes/ig-vigia/DehzQHCJACu.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DejoeT9MGWt.json",
+     "nota": "original: fuentes/ig-vigia/DejoeT9MGWt.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfFaawVF5fK.json",
+     "nota": "original: fuentes/ig-vigia/DfFaawVF5fK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfNlEO1hGy1.json",
+     "nota": "original: fuentes/ig-vigia/DfNlEO1hGy1.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfU_6nOIw4e.json",
+     "nota": "original: fuentes/ig-vigia/DfU_6nOIw4e.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfdSh_XFLWK.json",
+     "nota": "original: fuentes/ig-vigia/DfdSh_XFLWK.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfvhEtnAq-m.json",
+     "nota": "original: fuentes/ig-vigia/DfvhEtnAq-m.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgKoX6FER7q.json",
+     "nota": "original: fuentes/ig-vigia/DgKoX6FER7q.json: el texto está, pero ni el título ni la dirección cerca",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1581240617371136.json",
+     "nota": "original: fuentes/ig-vigia/fb-1581240617371136.json: el texto está, pero ni el título ni la dirección cerca",
+     "resultado": "ilegible"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1817245/",
+     "nota": "original: https://letterboxd.com/tmdb/1817245/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1817245",
+     "nota": "original: TMDB 1817245",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Sinfonía incompleta de oficios del Fonce\" Silva",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Sinfonía incompleta de oficios del Fonce\" sinopsis",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Sinfonía incompleta de oficios del Fonce\" synopsis Silva",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"En un viaje de imágenes acompasadas al ritmo de\"",
+     "nota": "resultados no relacionados con la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficfusa-2026",
+  "provinciadevelez-2026",
+  "siembrafest-2026"
+ ],
+ "hallazgo": {
+  "a_mano": true,
+  "clase": "fuentes",
+  "donde": "fuentes/provinciadevelez-2026/fb/post-25nov.txt"
+ },
+ "work_id": "w_R4NEB2E4M4YS"
+}

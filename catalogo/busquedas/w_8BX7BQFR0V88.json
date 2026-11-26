@@ -1,0 +1,150 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=El%20rey%20de%20la%20monta%C3%B1a",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "original: fuentes/festicineantioquia-2026/lectura-2.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt28757129/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De2m9YiSClG.json",
+     "nota": "original: fuentes/ig-vigia/De2m9YiSClG.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De7mm-IFTd_.json",
+     "nota": "original: fuentes/ig-vigia/De7mm-IFTd_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df5LFFVN2Yw.json",
+     "nota": "original: fuentes/ig-vigia/Df5LFFVN2Yw.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfAWF0dRPvy.json",
+     "nota": "original: fuentes/ig-vigia/DfAWF0dRPvy.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfPT4i1jXbI.json",
+     "nota": "original: fuentes/ig-vigia/DfPT4i1jXbI.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfTESBmFmhP.json",
+     "nota": "original: fuentes/ig-vigia/DfTESBmFmhP.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfVVAlWm8hG.json",
+     "nota": "original: fuentes/ig-vigia/DfVVAlWm8hG.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfViyizlrX-.json",
+     "nota": "original: fuentes/ig-vigia/DfViyizlrX-.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfVjXUdllzQ.json",
+     "nota": "original: fuentes/ig-vigia/DfVjXUdllzQ.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfXUGQ8m1dX.json",
+     "nota": "original: fuentes/ig-vigia/DfXUGQ8m1dX.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfiJa7Yvdm6.json",
+     "nota": "original: fuentes/ig-vigia/DfiJa7Yvdm6.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfkEUCQG1es.json",
+     "nota": "original: fuentes/ig-vigia/DfkEUCQG1es.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfmWXM9OpR_.json",
+     "nota": "original: fuentes/ig-vigia/DfmWXM9OpR_.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfnDhtqGxdT.json",
+     "nota": "original: fuentes/ig-vigia/DfnDhtqGxdT.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Dfp9n0mBMyU.json",
+     "nota": "original: fuentes/ig-vigia/Dfp9n0mBMyU.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfsFlb1m4u6.json",
+     "nota": "original: fuentes/ig-vigia/DfsFlb1m4u6.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfsR7t_G83v.json",
+     "nota": "original: fuentes/ig-vigia/DfsR7t_G83v.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1181417/",
+     "nota": "original: https://letterboxd.com/tmdb/1181417/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1181417",
+     "nota": "original: TMDB 1181417",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1181417"
+ },
+ "work_id": "w_8BX7BQFR0V88"
+}

@@ -1,0 +1,101 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Three%20black%20men",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1616280/",
+     "nota": "en: https://letterboxd.com/tmdb/1616280/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1616280",
+     "nota": "en: TMDB 1616280",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Three black men\" McLean-LoGreco",
+     "nota": "casos judiciales y linchamientos; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Three black men\" sinopsis",
+     "nota": "documentaries.org (sinopsis en inglés, no verbatim), imdb de otras obras · máquina: original: https://www.documentaries.org/films/three-black-men/",
+     "resultado": "no está",
+     "url": "https://www.documentaries.org/films/three-black-men/"
+    },
+    {
+     "consulta": "\"Three black men\" synopsis McLean-LoGreco",
+     "nota": "commonweal, comptonfoundation, documentaries.org · máquina: original: https://www.commonweal.org/news/the-three-black-men-project-a-new-film-the-continuing-journey-and-embodied-liberation",
+     "resultado": "no está",
+     "url": "https://www.commonweal.org/news/the-three-black-men-project-a-new-film-the-continuing-journey-and-embodied-liberation"
+    },
+    {
+     "consulta": "\"Puede un viaje hacia el pasado abrir nuevas posibilidades\"",
+     "nota": "artículos sobre viajes en el tiempo",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:quibdoafricafilmfestival.com \"Three black men\"",
+     "nota": "ningún resultado de quibdoafricafilmfestival.com; documentaries.org y rogerebert",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "ficdeh-2026",
+  "qaff-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1616280"
+ },
+ "work_id": "w_R4HGZY27FP8A"
+}

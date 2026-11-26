@@ -1,0 +1,149 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Cayenas%20libertarias",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/festicineantioquia-2026/caja-de-pandora-2026.html",
+     "nota": "original: fuentes/festicineantioquia-2026/caja-de-pandora-2026.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "original: fuentes/festicineantioquia-2026/lectura-2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/seleccionados.json",
+     "nota": "original: fuentes/festicineantioquia-2026/seleccionados.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/pages.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/pages.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/posts.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/posts.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-prog-v2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "nota": "original: fuentes/ficdeh-2026/ficdeh-programacion-2026.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficica-2026/programas.html",
+     "nota": "original: fuentes/ficica-2026/programas.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficica-2026/seleccion-oficial.html",
+     "nota": "original: fuentes/ficica-2026/seleccion-oficial.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/busca-cayenas-libertarias.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/busca-cayenas-libertarias.json",
+     "resultado": "ilegible"
+    },
+    {
+     "donde": "fuentes/popayan-2026/cinecorto/post-15594.json",
+     "nota": "original: fuentes/popayan-2026/cinecorto/post-15594.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.29sep.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.29sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.30sep.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.30sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.json",
+     "nota": "original: fuentes/popayan-2026/programacion2026.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/programacion2026.txt",
+     "nota": "original: fuentes/popayan-2026/programacion2026.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/seleccion-oficial-2026.28sep.json",
+     "nota": "original: fuentes/popayan-2026/seleccion-oficial-2026.28sep.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/popayan-2026/seleccion-oficial-2026.json",
+     "nota": "original: fuentes/popayan-2026/seleccion-oficial-2026.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DfnPWCWgXmF.json",
+     "nota": "original: fuentes/ig-vigia/DfnPWCWgXmF.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1737961/",
+     "nota": "original: https://letterboxd.com/tmdb/1737961/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1737961",
+     "nota": "original: TMDB 1737961",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026",
+  "ficdeh-2026",
+  "ficfusa-2026",
+  "ficica-2026",
+  "popayan-2026",
+  "siembrafest-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1737961"
+ },
+ "work_id": "w_R4HJ5YQ69QN3"
+}

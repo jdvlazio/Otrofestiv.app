@@ -7517,6 +7517,23 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [busqueda-completa] «sin fuente» solo después de buscar en TODOS los lugares (pipeline/buscar_sinopsis.py) ──
+# Juan, 26 nov 2026: dos agentes declararon «sin fuente» tras 5 búsquedas. Dónde se busca lo decide
+# el código; una obra en catalogo/sin-fuente.json necesita su registro completo y sin hallazgo.
+check = 'busqueda-completa'
+try:
+    import buscar_sinopsis as _bs
+    _ciega = _bs.autoprueba()
+    _mal = _bs.problemas()
+    if _ciega:
+        fail(check, 'regla ciega: ' + ' · '.join(_ciega[:4]))
+    elif _mal:
+        fail(check, f'{len(_mal)} obra(s) declaradas sin fuente sin haber buscado en todo: ' + ' · '.join(_mal[:5]))
+    else:
+        ok(check, 'cada obra declarada sin fuente tiene su búsqueda completa en catalogo/busquedas/')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 # ── [caja-titulo] programas y secciones en Título (regla de Juan, 15 oct 2026) ──
 # «Muestra de Cortos», «Colombia Viva»: las palabras son del festival y la caja
 # de la app (pipeline/caja.py, el único dueño). Los títulos de obra no se miran.

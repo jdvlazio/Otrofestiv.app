@@ -1,0 +1,114 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Suelo",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/festicineantioquia-2026/caja-de-pandora-2026.html",
+     "nota": "original: fuentes/festicineantioquia-2026/caja-de-pandora-2026.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "original: fuentes/festicineantioquia-2026/lectura-2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/seleccionados.json",
+     "nota": "original: fuentes/festicineantioquia-2026/seleccionados.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/op.html",
+     "nota": "original: fuentes/festicineantioquia-2026/web/op.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/pages.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/pages.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/posts.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/posts.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DfU_6nOIw4e.json",
+     "nota": "original: fuentes/ig-vigia/DfU_6nOIw4e.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfyfsrDAuTO.json",
+     "nota": "original: fuentes/ig-vigia/DfyfsrDAuTO.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1458814543115919.json",
+     "nota": "original: fuentes/ig-vigia/fb-1458814543115919.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/fb-1461146622882711.json",
+     "nota": "original: fuentes/ig-vigia/fb-1461146622882711.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "tmdb": {
+   "no aplica": "la obra no tiene ficha TMDB"
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Suelo\" Peña",
+     "nota": "apellido Peña y suelo/pisos; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Suelo\" sinopsis",
+     "nota": "Plex 'Suelo' corto 2021 de Álvaro Ganaza (otro director); textos de biología",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Suelo\" synopsis Peña",
+     "nota": "IMDb tt5820976 personaje Pastor Peña sin título; Plex corto de Ganaza; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Año 7 000 d C Dos seres de otra\"",
+     "nota": "Wattpad y textos de ciencia ficción; frase no encontrada",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026",
+  "festicinerio-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_P1KS8DNKV57D"
+}

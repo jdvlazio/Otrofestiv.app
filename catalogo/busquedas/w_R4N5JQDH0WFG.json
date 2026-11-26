@@ -1,0 +1,128 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Refugiar%20el%20Gesto",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/villadelcine-2026/programacion-2026.pdf",
+     "nota": "original: fuentes/villadelcine-2026/programacion-2026.pdf: el texto está, pero ni el título ni la dirección cerca",
+     "resultado": "ilegible"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/De4MmOSj8gv.json",
+     "nota": "original: fuentes/ig-vigia/De4MmOSj8gv.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/De4Xcd4R7oO.json",
+     "nota": "original: fuentes/ig-vigia/De4Xcd4R7oO.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/Df4-p22kTfi.json",
+     "nota": "original: fuentes/ig-vigia/Df4-p22kTfi.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfNO6eex__m.json",
+     "nota": "original: fuentes/ig-vigia/DfNO6eex__m.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfViHBeFtUF.json",
+     "nota": "original: fuentes/ig-vigia/DfViHBeFtUF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfXTgN3DeiR.json",
+     "nota": "original: fuentes/ig-vigia/DfXTgN3DeiR.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1713804/",
+     "nota": "original: https://letterboxd.com/tmdb/1713804/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1713804",
+     "nota": "original: TMDB 1713804",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Refugiar el Gesto\" Villa-Dávila Prado",
+     "nota": "revistas académicas sobre gesto; nada de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Refugiar el Gesto\" sinopsis",
+     "nota": "obras ajenas (El gesto, Gesto Quimera)",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Refugiar el Gesto\" synopsis Villa-Dávila Prado",
+     "nota": "revistas académicas ajenas",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Jóvenes bailarines recuperan la Danza de las Tabliteras a\"",
+     "nota": "notas de danza en El Salvador, Guatemala; nada de Tabliteras",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:quibdoafricafilmfestival.com \"Refugiar el Gesto\"",
+     "nota": "FilmFreeway y programas QAFF genéricos; sin la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:villadelcine.com \"Refugiar el Gesto\"",
+     "nota": "Labocine Refugio/Cada gesto, ajenos; nada de villadelcine.com",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cineparalapaz-2026",
+  "fecibac-2026",
+  "qaff-2026",
+  "siembrafest-2026",
+  "villadelcine-2026"
+ ],
+ "hallazgo": {
+  "a_mano": true,
+  "clase": "fuentes",
+  "donde": "fuentes/villadelcine-2026/programacion-2026.pdf"
+ },
+ "work_id": "w_R4N5JQDH0WFG"
+}

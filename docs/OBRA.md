@@ -34,6 +34,10 @@ original tiene que estar letra por letra en su fuente, y la fuente tiene que ser
 (su ficha de TMDB, o su título o su dirección cerca del texto). El almacén no es fuente de sí
 mismo. Lo publicado de cada obra es lo que dice la obra: `[obra-al-dia]` (el legado, solo baja).
 Las listas de lo pendiente no crecen a mano: `[deuda-solo-baja]` las compara con main.
+Dónde se busca la fuente de una sinopsis lo decide el código (`pipeline/buscar_sinopsis.py`:
+fuentes guardadas, Instagram guardado, TMDB, Letterboxd, IMDb, web oficial, Filmaffinity y
+consultas web fijas) y queda escrito en `catalogo/busquedas/`. Una obra se declara sin fuente
+(`catalogo/sin-fuente.json`) solo con la búsqueda completa: `[busqueda-completa]`.
 
 Que sea el **mismo** en todos los festivales: `[obra-unica]`. Que sea **verdad**:
 la identidad contra su fuente (en construcción, paso 2 y 3 del plan).

@@ -1,0 +1,121 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Trizas",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.pdf",
+     "nota": "original: fuentes/ficci-65/catalogo/catalogo.pdf",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ficci-65/catalogo/catalogo.txt",
+     "nota": "original: fuentes/ficci-65/catalogo/catalogo.txt",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/festival-formulario/formulario.csv",
+     "nota": "original: fuentes/midbo-2026/festival-formulario/formulario.csv",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/filme-pin.html",
+     "nota": "original: fuentes/midbo-2026/fichas/filme-pin.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/la-taquigrafista.html",
+     "nota": "original: fuentes/midbo-2026/fichas/la-taquigrafista.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/os-arcos-dourados-de-olinda.html",
+     "nota": "original: fuentes/midbo-2026/fichas/os-arcos-dourados-de-olinda.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/fichas/trizas.html",
+     "nota": "original: fuentes/midbo-2026/fichas/trizas.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/pelicula-1.json",
+     "nota": "original: fuentes/midbo-2026/pelicula-1.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/midbo-2026/pelicula.json",
+     "nota": "original: fuentes/midbo-2026/pelicula.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "TMDB no da número de IMDb"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DeufT5zifcB.json",
+     "nota": "original: fuentes/ig-vigia/DeufT5zifcB.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "nota": "original: fuentes/ig-vigia/DfCiPvXoGqF.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DfHn6M1AP4s.json",
+     "nota": "original: fuentes/ig-vigia/DfHn6M1AP4s.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/ig-vigia/DgLHzJtCQpK.json",
+     "nota": "original: fuentes/ig-vigia/DgLHzJtCQpK.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1604094/",
+     "nota": "original: https://letterboxd.com/tmdb/1604094/",
+     "resultado": "literal"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1604094",
+     "nota": "original: TMDB 1604094",
+     "resultado": "literal"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "cinemancia-2026",
+  "ficci-65",
+  "midbo-2026"
+ ],
+ "hallazgo": {
+  "clase": "tmdb",
+  "donde": "https://www.themoviedb.org/movie/1604094"
+ },
+ "work_id": "w_R4F1D2Q71DK4"
+}

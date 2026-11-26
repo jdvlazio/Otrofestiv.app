@@ -1,0 +1,119 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Kueka%2C%20memoria%20ancestral",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "original: fuentes/festicineantioquia-2026/lectura-2.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/media.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/media.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/op.html",
+     "nota": "original: fuentes/festicineantioquia-2026/web/op.html",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/pages.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/pages.json",
+     "resultado": "no está"
+    },
+    {
+     "donde": "fuentes/festicineantioquia-2026/web/posts.json",
+     "nota": "original: fuentes/festicineantioquia-2026/web/posts.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "imdb": {
+   "consultas": [
+    {
+     "donde": "https://www.imdb.com/title/tt37194875/",
+     "nota": "la página no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia/DfBFvNHm8we.json",
+     "nota": "original: fuentes/ig-vigia/DfBFvNHm8we.json",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "letterboxd": {
+   "consultas": [
+    {
+     "donde": "https://letterboxd.com/tmdb/1514102/",
+     "nota": "original: https://letterboxd.com/tmdb/1514102/",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "productora": {
+   "no aplica": "TMDB no da página oficial"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "https://www.themoviedb.org/movie/1514102",
+     "nota": "original: TMDB 1514102",
+     "resultado": "no está"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Kueka, memoria ancestral\" Fonseca",
+     "nota": "artículos académicos sobre la piedra Kueka",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Kueka, memoria ancestral\" sinopsis",
+     "nota": "filmfreeway (403), watchroster, goldenravenfilmfest, imdb tt12450582 · máquina: original: https://filmfreeway.com/KuekaAncestralMemory",
+     "resultado": "ilegible",
+     "url": "https://filmfreeway.com/KuekaAncestralMemory"
+    },
+    {
+     "consulta": "\"Kueka, memoria ancestral\" synopsis Fonseca",
+     "nota": "FilmFreeway de la obra (Peña Fonseca) en resultados; WebFetch 403 · máquina: original: https://filmfreeway.com/KuekaAncestralMemory",
+     "resultado": "ilegible",
+     "url": "https://filmfreeway.com/KuekaAncestralMemory"
+    },
+    {
+     "consulta": "\"En una comunidad al sur de Venezuela tres generaciones\"",
+     "nota": "PDFs académicos sobre Venezuela; ninguna página de la obra",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "site:ficpa.co \"Kueka, memoria ancestral\"",
+     "nota": "sin páginas de ficpa.co; resultados académicos ajenos",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026",
+  "ficpa-2026"
+ ],
+ "hallazgo": null,
+ "work_id": "w_R4JB102F8QWB"
+}
