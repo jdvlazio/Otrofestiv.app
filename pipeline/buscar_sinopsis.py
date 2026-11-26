@@ -20,7 +20,7 @@ buscado nada). Ahí no hay texto que comprobar: se busca la obra, por título y 
 archivo guardado que la nombra y cada página suya queda como línea POR LEER; TMDB se consulta
 por número o, sin número, por título con la dirección confirmada en los créditos. Quien lee
 anota con --anotar: «sin resultado», o el texto hallado, que la máquina comprueba en ese mismo
-lugar. Un registro con todas las clases en «no aplica» ya no cuenta como búsqueda.
+lugar. Fuentes, Instagram, TMDB y web no admiten «no aplica»: por título siempre se puede buscar.
 
 La búsqueda web es la única que no corre sola (los buscadores bloquean a los programas):
 el código escribe las consultas EXACTAS; quien las corre anota un resultado por consulta
@@ -410,9 +410,6 @@ def hallazgo(reg):
 def incompleto(reg):
     """→ qué falta para que el registro diga «busqué en todo». [] = completo."""
     falta = []
-    cl = reg.get('clases') or {}
-    if cl and all('no aplica' in (cl.get(c) or {}) for c in CLASES):
-        falta.append('ninguna clase se consultó: «no aplica» en todas no es una búsqueda')
     for c in CLASES:
         x = (reg.get('clases') or {}).get(c)
         if not x:
