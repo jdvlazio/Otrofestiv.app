@@ -279,7 +279,11 @@
     "Teatro Urbano, Piso -1"
    ],
    "ciudad": "Bogotá",
-   "corto": "Centro Felicidad Chapinero"
+   "corto": "CEFE Chapinero",
+   "corto_decidido": {
+    "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
+    "fecha": "2026-11-26"
+   }
   },
   "s_11d2cb61": {
    "nombre": "Teatro La Unión",
@@ -847,7 +851,11 @@
     "miradas-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Capilla, Comfama"
+   "corto": "Capilla del Claustro Comfama",
+   "corto_decidido": {
+    "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
+    "fecha": "2026-11-26"
+   }
   },
   "s_2635c36c": {
    "nombre": "Universidad Nacional",
@@ -1745,7 +1753,11 @@
     "midbo-2026"
    ],
    "ciudad": "Bogotá",
-   "corto": "Centro Ático, Universidad Javeriana"
+   "corto": "Centro Ático",
+   "corto_decidido": {
+    "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
+    "fecha": "2026-11-26"
+   }
   },
   "s_5d1ff362": {
    "nombre": "Universidad del Atlántico, sede Norte",
@@ -3281,9 +3293,13 @@
     "Teatro"
    ],
    "ciudad": "Medellín",
-   "corto": "Museo de Arte Moderno de Medellín",
+   "corto": "MAMM",
    "salas_alias": {
     "Teatro MAMM": "Teatro"
+   },
+   "corto_decidido": {
+    "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
+    "fecha": "2026-11-26"
    }
   },
   "s_99a993f3": {
@@ -3901,7 +3917,11 @@
     "Sala 3"
    ],
    "ciudad": "Medellín",
-   "corto": "Cineprox Las Américas"
+   "corto": "Cineprox Las Américas",
+   "corto_decidido": {
+    "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
+    "fecha": "2026-11-26"
+   }
   },
   "s_b5d25cab": {
    "nombre": "Centro Colombo Americano",
@@ -4973,7 +4993,11 @@
     "under-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Antimateria Libros y Café"
+   "corto": "Antimateria Libros y Café",
+   "corto_decidido": {
+    "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
+    "fecha": "2026-11-26"
+   }
   },
   "s_e1ed2a67": {
    "nombre": "Hotel Mariscal Robledo",
@@ -5448,11 +5472,15 @@
     "miradas-2026"
    ],
    "ciudad": "Bello",
-   "corto": "Biblioteca Comfama Bello Centro",
+   "corto": "Biblioteca Comfama Bello",
    "_ciudades_vistas": [
     "Bello",
     "Medellín"
-   ]
+   ],
+   "corto_decidido": {
+    "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
+    "fecha": "2026-11-26"
+   }
   },
   "s_f95d634b": {
    "nombre": "Universidad Católica Luis Amigó",

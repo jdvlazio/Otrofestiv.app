@@ -43,8 +43,10 @@ def _desde_almacen(g):
     if not e:
         sys.exit(f'✗ venue-geo apunta a {g["_matriz"]}, que no está en catalogo/sedes.json')
     if e.get('campus'):   # un campus: cada festival en SU edificio, con su pin
-        return g
+        return {**g, 'short': e['corto']} if e.get('corto_decidido') else g
     out = {**g, 'lat': e['lat'], 'lng': e['lng']}
+    if e.get('corto_decidido'):   # el nombre decidido, igual en todo festival (sedes.py --corto)
+        out['short'] = e['corto']
     if e.get('address'):
         out['address'] = e['address']
     return out

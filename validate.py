@@ -5703,6 +5703,21 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [sede-nombre] un lugar, un nombre en la app (26 nov 2026) ─────────────────
+# El MAMM salía con tres nombres según el festival. El nombre decidido vive en
+# catalogo/sedes.json (sedes.py --corto) y ensamblar.py lo publica; aquí se avisa
+# si un festival vigente publica otro (se arregla volviendo a armarlo).
+check = 'sede-nombre'
+try:
+    _cd = _sm.cortos_distintos()
+    if _cd:
+        warn(check, f'{len(_cd)} lugar(es) de festivales vigentes con otro nombre que el decidido (volver a armar): '
+                    + ', '.join(f'{a}: «{c}» → «{d}»' for a, b, c, d in _cd[:6]))
+    else:
+        ok(check, f"{sum(1 for _x in _S.values() if _x.get('corto_decidido'))} lugares con nombre decidido; los festivales vigentes lo publican igual")
+except Exception as _e:
+    warn(check, f'el guardián no pudo correr: {_e}')
+
 # ── [sedes-apiladas] + [sala-en-sede] — los guardianes de datos de sede ───────
 # Aprobados tras FICDEH. (a) dos sedes del mismo festival a <60 m casi siempre
 # son la MISMA con dos nombres (63 de 120 apiladas en el geocoding v1); si es

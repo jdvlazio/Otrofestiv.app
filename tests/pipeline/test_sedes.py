@@ -283,6 +283,51 @@ class Encontrar(Base):
         self.assertEqual(plan['Colombo sala 2'], ['Centro Colombo Americano - Medellín', 'Sala 2'])
 
 
+class Corto(Base):
+    """Un lugar, un nombre en la app (fase 2, 26 nov 2026)."""
+    def setUp(self):
+        super().setUp()
+        self.geo('a-2026', {'Museo de Arte Moderno de Medellín - Medellín': {'lat': 6.2241, 'lng': -75.5734, '_prec': 'manual'}})
+        S.construir(self.r)
+        S.enlazar(self.r)
+        self.sid = next(iter(S.leer(self.r)['sedes']))
+
+    def test_fijar_guarda_motivo_y_deja_el_viejo_como_variante(self):
+        S._escribir({**S.leer(self.r), 'sedes': {self.sid: {**S.leer(self.r)['sedes'][self.sid], 'corto': 'Cine MAMM'}}}, self.r)
+        e = S.fijar_corto(self.sid, 'MAMM', 'así lo conoce la gente', self.r, fecha='2026-11-26')
+        self.assertEqual((e['corto'], e['corto_decidido']['por_que']), ('MAMM', 'así lo conoce la gente'))
+        self.assertIn('Cine MAMM', e['alias'])
+        S.construir(self.r)
+        self.assertEqual(S.leer(self.r)['sedes'][self.sid]['corto'], 'MAMM')          # reconstruir no lo pisa
+        self.assertEqual(S.encontrar('Cine MAMM', ciudad='Medellín', raiz=self.r)[0]['sid'], self.sid)
+
+    def test_sin_motivo_o_sin_nombre_no(self):
+        for txt, pq in (('MAMM', ''), ('  ', 'x')):
+            with self.assertRaises(SystemExit):
+                S.fijar_corto(self.sid, txt, pq, self.r)
+        with self.assertRaises(SystemExit):
+            S.fijar_corto('s_noexiste', 'MAMM', 'x', self.r)
+
+    def test_ensamblar_publica_el_decidido_y_el_guardian_ve_el_distinto(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'pipeline'))
+        import ensamblar
+        g = json.load(open(f'{self.r}/festivals/staging/a-2026-venues-geo.json'))['Museo de Arte Moderno de Medellín - Medellín']
+        json.dump({'venues': {'Museo de Arte Moderno de Medellín - Medellín': {'short': 'Museo de Arte Moderno de Medellín'}}},
+                  open(f'{self.r}/festivals/a-2026.json', 'w'))
+        self.assertEqual(S.cortos_distintos(self.r), [])                                    # sin decisión, nada que avisar
+        S.fijar_corto(self.sid, 'MAMM', 'x', self.r)
+        self.assertEqual(S.cortos_distintos(self.r), [('a-2026', 'Museo de Arte Moderno de Medellín - Medellín',
+                                                        'Museo de Arte Moderno de Medellín', 'MAMM')])
+        orig = S.REPO
+        try:
+            S.REPO = self.r
+            S.lugar.__defaults__ = (self.r, None)
+            self.assertEqual(ensamblar._desde_almacen(g)['short'], 'MAMM')
+        finally:
+            S.REPO = orig
+            S.lugar.__defaults__ = (orig, None)
+
+
 class Normalizar(Base):
     def test_salas_compuestas_fuera_y_variantes_juntas(self):
         e = {'nombre': 'MAMM', 'corto': 'MAMM'}
