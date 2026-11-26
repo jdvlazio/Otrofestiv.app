@@ -335,6 +335,7 @@ class Institucion(Base):
         self.geo('a-2026', {'Comfama Aranjuez - Medellín': {'lat': 6.2800, 'lng': -75.5560, '_prec': 'manual'},
                             'Comfama San Ignacio - Medellín': {'lat': 6.2470, 'lng': -75.5640, '_prec': 'manual'},
                             'Biblioteca Comfama Bello - Bello': {'lat': 6.3370, 'lng': -75.5580, '_prec': 'manual'},
+                            'Comfama - Girardota': {'lat': 6.3780, 'lng': -75.4460, '_prec': 'manual'},
                             'Cinemateca de Bogotá - Bogotá': {'lat': 4.6105, 'lng': -74.0705, '_prec': 'manual'},
                             'Cinemateca Fontanar del Río - Bogotá': {'lat': 4.7600, 'lng': -74.0900, '_prec': 'manual'}})
         os.makedirs(f'{self.r}/festivals', exist_ok=True)
@@ -346,7 +347,7 @@ class Institucion(Base):
         self.sid = lambda n: next(s for s, e in S.leer(self.r)['sedes'].items() if e['nombre'] == n)
 
     def comfama(self):
-        return S.institucion('Comfama', [self.sid('Comfama Aranjuez'), self.sid('Comfama San Ignacio'), self.sid('Biblioteca Comfama Bello')],
+        return S.institucion('Comfama', [self.sid('Comfama Aranjuez'), self.sid('Comfama San Ignacio'), self.sid('Biblioteca Comfama Bello'), self.sid('Comfama')],
                              'caja de compensación con varias sedes', alias=['Caja de Compensación Familiar de Antioquia'], raiz=self.r)
 
     def test_agrupa_y_sobrevive_al_reconstruir(self):
@@ -354,7 +355,7 @@ class Institucion(Base):
         S.construir(self.r)
         m = S.leer(self.r)
         self.assertEqual(m['instituciones'][iid]['nombre'], 'Comfama')
-        self.assertEqual(len(S.sedes_de(iid, self.r)), 3)
+        self.assertEqual(len(S.sedes_de(iid, self.r)), 4)
         self.assertEqual(m['instituciones'][iid]['decisiones'][0]['por_que'], 'caja de compensación con varias sedes')
 
     def test_encontrar_por_la_institucion_y_su_alias(self):
@@ -366,13 +367,15 @@ class Institucion(Base):
         self.assertEqual([(x['nombre'], x['firme']) for x in r], [('Biblioteca Comfama Bello', True)])   # una sola sede en la ciudad
         r = S.encontrar('Comfama San Ignacio', ciudad='Medellín', raiz=self.r)
         self.assertEqual((r[0]['nombre'], r[0]['nivel'], r[0]['firme']), ('Comfama San Ignacio', 'igual', True))   # lo exacto gana
+        r = S.encontrar('Comfama', ciudad='Girardota', raiz=self.r)
+        self.assertEqual([(x['nombre'], x['nivel'], x['institucion']) for x in r], [('Comfama', 'igual', 'Comfama')])   # el nombre exacto no baja a institución
 
     def test_una_sede_no_cambia_de_institucion_sin_querer(self):
         self.comfama()
         with self.assertRaises(SystemExit):
             S.institucion('Cajas de Antioquia', [self.sid('Comfama Aranjuez')], 'x', raiz=self.r)
         iid2 = S.institucion('Comfama', [self.sid('Comfama Aranjuez')], 'otra vez', raiz=self.r)   # la misma, por nombre: suma
-        self.assertEqual(len(S.sedes_de(iid2, self.r)), 3)
+        self.assertEqual(len(S.sedes_de(iid2, self.r)), 4)
 
     def test_sin_motivo_sede_inexistente_o_sin_nombre_no(self):
         for args in (('Comfama', [self.sid('Comfama Aranjuez')], ''), ('Comfama', ['s_00000000'], 'x'), ('  ', [self.sid('Comfama Aranjuez')], 'x'),
