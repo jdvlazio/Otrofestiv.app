@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Rescatar%20por%20amor",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "rescatar por amor 3 min entre patas y sentimientos dos realidades una oportunidad una segunda oportunidad por qué me olvidaste rescatar por amor 2026 12 05 15 00 auditorio cámara de comercio de medellín para antioquia película lactar dirección harold trompetero colombia 2026 75 min con presencia de la actriz maría helena doering lactar harold trompetero colombia 2026 12 05 15 00 universidad de ant",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Rescatar por amor»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Rescatar por amor\"",
+     "nota": "2° puesto Realizadores en Mascotiando (elextramedios.com); solo frase elogiosa, no sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Rescatar por amor\" sinopsis",
+     "nota": "2° puesto Realizadores en Mascotiando (elextramedios.com); solo frase elogiosa, no sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Rescatar por amor\" synopsis",
+     "nota": "2° puesto Realizadores en Mascotiando (elextramedios.com); solo frase elogiosa, no sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Rescatar por amor\"  cortometraje",
+     "nota": "2° puesto Realizadores en Mascotiando (elextramedios.com); solo frase elogiosa, no sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Rescatar por amor\"  filmfreeway",
+     "nota": "2° puesto Realizadores en Mascotiando (elextramedios.com); solo frase elogiosa, no sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Rescatar por amor\"  vimeo OR youtube",
+     "nota": "2° puesto Realizadores en Mascotiando (elextramedios.com); solo frase elogiosa, no sinopsis.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX6YNMAQ0E4"
+}

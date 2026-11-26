@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Entre%20patas%20y%20sentimientos",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "entre patas y sentimientos 3 min dos realidades una oportunidad 3 min una segunda oportunidad 3 min por qué me olvidaste 3 min rescatar por amor 3 min entre patas y sentimientos dos realidades una oportunidad una segunda oportunidad por qué me olvidaste rescatar por amor 2026 12 05 15 00 auditorio cámara de comercio de medellín para antioquia película lactar dirección harold trompetero colombia 20",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Entre patas y sentimientos»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Entre patas y sentimientos\"",
+     "nota": "1er puesto Estudiantes en Mascotiando (I.E. Pedro Estrada) según elextramedios; sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Entre patas y sentimientos\" sinopsis",
+     "nota": "1er puesto Estudiantes en Mascotiando (I.E. Pedro Estrada) según elextramedios; sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Entre patas y sentimientos\" synopsis",
+     "nota": "1er puesto Estudiantes en Mascotiando (I.E. Pedro Estrada) según elextramedios; sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Entre patas y sentimientos\"  cortometraje",
+     "nota": "1er puesto Estudiantes en Mascotiando (I.E. Pedro Estrada) según elextramedios; sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Entre patas y sentimientos\"  filmfreeway",
+     "nota": "1er puesto Estudiantes en Mascotiando (I.E. Pedro Estrada) según elextramedios; sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Entre patas y sentimientos\"  vimeo OR youtube",
+     "nota": "1er puesto Estudiantes en Mascotiando (I.E. Pedro Estrada) según elextramedios; sin sinopsis.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX6XK4F9GTB"
+}

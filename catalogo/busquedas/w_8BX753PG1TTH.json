@@ -1,0 +1,115 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=Persiguiendo%20sue%C3%B1os",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "persiguiendo sueños chhamber y lexx ficción refracción isabella palacio mesa ficción replay simón matallana nossa animación suelo eduar yosniel pájaro peña animación una mujer de rostro ya olvidado miguel solano j ficción la selección está conformada por 21 cortometrajes de ficción documental y animación que representan distintas miradas territorios búsquedas y formas de entender el cine en colomb",
+     "donde": "fuentes/festicineantioquia-2026/caja-de-pandora-2026.html",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "persiguiendo sueños chhamber lexx ficción refracción isabella palacio mesa ficción replay simón matallana nossa animación suelo eduar yosniel pájaro peña animación una mujer de rostro ya olvidado miguel solano j ficción 2026 12 06 22 00 plaza mayor simón bolívar parque principal película los iniciados dirección juan felipe orozco colombia 2023 111 min con presencia de cristina echeverri productora",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "persiguiendo sueños chhamber y lexx ficción refracción isabella palacio mesa ficción replay simón matallana nossa animación suelo eduar yosniel pájaro peña animación una mujer de rostro ya olvidado miguel solano j ficción la selección está conformada por 21 cortometrajes de ficción documental y animación que representan distintas miradas territorios búsquedas y formas de entender el cine en colomb",
+     "donde": "fuentes/festicineantioquia-2026/seleccionados.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "persiguiendo sueños chhamber y lexx ficción refracción isabella palacio mesa ficción replay simón matallana nossa animación suelo eduar yosniel pájaro peña animación una mujer de rostro ya olvidado miguel solano j ficción la selección está conformada por 21 cortometrajes de ficción documental y animación que representan distintas miradas territorios búsquedas y formas de entender el cine en colomb",
+     "donde": "fuentes/festicineantioquia-2026/web/pages.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    },
+    {
+     "contexto": "persiguiendo sueños chhamber y lexx ficción refracción isabella palacio mesa ficción replay simón matallana nossa animación suelo eduar yosniel pájaro peña animación una mujer de rostro ya olvidado miguel solano j ficción la selección está conformada por 21 cortometrajes de ficción documental y animación que representan distintas miradas territorios búsquedas y formas de entender el cine en colomb",
+     "donde": "fuentes/festicineantioquia-2026/web/posts.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «Persiguiendo sueños»",
+     "nota": "2 ficha(s) con ese título; ninguna con la dirección de la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"Persiguiendo sueños\" Chhamber Lexx",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Persiguiendo sueños\" sinopsis",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Persiguiendo sueños\" synopsis Chhamber Lexx",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Persiguiendo sueños\" Chhamber Lexx cortometraje",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Persiguiendo sueños\" Chhamber Lexx filmfreeway",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"Persiguiendo sueños\" Chhamber Lexx vimeo OR youtube",
+     "nota": "Listada en Caja de Pandora 2026 sin sinopsis.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX753PG1TTH"
+}

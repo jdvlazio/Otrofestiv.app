@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20sombra%20del%20zagu%C3%A1n",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "la sombra del zaguán 6 min mácula 7 min los ignorantes 8 min donde todo termina 2 min gente de bien 8 min la máquina de los sueños 8 min made to shine 5 min mi caballo 2 min vástago 9 min banda paniagua 200 años legado y tradición el ritmo de un círculo la barbería la sombra del zaguán mácula los ignorantes donde todo termina gente de bien la máquina de los sueños made to shine mi caballo vástago ",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «La sombra del zaguán»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"La sombra del zaguán\"",
+     "nota": "Sin coincidencia con la obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La sombra del zaguán\" sinopsis",
+     "nota": "Sin coincidencia con la obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La sombra del zaguán\" synopsis",
+     "nota": "Sin coincidencia con la obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La sombra del zaguán\"  cortometraje",
+     "nota": "Sin coincidencia con la obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La sombra del zaguán\"  filmfreeway",
+     "nota": "Sin coincidencia con la obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La sombra del zaguán\"  vimeo OR youtube",
+     "nota": "Sin coincidencia con la obra.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX77GD7HAVW"
+}

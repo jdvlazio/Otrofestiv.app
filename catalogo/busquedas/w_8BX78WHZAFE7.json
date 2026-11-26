@@ -1,0 +1,91 @@
+{
+ "clases": {
+  "filmaffinity": {
+   "consultas": [
+    {
+     "donde": "https://www.filmaffinity.com/co/search.php?stext=La%20m%C3%A1quina%20de%20los%20sue%C3%B1os",
+     "nota": "la búsqueda no se dejó leer",
+     "resultado": "bloqueado"
+    }
+   ]
+  },
+  "fuentes": {
+   "consultas": [
+    {
+     "contexto": "la máquina de los sueños 8 min made to shine 5 min mi caballo 2 min vástago 9 min banda paniagua 200 años legado y tradición el ritmo de un círculo la barbería la sombra del zaguán mácula los ignorantes donde todo termina gente de bien la máquina de los sueños made to shine mi caballo vástago 2026 12 07 12 00 auditorio hotel mariscal robledo película familiar koatí dirección rodrigo pérez castro m",
+     "donde": "fuentes/festicineantioquia-2026/lectura-2.json",
+     "nota": "solo título, dirección, categoría y duración; sin sinopsis",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "imdb": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "instagram": {
+   "consultas": [
+    {
+     "donde": "fuentes/ig-vigia",
+     "nota": "ningún post guardado nombra la obra",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "letterboxd": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "productora": {
+   "no aplica": "la obra no tiene ficha TMDB (se buscó por título y dirección)"
+  },
+  "tmdb": {
+   "consultas": [
+    {
+     "donde": "TMDB, búsqueda «La máquina de los sueños»",
+     "nota": "la obra no tiene dirección con qué confirmar una ficha",
+     "resultado": "sin resultado"
+    }
+   ]
+  },
+  "web": {
+   "consultas": [
+    {
+     "consulta": "\"La máquina de los sueños\"",
+     "nota": "Corto español 2014 homónimo y libros; ninguno es esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La máquina de los sueños\" sinopsis",
+     "nota": "Corto español 2014 homónimo y libros; ninguno es esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La máquina de los sueños\" synopsis",
+     "nota": "Corto español 2014 homónimo y libros; ninguno es esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La máquina de los sueños\"  cortometraje",
+     "nota": "Corto español 2014 homónimo y libros; ninguno es esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La máquina de los sueños\"  filmfreeway",
+     "nota": "Corto español 2014 homónimo y libros; ninguno es esta obra.",
+     "resultado": "sin resultado"
+    },
+    {
+     "consulta": "\"La máquina de los sueños\"  vimeo OR youtube",
+     "nota": "Corto español 2014 homónimo y libros; ninguno es esta obra.",
+     "resultado": "sin resultado"
+    }
+   ]
+  }
+ },
+ "fecha": "2026-11-26",
+ "festivales": [
+  "festicineantioquia-2026"
+ ],
+ "hallazgo": null,
+ "modo": "sin texto",
+ "work_id": "w_8BX78WHZAFE7"
+}
