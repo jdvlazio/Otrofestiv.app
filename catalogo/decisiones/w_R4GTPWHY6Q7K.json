@@ -21,13 +21,14 @@
  {
   "work_id": "w_R4GTPWHY6Q7K",
   "campo": "sinopsis.es",
-  "valor": "Lucía y Adrián, hermanos que huyen de la oscura herencia de su padre vampiro, buscan refugio en una casona aislada en el bosque. Un gato les trae un dedo humano y revela que sus vecinos son de una red que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Lucía deberá enfrentar, además, una maldición familiar.",
+  "valor": "Lucía y Adrián, hermanos que cargan con la herencia sobrenatural de su padre vampiro, se instalan en una casona aislada en el bosque. Cuando un gato les trae un dedo humano, descubren que sus vecinos andan en actividades criminales que los ponen en peligro. Entre esa amenaza y una maldición familiar, deben sobrevivir en el refugio que eligieron.",
   "motivo": "una sola sinopsis por obra: la sugerida de la hoja (fantasofest-2026)",
   "fecha": "2026-11-23",
   "quien": "Juan, 23 nov 2026 («Sí, unifica»)",
   "vistas": [
    "043cb57cf876",
-   "8771c8f64370"
+   "8771c8f64370",
+   "9e63e0c90a74"
   ],
   "antes": {
    "bhff-2026": "Lucía y Adrián huyen de su padre violento a una mansión. Descubren una red de snuff y una maldición familiar.",
@@ -41,11 +42,11 @@
   "titulo": "El Susurro",
   "original": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio.",
   "sintesis": {
-   "redacta": "Claude (sesión onboarding)",
-   "verifica": "Claude (verificador acbdb802)",
+   "redacta": "Claude 26 nov",
+   "verifica": "verificador independiente 26 nov",
    "veredicto": "fiel",
-   "fecha": "2026-11-25",
-   "huella": "6563b0c9d6bf"
+   "fecha": "2026-11-26",
+   "huella": "13998bd77b37"
   }
  },
  {
@@ -65,10 +66,10 @@
  {
   "work_id": "w_R4GTPWHY6Q7K",
   "campo": "sinopsis.en",
-  "valor": "Lucía and Adrián, siblings fleeing the dark legacy of their vampire father, seek refuge in an isolated house in the woods. When a cat brings them a human finger, they discover that their neighbors belong to a ring that abducts teenagers to make snuff films and plans to get rid of them. To protect her brother, Lucía must face a dark family curse.",
-  "motivo": "paralelo a la española",
-  "fecha": "2026-11-25",
-  "quien": "Claude",
+  "valor": "Lucía and Adrián, siblings who carry the supernatural legacy of their vampire father, settle in an isolated house in the woods. When a cat brings them a human finger, they discover their neighbors are involved in criminal activities that put them in danger. Caught between that threat and a family curse, they must survive in the refuge they chose.",
+  "motivo": "síntesis del original del festival (decisión de Juan 26 nov)",
+  "fecha": "2026-11-26",
+  "quien": "Juan",
   "titulo": "El Susurro",
   "antes": {
    "bhff-2026": "Fleeing from their violent father, siblings Lucía and Adrián take refuge in a remote mansion. With the help of a hidden micro-camera on a cat, Lucía uncovers a terrifying secret: their neighbors are part of a criminal network that kidnaps teenage girls to make snuff films, and they intend to get rid of the siblings. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their newfound sanctuary.",
@@ -87,6 +88,12 @@
     "motivo": "el EN contradice al ES; padre vampiro confirmado en Anibia y El Observador (red snuff: El Observador)",
     "fecha": "2026-11-25",
     "quien": "segunda lectura (sellos)"
+   },
+   {
+    "valor": "Lucía and Adrián, siblings fleeing the dark legacy of their vampire father, seek refuge in an isolated house in the woods. When a cat brings them a human finger, they discover that their neighbors belong to a ring that abducts teenagers to make snuff films and plans to get rid of them. To protect her brother, Lucía must face a dark family curse.",
+    "motivo": "paralelo a la española",
+    "fecha": "2026-11-25",
+    "quien": "Claude"
    }
   ]
  },
