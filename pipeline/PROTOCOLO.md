@@ -498,6 +498,10 @@ consultas web; cada uno se anota «sin resultado» o con el texto hallado (`text
 que la máquina comprueba ahí mismo. TMDB se consulta por título y la dirección se confirma en
 los créditos; si la obra no tiene ese número, el hallazgo lo confirma una persona.
 
+**El primer inglés de una obra** que solo publica español: `python3 pipeline/obra_unica.py
+--decidir <work_id> sinopsis.en "<texto>" --motivo "…" --quien "…"` y `ficha_unica.py --aplicar
+--escribir`. Nunca escribiendo `synopsis_en` en el JSON del festival a mano.
+
 **La función y su acceso** (24 nov 2026): después de `alta-festival.py` (su
 config entra en la huella) y antes de la primera publicación, (1) el inventario
 de fuentes sin nada `sin-revisar`; (2) `festivals/staging/<id>-acceso.json`: cómo se entra por
