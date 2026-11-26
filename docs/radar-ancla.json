@@ -6725,6 +6725,12 @@
       "url": "",
       "fecha": "2026-11-25",
       "resultado": "no_mirada"
+     },
+     {
+      "url": "https://www.facebook.com/cinelibrefest",
+      "fecha": "2026-11-26",
+      "resultado": "no_aplica",
+      "nota": "Juan 24 nov (issue #1438): fechas reales 24–29 NOV, no se monta en 2026; queda para 2027."
      }
     ],
     "sede": [
@@ -6768,6 +6774,12 @@
       "fecha": "2026-11-25",
       "resultado": "ilegible",
       "nota": "no resuelve"
+     },
+     {
+      "url": "https://fecili.com",
+      "fecha": "2026-11-26",
+      "resultado": "ilegible",
+      "nota": "El dominio no resuelve (26 nov)."
      }
     ],
     "convocatoria": [
@@ -6823,6 +6835,12 @@
       "fecha": "2026-11-25",
       "resultado": "ilegible",
       "nota": "desafío anti-bot"
+     },
+     {
+      "url": "https://ficgofestival.com",
+      "fecha": "2026-11-26",
+      "resultado": "nada",
+      "nota": "Solo trae la edición 2025 (30 nov–4 dic 2025); nada de 2026."
      }
     ],
     "redes": [
@@ -6860,6 +6878,12 @@
       "url": "búsqueda: El Meridiano",
       "fecha": "2026-11-25",
       "resultado": "nada"
+     },
+     {
+      "url": "https://www.google.com/search?q=FICGO+2026",
+      "fecha": "2026-11-26",
+      "resultado": "extracto",
+      "nota": "Buscador: sin programación, horarios ni obras 2026."
      }
     ],
     "obras": [
@@ -6874,6 +6898,12 @@
       "url": "https://filmmakers.festhome.com/f/6205/1/1",
       "fecha": "2026-11-25",
       "resultado": "encontro"
+     },
+     {
+      "url": "https://filmmakers.festhome.com/f/6205/1/1",
+      "fecha": "2026-11-26",
+      "resultado": "encontro",
+      "nota": "Festhome, leída hoy: 6.ª edición, festival 9–12 DIC 2026. El 28 NOV de FilmFreeway era solo extracto del buscador; Festhome leída lo contradice."
      }
     ]
    }
@@ -6919,6 +6949,12 @@
       "url": "https://changuitovisual.wixsite.com/changuitovisual",
       "fecha": "2026-11-25",
       "resultado": "nada"
+     },
+     {
+      "url": "https://changuitovisual.wixsite.com/",
+      "fecha": "2026-11-26",
+      "resultado": "ilegible",
+      "nota": "HTTP 404 el 26 nov."
      }
     ],
     "redes": [
@@ -7201,6 +7237,12 @@
       "fecha": "2026-11-25",
       "resultado": "ilegible",
       "nota": "desafío anti-bot"
+     },
+     {
+      "url": "https://www.tengofefilms.com/",
+      "fecha": "2026-11-26",
+      "resultado": "nada",
+      "nota": "Legible hoy: solo enlaces de secciones (Movies, Academy, Films, Film Festival); sin fechas, selección ni programación 2026."
      }
     ],
     "redes": [
@@ -7223,6 +7265,12 @@
       "url": "",
       "fecha": "2026-11-25",
       "resultado": "no_mirada"
+     },
+     {
+      "url": "https://cinepolis.com.co/",
+      "fecha": "2026-11-26",
+      "resultado": "ilegible",
+      "nota": "Cartelera de Cinépolis se arma con JavaScript; sin texto del festival en el HTML."
      }
     ],
     "boleteria": [
@@ -7230,6 +7278,12 @@
       "url": "",
       "fecha": "2026-11-25",
       "resultado": "no_mirada"
+     },
+     {
+      "url": "https://cinepolis.com.co/",
+      "fecha": "2026-11-26",
+      "resultado": "ilegible",
+      "nota": "Igual que anfitrión: sin cartelera legible. Funciones aún sin programar (convocatoria cierra 30 nov)."
      }
     ],
     "prensa": [
@@ -7237,6 +7291,12 @@
       "url": "El Heraldo, Coopercom y Radio Nacional",
       "fecha": "2026-11-25",
       "resultado": "encontro"
+     },
+     {
+      "url": "https://www.google.com/search?q=%22Tengo+Fe+Film+Festival%22+2026",
+      "fecha": "2026-11-26",
+      "resultado": "extracto",
+      "nota": "Buscador: nada nuevo; solo la nota de convocatoria de El Heraldo. Convocatoria abierta hasta el 30 nov."
      }
     ],
     "obras": [
@@ -7316,6 +7376,12 @@
       "url": "https://tenjoculturayturismo.gov.co/sites/default/files/2026-10/RESOLUCION%20CINE%20CHICU%202026%20-131.pdf",
       "fecha": "2026-11-25",
       "resultado": "encontro"
+     },
+     {
+      "url": "https://tenjoculturayturismo.gov.co/normativa-entidad",
+      "fecha": "2026-11-26",
+      "resultado": "nada",
+      "nota": "26 nov 09:00: solo la Resolución 131 (convocatoria, 7–12 DIC). Aún no está la resolución de seleccionados 2026."
      }
     ],
     "boleteria": [
