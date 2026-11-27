@@ -512,7 +512,7 @@ export function openVenueSheet(venueName){
   const _addr=[v.address||''];
   if(v.city&&v.city!==_festCity&&!(v.address||'').includes(v.city)) _addr.push(v.city);
   const addr=_addr.filter(Boolean).join(' · ');
-  const hasGeo=v.lat!=null&&v.lng!=null;
+  const hasGeo=v.lat!=null&&v.lng!=null, _dirQ=/* Apple Maps busca por nombre: el pin viene de Google (27 nov 2026) */[name,v.address||'',v.city||_festCity].filter(Boolean).join(', ');
   const fns=FILMS.filter(f=>f.venue===venueName)
     .sort((a,b)=>(a.day_order-b.day_order)||(toMin(a.time)-toMin(b.time)));
   const _fnRow=f=>{
@@ -536,7 +536,7 @@ export function openVenueSheet(venueName){
     <div class="venue-sheet-name">${name}</div>
     ${addr?`<div class="venue-sheet-addr">${addr}</div>`:''}
     ${hasGeo?`<div class="venue-sheet-map">${ICONS.pin}</div>
-    <button class="venue-sheet-dir" data-action="venueDirections" data-lat="${v.lat}" data-lng="${v.lng}">${ICONS.pin} ${t('venue_directions')}</button>`:''}
+    <button class="venue-sheet-dir" data-action="venueDirections" data-lat="${v.lat}" data-lng="${v.lng}" data-q="${_dirQ.replace(/"/g,'&quot;')}">${ICONS.pin} ${t('venue_directions')}</button>`:''}
         <div class="sec-hdr sm">${ICONS.clock} <span>${t('label_funciones')}</span></div>
     ${rows}`;
   const vs=document.getElementById('venue-sheet');

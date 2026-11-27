@@ -3754,13 +3754,15 @@ test('T201 — Cómo llegar abre el mapa de cada plataforma', async ({ page }) =
     Object.defineProperty(navigator, 'userAgent', { value: ua, configurable: true });
     let url = ''; const o = window.open; window.open = u => { url = u; return null; };
     const b = document.createElement('button'); b.setAttribute('data-action', 'venueDirections');
-    b.dataset.lat = '5.598'; b.dataset.lng = '-75.819'; document.body.appendChild(b); b.click(); b.remove();
+    b.dataset.lat = '5.598'; b.dataset.lng = '-75.819'; b.dataset.q = 'Teatro Municipal, Cra. 5 #9-20, Jardín';
+    document.body.appendChild(b); b.click(); b.remove();
     window.open = o; return url;
   }, ua);
   const and = await abrir('Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 Chrome/126 Mobile Safari/537.36');
   expect(and, 'Android → Google Maps con destino').toBe('https://www.google.com/maps/dir/?api=1&destination=5.598,-75.819');
   const ios = await abrir('Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148');
-  expect(ios, 'iPhone → Apple Maps').toContain('maps.apple.com');
+  // Apple busca por nombre y dirección: nunca recibe el pin, que viene de Google (27 nov 2026)
+  expect(ios, 'iPhone → Apple Maps por nombre').toBe('https://maps.apple.com/?q=' + encodeURIComponent('Teatro Municipal, Cra. 5 #9-20, Jardín'));
 });
 
 // P-GQ — Gratis y Con Q&A en el desplegable de Sección (7 oct 2026, Juan, opción B).
