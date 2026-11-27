@@ -18,7 +18,7 @@ EL MODELO. `catalogo/sedes.json`:
         "festivales": [fid…]}},
      "decisiones": {"mismo": [[a, b]…], "distintos": [[a, b]…]},
      "_divergentes": {sid: [pines…]},
-     "_deuda": {"sin_url": [sid…]}}
+     "_deuda": {"sin_url": [sid…], "importados": [sid…]}}
 El id (`s_` + 8 hex) nace una vez y NO se recalcula: si el nombre o el pin
 cambian, el lugar sigue siendo el mismo (como el work_id de las obras).
 
@@ -104,6 +104,23 @@ def pines(raiz=REPO):
         for k, v in json.load(open(p, encoding='utf-8')).items():
             if isinstance(v, dict) and v.get('lat') is not None and v.get('lng') is not None \
                     and v.get('_prec') != 'sin verificar':
+                out.append((fid, k, nombre_de(k), v))
+    # festivales publicados que nunca tuvieron venues-geo (fase 5, 26 nov 2026):
+    # sus pines viven en el `venues` del JSON publicado. Sin `_prec` se tratan
+    # como «aproximado», el nivel más bajo: no le ganan a un pin verificado.
+    con_geo = {x[0] for x in out}
+    for p in sorted(glob.glob(f'{raiz}/festivals/*.json')):
+        fid = os.path.basename(p)[:-5]
+        if fid in con_geo:
+            continue
+        try:
+            d = json.load(open(p, encoding='utf-8'))
+        except ValueError:
+            continue
+        vs = d.get('venues') if isinstance(d, dict) else None
+        for k, v in (vs or {}).items() if isinstance(vs, dict) else ():
+            if isinstance(v, dict) and v.get('lat') is not None and (v.get('lng') if v.get('lng') is not None else v.get('lon')) is not None:
+                v = dict(v, lng=v['lng'] if v.get('lng') is not None else v['lon'], _publicado=True)
                 out.append((fid, k, nombre_de(k), v))
     return out
 
@@ -370,7 +387,7 @@ def construir(raiz=REPO):
             sid = _nuevo_id(base[2], base[3]['lat'], base[3]['lng'], usados)
             usados.add(sid)
             e = {'nombre': base[2], 'lat': base[3]['lat'], 'lng': base[3]['lng'],
-                 'evidencia': {'nivel': nivel_de(base[3].get('_prec')), 'fuente': f'{base[0]}-venues-geo.json'}}
+                 'evidencia': {'nivel': nivel_de(base[3].get('_prec')), 'fuente': f'{base[0]}.json (publicado)' if base[3].get('_publicado') else f'{base[0]}-venues-geo.json'}}
             if base[3].get('address'):
                 e['address'] = base[3]['address']
         e['alias'] = sorted((set(e.get('alias', [])) | alias) - {e['nombre']})
@@ -436,6 +453,11 @@ def construir(raiz=REPO):
                                                        if not (e.get('evidencia') or {}).get('url'))}
     deuda['sin_url'] = sorted(s for s in deuda.get('sin_url', []) if s in sedes and s not in redir and
                               not (sedes[s].get('evidencia') or {}).get('url'))
+    # `importados`: los lugares de los 16 festivales publicados que nunca
+    # tuvieron venues-geo (fase 5, 26 nov 2026). Deuda aparte de la vieja,
+    # con su propio número; como la otra, solo baja.
+    deuda['importados'] = sorted({redir.get(s, s) for s in deuda.get('importados', [])} & set(sedes) - set(deuda['sin_url'])
+                                 - {s for s in sedes if (sedes[s].get('evidencia') or {}).get('url')})
     d = {'_provenance': {'fuente': 'festivals/staging/*-venues-geo.json + decisiones humanas',
                          'construido_por': 'pipeline/sedes.py --construir',
                          'regla': f'mismo lugar: mismo nombre (o declarado) a <{MISMO_LUGAR_M} m; '
@@ -581,7 +603,8 @@ def apartados(raiz=REPO, solo_vivos=True):
 def sin_evidencia_nueva(raiz=REPO):
     """Lugares sin enlace de Maps que NO están en la deuda congelada."""
     m = leer(raiz)
-    deuda = set((m.get('_deuda') or {}).get('sin_url') or [])
+    d = m.get('_deuda') or {}
+    deuda = set(d.get('sin_url') or []) | set(d.get('importados') or [])
     return sorted(s for s, e in (m.get('sedes') or {}).items()
                   if not (e.get('evidencia') or {}).get('url') and s not in deuda)
 
