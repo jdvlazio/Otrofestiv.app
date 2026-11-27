@@ -342,7 +342,12 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/Pontificia+Universidad+Javeriana/@4.6284875,-74.0646645,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f99a8193f1c9f:0xf93431640f134c07!8m2!3d4.6284875!4d-74.0646645!16zL20vMDdteTBi",
     "fecha": "2026-11-27",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "sin_ficha_google": {
+     "motivo": "campus: Google pone el pin en la entrada de la Cra. 7; el nuestro es el del evento",
+     "fecha": "2026-11-27",
+     "decide": "Juan"
+    }
    },
    "address": "Calle 40B # 5-37",
    "alias": [
@@ -830,7 +835,8 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e3f9be0ef334087:0xe1ee1abc241f3e8e",
     "fecha": "2026-11-27",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "place_id": "ChIJh0Az7-CbP44Rjj4fJLwa7uE"
    },
    "address": "Av. Cra. 30 # 45-03",
    "alias": [],
@@ -843,7 +849,8 @@
    ],
    "ciudad": "Bogotá",
    "corto": "Universidad Nacional, Edificio 303 (NEA)",
-   "institucion": "i_22f00e34"
+   "institucion": "i_22f00e34",
+   "coords_fecha": "2026-11-27"
   },
   "s_11519c26": {
    "nombre": "Parque Fundadores",
@@ -2150,7 +2157,12 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/Cra.+43+%2353-51/@6.2496084,-75.5619183,17z",
     "fecha": "2026-11-18",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "sin_ficha_google": {
+     "motivo": "no está en Google; pin por la dirección publicada, Cra. 43 #53-51 (Parque del Periodista)",
+     "fecha": "2026-11-27",
+     "decide": "Juan"
+    }
    },
    "address": "Cra. 43 #53-51, Parque del Periodista",
    "alias": [
@@ -3923,13 +3935,14 @@
   },
   "s_637019f0": {
    "nombre": "Jardín Botánico de Medellín",
-   "lat": 6.2705481,
-   "lng": -75.5635288,
+   "lat": 6.2693605,
+   "lng": -75.5648496,
    "evidencia": {
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/Jard%C3%ADn+Bot%C3%A1nico+de+Medell%C3%ADn/@6.2693605,-75.5648496,17z/data=!3m1!4b1!4m6!3m5!1s0x8e4428e80e411f91:0x142ab912fdb68353!8m2!3d6.2693605!4d-75.5648496!16s%2Fm%2F0w7ppn7",
     "fecha": "2026-11-27",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "place_id": "ChIJkR9BDugoRI4RU4O2_RK5KhQ"
    },
    "address": "Cl. 73 #51D-14",
    "alias": [
@@ -3944,7 +3957,8 @@
     "Auditorio Aurita López"
    ],
    "ciudad": "Medellín",
-   "corto": "Jardín Botánico de Medellín"
+   "corto": "Jardín Botánico de Medellín",
+   "coords_fecha": "2026-11-27"
   },
   "s_63acec57": {
    "nombre": "Inspección de Policía Santuario",
@@ -4293,7 +4307,12 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/Arzobispado+Santa+Fe+de+Antioquia/@6.55798,-75.82984,17z",
     "fecha": "2026-11-24",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "sin_ficha_google": {
+     "motivo": "el festival la ubica en el Parque de la Chinca, contiguo al Palacio Arzobispal; la ficha de Comfenalco en Google es otra oficina, en el parque principal (343 m)",
+     "fecha": "2026-11-27",
+     "decide": "Juan"
+    }
    },
    "address": "Parque de la Chinca, contiguo al Palacio Arzobispal",
    "alias": [
@@ -4994,7 +5013,12 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/Cl.+18+&+Cra.+11/@6.5646701,-75.824623,17z",
     "fecha": "2026-11-24",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "sin_ficha_google": {
+     "motivo": "es un barrio: Google no da ficha de lugar",
+     "fecha": "2026-11-27",
+     "decide": "Juan"
+    }
    },
    "address": "Sector calle 18 entre la carrera 11 y la vía al Tunal, diagonal al gimnasio al aire libre",
    "alias": [
@@ -5067,7 +5091,12 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/El+paso+real/@6.5153935,-75.8179349,17z",
     "fecha": "2026-11-24",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "sin_ficha_google": {
+     "motivo": "es un barrio: Google no da ficha de lugar",
+     "fecha": "2026-11-27",
+     "decide": "Juan"
+    }
    },
    "address": "Vereda El Paso Real",
    "alias": [
@@ -5104,7 +5133,8 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/Centro+de+Formacion+de+la+Cooperacion+Espa%C3%B1ola/@10.4244554,-75.5521665,17z",
     "fecha": "2026-11-26",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "place_id": "ChIJQztDN6Av9o4RlV_onIHy1n0"
    },
    "alias": [
     "Centro de Formación de la Cooperación Española",
@@ -5118,7 +5148,8 @@
    "ciudad": "Cartagena",
    "corto": "AECID",
    "address": "Cartagena",
-   "_elegido_de": "maps"
+   "_elegido_de": "maps",
+   "coords_fecha": "2026-11-27"
   },
   "s_81709587": {
    "nombre": "Gimnasio Moderno",
@@ -5406,7 +5437,12 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/Sede+Bogot%C3%A1+-+Universidad+Nacional+de+Colombia/@4.6396672,-74.0890479,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9bd14943c13b:0x3de530667d9ff6b0!8m2!3d4.6396672!4d-74.0890479!16zL20vMDRqMGxu",
     "fecha": "2026-11-27",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "sin_ficha_google": {
+     "motivo": "campus: la ficha de Google apunta al edificio Uriel Gutiérrez, fuera del campus",
+     "fecha": "2026-11-27",
+     "decide": "Juan"
+    }
    },
    "alias": [
     "Universidad Nacional de Colombia - Bogotá",
@@ -5472,7 +5508,12 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/search/Parque+principal+Capit%C3%A1n+Ernesto+Esguerra+Cubides+Funza/@4.7163769,-74.2121763,17z",
     "fecha": "2026-11-18",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "sin_ficha_google": {
+     "motivo": "no está en Google; el festival lo ubica en el parque principal Capitán Ernesto Esguerra Cubides",
+     "fecha": "2026-11-27",
+     "decide": "Juan"
+    }
    },
    "address": "Parque principal Capitán Ernesto Esguerra Cubides, Funza",
    "alias": [],
@@ -6757,7 +6798,8 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/Cra.+7+%23+6-46,+Barbosa,+Santander/@5.9282983,-73.617872,17z",
     "fecha": "2026-11-19",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "place_id": "ChIJ2RB4SwDlQY4Rgqiburnj-FI"
    },
    "address": "Carrera 7 # 6-46, sótano",
    "alias": [
@@ -6767,7 +6809,8 @@
     "provinciadevelez-2026"
    ],
    "ciudad": "Barbosa",
-   "corto": "Grupo Central AA"
+   "corto": "Grupo Central AA",
+   "coords_fecha": "2026-11-27"
   },
   "s_ad9e5f5a": {
    "nombre": "Casa Páramo",
@@ -7277,7 +7320,12 @@
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/Estaci%C3%B3n+De+Ferrocarril/@5.9267077,-73.6196272,17z/data=!3m1!4b1!4m6!3m5!1s0x8e41e5b9d49e96c9:0xde3c338261bef14c!8m2!3d5.9267077!4d-73.6196272!16s%2Fg%2F1tk_q9xk",
     "fecha": "2026-11-27",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "sin_ficha_google": {
+     "motivo": "Google solo tiene la estación de Barbosa (Antioquia), a 198 km; esta es la de Santander",
+     "fecha": "2026-11-27",
+     "decide": "Juan"
+    }
    },
    "address": "Plaza de Mercado",
    "alias": [
@@ -8397,13 +8445,14 @@
   },
   "s_df30b46a": {
    "nombre": "Universidad de la Costa – CUC",
-   "lat": 10.9953387,
-   "lng": -74.78881,
+   "lat": 10.9951685,
+   "lng": -74.7908003,
    "evidencia": {
     "nivel": "maps",
     "url": "https://www.google.com/maps/place/Universidad+De+La+Costa,+CUC/@10.9951685,-74.7908003,17z/data=!3m1!4b1!4m6!3m5!1s0x8ef42d7974b945fd:0x58d2cc28a018ba1!8m2!3d10.9951685!4d-74.7908003!16s%2Fg%2F1hhzg57mq",
     "fecha": "2026-11-27",
-    "fuente": "verificado en Google Maps"
+    "fuente": "verificado en Google Maps",
+    "place_id": "ChIJ_UW5dHkt9I4RoYsBisIsjQU"
    },
    "address": "Entrada #2, Calle 52 #56A-75",
    "alias": [],
@@ -8418,7 +8467,8 @@
     "Salón Fundadores, bloque 11, piso 8"
    ],
    "ciudad": "Barranquilla",
-   "corto": "Universidad de la Costa – CUC"
+   "corto": "Universidad de la Costa – CUC",
+   "coords_fecha": "2026-11-27"
   },
   "s_dfa5ca4b": {
    "nombre": "Coliseo Municipal",
