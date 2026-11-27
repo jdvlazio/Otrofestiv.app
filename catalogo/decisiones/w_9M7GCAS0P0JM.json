@@ -77,5 +77,29 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/la-belleza-v2.jpg"
   }
+ },
+ {
+  "work_id": "w_9M7GCAS0P0JM",
+  "campo": "xref.tmdb",
+  "valor": 1849395,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849395"
+  }
+ },
+ {
+  "work_id": "w_9M7GCAS0P0JM",
+  "campo": "xref.letterboxd",
+  "valor": "la-belleza-1",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "la-belleza-1"
+  }
  }
 ]

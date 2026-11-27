@@ -78,5 +78,29 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg"
   }
+ },
+ {
+  "work_id": "w_JTT49B2JV3A9",
+  "campo": "xref.tmdb",
+  "valor": 1849389,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849389"
+  }
+ },
+ {
+  "work_id": "w_JTT49B2JV3A9",
+  "campo": "xref.letterboxd",
+  "valor": "nueve-jueves-en-riachuelo",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "nueve-jueves-en-riachuelo"
+  }
  }
 ]

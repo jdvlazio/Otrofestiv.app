@@ -65,5 +65,29 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/el-arte-de-inmortalizar-mortales.jpg"
   }
+ },
+ {
+  "work_id": "w_7JCY08A1YE1K",
+  "campo": "xref.tmdb",
+  "valor": 1849458,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849458"
+  }
+ },
+ {
+  "work_id": "w_7JCY08A1YE1K",
+  "campo": "xref.letterboxd",
+  "valor": "el-arte-de-inmortalizar-mortales",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "el-arte-de-inmortalizar-mortales"
+  }
  }
 ]

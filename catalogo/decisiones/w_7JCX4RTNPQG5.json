@@ -65,5 +65,29 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/paisaje-niebla.jpg"
   }
+ },
+ {
+  "work_id": "w_7JCX4RTNPQG5",
+  "campo": "xref.tmdb",
+  "valor": 1849434,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849434"
+  }
+ },
+ {
+  "work_id": "w_7JCX4RTNPQG5",
+  "campo": "xref.letterboxd",
+  "valor": "paisaje-niebla",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "paisaje-niebla"
+  }
  }
 ]

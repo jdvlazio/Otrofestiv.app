@@ -79,5 +79,29 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/el-dolor-del-vientre.jpg"
   }
+ },
+ {
+  "work_id": "w_7JCXNQ9V2YCC",
+  "campo": "xref.tmdb",
+  "valor": 1849447,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849447"
+  }
+ },
+ {
+  "work_id": "w_7JCXNQ9V2YCC",
+  "campo": "xref.letterboxd",
+  "valor": "el-dolor-del-vientre",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "el-dolor-del-vientre"
+  }
  }
 ]

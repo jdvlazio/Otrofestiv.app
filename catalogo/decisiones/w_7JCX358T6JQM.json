@@ -51,5 +51,29 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/salvemos-el-agua.jpg"
   }
+ },
+ {
+  "work_id": "w_7JCX358T6JQM",
+  "campo": "xref.tmdb",
+  "valor": 1849416,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849416"
+  }
+ },
+ {
+  "work_id": "w_7JCX358T6JQM",
+  "campo": "xref.letterboxd",
+  "valor": "salvemos-el-agua",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "salvemos-el-agua"
+  }
  }
 ]
