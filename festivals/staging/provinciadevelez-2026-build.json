@@ -1418,5 +1418,12 @@
     }
    }
   }
- ]
+ ],
+ "_corrido": {
+  "por": "pipeline/correr.py",
+  "fecha": "2026-11-27T16:12:34",
+  "plan_sha": "95fbb9b0329f755a",
+  "paso": 7,
+  "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"
+ }
 }
