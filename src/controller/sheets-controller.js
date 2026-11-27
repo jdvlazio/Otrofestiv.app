@@ -8,7 +8,7 @@
 
 import {FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG} from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, _posterForma, makeMesaDeLuzSVG, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, ventanaDias, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts, abiertaLabel, abiertaRango } from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, ventanaDias, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts, abiertaLabel, abiertaRango, venueLabel } from '../view/helpers.js';
 // countryToFlags vive en dominio (src/domain/banderas.js), junto a la tabla de
 // países GENERADA (scripts/generate-paises.js, ICU es+en). Aquí había un
 // literal escrito a mano y en pipeline/lib.py otro: divergieron en contenido y
@@ -507,7 +507,7 @@ export function openVenueSheet(venueName){
   if(!venueName) return;
   const _d=document.createElement('textarea');_d.innerHTML=venueName;venueName=_d.value;
   const v=vcfg(venueName)||{};
-  const name=v.name||venueName;
+  const name=venueLabel(venueName);
   const _festCity=(FESTIVAL_CONFIG[_activeFestId]||{}).city||'';
   const _addr=[v.address||''];
   if(v.city&&v.city!==_festCity&&!(v.address||'').includes(v.city)) _addr.push(v.city);
