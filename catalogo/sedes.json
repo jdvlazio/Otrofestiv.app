@@ -7004,6 +7004,26 @@
    "ciudad": "Medellín",
    "corto": "Estación Metrocable Andalucía"
   },
+  "s_bad03f9a": {
+   "nombre": "Estación del Tren",
+   "lat": 5.9267077,
+   "lng": -73.6196272,
+   "evidencia": {
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Estaci%C3%B3n+De+Ferrocarril/@5.9267077,-73.6196272,17z/data=!3m1!4b1!4m6!3m5!1s0x8e41e5b9d49e96c9:0xde3c338261bef14c!8m2!3d5.9267077!4d-73.6196272!16s%2Fg%2F1tk_q9xk",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
+   },
+   "address": "Plaza de Mercado",
+   "alias": [
+    "Estación del Tren - Barbosa"
+   ],
+   "festivales": [
+    "provinciadevelez-2026"
+   ],
+   "ciudad": "Barbosa",
+   "corto": "Estación del Tren"
+  },
   "s_bb5ec19d": {
    "nombre": "La Comarca",
    "lat": 6.2344921,

@@ -338,27 +338,27 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
 | `film_start` | string | `^\d{2}:\d{2}$` | 1 fest | Hora en que EMPIEZA LA OBRA cuando la función abre antes (BHFF: Parapeto abre 19:00, la obra 19:30). Solo informa: el aviso «Inicio» de la ficha; la card y el plan siguen con `time`. Por función. |
-| `title_en` | string | — | 42 fest |  |
+| `title_en` | string | — | 43 fest |  |
 | `title_es` | string | — | — | Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial. |
 | `director` | string | — | 52 fest |  |
-| `year` | number | — | 50 fest | Entero. Dos festivales legacy lo tienen como string. |
+| `year` | number | — | 51 fest | Entero. Dos festivales legacy lo tienen como string. |
 | `country` | string | — | 56 fest |  |
 | `flags` | string | — | 56 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
 | `duration` | string | `^\d+ min$` | 56 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
 | `language` | string | — | 10 fest |  |
-| `genre` | string | — | 48 fest |  |
+| `genre` | string | — | 49 fest |  |
 | `synopsis` | string | — | 52 fest | SIEMPRE en español. La traducción no es opcional. |
 | `synopsis_en` | string | — | 51 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
 | `synopsis_lang` | string | `es` · `en` · `pt` | 52 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
-| `description` | string | — | 49 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
+| `description` | string | — | 50 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
 | `description_en` | string | — | 5 fest |  |
 | `description_es` | string | — | 1 fest |  |
-| `description_lang` | string | `es` · `en` · `pt` | 49 fest |  |
+| `description_lang` | string | `es` · `en` · `pt` | 50 fest |  |
 | `rating` | string | — | 8 fest |  |
 | `premiere` | string | — | 20 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 53 fest |  |
-| `event_kind` | string | — | 44 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
+| `event_kind` | string | — | 45 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
 | `is_cortos` | boolean | — | 51 fest | exige `film_list` Programa curado: exige film_list no vacío. |
 | `film_list` | array | — | 51 fest |  |
 | `is_programa` | boolean | — | 5 fest |  |

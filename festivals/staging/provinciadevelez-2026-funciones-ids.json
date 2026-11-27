@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "ensamblar.py: ids estables de las funciones (docs/FUNCION.md C1)",
-  "capturado": "2026-11-25"
+  "capturado": "2026-11-27"
  },
  "funciones": {
   "f_f9339da525": {
@@ -52,6 +52,27 @@
    "hora": "18:00",
    "sala": "",
    "titulo": "el dolor del vientre 5 obras"
+  },
+  "f_b20dd43ac9": {
+   "sede": "Parque Emilio Ulloa - Barbosa",
+   "dia": "2026-12-05",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "conversatorio realidad y destino"
+  },
+  "f_98f2cf4a66": {
+   "sede": "Parque Emilio Ulloa - Barbosa",
+   "dia": "2026-12-05",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "tres lunas nuevas"
+  },
+  "f_6dd67f718c": {
+   "sede": "Estación del Tren - Barbosa",
+   "dia": "2026-12-06",
+   "hora": "20:00",
+   "sala": "",
+   "titulo": "ayuno y cenizas"
   }
  }
 }

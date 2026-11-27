@@ -1,0 +1,128 @@
+[
+ {
+  "work_id": "w_EJEM1K21JJAJ",
+  "campo": "directores",
+  "valor": [
+   "Rodrigo Dimaté"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Rodrigo Dimaté"
+  }
+ },
+ {
+  "work_id": "w_EJEM1K21JJAJ",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "2025"
+  }
+ },
+ {
+  "work_id": "w_EJEM1K21JJAJ",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_EJEM1K21JJAJ",
+  "campo": "generos",
+  "valor": [
+   "Crimen"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Crimen"
+  }
+ },
+ {
+  "work_id": "w_EJEM1K21JJAJ",
+  "campo": "sinopsis.es",
+  "valor": "Cuenta cómo abrir una pequeña puerta en la juventud puede traer problemas enormes: quien siembra vientos cosecha tempestades.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Cuenta cómo abrir una pequeña puerta en la juventud puede traer problemas enormes: quien siembra vientos cosecha tempestades."
+  }
+ },
+ {
+  "work_id": "w_EJEM1K21JJAJ",
+  "campo": "sinopsis.en",
+  "valor": "It tells how opening a small door in youth can bring enormous trouble: whoever sows the wind reaps the whirlwind.",
+  "motivo": "traducción del ES del festival; la EN de TMDB no corresponde",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Alex doesn't go to school and spends his day hanging around, seemingly free, doing what he was told not to do; Steven tries to hold down a job, but there's always a friend, a party, a problem; Kevin wants to escape the drugs and violence. Three young men face the harshness of Bogotá life while they wait, amid continuous failures, for a miracle."
+  },
+  "anteriores": [
+   {
+    "valor": "Alex doesn't go to school and spends his day hanging around, seemingly free, doing what he was told not to do; Steven tries to hold down a job, but there's always a friend, a party, a problem; Kevin wants to escape the drugs and violence. Three young men face the harshness of Bogotá life while they wait, amid continuous failures, for a miracle.",
+    "motivo": "alta desde provinciadevelez-2026",
+    "fecha": "2026-11-27",
+    "quien": "claude"
+   }
+  ]
+ },
+ {
+  "work_id": "w_EJEM1K21JJAJ",
+  "campo": "xref.tmdb",
+  "valor": 1548988,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1548988"
+  }
+ },
+ {
+  "work_id": "w_EJEM1K21JJAJ",
+  "campo": "xref.letterboxd",
+  "valor": "three-new-moons",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "three-new-moons"
+  }
+ },
+ {
+  "work_id": "w_EJEM1K21JJAJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/tres-lunas-nuevas.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/tres-lunas-nuevas.jpg"
+  }
+ }
+]
