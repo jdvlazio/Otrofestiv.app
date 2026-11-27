@@ -300,7 +300,7 @@ de FICDEH. La sala va FUERA del nombre (campo `sala` de la función); la tabla
 es explícita, nunca heurística sobre el guion.
 
 ```bash
-python3 pipeline/geocodificar.py <id> --centro LAT,LNG   # verificado por tipo
+python3 pipeline/geocodificar.py <id> --centro LAT,LNG   # Google Maps (GOOGLE_MAPS_API_KEY); lo dudoso, a revisión
 python3 pipeline/sedes-html.py   <id> --centro LAT,LNG   # las pendientes, a mano
 ```
 

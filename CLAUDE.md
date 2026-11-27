@@ -195,5 +195,5 @@ python3 validate.py                        # validar antes de commitear
 node scripts/generate-claude-md.js         # regenerar este archivo cuando cambie el estado del proyecto
 node scripts/generate-config.js --help     # generar entrada FESTIVAL_CONFIG
 python3 scripts/enrich-festival.py --help  # enriquecer JSON con TMDB
-python3 scripts/geocode-venues.py --help   # geocodificar venues
+python3 pipeline/geocodificar.py <id> --centro LAT,LNG  # sedes desde Google Maps (GOOGLE_MAPS_API_KEY)
 ```

@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
 """geocodificar.py <fest-id> --centro LAT,LNG [--radio 0.3] — sedes verificadas.
 
-Herramienta genérica sobre el formato intermedio. Trae las DOS lecciones de
-geocoding pagadas con bugs:
+Herramienta genérica sobre el formato intermedio. Desde el 27 nov 2026 la única
+fuente es GOOGLE MAPS (`pipeline/gmaps.py`): Nominatim y Photon salieron del
+pipeline — medidos sobre lugares ya verificados, Nominatim falló en 15 de 18 y
+los pines malos de FICDEH venían de ahí. Sin `GOOGLE_MAPS_API_KEY` se detiene.
 
-  · FICDEH v1 aceptaba el primer resultado de Nominatim: 63 de 120 sedes
-    apiladas en 10 centroides, reportadas «OK». Aquí un resultado solo entra si
-    cae en la caja de la ciudad Y comparte un token distintivo con la sede.
-  · FICMA: «Fundadores» (el teatro) aterrizaba en el BARRIO Fundadores. Una
-    sede fija nunca es un barrio: los resultados de clase place/boundary/
-    landuse se descartan, salvo para las sedes listadas en `_barrios_ok` del
-    sidecar (los puntos de un ciclo itinerante sí son barrios y canchas).
+Un pin entra solo si cumple la regla fija de `gmaps.elegir` (nombre distintivo
++ ciudad + nunca un barrio + a <150 m de la dirección publicada, si la hay).
+Lo que no la cumple queda `_prec:"sin verificar"` con el porqué en `_todo`:
+NUNCA se adivina. Medida el 27 nov sobre 40 lugares verificados: 32 bien, 0
+mal, 8 a revisión. Cada pin guarda `_place_id` (Google deja guardarlo para
+siempre) y `_maps_url`; las coordenadas vencen a los 30 días y las renueva
+`sedes.py --refrescar`.
 
 Una sede que ya está en la MATRIZ (catalogo/sedes.json, pipeline/sedes.py)
-entra con su pin, `_prec:"matriz"`, antes de preguntarle a Nominatim.
+entra con su pin, `_prec:"matriz"`, antes de preguntarle a Google.
 
 Las coordenadas con `_prec:"manual"` son verificación humana y NO SE TOCAN —
 correr el geocoder dos veces pisó 40 verificaciones de Juan en FICDEH.
@@ -21,49 +23,14 @@ correr el geocoder dos veces pisó 40 verificaciones de Juan en FICDEH.
 Lee   festivals/staging/<id>-crudo.json  +  pipeline/<id>.plan.json (festival.sedes)
 Merge festivals/staging/<id>-venues-geo.json   (se crea si no existe)
 """
-import json, os, re, sys, time
+import json, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lib import cargar_crudo, norm, provenance
+from lib import cargar_crudo, provenance
+import gmaps
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
-GENERICAS = {'parque', 'auditorio', 'sala', 'teatro', 'cancha', 'plaza', 'barrio',
-             'universidad', 'cine', 'centro', 'cultural', 'casa', 'club', 'colegio',
-             'principal', 'campus', 'de', 'la', 'el', 'los', 'las', 'del', 'san'}
-UA_NOM = 'Otrofestiv/1.0 (onboarding de festival; github.com/jdvlazio)'
-CLASES_LUGAR = {'place', 'boundary', 'landuse'}
-
-
-def buscar(q):
-    import subprocess
-    url = ('https://nominatim.openstreetmap.org/search?format=json&limit=5'
-           '&countrycodes=co,ar,br&q=' + q.replace(' ', '%20').replace('&', '%26'))
-    r = subprocess.run(['curl', '-s', '--max-time', '25', '-A', UA_NOM, url],
-                       capture_output=True)
-    try:
-        return json.loads(r.stdout)
-    except Exception:
-        return []
-
-
-def limpia_direccion(d):
-    """La dirección colombiana, como Nominatim la entiende.
-
-    Medido el 23 sep 2026 con las sedes de Itagüí:
-      «Carrera 50 # 52-77, barrio Centro» → 5 resultados, TODOS EN BOGOTÁ
-      «Carrera 50 52-77»                  → Teatro Caribe, exacto
-    El «#» y el «barrio X» no son ruido inocente: desvían la búsqueda a otra
-    ciudad, que es peor que no encontrar nada. También sobra lo que va entre
-    paréntesis («(carrera 51 # 51-55)» ya viene suelto) y el piso.
-    """
-    d = re.sub(r'\(([^)]*)\)', r' \1 ', d)          # los paréntesis, planos
-    d = re.sub(r'\s*#\s*', ' ', d)                  # «# 52-77» → «52-77»
-    d = re.sub(r',?\s*barrio\s+[^,]+', '', d, flags=re.I)
-    d = re.sub(r'^\s*(sexto|quinto|cuarto|tercer|segundo|primer)\s+piso[^,]*,?\s*',
-               '', d, flags=re.I)
-    return re.sub(r'\s{2,}', ' ', d).strip(' ,')
-
 
 
 def main():
@@ -126,7 +93,7 @@ def main():
             ya += 1; continue
         # LA MATRIZ DE SEDES PRIMERO (16 nov 2026, catalogo/sedes.json): una
         # sede que ya ubicamos en otro festival entra con ESE pin verificado, no
-        # se vuelve a buscar ni se copia a mano. Solo las nuevas van a Nominatim.
+        # se vuelve a buscar ni se copia a mano. Solo las nuevas van a Google.
         import sedes as _matriz
         hit = _matriz.buscar(s, (lat0, lng0), radio_m=radio * 111000)
         if hit:
@@ -134,40 +101,18 @@ def main():
             ok += 1
             print(f'[{i:2}] MZ  {s[:44]:46} {hit["_matriz"]}', flush=True)
             continue
-        # LA DIRECCIÓN, CUANDO EL FESTIVAL LA PUBLICA (23 sep 2026). Nominatim
-        # no conoce «Auditorio Juan Carlos Escobar» ni «Cineprox Mayorca», pero
-        # sí conoce «carrera 51 # 51-55, Itagüí». Itagüí imprime las SIETE
-        # direcciones en sus láminas y las siete caían a mano por buscar solo
-        # por nombre. Se declara en el plan (`festival.direcciones`) y se usa
-        # como SEGUNDA consulta: el nombre primero, porque cuando acierta es más
-        # preciso que el número de la calle.
-        consultas = [f'{s}, {meta["ciudad"] or ciudad}'.strip(', ')]
+        # GOOGLE (27 nov 2026): Places por nombre y ciudad, sesgado al centro;
+        # la dirección del festival (`festival.direcciones` del plan), si la
+        # hay, se ubica con Geocoding y el lugar debe caer a <150 m de ella.
+        donde = meta['ciudad'] or ciudad
         _dir = (direcciones or {}).get(s)
-        if _dir:
-            consultas.append(f'{limpia_direccion(_dir)}, {meta["ciudad"] or ciudad}'.strip(', '))
-        distintivos = set(norm(s).split()) - GENERICAS
-        elegido = None
-        # La consulta POR DIRECCIÓN no puede exigir las palabras del nombre: el
-        # resultado de «Carrera 50 # 52-77, Itagüí» no dice «Caribe» en ninguna
-        # parte, y con el filtro del nombre las siete sedes seguían cayendo a
-        # mano. Lo que la valida es OTRA cosa: que la dirección sea del propio
-        # festival —impresa en su lámina— y que caiga dentro del radio. Se marca
-        # `_prec:'direccion'` para que se vea de dónde salió cada punto, y no se
-        # confunda con la coincidencia por nombre, que es más fuerte.
-        for r, por_direccion in [(x, i > 0) for i, c in enumerate(consultas)
-                                 for x in buscar(c)]:
-            la, ln = float(r['lat']), float(r['lon'])
-            if abs(la - lat0) > radio or abs(ln - lng0) > radio:
-                continue                           # otra ciudad
-            if not por_direccion and distintivos and not (
-                    distintivos & set(norm(r.get('display_name', '')).split())):
-                continue                           # nombre que no distingue nada
-            if not por_direccion and r.get('class') in CLASES_LUGAR and s not in barrios_ok:
-                continue                           # una sala fija nunca es un barrio
-            elegido = {'lat': round(la, 7), 'lng': round(ln, 7),
-                       '_prec': 'direccion' if por_direccion else 'nominatim',
-                       '_match': r['display_name'][:90]}
-            break
+        dirg = gmaps.geocodificar(_dir, donde) if _dir else None
+        cands = gmaps.buscar_lugar(s, donde, (lat0, lng0), radio * 111000)
+        c, por = gmaps.elegir(s, cands, (lat0, lng0), radio * 111000,
+                              barrio_ok=s in barrios_ok, direccion=dirg)
+        elegido = c and {'lat': round(c['lat'], 7), 'lng': round(c['lng'], 7), '_prec': 'maps',
+                         '_place_id': c['place_id'], '_maps_url': c['url'],
+                         '_match': f'{c["nombre"]} — {c["direccion"]}'[:90], '_por': por}
         if elegido:
             geo[s] = {**prev, **elegido, 'n': meta['n']}
             ok += 1
@@ -188,14 +133,13 @@ def main():
             # es justo lo que un pipeline re-corrible no puede hacer.
             geo[s] = {**prev, 'n': meta['n'], '_prec': 'sin verificar',
                       '_todo': prev.get('_todo')
-                      or 'buscar a mano (sedes-html.py genera la página)'}
+                      or f'revisar en Google Maps: {por}'}
             falta += 1
             print(f'[{i:2}] ??  {s[:44]}', flush=True)
-        time.sleep(1.1)                            # cortesía con Nominatim
 
     geo['_provenance'] = provenance(
-        'Nominatim con verificación: caja de ciudad + token distintivo + clase '
-        'de lugar (una sede fija nunca es un barrio). _prec:manual intocable.')
+        'Google Maps (Places + Geocoding) con la regla fija de gmaps.elegir: nombre '
+        'distintivo + ciudad + nunca un barrio + dirección publicada. _prec:manual intocable.')
     json.dump(geo, open(geo_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'\n{len(sedes)} sedes · ubicadas ahora {ok} · ya estaban {ya} · a mano {falta}')
 
