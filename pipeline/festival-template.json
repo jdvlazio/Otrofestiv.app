@@ -125,7 +125,7 @@
   "verificacion": "Qué se cruzó contra qué (grilla día/sede/hora, doc oficial, IG)"
  },
  "venues": {
-  "_instruccion": "Una entrada por sede. La clave debe coincidir EXACTAMENTE con films[].venue. Coordenadas vía scripts/geocode-venues.py.",
+  "_instruccion": "Una entrada por sede. La clave debe coincidir EXACTAMENTE con films[].venue. Coordenadas vía pipeline/geocodificar.py (Google Maps).",
   "Sala de Cine - Ciudad": {
    "short": "Sala de Cine - Ciudad",
    "lat": 4.6125,

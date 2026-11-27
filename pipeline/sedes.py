@@ -45,10 +45,12 @@ fusionados con `--mismo`.
     python3 pipeline/sedes.py --resolver <fid> [--escribir] [--aceptar «cruda=s_xxx» …] [--centro LAT,LNG]
                                                           # las sedes del crudo: ya / conocida / parecida / nueva
     python3 pipeline/sedes.py --tablero                   # festivales vivos: qué falta en sus sedes
-    python3 pipeline/sedes.py --completar-ciudades        # vecino del almacén (<3 km) o Nominatim reverso
+    python3 pipeline/sedes.py --completar-ciudades        # vecino del almacén (<3 km) o Google inverso
+    python3 pipeline/sedes.py --refrescar [--max N]       # coordenadas de Google de más de 25 días, por place_id
+    python3 pipeline/sedes.py --enlazar-google [--max N]  # place_id de Google a los lugares verificados que no lo tienen
     python3 pipeline/sedes.py --enlazar                   # cada pin de los venues-geo apunta a su lugar (_matriz)
 
-geocodificar.py consulta el almacén ANTES de Nominatim. Guardián: [sede-matriz].
+geocodificar.py consulta el almacén ANTES de Google Maps. Guardián: [sede-matriz].
 """
 import glob, hashlib, json, math, os, re, sys, unicodedata
 from datetime import date
@@ -390,6 +392,11 @@ def construir(raiz=REPO):
                  'evidencia': {'nivel': nivel_de(base[3].get('_prec')), 'fuente': f'{base[0]}.json (publicado)' if base[3].get('_publicado') else f'{base[0]}-venues-geo.json'}}
             if base[3].get('address'):
                 e['address'] = base[3]['address']
+            if base[3].get('_place_id'):   # ubicado por geocodificar.py en Google (27 nov 2026)
+                e['evidencia'] = {'nivel': 'maps', 'url': base[3].get('_maps_url') or '',
+                                  'place_id': base[3]['_place_id'], 'fecha': date.today().isoformat(),
+                                  'fuente': f'Google Places ({base[3].get("_por") or "geocodificar.py"})'}
+                e['coords_fecha'] = date.today().isoformat()
         e['alias'] = sorted((set(e.get('alias', [])) | alias) - {e['nombre']})
         e['festivales'] = sorted(set(e.get('festivales', [])) | {x[0] for x in g})
         _ficha(e, g, ctx)
@@ -663,25 +670,77 @@ def sin_enlace(raiz=REPO):
     return out
 
 
+# ── Google: place_id y coordenadas de 30 días (27 nov 2026) ───────────────────
+# Las condiciones de Google Maps dejan guardar el place_id para siempre, pero
+# las coordenadas solo 30 días. Cada lugar enlazado guarda `place_id` y
+# `coords_fecha`; --refrescar las renueva antes de que venzan (unas 470
+# consultas al mes, dentro del cupo gratis) y avisa si Google movió un pin.
+VENCE_DIAS = 25
+
+
+def refrescar(raiz=REPO, hoy=None, maximo=280, detalle=None):
+    """→ [(sid, nombre, metros que se movió)] de los refrescados."""
+    import gmaps
+    detalle = detalle or gmaps.detalle
+    hoy = hoy or date.today()
+    m = leer(raiz)
+    out = []
+    for sid, e in sorted((m.get('sedes') or {}).items()):
+        pid = (e.get('evidencia') or {}).get('place_id')
+        f = e.get('coords_fecha')
+        if not pid or (f and (hoy - date.fromisoformat(f)).days < VENCE_DIAS):
+            continue
+        if len(out) >= maximo:
+            break
+        g = detalle(pid)
+        if g.get('lat') is None:
+            continue
+        d = metros((e['lat'], e['lng']), (g['lat'], g['lng']))
+        e['lat'], e['lng'] = round(g['lat'], 7), round(g['lng'], 7)
+        e['coords_fecha'] = hoy.isoformat()
+        out.append((sid, e['nombre'], round(d)))
+    _escribir(m, raiz)
+    construir(raiz)
+    return out
+
+
+def enlazar_google(raiz=REPO, maximo=280, buscar_lugar=None):
+    """El place_id de cada lugar verificado en Maps que no lo tiene: el
+    candidato de Google con nombre distintivo a <150 m del pin. Si no hay uno
+    solo que cumpla, no se adivina. → ([(sid, nombre)] enlazados, [sin])"""
+    import gmaps
+    buscar_lugar = buscar_lugar or gmaps.buscar_lugar
+    m = leer(raiz)
+    hechos, sin = [], []
+    for sid, e in sorted((m.get('sedes') or {}).items()):
+        ev = e.get('evidencia') or {}
+        if ev.get('nivel') != 'maps' or ev.get('place_id'):
+            continue
+        if len(hechos) + len(sin) >= maximo:
+            break
+        cands = buscar_lugar(e['nombre'], e.get('ciudad') or '', (e['lat'], e['lng']), 2000)
+        c, por = gmaps.elegir(e['nombre'], cands, (e['lat'], e['lng']), 150)
+        if c:
+            ev['place_id'] = c['place_id']
+            e['coords_fecha'] = None   # que el próximo --refrescar traiga las de Google
+            hechos.append((sid, e['nombre']))
+        else:
+            sin.append((sid, e['nombre'], por))
+    _escribir(m, raiz)
+    return hechos, sin
+
+
 # ── completar la ciudad (16 nov 2026, Juan: «añadir ciudad») ────────────────
 def _reverso(lat, lng):
-    """Nominatim reverso → municipio. Con la cortesía de 1 consulta/s."""
-    import subprocess, time
-    url = f'https://nominatim.openstreetmap.org/reverse?format=json&zoom=10&lat={lat}&lon={lng}&accept-language=es'
-    r = subprocess.run(['curl', '-s', '--max-time', '25', '-A', 'Otrofestiv/1.0 (sedes; github.com/jdvlazio)', url],
-                       capture_output=True)
-    time.sleep(1.1)
-    try:
-        a = json.loads(r.stdout).get('address') or {}
-    except ValueError:
-        return None
-    return a.get('city') or a.get('town') or a.get('municipality') or a.get('village') or a.get('county')   # en Colombia el municipio rural sale como «county»
+    """Google Geocoding inverso → municipio (27 nov 2026: fuera Nominatim)."""
+    import gmaps
+    return gmaps.ciudad_de(lat, lng)
 
 
 def completar_ciudades(raiz=REPO, reverso=_reverso):
     """La ciudad de los lugares que no la tienen (o la tenían dudosa): primero
     el lugar del almacén más cercano con ciudad, si está a <3 km; si no,
-    Nominatim reverso. Queda fijada, con su fuente. → [(nombre, ciudad, fuente)]"""
+    Google Geocoding inverso. Queda fijada, con su fuente. → [(nombre, ciudad, fuente)]"""
     m = leer(raiz)
     S = m.get('sedes') or {}
     con = [(e['lat'], e['lng'], e['ciudad']) for e in S.values() if e.get('ciudad')]
@@ -693,7 +752,7 @@ def completar_ciudades(raiz=REPO, reverso=_reverso):
         if cerca and cerca[0][0] < 3000:
             ciudad, fuente = cerca[0][1], f'lugar vecino del almacén a {round(cerca[0][0])} m'
         else:
-            ciudad, fuente = limpia_ciudad(reverso(e['lat'], e['lng'])), 'Nominatim reverso'
+            ciudad, fuente = limpia_ciudad(reverso(e['lat'], e['lng'])), 'Google Geocoding inverso'
         if ciudad:
             e.update(ciudad=ciudad, _ciudad_fijada=fuente)
             e.pop('_ciudad_dudosa', None)
@@ -1172,6 +1231,17 @@ def main():
     elif '--enlazar' in a:
         r = enlazar()
         print(f'✓ {sum(r.values())} pines enlazados en {len(r)} festivales' if r else '✓ todo enlazado')
+    elif '--refrescar' in a:
+        r = refrescar(maximo=int(_arg('--max')) if '--max' in a else 280)
+        for sid, n, d in r:
+            if d > 150:
+                print(f'  ⚠ {sid} {n}: Google lo movió {d} m — revisar los festivales que lo usan')
+        print(f'✓ {len(r)} lugares con coordenadas de Google renovadas')
+    elif '--enlazar-google' in a:
+        h, sin = enlazar_google(maximo=int(_arg('--max')) if '--max' in a else 280)
+        for sid, n, por in sin:
+            print(f'  —  {sid} {n}: {por[:90]}')
+        print(f'✓ {len(h)} lugares con place_id · {len(sin)} sin candidato seguro (a revisión)')
     elif '--completar-ciudades' in a:
         for n, c, f in completar_ciudades():
             print(f'  {n:50} → {c}  ({f})')

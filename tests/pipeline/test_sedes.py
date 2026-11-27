@@ -477,7 +477,7 @@ class Normalizar(Base):
         hechas = {n: (c, f) for n, c, f in S.completar_ciudades(self.r, reverso=lambda a, b: 'Perímetro Urbano Neira')}
         self.assertEqual(hechas['Plaza B'][0], 'Manizales')
         self.assertIn('vecino', hechas['Plaza B'][1])
-        self.assertEqual(hechas['Finca Lejana'], ('Neira', 'Nominatim reverso'))
+        self.assertEqual(hechas['Finca Lejana'], ('Neira', 'Google Geocoding inverso'))
         S.construir(self.r)                                                    # reconstruir no la borra
         self.assertEqual(next(e for e in S.leer(self.r)['sedes'].values() if e['nombre'] == 'Plaza B')['ciudad'], 'Manizales')
 
