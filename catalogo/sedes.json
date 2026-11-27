@@ -564,11 +564,13 @@
   },
   "s_0b79c2ba": {
    "nombre": "Casa de la Juventud Iwoka",
-   "lat": 4.6222774,
-   "lng": -74.1571759,
+   "lat": 4.6234371,
+   "lng": -74.1562192,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e3f9fa4162c0b33:0xad3d9252b246b718",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 78N BIS # 39-33",
    "alias": [
@@ -1620,11 +1622,13 @@
   },
   "s_22fe5886": {
    "nombre": "Parque Arqueológico de Usme",
-   "lat": 4.4774665,
-   "lng": -74.1186759,
+   "lat": 4.4752152,
+   "lng": -74.1215758,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e3fa3fcd0236ae1:0xe161e30cbdf917f1",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 136B Sur # 3A-48",
    "alias": [
@@ -2400,22 +2404,6 @@
    "ciudad": "Medellín",
    "corto": "Escuela Vereda El Placer"
   },
-  "s_39b49fba": {
-   "nombre": "Cineprox Las Américas",
-   "lat": 6.2504,
-   "lng": -75.5892,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "aff-2026.json (publicado)"
-   },
-   "address": "Diagonal 75B #2A-120",
-   "alias": [],
-   "festivales": [
-    "aff-2026"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Cineprox Las Américas"
-  },
   "s_39dd7973": {
    "nombre": "Cinema Los Ángeles",
    "lat": 4.3404799,
@@ -2537,11 +2525,13 @@
   },
   "s_3cc54ab6": {
    "nombre": "Casa de la Juventud Damawha",
-   "lat": 4.5427513,
-   "lng": -74.1087731,
+   "lat": 4.5759887,
+   "lng": -74.0824783,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e3f99e61d66b267:0x132dc365222cc366",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 1 Este # 10-48 Sur",
    "alias": [
@@ -2947,10 +2937,12 @@
    },
    "address": "Calle 48 # 43–87, Medellín, Antioquia",
    "alias": [
+    "Teatro Comfama",
     "Teatro Comfama Alfonso Restrepo Moreno - Medellín",
     "Teatro Comfama Alfonso Restrepo Moreno Medellín"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026"
    ],
    "ciudad": "Medellín",
@@ -3470,11 +3462,13 @@
   },
   "s_57f81227": {
    "nombre": "Archipiélago Sonoro",
-   "lat": 6.2419995,
-   "lng": -75.5958328,
+   "lat": 6.223509,
+   "lng": -75.6017657,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e44299257d8cabf:0xfaf4f564fc07911b",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Carrera 80B #18-13",
    "alias": [],
@@ -4122,21 +4116,6 @@
     "Cinemateca móvil, Laboratorio": "Cinemateca móvil, laboratorio"
    }
   },
-  "s_6a4302c3": {
-   "nombre": "CEFE Fontanar del Río",
-   "lat": 4.754983,
-   "lng": -74.1126869,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tercertiempo-2026.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "tercertiempo-2026"
-   ],
-   "ciudad": "Bogotá",
-   "corto": "CEFE Fontanar del Río"
-  },
   "s_6b6f9da6": {
    "nombre": "Sede de empleo y emprendimiento Comfenalco Antioquia",
    "lat": 6.55798,
@@ -4267,11 +4246,13 @@
   },
   "s_6cf2cf5a": {
    "nombre": "Casa B",
-   "lat": 4.5533234,
-   "lng": -74.100257,
+   "lat": 4.5918951,
+   "lng": -74.0732637,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e3f99978bc6f847:0xaf1964ad12f7d0a8",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 2 BIS # 6D-30",
    "alias": [
@@ -5104,11 +5085,13 @@
   },
   "s_859f08bc": {
    "nombre": "Biblioteca Pública Las Ferias",
-   "lat": 4.6716157,
-   "lng": -74.0982024,
+   "lat": 4.6837406,
+   "lng": -74.089299,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e3f9b1764ebb34f:0xbcc2232a36b1c690",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 69J # 73-29",
    "alias": [
@@ -6321,11 +6304,13 @@
   },
   "s_a778bfa3": {
    "nombre": "Casa de la Juventud Huitaca",
-   "lat": 4.646258,
-   "lng": -74.1221864,
+   "lat": 4.6847922,
+   "lng": -74.1562593,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e3f9d1e096bf44d:0xdd4a0abdc48e260b",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 17A # 118-25",
    "alias": [
@@ -6618,22 +6603,6 @@
    ],
    "ciudad": "Armenia",
    "corto": "Casa Cromo Casa Cultural"
-  },
-  "s_b067121f": {
-   "nombre": "Teatro Comfama",
-   "lat": 6.2822377,
-   "lng": -75.5631107,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Calle 48 #43-87",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Teatro Comfama"
   },
   "s_b14cf4f4": {
    "nombre": "Teatro Regional Valerio Antonio Jiménez",
@@ -7340,11 +7309,13 @@
   },
   "s_c19bda57": {
    "nombre": "Casa de las Luciérnagas",
-   "lat": 4.6067352,
-   "lng": -74.2038167,
+   "lat": 4.6053057,
+   "lng": -74.2066362,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e3f9f1ded8cc8ab:0x96e153fedf258256",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Diagonal 73H SUR # 78-38",
    "alias": [
@@ -7469,6 +7440,7 @@
    "alias": [
     "Biblioteca Pública CEFE Fontanar Del Río",
     "Biblioteca Pública CEFE Fontanar Del Río - Bogotá",
+    "CEFE Fontanar del Río",
     "Cinemateca Fontanar del Río - Bogotá",
     "Cinemateca de Bogotá Sede Fontanar del Río"
    ],
@@ -7478,7 +7450,8 @@
     "bhff-2026",
     "bogoshorts-2026",
     "ficdeh-2026",
-    "narrarelfuturo-2026"
+    "narrarelfuturo-2026",
+    "tercertiempo-2026"
    ],
    "ciudad": "Bogotá",
    "corto": "Cinemateca Fontanar del Río",
@@ -7502,11 +7475,13 @@
   },
   "s_cb9cf76f": {
    "nombre": "Casa de la Juventud Nacho Sánchez",
-   "lat": 4.5401056,
-   "lng": -74.0980355,
+   "lat": 4.592708,
+   "lng": -74.0698591,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e3f99bb396b646f:0xfd1cdd0b48605402",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 3 Este # 9-58",
    "alias": [
@@ -8285,6 +8260,7 @@
     "Librería y Espacio Cultural Antimateria (calle 45E # 72-09, Laureles)"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026",
     "fantasmagoria-2026",
     "miradas-2026",
@@ -8568,21 +8544,6 @@
    "ciudad": "Toro",
    "corto": "Colegio agrícola"
   },
-  "s_eca709c9": {
-   "nombre": "Antimateria Libros y Café",
-   "lat": 6.20062,
-   "lng": -75.56368,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Antimateria"
-  },
   "s_ecea4a9b": {
    "nombre": "Escuela Rural Santa Ana",
    "lat": 4.9288644,
@@ -8709,11 +8670,13 @@
   },
   "s_eec0c2a8": {
    "nombre": "Casa de la Juventud Aldea De Pensadores",
-   "lat": 4.7170723,
-   "lng": -74.1375702,
+   "lat": 4.6944419,
+   "lng": -74.1095759,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/data=!4m2!3m1!1s0x8e3f9b44f9a24e27:0x8430793f8e37d685",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 70 # 88A-7",
    "alias": [
@@ -9405,6 +9368,7 @@
   "s_38b11470": "s_dfa5f4a5",
   "s_38c806a7": "s_c564ed7b",
   "s_3963654a": "s_2f75a36e",
+  "s_39b49fba": "s_b3c7c07a",
   "s_39f180cc": "s_f7766586",
   "s_3a1a80bb": "s_c82c47d7",
   "s_3c0f5d1e": "s_c82c47d7",
@@ -9515,6 +9479,7 @@
   "s_68354e9a": "s_46c0ae50",
   "s_688b3106": "s_b5d25cab",
   "s_69ba9c82": "s_b3c7c07a",
+  "s_6a4302c3": "s_c82c47d7",
   "s_6aab117a": "s_dfa5f4a5",
   "s_6b6aa2bd": "s_98bbb7e0",
   "s_6b8f20eb": "s_20a122a7",
@@ -9690,6 +9655,7 @@
   "s_ae98eac3": "s_2f75a36e",
   "s_ae9ee9c2": "s_b3c7c07a",
   "s_aee765f4": "s_b3c7c07a",
+  "s_b067121f": "s_4a79ccdf",
   "s_b09e468d": "s_d1996183",
   "s_b0ae1276": "s_d1996183",
   "s_b17de17f": "s_1347d668",
@@ -9848,6 +9814,7 @@
   "s_eac6c04b": "s_63354c37",
   "s_ec39ea3f": "s_a8672cd3",
   "s_ec43ea67": "s_98bbb7e0",
+  "s_eca709c9": "s_e1907155",
   "s_ed9785f5": "s_b3c7c07a",
   "s_edfce41b": "s_f689bcee",
   "s_ee65fd05": "s_25caf24a",
@@ -10162,6 +10129,16 @@
     "AECID",
     "Centro de Formación de la Cooperación Española",
     "la AECID es la Cooperación Española; verificado en Google Maps; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "CEFE Fontanar del Río",
+    "Cinemateca Fontanar del Río",
+    "mismo edificio: la Cinemateca de Bogotá funciona dentro del CEFE Fontanar del Río; misma ficha de Google Maps (27 nov 2026)"
+   ],
+   [
+    "Teatro Comfama",
+    "Teatro Comfama Alfonso Restrepo Moreno",
+    "misma dirección (Calle 48 #43-87, Medellín) y misma ficha de Google Maps; Cinemancia 2025 lo publicó con el pin a 4 km (27 nov 2026)"
    ]
   ],
   "distintos": [
@@ -10524,7 +10501,6 @@
    "s_09b62d67",
    "s_0a0f2470",
    "s_0af324db",
-   "s_0b79c2ba",
    "s_0bbb84e5",
    "s_0cc0d8e2",
    "s_1021dabf",
@@ -10535,7 +10511,6 @@
    "s_1d996547",
    "s_2056aff0",
    "s_205f3363",
-   "s_22fe5886",
    "s_23463670",
    "s_24c3ac31",
    "s_27e8f3e2",
@@ -10549,12 +10524,10 @@
    "s_3217e964",
    "s_3324b403",
    "s_39107202",
-   "s_39b49fba",
    "s_3a422f2a",
    "s_3bb9f4df",
    "s_3c174214",
    "s_3c2f53cf",
-   "s_3cc54ab6",
    "s_3d446a6c",
    "s_3d810f53",
    "s_3df2df68",
@@ -10575,15 +10548,12 @@
    "s_55ba19eb",
    "s_56d5bec2",
    "s_57240f05",
-   "s_57f81227",
    "s_57fda933",
    "s_5b798d64",
    "s_603976c3",
    "s_63ca461f",
    "s_63e34462",
    "s_659f2a44",
-   "s_6a4302c3",
-   "s_6cf2cf5a",
    "s_72d9a1aa",
    "s_73cac39d",
    "s_73e47185",
@@ -10593,7 +10563,6 @@
    "s_7de8bddf",
    "s_7e3dd06f",
    "s_854bd5a3",
-   "s_859f08bc",
    "s_89b03e3b",
    "s_8d369c94",
    "s_8d82c9c5",
@@ -10608,12 +10577,10 @@
    "s_9cd42c9a",
    "s_a2381802",
    "s_a3e4479d",
-   "s_a778bfa3",
    "s_a9ccfb29",
    "s_af437f4a",
    "s_afbde4e6",
    "s_b054f641",
-   "s_b067121f",
    "s_b74ca288",
    "s_b75b331b",
    "s_b7eadc36",
@@ -10622,8 +10589,6 @@
    "s_bc53ff29",
    "s_bf4f782d",
    "s_bfe8b044",
-   "s_c19bda57",
-   "s_cb9cf76f",
    "s_cc663c68",
    "s_cdc0ebb9",
    "s_ce6a3ac5",
@@ -10637,10 +10602,8 @@
    "s_e4ad0263",
    "s_e5a9771f",
    "s_e84293c6",
-   "s_eca709c9",
    "s_ecea4a9b",
    "s_ed587a37",
-   "s_eec0c2a8",
    "s_f1eeffaa",
    "s_f7d2d58e",
    "s_f81e2500",
