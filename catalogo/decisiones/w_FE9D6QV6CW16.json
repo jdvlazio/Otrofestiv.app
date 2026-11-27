@@ -25,5 +25,29 @@
   "antes": {
    "provinciadevelez-2026": "2025"
   }
+ },
+ {
+  "work_id": "w_FE9D6QV6CW16",
+  "campo": "sinopsis.es",
+  "valor": "Una señora va al médico y termina convertida en adicta al clonazepam.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "Juan (respuesta del festival, 27 nov)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Una señora va al médico y termina convertida en adicta al clonazepam."
+  }
+ },
+ {
+  "work_id": "w_FE9D6QV6CW16",
+  "campo": "sinopsis.en",
+  "valor": "A woman goes to the doctor and ends up addicted to clonazepam.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "Juan (respuesta del festival, 27 nov)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "A woman goes to the doctor and ends up addicted to clonazepam."
+  }
  }
 ]

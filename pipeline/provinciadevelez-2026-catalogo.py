@@ -197,11 +197,16 @@ SINOPSIS = {
         'para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de '
         'Ati Gündiwa Villafaña Mejía.'),
     'Gualí': ('https://www.facebook.com/festivaldecinebarbosa (20 nov; el final del pie viene cortado)', 'En el corazón de la sabana de Bogotá, el humedal Gualí es un santuario de biodiversidad. El documental se sumerge en su riqueza natural a través de una narrativa visual poética.'),
+    # Respuesta del festival a Juan por Instagram, 27 nov 2026 (texto suyo, apenas redactado)
+    'El empiezo': ('respuesta del festival por Instagram a Juan, 27 nov 2026', 'Videoclip sobre el campo: un campesino convierte la luna en una pequeña tierra.'),
+    'Coming from Hell': ('respuesta del festival por Instagram a Juan, 27 nov 2026', 'Una señora va al médico y la convierten en adicta al clonazepam.'),
     'Ayuno y cenizas': (WEB,'Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy.'),
 }
 
 # Sinopsis en inglés: traducción nuestra de la española publicada (24 nov 2026)
 SINOPSIS_EN = {
+    "El empiezo": "A music video about the countryside: a farmer turns the moon into a small piece of land.",
+    "Coming from Hell": "A woman goes to the doctor and is turned into a clonazepam addict.",
     "Nueve jueves en Riachuelo": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
     "Sinfonía incompleta de oficios del Fonce": "On a journey of images set to the rhythm of music, we enter emblematic but inaccessible places in San Gil. The camera reveals the inside of the factories and the trades that still survive there: hands, gears, machines, musical instruments and their harmony, in an audiovisual symphony that lets us get to know these places.",
     "Pez azul": "A girl sets out on a quite moving journey to heal and to let go. Her mother will always be with her.",
