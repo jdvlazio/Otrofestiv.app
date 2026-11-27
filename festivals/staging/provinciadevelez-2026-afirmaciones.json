@@ -1,0 +1,33 @@
+{
+ "_provenance": {
+  "fuente": "Juan, por una story de IG del festival",
+  "capturado": "2026-11-27",
+  "metodo": "una afirmación por casilla, con su fuente (docs/FUNCION.md)"
+ },
+ "afirmaciones": [
+  {
+   "funcion": "f_79a0ffd095",
+   "casilla": "has_qa",
+   "valor": true,
+   "contra": false,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "La funcion de La Imaginada tiene QA con Carolina Muñoz, lo vi en la última story de IG que subió el festival",
+    "fecha": "2026-11-27"
+   },
+   "evidencia": "Story de IG del festival vista por Juan (26-27 nov); Carolina Muñoz es la directora de la obra"
+  },
+  {
+   "funcion": "f_79a0ffd095",
+   "casilla": "qa_type",
+   "valor": "team",
+   "contra": null,
+   "fuente": {
+    "tipo": "juan",
+    "frase": "La funcion de La Imaginada tiene QA con Carolina Muñoz, lo vi en la última story de IG que subió el festival",
+    "fecha": "2026-11-27"
+   },
+   "evidencia": "Story de IG del festival vista por Juan (26-27 nov); Carolina Muñoz es la directora de la obra"
+  }
+ ]
+}
