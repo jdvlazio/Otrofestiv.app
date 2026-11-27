@@ -147,6 +147,25 @@ class Publicados(Base):
         self.assertEqual(len(S.sin_evidencia_nueva(self.r)), 1)            # uno nuevo sí frena
 
 
+class Idempotente(Base):
+    """27 nov 2026: cada --construir sumaba ~31 redirecciones de ids acuñados y
+    fundidos en la misma corrida (617 → 1020 en un lote de 13 evidencias)."""
+    def test_reconstruir_no_suma_redirecciones(self):
+        # el caso real: un pin ENLAZADO (`_matriz`) y otro festival suelto con el
+        # mismo nombre — el suelto ya no encuentra el id (lo tomó el enlazado),
+        # acuña uno y la fusión tardía lo junta
+        self.geo('a-2026', {'Teatro X': {'lat': 6.0, 'lng': -75.0, '_prec': 'manual'}})
+        S.construir(self.r)
+        sid, _ = self.unico()
+        self.geo('a-2026', {'Teatro X': {'lat': 6.0, 'lng': -75.0, '_prec': 'manual', '_matriz': sid}})
+        json.dump({'venues': {'Teatro X': {'lat': 6.0004, 'lng': -75.0}}}, open(f'{self.r}/festivals/viejo-2025.json', 'w'))
+        S.construir(self.r)
+        antes = dict(S.leer(self.r)['redirecciones'])
+        for _ in range(3):
+            S.construir(self.r)
+        self.assertEqual(S.leer(self.r)['redirecciones'], antes)
+
+
 class Ficha(Base):
     def test_ficha_desde_plan_publicado_y_funciones(self):
         self.geo('a-2026', {'Cinemateca de Bogotá - Bogotá': {'lat': 4.6105, 'lng': -74.0705, '_prec': 'manual'}})

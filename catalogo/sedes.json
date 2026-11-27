@@ -254,8 +254,10 @@
    "lat": 4.5953608,
    "lng": -74.0724134,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cineautopsia-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Fundaci%C3%B3n+Gilberto+Alzate+Avenda%C3%B1o/@4.5953883,-74.0726531,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f99a8c21dc503:0x593362cf6af7940f!8m2!3d4.5953883!4d-74.0726531!16s%2Fg%2F12276wld",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cl. 10 #3-16",
    "alias": [
@@ -335,8 +337,10 @@
    "lat": 4.626481,
    "lng": -74.0644571,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "anibia-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Pontificia+Universidad+Javeriana/@4.6284875,-74.0646645,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f99a8193f1c9f:0xf93431640f134c07!8m2!3d4.6284875!4d-74.0646645!16zL20vMDdteTBi",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 40B # 5-37",
    "alias": [
@@ -988,8 +992,10 @@
    "lat": 6.2458698,
    "lng": -75.5639884,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "fantasmagoria-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Comfama+Claustro+San+Ignacio/@6.2458698,-75.5639884,17z/data=!3m1!4b1!4m6!3m5!1s0x8e442857089d860b:0x30ea326f2cf3897e!8m2!3d6.2458698!4d-75.5639884!16s%2Fg%2F120qd1wg",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Claustro Comfama San Ignacio, Cra. 44 #48-18",
    "alias": [
@@ -1987,8 +1993,10 @@
    "lat": 6.2575625,
    "lng": -75.6019375,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "cinemancia-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Facultad+de+Artes+y+Humanidades+del+ITM/@6.2575168,-75.6019566,17z/data=!3m1!4b1!4m6!3m5!1s0x8e44297246840b83:0x3cd6867bc14d8c6c!8m2!3d6.2575168!4d-75.6019566!16s%2Fg%2F1tczfz6v",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 47A # 85–20, Medellín, Antioquia",
    "alias": [
@@ -2285,8 +2293,10 @@
    "lat": 5.0559375,
    "lng": -75.4929375,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Universidad+de+Caldas/@5.0559546,-75.4928883,17z/data=!3m1!4b1!4m6!3m5!1s0x8e476564a7bfefc7:0xc1e29e2ea369afb6!8m2!3d5.0559546!4d-75.4928883!16s%2Fm%2F05mrdwl",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [
     "Universidad de Caldas - Auditorio Roberto Vélez Correa - Manizales"
@@ -3720,8 +3730,10 @@
    "lat": 6.2705481,
    "lng": -75.5635288,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Jard%C3%ADn+Bot%C3%A1nico+de+Medell%C3%ADn/@6.2693605,-75.5648496,17z/data=!3m1!4b1!4m6!3m5!1s0x8e4428e80e411f91:0x142ab912fdb68353!8m2!3d6.2693605!4d-75.5648496!16s%2Fm%2F0w7ppn7",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cl. 73 #51D-14",
    "alias": [
@@ -5129,8 +5141,10 @@
    "lat": 4.6342839,
    "lng": -74.0865589,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "midbo-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Sede+Bogot%C3%A1+-+Universidad+Nacional+de+Colombia/@4.6396672,-74.0890479,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9bd14943c13b:0x3de530667d9ff6b0!8m2!3d4.6396672!4d-74.0890479!16zL20vMDRqMGxu",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [
     "Universidad Nacional de Colombia - Bogotá",
@@ -6127,8 +6141,10 @@
    "lat": 6.2459198,
    "lng": -75.5565561,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Museo+Casa+de+la+Memoria/@6.2459273,-75.5566562,17z/data=!3m1!4b1!4m6!3m5!1s0x8e442858bf2ab6b9:0xb5ad51d32782ddb4!8m2!3d6.2459273!4d-75.5566562!16s%2Fg%2F11c5wx0t33",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cl. 51 #36-66. Parque Bicentenario",
    "alias": [
@@ -6270,8 +6286,10 @@
    "lat": 4.585959,
    "lng": -74.1586544,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "biff-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Teatro+del+Ensue%C3%B1o/@4.585959,-74.1586544,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9f58bf6fd6ad:0x829ccb61379150dd!8m2!3d4.585959!4d-74.1586544!16s%2Fg%2F11h93djzd2",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Tv. 70D #60-90 Sur",
    "alias": [
@@ -7247,8 +7265,10 @@
    "lat": 3.4502809,
    "lng": -76.5453033,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Museo+La+Tertulia/@3.4502809,-76.5453033,17z/data=!3m1!4b1!4m6!3m5!1s0x8e30a67972954e17:0x7a4c9ebc2e3d386b!8m2!3d3.4502809!4d-76.5453033!16s%2Fg%2F11b6pkts5q",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Carrera 1 Oeste #5-105, El Peñón",
    "alias": [
@@ -7564,8 +7584,10 @@
    "lat": 5.0563125,
    "lng": -75.4854375,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/All+Cine/@5.0562896,-75.4854314,17z/data=!3m1!4b1!4m6!3m5!1s0x8e4765a6dd444799:0xb8f366547fa90a00!8m2!3d5.0562896!4d-75.4854314!16s%2Fg%2F11t40lch8_",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [
     "All Cine Cable Plaza",
@@ -7964,8 +7986,10 @@
    "lat": 10.9953387,
    "lng": -74.78881,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficica-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Universidad+De+La+Costa,+CUC/@10.9951685,-74.7908003,17z/data=!3m1!4b1!4m6!3m5!1s0x8ef42d7974b945fd:0x58d2cc28a018ba1!8m2!3d10.9951685!4d-74.7908003!16s%2Fg%2F1hhzg57mq",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Entrada #2, Calle 52 #56A-75",
    "alias": [],
@@ -8002,8 +8026,10 @@
    "lat": 11.0055967,
    "lng": -74.8022166,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficica-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/CINEMATECA+DEL+CARIBE+-+SALA+COUNTRY/@11.0055967,-74.8022166,17z/data=!3m1!4b1!4m6!3m5!1s0x8ef42d6dc6415c91:0x4f373ebf9e6679be!8m2!3d11.0055967!4d-74.8022166!16s%2Fg%2F1hd_40glw",
+    "fecha": "2026-11-27",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cl. 76 #57-61",
    "alias": [
@@ -10203,7 +10229,6 @@
   "sin_url": [
    "s_03bcfa6f",
    "s_05f4d981",
-   "s_0655bb7b",
    "s_0a4d1410",
    "s_0b6dd1ff",
    "s_0ecc197a",
@@ -10215,7 +10240,6 @@
    "s_12238873",
    "s_125e80c3",
    "s_1311c9f4",
-   "s_1347d668",
    "s_148dd95b",
    "s_15ec15df",
    "s_180f653f",
@@ -10238,14 +10262,12 @@
    "s_298b07a2",
    "s_2b8a4bc3",
    "s_2e88d79d",
-   "s_2f75a36e",
    "s_30a5d6b9",
    "s_324d7230",
    "s_3327940f",
    "s_33ad881a",
    "s_34124cb5",
    "s_36b34e66",
-   "s_384e68d5",
    "s_39a0cbb2",
    "s_3aba7a01",
    "s_3c28b8d0",
@@ -10314,7 +10336,6 @@
    "s_86f5f95f",
    "s_882ae757",
    "s_8858d894",
-   "s_891e8481",
    "s_8cc7eb0e",
    "s_8d191328",
    "s_8d94ab1d",
@@ -10339,7 +10360,6 @@
    "s_a752daa6",
    "s_a788828f",
    "s_a7d462a5",
-   "s_a8672cd3",
    "s_aafb86e6",
    "s_ab91ad2b",
    "s_ac49afea",
@@ -10365,12 +10385,10 @@
    "s_bfe8eb92",
    "s_c0e88ef0",
    "s_c160e346",
-   "s_c2f59f7f",
    "s_c4b65a07",
    "s_c85c8e31",
    "s_cc00aafb",
    "s_cf7584fa",
-   "s_d1996183",
    "s_d1aeb7dc",
    "s_d278bee5",
    "s_d478c93a",
@@ -10384,9 +10402,7 @@
    "s_dbb94309",
    "s_dd71de11",
    "s_dd9fc38c",
-   "s_df30b46a",
    "s_dfa5ca4b",
-   "s_dfa5f4a5",
    "s_dfae17a9",
    "s_dfb79418",
    "s_e046a622",
@@ -10425,7 +10441,6 @@
    "s_00e7323f",
    "s_010ecd16",
    "s_0237c113",
-   "s_0344094c",
    "s_035a81a0",
    "s_06b3cd76",
    "s_09b62d67",
@@ -10501,7 +10516,6 @@
    "s_5b798d64",
    "s_603976c3",
    "s_6184f4b5",
-   "s_637019f0",
    "s_63ca461f",
    "s_63e34462",
    "s_659f2a44",
@@ -10537,7 +10551,6 @@
    "s_a2381802",
    "s_a3e4479d",
    "s_a49e5821",
-   "s_a5a8c84b",
    "s_a778bfa3",
    "s_a9ccfb29",
    "s_af437f4a",
