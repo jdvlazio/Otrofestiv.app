@@ -65,8 +65,23 @@
      "resultado": "ficha de la obra en la web del festival: sin póster"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "Ninguna fuente (TMDB, IMDb, Letterboxd, búsqueda web, perfil del director) muestra afiche ni imagen de la obra"
+   "estado": "alta_hecha",
+   "por_que_sin_afiche": "Ninguna fuente (TMDB, IMDb, Letterboxd, búsqueda web, perfil del director) muestra afiche ni imagen de la obra",
+   "afiche": {
+    "url": "fuentes/bogoshorts-2026/afiches-drive/a-body-that-hurts.jpg",
+    "fuente": "afiche oficial del Drive de BOGOSHORTS",
+    "archivo": "fuentes/bogoshorts-2026/altas/a-body-that-hurts.jpg",
+    "px": [
+     1333,
+     2000
+    ],
+    "ratio": 0.6665,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-27"
+   },
+   "tmdb_id": 1849762,
+   "alta_fecha": "2026-11-27"
   },
   "Amará": {
    "titulo": "Amará",
@@ -454,8 +469,33 @@
      "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "sin afiche tras catálogo, web/redes del director, plataformas y Bing Imágenes"
+   "estado": "alta_hecha",
+   "por_que_sin_afiche": "sin afiche tras catálogo, web/redes del director, plataformas y Bing Imágenes",
+   "afiche": {
+    "url": "fuentes/bogoshorts-2026/afiches-drive/carta-a-un-joven-ladr-n.jpg",
+    "fuente": "afiche oficial del Drive de BOGOSHORTS",
+    "archivo": "fuentes/bogoshorts-2026/altas/carta-a-un-joven-ladron.jpg",
+    "px": [
+     1597,
+     2396
+    ],
+    "ratio": 0.6665,
+    "recorte": {
+     "de": [
+      1597,
+      2000
+     ],
+     "estirado": [
+      1597,
+      2396
+     ],
+     "objetivo": 0.6667
+    },
+    "veredicto_criterio": null,
+    "fecha": "2026-11-27"
+   },
+   "tmdb_id": 1849754,
+   "alta_fecha": "2026-11-27"
   },
   "Cartas a Daniel Apóstol": {
    "titulo": "Cartas a Daniel Apóstol",
@@ -672,8 +712,23 @@
      "resultado": "ficha de la obra en la web del festival, sin póster"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "sin afiche en catálogo, web ni Bing Imágenes"
+   "estado": "alta_hecha",
+   "por_que_sin_afiche": "sin afiche en catálogo, web ni Bing Imágenes",
+   "afiche": {
+    "url": "fuentes/bogoshorts-2026/afiches-drive/clasificado-personal.jpg",
+    "fuente": "afiche oficial del Drive de BOGOSHORTS",
+    "archivo": "fuentes/bogoshorts-2026/altas/clasificado-personal.jpg",
+    "px": [
+     1350,
+     2000
+    ],
+    "ratio": 0.675,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-27"
+   },
+   "tmdb_id": 1849756,
+   "alta_fecha": "2026-11-27"
   },
   "Cocodrilo (Dillom)": {
    "titulo": "Cocodrilo (Dillom)",
@@ -3506,8 +3561,23 @@
      "resultado": "ficha de la obra en la web del festival: sin póster"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "Gargantua (agencia) solo publica fotogramas; ficha BOGOSHORTS corto/4364 sin póster; Bing Imágenes sin afiche"
+   "estado": "alta_hecha",
+   "por_que_sin_afiche": "Gargantua (agencia) solo publica fotogramas; ficha BOGOSHORTS corto/4364 sin póster; Bing Imágenes sin afiche",
+   "afiche": {
+    "url": "fuentes/bogoshorts-2026/afiches-drive/nothing-here-is-lost.jpg",
+    "fuente": "afiche oficial del Drive de BOGOSHORTS",
+    "archivo": "fuentes/bogoshorts-2026/altas/nothing-here-is-lost.jpg",
+    "px": [
+     1350,
+     2000
+    ],
+    "ratio": 0.675,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-27"
+   },
+   "tmdb_id": 1849751,
+   "alta_fecha": "2026-11-27"
   },
   "Némica": {
    "titulo": "Némica",
@@ -5579,8 +5649,21 @@
      "resultado": "Solo fotogramas/capturas (KFF 1920×1080, TAICCA, Swapcard 1687×1687 cuadrado), ningún afiche vertical"
     }
    },
-   "estado": "sin_afiche",
-   "por_que_sin_afiche": "Experiencia VR: ficha del festival sin póster; Acorn Den, TAICCA, KFF y Bing Imágenes solo tienen fotogramas/capturas horizontales o cuadradas"
+   "estado": "alta_posible",
+   "por_que_sin_afiche": "Experiencia VR: ficha del festival sin póster; Acorn Den, TAICCA, KFF y Bing Imágenes solo tienen fotogramas/capturas horizontales o cuadradas",
+   "afiche": {
+    "url": "fuentes/bogoshorts-2026/afiches-drive/when-the-flowers-bloom.jpg",
+    "fuente": "afiche oficial del Drive de BOGOSHORTS",
+    "archivo": "fuentes/bogoshorts-2026/altas/when-the-flowers-bloom.jpg",
+    "px": [
+     1414,
+     2000
+    ],
+    "ratio": 0.707,
+    "recorte": null,
+    "veredicto_criterio": null,
+    "fecha": "2026-11-27"
+   }
   },
   "Who Are We Against God?": {
    "titulo": "Who Are We Against God?",
@@ -6819,6 +6902,6 @@
  "_nota": "registro de altas: por obra sin ficha, las fuentes revisadas y la decisión. Se escribe con pipeline/altas.py, no a mano.",
  "_provenance": {
   "fuente": "pipeline/altas.py (TMDB + fuentes revisadas a mano, una por una)",
-  "capturado": "2026-11-24"
+  "capturado": "2026-11-27"
  }
 }

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-25"
+  "capturado": "2026-11-27"
  },
  "obras": [
   {
@@ -19,7 +19,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH1NB8Q7M8Y, bogoshorts-2026)",
    "work_id": "w_4KH1NB8Q7M8Y",
    "_director": "Steven Woloshen",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/1000-plateaus-2004-2014.jpg",
    "posterSource": "tmdb"
   },
@@ -37,7 +37,7 @@
    "lbSlug": "2000-2026",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1712540 «2000» — director ✓ y año/duración ✓",
    "_director": "Renata Lučić",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/2000.jpg",
    "posterSource": "tmdb"
   },
@@ -76,6 +76,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "A Body that Hurts",
+   "tmdb_id": 1849762,
+   "titulo_original": "A Body that Hurts",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A body that hurts is a short film conceived out of a request from the body to be fully involved in the task of animation. The mechanical nature of the work leads to the neglect of the body, causing pain, fatigue, and discomfort. Through repetitive actions, grotesque sound and the use of different hands-on techniques, the video explores the decaying body as an operator rather than a creator, reflecting the lack of attention put into the flesh during labor.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 4,
+   "pais_tmdb": "",
+   "lbSlug": "a-body-that-hurts",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_director": "David Espitia Calderón",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/abodythathurts-drive.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial del Drive de BOGOSHORTS (ABodyThatHurts_CN-ANI01_Poster_24BSFF.tiff)"
+  },
+  {
    "titulo": "A Little Death",
    "tmdb_id": 1716965,
    "titulo_original": "A Little Death",
@@ -90,7 +109,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFQG532F93Z, bogoshorts-2026)",
    "work_id": "w_4KFQG532F93Z",
    "_director": "Leto Meade, Jonathan Rockefeller",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/a-little-death.jpg",
    "posterSource": "tmdb"
   },
@@ -109,7 +128,7 @@
    "_verificado": "el catálogo ya la tiene (w_7THXGHQ2R69P, bogoshorts-2026)",
    "work_id": "w_7THXGHQ2R69P",
    "_director": "Kate Voet, Victor Maes",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/a-long-goodbye.jpg",
    "posterSource": "tmdb"
   },
@@ -128,7 +147,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGW8XAHE5H0, bogoshorts-2026)",
    "work_id": "w_4KGW8XAHE5H0",
    "_director": "Anouk Chambaz",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/a-quiet-day.jpg",
    "posterSource": "tmdb"
   },
@@ -147,7 +166,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDR3QZDYR8A, bogoshorts-2026)",
    "work_id": "w_4KDR3QZDYR8A",
    "_director": "Amélie Hardy",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/a-wolf-in-the-suburbs.jpg",
    "posterSource": "tmdb"
   },
@@ -165,7 +184,7 @@
    "lbSlug": "a-los-once",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1826830 «A los once» — director ✓ y año/duración ✓",
    "_director": "Priscila Núñez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/a-los-once.jpg",
    "posterSource": "tmdb"
   },
@@ -203,7 +222,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH6F5Z6WDRQ, bogoshorts-2026)",
    "work_id": "w_4KH6F5Z6WDRQ",
    "_director": "Johannes Förster & Elkin Calderón Guevara",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/about-happy-hippos-and-sad-peacocks.jpg",
    "posterSource": "tmdb"
   },
@@ -223,7 +242,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH835JPV8Z2, bogoshorts-2026)",
    "work_id": "w_4KH835JPV8Z2",
    "_director": "María Rojas Arias",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/abrir-monte.jpg",
    "posterSource": "tmdb"
   },
@@ -243,7 +262,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFW0P7SZC6P, bogoshorts-2026)",
    "work_id": "w_4KFW0P7SZC6P",
    "_director": "Roddy Dextre",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/alla-en-el-cielo.jpg",
    "posterSource": "tmdb"
   },
@@ -281,7 +300,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGQRE8VCEF7, bogoshorts-2026)",
    "work_id": "w_4KGQRE8VCEF7",
    "_director": "Arturo Spano",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/an-impossible-word-of-praise.jpg",
    "posterSource": "tmdb"
   },
@@ -320,7 +339,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEJKEVVZHY3, bogoshorts-2026)",
    "work_id": "w_4KEJKEVVZHY3",
    "_director": "Alba Cros Pellisé",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/anhel-de-llum.jpg",
    "posterSource": "tmdb"
   },
@@ -339,7 +358,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ7CDARJ28S, bogoshorts-2026)",
    "work_id": "w_4KJ7CDARJ28S",
    "_director": "Chloe Hebert",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/aster.jpg",
    "posterSource": "tmdb"
   },
@@ -358,7 +377,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJA35RRG18G, bogoshorts-2026)",
    "work_id": "w_4KJA35RRG18G",
    "_director": "Lola Grand, Alexandre Arpentinier, Mathieu Blanchys, Tristan Lamarca, Thomas Lemaille, Jean-Charles Lusseau",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/asteria.jpg",
    "posterSource": "tmdb"
   },
@@ -378,7 +397,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF4HG4N9S73, bogoshorts-2026)",
    "work_id": "w_4KF4HG4N9S73",
    "_director": "Axelle Vinassac, Maël Caradec",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/au-dessus-du-vacarme.jpg",
    "posterSource": "tmdb"
   },
@@ -397,7 +416,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDVC8AE1ZPJ, bogoshorts-2026)",
    "work_id": "w_4KDVC8AE1ZPJ",
    "_director": "Andrés Khamis Giacoman, Francisca Khamis Giacoman",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/baisanos.jpg",
    "posterSource": "tmdb"
   },
@@ -415,7 +434,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGNGB1M5J9B, bogoshorts-2026)",
    "work_id": "w_4KGNGB1M5J9B",
    "_director": "Peter Vass",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/banshee.jpg",
    "posterSource": "tmdb",
    "genero": "Terror",
@@ -438,7 +457,7 @@
    "lbSlug": "barcelona-main-city-of-catalonia",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 356487 «Barcelona, Main City of Catalonia» — director ✓ y año/duración ✓",
    "_director": "Segundo de Chomón",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/barcelona.jpg",
    "posterSource": "tmdb"
   },
@@ -457,7 +476,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KFHGYG6P2D4, bogoshorts-2026)",
    "work_id": "w_4KFHGYG6P2D4",
    "_director": "Theodore Ushev",
-   "_sondeado": "2026-11-25"
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/barcelonadefoc-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (Barcelona de Foc_CITY_GAUDÍ15_Fotograma1_24BSFF.jpg)"
   },
   {
    "titulo": "Bariazioak",
@@ -494,7 +516,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDW91HEMYMQ, bogoshorts-2026)",
    "work_id": "w_4KDW91HEMYMQ",
    "_director": "RJ Sanchez, Eduardo Giralt Brun, Pedro Valtierra Anza",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/barra-brava.jpg",
    "posterSource": "tmdb"
   },
@@ -513,7 +535,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGE14X32AE7, bogoshorts-2026)",
    "work_id": "w_4KGE14X32AE7",
    "_director": "Sarah Saidan",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/beach-flags.jpg",
    "posterSource": "tmdb"
   },
@@ -532,7 +554,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF5J046MV9D, bogoshorts-2026)",
    "work_id": "w_4KF5J046MV9D",
    "_director": "Dubravka Turić",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/belladonna.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4252), 315×450"
@@ -639,7 +661,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFKDE46JK0D, bogoshorts-2026)",
    "work_id": "w_4KFKDE46JK0D",
    "_director": "Rubens Fabricio Anzolin, João Fernando Chagas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/braco-forte.jpg",
    "posterSource": "tmdb"
   },
@@ -657,7 +679,7 @@
    "lbSlug": "bus",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1274419 «Bus» — director ✓ y año/duración ✓",
    "_director": "André Balbuena",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/bus.jpg",
    "posterSource": "tmdb"
   },
@@ -676,7 +698,7 @@
    "lbSlug": "tropic-of-cancer-1",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
    "_director": "Alex Jiang",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
    "posterSource": "tmdb"
   },
@@ -696,7 +718,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KFD6X5KGHZ7, bogoshorts-2026)",
    "work_id": "w_4KFD6X5KGHZ7",
    "_director": "Raúl Arroyo",
-   "_sondeado": "2026-11-25"
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/cadadiapasoporaqui-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (Cada día paso por aquí_CITY_GAUDÍ11_Fotograma1_24BSFF.jpg)"
   },
   {
    "titulo": "Cameras Take Five",
@@ -712,10 +737,29 @@
    "_verificado": "el catálogo ya la tiene (w_4KH2FHZGP1WS, bogoshorts-2026)",
    "work_id": "w_4KH2FHZGP1WS",
    "_director": "Steven Woloshen",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/cameras-take-five.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial de la obra (https://www.imdb.com/title/tt0377583/)"
+  },
+  {
+   "titulo": "Carta a un joven ladrón",
+   "tmdb_id": 1849754,
+   "titulo_original": "Carta a un joven ladrón",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "“Letter to a Young Thief,” a short film that straddles the boundaries between self-portraiture and experimentation with personal archives. The work explores the tension between the materiality of memory and the construction of identity, presenting a stream of consciousness that reflects on the course of life, temporal asynchrony, and the ever-present possibility of death.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "carta-a-un-joven-ladron",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_director": "Daniel Quintero Correa",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/cartaaunjovenladron-drive.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial del Drive de BOGOSHORTS (Cartaunjovenladrón_CN-EXP05_Poster_24BSFF.jpg.png)"
   },
   {
    "titulo": "Cat Me If You Can",
@@ -732,7 +776,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHVJA5C3STR, bogoshorts-2026)",
    "work_id": "w_4KHVJA5C3STR",
    "_director": "Edouard Delebecque, Giovanni Edwards, Amaury Da Costa, Erwan Annah, Yauhan Guo, Andrea Origlia",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/cat-me-if-you-can.jpg",
    "posterSource": "tmdb"
   },
@@ -751,28 +795,31 @@
    "_verificado": "el catálogo ya la tiene (w_4KEKTTFVMWNS, bogoshorts-2026)",
    "work_id": "w_4KEKTTFVMWNS",
    "_director": "Anna Mundet Molas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/cementiri-d-antenes.jpg",
    "posterSource": "tmdb"
   },
   {
    "titulo": "Chingona (Tamara Flores)",
    "tmdb_id": 1719717,
-   "titulo_original": "Tamara Flores - Chingona",
-   "poster_path": "/ijjeIKogGfkcNNJJTfYXCpmkdNN.jpg",
+   "titulo_original": null,
    "synopsis_es": "",
-   "synopsis_en": "Tamara Flores moves with fearless determination through the colorful streets of Acatlán, Mexico, the hometown of her mother. Her impossibly long braid is a living symbol of strength and empowerment. “Chingona” is a bold visual anthem about carving your own path and owning every step forward. Bursting with color, rhythm and dance, it’s a celebration of identity and the unapologetic freedom to live life on your own terms.",
-   "genero": "Music",
+   "synopsis_en": "",
    "anio_tmdb": 0,
-   "duracion_tmdb": 3,
+   "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "tamara-flores-chingona",
    "_verificado": "el catálogo ya la tiene (w_4KJK77PYY5V4, bogoshorts-2026)",
    "work_id": "w_4KJK77PYY5V4",
    "_director": "Rupert Höller",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/chingona-tamara-flores.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra (https://festival.bogoshorts.com/corto/4350; copia de 780 px bajada de TMDB 1719717 antes de que esa ficha se borrara)",
+   "genero": "Música",
+   "_heredado": {
+    "genero": "catálogo w_4KJK77PYY5V4 (bogoshorts-2026)"
+   }
   },
   {
    "titulo": "Choque de trenes",
@@ -808,9 +855,28 @@
    "_verificado": "el catálogo ya la tiene (w_4KHCD5HZVPCB, bogoshorts-2026)",
    "work_id": "w_4KHCD5HZVPCB",
    "_director": "Zhenia Kazankina",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/city-of-owls.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Clasificado personal",
+   "tmdb_id": 1849756,
+   "titulo_original": "Clasificado personal",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "At some point in the twentieth century, the radio plays. Lost desires and undelivered letters travel through Bogotá’s electricity cables.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "clasificado-personal",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_director": "Juan Pablo Melo",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/clasificadopersonal-drive.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial del Drive de BOGOSHORTS (ClasificadoPersonal_CN-EXP06_Póster_24BSFFCLP.pdf)"
   },
   {
    "titulo": "Cold Coffee",
@@ -827,7 +893,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHGM1ARNBBR, bogoshorts-2026)",
    "work_id": "w_4KHGM1ARNBBR",
    "_director": "Luis de Jesús",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/cold-coffee.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4195), 450×667"
@@ -848,7 +914,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGR8SY1CCH9, bogoshorts-2026)",
    "work_id": "w_4KGR8SY1CCH9",
    "_director": "Prin Rodriguez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/comida-para-todos-divinidades-naturaleza-y-humanos.jpg",
    "posterSource": "tmdb"
   },
@@ -866,7 +932,7 @@
    "lbSlug": "complementarios",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Mar Triana García",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/complementarios.jpg",
    "posterSource": "tmdb"
   },
@@ -886,7 +952,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGRSGKF7F8H, bogoshorts-2026)",
    "work_id": "w_4KGRSGKF7F8H",
    "_director": "Alice dos Reis",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/computadora.jpg",
    "posterSource": "tmdb"
   },
@@ -904,7 +970,7 @@
    "lbSlug": "cuando-retornen-las-garzas",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1575134 «When the Herons Return» (2025, 19 min) acreditada a Robert Brand Ordóñez (persona TMDB 4113226): coincide director, año 2025, duración 19'25'' y título inglés del catálogo BOGOSHORTS. Sin IMDb ni póster en TMDB.",
    "_director": "Robert Brand Ordóñez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/cuando-retornen-las-garzas.jpg",
    "posterSource": "tmdb"
   },
@@ -943,7 +1009,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHS212ZW90W, bogoshorts-2026)",
    "work_id": "w_4KHS212ZW90W",
    "_director": "Zoé Pelchat",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/c-est-ma-s-ur.jpg",
    "posterSource": "tmdb"
   },
@@ -963,7 +1029,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE8X6ZCDT6Z, bogoshorts-2026)",
    "work_id": "w_4KE8X6ZCDT6Z",
    "_director": "Hana Jušić",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/da-je-kuca-dobra-i-vuk-bi-je-imao.jpg",
    "posterSource": "tmdb"
   },
@@ -982,7 +1048,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE1H4V2MPB8, bogoshorts-2026)",
    "work_id": "w_4KE1H4V2MPB8",
    "_director": "Elizabeth Hobbs",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/daughters-of-the-late-colonel.jpg",
    "posterSource": "tmdb"
   },
@@ -1033,7 +1099,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KG81V5AYB9P, bogoshorts-2026)",
    "work_id": "w_4KG81V5AYB9P",
    "_director": "Amos Ostermeier",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/die-tauben.jpg",
    "posterSource": "tmdb"
   },
@@ -1052,7 +1118,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KETZZZ07B5N, bogoshorts-2026)",
    "work_id": "w_4KETZZZ07B5N",
    "_director": "Patrícia Saramago",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/dois-e-um-gato.jpg",
    "posterSource": "tmdb"
   },
@@ -1091,7 +1157,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJADXYMS6JX, bogoshorts-2026)",
    "work_id": "w_4KJADXYMS6JX",
    "_director": "Jerónimo Rocha",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/dedalo.jpg",
    "posterSource": "tmdb"
   },
@@ -1110,7 +1176,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH8NK5K2DR4, bogoshorts-2026)",
    "work_id": "w_4KH8NK5K2DR4",
    "_director": "Elkin Calderón Guevara, Diego Piñeros García",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/ekobio.jpg",
    "posterSource": "tmdb"
   },
@@ -1192,7 +1258,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJGAQBYGZ3R, bogoshorts-2026)",
    "work_id": "w_4KJGAQBYGZ3R",
    "_director": "Gerardo García León",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/el-cortejo.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4147), 2550×3300"
@@ -1213,7 +1279,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHR0H0FQE9K, bogoshorts-2026)",
    "work_id": "w_4KHR0H0FQE9K",
    "_director": "Pau Peidro Vancells",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/el-dia-de-l-os.jpg",
    "posterSource": "tmdb"
   },
@@ -1270,7 +1336,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KFC70275MEB, bogoshorts-2026)",
    "work_id": "w_4KFC70275MEB",
    "_director": "Segundo de Chomón",
-   "_sondeado": "2026-11-25"
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/elgusanosolitario-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (09_gusano.jpg)"
   },
   {
    "titulo": "El hombre del reloj",
@@ -1286,7 +1355,7 @@
    "lbSlug": "el-hombre-del-reloj",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Daniel Prieto Muriel",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/el-hombre-del-reloj.jpg",
    "posterSource": "tmdb"
   },
@@ -1382,7 +1451,7 @@
    "lbSlug": "elefante-1",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1826828 'Elefante' dir. César Heredia, 15 min, sinopsis del Renault 4 y el padre = catálogo (Colombia 2014, 14'36''); coincide con IMDb tt4392972 y Proimágenes id 2344",
    "_director": "César Heredia Cruz",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/elefante.jpg",
    "posterSource": "tmdb"
   },
@@ -1400,7 +1469,7 @@
    "lbSlug": "in-the-silence-after",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1724318 'In the Silence After' (2026, 17 min, QA/US/CO) dir./guion/foto/montaje Sebastian Delascasas = catálogo (Catar, EE.UU., Colombia 2026, 16'50'', mismos créditos); IMDb tt43337293 en external_ids",
    "_director": "Sebastian Delascasas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/en-el-silencio-despues.jpg",
    "posterSource": "tmdb"
   },
@@ -1420,7 +1489,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDT1FZ9ZC90, bogoshorts-2026)",
    "work_id": "w_4KDT1FZ9ZC90",
    "_director": "Hervé Demers",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/en-pays-froid.jpg",
    "posterSource": "tmdb"
   },
@@ -1458,7 +1527,7 @@
    "lbSlug": "end-of-summer-2023-1",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1256387 «END OF SUMMER» — director ✓ y año/duración ✓",
    "_director": "Tara Attarzadeh",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/end-of-summer.jpg",
    "posterSource": "tmdb"
   },
@@ -1477,7 +1546,7 @@
    "lbSlug": "eri-the-cow",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1118590 «Eri, The Cow» — director ✓ y año/duración ✓",
    "_director": "Honami Yano",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/eri.jpg",
    "posterSource": "tmdb"
   },
@@ -1515,7 +1584,7 @@
    "lbSlug": "espaciar",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Daniela Giraldo Suárez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/espaciar.jpg",
    "posterSource": "tmdb"
   },
@@ -1533,7 +1602,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJMK06H4RE7, bogoshorts-2026)",
    "work_id": "w_4KJMK06H4RE7",
    "_director": "Aitana Ahrens",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/fantasy-land.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial de la ficha de TMDB 1840640 (acredita a Aitana Ahrens), sin el recorte del encuadre"
@@ -1552,7 +1621,7 @@
    "lbSlug": "fiction-2026",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1691015 «Fiction» — director ✓ y año/duración ✓",
    "_director": "Ambroise Rateau",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/fiction.jpg",
    "posterSource": "tmdb"
   },
@@ -1572,7 +1641,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ5FWWZMASS, bogoshorts-2026)",
    "work_id": "w_4KJ5FWWZMASS",
    "_director": "Ayaka Ohira",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/galverse.jpg",
    "posterSource": "tmdb"
   },
@@ -1685,7 +1754,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ2XXD4C463, bogoshorts-2026)",
    "work_id": "w_4KJ2XXD4C463",
    "_director": "Víctor Orozco Ramírez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/gofrodita.jpg",
    "posterSource": "tmdb"
   },
@@ -1703,7 +1772,7 @@
    "lbSlug": "grounded-2026-1",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1700763 «Grounded» — director ✓ y año/duración ✓",
    "_director": "Chris Callus",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/grounded.jpg",
    "posterSource": "tmdb"
   },
@@ -1817,7 +1886,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGMH5W98ZRG, bogoshorts-2026)",
    "work_id": "w_4KGMH5W98ZRG",
    "_director": "Avi Mograbi",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/halayon.jpg",
    "posterSource": "tmdb"
   },
@@ -1836,7 +1905,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF72RAZC5PP, bogoshorts-2026)",
    "work_id": "w_4KF72RAZC5PP",
    "_director": "Danielle Shapira, Matt Sweeney",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/i-wanna-go-home.jpg",
    "posterSource": "tmdb"
   },
@@ -1855,7 +1924,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHF4CV8JNQ8, bogoshorts-2026)",
    "work_id": "w_4KHF4CV8JNQ8",
    "_director": "Aliona Zagurovska",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/ici-azor.jpg",
    "posterSource": "tmdb"
   },
@@ -1873,7 +1942,7 @@
    "lbSlug": "idols-2026",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1654471 «Idols» — director ✓ y año/duración ✓",
    "_director": "Matt Halsall",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/idols.jpg",
    "posterSource": "tmdb"
   },
@@ -1892,7 +1961,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFPE5350M1D, bogoshorts-2026)",
    "work_id": "w_4KFPE5350M1D",
    "_director": "Ada Güvenir",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/if-only.jpg",
    "posterSource": "tmdb"
   },
@@ -1911,7 +1980,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF85Q7RVCNR, bogoshorts-2026)",
    "work_id": "w_4KF85Q7RVCNR",
    "_director": "Karine Winczura",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/in-articulo-mortis.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4210), 318×450"
@@ -1931,7 +2000,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH103Q0ZHY0, bogoshorts-2026)",
    "work_id": "w_4KH103Q0ZHY0",
    "_director": "Will Niava",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/jazz-infernal.jpg",
    "posterSource": "tmdb"
   },
@@ -1949,7 +2018,7 @@
    "lbSlug": "joychair",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Vanessa Sandre",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/joychair.jpg",
    "posterSource": "tmdb"
   },
@@ -1969,7 +2038,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEMBRYPQKFT, bogoshorts-2026)",
    "work_id": "w_4KEMBRYPQKFT",
    "_director": "Luzbeidy Monterrosa Atencio",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/julapuin-yonna.jpg",
    "posterSource": "tmdb"
   },
@@ -1988,7 +2057,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEZCS8XT06H, bogoshorts-2026)",
    "work_id": "w_4KEZCS8XT06H",
    "_director": "Mahmoud Assi",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/khufu.jpg",
    "posterSource": "tmdb"
   },
@@ -2006,7 +2075,7 @@
    "lbSlug": "class-photo",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1668922 «Class Photo» (2026, 17 min, Lituania, dir. Arnas Balčiūnas) con sinopsis idéntica a la del catálogo (Ignas, escuela abandonada); imdb_id tt41815531 coincide con IMDb; LB class-photo alt. Klasės nuotrauka",
    "_director": "Arnas Balčiūnas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/klases-nuotrauka.jpg",
    "posterSource": "tmdb"
   },
@@ -2060,7 +2129,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFRHPQVH43X, bogoshorts-2026)",
    "work_id": "w_4KFRHPQVH43X",
    "_director": "Péter Vácz",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/kutyaful.jpg",
    "posterSource": "tmdb"
   },
@@ -2125,7 +2194,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ0NZFX2N91, bogoshorts-2026)",
    "work_id": "w_4KJ0NZFX2N91",
    "_director": "Rémi Durin",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-grande-revasion.jpg",
    "posterSource": "tmdb"
   },
@@ -2164,7 +2233,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEX48ECW9KM, bogoshorts-2026)",
    "work_id": "w_4KEX48ECW9KM",
    "_director": "Renzo Cozza",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-hora-de-irse.jpg",
    "posterSource": "tmdb"
   },
@@ -2203,7 +2272,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDTWVRM7M5S, bogoshorts-2026)",
    "work_id": "w_4KDTWVRM7M5S",
    "_director": "Melissa Saavedra Gil",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-linea-del-mar.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4140), 253×450"
@@ -2243,7 +2312,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KETFK8PERRX, bogoshorts-2026)",
    "work_id": "w_4KETFK8PERRX",
    "_director": "Adrien Lagier, Roman Bellity",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-memoire-des-poissons.jpg",
    "posterSource": "tmdb"
   },
@@ -2263,7 +2332,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDSQ2DFC6FA, bogoshorts-2026)",
    "work_id": "w_4KDSQ2DFC6FA",
    "_director": "Alice Voisin",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-petite-ecole.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4248), 450×637"
@@ -2283,7 +2352,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KENR5ENZQTB, bogoshorts-2026)",
    "work_id": "w_4KENR5ENZQTB",
    "_director": "Daniela López Moreno",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-rabia.jpg",
    "posterSource": "tmdb"
   },
@@ -2302,7 +2371,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHHQQ7YDFTH, bogoshorts-2026)",
    "work_id": "w_4KHHQQ7YDFTH",
    "_director": "Sofía Camargo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-selva.jpg",
    "posterSource": "tmdb"
   },
@@ -2322,7 +2391,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGJ153QP32E, bogoshorts-2026)",
    "work_id": "w_4KGJ153QP32E",
    "_director": "Ali Cherri",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-sentinelle.jpg",
    "posterSource": "tmdb"
   },
@@ -2340,7 +2409,7 @@
    "lbSlug": "la-suma-de-todas-las-partes",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Maite Lucía Valero",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-suma-de-todas-las-partes.jpg",
    "posterSource": "tmdb"
   },
@@ -2358,7 +2427,7 @@
    "lbSlug": "la-vida-de-un-hilo",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Guillermo Castañeda, Andrea Castillo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-vida-de-un-hilo.jpg",
    "posterSource": "tmdb"
   },
@@ -2435,7 +2504,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFJW5DB2BZS, bogoshorts-2026)",
    "work_id": "w_4KFJW5DB2BZS",
    "_director": "Lucas Acher",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/laser-gato.jpg",
    "posterSource": "tmdb"
   },
@@ -2473,7 +2542,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDWWD07DD6X, bogoshorts-2026)",
    "work_id": "w_4KDWWD07DD6X",
    "_director": "Avril Lehmann, Yael Vallotton",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/le-miracle.jpg",
    "posterSource": "tmdb"
   },
@@ -2539,7 +2608,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHRH5M6MZZP, bogoshorts-2026)",
    "work_id": "w_4KHRH5M6MZZP",
    "_director": "Daria Blažević",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/lekcije.jpg",
    "posterSource": "tmdb"
   },
@@ -2578,7 +2647,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGS8P404AYQ, bogoshorts-2026)",
    "work_id": "w_4KGS8P404AYQ",
    "_director": "Gala Hernández López",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/like-moths-to-light.jpg",
    "posterSource": "tmdb"
   },
@@ -2597,7 +2666,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE5T266SQ0H, bogoshorts-2026)",
    "work_id": "w_4KE5T266SQ0H",
    "_director": "Bruno Tondeur",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/like-a-beast.jpg",
    "posterSource": "tmdb"
   },
@@ -2616,7 +2685,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDRP7E1EVR5, bogoshorts-2026)",
    "work_id": "w_4KDRP7E1EVR5",
    "_director": "Antonia Colodro, Alaa Hathleen",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/living-despite-them.jpg",
    "posterSource": "tmdb"
   },
@@ -2635,7 +2704,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEK5WQ2Z4CH, bogoshorts-2026)",
    "work_id": "w_4KEK5WQ2Z4CH",
    "_director": "Lucía Romero Castillo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/llamame-llevame-avisame.jpg",
    "posterSource": "tmdb"
   },
@@ -2653,7 +2722,7 @@
    "lbSlug": "lo-entranable",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Valentina Laverde Castillo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/lo-entranable.jpg",
    "posterSource": "tmdb"
   },
@@ -2709,7 +2778,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KG18808YNKY, bogoshorts-2026)",
    "work_id": "w_4KG18808YNKY",
    "_director": "Valentina Romero López",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/los-gallos.jpg",
    "posterSource": "tmdb"
   },
@@ -2729,7 +2798,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH9W2JNR170, bogoshorts-2026)",
    "work_id": "w_4KH9W2JNR170",
    "_director": "Eduardo Braun Costa",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/los-mentirosos.jpg",
    "posterSource": "tmdb"
   },
@@ -2767,7 +2836,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KES6P5HD813, bogoshorts-2026)",
    "work_id": "w_4KES6P5HD813",
    "_director": "Arnold Tam",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/love-in-the-gaze-of-a-panopticon.jpg",
    "posterSource": "tmdb"
   },
@@ -2840,7 +2909,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE821XNGJWG, bogoshorts-2026)",
    "work_id": "w_4KE821XNGJWG",
    "_director": "Emily Lawson",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/man-eating-pussy.jpg",
    "posterSource": "tmdb"
   },
@@ -2859,7 +2928,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFX3J8AJ4QB, bogoshorts-2026)",
    "work_id": "w_4KFX3J8AJ4QB",
    "_director": "Gabriela Ortega",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/marga-en-el-df.jpg",
    "posterSource": "tmdb"
   },
@@ -2878,7 +2947,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGH18WFAAA5, bogoshorts-2026)",
    "work_id": "w_4KGH18WFAAA5",
    "_director": "Ingrid Pérez López",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/manana.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial de la obra (https://shortfilmwire.com/en/embedded/film/200122884/toto)"
@@ -2899,7 +2968,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF6HY2N6M9R, bogoshorts-2026)",
    "work_id": "w_4KF6HY2N6M9R",
    "_director": "Ivan Grgur",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/medo-u-sparugama.jpg",
    "posterSource": "tmdb"
   },
@@ -2917,7 +2986,7 @@
    "lbSlug": "meyolotl",
    "_verificado": "declarada a mano: altas.py --ficha: mismo título, dirección Lorena R. Valencia en los créditos de TMDB (leídos 24 nov) y en el catálogo del festival",
    "_director": "Lorena R. Valencia",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/meyolotl.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4197), 531×787"
@@ -2986,7 +3055,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH4TTVQ2GMB, bogoshorts-2026)",
    "work_id": "w_4KH4TTVQ2GMB",
    "_director": "Irina Rubina",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/miles-davis-what-s-love-got-to-do-with-it.jpg",
    "posterSource": "tmdb"
   },
@@ -3005,7 +3074,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFS16B69HTJ, bogoshorts-2026)",
    "work_id": "w_4KFS16B69HTJ",
    "_director": "Alina Milkina",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/mind-your-step.jpg",
    "posterSource": "tmdb"
   },
@@ -3059,7 +3128,7 @@
    "lbSlug": "mirage-2025-1",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1705630 «Mirage» — director ✓ y año/duración ✓",
    "_director": "Naima Karim",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/mirage.jpg",
    "posterSource": "tmdb"
   },
@@ -3078,7 +3147,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KED5JPPHASH, bogoshorts-2026)",
    "work_id": "w_4KED5JPPHASH",
    "_director": "Karla Condado",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/miriam.jpg",
    "posterSource": "tmdb"
   },
@@ -3097,7 +3166,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJAY0M60DNN, bogoshorts-2026)",
    "work_id": "w_4KJAY0M60DNN",
    "_director": "Ferand Peek",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/mis-drop.jpg",
    "posterSource": "tmdb"
   },
@@ -3116,7 +3185,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFSPXY9EM48, bogoshorts-2026)",
    "work_id": "w_4KFSPXY9EM48",
    "_director": "Sabah Machy",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/mon-chat-est-mort.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4300), 2500×3539"
@@ -3156,7 +3225,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ1PFE6XGG8, bogoshorts-2026)",
    "work_id": "w_4KJ1PFE6XGG8",
    "_director": "Élisabeth Caravella",
-   "_sondeado": "2026-11-25"
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/metae-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (METAE_ES-METRO3_Fotograma1_24BSFF 01.jpg)"
   },
   {
    "titulo": "Météores",
@@ -3173,7 +3245,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHP7FKXQNBS, bogoshorts-2026)",
    "work_id": "w_4KHP7FKXQNBS",
    "_director": "Agnès Patron, Morgane Le Péchon",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/meteores.jpg",
    "posterSource": "tmdb"
   },
@@ -3193,7 +3265,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHWSKJPGRPF, bogoshorts-2026)",
    "work_id": "w_4KHWSKJPGRPF",
    "_director": "Lena von Döhren",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/nachtschwarmer.jpg",
    "posterSource": "tmdb"
   },
@@ -3233,7 +3305,7 @@
    "lbSlug": "ni-aqui-ni-alla",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Manuela Romero Samacá",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/ni-aqui-ni-alla.jpg",
    "posterSource": "tmdb"
   },
@@ -3252,7 +3324,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGP1RQ0VXTS, bogoshorts-2026)",
    "work_id": "w_4KGP1RQ0VXTS",
    "_director": "Rana Roy",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/night-feeds.jpg",
    "posterSource": "tmdb"
   },
@@ -3272,7 +3344,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE9X9V5TSPC, bogoshorts-2026)",
    "work_id": "w_4KE9X9V5TSPC",
    "_director": "Ana Šiškov",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/nije-pristojno-plesat-po-grobu.jpg",
    "posterSource": "tmdb"
   },
@@ -3312,7 +3384,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE9K3XEVDCP, bogoshorts-2026)",
    "work_id": "w_4KE9K3XEVDCP",
    "_director": "David Gašo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/niska-trava.jpg",
    "posterSource": "tmdb"
   },
@@ -3332,7 +3404,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFVGSZJYP89, bogoshorts-2026)",
    "work_id": "w_4KFVGSZJYP89",
    "_director": "Luciana Espinoza Hoempler",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/no-hay-camino.jpg",
    "posterSource": "tmdb"
   },
@@ -3350,7 +3422,7 @@
    "lbSlug": "no-te-conozcas",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Andrés Isaza Giraldo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/no-te-conozcas.jpg",
    "posterSource": "tmdb"
   },
@@ -3367,7 +3439,7 @@
    "pais_tmdb": "Colombia",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1827960 «No todos los pájaros son aves» — director ✓ y año/duración ✓",
    "_director": "Mateo Guerrero Quintero",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/no-todos-los-pajaros-son-aves.jpg",
    "posterSource": "tmdb"
   },
@@ -3387,7 +3459,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGD95CHJDSJ, bogoshorts-2026)",
    "work_id": "w_4KGD95CHJDSJ",
    "_director": "Roshanak Roshan",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/noon-le-pain-de-teheran.jpg",
    "posterSource": "tmdb"
   },
@@ -3406,7 +3478,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHQ8RGPTWNG, bogoshorts-2026)",
    "work_id": "w_4KHQ8RGPTWNG",
    "_director": "Simon Ellis",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/notes-from-planet-three.jpg",
    "posterSource": "tmdb"
   },
@@ -3425,9 +3497,28 @@
    "_verificado": "el catálogo ya la tiene (w_4KG2S47VYHVH, bogoshorts-2026)",
    "work_id": "w_4KG2S47VYHVH",
    "_director": "Ibrahim Omar",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/nothing-happens-after-your-absence.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Nothing Here is Lost",
+   "tmdb_id": 1849751,
+   "titulo_original": "Nothing Here is Lost",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In 2028, when the world has been dominated by data machine power, an Alpine mountain suffers a crisis of identity. Meanwhile, a Ticinese landowner fights in court to protect the mountain from total industrialization.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "",
+   "lbSlug": "nothing-here-is-lost",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_director": "Kathy Mitrani",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/nothinghereislost-drive.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial del Drive de BOGOSHORTS (Qui niente é perduto_CN-EXP03_Poster_24BSFF.tif)"
   },
   {
    "titulo": "Nuestra sombra",
@@ -3463,7 +3554,7 @@
    "lbSlug": "nemica",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Felipe Flórez Ramos",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/nemica.jpg",
    "posterSource": "tmdb"
   },
@@ -3483,7 +3574,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFJB16EJ1QV, bogoshorts-2026)",
    "work_id": "w_4KFJB16EJ1QV",
    "_director": "Pedro Geraldo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/o-lago-cinza-e-cego.jpg",
    "posterSource": "tmdb"
   },
@@ -3503,7 +3594,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEB44TF4HF7, bogoshorts-2026)",
    "work_id": "w_4KEB44TF4HF7",
    "_director": "Felipe Casanova",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/o-rio-de-janeiro-continua-lindo.jpg",
    "posterSource": "tmdb"
   },
@@ -3522,7 +3613,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHNR5W32T9T, bogoshorts-2026)",
    "work_id": "w_4KHNR5W32T9T",
    "_director": "Gavati Wad",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/o-seeker.jpg",
    "posterSource": "tmdb"
   },
@@ -3542,7 +3633,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHSH4MSAP6G, bogoshorts-2026)",
    "work_id": "w_4KHSH4MSAP6G",
    "_director": "Clara Vieira",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/onde-nascem-os-pirilampos.jpg",
    "posterSource": "tmdb"
   },
@@ -3561,7 +3652,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHE144F5HHG, bogoshorts-2026)",
    "work_id": "w_4KHE144F5HHG",
    "_director": "Marie Lukáčová",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/orla.jpg",
    "posterSource": "tmdb"
   },
@@ -3600,7 +3691,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KER4W7YQ9JR, bogoshorts-2026)",
    "work_id": "w_4KER4W7YQ9JR",
    "_director": "Iva Kraljevic",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/ovu-sobu-ostavite-zakopanu.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4312), 318×450"
@@ -3660,7 +3751,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KG026GYZBXS, bogoshorts-2026)",
    "work_id": "w_4KG026GYZBXS",
    "_director": "Theo Montoya",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/peloton-trueno.jpg",
    "posterSource": "tmdb"
   },
@@ -3719,7 +3810,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGHHBJD2TPA, bogoshorts-2026)",
    "work_id": "w_4KGHHBJD2TPA",
    "_director": "Radu Jude, Adrian Cioflâncă",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/plan-contraplan.jpg",
    "posterSource": "tmdb"
   },
@@ -3808,7 +3899,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KG69QZ7CPQ0, bogoshorts-2026)",
    "work_id": "w_4KG69QZ7CPQ0",
    "_director": "India Opzoomer",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/poster-boy.jpg",
    "posterSource": "tmdb"
   },
@@ -3827,7 +3918,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFB85Z8208G, bogoshorts-2026)",
    "work_id": "w_4KFB85Z8208G",
    "_director": "Diego Rojas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/prayer-for-all-simple-things.jpg",
    "posterSource": "tmdb"
   },
@@ -3846,7 +3937,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJN38FH762B, bogoshorts-2026)",
    "work_id": "w_4KJN38FH762B",
    "_director": "Avelina Prat",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/principio-de-incendio-sobre-paisaje-desierto.jpg",
    "posterSource": "tmdb"
   },
@@ -3948,7 +4039,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF3J1TYKF0J, bogoshorts-2026)",
    "work_id": "w_4KF3J1TYKF0J",
    "_director": "Antía Carreira Vázquez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/pupa.jpg",
    "posterSource": "tmdb"
   },
@@ -3968,7 +4059,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE6GK8FS60T, bogoshorts-2026)",
    "work_id": "w_4KE6GK8FS60T",
    "_director": "Kateřina Čupová",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/piskoviste.jpg",
    "posterSource": "tmdb"
   },
@@ -3986,7 +4077,7 @@
    "lbSlug": "querida-a",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Elena Molina",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/querida-a.jpg",
    "posterSource": "tmdb"
   },
@@ -4004,7 +4095,7 @@
    "lbSlug": "rajin",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Faiz Abu Rmeleh, Keren Manor",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/raj-in.jpg",
    "posterSource": "tmdb"
   },
@@ -4022,7 +4113,7 @@
    "lbSlug": "raices-2026-3",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1784652 «Raíces» — director ✓ y año/duración ✓",
    "_director": "Mavie Beisheim, Felipe Cuartas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/raices.jpg",
    "posterSource": "tmdb"
   },
@@ -4041,7 +4132,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGF1JX4PY49, bogoshorts-2026)",
    "work_id": "w_4KGF1JX4PY49",
    "_director": "Maryam Mohajer",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/red-dress-no-straps.jpg",
    "posterSource": "tmdb"
   },
@@ -4060,7 +4151,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEBF0T14GQ6, bogoshorts-2026)",
    "work_id": "w_4KEBF0T14GQ6",
    "_director": "Iqran Rasheed",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/red-elephant.jpg",
    "posterSource": "tmdb"
   },
@@ -4079,7 +4170,7 @@
    "lbSlug": "they-rose-from-the-grave-and-it-was-the-apocalypse",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1788289 «They Rose from the Grave and It Was… The Apocalypse!» — director ✓ y año/duración ✓",
    "_director": "Domenico Montixi",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/risorsero-dalla-tomba-e-fu-l-apocalisse.jpg",
    "posterSource": "tmdb"
   },
@@ -4131,7 +4222,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDYGDZB74EP, bogoshorts-2026)",
    "work_id": "w_4KDYGDZB74EP",
    "_director": "Margarida Paias",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/rui-carlos.jpg",
    "posterSource": "tmdb"
   },
@@ -4150,7 +4241,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ7VNBXKJHF, bogoshorts-2026)",
    "work_id": "w_4KJ7VNBXKJHF",
    "_director": "Kaleb Lechowski",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/r-ha.jpg",
    "posterSource": "tmdb"
   },
@@ -4188,7 +4279,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGA8WRY51T9, bogoshorts-2026)",
    "work_id": "w_4KGA8WRY51T9",
    "_director": "Romy Boutin St-Pierre, Nada Cheddadi, Karima Zouhair",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/sara-fatima.jpg",
    "posterSource": "tmdb"
   },
@@ -4207,7 +4298,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF41SH3RNAZ, bogoshorts-2026)",
    "work_id": "w_4KF41SH3RNAZ",
    "_director": "Gaby Clingman",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/see-you-in-the-morning.jpg",
    "posterSource": "tmdb"
   },
@@ -4246,7 +4337,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFQZYHAFX33, bogoshorts-2026)",
    "work_id": "w_4KFQZYHAFX33",
    "_director": "Katya Mikheeva",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/shades-of-blue.jpg",
    "posterSource": "tmdb"
   },
@@ -4265,7 +4356,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJHHYWY8JRM, bogoshorts-2026)",
    "work_id": "w_4KJHHYWY8JRM",
    "_director": "Simon Schares",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/shit-happened.jpg",
    "posterSource": "tmdb"
   },
@@ -4283,7 +4374,7 @@
    "lbSlug": "solos-2019",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 758792 «Solos» — director ✓ y año/duración ✓",
    "_director": "Gabriella Marsh",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/solos.jpg",
    "posterSource": "tmdb"
   },
@@ -4321,7 +4412,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHN9ATNHM7W, bogoshorts-2026)",
    "work_id": "w_4KHN9ATNHM7W",
    "_director": "Davide Palella",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/sonnenstube.jpg",
    "posterSource": "tmdb"
   },
@@ -4340,7 +4431,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGTSVMJ3MF9, bogoshorts-2026)",
    "work_id": "w_4KGTSVMJ3MF9",
    "_director": "Tania de León Yong",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/sone-con-zapata.jpg",
    "posterSource": "tmdb"
   },
@@ -4359,7 +4450,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ4SN2TADQ3, bogoshorts-2026)",
    "work_id": "w_4KJ4SN2TADQ3",
    "_director": "Thorvaldur S. Gunnarsson, Jonatan Brüsch, Ágúst Kristinsson, Arna Rut Diego Snæbjörnsdóttir, Esben J. Jespersen, Touraj Khosravi, Polina Bokhan",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/space-stallions.jpg",
    "posterSource": "tmdb"
   },
@@ -4444,7 +4535,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH3SG7X0W0G, bogoshorts-2026)",
    "work_id": "w_4KH3SG7X0W0G",
    "_director": "Aram Atkinson",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/sunrise-meets-sunset.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial de la obra (https://www.imdb.com/title/tt20515956/)"
@@ -4483,7 +4574,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHFQ5XRZ03R, bogoshorts-2026)",
    "work_id": "w_4KHFQ5XRZ03R",
    "_director": "Arianna Ortiz",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-birthday-gift.jpg",
    "posterSource": "tmdb"
   },
@@ -4501,7 +4592,7 @@
    "lbSlug": "the-end-13",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1472669 «The End» — director ✓ y año/duración ✓",
    "_director": "Niki Lindroth von Bahr",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-end.jpg",
    "posterSource": "tmdb"
   },
@@ -4519,7 +4610,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGWSGSWFAQQ, bogoshorts-2026)",
    "work_id": "w_4KGWSGSWFAQQ",
    "_director": "Raquel Guerrero",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-getaway.jpg",
    "posterSource": "tmdb"
   },
@@ -4538,7 +4629,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KECFEW478VX, bogoshorts-2026)",
    "work_id": "w_4KECFEW478VX",
    "_director": "Daniel Mann",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-recce.jpg",
    "posterSource": "tmdb"
   },
@@ -4557,7 +4648,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ6TTNQXW1T, bogoshorts-2026)",
    "work_id": "w_4KJ6TTNQXW1T",
    "_director": "Mikkel Mainz, Kenneth Ladekjær",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-reward.jpg",
    "posterSource": "tmdb"
   },
@@ -4576,7 +4667,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGCT4Y5QCVE, bogoshorts-2026)",
    "work_id": "w_4KGCT4Y5QCVE",
    "_director": "Mehrnaz Abdollahinia, Feben Elias Woldehawariat, Razahk Issaka, Celeste Jamneck, Yi Liu",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-soloists.jpg",
    "posterSource": "tmdb"
   },
@@ -4595,7 +4686,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHKR4XXNBY1, bogoshorts-2026)",
    "work_id": "w_4KHKR4XXNBY1",
    "_director": "Lorena Villanueva",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-tide-inside.jpg",
    "posterSource": "tmdb"
   },
@@ -4633,7 +4724,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGK1EP1B55T, bogoshorts-2026)",
    "work_id": "w_4KGK1EP1B55T",
    "_director": "Laura Poitras, Rachel Lauren Mueller",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/they-re-here.jpg",
    "posterSource": "tmdb"
   },
@@ -4652,7 +4743,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEYVA9VR7YR, bogoshorts-2026)",
    "work_id": "w_4KEYVA9VR7YR",
    "_director": "Amer Nasser",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/to-the-north.jpg",
    "posterSource": "tmdb"
   },
@@ -4725,7 +4816,7 @@
    "lbSlug": "triangle-2025",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1567979 «Triangle» — director ✓ y año/duración ✓",
    "_director": "Anaël Dang",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/triangle.jpg",
    "posterSource": "tmdb"
   },
@@ -4744,7 +4835,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJJKNB5MZDV, bogoshorts-2026)",
    "work_id": "w_4KJJKNB5MZDV",
    "_director": "Fridtjof Stensæth Josefsen, Morten Borgestad",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/trio.jpg",
    "posterSource": "tmdb"
   },
@@ -4764,7 +4855,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE8DPCGFZ6Q, bogoshorts-2026)",
    "work_id": "w_4KE8DPCGFZ6Q",
    "_director": "Antoneta Alamat Kusijanović",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/u-plavetnilo.jpg",
    "posterSource": "tmdb"
   },
@@ -4783,7 +4874,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFMZ3Z2FWFZ, bogoshorts-2026)",
    "work_id": "w_4KFMZ3Z2FWFZ",
    "_director": "Henri Veermäe",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/uka-uka.jpg",
    "posterSource": "tmdb"
   },
@@ -4801,7 +4892,7 @@
    "lbSlug": "un-pajaro-mas",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Julián Gómez Reyes",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/un-pajaro-mas.jpg",
    "posterSource": "tmdb"
   },
@@ -4819,7 +4910,7 @@
    "lbSlug": "una-carta-supuesta",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Megumi Cardona",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/una-carta-supuesta.jpg",
    "posterSource": "tmdb"
   },
@@ -4875,7 +4966,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KG3S25KGZSG, bogoshorts-2026)",
    "work_id": "w_4KG3S25KGZSG",
    "_director": "Fernanda Pessoa",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/v-o-por-f-p.jpg",
    "posterSource": "tmdb"
   },
@@ -4895,7 +4986,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFMBM4TPEG3, bogoshorts-2026)",
    "work_id": "w_4KFMBM4TPEG3",
    "_director": "Lara Carvalho",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/vou-dancar-ate-voce.jpg",
    "posterSource": "tmdb"
   },
@@ -4915,7 +5006,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFND3HMNSG7, bogoshorts-2026)",
    "work_id": "w_4KFND3HMNSG7",
    "_director": "Susa Monteiro",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/vagabundo.jpg",
    "posterSource": "tmdb"
   },
@@ -4933,7 +5024,7 @@
    "lbSlug": "varoncito",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Camilo Giraldo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/varoncito.jpg",
    "posterSource": "tmdb"
   },
@@ -4953,7 +5044,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHZ2FS82F03, bogoshorts-2026)",
    "work_id": "w_4KHZ2FS82F03",
    "_director": "Antonin Niclass",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/vers-la-foret.jpg",
    "posterSource": "tmdb"
   },
@@ -4972,7 +5063,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFNZ8CE1BDV, bogoshorts-2026)",
    "work_id": "w_4KFNZ8CE1BDV",
    "_director": "Marcy Page",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/virgin-fandango.jpg",
    "posterSource": "tmdb"
   },
@@ -4991,7 +5082,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ4B5TCZ32D, bogoshorts-2026)",
    "work_id": "w_4KJ4B5TCZ32D",
    "_director": "Vitaliy Shushko",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/x-story.jpg",
    "posterSource": "tmdb"
   },
@@ -5011,7 +5102,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEWC0PG23NP, bogoshorts-2026)",
    "work_id": "w_4KEWC0PG23NP",
    "_director": "Anders Jon, Kasper Juhl, Michael Kunov y Michael Panduro",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/yndige-mennesker.jpg",
    "posterSource": "tmdb"
   },
@@ -5030,7 +5121,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH944E3FVDN, bogoshorts-2026)",
    "work_id": "w_4KH944E3FVDN",
    "_director": "Carlos Gómez Salamanca",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/yugo.jpg",
    "posterSource": "tmdb"
   },
@@ -5048,7 +5139,7 @@
    "lbSlug": "el-regreso-pa-cuando",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Antonia Bello Vélez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/el-regreso-pa-cuando.jpg",
    "posterSource": "tmdb"
   },
@@ -5088,7 +5179,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF537BZKWD8, bogoshorts-2026)",
    "work_id": "w_4KF537BZKWD8",
    "_director": "Zvonimir Jurić",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/zuti-mjesec.jpg",
    "posterSource": "tmdb"
   },
@@ -5108,7 +5199,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "环岛",
    "_director": "Dean Wei",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/tmdb-1599912.jpg",
    "posterSource": "tmdb"
   },
@@ -5128,7 +5219,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "跳房子",
    "_director": "Jingyuan Liang, Shizhao Ye",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/tmdb-1736821.jpg",
    "posterSource": "tmdb"
   },
@@ -5149,6 +5240,108 @@
    "poster": "/assets/bogoshorts-2026/jazzed.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial de la obra (https://www.filmaffinity.com/es/film781501.html)"
+  },
+  {
+   "titulo": "La colère et après",
+   "poster": "/assets/bogoshorts-2026/lacolereetapres-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (La colère et après_CLC-FUT02_Fotograma1_24BSFF.jpg)"
+  },
+  {
+   "titulo": "When the Flowers Bloom",
+   "poster": "/assets/bogoshorts-2026/whentheflowersbloom-drive.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial del Drive de BOGOSHORTS (WhenTheFlowersBloom_CVR-02_Poster_24BSFF.pdf)"
+  },
+  {
+   "titulo": "Has estado aquí",
+   "poster": "/assets/bogoshorts-2026/hasestadoaqui-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (Has estado aquí_CITY_GAUDÍ05_Fotograma1_24BSFF.png)"
+  },
+  {
+   "titulo": "Un gallinazo sin suerte",
+   "poster": "/assets/bogoshorts-2026/ungallinazosinsuerte-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (FRM_GALLINAZO_00.png)"
+  },
+  {
+   "titulo": "Lucha",
+   "poster": "/assets/bogoshorts-2026/lucha-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (02_lucha.png)"
+  },
+  {
+   "titulo": "Para Dani",
+   "poster": "/assets/bogoshorts-2026/paradani-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (04_dani.png)"
+  },
+  {
+   "titulo": "Todo río lloverá sobre nosotros",
+   "poster": "/assets/bogoshorts-2026/todoriolloverasobrenosotros-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (03_rio.jpg)"
+  },
+  {
+   "titulo": "I Carry Them",
+   "poster": "/assets/bogoshorts-2026/icarrythem-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (I carry them.jpg)"
+  },
+  {
+   "titulo": "Cassandra",
+   "poster": "/assets/bogoshorts-2026/cassandra-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (Cassandra_FES-LADRA01_Fotograma1_24BSFF..jpg)"
+  },
+  {
+   "titulo": "Transastralisme",
+   "poster": "/assets/bogoshorts-2026/transastralisme-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (05_trans.jpg)"
+  },
+  {
+   "titulo": "La primera estampilla de Korinco",
+   "poster": "/assets/bogoshorts-2026/laprimeraestampilladekorinco-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (260724-MFW-KOR-ERDE-102.JPG)"
+  },
+  {
+   "titulo": "Berzingue (Crache)",
+   "poster": "/assets/bogoshorts-2026/berzinguecrache-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (Berzingue_CI-VC03_Fotograma1_24BSFF.jpg)"
+  },
+  {
+   "titulo": "The Beat (Matías Aguayo)",
+   "poster": "/assets/bogoshorts-2026/thebeatmatiasaguayo-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (TheBeat_CI-VC06_Poster_24BSFF.png)"
+  },
+  {
+   "titulo": "Argentina Is Daing (Marttein)",
+   "poster": "/assets/bogoshorts-2026/argentinaisdaingmarttein-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (ARGENTINA IS DAING_CI-VC07_Fotograma1_24BSFF.png)"
+  },
+  {
+   "titulo": "Oui (Balming Tiger)",
+   "poster": "/assets/bogoshorts-2026/ouibalmingtiger-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (Oui_CI-VC09_Stillcut1_24BSFF.jpg)"
+  },
+  {
+   "titulo": "¿Cómo se ama? (Jorge Drexler)",
+   "poster": "/assets/bogoshorts-2026/comoseamajorgedrexler-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (¿Cómo se ama?__CI-VC12_Fotograma1_24BSFF.png)"
+  },
+  {
+   "titulo": "O sigilo",
+   "poster": "/assets/bogoshorts-2026/osigilo-drive.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial del Drive de BOGOSHORTS (O Sigilo_CN-EXP01_Póster_24BSFF.pdf)"
   },
   {
    "titulo": "Escritorio",
@@ -5380,7 +5573,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH1NB8Q7M8Y, bogoshorts-2026)",
    "work_id": "w_4KH1NB8Q7M8Y",
    "_director": "Steven Woloshen",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/1000-plateaus-2004-2014.jpg",
    "posterSource": "tmdb"
   },
@@ -5397,7 +5590,7 @@
    "lbSlug": "2000-2026",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1712540 «2000» — director ✓ y año/duración ✓",
    "_director": "Renata Lučić",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/2000.jpg",
    "posterSource": "tmdb"
   },
@@ -5434,6 +5627,24 @@
    "poster": "/assets/bogoshorts-2026/2-love.jpg",
    "posterSource": "tmdb"
   },
+  "A Body that Hurts": {
+   "tmdb_id": 1849762,
+   "titulo_original": "A Body that Hurts",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "A body that hurts is a short film conceived out of a request from the body to be fully involved in the task of animation. The mechanical nature of the work leads to the neglect of the body, causing pain, fatigue, and discomfort. Through repetitive actions, grotesque sound and the use of different hands-on techniques, the video explores the decaying body as an operator rather than a creator, reflecting the lack of attention put into the flesh during labor.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 4,
+   "pais_tmdb": "",
+   "lbSlug": "a-body-that-hurts",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_director": "David Espitia Calderón",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/abodythathurts-drive.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial del Drive de BOGOSHORTS (ABodyThatHurts_CN-ANI01_Poster_24BSFF.tiff)"
+  },
   "A Little Death": {
    "tmdb_id": 1716965,
    "titulo_original": "A Little Death",
@@ -5448,7 +5659,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFQG532F93Z, bogoshorts-2026)",
    "work_id": "w_4KFQG532F93Z",
    "_director": "Leto Meade, Jonathan Rockefeller",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/a-little-death.jpg",
    "posterSource": "tmdb"
   },
@@ -5466,7 +5677,7 @@
    "_verificado": "el catálogo ya la tiene (w_7THXGHQ2R69P, bogoshorts-2026)",
    "work_id": "w_7THXGHQ2R69P",
    "_director": "Kate Voet, Victor Maes",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/a-long-goodbye.jpg",
    "posterSource": "tmdb"
   },
@@ -5484,7 +5695,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGW8XAHE5H0, bogoshorts-2026)",
    "work_id": "w_4KGW8XAHE5H0",
    "_director": "Anouk Chambaz",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/a-quiet-day.jpg",
    "posterSource": "tmdb"
   },
@@ -5502,7 +5713,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDR3QZDYR8A, bogoshorts-2026)",
    "work_id": "w_4KDR3QZDYR8A",
    "_director": "Amélie Hardy",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/a-wolf-in-the-suburbs.jpg",
    "posterSource": "tmdb"
   },
@@ -5519,7 +5730,7 @@
    "lbSlug": "a-los-once",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1826830 «A los once» — director ✓ y año/duración ✓",
    "_director": "Priscila Núñez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/a-los-once.jpg",
    "posterSource": "tmdb"
   },
@@ -5555,7 +5766,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH6F5Z6WDRQ, bogoshorts-2026)",
    "work_id": "w_4KH6F5Z6WDRQ",
    "_director": "Johannes Förster & Elkin Calderón Guevara",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/about-happy-hippos-and-sad-peacocks.jpg",
    "posterSource": "tmdb"
   },
@@ -5574,7 +5785,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH835JPV8Z2, bogoshorts-2026)",
    "work_id": "w_4KH835JPV8Z2",
    "_director": "María Rojas Arias",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/abrir-monte.jpg",
    "posterSource": "tmdb"
   },
@@ -5593,7 +5804,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFW0P7SZC6P, bogoshorts-2026)",
    "work_id": "w_4KFW0P7SZC6P",
    "_director": "Roddy Dextre",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/alla-en-el-cielo.jpg",
    "posterSource": "tmdb"
   },
@@ -5629,7 +5840,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGQRE8VCEF7, bogoshorts-2026)",
    "work_id": "w_4KGQRE8VCEF7",
    "_director": "Arturo Spano",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/an-impossible-word-of-praise.jpg",
    "posterSource": "tmdb"
   },
@@ -5666,7 +5877,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEJKEVVZHY3, bogoshorts-2026)",
    "work_id": "w_4KEJKEVVZHY3",
    "_director": "Alba Cros Pellisé",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/anhel-de-llum.jpg",
    "posterSource": "tmdb"
   },
@@ -5684,7 +5895,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ7CDARJ28S, bogoshorts-2026)",
    "work_id": "w_4KJ7CDARJ28S",
    "_director": "Chloe Hebert",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/aster.jpg",
    "posterSource": "tmdb"
   },
@@ -5702,7 +5913,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJA35RRG18G, bogoshorts-2026)",
    "work_id": "w_4KJA35RRG18G",
    "_director": "Lola Grand, Alexandre Arpentinier, Mathieu Blanchys, Tristan Lamarca, Thomas Lemaille, Jean-Charles Lusseau",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/asteria.jpg",
    "posterSource": "tmdb"
   },
@@ -5721,7 +5932,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF4HG4N9S73, bogoshorts-2026)",
    "work_id": "w_4KF4HG4N9S73",
    "_director": "Axelle Vinassac, Maël Caradec",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/au-dessus-du-vacarme.jpg",
    "posterSource": "tmdb"
   },
@@ -5739,7 +5950,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDVC8AE1ZPJ, bogoshorts-2026)",
    "work_id": "w_4KDVC8AE1ZPJ",
    "_director": "Andrés Khamis Giacoman, Francisca Khamis Giacoman",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/baisanos.jpg",
    "posterSource": "tmdb"
   },
@@ -5756,7 +5967,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGNGB1M5J9B, bogoshorts-2026)",
    "work_id": "w_4KGNGB1M5J9B",
    "_director": "Peter Vass",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/banshee.jpg",
    "posterSource": "tmdb",
    "genero": "Terror",
@@ -5778,7 +5989,7 @@
    "lbSlug": "barcelona-main-city-of-catalonia",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 356487 «Barcelona, Main City of Catalonia» — director ✓ y año/duración ✓",
    "_director": "Segundo de Chomón",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/barcelona.jpg",
    "posterSource": "tmdb"
   },
@@ -5796,7 +6007,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KFHGYG6P2D4, bogoshorts-2026)",
    "work_id": "w_4KFHGYG6P2D4",
    "_director": "Theodore Ushev",
-   "_sondeado": "2026-11-25"
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/barcelonadefoc-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (Barcelona de Foc_CITY_GAUDÍ15_Fotograma1_24BSFF.jpg)"
   },
   "Bariazioak": {
    "tmdb_id": 1482137,
@@ -5831,7 +6045,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDW91HEMYMQ, bogoshorts-2026)",
    "work_id": "w_4KDW91HEMYMQ",
    "_director": "RJ Sanchez, Eduardo Giralt Brun, Pedro Valtierra Anza",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/barra-brava.jpg",
    "posterSource": "tmdb"
   },
@@ -5849,7 +6063,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGE14X32AE7, bogoshorts-2026)",
    "work_id": "w_4KGE14X32AE7",
    "_director": "Sarah Saidan",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/beach-flags.jpg",
    "posterSource": "tmdb"
   },
@@ -5867,7 +6081,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF5J046MV9D, bogoshorts-2026)",
    "work_id": "w_4KF5J046MV9D",
    "_director": "Dubravka Turić",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/belladonna.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4252), 315×450"
@@ -5972,7 +6186,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFKDE46JK0D, bogoshorts-2026)",
    "work_id": "w_4KFKDE46JK0D",
    "_director": "Rubens Fabricio Anzolin, João Fernando Chagas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/braco-forte.jpg",
    "posterSource": "tmdb"
   },
@@ -5989,7 +6203,7 @@
    "lbSlug": "bus",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1274419 «Bus» — director ✓ y año/duración ✓",
    "_director": "André Balbuena",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/bus.jpg",
    "posterSource": "tmdb"
   },
@@ -6007,7 +6221,7 @@
    "lbSlug": "tropic-of-cancer-1",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1826831 «Tropic of Cancer» (北回歸線), dir. Alex Jiang, 13 min; misma sinopsis: fábrica de lencería, joven, vínculo inesperado; el título en inglés es el del catálogo",
    "_director": "Alex Jiang",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/bei-hui-gui-xian.jpg",
    "posterSource": "tmdb"
   },
@@ -6026,7 +6240,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KFD6X5KGHZ7, bogoshorts-2026)",
    "work_id": "w_4KFD6X5KGHZ7",
    "_director": "Raúl Arroyo",
-   "_sondeado": "2026-11-25"
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/cadadiapasoporaqui-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (Cada día paso por aquí_CITY_GAUDÍ11_Fotograma1_24BSFF.jpg)"
   },
   "Cameras Take Five": {
    "tmdb_id": 299661,
@@ -6041,10 +6258,28 @@
    "_verificado": "el catálogo ya la tiene (w_4KH2FHZGP1WS, bogoshorts-2026)",
    "work_id": "w_4KH2FHZGP1WS",
    "_director": "Steven Woloshen",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/cameras-take-five.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial de la obra (https://www.imdb.com/title/tt0377583/)"
+  },
+  "Carta a un joven ladrón": {
+   "tmdb_id": 1849754,
+   "titulo_original": "Carta a un joven ladrón",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "“Letter to a Young Thief,” a short film that straddles the boundaries between self-portraiture and experimentation with personal archives. The work explores the tension between the materiality of memory and the construction of identity, presenting a stream of consciousness that reflects on the course of life, temporal asynchrony, and the ever-present possibility of death.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "carta-a-un-joven-ladron",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_director": "Daniel Quintero Correa",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/cartaaunjovenladron-drive.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial del Drive de BOGOSHORTS (Cartaunjovenladrón_CN-EXP05_Poster_24BSFF.jpg.png)"
   },
   "Cat Me If You Can": {
    "tmdb_id": 1817624,
@@ -6060,7 +6295,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHVJA5C3STR, bogoshorts-2026)",
    "work_id": "w_4KHVJA5C3STR",
    "_director": "Edouard Delebecque, Giovanni Edwards, Amaury Da Costa, Erwan Annah, Yauhan Guo, Andrea Origlia",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/cat-me-if-you-can.jpg",
    "posterSource": "tmdb"
   },
@@ -6078,27 +6313,30 @@
    "_verificado": "el catálogo ya la tiene (w_4KEKTTFVMWNS, bogoshorts-2026)",
    "work_id": "w_4KEKTTFVMWNS",
    "_director": "Anna Mundet Molas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/cementiri-d-antenes.jpg",
    "posterSource": "tmdb"
   },
   "Chingona (Tamara Flores)": {
    "tmdb_id": 1719717,
-   "titulo_original": "Tamara Flores - Chingona",
-   "poster_path": "/ijjeIKogGfkcNNJJTfYXCpmkdNN.jpg",
+   "titulo_original": null,
    "synopsis_es": "",
-   "synopsis_en": "Tamara Flores moves with fearless determination through the colorful streets of Acatlán, Mexico, the hometown of her mother. Her impossibly long braid is a living symbol of strength and empowerment. “Chingona” is a bold visual anthem about carving your own path and owning every step forward. Bursting with color, rhythm and dance, it’s a celebration of identity and the unapologetic freedom to live life on your own terms.",
-   "genero": "Music",
+   "synopsis_en": "",
    "anio_tmdb": 0,
-   "duracion_tmdb": 3,
+   "duracion_tmdb": 0,
    "pais_tmdb": "",
    "lbSlug": "tamara-flores-chingona",
    "_verificado": "el catálogo ya la tiene (w_4KJK77PYY5V4, bogoshorts-2026)",
    "work_id": "w_4KJK77PYY5V4",
    "_director": "Rupert Höller",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/chingona-tamara-flores.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial de la obra (https://festival.bogoshorts.com/corto/4350; copia de 780 px bajada de TMDB 1719717 antes de que esa ficha se borrara)",
+   "genero": "Música",
+   "_heredado": {
+    "genero": "catálogo w_4KJK77PYY5V4 (bogoshorts-2026)"
+   }
   },
   "Choque de trenes": {
    "tmdb_id": 1657113,
@@ -6132,9 +6370,27 @@
    "_verificado": "el catálogo ya la tiene (w_4KHCD5HZVPCB, bogoshorts-2026)",
    "work_id": "w_4KHCD5HZVPCB",
    "_director": "Zhenia Kazankina",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/city-of-owls.jpg",
    "posterSource": "tmdb"
+  },
+  "Clasificado personal": {
+   "tmdb_id": 1849756,
+   "titulo_original": "Clasificado personal",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "At some point in the twentieth century, the radio plays. Lost desires and undelivered letters travel through Bogotá’s electricity cables.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "clasificado-personal",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_director": "Juan Pablo Melo",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/clasificadopersonal-drive.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial del Drive de BOGOSHORTS (ClasificadoPersonal_CN-EXP06_Póster_24BSFFCLP.pdf)"
   },
   "Cold Coffee": {
    "tmdb_id": 1374604,
@@ -6150,7 +6406,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHGM1ARNBBR, bogoshorts-2026)",
    "work_id": "w_4KHGM1ARNBBR",
    "_director": "Luis de Jesús",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/cold-coffee.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4195), 450×667"
@@ -6170,7 +6426,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGR8SY1CCH9, bogoshorts-2026)",
    "work_id": "w_4KGR8SY1CCH9",
    "_director": "Prin Rodriguez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/comida-para-todos-divinidades-naturaleza-y-humanos.jpg",
    "posterSource": "tmdb"
   },
@@ -6187,7 +6443,7 @@
    "lbSlug": "complementarios",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Mar Triana García",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/complementarios.jpg",
    "posterSource": "tmdb"
   },
@@ -6206,7 +6462,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGRSGKF7F8H, bogoshorts-2026)",
    "work_id": "w_4KGRSGKF7F8H",
    "_director": "Alice dos Reis",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/computadora.jpg",
    "posterSource": "tmdb"
   },
@@ -6223,7 +6479,7 @@
    "lbSlug": "cuando-retornen-las-garzas",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1575134 «When the Herons Return» (2025, 19 min) acreditada a Robert Brand Ordóñez (persona TMDB 4113226): coincide director, año 2025, duración 19'25'' y título inglés del catálogo BOGOSHORTS. Sin IMDb ni póster en TMDB.",
    "_director": "Robert Brand Ordóñez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/cuando-retornen-las-garzas.jpg",
    "posterSource": "tmdb"
   },
@@ -6260,7 +6516,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHS212ZW90W, bogoshorts-2026)",
    "work_id": "w_4KHS212ZW90W",
    "_director": "Zoé Pelchat",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/c-est-ma-s-ur.jpg",
    "posterSource": "tmdb"
   },
@@ -6279,7 +6535,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE8X6ZCDT6Z, bogoshorts-2026)",
    "work_id": "w_4KE8X6ZCDT6Z",
    "_director": "Hana Jušić",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/da-je-kuca-dobra-i-vuk-bi-je-imao.jpg",
    "posterSource": "tmdb"
   },
@@ -6297,7 +6553,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE1H4V2MPB8, bogoshorts-2026)",
    "work_id": "w_4KE1H4V2MPB8",
    "_director": "Elizabeth Hobbs",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/daughters-of-the-late-colonel.jpg",
    "posterSource": "tmdb"
   },
@@ -6346,7 +6602,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KG81V5AYB9P, bogoshorts-2026)",
    "work_id": "w_4KG81V5AYB9P",
    "_director": "Amos Ostermeier",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/die-tauben.jpg",
    "posterSource": "tmdb"
   },
@@ -6364,7 +6620,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KETZZZ07B5N, bogoshorts-2026)",
    "work_id": "w_4KETZZZ07B5N",
    "_director": "Patrícia Saramago",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/dois-e-um-gato.jpg",
    "posterSource": "tmdb"
   },
@@ -6401,7 +6657,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJADXYMS6JX, bogoshorts-2026)",
    "work_id": "w_4KJADXYMS6JX",
    "_director": "Jerónimo Rocha",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/dedalo.jpg",
    "posterSource": "tmdb"
   },
@@ -6419,7 +6675,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH8NK5K2DR4, bogoshorts-2026)",
    "work_id": "w_4KH8NK5K2DR4",
    "_director": "Elkin Calderón Guevara, Diego Piñeros García",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/ekobio.jpg",
    "posterSource": "tmdb"
   },
@@ -6499,7 +6755,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJGAQBYGZ3R, bogoshorts-2026)",
    "work_id": "w_4KJGAQBYGZ3R",
    "_director": "Gerardo García León",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/el-cortejo.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4147), 2550×3300"
@@ -6519,7 +6775,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHR0H0FQE9K, bogoshorts-2026)",
    "work_id": "w_4KHR0H0FQE9K",
    "_director": "Pau Peidro Vancells",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/el-dia-de-l-os.jpg",
    "posterSource": "tmdb"
   },
@@ -6573,7 +6829,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KFC70275MEB, bogoshorts-2026)",
    "work_id": "w_4KFC70275MEB",
    "_director": "Segundo de Chomón",
-   "_sondeado": "2026-11-25"
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/elgusanosolitario-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (09_gusano.jpg)"
   },
   "El hombre del reloj": {
    "tmdb_id": 1841385,
@@ -6588,7 +6847,7 @@
    "lbSlug": "el-hombre-del-reloj",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Daniel Prieto Muriel",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/el-hombre-del-reloj.jpg",
    "posterSource": "tmdb"
   },
@@ -6681,7 +6940,7 @@
    "lbSlug": "elefante-1",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1826828 'Elefante' dir. César Heredia, 15 min, sinopsis del Renault 4 y el padre = catálogo (Colombia 2014, 14'36''); coincide con IMDb tt4392972 y Proimágenes id 2344",
    "_director": "César Heredia Cruz",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/elefante.jpg",
    "posterSource": "tmdb"
   },
@@ -6698,7 +6957,7 @@
    "lbSlug": "in-the-silence-after",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1724318 'In the Silence After' (2026, 17 min, QA/US/CO) dir./guion/foto/montaje Sebastian Delascasas = catálogo (Catar, EE.UU., Colombia 2026, 16'50'', mismos créditos); IMDb tt43337293 en external_ids",
    "_director": "Sebastian Delascasas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/en-el-silencio-despues.jpg",
    "posterSource": "tmdb"
   },
@@ -6717,7 +6976,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDT1FZ9ZC90, bogoshorts-2026)",
    "work_id": "w_4KDT1FZ9ZC90",
    "_director": "Hervé Demers",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/en-pays-froid.jpg",
    "posterSource": "tmdb"
   },
@@ -6753,7 +7012,7 @@
    "lbSlug": "end-of-summer-2023-1",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1256387 «END OF SUMMER» — director ✓ y año/duración ✓",
    "_director": "Tara Attarzadeh",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/end-of-summer.jpg",
    "posterSource": "tmdb"
   },
@@ -6771,7 +7030,7 @@
    "lbSlug": "eri-the-cow",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1118590 «Eri, The Cow» — director ✓ y año/duración ✓",
    "_director": "Honami Yano",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/eri.jpg",
    "posterSource": "tmdb"
   },
@@ -6807,7 +7066,7 @@
    "lbSlug": "espaciar",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Daniela Giraldo Suárez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/espaciar.jpg",
    "posterSource": "tmdb"
   },
@@ -6824,7 +7083,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJMK06H4RE7, bogoshorts-2026)",
    "work_id": "w_4KJMK06H4RE7",
    "_director": "Aitana Ahrens",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/fantasy-land.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial de la ficha de TMDB 1840640 (acredita a Aitana Ahrens), sin el recorte del encuadre"
@@ -6842,7 +7101,7 @@
    "lbSlug": "fiction-2026",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1691015 «Fiction» — director ✓ y año/duración ✓",
    "_director": "Ambroise Rateau",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/fiction.jpg",
    "posterSource": "tmdb"
   },
@@ -6861,7 +7120,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ5FWWZMASS, bogoshorts-2026)",
    "work_id": "w_4KJ5FWWZMASS",
    "_director": "Ayaka Ohira",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/galverse.jpg",
    "posterSource": "tmdb"
   },
@@ -6969,7 +7228,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ2XXD4C463, bogoshorts-2026)",
    "work_id": "w_4KJ2XXD4C463",
    "_director": "Víctor Orozco Ramírez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/gofrodita.jpg",
    "posterSource": "tmdb"
   },
@@ -6986,7 +7245,7 @@
    "lbSlug": "grounded-2026-1",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1700763 «Grounded» — director ✓ y año/duración ✓",
    "_director": "Chris Callus",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/grounded.jpg",
    "posterSource": "tmdb"
   },
@@ -7098,7 +7357,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGMH5W98ZRG, bogoshorts-2026)",
    "work_id": "w_4KGMH5W98ZRG",
    "_director": "Avi Mograbi",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/halayon.jpg",
    "posterSource": "tmdb"
   },
@@ -7116,7 +7375,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF72RAZC5PP, bogoshorts-2026)",
    "work_id": "w_4KF72RAZC5PP",
    "_director": "Danielle Shapira, Matt Sweeney",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/i-wanna-go-home.jpg",
    "posterSource": "tmdb"
   },
@@ -7134,7 +7393,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHF4CV8JNQ8, bogoshorts-2026)",
    "work_id": "w_4KHF4CV8JNQ8",
    "_director": "Aliona Zagurovska",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/ici-azor.jpg",
    "posterSource": "tmdb"
   },
@@ -7151,7 +7410,7 @@
    "lbSlug": "idols-2026",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1654471 «Idols» — director ✓ y año/duración ✓",
    "_director": "Matt Halsall",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/idols.jpg",
    "posterSource": "tmdb"
   },
@@ -7169,7 +7428,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFPE5350M1D, bogoshorts-2026)",
    "work_id": "w_4KFPE5350M1D",
    "_director": "Ada Güvenir",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/if-only.jpg",
    "posterSource": "tmdb"
   },
@@ -7187,7 +7446,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF85Q7RVCNR, bogoshorts-2026)",
    "work_id": "w_4KF85Q7RVCNR",
    "_director": "Karine Winczura",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/in-articulo-mortis.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4210), 318×450"
@@ -7206,7 +7465,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH103Q0ZHY0, bogoshorts-2026)",
    "work_id": "w_4KH103Q0ZHY0",
    "_director": "Will Niava",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/jazz-infernal.jpg",
    "posterSource": "tmdb"
   },
@@ -7223,7 +7482,7 @@
    "lbSlug": "joychair",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Vanessa Sandre",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/joychair.jpg",
    "posterSource": "tmdb"
   },
@@ -7242,7 +7501,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEMBRYPQKFT, bogoshorts-2026)",
    "work_id": "w_4KEMBRYPQKFT",
    "_director": "Luzbeidy Monterrosa Atencio",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/julapuin-yonna.jpg",
    "posterSource": "tmdb"
   },
@@ -7260,7 +7519,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEZCS8XT06H, bogoshorts-2026)",
    "work_id": "w_4KEZCS8XT06H",
    "_director": "Mahmoud Assi",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/khufu.jpg",
    "posterSource": "tmdb"
   },
@@ -7277,7 +7536,7 @@
    "lbSlug": "class-photo",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1668922 «Class Photo» (2026, 17 min, Lituania, dir. Arnas Balčiūnas) con sinopsis idéntica a la del catálogo (Ignas, escuela abandonada); imdb_id tt41815531 coincide con IMDb; LB class-photo alt. Klasės nuotrauka",
    "_director": "Arnas Balčiūnas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/klases-nuotrauka.jpg",
    "posterSource": "tmdb"
   },
@@ -7329,7 +7588,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFRHPQVH43X, bogoshorts-2026)",
    "work_id": "w_4KFRHPQVH43X",
    "_director": "Péter Vácz",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/kutyaful.jpg",
    "posterSource": "tmdb"
   },
@@ -7392,7 +7651,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ0NZFX2N91, bogoshorts-2026)",
    "work_id": "w_4KJ0NZFX2N91",
    "_director": "Rémi Durin",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-grande-revasion.jpg",
    "posterSource": "tmdb"
   },
@@ -7429,7 +7688,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEX48ECW9KM, bogoshorts-2026)",
    "work_id": "w_4KEX48ECW9KM",
    "_director": "Renzo Cozza",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-hora-de-irse.jpg",
    "posterSource": "tmdb"
   },
@@ -7466,7 +7725,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDTWVRM7M5S, bogoshorts-2026)",
    "work_id": "w_4KDTWVRM7M5S",
    "_director": "Melissa Saavedra Gil",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-linea-del-mar.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4140), 253×450"
@@ -7504,7 +7763,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KETFK8PERRX, bogoshorts-2026)",
    "work_id": "w_4KETFK8PERRX",
    "_director": "Adrien Lagier, Roman Bellity",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-memoire-des-poissons.jpg",
    "posterSource": "tmdb"
   },
@@ -7523,7 +7782,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDSQ2DFC6FA, bogoshorts-2026)",
    "work_id": "w_4KDSQ2DFC6FA",
    "_director": "Alice Voisin",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-petite-ecole.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4248), 450×637"
@@ -7542,7 +7801,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KENR5ENZQTB, bogoshorts-2026)",
    "work_id": "w_4KENR5ENZQTB",
    "_director": "Daniela López Moreno",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-rabia.jpg",
    "posterSource": "tmdb"
   },
@@ -7560,7 +7819,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHHQQ7YDFTH, bogoshorts-2026)",
    "work_id": "w_4KHHQQ7YDFTH",
    "_director": "Sofía Camargo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-selva.jpg",
    "posterSource": "tmdb"
   },
@@ -7579,7 +7838,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGJ153QP32E, bogoshorts-2026)",
    "work_id": "w_4KGJ153QP32E",
    "_director": "Ali Cherri",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-sentinelle.jpg",
    "posterSource": "tmdb"
   },
@@ -7596,7 +7855,7 @@
    "lbSlug": "la-suma-de-todas-las-partes",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Maite Lucía Valero",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-suma-de-todas-las-partes.jpg",
    "posterSource": "tmdb"
   },
@@ -7613,7 +7872,7 @@
    "lbSlug": "la-vida-de-un-hilo",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Guillermo Castañeda, Andrea Castillo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/la-vida-de-un-hilo.jpg",
    "posterSource": "tmdb"
   },
@@ -7688,7 +7947,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFJW5DB2BZS, bogoshorts-2026)",
    "work_id": "w_4KFJW5DB2BZS",
    "_director": "Lucas Acher",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/laser-gato.jpg",
    "posterSource": "tmdb"
   },
@@ -7724,7 +7983,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDWWD07DD6X, bogoshorts-2026)",
    "work_id": "w_4KDWWD07DD6X",
    "_director": "Avril Lehmann, Yael Vallotton",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/le-miracle.jpg",
    "posterSource": "tmdb"
   },
@@ -7788,7 +8047,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHRH5M6MZZP, bogoshorts-2026)",
    "work_id": "w_4KHRH5M6MZZP",
    "_director": "Daria Blažević",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/lekcije.jpg",
    "posterSource": "tmdb"
   },
@@ -7825,7 +8084,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGS8P404AYQ, bogoshorts-2026)",
    "work_id": "w_4KGS8P404AYQ",
    "_director": "Gala Hernández López",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/like-moths-to-light.jpg",
    "posterSource": "tmdb"
   },
@@ -7843,7 +8102,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE5T266SQ0H, bogoshorts-2026)",
    "work_id": "w_4KE5T266SQ0H",
    "_director": "Bruno Tondeur",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/like-a-beast.jpg",
    "posterSource": "tmdb"
   },
@@ -7861,7 +8120,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDRP7E1EVR5, bogoshorts-2026)",
    "work_id": "w_4KDRP7E1EVR5",
    "_director": "Antonia Colodro, Alaa Hathleen",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/living-despite-them.jpg",
    "posterSource": "tmdb"
   },
@@ -7879,7 +8138,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEK5WQ2Z4CH, bogoshorts-2026)",
    "work_id": "w_4KEK5WQ2Z4CH",
    "_director": "Lucía Romero Castillo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/llamame-llevame-avisame.jpg",
    "posterSource": "tmdb"
   },
@@ -7896,7 +8155,7 @@
    "lbSlug": "lo-entranable",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Valentina Laverde Castillo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/lo-entranable.jpg",
    "posterSource": "tmdb"
   },
@@ -7949,7 +8208,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KG18808YNKY, bogoshorts-2026)",
    "work_id": "w_4KG18808YNKY",
    "_director": "Valentina Romero López",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/los-gallos.jpg",
    "posterSource": "tmdb"
   },
@@ -7968,7 +8227,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH9W2JNR170, bogoshorts-2026)",
    "work_id": "w_4KH9W2JNR170",
    "_director": "Eduardo Braun Costa",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/los-mentirosos.jpg",
    "posterSource": "tmdb"
   },
@@ -8004,7 +8263,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KES6P5HD813, bogoshorts-2026)",
    "work_id": "w_4KES6P5HD813",
    "_director": "Arnold Tam",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/love-in-the-gaze-of-a-panopticon.jpg",
    "posterSource": "tmdb"
   },
@@ -8074,7 +8333,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE821XNGJWG, bogoshorts-2026)",
    "work_id": "w_4KE821XNGJWG",
    "_director": "Emily Lawson",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/man-eating-pussy.jpg",
    "posterSource": "tmdb"
   },
@@ -8092,7 +8351,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFX3J8AJ4QB, bogoshorts-2026)",
    "work_id": "w_4KFX3J8AJ4QB",
    "_director": "Gabriela Ortega",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/marga-en-el-df.jpg",
    "posterSource": "tmdb"
   },
@@ -8110,7 +8369,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGH18WFAAA5, bogoshorts-2026)",
    "work_id": "w_4KGH18WFAAA5",
    "_director": "Ingrid Pérez López",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/manana.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial de la obra (https://shortfilmwire.com/en/embedded/film/200122884/toto)"
@@ -8130,7 +8389,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF6HY2N6M9R, bogoshorts-2026)",
    "work_id": "w_4KF6HY2N6M9R",
    "_director": "Ivan Grgur",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/medo-u-sparugama.jpg",
    "posterSource": "tmdb"
   },
@@ -8147,7 +8406,7 @@
    "lbSlug": "meyolotl",
    "_verificado": "declarada a mano: altas.py --ficha: mismo título, dirección Lorena R. Valencia en los créditos de TMDB (leídos 24 nov) y en el catálogo del festival",
    "_director": "Lorena R. Valencia",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/meyolotl.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4197), 531×787"
@@ -8214,7 +8473,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH4TTVQ2GMB, bogoshorts-2026)",
    "work_id": "w_4KH4TTVQ2GMB",
    "_director": "Irina Rubina",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/miles-davis-what-s-love-got-to-do-with-it.jpg",
    "posterSource": "tmdb"
   },
@@ -8232,7 +8491,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFS16B69HTJ, bogoshorts-2026)",
    "work_id": "w_4KFS16B69HTJ",
    "_director": "Alina Milkina",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/mind-your-step.jpg",
    "posterSource": "tmdb"
   },
@@ -8284,7 +8543,7 @@
    "lbSlug": "mirage-2025-1",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1705630 «Mirage» — director ✓ y año/duración ✓",
    "_director": "Naima Karim",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/mirage.jpg",
    "posterSource": "tmdb"
   },
@@ -8302,7 +8561,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KED5JPPHASH, bogoshorts-2026)",
    "work_id": "w_4KED5JPPHASH",
    "_director": "Karla Condado",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/miriam.jpg",
    "posterSource": "tmdb"
   },
@@ -8320,7 +8579,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJAY0M60DNN, bogoshorts-2026)",
    "work_id": "w_4KJAY0M60DNN",
    "_director": "Ferand Peek",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/mis-drop.jpg",
    "posterSource": "tmdb"
   },
@@ -8338,7 +8597,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFSPXY9EM48, bogoshorts-2026)",
    "work_id": "w_4KFSPXY9EM48",
    "_director": "Sabah Machy",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/mon-chat-est-mort.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4300), 2500×3539"
@@ -8376,7 +8635,10 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ1PFE6XGG8, bogoshorts-2026)",
    "work_id": "w_4KJ1PFE6XGG8",
    "_director": "Élisabeth Caravella",
-   "_sondeado": "2026-11-25"
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/metae-drive.jpg",
+   "posterSource": "editorial",
+   "_afiche": "declarado: fotograma oficial del Drive de BOGOSHORTS (METAE_ES-METRO3_Fotograma1_24BSFF 01.jpg)"
   },
   "Météores": {
    "tmdb_id": 1212653,
@@ -8392,7 +8654,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHP7FKXQNBS, bogoshorts-2026)",
    "work_id": "w_4KHP7FKXQNBS",
    "_director": "Agnès Patron, Morgane Le Péchon",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/meteores.jpg",
    "posterSource": "tmdb"
   },
@@ -8411,7 +8673,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHWSKJPGRPF, bogoshorts-2026)",
    "work_id": "w_4KHWSKJPGRPF",
    "_director": "Lena von Döhren",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/nachtschwarmer.jpg",
    "posterSource": "tmdb"
   },
@@ -8428,7 +8690,7 @@
    "lbSlug": "ni-aqui-ni-alla",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Manuela Romero Samacá",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/ni-aqui-ni-alla.jpg",
    "posterSource": "tmdb"
   },
@@ -8446,7 +8708,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGP1RQ0VXTS, bogoshorts-2026)",
    "work_id": "w_4KGP1RQ0VXTS",
    "_director": "Rana Roy",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/night-feeds.jpg",
    "posterSource": "tmdb"
   },
@@ -8465,7 +8727,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE9X9V5TSPC, bogoshorts-2026)",
    "work_id": "w_4KE9X9V5TSPC",
    "_director": "Ana Šiškov",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/nije-pristojno-plesat-po-grobu.jpg",
    "posterSource": "tmdb"
   },
@@ -8503,7 +8765,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE9K3XEVDCP, bogoshorts-2026)",
    "work_id": "w_4KE9K3XEVDCP",
    "_director": "David Gašo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/niska-trava.jpg",
    "posterSource": "tmdb"
   },
@@ -8522,7 +8784,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFVGSZJYP89, bogoshorts-2026)",
    "work_id": "w_4KFVGSZJYP89",
    "_director": "Luciana Espinoza Hoempler",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/no-hay-camino.jpg",
    "posterSource": "tmdb"
   },
@@ -8539,7 +8801,7 @@
    "lbSlug": "no-te-conozcas",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Andrés Isaza Giraldo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/no-te-conozcas.jpg",
    "posterSource": "tmdb"
   },
@@ -8555,7 +8817,7 @@
    "pais_tmdb": "Colombia",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1827960 «No todos los pájaros son aves» — director ✓ y año/duración ✓",
    "_director": "Mateo Guerrero Quintero",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/no-todos-los-pajaros-son-aves.jpg",
    "posterSource": "tmdb"
   },
@@ -8574,7 +8836,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGD95CHJDSJ, bogoshorts-2026)",
    "work_id": "w_4KGD95CHJDSJ",
    "_director": "Roshanak Roshan",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/noon-le-pain-de-teheran.jpg",
    "posterSource": "tmdb"
   },
@@ -8592,7 +8854,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHQ8RGPTWNG, bogoshorts-2026)",
    "work_id": "w_4KHQ8RGPTWNG",
    "_director": "Simon Ellis",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/notes-from-planet-three.jpg",
    "posterSource": "tmdb"
   },
@@ -8610,9 +8872,27 @@
    "_verificado": "el catálogo ya la tiene (w_4KG2S47VYHVH, bogoshorts-2026)",
    "work_id": "w_4KG2S47VYHVH",
    "_director": "Ibrahim Omar",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/nothing-happens-after-your-absence.jpg",
    "posterSource": "tmdb"
+  },
+  "Nothing Here is Lost": {
+   "tmdb_id": 1849751,
+   "titulo_original": "Nothing Here is Lost",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In 2028, when the world has been dominated by data machine power, an Alpine mountain suffers a crisis of identity. Meanwhile, a Ticinese landowner fights in court to protect the mountain from total industrialization.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "",
+   "lbSlug": "nothing-here-is-lost",
+   "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_director": "Kathy Mitrani",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/bogoshorts-2026/nothinghereislost-drive.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: afiche oficial del Drive de BOGOSHORTS (Qui niente é perduto_CN-EXP03_Poster_24BSFF.tif)"
   },
   "Nuestra sombra": {
    "tmdb_id": 1275379,
@@ -8646,7 +8926,7 @@
    "lbSlug": "nemica",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Felipe Flórez Ramos",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/nemica.jpg",
    "posterSource": "tmdb"
   },
@@ -8665,7 +8945,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFJB16EJ1QV, bogoshorts-2026)",
    "work_id": "w_4KFJB16EJ1QV",
    "_director": "Pedro Geraldo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/o-lago-cinza-e-cego.jpg",
    "posterSource": "tmdb"
   },
@@ -8684,7 +8964,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEB44TF4HF7, bogoshorts-2026)",
    "work_id": "w_4KEB44TF4HF7",
    "_director": "Felipe Casanova",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/o-rio-de-janeiro-continua-lindo.jpg",
    "posterSource": "tmdb"
   },
@@ -8702,7 +8982,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHNR5W32T9T, bogoshorts-2026)",
    "work_id": "w_4KHNR5W32T9T",
    "_director": "Gavati Wad",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/o-seeker.jpg",
    "posterSource": "tmdb"
   },
@@ -8721,7 +9001,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHSH4MSAP6G, bogoshorts-2026)",
    "work_id": "w_4KHSH4MSAP6G",
    "_director": "Clara Vieira",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/onde-nascem-os-pirilampos.jpg",
    "posterSource": "tmdb"
   },
@@ -8739,7 +9019,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHE144F5HHG, bogoshorts-2026)",
    "work_id": "w_4KHE144F5HHG",
    "_director": "Marie Lukáčová",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/orla.jpg",
    "posterSource": "tmdb"
   },
@@ -8776,7 +9056,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KER4W7YQ9JR, bogoshorts-2026)",
    "work_id": "w_4KER4W7YQ9JR",
    "_director": "Iva Kraljevic",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/ovu-sobu-ostavite-zakopanu.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: póster oficial de la ficha de la obra en la web del festival (https://festival.bogoshorts.com/corto/4312), 318×450"
@@ -8833,7 +9113,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KG026GYZBXS, bogoshorts-2026)",
    "work_id": "w_4KG026GYZBXS",
    "_director": "Theo Montoya",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/peloton-trueno.jpg",
    "posterSource": "tmdb"
   },
@@ -8889,7 +9169,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGHHBJD2TPA, bogoshorts-2026)",
    "work_id": "w_4KGHHBJD2TPA",
    "_director": "Radu Jude, Adrian Cioflâncă",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/plan-contraplan.jpg",
    "posterSource": "tmdb"
   },
@@ -8975,7 +9255,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KG69QZ7CPQ0, bogoshorts-2026)",
    "work_id": "w_4KG69QZ7CPQ0",
    "_director": "India Opzoomer",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/poster-boy.jpg",
    "posterSource": "tmdb"
   },
@@ -8993,7 +9273,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFB85Z8208G, bogoshorts-2026)",
    "work_id": "w_4KFB85Z8208G",
    "_director": "Diego Rojas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/prayer-for-all-simple-things.jpg",
    "posterSource": "tmdb"
   },
@@ -9011,7 +9291,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJN38FH762B, bogoshorts-2026)",
    "work_id": "w_4KJN38FH762B",
    "_director": "Avelina Prat",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/principio-de-incendio-sobre-paisaje-desierto.jpg",
    "posterSource": "tmdb"
   },
@@ -9110,7 +9390,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF3J1TYKF0J, bogoshorts-2026)",
    "work_id": "w_4KF3J1TYKF0J",
    "_director": "Antía Carreira Vázquez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/pupa.jpg",
    "posterSource": "tmdb"
   },
@@ -9129,7 +9409,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE6GK8FS60T, bogoshorts-2026)",
    "work_id": "w_4KE6GK8FS60T",
    "_director": "Kateřina Čupová",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/piskoviste.jpg",
    "posterSource": "tmdb"
   },
@@ -9146,7 +9426,7 @@
    "lbSlug": "querida-a",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Elena Molina",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/querida-a.jpg",
    "posterSource": "tmdb"
   },
@@ -9163,7 +9443,7 @@
    "lbSlug": "rajin",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Faiz Abu Rmeleh, Keren Manor",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/raj-in.jpg",
    "posterSource": "tmdb"
   },
@@ -9180,7 +9460,7 @@
    "lbSlug": "raices-2026-3",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1784652 «Raíces» — director ✓ y año/duración ✓",
    "_director": "Mavie Beisheim, Felipe Cuartas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/raices.jpg",
    "posterSource": "tmdb"
   },
@@ -9198,7 +9478,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGF1JX4PY49, bogoshorts-2026)",
    "work_id": "w_4KGF1JX4PY49",
    "_director": "Maryam Mohajer",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/red-dress-no-straps.jpg",
    "posterSource": "tmdb"
   },
@@ -9216,7 +9496,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEBF0T14GQ6, bogoshorts-2026)",
    "work_id": "w_4KEBF0T14GQ6",
    "_director": "Iqran Rasheed",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/red-elephant.jpg",
    "posterSource": "tmdb"
   },
@@ -9234,7 +9514,7 @@
    "lbSlug": "they-rose-from-the-grave-and-it-was-the-apocalypse",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1788289 «They Rose from the Grave and It Was… The Apocalypse!» — director ✓ y año/duración ✓",
    "_director": "Domenico Montixi",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/risorsero-dalla-tomba-e-fu-l-apocalisse.jpg",
    "posterSource": "tmdb"
   },
@@ -9284,7 +9564,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KDYGDZB74EP, bogoshorts-2026)",
    "work_id": "w_4KDYGDZB74EP",
    "_director": "Margarida Paias",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/rui-carlos.jpg",
    "posterSource": "tmdb"
   },
@@ -9302,7 +9582,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ7VNBXKJHF, bogoshorts-2026)",
    "work_id": "w_4KJ7VNBXKJHF",
    "_director": "Kaleb Lechowski",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/r-ha.jpg",
    "posterSource": "tmdb"
   },
@@ -9338,7 +9618,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGA8WRY51T9, bogoshorts-2026)",
    "work_id": "w_4KGA8WRY51T9",
    "_director": "Romy Boutin St-Pierre, Nada Cheddadi, Karima Zouhair",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/sara-fatima.jpg",
    "posterSource": "tmdb"
   },
@@ -9356,7 +9636,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF41SH3RNAZ, bogoshorts-2026)",
    "work_id": "w_4KF41SH3RNAZ",
    "_director": "Gaby Clingman",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/see-you-in-the-morning.jpg",
    "posterSource": "tmdb"
   },
@@ -9393,7 +9673,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFQZYHAFX33, bogoshorts-2026)",
    "work_id": "w_4KFQZYHAFX33",
    "_director": "Katya Mikheeva",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/shades-of-blue.jpg",
    "posterSource": "tmdb"
   },
@@ -9411,7 +9691,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJHHYWY8JRM, bogoshorts-2026)",
    "work_id": "w_4KJHHYWY8JRM",
    "_director": "Simon Schares",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/shit-happened.jpg",
    "posterSource": "tmdb"
   },
@@ -9428,7 +9708,7 @@
    "lbSlug": "solos-2019",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 758792 «Solos» — director ✓ y año/duración ✓",
    "_director": "Gabriella Marsh",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/solos.jpg",
    "posterSource": "tmdb"
   },
@@ -9464,7 +9744,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHN9ATNHM7W, bogoshorts-2026)",
    "work_id": "w_4KHN9ATNHM7W",
    "_director": "Davide Palella",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/sonnenstube.jpg",
    "posterSource": "tmdb"
   },
@@ -9482,7 +9762,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGTSVMJ3MF9, bogoshorts-2026)",
    "work_id": "w_4KGTSVMJ3MF9",
    "_director": "Tania de León Yong",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/sone-con-zapata.jpg",
    "posterSource": "tmdb"
   },
@@ -9500,7 +9780,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ4SN2TADQ3, bogoshorts-2026)",
    "work_id": "w_4KJ4SN2TADQ3",
    "_director": "Thorvaldur S. Gunnarsson, Jonatan Brüsch, Ágúst Kristinsson, Arna Rut Diego Snæbjörnsdóttir, Esben J. Jespersen, Touraj Khosravi, Polina Bokhan",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/space-stallions.jpg",
    "posterSource": "tmdb"
   },
@@ -9582,7 +9862,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH3SG7X0W0G, bogoshorts-2026)",
    "work_id": "w_4KH3SG7X0W0G",
    "_director": "Aram Atkinson",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/sunrise-meets-sunset.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: afiche oficial de la obra (https://www.imdb.com/title/tt20515956/)"
@@ -9619,7 +9899,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHFQ5XRZ03R, bogoshorts-2026)",
    "work_id": "w_4KHFQ5XRZ03R",
    "_director": "Arianna Ortiz",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-birthday-gift.jpg",
    "posterSource": "tmdb"
   },
@@ -9636,7 +9916,7 @@
    "lbSlug": "the-end-13",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_titulo: TMDB 1472669 «The End» — director ✓ y año/duración ✓",
    "_director": "Niki Lindroth von Bahr",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-end.jpg",
    "posterSource": "tmdb"
   },
@@ -9653,7 +9933,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGWSGSWFAQQ, bogoshorts-2026)",
    "work_id": "w_4KGWSGSWFAQQ",
    "_director": "Raquel Guerrero",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-getaway.jpg",
    "posterSource": "tmdb"
   },
@@ -9671,7 +9951,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KECFEW478VX, bogoshorts-2026)",
    "work_id": "w_4KECFEW478VX",
    "_director": "Daniel Mann",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-recce.jpg",
    "posterSource": "tmdb"
   },
@@ -9689,7 +9969,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ6TTNQXW1T, bogoshorts-2026)",
    "work_id": "w_4KJ6TTNQXW1T",
    "_director": "Mikkel Mainz, Kenneth Ladekjær",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-reward.jpg",
    "posterSource": "tmdb"
   },
@@ -9707,7 +9987,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGCT4Y5QCVE, bogoshorts-2026)",
    "work_id": "w_4KGCT4Y5QCVE",
    "_director": "Mehrnaz Abdollahinia, Feben Elias Woldehawariat, Razahk Issaka, Celeste Jamneck, Yi Liu",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-soloists.jpg",
    "posterSource": "tmdb"
   },
@@ -9725,7 +10005,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHKR4XXNBY1, bogoshorts-2026)",
    "work_id": "w_4KHKR4XXNBY1",
    "_director": "Lorena Villanueva",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/the-tide-inside.jpg",
    "posterSource": "tmdb"
   },
@@ -9761,7 +10041,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KGK1EP1B55T, bogoshorts-2026)",
    "work_id": "w_4KGK1EP1B55T",
    "_director": "Laura Poitras, Rachel Lauren Mueller",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/they-re-here.jpg",
    "posterSource": "tmdb"
   },
@@ -9779,7 +10059,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEYVA9VR7YR, bogoshorts-2026)",
    "work_id": "w_4KEYVA9VR7YR",
    "_director": "Amer Nasser",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/to-the-north.jpg",
    "posterSource": "tmdb"
   },
@@ -9849,7 +10129,7 @@
    "lbSlug": "triangle-2025",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_director: TMDB 1567979 «Triangle» — director ✓ y año/duración ✓",
    "_director": "Anaël Dang",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/triangle.jpg",
    "posterSource": "tmdb"
   },
@@ -9867,7 +10147,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJJKNB5MZDV, bogoshorts-2026)",
    "work_id": "w_4KJJKNB5MZDV",
    "_director": "Fridtjof Stensæth Josefsen, Morten Borgestad",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/trio.jpg",
    "posterSource": "tmdb"
   },
@@ -9886,7 +10166,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KE8DPCGFZ6Q, bogoshorts-2026)",
    "work_id": "w_4KE8DPCGFZ6Q",
    "_director": "Antoneta Alamat Kusijanović",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/u-plavetnilo.jpg",
    "posterSource": "tmdb"
   },
@@ -9904,7 +10184,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFMZ3Z2FWFZ, bogoshorts-2026)",
    "work_id": "w_4KFMZ3Z2FWFZ",
    "_director": "Henri Veermäe",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/uka-uka.jpg",
    "posterSource": "tmdb"
   },
@@ -9921,7 +10201,7 @@
    "lbSlug": "un-pajaro-mas",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Julián Gómez Reyes",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/un-pajaro-mas.jpg",
    "posterSource": "tmdb"
   },
@@ -9938,7 +10218,7 @@
    "lbSlug": "una-carta-supuesta",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Megumi Cardona",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/una-carta-supuesta.jpg",
    "posterSource": "tmdb"
   },
@@ -9992,7 +10272,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KG3S25KGZSG, bogoshorts-2026)",
    "work_id": "w_4KG3S25KGZSG",
    "_director": "Fernanda Pessoa",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/v-o-por-f-p.jpg",
    "posterSource": "tmdb"
   },
@@ -10011,7 +10291,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFMBM4TPEG3, bogoshorts-2026)",
    "work_id": "w_4KFMBM4TPEG3",
    "_director": "Lara Carvalho",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/vou-dancar-ate-voce.jpg",
    "posterSource": "tmdb"
   },
@@ -10030,7 +10310,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFND3HMNSG7, bogoshorts-2026)",
    "work_id": "w_4KFND3HMNSG7",
    "_director": "Susa Monteiro",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/vagabundo.jpg",
    "posterSource": "tmdb"
   },
@@ -10047,7 +10327,7 @@
    "lbSlug": "varoncito",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Camilo Giraldo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/varoncito.jpg",
    "posterSource": "tmdb"
   },
@@ -10066,7 +10346,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KHZ2FS82F03, bogoshorts-2026)",
    "work_id": "w_4KHZ2FS82F03",
    "_director": "Antonin Niclass",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/vers-la-foret.jpg",
    "posterSource": "tmdb"
   },
@@ -10084,7 +10364,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KFNZ8CE1BDV, bogoshorts-2026)",
    "work_id": "w_4KFNZ8CE1BDV",
    "_director": "Marcy Page",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/virgin-fandango.jpg",
    "posterSource": "tmdb"
   },
@@ -10102,7 +10382,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KJ4B5TCZ32D, bogoshorts-2026)",
    "work_id": "w_4KJ4B5TCZ32D",
    "_director": "Vitaliy Shushko",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/x-story.jpg",
    "posterSource": "tmdb"
   },
@@ -10121,7 +10401,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KEWC0PG23NP, bogoshorts-2026)",
    "work_id": "w_4KEWC0PG23NP",
    "_director": "Anders Jon, Kasper Juhl, Michael Kunov y Michael Panduro",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/yndige-mennesker.jpg",
    "posterSource": "tmdb"
   },
@@ -10139,7 +10419,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KH944E3FVDN, bogoshorts-2026)",
    "work_id": "w_4KH944E3FVDN",
    "_director": "Carlos Gómez Salamanca",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/yugo.jpg",
    "posterSource": "tmdb"
   },
@@ -10156,7 +10436,7 @@
    "lbSlug": "el-regreso-pa-cuando",
    "_verificado": "declarada a mano: alta en TMDB hecha por nosotros el 2026-11-23 (registro bogoshorts-2026-altas.json)",
    "_director": "Antonia Bello Vélez",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/el-regreso-pa-cuando.jpg",
    "posterSource": "tmdb"
   },
@@ -10194,7 +10474,7 @@
    "_verificado": "el catálogo ya la tiene (w_4KF537BZKWD8, bogoshorts-2026)",
    "work_id": "w_4KF537BZKWD8",
    "_director": "Zvonimir Jurić",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/zuti-mjesec.jpg",
    "posterSource": "tmdb"
   },
@@ -10213,7 +10493,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "环岛",
    "_director": "Dean Wei",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/tmdb-1599912.jpg",
    "posterSource": "tmdb"
   },
@@ -10232,7 +10512,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "跳房子",
    "_director": "Jingyuan Liang, Shizhao Ye",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-27",
    "poster": "/assets/bogoshorts-2026/tmdb-1736821.jpg",
    "posterSource": "tmdb"
   },
@@ -10248,15 +10528,12 @@
   }
  },
  "sin_ficha": [
-  "A Body that Hurts",
   "Amará",
   "Argentina Is Daing (Marttein)",
   "Berzingue (Crache)",
   "Bu",
-  "Carta a un joven ladrón",
   "Cartas a Daniel Apóstol",
   "Cassandra",
-  "Clasificado personal",
   "Cocodrilo (Dillom)",
   "Cumbia pa’ la luna (Fuji Kurosawa ft. Lina Remolina)",
   "El Alto de los Buitres",
@@ -10282,7 +10559,6 @@
   "Maria Lionza (Yajaira La Beyaca)",
   "Mi barquito (Canalón de Timbiquí)",
   "Nancy resabiada (Cumbia) (El Kalvo & La Banda Resabiada)",
-  "Nothing Here is Lost",
   "O sigilo",
   "On naît seul, on meurt seul",
   "Oui (Balming Tiger)",
@@ -10308,10 +10584,6 @@
   "¿Cómo se ama? (Jorge Drexler)"
  ],
  "_sin_ficha_sondeo": {
-  "A Body that Hurts": {
-   "director": "David Espitia Calderón",
-   "fecha": "2026-11-23"
-  },
   "Amará": {
    "director": "Manuela Ocampo",
    "fecha": "2026-11-23"
@@ -10328,20 +10600,12 @@
    "director": "Daniel Alemán Montero",
    "fecha": "2026-11-23"
   },
-  "Carta a un joven ladrón": {
-   "director": "Daniel Quintero Correa",
-   "fecha": "2026-11-23"
-  },
   "Cartas a Daniel Apóstol": {
    "director": "David Suárez Muñetón",
    "fecha": "2026-11-23"
   },
   "Cassandra": {
    "director": "Martín Arbeláez",
-   "fecha": "2026-11-23"
-  },
-  "Clasificado personal": {
-   "director": "Juan Pablo Melo",
    "fecha": "2026-11-23"
   },
   "Cocodrilo (Dillom)": {
@@ -10442,10 +10706,6 @@
   },
   "Nancy resabiada (Cumbia) (El Kalvo & La Banda Resabiada)": {
    "director": "Valeria Martí, El Kalvo",
-   "fecha": "2026-11-23"
-  },
-  "Nothing Here is Lost": {
-   "director": "Kathy Mitrani",
    "fecha": "2026-11-23"
   },
   "O sigilo": {

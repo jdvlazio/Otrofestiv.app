@@ -100,5 +100,21 @@
   "antes": {
    "bogoshorts-2026": "metae"
   }
+ },
+ {
+  "work_id": "w_4KJ1PFE6XGG8",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/metae-drive.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/metae-drive.jpg"
+  }
  }
 ]

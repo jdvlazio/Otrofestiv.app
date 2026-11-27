@@ -76,5 +76,44 @@
   "antes": {
    "bogoshorts-2026": "At some point in the twentieth century, the radio plays. Lost desires and undelivered letters travel through Bogotá’s electricity cables."
   }
+ },
+ {
+  "work_id": "w_4KDR2J6G445C",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/clasificadopersonal-drive.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/clasificadopersonal-drive.jpg"
+  }
+ },
+ {
+  "work_id": "w_4KDR2J6G445C",
+  "campo": "xref.tmdb",
+  "valor": 1849756,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1849756"
+  }
+ },
+ {
+  "work_id": "w_4KDR2J6G445C",
+  "campo": "xref.letterboxd",
+  "valor": "clasificado-personal",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "clasificado-personal"
+  }
  }
 ]

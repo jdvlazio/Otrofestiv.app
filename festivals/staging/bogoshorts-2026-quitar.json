@@ -1,0 +1,23 @@
+{
+ "_provenance": {
+  "fuente": "decisión de corrección, mirada a mano",
+  "capturado": "2026-11-27"
+ },
+ "quitar": [
+  {
+   "titulo": "La primera estampilla de Korinco",
+   "campo": "synopsis",
+   "por_que": "heredado por error de «La» (ficfusa-2026, cineparalapaz-2026), otra obra: ya_publicada tomaba el artículo «La» como comienzo del título «La primera estampilla de Korinco» y el año lo corroboraba. Korinco es un stop motion hecho por niños (catálogo BOGOSHORTS pág. 191, Minikino) y no tiene afiche ni sinopsis propios publicados."
+  },
+  {
+   "titulo": "La primera estampilla de Korinco",
+   "campo": "synopsis_lang",
+   "por_que": "heredado por error de «La» (ficfusa-2026, cineparalapaz-2026), otra obra: ya_publicada tomaba el artículo «La» como comienzo del título «La primera estampilla de Korinco» y el año lo corroboraba. Korinco es un stop motion hecho por niños (catálogo BOGOSHORTS pág. 191, Minikino) y no tiene afiche ni sinopsis propios publicados."
+  },
+  {
+   "titulo": "La primera estampilla de Korinco",
+   "campo": "synopsis_en",
+   "por_que": "heredado por error de «La» (ficfusa-2026, cineparalapaz-2026), otra obra: ya_publicada tomaba el artículo «La» como comienzo del título «La primera estampilla de Korinco» y el año lo corroboraba. Korinco es un stop motion hecho por niños (catálogo BOGOSHORTS pág. 191, Minikino) y no tiene afiche ni sinopsis propios publicados."
+  }
+ ]
+}

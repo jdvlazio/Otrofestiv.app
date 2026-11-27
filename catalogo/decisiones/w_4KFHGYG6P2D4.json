@@ -101,5 +101,21 @@
   "antes": {
    "bogoshorts-2026": "barcelona-de-foc"
   }
+ },
+ {
+  "work_id": "w_4KFHGYG6P2D4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/barcelonadefoc-drive.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/barcelonadefoc-drive.jpg"
+  }
  }
 ]

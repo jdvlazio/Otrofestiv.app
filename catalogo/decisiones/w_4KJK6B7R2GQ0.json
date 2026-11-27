@@ -80,5 +80,21 @@
   "antes": {
    "bogoshorts-2026": "Matías Aguayo is a music teacher whose beat class turns the classroom into a portal. Instrument by instrument, he guides his puppet students through the anatomy of a beat, until the lesson takes on a life of its own. A piñata-built puppet world unravels and an animated geometric classroom takes shape. The more he shows the instruments, the more his students lose themselves in the music, until the teacher turns into a puppet himself, finally loose, finally in the groove with everyone else."
   }
+ },
+ {
+  "work_id": "w_4KJK6B7R2GQ0",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/thebeatmatiasaguayo-drive.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/thebeatmatiasaguayo-drive.jpg"
+  }
  }
 ]

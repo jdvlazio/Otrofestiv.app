@@ -77,5 +77,44 @@
   "antes": {
    "bogoshorts-2026": "In 2028, when the world has been dominated by data machine power, an Alpine mountain suffers a crisis of identity. Meanwhile, a Ticinese landowner fights in court to protect the mountain from total industrialization."
   }
+ },
+ {
+  "work_id": "w_4KDR0VRX64QC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/nothinghereislost-drive.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/nothinghereislost-drive.jpg"
+  }
+ },
+ {
+  "work_id": "w_4KDR0VRX64QC",
+  "campo": "xref.tmdb",
+  "valor": 1849751,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1849751"
+  }
+ },
+ {
+  "work_id": "w_4KDR0VRX64QC",
+  "campo": "xref.letterboxd",
+  "valor": "nothing-here-is-lost",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "nothing-here-is-lost"
+  }
  }
 ]
