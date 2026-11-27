@@ -92,5 +92,29 @@
   "antes": {
    "bogoshorts-2026": "/assets/bogoshorts-2026/osigilo-drive.jpg"
   }
+ },
+ {
+  "work_id": "w_4KDQZQBJYQSZ",
+  "campo": "xref.tmdb",
+  "valor": 1849828,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "alta TMDB 1849828 (Claude, OK de Juan)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1849828"
+  }
+ },
+ {
+  "work_id": "w_4KDQZQBJYQSZ",
+  "campo": "xref.letterboxd",
+  "valor": "o-sigilo",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "alta TMDB 1849828 (Claude, OK de Juan)",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "o-sigilo"
+  }
  }
 ]
