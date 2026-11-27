@@ -124,7 +124,9 @@
   }
  },
  "sin_afiche": {
-  "Entre Ríos. Todos somos hermanos": "sin afiche: la lámina del festival (Df-DlZyERf2/08) trae solo un still horizontal sin créditos; la web no incluye la obra; sin director no hay con qué verificar un homónimo en TMDB (24 nov 2026)"
+  "Entre Ríos. Todos somos hermanos": "sin afiche: la lámina del festival (Df-DlZyERf2/08) trae solo un still horizontal sin créditos; la web no incluye la obra; sin director no hay con qué verificar un homónimo en TMDB (24 nov 2026)",
+  "El empiezo": "sin afiche: videoclip; la lámina (DfcpGHfoWWI/06) y la ficha del 1 dic (27 nov) solo traen título y créditos, sin afiche vertical (27 nov 2026)",
+  "Coming from Hell": "sin afiche: videoclip de Klonazepan & Mafa; la lámina (DfcqutroV1z/10) y la ficha del 6 dic (27 nov) no traen afiche vertical (27 nov 2026)"
  },
  "sin_sinopsis": {
   "El cuarto": {
@@ -165,6 +167,24 @@
     "https://www.facebook.com/festivaldecinebarbosa",
     "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
     "YouTube, búsqueda por título y autoría (24 nov 2026)"
+   ]
+  },
+  "El empiezo": {
+   "_por_que": "videoclip; las fuentes solo traen título, director, año y duración.",
+   "fuentes": [
+    "fuentes/provinciadevelez-2026/ig/fichas-2026-11-27 (fichas del festival, 27 nov 2026)",
+    "https://festivaldecineprovinciadevelez.com/",
+    "https://www.facebook.com/festivaldecinebarbosa",
+    "https://www.instagram.com/p/DfcpGHfoWWI/"
+   ]
+  },
+  "Coming from Hell": {
+   "_por_que": "videoclip; las fuentes solo traen título, autoría, año y duración.",
+   "fuentes": [
+    "fuentes/provinciadevelez-2026/ig/fichas-2026-11-27 (fichas del festival, 27 nov 2026)",
+    "https://festivaldecineprovinciadevelez.com/",
+    "https://www.facebook.com/festivaldecinebarbosa",
+    "https://www.instagram.com/p/DfcqutroV1z/"
    ]
   }
  },
