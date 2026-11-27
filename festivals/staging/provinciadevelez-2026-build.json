@@ -775,7 +775,7 @@
      "synopsis": "Buscando escapar de la rutina de la ciudad, un grupo de jóvenes visita a una amiga que vive sola en las montañas. Rodeados por la inmensidad del paisaje y el silencio del campo, escuchan los relatos que ella conoce sobre la región.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/entre-amigos.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "entre-amigos-1",
      "tmdb_id": 1849444
     },
@@ -837,71 +837,6 @@
     }
    },
    "_duracion_corregida": "suma de sus obras con duración verificada"
-  },
-  {
-   "title": "Conversatorio: ¿Fue como lo imaginaste o lo que fue te imaginó?",
-   "type": "event",
-   "section": "💬 Conversatorios",
-   "_ancla": [
-    "La Tante Boutique - Barbosa",
-    "2026-12-04",
-    "18:00"
-   ],
-   "day": "2026-12-04",
-   "time": "18:00",
-   "day_order": 3,
-   "venue": "La Tante Boutique - Barbosa",
-   "event_kind": "conversatorio",
-   "has_qa": false,
-   "_src": {
-    "url": "correo del festival a hola@otrofestiv.app (4 láminas, sin texto)",
-    "date": "2026-11-27",
-    "tipo": "festival"
-   },
-   "description": "Carolina Muñoz y Claudia Sanabria",
-   "description_lang": "es",
-   "_fid": "f_5eaefa317b",
-   "id": "f_5eaefa317b",
-   "is_free": true,
-   "_procedencia": {
-    "day": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-27"
-    },
-    "time": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-27"
-    },
-    "venue": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-27"
-    },
-    "entrada": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-27"
-    },
-    "has_qa": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-27"
-    },
-    "title": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-27"
-    },
-    "type": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-27"
-    },
-    "event_kind": {
-     "tipo": "festival-web",
-     "fecha": "2026-11-27"
-    },
-    "duration": {
-     "tipo": "regla",
-     "marca": "estimado"
-    }
-   },
-   "duration": "60 min"
   },
   {
    "title": "El Dolor del Vientre + 5 Obras",
@@ -1421,7 +1356,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-27T16:12:34",
+  "fecha": "2026-11-27T16:39:42",
   "plan_sha": "95fbb9b0329f755a",
   "paso": 7,
   "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"

@@ -46,9 +46,8 @@ FUNCIONES = {
     ('2026-12-06', '20:00'): ('Ayuno y cenizas', 'Muestra Central', CORREO, '2026-11-27', ['Ayuno y cenizas']),
 }
 # Eventos sin obra (correo del 27 nov): el conversatorio del 5 dic
-EVENTOS = [{'titulo': 'Conversatorio: ¿Fue como lo imaginaste o lo que fue te imaginó?', 'dia': '2026-12-04', 'hora': '18:00',
-            'sede': 'La Tante Boutique', 'seccion': 'Conversatorios', 'tipo': 'evento',
-            'event_kind': 'conversatorio', 'invitados': 'Carolina Muñoz y Claudia Sanabria'},
+# el conversatorio del 4 dic va dentro de la función (lámina): es su has_qa, decidido por Juan
+EVENTOS = [
            {'titulo': 'Conversatorio: La realidad y el destino', 'dia': '2026-12-05', 'hora': '19:30',
             'sede': 'Parque Emilio Ulloa', 'seccion': 'Conversatorios', 'tipo': 'evento',
             'event_kind': 'conversatorio', 'invitados': 'Rodrigo Dimaté, María Jimena Barreto y Luis Carlos Torres'}]

@@ -39,13 +39,6 @@
    "sala": "",
    "titulo": "la imaginada 10 obras"
   },
-  "f_5eaefa317b": {
-   "sede": "La Tante Boutique - Barbosa",
-   "dia": "2026-12-04",
-   "hora": "18:00",
-   "sala": "",
-   "titulo": "conversatorio fue como lo imaginaste o lo que fue te imagino"
-  },
   "f_f0ed1fcf3f": {
    "sede": "Parque Emilio Ulloa - Barbosa",
    "dia": "2026-12-05",
@@ -87,6 +80,14 @@
    "hora": "20:00",
    "sala": "",
    "titulo": "ayuno y cenizas"
+  },
+  "f_5eaefa317b": {
+   "sede": "La Tante Boutique - Barbosa",
+   "dia": "2026-12-04",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "conversatorio fue como lo imaginaste o lo que fue te imagino",
+   "ausente": true
   },
   "f_7a2dca52ee": {
    "sede": "La Tante Boutique - Barbosa",
