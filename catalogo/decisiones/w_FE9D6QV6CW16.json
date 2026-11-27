@@ -1,0 +1,29 @@
+[
+ {
+  "work_id": "w_FE9D6QV6CW16",
+  "campo": "directores",
+  "valor": [
+   "Klonazepan",
+   "Mafa"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "Claude (fichas 27 nov)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Klonazepan, Mafa"
+  }
+ },
+ {
+  "work_id": "w_FE9D6QV6CW16",
+  "campo": "anio",
+  "valor": 2025,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "Claude (fichas 27 nov)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "2025"
+  }
+ }
+]

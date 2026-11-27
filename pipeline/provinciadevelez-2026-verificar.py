@@ -11,7 +11,10 @@ IG = f'{REPO}/fuentes/provinciadevelez-2026/ig'
 # lo que la lámina imprime distinto, y la segunda lámina de la misma función
 FB = 'pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul'
 CORREO = 'correo del festival a hola@otrofestiv.app (4 láminas, sin texto)'   # 27 nov, en ig/correo-2026-11-27
-POSTS = {CORREO: ['correo-2026-11-27'], FB: ['fb-1581240617371136'], 'DfxyKI-S9LA': ['DfxyKI-S9LA', 'DfzhWP2x_sy']}
+FICHAS = 'fichas del festival a Juan (8 láminas, 27 nov 2026)'   # en ig/fichas-2026-11-27
+POSTS = {FICHAS: ['fichas-2026-11-27'], CORREO: ['correo-2026-11-27'], FB: ['fb-1581240617371136'], 'DfxyKI-S9LA': ['DfxyKI-S9LA', 'DfzhWP2x_sy', 'fichas-2026-11-27']}
+# las fichas del 27 nov dibujan el número del día: se lee el día de la semana (dic 2026)
+SEMANA = {1: 'martes', 2: 'miercoles', 3: 'jueves', 4: 'viernes', 5: 'sabado', 6: 'domingo'}
 IMPRESO = {'El pescador (videoclip)': 'El pescador', 'El fantástico Sr. Fox': 'Fantastic Mr Fox'}
 A_OJO = {'Saint Juanito'}   # título dibujado en el afiche (lámina 01 de Df7ZYXrEaXh)
 
@@ -27,7 +30,7 @@ for f in b:   # solo días oficiales: el afiche dice 1 al 6 de diciembre (Juan, 
     if not '2026-12-01' <= f['day'] <= '2026-12-06':
         err.append(f'{f["title"]}: {f["day"]} fuera de los días oficiales')
 for f in b:
-    sc = f['_src']['url'] if f['_src']['url'] == CORREO else f['_src']['url'].rstrip('/').split('/')[-1]
+    sc = f['_src']['url'] if f['_src']['url'] in (CORREO, FICHAS) else f['_src']['url'].rstrip('/').split('/')[-1]
     txt = ''
     for p in POSTS.get(sc, [sc]):
         for im in sorted(glob.glob(f'{IG}/{p}/*.jpg')):
@@ -35,7 +38,8 @@ for f in b:
             txt += ' ' + (r if isinstance(r, str) else json.dumps(r, ensure_ascii=False))
     t = n(txt)
     d, h = int(f['day'][-2:]), int(f['time'][:2]) - 12
-    if f'{d}dediciembre' not in t and f'{d}denoviembre' not in t:
+    if f'{d}dediciembre' not in t and f'{d}denoviembre' not in t and not (
+            f['_src']['url'] == FICHAS and SEMANA[d] in t):
         err.append(f'{f["title"]}: el día {d} no se lee')
     if not re.search(rf'(?<!\d){h}(:\d\d)?\s*(P\.?\s?M|DE LA TARDE)', txt, re.I):
         err.append(f'{f["title"]}: la hora {h} no se lee')

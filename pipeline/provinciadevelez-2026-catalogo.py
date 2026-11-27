@@ -64,14 +64,17 @@ F2 = ('2026-12-02', '19:00', 'Grupo Central AA',
 F3 = ('2026-12-03', '18:00', 'Casa Taller Palo de Mango',
       f'{IG}Df4hzKXkYiP/: «JUEVES 3 DE DICIEMBRE · 6 P.M. · EN CASA TALLER PALO DE MANGO · Pasos arriba del '
       'Moncada, Barrio Marsella»; la web: «Jueves 3 de diciembre · 6:00 p. m.»')
-F4 = ('2026-12-04', '19:00', 'La Tante Boutique',
+F4 = ('2026-12-04', '18:00', 'La Tante Boutique',
       f'{IG}Df7ZYXrEaXh/: láminas «VIERNES 4 DE DICIEMBRE · DESDE LAS 7:00 P. M. · La Tante · Barbosa» '
       '(la de Cicatrices: «La Tante Boutique Barbosa»); el pie: «el 04 de diciembre desde las 6.00pm … '
-      'La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»')
+      'La imaginada … Seguiremos con once (11) hermosos trabajos de la selección oficial»; ficha del festival '
+      '(27 nov, Descargas): un solo bloque «6:00 P. M.» con La imaginada, conversatorio y 10 obras (sin Cicatrices)')
+FICHAS = 'fichas del festival por WhatsApp a Juan, 27 nov 2026 (8 láminas)'
+F7A = ('2026-12-06', '18:00', 'Estación del Tren', f'{FICHAS}: «6:00 P. M. · FRANJA INFANTIL · El fantástico Sr. Fox» · Estación del Ferrocarril')
+F7B = ('2026-12-06', '19:30', 'Estación del Tren', f'{FICHAS}: «7:30 P. M. · MUESTRA ESPECIAL · La imaginada · Coming from Hell»')
 F6 = ('2026-12-02', '18:00', 'Parque Central Cite',
       f'{FB25} (4 láminas, 25 nov): «CONVOCATORIA SARAVITA DOCUMENTAL · PARQUE CENTRAL CITE · MIÉRCOLES 2 DE DICIEMBRE · '
       'DESDE LAS 6:00 P.M.» pintado en cada una')
-F4_IMAG = ('2026-12-04', '18:00', 'La Tante Boutique', F4[3])
 
 # (id web, título, categoría web, director, país, año, lámina IG, función, _corrige)
 SEL = [
@@ -90,8 +93,8 @@ SEL = [
     ('salvemos-el-agua', 'Salvemos el agua', 'Cortometraje', None, 'Colombia', None, 'DfcpGHfoWWI/07', F3,
      'lámina: «Cortometraje realizado en el marco de un proceso de cine comunitario en Palomino, La Guajira» '
      '· Escuela Kiné · Fundación Nukuba; sin director nombrado'),
-    ('cicatrices', 'Cicatrices', 'Cortometraje', 'Jhon Amado', 'Colombia', 2026, 'DfcpGHfoWWI/02', F4,
-     'lámina: «DIRIGIDA POR JHON AMADO … FILIPINAS - ARAUCA 2026»; web: «Filipinas, Arauca»'),
+    ('cicatrices', 'Cicatrices', 'Cortometraje', 'Jhon Amado', 'Colombia', 2026, 'DfcpGHfoWWI/02', None,
+     'lámina: «DIRIGIDA POR JHON AMADO … FILIPINAS - ARAUCA 2026»; web: «Filipinas, Arauca»; la ficha del 4 dic (27 nov) ya no la trae'),
     ('el-pescador', 'El pescador', 'Cortometraje', 'Juan Cruz', 'Puerto Rico, Colombia', None, 'DfcqutroV1z/03', F4,
      'lámina: «DIRIGIDO POR JUAN CRUZ PARA TALLER TOCA PLENA & CASA DEL SOL» (OCR «CAUZ»)'),
     ('creation-unicorn', 'Creation of a Unicorn', 'Experimental', 'Dr Klonasepam, Mafa', 'Colombia', None, 'DfcqutroV1z/09', F4,
@@ -120,12 +123,12 @@ SEL = [
      'lámina: «DIRIGIDA POR: MARÍA CANDELARIA ALDANA, PRODUCIDA POR: VALENTINA SANTOS»'),
     ('llantos-monte', 'Llantos del monte', 'Videoclip', None, 'Argentina', None, 'DfcpGHfoWWI/11', F5,
      'lámina: «Oberá - Misiones - Argentina · Cine Joven Comunitario»; sin director nombrado'),
-    ('coming-from-hell', 'Coming from Hell', 'Videoclip', 'Klonazepan & Mafa', None, None, 'DfcqutroV1z/10', None,
+    ('coming-from-hell', 'Coming from Hell', 'Videoclip', 'Klonazepan & Mafa', None, 2025, 'DfcqutroV1z/10', F7B,
      'lámina: «KLONAZEPAN & MAFA» — artistas, no dirección'),
     ('el-pescador-clip', 'El pescador (videoclip)', 'Videoclip', 'Juan Cruz', 'Puerto Rico, Colombia', None, 'DfhmCGsEZ84/03', F1,
      f'pie de {IG}DfzhWP2x_sy/: «Dirección Juan Cruz, Puerto Rico»; lámina: «(PUERTO RICO FT COL) · TALLER TOCA PLENA x CASA DEL SOL»'),
-    ('el-empiezo', 'El empiezo', 'Videoclip', None, None, None, 'DfcpGHfoWWI/06', None,
-     'lámina y web: solo el título'),
+    ('el-empiezo', 'El empiezo', 'Videoclip', 'Nelson Silva', None, 2022, 'DfcpGHfoWWI/06', F1,
+     f'{FICHAS}, 1 dic: «El empiezo · Videoclip · Dir. Nelson Silva · 2022 · 3 min»'),
     ('saint-juanito', 'Saint Juanito', 'Videoclip', 'Sebastián Tapia', 'Perú', None, 'DfhmCGsEZ84/02', F4,
      'lámina: «(PERÚ) · CHRIS ANDREE» — el artista; dirige Sebastián Tapia (créditos del video oficial, youtube QQ1G_ps-A34); el pie del 19 nov: «Chris Andree explora…»'),
     ('el-cuarto', 'El cuarto', 'Filminuto', 'María Candelaria Aldana', 'Colombia', None, 'DfcqutroV1z/04', F4,
@@ -227,12 +230,12 @@ SINOPSIS_EN = {
 OTRAS = [
     ('La familia Bélier', 'Éric Lartigau', 'largo', 'Franja infantil', F1,
      'web «Franja infantil» + lámina «MUESTRA ESPECIAL · FRANJA INFANTIL»'),
-    ('El fantástico Sr. Fox', 'Wes Anderson', 'largo', 'Franja infantil', F3,
+    ('El fantástico Sr. Fox', 'Wes Anderson', 'largo', 'Franja infantil', (F3, F7A),
      'web «Franja infantil · Wes Anderson · stop motion» + lámina «MUESTRA ESPECIAL · FRANJA PARA NIÑOS»'),
     ('My Name Is Bill W.', 'Daniel Petrie', 'largo', 'Muestra especial', F2,
      'lámina «MUESTRA ESPECIAL BARBOSA»; el afiche dice «My Name is Bill W.» (James Woods, JoBeth Williams, '
      'James Garner); el pie del 17 nov la presenta como «La caída»'),
-    ('La imaginada', 'Carolina Muñoz', 'corto', 'Muestra especial', F4_IMAG,
+    ('La imaginada', 'Carolina Muñoz', 'corto', 'Muestra especial', (F4, F7B),
      'pie Df7ZYXrEaXh: «película de 20 minutos inspirada en Barbosa, nominada a la India Catalina, que se presentó en '
      'el 2016 … presencia de la escritora y directora Carolina Muñoz»; lámina Df71yg2P6hF (y FB 19 nov): «MUESTRA ESPECIAL LA IMAGINADA 2016 – 2026 · DIRECTORA CAROLINA MUÑOZ · VIERNES 4 DE DICIEMBRE · DESDE LAS 6:00 P. M. · LA TANTE · BARBOSA»'),
     ('Uma Uñjirinaka · Puchucollo Alto', 'Left Hand Rotation', 'corto', SO, None,
@@ -268,7 +271,7 @@ def main():
     assert len(SEL) == 29, 'la web dice 29 obras'
     assert sum(1 for s in SEL if s[6].startswith('DfcpGHfoWWI')) == 13
     assert sum(1 for s in SEL if s[6].startswith('DfcqutroV1z')) == 14
-    assert sum(1 for s in SEL if s[7] is F4) == 11, 'el pie del 19 nov: «once (11) trabajos»'
+    assert sum(1 for s in SEL if s[7] is F4) == 10, 'ficha del 4 dic (27 nov): 10 obras de la selección'
     obras = []
     for wid, tit, cat, dire, pais, anio, lam, fun, cor in SEL:
         o = {'titulo': tit, 'director': dire, 'pais': pais, 'anio': anio, 'tipo': 'corto',
@@ -305,6 +308,8 @@ def main():
             o['seccion'] = sec
         if fun:
             o['funcion'] = funcion(fun)
+            if isinstance(fun[0], tuple):
+                o['funciones'] = [funcion(x) for x in fun]
         else:
             o['franja'] = 'sin función en los días oficiales (1–6 dic)'
         if tit in SINOPSIS:

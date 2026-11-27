@@ -9,7 +9,7 @@
    "dia": "2026-12-01",
    "hora": "18:00",
    "sala": "",
-   "titulo": "la familia belier el pescador videoclip"
+   "titulo": "la familia belier 2 obras"
   },
   "f_2204c2d881": {
    "sede": "Parque Central Cite - Barbosa",
@@ -37,14 +37,7 @@
    "dia": "2026-12-04",
    "hora": "18:00",
    "sala": "",
-   "titulo": "la imaginada"
-  },
-  "f_7a2dca52ee": {
-   "sede": "La Tante Boutique - Barbosa",
-   "dia": "2026-12-04",
-   "hora": "19:00",
-   "sala": "",
-   "titulo": "saint juanito 10 obras"
+   "titulo": "la imaginada 10 obras"
   },
   "f_f0ed1fcf3f": {
    "sede": "Parque Emilio Ulloa - Barbosa",
@@ -58,7 +51,7 @@
    "dia": "2026-12-05",
    "hora": "19:30",
    "sala": "",
-   "titulo": "conversatorio realidad y destino"
+   "titulo": "conversatorio la realidad y el destino"
   },
   "f_98f2cf4a66": {
    "sede": "Parque Emilio Ulloa - Barbosa",
@@ -67,12 +60,42 @@
    "sala": "",
    "titulo": "tres lunas nuevas"
   },
+  "f_3cc9c10da9": {
+   "sede": "Estación del Tren - Barbosa",
+   "dia": "2026-12-06",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "el fantastico sr fox"
+  },
+  "f_0823b4e3c6": {
+   "sede": "Estación del Tren - Barbosa",
+   "dia": "2026-12-06",
+   "hora": "19:30",
+   "sala": "",
+   "titulo": "la imaginada coming from hell"
+  },
   "f_6dd67f718c": {
    "sede": "Estación del Tren - Barbosa",
    "dia": "2026-12-06",
    "hora": "20:00",
    "sala": "",
    "titulo": "ayuno y cenizas"
+  },
+  "f_5eaefa317b": {
+   "sede": "La Tante Boutique - Barbosa",
+   "dia": "2026-12-04",
+   "hora": "18:00",
+   "sala": "",
+   "titulo": "conversatorio fue como lo imaginaste o lo que fue te imagino",
+   "ausente": true
+  },
+  "f_7a2dca52ee": {
+   "sede": "La Tante Boutique - Barbosa",
+   "dia": "2026-12-04",
+   "hora": "19:00",
+   "sala": "",
+   "titulo": "saint juanito 10 obras",
+   "ausente": true
   }
  }
 }

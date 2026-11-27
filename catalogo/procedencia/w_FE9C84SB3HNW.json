@@ -7,24 +7,16 @@
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "alta desde provinciadevelez-2026",
-  "fecha": "2026-11-24"
+  "fecha": "2026-11-27"
  },
  "anio": {
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "alta desde provinciadevelez-2026",
-  "fecha": "2026-11-24"
+  "fecha": "2026-11-27"
  },
  "paises": {
-  "fuente": "humano",
-  "regla": "decisión",
-  "motivo": "alta desde provinciadevelez-2026",
-  "fecha": "2026-11-24"
- },
- "afiche": {
-  "fuente": "humano",
-  "regla": "decisión",
-  "motivo": "alta desde provinciadevelez-2026",
-  "fecha": "2026-11-24"
+  "fuente": "festival",
+  "regla": "pais-union"
  }
 }

@@ -1,0 +1,28 @@
+[
+ {
+  "work_id": "w_FE9C84SB3HNW",
+  "campo": "directores",
+  "valor": [
+   "Nelson Silva"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "Claude (fichas 27 nov)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Nelson Silva"
+  }
+ },
+ {
+  "work_id": "w_FE9C84SB3HNW",
+  "campo": "anio",
+  "valor": 2022,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "Claude (fichas 27 nov)",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "2022"
+  }
+ }
+]
