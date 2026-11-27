@@ -714,8 +714,8 @@ def enlazar_google(raiz=REPO, maximo=280, buscar_lugar=None):
     hechos, sin = [], []
     for sid, e in sorted((m.get('sedes') or {}).items()):
         ev = e.get('evidencia') or {}
-        if ev.get('nivel') != 'maps' or ev.get('place_id'):
-            continue
+        if ev.get('nivel') != 'maps' or ev.get('place_id') or ev.get('sin_ficha_google'):
+            continue   # sin_ficha_google: decidido por persona (campus, barrio…), con su motivo
         if len(hechos) + len(sin) >= maximo:
             break
         cands = buscar_lugar(e['nombre'], e.get('ciudad') or '', (e['lat'], e['lng']), 2000)
