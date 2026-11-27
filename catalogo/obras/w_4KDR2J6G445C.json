@@ -22,7 +22,14 @@
  "generos": [
   "Experimental"
  ],
- "xref": {},
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/clasificadopersonal-drive.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1849756,
+  "letterboxd": "clasificado-personal"
+ },
  "versiones": [
   {
    "etiqueta": "15 min",

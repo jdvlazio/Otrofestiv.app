@@ -23,7 +23,14 @@
  "generos": [
   "Experimental"
  ],
- "xref": {},
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/cartaaunjovenladron-drive.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1849754,
+  "letterboxd": "carta-a-un-joven-ladron"
+ },
  "versiones": [
   {
    "etiqueta": "13 min",
