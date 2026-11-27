@@ -7569,17 +7569,19 @@
   },
   "Plaza Bocagrande": {
    "short": "Plaza Bocagrande",
-   "lat": 10.3987,
-   "lon": -75.56,
+   "lat": 10.411173,
+   "lon": -75.5512287,
    "city": "Cartagena",
-   "lng": -75.5499
+   "lng": -75.5512287,
+   "address": "Av. San Martín, Bocagrande, Cartagena"
   },
   "CC Caribe Plaza": {
    "short": "CC Caribe Plaza",
-   "lat": 10.4071,
-   "lon": -75.5124,
+   "lat": 10.414434,
+   "lon": -75.5295239,
    "city": "Cartagena",
-   "lng": -75.5005
+   "lng": -75.5295239,
+   "address": "Av. Pedro de Heredia, Cartagena"
   },
   "Auditorio Nido": {
    "short": "Auditorio Nido",
@@ -7597,10 +7599,11 @@
   },
   "C. Convenciones": {
    "short": "C. Convenciones",
-   "lat": 10.4242,
-   "lon": -75.5497,
+   "lat": 10.4208751,
+   "lon": -75.5491034,
    "city": "Cartagena",
-   "lng": -75.5505
+   "lng": -75.5491034,
+   "address": "Cl. 24 #8A-344, Getsemaní"
   },
   "Unibac": {
    "short": "Unibac",
@@ -7611,10 +7614,11 @@
   },
   "AECID": {
    "short": "AECID",
-   "lat": 10.421,
-   "lon": -75.547,
+   "lat": 10.4244554,
+   "lon": -75.5521665,
    "city": "Cartagena",
-   "lng": -75.5484
+   "lng": -75.5521665,
+   "address": "Cl. 36 #2-74, El Centro"
   },
   "Plaza de la Proclamación": {
    "short": "Plaza Proclamación",
@@ -7625,10 +7629,11 @@
   },
   "C. de Convenciones · Patio de Banderas": {
    "short": "C. Convenciones",
-   "lat": 10.4242,
-   "lon": -75.5497,
+   "lat": 10.4208751,
+   "lon": -75.5491034,
    "city": "Cartagena",
-   "lng": -75.5505
+   "lng": -75.5491034,
+   "address": "Cl. 24 #8A-344, Getsemaní"
   },
   "Auditorio nido": {
    "short": "Auditorio Nido",
@@ -7641,57 +7646,57 @@
    "short": "CC Caribe Plaza",
    "city": "Cartagena",
    "address": "Av. Pedro de Heredia, Cartagena",
-   "lat": 10.4061,
-   "lng": -75.5005
+   "lat": 10.414434,
+   "lng": -75.5295239
   },
   "CC Caribe Plaza ‒ Sala 5": {
    "short": "CC Caribe Plaza",
    "city": "Cartagena",
    "address": "Av. Pedro de Heredia, Cartagena",
-   "lat": 10.4061,
-   "lng": -75.5005
+   "lat": 10.414434,
+   "lng": -75.5295239
   },
   "CC Caribe Plaza ‒ Sala 6": {
    "short": "CC Caribe Plaza",
    "city": "Cartagena",
    "address": "Av. Pedro de Heredia, Cartagena",
-   "lat": 10.4061,
-   "lng": -75.5005
+   "lat": 10.414434,
+   "lng": -75.5295239
   },
   "Plaza Bocagrande ‒ Sala 1": {
    "short": "Plaza Bocagrande",
    "city": "Cartagena",
    "address": "Av. San Martín, Bocagrande, Cartagena",
-   "lat": 10.3979,
-   "lng": -75.5499
+   "lat": 10.411173,
+   "lng": -75.5512287
   },
   "Plaza Bocagrande ‒ Sala 2": {
    "short": "Plaza Bocagrande",
    "city": "Cartagena",
    "address": "Av. San Martín, Bocagrande, Cartagena",
-   "lat": 10.3979,
-   "lng": -75.5499
+   "lat": 10.411173,
+   "lng": -75.5512287
   },
   "Plaza Bocagrande ‒ Sala 3": {
    "short": "Plaza Bocagrande",
    "city": "Cartagena",
    "address": "Av. San Martín, Bocagrande, Cartagena",
-   "lat": 10.3979,
-   "lng": -75.5499
+   "lat": 10.411173,
+   "lng": -75.5512287
   },
   "Plaza Bocagrande ‒ Sala 4": {
    "short": "Plaza Bocagrande",
    "city": "Cartagena",
    "address": "Av. San Martín, Bocagrande, Cartagena",
-   "lat": 10.3979,
-   "lng": -75.5499
+   "lat": 10.411173,
+   "lng": -75.5512287
   },
   "Plaza Bocagrande ‒ Sala 5": {
    "short": "Plaza Bocagrande",
    "city": "Cartagena",
    "address": "Av. San Martín, Bocagrande, Cartagena",
-   "lat": 10.3979,
-   "lng": -75.5499
+   "lat": 10.411173,
+   "lng": -75.5512287
   },
   "Salón 1 ‒ Miguel Sebastián Guerrero, unibac": {
    "short": "UNIBAC",
@@ -7703,9 +7708,9 @@
   "aecid": {
    "short": "AECID",
    "city": "Cartagena",
-   "address": "Cartagena",
-   "lat": 10.4236,
-   "lng": -75.5484
+   "address": "Cl. 36 #2-74, El Centro",
+   "lat": 10.4244554,
+   "lng": -75.5521665
   }
  },
  "transport": "mixed",
