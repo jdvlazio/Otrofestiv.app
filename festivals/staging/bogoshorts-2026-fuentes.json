@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "pipeline/fuentes_descubrir.py",
-  "capturado": "2026-11-25T10:04",
+  "capturado": "2026-11-27T10:00",
   "paginas_leidas": 60,
   "errores": [
    "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/www.bogoshorts.com: HTTP Error 404: Not Found"
@@ -22,7 +22,7 @@
    "tipo": "formulario",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "suscripción al newsletter, no es inscripción a una actividad",
    "revisado": "2026-11-23T10:11"
@@ -31,7 +31,7 @@
    "tipo": "drive",
    "visto_en": "https://festival.bogoshorts.com/prensa",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "catálogo de la edición 23 (2025)",
    "revisado": "2026-11-23T10:11"
@@ -40,7 +40,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/escenarios",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "escenarios de 2025; sedes 2026 en el catálogo",
    "revisado": "2026-11-23T10:11"
@@ -49,7 +49,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/prensa",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "textos de Al Tablero BFM y sinopsis de Furia",
    "revisado": "2026-11-23T10:54"
@@ -58,7 +58,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/interna/9",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "duración de Al Tablero BFM (10:00 a.m. - 12:00 m.); el resto es industria con acreditación",
    "revisado": "2026-11-23T10:11"
@@ -67,7 +67,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "pág. 5: las salas con pago, las gratuitas y la Sala VR; leídas las 9 páginas",
    "revisado": "2026-11-25T05:51"
@@ -76,7 +76,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "cortos, sinopsis, actividades, sedes y acceso",
    "revisado": "2026-11-23T10:11"
@@ -85,7 +85,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "la grilla",
    "revisado": "2026-11-23T10:11"
@@ -94,7 +94,7 @@
    "tipo": "pdf",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-23T10:01",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "términos de la web",
    "revisado": "2026-11-23T10:11"
@@ -103,7 +103,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/universo/004_actividades_bam.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "acreditación BFM de la edición 22 (2024)",
    "revisado": "2026-11-25T05:51"
@@ -112,7 +112,7 @@
    "tipo": "drive",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/003_poster_oficial.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "Poster 2000px de ancho Sin logos.png: imagen, sin programación",
    "revisado": "2026-11-25T05:51"
@@ -121,7 +121,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/004_acreditaciones_24bsff.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "formulario de acreditación del boletín 004: exige sesión (HTTP 401), sin leer; las mismas condiciones están en el PDF de acreditaciones, leído",
    "revisado": "2026-11-25T05:51"
@@ -130,7 +130,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/004_acreditaciones_24bsff.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "formulario de acreditación del boletín 004: exige sesión (HTTP 401), sin leer; las mismas condiciones están en el PDF de acreditaciones, leído",
    "revisado": "2026-11-25T05:51"
@@ -139,7 +139,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "inscripción de una charla Al Tablero: leída 25 nov, día y hora iguales a lo publicado",
    "revisado": "2026-11-25T05:51"
@@ -148,7 +148,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "inscripción de una charla Al Tablero: leída 25 nov, día y hora iguales a lo publicado",
    "revisado": "2026-11-25T05:51"
@@ -157,7 +157,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/004_acreditaciones_24bsff.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "formulario de acreditación del boletín 004: exige sesión (HTTP 401), sin leer; las mismas condiciones están en el PDF de acreditaciones, leído",
    "revisado": "2026-11-25T05:51"
@@ -166,7 +166,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "inscripción de una charla Al Tablero: leída 25 nov, día y hora iguales a lo publicado",
    "revisado": "2026-11-25T05:51"
@@ -175,7 +175,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "inscripción de una charla Al Tablero: leída 25 nov, día y hora iguales a lo publicado",
    "revisado": "2026-11-25T05:51"
@@ -184,7 +184,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "inscripción de una charla Al Tablero: leída 25 nov, día y hora iguales a lo publicado",
    "revisado": "2026-11-25T05:51"
@@ -193,7 +193,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "inscripción de una charla Al Tablero: leída 25 nov, día y hora iguales a lo publicado",
    "revisado": "2026-11-25T05:51"
@@ -202,7 +202,7 @@
    "tipo": "formulario",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "inscripción de una charla Al Tablero: leída 25 nov, día y hora iguales a lo publicado",
    "revisado": "2026-11-25T05:51"
@@ -211,7 +211,7 @@
    "tipo": "pagina-programa",
    "visto_en": "https://festival.bogoshorts.com/",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "boletín de la selección oficial: sin funciones ni acceso, leído 25 nov",
    "revisado": "2026-11-25T05:51"
@@ -220,7 +220,7 @@
    "tipo": "pdf",
    "visto_en": "https://info.bogoshorts.com/sccs/prensa/2026/24bsff/027_al_tablero.html",
    "primera_vez": "2026-11-25T05:45",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "usada",
    "_por_que": "bases de IMAGINATÓN, vistas 25 nov: horas, inscripción y precio",
    "revisado": "2026-11-25T05:51"
@@ -229,7 +229,7 @@
    "tipo": "formulario",
    "visto_en": "raíz bio_3",
    "primera_vez": "2026-11-25T10:04",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "formulario de inscripción de IMAGINATÓN enlazado en la bio: no abre sin sesión de Google y son dos distintos, no se sabe cuál corresponde a cada función; las bases en PDF sí se usaron",
    "revisado": "2026-11-25T10:04"
@@ -238,7 +238,7 @@
    "tipo": "formulario",
    "visto_en": "raíz bio_2",
    "primera_vez": "2026-11-25T10:04",
-   "ultima_vez": "2026-11-25T10:04",
+   "ultima_vez": "2026-11-27T10:00",
    "estado": "descartada",
    "_por_que": "formulario de inscripción de IMAGINATÓN enlazado en la bio: no abre sin sesión de Google y son dos distintos, no se sabe cuál corresponde a cada función; las bases en PDF sí se usaron",
    "revisado": "2026-11-25T10:04"

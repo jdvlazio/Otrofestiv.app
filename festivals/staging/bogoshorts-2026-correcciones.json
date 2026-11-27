@@ -231,6 +231,30 @@
    "_fuente": "https://www.themoviedb.org/movie/1807233",
    "_por_que": "altas.py --ficha: mismo título, dirección Lorena R. Valencia en los créditos de TMDB (leídos 24 nov) y en el catálogo del festival",
    "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Nothing Here is Lost": {
+   "tmdb": 1849751,
+   "_fuente": "https://www.themoviedb.org/movie/1849751",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Carta a un joven ladrón": {
+   "tmdb": 1849754,
+   "_fuente": "https://www.themoviedb.org/movie/1849754",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "Clasificado personal": {
+   "tmdb": 1849756,
+   "_fuente": "https://www.themoviedb.org/movie/1849756",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
+  },
+  "A Body that Hurts": {
+   "tmdb": 1849762,
+   "_fuente": "https://www.themoviedb.org/movie/1849762",
+   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro bogoshorts-2026-altas.json)",
+   "_registro": "bogoshorts-2026-altas.json"
   }
  },
  "duracion_distinta": {
@@ -366,6 +390,11 @@
     "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_catalogo2026.pdf#page=191",
     "https://minikino.org/en/korinco-2026-en/"
    ]
+  }
+ },
+ "no_heredar": {
+  "La primera estampilla de Korinco": {
+   "_por_que": "el cruce la empareja con «La Tephy» (ficfusa-2026, Piedrahita Avellaneda): otra obra; Korinco no tiene director para distinguirla"
   }
  }
 }

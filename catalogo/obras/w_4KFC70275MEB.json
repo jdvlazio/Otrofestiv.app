@@ -16,6 +16,11 @@
  "generos": [
   "Comedia"
  ],
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/elgusanosolitario-drive.jpg",
+  "veredicto": "fotograma",
+  "elegido": true
+ },
  "xref": {
   "tmdb": 1058527,
   "letterboxd": "el-gusano-solitario"

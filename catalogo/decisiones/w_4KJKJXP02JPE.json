@@ -64,5 +64,21 @@
   "antes": {
    "bogoshorts-2026": "The apparent loss of the ability to love leads our character to wander the city streets in search of a sign."
   }
+ },
+ {
+  "work_id": "w_4KJKJXP02JPE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/comoseamajorgedrexler-drive.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/comoseamajorgedrexler-drive.jpg"
+  }
  }
 ]

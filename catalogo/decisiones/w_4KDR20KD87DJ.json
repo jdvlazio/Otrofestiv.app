@@ -88,5 +88,44 @@
   "antes": {
    "bogoshorts-2026": "“Letter to a Young Thief,” a short film that straddles the boundaries between self-portraiture and experimentation with personal archives. The work explores the tension between the materiality of memory and the construction of identity, presenting a stream of consciousness that reflects on the course of life, temporal asynchrony, and the ever-present possibility of death."
   }
+ },
+ {
+  "work_id": "w_4KDR20KD87DJ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/cartaaunjovenladron-drive.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/cartaaunjovenladron-drive.jpg"
+  }
+ },
+ {
+  "work_id": "w_4KDR20KD87DJ",
+  "campo": "xref.tmdb",
+  "valor": 1849754,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1849754"
+  }
+ },
+ {
+  "work_id": "w_4KDR20KD87DJ",
+  "campo": "xref.letterboxd",
+  "valor": "carta-a-un-joven-ladron",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "carta-a-un-joven-ladron"
+  }
  }
 ]

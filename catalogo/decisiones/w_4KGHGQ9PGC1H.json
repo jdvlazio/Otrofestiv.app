@@ -62,5 +62,21 @@
   "antes": {
    "bogoshorts-2026": "Camila was born in the river. Since the rumbling began and the ghosts arrived, she and her friends are no longer who they used to be. Perhaps they are water now."
   }
+ },
+ {
+  "work_id": "w_4KGHGQ9PGC1H",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/todoriolloverasobrenosotros-drive.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/todoriolloverasobrenosotros-drive.jpg"
+  }
  }
 ]

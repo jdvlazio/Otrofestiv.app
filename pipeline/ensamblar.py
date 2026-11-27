@@ -283,8 +283,10 @@ def _conservar_publicado(fid, films, sin=()):
     # montaje. Lo declarado se saca del build, con su procedencia
     for f in films:
         for o in [f] + (f.get('film_list') or []):
-            for _c in lib.RETIRABLES.get(next((c for t, c in quitar if t == o.get('title') and c in lib.RETIRABLES), ''), ()):
-                o.pop(_c, None)
+            # TODOS los declarados de la obra, no solo el primero (Korinco, 27 nov 2026)
+            for _r in [c for t, c in quitar if t == o.get('title') and c in lib.RETIRABLES]:
+                for _c in lib.RETIRABLES[_r]:
+                    o.pop(_c, None)
     p = f'{REPO}/festivals/{fid}.json'
     if not os.path.exists(p):
         return

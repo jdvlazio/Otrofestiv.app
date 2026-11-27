@@ -90,5 +90,44 @@
   "antes": {
    "bogoshorts-2026": "A body that hurts is a short film conceived out of a request from the body to be fully involved in the task of animation. The mechanical nature of the work leads to the neglect of the body, causing pain, fatigue, and discomfort. Through repetitive actions, grotesque sound and the use of different hands-on techniques, the video explores the decaying body as an operator rather than a creator, reflecting the lack of attention put into the flesh during labor."
   }
+ },
+ {
+  "work_id": "w_4KEWWNRDFV6K",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/abodythathurts-drive.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/abodythathurts-drive.jpg"
+  }
+ },
+ {
+  "work_id": "w_4KEWWNRDFV6K",
+  "campo": "xref.tmdb",
+  "valor": 1849762,
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "1849762"
+  }
+ },
+ {
+  "work_id": "w_4KEWWNRDFV6K",
+  "campo": "xref.letterboxd",
+  "valor": "a-body-that-hurts",
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "a-body-that-hurts"
+  }
  }
 ]

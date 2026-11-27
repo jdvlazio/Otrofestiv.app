@@ -65,5 +65,21 @@
   "antes": {
    "bogoshorts-2026": "A young office worker spends his time trying to seduce all his female coworkers and friends, until one of them teaches him a lesson in love. A moral comedy with a popular twist, starring Gustavo de la Hoz and Rubiela Hurtado. It showcases a lesser-known side of Pinilla: his sense of humor and his social satire."
   }
+ },
+ {
+  "work_id": "w_4KF3GN2Q70X6",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/ungallinazosinsuerte-drive.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/ungallinazosinsuerte-drive.jpg"
+  }
  }
 ]

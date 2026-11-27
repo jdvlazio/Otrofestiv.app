@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_programacion2026.pdf",
-  "capturado": "2026-11-25",
+  "capturado": "2026-11-27",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 575,
@@ -291,8 +291,8 @@
   "CEFE Chapinero - Bogotá": {
    "short": "CEFE Chapinero",
    "city": "Bogotá",
-   "lat": 4.6654518,
-   "lng": -74.0527949,
+   "lat": 4.6654539,
+   "lng": -74.0527417,
    "_prec": "matriz",
    "_matriz": "s_11667bea",
    "_match": "almacén de sedes (manual)",
@@ -304,8 +304,8 @@
    "city": "Bogotá",
    "_prec": "manual",
    "_nota": "Catálogo 2026 (Escenarios): «Sala Gaitán (Antigua Cinemateca Distrital)», Carrera 7 # 22-47, la misma dirección del Teatro Jorge Eliécer Gaitán: sala del mismo predio, dos sedes reales. Pin del predio.",
-   "lat": 4.608881,
-   "lng": -74.0706722,
+   "lat": 4.6086901,
+   "lng": -74.0707267,
    "address": "Carrera 7 # 22-47",
    "_matriz": "s_a6295d2a"
   },
@@ -764,7 +764,9 @@
      },
      "synopsis": "El Sigilo, un meteorito que no refleja la luz, se dirige hacia la Tierra. Nadie lo vio venir. Mientras se acerca silenciosamente, alguien se dirige hacia un árbol para susurrarle un secreto.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/osigilo-drive.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "No te conozcas",
@@ -805,7 +807,11 @@
      },
      "synopsis": "En 2028, en un mundo dominado por el poder de las máquinas de datos, una montaña alpina atraviesa una crisis de identidad. Mientras tanto, un terrateniente del Tesino lucha en los tribunales para proteger la montaña de su industrialización total.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/nothinghereislost-drive.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "nothing-here-is-lost",
+     "tmdb_id": 1849751
     },
     {
      "title": "Complementarios",
@@ -847,7 +853,11 @@
      },
      "synopsis": "Carta a un joven ladrón, un cortometraje que se articula en las fronteras del autorretrato y la experimentación con el archivo personal. La obra explora la tensión entre la materialidad de la memoria y la construcción de identidad, proponiendo un flujo de conciencia que se pregunta por el devenir de la vida, la disincronía temporal y la posibilidad constante de la muerte.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/cartaaunjovenladron-drive.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "carta-a-un-joven-ladron",
+     "tmdb_id": 1849754
     },
     {
      "title": "Clasificado personal",
@@ -866,7 +876,11 @@
      },
      "synopsis": "En algún momento del siglo XX suena la radio. Por los cables de luz de Bogotá viajan anhelos perdidos y cartas sin destino.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/clasificadopersonal-drive.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "clasificado-personal",
+     "tmdb_id": 1849756
     }
    ],
    "_fid": "f_0caff94a2e",
@@ -1332,7 +1346,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Un grupo de hinchas furiosos retiene a dos futbolistas profesionales y a su jefe de prensa en un vestuario. Allí los tres deben decidir si actúan juntos.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/lacolereetapres-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Baisanos",
@@ -2520,7 +2536,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/whentheflowersbloom-drive.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Raj’in",
@@ -2772,7 +2790,9 @@
      },
      "synopsis": "Después de un largo camino migratorio de veinte años, la directora se enfrenta a su época más difícil: ver envejecer a su madre desde la distancia y darse cuenta de cómo su mente con demencia empieza a olvidar esos pocos momentos que compartieron en Barcelona y Bogotá. A través de las conversaciones telefónicas que tiene con su madre le brinda esos recuerdos para que ella los reviva y al mismo tiempo lucha para intentar una reagrupación familiar y estar presente para su hija.",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/hasestadoaqui-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Llámame, llévame, avísame",
@@ -3396,7 +3416,7 @@
    ],
    "_fid": "f_10979b2923",
    "id": "f_10979b2923",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3415,9 +3435,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -3472,7 +3492,7 @@
    "tmdb_id": 1368172,
    "_fid": "f_00e9cfb024",
    "id": "f_00e9cfb024",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3491,9 +3511,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -3775,7 +3795,11 @@
      },
      "synopsis": "Un cuerpo que duele es un cortometraje que nace de la exigencia del cuerpo para vincularse completamente con la labor de la animación. La naturaleza mecánica del trabajo lleva a descuidar el cuerpo, causando así dolor, fatiga e incomodidad. A través de acciones repetitivas, sonidos grotescos y el uso de diferentes técnicas tradicionales, el video explora como el cuerpo en estado de decadencia abandona el papel de creador y se convierte en un operador.",
      "genre": "Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/abodythathurts-drive.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "a-body-that-hurts",
+     "tmdb_id": 1849762
     },
     {
      "title": "Pececín",
@@ -4253,7 +4277,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Un joven oficinista se dedica a pretender a todas sus compañeras y amigas, hasta que una de ellas le da una lección sentimental. Comedia moral en clave popular, protagonizada por Gustavo de la Hoz y Rubiela Hurtado. Muestra al Pinilla menos conocido: el del humor y la fábula de costumbres.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/ungallinazosinsuerte-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Robo macabro",
@@ -5135,6 +5161,8 @@
      },
      "synopsis": "Escamillo sufre por una tenia. El corto convierte su dolencia en una comedia grotesca mediante trucajes y animación.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/elgusanosolitario-drive.jpg",
+     "posterSource": "editorial",
      "lbSlug": "el-gusano-solitario",
      "tmdb_id": 1058527,
      "genre": "Comedia"
@@ -5178,6 +5206,8 @@
      },
      "synopsis": "Un recorrido por el barrio del Raval de Barcelona a través de pintadas, señales, carteles y texturas urbanas. Al ritmo de la música, estas imágenes revelan las huellas de sus habitantes y las transformaciones de los espacios que recorremos a diario.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/cadadiapasoporaqui-drive.jpg",
+     "posterSource": "editorial",
      "lbSlug": "i-pass-by-here-every-day",
      "tmdb_id": 438251,
      "title_en": "I Pass by Here Every Day",
@@ -5266,6 +5296,8 @@
      },
      "synopsis": "Pinturas realizadas con cera caliente sobre una guía telefónica de Barcelona evocan la violencia y la agitación de las protestas de octubre de 2019.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/barcelonadefoc-drive.jpg",
+     "posterSource": "editorial",
      "lbSlug": "barcelona-de-foc",
      "tmdb_id": 750788,
      "genre": "Animación"
@@ -6368,7 +6400,7 @@
    ],
    "_fid": "f_e45b0de929",
    "id": "f_e45b0de929",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -6387,9 +6419,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -6566,7 +6598,7 @@
    ],
    "_fid": "f_3cc8328112",
    "id": "f_3cc8328112",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -6585,9 +6617,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -6893,7 +6925,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Luisa, una niña de 12 años, vive sola con Rigo, su padre de 40 años. Usan las máscaras de los luchadores en todo momento, debido a la obsesión de Rigo. Sin embargo, Luisa comienza a cuestionar esta costumbre particular. La confrontación con su padre llevará a un descubrimiento poderoso.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/lucha-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Para Dani",
@@ -6910,7 +6944,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Correspondencia para Dani 8 de dic de 2025.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/paradani-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Mañana",
@@ -6951,12 +6987,16 @@
       "date": "2026-11-13"
      },
      "synopsis": "Camila nació en el río. Desde que empezaron los estruendos y llegaron los fantasmas, ella y sus amigos ya no son los mismos. Quizá ahora sean agua.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/todoriolloverasobrenosotros-drive.jpg",
+     "posterSource": "editorial"
     }
    ],
    "_fid": "f_6e17a91f7c",
    "id": "f_6e17a91f7c",
    "is_free": true,
+   "requires_registration": true,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfQdg1P2mqfNY81tpIT-cqL8XfTgVukH642LMZvTRB3-eyAIA/viewform",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -6977,6 +7017,16 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-13"
+    },
+    "requires_registration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-26",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfQdg1P2mqfNY81tpIT-cqL8XfTgVukH642LMZvTRB3-eyAIA/viewform"
+    },
+    "registration_url": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-26",
+     "url": "https://docs.google.com/forms/d/e/1FAIpQLSfQdg1P2mqfNY81tpIT-cqL8XfTgVukH642LMZvTRB3-eyAIA/viewform"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -8413,7 +8463,11 @@
      },
      "synopsis": "Un cuerpo que duele es un cortometraje que nace de la exigencia del cuerpo para vincularse completamente con la labor de la animación. La naturaleza mecánica del trabajo lleva a descuidar el cuerpo, causando así dolor, fatiga e incomodidad. A través de acciones repetitivas, sonidos grotescos y el uso de diferentes técnicas tradicionales, el video explora como el cuerpo en estado de decadencia abandona el papel de creador y se convierte en un operador.",
      "genre": "Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/abodythathurts-drive.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "a-body-that-hurts",
+     "tmdb_id": 1849762
     },
     {
      "title": "Pececín",
@@ -8791,7 +8845,9 @@
      },
      "synopsis": "Una figura solitaria recorre una ciudad desolada. A través de la danza vuelve sobre sus triunfos y fracasos.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/icarrythem-drive.jpg",
+     "posterSource": "editorial"
     }
    ],
    "_fid": "f_7c90331d4d",
@@ -8884,7 +8940,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Cassandra lujuria del río Fuego de la noche.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/cassandra-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "About Happy Hippos and Sad Peacocks",
@@ -9415,7 +9473,7 @@
    "description_lang": "es",
    "_fid": "f_0f47ae4440",
    "id": "f_0f47ae4440",
-   "is_free": false,
+   "is_free": true,
    "requires_registration": true,
    "_procedencia": {
     "day": {
@@ -9436,9 +9494,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "requires_registration": {
      "tipo": "festival-pdf",
@@ -9730,6 +9788,8 @@
      },
      "synopsis": "Escamillo sufre por una tenia. El corto convierte su dolencia en una comedia grotesca mediante trucajes y animación.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/elgusanosolitario-drive.jpg",
+     "posterSource": "editorial",
      "lbSlug": "el-gusano-solitario",
      "tmdb_id": 1058527,
      "genre": "Comedia"
@@ -9773,6 +9833,8 @@
      },
      "synopsis": "Un recorrido por el barrio del Raval de Barcelona a través de pintadas, señales, carteles y texturas urbanas. Al ritmo de la música, estas imágenes revelan las huellas de sus habitantes y las transformaciones de los espacios que recorremos a diario.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/cadadiapasoporaqui-drive.jpg",
+     "posterSource": "editorial",
      "lbSlug": "i-pass-by-here-every-day",
      "tmdb_id": 438251,
      "title_en": "I Pass by Here Every Day",
@@ -9861,6 +9923,8 @@
      },
      "synopsis": "Pinturas realizadas con cera caliente sobre una guía telefónica de Barcelona evocan la violencia y la agitación de las protestas de octubre de 2019.",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/barcelonadefoc-drive.jpg",
+     "posterSource": "editorial",
      "lbSlug": "barcelona-de-foc",
      "tmdb_id": 750788,
      "genre": "Animación"
@@ -10086,7 +10150,9 @@
      },
      "synopsis": "Una exploración animada del transastralismo como práctica personal para orientarse en tiempos inciertos y abrirse a lo efímero.",
      "genre": "Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/transastralisme-drive.jpg",
+     "posterSource": "editorial"
     }
    ],
    "_fid": "f_f58604503e",
@@ -10297,7 +10363,7 @@
    ],
    "_fid": "f_c51e8db23d",
    "id": "f_c51e8db23d",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -10316,9 +10382,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -10499,7 +10565,7 @@
    ],
    "_fid": "f_522a341f7a",
    "id": "f_522a341f7a",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -10518,9 +10584,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -12242,6 +12308,8 @@
      "synopsis": "En su aplicación de realidad aumentada, una nerd introvertida que busca escapar de su realidad se encuentra con Iliona, un enigmático personaje 3D que, sin emitir sonido alguno, trastocará su realidad.",
      "genre": "Experimental",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/metae-drive.jpg",
+     "posterSource": "editorial",
      "lbSlug": "metae",
      "tmdb_id": 1558794
     },
@@ -12612,7 +12680,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/whentheflowersbloom-drive.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Raj’in",
@@ -12770,7 +12840,11 @@
      },
      "synopsis": "Un cuerpo que duele es un cortometraje que nace de la exigencia del cuerpo para vincularse completamente con la labor de la animación. La naturaleza mecánica del trabajo lleva a descuidar el cuerpo, causando así dolor, fatiga e incomodidad. A través de acciones repetitivas, sonidos grotescos y el uso de diferentes técnicas tradicionales, el video explora como el cuerpo en estado de decadencia abandona el papel de creador y se convierte en un operador.",
      "genre": "Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/abodythathurts-drive.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "a-body-that-hurts",
+     "tmdb_id": 1849762
     },
     {
      "title": "Pececín",
@@ -13265,7 +13339,9 @@
       "url": "https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11",
       "date": "2026-11-23"
      },
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/bogoshorts-2026/laprimeraestampilladekorinco-drive.jpg",
+     "posterSource": "editorial"
     }
    ],
    "_fid": "f_482722604c",
@@ -13733,7 +13809,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Un joven oficinista se dedica a pretender a todas sus compañeras y amigas, hasta que una de ellas le da una lección sentimental. Comedia moral en clave popular, protagonizada por Gustavo de la Hoz y Rubiela Hurtado. Muestra al Pinilla menos conocido: el del humor y la fábula de costumbres.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/ungallinazosinsuerte-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Robo macabro",
@@ -14144,7 +14222,7 @@
    ],
    "_fid": "f_85c6681f2c",
    "id": "f_85c6681f2c",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -14163,9 +14241,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -14300,7 +14378,7 @@
    ],
    "_fid": "f_6f3bdb31d4",
    "id": "f_6f3bdb31d4",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -14319,9 +14397,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -14731,7 +14809,9 @@
       "url": "https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11",
       "date": "2026-11-23"
      },
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/bogoshorts-2026/laprimeraestampilladekorinco-drive.jpg",
+     "posterSource": "editorial"
     }
    ],
    "_fid": "f_262de95bb6",
@@ -15896,7 +15976,9 @@
      },
      "synopsis": "Después de un largo camino migratorio de veinte años, la directora se enfrenta a su época más difícil: ver envejecer a su madre desde la distancia y darse cuenta de cómo su mente con demencia empieza a olvidar esos pocos momentos que compartieron en Barcelona y Bogotá. A través de las conversaciones telefónicas que tiene con su madre le brinda esos recuerdos para que ella los reviva y al mismo tiempo lucha para intentar una reagrupación familiar y estar presente para su hija.",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/hasestadoaqui-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Llámame, llévame, avísame",
@@ -16774,7 +16856,11 @@
      },
      "synopsis": "Un cuerpo que duele es un cortometraje que nace de la exigencia del cuerpo para vincularse completamente con la labor de la animación. La naturaleza mecánica del trabajo lleva a descuidar el cuerpo, causando así dolor, fatiga e incomodidad. A través de acciones repetitivas, sonidos grotescos y el uso de diferentes técnicas tradicionales, el video explora como el cuerpo en estado de decadencia abandona el papel de creador y se convierte en un operador.",
      "genre": "Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/abodythathurts-drive.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "a-body-that-hurts",
+     "tmdb_id": 1849762
     },
     {
      "title": "Pececín",
@@ -17093,7 +17179,9 @@
       "url": "https://cinematecadebogota.gov.co/node/peliculas/3747?sede=11",
       "date": "2026-11-23"
      },
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/bogoshorts-2026/laprimeraestampilladekorinco-drive.jpg",
+     "posterSource": "editorial"
     }
    ],
    "_fid": "f_58509ed531",
@@ -17729,7 +17817,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Un grupo de hinchas furiosos retiene a dos futbolistas profesionales y a su jefe de prensa en un vestuario. Allí los tres deben decidir si actúan juntos.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/lacolereetapres-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Baisanos",
@@ -17822,7 +17912,7 @@
    ],
    "_fid": "f_a23f2842ab",
    "id": "f_a23f2842ab",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -17841,9 +17931,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -17981,7 +18071,7 @@
    ],
    "_fid": "f_9adbaf188e",
    "id": "f_9adbaf188e",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -18000,9 +18090,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -18181,6 +18271,7 @@
    "_fid": "f_2067536081",
    "id": "f_2067536081",
    "is_free": true,
+   "requires_registration": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -18201,6 +18292,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-13"
+    },
+    "requires_registration": {
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -18328,7 +18424,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Cassandra lujuria del río Fuego de la noche.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/cassandra-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "About Happy Hippos and Sad Peacocks",
@@ -18734,7 +18832,9 @@
      },
      "synopsis": "El Sigilo, un meteorito que no refleja la luz, se dirige hacia la Tierra. Nadie lo vio venir. Mientras se acerca silenciosamente, alguien se dirige hacia un árbol para susurrarle un secreto.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/osigilo-drive.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "No te conozcas",
@@ -18775,7 +18875,11 @@
      },
      "synopsis": "En 2028, en un mundo dominado por el poder de las máquinas de datos, una montaña alpina atraviesa una crisis de identidad. Mientras tanto, un terrateniente del Tesino lucha en los tribunales para proteger la montaña de su industrialización total.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/nothinghereislost-drive.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "nothing-here-is-lost",
+     "tmdb_id": 1849751
     },
     {
      "title": "Complementarios",
@@ -18817,7 +18921,11 @@
      },
      "synopsis": "Carta a un joven ladrón, un cortometraje que se articula en las fronteras del autorretrato y la experimentación con el archivo personal. La obra explora la tensión entre la materialidad de la memoria y la construcción de identidad, proponiendo un flujo de conciencia que se pregunta por el devenir de la vida, la disincronía temporal y la posibilidad constante de la muerte.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/cartaaunjovenladron-drive.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "carta-a-un-joven-ladron",
+     "tmdb_id": 1849754
     },
     {
      "title": "Clasificado personal",
@@ -18836,7 +18944,11 @@
      },
      "synopsis": "En algún momento del siglo XX suena la radio. Por los cables de luz de Bogotá viajan anhelos perdidos y cartas sin destino.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/clasificadopersonal-drive.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "clasificado-personal",
+     "tmdb_id": 1849756
     }
    ],
    "_fid": "f_1d38a3191d",
@@ -19000,7 +19112,7 @@
    ],
    "_fid": "f_4f94fb5564",
    "id": "f_4f94fb5564",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -19019,9 +19131,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -19178,7 +19290,7 @@
    ],
    "_fid": "f_4b8aac68ec",
    "id": "f_4b8aac68ec",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -19197,9 +19309,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -19297,7 +19409,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Un hombre persigue desesperadamente a una criatura por calles sinuosas. Al principio adorable, se transforma gradualmente en un ser monstruoso, hasta poner en cuestión la fascinación que despierta en él.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/berzinguecrache-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Cocodrilo (Dillom)",
@@ -19333,7 +19447,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "Matías Aguayo es un maestro de música que convierte una clase sobre el ritmo en un portal a otros mundos. Instrumento por instrumento, guía a sus alumnos títeres por la anatomía de un beat, hasta que la lección cobra vida propia. Se transportan al mundo de títeres hecho de piñatas y un salón geométrico animado. Mientras habla de los instrumentos, los alumnos se pierden en la música, hasta que sin darse cuenta el maestro, por fin suelto, se convierte en títere para entrar en el groove con todos.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/thebeatmatiasaguayo-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Argentina Is Daing (Marttein)",
@@ -19350,7 +19466,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "MARTTEIN pasa sus dias con su compañero haciendo musica encerrados en su apartamento hasta que, una confesión global, desata el caos en su contra. Comienzan a ser acechados por los vecinos que quieren irrumpir en su departamento y por los elementos extraños que envían los Estados Unidos hasta, tambien, su apartamento.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/argentinaisdaingmarttein-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Oui (Balming Tiger)",
@@ -19367,7 +19485,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "En Gongbu Korea, un instituto ficticio que estudia los sueños humanos, el investigador Park Min (interpretado por Wonjin, integrante de Balming Tiger) se asoma uno a uno a los sueños de cada miembro del colectivo. Con el vestuario escénico de su concierto, los integrantes recorren paisajes oníricos llenos de elementos que difuminan la frontera entre lo real y lo irreal. Un viaje lúdico y extraño al subconsciente, al ritmo hipnótico de “Oui”",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/ouibalmingtiger-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "Chingona (Tamara Flores)",
@@ -19386,10 +19506,10 @@
      "synopsis": "Tamara Flores avanza con determinación por las coloridas calles de Acatlán, México, pueblo natal de su madre. Su larguísima trenza es un símbolo vivo de fuerza y empoderamiento. Chingona es un himno visual sobre abrirse camino y apropiarse de cada paso. Entre color, ritmo y baile, celebra la identidad y la libertad de vivir según las propias reglas.",
      "synopsis_lang": "es",
      "poster": "/assets/bogoshorts-2026/chingona-tamara-flores.jpg",
-     "posterSource": "tmdb",
+     "posterSource": "oficial",
      "lbSlug": "tamara-flores-chingona",
      "tmdb_id": 1719717,
-     "genre": "Music"
+     "genre": "Música"
     },
     {
      "title": "¿Cómo se ama? (Jorge Drexler)",
@@ -19406,7 +19526,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "La pérdida aparente de la capacidad de amar lleva a nuestro personaje a merodear las calles de la ciudad en busca de una señal.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/comoseamajorgedrexler-drive.jpg",
+     "posterSource": "editorial"
     },
     {
      "title": "You get one (The Plot in You)",
@@ -20837,7 +20959,9 @@
      },
      "synopsis": "Una exploración animada del transastralismo como práctica personal para orientarse en tiempos inciertos y abrirse a lo efímero.",
      "genre": "Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/transastralisme-drive.jpg",
+     "posterSource": "editorial"
     }
    ],
    "_fid": "f_a2159d119f",
@@ -21141,6 +21265,8 @@
      "synopsis": "En su aplicación de realidad aumentada, una nerd introvertida que busca escapar de su realidad se encuentra con Iliona, un enigmático personaje 3D que, sin emitir sonido alguno, trastocará su realidad.",
      "genre": "Experimental",
      "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/metae-drive.jpg",
+     "posterSource": "editorial",
      "lbSlug": "metae",
      "tmdb_id": 1558794
     },
@@ -21384,7 +21510,9 @@
       "date": "2026-11-13"
      },
      "synopsis": "En una ciudad subterránea posapocalíptica, una investigadora descubre un diente de león capaz de sobrevivir en la hostil superficie. Con la esperanza de devolver la vida a un mundo estéril, intenta replantarlo arriba. En esta experiencia VR inspirada en los libros ilustrados, los jugadores guían haces de luz entre las sombras y descubren ilusiones dibujadas y recuerdos olvidados, mientras buscan el camino de regreso a la superficie.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/whentheflowersbloom-drive.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Raj’in",
@@ -21695,7 +21823,9 @@
      },
      "synopsis": "Una figura solitaria recorre una ciudad desolada. A través de la danza vuelve sobre sus triunfos y fracasos.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/bogoshorts-2026/icarrythem-drive.jpg",
+     "posterSource": "editorial"
     }
    ],
    "_fid": "f_50249df760",
@@ -22230,7 +22360,7 @@
    ],
    "_fid": "f_5b1ba5fe8c",
    "id": "f_5b1ba5fe8c",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -22249,9 +22379,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -22408,7 +22538,7 @@
    ],
    "_fid": "f_c78486af98",
    "id": "f_c78486af98",
-   "is_free": false,
+   "is_free": true,
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -22427,9 +22557,9 @@
      "fecha": "2026-11-13"
     },
     "entrada": {
-     "tipo": "festival-pdf",
-     "fecha": "2026-11-24",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_acreditaciones2026.pdf"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -22523,7 +22653,7 @@
     "20:00"
    ],
    "day": "2026-12-04",
-   "time": "19:00",
+   "time": "20:00",
    "day_order": 3,
    "venue": "Teatro El Parque - Bogotá",
    "event_kind": "evento",
@@ -22534,7 +22664,7 @@
    },
    "_fid": "f_5ade8fa1d3",
    "id": "f_5ade8fa1d3",
-   "is_free": false,
+   "is_free": true,
    "requires_registration": true,
    "_procedencia": {
     "day": {
@@ -22542,22 +22672,22 @@
      "fecha": "2026-11-18"
     },
     "time": {
-     "tipo": "juan",
-     "fecha": "2026-10-17",
-     "frase": "pongamos la más temprano, para que la gente no llegue tarde en caso tal"
+     "tipo": "festival-mensaje",
+     "fecha": "2026-11-25",
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "venue": {
      "tipo": "festival-web",
      "fecha": "2026-11-18"
     },
     "entrada": {
-     "tipo": "festival-pdf",
+     "tipo": "festival-mensaje",
      "fecha": "2026-11-25",
-     "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf"
+     "url": "https://bit.ly/Programacion24BSFF"
     },
     "requires_registration": {
      "tipo": "festival-pdf",
-     "fecha": "2026-11-25",
+     "fecha": "2026-11-24",
      "url": "https://info.bogoshorts.com/sccs/prensa/2026/docs_2026/24BSFF_IMAGINATON.pdf"
     },
     "has_qa": {
@@ -22655,7 +22785,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-25T10:02:53",
+  "fecha": "2026-11-27T14:29:51",
   "plan_sha": "c7ef5255110fedd6",
   "paso": 11,
   "cmd": "python3 pipeline/encuadrar-posters.py bogoshorts-2026 --aplicar --desde festivals/staging/bogoshorts-2026-build.json"

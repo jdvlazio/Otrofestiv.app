@@ -62,5 +62,21 @@
   "antes": {
    "bogoshorts-2026": "Letter to Dani, Dec. 8, 2025."
   }
+ },
+ {
+  "work_id": "w_4KGH0YKJHBD4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/paradani-drive.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/paradani-drive.jpg"
+  }
  }
 ]

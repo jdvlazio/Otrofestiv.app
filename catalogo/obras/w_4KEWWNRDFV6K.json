@@ -18,7 +18,14 @@
  "generos": [
   "Animación"
  ],
- "xref": {},
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/abodythathurts-drive.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1849762,
+  "letterboxd": "a-body-that-hurts"
+ },
  "versiones": [
   {
    "etiqueta": "4 min",

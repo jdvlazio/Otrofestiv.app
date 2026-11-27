@@ -16,7 +16,14 @@
  "generos": [
   "Experimental"
  ],
- "xref": {},
+ "afiche": {
+  "archivo": "/assets/bogoshorts-2026/nothinghereislost-drive.jpg",
+  "veredicto": "oficial"
+ },
+ "xref": {
+  "tmdb": 1849751,
+  "letterboxd": "nothing-here-is-lost"
+ },
  "versiones": [
   {
    "etiqueta": "12 min",

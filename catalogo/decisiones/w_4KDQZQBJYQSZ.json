@@ -77,5 +77,20 @@
   "antes": {
    "bogoshorts-2026": "“El Sigilo,” a meteorite that doesn’t reflect light, is heading toward Earth. No one saw it coming. As it silently approaches, someone walks toward a tree to whisper a secret to it."
   }
+ },
+ {
+  "work_id": "w_4KDQZQBJYQSZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/osigilo-drive.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/osigilo-drive.jpg"
+  }
  }
 ]

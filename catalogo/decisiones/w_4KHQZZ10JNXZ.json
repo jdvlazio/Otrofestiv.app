@@ -76,5 +76,21 @@
   "antes": {
    "bogoshorts-2026": "An animated exploration of transastralism as a personal practice for finding direction in uncertain times and embracing the ephemeral."
   }
+ },
+ {
+  "work_id": "w_4KHQZZ10JNXZ",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/transastralisme-drive.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/transastralisme-drive.jpg"
+  }
  }
 ]

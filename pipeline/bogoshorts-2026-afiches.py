@@ -51,6 +51,13 @@ def main():
     for t, x in json.load(open(f'{REPO}/festivals/staging/bogoshorts-2026-afiches-hallados.json', encoding='utf-8'))['afiches'].items():
         if os.path.exists(f"{REPO}/{x['archivo']}"):
             out[t] = {'archivo': x['archivo'], 'sobre_tmdb': True, 'url': x['url'], 'fuente': f"afiche oficial de la obra ({x['pagina']})"}
+    # el Drive que mandó el festival (27 nov 2026): afiche vertical → oficial; si solo trae
+    # fotogramas, el primero va entero como póster propio (`editorial`). Manda sobre la web
+    for t, x in json.load(open(f'{REPO}/festivals/staging/bogoshorts-2026-afiches-drive.json', encoding='utf-8'))['afiches'].items():
+        if os.path.exists(f"{REPO}/{x['archivo']}") and not (enr.get(t) or {}).get('poster_path'):
+            out[t] = {'archivo': x['archivo'], 'url': x['url'], 'asset': f"{n(t)}-drive.jpg",
+                      'fuente': f"{'fotograma' if x.get('editorial') else 'afiche'} oficial del Drive de BOGOSHORTS ({x['original']})",
+                      **({'editorial': True} if x.get('editorial') else {})}
     for obras in cortos.values():
         for o in obras:
             t = o['titulo']

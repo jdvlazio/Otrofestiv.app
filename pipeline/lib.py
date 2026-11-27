@@ -210,7 +210,9 @@ def tmdb_ficha_autoprueba():
 # Lo que `quitar.json` puede retirar aunque no se conserve de lo publicado, con
 # los campos que se van con él (un afiche se lleva su procedencia). Lo leen
 # ensamblar (lo saca del build) y publicar (no lo cuenta como pérdida).
-RETIRABLES = {'poster': ('poster', 'posterSource')}
+# synopsis_en no se conserva de lo publicado, pero llega heredada: una herencia
+# equivocada se retira declarándola (Korinco heredó la de «La», 27 nov 2026)
+RETIRABLES = {'poster': ('poster', 'posterSource'), 'synopsis_en': ('synopsis_en',)}
 
 
 def quitados(fid):
@@ -409,6 +411,11 @@ def ya_publicada(obra, idx):
     out = []
     for k, filas in idx.items():
         if not (k == t or k.startswith(t + ' ') or t.startswith(k + ' ')):
+            continue
+        # el comienzo tiene que nombrar algo: «La» (FICFUSA) es el comienzo de
+        # «La primera estampilla de Korinco» y el año la «corroboraba»: BOGOSHORTS
+        # heredó afiche y sinopsis de otra obra (27 nov 2026)
+        if k != t and not clave_sin_vacias(min(k, t, key=len)):
             continue
         for fest, o in filas:
             d_pub, d_nue = o.get('director'), obra.get('director')

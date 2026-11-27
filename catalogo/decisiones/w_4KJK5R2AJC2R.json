@@ -63,5 +63,21 @@
   "antes": {
    "bogoshorts-2026": "A man desperately pursues a creature through winding streets. At first cute, it gradually transforms and becomes monstrous, until the man’s fascination with it is called into question."
   }
+ },
+ {
+  "work_id": "w_4KJK5R2AJC2R",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/berzinguecrache-drive.jpg",
+   "veredicto": "fotograma",
+   "elegido": true
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/berzinguecrache-drive.jpg"
+  }
  }
 ]

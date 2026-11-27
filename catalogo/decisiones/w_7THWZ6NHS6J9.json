@@ -63,5 +63,20 @@
   "antes": {
    "bogoshorts-2026": "In a post-apocalyptic underground city, a lone researcher discovers a dandelion capable of surviving the harsh surface climate. Hoping to restore life to the barren world, she sets out to replant the seedling above ground. In this picture-book-inspired VR experience, players guide beams of light through the darkness, uncovering illustrated illusions and forgotten memories as they search for a path back to the surface."
   }
+ },
+ {
+  "work_id": "w_7THWZ6NHS6J9",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/bogoshorts-2026/whentheflowersbloom-drive.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde bogoshorts-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "bogoshorts-2026": "/assets/bogoshorts-2026/whentheflowersbloom-drive.jpg"
+  }
  }
 ]
