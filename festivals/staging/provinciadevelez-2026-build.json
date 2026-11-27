@@ -437,8 +437,8 @@
    "title": "My Name Is Bill W. + De la tradición a la prohibición",
    "type": "film",
    "section": "⭐ Muestra Especial",
-   "country": "United States of America",
-   "flags": "🇺🇸",
+   "country": "United States of America, Colombia",
+   "flags": "🇺🇸🇨🇴",
    "duration": "100 min",
    "_ancla": [
     "Grupo Central AA - Barbosa",
@@ -475,6 +475,8 @@
     },
     {
      "title": "De la tradición a la prohibición",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "genre": "Documental",
      "synopsis_en": "A documentary exploring the evolution of sacred plants of power, from ancestral rituals to their stigmatization and prohibition. In a Latin American context, it questions the official narratives that have criminalized this knowledge and reveals processes of cultural dispossession and the rupture of collective memory.",
      "synopsis": "Es un documental que explora la evolución de las plantas sagradas de poder desde los rituales ancestrales hasta su estigmatización y prohibición en la sociedad contemporánea. La película se sitúa en un contexto latinoamericano para cuestionar los discursos oficiales que han criminalizado estos saberes, revelando procesos de despojo cultural y ruptura de la memoria colectiva.",
@@ -827,6 +829,9 @@
     },
     {
      "title": "Creation of a Unicorn",
+     "director": "Dr Klonasepam, Mafa",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "poster": "/assets/provinciadevelez-2026/creation-of-a-unicorn.jpg",
      "posterSource": "oficial"
     },
@@ -1252,7 +1257,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-27T08:20:27",
+  "fecha": "2026-11-27T09:18:06",
   "plan_sha": "95fbb9b0329f755a",
   "paso": 7,
   "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"
