@@ -426,7 +426,10 @@ def construir(raiz=REPO):
                         ea[k] = sorted(set(ea.get(k, [])) | set(eb[k]))
                 if eb.get('institucion') and not ea.get('institucion'):
                     ea['institucion'] = eb['institucion']
-                redir[b_] = a_
+                # un id acuñado en ESTA corrida nunca salió de aquí: no deja
+                # redirección (27 nov: cada --construir sumaba ~31 ids basura)
+                if b_ in viejas:
+                    redir[b_] = a_
                 div.pop(b_, None)
                 del sedes[b_]
                 ca |= {canon(plano(n)) for n in [eb['nombre']] + eb.get('alias', [])}
