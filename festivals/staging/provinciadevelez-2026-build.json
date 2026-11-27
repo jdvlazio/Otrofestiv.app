@@ -268,7 +268,10 @@
     {
      "title": "El empiezo",
      "director": "Nelson Silva",
-     "year": 2022
+     "year": 2022,
+     "synopsis_en": "A music video about the countryside: a farmer turns the moon into a small piece of land.",
+     "synopsis": "Videoclip sobre el campo: un campesino convierte la luna en una pequeña tierra.",
+     "synopsis_lang": "es"
     }
    ],
    "_fid": "f_f9339da525",
@@ -1237,7 +1240,10 @@
     {
      "title": "Coming from Hell",
      "director": "Klonazepan & Mafa",
-     "year": 2025
+     "year": 2025,
+     "synopsis_en": "A woman goes to the doctor and is turned into a clonazepam addict.",
+     "synopsis": "Una señora va al médico y la convierten en adicta al clonazepam.",
+     "synopsis_lang": "es"
     }
    ],
    "_fid": "f_0823b4e3c6",
@@ -1356,7 +1362,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-27T16:39:42",
+  "fecha": "2026-11-27T17:26:50",
   "plan_sha": "95fbb9b0329f755a",
   "paso": 7,
   "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"
