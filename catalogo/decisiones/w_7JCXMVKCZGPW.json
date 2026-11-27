@@ -13,5 +13,34 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/creation-of-a-unicorn.jpg"
   }
+ },
+ {
+  "work_id": "w_7JCXMVKCZGPW",
+  "campo": "directores",
+  "valor": [
+   "Dr Klonasepam",
+   "Mafa"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "DM del festival en IG, 27 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Dr Klonasepam, Mafa"
+  }
+ },
+ {
+  "work_id": "w_7JCXMVKCZGPW",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "DM del festival en IG, 27 nov 2026",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
  }
 ]
