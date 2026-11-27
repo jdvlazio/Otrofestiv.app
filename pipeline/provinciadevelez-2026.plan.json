@@ -1,5 +1,5 @@
 {
- "_nota": "9.º Festival de Cine Provincia de Vélez (Barbosa, Santander, 1–6 dic 2026). PRE-ONBOARDING, SIN PUBLICAR. Fuente: festivaldecineprovinciadevelez.com (landing.js: 29 obras de la selección oficial, convocatoria Saravita; franja infantil; muestra central de Rodrigo Dimaté) + IG @9_festcineprovinciadevelez por Bright Data (láminas con día, hora y sede: 1, 2, 3, 4 y 5 dic; faltan las dos de la muestra central). Acceso: «¡Entrada libre a todos los escenarios!» (IG Df4hzKXkYiP, 18 nov). MONTADO 24 nov con 6 funciones; la 7.ª (Parque Central Cite, 2 dic) el 25 nov, de Facebook. Nombre, subtítulo y secciones: PROPUESTA para Juan. 30 NOV FUERA: la función del SENA de Vélez (IG Df-DlZyERf2) no se monta porque el afiche oficial dice «del 1 al 6 de diciembre» (Juan, 24 nov 2026, solo días oficiales). No volver a sumarla.",
+ "_nota": "9.º Festival de Cine Provincia de Vélez (Barbosa, Santander, 1–6 dic 2026). PRE-ONBOARDING, SIN PUBLICAR. Fuente: festivaldecineprovinciadevelez.com (landing.js: 29 obras de la selección oficial, convocatoria Saravita; franja infantil; muestra central de Rodrigo Dimaté) + IG @9_festcineprovinciadevelez por Bright Data (láminas con día, hora y sede: 1, 2, 3, 4 y 5 dic; faltan las dos de la muestra central). Acceso: «¡Entrada libre a todos los escenarios!» (IG Df4hzKXkYiP, 18 nov). MONTADO 24 nov con 6 funciones; la 7.ª (Parque Central Cite, 2 dic) el 25 nov, de Facebook. Nombre, subtítulo y secciones: PROPUESTA para Juan. 30 NOV FUERA: la función del SENA de Vélez (IG Df-DlZyERf2) no se monta porque el afiche oficial dice «del 1 al 6 de diciembre» (Juan, 24 nov 2026, solo días oficiales). No volver a sumarla. 27 nov: el festival mandó por correo 4 láminas (Muestra Central y conversatorios); se suman el 6 dic y la Muestra Central.",
  "pasos": [
   {
    "cmd": "python3 pipeline/provinciadevelez-2026-catalogo.py",
@@ -70,6 +70,16 @@
     "emoji": "⭐",
     "en": "Special Showcase",
     "archetype": "Especiales / Eventos"
+   },
+   "Muestra Central": {
+    "emoji": "🎬",
+    "en": "Central Showcase",
+    "archetype": "Muestra / País"
+   },
+   "Conversatorios": {
+    "emoji": "💬",
+    "en": "Talks",
+    "archetype": "Charlas / Industria"
    }
   },
   "sedes": {
@@ -96,6 +106,10 @@
    "Casa Taller Palo de Mango": [
     "Casa Taller Palo de Mango - Barbosa",
     ""
+   ],
+   "Estación del Tren": [
+    "Estación del Tren - Barbosa",
+    ""
    ]
   },
   "name": "Provincia de Vélez",
@@ -115,9 +129,7 @@
   "festivalEndStr": "2026-12-06T23:59:00",
   "sharedSlotIsOneScreening": false,
   "mes_es": "diciembre",
-  "dias_vacios": [
-   "2026-12-06"
-  ],
+  "dias_vacios": [],
   "instagram": "9_festcineprovinciadevelez",
   "_por_que_fechas": "El afiche oficial (IG DfihtPIRt2g) dice 1 al 6 de diciembre: el 30 nov en el SENA de Vélez no va (Juan, 24 nov 2026)."
  }

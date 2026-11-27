@@ -55,5 +55,14 @@
   "_match": "Google Maps (25 nov 2026): «Parque Central De Cite», Cite, Barbosa, Santander",
   "_maps": "https://www.google.com/maps/place/Parque+Central+De+Cite/@5.9646939,-73.603604,17z",
   "_matriz": "s_4c6ebcc5"
+ },
+ "Estación del Tren - Barbosa": {
+  "lat": 5.9267077,
+  "lng": -73.6196272,
+  "address": "Plaza de Mercado",
+  "_prec": "manual",
+  "_match": "Google Maps (27 nov 2026): «Estación De Ferrocarril» de Barbosa, a 80 m de «Plaza De Mercado, Cra. 7 # 4-22 a 4-76» (5.9266406,-73.6203855); la lámina dice «Estación del Tren, Plaza de Mercado»",
+  "_maps": "https://www.google.com/maps/place/Estaci%C3%B3n+De+Ferrocarril/@5.9267077,-73.6196272,17z",
+  "_matriz": "s_bad03f9a"
  }
 }

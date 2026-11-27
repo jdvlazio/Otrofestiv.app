@@ -9,5 +9,150 @@
   "antes": {
    "ficma-2026": "ayuno-y-cenizas"
   }
+ },
+ {
+  "work_id": "w_R4HMHX4G932S",
+  "campo": "sinopsis.es",
+  "valor": "En las montañas de Bogotá, un grupo de teatro aficionado ensaya Edipo Rey. Lo integran músicos, actores, artistas de barrio y algunos consumidores de bazuco. Los testimonios sobre droga, familia y barrio contrastan con los tambores del montaje. Aquí, Edipo Rey es una pregunta sobre el destino y la posibilidad de tomar el rumbo de la propia vida.",
+  "motivo": "obra ya verificada en ficma-2026: sinopsis completa del festival y afiche oficial de mayor resolución",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "antes": {
+   "ficma-2026": "En medio de las montañas de Bogotá, un grupo aficionado de teatro hace ensayos y lleva a escena la más famosa de todas las obras, Edipo Rey. Sus integrantes son músicos, actores, artistas de barrio y, algunos de ellos, consumidores de bazuco. Los testimonios sobre la droga, la familia y el barrio —voces, manos y rostros, a veces distantes y a veces frágiles—, contrastan con la atmósfera de tambores y luces incandescentes de la creación teatral. En las lomas de la ciudad, Edipo Rey no es una obra antigua, es una pregunta sobre el destino, sobre la posibilidad de tomar el rumbo de la propia vida.",
+   "provinciadevelez-2026": "Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy."
+  },
+  "vistas": [
+   "0c2e14509ee6",
+   "6479e08712e2"
+  ],
+  "original_de": [
+   "ficma-2026",
+   "provinciadevelez-2026"
+  ],
+  "titulo": "Ayuno y cenizas",
+  "original": "En medio de las montañas de Bogotá, un grupo aficionado de teatro hace ensayos y lleva a escena la más famosa de todas las obras, Edipo Rey. Sus integrantes son músicos, actores, artistas de barrio y, algunos de ellos, consumidores de bazuco. Los testimonios sobre la droga, la familia y el barrio —voces, manos y rostros, a veces distantes y a veces frágiles—, contrastan con la atmósfera de tambores y luces incandescentes de la creación teatral. En las lomas de la ciudad, Edipo Rey no es una obra antigua, es una pregunta sobre el destino, sobre la posibilidad de tomar el rumbo de la propia vida.",
+  "sintesis": {
+   "redacta": "claude-opus",
+   "verifica": "agente-verificador-sonnet",
+   "veredicto": "fiel",
+   "fecha": "2026-11-27",
+   "huella": "9904b7828f10"
+  }
+ },
+ {
+  "work_id": "w_R4HMHX4G932S",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/ficma/ayuno-y-cenizas.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "afiche oficial ya verificado en ficma-2026, de mayor resolución",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "antes": {
+   "ficma-2026": "/assets/ficma/ayuno-y-cenizas.jpg",
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/ayuno-y-cenizas.jpg"
+  },
+  "vistas": [
+   "/assets/provinciadevelez-2026/ayuno-y-cenizas.jpg"
+  ]
+ },
+ {
+  "work_id": "w_R4HMHX4G932S",
+  "campo": "directores",
+  "valor": [
+   "Rodrigo Dimaté"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "ficma-2026": "Rodrigo Dimaté",
+   "provinciadevelez-2026": "Rodrigo Dimaté"
+  }
+ },
+ {
+  "work_id": "w_R4HMHX4G932S",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "ficma-2026": "2026",
+   "provinciadevelez-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_R4HMHX4G932S",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "ficma-2026": "Colombia",
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_R4HMHX4G932S",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "ficma-2026": "Documental",
+   "provinciadevelez-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_R4HMHX4G932S",
+  "campo": "sinopsis.en",
+  "valor": "In the mountains of Bogotá, an amateur theater group rehearses Oedipus Rex. Its members are musicians, actors, local artists and some crack users. Testimonies about drugs, family and the neighborhood contrast with the drums of the staging. Here, Oedipus Rex is a question about destiny and the possibility of taking control of one's own life.",
+  "motivo": "síntesis ≤350 de la EN de TMDB, paralela a la corta ES verificada",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "ficma-2026": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life.",
+   "provinciadevelez-2026": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life."
+  },
+  "anteriores": [
+   {
+    "valor": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life.",
+    "motivo": "alta desde provinciadevelez-2026",
+    "fecha": "2026-11-27",
+    "quien": "claude"
+   },
+   {
+    "valor": "In the mountains of Bogotá, an amateur theater group rehearses Oedipus Rex. Its members are musicians, actors, local artists and some crack cocaine users. Testimonies about drugs, family and the neighborhood contrast with the drums of the staging. Here, Oedipus Rex is a question about destiny and the possibility of taking control of one's own life.",
+    "motivo": "síntesis ≤350 de la EN de TMDB, paralela a la corta ES verificada",
+    "fecha": "2026-11-27",
+    "quien": "claude"
+   }
+  ]
+ },
+ {
+  "work_id": "w_R4HMHX4G932S",
+  "campo": "xref.tmdb",
+  "valor": 1756580,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "ficma-2026": "1756580",
+   "provinciadevelez-2026": "1756580"
+  }
  }
 ]

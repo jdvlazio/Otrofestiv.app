@@ -245,9 +245,9 @@ OTRAS = [
     ('Entre Ríos. Todos somos hermanos', None, 'corto', 'Muestra especial', None,
      'lámina Df-DlZyERf2/08: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Entre Ríos · Todos somos '
      'hermanos»; sin créditos; tipo supuesto por la portada (documental y cortometraje), sin duración'),
-    ('Tres lunas nuevas', 'Rodrigo Dimaté', 'largo', 'Muestra central', None,
+    ('Tres lunas nuevas', 'Rodrigo Dimaté', 'largo', 'Muestra central', ('2026-12-05', '20:00', 'Parque Emilio Ulloa', 'correo del festival a hola@otrofestiv.app, 27 nov 2026 (4 láminas)'),
      'web: «es una de las películas de la muestra central, y su director nos acompaña en el festival»; sin día ni hora'),
-    ('Ayuno y cenizas', 'Rodrigo Dimaté', 'largo', 'Muestra central', None,
+    ('Ayuno y cenizas', 'Rodrigo Dimaté', 'largo', 'Muestra central', ('2026-12-06', '20:00', 'Estación del Tren', 'correo del festival a hola@otrofestiv.app, 27 nov 2026 (4 láminas)'),
      'web: «también de Rodrigo Dimaté y estreno nacional, es la otra película de la muestra central»; sin día ni hora'),
 ]
 

@@ -3238,6 +3238,15 @@
   "veredicto": "fiel",
   "verifica": "lector BOGOSHORTS E"
  },
+ "w_EJEM1K21JJAJ": {
+  "comprobado": "a mano: web del festival, ficha de Tres lunas nuevas (leída por el verificador, texto literal)",
+  "contra": "https://festivaldecineprovinciadevelez.com/",
+  "fecha": "2026-11-27",
+  "huella": "c40b37f853a5",
+  "redacta": "claude-opus",
+  "veredicto": "fiel",
+  "verifica": "agente-verificador-sonnet"
+ },
  "w_FBZA6DCNBRHR": {
   "comprobado": "a mano: segundo lector 26 nov: fuentes/anibia-2026/fichas/3593.txt — texto inmediatamente después del encabezado/ficha de Todo es culpa de la sal (María Cristina Pérez)",
   "contra": "fuentes/anibia-2026/fichas/3593.txt",
@@ -6364,6 +6373,15 @@
   "redacta": "redactor 2 26 nov",
   "veredicto": "fiel",
   "verifica": "verificador 2 26 nov"
+ },
+ "w_R4HMHX4G932S": {
+  "comprobado": "a mano: PROGRAMACIÓN FICMA 17 (PDF de imagen, laficma.com, 19 sep 2026)",
+  "contra": "fuentes/ficma-2026/FICMA 17 - PROGRAMACIÓN.pdf",
+  "fecha": "2026-11-27",
+  "huella": "80aeec2328e9",
+  "redacta": "claude-opus",
+  "veredicto": "fiel",
+  "verifica": "agente-verificador-sonnet"
  },
  "w_R4HQ9NNQ5PNF": {
   "comprobado": "máquina: TMDB 1571285",

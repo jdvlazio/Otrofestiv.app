@@ -22,9 +22,7 @@
  "festivalStartStr": "2026-12-01T00:00:00",
  "festivalEndStr": "2026-12-06T23:59:00",
  "sharedSlotIsOneScreening": false,
- "dias_vacios": [
-  "2026-12-06"
- ],
+ "dias_vacios": [],
  "instagram": "9_festcineprovinciadevelez",
  "_por_que_fechas": "El afiche oficial (IG DfihtPIRt2g) dice 1 al 6 de diciembre: el 30 nov en el SENA de Vélez no va (Juan, 24 nov 2026).",
  "prioLimit": 3,
@@ -123,6 +121,16 @@
    "en": "Special Showcase",
    "archetype": "Especiales / Eventos",
    "order": 3
+  },
+  "💬 Conversatorios": {
+   "en": "Talks",
+   "archetype": "Charlas / Industria",
+   "order": 4
+  },
+  "🎬 Muestra Central": {
+   "en": "Central Showcase",
+   "archetype": "Muestra / País",
+   "order": 5
   }
  },
  "venues": {
@@ -190,6 +198,17 @@
    "_match": "Google Maps (24 nov 2026): «Parque Emilio Ulloa», Barbosa, nombre exacto",
    "_maps": "https://www.google.com/maps/place/Parque+Emilio+Ulloa/@5.9305215,-73.6163535,17z",
    "_matriz": "s_928647f0"
+  },
+  "Estación del Tren - Barbosa": {
+   "short": "Estación del Tren",
+   "city": "Barbosa",
+   "lat": 5.9267077,
+   "lng": -73.6196272,
+   "address": "Plaza de Mercado",
+   "_prec": "manual",
+   "_match": "Google Maps (27 nov 2026): «Estación De Ferrocarril» de Barbosa, a 80 m de «Plaza De Mercado, Cra. 7 # 4-22 a 4-76» (5.9266406,-73.6203855); la lámina dice «Estación del Tren, Plaza de Mercado»",
+   "_maps": "https://www.google.com/maps/place/Estaci%C3%B3n+De+Ferrocarril/@5.9267077,-73.6196272,17z",
+   "_matriz": "s_bad03f9a"
   }
  },
  "_avisos_id": [],
@@ -1022,12 +1041,219 @@
     }
    },
    "_duracion_corregida": "suma de sus obras con duración verificada"
+  },
+  {
+   "title": "Conversatorio: Realidad y destino",
+   "type": "event",
+   "section": "💬 Conversatorios",
+   "_ancla": [
+    "Parque Emilio Ulloa - Barbosa",
+    "2026-12-05",
+    "19:30"
+   ],
+   "day": "2026-12-05",
+   "time": "19:30",
+   "day_order": 4,
+   "venue": "Parque Emilio Ulloa - Barbosa",
+   "event_kind": "conversatorio",
+   "has_qa": false,
+   "_src": {
+    "url": "correo del festival a hola@otrofestiv.app (4 láminas, sin texto)",
+    "date": "2026-11-27",
+    "tipo": "festival"
+   },
+   "description": "Rodrigo Dimaté y María Jimena Barreto",
+   "description_lang": "es",
+   "_fid": "f_b20dd43ac9",
+   "id": "f_b20dd43ac9",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "event_kind": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "duration": {
+     "tipo": "regla",
+     "marca": "estimado"
+    }
+   },
+   "duration": "30 min"
+  },
+  {
+   "title": "Tres lunas nuevas",
+   "type": "film",
+   "section": "🎬 Muestra Central",
+   "director": "Rodrigo Dimaté",
+   "year": 2025,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "144 min",
+   "genre": "Crimen",
+   "_ancla": [
+    "Parque Emilio Ulloa - Barbosa",
+    "2026-12-05",
+    "20:00"
+   ],
+   "day": "2026-12-05",
+   "time": "20:00",
+   "day_order": 4,
+   "venue": "Parque Emilio Ulloa - Barbosa",
+   "has_qa": false,
+   "synopsis": "Cuenta cómo abrir una pequeña puerta en la juventud puede traer problemas enormes: quien siembra vientos cosecha tempestades.",
+   "synopsis_lang": "es",
+   "poster": "/assets/provinciadevelez-2026/tres-lunas-nuevas.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "correo del festival a hola@otrofestiv.app (4 láminas, sin texto)",
+    "date": "2026-11-27",
+    "tipo": "festival"
+   },
+   "lbSlug": "three-new-moons",
+   "tmdb_id": 1548988,
+   "synopsis_en": "Alex doesn't go to school and spends his day hanging around, seemingly free, doing what he was told not to do; Steven tries to hold down a job, but there's always a friend, a party, a problem; Kevin wants to escape the drugs and violence. Three young men face the harshness of Bogotá life while they wait, amid continuous failures, for a miracle.",
+   "title_en": "Three New Moons",
+   "_fid": "f_98f2cf4a66",
+   "id": "f_98f2cf4a66",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    }
+   }
+  },
+  {
+   "title": "Ayuno y cenizas",
+   "type": "film",
+   "section": "🎬 Muestra Central",
+   "director": "Rodrigo Dimaté",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "100 min",
+   "genre": "Documental",
+   "_ancla": [
+    "Estación del Tren - Barbosa",
+    "2026-12-06",
+    "20:00"
+   ],
+   "day": "2026-12-06",
+   "time": "20:00",
+   "day_order": 5,
+   "venue": "Estación del Tren - Barbosa",
+   "has_qa": false,
+   "synopsis": "Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy.",
+   "synopsis_lang": "es",
+   "poster": "/assets/provinciadevelez-2026/ayuno-y-cenizas.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "correo del festival a hola@otrofestiv.app (4 láminas, sin texto)",
+    "date": "2026-11-27",
+    "tipo": "festival"
+   },
+   "lbSlug": "hunger-and-ashes",
+   "tmdb_id": 1756580,
+   "synopsis_en": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life.",
+   "title_en": "Hunger and ashes",
+   "_fid": "f_6dd67f718c",
+   "id": "f_6dd67f718c",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    }
+   }
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-27T07:34:12",
-  "plan_sha": "5e15e89e3223db1c",
+  "fecha": "2026-11-27T08:20:27",
+  "plan_sha": "95fbb9b0329f755a",
   "paso": 7,
   "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"
  }

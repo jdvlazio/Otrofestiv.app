@@ -1,28 +1,60 @@
 {
  "titulo_original": {
-  "fuente": "festival:ficma-2026",
+  "fuente": "festival:ficma-2026,provinciadevelez-2026",
   "regla": "el título que más festivales imprimen"
  },
  "directores": {
-  "fuente": "festival",
-  "regla": "la grafía más completa que acreditan los festivales"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27"
  },
  "anio": {
-  "fuente": "tmdb:1756580",
-  "regla": "tmdb-manda"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27"
  },
  "paises": {
-  "fuente": "festival",
-  "regla": "pais-union"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27"
  },
  "generos": {
-  "fuente": "festival",
-  "regla": "todos los publicados, del más al menos frecuente"
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27"
  },
  "xref.letterboxd": {
   "fuente": "humano",
   "regla": "decisión",
   "motivo": "Letterboxd redirige ahí la dirección anterior",
   "fecha": "2026-11-24"
+ },
+ "sinopsis.es": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "obra ya verificada en ficma-2026: sinopsis completa del festival y afiche oficial de mayor resolución",
+  "fecha": "2026-11-27"
+ },
+ "afiche": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "afiche oficial ya verificado en ficma-2026, de mayor resolución",
+  "fecha": "2026-11-27"
+ },
+ "sinopsis.en": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "síntesis ≤350 de la EN de TMDB, paralela a la corta ES verificada",
+  "fecha": "2026-11-27"
+ },
+ "xref.tmdb": {
+  "fuente": "humano",
+  "regla": "decisión",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27"
  }
 }

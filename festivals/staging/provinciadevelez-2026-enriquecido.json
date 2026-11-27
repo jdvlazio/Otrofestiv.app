@@ -5,6 +5,47 @@
  },
  "obras": [
   {
+   "titulo": "Ayuno y cenizas",
+   "tmdb_id": 1756580,
+   "titulo_original": "Ayuno y Cenizas",
+   "poster_path": "/ajvnPIgoeSrCiuuLkE0VNVpkpkV.jpg",
+   "synopsis_es": "En medio de las montañas de Bogotá, un grupo aficionado de teatro hace ensayos y lleva a escena la más famosa de todas las obras, Edipo Rey. Sus integrantes son músicos, actores, artistas de barrio y, algunos de ellos, consumidores de bazuco. Los testimonios sobre la droga, la familia y el barrio —voces, manos y rostros, a veces distantes y a veces frágiles—, contrastan con la atmósfera de tambores y luces incandescentes de la creación teatral. En las lomas de la ciudad, Edipo Rey no es una obra antigua, es una pregunta sobre el destino, sobre la posibilidad de tomar el rumbo de la propia vida.",
+   "synopsis_en": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 100,
+   "pais_tmdb": "",
+   "title_en": "Hunger and ashes",
+   "lbSlug": "hunger-and-ashes",
+   "_verificado": "el catálogo ya la tiene (w_R4HMHX4G932S, ficma-2026)",
+   "work_id": "w_R4HMHX4G932S",
+   "_director": "Rodrigo Dimaté",
+   "_sondeado": "2026-11-27",
+   "_ya_publicada": [
+    {
+     "festival": "ficma-2026",
+     "titulo": "Ayuno y cenizas",
+     "tmdb_id": 1756580,
+     "poster": "/assets/ficma/ayuno-y-cenizas.jpg",
+     "posterSource": "custom",
+     "lbSlug": "hunger-and-ashes",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "100 min",
+     "genre": "Documental",
+     "synopsis_en": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life.",
+     "sinopsis": "En medio de las montañas de Bogotá, un grupo aficionado de teatro hace ensayos y lleva a escena la más famosa de todas las obras, Edipo Rey. Sus integrantes son músicos, actores, artistas de barrio y, algunos de ellos, consumidores de bazuco. Los testimonios sobre la droga, la familia y el barrio —voces, manos y rostros, a veces distantes y a veces frágiles—, contrastan con la atmósfera de tambores y luces incandescentes de la creación teatral. En las lomas de la ciudad, Edipo Rey no es una obra antigua, es una pregunta sobre el destino, sobre la posibilidad de tomar el rumbo de la propia vida."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficma-2026",
+   "poster": "/assets/provinciadevelez-2026/ayuno-y-cenizas.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4HMHX4G932S (ficma-2026, provinciadevelez-2026)"
+   }
+  },
+  {
    "titulo": "De la tradición a la prohibición",
    "tmdb_id": 1849406,
    "titulo_original": "De la tradición a la prohibición",
@@ -115,7 +156,6 @@
    "synopsis_en": "El Pescador is an intimate portrait of the Caribbean through the lives of those who devote themselves to the sea. From the voice of a Puerto Rican fisherman to the bond between a father and his son in Colombia, the film reveals how fishing both unites and distinguishes, portraying a legacy shaped by tradition, struggle, and hope. Filmed in La Parguera, Lajas, Puerto Rico and Palomino, La Guajira, Colombia.",
    "genero": "Documental",
    "anio_tmdb": 0,
-   "duracion_tmdb": 10,
    "pais_tmdb": "",
    "lbSlug": "el-pescador-1",
    "_verificado": "el catálogo ya la tiene (w_7JCX65BM88M0, provinciadevelez-2026)",
@@ -124,6 +164,7 @@
    "_sondeado": "2026-11-27",
    "poster": "/assets/provinciadevelez-2026/el-pescador.jpg",
    "posterSource": "tmdb",
+   "duracion_tmdb": 10,
    "_heredado": {
     "duracion_tmdb": "catálogo w_7JCX65BM88M0 (provinciadevelez-2026)"
    }
@@ -418,6 +459,29 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Tres lunas nuevas",
+   "tmdb_id": 1548988,
+   "titulo_original": "Tres lunas nuevas",
+   "poster_path": "/c3WVtmKJ8ixO5pnQvrV34RNvAWm.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Alex doesn't go to school and spends his day hanging around, seemingly free, doing what he was told not to do; Steven tries to hold down a job, but there's always a friend, a party, a problem; Kevin wants to escape the drugs and violence. Three young men face the harshness of Bogotá life while they wait, amid continuous failures, for a miracle.",
+   "genero": "Crimen",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 144,
+   "pais_tmdb": "Colombia",
+   "title_en": "Three New Moons",
+   "lbSlug": "three-new-moons",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Rodrigo Dimaté",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/provinciadevelez-2026/tres-lunas-nuevas.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_EJEM1K21JJAJ (provinciadevelez-2026)"
+   }
+  },
+  {
    "titulo": "Uma Uñjirinaka · Alto Milluni",
    "tmdb_id": 1849455,
    "titulo_original": "Uma Uñjirinaka · Alto Milluni",
@@ -484,6 +548,46 @@
   }
  ],
  "verificadas": {
+  "Ayuno y cenizas": {
+   "tmdb_id": 1756580,
+   "titulo_original": "Ayuno y Cenizas",
+   "poster_path": "/ajvnPIgoeSrCiuuLkE0VNVpkpkV.jpg",
+   "synopsis_es": "En medio de las montañas de Bogotá, un grupo aficionado de teatro hace ensayos y lleva a escena la más famosa de todas las obras, Edipo Rey. Sus integrantes son músicos, actores, artistas de barrio y, algunos de ellos, consumidores de bazuco. Los testimonios sobre la droga, la familia y el barrio —voces, manos y rostros, a veces distantes y a veces frágiles—, contrastan con la atmósfera de tambores y luces incandescentes de la creación teatral. En las lomas de la ciudad, Edipo Rey no es una obra antigua, es una pregunta sobre el destino, sobre la posibilidad de tomar el rumbo de la propia vida.",
+   "synopsis_en": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 100,
+   "pais_tmdb": "",
+   "title_en": "Hunger and ashes",
+   "lbSlug": "hunger-and-ashes",
+   "_verificado": "el catálogo ya la tiene (w_R4HMHX4G932S, ficma-2026)",
+   "work_id": "w_R4HMHX4G932S",
+   "_director": "Rodrigo Dimaté",
+   "_sondeado": "2026-11-27",
+   "_ya_publicada": [
+    {
+     "festival": "ficma-2026",
+     "titulo": "Ayuno y cenizas",
+     "tmdb_id": 1756580,
+     "poster": "/assets/ficma/ayuno-y-cenizas.jpg",
+     "posterSource": "custom",
+     "lbSlug": "hunger-and-ashes",
+     "country": "Colombia",
+     "year": 2026,
+     "duration": "100 min",
+     "genre": "Documental",
+     "synopsis_en": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life.",
+     "sinopsis": "En medio de las montañas de Bogotá, un grupo aficionado de teatro hace ensayos y lleva a escena la más famosa de todas las obras, Edipo Rey. Sus integrantes son músicos, actores, artistas de barrio y, algunos de ellos, consumidores de bazuco. Los testimonios sobre la droga, la familia y el barrio —voces, manos y rostros, a veces distantes y a veces frágiles—, contrastan con la atmósfera de tambores y luces incandescentes de la creación teatral. En las lomas de la ciudad, Edipo Rey no es una obra antigua, es una pregunta sobre el destino, sobre la posibilidad de tomar el rumbo de la propia vida."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficma-2026",
+   "poster": "/assets/provinciadevelez-2026/ayuno-y-cenizas.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_R4HMHX4G932S (ficma-2026, provinciadevelez-2026)"
+   }
+  },
   "De la tradición a la prohibición": {
    "tmdb_id": 1849406,
    "titulo_original": "De la tradición a la prohibición",
@@ -589,7 +693,6 @@
    "synopsis_en": "El Pescador is an intimate portrait of the Caribbean through the lives of those who devote themselves to the sea. From the voice of a Puerto Rican fisherman to the bond between a father and his son in Colombia, the film reveals how fishing both unites and distinguishes, portraying a legacy shaped by tradition, struggle, and hope. Filmed in La Parguera, Lajas, Puerto Rico and Palomino, La Guajira, Colombia.",
    "genero": "Documental",
    "anio_tmdb": 0,
-   "duracion_tmdb": 10,
    "pais_tmdb": "",
    "lbSlug": "el-pescador-1",
    "_verificado": "el catálogo ya la tiene (w_7JCX65BM88M0, provinciadevelez-2026)",
@@ -598,6 +701,7 @@
    "_sondeado": "2026-11-27",
    "poster": "/assets/provinciadevelez-2026/el-pescador.jpg",
    "posterSource": "tmdb",
+   "duracion_tmdb": 10,
    "_heredado": {
     "duracion_tmdb": "catálogo w_7JCX65BM88M0 (provinciadevelez-2026)"
    }
@@ -876,6 +980,28 @@
    ],
    "poster": "/assets/provinciadevelez-2026/sinfonia-incompleta-de-oficios-del-fonce.jpg",
    "posterSource": "tmdb"
+  },
+  "Tres lunas nuevas": {
+   "tmdb_id": 1548988,
+   "titulo_original": "Tres lunas nuevas",
+   "poster_path": "/c3WVtmKJ8ixO5pnQvrV34RNvAWm.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Alex doesn't go to school and spends his day hanging around, seemingly free, doing what he was told not to do; Steven tries to hold down a job, but there's always a friend, a party, a problem; Kevin wants to escape the drugs and violence. Three young men face the harshness of Bogotá life while they wait, amid continuous failures, for a miracle.",
+   "genero": "Crimen",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 144,
+   "pais_tmdb": "Colombia",
+   "title_en": "Three New Moons",
+   "lbSlug": "three-new-moons",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Rodrigo Dimaté",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/provinciadevelez-2026/tres-lunas-nuevas.jpg",
+   "posterSource": "tmdb",
+   "pais_heredado": "Colombia",
+   "_heredado": {
+    "pais_heredado": "catálogo w_EJEM1K21JJAJ (provinciadevelez-2026)"
+   }
   },
   "Uma Uñjirinaka · Alto Milluni": {
    "tmdb_id": 1849455,

@@ -872,9 +872,16 @@
     "date": "2026-11-25"
    },
    "seccion": "Muestra central",
-   "franja": "sin función en los días oficiales (1–6 dic)",
+   "funcion": {
+    "fecha": "2026-12-05",
+    "hora": "20:00",
+    "sede": "Parque Emilio Ulloa",
+    "_evidencia": "correo del festival a hola@otrofestiv.app, 27 nov 2026 (4 láminas)"
+   },
    "sinopsis": "Cuenta cómo abrir una pequeña puerta en la juventud puede traer problemas enormes: quien siembra vientos cosecha tempestades.",
-   "_sinopsis_de": "https://festivaldecineprovinciadevelez.com/"
+   "_sinopsis_de": "https://festivaldecineprovinciadevelez.com/",
+   "afiche": "assets/provinciadevelez-2026/tres-lunas-nuevas.jpg",
+   "_afiche_de": "cartelera de la web del festival"
   },
   {
    "titulo": "Ayuno y cenizas",
@@ -886,9 +893,16 @@
     "date": "2026-11-25"
    },
    "seccion": "Muestra central",
-   "franja": "sin función en los días oficiales (1–6 dic)",
+   "funcion": {
+    "fecha": "2026-12-06",
+    "hora": "20:00",
+    "sede": "Estación del Tren",
+    "_evidencia": "correo del festival a hola@otrofestiv.app, 27 nov 2026 (4 láminas)"
+   },
    "sinopsis": "Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy.",
-   "_sinopsis_de": "https://festivaldecineprovinciadevelez.com/"
+   "_sinopsis_de": "https://festivaldecineprovinciadevelez.com/",
+   "afiche": "assets/provinciadevelez-2026/ayuno-y-cenizas.jpg",
+   "_afiche_de": "cartelera de la web del festival"
   }
  ]
 }

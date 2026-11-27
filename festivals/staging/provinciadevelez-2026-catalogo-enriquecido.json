@@ -150,8 +150,10 @@
     {
      "festival": "cineparalapaz-2026",
      "titulo": "Nueve jueves en Riachuelo",
+     "tmdb_id": 1849389,
      "poster": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
      "posterSource": "oficial",
+     "lbSlug": "nueve-jueves-en-riachuelo",
      "country": "Colombia",
      "duration": "24 min",
      "genre": "Documental",
@@ -377,7 +379,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Three New Moons",
    "lbSlug": "three-new-moons",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_EJEM1K21JJAJ, provinciadevelez-2026)",
+   "work_id": "w_EJEM1K21JJAJ"
   },
   {
    "titulo": "Ayuno y cenizas",
@@ -392,7 +395,7 @@
    "pais_tmdb": "",
    "title_en": "Hunger and ashes",
    "lbSlug": "hunger-and-ashes",
-   "_verificado": "el catálogo ya la tiene (w_R4HMHX4G932S, ficma-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HMHX4G932S, ficma-2026, provinciadevelez-2026)",
    "work_id": "w_R4HMHX4G932S",
    "_ya_publicada": [
     {
@@ -550,8 +553,10 @@
     {
      "festival": "cineparalapaz-2026",
      "titulo": "Nueve jueves en Riachuelo",
+     "tmdb_id": 1849389,
      "poster": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
      "posterSource": "oficial",
+     "lbSlug": "nueve-jueves-en-riachuelo",
      "country": "Colombia",
      "duration": "24 min",
      "genre": "Documental",
@@ -764,7 +769,8 @@
    "pais_tmdb": "Colombia",
    "title_en": "Three New Moons",
    "lbSlug": "three-new-moons",
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+   "_verificado": "el catálogo ya la tiene (w_EJEM1K21JJAJ, provinciadevelez-2026)",
+   "work_id": "w_EJEM1K21JJAJ"
   },
   "Ayuno y cenizas": {
    "tmdb_id": 1756580,
@@ -778,7 +784,7 @@
    "pais_tmdb": "",
    "title_en": "Hunger and ashes",
    "lbSlug": "hunger-and-ashes",
-   "_verificado": "el catálogo ya la tiene (w_R4HMHX4G932S, ficma-2026)",
+   "_verificado": "el catálogo ya la tiene (w_R4HMHX4G932S, ficma-2026, provinciadevelez-2026)",
    "work_id": "w_R4HMHX4G932S",
    "_ya_publicada": [
     {
