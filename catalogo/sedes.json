@@ -6468,13 +6468,14 @@
   },
   "s_a6295d2a": {
    "nombre": "Sala Gaitán Antigua Cinemateca",
-   "lat": 4.608881,
-   "lng": -74.0706722,
+   "lat": 4.6086901,
+   "lng": -74.0707267,
    "evidencia": {
     "nivel": "maps",
-    "url": "https://www.google.com/maps/search/?api=1&query=Carrera+7+%2322-47+Bogota",
-    "fecha": "2026-11-23",
-    "fuente": "verificado en Google Maps"
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJ4SnQz5iZP44RAJxww7s4kJY",
+    "place_id": "ChIJ4SnQz5iZP44RAJxww7s4kJY",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places: Teatro Municipal Jorge Eliécer Gaitán, Cra. 7 #22-47 — la Sala Gaitán está en ese edificio, misma dirección, a 22 m del pin"
    },
    "address": "Carrera 7 # 22-47",
    "alias": [
@@ -6484,7 +6485,8 @@
     "bogoshorts-2026"
    ],
    "ciudad": "Bogotá",
-   "corto": "Sala Gaitán Antigua Cinemateca"
+   "corto": "Sala Gaitán Antigua Cinemateca",
+   "coords_fecha": "2026-11-27"
   },
   "s_a6e0e0b3": {
    "nombre": "Cine Colombia Multiplex Avenida Chile",
