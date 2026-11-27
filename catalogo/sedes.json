@@ -179,6 +179,140 @@
   }
  },
  "sedes": {
+  "s_0061ac1e": {
+   "nombre": "Alianza Francesa",
+   "lat": 10.9934124,
+   "lng": -74.7890175,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 52 # 54-75",
+   "alias": [
+    "Alianza Francesa - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "corto": "Alianza Francesa",
+   "_ciudad_dudosa": "Cartagena"
+  },
+  "s_00cb56fc": {
+   "nombre": "Auditorio nido",
+   "lat": 10.391,
+   "lng": -75.4794,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Cartagena",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Auditorio Nido"
+  },
+  "s_00e7323f": {
+   "nombre": "Casa de la Juventud Ayelen",
+   "lat": 4.5537767,
+   "lng": -74.1431784,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 65A Sur # 17C-30",
+   "alias": [
+    "Casa de la Juventud Ayelen - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Ayelen"
+  },
+  "s_010ecd16": {
+   "nombre": "Casa Cultural El Bordillo",
+   "lat": 10.9998767,
+   "lng": -74.8190555,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 44 # 87-44",
+   "alias": [
+    "Casa Cultural El Bordillo - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Casa Cultural El Bordillo"
+  },
+  "s_0237c113": {
+   "nombre": "Casa Aparte",
+   "lat": 4.5453739,
+   "lng": -75.6744517,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 23d # 11-25",
+   "alias": [
+    "Casa Aparte - Armenia"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Armenia",
+   "corto": "Casa Aparte"
+  },
+  "s_0344094c": {
+   "nombre": "Fundación Gilberto Álzate Avendaño",
+   "lat": 4.5953608,
+   "lng": -74.0724134,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cineautopsia-2026.json (publicado)"
+   },
+   "address": "Cl. 10 #3-16",
+   "alias": [
+    "Fundación Gilberto Alzate Avendaño",
+    "Fundación Gilberto Alzate Avendaño - Biblioteca - Bogotá",
+    "Fundación Gilberto Alzate Avendaño FUGA (Cl. 10 #3-16, Bogotá)",
+    "Fundación Gilberto Álzate Avendaño - Bogotá"
+   ],
+   "festivales": [
+    "cineautopsia-2026",
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "FUGA"
+  },
+  "s_035a81a0": {
+   "nombre": "TIFF Lightbox",
+   "lat": 43.6467198,
+   "lng": -79.3905334,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tiff-2026.json (publicado)"
+   },
+   "address": "350 King Street West",
+   "alias": [
+    "TIFF Lightbox - Toronto"
+   ],
+   "festivales": [
+    "tiff-2026"
+   ],
+   "salas": [
+    "TLB 1",
+    "TLB 2",
+    "TLB 3",
+    "TLB 4"
+   ],
+   "ciudad": "Toronto",
+   "corto": "TIFF Lightbox"
+  },
   "s_03bcfa6f": {
    "nombre": "Universidad Nacional · El Cable",
    "lat": 5.0555625,
@@ -223,15 +357,26 @@
     "fuente": "anibia-2026-venues-geo.json"
    },
    "address": "Calle 40B # 5-37",
-   "alias": [],
+   "alias": [
+    "Pontificia Universidad Javeriana - Bogotá",
+    "Pontificia Universidad Javeriana · Auditorio Centro Ático",
+    "Pontificia Universidad Javeriana · Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes",
+    "Pontificia Universidad Javeriana · Sala 901 - Edificio Jorge Hoyos Vásquez, S.J.",
+    "Pontificia Universidad Javeriana · Sala 903 - Edificio Jorge Hoyos Vásquez, S.J."
+   ],
    "festivales": [
     "anibia-2026",
-    "biff-2026"
+    "biff-2026",
+    "qaff-2026"
    ],
    "salas": [
+    "Auditorio Centro Ático",
     "Aula Múltiple",
     "Ed. Gerardo Arango",
-    "Ed. Ático"
+    "Ed. Ático",
+    "Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes",
+    "Sala 901 - Edificio Jorge Hoyos Vásquez, S.J.",
+    "Sala 903 - Edificio Jorge Hoyos Vásquez, S.J."
    ],
    "ciudad": "Bogotá",
    "corto": "Pontificia Universidad Javeriana",
@@ -257,6 +402,91 @@
    "ciudad": "Medellín",
    "corto": "House of Demons"
   },
+  "s_06b3cd76": {
+   "nombre": "Casa de la Juventud Chiguazá",
+   "lat": 4.5512974,
+   "lng": -74.1091675,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 48P BIS D Sur # 5A-43",
+   "alias": [
+    "Casa de la Juventud Chiguazá - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Chiguazá"
+  },
+  "s_06ca6f77": {
+   "nombre": "C. Convenciones",
+   "lat": 10.4242,
+   "lng": -75.5505,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "C. Convenciones"
+  },
+  "s_079de1f0": {
+   "nombre": "Cine Passeio Ritz",
+   "lat": -25.426501,
+   "lng": -49.26945,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "olhar-2026.json (publicado)"
+   },
+   "address": "R. Riachuelo, 410 - Centro",
+   "alias": [],
+   "festivales": [
+    "olhar-2026"
+   ],
+   "ciudad": "Curitiba",
+   "corto": "Cine Passeio (Ritz)"
+  },
+  "s_09b62d67": {
+   "nombre": "Colegio Carrasquilla (Cra. 7ma)",
+   "lat": 5.69135,
+   "lng": -76.6568012,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Colegio Carrasquilla (Cra. 7ma)",
+   "alias": [
+    "Colegio Carrasquilla (Cra. 7ma) - Quibdó"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Quibdó",
+   "corto": "Colegio Carrasquilla (Cra. 7ma)"
+  },
+  "s_0a0f2470": {
+   "nombre": "Fundación Alianza Tecnologica y Desarrollo Educativo",
+   "lat": 10.9946547,
+   "lng": -74.7936587,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 54 # 64-73",
+   "alias": [
+    "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Fundación Alianza Tecnologica y Desarrollo Educativo - ALITIC"
+  },
   "s_0a4d1410": {
    "nombre": "Bar Yenyeré",
    "lat": 7.9884252,
@@ -274,6 +504,42 @@
    "ciudad": "Caucasia",
    "corto": "Bar Yenyeré"
   },
+  "s_0af324db": {
+   "nombre": "Teatro Empire",
+   "lat": -34.6105202,
+   "lng": -58.3938625,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "finca-2026.json (publicado)"
+   },
+   "address": "Hipólito Yrigoyen 1934, Balvanera, CABA",
+   "alias": [
+    "Teatro Empire - Buenos Aires"
+   ],
+   "festivales": [
+    "finca-2026"
+   ],
+   "ciudad": "Buenos Aires",
+   "corto": "Teatro Empire"
+  },
+  "s_0af8e5f1": {
+   "nombre": "Cinema Local",
+   "lat": 4.6627544,
+   "lng": -74.0630981,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 74 # 20 B -19",
+   "alias": [
+    "Cinema Local - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "corto": "Cinema Local",
+   "_ciudad_dudosa": "Cali"
+  },
   "s_0b6dd1ff": {
    "nombre": "Teatro Bolívar",
    "lat": 2.4386267,
@@ -289,6 +555,39 @@
    ],
    "ciudad": "Popayán",
    "corto": "Teatro Bolívar"
+  },
+  "s_0b79c2ba": {
+   "nombre": "Casa de la Juventud Iwoka",
+   "lat": 4.6222774,
+   "lng": -74.1571759,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 78N BIS # 39-33",
+   "alias": [
+    "Casa de la Juventud Iwoka - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Iwoka"
+  },
+  "s_0bbb84e5": {
+   "nombre": "Plaza de la Proclamación",
+   "lat": 10.423,
+   "lng": -75.548,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Plaza Proclamación"
   },
   "s_0bdf6316": {
    "nombre": "Hotel Plaza Mayor",
@@ -331,6 +630,39 @@
    "ciudad": "Fusagasugá",
    "corto": "Casona Tierra Grata"
   },
+  "s_0ca8367d": {
+   "nombre": "Teatro Colón",
+   "lat": 4.5966666,
+   "lng": -74.0744201,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 10 # 5-32",
+   "alias": [
+    "Teatro Colón - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Teatro Colón"
+  },
+  "s_0cc0d8e2": {
+   "nombre": "Comfama La Estrella",
+   "lat": 6.15431,
+   "lng": -75.65313,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "La Estrella",
+   "corto": "Comfama La Estrella"
+  },
   "s_0ecc197a": {
    "nombre": "Estación Trece de Noviembre",
    "lat": 6.2454624,
@@ -348,6 +680,42 @@
    ],
    "ciudad": "Medellín",
    "corto": "Estación Trece de Noviembre"
+  },
+  "s_1021dabf": {
+   "nombre": "Alianza Francesa de Buenos Aires",
+   "lat": -34.59917,
+   "lng": -58.3802926,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "finca-2026.json (publicado)"
+   },
+   "address": "Av. Córdoba 946, CABA",
+   "alias": [
+    "Alianza Francesa de Buenos Aires - Buenos Aires"
+   ],
+   "festivales": [
+    "finca-2026"
+   ],
+   "ciudad": "Buenos Aires",
+   "corto": "Alianza Francesa"
+  },
+  "s_1038a36e": {
+   "nombre": "Casa de la Juventud Diego Felipe Becerra",
+   "lat": 4.7408869,
+   "lng": -74.1081235,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 125 # 132C-82",
+   "alias": [
+    "Casa de la Juventud Diego Felipe Becerra - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Diego Felipe Becerra"
   },
   "s_104736cc": {
    "nombre": "Expoferias",
@@ -378,6 +746,25 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali"
+  },
+  "s_1093f228": {
+   "nombre": "Museo Interactivo Maloka",
+   "lat": 4.6554318,
+   "lng": -74.1094912,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cineautopsia-2026.json (publicado)"
+   },
+   "address": "Cra. 68d # 24A-51",
+   "alias": [
+    "Museo Interactivo Maloka - Bogotá",
+    "Museo Interactivo Maloka, Bogotá, Cra. 68d # 24A - 51."
+   ],
+   "festivales": [
+    "cineautopsia-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Maloka"
   },
   "s_10f3578c": {
    "nombre": "Hotel Obelisco",
@@ -514,6 +901,46 @@
    "ciudad": "Toro",
    "corto": "Hotel Miracruz"
   },
+  "s_12a73c86": {
+   "nombre": "Museo Nacional de Colombia",
+   "lat": 4.6155238,
+   "lng": -74.0684131,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "qaff-2026.json (publicado)"
+   },
+   "address": "Cra. 7 # 28-66",
+   "alias": [
+    "Museo Nacional de Colombia - Bogotá",
+    "Museo Nacional de Colombia · Auditorio Teresa Cuervo Borda"
+   ],
+   "festivales": [
+    "qaff-2026"
+   ],
+   "salas": [
+    "Auditorio Teresa Cuervo Borda"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Museo Nacional"
+  },
+  "s_12aa5ffa": {
+   "nombre": "Biblioteca Pública Francisco José de Caldas",
+   "lat": 4.7411974,
+   "lng": -74.0847011,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 92 # 146 C - 24",
+   "alias": [
+    "Biblioteca Pública Francisco José de Caldas - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Biblioteca Pública Francisco José de Caldas"
+  },
   "s_12ebb5ae": {
    "nombre": "Centro Cultural y Educativo Fundación Diego Echavarría Misas",
    "lat": 6.1724116,
@@ -590,6 +1017,40 @@
    ],
    "ciudad": "Cali"
   },
+  "s_14bca442": {
+   "nombre": "Casa de la Juventud El Frailejón",
+   "lat": 4.5121198,
+   "lng": -74.1145298,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 12 # 76A-28 Sur",
+   "alias": [
+    "Casa de la Juventud El Frailejón - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud El Frailejón"
+  },
+  "s_15e48dad": {
+   "nombre": "Cinemateca de Salento",
+   "lat": 4.6347422,
+   "lng": -75.5736999,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficmontanas-2026.json (publicado)"
+   },
+   "address": "Calle 12 # 6-43, Salento, Quindío",
+   "alias": [],
+   "festivales": [
+    "ficmontanas-2026"
+   ],
+   "ciudad": "Salento",
+   "corto": "Cinemateca"
+  },
   "s_15ec15df": {
    "nombre": "SENA Salomia",
    "lat": 3.4678756,
@@ -641,7 +1102,12 @@
    },
    "address": "Cra. 3 #19-10, Bogotá",
    "alias": [
-    "Cinemateca de Bogotá - Bogotá"
+    "Cinemateca de Bogotá - Bogotá",
+    "Cinemateca de Bogotá · Sala 2",
+    "Cinemateca de Bogotá · Sala 3",
+    "Cinemateca de Bogotá · Sala Capital",
+    "Sala 2, Cinemateca de Bogotá (Cra. 3 # 19-10)",
+    "Sala Capital, Cinemateca de Bogotá (Cra. 3 # 19-10)"
    ],
    "festivales": [
     "aleste-2026",
@@ -649,9 +1115,12 @@
     "bhff-2026",
     "biff-2026",
     "bogoshorts-2026",
+    "cineautopsia-2026",
     "cuaff-2026",
+    "ficdeh-2026",
     "midbo-2026",
-    "narrarelfuturo-2026"
+    "narrarelfuturo-2026",
+    "qaff-2026"
    ],
    "salas": [
     "Calle Museo",
@@ -703,6 +1172,21 @@
    "ciudad": "Cali",
    "corto": "Curador"
   },
+  "s_1992e58d": {
+   "nombre": "CEFE El Tunal",
+   "lat": 4.5718773,
+   "lng": -74.1341131,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tercertiempo-2026.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "tercertiempo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "CEFE El Tunal"
+  },
   "s_19daa131": {
    "nombre": "Uniamazonia Sede Centro",
    "lat": 1.6068188,
@@ -729,6 +1213,24 @@
    "ciudad": "Florencia",
    "corto": "Uniamazonia Sede Centro",
    "institucion": "i_7fb48a56"
+  },
+  "s_1a11bba5": {
+   "nombre": "Carpa Cinema",
+   "lat": 4.6372361,
+   "lng": -75.5698171,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficmontanas-2026.json (publicado)"
+   },
+   "address": "Parque Principal (Plaza de Bolívar), Salento, Quindío",
+   "alias": [
+    "Carpa Cinema - Parque Salento"
+   ],
+   "festivales": [
+    "ficmontanas-2026"
+   ],
+   "ciudad": "Salento",
+   "corto": "Carpa Cinema"
   },
   "s_1b1244a2": {
    "nombre": "I.E San Antonio",
@@ -783,7 +1285,8 @@
    ],
    "festivales": [
     "bogoshorts-2026",
-    "midbo-2026"
+    "midbo-2026",
+    "qaff-2026"
    ],
    "salas": [
     "Sala Jules Verne",
@@ -810,6 +1313,22 @@
    "ciudad": "Guatapé",
    "corto": "I.E. Sede La Piedra"
   },
+  "s_1d996547": {
+   "nombre": "Procinal Parque Fabricato",
+   "lat": 6.32434,
+   "lng": -75.55926,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Carrera 50 #38a-185",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Bello",
+   "corto": "Cineprox Fabricato"
+  },
   "s_1e0b7f79": {
    "nombre": "BlackGround",
    "lat": 3.4359135,
@@ -825,6 +1344,22 @@
    ],
    "ciudad": "Cali",
    "corto": "BlackGround"
+  },
+  "s_1e559a7c": {
+   "nombre": "Plaza Bocagrande ‒ Sala 3",
+   "lat": 10.3979,
+   "lng": -75.5499,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Av. San Martín, Bocagrande, Cartagena",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Plaza Bocagrande"
   },
   "s_1e670050": {
    "nombre": "Centro de Desarrollo Cultural de Moravia",
@@ -904,6 +1439,59 @@
    "ciudad": "Cali",
    "corto": "Bulevar del Río"
   },
+  "s_1f9bcadc": {
+   "nombre": "Biblioteca Pública Usaquén Servitá",
+   "lat": 4.74197,
+   "lng": -74.02381,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 165 # 7-52",
+   "alias": [
+    "Biblioteca Pública Usaquén Servitá - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Biblioteca Pública Usaquén Servitá"
+  },
+  "s_2056aff0": {
+   "nombre": "Auditorio Principal",
+   "lat": 4.7542802,
+   "lng": -74.0533574,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Auditorio Principal - UNIAGRARIA - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Auditorio Principal - UNIAGRARIA"
+  },
+  "s_205f3363": {
+   "nombre": "COMFAMA",
+   "lat": 6.2922203,
+   "lng": -75.5558029,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 49 #46-57",
+   "alias": [
+    "COMFAMA - Cineclub Bello - Medellín"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "COMFAMA - Capilla del Claustro"
+  },
   "s_20a122a7": {
    "nombre": "Terko",
    "lat": 6.3473919,
@@ -940,6 +1528,22 @@
    ],
    "ciudad": "Girardota",
    "corto": "Parque de la Poesía"
+  },
+  "s_20cb6106": {
+   "nombre": "Planetario",
+   "lat": 6.26902,
+   "lng": -75.56611,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Parque de los Deseos",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Planetario"
   },
   "s_20f5d939": {
    "nombre": "Teatrino Proyecto Oriente",
@@ -991,6 +1595,39 @@
    "ciudad": "Medellín",
    "corto": "Instituto Cultural Alexander von Humboldt"
   },
+  "s_22fe5886": {
+   "nombre": "Parque Arqueológico de Usme",
+   "lat": 4.4774665,
+   "lng": -74.1186759,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 136B Sur # 3A-48",
+   "alias": [
+    "Parque Arqueológico de Usme - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Parque Arqueológico de Usme"
+  },
+  "s_23463670": {
+   "nombre": "Village East by Angelika",
+   "lat": 40.7285,
+   "lng": -73.9876,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tribeca-2026.json (publicado)"
+   },
+   "address": "181-189 2nd Ave, New York, NY 10003",
+   "alias": [],
+   "festivales": [
+    "tribeca-2026"
+   ],
+   "corto": "Village East"
+  },
   "s_23554cca": {
    "nombre": "Museo del Zócalo",
    "lat": 6.2331095,
@@ -1022,6 +1659,39 @@
    ],
    "ciudad": "Medellín"
   },
+  "s_24c3ac31": {
+   "nombre": "Centro de Conciliación y Arbitraje",
+   "lat": 11.0060088,
+   "lng": -74.7953414,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 74 # 58-79",
+   "alias": [
+    "Centro de Conciliación y Arbitraje - Universidad del Norte - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Centro de Conciliación y Arbitraje - Universidad del Norte"
+  },
+  "s_25652566": {
+   "nombre": "Parque de la Poesía Girardota",
+   "lat": 6.3755727,
+   "lng": -75.4480894,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Girardota",
+   "corto": "Parque Poesía Girardota"
+  },
   "s_25caf24a": {
    "nombre": "Comfama La Capilla",
    "lat": 6.2458698,
@@ -1034,6 +1704,7 @@
    },
    "address": "Claustro Comfama San Ignacio, Cra. 44 #48-18 (2.º piso)",
    "alias": [
+    "Capilla Comfama",
     "Capilla, Comfama",
     "Comfama La Capilla - Medellín",
     "La Capilla del Claustro Comfama",
@@ -1041,6 +1712,7 @@
     "La Capilla del Claustro Comfama Medellín"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026",
     "mamut-2026",
     "miradas-2026"
@@ -1121,6 +1793,22 @@
    "corto": "Universidad de Antioquia Seccional Occidente",
    "institucion": "i_b40f78bd"
   },
+  "s_26fa00c5": {
+   "nombre": "Procinal Las Américas",
+   "lat": 6.2145832,
+   "lng": -75.5963458,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Diagonal 75B #2A-120",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Cineprox Las Américas"
+  },
   "s_274fbe5a": {
    "nombre": "Universidad del Magdalena",
    "lat": 11.2262461,
@@ -1137,6 +1825,39 @@
    "ciudad": "Santa Marta",
    "_ciudad_fijada": "Nominatim reverso"
   },
+  "s_27e8f3e2": {
+   "nombre": "Shorts Theater at Spring Studios",
+   "lat": 40.7258,
+   "lng": -74.0063,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tribeca-2026.json (publicado)"
+   },
+   "address": "50 Varick St, New York, NY 10013",
+   "alias": [],
+   "festivales": [
+    "tribeca-2026"
+   ],
+   "corto": "Shorts Theater"
+  },
+  "s_2807be45": {
+   "nombre": "Casa de la Juventud El Cacma",
+   "lat": 4.6224979,
+   "lng": -74.0811927,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 24 # 27A-31",
+   "alias": [
+    "Casa de la Juventud El Cacma - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud El Cacma"
+  },
   "s_298b07a2": {
    "nombre": "Co.Laboratorio",
    "lat": 4.6215012,
@@ -1152,6 +1873,42 @@
    ],
    "ciudad": "Bogotá",
    "corto": "Co.Laboratorio"
+  },
+  "s_2a85b8da": {
+   "nombre": "Casa de la Juventud Chapinero",
+   "lat": 4.697615,
+   "lng": -74.1239484,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 65A # 1-40",
+   "alias": [
+    "Casa de la Juventud Chapinero - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Chapinero"
+  },
+  "s_2b03fa90": {
+   "nombre": "Contacto Escuela de Fotografía",
+   "lat": 4.5388271,
+   "lng": -75.6685075,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 16 # 9-54, piso 2",
+   "alias": [
+    "Contacto Escuela de Fotografía - Armenia"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Armenia",
+   "corto": "Contacto Escuela de Fotografía"
   },
   "s_2b8a4bc3": {
    "nombre": "Teatro Mayor Julio Mario Santo Domingo",
@@ -1188,6 +1945,59 @@
    ],
    "ciudad": "Manizales",
    "_ciudad_fijada": "Nominatim reverso"
+  },
+  "s_2c894bd8": {
+   "nombre": "Universidad del Quindío",
+   "lat": 4.5538677,
+   "lng": -75.6610022,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 15 con calle 12 Norte",
+   "alias": [
+    "Universidad del Quindío - Armenia"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Armenia",
+   "corto": "Universidad del Quindío"
+  },
+  "s_2d1affc7": {
+   "nombre": "Fundación Malabareando las Calles",
+   "lat": 4.8135729,
+   "lng": -75.6922049,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Carrera 8 #15 - 09",
+   "alias": [
+    "Fundación Malabareando las Calles - Pereira"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Pereira",
+   "corto": "Fundación Malabareando las Calles"
+  },
+  "s_2e7ad9fe": {
+   "nombre": "Cinemateca Sala Capital",
+   "lat": 4.6032463,
+   "lng": -74.06758,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "fantasofest-2026.json (publicado)"
+   },
+   "address": "Carrera 3 No. 19-10",
+   "alias": [],
+   "festivales": [
+    "fantasofest-2026",
+    "tercertiempo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Cinemateca de Bogotá"
   },
   "s_2e88d79d": {
    "nombre": "Parque Ernesto Gutiérrez",
@@ -1226,6 +2036,24 @@
    "ciudad": "Medellín",
    "corto": "ITM"
   },
+  "s_2f988a5e": {
+   "nombre": "Maloka Cultural",
+   "lat": 10.9954675,
+   "lng": -74.8076454,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 46 # 79-18",
+   "alias": [
+    "Maloka Cultural - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Maloka Cultural"
+  },
   "s_2f9c41f8": {
    "nombre": "Donde Robin",
    "lat": 6.2496084,
@@ -1246,6 +2074,40 @@
    "ciudad": "Medellín",
    "corto": "Donde Robin"
   },
+  "s_2fbc75de": {
+   "nombre": "Plaza Bocagrande ‒ Sala 1",
+   "lat": 10.3979,
+   "lng": -75.5499,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Av. San Martín, Bocagrande, Cartagena",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Plaza Bocagrande"
+  },
+  "s_301651c3": {
+   "nombre": "Cinema Local",
+   "lat": 3.373295,
+   "lng": -76.5456344,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 4B # 38A-66",
+   "alias": [
+    "Cinema Local - Cali"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Cinema Local"
+  },
   "s_30a5d6b9": {
    "nombre": "Potocine",
    "lat": 4.5687992,
@@ -1262,6 +2124,62 @@
    "ciudad": "Bogotá",
    "corto": "Potocine"
   },
+  "s_30a8fc5c": {
+   "nombre": "Institución Educativa Los Arrieritos",
+   "lat": 5.0743694,
+   "lng": -75.5081209,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Institución Educativa Los Arrieritos - Manizales"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Institución Educativa Los Arrieritos"
+  },
+  "s_31e92d8a": {
+   "nombre": "Centro Cultural de Cali",
+   "lat": 3.4498201,
+   "lng": -76.5361556,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 5 # 6-05, San Pedro",
+   "alias": [
+    "Centro Cultural de Cali - Cali"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "salas": [
+    "Sala Audiovisual"
+   ],
+   "ciudad": "Cali",
+   "corto": "Centro Cultural de Cali"
+  },
+  "s_3217e964": {
+   "nombre": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
+   "lat": 5.6904134,
+   "lng": -76.6448593,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
+   "alias": [
+    "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera - Quibdó"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Quibdó",
+   "corto": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera"
+  },
   "s_324d7230": {
    "nombre": "La Mecánica",
    "lat": 4.6559406,
@@ -1277,6 +2195,22 @@
    ],
    "ciudad": "Bogotá",
    "corto": "La Mecánica"
+  },
+  "s_3324b403": {
+   "nombre": "Salón 1 ‒ Miguel Sebastián Guerrero, unibac",
+   "lat": 10.4,
+   "lng": -75.507,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Universidad de Cartagena, Cartagena",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "UNIBAC"
   },
   "s_3327940f": {
    "nombre": "Biblioteca Pública La Paz",
@@ -1339,8 +2273,12 @@
     "fecha": "2026-11-16",
     "fuente": "verificado en Google Maps"
    },
-   "alias": [],
+   "alias": [
+    "Teatro Los Fundadores",
+    "Teatro Los Fundadores - Manizales"
+   ],
    "festivales": [
+    "ficdeh-2026",
     "ficma-2026"
    ],
    "salas": [
@@ -1348,6 +2286,22 @@
    ],
    "ciudad": "Manizales",
    "corto": "Teatro los Fundadores"
+  },
+  "s_34ec3c29": {
+   "nombre": "Plaza Bocagrande ‒ Sala 2",
+   "lat": 10.3979,
+   "lng": -75.5499,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Av. San Martín, Bocagrande, Cartagena",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Plaza Bocagrande"
   },
   "s_36b34e66": {
    "nombre": "Cine fest",
@@ -1392,8 +2346,11 @@
     "nivel": "manual",
     "fuente": "ficma-2026-venues-geo.json"
    },
-   "alias": [],
+   "alias": [
+    "Universidad de Caldas - Auditorio Roberto Vélez Correa - Manizales"
+   ],
    "festivales": [
+    "ficdeh-2026",
     "ficma-2026"
    ],
    "salas": [
@@ -1401,6 +2358,39 @@
    ],
    "ciudad": "Manizales",
    "corto": "Universidad de Caldas"
+  },
+  "s_3886740c": {
+   "nombre": "Parque Bicentenario",
+   "lat": 6.24667,
+   "lng": -75.55759,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Parque Bicentenario"
+  },
+  "s_39107202": {
+   "nombre": "Fundación Universitaria Agraria UNIAGRARIA",
+   "lat": 4.7528545,
+   "lng": -74.0510679,
+   "evidencia": {
+    "nivel": "nominatim",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Avenida Calle 170",
+   "alias": [
+    "Fundación Universitaria Agraria UNIAGRARIA - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "UNIAGRARIA"
   },
   "s_39a0cbb2": {
    "nombre": "Escuela Vereda El Placer",
@@ -1419,6 +2409,22 @@
    ],
    "ciudad": "Medellín",
    "corto": "Escuela Vereda El Placer"
+  },
+  "s_39b49fba": {
+   "nombre": "Cineprox Las Américas",
+   "lat": 6.2504,
+   "lng": -75.5892,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "aff-2026.json (publicado)"
+   },
+   "address": "Diagonal 75B #2A-120",
+   "alias": [],
+   "festivales": [
+    "aff-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Cineprox Las Américas"
   },
   "s_39dd7973": {
    "nombre": "Cinema Los Ángeles",
@@ -1440,6 +2446,24 @@
    "ciudad": "Fusagasugá",
    "corto": "Cinema Los Ángeles"
   },
+  "s_3a422f2a": {
+   "nombre": "El Teatrino",
+   "lat": 10.3917183,
+   "lng": -75.4959899,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Los Almendros Mz E # Lote 11",
+   "alias": [
+    "El Teatrino - Cartagena"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "El Teatrino"
+  },
   "s_3aba7a01": {
    "nombre": "Escuela de Encenillos",
    "lat": 6.3769207,
@@ -1456,6 +2480,39 @@
    "ciudad": "Girardota",
    "corto": "Escuela de Encenillos"
   },
+  "s_3bb9f4df": {
+   "nombre": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales",
+   "lat": 5.0637592,
+   "lng": -75.4959969,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Av. Santander # 57-58",
+   "alias": [
+    "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales - Manizales"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales"
+  },
+  "s_3c174214": {
+   "nombre": "Spring Studios",
+   "lat": 40.7253,
+   "lng": -74.0055,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tribeca-2026.json (publicado)"
+   },
+   "address": "50 Varick St, New York, NY 10013",
+   "alias": [],
+   "festivales": [
+    "tribeca-2026"
+   ],
+   "corto": "Spring Studios"
+  },
   "s_3c28b8d0": {
    "nombre": "Secretaría de la Mujer y Equidad de Género",
    "lat": 5.0678125,
@@ -1471,6 +2528,91 @@
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 446 m"
   },
+  "s_3c2f53cf": {
+   "nombre": "Museo Casa Consistorial",
+   "lat": 6.15777,
+   "lng": -75.64284,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "La Estrella",
+   "corto": "Casa Consistorial"
+  },
+  "s_3cc54ab6": {
+   "nombre": "Casa de la Juventud Damawha",
+   "lat": 4.5427513,
+   "lng": -74.1087731,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 1 Este # 10-48 Sur",
+   "alias": [
+    "Casa de la Juventud Damawha - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Damawha"
+  },
+  "s_3d446a6c": {
+   "nombre": "Colombo Americano de Pereira",
+   "lat": 4.8162251,
+   "lng": -75.6979463,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Carrera 6 Nº 23-58",
+   "alias": [
+    "Colombo Americano de Pereira - Pereira"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Pereira",
+   "corto": "Colombo Americano de Pereira"
+  },
+  "s_3d6f67be": {
+   "nombre": "Auditorio Ciro Mendía Caldas",
+   "lat": 6.0925082,
+   "lng": -75.6352338,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Carrera 49 #128 Sur-40",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Caldas",
+   "corto": "Auditorio Ciro Mendía"
+  },
+  "s_3d810f53": {
+   "nombre": "CasArte3962",
+   "lat": 10.9900266,
+   "lng": -74.8098764,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 73B # 39-62",
+   "alias": [
+    "CasArte3962 - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "CasArte3962"
+  },
   "s_3d933a6f": {
    "nombre": "Escuela Jahel Peláez Montoya",
    "lat": 5.5980302,
@@ -1485,6 +2627,24 @@
    ],
    "ciudad": "Jardín",
    "corto": "Escuela Jahel Peláez Montoya"
+  },
+  "s_3df2df68": {
+   "nombre": "IED San Nicolás",
+   "lat": 4.9648759,
+   "lng": -74.4333762,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "address": "Urbanización San José",
+   "alias": [
+    "IED San Nicolás - Sasaima"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Sasaima",
+   "corto": "IED San Nicolás"
   },
   "s_3e183821": {
    "nombre": "Lab UNAL",
@@ -1534,6 +2694,21 @@
    "ciudad": "Cali",
    "corto": "Tecnocentro Cultural Somos Pacífico"
   },
+  "s_3facd89f": {
+   "nombre": "Le Poisson Rouge",
+   "lat": 40.7281,
+   "lng": -74.0005,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tribeca-2026.json (publicado)"
+   },
+   "address": "158 Bleecker St, New York, NY 10012",
+   "alias": [],
+   "festivales": [
+    "tribeca-2026"
+   ],
+   "corto": "Le Poisson Rouge"
+  },
   "s_401a944e": {
    "nombre": "Institución Educativa La Independencia",
    "lat": 6.253025,
@@ -1552,6 +2727,45 @@
    ],
    "ciudad": "Medellín",
    "corto": "Institución Educativa La Independencia"
+  },
+  "s_4156e8d0": {
+   "nombre": "Casa LGBTIQ Sebastián Romero",
+   "lat": 4.6538268,
+   "lng": -74.0999662,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 44 # 14-60",
+   "alias": [
+    "Casa LGBTIQ Sebastián Romero - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa LGBTIQ Sebastián Romero"
+  },
+  "s_4285aa18": {
+   "nombre": "John Bassett Theatre",
+   "lat": 43.6438376,
+   "lng": -79.3866925,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tiff-2026.json (publicado)"
+   },
+   "address": "Front Street West",
+   "alias": [
+    "John Bassett Theatre - Toronto"
+   ],
+   "festivales": [
+    "tiff-2026"
+   ],
+   "salas": [
+    "JBT"
+   ],
+   "ciudad": "Toronto",
+   "corto": "John Bassett Theatre"
   },
   "s_42f35085": {
    "nombre": "Teatro Pablo Tobón Uribe",
@@ -1589,6 +2803,86 @@
    "ciudad": "Guatapé",
    "corto": "1811 Gelatería"
   },
+  "s_445eff6c": {
+   "nombre": "AMC 19th St. East 6",
+   "lat": 40.7378,
+   "lng": -73.9895,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tribeca-2026.json (publicado)"
+   },
+   "address": "890 Broadway, New York, NY 10003",
+   "alias": [],
+   "festivales": [
+    "tribeca-2026"
+   ],
+   "corto": "AMC 19th St."
+  },
+  "s_4660f10c": {
+   "nombre": "MAMM · Plazoleta",
+   "lat": 6.2338,
+   "lng": -75.5697,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "aff-2026.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "aff-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "MAMM · Plazoleta"
+  },
+  "s_46827f84": {
+   "nombre": "Plaza Proclamación",
+   "lat": 10.423,
+   "lng": -75.548,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Plaza Proclamación"
+  },
+  "s_469ea671": {
+   "nombre": "Museo Panóptico de Ibagué",
+   "lat": 4.4481695,
+   "lng": -75.2399655,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Museo Panóptico de Ibagué - Ibagué"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Ibagué",
+   "corto": "Museo Panóptico de Ibagué"
+  },
+  "s_46b59d10": {
+   "nombre": "Cine York",
+   "lat": -34.5076739,
+   "lng": -58.4849533,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "finca-2026.json (publicado)"
+   },
+   "address": "Juan Bautista Alberdi 895, Olivos, Vicente López",
+   "alias": [
+    "Cine York - Buenos Aires"
+   ],
+   "festivales": [
+    "finca-2026"
+   ],
+   "ciudad": "Olivos",
+   "corto": "Cine York"
+  },
   "s_46bfcf2a": {
    "nombre": "Auditorio principal Campus El Cable",
    "lat": 5.0555625,
@@ -1622,6 +2916,24 @@
    ],
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 210 m"
+  },
+  "s_47a90dcc": {
+   "nombre": "Rueda Libre (La Ceja)",
+   "lat": 6.030433,
+   "lng": -75.4333412,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Teatro Municipal Juan de Dios Aranzazu: Cra. 22 #18-77",
+   "alias": [
+    "Rueda Libre (La Ceja) - Medellín"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Rueda Libre (La Ceja)"
   },
   "s_49d684d9": {
    "nombre": "Placa deportiva Simón Bolívar",
@@ -1694,6 +3006,48 @@
    "ciudad": "Medellín",
    "corto": "Teatro UVA Tricentenario"
   },
+  "s_4c2461fa": {
+   "nombre": "Universidad de Ibagué",
+   "lat": 4.4491415,
+   "lng": -75.200056,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Universidad de Ibagué - Ibagué"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "salas": [
+    "Auditorio Central",
+    "Auditorio de Ingeniería",
+    "Biblioteca Sala 4",
+    "La Casona",
+    "Media Torta Facultad de Humanidades"
+   ],
+   "ciudad": "Ibagué",
+   "corto": "Universidad de Ibagué"
+  },
+  "s_4c39e6c3": {
+   "nombre": "Biblioteca Pública Carlos E. Restrepo",
+   "lat": 4.5843555,
+   "lng": -74.1032378,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Diagonal 21A Sur # 19-54 sur",
+   "alias": [
+    "Biblioteca Pública Carlos E. Restrepo - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Biblioteca Pública Carlos E. Restrepo"
+  },
   "s_4c6ebcc5": {
    "nombre": "Parque Central Cite",
    "lat": 5.9646939,
@@ -1732,6 +3086,76 @@
    "ciudad": "Florencia",
    "corto": "I.E. Juan Bautista La Salle"
   },
+  "s_4cdac717": {
+   "nombre": "Ópera de Arame",
+   "lat": -25.384501,
+   "lng": -49.276154,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "olhar-2026.json (publicado)"
+   },
+   "address": "R. João Gava - Pilarzinho",
+   "alias": [],
+   "festivales": [
+    "olhar-2026"
+   ],
+   "ciudad": "Curitiba",
+   "corto": "Ópera de Arame"
+  },
+  "s_4cdb95d4": {
+   "nombre": "Sena Galán",
+   "lat": 4.5169258,
+   "lng": -75.6918669,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 18 # 7-58",
+   "alias": [
+    "Sena Galán - Armenia"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Armenia",
+   "corto": "Sena Galán"
+  },
+  "s_4d15085b": {
+   "nombre": "Cine Club La Florida",
+   "lat": 4.7592804,
+   "lng": -75.6116548,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Corregimiento La Florida",
+   "alias": [
+    "Cine Club La Florida - Pereira"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Pereira",
+   "corto": "Cine Club La Florida"
+  },
+  "s_4da9a121": {
+   "nombre": "Centro Cultural del Socorro",
+   "lat": 10.3842515,
+   "lng": -75.4805496,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
+   "alias": [
+    "Centro Cultural del Socorro - Cartagena"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Centro Cultural del Socorro"
+  },
   "s_4ea5f87b": {
    "nombre": "Casa de la Juventud",
    "lat": 6.2344925,
@@ -1749,6 +3173,42 @@
    ],
    "ciudad": "Guatapé",
    "corto": "Casa de la Juventud"
+  },
+  "s_4ed8fa7d": {
+   "nombre": "Lugar del Poema",
+   "lat": 10.420315,
+   "lng": -75.5481268,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Pasaje Leclerc, calle 24 # 8b-83 piso 2, Getsemaní",
+   "alias": [
+    "Lugar del Poema - Cartagena"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Lugar del Poema"
+  },
+  "s_4ee78b3f": {
+   "nombre": "Biblioteca Pública La Victoria",
+   "lat": 4.5537936,
+   "lng": -74.0947173,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 37 BIS B Sur # 2B",
+   "alias": [
+    "Biblioteca Pública La Victoria - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Biblioteca Pública La Victoria"
   },
   "s_4f01e23d": {
    "nombre": "Comfama Aranjuez",
@@ -1772,6 +3232,43 @@
    "corto": "Comfama Aranjuez",
    "institucion": "i_0b12d8c2"
   },
+  "s_51ff4c81": {
+   "nombre": "I.E. Pedro Luis Álvarez Caldas",
+   "lat": 6.0925082,
+   "lng": -75.6352338,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 132 Sur #44-93",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Caldas",
+   "corto": "I.E. Pedro Luis Álvarez"
+  },
+  "s_525d04e9": {
+   "nombre": "Royal Alexandra Theatre",
+   "lat": 43.6473934,
+   "lng": -79.3876006,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tiff-2026.json (publicado)"
+   },
+   "address": "260 King Street West",
+   "alias": [
+    "Royal Alexandra Theatre - Toronto"
+   ],
+   "festivales": [
+    "tiff-2026"
+   ],
+   "salas": [
+    "RA"
+   ],
+   "ciudad": "Toronto",
+   "corto": "Royal Alexandra Theatre"
+  },
   "s_526f7636": {
    "nombre": "Universidad de Antioquia",
    "lat": 6.2464191,
@@ -1788,6 +3285,39 @@
    "ciudad": "Medellín",
    "_ciudad_fijada": "lugar vecino del almacén a 0 m",
    "institucion": "i_b40f78bd"
+  },
+  "s_531b9b0a": {
+   "nombre": "Plaza Bocagrande",
+   "lat": 10.3987,
+   "lng": -75.5499,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Plaza Bocagrande"
+  },
+  "s_538b1159": {
+   "nombre": "Biblioteca Pública La Marichuela",
+   "lat": 4.5121758,
+   "lng": -74.1177298,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Diagonal 76B Sur # 1C-40",
+   "alias": [
+    "Biblioteca Pública La Marichuela - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Biblioteca Pública La Marichuela"
   },
   "s_54536669": {
    "nombre": "Por definir",
@@ -1831,6 +3361,24 @@
    "ciudad": "Bogotá",
    "corto": "City U"
   },
+  "s_55231d60": {
+   "nombre": "Biblioteca Pública Julio Mario Santodomingo",
+   "lat": 4.7566147,
+   "lng": -74.0626286,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 170 # 67-51",
+   "alias": [
+    "Biblioteca Pública Julio Mario Santodomingo - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Biblioteca Pública Julio Mario Santodomingo"
+  },
   "s_554ab71f": {
    "nombre": "Plaza de mercado",
    "lat": 7.9886985,
@@ -1867,6 +3415,24 @@
    "ciudad": "Pasto",
    "corto": "Universidad CESMAG"
   },
+  "s_55ba19eb": {
+   "nombre": "Cinefilo",
+   "lat": 10.3566029,
+   "lng": -75.4924962,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 6, Calle de la Universidad # 36-100",
+   "alias": [
+    "Cinefilo - UdeC San Agustín, Patio de Humanidades - Cartagena"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Cinefilo - UdeC San Agustín, Patio de Humanidades"
+  },
   "s_55f3a489": {
    "nombre": "Punto de Turismo",
    "lat": 6.3777171,
@@ -1883,6 +3449,42 @@
    "ciudad": "Girardota",
    "corto": "Punto de Turismo"
   },
+  "s_56d5bec2": {
+   "nombre": "Roy Thomson Hall",
+   "lat": 43.6465586,
+   "lng": -79.386339,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tiff-2026.json (publicado)"
+   },
+   "address": "60 Simcoe Street",
+   "alias": [
+    "Roy Thomson Hall - Toronto"
+   ],
+   "festivales": [
+    "tiff-2026"
+   ],
+   "salas": [
+    "RTH"
+   ],
+   "ciudad": "Toronto",
+   "corto": "Roy Thomson Hall"
+  },
+  "s_57240f05": {
+   "nombre": "Hudson Yards Public Square and Gardens",
+   "lat": 40.7536,
+   "lng": -74.0021,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tribeca-2026.json (publicado)"
+   },
+   "address": "Hudson Yards Public Square, New York, NY 10001",
+   "alias": [],
+   "festivales": [
+    "tribeca-2026"
+   ],
+   "corto": "Hudson Yards"
+  },
   "s_57b40373": {
    "nombre": "Clandestino Records",
    "lat": 5.0701875,
@@ -1897,6 +3499,38 @@
    ],
    "ciudad": "Manizales",
    "corto": "Clandestino Records"
+  },
+  "s_57f81227": {
+   "nombre": "Archipiélago Sonoro",
+   "lat": 6.2419995,
+   "lng": -75.5958328,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Carrera 80B #18-13",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Archipiélago"
+  },
+  "s_57fda933": {
+   "nombre": "Biblioteca Barbosa",
+   "lat": 6.4357587,
+   "lng": -75.3294538,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 16 #10-50",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "corto": "Biblioteca Barbosa",
+   "_ciudad_dudosa": "Barbosa"
   },
   "s_59792218": {
    "nombre": "Alpamanda Peña Cultural",
@@ -1918,6 +3552,40 @@
    "ciudad": "Bogotá",
    "corto": "Alpamanda Peña Cultural"
   },
+  "s_5b5134c3": {
+   "nombre": "Biblioteca Pública Gabriel García Márquez",
+   "lat": 4.5718289,
+   "lng": -74.1298209,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 48B SUR # 21-13",
+   "alias": [
+    "Biblioteca Pública Gabriel García Márquez - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Biblioteca Pública Gabriel García Márquez"
+  },
+  "s_5b798d64": {
+   "nombre": "Biblioteca Sabaneta",
+   "lat": 6.1495623,
+   "lng": -75.6187333,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 75 sur #45-47",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Sabaneta",
+   "corto": "Biblioteca Sabaneta"
+  },
   "s_5c62c6c3": {
    "nombre": "Teatro Caribe",
    "lat": 6.1728219,
@@ -1933,6 +3601,7 @@
     "Teatro Caribe Itagüí"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026",
     "itagui-2026"
    ],
@@ -1986,6 +3655,30 @@
    "ciudad": "Barranquilla",
    "corto": "Universidad del Atlántico, sede Norte"
   },
+  "s_5dc39901": {
+   "nombre": "Centro Cultural Panóptico de Ibagué",
+   "lat": 4.4483425,
+   "lng": -75.2400253,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Centro Cultural Panóptico de Ibagué - Ibagué"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "salas": [
+    "Auditorio",
+    "Celda Teatro Ibagué (Proyección en loop)"
+   ],
+   "salas_alias": {
+    "Celda Teatro Ibagué - Proyección en loop": "Celda Teatro Ibagué (Proyección en loop)"
+   },
+   "ciudad": "Ibagué",
+   "corto": "Centro Cultural Panóptico de Ibagué"
+  },
   "s_5f0c609d": {
    "nombre": "Auditorio Cultural Diego Echavarría Misas",
    "lat": 6.1722992,
@@ -2020,6 +3713,24 @@
    ],
    "ciudad": "Barranquilla",
    "corto": "Universidad Simón Bolívar, sede 1"
+  },
+  "s_603976c3": {
+   "nombre": "Librería Bagatá",
+   "lat": 5.6912842,
+   "lng": -76.6574025,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
+   "alias": [
+    "Librería Bagatá - Quibdó"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Quibdó",
+   "corto": "Librería Bagatá"
   },
   "s_61310bc4": {
    "nombre": "Universidad Autónoma de Occidente",
@@ -2065,6 +3776,45 @@
    "ciudad": "Barranquilla",
    "corto": "Aduana de Barranquilla"
   },
+  "s_6184f4b5": {
+   "nombre": "Centro Integral de Justicia Campo Verde",
+   "lat": 4.624401,
+   "lng": -74.2120163,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 85 Sur # 94-75",
+   "alias": [
+    "Centro Integral de Justicia Campo Verde - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Centro Integral de Justicia Campo Verde"
+  },
+  "s_61b5d7d1": {
+   "nombre": "Cineprox",
+   "lat": 6.2145832,
+   "lng": -75.5963458,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Dg. 75B #2A-120Rotonda Comercial Las Américas",
+   "alias": [
+    "Cineprox - Medellín"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "salas": [
+    "SALA 3"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Cineprox"
+  },
   "s_626a169c": {
    "nombre": "Café Pletórico",
    "lat": 6.2935942,
@@ -2083,6 +3833,43 @@
    "ciudad": "Medellín",
    "corto": "Café Pletórico"
   },
+  "s_63354c37": {
+   "nombre": "CC Caribe Plaza ‒ Sala 6",
+   "lat": 10.4061,
+   "lng": -75.5005,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Av. Pedro de Heredia, Cartagena",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "CC Caribe Plaza"
+  },
+  "s_637019f0": {
+   "nombre": "Jardín Botánico de Medellín",
+   "lat": 6.2705481,
+   "lng": -75.5635288,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cl. 73 #51D-14",
+   "alias": [
+    "Jardín Botánico de Medellín - Medellín"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "salas": [
+    "Auditorio Aurita López"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Jardín Botánico de Medellín"
+  },
   "s_63acec57": {
    "nombre": "Inspección de Policía Santuario",
    "lat": 1.654916,
@@ -2100,6 +3887,42 @@
    ],
    "ciudad": "Florencia",
    "corto": "Inspección de Policía Santuario"
+  },
+  "s_63ca461f": {
+   "nombre": "Universidad Nacional de Colombia",
+   "lat": 5.064816,
+   "lng": -75.5094002,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Carrera 27 # 64-60",
+   "alias": [
+    "Universidad Nacional de Colombia - Auditorio Juan Hurtado - Manizales"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Universidad Nacional de Colombia - Auditorio Juan Hurtado"
+  },
+  "s_63e34462": {
+   "nombre": "CCEBA",
+   "lat": -34.59511,
+   "lng": -58.388438,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "finca-2026.json (publicado)"
+   },
+   "address": "Paraná 1159, CABA",
+   "alias": [
+    "CCEBA - Buenos Aires"
+   ],
+   "festivales": [
+    "finca-2026"
+   ],
+   "ciudad": "Buenos Aires",
+   "corto": "CCEBA"
   },
   "s_643e6771": {
    "nombre": "Cineprox Mayorca",
@@ -2131,6 +3954,24 @@
    ],
    "ciudad": "Medellín",
    "corto": "Casa Libre"
+  },
+  "s_659f2a44": {
+   "nombre": "Shuffle live music",
+   "lat": 4.8150592,
+   "lng": -75.6983206,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "CC El Lago. Calle 24 #7-17, local 303",
+   "alias": [
+    "Shuffle live music - Pereira"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Pereira",
+   "corto": "Shuffle live music"
   },
   "s_66915e12": {
    "nombre": "Casa Municipal de la Cultura",
@@ -2216,6 +4057,24 @@
    "ciudad": "Medellín",
    "corto": "Bebop Bar"
   },
+  "s_67f47d6d": {
+   "nombre": "Aguas Fieras",
+   "lat": 6.2097776,
+   "lng": -75.5751323,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 45 #7-45, El Poblado",
+   "alias": [
+    "Aguas Fieras - Medellín"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Aguas Fieras"
+  },
   "s_67f4ce21": {
    "nombre": "Quinta Balmoral",
    "lat": 4.3342262,
@@ -2299,6 +4158,7 @@
    ],
    "festivales": [
     "fantasmagoria-2026",
+    "ficdeh-2026",
     "miradas-2026"
    ],
    "salas": [
@@ -2313,6 +4173,21 @@
    "salas_alias": {
     "Cinemateca móvil, Laboratorio": "Cinemateca móvil, laboratorio"
    }
+  },
+  "s_6a4302c3": {
+   "nombre": "CEFE Fontanar del Río",
+   "lat": 4.754983,
+   "lng": -74.1126869,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tercertiempo-2026.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "tercertiempo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "CEFE Fontanar del Río"
   },
   "s_6b6f9da6": {
    "nombre": "Sede de empleo y emprendimiento Comfenalco Antioquia",
@@ -2404,6 +4279,24 @@
    "ciudad": "Medellín",
    "corto": "Nueva Villa de Aburrá"
   },
+  "s_6c7c3da9": {
+   "nombre": "Casa de la Juventud Antonio Nariño",
+   "lat": 4.5849866,
+   "lng": -74.1032411,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 20 # 19 Sur - 26",
+   "alias": [
+    "Casa de la Juventud Antonio Nariño - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Antonio Nariño"
+  },
   "s_6cbcf2c5": {
    "nombre": "JAC Santa Cruz parte alta",
    "lat": 6.2925953,
@@ -2422,6 +4315,24 @@
    "ciudad": "Medellín",
    "corto": "JAC Santa Cruz parte alta"
   },
+  "s_6cf2cf5a": {
+   "nombre": "Casa B",
+   "lat": 4.5533234,
+   "lng": -74.100257,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 2 BIS # 6D-30",
+   "alias": [
+    "Casa B - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa B"
+  },
   "s_6ee94d4a": {
    "nombre": "Casa 32",
    "lat": 4.6203473,
@@ -2437,6 +4348,24 @@
    ],
    "ciudad": "Bogotá",
    "corto": "Casa 32"
+  },
+  "s_6f419691": {
+   "nombre": "Biblioteca Pública Manuel Zapata Olivella",
+   "lat": 4.6430663,
+   "lng": -74.1547667,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Av. Ciudad de Cali # 6C-09",
+   "alias": [
+    "Biblioteca Pública Manuel Zapata Olivella - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Biblioteca Pública Manuel Zapata Olivella"
   },
   "s_6f855f0a": {
    "nombre": "Camping La Espacial",
@@ -2526,6 +4455,23 @@
    "corto": "Biblioteca Comfama Caldas",
    "institucion": "i_0b12d8c2"
   },
+  "s_72d9a1aa": {
+   "nombre": "Villeta y Sasaima",
+   "lat": 5.011258,
+   "lng": -74.47023,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "alias": [
+    "Villeta y Sasaima - Villeta"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Villeta",
+   "corto": "Villeta y Sasaima"
+  },
   "s_72e761e5": {
    "nombre": "Finca La Manuela",
    "lat": 6.2351704,
@@ -2542,6 +4488,41 @@
    ],
    "ciudad": "Guatapé",
    "corto": "Finca La Manuela"
+  },
+  "s_73cac39d": {
+   "nombre": "Salón Comunal Vda. San Bernardo",
+   "lat": 4.915146,
+   "lng": -74.41883,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "alias": [
+    "Salón Comunal Vda. San Bernardo - Sasaima"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Sasaima",
+   "corto": "Salón Comunal Vda. San Bernardo"
+  },
+  "s_73e47185": {
+   "nombre": "Casa Cultural y Comunitaria Casa Sin Raza",
+   "lat": 4.6140704,
+   "lng": -74.1975551,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Diagonal 73B Sur # 82F-34",
+   "alias": [
+    "Casa Cultural y Comunitaria Casa Sin Raza - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa Cultural y Comunitaria Casa Sin Raza"
   },
   "s_74e18f6b": {
    "nombre": "I.E. Luis Carlos Galán",
@@ -2607,6 +4588,24 @@
    "ciudad": "Pasto",
    "corto": "Teatro Colombia"
   },
+  "s_76fd6900": {
+   "nombre": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López",
+   "lat": 4.8111739,
+   "lng": -75.6769712,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Carrera 7b # 2e-05, barrio Alfonso López",
+   "alias": [
+    "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López - Pereira"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Pereira",
+   "corto": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López"
+  },
   "s_7715f7c0": {
    "nombre": "Casa Taller Sirirí",
    "lat": 2.4869714,
@@ -2622,6 +4621,24 @@
    ],
    "ciudad": "Popayán",
    "corto": "Casa Taller Sirirí"
+  },
+  "s_77fb8213": {
+   "nombre": "Bulevar del Oriente",
+   "lat": 3.4265621,
+   "lng": -76.4761659,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Comuna 14, entre la transversal 103 con calle 96 y calle 73 con transversal 73, entre los barrios Alfonso Bonilla Aragón y Marroquín 2",
+   "alias": [
+    "Bulevar del Oriente - Cali"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Bulevar del Oriente"
   },
   "s_7826af67": {
    "nombre": "Parque Las Flores",
@@ -2753,6 +4770,42 @@
    ],
    "ciudad": "Cali"
   },
+  "s_7c506403": {
+   "nombre": "Plazoleta del Samán",
+   "lat": 3.4498201,
+   "lng": -76.5361556,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 5 # 6-05, San Pedro",
+   "alias": [
+    "Plazoleta del Samán - Cali"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Plazoleta del Samán"
+  },
+  "s_7d5e0def": {
+   "nombre": "Museo de Arte Moderno",
+   "lat": 10.9869747,
+   "lng": -74.7780462,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Edificio World Trade Center (Calle 76 # 54-11, loc B3)",
+   "alias": [
+    "Museo de Arte Moderno - MAMB - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Museo de Arte Moderno - MAMB"
+  },
   "s_7dac69ba": {
    "nombre": "UdeA Campus Caucasia",
    "lat": 7.9918236,
@@ -2775,6 +4828,40 @@
    "ciudad": "Caucasia",
    "corto": "UdeA Campus Caucasia",
    "institucion": "i_b40f78bd"
+  },
+  "s_7de8bddf": {
+   "nombre": "Mediateca Municipal",
+   "lat": 6.8162013,
+   "lng": -73.269468,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "leviza-2026.json (publicado)"
+   },
+   "address": "Cra. 10 #1938, Zapatoca, Santander",
+   "alias": [
+    "Mediateca Municipal - Zapatoca"
+   ],
+   "festivales": [
+    "leviza-2026"
+   ],
+   "ciudad": "Zapatoca",
+   "corto": "Mediateca"
+  },
+  "s_7e3dd06f": {
+   "nombre": "Teatro Baggenuff",
+   "lat": 6.3461,
+   "lng": -75.50803,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 50 #43-84",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Copacabana",
+   "corto": "Baggenuff"
   },
   "s_7ecef455": {
    "nombre": "Facultad de Artes Unicauca",
@@ -2814,6 +4901,24 @@
    ],
    "ciudad": "Santa Fe de Antioquia",
    "corto": "Barrio Llano de Bolívar"
+  },
+  "s_7fc7a387": {
+   "nombre": "Fundación Batuta Caldas",
+   "lat": 5.0508329,
+   "lng": -75.4828074,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 22 #70b-31, Manizales, Caldas",
+   "alias": [
+    "Fundación Batuta Caldas - Manizales"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Fundación Batuta Caldas"
   },
   "s_808cba64": {
    "nombre": "Universidad Jorge Tadeo Lozano",
@@ -2903,6 +5008,39 @@
    "ciudad": "Toro",
    "corto": "Coliseo Corregimiento de San Francisco"
   },
+  "s_80a1ce5d": {
+   "nombre": "Claustro Comfama",
+   "lat": 6.24575,
+   "lng": -75.56372,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Claustro Comfama"
+  },
+  "s_80a2590b": {
+   "nombre": "AECID",
+   "lat": 10.421,
+   "lng": -75.5484,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "alias": [
+    "aecid"
+   ],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "AECID",
+   "address": "Cartagena"
+  },
   "s_81709587": {
    "nombre": "Gimnasio Moderno",
    "lat": 4.6589052,
@@ -2922,6 +5060,39 @@
    ],
    "ciudad": "Bogotá",
    "corto": "Gimnasio Moderno"
+  },
+  "s_8178a092": {
+   "nombre": "CC Caribe Plaza",
+   "lat": 10.4071,
+   "lng": -75.5005,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "CC Caribe Plaza"
+  },
+  "s_81d3b00d": {
+   "nombre": "Centro de Formación de la Cooperación Española",
+   "lat": 10.4244554,
+   "lng": -75.5521665,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 36 # 2-74, El Centro",
+   "alias": [
+    "Centro de Formación de la Cooperación Española - Cartagena"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Centro de Formación de la Cooperación Española"
   },
   "s_826e6831": {
    "nombre": "Teatro Municipal de Jardín",
@@ -2979,6 +5150,23 @@
    "ciudad": "Barranquilla",
    "corto": "Universidad del Norte"
   },
+  "s_854bd5a3": {
+   "nombre": "Función Aire Libre",
+   "lat": 5.6912238,
+   "lng": -76.6619724,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Función Aire Libre - Malecón - Quibdó"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Quibdó",
+   "corto": "Función Aire Libre - Malecón"
+  },
   "s_85744479": {
    "nombre": "Teatro La Concha",
    "lat": 3.4457545,
@@ -3013,6 +5201,42 @@
    ],
    "ciudad": "Pasto",
    "corto": "Cinemas Valle de Atriz"
+  },
+  "s_8590800a": {
+   "nombre": "Casa de la Juventud José Saramago",
+   "lat": 4.6125355,
+   "lng": -74.1939132,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 82J # 70A-52",
+   "alias": [
+    "Casa de la Juventud José Saramago - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud José Saramago"
+  },
+  "s_859f08bc": {
+   "nombre": "Biblioteca Pública Las Ferias",
+   "lat": 4.6716157,
+   "lng": -74.0982024,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 69J # 73-29",
+   "alias": [
+    "Biblioteca Pública Las Ferias - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Biblioteca Pública Las Ferias"
   },
   "s_85e5255e": {
    "nombre": "Claustro de San Francisco",
@@ -3112,15 +5336,20 @@
     "nivel": "manual",
     "fuente": "midbo-2026-venues-geo.json"
    },
-   "alias": [],
+   "alias": [
+    "Universidad Nacional de Colombia - Bogotá",
+    "Universidad Nacional de Colombia · Facultad de Artes"
+   ],
    "festivales": [
-    "midbo-2026"
+    "midbo-2026",
+    "qaff-2026"
    ],
    "salas": [
     "Auditorio 313, edificio 303C (NEA)",
     "Auditorio 422, edificio 303C (NEA)",
     "Auditorio Virginia Gutiérrez",
-    "Cinemateca Sala Alterna, Auditorio 105, edificio 301"
+    "Cinemateca Sala Alterna, Auditorio 105, edificio 301",
+    "Facultad de Artes"
    ],
    "ciudad": "Bogotá",
    "corto": "Universidad Nacional de Colombia",
@@ -3142,6 +5371,24 @@
    ],
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 246 m"
+  },
+  "s_89b03e3b": {
+   "nombre": "Fundación Puerto Colombia",
+   "lat": 10.9881836,
+   "lng": -74.9591253,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Estación Ferrocarril de Bolívar, Cra. 4 # 2-45",
+   "alias": [
+    "Fundación Puerto Colombia - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Fundación Puerto Colombia"
   },
   "s_8b3ca384": {
    "nombre": "CITI",
@@ -3195,6 +5442,24 @@
    "corto": "Comfama",
    "institucion": "i_0b12d8c2"
   },
+  "s_8d369c94": {
+   "nombre": "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto",
+   "lat": 10.9676945,
+   "lng": -74.8215917,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Diagonal 75A # 15D-67",
+   "alias": [
+    "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto"
+  },
   "s_8d5d66e1": {
    "nombre": "Perpetua Lab",
    "lat": 6.2346133,
@@ -3215,6 +5480,24 @@
    "ciudad": "Medellín",
    "corto": "Perpetua Lab"
   },
+  "s_8d82c9c5": {
+   "nombre": "Ágora Casa Cultural (La Ceja)",
+   "lat": 6.2217344,
+   "lng": -75.5822126,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cl. 19 # 23-15",
+   "alias": [
+    "Ágora Casa Cultural (La Ceja) - Medellín"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Ágora Casa Cultural (La Ceja)"
+  },
   "s_8d94ab1d": {
    "nombre": "Mambo House",
    "lat": 4.5926679,
@@ -3231,6 +5514,21 @@
    ],
    "ciudad": "Toro",
    "corto": "Mambo House"
+  },
+  "s_8da0fd42": {
+   "nombre": "Unibac",
+   "lat": 10.418,
+   "lng": -75.507,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Unibac"
   },
   "s_901a0a59": {
    "nombre": "Catedral Basílica Metropolitana",
@@ -3251,6 +5549,24 @@
    ],
    "ciudad": "Santa Fe de Antioquia",
    "corto": "Catedral Basílica Metropolitana"
+  },
+  "s_90b61903": {
+   "nombre": "Biblioteca Pública CEFE Fontanar Del Río",
+   "lat": 4.7561244,
+   "lng": -74.1110572,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 146 # 138A-99",
+   "alias": [
+    "Biblioteca Pública CEFE Fontanar Del Río - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Biblioteca Pública CEFE Fontanar Del Río"
   },
   "s_9106c39d": {
    "nombre": "Teatro al aire libre La Media Torta",
@@ -3309,6 +5625,74 @@
    "ciudad": "Barbosa",
    "corto": "Parque Emilio Ulloa"
   },
+  "s_928f01a3": {
+   "nombre": "Cine Club Alef",
+   "lat": 4.8161526,
+   "lng": -75.6885385,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 12 bis # 16-18, Av. Circunvalar",
+   "alias": [
+    "Cine Club Alef - Casa Hoja - Pereira"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Pereira",
+   "corto": "Cine Club Alef - Casa Hoja"
+  },
+  "s_92a4e3bb": {
+   "nombre": "Cine Passeio Luz",
+   "lat": -25.426501,
+   "lng": -49.26945,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "olhar-2026.json (publicado)"
+   },
+   "address": "R. Riachuelo, 410 - Centro",
+   "alias": [],
+   "festivales": [
+    "olhar-2026"
+   ],
+   "ciudad": "Curitiba",
+   "corto": "Cine Passeio (Luz)"
+  },
+  "s_92e9bbf4": {
+   "nombre": "Scotiabank Theatre Toronto",
+   "lat": 43.6485875,
+   "lng": -79.3913729,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tiff-2026.json (publicado)"
+   },
+   "address": "259 Richmond Street West",
+   "alias": [
+    "Scotiabank Theatre Toronto - Toronto"
+   ],
+   "festivales": [
+    "tiff-2026"
+   ],
+   "salas": [
+    "SCOTIA 1",
+    "SCOTIA 10",
+    "SCOTIA 11",
+    "SCOTIA 12",
+    "SCOTIA 13",
+    "SCOTIA 14",
+    "SCOTIA 2",
+    "SCOTIA 3",
+    "SCOTIA 4",
+    "SCOTIA 5",
+    "SCOTIA 6",
+    "SCOTIA 7",
+    "SCOTIA 8",
+    "SCOTIA 9"
+   ],
+   "ciudad": "Toronto",
+   "corto": "Scotiabank Theatre Toronto"
+  },
   "s_936e7c22": {
    "nombre": "Silencio",
    "lat": 6.2456401,
@@ -3324,6 +5708,41 @@
    ],
    "ciudad": "Medellín",
    "corto": "Silencio"
+  },
+  "s_93f52f8a": {
+   "nombre": "Manzana del Cuidado Mochuelo",
+   "lat": 4.5084612,
+   "lng": -74.1480765,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 91C Sur # 18H-14",
+   "alias": [
+    "Manzana del Cuidado Mochuelo - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Manzana del Cuidado Mochuelo"
+  },
+  "s_944f92f0": {
+   "nombre": "Cineland",
+   "lat": 5.6899285,
+   "lng": -76.6441132,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Cineland - Quibdó"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Quibdó",
+   "corto": "Cineland"
   },
   "s_94b49a61": {
    "nombre": "Hotel Mesón de los Virreyes",
@@ -3350,6 +5769,21 @@
    "ciudad": "Villa de Leyva",
    "corto": "Hotel Mesón de los Virreyes"
   },
+  "s_958f34a7": {
+   "nombre": "Fiesta del Libro Parque de los Deseos",
+   "lat": 6.26846,
+   "lng": -75.56611,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Parque de los Deseos"
+  },
   "s_964bfd80": {
    "nombre": "Malecón",
    "lat": 6.2356097,
@@ -3373,6 +5807,24 @@
    "ciudad": "Guatapé",
    "corto": "Malecón"
   },
+  "s_968bdbf4": {
+   "nombre": "Lember Cinéma",
+   "lat": 4.4346758,
+   "lng": -75.2128494,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 42 # 3-45",
+   "alias": [
+    "Lember Cinéma - Ibagué"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Ibagué",
+   "corto": "Lember Cinéma"
+  },
   "s_9717417e": {
    "nombre": "Teatro El Parque",
    "lat": 4.6230409,
@@ -3392,6 +5844,21 @@
    ],
    "ciudad": "Bogotá",
    "corto": "Teatro El Parque"
+  },
+  "s_977026c6": {
+   "nombre": "Beacon Theatre",
+   "lat": 40.7799,
+   "lng": -73.981,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tribeca-2026.json (publicado)"
+   },
+   "address": "2124 Broadway, New York, NY 10023",
+   "alias": [],
+   "festivales": [
+    "tribeca-2026"
+   ],
+   "corto": "Beacon Theatre"
   },
   "s_98028200": {
    "nombre": "Centro Cultural Brisas de Mayo",
@@ -3433,6 +5900,29 @@
    "ciudad": "Manizales",
    "corto": "Universidad Autónoma"
   },
+  "s_9854df1f": {
+   "nombre": "Colombo Americano",
+   "lat": 6.2592,
+   "lng": -75.5682,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "aff-2026.json (publicado)"
+   },
+   "address": "Calle 43 #25-30",
+   "alias": [
+    "Colombo Americano - Medellín"
+   ],
+   "festivales": [
+    "aff-2026",
+    "ficdeh-2026"
+   ],
+   "salas": [
+    "SALA 1",
+    "SALA 2"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Colombo Americano"
+  },
   "s_987cd558": {
    "nombre": "Media Torta de Chipre",
    "lat": 5.0723125,
@@ -3460,10 +5950,13 @@
    },
    "address": "Cra. 13 #36-37",
    "alias": [
+    "La Trocha",
+    "La Trocha - Casa de la Paz - Bogotá",
     "La Trocha · Casa de la Paz - Bogotá"
    ],
    "festivales": [
-    "cineparalapaz-2026"
+    "cineparalapaz-2026",
+    "ficdeh-2026"
    ],
    "ciudad": "Bogotá",
    "corto": "La Trocha · Casa de la Paz"
@@ -3510,7 +6003,9 @@
     "Museo de Arte Moderno de Medellín - MAMM - Medellín"
    ],
    "festivales": [
+    "aff-2026",
     "aleste-2026",
+    "cinemancia-2025",
     "cinemancia-2026",
     "fantasmagoria-2026",
     "mamut-2026",
@@ -3546,6 +6041,24 @@
    ],
    "ciudad": "Marinilla",
    "corto": "Galería San José"
+  },
+  "s_9a119b45": {
+   "nombre": "MON",
+   "lat": -25.410392,
+   "lng": -49.265944,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "olhar-2026.json (publicado)"
+   },
+   "address": "R. Mal. Hermes, 999 - Centro Cívico",
+   "alias": [
+    "MON - Poty Lazzarotto"
+   ],
+   "festivales": [
+    "olhar-2026"
+   ],
+   "ciudad": "Curitiba",
+   "corto": "MON"
   },
   "s_9af60335": {
    "nombre": "Cámara de Comercio de Medellín para Antioquia",
@@ -3585,6 +6098,40 @@
    ],
    "ciudad": "Popayán",
    "corto": "Mikuna Casa Cultural"
+  },
+  "s_9bd6abf8": {
+   "nombre": "Plaza Bocagrande ‒ Sala 5",
+   "lat": 10.3979,
+   "lng": -75.5499,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Av. San Martín, Bocagrande, Cartagena",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Plaza Bocagrande"
+  },
+  "s_9bd9d312": {
+   "nombre": "Cine Arte Cacodelphia",
+   "lat": -34.6079213,
+   "lng": -58.3736329,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "finca-2026.json (publicado)"
+   },
+   "address": "Av. Roque Sáenz Peña 1150, CABA",
+   "alias": [
+    "Cine Arte Cacodelphia - Buenos Aires"
+   ],
+   "festivales": [
+    "finca-2026"
+   ],
+   "ciudad": "Buenos Aires",
+   "corto": "Cacodelphia"
   },
   "s_9bf6896c": {
    "nombre": "Casa Occio",
@@ -3652,6 +6199,27 @@
    ],
    "ciudad": "Guatapé",
    "corto": "Museo Comunitario"
+  },
+  "s_9cd42c9a": {
+   "nombre": "Universidad Minuto de Dios",
+   "lat": 4.699716,
+   "lng": -74.09075,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Diagonal 81F # 72 C-1",
+   "alias": [
+    "Universidad Minuto de Dios - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "salas": [
+    "Auditorio C202"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad Minuto de Dios"
   },
   "s_9d2019dc": {
    "nombre": "Universidad Central",
@@ -3732,6 +6300,22 @@
    "ciudad": "La Florida",
    "corto": "Parque Principal de La Florida"
   },
+  "s_a06e814b": {
+   "nombre": "Centro Cultural Echavarría Misas",
+   "lat": 6.1723554,
+   "lng": -75.6112823,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 48 No 51-34",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Itagüí",
+   "corto": "Echavarría Misas"
+  },
   "s_a140e4f3": {
    "nombre": "Finca Agroturística El Encanto de Mis Abuelos",
    "lat": 6.2985309,
@@ -3749,6 +6333,61 @@
    ],
    "ciudad": "Medellín",
    "corto": "Finca Agroturística El Encanto de Mis Abuelos"
+  },
+  "s_a2381802": {
+   "nombre": "Universidad del Atlántico",
+   "lat": 11.019602,
+   "lng": -74.8732855,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Universidad del Atlántico - Puerto Colombia - Cra. 30 # 8-49, Puerto Colombia",
+   "alias": [
+    "Universidad del Atlántico - Centro de Convenciones - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Universidad del Atlántico - Centro de Convenciones"
+  },
+  "s_a3e4479d": {
+   "nombre": "Caas Morón",
+   "lat": 11.0063726,
+   "lng": -74.8137185,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 53 # 48-134",
+   "alias": [
+    "Caas Morón - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Caas Morón"
+  },
+  "s_a49e5821": {
+   "nombre": "Cartel Urbano (San Felipe)",
+   "lat": 4.6641455,
+   "lng": -74.0630397,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cineautopsia-2026.json (publicado)"
+   },
+   "address": "Calle 75 # 20C-89, San Felipe",
+   "alias": [
+    "Cartel Urbano (San Felipe) - Bogotá",
+    "Cartel Urbano, San Felipe, Bogotá"
+   ],
+   "festivales": [
+    "cineautopsia-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Cartel Urbano"
   },
   "s_a4d046a3": {
    "nombre": "Teatro Jorge Eliécer Gaitán",
@@ -3786,6 +6425,24 @@
    ],
    "ciudad": "Toro",
    "corto": "Coliseo Institución Educativa Fray José Joaquín Escobar"
+  },
+  "s_a5a8c84b": {
+   "nombre": "Museo Casa de la Memoria",
+   "lat": 6.2459198,
+   "lng": -75.5565561,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cl. 51 #36-66. Parque Bicentenario",
+   "alias": [
+    "Museo Casa de la Memoria - Medellín"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Museo Casa de la Memoria"
   },
   "s_a6295d2a": {
    "nombre": "Sala Gaitán Antigua Cinemateca",
@@ -3860,6 +6517,24 @@
    "ciudad": "Cali",
    "corto": "Casa Ethel"
   },
+  "s_a778bfa3": {
+   "nombre": "Casa de la Juventud Huitaca",
+   "lat": 4.646258,
+   "lng": -74.1221864,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 17A # 118-25",
+   "alias": [
+    "Casa de la Juventud Huitaca - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Huitaca"
+  },
   "s_a788828f": {
    "nombre": "Acajel",
    "lat": 3.448634,
@@ -3901,12 +6576,33 @@
     "fuente": "biff-2026-venues-geo.json"
    },
    "address": "Tv. 70D #60-90 Sur",
-   "alias": [],
+   "alias": [
+    "Teatro El Ensueño - Bogotá"
+   ],
    "festivales": [
-    "biff-2026"
+    "biff-2026",
+    "ficdeh-2026"
    ],
    "ciudad": "Bogotá",
    "corto": "Teatro El Ensueño"
+  },
+  "s_a9ccfb29": {
+   "nombre": "Casa de la Juventud Usaquén",
+   "lat": 4.7302391,
+   "lng": -74.0258586,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 155 # 7-45",
+   "alias": [
+    "Casa de la Juventud Usaquén - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Usaquén"
   },
   "s_aafb86e6": {
    "nombre": "Parque Principal de Yacuanquer",
@@ -4064,6 +6760,91 @@
    "ciudad": "Guatapé",
    "corto": "Biblioteca Municipal"
   },
+  "s_ae9ee9c2": {
+   "nombre": "Cinemas Procinal Las Américas",
+   "lat": 6.2145832,
+   "lng": -75.5963458,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Diagonal 75B #2A-120",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Procinal Las Américas"
+  },
+  "s_af437f4a": {
+   "nombre": "Universidad Jorge Tadeo Lozano Salón Oval",
+   "lat": 4.607911,
+   "lng": -74.0673108,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Universidad Jorge Tadeo Lozano Salón Oval",
+   "alias": [
+    "Universidad Jorge Tadeo Lozano Salón Oval - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad Jorge Tadeo Lozano Salón Oval"
+  },
+  "s_afbde4e6": {
+   "nombre": "Cámara de Comercio de Pereira",
+   "lat": 4.814082,
+   "lng": -75.6977866,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Cámara de Comercio de Pereira - Pereira"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Pereira",
+   "corto": "Cámara de Comercio de Pereira"
+  },
+  "s_b054f641": {
+   "nombre": "Casa Cromo Casa Cultural",
+   "lat": 4.559016,
+   "lng": -75.6542441,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 22 Norte # 12-39",
+   "alias": [
+    "Casa Cromo Casa Cultural - Armenia"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Armenia",
+   "corto": "Casa Cromo Casa Cultural"
+  },
+  "s_b067121f": {
+   "nombre": "Teatro Comfama",
+   "lat": 6.2822377,
+   "lng": -75.5631107,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 48 #43-87",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Teatro Comfama"
+  },
   "s_b14cf4f4": {
    "nombre": "Teatro Regional Valerio Antonio Jiménez",
    "lat": 6.1720347,
@@ -4167,6 +6948,8 @@
    "address": "Cra. 45 (El Palo) #53-38",
    "alias": [
     "Centro Colombo Americano - Medellín",
+    "Centro Colombo Americano - Medellín · Sala 1",
+    "Centro Colombo Americano - Medellín · Sala 2",
     "Centro Colombo Americano - Sede centro - Medellín",
     "Centro Colombo Americano Sede centro sala 1 Medellín",
     "Centro Colombo Americano Sede centro sala 2 Medellín",
@@ -4174,10 +6957,12 @@
    ],
    "festivales": [
     "aleste-2026",
+    "cinemancia-2025",
     "cinemancia-2026",
     "fantasmagoria-2026",
     "mamut-2026",
-    "miradas-2026"
+    "miradas-2026",
+    "vartex-2026"
    ],
    "salas": [
     "Aula Múltiple",
@@ -4220,6 +7005,45 @@
    "ciudad": "Roldanillo",
    "corto": "Museo Rayo"
   },
+  "s_b74ca288": {
+   "nombre": "VISA Screening Room at the Princess of Wales Theatre",
+   "lat": 43.6470405,
+   "lng": -79.3892399,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tiff-2026.json (publicado)"
+   },
+   "address": "300 King Street West",
+   "alias": [
+    "VISA Screening Room at the Princess of Wales Theatre - Toronto"
+   ],
+   "festivales": [
+    "tiff-2026"
+   ],
+   "salas": [
+    "VSR"
+   ],
+   "ciudad": "Toronto",
+   "corto": "VISA Screening Room at the Princess of Wales Theatre"
+  },
+  "s_b75b331b": {
+   "nombre": "Fundación Universitaria Bellas Artes",
+   "lat": 6.248511,
+   "lng": -75.5614556,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "vartex-2026.json (publicado)"
+   },
+   "address": "Calle 52 # 42–08, Medellín, Antioquia",
+   "alias": [
+    "Fundación Universitaria Bellas Artes - Medellín"
+   ],
+   "festivales": [
+    "vartex-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Instituto de Bellas Artes"
+  },
   "s_b7930658": {
    "nombre": "Universidad Nacional, Edificio 301",
    "lat": 4.6363087,
@@ -4254,6 +7078,24 @@
    ],
    "ciudad": "Manizales",
    "corto": "Torre del Cable"
+  },
+  "s_b7eadc36": {
+   "nombre": "Alianza Francesa",
+   "lat": 10.4264842,
+   "lng": -75.5482642,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
+   "alias": [
+    "Alianza Francesa - Cartagena"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Alianza Francesa"
   },
   "s_b862f340": {
    "nombre": "Casa de la Secretaría de Cultura",
@@ -4320,6 +7162,21 @@
    "ciudad": "Guatapé",
    "corto": "Parque Principal"
   },
+  "s_ba188ef6": {
+   "nombre": "SVA Theatre",
+   "lat": 40.7467,
+   "lng": -74.0001,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tribeca-2026.json (publicado)"
+   },
+   "address": "333 W 23rd St, New York, NY 10011",
+   "alias": [],
+   "festivales": [
+    "tribeca-2026"
+   ],
+   "corto": "SVA Theatre"
+  },
   "s_ba748121": {
    "nombre": "Centro Cultural Bacatá",
    "lat": 4.7158665,
@@ -4373,6 +7230,44 @@
    "ciudad": "Medellín",
    "corto": "La Comarca"
   },
+  "s_bbbdcb1f": {
+   "nombre": "Universidad Nacional",
+   "lat": 4.6387426,
+   "lng": -74.0852375,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cineautopsia-2026.json (publicado)"
+   },
+   "address": "Auditorio 422, edificio 303C",
+   "alias": [
+    "Cinemateca Sala Alterna, Universidad Nacional de Colombia, Auditorio 422. Edficio 303C. NEA.",
+    "Universidad Nacional - Bogotá"
+   ],
+   "festivales": [
+    "cineautopsia-2026"
+   ],
+   "salas": [
+    "Auditorio 422"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "U. Nacional"
+  },
+  "s_bc055e86": {
+   "nombre": "Plaza Bocagrande ‒ Sala 4",
+   "lat": 10.3979,
+   "lng": -75.5499,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Av. San Martín, Bocagrande, Cartagena",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Plaza Bocagrande"
+  },
   "s_bc531678": {
    "nombre": "Banco de la República",
    "lat": 1.2115002,
@@ -4393,6 +7288,46 @@
    "ciudad": "Pasto",
    "corto": "Banco de la República"
   },
+  "s_bc53ff29": {
+   "nombre": "Universidad Tecnológica de Pereira -UTP",
+   "lat": 4.7943151,
+   "lng": -75.6888918,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "UNIVERSIDAD TECNOLÓGICA DE PEREIRA - BLOQUE 7A / 118",
+   "alias": [
+    "Universidad Tecnológica de Pereira -UTP - Pereira"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "salas": [
+    "Bloque 13, Sala Magistral 1",
+    "Bloque 7A / 118"
+   ],
+   "ciudad": "Pereira",
+   "corto": "Universidad Tecnológica de Pereira -UTP"
+  },
+  "s_bde21274": {
+   "nombre": "IED Rural San Bernardo",
+   "lat": 4.915146,
+   "lng": -74.41883,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "address": "Vereda San Bernardo",
+   "alias": [
+    "IED Rural San Bernardo - Sasaima"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Sasaima",
+   "corto": "IED Rural San Bernardo"
+  },
   "s_be408f33": {
    "nombre": "Fonda Hotel Hacienda Balandú Comfenalco",
    "lat": 5.5907473,
@@ -4410,6 +7345,23 @@
    "ciudad": "Jardín",
    "institucion": "i_eac0636e"
   },
+  "s_be94e26b": {
+   "nombre": "Auditorio Centro Cultural Universitario Rogelio Salmona",
+   "lat": 5.0545465,
+   "lng": -75.4916559,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "Auditorio Centro Cultural Universitario Rogelio Salmona"
+  },
   "s_bf32b45a": {
    "nombre": "Fábrica de la Cultura 2",
    "lat": 10.9603756,
@@ -4425,6 +7377,24 @@
    ],
    "ciudad": "Barranquilla",
    "corto": "Fábrica de la Cultura 2"
+  },
+  "s_bf4f782d": {
+   "nombre": "Cinema Villeta",
+   "lat": 5.0110174,
+   "lng": -74.4699592,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "address": "Parque de la Molienda — parque principal",
+   "alias": [
+    "Cinema Villeta - Villeta"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Villeta",
+   "corto": "Cinema Villeta"
   },
   "s_bf5c6a6a": {
    "nombre": "Universidad Jorge Tadeo Lozano, Módulo 4",
@@ -4499,6 +7469,39 @@
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 638 m"
   },
+  "s_bfe0dda3": {
+   "nombre": "C. de Convenciones · Patio de Banderas",
+   "lat": 10.4242,
+   "lng": -75.5505,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "C. Convenciones"
+  },
+  "s_bfe8b044": {
+   "nombre": "SENA CDAE Villeta",
+   "lat": 5.0072155,
+   "lng": -74.4787477,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "address": "Calle 2 n.º 13-03, barrio San Rafael",
+   "alias": [
+    "SENA CDAE Villeta - Villeta"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Villeta",
+   "corto": "SENA CDAE Villeta"
+  },
   "s_bfe8eb92": {
    "nombre": "Cámara de Comercio de Medellín",
    "lat": 6.2501303,
@@ -4553,6 +7556,42 @@
    ],
    "ciudad": "Medellín",
    "corto": "Junta de Acción Comunal El Faro"
+  },
+  "s_c19bda57": {
+   "nombre": "Casa de las Luciérnagas",
+   "lat": 4.6067352,
+   "lng": -74.2038167,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Diagonal 73H SUR # 78-38",
+   "alias": [
+    "Casa de las Luciérnagas - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de las Luciérnagas"
+  },
+  "s_c2a57132": {
+   "nombre": "Cinemateca del Museo La Tertulia",
+   "lat": 3.45019,
+   "lng": -76.54538,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 1 # 5-105, Oeste",
+   "alias": [
+    "Cinemateca del Museo La Tertulia - Cali"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Cali",
+   "corto": "Cinemateca del Museo La Tertulia"
   },
   "s_c2f59f7f": {
    "nombre": "Cinemateca La Tertulia",
@@ -4616,13 +7655,32 @@
     "fuente": "verificado en Google Maps"
    },
    "address": "Cl. 47 #43-88",
-   "alias": [],
+   "alias": [
+    "La Pascasia - Medellín"
+   ],
    "festivales": [
     "fantasmagoria-2026",
+    "ficdeh-2026",
     "mamut-2026"
    ],
    "ciudad": "Medellín",
    "corto": "La Pascasia"
+  },
+  "s_c5c7fd6b": {
+   "nombre": "CC Caribe Plaza ‒ Sala 2",
+   "lat": 10.4061,
+   "lng": -75.5005,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Av. Pedro de Heredia, Cartagena",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "CC Caribe Plaza"
   },
   "s_c760d1fd": {
    "nombre": "Casa Escuela Formación Musical Leo Olarte",
@@ -4664,6 +7722,7 @@
     "anibia-2026",
     "bhff-2026",
     "bogoshorts-2026",
+    "ficdeh-2026",
     "narrarelfuturo-2026"
    ],
    "ciudad": "Bogotá",
@@ -4686,6 +7745,55 @@
    "ciudad": "Cali",
    "corto": "Cine Colombia Unicentro"
   },
+  "s_c8923ef3": {
+   "nombre": "Fiesta del Libro Jardín Botánico",
+   "lat": 6.27053,
+   "lng": -75.56353,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Jardín Botánico"
+  },
+  "s_caf327dd": {
+   "nombre": "ITM La Floresta",
+   "lat": 6.2575168,
+   "lng": -75.6019566,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 47A #85-20",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "ITM"
+  },
+  "s_cb9cf76f": {
+   "nombre": "Casa de la Juventud Nacho Sánchez",
+   "lat": 4.5401056,
+   "lng": -74.0980355,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 3 Este # 9-58",
+   "alias": [
+    "Casa de la Juventud Nacho Sánchez - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Nacho Sánchez"
+  },
   "s_cc00aafb": {
    "nombre": "Rosalia's Garden",
    "lat": 4.6091797,
@@ -4702,6 +7810,40 @@
    ],
    "ciudad": "Toro",
    "corto": "Rosalia's Garden"
+  },
+  "s_cc663c68": {
+   "nombre": "Book Times",
+   "lat": 10.9790026,
+   "lng": -74.7960474,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 54 # 53-76",
+   "alias": [
+    "Book Times - Barranquilla"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Barranquilla",
+   "corto": "Book Times"
+  },
+  "s_cc779c09": {
+   "nombre": "Terko Bar",
+   "lat": 6.34726,
+   "lng": -75.506,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 50#47-21",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Copacabana",
+   "corto": "Terko Bar"
   },
   "s_cd218eeb": {
    "nombre": "Institución Educativa Ágora",
@@ -4721,6 +7863,39 @@
    "ciudad": "Funza",
    "corto": "Institución Educativa Ágora"
   },
+  "s_cdc0ebb9": {
+   "nombre": "Teatro Adolfo Mejía",
+   "lat": 10.4238,
+   "lng": -75.5503,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Calle del Tablón #14-34",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Teatro Adolfo Mejía"
+  },
+  "s_ce6a3ac5": {
+   "nombre": "Cine Bajo las Estrellas programa de exhibición y circulación",
+   "lat": 4.5360491,
+   "lng": -75.6691458,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Cine Bajo las Estrellas programa de exhibición y circulación - Armenia"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Armenia",
+   "corto": "Cine Bajo las Estrellas programa de exhibición y circulación"
+  },
   "s_ce9371b5": {
    "nombre": "Universidad Nacional · Palogrande",
    "lat": 5.0560227,
@@ -4738,6 +7913,21 @@
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 202 m",
    "institucion": "i_22f00e34"
+  },
+  "s_cefad4d8": {
+   "nombre": "OKX Theater at BMCC TPAC",
+   "lat": 40.7156,
+   "lng": -74.0087,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "tribeca-2026.json (publicado)"
+   },
+   "address": "199 Chambers St, New York, NY 10007",
+   "alias": [],
+   "festivales": [
+    "tribeca-2026"
+   ],
+   "corto": "OKX Theater"
   },
   "s_cf6efa76": {
    "nombre": "Museo Arqueológico Jaime Hincapié Santa María",
@@ -4790,6 +7980,23 @@
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 118 m"
   },
+  "s_d1a2e010": {
+   "nombre": "Cinemateca Sala 2",
+   "lat": 4.6032463,
+   "lng": -74.06758,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "fantasofest-2026.json (publicado)"
+   },
+   "address": "Carrera 3 No. 19-10",
+   "alias": [],
+   "festivales": [
+    "fantasofest-2026",
+    "tercertiempo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Cinemateca de Bogotá"
+  },
   "s_d1aeb7dc": {
    "nombre": "Yawa",
    "lat": 3.4292722,
@@ -4809,6 +8016,24 @@
    "ciudad": "Cali",
    "corto": "Yawa"
   },
+  "s_d241f4f3": {
+   "nombre": "Universidad Alexander von Humboldt",
+   "lat": 4.5425151,
+   "lng": -75.6627651,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Avenida Bolívar # 1-189",
+   "alias": [
+    "Universidad Alexander von Humboldt - Armenia"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Armenia",
+   "corto": "Universidad Alexander von Humboldt"
+  },
   "s_d278bee5": {
    "nombre": "Plazoleta La Maceta",
    "lat": 3.4470002,
@@ -4825,6 +8050,23 @@
    "ciudad": "Cali",
    "corto": "Plazoleta La Maceta"
   },
+  "s_d2e461ee": {
+   "nombre": "All Cine Cable Plaza",
+   "lat": 5.0562896,
+   "lng": -75.4854314,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "All Cine Cable Plaza - Manizales"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Manizales",
+   "corto": "All Cine Cable Plaza"
+  },
   "s_d478c93a": {
    "nombre": "Biblioteca Pública San Luis I",
    "lat": 3.481656,
@@ -4839,6 +8081,29 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali"
+  },
+  "s_d4bd8200": {
+   "nombre": "Universidad Distrital ASAB",
+   "lat": 4.6044072,
+   "lng": -74.0781634,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cineautopsia-2026.json (publicado)"
+   },
+   "address": "Cra. 13 #14-69 · Auditorio Samuel Bedoya",
+   "alias": [
+    "Auditorio Samuel Bedoya. Universidad Francisco José de Caldas (Distrital). Facultad de Arte ASAB. Cra 13 #14-69",
+    "Auditorio Samuel Bedoya. Universidad Francisco José de Caldas (Distrital). Facultad de Arte ASAB. Cra 13#14-69",
+    "Universidad Distrital ASAB - Bogotá"
+   ],
+   "festivales": [
+    "cineautopsia-2026"
+   ],
+   "salas": [
+    "Auditorio Samuel Bedoya"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "ASAB"
   },
   "s_d6693f43": {
    "nombre": "Biblioteca Comfenalco Castilla",
@@ -5004,6 +8269,38 @@
    "ciudad": "Fusagasugá",
    "corto": "Centro de Integración e Innovación Social"
   },
+  "s_dacdf5ec": {
+   "nombre": "Colombo Sala 1",
+   "lat": 6.2497341,
+   "lng": -75.5627237,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 43 #54-139",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Colombo Americano"
+  },
+  "s_db1dfa76": {
+   "nombre": "Academia Municipal Girardota",
+   "lat": 6.3755727,
+   "lng": -75.4480894,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Carrera 14 #8-37",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Girardota",
+   "corto": "Academia Artes Girardota"
+  },
   "s_dbb94309": {
    "nombre": "Cine club Cine 40",
    "lat": 11.1426579,
@@ -5018,6 +8315,59 @@
    ],
    "ciudad": "Santa Marta",
    "_ciudad_fijada": "Nominatim reverso"
+  },
+  "s_dbbed1c0": {
+   "nombre": "Cinemateca de Tunja",
+   "lat": 5.5327848,
+   "lng": -73.3709906,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "alias": [
+    "Cinemateca de Tunja - Tunja"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Tunja",
+   "corto": "Cinemateca de Tunja"
+  },
+  "s_dc6b1f28": {
+   "nombre": "CEFE Cometas",
+   "lat": 4.7138599,
+   "lng": -74.0868349,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 127 A # 87",
+   "alias": [
+    "CEFE Cometas - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "CEFE Cometas"
+  },
+  "s_dd41c912": {
+   "nombre": "COMFAMA",
+   "lat": 6.2457531,
+   "lng": -75.5637191,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Carrera 44 # 48 - 18",
+   "alias": [
+    "COMFAMA - Capilla del Claustro - Medellín"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "COMFAMA - Capilla del Claustro"
   },
   "s_dd71de11": {
    "nombre": "Universidad Santiago de Cali",
@@ -5040,6 +8390,24 @@
    "ciudad": "Cali",
    "corto": "Universidad Santiago de Cali"
   },
+  "s_dd84dcf7": {
+   "nombre": "IED Alonso de Olalla",
+   "lat": 5.0044879,
+   "lng": -74.4701587,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "address": "Diagonal 1 Sur n.º 72-31, barrio Carlos Lleras",
+   "alias": [
+    "IED Alonso de Olalla - Villeta"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Villeta",
+   "corto": "IED Alonso de Olalla"
+  },
   "s_dd9fc38c": {
    "nombre": "Universidad Mariana",
    "lat": 1.2238916,
@@ -5060,6 +8428,22 @@
    ],
    "ciudad": "Pasto",
    "corto": "Universidad Mariana"
+  },
+  "s_de1a611f": {
+   "nombre": "Centro Colombo Americano Sede centro. Sala 2",
+   "lat": 6.2497341,
+   "lng": -75.5627237,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 43 #54-139",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Colombo Americano"
   },
   "s_df30b46a": {
    "nombre": "Universidad de la Costa – CUC",
@@ -5108,8 +8492,11 @@
     "fuente": "ficica-2026-venues-geo.json"
    },
    "address": "Cl. 76 #57-61",
-   "alias": [],
+   "alias": [
+    "Cinemateca del Caribe - Barranquilla"
+   ],
    "festivales": [
+    "ficdeh-2026",
     "ficica-2026"
    ],
    "salas": [
@@ -5172,6 +8559,24 @@
    ],
    "ciudad": "Bogotá",
    "corto": "MonkeyDo"
+  },
+  "s_e034e3f9": {
+   "nombre": "Cine a la Calle",
+   "lat": 4.8092321,
+   "lng": -75.6964031,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Parque Olaya Herrera",
+   "alias": [
+    "Cine a la Calle - Pereira"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Pereira",
+   "corto": "Cine a la Calle"
   },
   "s_e046a622": {
    "nombre": "La Maloca Cultural",
@@ -5286,6 +8691,39 @@
    "ciudad": "Medellín",
    "corto": "Casa TEA"
   },
+  "s_e39441b1": {
+   "nombre": "Industry Days",
+   "lat": 6.2338,
+   "lng": -75.5697,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "aff-2026.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "aff-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Industry Days"
+  },
+  "s_e4ad0263": {
+   "nombre": "Centro Cultural Banco de la República",
+   "lat": 6.249052,
+   "lng": -75.5684408,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cl. 50 #50-21 Piso 3",
+   "alias": [
+    "Centro Cultural Banco de la República - Medellín"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Centro Cultural Banco de la República"
+  },
   "s_e4f61235": {
    "nombre": "Polideportivo San Antonio",
    "lat": 4.5925149,
@@ -5302,6 +8740,24 @@
    ],
    "ciudad": "Toro",
    "corto": "Polideportivo San Antonio"
+  },
+  "s_e5a9771f": {
+   "nombre": "Centro Cultural 25 de Mayo",
+   "lat": -34.5763854,
+   "lng": -58.4837318,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "finca-2026.json (publicado)"
+   },
+   "address": "Av. Triunvirato 4444, Villa Urquiza, CABA",
+   "alias": [
+    "Centro Cultural 25 de Mayo - Buenos Aires"
+   ],
+   "festivales": [
+    "finca-2026"
+   ],
+   "ciudad": "Buenos Aires",
+   "corto": "CC 25 de Mayo"
   },
   "s_e605777d": {
    "nombre": "Casa de la Cultura",
@@ -5338,6 +8794,38 @@
    ],
    "ciudad": "Guatapé",
    "corto": "Centro Día Gerontológico"
+  },
+  "s_e84293c6": {
+   "nombre": "Auditorio Nido",
+   "lat": 10.425,
+   "lng": -75.5481,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "Auditorio Nido",
+   "address": "Cartagena"
+  },
+  "s_e876407d": {
+   "nombre": "Colombo Sala 2",
+   "lat": 6.2497341,
+   "lng": -75.5627237,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 43 #54-139",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Colombo Americano"
   },
   "s_e8c35b78": {
    "nombre": "Comfama",
@@ -5390,6 +8878,22 @@
    "ciudad": "Marinilla",
    "corto": "Casa Cultural Valerio Antonio Jiménez",
    "institucion": "i_4a303e29"
+  },
+  "s_eac6c04b": {
+   "nombre": "CC Caribe Plaza ‒ Sala 5",
+   "lat": 10.4061,
+   "lng": -75.5005,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "address": "Av. Pedro de Heredia, Cartagena",
+   "alias": [],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "CC Caribe Plaza"
   },
   "s_eb2718df": {
    "nombre": "Morning",
@@ -5463,6 +8967,38 @@
    "ciudad": "Toro",
    "corto": "Colegio agrícola"
   },
+  "s_eca709c9": {
+   "nombre": "Antimateria Libros y Café",
+   "lat": 6.20062,
+   "lng": -75.56368,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Antimateria"
+  },
+  "s_ecea4a9b": {
+   "nombre": "Escuela Rural Santa Ana",
+   "lat": 4.9288644,
+   "lng": -74.4321437,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "alias": [
+    "Escuela Rural Santa Ana - Sasaima"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Sasaima",
+   "corto": "Escuela Rural Santa Ana"
+  },
   "s_ecedd1d7": {
    "nombre": "Plaza Mayor",
    "lat": 6.2416086,
@@ -5484,6 +9020,24 @@
     "Salón Circo digital"
    ],
    "corto": "Plaza Mayor"
+  },
+  "s_ed587a37": {
+   "nombre": "Auditorio Polideportivo",
+   "lat": 6.8115307,
+   "lng": -73.2714857,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "leviza-2026.json (publicado)"
+   },
+   "address": "Zapatoca, Santander",
+   "alias": [
+    "Auditorio Polideportivo - Zapatoca"
+   ],
+   "festivales": [
+    "leviza-2026"
+   ],
+   "ciudad": "Zapatoca",
+   "corto": "Polideportivo"
   },
   "s_ed5a19ae": {
    "nombre": "Museo Casa Antonio Nariño",
@@ -5536,6 +9090,22 @@
    ],
    "corto": "Centro Cultural y de Convenciones Fernando Botero"
   },
+  "s_ee8dd663": {
+   "nombre": "Casa de la Memoria",
+   "lat": 6.2459198,
+   "lng": -75.5565561,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Calle 51 #36-66",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Casa Memoria"
+  },
   "s_ee9c7bec": {
    "nombre": "CineQuanon",
    "lat": 3.4558323,
@@ -5551,6 +9121,40 @@
    ],
    "ciudad": "Cali",
    "corto": "CineQuanon"
+  },
+  "s_eec0c2a8": {
+   "nombre": "Casa de la Juventud Aldea De Pensadores",
+   "lat": 4.7170723,
+   "lng": -74.1375702,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Calle 70 # 88A-7",
+   "alias": [
+    "Casa de la Juventud Aldea De Pensadores - Bogotá"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Casa de la Juventud Aldea De Pensadores"
+  },
+  "s_f1eeffaa": {
+   "nombre": "Cinemateca",
+   "lat": -25.424779,
+   "lng": -49.276579,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "olhar-2026.json (publicado)"
+   },
+   "address": "R. Presidente Carlos Cavalcanti, 1174 - São Francisco",
+   "alias": [],
+   "festivales": [
+    "olhar-2026"
+   ],
+   "ciudad": "Curitiba",
+   "corto": "Cinemateca"
   },
   "s_f21094a3": {
    "nombre": "Auditorio Juan Carlos Escobar",
@@ -5585,6 +9189,39 @@
    ],
    "ciudad": "Barranquilla",
    "corto": "Barrio Villas de la Cordialidad"
+  },
+  "s_f35fa424": {
+   "nombre": "Cinemateca Sala 3",
+   "lat": 4.6032463,
+   "lng": -74.06758,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "fantasofest-2026.json (publicado)"
+   },
+   "address": "Carrera 3 No. 19-10",
+   "alias": [],
+   "festivales": [
+    "fantasofest-2026",
+    "tercertiempo-2026"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Cinemateca de Bogotá"
+  },
+  "s_f379cae8": {
+   "nombre": "Procinal Las Américas Sala 3",
+   "lat": 6.2145832,
+   "lng": -75.5963458,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "cinemancia-2025.json (publicado)"
+   },
+   "address": "Diagonal 75B #2A-120",
+   "alias": [],
+   "festivales": [
+    "cinemancia-2025"
+   ],
+   "ciudad": "Medellín",
+   "corto": "Cineprox Las Américas"
   },
   "s_f4246a34": {
    "nombre": "Centro Comercial Terra Plaza",
@@ -5717,6 +9354,7 @@
     "Biblioteca Comfama Bello Centro Bello"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026",
     "miradas-2026"
    ],
@@ -5731,6 +9369,40 @@
     "fecha": "2026-11-26"
    },
    "institucion": "i_0b12d8c2"
+  },
+  "s_f7d2d58e": {
+   "nombre": "Rotonda Tienda Museo del Café",
+   "lat": 4.964313,
+   "lng": -74.434938,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "alias": [
+    "Rotonda Tienda Museo del Café - Sasaima"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Sasaima",
+   "corto": "Rotonda Tienda Museo del Café"
+  },
+  "s_f81e2500": {
+   "nombre": "Vereda Ilo Alto",
+   "lat": 5.01144,
+   "lng": -74.410313,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "alias": [
+    "Vereda Ilo Alto - Sasaima"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Sasaima",
+   "corto": "Vereda Ilo Alto"
   },
   "s_f95d634b": {
    "nombre": "Universidad Católica Luis Amigó",
@@ -5783,6 +9455,23 @@
    ],
    "ciudad": "Funza",
    "corto": "Biblioteca de Ciudad Universitaria"
+  },
+  "s_fa7b2078": {
+   "nombre": "Vda. Chapaima",
+   "lat": 4.9573716,
+   "lng": -74.5255619,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "siembrafest-2026.json (publicado)"
+   },
+   "alias": [
+    "Vda. Chapaima - Villeta"
+   ],
+   "festivales": [
+    "siembrafest-2026"
+   ],
+   "ciudad": "Villeta",
+   "corto": "Vda. Chapaima"
   },
   "s_fb44dd3d": {
    "nombre": "Muelle Corona",
@@ -5837,6 +9526,24 @@
    ],
    "ciudad": "Cali",
    "corto": "Café Macondo"
+  },
+  "s_fc1bd923": {
+   "nombre": "Escuela de Administración y Mercadotecnia del Quindío (EAM)",
+   "lat": 4.541757,
+   "lng": -75.6634798,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficdeh-2026.json (publicado)"
+   },
+   "address": "Cra. 14 # 3-11 (Avenida Bolívar)",
+   "alias": [
+    "Escuela de Administración y Mercadotecnia del Quindío (EAM) - Armenia"
+   ],
+   "festivales": [
+    "ficdeh-2026"
+   ],
+   "ciudad": "Armenia",
+   "corto": "Escuela de Administración y Mercadotecnia del Quindío (EAM)"
   },
   "s_fce87735": {
    "nombre": "El Majagual",
@@ -5945,10 +9652,27 @@
     "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026"
    ],
    "ciudad": "Envigado",
    "corto": "Teatro Otraparte"
+  },
+  "s_ff72ca1b": {
+   "nombre": "Teatro da Vila",
+   "lat": -25.505168,
+   "lng": -49.324059,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "olhar-2026.json (publicado)"
+   },
+   "address": "R. Davi Xavier da Silva, 451 - Cidade Industrial de Curitiba",
+   "alias": [],
+   "festivales": [
+    "olhar-2026"
+   ],
+   "ciudad": "Curitiba",
+   "corto": "Teatro da Vila"
   },
   "s_ffcf8a2c": {
    "nombre": "Servicio Forjar Restaurativo Arborizadora Baja",
@@ -5965,20 +9689,64 @@
    ],
    "ciudad": "Bogotá",
    "corto": "Servicio Forjar Restaurativo Arborizadora Baja"
+  },
+  "s_fff0c4b6": {
+   "nombre": "Universidad de los Andes",
+   "lat": 4.6014026,
+   "lng": -74.064905,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "qaff-2026.json (publicado)"
+   },
+   "address": "Cra. 1 # 18A-12",
+   "alias": [
+    "Universidad de los Andes - Bogotá",
+    "Universidad de los Andes · Auditorio (ML-C)",
+    "Universidad de los Andes · Salón (ML513)",
+    "Universidad de los Andes · Salón (RGD08)"
+   ],
+   "festivales": [
+    "qaff-2026"
+   ],
+   "salas": [
+    "Auditorio (ML-C)",
+    "Salón (ML513)",
+    "Salón (RGD08)"
+   ],
+   "ciudad": "Bogotá",
+   "corto": "Universidad de los Andes"
   }
  },
  "redirecciones": {
   "s_1bbd676f": "s_f7766586",
+  "s_1da2107a": "s_a8672cd3",
+  "s_20c9dc1e": "s_f7766586",
+  "s_2a97741a": "s_99915661",
+  "s_3628baf1": "s_34d4a9cf",
+  "s_4d83a496": "s_5c62c6c3",
   "s_5bb05c96": "s_25caf24a",
+  "s_67beacd5": "s_0655bb7b",
+  "s_6aab117a": "s_dfa5f4a5",
   "s_75f70e3f": "s_99915661",
+  "s_84425cb1": "s_98bbb7e0",
+  "s_9a89fed3": "s_891e8481",
+  "s_9bac3b97": "s_6a3d6ea4",
   "s_a06daf52": "s_99915661",
+  "s_a18cdfde": "s_1be38f20",
+  "s_abe4a91c": "s_25caf24a",
   "s_b3ecb108": "s_25caf24a",
+  "s_b9368d0f": "s_384e68d5",
+  "s_c162d664": "s_c564ed7b",
   "s_c1adc674": "s_e1907155",
   "s_c3221991": "s_11667bea",
   "s_c5c17b27": "s_e1907155",
+  "s_d8981bb9": "s_ff62cf6a",
   "s_dc769578": "s_b3c7c07a",
   "s_e114d377": "s_5ce71f2b",
-  "s_e4896ea4": "s_e1907155"
+  "s_e4896ea4": "s_e1907155",
+  "s_ef0181a6": "s_17a71d8b",
+  "s_f0d463e9": "s_b5d25cab",
+  "s_ff979632": "s_c82c47d7"
  },
  "decisiones": {
   "mismo": [
@@ -6160,7 +9928,44 @@
    ]
   ]
  },
- "_divergentes": {},
+ "_divergentes": {
+  "s_80a2590b": [
+   {
+    "fid": "ficci-65",
+    "clave": "AECID",
+    "lat": 10.421,
+    "lng": -75.5484,
+    "nivel": "aproximado",
+    "a_m": 0
+   },
+   {
+    "fid": "ficci-65",
+    "clave": "aecid",
+    "lat": 10.4236,
+    "lng": -75.5484,
+    "nivel": "aproximado",
+    "a_m": 289
+   }
+  ],
+  "s_9854df1f": [
+   {
+    "fid": "aff-2026",
+    "clave": "Colombo Americano",
+    "lat": 6.2592,
+    "lng": -75.5682,
+    "nivel": "aproximado",
+    "a_m": 0
+   },
+   {
+    "fid": "ficdeh-2026",
+    "clave": "Colombo Americano - Medellín",
+    "lat": 6.2497341,
+    "lng": -75.5627237,
+    "nivel": "aproximado",
+    "a_m": 1214
+   }
+  ]
+ },
  "_deuda": {
   "sin_url": [
    "s_03bcfa6f",

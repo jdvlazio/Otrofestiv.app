@@ -105,6 +105,23 @@ def pines(raiz=REPO):
             if isinstance(v, dict) and v.get('lat') is not None and v.get('lng') is not None \
                     and v.get('_prec') != 'sin verificar':
                 out.append((fid, k, nombre_de(k), v))
+    # festivales publicados que nunca tuvieron venues-geo (fase 5, 26 nov 2026):
+    # sus pines viven en el `venues` del JSON publicado. Sin `_prec` se tratan
+    # como «aproximado», el nivel más bajo: no le ganan a un pin verificado.
+    con_geo = {x[0] for x in out}
+    for p in sorted(glob.glob(f'{raiz}/festivals/*.json')):
+        fid = os.path.basename(p)[:-5]
+        if fid in con_geo:
+            continue
+        try:
+            d = json.load(open(p, encoding='utf-8'))
+        except ValueError:
+            continue
+        vs = d.get('venues') if isinstance(d, dict) else None
+        for k, v in (vs or {}).items() if isinstance(vs, dict) else ():
+            if isinstance(v, dict) and v.get('lat') is not None and (v.get('lng') if v.get('lng') is not None else v.get('lon')) is not None:
+                v = dict(v, lng=v['lng'] if v.get('lng') is not None else v['lon'], _publicado=True)
+                out.append((fid, k, nombre_de(k), v))
     return out
 
 
@@ -370,7 +387,7 @@ def construir(raiz=REPO):
             sid = _nuevo_id(base[2], base[3]['lat'], base[3]['lng'], usados)
             usados.add(sid)
             e = {'nombre': base[2], 'lat': base[3]['lat'], 'lng': base[3]['lng'],
-                 'evidencia': {'nivel': nivel_de(base[3].get('_prec')), 'fuente': f'{base[0]}-venues-geo.json'}}
+                 'evidencia': {'nivel': nivel_de(base[3].get('_prec')), 'fuente': f'{base[0]}.json (publicado)' if base[3].get('_publicado') else f'{base[0]}-venues-geo.json'}}
             if base[3].get('address'):
                 e['address'] = base[3]['address']
         e['alias'] = sorted((set(e.get('alias', [])) | alias) - {e['nombre']})
