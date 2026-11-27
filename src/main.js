@@ -275,10 +275,11 @@ const ACTION_REGISTRY = {
   openPelFromVenue:    (el)    => { closeVenueSheet(); openPelSheet(el.dataset.title); },
   // «Cómo llegar» con el mapa de cada plataforma (28 sep 2026): en Android abría
   // Apple Maps en el navegador; ahora Google Maps (la app si está, que atrapa el
-  // enlace). iPhone y Mac siguen con Apple Maps.
+  // enlace). iPhone y Mac siguen con Apple Maps, que busca por nombre y
+  // dirección (27 nov 2026): el pin viene de Google y no va a un mapa ajeno.
   venueDirections:     (el)    => window.open(/Android/i.test(navigator.userAgent)
     ? 'https://www.google.com/maps/dir/?api=1&destination='+el.dataset.lat+','+el.dataset.lng
-    : 'https://maps.apple.com/?q='+el.dataset.lat+','+el.dataset.lng,'_blank'),
+    : 'https://maps.apple.com/?q='+encodeURIComponent(el.dataset.q||''),'_blank'),
   pafClearSec:         ()      => _pafClearSec(),
   pafClearVenue:       ()      => _pafClearVenue(),
   toggleEveningFilms:  (el)    => _toggleEveningFilms(el),
