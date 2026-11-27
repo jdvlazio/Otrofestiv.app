@@ -548,6 +548,28 @@
     "fecha": "2026-11-25"
    },
    "evidencia": "pág. 5: Alianza Francesa está entre las salas con pago; ni el catálogo (pág. 32) da entrada libre, hereda la sede"
+  },
+  {
+   "funcion": "f_6e17a91f7c",
+   "casilla": "requires_registration",
+   "valor": true,
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfQdg1P2mqfNY81tpIT-cqL8XfTgVukH642LMZvTRB3-eyAIA/viewform",
+    "fecha": "2026-11-26"
+   },
+   "evidencia": "formulario «CONFIRMACIÓN DE ASISTENCIA: ESTRELLA FUGAZ – HOMENAJE A CÉSAR HEREDIA | 24 BOGOSHORTS», leído el 26 nov"
+  },
+  {
+   "funcion": "f_6e17a91f7c",
+   "casilla": "registration_url",
+   "valor": "https://docs.google.com/forms/d/e/1FAIpQLSfQdg1P2mqfNY81tpIT-cqL8XfTgVukH642LMZvTRB3-eyAIA/viewform",
+   "fuente": {
+    "tipo": "festival-web",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfQdg1P2mqfNY81tpIT-cqL8XfTgVukH642LMZvTRB3-eyAIA/viewform",
+    "fecha": "2026-11-26"
+   },
+   "evidencia": "formulario «CONFIRMACIÓN DE ASISTENCIA: ESTRELLA FUGAZ – HOMENAJE A CÉSAR HEREDIA | 24 BOGOSHORTS», leído el 26 nov"
   }
  ]
 }
