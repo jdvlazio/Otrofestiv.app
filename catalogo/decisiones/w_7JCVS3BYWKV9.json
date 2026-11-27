@@ -79,5 +79,29 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/uma-unjirinaka-alto-milluni.jpg"
   }
+ },
+ {
+  "work_id": "w_7JCVS3BYWKV9",
+  "campo": "xref.tmdb",
+  "valor": 1849455,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849455"
+  }
+ },
+ {
+  "work_id": "w_7JCVS3BYWKV9",
+  "campo": "xref.letterboxd",
+  "valor": "uma-unjirinaka-alto-milluni",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "uma-unjirinaka-alto-milluni"
+  }
  }
 ]

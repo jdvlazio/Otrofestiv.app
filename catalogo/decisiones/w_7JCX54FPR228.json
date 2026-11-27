@@ -65,5 +65,29 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/olvidar-a-miriam.jpg"
   }
+ },
+ {
+  "work_id": "w_7JCX54FPR228",
+  "campo": "xref.tmdb",
+  "valor": 1849439,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849439"
+  }
+ },
+ {
+  "work_id": "w_7JCX54FPR228",
+  "campo": "xref.letterboxd",
+  "valor": "olvidar-a-miriam",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "olvidar-a-miriam"
+  }
  }
 ]

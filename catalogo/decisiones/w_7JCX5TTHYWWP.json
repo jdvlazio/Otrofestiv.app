@@ -66,5 +66,29 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/entre-amigos.jpg"
   }
+ },
+ {
+  "work_id": "w_7JCX5TTHYWWP",
+  "campo": "xref.tmdb",
+  "valor": 1849444,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849444"
+  }
+ },
+ {
+  "work_id": "w_7JCX5TTHYWWP",
+  "campo": "xref.letterboxd",
+  "valor": "entre-amigos-1",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "entre-amigos-1"
+  }
  }
 ]

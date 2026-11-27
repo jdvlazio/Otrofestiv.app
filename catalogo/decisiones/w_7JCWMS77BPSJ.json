@@ -73,5 +73,29 @@
   "fecha": "2026-11-24",
   "quien": "plan del almacén (lector independiente)",
   "fuente": "https://www.instagram.com/p/Df2AcYNEbXC/"
+ },
+ {
+  "work_id": "w_7JCWMS77BPSJ",
+  "campo": "xref.tmdb",
+  "valor": 1849406,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849406"
+  }
+ },
+ {
+  "work_id": "w_7JCWMS77BPSJ",
+  "campo": "xref.letterboxd",
+  "valor": "de-la-tradicion-a-la-prohibicion",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "de-la-tradicion-a-la-prohibicion"
+  }
  }
 ]

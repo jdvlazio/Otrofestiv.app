@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "IG @9_festcineprovinciadevelez (láminas) vía provinciadevelez-2026-catalogo.json",
-  "capturado": "2026-11-25",
+  "capturado": "2026-11-27",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "Rótulos de las láminas y la web: «SELECCIÓN OFICIAL 2026», «FRANJA INFANTIL», «MUESTRA ESPECIAL». PROPUESTA para Juan. «Muestra Central» se suma cuando tenga función.",
@@ -216,7 +216,6 @@
     "date": "2026-11-15",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -249,7 +248,46 @@
     }
    ],
    "_fid": "f_f9339da525",
-   "id": "f_f9339da525"
+   "id": "f_f9339da525",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-15"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-15"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-15"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-15"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-15"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-15"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-15"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-15"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-15"
+    }
+   }
   },
   {
    "title": "Nueve Jueves en Riachuelo + 3 Obras",
@@ -273,7 +311,6 @@
     "date": "2026-11-25",
     "tipo": "festival"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -287,6 +324,8 @@
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/nueve-jueves-en-riachuelo-v2.jpg",
      "posterSource": "oficial",
+     "lbSlug": "nueve-jueves-en-riachuelo",
+     "tmdb_id": 1849389,
      "duration": "24 min"
     },
     {
@@ -315,7 +354,9 @@
      "synopsis": "La historia del municipio de La Belleza, Santander, es contada por sus propias voces. Desde lo poco que se sabe de sus habitantes precolombinos, los Tisquizoques, hasta nuestros días, se revela la historia fundacional del municipio, pasando por los capítulos más aciagos y de cómo al día de hoy es un remanso de paz de exuberante belleza.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/la-belleza-v2.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "la-belleza-1",
+     "tmdb_id": 1849395
     },
     {
      "title": "Pez azul",
@@ -326,11 +367,52 @@
      "synopsis": "Una niña emprende un viaje bastante conmovedor para sanar y para dejar ir. Su madre siempre la acompañará.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/pez-azul-v2.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "pez-azul-1",
+     "tmdb_id": 1849399
     }
    ],
    "_fid": "f_2204c2d881",
-   "id": "f_2204c2d881"
+   "id": "f_2204c2d881",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-25"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-25"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-25"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-25"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-25"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-25"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-25"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-25"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-25"
+    }
+   }
   },
   {
    "title": "My Name Is Bill W. + De la tradición a la prohibición",
@@ -354,7 +436,6 @@
     "date": "2026-11-17",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -381,11 +462,52 @@
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/de-la-tradicion-a-la-prohibicion.jpg",
      "posterSource": "oficial",
+     "lbSlug": "de-la-tradicion-a-la-prohibicion",
+     "tmdb_id": 1849406,
      "director": "Lente Andino Films"
     }
    ],
    "_fid": "f_203b9c0849",
-   "id": "f_203b9c0849"
+   "id": "f_203b9c0849",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-17"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-17"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-17"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-17"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-17"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-17"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-17"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-17"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-17"
+    }
+   }
   },
   {
    "title": "El fantástico Sr. Fox + Salvemos el agua",
@@ -409,7 +531,6 @@
     "date": "2026-11-18",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -436,11 +557,52 @@
      "synopsis": "El cortometraje propone una aventura en la que la sabiduría ancestral y la creatividad infantil se encuentran para reflexionar sobre el cuidado de los ríos, la biodiversidad y la vida.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/salvemos-el-agua.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "salvemos-el-agua",
+     "tmdb_id": 1849416
     }
    ],
    "_fid": "f_adb8320fbd",
-   "id": "f_adb8320fbd"
+   "id": "f_adb8320fbd",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-18"
+    }
+   }
   },
   {
    "title": "La imaginada",
@@ -459,7 +621,7 @@
    "time": "18:00",
    "day_order": 3,
    "venue": "La Tante Boutique - Barbosa",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "A través de un diálogo íntimo entre el documental y la ficción, La imaginada recorre la memoria colectiva y los relatos orales de Barbosa, Santander, para revelar cómo sus habitantes han construido su identidad a lo largo del tiempo.",
    "synopsis_lang": "es",
    "poster": "/assets/provinciadevelez-2026/la-imaginada.jpg",
@@ -470,9 +632,52 @@
     "tipo": "festival-ig"
    },
    "synopsis_en": "Through an intimate dialogue between documentary and fiction, La imaginada travels through the collective memory and oral stories of Barbosa, Santander, to reveal how its inhabitants have built their identity over time.",
-   "is_free": true,
+   "lbSlug": "la-imaginada",
+   "tmdb_id": 1849422,
    "_fid": "f_79a0ffd095",
    "id": "f_79a0ffd095",
+   "is_free": true,
+   "qa_type": "team",
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "has_qa": {
+     "tipo": "juan",
+     "fecha": "2026-11-27",
+     "frase": "La funcion de La Imaginada tiene QA con Carolina Muñoz, lo vi en la última story de IG que subió el festival"
+    },
+    "qa_type": {
+     "tipo": "juan",
+     "fecha": "2026-11-27",
+     "frase": "La funcion de La Imaginada tiene QA con Carolina Muñoz, lo vi en la última story de IG que subió el festival"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    }
+   },
    "_duracion_corregida": "https://www.instagram.com/p/Df7ZYXrEaXh/"
   },
   {
@@ -497,7 +702,6 @@
     "date": "2026-11-19",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -522,7 +726,9 @@
      "synopsis": "Después de 15 años de ausencia, el reloj de la Inmaculada vuelve a latir en Barichara.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/el-latir-de-la-memoria.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "el-latir-de-la-memoria",
+     "tmdb_id": 1849426
     },
     {
      "title": "Paisaje / Niebla",
@@ -533,7 +739,9 @@
      "synopsis": "Este cortometraje, grabado en el Páramo de Sumapaz, es un acercamiento poético a la vida de este territorio, que observa su inmensidad pero también su lado más oscuro: la violencia que sufrió hace años.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/paisaje-niebla.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "paisaje-niebla",
+     "tmdb_id": 1849434
     },
     {
      "title": "Olvidar a Miriam",
@@ -544,7 +752,9 @@
      "synopsis": "El minuto recorre la tristeza de la vejez y a través del tango transmite el sentimiento de una lágrima por la nostalgia.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/olvidar-a-miriam.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "olvidar-a-miriam",
+     "tmdb_id": 1849439
     },
     {
      "title": "Limones",
@@ -555,7 +765,9 @@
      "synopsis": "Cristian y Andrés, dos niños wayuu de nueve años, recorren las calles de Palomino vendiendo limones. Mientras trabajan, escuchan y comentan en segundo plano la desaparición de Bartolo, ocurrida durante los recientes enfrentamientos armados en la Sierra Nevada. Al caer la noche, regresan a casa y entregan el producido a su madre.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/limones.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "limones",
+     "tmdb_id": 1849440
     },
     {
      "title": "Entre amigos",
@@ -566,7 +778,9 @@
      "synopsis": "Buscando escapar de la rutina de la ciudad, un grupo de jóvenes visita a una amiga que vive sola en las montañas. Rodeados por la inmensidad del paisaje y el silencio del campo, escuchan los relatos que ella conoce sobre la región.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/entre-amigos.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "entre-amigos-1",
+     "tmdb_id": 1849444
     },
     {
      "title": "El pescador",
@@ -617,6 +831,45 @@
    ],
    "_fid": "f_7a2dca52ee",
    "id": "f_7a2dca52ee",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-19"
+    }
+   },
    "_duracion_corregida": "suma de sus obras con duración verificada"
   },
   {
@@ -641,7 +894,6 @@
     "date": "2026-11-23",
     "tipo": "festival-ig"
    },
-   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -654,7 +906,9 @@
      "synopsis": "Entre amores y tambores, una madre recuerda la partida de un hijo y las vivencias nostálgicas de su tambor.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/el-dolor-del-vientre.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "el-dolor-del-vientre",
+     "tmdb_id": 1849447
     },
     {
      "title": "Llantos del monte",
@@ -665,6 +919,8 @@
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/llantos-del-monte.jpg",
      "posterSource": "oficial",
+     "lbSlug": "llantos-del-monte",
+     "tmdb_id": 1849450,
      "duration": "7 min",
      "_duracion_corregida": "https://www.youtube.com/watch?v=gy-JVJUkNUY"
     },
@@ -679,6 +935,8 @@
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/uma-unjirinaka-alto-milluni.jpg",
      "posterSource": "oficial",
+     "lbSlug": "uma-unjirinaka-alto-milluni",
+     "tmdb_id": 1849455,
      "duration": "13 min",
      "_duracion_corregida": "https://www.youtube.com/watch?v=WR8JaGW0p-8"
     },
@@ -717,17 +975,58 @@
      "synopsis": "Don Antonio: la memoria esculpida que da la bienvenida o el último adiós.",
      "synopsis_lang": "es",
      "poster": "/assets/provinciadevelez-2026/el-arte-de-inmortalizar-mortales.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "el-arte-de-inmortalizar-mortales",
+     "tmdb_id": 1849458
     }
    ],
    "_fid": "f_f0ed1fcf3f",
    "id": "f_f0ed1fcf3f",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-23"
+    }
+   },
    "_duracion_corregida": "suma de sus obras con duración verificada"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-25T10:36:02",
+  "fecha": "2026-11-27T07:34:12",
   "plan_sha": "5e15e89e3223db1c",
   "paso": 7,
   "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"

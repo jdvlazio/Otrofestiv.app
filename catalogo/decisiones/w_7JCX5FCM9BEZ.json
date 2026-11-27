@@ -66,5 +66,29 @@
   "antes": {
    "provinciadevelez-2026": "/assets/provinciadevelez-2026/limones.jpg"
   }
+ },
+ {
+  "work_id": "w_7JCX5FCM9BEZ",
+  "campo": "xref.tmdb",
+  "valor": 1849440,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1849440"
+  }
+ },
+ {
+  "work_id": "w_7JCX5FCM9BEZ",
+  "campo": "xref.letterboxd",
+  "valor": "limones",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "limones"
+  }
  }
 ]
