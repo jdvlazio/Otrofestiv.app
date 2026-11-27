@@ -115,6 +115,38 @@ class Almacen(Base):
         self.assertEqual(S.sin_evidencia_nueva(self.r), [])
 
 
+class Publicados(Base):
+    """Fase 5 (26 nov 2026): un festival publicado sin venues-geo entra por su `venues`."""
+    def pub(self, fid, venues):
+        json.dump({'venues': venues}, open(f'{self.r}/festivals/{fid}.json', 'w'), ensure_ascii=False)
+
+    def test_festival_sin_venues_geo_entra_por_el_publicado_con_nivel_bajo(self):
+        self.pub('viejo-2025', {'Teatro Y': {'lat': 6.0, 'lon': -75.0, 'city': 'Medellín'}})
+        sid, e = self.unico() if S.construir(self.r) else None
+        self.assertEqual((e['festivales'], e['lng'], e['evidencia']['nivel']), (['viejo-2025'], -75.0, 'aproximado'))
+        self.assertIn('publicado', e['evidencia']['fuente'])
+
+    def test_si_tiene_venues_geo_no_se_lee_el_publicado(self):
+        self.geo('a-2026', {'Teatro Y': {'lat': 6.0, 'lng': -75.0, '_prec': 'manual'}})
+        self.pub('a-2026', {'Otro Lugar': {'lat': 7.0, 'lng': -76.0}})
+        self.assertEqual(len(S.construir(self.r)['sedes']), 1)
+
+    def test_importados_son_deuda_aparte_que_solo_baja(self):
+        self.pub('viejo-2025', {'Teatro Y': {'lat': 6.0, 'lng': -75.0}, 'Teatro Z': {'lat': 7.0, 'lng': -76.0}})
+        S.construir(self.r)
+        m = S.leer(self.r)
+        m['_deuda'] = {'sin_url': [], 'importados': sorted(m['sedes'])}
+        S._escribir(m, self.r)
+        S.construir(self.r)
+        self.assertEqual(S.sin_evidencia_nueva(self.r), [])
+        y = next(s for s, e in S.leer(self.r)['sedes'].items() if e['nombre'] == 'Teatro Y')
+        S.poner_evidencia(y, MAPS, raiz=self.r)
+        self.assertEqual(len(S.leer(self.r)['_deuda']['importados']), 1)   # verificado: sale y no vuelve
+        self.pub('nuevo-2026', {'Teatro W': {'lat': 8.0, 'lng': -77.0}})
+        S.construir(self.r)
+        self.assertEqual(len(S.sin_evidencia_nueva(self.r)), 1)            # uno nuevo sí frena
+
+
 class Ficha(Base):
     def test_ficha_desde_plan_publicado_y_funciones(self):
         self.geo('a-2026', {'Cinemateca de Bogotá - Bogotá': {'lat': 4.6105, 'lng': -74.0705, '_prec': 'manual'}})

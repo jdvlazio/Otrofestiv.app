@@ -18,7 +18,7 @@ EL MODELO. `catalogo/sedes.json`:
         "festivales": [fid…]}},
      "decisiones": {"mismo": [[a, b]…], "distintos": [[a, b]…]},
      "_divergentes": {sid: [pines…]},
-     "_deuda": {"sin_url": [sid…]}}
+     "_deuda": {"sin_url": [sid…], "importados": [sid…]}}
 El id (`s_` + 8 hex) nace una vez y NO se recalcula: si el nombre o el pin
 cambian, el lugar sigue siendo el mismo (como el work_id de las obras).
 
@@ -453,6 +453,11 @@ def construir(raiz=REPO):
                                                        if not (e.get('evidencia') or {}).get('url'))}
     deuda['sin_url'] = sorted(s for s in deuda.get('sin_url', []) if s in sedes and s not in redir and
                               not (sedes[s].get('evidencia') or {}).get('url'))
+    # `importados`: los lugares de los 16 festivales publicados que nunca
+    # tuvieron venues-geo (fase 5, 26 nov 2026). Deuda aparte de la vieja,
+    # con su propio número; como la otra, solo baja.
+    deuda['importados'] = sorted({redir.get(s, s) for s in deuda.get('importados', [])} & set(sedes) - set(deuda['sin_url'])
+                                 - {s for s in sedes if (sedes[s].get('evidencia') or {}).get('url')})
     d = {'_provenance': {'fuente': 'festivals/staging/*-venues-geo.json + decisiones humanas',
                          'construido_por': 'pipeline/sedes.py --construir',
                          'regla': f'mismo lugar: mismo nombre (o declarado) a <{MISMO_LUGAR_M} m; '
@@ -598,7 +603,8 @@ def apartados(raiz=REPO, solo_vivos=True):
 def sin_evidencia_nueva(raiz=REPO):
     """Lugares sin enlace de Maps que NO están en la deuda congelada."""
     m = leer(raiz)
-    deuda = set((m.get('_deuda') or {}).get('sin_url') or [])
+    d = m.get('_deuda') or {}
+    deuda = set(d.get('sin_url') or []) | set(d.get('importados') or [])
     return sorted(s for s, e in (m.get('sedes') or {}).items()
                   if not (e.get('evidencia') or {}).get('url') and s not in deuda)
 

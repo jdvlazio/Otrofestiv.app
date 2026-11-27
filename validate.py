@@ -5702,7 +5702,8 @@ try:
             fail(check, ' · '.join(_p))
         else:
             ok(check, f'{len(_S)} lugares; todo pin coincide con el suyo, ningún par cercano sin decidir, todo lugar nuevo con Maps '
-                      f'({len((_mz.get("_deuda") or {}).get("sin_url") or [])} viejos sin enlace: deuda que solo baja)')
+                      f'({len((_mz.get("_deuda") or {}).get("sin_url") or [])} viejos y '
+                      f'{len((_mz.get("_deuda") or {}).get("importados") or [])} importados de festivales pasados sin enlace: deuda que solo baja)')
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 

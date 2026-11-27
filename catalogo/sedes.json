@@ -179,24 +179,6 @@
   }
  },
  "sedes": {
-  "s_0061ac1e": {
-   "nombre": "Alianza Francesa",
-   "lat": 10.9934124,
-   "lng": -74.7890175,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "address": "Calle 52 # 54-75",
-   "alias": [
-    "Alianza Francesa - Barranquilla"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "corto": "Alianza Francesa",
-   "_ciudad_dudosa": "Cartagena"
-  },
   "s_00cb56fc": {
    "nombre": "Auditorio nido",
    "lat": 10.391,
@@ -422,34 +404,49 @@
   },
   "s_06ca6f77": {
    "nombre": "C. Convenciones",
-   "lat": 10.4242,
-   "lng": -75.5505,
+   "lat": 10.4208751,
+   "lng": -75.5491034,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+de+Convenciones+Cartagena+de+Indias/@10.4208751,-75.5491034,17z",
+    "fecha": "2026-11-26",
+    "fuente": "verificado en Google Maps"
    },
-   "alias": [],
+   "alias": [
+    "C. de Convenciones · Patio de Banderas"
+   ],
    "festivales": [
     "ficci-65"
    ],
    "ciudad": "Cartagena",
-   "corto": "C. Convenciones"
+   "corto": "C. Convenciones",
+   "address": "Cl. 24 #8A-344, Getsemaní"
   },
   "s_079de1f0": {
-   "nombre": "Cine Passeio Ritz",
-   "lat": -25.426501,
-   "lng": -49.26945,
+   "nombre": "Cine Passeio",
+   "lat": -25.4264471,
+   "lng": -49.2694665,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "olhar-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Cine+Passeio/@-25.4264471,-49.2694665,17z",
+    "fecha": "2026-11-26",
+    "fuente": "verificado en Google Maps"
    },
    "address": "R. Riachuelo, 410 - Centro",
-   "alias": [],
+   "alias": [
+    "Cine Passeio (Ritz)",
+    "Cine Passeio Luz",
+    "Cine Passeio Ritz"
+   ],
    "festivales": [
     "olhar-2026"
    ],
    "ciudad": "Curitiba",
-   "corto": "Cine Passeio (Ritz)"
+   "corto": "Cine Passeio",
+   "corto_decidido": {
+    "por_que": "Ritz y Luz son salas; aprobado por Juan el 26 nov 2026 (fase 5)",
+    "fecha": "2026-11-26"
+   }
   },
   "s_09b62d67": {
    "nombre": "Colegio Carrasquilla (Cra. 7ma)",
@@ -538,7 +535,8 @@
     "ficdeh-2026"
    ],
    "corto": "Cinema Local",
-   "_ciudad_dudosa": "Cali"
+   "ciudad": "Bogotá",
+   "_ciudad_fijada": "lugar vecino del almacén a 155 m"
   },
   "s_0b6dd1ff": {
    "nombre": "Teatro Bolívar",
@@ -582,7 +580,9 @@
     "nivel": "aproximado",
     "fuente": "ficci-65.json (publicado)"
    },
-   "alias": [],
+   "alias": [
+    "Plaza Proclamación"
+   ],
    "festivales": [
     "ficci-65"
    ],
@@ -953,10 +953,12 @@
    },
    "address": "Calle 48 # 51–34, Itagüí, Antioquia",
    "alias": [
+    "Centro Cultural Echavarría Misas",
     "Centro Cultural y Educativo Fundación Diego Echavarría Misas - Itagüí",
     "Centro Cultural y Educativo Fundación Diego Echavarría Misas Itagüí"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026"
    ],
    "ciudad": "Itagüí",
@@ -990,9 +992,15 @@
     "fuente": "fantasmagoria-2026-venues-geo.json"
    },
    "address": "Claustro Comfama San Ignacio, Cra. 44 #48-18",
-   "alias": [],
+   "alias": [
+    "COMFAMA",
+    "COMFAMA - Capilla del Claustro - Medellín",
+    "Claustro Comfama"
+   ],
    "festivales": [
-    "fantasmagoria-2026"
+    "cinemancia-2025",
+    "fantasmagoria-2026",
+    "ficdeh-2026"
    ],
    "salas": [
     "La Capilla",
@@ -1102,6 +1110,9 @@
    },
    "address": "Cra. 3 #19-10, Bogotá",
    "alias": [
+    "Cinemateca Sala 2",
+    "Cinemateca Sala 3",
+    "Cinemateca Sala Capital",
     "Cinemateca de Bogotá - Bogotá",
     "Cinemateca de Bogotá · Sala 2",
     "Cinemateca de Bogotá · Sala 3",
@@ -1117,10 +1128,12 @@
     "bogoshorts-2026",
     "cineautopsia-2026",
     "cuaff-2026",
+    "fantasofest-2026",
     "ficdeh-2026",
     "midbo-2026",
     "narrarelfuturo-2026",
-    "qaff-2026"
+    "qaff-2026",
+    "tercertiempo-2026"
    ],
    "salas": [
     "Calle Museo",
@@ -1346,15 +1359,23 @@
    "corto": "BlackGround"
   },
   "s_1e559a7c": {
-   "nombre": "Plaza Bocagrande ‒ Sala 3",
-   "lat": 10.3979,
-   "lng": -75.5499,
+   "nombre": "Plaza Bocagrande",
+   "lat": 10.411173,
+   "lng": -75.5512287,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Plaza+Bocagrande+Centro+Comercial/@10.411173,-75.5512287,17z",
+    "fecha": "2026-11-26",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Av. San Martín, Bocagrande, Cartagena",
-   "alias": [],
+   "alias": [
+    "Plaza Bocagrande ‒ Sala 1",
+    "Plaza Bocagrande ‒ Sala 2",
+    "Plaza Bocagrande ‒ Sala 3",
+    "Plaza Bocagrande ‒ Sala 4",
+    "Plaza Bocagrande ‒ Sala 5"
+   ],
    "festivales": [
     "ficci-65"
    ],
@@ -1505,45 +1526,15 @@
    "address": "Calle 50 # 47–21, Copacabana, Antioquia",
    "alias": [
     "Terko - Copacabana",
+    "Terko Bar",
     "Terko Copacabana"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026"
    ],
    "ciudad": "Copacabana",
    "corto": "Terko"
-  },
-  "s_20babab4": {
-   "nombre": "Parque de la Poesía",
-   "lat": 6.3705599,
-   "lng": -75.444781,
-   "evidencia": {
-    "nivel": "manual",
-    "fuente": "girardota-2026-venues-geo.json"
-   },
-   "address": "Cl. 10C con Cra. 9A",
-   "alias": [],
-   "festivales": [
-    "girardota-2026"
-   ],
-   "ciudad": "Girardota",
-   "corto": "Parque de la Poesía"
-  },
-  "s_20cb6106": {
-   "nombre": "Planetario",
-   "lat": 6.26902,
-   "lng": -75.56611,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Parque de los Deseos",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Planetario"
   },
   "s_20f5d939": {
    "nombre": "Teatrino Proyecto Oriente",
@@ -1626,7 +1617,9 @@
    "festivales": [
     "tribeca-2026"
    ],
-   "corto": "Village East"
+   "corto": "Village East",
+   "ciudad": "Nueva York",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_23554cca": {
    "nombre": "Museo del Zócalo",
@@ -1679,18 +1672,24 @@
   },
   "s_25652566": {
    "nombre": "Parque de la Poesía Girardota",
-   "lat": 6.3755727,
-   "lng": -75.4480894,
+   "lat": 6.3705599,
+   "lng": -75.444781,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Parque+de+la+Poes%C3%ADa/@6.3705599,-75.444781,17z",
+    "fecha": "2026-11-26",
+    "fuente": "verificado en Google Maps"
    },
-   "alias": [],
+   "alias": [
+    "Parque de la Poesía"
+   ],
    "festivales": [
-    "cinemancia-2025"
+    "cinemancia-2025",
+    "girardota-2026"
    ],
    "ciudad": "Girardota",
-   "corto": "Parque Poesía Girardota"
+   "corto": "Parque Poesía Girardota",
+   "address": "Calle 10C con Cra. 9A"
   },
   "s_25caf24a": {
    "nombre": "Comfama La Capilla",
@@ -1793,22 +1792,6 @@
    "corto": "Universidad de Antioquia Seccional Occidente",
    "institucion": "i_b40f78bd"
   },
-  "s_26fa00c5": {
-   "nombre": "Procinal Las Américas",
-   "lat": 6.2145832,
-   "lng": -75.5963458,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Diagonal 75B #2A-120",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Cineprox Las Américas"
-  },
   "s_274fbe5a": {
    "nombre": "Universidad del Magdalena",
    "lat": 11.2262461,
@@ -1838,7 +1821,9 @@
    "festivales": [
     "tribeca-2026"
    ],
-   "corto": "Shorts Theater"
+   "corto": "Shorts Theater",
+   "ciudad": "Nueva York",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_2807be45": {
    "nombre": "Casa de la Juventud El Cacma",
@@ -1982,23 +1967,6 @@
    "ciudad": "Pereira",
    "corto": "Fundación Malabareando las Calles"
   },
-  "s_2e7ad9fe": {
-   "nombre": "Cinemateca Sala Capital",
-   "lat": 4.6032463,
-   "lng": -74.06758,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "fantasofest-2026.json (publicado)"
-   },
-   "address": "Carrera 3 No. 19-10",
-   "alias": [],
-   "festivales": [
-    "fantasofest-2026",
-    "tercertiempo-2026"
-   ],
-   "ciudad": "Bogotá",
-   "corto": "Cinemateca de Bogotá"
-  },
   "s_2e88d79d": {
    "nombre": "Parque Ernesto Gutiérrez",
    "lat": 5.0683125,
@@ -2025,9 +1993,11 @@
    "address": "Calle 47A # 85–20, Medellín, Antioquia",
    "alias": [
     "ITM - Facultad de Artes y Humanidades - Medellín",
+    "ITM La Floresta",
     "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026"
    ],
    "salas": [
@@ -2073,22 +2043,6 @@
    ],
    "ciudad": "Medellín",
    "corto": "Donde Robin"
-  },
-  "s_2fbc75de": {
-   "nombre": "Plaza Bocagrande ‒ Sala 1",
-   "lat": 10.3979,
-   "lng": -75.5499,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
-   },
-   "address": "Av. San Martín, Bocagrande, Cartagena",
-   "alias": [],
-   "festivales": [
-    "ficci-65"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "Plaza Bocagrande"
   },
   "s_301651c3": {
    "nombre": "Cinema Local",
@@ -2146,12 +2100,16 @@
    "lat": 3.4498201,
    "lng": -76.5361556,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+Cultural+de+Cali/@3.4498201,-76.5361556,17z",
+    "fecha": "2026-11-26",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Cra. 5 # 6-05, San Pedro",
    "alias": [
-    "Centro Cultural de Cali - Cali"
+    "Centro Cultural de Cali - Cali",
+    "Plazoleta del Samán",
+    "Plazoleta del Samán - Cali"
    ],
    "festivales": [
     "ficdeh-2026"
@@ -2286,22 +2244,6 @@
    ],
    "ciudad": "Manizales",
    "corto": "Teatro los Fundadores"
-  },
-  "s_34ec3c29": {
-   "nombre": "Plaza Bocagrande ‒ Sala 2",
-   "lat": 10.3979,
-   "lng": -75.5499,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
-   },
-   "address": "Av. San Martín, Bocagrande, Cartagena",
-   "alias": [],
-   "festivales": [
-    "ficci-65"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "Plaza Bocagrande"
   },
   "s_36b34e66": {
    "nombre": "Cine fest",
@@ -2511,7 +2453,9 @@
    "festivales": [
     "tribeca-2026"
    ],
-   "corto": "Spring Studios"
+   "corto": "Spring Studios",
+   "ciudad": "Nueva York",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_3c28b8d0": {
    "nombre": "Secretaría de la Mujer y Equidad de Género",
@@ -2578,22 +2522,6 @@
    ],
    "ciudad": "Pereira",
    "corto": "Colombo Americano de Pereira"
-  },
-  "s_3d6f67be": {
-   "nombre": "Auditorio Ciro Mendía Caldas",
-   "lat": 6.0925082,
-   "lng": -75.6352338,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Carrera 49 #128 Sur-40",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Caldas",
-   "corto": "Auditorio Ciro Mendía"
   },
   "s_3d810f53": {
    "nombre": "CasArte3962",
@@ -2707,7 +2635,9 @@
    "festivales": [
     "tribeca-2026"
    ],
-   "corto": "Le Poisson Rouge"
+   "corto": "Le Poisson Rouge",
+   "ciudad": "Nueva York",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_401a944e": {
    "nombre": "Institución Educativa La Independencia",
@@ -2816,37 +2746,9 @@
    "festivales": [
     "tribeca-2026"
    ],
-   "corto": "AMC 19th St."
-  },
-  "s_4660f10c": {
-   "nombre": "MAMM · Plazoleta",
-   "lat": 6.2338,
-   "lng": -75.5697,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "aff-2026.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "aff-2026"
-   ],
-   "ciudad": "Medellín",
-   "corto": "MAMM · Plazoleta"
-  },
-  "s_46827f84": {
-   "nombre": "Plaza Proclamación",
-   "lat": 10.423,
-   "lng": -75.548,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "ficci-65"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "Plaza Proclamación"
+   "corto": "AMC 19th St.",
+   "ciudad": "Nueva York",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_469ea671": {
    "nombre": "Museo Panóptico de Ibagué",
@@ -2857,13 +2759,22 @@
     "fuente": "ficdeh-2026.json (publicado)"
    },
    "alias": [
+    "Centro Cultural Panóptico de Ibagué",
+    "Centro Cultural Panóptico de Ibagué - Ibagué",
     "Museo Panóptico de Ibagué - Ibagué"
    ],
    "festivales": [
     "ficdeh-2026"
    ],
    "ciudad": "Ibagué",
-   "corto": "Museo Panóptico de Ibagué"
+   "corto": "Museo Panóptico de Ibagué",
+   "salas": [
+    "Auditorio",
+    "Celda Teatro Ibagué (Proyección en loop)"
+   ],
+   "salas_alias": {
+    "Celda Teatro Ibagué - Proyección en loop": "Celda Teatro Ibagué (Proyección en loop)"
+   }
   },
   "s_46b59d10": {
    "nombre": "Cine York",
@@ -2910,8 +2821,12 @@
     "fecha": "2026-11-16",
     "fuente": "verificado en Google Maps"
    },
-   "alias": [],
+   "alias": [
+    "Auditorio Centro Cultural Universitario Rogelio Salmona",
+    "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales"
+   ],
    "festivales": [
+    "ficdeh-2026",
     "ficma-2026"
    ],
    "ciudad": "Manizales",
@@ -3234,11 +3149,13 @@
   },
   "s_51ff4c81": {
    "nombre": "I.E. Pedro Luis Álvarez Caldas",
-   "lat": 6.0925082,
-   "lng": -75.6352338,
+   "lat": 6.089104,
+   "lng": -75.630312,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Instituci%C3%B3n+Educativa+Pedro+Luis+%C3%81lvarez+Correa/@6.089104,-75.630312,17z",
+    "fecha": "2026-11-26",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Calle 132 Sur #44-93",
    "alias": [],
@@ -3285,21 +3202,6 @@
    "ciudad": "Medellín",
    "_ciudad_fijada": "lugar vecino del almacén a 0 m",
    "institucion": "i_b40f78bd"
-  },
-  "s_531b9b0a": {
-   "nombre": "Plaza Bocagrande",
-   "lat": 10.3987,
-   "lng": -75.5499,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "ficci-65"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "Plaza Bocagrande"
   },
   "s_538b1159": {
    "nombre": "Biblioteca Pública La Marichuela",
@@ -3483,7 +3385,9 @@
    "festivales": [
     "tribeca-2026"
    ],
-   "corto": "Hudson Yards"
+   "corto": "Hudson Yards",
+   "ciudad": "Nueva York",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_57b40373": {
    "nombre": "Clandestino Records",
@@ -3530,7 +3434,8 @@
     "cinemancia-2025"
    ],
    "corto": "Biblioteca Barbosa",
-   "_ciudad_dudosa": "Barbosa"
+   "ciudad": "Barbosa",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_59792218": {
    "nombre": "Alpamanda Peña Cultural",
@@ -3655,30 +3560,6 @@
    "ciudad": "Barranquilla",
    "corto": "Universidad del Atlántico, sede Norte"
   },
-  "s_5dc39901": {
-   "nombre": "Centro Cultural Panóptico de Ibagué",
-   "lat": 4.4483425,
-   "lng": -75.2400253,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "alias": [
-    "Centro Cultural Panóptico de Ibagué - Ibagué"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "salas": [
-    "Auditorio",
-    "Celda Teatro Ibagué (Proyección en loop)"
-   ],
-   "salas_alias": {
-    "Celda Teatro Ibagué - Proyección en loop": "Celda Teatro Ibagué (Proyección en loop)"
-   },
-   "ciudad": "Ibagué",
-   "corto": "Centro Cultural Panóptico de Ibagué"
-  },
   "s_5f0c609d": {
    "nombre": "Auditorio Cultural Diego Echavarría Misas",
    "lat": 6.1722992,
@@ -3794,27 +3675,6 @@
    "ciudad": "Bogotá",
    "corto": "Centro Integral de Justicia Campo Verde"
   },
-  "s_61b5d7d1": {
-   "nombre": "Cineprox",
-   "lat": 6.2145832,
-   "lng": -75.5963458,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "address": "Dg. 75B #2A-120Rotonda Comercial Las Américas",
-   "alias": [
-    "Cineprox - Medellín"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "salas": [
-    "SALA 3"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Cineprox"
-  },
   "s_626a169c": {
    "nombre": "Café Pletórico",
    "lat": 6.2935942,
@@ -3834,15 +3694,21 @@
    "corto": "Café Pletórico"
   },
   "s_63354c37": {
-   "nombre": "CC Caribe Plaza ‒ Sala 6",
-   "lat": 10.4061,
-   "lng": -75.5005,
+   "nombre": "CC Caribe Plaza",
+   "lat": 10.414434,
+   "lng": -75.5295239,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Caribe+Plaza+Centro+Comercial/@10.414434,-75.5295239,17z",
+    "fecha": "2026-11-26",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Av. Pedro de Heredia, Cartagena",
-   "alias": [],
+   "alias": [
+    "CC Caribe Plaza ‒ Sala 2",
+    "CC Caribe Plaza ‒ Sala 5",
+    "CC Caribe Plaza ‒ Sala 6"
+   ],
    "festivales": [
     "ficci-65"
    ],
@@ -3859,9 +3725,11 @@
    },
    "address": "Cl. 73 #51D-14",
    "alias": [
+    "Fiesta del Libro Jardín Botánico",
     "Jardín Botánico de Medellín - Medellín"
    ],
    "festivales": [
+    "cinemancia-2025",
     "ficdeh-2026"
    ],
    "salas": [
@@ -3985,10 +3853,12 @@
    },
    "address": "Carrera 49 # 128 Sur–40, Caldas, Antioquia",
    "alias": [
+    "Auditorio Ciro Mendía Caldas",
     "Casa Municipal de la Cultura - Caldas",
     "Casa Municipal de la Cultura de Caldas Caldas"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026"
    ],
    "ciudad": "Caldas",
@@ -4154,9 +4024,11 @@
    },
    "address": "Cl. 71, Aranjuez",
    "alias": [
+    "Fiesta del Libro Parque de los Deseos",
     "Parque de los Deseos - Medellín"
    ],
    "festivales": [
+    "cinemancia-2025",
     "fantasmagoria-2026",
     "ficdeh-2026",
     "miradas-2026"
@@ -4489,6 +4361,26 @@
    "ciudad": "Guatapé",
    "corto": "Finca La Manuela"
   },
+  "s_73517fc2": {
+   "nombre": "CC Caribe Plaza",
+   "lat": 10.4071,
+   "lng": -75.5005,
+   "evidencia": {
+    "nivel": "aproximado",
+    "fuente": "ficci-65.json (publicado)"
+   },
+   "alias": [
+    "CC Caribe Plaza ‒ Sala 2",
+    "CC Caribe Plaza ‒ Sala 5",
+    "CC Caribe Plaza ‒ Sala 6"
+   ],
+   "festivales": [
+    "ficci-65"
+   ],
+   "ciudad": "Cartagena",
+   "corto": "CC Caribe Plaza",
+   "address": "Av. Pedro de Heredia, Cartagena"
+  },
   "s_73cac39d": {
    "nombre": "Salón Comunal Vda. San Bernardo",
    "lat": 4.915146,
@@ -4742,9 +4634,11 @@
    },
    "address": "Cra. 52 #71-117",
    "alias": [
+    "Planetario",
     "Planetario de Medellín - Medellín"
    ],
    "festivales": [
+    "cinemancia-2025",
     "fantasmagoria-2026",
     "miradas-2026"
    ],
@@ -4769,24 +4663,6 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali"
-  },
-  "s_7c506403": {
-   "nombre": "Plazoleta del Samán",
-   "lat": 3.4498201,
-   "lng": -76.5361556,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "address": "Cra. 5 # 6-05, San Pedro",
-   "alias": [
-    "Plazoleta del Samán - Cali"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "ciudad": "Cali",
-   "corto": "Plazoleta del Samán"
   },
   "s_7d5e0def": {
    "nombre": "Museo de Arte Moderno",
@@ -4902,24 +4778,6 @@
    "ciudad": "Santa Fe de Antioquia",
    "corto": "Barrio Llano de Bolívar"
   },
-  "s_7fc7a387": {
-   "nombre": "Fundación Batuta Caldas",
-   "lat": 5.0508329,
-   "lng": -75.4828074,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "address": "Cra. 22 #70b-31, Manizales, Caldas",
-   "alias": [
-    "Fundación Batuta Caldas - Manizales"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "ciudad": "Manizales",
-   "corto": "Fundación Batuta Caldas"
-  },
   "s_808cba64": {
    "nombre": "Universidad Jorge Tadeo Lozano",
    "lat": 4.606567,
@@ -5008,38 +4866,29 @@
    "ciudad": "Toro",
    "corto": "Coliseo Corregimiento de San Francisco"
   },
-  "s_80a1ce5d": {
-   "nombre": "Claustro Comfama",
-   "lat": 6.24575,
-   "lng": -75.56372,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Claustro Comfama"
-  },
   "s_80a2590b": {
    "nombre": "AECID",
-   "lat": 10.421,
-   "lng": -75.5484,
+   "lat": 10.4244554,
+   "lng": -75.5521665,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Centro+de+Formacion+de+la+Cooperacion+Espa%C3%B1ola/@10.4244554,-75.5521665,17z",
+    "fecha": "2026-11-26",
+    "fuente": "verificado en Google Maps"
    },
    "alias": [
+    "Centro de Formación de la Cooperación Española",
+    "Centro de Formación de la Cooperación Española - Cartagena",
     "aecid"
    ],
    "festivales": [
-    "ficci-65"
+    "ficci-65",
+    "ficdeh-2026"
    ],
    "ciudad": "Cartagena",
    "corto": "AECID",
-   "address": "Cartagena"
+   "address": "Cartagena",
+   "_elegido_de": "maps"
   },
   "s_81709587": {
    "nombre": "Gimnasio Moderno",
@@ -5060,39 +4909,6 @@
    ],
    "ciudad": "Bogotá",
    "corto": "Gimnasio Moderno"
-  },
-  "s_8178a092": {
-   "nombre": "CC Caribe Plaza",
-   "lat": 10.4071,
-   "lng": -75.5005,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "ficci-65"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "CC Caribe Plaza"
-  },
-  "s_81d3b00d": {
-   "nombre": "Centro de Formación de la Cooperación Española",
-   "lat": 10.4244554,
-   "lng": -75.5521665,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "address": "Calle 36 # 2-74, El Centro",
-   "alias": [
-    "Centro de Formación de la Cooperación Española - Cartagena"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "Centro de Formación de la Cooperación Española"
   },
   "s_826e6831": {
    "nombre": "Teatro Municipal de Jardín",
@@ -5550,24 +5366,6 @@
    "ciudad": "Santa Fe de Antioquia",
    "corto": "Catedral Basílica Metropolitana"
   },
-  "s_90b61903": {
-   "nombre": "Biblioteca Pública CEFE Fontanar Del Río",
-   "lat": 4.7561244,
-   "lng": -74.1110572,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "address": "Calle 146 # 138A-99",
-   "alias": [
-    "Biblioteca Pública CEFE Fontanar Del Río - Bogotá"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "ciudad": "Bogotá",
-   "corto": "Biblioteca Pública CEFE Fontanar Del Río"
-  },
   "s_9106c39d": {
    "nombre": "Teatro al aire libre La Media Torta",
    "lat": 4.6003444,
@@ -5642,22 +5440,6 @@
    ],
    "ciudad": "Pereira",
    "corto": "Cine Club Alef - Casa Hoja"
-  },
-  "s_92a4e3bb": {
-   "nombre": "Cine Passeio Luz",
-   "lat": -25.426501,
-   "lng": -49.26945,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "olhar-2026.json (publicado)"
-   },
-   "address": "R. Riachuelo, 410 - Centro",
-   "alias": [],
-   "festivales": [
-    "olhar-2026"
-   ],
-   "ciudad": "Curitiba",
-   "corto": "Cine Passeio (Luz)"
   },
   "s_92e9bbf4": {
    "nombre": "Scotiabank Theatre Toronto",
@@ -5769,21 +5551,6 @@
    "ciudad": "Villa de Leyva",
    "corto": "Hotel Mesón de los Virreyes"
   },
-  "s_958f34a7": {
-   "nombre": "Fiesta del Libro Parque de los Deseos",
-   "lat": 6.26846,
-   "lng": -75.56611,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Parque de los Deseos"
-  },
   "s_964bfd80": {
    "nombre": "Malecón",
    "lat": 6.2356097,
@@ -5858,7 +5625,9 @@
    "festivales": [
     "tribeca-2026"
    ],
-   "corto": "Beacon Theatre"
+   "corto": "Beacon Theatre",
+   "ciudad": "Nueva York",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_98028200": {
    "nombre": "Centro Cultural Brisas de Mayo",
@@ -5899,29 +5668,6 @@
    ],
    "ciudad": "Manizales",
    "corto": "Universidad Autónoma"
-  },
-  "s_9854df1f": {
-   "nombre": "Colombo Americano",
-   "lat": 6.2592,
-   "lng": -75.5682,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "aff-2026.json (publicado)"
-   },
-   "address": "Calle 43 #25-30",
-   "alias": [
-    "Colombo Americano - Medellín"
-   ],
-   "festivales": [
-    "aff-2026",
-    "ficdeh-2026"
-   ],
-   "salas": [
-    "SALA 1",
-    "SALA 2"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Colombo Americano"
   },
   "s_987cd558": {
    "nombre": "Media Torta de Chipre",
@@ -5997,7 +5743,9 @@
     "Cine MAMM",
     "Cine MAMM - Medellín",
     "Cine MAMM Medellín",
+    "Industry Days",
     "MAMM - Medellín",
+    "MAMM · Plazoleta",
     "Museo de Arte Moderno de Medellín",
     "Museo de Arte Moderno de Medellín - MAMM",
     "Museo de Arte Moderno de Medellín - MAMM - Medellín"
@@ -6098,22 +5846,6 @@
    ],
    "ciudad": "Popayán",
    "corto": "Mikuna Casa Cultural"
-  },
-  "s_9bd6abf8": {
-   "nombre": "Plaza Bocagrande ‒ Sala 5",
-   "lat": 10.3979,
-   "lng": -75.5499,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
-   },
-   "address": "Av. San Martín, Bocagrande, Cartagena",
-   "alias": [],
-   "festivales": [
-    "ficci-65"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "Plaza Bocagrande"
   },
   "s_9bd9d312": {
    "nombre": "Cine Arte Cacodelphia",
@@ -6300,22 +6032,6 @@
    "ciudad": "La Florida",
    "corto": "Parque Principal de La Florida"
   },
-  "s_a06e814b": {
-   "nombre": "Centro Cultural Echavarría Misas",
-   "lat": 6.1723554,
-   "lng": -75.6112823,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Calle 48 No 51-34",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Itagüí",
-   "corto": "Echavarría Misas"
-  },
   "s_a140e4f3": {
    "nombre": "Finca Agroturística El Encanto de Mis Abuelos",
    "lat": 6.2985309,
@@ -6436,9 +6152,11 @@
    },
    "address": "Cl. 51 #36-66. Parque Bicentenario",
    "alias": [
+    "Casa de la Memoria",
     "Museo Casa de la Memoria - Medellín"
    ],
    "festivales": [
+    "cinemancia-2025",
     "ficdeh-2026"
    ],
    "ciudad": "Medellín",
@@ -6760,22 +6478,6 @@
    "ciudad": "Guatapé",
    "corto": "Biblioteca Municipal"
   },
-  "s_ae9ee9c2": {
-   "nombre": "Cinemas Procinal Las Américas",
-   "lat": 6.2145832,
-   "lng": -75.5963458,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Diagonal 75B #2A-120",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Procinal Las Américas"
-  },
   "s_af437f4a": {
    "nombre": "Universidad Jorge Tadeo Lozano Salón Oval",
    "lat": 4.607911,
@@ -6915,17 +6617,25 @@
    },
    "address": "Dg. 75B #2A-120",
    "alias": [
+    "Cinemas Procinal Las Américas",
+    "Cineprox",
+    "Cineprox - Medellín",
     "Cineprox Las Américas",
     "Cineprox Las Américas - Medellín",
-    "Cineprox Las Américas Medellín"
+    "Cineprox Las Américas Medellín",
+    "Procinal Las Américas",
+    "Procinal Las Américas Sala 3"
    ],
    "festivales": [
+    "cinemancia-2025",
     "cinemancia-2026",
     "fantasmagoria-2026",
+    "ficdeh-2026",
     "mamut-2026",
     "miradas-2026"
    ],
    "salas": [
+    "SALA 3",
     "Sala 3"
    ],
    "ciudad": "Medellín",
@@ -6933,6 +6643,9 @@
    "corto_decidido": {
     "por_que": "decidido por Juan el 26 nov 2026 (fase 2: un nombre por lugar)",
     "fecha": "2026-11-26"
+   },
+   "salas_alias": {
+    "SALA 3": "Sala 3"
    }
   },
   "s_b5d25cab": {
@@ -6953,24 +6666,37 @@
     "Centro Colombo Americano - Sede centro - Medellín",
     "Centro Colombo Americano Sede centro sala 1 Medellín",
     "Centro Colombo Americano Sede centro sala 2 Medellín",
-    "Centro Colombo Americano, Aula Múltiple."
+    "Centro Colombo Americano Sede centro. Sala 2",
+    "Centro Colombo Americano, Aula Múltiple.",
+    "Colombo Americano",
+    "Colombo Americano - Medellín",
+    "Colombo Sala 1",
+    "Colombo Sala 2"
    ],
    "festivales": [
+    "aff-2026",
     "aleste-2026",
     "cinemancia-2025",
     "cinemancia-2026",
     "fantasmagoria-2026",
+    "ficdeh-2026",
     "mamut-2026",
     "miradas-2026",
     "vartex-2026"
    ],
    "salas": [
     "Aula Múltiple",
+    "SALA 1",
+    "SALA 2",
     "Sala 1",
     "Sala 2"
    ],
    "ciudad": "Medellín",
-   "corto": "Centro Colombo Americano"
+   "corto": "Centro Colombo Americano",
+   "salas_alias": {
+    "SALA 1": "Sala 1",
+    "SALA 2": "Sala 2"
+   }
   },
   "s_b655ef88": {
    "nombre": "Teatro del Norte",
@@ -7175,7 +6901,9 @@
    "festivales": [
     "tribeca-2026"
    ],
-   "corto": "SVA Theatre"
+   "corto": "SVA Theatre",
+   "ciudad": "Nueva York",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_ba748121": {
    "nombre": "Centro Cultural Bacatá",
@@ -7252,22 +6980,6 @@
    "ciudad": "Bogotá",
    "corto": "U. Nacional"
   },
-  "s_bc055e86": {
-   "nombre": "Plaza Bocagrande ‒ Sala 4",
-   "lat": 10.3979,
-   "lng": -75.5499,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
-   },
-   "address": "Av. San Martín, Bocagrande, Cartagena",
-   "alias": [],
-   "festivales": [
-    "ficci-65"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "Plaza Bocagrande"
-  },
   "s_bc531678": {
    "nombre": "Banco de la República",
    "lat": 1.2115002,
@@ -7312,11 +7024,13 @@
   },
   "s_bde21274": {
    "nombre": "IED Rural San Bernardo",
-   "lat": 4.915146,
-   "lng": -74.41883,
+   "lat": 4.9194678,
+   "lng": -74.4190398,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "siembrafest-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://www.google.com/maps/place/Colegio+San+Bernardo+Sasaima/@4.9194678,-74.4190398,17z",
+    "fecha": "2026-11-26",
+    "fuente": "verificado en Google Maps"
    },
    "address": "Vereda San Bernardo",
    "alias": [
@@ -7344,23 +7058,6 @@
    ],
    "ciudad": "Jardín",
    "institucion": "i_eac0636e"
-  },
-  "s_be94e26b": {
-   "nombre": "Auditorio Centro Cultural Universitario Rogelio Salmona",
-   "lat": 5.0545465,
-   "lng": -75.4916559,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "alias": [
-    "Auditorio Centro Cultural Universitario Rogelio Salmona - Manizales"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "ciudad": "Manizales",
-   "corto": "Auditorio Centro Cultural Universitario Rogelio Salmona"
   },
   "s_bf32b45a": {
    "nombre": "Fábrica de la Cultura 2",
@@ -7462,27 +7159,16 @@
     "fecha": "2026-11-16",
     "fuente": "verificado en Google Maps"
    },
-   "alias": [],
+   "alias": [
+    "Fundación Batuta Caldas",
+    "Fundación Batuta Caldas - Manizales"
+   ],
    "festivales": [
+    "ficdeh-2026",
     "ficma-2026"
    ],
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 638 m"
-  },
-  "s_bfe0dda3": {
-   "nombre": "C. de Convenciones · Patio de Banderas",
-   "lat": 10.4242,
-   "lng": -75.5505,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "ficci-65"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "C. Convenciones"
   },
   "s_bfe8b044": {
    "nombre": "SENA CDAE Villeta",
@@ -7575,24 +7261,6 @@
    "ciudad": "Bogotá",
    "corto": "Casa de las Luciérnagas"
   },
-  "s_c2a57132": {
-   "nombre": "Cinemateca del Museo La Tertulia",
-   "lat": 3.45019,
-   "lng": -76.54538,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "address": "Cra. 1 # 5-105, Oeste",
-   "alias": [
-    "Cinemateca del Museo La Tertulia - Cali"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "ciudad": "Cali",
-   "corto": "Cinemateca del Museo La Tertulia"
-  },
   "s_c2f59f7f": {
    "nombre": "Cinemateca La Tertulia",
    "lat": 3.4502809,
@@ -7602,9 +7270,13 @@
     "fuente": "ficcali-2026-venues-geo.json"
    },
    "address": "Carrera 1 Oeste #5-105, El Peñón",
-   "alias": [],
+   "alias": [
+    "Cinemateca del Museo La Tertulia",
+    "Cinemateca del Museo La Tertulia - Cali"
+   ],
    "festivales": [
-    "ficcali-2026"
+    "ficcali-2026",
+    "ficdeh-2026"
    ],
    "ciudad": "Cali",
    "corto": "Cinemateca La Tertulia"
@@ -7666,22 +7338,6 @@
    "ciudad": "Medellín",
    "corto": "La Pascasia"
   },
-  "s_c5c7fd6b": {
-   "nombre": "CC Caribe Plaza ‒ Sala 2",
-   "lat": 10.4061,
-   "lng": -75.5005,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
-   },
-   "address": "Av. Pedro de Heredia, Cartagena",
-   "alias": [],
-   "festivales": [
-    "ficci-65"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "CC Caribe Plaza"
-  },
   "s_c760d1fd": {
    "nombre": "Casa Escuela Formación Musical Leo Olarte",
    "lat": 5.9359462,
@@ -7714,6 +7370,8 @@
    },
    "address": "Calle 146 # 138A-99",
    "alias": [
+    "Biblioteca Pública CEFE Fontanar Del Río",
+    "Biblioteca Pública CEFE Fontanar Del Río - Bogotá",
     "Cinemateca Fontanar del Río - Bogotá",
     "Cinemateca de Bogotá Sede Fontanar del Río"
    ],
@@ -7744,37 +7402,6 @@
    ],
    "ciudad": "Cali",
    "corto": "Cine Colombia Unicentro"
-  },
-  "s_c8923ef3": {
-   "nombre": "Fiesta del Libro Jardín Botánico",
-   "lat": 6.27053,
-   "lng": -75.56353,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Jardín Botánico"
-  },
-  "s_caf327dd": {
-   "nombre": "ITM La Floresta",
-   "lat": 6.2575168,
-   "lng": -75.6019566,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Calle 47A #85-20",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "ITM"
   },
   "s_cb9cf76f": {
    "nombre": "Casa de la Juventud Nacho Sánchez",
@@ -7828,22 +7455,6 @@
    ],
    "ciudad": "Barranquilla",
    "corto": "Book Times"
-  },
-  "s_cc779c09": {
-   "nombre": "Terko Bar",
-   "lat": 6.34726,
-   "lng": -75.506,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Calle 50#47-21",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Copacabana",
-   "corto": "Terko Bar"
   },
   "s_cd218eeb": {
    "nombre": "Institución Educativa Ágora",
@@ -7927,7 +7538,9 @@
    "festivales": [
     "tribeca-2026"
    ],
-   "corto": "OKX Theater"
+   "corto": "OKX Theater",
+   "ciudad": "Nueva York",
+   "_ciudad_fijada": "Nominatim reverso"
   },
   "s_cf6efa76": {
    "nombre": "Museo Arqueológico Jaime Hincapié Santa María",
@@ -7973,29 +7586,16 @@
     "nivel": "manual",
     "fuente": "ficma-2026-venues-geo.json"
    },
-   "alias": [],
+   "alias": [
+    "All Cine Cable Plaza",
+    "All Cine Cable Plaza - Manizales"
+   ],
    "festivales": [
+    "ficdeh-2026",
     "ficma-2026"
    ],
    "ciudad": "Manizales",
    "_ciudad_fijada": "lugar vecino del almacén a 118 m"
-  },
-  "s_d1a2e010": {
-   "nombre": "Cinemateca Sala 2",
-   "lat": 4.6032463,
-   "lng": -74.06758,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "fantasofest-2026.json (publicado)"
-   },
-   "address": "Carrera 3 No. 19-10",
-   "alias": [],
-   "festivales": [
-    "fantasofest-2026",
-    "tercertiempo-2026"
-   ],
-   "ciudad": "Bogotá",
-   "corto": "Cinemateca de Bogotá"
   },
   "s_d1aeb7dc": {
    "nombre": "Yawa",
@@ -8049,23 +7649,6 @@
    ],
    "ciudad": "Cali",
    "corto": "Plazoleta La Maceta"
-  },
-  "s_d2e461ee": {
-   "nombre": "All Cine Cable Plaza",
-   "lat": 5.0562896,
-   "lng": -75.4854314,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "alias": [
-    "All Cine Cable Plaza - Manizales"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "ciudad": "Manizales",
-   "corto": "All Cine Cable Plaza"
   },
   "s_d478c93a": {
    "nombre": "Biblioteca Pública San Luis I",
@@ -8269,22 +7852,6 @@
    "ciudad": "Fusagasugá",
    "corto": "Centro de Integración e Innovación Social"
   },
-  "s_dacdf5ec": {
-   "nombre": "Colombo Sala 1",
-   "lat": 6.2497341,
-   "lng": -75.5627237,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Calle 43 #54-139",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Colombo Americano"
-  },
   "s_db1dfa76": {
    "nombre": "Academia Municipal Girardota",
    "lat": 6.3755727,
@@ -8351,24 +7918,6 @@
    "ciudad": "Bogotá",
    "corto": "CEFE Cometas"
   },
-  "s_dd41c912": {
-   "nombre": "COMFAMA",
-   "lat": 6.2457531,
-   "lng": -75.5637191,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "address": "Carrera 44 # 48 - 18",
-   "alias": [
-    "COMFAMA - Capilla del Claustro - Medellín"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "ciudad": "Medellín",
-   "corto": "COMFAMA - Capilla del Claustro"
-  },
   "s_dd71de11": {
    "nombre": "Universidad Santiago de Cali",
    "lat": 3.4033961,
@@ -8428,22 +7977,6 @@
    ],
    "ciudad": "Pasto",
    "corto": "Universidad Mariana"
-  },
-  "s_de1a611f": {
-   "nombre": "Centro Colombo Americano Sede centro. Sala 2",
-   "lat": 6.2497341,
-   "lng": -75.5627237,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Calle 43 #54-139",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Colombo Americano"
   },
   "s_df30b46a": {
    "nombre": "Universidad de la Costa – CUC",
@@ -8691,21 +8224,6 @@
    "ciudad": "Medellín",
    "corto": "Casa TEA"
   },
-  "s_e39441b1": {
-   "nombre": "Industry Days",
-   "lat": 6.2338,
-   "lng": -75.5697,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "aff-2026.json (publicado)"
-   },
-   "alias": [],
-   "festivales": [
-    "aff-2026"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Industry Days"
-  },
   "s_e4ad0263": {
    "nombre": "Centro Cultural Banco de la República",
    "lat": 6.249052,
@@ -8811,22 +8329,6 @@
    "corto": "Auditorio Nido",
    "address": "Cartagena"
   },
-  "s_e876407d": {
-   "nombre": "Colombo Sala 2",
-   "lat": 6.2497341,
-   "lng": -75.5627237,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Calle 43 #54-139",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Colombo Americano"
-  },
   "s_e8c35b78": {
    "nombre": "Comfama",
    "lat": 6.3799362,
@@ -8878,22 +8380,6 @@
    "ciudad": "Marinilla",
    "corto": "Casa Cultural Valerio Antonio Jiménez",
    "institucion": "i_4a303e29"
-  },
-  "s_eac6c04b": {
-   "nombre": "CC Caribe Plaza ‒ Sala 5",
-   "lat": 10.4061,
-   "lng": -75.5005,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficci-65.json (publicado)"
-   },
-   "address": "Av. Pedro de Heredia, Cartagena",
-   "alias": [],
-   "festivales": [
-    "ficci-65"
-   ],
-   "ciudad": "Cartagena",
-   "corto": "CC Caribe Plaza"
   },
   "s_eb2718df": {
    "nombre": "Morning",
@@ -9090,22 +8576,6 @@
    ],
    "corto": "Centro Cultural y de Convenciones Fernando Botero"
   },
-  "s_ee8dd663": {
-   "nombre": "Casa de la Memoria",
-   "lat": 6.2459198,
-   "lng": -75.5565561,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Calle 51 #36-66",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Casa Memoria"
-  },
   "s_ee9c7bec": {
    "nombre": "CineQuanon",
    "lat": 3.4558323,
@@ -9190,39 +8660,6 @@
    "ciudad": "Barranquilla",
    "corto": "Barrio Villas de la Cordialidad"
   },
-  "s_f35fa424": {
-   "nombre": "Cinemateca Sala 3",
-   "lat": 4.6032463,
-   "lng": -74.06758,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "fantasofest-2026.json (publicado)"
-   },
-   "address": "Carrera 3 No. 19-10",
-   "alias": [],
-   "festivales": [
-    "fantasofest-2026",
-    "tercertiempo-2026"
-   ],
-   "ciudad": "Bogotá",
-   "corto": "Cinemateca de Bogotá"
-  },
-  "s_f379cae8": {
-   "nombre": "Procinal Las Américas Sala 3",
-   "lat": 6.2145832,
-   "lng": -75.5963458,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
-   },
-   "address": "Diagonal 75B #2A-120",
-   "alias": [],
-   "festivales": [
-    "cinemancia-2025"
-   ],
-   "ciudad": "Medellín",
-   "corto": "Cineprox Las Américas"
-  },
   "s_f4246a34": {
    "nombre": "Centro Comercial Terra Plaza",
    "lat": 2.4875749,
@@ -9288,8 +8725,12 @@
     "fuente": "verificado en Google Maps"
    },
    "address": "Calle 52 #54-75",
-   "alias": [],
+   "alias": [
+    "Alianza Francesa",
+    "Alianza Francesa - Barranquilla"
+   ],
    "festivales": [
+    "ficdeh-2026",
     "ficica-2026",
     "ficidi-2026"
    ],
@@ -9718,35 +9159,560 @@
   }
  },
  "redirecciones": {
+  "s_001dbac7": "s_ff62cf6a",
+  "s_0061ac1e": "s_f689bcee",
+  "s_0073d401": "s_891e8481",
+  "s_007906d1": "s_c564ed7b",
+  "s_008620a7": "s_dfa5f4a5",
+  "s_0095f216": "s_25caf24a",
+  "s_00e9633c": "s_dfa5f4a5",
+  "s_01021f9f": "s_46c0ae50",
+  "s_018ad014": "s_1be38f20",
+  "s_01e17eaf": "s_0655bb7b",
+  "s_053b9703": "s_5c62c6c3",
+  "s_05913243": "s_a8672cd3",
+  "s_06045e2f": "s_bfd4ab42",
+  "s_06867ff5": "s_c82c47d7",
+  "s_068977ac": "s_20a122a7",
+  "s_082fb26a": "s_46c0ae50",
+  "s_08aeafff": "s_c82c47d7",
+  "s_09ec5e19": "s_bfd4ab42",
+  "s_0a055496": "s_c2f59f7f",
+  "s_0aa6d66d": "s_1347d668",
+  "s_0b0c8db1": "s_34d4a9cf",
+  "s_0bf45511": "s_b3c7c07a",
+  "s_0c49848a": "s_ff62cf6a",
+  "s_0cae3293": "s_c564ed7b",
+  "s_0cc84d84": "s_c564ed7b",
+  "s_0d297392": "s_d1996183",
+  "s_0ddbbdc9": "s_c564ed7b",
+  "s_0f922d02": "s_5c62c6c3",
+  "s_0fc56526": "s_d1996183",
+  "s_1027352f": "s_66915e12",
+  "s_114d9ec1": "s_891e8481",
+  "s_123dbace": "s_f7766586",
+  "s_1263aa84": "s_66915e12",
+  "s_131135dd": "s_c82c47d7",
+  "s_13796db0": "s_d1996183",
+  "s_13f14e30": "s_20a122a7",
+  "s_148aff1a": "s_b5d25cab",
+  "s_1498fd64": "s_c564ed7b",
+  "s_1616af9b": "s_66915e12",
+  "s_17a56376": "s_1be38f20",
+  "s_17fe8bc9": "s_c2f59f7f",
+  "s_181095cb": "s_5c62c6c3",
+  "s_181de983": "s_b3c7c07a",
+  "s_196fb8f9": "s_891e8481",
+  "s_19a03d17": "s_bfd4ab42",
+  "s_1b01a448": "s_c2f59f7f",
+  "s_1b4ab616": "s_ff62cf6a",
+  "s_1b5a824c": "s_66915e12",
+  "s_1bb1557c": "s_5c62c6c3",
   "s_1bbd676f": "s_f7766586",
+  "s_1d03e3a9": "s_c2f59f7f",
+  "s_1d54e8e8": "s_dfa5f4a5",
   "s_1da2107a": "s_a8672cd3",
+  "s_1dce6596": "s_25caf24a",
+  "s_1e369be1": "s_0655bb7b",
+  "s_1eeb3509": "s_d1996183",
+  "s_1ef5ecdd": "s_2f75a36e",
+  "s_1efbf035": "s_7aa97950",
+  "s_1f64a9a3": "s_98bbb7e0",
+  "s_20babab4": "s_25652566",
   "s_20c9dc1e": "s_f7766586",
+  "s_20cb6106": "s_7aa97950",
+  "s_210936e4": "s_b5d25cab",
+  "s_219c43fb": "s_dfa5f4a5",
+  "s_21aee56e": "s_384e68d5",
+  "s_224a3536": "s_dfa5f4a5",
+  "s_22a3a0f5": "s_99915661",
+  "s_22bc1cd7": "s_0655bb7b",
+  "s_22edf6af": "s_99915661",
+  "s_232e0a3e": "s_34d4a9cf",
+  "s_23497c7e": "s_7aa97950",
+  "s_2366dab2": "s_b3c7c07a",
+  "s_2376132a": "s_34d4a9cf",
+  "s_249f1523": "s_384e68d5",
+  "s_24a1aef8": "s_bfd4ab42",
+  "s_25616c93": "s_25caf24a",
+  "s_2578b274": "s_17a71d8b",
+  "s_2631922d": "s_2f75a36e",
+  "s_26991857": "s_ff62cf6a",
+  "s_26f0e69a": "s_a8672cd3",
+  "s_26fa00c5": "s_b3c7c07a",
+  "s_27b70397": "s_a8672cd3",
+  "s_28a01f95": "s_12ebb5ae",
+  "s_29729878": "s_34d4a9cf",
+  "s_2a2ac3dc": "s_f689bcee",
+  "s_2a2bc80e": "s_1347d668",
   "s_2a97741a": "s_99915661",
+  "s_2b330d35": "s_25caf24a",
+  "s_2b5b0298": "s_17a71d8b",
+  "s_2ce469b0": "s_f7766586",
+  "s_2d29f975": "s_6a3d6ea4",
+  "s_2dd4a92a": "s_17a71d8b",
+  "s_2ddf68e7": "s_12ebb5ae",
+  "s_2e14fe1b": "s_c2f59f7f",
+  "s_2e7ad9fe": "s_17a71d8b",
+  "s_2f545ab7": "s_66915e12",
+  "s_2f93a792": "s_7aa97950",
+  "s_2fbb3202": "s_98bbb7e0",
+  "s_2fbc75de": "s_1e559a7c",
+  "s_2fc70b95": "s_5c62c6c3",
+  "s_3108c198": "s_1347d668",
+  "s_3115ce74": "s_f689bcee",
+  "s_31613067": "s_f7766586",
+  "s_31d4d381": "s_bfd4ab42",
+  "s_31f4df52": "s_7aa97950",
+  "s_33073748": "s_0655bb7b",
+  "s_3361eeba": "s_f689bcee",
+  "s_33f22692": "s_b3c7c07a",
+  "s_34428fc1": "s_a8672cd3",
+  "s_34ec3c29": "s_1e559a7c",
+  "s_35d15f52": "s_7aa97950",
   "s_3628baf1": "s_34d4a9cf",
+  "s_36494df4": "s_891e8481",
+  "s_36711c70": "s_46c0ae50",
+  "s_36a2f7bc": "s_17a71d8b",
+  "s_36c5e770": "s_1be38f20",
+  "s_38b11470": "s_dfa5f4a5",
+  "s_38c806a7": "s_c564ed7b",
+  "s_3963654a": "s_2f75a36e",
+  "s_3a1a80bb": "s_c82c47d7",
+  "s_3c2eefb3": "s_1347d668",
+  "s_3c634695": "s_f7766586",
+  "s_3d1492cb": "s_a8672cd3",
+  "s_3d61ea71": "s_1347d668",
+  "s_3d6b4608": "s_1be38f20",
+  "s_3d6f67be": "s_66915e12",
+  "s_3db182f7": "s_17a71d8b",
+  "s_3e318bfa": "s_34d4a9cf",
+  "s_3e8a2913": "s_7aa97950",
+  "s_3f97e1ce": "s_12ebb5ae",
+  "s_407ab4d2": "s_99915661",
+  "s_40b7a9e3": "s_b3c7c07a",
+  "s_40f104bf": "s_384e68d5",
+  "s_41c21053": "s_c2f59f7f",
+  "s_41e6fff8": "s_12ebb5ae",
+  "s_42085dbf": "s_a8672cd3",
+  "s_42ca4d64": "s_384e68d5",
+  "s_430d92e4": "s_c2f59f7f",
+  "s_43a4e439": "s_25caf24a",
+  "s_43ca23b4": "s_34d4a9cf",
+  "s_45266d9b": "s_17a71d8b",
+  "s_454d51f4": "s_384e68d5",
+  "s_461a634e": "s_6a3d6ea4",
+  "s_4660f10c": "s_99915661",
+  "s_46778811": "s_891e8481",
+  "s_46827f84": "s_0bbb84e5",
+  "s_47110366": "s_2f75a36e",
+  "s_478d8b75": "s_2f75a36e",
+  "s_479be519": "s_d1996183",
+  "s_47ac5b09": "s_1347d668",
+  "s_485bbc62": "s_25652566",
+  "s_4896d1af": "s_891e8481",
+  "s_48c57ce1": "s_d1996183",
+  "s_492e1751": "s_0655bb7b",
+  "s_4a8f5534": "s_20a122a7",
+  "s_4abaa801": "s_c2f59f7f",
+  "s_4af28e88": "s_0655bb7b",
+  "s_4afbde8c": "s_bfd4ab42",
+  "s_4b382ea8": "s_34d4a9cf",
+  "s_4c1ef287": "s_98bbb7e0",
+  "s_4c453b7a": "s_384e68d5",
   "s_4d83a496": "s_5c62c6c3",
+  "s_4ddd90c3": "s_46c0ae50",
+  "s_4f77c87b": "s_12ebb5ae",
+  "s_502836aa": "s_20a122a7",
+  "s_5080e78d": "s_99915661",
+  "s_50b91ad3": "s_c564ed7b",
+  "s_5250751d": "s_891e8481",
+  "s_52a50ea4": "s_c82c47d7",
+  "s_52d25c39": "s_c82c47d7",
+  "s_531b9b0a": "s_1e559a7c",
+  "s_53968e8f": "s_46c0ae50",
+  "s_5469b727": "s_ff62cf6a",
+  "s_553c6297": "s_f689bcee",
+  "s_56c15cde": "s_17a71d8b",
+  "s_5746b264": "s_b5d25cab",
+  "s_57516e4e": "s_46c0ae50",
+  "s_577e9934": "s_20a122a7",
+  "s_58bd5995": "s_0655bb7b",
+  "s_58c29a53": "s_b3c7c07a",
+  "s_58e47600": "s_a8672cd3",
+  "s_58f8e918": "s_6a3d6ea4",
+  "s_5a4ddf39": "s_384e68d5",
+  "s_5af583ce": "s_dfa5f4a5",
+  "s_5b526f0b": "s_34d4a9cf",
+  "s_5b746f89": "s_b5d25cab",
   "s_5bb05c96": "s_25caf24a",
+  "s_5d31ba2d": "s_46c0ae50",
+  "s_5d55374c": "s_c82c47d7",
+  "s_5d90d91e": "s_ff62cf6a",
+  "s_5dc39901": "s_469ea671",
+  "s_5dcaaaee": "s_12ebb5ae",
+  "s_5dd0cf09": "s_20a122a7",
+  "s_5f115fc1": "s_5c62c6c3",
+  "s_5f3b05c3": "s_98bbb7e0",
+  "s_5f703941": "s_25caf24a",
+  "s_5fef7d54": "s_99915661",
+  "s_60760bb5": "s_12ebb5ae",
+  "s_61531830": "s_66915e12",
+  "s_61b5d7d1": "s_b3c7c07a",
+  "s_62900d04": "s_34d4a9cf",
+  "s_64f6ba70": "s_c82c47d7",
+  "s_64fd20d1": "s_f689bcee",
+  "s_651b0890": "s_7aa97950",
+  "s_6527d2c2": "s_1be38f20",
+  "s_655e3dea": "s_c82c47d7",
+  "s_657c3acf": "s_5c62c6c3",
+  "s_658eb439": "s_f689bcee",
   "s_67beacd5": "s_0655bb7b",
+  "s_68354e9a": "s_46c0ae50",
+  "s_688b3106": "s_b5d25cab",
+  "s_69ba9c82": "s_b3c7c07a",
   "s_6aab117a": "s_dfa5f4a5",
+  "s_6b6aa2bd": "s_98bbb7e0",
+  "s_6b8f20eb": "s_20a122a7",
+  "s_6c16039f": "s_46c0ae50",
+  "s_6c4c03d4": "s_12ebb5ae",
+  "s_6cc2e965": "s_7aa97950",
+  "s_6df1e110": "s_25caf24a",
+  "s_6ea141f4": "s_46c0ae50",
+  "s_6ebc6f68": "s_20a122a7",
+  "s_7006e908": "s_12ebb5ae",
+  "s_70168cf9": "s_a8672cd3",
+  "s_71d9237d": "s_ff62cf6a",
+  "s_72267a64": "s_1347d668",
+  "s_722f70e1": "s_f7766586",
+  "s_731c0386": "s_c564ed7b",
+  "s_732f3f7c": "s_c564ed7b",
+  "s_73365a45": "s_891e8481",
+  "s_7361ea26": "s_f7766586",
+  "s_73d8dddd": "s_f7766586",
+  "s_73f3669f": "s_7aa97950",
+  "s_74039584": "s_66915e12",
+  "s_7422c73f": "s_99915661",
+  "s_7517febd": "s_6a3d6ea4",
+  "s_75a49f8e": "s_384e68d5",
   "s_75f70e3f": "s_99915661",
+  "s_7740fac1": "s_f7766586",
+  "s_77423b4f": "s_a8672cd3",
+  "s_77e6c80f": "s_c564ed7b",
+  "s_7856e8ad": "s_f689bcee",
+  "s_790ef408": "s_b5d25cab",
+  "s_7927b527": "s_b5d25cab",
+  "s_79fe2995": "s_12ebb5ae",
+  "s_7abcda9c": "s_5c62c6c3",
+  "s_7b1abb7c": "s_c82c47d7",
+  "s_7b3118d6": "s_6a3d6ea4",
+  "s_7b654e62": "s_34d4a9cf",
+  "s_7b9fef26": "s_b5d25cab",
+  "s_7c506403": "s_31e92d8a",
+  "s_7df8ec6b": "s_f7766586",
+  "s_7e74554a": "s_f7766586",
+  "s_7e7e9492": "s_99915661",
+  "s_7f2a63dd": "s_b5d25cab",
+  "s_7fc7a387": "s_bfd4ab42",
+  "s_7fe6488d": "s_98bbb7e0",
+  "s_7fec664a": "s_d1996183",
+  "s_801407c9": "s_46c0ae50",
+  "s_80a1ce5d": "s_1347d668",
+  "s_815774c5": "s_f689bcee",
+  "s_8168ee46": "s_98bbb7e0",
+  "s_8178a092": "s_63354c37",
+  "s_8192f700": "s_66915e12",
+  "s_81cb7499": "s_0655bb7b",
+  "s_81d3b00d": "s_80a2590b",
+  "s_81f59459": "s_c82c47d7",
+  "s_825df88f": "s_99915661",
+  "s_82657573": "s_ff62cf6a",
+  "s_82db8442": "s_c2f59f7f",
+  "s_838406b4": "s_bfd4ab42",
+  "s_83ccc981": "s_c2f59f7f",
+  "s_83d1ad3e": "s_dfa5f4a5",
   "s_84425cb1": "s_98bbb7e0",
+  "s_849dbf91": "s_1be38f20",
+  "s_849dcf9a": "s_c2f59f7f",
+  "s_852bf65c": "s_bfd4ab42",
+  "s_8650d4b1": "s_b3c7c07a",
+  "s_86589821": "s_dfa5f4a5",
+  "s_86f9f6ba": "s_f7766586",
+  "s_87074e20": "s_dfa5f4a5",
+  "s_876b2ac5": "s_a8672cd3",
+  "s_87f325a0": "s_b5d25cab",
+  "s_89fb97d7": "s_c2f59f7f",
+  "s_8ab6f60c": "s_c564ed7b",
+  "s_8b1c65e4": "s_7aa97950",
+  "s_8b32c7d9": "s_d1996183",
+  "s_8bf195fa": "s_6a3d6ea4",
+  "s_8c8ca26e": "s_20a122a7",
+  "s_8d78f964": "s_384e68d5",
+  "s_8db932d4": "s_891e8481",
+  "s_8e580b91": "s_25caf24a",
+  "s_8eacbc65": "s_a8672cd3",
+  "s_8eb46eb8": "s_99915661",
+  "s_8edc2f5f": "s_ff62cf6a",
+  "s_8ef81c39": "s_384e68d5",
+  "s_8f0fdf64": "s_a8672cd3",
+  "s_8f1b80c0": "s_a8672cd3",
+  "s_8fb5df0c": "s_25caf24a",
+  "s_8ff96a7a": "s_f7766586",
+  "s_90168290": "s_98bbb7e0",
+  "s_904ee7c1": "s_98bbb7e0",
+  "s_90b61903": "s_c82c47d7",
+  "s_918f9aa9": "s_2f75a36e",
+  "s_9197d49d": "s_34d4a9cf",
+  "s_91a1dde0": "s_66915e12",
+  "s_92a4e3bb": "s_079de1f0",
+  "s_9500c3dd": "s_bfd4ab42",
+  "s_958f34a7": "s_6a3d6ea4",
+  "s_97b9242d": "s_46c0ae50",
+  "s_9854df1f": "s_b5d25cab",
+  "s_988fa0b7": "s_1347d668",
+  "s_998361e9": "s_5c62c6c3",
+  "s_9a58ee2c": "s_a8672cd3",
+  "s_9a733272": "s_c82c47d7",
   "s_9a89fed3": "s_891e8481",
+  "s_9ade59e6": "s_dfa5f4a5",
+  "s_9b85ef70": "s_d1996183",
   "s_9bac3b97": "s_6a3d6ea4",
+  "s_9bd6abf8": "s_1e559a7c",
+  "s_9c77b909": "s_d1996183",
+  "s_9cf5ade7": "s_2f75a36e",
+  "s_9d736561": "s_ff62cf6a",
+  "s_9daa7c16": "s_c2f59f7f",
+  "s_9e6aea67": "s_1be38f20",
+  "s_9e74df7a": "s_c2f59f7f",
+  "s_9ea43237": "s_17a71d8b",
+  "s_9f94f748": "s_bfd4ab42",
+  "s_9fd2b60b": "s_b5d25cab",
+  "s_a06d986e": "s_1be38f20",
   "s_a06daf52": "s_99915661",
+  "s_a06e814b": "s_12ebb5ae",
+  "s_a07c6ac2": "s_17a71d8b",
+  "s_a0ae81a7": "s_7aa97950",
+  "s_a0b3982f": "s_46c0ae50",
+  "s_a17def73": "s_6a3d6ea4",
   "s_a18cdfde": "s_1be38f20",
+  "s_a19bfe72": "s_5c62c6c3",
+  "s_a1f91919": "s_ff62cf6a",
+  "s_a207fcf9": "s_c564ed7b",
+  "s_a21d63ab": "s_891e8481",
+  "s_a2a1a1e7": "s_384e68d5",
+  "s_a3ce67ac": "s_7aa97950",
+  "s_a44550d4": "s_891e8481",
+  "s_a4bf2c43": "s_1be38f20",
+  "s_a4e003f6": "s_2f75a36e",
+  "s_a4eee84d": "s_99915661",
+  "s_a66bae87": "s_c564ed7b",
+  "s_a8598363": "s_6a3d6ea4",
+  "s_a8b4ce8e": "s_6a3d6ea4",
+  "s_a954794d": "s_25caf24a",
+  "s_a9bc1b91": "s_b5d25cab",
+  "s_a9eb44bf": "s_2f75a36e",
+  "s_a9eb65ff": "s_6a3d6ea4",
+  "s_aa16c50a": "s_0655bb7b",
+  "s_aa4f8e50": "s_17a71d8b",
+  "s_aad61b2b": "s_99915661",
+  "s_ab0905a8": "s_f7766586",
+  "s_ab3366f8": "s_98bbb7e0",
   "s_abe4a91c": "s_25caf24a",
+  "s_ac3b26db": "s_0655bb7b",
+  "s_ac5bbe64": "s_34d4a9cf",
+  "s_ac6b70ce": "s_98bbb7e0",
+  "s_acd3ba42": "s_f689bcee",
+  "s_acf4f122": "s_99915661",
+  "s_ae203983": "s_5c62c6c3",
+  "s_ae8088f4": "s_1be38f20",
+  "s_ae98eac3": "s_2f75a36e",
+  "s_ae9ee9c2": "s_b3c7c07a",
+  "s_b09e468d": "s_d1996183",
+  "s_b0ae1276": "s_d1996183",
+  "s_b17de17f": "s_1347d668",
+  "s_b28ed426": "s_0655bb7b",
+  "s_b2c3490b": "s_17a71d8b",
+  "s_b2dbf7cd": "s_f7766586",
+  "s_b31caa67": "s_5c62c6c3",
+  "s_b3acc651": "s_b3c7c07a",
+  "s_b3c16596": "s_25caf24a",
   "s_b3ecb108": "s_25caf24a",
+  "s_b4497e04": "s_1347d668",
+  "s_b488baca": "s_bfd4ab42",
+  "s_b4d3e352": "s_b3c7c07a",
+  "s_b5056339": "s_c82c47d7",
+  "s_b5264199": "s_5c62c6c3",
+  "s_b577a6a6": "s_dfa5f4a5",
+  "s_b58c1336": "s_384e68d5",
+  "s_b5a3955e": "s_ff62cf6a",
+  "s_b5f05784": "s_f7766586",
+  "s_b66d9c3b": "s_5c62c6c3",
+  "s_b6a1a2f9": "s_c82c47d7",
+  "s_b7a658ae": "s_384e68d5",
+  "s_b7dbcc7d": "s_c82c47d7",
+  "s_b7e41930": "s_d1996183",
+  "s_b92eef29": "s_bfd4ab42",
   "s_b9368d0f": "s_384e68d5",
+  "s_b9443489": "s_66915e12",
+  "s_b981678a": "s_891e8481",
+  "s_b9ac04fb": "s_20a122a7",
+  "s_ba43c589": "s_66915e12",
+  "s_ba65786c": "s_12ebb5ae",
+  "s_ba93446d": "s_34d4a9cf",
+  "s_bae6f59a": "s_891e8481",
+  "s_bb21cddd": "s_2f75a36e",
+  "s_bbafcaec": "s_c82c47d7",
+  "s_bbc8f0b7": "s_1347d668",
+  "s_bc055e86": "s_1e559a7c",
+  "s_bc48cba7": "s_98bbb7e0",
+  "s_bc6686e8": "s_34d4a9cf",
+  "s_bca2d791": "s_dfa5f4a5",
+  "s_bdf8cb23": "s_25caf24a",
+  "s_be15b3c2": "s_6a3d6ea4",
+  "s_be94e26b": "s_46c0ae50",
+  "s_be9968aa": "s_b5d25cab",
+  "s_beb4992c": "s_46c0ae50",
+  "s_bfe0dda3": "s_06ca6f77",
+  "s_c02924e9": "s_c2f59f7f",
+  "s_c057be80": "s_f689bcee",
+  "s_c0f5c918": "s_99915661",
   "s_c162d664": "s_c564ed7b",
   "s_c1adc674": "s_e1907155",
+  "s_c1d8f9fd": "s_46c0ae50",
+  "s_c20fe528": "s_7aa97950",
+  "s_c2a57132": "s_c2f59f7f",
+  "s_c2fae5f0": "s_1347d668",
   "s_c3221991": "s_11667bea",
   "s_c5c17b27": "s_e1907155",
+  "s_c5c7fd6b": "s_63354c37",
+  "s_c7ea1b3b": "s_12ebb5ae",
+  "s_c891c9bf": "s_99915661",
+  "s_c8923ef3": "s_637019f0",
+  "s_c8982d1d": "s_bfd4ab42",
+  "s_c9f15896": "s_d1996183",
+  "s_ca41c8c2": "s_1347d668",
+  "s_ca754afc": "s_98bbb7e0",
+  "s_caf327dd": "s_2f75a36e",
+  "s_cc779c09": "s_20a122a7",
+  "s_cc9a7647": "s_b3c7c07a",
+  "s_cdbd5a5a": "s_2f75a36e",
+  "s_ce1399c1": "s_dfa5f4a5",
+  "s_ceb24e97": "s_dfa5f4a5",
+  "s_cf98aba1": "s_f689bcee",
+  "s_cfd7285e": "s_1347d668",
+  "s_d1355aa7": "s_891e8481",
+  "s_d1a2e010": "s_17a71d8b",
+  "s_d2e461ee": "s_d1996183",
+  "s_d2f461cb": "s_384e68d5",
+  "s_d3bea447": "s_20a122a7",
+  "s_d3c02f81": "s_b3c7c07a",
+  "s_d41c698f": "s_bfd4ab42",
+  "s_d4b3364d": "s_98bbb7e0",
+  "s_d59bf0a0": "s_1be38f20",
+  "s_d5ff4d56": "s_0655bb7b",
+  "s_d6cec9a1": "s_98bbb7e0",
+  "s_d7913d4d": "s_1be38f20",
+  "s_d7cbefda": "s_ff62cf6a",
+  "s_d7e57df7": "s_b3c7c07a",
+  "s_d869a780": "s_1be38f20",
   "s_d8981bb9": "s_ff62cf6a",
+  "s_d8d6b4a1": "s_f689bcee",
+  "s_d96bb1ae": "s_2f75a36e",
+  "s_d97d59ff": "s_bfd4ab42",
+  "s_d9f8a816": "s_17a71d8b",
+  "s_dacdf5ec": "s_b5d25cab",
+  "s_db2727c5": "s_bfd4ab42",
   "s_dc769578": "s_b3c7c07a",
+  "s_dce30dcd": "s_6a3d6ea4",
+  "s_dd2abb65": "s_46c0ae50",
+  "s_dd41c912": "s_1347d668",
+  "s_dd5743d0": "s_6a3d6ea4",
+  "s_dda72687": "s_ff62cf6a",
+  "s_ddaf29f1": "s_b3c7c07a",
+  "s_dddf876a": "s_66915e12",
+  "s_de1a611f": "s_b5d25cab",
+  "s_de77f7be": "s_c564ed7b",
+  "s_de91bab5": "s_0655bb7b",
+  "s_dea3606a": "s_d1996183",
+  "s_debfd09f": "s_7aa97950",
+  "s_df852d61": "s_7aa97950",
+  "s_df8e3070": "s_0655bb7b",
   "s_e114d377": "s_5ce71f2b",
+  "s_e1632480": "s_a8672cd3",
+  "s_e18be7fe": "s_17a71d8b",
+  "s_e1d35eb9": "s_34d4a9cf",
+  "s_e203deeb": "s_2f75a36e",
+  "s_e20e1e51": "s_7aa97950",
+  "s_e23494cc": "s_6a3d6ea4",
+  "s_e2381c3f": "s_0655bb7b",
+  "s_e23eb01d": "s_17a71d8b",
+  "s_e2cbaee0": "s_1be38f20",
+  "s_e33abe52": "s_1347d668",
+  "s_e39441b1": "s_99915661",
+  "s_e3c3aadf": "s_66915e12",
+  "s_e3c53811": "s_384e68d5",
+  "s_e44735f9": "s_b5d25cab",
   "s_e4896ea4": "s_e1907155",
+  "s_e56b1b04": "s_c564ed7b",
+  "s_e577040b": "s_20a122a7",
+  "s_e581baa6": "s_dfa5f4a5",
+  "s_e5c9b112": "s_66915e12",
+  "s_e6ac966d": "s_f689bcee",
+  "s_e6d7880f": "s_12ebb5ae",
+  "s_e6ef6d51": "s_ff62cf6a",
+  "s_e74f5fa3": "s_25caf24a",
+  "s_e7caf76e": "s_1347d668",
+  "s_e7e65534": "s_6a3d6ea4",
+  "s_e836b5f3": "s_384e68d5",
+  "s_e863294a": "s_b5d25cab",
+  "s_e876407d": "s_b5d25cab",
+  "s_e8cf2218": "s_34d4a9cf",
+  "s_ea27be7a": "s_2f75a36e",
+  "s_ea3fd7e5": "s_1be38f20",
+  "s_eac6c04b": "s_63354c37",
+  "s_ec43ea67": "s_98bbb7e0",
+  "s_ed9785f5": "s_b3c7c07a",
+  "s_edfce41b": "s_f689bcee",
+  "s_ee65fd05": "s_25caf24a",
+  "s_ee8dd663": "s_a5a8c84b",
+  "s_eefd0910": "s_f689bcee",
   "s_ef0181a6": "s_17a71d8b",
+  "s_ef5316ff": "s_20a122a7",
+  "s_f0747db8": "s_5c62c6c3",
+  "s_f0b548f1": "s_25caf24a",
   "s_f0d463e9": "s_b5d25cab",
-  "s_ff979632": "s_c82c47d7"
+  "s_f108005e": "s_ff62cf6a",
+  "s_f123204d": "s_99915661",
+  "s_f126c3d0": "s_6a3d6ea4",
+  "s_f26fc175": "s_891e8481",
+  "s_f28d7230": "s_20a122a7",
+  "s_f30225fc": "s_891e8481",
+  "s_f35fa424": "s_17a71d8b",
+  "s_f379cae8": "s_b3c7c07a",
+  "s_f3843bad": "s_b5d25cab",
+  "s_f3b216ba": "s_12ebb5ae",
+  "s_f3f0ec06": "s_12ebb5ae",
+  "s_f3f3d2df": "s_f689bcee",
+  "s_f5deaa7f": "s_25caf24a",
+  "s_f76c1129": "s_99915661",
+  "s_f78adf6d": "s_a8672cd3",
+  "s_f8003750": "s_2f75a36e",
+  "s_f84d8fd3": "s_0655bb7b",
+  "s_f86c18d0": "s_17a71d8b",
+  "s_f96d833f": "s_1be38f20",
+  "s_f9934d17": "s_d1996183",
+  "s_f9ef22fc": "s_b3c7c07a",
+  "s_fa9903e0": "s_20a122a7",
+  "s_faaf6099": "s_66915e12",
+  "s_fba8226f": "s_c2f59f7f",
+  "s_fc4e5273": "s_f7766586",
+  "s_fd630b5a": "s_20a122a7",
+  "s_fdace4e0": "s_5c62c6c3",
+  "s_fec3edcd": "s_12ebb5ae",
+  "s_ff209a82": "s_c564ed7b",
+  "s_ff4ef7c6": "s_17a71d8b",
+  "s_ff979632": "s_c82c47d7",
+  "s_ffda550c": "s_66915e12"
  },
  "decisiones": {
   "mismo": [
@@ -9794,6 +9760,226 @@
     "Centro Ático",
     "Centro Ático, Universidad Javeriana",
     "el Centro Ático de la Javeriana, Calle 40B # 6-23 (catálogo BOGOSHORTS 2026)"
+   ],
+   [
+    "Plaza Bocagrande ‒ Sala 1",
+    "Plaza Bocagrande ‒ Sala 2",
+    "salas del mismo multiplex; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Plaza Bocagrande ‒ Sala 1",
+    "Plaza Bocagrande ‒ Sala 3",
+    "salas del mismo multiplex; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Plaza Bocagrande ‒ Sala 1",
+    "Plaza Bocagrande ‒ Sala 4",
+    "salas del mismo multiplex; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Plaza Bocagrande ‒ Sala 1",
+    "Plaza Bocagrande ‒ Sala 5",
+    "salas del mismo multiplex; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "CC Caribe Plaza ‒ Sala 2",
+    "CC Caribe Plaza ‒ Sala 5",
+    "salas del mismo multiplex; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "CC Caribe Plaza ‒ Sala 2",
+    "CC Caribe Plaza ‒ Sala 6",
+    "salas del mismo multiplex; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Cinemateca Sala Capital",
+    "Cinemateca de Bogotá",
+    "sala de la Cinemateca de Bogotá; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Cinemateca Sala 2",
+    "Cinemateca de Bogotá",
+    "sala de la Cinemateca de Bogotá; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Cinemateca Sala 3",
+    "Cinemateca de Bogotá",
+    "sala de la Cinemateca de Bogotá; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Centro Colombo Americano",
+    "Colombo Sala 1",
+    "sala del Colombo de Medellín; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Centro Colombo Americano",
+    "Colombo Sala 2",
+    "sala del Colombo de Medellín; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Centro Colombo Americano",
+    "Centro Colombo Americano Sede centro. Sala 2",
+    "sala del Colombo de Medellín; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Centro Colombo Americano",
+    "Colombo Americano",
+    "sala del Colombo de Medellín; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Cine Passeio Luz",
+    "Cine Passeio Ritz",
+    "Ritz y Luz son las dos salas del Cine Passeio; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Las Américas",
+    "Procinal Las Américas",
+    "Procinal pasó a llamarse Cineprox; misma dirección; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Cinemas Procinal Las Américas",
+    "Las Américas",
+    "Procinal pasó a llamarse Cineprox; misma dirección; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Las Américas",
+    "Procinal Las Américas Sala 3",
+    "Procinal pasó a llamarse Cineprox; misma dirección; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Cineprox",
+    "Las Américas",
+    "Procinal pasó a llamarse Cineprox; misma dirección; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Claustro Comfama",
+    "Comfama San Ignacio",
+    "misma dirección, Cra. 44 #48-18; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "COMFAMA",
+    "Comfama San Ignacio",
+    "misma dirección, Cra. 44 #48-18; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Planetario",
+    "Planetario de Medellín",
+    "mismo lugar, nombre corto; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Terko",
+    "Terko Bar",
+    "mismo lugar, nombre corto; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "ITM",
+    "ITM La Floresta",
+    "misma dirección, Calle 47A #85-20; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Casa de la Memoria",
+    "Museo Casa de la Memoria",
+    "mismo lugar, nombre corto; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Batuta",
+    "Fundación Batuta Caldas",
+    "mismo lugar, nombre corto; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "All Cine",
+    "All Cine Cable Plaza",
+    "mismo lugar, nombre corto; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Cinemateca La Tertulia",
+    "Cinemateca del Museo La Tertulia",
+    "mismo lugar, nombre corto; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Auditorio Centro Cultural Universitario Rogelio Salmona",
+    "Rogelio Salmona",
+    "mismo lugar, nombre corto; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Centro Cultural Panóptico de Ibagué",
+    "Museo Panóptico de Ibagué",
+    "mismo edificio, el Panóptico; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Centro Cultural Echavarría Misas",
+    "Centro Cultural y Educativo Fundación Diego Echavarría Misas",
+    "mismo lugar, nombre corto; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Plaza Proclamación",
+    "Plaza de la Proclamación",
+    "mismo lugar; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "C. Convenciones",
+    "C. de Convenciones · Patio de Banderas",
+    "el Patio de Banderas es un espacio del Centro de Convenciones; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Alianza Francesa",
+    "Alianza Francesa de Barranquilla",
+    "misma sede, FICDEH no dijo la ciudad en el nombre; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Biblioteca Pública CEFE Fontanar Del Río",
+    "Cinemateca Fontanar del Río",
+    "la Cinemateca funciona dentro de la Biblioteca Fontanar del Río; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Fiesta del Libro Jardín Botánico",
+    "Jardín Botánico de Medellín",
+    "la Fiesta del Libro es el evento; el lugar es el Jardín Botánico; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Fiesta del Libro Parque de los Deseos",
+    "Parque de los Deseos",
+    "la Fiesta del Libro es el evento; el lugar es el Parque de los Deseos; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Industry Days",
+    "MAMM",
+    "Industry Days es un evento del AFF en el MAMM; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "MAMM",
+    "MAMM · Plazoleta",
+    "la Plazoleta es un espacio del MAMM; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Centro Cultural de Cali",
+    "Plazoleta del Samán",
+    "misma dirección, Cra. 5 #6-05; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Auditorio Ciro Mendía Caldas",
+    "Casa Municipal de la Cultura",
+    "misma dirección, Cra. 49 #128 Sur-40; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Plaza Bocagrande",
+    "Plaza Bocagrande ‒ Sala 1",
+    "salas del mismo multiplex; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "CC Caribe Plaza",
+    "CC Caribe Plaza ‒ Sala 2",
+    "salas del mismo multiplex; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Parque de la Poesía",
+    "Parque de la Poesía Girardota",
+    "mismo parque; verificado en Google Maps; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "AECID",
+    "Centro de Formación de la Cooperación Española",
+    "la AECID es la Cooperación Española; verificado en Google Maps; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
    ]
   ],
   "distintos": [
@@ -9911,6 +10097,46 @@
     "Sala Gaitán Antigua Cinemateca",
     "Teatro Jorge Eliécer Gaitán",
     "dos salas del mismo predio (Carrera 7 # 22-47): el teatro y la antigua Cinemateca Distrital"
+   ],
+   [
+    "Academia Municipal Girardota",
+    "Parque de la Poesía Girardota",
+    "direcciones distintas; comparten un pin aproximado; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Casa Municipal de la Cultura",
+    "I.E. Pedro Luis Álvarez Caldas",
+    "direcciones distintas (Calle 132 Sur vs. Cra. 49); aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Biblioteca Comfama Caldas",
+    "I.E. Pedro Luis Álvarez Caldas",
+    "direcciones distintas; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "IED Rural San Bernardo",
+    "Salón Comunal Vda. San Bernardo",
+    "dos lugares de la vereda; comparten un pin aproximado; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Biblioteca Pública Julio Mario Santodomingo",
+    "Teatro Mayor Julio Mario Santo Domingo",
+    "mismo complejo, edificios distintos; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Claustro Comfama",
+    "Comfama La Capilla",
+    "La Capilla ya es un lugar aparte del Claustro; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "COMFAMA",
+    "Comfama La Capilla",
+    "La Capilla ya es un lugar aparte del Claustro; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
+   ],
+   [
+    "Auditorio Cultural Diego Echavarría Misas",
+    "Centro Cultural Echavarría Misas",
+    "el Auditorio ya es un lugar aparte del Centro; aprobado por Juan el 26 nov 2026 (fase 5: festivales pasados)"
    ]
   ],
   "sala_igual": [
@@ -9928,44 +10154,7 @@
    ]
   ]
  },
- "_divergentes": {
-  "s_80a2590b": [
-   {
-    "fid": "ficci-65",
-    "clave": "AECID",
-    "lat": 10.421,
-    "lng": -75.5484,
-    "nivel": "aproximado",
-    "a_m": 0
-   },
-   {
-    "fid": "ficci-65",
-    "clave": "aecid",
-    "lat": 10.4236,
-    "lng": -75.5484,
-    "nivel": "aproximado",
-    "a_m": 289
-   }
-  ],
-  "s_9854df1f": [
-   {
-    "fid": "aff-2026",
-    "clave": "Colombo Americano",
-    "lat": 6.2592,
-    "lng": -75.5682,
-    "nivel": "aproximado",
-    "a_m": 0
-   },
-   {
-    "fid": "ficdeh-2026",
-    "clave": "Colombo Americano - Medellín",
-    "lat": 6.2497341,
-    "lng": -75.5627237,
-    "nivel": "aproximado",
-    "a_m": 1214
-   }
-  ]
- },
+ "_divergentes": {},
  "_deuda": {
   "sin_url": [
    "s_03bcfa6f",
@@ -9995,7 +10184,6 @@
    "s_1ee22222",
    "s_1f206eab",
    "s_1f59d368",
-   "s_20babab4",
    "s_213dce05",
    "s_2263f2e4",
    "s_23554cca",
@@ -10187,6 +10375,167 @@
    "s_fd423d59",
    "s_fe8d7da8",
    "s_ffcf8a2c"
+  ],
+  "importados": [
+   "s_00cb56fc",
+   "s_00e7323f",
+   "s_010ecd16",
+   "s_0237c113",
+   "s_0344094c",
+   "s_035a81a0",
+   "s_06b3cd76",
+   "s_09b62d67",
+   "s_0a0f2470",
+   "s_0af324db",
+   "s_0af8e5f1",
+   "s_0b79c2ba",
+   "s_0bbb84e5",
+   "s_0ca8367d",
+   "s_0cc0d8e2",
+   "s_1021dabf",
+   "s_1038a36e",
+   "s_1093f228",
+   "s_12a73c86",
+   "s_12aa5ffa",
+   "s_14bca442",
+   "s_15e48dad",
+   "s_1992e58d",
+   "s_1a11bba5",
+   "s_1d996547",
+   "s_1f9bcadc",
+   "s_2056aff0",
+   "s_205f3363",
+   "s_22fe5886",
+   "s_23463670",
+   "s_24c3ac31",
+   "s_27e8f3e2",
+   "s_2807be45",
+   "s_2a85b8da",
+   "s_2b03fa90",
+   "s_2c894bd8",
+   "s_2d1affc7",
+   "s_2f988a5e",
+   "s_301651c3",
+   "s_30a8fc5c",
+   "s_3217e964",
+   "s_3324b403",
+   "s_3886740c",
+   "s_39107202",
+   "s_39b49fba",
+   "s_3a422f2a",
+   "s_3bb9f4df",
+   "s_3c174214",
+   "s_3c2f53cf",
+   "s_3cc54ab6",
+   "s_3d446a6c",
+   "s_3d810f53",
+   "s_3df2df68",
+   "s_3facd89f",
+   "s_4156e8d0",
+   "s_4285aa18",
+   "s_445eff6c",
+   "s_469ea671",
+   "s_46b59d10",
+   "s_47a90dcc",
+   "s_4c2461fa",
+   "s_4c39e6c3",
+   "s_4cdac717",
+   "s_4cdb95d4",
+   "s_4d15085b",
+   "s_4da9a121",
+   "s_4ed8fa7d",
+   "s_4ee78b3f",
+   "s_525d04e9",
+   "s_538b1159",
+   "s_55231d60",
+   "s_55ba19eb",
+   "s_56d5bec2",
+   "s_57240f05",
+   "s_57f81227",
+   "s_57fda933",
+   "s_5b5134c3",
+   "s_5b798d64",
+   "s_603976c3",
+   "s_6184f4b5",
+   "s_637019f0",
+   "s_63ca461f",
+   "s_63e34462",
+   "s_659f2a44",
+   "s_67f47d6d",
+   "s_6a4302c3",
+   "s_6c7c3da9",
+   "s_6cf2cf5a",
+   "s_6f419691",
+   "s_72d9a1aa",
+   "s_73517fc2",
+   "s_73cac39d",
+   "s_73e47185",
+   "s_76fd6900",
+   "s_77fb8213",
+   "s_7d5e0def",
+   "s_7de8bddf",
+   "s_7e3dd06f",
+   "s_854bd5a3",
+   "s_8590800a",
+   "s_859f08bc",
+   "s_89b03e3b",
+   "s_8d369c94",
+   "s_8d82c9c5",
+   "s_8da0fd42",
+   "s_928f01a3",
+   "s_92e9bbf4",
+   "s_93f52f8a",
+   "s_944f92f0",
+   "s_968bdbf4",
+   "s_977026c6",
+   "s_9a119b45",
+   "s_9bd9d312",
+   "s_9cd42c9a",
+   "s_a2381802",
+   "s_a3e4479d",
+   "s_a49e5821",
+   "s_a5a8c84b",
+   "s_a778bfa3",
+   "s_a9ccfb29",
+   "s_af437f4a",
+   "s_afbde4e6",
+   "s_b054f641",
+   "s_b067121f",
+   "s_b74ca288",
+   "s_b75b331b",
+   "s_b7eadc36",
+   "s_ba188ef6",
+   "s_bbbdcb1f",
+   "s_bc53ff29",
+   "s_bf4f782d",
+   "s_bfe8b044",
+   "s_c19bda57",
+   "s_cb9cf76f",
+   "s_cc663c68",
+   "s_cdc0ebb9",
+   "s_ce6a3ac5",
+   "s_cefad4d8",
+   "s_d241f4f3",
+   "s_d4bd8200",
+   "s_db1dfa76",
+   "s_dbbed1c0",
+   "s_dc6b1f28",
+   "s_dd84dcf7",
+   "s_e034e3f9",
+   "s_e4ad0263",
+   "s_e5a9771f",
+   "s_e84293c6",
+   "s_eca709c9",
+   "s_ecea4a9b",
+   "s_ed587a37",
+   "s_eec0c2a8",
+   "s_f1eeffaa",
+   "s_f7d2d58e",
+   "s_f81e2500",
+   "s_fa7b2078",
+   "s_fc1bd923",
+   "s_ff72ca1b",
+   "s_fff0c4b6"
   ]
  }
 }
