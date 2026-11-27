@@ -4115,9 +4115,14 @@
    },
    "address": "Cl. 27 Sur #43A-51, Envigado",
    "alias": [
-    "Comfama Otraparte - Medellín"
+    "Comfama Otraparte - Medellín",
+    "Teatro Otraparte",
+    "Teatro Otraparte - Envigado",
+    "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado"
    ],
    "festivales": [
+    "cinemancia-2025",
+    "cinemancia-2026",
     "fantasmagoria-2026",
     "miradas-2026"
    ],
@@ -4125,7 +4130,11 @@
    "corto": "Comfama Otraparte",
    "institucion": "i_0b12d8c2",
    "_ciudad_fijada": true,
-   "coords_fecha": "2026-11-27"
+   "coords_fecha": "2026-11-27",
+   "_ciudades_vistas": [
+    "Envigado",
+    "Medellín"
+   ]
   },
   "s_67e7a9bd": {
    "nombre": "Bebop Bar",
@@ -6459,13 +6468,14 @@
   },
   "s_a6295d2a": {
    "nombre": "Sala Gaitán Antigua Cinemateca",
-   "lat": 4.608881,
-   "lng": -74.0706722,
+   "lat": 4.6086901,
+   "lng": -74.0707267,
    "evidencia": {
     "nivel": "maps",
-    "url": "https://www.google.com/maps/search/?api=1&query=Carrera+7+%2322-47+Bogota",
-    "fecha": "2026-11-23",
-    "fuente": "verificado en Google Maps"
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJ4SnQz5iZP44RAJxww7s4kJY",
+    "place_id": "ChIJ4SnQz5iZP44RAJxww7s4kJY",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places: Teatro Municipal Jorge Eliécer Gaitán, Cra. 7 #22-47 — la Sala Gaitán está en ese edificio, misma dirección, a 22 m del pin"
    },
    "address": "Carrera 7 # 22-47",
    "alias": [
@@ -6475,7 +6485,8 @@
     "bogoshorts-2026"
    ],
    "ciudad": "Bogotá",
-   "corto": "Sala Gaitán Antigua Cinemateca"
+   "corto": "Sala Gaitán Antigua Cinemateca",
+   "coords_fecha": "2026-11-27"
   },
   "s_a6e0e0b3": {
    "nombre": "Cine Colombia Multiplex Avenida Chile",
@@ -9507,28 +9518,6 @@
    "institucion": "i_b40f78bd",
    "coords_fecha": "2026-11-27"
   },
-  "s_ff62cf6a": {
-   "nombre": "Teatro Otraparte",
-   "lat": 6.1792522,
-   "lng": -75.5839678,
-   "evidencia": {
-    "nivel": "maps",
-    "url": "https://www.google.com/maps/place/Casa+Museo+Otraparte/@6.1792522,-75.5839678,17z",
-    "fecha": "2026-11-16",
-    "fuente": "verificado en Google Maps"
-   },
-   "address": "Carrera 43A # 27A Sur–11, Envigado, Antioquia",
-   "alias": [
-    "Teatro Otraparte - Envigado",
-    "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado"
-   ],
-   "festivales": [
-    "cinemancia-2025",
-    "cinemancia-2026"
-   ],
-   "ciudad": "Envigado",
-   "corto": "Teatro Otraparte"
-  },
   "s_ff72ca1b": {
    "nombre": "Teatro da Vila",
    "lat": -25.505168,
@@ -10212,6 +10201,7 @@
   "s_fec3edcd": "s_12ebb5ae",
   "s_ff209a82": "s_c564ed7b",
   "s_ff4ef7c6": "s_17a71d8b",
+  "s_ff62cf6a": "s_67c78bba",
   "s_ff979632": "s_c82c47d7",
   "s_ffda550c": "s_66915e12"
  },
@@ -10491,6 +10481,11 @@
     "Teatro Comfama",
     "Teatro Comfama Alfonso Restrepo Moreno",
     "misma dirección (Calle 48 #43-87, Medellín) y misma ficha de Google Maps; Cinemancia 2025 lo publicó con el pin a 4 km (27 nov 2026)"
+   ],
+   [
+    "Comfama Otraparte",
+    "Teatro Otraparte",
+    "el Teatro Otraparte queda dentro del Parque Cultural y Ambiental Otraparte (Cl. 27 Sur #43A-51, Envigado), la sede de Comfama Otraparte; la Casa Museo Otraparte es el lugar vecino, aparte. Confirmado por Juan el 27 nov 2026"
    ]
   ],
   "distintos": [
