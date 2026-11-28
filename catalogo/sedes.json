@@ -301,11 +301,18 @@
   },
   "s_03bcfa6f": {
    "nombre": "Universidad Nacional · El Cable",
-   "lat": 5.0555625,
-   "lng": -75.4861875,
+   "lat": 5.0556079,
+   "lng": -75.4861774,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12136705802349474471&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJBwthsn5lR44Rp3J2zJ89bqg",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
@@ -316,15 +323,23 @@
    ],
    "ciudad": "Manizales",
    "corto": "Universidad Nacional · El Cable",
-   "institucion": "i_22f00e34"
+   "institucion": "i_22f00e34",
+   "coords_fecha": "2026-11-27"
   },
   "s_05f4d981": {
    "nombre": "Madame Blue",
    "lat": 3.4597979,
    "lng": -76.5340988,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12926216761096087545&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJr7y9iYqnMI4R-SfVfqglY7M",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Avenida 9 Norte #15N-39, Granada",
    "alias": [],
@@ -332,7 +347,8 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Madame Blue"
+   "corto": "Madame Blue",
+   "coords_fecha": "2026-11-27"
   },
   "s_0655bb7b": {
    "nombre": "Pontificia Universidad Javeriana",
@@ -568,8 +584,15 @@
    "lat": 2.4386267,
    "lng": -76.6041451,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "popayan-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=2283116886193559010&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJtbi78AQDMI4R4lVDJrZCrx8",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "popayan-2026-venues-geo.json"
+    }
    },
    "address": "Cl. 7 #3-105, Centro, Popayán",
    "alias": [],
@@ -577,7 +600,8 @@
     "popayan-2026"
    ],
    "ciudad": "Popayán",
-   "corto": "Teatro Bolívar"
+   "corto": "Teatro Bolívar",
+   "coords_fecha": "2026-11-27"
   },
   "s_0b79c2ba": {
    "nombre": "Casa de la Juventud Iwoka",
@@ -760,18 +784,26 @@
   },
   "s_104736cc": {
    "nombre": "Expoferias",
-   "lat": 5.0416875,
-   "lng": -75.4753125,
+   "lat": 5.0417109,
+   "lng": -75.4753017,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=9480421660159226207&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJn6L_NJ9lR44RX7G1PkU5kYM",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "_ciudad_fijada": "lugar vecino del almacén a 1957 m"
+   "_ciudad_fijada": "lugar vecino del almacén a 1957 m",
+   "coords_fecha": "2026-11-27"
   },
   "s_1071539b": {
    "nombre": "Alto Meléndez",
@@ -816,8 +848,15 @@
    "lat": 3.4506674,
    "lng": -76.5442123,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=16397806279501906810&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ1cADv9SlMI4ReoNhke61kOM",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Avenida Colombia #4 Oeste-49",
    "alias": [],
@@ -825,7 +864,8 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Hotel Obelisco"
+   "corto": "Hotel Obelisco",
+   "coords_fecha": "2026-11-27"
   },
   "s_11433c3f": {
    "nombre": "Universidad Nacional, Edificio 303 (NEA)",
@@ -908,11 +948,18 @@
   },
   "s_11d2cb61": {
    "nombre": "Teatro La Unión",
-   "lat": 3.4124011,
-   "lng": -76.5124279,
+   "lat": 3.4125309,
+   "lng": -76.5123473,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=8004824528961048142&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJccqdshWnMI4RTo4Oan_ZFm8",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 41H #38-80, Unión de Vivienda Popular (Comuna 16)",
    "alias": [],
@@ -920,30 +967,46 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Teatro La Unión"
+   "corto": "Teatro La Unión",
+   "coords_fecha": "2026-11-27"
   },
   "s_12238873": {
    "nombre": "Parque Principal de Marinilla",
-   "lat": 6.1736597,
-   "lng": -75.334636,
+   "lat": 6.173651,
+   "lng": -75.3346558,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "filcmar-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=15415760933150084537&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ113BGSSgRo4RuU3BeuTI79U",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "filcmar-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "filcmar-2026"
    ],
    "ciudad": "Marinilla",
-   "corto": "Parque Principal de Marinilla"
+   "corto": "Parque Principal de Marinilla",
+   "coords_fecha": "2026-11-27"
   },
   "s_125e80c3": {
    "nombre": "Hotel Miracruz",
    "lat": 4.6117939,
    "lng": -76.0793798,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "cinetoro-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12160129133286633082&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ8eCVxCznOY4Req5tBAV1wag",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "cinetoro-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Hotel Miracruz - Toro"
@@ -952,7 +1015,8 @@
     "cinetoro-2026"
    ],
    "ciudad": "Toro",
-   "corto": "Hotel Miracruz"
+   "corto": "Hotel Miracruz",
+   "coords_fecha": "2026-11-27"
   },
   "s_12a73c86": {
    "nombre": "Museo Nacional de Colombia",
@@ -1139,8 +1203,15 @@
    "lat": 3.4678756,
    "lng": -76.4998164,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6222440850268592163&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJH-VHgMynMI4RI5gjRPyMWlY",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 2 #52-396 / Calle 52, El Sena (Comuna 5)",
    "alias": [],
@@ -1148,7 +1219,8 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "SENA Salomia"
+   "corto": "SENA Salomia",
+   "coords_fecha": "2026-11-27"
   },
   "s_16c02a2e": {
    "nombre": "La Fábrica de Cultura",
@@ -1237,8 +1309,15 @@
    "lat": 6.3992839,
    "lng": -75.440165,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "girardota-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11345346525809253229&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJkYeQV2M7RI4RbZuSFI7Ecp0",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "girardota-2026-venues-geo.json"
+    }
    },
    "address": "Institución Educativa San Andrés",
    "alias": [],
@@ -1246,15 +1325,23 @@
     "girardota-2026"
    ],
    "ciudad": "Girardota",
-   "corto": "I.E. San Andrés"
+   "corto": "I.E. San Andrés",
+   "coords_fecha": "2026-11-27"
   },
   "s_18443fd2": {
    "nombre": "Curador",
    "lat": 3.4533284,
    "lng": -76.5325066,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=9951048017891736930&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJoRxKTwCnMI4RYr1KCXM5GYo",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Calle 12 #1-18, San Pedro",
    "alias": [],
@@ -1262,7 +1349,8 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Curador"
+   "corto": "Curador",
+   "coords_fecha": "2026-11-27"
   },
   "s_1992e58d": {
    "nombre": "CEFE El Tunal",
@@ -1343,8 +1431,15 @@
    "lat": 4.6516095,
    "lng": -74.0594602,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "biff-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=15087207464871729369&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJKwaIB0SaP44R2RhN_ECHYNE",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "biff-2026-venues-geo.json"
+    }
    },
    "address": "Cl. 67 #8-32",
    "alias": [
@@ -1359,7 +1454,8 @@
     "Salón 307/308"
    ],
    "ciudad": "Bogotá",
-   "corto": "Cámara de Comercio de Bogotá"
+   "corto": "Cámara de Comercio de Bogotá",
+   "coords_fecha": "2026-11-27"
   },
   "s_1be38f20": {
    "nombre": "Alianza Francesa",
@@ -1394,8 +1490,15 @@
    "lat": 6.2230449,
    "lng": -75.1769317,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=8494264951605078262&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ5csCYLMdRI4R9qh4DPiw4XU",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "I.E. Sede La Piedra - Guatapé",
@@ -1405,7 +1508,8 @@
     "guatape-2026"
    ],
    "ciudad": "Guatapé",
-   "corto": "I.E. Sede La Piedra"
+   "corto": "I.E. Sede La Piedra",
+   "coords_fecha": "2026-11-27"
   },
   "s_1d996547": {
    "nombre": "Procinal Parque Fabricato",
@@ -1428,8 +1532,15 @@
    "lat": 3.4359135,
    "lng": -76.5432882,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3077494521441364747&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJkyQKPYGnMI4RCyu5RPZ0tSo",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Calle 3 #26-112, Miraflores",
    "alias": [],
@@ -1437,7 +1548,8 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "BlackGround"
+   "corto": "BlackGround",
+   "coords_fecha": "2026-11-27"
   },
   "s_1e559a7c": {
    "nombre": "Plaza Bocagrande",
@@ -1533,8 +1645,15 @@
    "lat": 3.4526661,
    "lng": -76.5347844,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=5477684040922625391&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJw0uqVQCnMI4Rb_UE-5ykBEw",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Bulevar de la Avenida Colombia, centro",
    "alias": [],
@@ -1547,7 +1666,8 @@
     "Carpa de la Red de Bibliotecas Públicas de Cali"
    ],
    "ciudad": "Cali",
-   "corto": "Bulevar del Río"
+   "corto": "Bulevar del Río",
+   "coords_fecha": "2026-11-27"
   },
   "s_1f9bcadc": {
    "nombre": "Biblioteca Pública Usaquén Servitá",
@@ -1731,8 +1851,15 @@
    "lat": 6.2331095,
    "lng": -75.1618162,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=4218593449100167399&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJwWAr_0EdRI4R58hnEWR0izo",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Museo del Zócalo - Guatapé"
@@ -1741,21 +1868,30 @@
     "guatape-2026"
    ],
    "ciudad": "Guatapé",
-   "corto": "Museo del Zócalo"
+   "corto": "Museo del Zócalo",
+   "coords_fecha": "2026-11-27"
   },
   "s_23e9dece": {
    "nombre": "La Grieta",
    "lat": 6.2556968,
    "lng": -75.5985767,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "fantasmagoria-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=13156379253529454255&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJAVmrfwApRI4RrybxwDnZlLY",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "fantasmagoria-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "fantasmagoria-2026"
    ],
-   "ciudad": "Medellín"
+   "ciudad": "Medellín",
+   "coords_fecha": "2026-11-27"
   },
   "s_24c3ac31": {
    "nombre": "Centro de Conciliación y Arbitraje",
@@ -1835,11 +1971,18 @@
   },
   "s_2635c36c": {
    "nombre": "Universidad Nacional",
-   "lat": 6.2615936,
-   "lng": -75.577683,
+   "lat": 6.2617101,
+   "lng": -75.5772982,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "fantasmagoria-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3551247463068367809&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJLavlFZcpRI4RwXuymcCQSDE",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "fantasmagoria-2026-venues-geo.json"
+    }
    },
    "address": "Universidad Nacional, sede Medellín (Cra. 65 #59A-110)",
    "alias": [],
@@ -1853,15 +1996,23 @@
    ],
    "ciudad": "Medellín",
    "corto": "Universidad Nacional",
-   "institucion": "i_22f00e34"
+   "institucion": "i_22f00e34",
+   "coords_fecha": "2026-11-27"
   },
   "s_26861d1b": {
    "nombre": "Real Fábrica",
    "lat": 5.6332892,
    "lng": -73.5222502,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "villadeleyvaiff-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12568345558555111569&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJJ6Ch3A3XQY4RkTAJELK7a64",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "villadeleyvaiff-2026-venues-geo.json"
+    }
    },
    "address": "Cl. 13 #8-51, Villa de Leyva, Boyacá",
    "alias": [
@@ -1875,7 +2026,8 @@
     "Sala Rosada"
    ],
    "ciudad": "Villa de Leyva",
-   "corto": "Real Fábrica"
+   "corto": "Real Fábrica",
+   "coords_fecha": "2026-11-27"
   },
   "s_26a2abce": {
    "nombre": "Universidad de Antioquia Seccional Occidente",
@@ -1908,8 +2060,15 @@
    "lat": 11.2262461,
    "lng": -74.1873608,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "midbo-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12883450243880092077&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJf7BPsqX19I4RrYHkw7w1y7I",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "midbo-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 32 #22-08",
    "alias": [],
@@ -1917,7 +2076,8 @@
     "midbo-2026"
    ],
    "ciudad": "Santa Marta",
-   "_ciudad_fijada": "Nominatim reverso"
+   "_ciudad_fijada": "Nominatim reverso",
+   "coords_fecha": "2026-11-27"
   },
   "s_27e8f3e2": {
    "nombre": "Shorts Theater at Spring Studios",
@@ -2090,18 +2250,26 @@
   },
   "s_2e88d79d": {
    "nombre": "Parque Ernesto Gutiérrez",
-   "lat": 5.0683125,
-   "lng": -75.5121875,
+   "lat": 5.0683336,
+   "lng": -75.5121536,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=16200011315802470452&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJHZPCEfFvR44RNPi223UA0uA",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "corto": "Parque Ernesto Gutiérrez"
+   "corto": "Parque Ernesto Gutiérrez",
+   "coords_fecha": "2026-11-27"
   },
   "s_2f75a36e": {
    "nombre": "ITM",
@@ -2315,23 +2483,38 @@
    "lat": 3.5202094,
    "lng": -76.5698722,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3782405377011560780&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJJ3IKKwCvMI4RTDFNfabNfTQ",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Corregimiento La Paz, junto a la Caseta Comunal",
    "alias": [],
    "festivales": [
     "ficcali-2026"
    ],
-   "ciudad": "Cali"
+   "ciudad": "Cali",
+   "coords_fecha": "2026-11-27"
   },
   "s_33ad881a": {
    "nombre": "Teatro Cuesta",
    "lat": 5.4203371,
    "lng": -75.7035394,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "festicinerio-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3731269493029738383&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJTTIK7Y8HR44RjxdKtdUhyDM",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "festicinerio-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 7 #6-13 a 6-101, Riosucio, Caldas",
    "alias": [
@@ -2341,15 +2524,23 @@
     "festicinerio-2026"
    ],
    "ciudad": "Riosucio",
-   "corto": "Teatro Cuesta"
+   "corto": "Teatro Cuesta",
+   "coords_fecha": "2026-11-27"
   },
   "s_34124cb5": {
    "nombre": "Casa de la Música",
    "lat": 6.2677102,
    "lng": -75.5662198,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "miradas-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=18330901844559842778&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJHS-7EucoRI4R2s2KORtyZP4",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "miradas-2026-venues-geo.json"
+    }
    },
    "address": "Calle 71 # 52-30, Aranjuez, Medellín",
    "alias": [
@@ -2359,7 +2550,8 @@
     "miradas-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Casa de la Música"
+   "corto": "Casa de la Música",
+   "coords_fecha": "2026-11-27"
   },
   "s_34d4a9cf": {
    "nombre": "Teatro los Fundadores",
@@ -2553,8 +2745,15 @@
    "lat": 6.3769207,
    "lng": -75.4178509,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "girardota-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=10756374598303470408&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJf9LWxbA8RI4RSNPpGrVRRpU",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "girardota-2026-venues-geo.json"
+    }
    },
    "address": "Vereda Encenillos",
    "alias": [],
@@ -2562,7 +2761,8 @@
     "girardota-2026"
    ],
    "ciudad": "Girardota",
-   "corto": "Escuela de Encenillos"
+   "corto": "Escuela de Encenillos",
+   "coords_fecha": "2026-11-27"
   },
   "s_3bb9f4df": {
    "nombre": "Auditorio Tulio Gómez Estrada, Facultad de Ciencias Jurídicas y Sociales",
@@ -2692,15 +2892,23 @@
    "lat": 5.5980302,
    "lng": -75.8171352,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "jardin-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6305912865072648077&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJXRtdvYJTRo4RjY84M1cag1c",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "jardin-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "jardin-2026"
    ],
    "ciudad": "Jardín",
-   "corto": "Escuela Jahel Peláez Montoya"
+   "corto": "Escuela Jahel Peláez Montoya",
+   "coords_fecha": "2026-11-27"
   },
   "s_3df2df68": {
    "nombre": "IED San Nicolás",
@@ -2741,8 +2949,15 @@
    "lat": 6.3761472,
    "lng": -75.4460794,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "girardota-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=8902145928415619536&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ7QQ31lE7RI4R0CnnaY7Gins",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "girardota-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 14 #9-16",
    "alias": [],
@@ -2750,15 +2965,23 @@
     "girardota-2026"
    ],
    "ciudad": "Girardota",
-   "corto": "Biblioteca Municipal Alberto Aguirre Ceballos"
+   "corto": "Biblioteca Municipal Alberto Aguirre Ceballos",
+   "coords_fecha": "2026-11-27"
   },
   "s_3f4bf26a": {
    "nombre": "Tecnocentro Cultural Somos Pacífico",
    "lat": 3.4100014,
    "lng": -76.4710246,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=661072180897414849&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ_yxm9k6nMI4RwX5IYaWZLAk",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 28B #121B-55, Manuela Beltrán (Potrero Grande)",
    "alias": [],
@@ -2766,7 +2989,8 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Tecnocentro Cultural Somos Pacífico"
+   "corto": "Tecnocentro Cultural Somos Pacífico",
+   "coords_fecha": "2026-11-27"
   },
   "s_3facd89f": {
    "nombre": "Le Poisson Rouge",
@@ -2950,11 +3174,18 @@
   },
   "s_46bfcf2a": {
    "nombre": "Auditorio principal Campus El Cable",
-   "lat": 5.0555625,
-   "lng": -75.4861875,
+   "lat": 5.0556079,
+   "lng": -75.4861774,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12136705802349474471&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJBwthsn5lR44Rp3J2zJ89bqg",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Auditorio principal Campus El Cable - Universidad Nacional de Colombia"
@@ -2963,7 +3194,8 @@
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "_ciudad_fijada": "lugar vecino del almacén a 0 m"
+   "_ciudad_fijada": "lugar vecino del almacén a 0 m",
+   "coords_fecha": "2026-11-27"
   },
   "s_46c0ae50": {
    "nombre": "Rogelio Salmona",
@@ -3083,7 +3315,8 @@
     "miradas-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Teatro UVA Tricentenario"
+   "corto": "Teatro UVA Tricentenario",
+   "coords_fecha": null
   },
   "s_4c2461fa": {
    "nombre": "Universidad de Ibagué",
@@ -3158,8 +3391,15 @@
    "lat": 1.6134841,
    "lng": -75.6157586,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "mambe-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11557190695558346590&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJs7uiughOJI4RXnc0erRjY6A",
+    "fecha": "2026-11-27",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "mambe-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Filmemoria · I.E Juan Bautisya La Salle",
@@ -3169,7 +3409,8 @@
     "mambe-2026"
    ],
    "ciudad": "Florencia",
-   "corto": "I.E. Juan Bautista La Salle"
+   "corto": "I.E. Juan Bautista La Salle",
+   "coords_fecha": "2026-11-27"
   },
   "s_4cdac717": {
    "nombre": "Ópera de Arame",
@@ -9117,7 +9358,8 @@
    ],
    "ciudad": "Itagüí",
    "corto": "Auditorio Juan Carlos Escobar",
-   "direccion": "CAMI, Edificio Judicial, piso 6 · Cra. 51 #51-55"
+   "direccion": "CAMI, Edificio Judicial, piso 6 · Cra. 51 #51-55",
+   "coords_fecha": "2026-11-27"
   },
   "s_f24df433": {
    "nombre": "Barrio Villas de la Cordialidad",
@@ -10716,50 +10958,20 @@
  "_divergentes": {},
  "_deuda": {
   "sin_url": [
-   "s_03bcfa6f",
-   "s_05f4d981",
    "s_0a4d1410",
-   "s_0b6dd1ff",
-   "s_104736cc",
    "s_1071539b",
-   "s_10f3578c",
-   "s_11d2cb61",
-   "s_12238873",
-   "s_125e80c3",
    "s_148dd95b",
-   "s_15ec15df",
-   "s_180f653f",
-   "s_18443fd2",
    "s_19daa131",
    "s_1b1244a2",
-   "s_1b7d9bf0",
-   "s_1d891113",
-   "s_1e0b7f79",
    "s_1ee22222",
-   "s_1f59d368",
    "s_213dce05",
-   "s_23554cca",
-   "s_23e9dece",
-   "s_2635c36c",
-   "s_26861d1b",
-   "s_274fbe5a",
    "s_298b07a2",
-   "s_2e88d79d",
-   "s_3327940f",
-   "s_33ad881a",
-   "s_34124cb5",
    "s_36b34e66",
-   "s_3aba7a01",
    "s_3c28b8d0",
-   "s_3d933a6f",
    "s_3e183821",
-   "s_3eb4048f",
-   "s_3f4bf26a",
    "s_439272df",
-   "s_46bfcf2a",
    "s_49d684d9",
    "s_4bf2bfa4",
-   "s_4cb9c1c2",
    "s_4ea5f87b",
    "s_526f7636",
    "s_54536669",
