@@ -555,6 +555,38 @@
     "fecha": "2026-11-25"
    },
    "evidencia": "ficha de la Cinemateca (leída 25 nov) con ese link; TuBoleta, abierta el 25 nov, dice «Sala 3 | 29.11.2026 - 19:00 | Retorno antes de las 3PM»"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "17:00"
+   },
+   "funcion": "f_61974e3c92",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313375",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4088?sede=11",
+    "fecha": "2026-11-28"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 28 nov): «Noviembre 29 5:00 PM · Sala 2», con ese link"
+  },
+  {
+   "ancla": {
+    "sede": "Cinemateca de Bogotá - Bogotá",
+    "dia": "2026-11-29",
+    "hora": "19:00"
+   },
+   "funcion": "f_730c9c11c9",
+   "casilla": "ticket_url",
+   "valor": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313374",
+   "fuente": {
+    "tipo": "sala",
+    "url": "https://cinematecadebogota.gov.co/node/peliculas/4090?sede=11",
+    "fecha": "2026-11-28"
+   },
+   "evidencia": "ficha de la Cinemateca (leída 28 nov): «Noviembre 29 7:00 PM · Sala Capital», con ese link"
   }
  ]
 }

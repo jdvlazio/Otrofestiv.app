@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-11-25"
+  "capturado": "2026-11-28"
  },
  "obras": [
   {
@@ -54,7 +54,7 @@
    "lbSlug": "here-elsewhere-2026",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓",
    "_director": "Comes Chahbazian",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "En julio de 2023, Nagorno-Karabaj lleva siete meses bajo el asedio de Azerbaiyán. Ante la inminencia de la guerra, la realizadora pide a su amigo Artsiv que filme su vida cotidiana junto a su esposa Tatev y sus cinco hijos. A través de imágenes de gran ternura emerge una forma silenciosa de resistencia: la de un pueblo que se encuentra al borde de tener que abandonar su hogar para siempre.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/aqu%C3%AD-en-otros-lugares",
    "poster": "/assets/aleste-2026/aqui-en-otros-lugares.jpg",
@@ -75,7 +75,7 @@
    "_verificado": "el catálogo ya la tiene (w_JETBVFBSYK7M, aleste-2026)",
    "work_id": "w_JETBVFBSYK7M",
    "_director": "Kiyoshi Kurosawa",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/bright-future.jpg",
    "posterSource": "tmdb",
    "sinopsis": "Yuji y Mamoru son dos jóvenes que trabajan en una fábrica de Tokio, sin rumbo y sin futuro. Cuando Mamoru termina en prisión, Yuji queda a cargo de su medusa venenosa, que escapa a los canales de la ciudad y empieza a multiplicarse. En Cannes 2003 compitió por la Palma de Oro.",
@@ -116,11 +116,20 @@
    "lbSlug": "citizen-havel",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓",
    "_director": "Miroslav Janek, Pavel Koutecký",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Tras la caída del comunismo en Europa del Este, el exdisidente y escritor checo Václav Havel se convirtió en el primer presidente electo democráticamente de la República Checa en 1993. Desde la campaña electoral hasta después de que terminaran sus 10 años en el cargo en el 2003, el cineasta y amigo de la familia, Pavel Koutecký, siguió de cerca a Havel durante los mítines de campaña, las deliberaciones del partido, las visitas de Estado y los asuntos privados.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/ciudadano-havel",
    "poster": "/assets/aleste-2026/ciudadano-havel.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Cortometrajes de Altura",
+   "synopsis_en": "A selection of five Bolivian animated shorts: \"Cuentos de la Cuenca\", on caring for the environment; \"Ekeko\", on the Andean deity of abundance; \"La muñeca de maíz\", a tender bond in the Chaco; \"Pascay\", on grief and highland traditions; and \"Paulina y el cóndor\", a moving journey to the big city.",
+   "_verificado": "declarada a mano: Traducción de la sinopsis elegida en el almacén, sellada en #1664 (doble lectura). Se había escrito solo en el JSON publicado y el re-armado la perdía.",
+   "_director": "",
+   "_sondeado": "2026-11-28",
+   "sinopsis": "Cortometrajes de Altura es una selección de 5 animaciones bolivianas con una duración total de 41 minutos, presentada en el 9º Festival AL ESTE 2026, que reúne las obras «Cuentos de la Cuenca» (sobre el cuidado ambiental), «Ekeko» (acerca de la deidad andina de la abundancia), «La muñeca de maíz» (un tierno vínculo en el Chaco boliviano), «Pascay» (un relato sobre el duelo y las tradiciones del altiplano) y «Paulina y el cóndor» (una emotiva travesía a la gran ciudad realizada con la técnica de papel rasgado).",
+   "_sinopsis": "https://www.alestfestival.com/programa2026/cortometrajes-de-altura"
   },
   {
    "titulo": "Desde acá veo la tormenta",
@@ -263,7 +272,7 @@
    "_verificado": "el catálogo ya la tiene (w_8VHQAXMC2M9R, aleste-2026)",
    "work_id": "w_8VHQAXMC2M9R",
    "_director": "Margherita Spampinato",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/gioia-mia.jpg",
    "posterSource": "tmdb",
    "sinopsis": "Un verano que empieza a regañadientes se vuelve una aventura encantada cuando un niño descubre que la misteriosa casa siciliana de su tía guarda secretos y, quizá, espíritus antiguos escondidos entre sus muros.",
@@ -283,7 +292,7 @@
    "lbSlug": "hysteria-2025-1",
    "_verificado": "declarada a mano: «Hysteria» (2025), dir. Mehmet Akif Büyükatalay en su filmografía de TMDB; Alemania, 103 min (lámina 104)",
    "_director": "Mehmet Akif Büyükatalay",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/histeria.jpg",
    "posterSource": "tmdb"
   },
@@ -302,7 +311,7 @@
    "lbSlug": "stories-of-a-lie",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓",
    "_director": "Olia Verriopoulou",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Durante una estancia en Grecia, su país natal, la realizadora se entera de que una amiga está enferma. Sus médicos y familiares se lo ocultan y ella también debe guardar el secreto. Este hecho despierta recuerdos de su infancia en un entorno médico y de cómo esta práctica afectó a personas cercanas. Decide entonces conversar con su padre, médico, e iniciar una investigación íntima para comprender las razones detrás de las mentiras médicas.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/historias-de-una-mentira",
    "poster": "/assets/aleste-2026/historias-de-una-mentira.jpg",
@@ -342,11 +351,15 @@
    "_verificado": "el catálogo ya la tiene (w_JET7S5Q0VAEA, aleste-2026)",
    "work_id": "w_JET7S5Q0VAEA",
    "_director": "Juan Camilo Moreno",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/junio-25-andrei-tarkovski-visita-a-su-tumba.jpg",
    "posterSource": "tmdb",
    "sinopsis": "En diciembre de 1986, el cineasta y poeta ruso Andréi Tarkovski muere a los 54 años a causa de un cáncer, luego de haberse exiliado de la URSS. Una tarde de verano del siglo 21, acompañado de una cámara súper8mm, viajo a visitar su tumba. Esta película es la bitácora de este viaje.",
-   "_sinopsis": "https://www.alestfestival.com/programa2026/junio-25.-andr%C3%A9i-tarkovski-visita-a-su-tumba"
+   "_sinopsis": "https://www.alestfestival.com/programa2026/junio-25.-andr%C3%A9i-tarkovski-visita-a-su-tumba",
+   "anio": 2024,
+   "_heredado": {
+    "anio": "catálogo w_JET7S5Q0VAEA (aleste-2026)"
+   }
   },
   {
    "titulo": "La retirada",
@@ -363,7 +376,7 @@
    "lbSlug": "leaving-2011",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓",
    "_director": "Václav Havel",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "La única película dirigida por Václav Havel, basada en su última obra literaria, es una reflexión autobiográfica y una libre interpretación de «El rey Lear», de Shakespeare y «El jardín de los cerezos», de Chéjov.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/la-retirada",
    "poster": "/assets/aleste-2026/la-retirada.jpg",
@@ -404,7 +417,7 @@
    "lbSlug": "the-promised-land-1975",
    "_verificado": "declarada a mano: «Ziemia obiecana», dir. Andrzej Wajda; la lámina dice 1974 (rodaje/premier) y TMDB 1975; 162 min es el montaje corto, TMDB da 179",
    "_director": "Andrzej Wajda",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/la-tierra-prometida.jpg",
    "posterSource": "tmdb"
   },
@@ -443,7 +456,7 @@
    "_verificado": "el catálogo ya la tiene (w_JET7R8SZN1D0, aleste-2026)",
    "work_id": "w_JET7R8SZN1D0",
    "_director": "Carlos Matsuo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/labriego.jpg",
    "posterSource": "tmdb",
    "sinopsis": "Una aproximación analítica al trabajo del artista Rosemberg Sandoval, cuya producción abarca desde 1980 hasta la actualidad y se caracteriza por el uso del cuerpo propio y ajeno, especialmente de habitantes de calle, como material artístico.",
@@ -464,7 +477,7 @@
    "_verificado": "el catálogo ya la tiene (w_JETAWV8S9EP5, aleste-2026)",
    "work_id": "w_JETAWV8S9EP5",
    "_director": "Šarūnas Bartas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/laguna.jpg",
    "posterSource": "tmdb",
    "sinopsis": "En 2021, Bartas perdió a su hija Ina Marija en un accidente. Viaja con su hija menor, Una, a la costa del Pacífico mexicano donde Ina Marija había elegido vivir. Entre manglares golpeados por huracanes, padre e hija atraviesan el duelo. Se estrenó en las Giornate degli Autori de Venecia 2025.",
@@ -584,7 +597,7 @@
    "_verificado": "el catálogo ya la tiene (w_JETH4AN7CW78, aleste-2026)",
    "work_id": "w_JETH4AN7CW78",
    "_director": "Kiyoshi Kurosawa",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/license-to-live.jpg",
    "posterSource": "tmdb",
    "sinopsis": "Tras diez años en coma, un joven despierta y debe enfrentarse a una vida que continuó sin él. Mientras intenta reconstruir sus vínculos familiares y encontrar su lugar en un mundo que ha cambiado, emprende un difícil proceso de adaptación.",
@@ -642,7 +655,7 @@
    "lbSlug": "london-2026",
    "_verificado": "declarada a mano: «London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año",
    "_director": "Sebastian Brameshuber",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan.",
    "_sinopsis": "https://www.elmamm.org/cine/9o-festival-al-este/",
    "poster": "/assets/aleste-2026/londres.jpg",
@@ -698,7 +711,7 @@
    "lbSlug": "innocent-sorcerers",
    "_verificado": "declarada a mano: «Niewinni czarodzieje» (1960, 83 min), dir. Andrzej Wajda: año y duración exactos",
    "_director": "Andrzej Wajda",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Un joven médico está cansado de que las mujeres lo persigan. Una noche conoce a una muchacha que prácticamente se instala en su cuarto, y allí hablan de la moral y del amor.",
    "_sinopsis": "traducida del inglés de TMDB 80324",
    "poster": "/assets/aleste-2026/los-inocentes-encantadores.jpg",
@@ -756,7 +769,7 @@
    "lbSlug": "nobody-in-sight",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1594652 «Nobody In Sight» / original არავინ არ ჩანს, dir. Kote Kalandadze, 2025-12-05, 76 min — coincide título original, director, año y duración (75)",
    "_director": "Kote Kalandadze",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Achiko lleva diez años en el programa estatal de terapia de sustitución, un sistema que ofrece rutina diaria pero deja pocas esperanzas de recuperación. A pesar de una soledad insoportable y una fuerte dependencia a las drogas, todavía sueña con vivir una vida plena.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/nadie-a-la-vista",
    "poster": "/assets/aleste-2026/nadie-a-la-vista.jpg",
@@ -777,7 +790,7 @@
    "lbSlug": "father-2025-1",
    "_verificado": "declarada a mano: «Otec» (2025), dir. Tereza Nvotová: misma dirección y año. TMDB 99 min, MAMM 103; el título en español no casa con «Father»",
    "_director": "Tereza Nvotová",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "La vida tranquila de un hombre exitoso se desmorona cuando su bebé desaparece de la guardería. La llamada desesperada de su esposa revela una verdad devastadora. Inspirada en hechos reales en torno al llamado síndrome del bebé olvidado, la película acompaña a Michal y a su esposa Zuzka a través del duelo, de la culpa, del escarnio público y el largo proceso judicial que sigue.",
    "_sinopsis": "https://www.elmamm.org/cine/9o-festival-al-este/",
    "poster": "/assets/aleste-2026/padre.jpg",
@@ -1003,7 +1016,7 @@
    "lbSlug": "back-before-3-pm",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓",
    "_director": "Gaël Lepingle",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/retorno-antes-de-las-3-p.-m.",
    "poster": "/assets/aleste-2026/retorno-antes-de-las-3-p-m.jpg",
@@ -1034,7 +1047,6 @@
    "titulo_original": "Sol de niebla",
    "poster_path": "/2aLKjUXGx6kWEd7i1Sf8PSa9WZe.jpg",
    "synopsis_es": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
-   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 6,
    "pais_tmdb": "",
@@ -1119,10 +1131,12 @@
    ],
    "poster": "/assets/aleste-2026/sol-de-niebla.jpg",
    "posterSource": "tmdb",
-   "synopsis_en": "A fragmented vision of frailejones that juxtaposes close-ups of the plant, like a morphological study, with scientific illustrations, official representations and discourses about it. Shot on photosensitive film, it shows the plant as a territory inhabited by diverse forms of life.",
+   "genero": "Documental",
    "_heredado": {
+    "genero": "catálogo w_R4JMKBFQW5V3 (aleste-2026, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
     "synopsis_en": "catálogo w_R4JMKBFQW5V3 (aleste-2026, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)"
-   }
+   },
+   "synopsis_en": "A fragmented vision of frailejones that juxtaposes close-ups of the plant, like a morphological study, with scientific illustrations, official representations and discourses about it. Shot on photosensitive film, it shows the plant as a territory inhabited by diverse forms of life."
   },
   {
    "titulo": "The Megalomaniacs",
@@ -1139,7 +1153,7 @@
    "_verificado": "el catálogo ya la tiene (w_JETCAD2VVTFW, aleste-2026)",
    "work_id": "w_JETCAD2VVTFW",
    "_director": "Spiros Stathoulopoulos",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/the-megalomaniacs.jpg",
    "posterSource": "tmdb",
    "sinopsis": "Convencida de que la cerámica antigua puede contener rastros de sonido grabado, la arqueóloga Sofía viaja a una remota isla griega para probar su teoría con Potter, un artista excéntrico que duda de su idea.",
@@ -1216,7 +1230,7 @@
    ],
    "poster": "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg",
    "posterSource": "tmdb",
-   "synopsis_en": "A narrative or documentary journey into the collective and emotional memory that songs build in people’s lives. It weaves together different stories around the creation, loss or preservation of music, showing how melodies define historical, geographical and personal moments in Colombia.",
+   "synopsis_en": "Omar, an Andean music teacher with a 25-year career, faces the closure of the university program to which he has devoted his life and the indifference of students and authorities. Amid empty classrooms, concerts and rehearsals, he begins a silent process of mourning and transformation.",
    "_heredado": {
     "synopsis_en": "catálogo w_R4EVBDPJHAXG (aleste-2026, cinemancia-2026)"
    }
@@ -1270,7 +1284,6 @@
    "titulo_original": "Transversal 30ff",
    "poster_path": "/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg",
    "synopsis_es": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos.",
-   "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
@@ -1281,20 +1294,17 @@
    "_sondeado": "2026-11-23",
    "poster": "/assets/aleste-2026/transversal30ff.jpg",
    "posterSource": "tmdb",
-   "synopsis_en": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city.",
+   "genero": "Comedia",
    "_heredado": {
+    "genero": "catálogo w_R4ET8FVT5MKJ (aleste-2026, cinemancia-2025, ficfusa-2026)",
     "synopsis_en": "catálogo w_R4ET8FVT5MKJ (aleste-2026, cinemancia-2025, ficfusa-2026)"
-   }
+   },
+   "synopsis_en": "In the middle of a move, two friends look for the address of the new apartment one of them is moving into, but both are equally lost."
   },
   {
    "titulo": "Latido. El grafiti como arte, el grafiti como forma de vida.",
    "sinopsis": "Cada artista plasma su visión y sentir en los muros, gracias a una historia que se escribe desde los años 80 hasta hoy, en una Medellín que siempre ha estado en proceso de transformación.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/latido.-el-grafiti-como-arte-el-grafiti-como-forma-de-vida."
-  },
-  {
-   "titulo": "Cortometrajes de Altura",
-   "sinopsis": "Cortometrajes de Altura es una selección de 5 animaciones bolivianas con una duración total de 41 minutos, presentada en el 9º Festival AL ESTE 2026, que reúne las obras «Cuentos de la Cuenca» (sobre el cuidado ambiental), «Ekeko» (acerca de la deidad andina de la abundancia), «La muñeca de maíz» (un tierno vínculo en el Chaco boliviano), «Pascay» (un relato sobre el duelo y las tradiciones del altiplano) y «Paulina y el cóndor» (una emotiva travesía a la gran ciudad realizada con la técnica de papel rasgado).",
-   "_sinopsis": "https://www.alestfestival.com/programa2026/cortometrajes-de-altura"
   },
   {
    "titulo": "Noche inaugural",
@@ -1351,7 +1361,7 @@
    "lbSlug": "here-elsewhere-2026",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1657855 «Here, Elsewhere» — director ✓ y año/duración ✓",
    "_director": "Comes Chahbazian",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "En julio de 2023, Nagorno-Karabaj lleva siete meses bajo el asedio de Azerbaiyán. Ante la inminencia de la guerra, la realizadora pide a su amigo Artsiv que filme su vida cotidiana junto a su esposa Tatev y sus cinco hijos. A través de imágenes de gran ternura emerge una forma silenciosa de resistencia: la de un pueblo que se encuentra al borde de tener que abandonar su hogar para siempre.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/aqu%C3%AD-en-otros-lugares",
    "poster": "/assets/aleste-2026/aqui-en-otros-lugares.jpg",
@@ -1371,7 +1381,7 @@
    "_verificado": "el catálogo ya la tiene (w_JETBVFBSYK7M, aleste-2026)",
    "work_id": "w_JETBVFBSYK7M",
    "_director": "Kiyoshi Kurosawa",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/bright-future.jpg",
    "posterSource": "tmdb",
    "sinopsis": "Yuji y Mamoru son dos jóvenes que trabajan en una fábrica de Tokio, sin rumbo y sin futuro. Cuando Mamoru termina en prisión, Yuji queda a cargo de su medusa venenosa, que escapa a los canales de la ciudad y empieza a multiplicarse. En Cannes 2003 compitió por la Palma de Oro.",
@@ -1410,11 +1420,19 @@
    "lbSlug": "citizen-havel",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 54346 «Citizen Havel» — director ✓ y año/duración ✓",
    "_director": "Miroslav Janek, Pavel Koutecký",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Tras la caída del comunismo en Europa del Este, el exdisidente y escritor checo Václav Havel se convirtió en el primer presidente electo democráticamente de la República Checa en 1993. Desde la campaña electoral hasta después de que terminaran sus 10 años en el cargo en el 2003, el cineasta y amigo de la familia, Pavel Koutecký, siguió de cerca a Havel durante los mítines de campaña, las deliberaciones del partido, las visitas de Estado y los asuntos privados.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/ciudadano-havel",
    "poster": "/assets/aleste-2026/ciudadano-havel.jpg",
    "posterSource": "tmdb"
+  },
+  "Cortometrajes de Altura": {
+   "synopsis_en": "A selection of five Bolivian animated shorts: \"Cuentos de la Cuenca\", on caring for the environment; \"Ekeko\", on the Andean deity of abundance; \"La muñeca de maíz\", a tender bond in the Chaco; \"Pascay\", on grief and highland traditions; and \"Paulina y el cóndor\", a moving journey to the big city.",
+   "_verificado": "declarada a mano: Traducción de la sinopsis elegida en el almacén, sellada en #1664 (doble lectura). Se había escrito solo en el JSON publicado y el re-armado la perdía.",
+   "_director": "",
+   "_sondeado": "2026-11-28",
+   "sinopsis": "Cortometrajes de Altura es una selección de 5 animaciones bolivianas con una duración total de 41 minutos, presentada en el 9º Festival AL ESTE 2026, que reúne las obras «Cuentos de la Cuenca» (sobre el cuidado ambiental), «Ekeko» (acerca de la deidad andina de la abundancia), «La muñeca de maíz» (un tierno vínculo en el Chaco boliviano), «Pascay» (un relato sobre el duelo y las tradiciones del altiplano) y «Paulina y el cóndor» (una emotiva travesía a la gran ciudad realizada con la técnica de papel rasgado).",
+   "_sinopsis": "https://www.alestfestival.com/programa2026/cortometrajes-de-altura"
   },
   "En la ciudad blanca": {
    "tmdb_id": 33802,
@@ -1526,7 +1544,7 @@
    "_verificado": "el catálogo ya la tiene (w_8VHQAXMC2M9R, aleste-2026)",
    "work_id": "w_8VHQAXMC2M9R",
    "_director": "Margherita Spampinato",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/gioia-mia.jpg",
    "posterSource": "tmdb",
    "sinopsis": "Un verano que empieza a regañadientes se vuelve una aventura encantada cuando un niño descubre que la misteriosa casa siciliana de su tía guarda secretos y, quizá, espíritus antiguos escondidos entre sus muros.",
@@ -1545,7 +1563,7 @@
    "lbSlug": "hysteria-2025-1",
    "_verificado": "declarada a mano: «Hysteria» (2025), dir. Mehmet Akif Büyükatalay en su filmografía de TMDB; Alemania, 103 min (lámina 104)",
    "_director": "Mehmet Akif Büyükatalay",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/histeria.jpg",
    "posterSource": "tmdb"
   },
@@ -1563,7 +1581,7 @@
    "lbSlug": "stories-of-a-lie",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1568190 «Stories of a Lie» — director ✓ y año/duración ✓",
    "_director": "Olia Verriopoulou",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Durante una estancia en Grecia, su país natal, la realizadora se entera de que una amiga está enferma. Sus médicos y familiares se lo ocultan y ella también debe guardar el secreto. Este hecho despierta recuerdos de su infancia en un entorno médico y de cómo esta práctica afectó a personas cercanas. Decide entonces conversar con su padre, médico, e iniciar una investigación íntima para comprender las razones detrás de las mentiras médicas.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/historias-de-una-mentira",
    "poster": "/assets/aleste-2026/historias-de-una-mentira.jpg",
@@ -1601,11 +1619,15 @@
    "_verificado": "el catálogo ya la tiene (w_JET7S5Q0VAEA, aleste-2026)",
    "work_id": "w_JET7S5Q0VAEA",
    "_director": "Juan Camilo Moreno",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/junio-25-andrei-tarkovski-visita-a-su-tumba.jpg",
    "posterSource": "tmdb",
    "sinopsis": "En diciembre de 1986, el cineasta y poeta ruso Andréi Tarkovski muere a los 54 años a causa de un cáncer, luego de haberse exiliado de la URSS. Una tarde de verano del siglo 21, acompañado de una cámara súper8mm, viajo a visitar su tumba. Esta película es la bitácora de este viaje.",
-   "_sinopsis": "https://www.alestfestival.com/programa2026/junio-25.-andr%C3%A9i-tarkovski-visita-a-su-tumba"
+   "_sinopsis": "https://www.alestfestival.com/programa2026/junio-25.-andr%C3%A9i-tarkovski-visita-a-su-tumba",
+   "anio": 2024,
+   "_heredado": {
+    "anio": "catálogo w_JET7S5Q0VAEA (aleste-2026)"
+   }
   },
   "La retirada": {
    "tmdb_id": 76598,
@@ -1621,7 +1643,7 @@
    "lbSlug": "leaving-2011",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 76598 «Leaving» — director ✓ y año/duración ✓",
    "_director": "Václav Havel",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "La única película dirigida por Václav Havel, basada en su última obra literaria, es una reflexión autobiográfica y una libre interpretación de «El rey Lear», de Shakespeare y «El jardín de los cerezos», de Chéjov.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/la-retirada",
    "poster": "/assets/aleste-2026/la-retirada.jpg",
@@ -1660,7 +1682,7 @@
    "lbSlug": "the-promised-land-1975",
    "_verificado": "declarada a mano: «Ziemia obiecana», dir. Andrzej Wajda; la lámina dice 1974 (rodaje/premier) y TMDB 1975; 162 min es el montaje corto, TMDB da 179",
    "_director": "Andrzej Wajda",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/la-tierra-prometida.jpg",
    "posterSource": "tmdb"
   },
@@ -1697,7 +1719,7 @@
    "_verificado": "el catálogo ya la tiene (w_JET7R8SZN1D0, aleste-2026)",
    "work_id": "w_JET7R8SZN1D0",
    "_director": "Carlos Matsuo",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/labriego.jpg",
    "posterSource": "tmdb",
    "sinopsis": "Una aproximación analítica al trabajo del artista Rosemberg Sandoval, cuya producción abarca desde 1980 hasta la actualidad y se caracteriza por el uso del cuerpo propio y ajeno, especialmente de habitantes de calle, como material artístico.",
@@ -1717,7 +1739,7 @@
    "_verificado": "el catálogo ya la tiene (w_JETAWV8S9EP5, aleste-2026)",
    "work_id": "w_JETAWV8S9EP5",
    "_director": "Šarūnas Bartas",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/laguna.jpg",
    "posterSource": "tmdb",
    "sinopsis": "En 2021, Bartas perdió a su hija Ina Marija en un accidente. Viaja con su hija menor, Una, a la costa del Pacífico mexicano donde Ina Marija había elegido vivir. Entre manglares golpeados por huracanes, padre e hija atraviesan el duelo. Se estrenó en las Giornate degli Autori de Venecia 2025.",
@@ -1786,7 +1808,7 @@
    "_verificado": "el catálogo ya la tiene (w_JETH4AN7CW78, aleste-2026)",
    "work_id": "w_JETH4AN7CW78",
    "_director": "Kiyoshi Kurosawa",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/license-to-live.jpg",
    "posterSource": "tmdb",
    "sinopsis": "Tras diez años en coma, un joven despierta y debe enfrentarse a una vida que continuó sin él. Mientras intenta reconstruir sus vínculos familiares y encontrar su lugar en un mundo que ha cambiado, emprende un difícil proceso de adaptación.",
@@ -1842,7 +1864,7 @@
    "lbSlug": "london-2026",
    "_verificado": "declarada a mano: «London» (2026), dir. Sebastian Brameshuber, en su filmografía de TMDB; misma dirección y año",
    "_director": "Sebastian Brameshuber",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Bobby siempre está de viaje, conduciendo su coche de un lado a otro por la autopista que une las ciudades austriacas de Viena y Salzburgo. Gracias a un servicio de coche compartido, recoge a otras personas que viajan por la misma ruta pero buscan ahorrar en gasolina. Durante el trayecto, charlan.",
    "_sinopsis": "https://www.elmamm.org/cine/9o-festival-al-este/",
    "poster": "/assets/aleste-2026/londres.jpg",
@@ -1896,7 +1918,7 @@
    "lbSlug": "innocent-sorcerers",
    "_verificado": "declarada a mano: «Niewinni czarodzieje» (1960, 83 min), dir. Andrzej Wajda: año y duración exactos",
    "_director": "Andrzej Wajda",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Un joven médico está cansado de que las mujeres lo persigan. Una noche conoce a una muchacha que prácticamente se instala en su cuarto, y allí hablan de la moral y del amor.",
    "_sinopsis": "traducida del inglés de TMDB 80324",
    "poster": "/assets/aleste-2026/los-inocentes-encantadores.jpg",
@@ -1952,7 +1974,7 @@
    "lbSlug": "nobody-in-sight",
    "_verificado": "declarada a mano: altas.py --ficha: TMDB 1594652 «Nobody In Sight» / original არავინ არ ჩანს, dir. Kote Kalandadze, 2025-12-05, 76 min — coincide título original, director, año y duración (75)",
    "_director": "Kote Kalandadze",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Achiko lleva diez años en el programa estatal de terapia de sustitución, un sistema que ofrece rutina diaria pero deja pocas esperanzas de recuperación. A pesar de una soledad insoportable y una fuerte dependencia a las drogas, todavía sueña con vivir una vida plena.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/nadie-a-la-vista",
    "poster": "/assets/aleste-2026/nadie-a-la-vista.jpg",
@@ -1972,7 +1994,7 @@
    "lbSlug": "father-2025-1",
    "_verificado": "declarada a mano: «Otec» (2025), dir. Tereza Nvotová: misma dirección y año. TMDB 99 min, MAMM 103; el título en español no casa con «Father»",
    "_director": "Tereza Nvotová",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "La vida tranquila de un hombre exitoso se desmorona cuando su bebé desaparece de la guardería. La llamada desesperada de su esposa revela una verdad devastadora. Inspirada en hechos reales en torno al llamado síndrome del bebé olvidado, la película acompaña a Michal y a su esposa Zuzka a través del duelo, de la culpa, del escarnio público y el largo proceso judicial que sigue.",
    "_sinopsis": "https://www.elmamm.org/cine/9o-festival-al-este/",
    "poster": "/assets/aleste-2026/padre.jpg",
@@ -2193,7 +2215,7 @@
    "lbSlug": "back-before-3-pm",
    "_verificado": "declarada a mano: altas.py --sondar: tmdb_alternos: TMDB 1633356 «Back Before 3 P.M.» — director ✓ y año/duración ✓",
    "_director": "Gaël Lepingle",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "sinopsis": "Se trata de un hombre y su hogar, el padre en un complejo habitacional. Es después de su muerte. Se ha encontrado algo. No es un secreto, sino la cara oculta de los días, registrada con precisión obsesiva. Una lucha diaria con la vida material y el paso del tiempo.",
    "_sinopsis": "https://www.alestfestival.com/programa2026/retorno-antes-de-las-3-p.-m.",
    "poster": "/assets/aleste-2026/retorno-antes-de-las-3-p-m.jpg",
@@ -2222,7 +2244,6 @@
    "titulo_original": "Sol de niebla",
    "poster_path": "/2aLKjUXGx6kWEd7i1Sf8PSa9WZe.jpg",
    "synopsis_es": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
-   "genero": "",
    "anio_tmdb": 2026,
    "duracion_tmdb": 6,
    "pais_tmdb": "",
@@ -2307,10 +2328,12 @@
    ],
    "poster": "/assets/aleste-2026/sol-de-niebla.jpg",
    "posterSource": "tmdb",
-   "synopsis_en": "A fragmented vision of frailejones that juxtaposes close-ups of the plant, like a morphological study, with scientific illustrations, official representations and discourses about it. Shot on photosensitive film, it shows the plant as a territory inhabited by diverse forms of life.",
+   "genero": "Documental",
    "_heredado": {
+    "genero": "catálogo w_R4JMKBFQW5V3 (aleste-2026, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)",
     "synopsis_en": "catálogo w_R4JMKBFQW5V3 (aleste-2026, cinetoro-2026, cortoscali-2026, ficfusa-2026, filcmar-2026, mamut-2026, midbo-2026)"
-   }
+   },
+   "synopsis_en": "A fragmented vision of frailejones that juxtaposes close-ups of the plant, like a morphological study, with scientific illustrations, official representations and discourses about it. Shot on photosensitive film, it shows the plant as a territory inhabited by diverse forms of life."
   },
   "The Megalomaniacs": {
    "tmdb_id": 1567508,
@@ -2326,7 +2349,7 @@
    "_verificado": "el catálogo ya la tiene (w_JETCAD2VVTFW, aleste-2026)",
    "work_id": "w_JETCAD2VVTFW",
    "_director": "Spiros Stathoulopoulos",
-   "_sondeado": "2026-11-25",
+   "_sondeado": "2026-11-28",
    "poster": "/assets/aleste-2026/the-megalomaniacs.jpg",
    "posterSource": "tmdb",
    "sinopsis": "Convencida de que la cerámica antigua puede contener rastros de sonido grabado, la arqueóloga Sofía viaja a una remota isla griega para probar su teoría con Potter, un artista excéntrico que duda de su idea.",
@@ -2401,7 +2424,7 @@
    ],
    "poster": "/assets/aleste-2026/todas-las-canciones-del-mundo.jpg",
    "posterSource": "tmdb",
-   "synopsis_en": "A narrative or documentary journey into the collective and emotional memory that songs build in people’s lives. It weaves together different stories around the creation, loss or preservation of music, showing how melodies define historical, geographical and personal moments in Colombia.",
+   "synopsis_en": "Omar, an Andean music teacher with a 25-year career, faces the closure of the university program to which he has devoted his life and the indifference of students and authorities. Amid empty classrooms, concerts and rehearsals, he begins a silent process of mourning and transformation.",
    "_heredado": {
     "synopsis_en": "catálogo w_R4EVBDPJHAXG (aleste-2026, cinemancia-2026)"
    }
@@ -2453,7 +2476,6 @@
    "titulo_original": "Transversal 30ff",
    "poster_path": "/5s2EhsHj9E5gCZhsVZXgYTsqR8J.jpg",
    "synopsis_es": "En medio de una mudanza, dos amigos buscan la dirección del nuevo apartamento de uno de ellos, pero ambos están igual de perdidos.",
-   "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 0,
    "pais_tmdb": "Colombia",
@@ -2464,10 +2486,12 @@
    "_sondeado": "2026-11-23",
    "poster": "/assets/aleste-2026/transversal30ff.jpg",
    "posterSource": "tmdb",
-   "synopsis_en": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city.",
+   "genero": "Comedia",
    "_heredado": {
+    "genero": "catálogo w_R4ET8FVT5MKJ (aleste-2026, cinemancia-2025, ficfusa-2026)",
     "synopsis_en": "catálogo w_R4ET8FVT5MKJ (aleste-2026, cinemancia-2025, ficfusa-2026)"
-   }
+   },
+   "synopsis_en": "In the middle of a move, two friends look for the address of the new apartment one of them is moving into, but both are equally lost."
   },
   "Noche inaugural": {
    "sinopsis": "Noche inaugural del 9.° Festival de Cine de Europa Central y Oriental, con una doble función: el cortometraje inaugural \"Latido. El grafiti como arte, el grafiti como forma de vida\" (dir. Juan Zapata, Colombia, 2026) y la película central \"La última ronda en Venecia\" (dir. Francesco Sossai, Italia, 2025).",
@@ -2475,16 +2499,11 @@
   }
  },
  "sin_ficha": [
-  "Cortometrajes de Altura",
   "Desde acá veo la tormenta",
   "Las piedras del río",
   "Latido. El grafiti como arte, el grafiti como forma de vida."
  ],
  "_sin_ficha_sondeo": {
-  "Cortometrajes de Altura": {
-   "director": "",
-   "fecha": "2026-11-23"
-  },
   "Desde acá veo la tormenta": {
    "director": "Juan Felipe Restrepo",
    "fecha": "2026-11-23"

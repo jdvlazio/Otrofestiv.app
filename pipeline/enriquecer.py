@@ -554,7 +554,7 @@ def main():
                 c = {k: v for k, v in c.items() if k not in _her | {'_heredado', '_genero_de'}}
             ok[t] = c
             reuso += 1
-            print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} tmdb {c["tmdb_id"]} '
+            print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} tmdb {c.get("tmdb_id")} '
                   f'(caché del {c["_sondeado"]})', flush=True)
             continue
         c = prev_no.get(t)

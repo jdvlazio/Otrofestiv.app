@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #1397 — https://github.com/jdvlazio/Otrofestiv.app/issues/1397",
-  "capturado": "2026-11-24",
+  "capturado": "2026-11-28",
   "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
   "estado": "OPEN",
-  "comentarios": 29
+  "comentarios": 35
  },
  "issue": 1397,
  "titulo": "RADAR: Festival de Cine Al Este — Medellín 18 NOV, Bogotá 25–29 NOV 2026",
@@ -126,6 +126,30 @@
   {
    "fecha": "2026-11-24",
    "cuerpo": "Vigía 23 nov 21:30 — «Ino Moxo» (jue 26 nov): contradicción de hora y sala, sin aplicar.\n- Post nuevo del 23 nov 18:01, de @blond.indian.films con @aleste.colombia de coautor (https://www.instagram.com/p/DgGg1InlhGH/): 7:30 p. m., Sala 3. Solo en el pie; las 5 láminas no traen hora ni sala.\n- Ficha de la Cinemateca (https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11): 7:30 p. m., Sala 3.\n- Web del festival y la app: 19:00, Sala 2.\n- Choca con «La retirada», que TuBoleta vende hoy en Sala 3 a las 19:00 (la ficha 4041 la pone en Sala 2 a las 19:00; la web del festival, 19:30 en Sala 3). Las fuentes cruzan las salas de las dos. El link de TuBoleta de «Ino Moxo» da error 404.\n"
+  },
+  {
+   "fecha": "2026-11-24",
+   "cuerpo": "Vigía 24 nov 09:40 — aplicado: «Retorno antes de las 3 p. m.» (29 nov, 19:00) pasa de Sala 2 a Sala 3 (#1613). Ficha de la Cinemateca 4116 (HTML y texto renderizado) y TuBoleta coinciden; la web del festival dice Sala 2. Las otras fichas de la Cinemateca Centro coinciden con la app en día, hora y sala.\n"
+  },
+  {
+   "fecha": "2026-11-25",
+   "cuerpo": "**Salas vs app — corrida 25 nov 2026** (solo lectura; nada cargado)\n\nFESTIVALES DESCONOCIDOS: ninguno.\n\n**Urgente (26–28 nov) — Al Este, Cinemateca de Bogotá.** Contra las fichas de la sala, las 25 funciones coinciden en día, hora, sala y boletería gratis.\n\n1. **Sala distinta entre la ficha y TuBoleta, jue 26 nov.** La ficha y la app coinciden; TuBoleta no. Las salas están cruzadas:\n   - \"Ino Moxo\" 19:30: ficha y app Sala 3 (https://cinematecadebogota.gov.co/node/peliculas/4042?sede=11); TuBoleta Sala 2 (productId 10230607313357, que el 23 nov daba 404 y hoy abre).\n   - \"La retirada\" 19:00: ficha y app Sala 2 (https://cinematecadebogota.gov.co/node/peliculas/4041?sede=11); TuBoleta Sala 3 (productId 10230607313356).\n   - Acción: que Juan confirme las salas con la Cinemateca; no cambiar por esta corrida.\n2. **Links de compra en la ficha, vacíos en la app.** Base: https://cinemateca.checkout.tuboleta.com/selection/event/date?productId= ; ficha: https://cinematecadebogota.gov.co/node/peliculas/NUMERO?sede=11\n   Abren y coinciden en día, hora y sala (acción: agregar ticket_url):\n   - 26 nov 16:00 S2 Ciudadano Havel: 10230607313353 (4038)\n   - 27 nov 14:30 S3 Historias de una mentira: 10230607313358 (4043)\n   - 27 nov 16:00 S2 Aquí, en otros lugares: 10230607313359 (4044)\n   - 28 nov 16:00 S2 Nadie a la vista: 10230607313366 (4081)\n   - 29 nov 19:00 S3 Retorno antes de las 3 p. m.: 10230639424954 (4116)\n   Con salvedad:\n   - 26 nov 19:30 Ino Moxo: 10230607313357 (4042), abre pero con Sala 2 (punto 1).\n   - 29 nov 16:30 License to Live: 10230607313375 (4088), abre con 17:00. La hora ya la decidió Juan (16:30); no se vuelve a proponer.\n   - 29 nov 19:00 Sala Capital La última ronda en Venecia: 10230607313374 (4090), da 404: no cargar.\n   Se leyó el título de la página de TuBoleta; no se comprobó que haya puestos a la venta.\n\n**BOGOSHORTS — Cinemateca:** sin diferencias en las funciones de sala con ficha (2–8 dic). Un link difiere solo en http/https (5 dic 19:00 S3). No verificable en las fichas: 7 Al Tablero en Sala Capital, 3 VR en Taller de la imagen y 4 en Fontanar. Sala Gaitán no se comparó.\n\n**Colombo** (https://www.colombomedellin.edu.co/programacion-por-salas/): 24–29 nov, sin rótulos vigentes. **MAMM** (https://www.elmamm.org/cine/): Itinerancia MIDBO 28, 25–29 nov, fuera de las fechas de MIDBO, no es hallazgo. Las funciones de Al Este en estas dos salas ya pasaron.\nSin funciones en estas salas: UNDER, Provincia de Vélez, Festicine Antioquia.\n\n**Lo que frenó la revisión:** Cinemateca del Caribe no respondió (530, dos intentos; ningún festival vigente usa esa sede). No se abrió la página 2 de la cartelera del MAMM. \"Cortometrajes de Altura\" (28 nov 14:00, Fontanar) no se cotejó: la agenda leída es la sede Centro.\n"
+  },
+  {
+   "fecha": "2026-11-25",
+   "cuerpo": "Vigía 25 nov 17:00. El post https://www.instagram.com/p/DgLaK8Alvkk/ confirma Hecho en Colombia Bloque 1 (sáb 28 nov, 2:30 p. m., Cinemateca Sala 3, conversatorio): la app coincide. Diferencia menor: la lámina de \"Junio 25. Andréi Tarkovski, visita a su tumba\" dice 2025; la app, 2024. No se cambió nada.\n"
+  },
+  {
+   "fecha": "2026-11-26",
+   "cuerpo": "Vigía 26 nov 09:00 — Grilla Bogotá de IG (DgNOIFiloIJ, láminas 00–02, leídas a ojo) y web del festival comparadas con la app: todo coincide salvo tres funciones donde el festival y la Cinemateca siguen en desacuerdo.\n- La retirada, 26 nov: el festival dice 19:30 Sala 3; la Cinemateca (ficha 4041) dice 7:00 PM Sala 2.\n- Ino Moxo, 26 nov: el festival dice 19:00 Sala 2; la Cinemateca (ficha 4042) dice 7:30 PM Sala 3.\n- License to Live, 29 nov: el festival dice 17:00; la Cinemateca (ficha 4088) dice 4:30 PM Sala 2.\n\nLa app sigue a la Cinemateca, como decidió Juan el 24 nov; las tres fichas se releyeron hoy sin cambios, así que no se tocó nada.\n\nAdemás:\n- Retorno antes de las 3PM (29 nov): la lámina lo pone en el bloque de Sala Dos, pero la Cinemateca y TuBoleta dicen Sala 3, igual que la app.\n- Los golfos (29 nov): la lámina no menciona el conversatorio que trae el catálogo; la app lo conserva.\n"
+  },
+  {
+   "fecha": "2026-11-27",
+   "cuerpo": "Vigía 26 nov 21:00 — la ficha web cambió el título a «La ciudad blanca» (antes «En la ciudad blanca»): https://www.alestfestival.com/programa2026/la-ciudad-blanca. Retorno antes de las 3 p. m. en Sala 3 ya está en la app. Boletería de TuBoleta del 28–29 nov coincide."
+  },
+  {
+   "fecha": "2026-11-28",
+   "cuerpo": "**Lector de salas — 28 nov 2026** (Cinemateca de Bogotá, ficha de cada obra; contra el almacén)\n\nDos diferencias, las dos de **mañana 29 nov**:\n\n1. **License to Live** — la sala la da a las **5:00 PM**, Sala 2. La app dice 16:30 en Sala 2.\n   Fuente: https://cinematecadebogota.gov.co/node/peliculas/4088?sede=11\n   Acción: pasar la función a 17:00 y ponerle `ticket_url` = https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313375 (en la app no tiene link).\n2. **La última ronda en Venecia** — 29 nov, 7:00 PM, Sala Capital, igual en la app y en la sala, pero la app no tiene link de compra. La sala da https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313374\n   Fuente: https://cinematecadebogota.gov.co/node/peliculas/4090?sede=11\n   Acción: agregar `ticket_url`.\n\nLas demás funciones del 28 y del 29 en la Cinemateca coinciden (día, hora, sala y link).\nNota: Hecho en Colombia 2 (29 nov) usa en la sala el mismo link que el Bloque 1 (productId 10230607313365). La app copia eso, así que no es diferencia con la app, pero puede ser un error de la sala.\nNo revisado: Colombo Americano (su web devuelve un captcha anti-bot) y la función de Fontanar del 28 nov (la agenda revisada es solo la de la sede Centro). El tramo de Medellín (18–22 nov) ya pasó.\n"
   }
  ]
 }
