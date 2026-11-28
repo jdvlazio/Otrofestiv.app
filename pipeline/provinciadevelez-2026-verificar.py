@@ -12,9 +12,9 @@ IG = f'{REPO}/fuentes/provinciadevelez-2026/ig'
 FB = 'pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul'
 CORREO = 'correo del festival a hola@otrofestiv.app (4 láminas, sin texto)'   # 27 nov, en ig/correo-2026-11-27
 FICHAS = 'fichas del festival a Juan (8 láminas, 27 nov 2026)'   # en ig/fichas-2026-11-27
-POSTS = {FICHAS: ['fichas-2026-11-27'], CORREO: ['correo-2026-11-27'], FB: ['fb-1581240617371136'], 'DfxyKI-S9LA': ['DfxyKI-S9LA', 'DfzhWP2x_sy', 'fichas-2026-11-27']}
+POSTS = {FICHAS: ['fichas-2026-11-27'], CORREO: ['correo-2026-11-27'], FB: ['fb-1581240617371136'], '1584046943757170': ['fb-1584046943757170'], 'DfxyKI-S9LA': ['DfxyKI-S9LA', 'DfzhWP2x_sy', 'fichas-2026-11-27']}
 # las fichas del 27 nov dibujan el número del día: se lee el día de la semana (dic 2026)
-SEMANA = {1: 'martes', 2: 'miercoles', 3: 'jueves', 4: 'viernes', 5: 'sabado', 6: 'domingo'}
+SEMANA = {30: 'lunes', 1: 'martes', 2: 'miercoles', 3: 'jueves', 4: 'viernes', 5: 'sabado', 6: 'domingo'}
 IMPRESO = {'El pescador (videoclip)': 'El pescador', 'El fantástico Sr. Fox': 'Fantastic Mr Fox'}
 A_OJO = {'Saint Juanito'}   # título dibujado en el afiche (lámina 01 de Df7ZYXrEaXh)
 
@@ -26,8 +26,8 @@ def n(s):
 
 b = json.load(open(f'{REPO}/festivals/staging/provinciadevelez-2026-build.json', encoding='utf-8'))['films']
 err, ojo = [], []
-for f in b:   # solo días oficiales: el afiche dice 1 al 6 de diciembre (Juan, 24 nov)
-    if not '2026-12-01' <= f['day'] <= '2026-12-06':
+for f in b:   # solo días oficiales: la programación del festival dice 30 nov–6 dic (FB, 27 nov)
+    if not '2026-11-30' <= f['day'] <= '2026-12-06':
         err.append(f'{f["title"]}: {f["day"]} fuera de los días oficiales')
 for f in b:
     sc = f['_src']['url'] if f['_src']['url'] in (CORREO, FICHAS) else f['_src']['url'].rstrip('/').split('/')[-1]

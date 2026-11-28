@@ -1,0 +1,70 @@
+[
+ {
+  "work_id": "w_FZRWNC0FJ7XC",
+  "campo": "directores",
+  "valor": [
+   "Wilson Beltrán",
+   "Wilson Valderrama"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Wilson Beltrán, Wilson Valderrama"
+  }
+ },
+ {
+  "work_id": "w_FZRWNC0FJ7XC",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_FZRWNC0FJ7XC",
+  "campo": "sinopsis.es",
+  "valor": "A Eulalio se le presenta la tentación de vender las tierras que han pasado de generación en generación en su familia. Un poco de chicha le ayudará a tomar la mejor decisión.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "A Eulalio se le presenta la tentación de vender las tierras que han pasado de generación en generación en su familia. Un poco de chicha le ayudará a tomar la mejor decisión."
+  }
+ },
+ {
+  "work_id": "w_FZRWNC0FJ7XC",
+  "campo": "sinopsis.en",
+  "valor": "Eulalio is tempted to sell the land that has been in his family for generations. A little chicha will help him make the best decision.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Eulalio is tempted to sell the land that has been in his family for generations. A little chicha will help him make the best decision."
+  }
+ },
+ {
+  "work_id": "w_FZRWNC0FJ7XC",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/una-mala-chicha-es-un-guarapo-v2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/una-mala-chicha-es-un-guarapo-v2.jpg"
+  }
+ }
+]

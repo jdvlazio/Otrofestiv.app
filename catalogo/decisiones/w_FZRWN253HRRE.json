@@ -1,0 +1,83 @@
+[
+ {
+  "work_id": "w_FZRWN253HRRE",
+  "campo": "directores",
+  "valor": [
+   "Daniela Herrera"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Daniela Herrera"
+  }
+ },
+ {
+  "work_id": "w_FZRWN253HRRE",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_FZRWN253HRRE",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_FZRWN253HRRE",
+  "campo": "sinopsis.es",
+  "valor": "El levantamiento de un templo sagrado femenino y el regreso de un ritual antiguo musical.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "El levantamiento de un templo sagrado femenino y el regreso de un ritual antiguo musical."
+  }
+ },
+ {
+  "work_id": "w_FZRWN253HRRE",
+  "campo": "sinopsis.en",
+  "valor": "The raising of a sacred feminine temple and the return of an ancient musical ritual.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "The raising of a sacred feminine temple and the return of an ancient musical ritual."
+  }
+ },
+ {
+  "work_id": "w_FZRWN253HRRE",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/titua-y-oro-v2.jpg",
+   "veredicto": "oficial"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/titua-y-oro-v2.jpg"
+  }
+ }
+]

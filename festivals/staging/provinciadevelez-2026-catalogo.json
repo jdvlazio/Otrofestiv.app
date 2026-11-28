@@ -206,7 +206,7 @@
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
     "date": "2026-11-25"
    },
-   "franja": "sin función en los días oficiales (1–6 dic)",
+   "franja": "sin función en los días oficiales (30 nov–6 dic)",
    "afiche": "assets/provinciadevelez-2026/cicatrices.jpg",
    "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/02 (afiche recortado de la lámina del festival)"
   },
@@ -275,11 +275,17 @@
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
     "date": "2026-11-25"
    },
-   "franja": "sin función en los días oficiales (1–6 dic)",
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA Vélez",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170 (programación, 27 nov): lámina 1 «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE DE 2026»; lámina 2 «LUNES 30 NOVIEMBRE · 4:00 P. M. · Auditorio SENA Vélez»"
+   },
    "sinopsis": "El levantamiento de un templo sagrado femenino y el regreso de un ritual antiguo musical.",
    "_sinopsis_de": "https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 14)",
    "afiche": "assets/provinciadevelez-2026/titua-y-oro.jpg",
-   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/14 (afiche recortado de la lámina del festival)"
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/14 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "The raising of a sacred feminine temple and the return of an ancient musical ritual."
   },
   {
    "titulo": "La Belleza",
@@ -323,11 +329,25 @@
     "date": "2026-11-25"
    },
    "funcion": {
-    "fecha": "2026-12-05",
-    "hora": "18:00",
-    "sede": "Parque Emilio Ulloa",
-    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA Vélez",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170 (programación, 27 nov): lámina 1 «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE DE 2026»; lámina 2 «LUNES 30 NOVIEMBRE · 4:00 P. M. · Auditorio SENA Vélez»"
    },
+   "funciones": [
+    {
+     "fecha": "2026-11-30",
+     "hora": "16:00",
+     "sede": "Auditorio SENA Vélez",
+     "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170 (programación, 27 nov): lámina 1 «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE DE 2026»; lámina 2 «LUNES 30 NOVIEMBRE · 4:00 P. M. · Auditorio SENA Vélez»"
+    },
+    {
+     "fecha": "2026-12-05",
+     "hora": "18:00",
+     "sede": "Parque Emilio Ulloa",
+     "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+    }
+   ],
    "sinopsis": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Gündiwa Villafaña Mejía.",
    "_sinopsis_de": "https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 8)",
    "afiche": "assets/provinciadevelez-2026/un-dialogo-para-sanar-la-tierra.jpg",
@@ -350,11 +370,25 @@
     "date": "2026-11-25"
    },
    "funcion": {
-    "fecha": "2026-12-05",
-    "hora": "18:00",
-    "sede": "Parque Emilio Ulloa",
-    "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA Vélez",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170 (programación, 27 nov): lámina 1 «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE DE 2026»; lámina 2 «LUNES 30 NOVIEMBRE · 4:00 P. M. · Auditorio SENA Vélez»"
    },
+   "funciones": [
+    {
+     "fecha": "2026-11-30",
+     "hora": "16:00",
+     "sede": "Auditorio SENA Vélez",
+     "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170 (programación, 27 nov): lámina 1 «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE DE 2026»; lámina 2 «LUNES 30 NOVIEMBRE · 4:00 P. M. · Auditorio SENA Vélez»"
+    },
+    {
+     "fecha": "2026-12-05",
+     "hora": "18:00",
+     "sede": "Parque Emilio Ulloa",
+     "_evidencia": "https://www.instagram.com/p/DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6"
+    }
+   ],
    "sinopsis": "Muestra el testimonio y lucha de las comunidades indígenas afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Alto Milluni, cuya agua naciente es robada a diario para ser llevada a la mega-urbe El Alto, las mujeres proponen un proyecto de turismo comunitario local para la supervivencia.",
    "_sinopsis_de": "https://www.instagram.com/p/DgFiVrTEbh0/",
    "afiche": "assets/provinciadevelez-2026/uma-unjirinaka-alto-milluni.jpg",
@@ -403,11 +437,17 @@
     "ig": "https://www.instagram.com/p/DfcqutroV1z/",
     "date": "2026-11-25"
    },
-   "franja": "sin función en los días oficiales (1–6 dic)",
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA Vélez",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170 (programación, 27 nov): lámina 1 «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE DE 2026»; lámina 2 «LUNES 30 NOVIEMBRE · 4:00 P. M. · Auditorio SENA Vélez»"
+   },
    "sinopsis": "En el corazón del trapiche, donde el sonido de la caña molida acompaña las jornadas de trabajo, Ecos del cañaveral retrata la vida de cinco campesinos hacedores de panela que han dedicado su existencia a un oficio ancestral.",
    "_sinopsis_de": "https://www.instagram.com/p/Df-DlZyERf2/",
    "afiche": "assets/provinciadevelez-2026/ecos-del-canaveral.jpg",
-   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/05 (afiche recortado de la lámina del festival)"
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcqutroV1z/05 (afiche recortado de la lámina del festival)",
+   "synopsis_en": "In the heart of the trapiche, where the sound of crushed cane accompanies the workday, Ecos del cañaveral portrays the lives of five panela-making farmers who have devoted their lives to an ancestral trade."
   },
   {
    "titulo": "Gualí",
@@ -424,12 +464,14 @@
     "ig": "https://www.instagram.com/p/DfcpGHfoWWI/",
     "date": "2026-11-25"
    },
-   "franja": "sin función en los días oficiales (1–6 dic)",
-   "sinopsis": "En el corazón de la sabana de Bogotá, el humedal Gualí es un santuario de biodiversidad. El documental se sumerge en su riqueza natural a través de una narrativa visual poética.",
-   "_sinopsis_de": "https://www.facebook.com/festivaldecinebarbosa (20 nov; el final del pie viene cortado)",
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA Vélez",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170 (programación, 27 nov): lámina 1 «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE DE 2026»; lámina 2 «LUNES 30 NOVIEMBRE · 4:00 P. M. · Auditorio SENA Vélez»"
+   },
    "afiche": "assets/provinciadevelez-2026/guali.jpg",
-   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/13 (afiche recortado de la lámina del festival)",
-   "synopsis_en": "In the heart of the Bogotá savanna, the Gualí wetland is a sanctuary of biodiversity. The documentary immerses itself in its natural wealth through a poetic visual narrative."
+   "_afiche_de": "lámina https://www.instagram.com/p/DfcpGHfoWWI/13 (afiche recortado de la lámina del festival)"
   },
   {
    "titulo": "Sinfonía incompleta de oficios del Fonce",
@@ -871,7 +913,7 @@
    "pais": "Bolivia",
    "categoria": "Documental",
    "seccion": "Selección oficial",
-   "franja": "sin función en los días oficiales (1–6 dic)",
+   "franja": "sin función en los días oficiales (30 nov–6 dic)",
    "sinopsis": "Muestra el testimonio y lucha de las comunidades indígenas urbanas y rurales afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Puchukollo Alto, periferia de la mega-urbe El Alto, las familias de la comunidad defienden el acuífero allí situado contra la usurpación y contaminación de sus aguas.",
    "_sinopsis_de": "https://www.instagram.com/p/Df-DlZyERf2/",
    "afiche": "assets/provinciadevelez-2026/uma-unjirinaka-puchucollo-alto.jpg",
@@ -889,7 +931,12 @@
    },
    "pais": "Colombia",
    "seccion": "Muestra especial",
-   "franja": "sin función en los días oficiales (1–6 dic)",
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA Vélez",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170 (programación, 27 nov): lámina 1 «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE DE 2026»; lámina 2 «LUNES 30 NOVIEMBRE · 4:00 P. M. · Auditorio SENA Vélez»"
+   },
    "sinopsis": "A Eulalio se le presenta la tentación de vender las tierras que han pasado de generación en generación en su familia. Un poco de chicha le ayudará a tomar la mejor decisión.",
    "_sinopsis_de": "https://www.instagram.com/p/Df-DlZyERf2/",
    "afiche": "assets/provinciadevelez-2026/una-mala-chicha-es-un-guarapo.jpg",
@@ -905,7 +952,12 @@
     "date": "2026-11-25"
    },
    "seccion": "Muestra especial",
-   "franja": "sin función en los días oficiales (1–6 dic)"
+   "funcion": {
+    "fecha": "2026-11-30",
+    "hora": "16:00",
+    "sede": "Auditorio SENA Vélez",
+    "_evidencia": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170 (programación, 27 nov): lámina 1 «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE DE 2026»; lámina 2 «LUNES 30 NOVIEMBRE · 4:00 P. M. · Auditorio SENA Vélez»"
+   }
   },
   {
    "titulo": "Tres lunas nuevas",

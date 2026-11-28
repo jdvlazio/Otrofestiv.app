@@ -1,187 +1,206 @@
 {
- "_provenance": {
-  "fuente": "pre-onboarding de provinciadevelez-2026 (altas.py + decisiones con su porqué)",
-  "capturado": "2026-11-19",
-  "metodo": "correcciones con su porqué"
- },
- "fichas": {
-  "El fantástico Sr. Fox": {
-   "tmdb": 10315,
-   "_fuente": "https://www.themoviedb.org/movie/10315",
-   "_por_que": "altas.py --ficha: TMDB 10315 «Fantastic Mr. Fox» (2009) de Wes Anderson: la web la presenta como «El fantástico Sr. Fox · Wes Anderson · stop motion» y la lámina del 18 nov pinta el afiche francés «Fantastic Mr. Fox · un film de Wes Anderson» (Amalric, Huppert). Título en español de la obra",
-   "_registro": "provinciadevelez-2026-altas.json"
+  "_provenance": {
+    "fuente": "pre-onboarding de provinciadevelez-2026 (altas.py + decisiones con su porqué)",
+    "capturado": "2026-11-19",
+    "metodo": "correcciones con su porqué"
   },
-  "Nueve jueves en Riachuelo": {
-   "tmdb": 1849389,
-   "_fuente": "https://www.themoviedb.org/movie/1849389",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
+  "fichas": {
+    "El fantástico Sr. Fox": {
+      "tmdb": 10315,
+      "_fuente": "https://www.themoviedb.org/movie/10315",
+      "_por_que": "altas.py --ficha: TMDB 10315 «Fantastic Mr. Fox» (2009) de Wes Anderson: la web la presenta como «El fantástico Sr. Fox · Wes Anderson · stop motion» y la lámina del 18 nov pinta el afiche francés «Fantastic Mr. Fox · un film de Wes Anderson» (Amalric, Huppert). Título en español de la obra",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "Nueve jueves en Riachuelo": {
+      "tmdb": 1849389,
+      "_fuente": "https://www.themoviedb.org/movie/1849389",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "La Belleza": {
+      "tmdb": 1849395,
+      "_fuente": "https://www.themoviedb.org/movie/1849395",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "Pez azul": {
+      "tmdb": 1849399,
+      "_fuente": "https://www.themoviedb.org/movie/1849399",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "De la tradición a la prohibición": {
+      "tmdb": 1849406,
+      "_fuente": "https://www.themoviedb.org/movie/1849406",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "Salvemos el agua": {
+      "tmdb": 1849416,
+      "_fuente": "https://www.themoviedb.org/movie/1849416",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "La imaginada": {
+      "tmdb": 1849422,
+      "_fuente": "https://www.themoviedb.org/movie/1849422",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "El latir de la memoria": {
+      "tmdb": 1849426,
+      "_fuente": "https://www.themoviedb.org/movie/1849426",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "Paisaje / Niebla": {
+      "tmdb": 1849434,
+      "_fuente": "https://www.themoviedb.org/movie/1849434",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "Olvidar a Miriam": {
+      "tmdb": 1849439,
+      "_fuente": "https://www.themoviedb.org/movie/1849439",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "Limones": {
+      "tmdb": 1849440,
+      "_fuente": "https://www.themoviedb.org/movie/1849440",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "Entre amigos": {
+      "tmdb": 1849444,
+      "_fuente": "https://www.themoviedb.org/movie/1849444",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "El dolor del vientre": {
+      "tmdb": 1849447,
+      "_fuente": "https://www.themoviedb.org/movie/1849447",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "Llantos del monte": {
+      "tmdb": 1849450,
+      "_fuente": "https://www.themoviedb.org/movie/1849450",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "Uma Uñjirinaka · Alto Milluni": {
+      "tmdb": 1849455,
+      "_fuente": "https://www.themoviedb.org/movie/1849455",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    },
+    "El arte de inmortalizar mortales": {
+      "tmdb": 1849458,
+      "_fuente": "https://www.themoviedb.org/movie/1849458",
+      "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
+      "_registro": "provinciadevelez-2026-altas.json"
+    }
   },
-  "La Belleza": {
-   "tmdb": 1849395,
-   "_fuente": "https://www.themoviedb.org/movie/1849395",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
+  "misma_obra": {
+    "Sinfonía incompleta de oficios del Fonce": {
+      "festival": "ficfusa-2026",
+      "titulo": "Sinfonía incompleta de oficios del fonce",
+      "_por_que": "mismo título; TMDB 1817245 (Nelson Silva) es la ficha de las dos; la lámina de Vélez: «DIRECTOR Y PRODUCTOR EJECUTIVO NELSON SILVA», web «2024»"
+    }
   },
-  "Pez azul": {
-   "tmdb": 1849399,
-   "_fuente": "https://www.themoviedb.org/movie/1849399",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
+  "no_heredar": {
+    "Cicatrices": {
+      "festival": "guatape-2026",
+      "_por_que": "la de Guatapé no trae dirección (30 min); la de Vélez es de Jhon Amado, Filipinas (Arauca), 2026, escuela de cine comunitario: no hay con qué casarlas"
+    },
+    "Entre amigos": {
+      "festival": "anibia-2026",
+      "_por_que": "«Entre paredes y flores» de Valentina Molano Muñoz es otra obra; la de Vélez es de Edward Llanos y Simón Muñoz"
+    },
+    "El pescador (videoclip)": {
+      "festival": "provinciadevelez-2026",
+      "_por_que": "el videoclip (Taller Toca Plena ft. Casa del Sol, lámina DfzhWP2x_sy) no es el corto documental «El pescador» de la lámina DfcqutroV1z/03, TMDB 1558138: no hereda su ficha"
+    }
   },
-  "De la tradición a la prohibición": {
-   "tmdb": 1849406,
-   "_fuente": "https://www.themoviedb.org/movie/1849406",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
+  "sin_afiche": {
+    "Entre Ríos. Todos somos hermanos": "sin afiche: la lámina del festival (Df-DlZyERf2/08) trae solo un still horizontal sin créditos; la web no incluye la obra; sin director no hay con qué verificar un homónimo en TMDB (24 nov 2026)",
+    "El empiezo": "sin afiche: videoclip; la lámina (DfcpGHfoWWI/06) y la ficha del 1 dic (27 nov) solo traen título y créditos, sin afiche vertical (27 nov 2026)",
+    "Coming from Hell": "sin afiche: videoclip de Klonazepan & Mafa; la lámina (DfcqutroV1z/10) y la ficha del 6 dic (27 nov) no traen afiche vertical (27 nov 2026)"
   },
-  "Salvemos el agua": {
-   "tmdb": 1849416,
-   "_fuente": "https://www.themoviedb.org/movie/1849416",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
+  "sin_sinopsis": {
+    "El cuarto": {
+      "_por_que": "ninguna fuente hallada publica sinopsis.",
+      "fuentes": [
+        "https://festivaldecineprovinciadevelez.com/",
+        "https://www.instagram.com/p/Df7ZYXrEaXh/",
+        "https://www.facebook.com/festivaldecinebarbosa",
+        "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
+        "YouTube, búsqueda por título y autoría (24 nov 2026)"
+      ]
+    },
+    "Creation of a Unicorn": {
+      "_por_que": "sin créditos en ninguna fuente.",
+      "fuentes": [
+        "https://festivaldecineprovinciadevelez.com/",
+        "https://www.instagram.com/p/Df7ZYXrEaXh/",
+        "https://www.facebook.com/festivaldecinebarbosa",
+        "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
+        "YouTube, búsqueda por título y autoría (24 nov 2026)"
+      ]
+    },
+    "Anima Sola": {
+      "_por_que": "la página de Nils Jacobsen solo acredita dirección y productora.",
+      "fuentes": [
+        "https://festivaldecineprovinciadevelez.com/",
+        "https://www.instagram.com/p/Df7ZYXrEaXh/",
+        "https://www.facebook.com/festivaldecinebarbosa",
+        "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
+        "YouTube, búsqueda por título y autoría (24 nov 2026)"
+      ]
+    },
+    "Cicatrices": {
+      "_por_que": "la lámina solo trae créditos.",
+      "fuentes": [
+        "https://festivaldecineprovinciadevelez.com/",
+        "https://www.instagram.com/p/Df7ZYXrEaXh/",
+        "https://www.facebook.com/festivaldecinebarbosa",
+        "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
+        "YouTube, búsqueda por título y autoría (24 nov 2026)"
+      ]
+    },
+    "Entre Ríos. Todos somos hermanos": {
+      "_por_que": "ninguna fuente hallada publica sinopsis; el festival no la enviará (Juan, 27 nov 2026).",
+      "fuentes": [
+        "https://festivaldecineprovinciadevelez.com/",
+        "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170",
+        "https://www.instagram.com/festivaldecinebarbosa/",
+        "YouTube, búsqueda por título y Cine Club Barbosa (24 nov 2026)"
+      ]
+    },
+    "Gualí": {
+      "_por_que": "el único texto hallado (pie de Facebook del 20 nov, cortado) no se guardó y no se pudo cotejar; la lámina solo trae título y productora.",
+      "fuentes": [
+        "https://www.facebook.com/festivaldecinebarbosa",
+        "fuentes/provinciadevelez-2026/ig/DfcpGHfoWWI/13.jpg"
+      ]
+    }
   },
-  "La imaginada": {
-   "tmdb": 1849422,
-   "_fuente": "https://www.themoviedb.org/movie/1849422",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
-  },
-  "El latir de la memoria": {
-   "tmdb": 1849426,
-   "_fuente": "https://www.themoviedb.org/movie/1849426",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
-  },
-  "Paisaje / Niebla": {
-   "tmdb": 1849434,
-   "_fuente": "https://www.themoviedb.org/movie/1849434",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
-  },
-  "Olvidar a Miriam": {
-   "tmdb": 1849439,
-   "_fuente": "https://www.themoviedb.org/movie/1849439",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
-  },
-  "Limones": {
-   "tmdb": 1849440,
-   "_fuente": "https://www.themoviedb.org/movie/1849440",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
-  },
-  "Entre amigos": {
-   "tmdb": 1849444,
-   "_fuente": "https://www.themoviedb.org/movie/1849444",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
-  },
-  "El dolor del vientre": {
-   "tmdb": 1849447,
-   "_fuente": "https://www.themoviedb.org/movie/1849447",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
-  },
-  "Llantos del monte": {
-   "tmdb": 1849450,
-   "_fuente": "https://www.themoviedb.org/movie/1849450",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
-  },
-  "Uma Uñjirinaka · Alto Milluni": {
-   "tmdb": 1849455,
-   "_fuente": "https://www.themoviedb.org/movie/1849455",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
-  },
-  "El arte de inmortalizar mortales": {
-   "tmdb": 1849458,
-   "_fuente": "https://www.themoviedb.org/movie/1849458",
-   "_por_que": "alta en TMDB hecha por nosotros el 2026-11-27 (registro provinciadevelez-2026-altas.json)",
-   "_registro": "provinciadevelez-2026-altas.json"
+  "sin_pais": {
+    "Creation of a Unicorn": {
+      "_por_que": "ninguna fuente lo dice; sin créditos (24 nov 2026)"
+    },
+    "De la tradición a la prohibición": {
+      "_por_que": "ni la lámina ni la web dicen el país; sin ficha (24 nov 2026)"
+    },
+    "El empiezo": {
+      "_por_que": "las fichas del festival (27 nov) solo dan título, dirección y año; sin fuente pública del país"
+    },
+    "Coming from Hell": {
+      "_por_que": "las fichas del festival (27 nov) solo dan título, dirección y año; sin fuente pública del país"
+    },
+    "Entre Ríos. Todos somos hermanos": {
+      "_por_que": "ninguna fuente dice el país; la lámina del 30 nov solo trae «Cine Club Barbosa · 2019 · 20 min» (27 nov 2026)"
+    }
   }
- },
- "misma_obra": {
-  "Sinfonía incompleta de oficios del Fonce": {
-   "festival": "ficfusa-2026",
-   "titulo": "Sinfonía incompleta de oficios del fonce",
-   "_por_que": "mismo título; TMDB 1817245 (Nelson Silva) es la ficha de las dos; la lámina de Vélez: «DIRECTOR Y PRODUCTOR EJECUTIVO NELSON SILVA», web «2024»"
-  }
- },
- "no_heredar": {
-  "Cicatrices": {
-   "festival": "guatape-2026",
-   "_por_que": "la de Guatapé no trae dirección (30 min); la de Vélez es de Jhon Amado, Filipinas (Arauca), 2026, escuela de cine comunitario: no hay con qué casarlas"
-  },
-  "Entre amigos": {
-   "festival": "anibia-2026",
-   "_por_que": "«Entre paredes y flores» de Valentina Molano Muñoz es otra obra; la de Vélez es de Edward Llanos y Simón Muñoz"
-  },
-  "El pescador (videoclip)": {
-   "festival": "provinciadevelez-2026",
-   "_por_que": "el videoclip (Taller Toca Plena ft. Casa del Sol, lámina DfzhWP2x_sy) no es el corto documental «El pescador» de la lámina DfcqutroV1z/03, TMDB 1558138: no hereda su ficha"
-  }
- },
- "sin_afiche": {
-  "Entre Ríos. Todos somos hermanos": "sin afiche: la lámina del festival (Df-DlZyERf2/08) trae solo un still horizontal sin créditos; la web no incluye la obra; sin director no hay con qué verificar un homónimo en TMDB (24 nov 2026)",
-  "El empiezo": "sin afiche: videoclip; la lámina (DfcpGHfoWWI/06) y la ficha del 1 dic (27 nov) solo traen título y créditos, sin afiche vertical (27 nov 2026)",
-  "Coming from Hell": "sin afiche: videoclip de Klonazepan & Mafa; la lámina (DfcqutroV1z/10) y la ficha del 6 dic (27 nov) no traen afiche vertical (27 nov 2026)"
- },
- "sin_sinopsis": {
-  "El cuarto": {
-   "_por_que": "ninguna fuente hallada publica sinopsis.",
-   "fuentes": [
-    "https://festivaldecineprovinciadevelez.com/",
-    "https://www.instagram.com/p/Df7ZYXrEaXh/",
-    "https://www.facebook.com/festivaldecinebarbosa",
-    "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
-    "YouTube, búsqueda por título y autoría (24 nov 2026)"
-   ]
-  },
-  "Creation of a Unicorn": {
-   "_por_que": "sin créditos en ninguna fuente.",
-   "fuentes": [
-    "https://festivaldecineprovinciadevelez.com/",
-    "https://www.instagram.com/p/Df7ZYXrEaXh/",
-    "https://www.facebook.com/festivaldecinebarbosa",
-    "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
-    "YouTube, búsqueda por título y autoría (24 nov 2026)"
-   ]
-  },
-  "Anima Sola": {
-   "_por_que": "la página de Nils Jacobsen solo acredita dirección y productora.",
-   "fuentes": [
-    "https://festivaldecineprovinciadevelez.com/",
-    "https://www.instagram.com/p/Df7ZYXrEaXh/",
-    "https://www.facebook.com/festivaldecinebarbosa",
-    "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
-    "YouTube, búsqueda por título y autoría (24 nov 2026)"
-   ]
-  },
-  "Cicatrices": {
-   "_por_que": "la lámina solo trae créditos.",
-   "fuentes": [
-    "https://festivaldecineprovinciadevelez.com/",
-    "https://www.instagram.com/p/Df7ZYXrEaXh/",
-    "https://www.facebook.com/festivaldecinebarbosa",
-    "festivals/staging/provinciadevelez-2026-altas.json (TMDB, IMDb, Letterboxd, web; 19–24 nov 2026)",
-    "YouTube, búsqueda por título y autoría (24 nov 2026)"
-   ]
-  }
- },
- "sin_pais": {
-  "Creation of a Unicorn": {
-   "_por_que": "ninguna fuente lo dice; sin créditos (24 nov 2026)"
-  },
-  "De la tradición a la prohibición": {
-   "_por_que": "ni la lámina ni la web dicen el país; sin ficha (24 nov 2026)"
-  },
-  "El empiezo": {
-   "_por_que": "las fichas del festival (27 nov) solo dan título, dirección y año; sin fuente pública del país"
-  },
-  "Coming from Hell": {
-   "_por_que": "las fichas del festival (27 nov) solo dan título, dirección y año; sin fuente pública del país"
-  }
- }
 }

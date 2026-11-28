@@ -68,6 +68,24 @@
    }
   },
   {
+   "titulo": "Ecos del cañaveral",
+   "tmdb_id": 1753875,
+   "titulo_original": "Ecos del cañaveral",
+   "poster_path": "/cmer33AvAocyiYdipbffmKckg02.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Five sugarcane farmers tell the story of an ancestral trade that resists being forgotten and faces an uncertain future in the Colombian countryside.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "ecos-del-canaveral",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Juan Sebastián Parra",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/provinciadevelez-2026/ecos-del-canaveral.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "El arte de inmortalizar mortales",
    "tmdb_id": 1849458,
    "titulo_original": "El arte de inmortalizar mortales",
@@ -530,6 +548,24 @@
    "poster": "/assets/provinciadevelez-2026/el-cuarto.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/04 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Titua y oro",
+   "poster": "/assets/provinciadevelez-2026/titua-y-oro-v2.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcqutroV1z/14 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Gualí",
+   "poster": "/assets/provinciadevelez-2026/guali-v2.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/DfcpGHfoWWI/13 (afiche recortado de la lámina del festival)"
+  },
+  {
+   "titulo": "Una mala chicha es un guarapo",
+   "poster": "/assets/provinciadevelez-2026/una-mala-chicha-es-un-guarapo-v2.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: lámina https://www.instagram.com/p/Df-DlZyERf2/04 (afiche recortado de la lámina del festival)"
   }
  ],
  "verificadas": {
@@ -593,6 +629,23 @@
    "_heredado": {
     "director_heredado": "catálogo w_7JCWMS77BPSJ (provinciadevelez-2026)"
    }
+  },
+  "Ecos del cañaveral": {
+   "tmdb_id": 1753875,
+   "titulo_original": "Ecos del cañaveral",
+   "poster_path": "/cmer33AvAocyiYdipbffmKckg02.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Five sugarcane farmers tell the story of an ancestral trade that resists being forgotten and faces an uncertain future in the Colombian countryside.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "ecos-del-canaveral",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Juan Sebastián Parra",
+   "_sondeado": "2026-11-27",
+   "poster": "/assets/provinciadevelez-2026/ecos-del-canaveral.jpg",
+   "posterSource": "tmdb"
   },
   "El arte de inmortalizar mortales": {
    "tmdb_id": 1849458,
@@ -1004,8 +1057,12 @@
   "El cuarto",
   "El empiezo",
   "El pescador (videoclip)",
+  "Entre Ríos. Todos somos hermanos",
+  "Gualí",
   "Saint Juanito",
-  "Un diálogo para sanar la Tierra"
+  "Titua y oro",
+  "Un diálogo para sanar la Tierra",
+  "Una mala chicha es un guarapo"
  ],
  "_sin_ficha_sondeo": {
   "Anima Sola": {
@@ -1032,13 +1089,29 @@
    "director": "Juan Cruz",
    "fecha": "2026-11-24"
   },
+  "Entre Ríos. Todos somos hermanos": {
+   "director": "",
+   "fecha": "2026-11-27"
+  },
+  "Gualí": {
+   "director": "",
+   "fecha": "2026-11-27"
+  },
   "Saint Juanito": {
    "director": "Sebastián Tapia",
    "fecha": "2026-11-24"
   },
+  "Titua y oro": {
+   "director": "Daniela Herrera",
+   "fecha": "2026-11-27"
+  },
   "Un diálogo para sanar la Tierra": {
    "director": "",
    "fecha": "2026-11-24"
+  },
+  "Una mala chicha es un guarapo": {
+   "director": "Wilson Beltrán, Wilson Valderrama",
+   "fecha": "2026-11-27"
   }
  }
 }
