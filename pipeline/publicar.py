@@ -262,6 +262,21 @@ def publicar(fid, forzar=False, ensayo=False):
             _frena('inventario de fuentes', f'✗ NO se publica {fid}: la obtención de fuentes no está completa:\n  · ' + '\n  · '.join(_pf)
                      + f'\n  python3 pipeline/fuentes_descubrir.py {fid}  (y --marcar cada fuente nueva)')
 
+    # ── toda sede con pin verificado y con fuente, ni con --forzar (27 nov 2026) ──
+    # Juan: «sin esperar, sin desfallecer, sin ignorar». La cascada de
+    # geocodificar.py (almacén → Google → dirección → variantes → WEB → persona)
+    # no deja una sede «sin información»: la que llega a una persona llega con
+    # lo que ya se buscó escrito. El Auditorio Juan Carlos Escobar estuvo meses
+    # sin dirección y una búsqueda web la dio en un minuto.
+    import geocodificar
+    _, _geo = geocodificar._leer_geo(fid)
+    _sp = [f'{s} — ' + ('paso 5: falta la búsqueda web' if paso == 5 else 'paso 6: ya se buscó, la decide Juan')
+           for s, paso, g in geocodificar.pendientes(_geo) if g.get('n', 0) > 0]
+    _sp += [f'{v} — sin coordenadas' for v, x in (b.get('venues') or {}).items() if x.get('lat') is None]
+    if _sp:
+        _frena('sedes sin pin verificado', f'✗ NO se publica {fid}: sedes sin pin verificado:\n  · ' + '\n  · '.join(_sp)
+               + f'\n  python3 pipeline/geocodificar.py {fid} --pendientes')
+
     rep = collections.Counter()
     out = {k: v for k, v in b.items() if k not in ('films', 'venues', 'sections')}
     out = limpio(out)
