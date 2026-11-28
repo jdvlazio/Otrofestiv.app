@@ -14,6 +14,14 @@ mal, 8 a revisión. Cada pin guarda `_place_id` (Google deja guardarlo para
 siempre) y `_maps_url`; las coordenadas vencen a los 30 días y las renueva
 `sedes.py --refrescar`.
 
+LA CASCADA (27 nov 2026): almacén → Google por nombre → dirección publicada →
+variantes del nombre → BÚSQUEDA WEB (paso 5, obligatorio) → persona. Lo que no
+ubican los pasos 1–4 queda con `_cascada` (qué dio cada paso) y `_buscar_web`:
+  --pendientes                              qué falta y qué buscar
+  --direccion "SEDE" "DIR" --fuente URL     la dirección hallada vuelve a Google
+  --sin-resultado "SEDE" "qué y dónde"      paso 5 vacío → paso 6, a Juan
+publicar.py no publica una sede sin pin verificado (ver pipeline/PROTOCOLO.md).
+
 Una sede que ya está en la MATRIZ (catalogo/sedes.json, pipeline/sedes.py)
 entra con su pin, `_prec:"matriz"`, antes de preguntarle a Google.
 
@@ -33,7 +41,56 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
 
 
+def _leer_geo(fid):
+    p = f'{ST}/{fid}-venues-geo.json'
+    return p, (json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {})
+
+
+def pendientes(geo):
+    """→ [(sede, paso, qué falta)] de las que no tienen pin verificado.
+    Paso 5 = falta la búsqueda web; paso 6 = ya se buscó, va a una persona."""
+    out = []
+    for s, g in sorted(geo.items()):
+        if s.startswith('_') or not isinstance(g, dict) or g.get('_prec') != 'sin verificar':
+            continue
+        out.append((s, 6 if g.get('_web') else 5, g))
+    return out
+
+
+def con_direccion(geo, sede, direccion, fuente, ciudad='', geocodificar=None, buscar=None):
+    """La dirección que se encontró en la web (paso 5) vuelve a Google (paso 3).
+    Entra solo si Google la ubica con precisión, y nunca sin su fuente. Si en
+    ese punto hay un lugar con el nombre (o una variante), se toma su ficha;
+    si no, el pin es la dirección misma, con el place_id de la dirección."""
+    geocodificar = geocodificar or gmaps.geocodificar
+    buscar = buscar or gmaps.buscar_lugar
+    if not (fuente or '').startswith('http'):
+        sys.exit('✗ --fuente debe ser la URL donde se publicó la dirección')
+    g = geocodificar(direccion, ciudad)
+    if not g or not g.get('precisa'):
+        sys.exit(f'✗ Google no ubica con precisión «{direccion}»' + (f' (dio {g["direccion"]})' if g else '')
+                 + ' — buscar una dirección con número (Cra. 51 #51-55)')
+    c = None
+    for q in [sede] + gmaps.variantes(sede):
+        c, _ = gmaps.elegir(sede, buscar(q, ciudad, (g['lat'], g['lng']), 150), (g['lat'], g['lng']), 150,
+                            direccion=g)
+        if c:
+            break
+    prev = geo.get(sede) or {}
+    nuevo = {k: v for k, v in prev.items() if k not in ('_todo', '_buscar_web', '_web')}
+    nuevo.update({'lat': round((c or g)['lat'], 7), 'lng': round((c or g)['lng'], 7), '_prec': 'maps',
+                  '_place_id': (c or g)['place_id'], 'address': direccion, '_fuente': fuente,
+                  '_por': 'dirección publicada' + (f' + ficha «{c["nombre"]}»' if c else ', ubicada por Google')})
+    if c:
+        nuevo['_maps_url'] = c.get('url')
+    geo[sede] = nuevo
+    return nuevo
+
+
 def main():
+    if len(sys.argv) >= 2 and ('--pendientes' in sys.argv or '--direccion' in sys.argv
+                               or '--sin-resultado' in sys.argv):
+        return _pasos_5_y_6(sys.argv[1])
     if len(sys.argv) < 2 or '--centro' not in sys.argv:
         sys.exit('uso: python3 pipeline/geocodificar.py <fest-id> --centro LAT,LNG [--radio 0.3] [--ciudad "Sasaima, Cundinamarca"]')
     fid = sys.argv[1]
@@ -110,6 +167,24 @@ def main():
         cands = gmaps.buscar_lugar(s, donde, (lat0, lng0), radio * 111000)
         c, por = gmaps.elegir(s, cands, (lat0, lng0), radio * 111000,
                               barrio_ok=s in barrios_ok, direccion=dirg)
+        cascada = {'1 almacén': 'no está',
+                   '2 Google por nombre': por,
+                   '3 dirección publicada': (('ubicada con precisión' if dirg and dirg.get('precisa')
+                                              else 'Google no la ubica con precisión') if _dir
+                                             else 'el festival no la publicó')}
+        # PASO 4: otras formas del nombre («Auditorio X - Ciudad» → «X»). Cambia
+        # la consulta, no la regla: `elegir` juzga contra el nombre completo.
+        if not c:
+            intentos = []
+            for q in gmaps.variantes(s):
+                c, por_v = gmaps.elegir(s, gmaps.buscar_lugar(q, donde, (lat0, lng0), radio * 111000),
+                                        (lat0, lng0), radio * 111000,
+                                        barrio_ok=s in barrios_ok, direccion=dirg)
+                intentos.append(f'«{q}»: {"sí" if c else por_v}')
+                if c:
+                    por = f'variante «{q}» + {por_v}'
+                    break
+            cascada['4 variantes del nombre'] = '; '.join(intentos) or 'no hay otra forma del nombre'
         elegido = c and {'lat': round(c['lat'], 7), 'lng': round(c['lng'], 7), '_prec': 'maps',
                          '_place_id': c['place_id'], '_maps_url': c['url'],
                          '_match': f'{c["nombre"]} — {c["direccion"]}'[:90], '_por': por}
@@ -131,9 +206,14 @@ def main():
             # la alcaldía; es sede nueva de esta edición»—. Pisarlo en cada
             # corrida borra el trabajo de averiguarlo y obliga a repetirlo, que
             # es justo lo que un pipeline re-corrible no puede hacer.
-            geo[s] = {**prev, 'n': meta['n'], '_prec': 'sin verificar',
+            # PASO 5, obligatorio: la búsqueda web. Queda escrita la consulta;
+            # lo que se encuentre entra con --direccion, y si de verdad no hay
+            # nada, --sin-resultado deja escrito qué se buscó. Solo entonces
+            # (paso 6) la sede va a una persona — ver --pendientes.
+            geo[s] = {**prev, 'n': meta['n'], '_prec': 'sin verificar', '_cascada': cascada,
+                      '_buscar_web': gmaps.consultas_web(s, donde),
                       '_todo': prev.get('_todo')
-                      or f'revisar en Google Maps: {por}'}
+                      or f'paso 5: buscar en la web la dirección (python3 pipeline/geocodificar.py {fid} --pendientes)'}
             falta += 1
             print(f'[{i:2}] ??  {s[:44]}', flush=True)
 
@@ -142,6 +222,49 @@ def main():
         'distintivo + ciudad + nunca un barrio + dirección publicada. _prec:manual intocable.')
     json.dump(geo, open(geo_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'\n{len(sedes)} sedes · ubicadas ahora {ok} · ya estaban {ya} · a mano {falta}')
+
+
+def _pasos_5_y_6(fid):
+    a = sys.argv
+    geo_p, geo = _leer_geo(fid)
+    if '--direccion' in a:
+        i = a.index('--direccion')
+        sede, dire = a[i + 1], a[i + 2]
+        if sede not in geo:
+            sys.exit(f'✗ «{sede}» no está en {geo_p}')
+        fuente = a[a.index('--fuente') + 1] if '--fuente' in a else ''
+        ciudad = a[a.index('--ciudad') + 1] if '--ciudad' in a else sede.split(' - ')[-1] if ' - ' in sede else ''
+        n = con_direccion(geo, sede, dire, fuente, ciudad)
+        print(f'✓ {sede}: {n["lat"]},{n["lng"]} — {n["_por"]}')
+    elif '--sin-resultado' in a:
+        i = a.index('--sin-resultado')
+        sede, que = a[i + 1], a[i + 2]
+        if (geo.get(sede) or {}).get('_prec') != 'sin verificar':
+            sys.exit(f'✗ «{sede}» no está pendiente')
+        if len(que) < 40:
+            sys.exit('✗ escribir QUÉ se buscó y DÓNDE (consultas, páginas, redes): es lo que verá la persona')
+        geo[sede]['_web'] = (geo[sede].get('_web') or []) + [que]
+        print(f'· {sede}: paso 6, a una persona, con lo que ya se buscó')
+    else:
+        p = pendientes(geo)
+        if not p:
+            print('✓ todas las sedes tienen pin verificado')
+        for s, paso, g in p:
+            print(f'\n{s}  — paso {paso}')
+            for k, v in (g.get('_cascada') or {}).items():
+                print(f'   {k}: {v}')
+            if paso == 5:
+                print('   5 BUSCAR EN LA WEB (alcaldía, prensa, IG/FB del lugar y del festival):')
+                for q in g.get('_buscar_web') or gmaps.consultas_web(s):
+                    print(f'       {q}')
+                print(f'     encontrada → python3 pipeline/geocodificar.py {fid} --direccion "{s}" "DIRECCIÓN" --fuente URL')
+                print(f'     de verdad nada → python3 pipeline/geocodificar.py {fid} --sin-resultado "{s}" "qué se buscó y dónde"')
+            else:
+                for w in g['_web']:
+                    print(f'   5 ya buscado: {w}')
+                print('   6 → a Juan')
+        return
+    json.dump(geo, open(geo_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 
 if __name__ == '__main__':

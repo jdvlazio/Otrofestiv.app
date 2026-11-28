@@ -153,3 +153,38 @@ def elegir(nombre, candidatos, centro=None, radio_m=30000, barrio_ok=False, dire
                 motivos.append(f'«{c["nombre"]}» a {round(d)} m de la dirección publicada'); continue
         return c, 'nombre + ciudad' + (' + dirección' if direccion and direccion.get('precisa') else '')
     return None, '; '.join(motivos) or 'Google no devolvió candidatos'
+
+
+# ── la cascada (27 nov 2026, Juan: «si este no funciona, intentar este») ──────
+# Paso 4: otras formas del mismo nombre. Solo cambia la CONSULTA; la regla de
+# `elegir` sigue juzgando contra el nombre original, así que una variante nunca
+# acepta un lugar que el nombre completo no habría aceptado por su nombre.
+_PREFIJOS = ('auditorio', 'sala', 'salón', 'salon', 'teatro', 'aula', 'sede', 'escenario')
+
+
+def variantes(nombre):
+    """→ consultas distintas del nombre, en orden, sin la original."""
+    import re
+    n = re.sub(r'\s+[-–‒]\s+[^-–‒,·]{2,30}$', '', nombre).strip()   # «… - Ciudad»
+    partes = [p.strip(' ()') for p in re.split(r'\s+·\s+|,\s+|\s+[-–‒]\s+|\s*\(|\)', n)]
+    out = [n, re.sub(r'\s*\([^)]*\)', '', n).strip()] + [p for p in partes if p]
+    for x in list(out):
+        w = x.split()
+        if len(w) > 2 and w[0].lower() in _PREFIJOS:
+            out.append(' '.join(w[1:]))
+    vistos, res = {nombre.lower()}, []
+    for x in out:
+        if len(x) >= 4 and x.lower() not in vistos and distintivas(x):
+            vistos.add(x.lower()); res.append(x)
+    return res
+
+
+def consultas_web(nombre, ciudad=''):
+    """Paso 5: lo que hay que buscar en la web cuando Google no lo tiene. La
+    pregunta no es «dónde está» sino «qué dirección publica alguien de él»: así
+    se encontró el Auditorio Juan Carlos Escobar (piso 6 del CAMI de Itagüí)."""
+    import re
+    n = re.sub(r'\s+[-–‒]\s+[^-–‒]+$', '', nombre).strip()
+    c = ciudad.split(',')[0].strip()
+    return [f'"{n}" {c} dirección'.strip(), f'"{n}" {c}'.strip(),
+            f'{n} {c} alcaldía OR casa de la cultura OR instagram'.strip()]

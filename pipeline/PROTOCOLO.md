@@ -299,10 +299,33 @@ varias maneras y cada variante parte o duplica funciones — la lección más ca
 de FICDEH. La sala va FUERA del nombre (campo `sala` de la función); la tabla
 es explícita, nunca heurística sobre el guion.
 
+**La cascada de sedes (27 nov 2026): ninguna se queda «sin información».**
+Cada sede baja por estos pasos hasta tener pin; ninguno se salta:
+
+| Paso | Qué | Quién |
+|---|---|---|
+| 1 | almacén de sedes (`catalogo/sedes.json`) | script |
+| 2 | Google Places por nombre + ciudad (regla fija de `gmaps.elegir`) | script |
+| 3 | Google Geocoding de la dirección publicada | script |
+| 4 | variantes del nombre (sin «Auditorio», sin «- Ciudad», partes) | script |
+| 5 | **búsqueda web de la DIRECCIÓN**: alcaldía, prensa, IG/FB del lugar y del festival | **Claude, obligatorio** |
+| 6 | solo si 5 no dio nada: a Juan, con lo que se buscó escrito | persona |
+
+En el paso 5 la pregunta no es «¿dónde está?» sino «¿qué dirección publica
+alguien de este lugar?», y después «¿en qué edificio queda?». Así salió el
+Auditorio Juan Carlos Escobar (piso 6 del CAMI de Itagüí) en un minuto. La
+dirección encontrada vuelve a Google (paso 3); el pin nunca se escribe a mano.
+
 ```bash
-python3 pipeline/geocodificar.py <id> --centro LAT,LNG   # Google Maps (GOOGLE_MAPS_API_KEY); lo dudoso, a revisión
-python3 pipeline/sedes-html.py   <id> --centro LAT,LNG   # las pendientes, a mano
+python3 pipeline/geocodificar.py <id> --centro LAT,LNG   # pasos 1–4
+python3 pipeline/geocodificar.py <id> --pendientes       # qué falta y qué buscar en la web
+python3 pipeline/geocodificar.py <id> --direccion "SEDE" "Cra. 51 #51-55" --fuente URL   # paso 5 encontrado
+python3 pipeline/geocodificar.py <id> --sin-resultado "SEDE" "qué se buscó y dónde"      # paso 5 vacío → 6
+python3 pipeline/sedes-html.py   <id> --centro LAT,LNG   # paso 6: Juan, a mano
 ```
+
+`publicar.py` **no publica** con una sede sin pin verificado, ni con
+`--forzar`: dice si le falta el paso 5 o si ya está en el 6.
 
 Lo verificado a mano lleva `_prec:"manual"` y es **intocable**. Dos sedes
 reales en el mismo predio se declaran con `_nota` (el guardián
