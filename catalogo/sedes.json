@@ -9107,14 +9107,17 @@
    "lng": -75.608795,
    "evidencia": {
     "nivel": "maps",
-    "fuente": "itagui-2026-venues-geo.json"
+    "fuente": "Alcaldía de Itagüí y Politécnico JIC: CAMI, piso 6 del Edificio Judicial, Cra. 51 #51-55; ficha de Google del CAMI (0 m)",
+    "place_id": "ChIJh3y23zGCRo4RRQHlKurme9w",
+    "fecha": "2026-11-27"
    },
    "alias": [],
    "festivales": [
     "itagui-2026"
    ],
    "ciudad": "Itagüí",
-   "corto": "Auditorio Juan Carlos Escobar"
+   "corto": "Auditorio Juan Carlos Escobar",
+   "direccion": "CAMI, Edificio Judicial, piso 6 · Cra. 51 #51-55"
   },
   "s_f24df433": {
    "nombre": "Barrio Villas de la Cordialidad",
