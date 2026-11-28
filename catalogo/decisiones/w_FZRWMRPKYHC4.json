@@ -1,0 +1,120 @@
+[
+ {
+  "work_id": "w_FZRWMRPKYHC4",
+  "campo": "directores",
+  "valor": [
+   "Juan Sebastián Parra"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Juan Sebastián Parra"
+  }
+ },
+ {
+  "work_id": "w_FZRWMRPKYHC4",
+  "campo": "anio",
+  "valor": 2026,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "2026"
+  }
+ },
+ {
+  "work_id": "w_FZRWMRPKYHC4",
+  "campo": "paises",
+  "valor": [
+   "CO"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Colombia"
+  }
+ },
+ {
+  "work_id": "w_FZRWMRPKYHC4",
+  "campo": "generos",
+  "valor": [
+   "Documental"
+  ],
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "Documental"
+  }
+ },
+ {
+  "work_id": "w_FZRWMRPKYHC4",
+  "campo": "sinopsis.es",
+  "valor": "En el corazón del trapiche, donde el sonido de la caña molida acompaña las jornadas de trabajo, Ecos del cañaveral retrata la vida de cinco campesinos hacedores de panela que han dedicado su existencia a un oficio ancestral.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "En el corazón del trapiche, donde el sonido de la caña molida acompaña las jornadas de trabajo, Ecos del cañaveral retrata la vida de cinco campesinos hacedores de panela que han dedicado su existencia a un oficio ancestral."
+  }
+ },
+ {
+  "work_id": "w_FZRWMRPKYHC4",
+  "campo": "xref.tmdb",
+  "valor": 1753875,
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "1753875"
+  }
+ },
+ {
+  "work_id": "w_FZRWMRPKYHC4",
+  "campo": "xref.letterboxd",
+  "valor": "ecos-del-canaveral",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "ecos-del-canaveral"
+  }
+ },
+ {
+  "work_id": "w_FZRWMRPKYHC4",
+  "campo": "afiche",
+  "valor": {
+   "archivo": "/assets/provinciadevelez-2026/ecos-del-canaveral.jpg",
+   "veredicto": "oficial",
+   "fuente": "tmdb"
+  },
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "/assets/provinciadevelez-2026/ecos-del-canaveral.jpg"
+  }
+ },
+ {
+  "work_id": "w_FZRWMRPKYHC4",
+  "campo": "sinopsis.en",
+  "valor": "In the heart of the trapiche, where the sound of crushed cane accompanies the workday, Ecos del cañaveral portrays the lives of five panela-making farmers who have devoted their lives to an ancestral trade.",
+  "motivo": "alta desde provinciadevelez-2026",
+  "fecha": "2026-11-27",
+  "quien": "claude",
+  "sembrada": true,
+  "antes": {
+   "provinciadevelez-2026": "In the heart of the trapiche, where the sound of crushed cane accompanies the workday, Ecos del cañaveral portrays the lives of five panela-making farmers who have devoted their lives to an ancestral trade."
+  }
+ }
+]

@@ -14,19 +14,20 @@
  "_por_que_copy": "nombre: <title> de la web «9.º Festival de Cine Provincia de Vélez». Nombre corto de portada «Provincia de Vélez» y subtítulo «Festival de Cine»: las dos líneas del logo del afiche, sin repetirse. PROPUESTA para Juan.",
  "city": "Barbosa",
  "country": "CO",
- "dates": "1–6 DIC",
- "dates_en": "DEC 1–6",
+ "dates": "30 NOV–6 DIC",
+ "dates_en": "NOV 30–DEC 6",
  "year": 2026,
  "timezoneOffset": "-05:00",
  "storageKey": "provinciadevelez2026_",
- "festivalStartStr": "2026-12-01T00:00:00",
+ "festivalStartStr": "2026-11-30T00:00:00",
  "festivalEndStr": "2026-12-06T23:59:00",
  "sharedSlotIsOneScreening": false,
  "dias_vacios": [],
  "instagram": "9_festcineprovinciadevelez",
  "_por_que_fechas": "El afiche oficial (IG DfihtPIRt2g) dice 1 al 6 de diciembre: el 30 nov en el SENA de Vélez no va (Juan, 24 nov 2026).",
- "prioLimit": 3,
+ "prioLimit": 4,
  "dias": [
+  "2026-11-30",
   "2026-12-01",
   "2026-12-02",
   "2026-12-03",
@@ -35,6 +36,7 @@
   "2026-12-06"
  ],
  "festivalDates": {
+  "2026-11-30": "2026-11-30",
   "2026-12-01": "2026-12-01",
   "2026-12-02": "2026-12-02",
   "2026-12-03": "2026-12-03",
@@ -43,6 +45,11 @@
   "2026-12-06": "2026-12-06"
  },
  "days": [
+  {
+   "k": "2026-11-30",
+   "d": 30,
+   "lbl": "LUN"
+  },
   {
    "k": "2026-12-01",
    "d": 1,
@@ -75,6 +82,7 @@
   }
  ],
  "dayKeys": [
+  "2026-11-30",
   "2026-12-01",
   "2026-12-02",
   "2026-12-03",
@@ -83,6 +91,7 @@
   "2026-12-06"
  ],
  "dayShort": {
+  "2026-11-30": "LUN 30",
   "2026-12-01": "MAR 1",
   "2026-12-02": "MIÉ 2",
   "2026-12-03": "JUE 3",
@@ -91,6 +100,7 @@
   "2026-12-06": "DOM 6"
  },
  "dayShort_en": {
+  "2026-11-30": "MON 30",
   "2026-12-01": "TUE 1",
   "2026-12-02": "WED 2",
   "2026-12-03": "THU 3",
@@ -99,6 +109,7 @@
   "2026-12-06": "SUN 6"
  },
  "dayLong": {
+  "2026-11-30": "Lunes 30 de noviembre",
   "2026-12-01": "Martes 1 de diciembre",
   "2026-12-02": "Miércoles 2 de diciembre",
   "2026-12-03": "Jueves 3 de diciembre",
@@ -107,14 +118,14 @@
   "2026-12-06": "Domingo 6 de diciembre"
  },
  "sections": {
-  "🧒 Franja Infantil": {
-   "en": "Children's Program",
-   "archetype": "Muestra / País",
-   "order": 1
-  },
   "🏆 Selección Oficial": {
    "en": "Official Selection",
    "archetype": "Competencia",
+   "order": 1
+  },
+  "🧒 Franja Infantil": {
+   "en": "Children's Program",
+   "archetype": "Muestra / País",
    "order": 2
   },
   "⭐ Muestra Especial": {
@@ -134,6 +145,17 @@
   }
  },
  "venues": {
+  "Auditorio SENA Vélez - Vélez": {
+   "short": "Auditorio SENA Vélez",
+   "city": "Vélez",
+   "lat": 6.0098388,
+   "lng": -73.6678772,
+   "address": "Vélez, Santander",
+   "_prec": "manual",
+   "_match": "Google Maps (27 nov 2026): «SENA», Centro de Gestión Agroempresarial del Oriente, 285J+WR Vélez, Santander; la lámina dice «Auditorio SENA Vélez»",
+   "_maps": "https://www.google.com/maps/place/SENA/@6.0098388,-73.6678772,17z",
+   "_matriz": "s_a00d148a"
+  },
   "Casa Escuela Formación Musical Leo Olarte - Barbosa": {
    "short": "Casa Escuela Formación Musical Leo Olarte",
    "city": "Barbosa",
@@ -214,6 +236,151 @@
  "_avisos_id": [],
  "films": [
   {
+   "title": "Uma Uñjirinaka · Alto Milluni + 6 Obras",
+   "type": "film",
+   "section": "🏆 Selección Oficial",
+   "country": "Bolivia, Colombia",
+   "flags": "🇧🇴🇨🇴",
+   "duration": "20 min",
+   "_ancla": [
+    "Auditorio SENA Vélez - Vélez",
+    "2026-11-30",
+    "16:00"
+   ],
+   "day": "2026-11-30",
+   "time": "16:00",
+   "day_order": 0,
+   "venue": "Auditorio SENA Vélez - Vélez",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170",
+    "date": "2026-11-27",
+    "tipo": "festival"
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Uma Uñjirinaka · Alto Milluni",
+     "director": "Left Hand Rotation",
+     "country": "Bolivia",
+     "flags": "🇧🇴",
+     "genre": "Documental",
+     "synopsis_en": "It shows the testimony and struggle of the Indigenous communities affected by water pollution in the Katari - Lake Titicaca basin in Bolivia. In Alto Milluni, whose spring water is stolen daily to be taken to the megacity of El Alto, the women propose a local community tourism project in order to survive.",
+     "synopsis": "Muestra el testimonio y lucha de las comunidades indígenas afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Alto Milluni, cuya agua naciente es robada a diario para ser llevada a la mega-urbe El Alto, las mujeres proponen un proyecto de turismo comunitario local para la supervivencia.",
+     "synopsis_lang": "es",
+     "poster": "/assets/provinciadevelez-2026/uma-unjirinaka-alto-milluni.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "uma-unjirinaka-alto-milluni",
+     "tmdb_id": 1849455,
+     "duration": "13 min",
+     "_duracion_corregida": "https://www.youtube.com/watch?v=WR8JaGW0p-8"
+    },
+    {
+     "title": "Un diálogo para sanar la Tierra",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "genre": "Documental",
+     "synopsis_en": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Gündiwa Villafaña Mejía.",
+     "synopsis": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Gündiwa Villafaña Mejía.",
+     "synopsis_lang": "es",
+     "poster": "/assets/provinciadevelez-2026/un-dialogo-para-sanar-la-tierra.jpg",
+     "posterSource": "oficial"
+    },
+    {
+     "title": "Gualí",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "genre": "Documental",
+     "poster": "/assets/provinciadevelez-2026/guali-v2.jpg",
+     "posterSource": "oficial"
+    },
+    {
+     "title": "Ecos del cañaveral",
+     "director": "Juan Sebastián Parra",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "genre": "Documental",
+     "synopsis_en": "In the heart of the trapiche, where the sound of crushed cane accompanies the workday, Ecos del cañaveral portrays the lives of five panela-making farmers who have devoted their lives to an ancestral trade.",
+     "synopsis": "En el corazón del trapiche, donde el sonido de la caña molida acompaña las jornadas de trabajo, Ecos del cañaveral retrata la vida de cinco campesinos hacedores de panela que han dedicado su existencia a un oficio ancestral.",
+     "synopsis_lang": "es",
+     "poster": "/assets/provinciadevelez-2026/ecos-del-canaveral.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "ecos-del-canaveral",
+     "tmdb_id": 1753875,
+     "year": 2026,
+     "duration": "7 min"
+    },
+    {
+     "title": "Titua y oro",
+     "director": "Daniela Herrera",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "genre": "Documental",
+     "synopsis_en": "The raising of a sacred feminine temple and the return of an ancient musical ritual.",
+     "synopsis": "El levantamiento de un templo sagrado femenino y el regreso de un ritual antiguo musical.",
+     "synopsis_lang": "es",
+     "poster": "/assets/provinciadevelez-2026/titua-y-oro-v2.jpg",
+     "posterSource": "oficial"
+    },
+    {
+     "title": "Una mala chicha es un guarapo",
+     "director": "Wilson Beltrán, Wilson Valderrama",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "synopsis_en": "Eulalio is tempted to sell the land that has been in his family for generations. A little chicha will help him make the best decision.",
+     "synopsis": "A Eulalio se le presenta la tentación de vender las tierras que han pasado de generación en generación en su familia. Un poco de chicha le ayudará a tomar la mejor decisión.",
+     "synopsis_lang": "es",
+     "poster": "/assets/provinciadevelez-2026/una-mala-chicha-es-un-guarapo-v2.jpg",
+     "posterSource": "oficial"
+    },
+    {
+     "title": "Entre Ríos. Todos somos hermanos"
+    }
+   ],
+   "_fid": "f_cac93d6177",
+   "id": "f_cac93d6177",
+   "is_free": true,
+   "_procedencia": {
+    "day": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "time": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "venue": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "duration": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "entrada": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "has_qa": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "title": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "film_list": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    },
+    "type": {
+     "tipo": "festival-web",
+     "fecha": "2026-11-27"
+    }
+   }
+  },
+  {
    "title": "La Familia Bélier + 2 Obras",
    "type": "film",
    "section": "🧒 Franja Infantil",
@@ -227,7 +394,7 @@
    ],
    "day": "2026-12-01",
    "time": "18:00",
-   "day_order": 0,
+   "day_order": 1,
    "venue": "Casa Escuela Formación Musical Leo Olarte - Barbosa",
    "has_qa": false,
    "_src": {
@@ -330,7 +497,7 @@
    ],
    "day": "2026-12-02",
    "time": "18:00",
-   "day_order": 1,
+   "day_order": 2,
    "venue": "Parque Central Cite - Barbosa",
    "has_qa": false,
    "_src": {
@@ -455,7 +622,7 @@
    ],
    "day": "2026-12-02",
    "time": "19:00",
-   "day_order": 1,
+   "day_order": 2,
    "venue": "Grupo Central AA - Barbosa",
    "has_qa": false,
    "_src": {
@@ -552,7 +719,7 @@
    ],
    "day": "2026-12-03",
    "time": "18:00",
-   "day_order": 2,
+   "day_order": 3,
    "venue": "Casa Taller Palo de Mango - Barbosa",
    "has_qa": false,
    "_src": {
@@ -647,7 +814,7 @@
    ],
    "day": "2026-12-04",
    "time": "18:00",
-   "day_order": 3,
+   "day_order": 4,
    "venue": "La Tante Boutique - Barbosa",
    "has_qa": true,
    "_src": {
@@ -855,7 +1022,7 @@
    ],
    "day": "2026-12-05",
    "time": "18:00",
-   "day_order": 4,
+   "day_order": 5,
    "venue": "Parque Emilio Ulloa - Barbosa",
    "has_qa": false,
    "_src": {
@@ -1003,7 +1170,7 @@
    ],
    "day": "2026-12-05",
    "time": "19:30",
-   "day_order": 4,
+   "day_order": 5,
    "venue": "Parque Emilio Ulloa - Barbosa",
    "event_kind": "conversatorio",
    "has_qa": false,
@@ -1074,7 +1241,7 @@
    ],
    "day": "2026-12-05",
    "time": "20:00",
-   "day_order": 4,
+   "day_order": 5,
    "venue": "Parque Emilio Ulloa - Barbosa",
    "has_qa": false,
    "synopsis": "Cuenta cómo abrir una pequeña puerta en la juventud puede traer problemas enormes: quien siembra vientos cosecha tempestades.",
@@ -1145,7 +1312,7 @@
    ],
    "day": "2026-12-06",
    "time": "18:00",
-   "day_order": 5,
+   "day_order": 6,
    "venue": "Estación del Tren - Barbosa",
    "has_qa": false,
    "synopsis": "Un astuto zorro llamado Fox (voz original de George Clooney) parece llevar una vida idílica con su esposa (Meryl Streep) y con su hijo Ash (Jason Schwartzman). Pero, por las noches, el señor Fox se dedica a robar gallinas, patos y pavos en las granjas vecinas. Los granjeros deciden acabar con la situación cazando a Mr. Fox. Basada en el famoso libro para niños de Roald Dahl.",
@@ -1212,7 +1379,7 @@
    ],
    "day": "2026-12-06",
    "time": "19:30",
-   "day_order": 5,
+   "day_order": 6,
    "venue": "Estación del Tren - Barbosa",
    "has_qa": false,
    "_src": {
@@ -1305,9 +1472,9 @@
    ],
    "day": "2026-12-06",
    "time": "20:00",
-   "day_order": 5,
+   "day_order": 6,
    "venue": "Estación del Tren - Barbosa",
-   "has_qa": false,
+   "has_qa": true,
    "synopsis": "Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy.",
    "synopsis_lang": "es",
    "poster": "/assets/provinciadevelez-2026/ayuno-y-cenizas.jpg",
@@ -1362,8 +1529,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-27T17:26:50",
-  "plan_sha": "95fbb9b0329f755a",
+  "fecha": "2026-11-27T22:16:50",
+  "plan_sha": "254aa265ad13e76d",
   "paso": 7,
   "cmd": "python3 pipeline/provinciadevelez-2026-verificar.py"
  }

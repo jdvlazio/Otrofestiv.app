@@ -47,9 +47,12 @@ IG = 'https://www.instagram.com/p/'
 FB25 = 'https://www.facebook.com/festivaldecinebarbosa/posts/pfbid02fqEztN5KAMM1Ro3k4YYZ61BBVJwtd7myTLcnZyVFp8qtAkX3ygDGrYRBDc18297Ul'
 SO = 'Selección oficial'   # web: «Selección oficial» / «Convocatoria Saravita para nuevos realizadores»
 
-# La función del 30 nov (SENA, Vélez; IG Df-DlZyERf2) NO se monta: el afiche oficial dice
-# «DEL 1 AL 6 DE DICIEMBRE» y solo van los días oficiales (Juan, 24 nov 2026). Sus obras
-# quedan en el catálogo; Alto Milluni y Un diálogo conservan la del 5 dic.
+# 30 nov (SENA, Vélez): el 24 nov quedó fuera porque el afiche decía «del 1 al 6 de diciembre».
+# El 27 nov el festival publicó su programación «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE» y entra.
+FB27 = 'https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170'
+F0 = ('2026-11-30', '16:00', 'Auditorio SENA Vélez',
+      f'{FB27} (programación, 27 nov): lámina 1 «DEL 30 DE NOVIEMBRE AL 6 DE DICIEMBRE DE 2026»; lámina 2 '
+      '«LUNES 30 NOVIEMBRE · 4:00 P. M. · Auditorio SENA Vélez»')
 F5 = ('2026-12-05', '18:00', 'Parque Emilio Ulloa',
       f'{IG}DgFiVrTEbh0/ (6 láminas, 23 nov): «PARQUE EMILIO ULLOA · SÁBADO 5 DE DICIEMBRE · DESDE LAS 6:00 DE LA '
       'TARDE» pintado en cada una; FB 23 nov, mismo post con 5 de las 6')
@@ -99,21 +102,21 @@ SEL = [
      'lámina: «DIRIGIDO POR JUAN CRUZ PARA TALLER TOCA PLENA & CASA DEL SOL» (OCR «CAUZ»)'),
     ('creation-unicorn', 'Creation of a Unicorn', 'Experimental', 'Dr Klonasepam, Mafa', 'Colombia', None, 'DfcqutroV1z/09', F4,
      'lámina: solo el título; director y país: DM del festival en IG, 27 nov 2026 («Dr klonasepam y mafa», «colombia»)'),
-    ('titua-y-oro', 'Titua y oro', 'Documental', 'Daniela Herrera', 'Colombia', None, 'DfcqutroV1z/14', None,
+    ('titua-y-oro', 'Titua y oro', 'Documental', 'Daniela Herrera', 'Colombia', None, 'DfcqutroV1z/14', F0,
      'lámina: «DIRECTED BY DANIELA HERRERA · FESTIVAL CINE PALOMINO»'),
     ('la-belleza', 'La Belleza', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/12', F6,
      'lámina: «UN DOCUMENTAL DE NELSON SILVA»'),
-    ('dialogo-tierra', 'Un diálogo para sanar la Tierra', 'Documental', None, 'Colombia', None, 'DfcqutroV1z/08', F5,
+    ('dialogo-tierra', 'Un diálogo para sanar la Tierra', 'Documental', None, 'Colombia', None, 'DfcqutroV1z/08', (F0, F5),
      'lámina: «(Incluye el visionado del documental Tanuzanamu: Principio del Equilibrio - Dir. Ati Gündiwa '
      'Villafaña Mejia)» · Palomino, La Guajira; el director de la obra no se nombra'),
-    ('uma-unjirinaka', 'Uma Uñjirinaka · Alto Milluni', 'Documental', 'Left Hand Rotation', 'Bolivia', None, 'DfcqutroV1z/07', F5,
+    ('uma-unjirinaka', 'Uma Uñjirinaka · Alto Milluni', 'Documental', 'Left Hand Rotation', 'Bolivia', None, 'DfcqutroV1z/07', (F0, F5),
      'lámina: «Una serie documental de Left Hand Rotation · UMA UÑJIRINAKA · Alto Milluni (CUIDADORXS DEL '
      'AGUA)»; la web escribe «Unjirinaka» (sin ñ)'),
     ('nueve-jueves', 'Nueve jueves en Riachuelo', 'Documental', 'Nelson Silva', 'Colombia', None, 'DfcqutroV1z/06', F6,
      'lámina: «DIRIGIDO POR NELSON SILVA · Producción Edson Velandia»'),
-    ('ecos-canaveral', 'Ecos del cañaveral', 'Documental', 'Juan Sebastián Parra', 'Colombia', None, 'DfcqutroV1z/05', None,
+    ('ecos-canaveral', 'Ecos del cañaveral', 'Documental', 'Juan Sebastián Parra', 'Colombia', None, 'DfcqutroV1z/05', F0,
      'web: «Juan Sebastián Parra»; lámina: «DIRECCIÓN JUAN SEBASTIÁN PARRA»'),
-    ('guali', 'Gualí', 'Documental', None, 'Colombia', 2025, 'DfcpGHfoWWI/13', None,
+    ('guali', 'Gualí', 'Documental', None, 'Colombia', 2025, 'DfcpGHfoWWI/13', F0,
      'lámina: «Una producción de Los Pinos Films · 2025»; sin director nombrado'),
     ('oficios-fonce', 'Sinfonía incompleta de oficios del Fonce', 'Documental', 'Nelson Silva', 'Colombia', 2024, 'DfcpGHfoWWI/05', F6,
      'lámina: «DIRECTOR Y PRODUCTOR EJECUTIVO NELSON SILVA»; web: «Nelson Silva · 2024»'),
@@ -196,7 +199,6 @@ SINOPSIS = {
     'Un diálogo para sanar la Tierra': ('https://www.instagram.com/p/DfcqutroV1z/ (afiche, lámina 8)', 'Entendiendo la labor de los Mamos '
         'para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de '
         'Ati Gündiwa Villafaña Mejía.'),
-    'Gualí': ('https://www.facebook.com/festivaldecinebarbosa (20 nov; el final del pie viene cortado)', 'En el corazón de la sabana de Bogotá, el humedal Gualí es un santuario de biodiversidad. El documental se sumerge en su riqueza natural a través de una narrativa visual poética.'),
     # Respuesta del festival a Juan por Instagram, 27 nov 2026 (texto suyo, apenas redactado)
     'El empiezo': ('respuesta del festival por Instagram a Juan, 27 nov 2026', 'Videoclip sobre el campo: un campesino convierte la luna en una pequeña tierra.'),
     'Coming from Hell': ('respuesta del festival por Instagram a Juan, 27 nov 2026', 'Una señora va al médico y la convierten en adicta al clonazepam.'),
@@ -205,6 +207,7 @@ SINOPSIS = {
 
 # Sinopsis en inglés: traducción nuestra de la española publicada (24 nov 2026)
 SINOPSIS_EN = {
+    "Ecos del cañaveral": "In the heart of the trapiche, where the sound of crushed cane accompanies the workday, Ecos del cañaveral portrays the lives of five panela-making farmers who have devoted their lives to an ancestral trade.",
     "El empiezo": "A music video about the countryside: a farmer turns the moon into a small piece of land.",
     "Coming from Hell": "A woman goes to the doctor and is turned into a clonazepam addict.",
     "Nueve jueves en Riachuelo": "Edson Velandia has nine Thursdays and a school’s recess breaks to form an orchestra. In Riachuelo, Santander, the first challenge is discovering what each student wants to play.",
@@ -217,7 +220,7 @@ SINOPSIS_EN = {
     "El latir de la memoria": "After 15 years of absence, the Inmaculada clock beats again in Barichara.",
     "El pescador (videoclip)": "This music video links fishing in the Caribbean of Puerto Rico and La Guajira, following Neymar, a boy from La Guajira who learns to fish from an early age.",
     "Entre amigos": "Seeking to escape the routine of the city, a group of young people visit a friend who lives alone in the mountains. Surrounded by the vastness of the landscape and the silence of the countryside, they listen to the stories she knows about the region.",
-    "Gualí": "In the heart of the Bogotá savanna, the Gualí wetland is a sanctuary of biodiversity. The documentary immerses itself in its natural wealth through a poetic visual narrative.",
+    "Titua y oro": "The raising of a sacred feminine temple and the return of an ancient musical ritual.",
     "La imaginada": "Through an intimate dialogue between documentary and fiction, La imaginada travels through the collective memory and oral stories of Barbosa, Santander, to reveal how its inhabitants have built their identity over time.",
     "Limones": "Cristian and Andrés, two nine-year-old Wayuu boys, roam the streets of Palomino selling limes. As they work, they hear and comment on, in the background, the disappearance of Bartolo, which occurred during the recent armed clashes in the Sierra Nevada. At nightfall, they return home and hand over their earnings to their mother.",
     "Llantos del monte": "A young man walks through the woods with friends, but when he is left alone, solitude and strange noises fill him with terror. After losing consciousness, he wakes in a mysterious room where a spiritual being reveals to him realities about the world and the imbalance that governs the universe.",
@@ -247,10 +250,10 @@ OTRAS = [
      'lámina Df-DlZyERf2/02: «CONVOCATORIA SARAVITA · DOCUMENTAL · Una serie documental de Left Hand Rotation · UMA '
      'UÑJIRINAKA · Puchucollo Alto (CUIDADORXS DEL AGUA) · SELECCIÓN OFICIAL 2026»; no está en las 29 de la web; '
      'el pie escribe «Puchukollo Alto»'),
-    ('Una mala chicha es un guarapo', 'Wilson Beltrán, Wilson Valderrama', 'corto', 'Muestra especial', None,
+    ('Una mala chicha es un guarapo', 'Wilson Beltrán, Wilson Valderrama', 'corto', 'Muestra especial', F0,
      'lámina Df-DlZyERf2/04: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Un Film De Cine Club Barbosa & '
      'Celuloide · Realizado Por Wilson Beltran, Wilson Valderrama»'),
-    ('Entre Ríos. Todos somos hermanos', None, 'corto', 'Muestra especial', None,
+    ('Entre Ríos. Todos somos hermanos', None, 'corto', 'Muestra especial', F0,
      'lámina Df-DlZyERf2/08: «MUESTRA ESPECIAL · EL ARTE COMO RESISTENCIA Y SALVACIÓN · Entre Ríos · Todos somos '
      'hermanos»; sin créditos; tipo supuesto por la portada (documental y cortometraje), sin duración'),
     ('Tres lunas nuevas', 'Rodrigo Dimaté', 'largo', 'Muestra central', ('2026-12-05', '20:00', 'Parque Emilio Ulloa', 'correo del festival a hola@otrofestiv.app, 27 nov 2026 (4 láminas)'),
@@ -291,7 +294,7 @@ def main():
             if isinstance(fun[0], tuple):
                 o['funciones'] = [funcion(x) for x in fun]
         else:
-            o['franja'] = 'sin función en los días oficiales (1–6 dic)'
+            o['franja'] = 'sin función en los días oficiales (30 nov–6 dic)'
         s = SINOPSIS.get(tit)
         if s:
             o['sinopsis'], o['_sinopsis_de'] = s[1], s[0]
@@ -316,7 +319,7 @@ def main():
             if isinstance(fun[0], tuple):
                 o['funciones'] = [funcion(x) for x in fun]
         else:
-            o['franja'] = 'sin función en los días oficiales (1–6 dic)'
+            o['franja'] = 'sin función en los días oficiales (30 nov–6 dic)'
         if tit in SINOPSIS:
             o['sinopsis'], o['_sinopsis_de'] = SINOPSIS[tit][1], SINOPSIS[tit][0]
         _a = f'assets/provinciadevelez-2026/{slug(tit)}.jpg'

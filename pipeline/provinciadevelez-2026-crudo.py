@@ -5,7 +5,7 @@ Cada obra del catálogo trae su(s) función(es) con la lámina que lo dice; acá
 agrupan por día, hora y sede, en el orden de las láminas. Una función con una obra
 es esa obra; con varias, un programa.
 
-30 NOV (SENA, Vélez) FUERA: el afiche dice 1–6 dic; solo días oficiales (Juan, 24 nov).
+30 NOV (SENA, Vélez) ENTRA desde el 27 nov: la programación del festival dice 30 nov–6 dic.
 TÍTULOS: el festival no nombra los programas: «A + B» / «A + N Obras» (precedente Under).
 ACCESO: «¡Entrada libre a todos los escenarios!» (Df4hzKXkYiP, 18 nov; Df2AcYNEbXC, 17 nov).
 DURACIÓN: ninguna franja; la del programa es la suma de las obras con duración conocida.
@@ -25,6 +25,9 @@ CORREO = 'correo del festival a hola@otrofestiv.app (4 láminas, sin texto)'
 FICHAS = 'fichas del festival a Juan (8 láminas, 27 nov 2026)'
 # (día, hora) → título, sección, post, fecha del post, obras en el orden de las láminas
 FUNCIONES = {
+    ('2026-11-30', '16:00'): ('Uma Uñjirinaka · Alto Milluni + 6 Obras', 'Selección Oficial', 'https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170', '2026-11-27', [
+        'Uma Uñjirinaka · Alto Milluni', 'Un diálogo para sanar la Tierra', 'Gualí', 'Ecos del cañaveral', 'Titua y oro',
+        'Una mala chicha es un guarapo', 'Entre Ríos. Todos somos hermanos']),
     ('2026-12-01', '18:00'): ('La familia Bélier + 2 Obras', 'Franja Infantil', 'DfxyKI-S9LA', '2026-11-15', [
         'La familia Bélier', 'El pescador (videoclip)', 'El empiezo']),
     ('2026-12-02', '18:00'): ('Nueve jueves en Riachuelo + 3 Obras', 'Selección Oficial', FB25, '2026-11-25', [
@@ -51,7 +54,7 @@ EVENTOS = [
            {'titulo': 'Conversatorio: La realidad y el destino', 'dia': '2026-12-05', 'hora': '19:30',
             'sede': 'Parque Emilio Ulloa', 'seccion': 'Conversatorios', 'tipo': 'evento',
             'event_kind': 'conversatorio', 'invitados': 'Rodrigo Dimaté, María Jimena Barreto y Luis Carlos Torres'}]
-INICIO, FIN = '2026-12-01', '2026-12-06'   # el afiche oficial
+INICIO, FIN = '2026-11-30', '2026-12-06'   # programación del festival (FB, 27 nov)
 assert all(INICIO <= d <= FIN for d, _ in FUNCIONES), 'función fuera de los días oficiales'
 CAMPOS = ('director', 'pais', 'anio', 'duracion_min', 'sinopsis', 'synopsis_en')
 
@@ -83,6 +86,8 @@ def main():
             f.update({k: v for k, v in os_[0].items() if k != 'titulo'})
         else:
             f['obras'] = os_
+        if tit == 'Ayuno y cenizas':   # FB 1583969830431548: «Contaremos con la presencia del Director Rodrigo Dimaté»
+            f['has_qa'] = True
         out.append(f)
     for e in EVENTOS:
         out.append({**e, 'acceso': 'Entrada libre', '_src': {'url': CORREO, 'date': '2026-11-27', 'tipo': 'festival'}})

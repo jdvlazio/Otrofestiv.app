@@ -5,6 +5,73 @@
  },
  "funciones": [
   {
+   "titulo": "Uma Uñjirinaka · Alto Milluni + 6 Obras",
+   "dia": "2026-11-30",
+   "hora": "16:00",
+   "sede": "Auditorio SENA Vélez",
+   "seccion": "Selección Oficial",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.facebook.com/festivaldecinebarbosa/posts/1584046943757170",
+    "date": "2026-11-27",
+    "tipo": "festival"
+   },
+   "obras": [
+    {
+     "titulo": "Uma Uñjirinaka · Alto Milluni",
+     "director": "Left Hand Rotation",
+     "pais": "Bolivia",
+     "sinopsis": "Muestra el testimonio y lucha de las comunidades indígenas afectadas por la contaminación del agua en la cuenca Katari - Lago Titicaca en Bolivia. En Alto Milluni, cuya agua naciente es robada a diario para ser llevada a la mega-urbe El Alto, las mujeres proponen un proyecto de turismo comunitario local para la supervivencia.",
+     "synopsis_en": "It shows the testimony and struggle of the Indigenous communities affected by water pollution in the Katari - Lake Titicaca basin in Bolivia. In Alto Milluni, whose spring water is stolen daily to be taken to the megacity of El Alto, the women propose a local community tourism project in order to survive.",
+     "genero": "Documental",
+     "genre": "Documental"
+    },
+    {
+     "titulo": "Un diálogo para sanar la Tierra",
+     "pais": "Colombia",
+     "sinopsis": "Entendiendo la labor de los Mamos para armonizar el universo. Incluye el visionado del documental «Tanuzanamu: Principio del equilibrio», de Ati Gündiwa Villafaña Mejía.",
+     "synopsis_en": "Understanding the Mamos' work to harmonize the universe. Includes a screening of the documentary “Tanuzanamu: Principio del equilibrio”, by Ati Gündiwa Villafaña Mejía.",
+     "genero": "Documental",
+     "genre": "Documental"
+    },
+    {
+     "titulo": "Gualí",
+     "pais": "Colombia",
+     "anio": 2025,
+     "genero": "Documental",
+     "genre": "Documental"
+    },
+    {
+     "titulo": "Ecos del cañaveral",
+     "director": "Juan Sebastián Parra",
+     "pais": "Colombia",
+     "sinopsis": "En el corazón del trapiche, donde el sonido de la caña molida acompaña las jornadas de trabajo, Ecos del cañaveral retrata la vida de cinco campesinos hacedores de panela que han dedicado su existencia a un oficio ancestral.",
+     "synopsis_en": "In the heart of the trapiche, where the sound of crushed cane accompanies the workday, Ecos del cañaveral portrays the lives of five panela-making farmers who have devoted their lives to an ancestral trade.",
+     "genero": "Documental",
+     "genre": "Documental"
+    },
+    {
+     "titulo": "Titua y oro",
+     "director": "Daniela Herrera",
+     "pais": "Colombia",
+     "sinopsis": "El levantamiento de un templo sagrado femenino y el regreso de un ritual antiguo musical.",
+     "synopsis_en": "The raising of a sacred feminine temple and the return of an ancient musical ritual.",
+     "genero": "Documental",
+     "genre": "Documental"
+    },
+    {
+     "titulo": "Una mala chicha es un guarapo",
+     "director": "Wilson Beltrán, Wilson Valderrama",
+     "pais": "Colombia",
+     "sinopsis": "A Eulalio se le presenta la tentación de vender las tierras que han pasado de generación en generación en su familia. Un poco de chicha le ayudará a tomar la mejor decisión.",
+     "synopsis_en": "Eulalio is tempted to sell the land that has been in his family for generations. A little chicha will help him make the best decision."
+    },
+    {
+     "titulo": "Entre Ríos. Todos somos hermanos"
+    }
+   ]
+  },
+  {
    "titulo": "La familia Bélier + 2 Obras",
    "dia": "2026-12-01",
    "hora": "18:00",
@@ -372,7 +439,8 @@
     "tipo": "festival"
    },
    "director": "Rodrigo Dimaté",
-   "sinopsis": "Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy."
+   "sinopsis": "Lleva la tragedia de Edipo Rey a las tragedias urbanas de los jóvenes colombianos de hoy.",
+   "has_qa": true
   }
  ]
 }
