@@ -277,11 +277,18 @@
   },
   "s_035a81a0": {
    "nombre": "TIFF Lightbox",
-   "lat": 43.6467198,
-   "lng": -79.3905334,
+   "lat": 43.6466098,
+   "lng": -79.3903459,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tiff-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=5721766538735862166&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJewSvlNA0K4gRlkERDVrMZ08",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "tiff-2026.json (publicado)"
+    }
    },
    "address": "350 King Street West",
    "alias": [
@@ -297,7 +304,8 @@
     "TLB 4"
    ],
    "ciudad": "Toronto",
-   "corto": "TIFF Lightbox"
+   "corto": "TIFF Lightbox",
+   "coords_fecha": "2026-11-28"
   },
   "s_03bcfa6f": {
    "nombre": "Universidad Nacional · El Cable",
@@ -487,11 +495,18 @@
   },
   "s_09b62d67": {
    "nombre": "Colegio Carrasquilla (Cra. 7ma)",
-   "lat": 5.69135,
-   "lng": -76.6568012,
+   "lat": 5.6913816,
+   "lng": -76.6568068,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11652788587698514506&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJBxsWlHGPSI4RSup-PHsFt6E",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Colegio Carrasquilla (Cra. 7ma)",
    "alias": [
@@ -501,7 +516,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Quibdó",
-   "corto": "Colegio Carrasquilla (Cra. 7ma)"
+   "corto": "Colegio Carrasquilla (Cra. 7ma)",
+   "coords_fecha": "2026-11-28"
   },
   "s_0a0f2470": {
    "nombre": "Fundación Alianza Tecnologica y Desarrollo Educativo",
@@ -540,11 +556,18 @@
   },
   "s_0af324db": {
    "nombre": "Teatro Empire",
-   "lat": -34.6105202,
-   "lng": -58.3938625,
+   "lat": -34.6105337,
+   "lng": -58.3938903,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "finca-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=10798963369918534031&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJLRjOr8LKvJURjxFzNvif3ZU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "finca-2026.json (publicado)"
+    }
    },
    "address": "Hipólito Yrigoyen 1934, Balvanera, CABA",
    "alias": [
@@ -554,7 +577,8 @@
     "finca-2026"
    ],
    "ciudad": "Buenos Aires",
-   "corto": "Teatro Empire"
+   "corto": "Teatro Empire",
+   "coords_fecha": "2026-11-28"
   },
   "s_0af8e5f1": {
    "nombre": "Cinema Local",
@@ -748,11 +772,18 @@
   },
   "s_1021dabf": {
    "nombre": "Alianza Francesa de Buenos Aires",
-   "lat": -34.59917,
-   "lng": -58.3802926,
+   "lat": -34.5991681,
+   "lng": -58.3803648,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "finca-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=8647597881314075712&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJie7lUsjKvJURQGQlxHRwAng",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "finca-2026.json (publicado)"
+    }
    },
    "address": "Av. Córdoba 946, CABA",
    "alias": [
@@ -762,15 +793,23 @@
     "finca-2026"
    ],
    "ciudad": "Buenos Aires",
-   "corto": "Alianza Francesa"
+   "corto": "Alianza Francesa",
+   "coords_fecha": "2026-11-28"
   },
   "s_1038a36e": {
    "nombre": "Casa de la Juventud Diego Felipe Becerra",
    "lat": 4.7408869,
    "lng": -74.1081235,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=7130488275276956913&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJzyC1_uOFP44R8YT4sk6V9GI",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Cra. 125 # 132C-82",
    "alias": [
@@ -780,7 +819,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Bogotá",
-   "corto": "Casa de la Juventud Diego Felipe Becerra"
+   "corto": "Casa de la Juventud Diego Felipe Becerra",
+   "coords_fecha": "2026-11-28"
   },
   "s_104736cc": {
    "nombre": "Expoferias",
@@ -807,18 +847,26 @@
   },
   "s_1071539b": {
    "nombre": "Alto Meléndez",
-   "lat": 3.3738372,
-   "lng": -76.5518993,
+   "lat": 3.3738259,
+   "lng": -76.5519615,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=10451590785565709967&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJO6PDcEejMI4Rj9Zjz3GCC5E",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Sede comunal JAC Alto Meléndez, Carrera 94D #2-23, Comuna 18",
    "alias": [],
    "festivales": [
     "ficcali-2026"
    ],
-   "ciudad": "Cali"
+   "ciudad": "Cali",
+   "coords_fecha": "2026-11-28"
   },
   "s_1093f228": {
    "nombre": "Museo Interactivo Maloka",
@@ -1774,18 +1822,26 @@
   },
   "s_213dce05": {
    "nombre": "El Carmen",
-   "lat": 5.0601441,
-   "lng": -75.5191322,
+   "lat": 5.0605349,
+   "lng": -75.5203621,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=2660419888375513160&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJKfoDx-BlR44RSMABAMu16yQ",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: nominatim)",
+    "antes": {
+     "nivel": "nominatim",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "corto": "El Carmen"
+   "corto": "El Carmen",
+   "coords_fecha": "2026-11-28"
   },
   "s_2263f2e4": {
    "nombre": "Instituto Cultural Alexander von Humboldt",
@@ -2154,11 +2210,18 @@
   },
   "s_2b03fa90": {
    "nombre": "Contacto Escuela de Fotografía",
-   "lat": 4.5388271,
-   "lng": -75.6685075,
+   "lat": 4.5389487,
+   "lng": -75.6685388,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=967807853094520722&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ-dAg36r1OI4RkkeIXh1Ybg0",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Cra. 16 # 9-54, piso 2",
    "alias": [
@@ -2168,7 +2231,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Armenia",
-   "corto": "Contacto Escuela de Fotografía"
+   "corto": "Contacto Escuela de Fotografía",
+   "coords_fecha": "2026-11-28"
   },
   "s_2b8a4bc3": {
    "nombre": "Teatro Mayor Julio Mario Santo Domingo",
@@ -2214,11 +2278,18 @@
   },
   "s_2c894bd8": {
    "nombre": "Universidad del Quindío",
-   "lat": 4.5538677,
-   "lng": -75.6610022,
+   "lat": 4.5539405,
+   "lng": -75.6602179,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11194593129972028811&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJe0GrcOT0OI4Ri9UC5SMvW5s",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Cra. 15 con calle 12 Norte",
    "alias": [
@@ -2228,15 +2299,23 @@
     "ficdeh-2026"
    ],
    "ciudad": "Armenia",
-   "corto": "Universidad del Quindío"
+   "corto": "Universidad del Quindío",
+   "coords_fecha": "2026-11-28"
   },
   "s_2d1affc7": {
    "nombre": "Fundación Malabareando las Calles",
-   "lat": 4.8135729,
-   "lng": -75.6922049,
+   "lat": 4.8133697,
+   "lng": -75.691056,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3550673849813761852&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJX4RV-4V9OI4RPP9q2w2HRjE",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Carrera 8 #15 - 09",
    "alias": [
@@ -2246,7 +2325,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Pereira",
-   "corto": "Fundación Malabareando las Calles"
+   "corto": "Fundación Malabareando las Calles",
+   "coords_fecha": "2026-11-28"
   },
   "s_2e88d79d": {
    "nombre": "Parque Ernesto Gutiérrez",
@@ -2429,8 +2509,15 @@
    "lat": 5.6904134,
    "lng": -76.6448593,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=17314813058981972197&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJbVHB8HyPSI4R5UjqRL2SSvA",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Calle 30, Avenida Aeropuerto, Barrio Los Ángeles (frente al Aeropuerto El Caraño)",
    "alias": [
@@ -2440,7 +2527,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Quibdó",
-   "corto": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera"
+   "corto": "Biblioteca Pública Deptal Arnoldo de los Santos Palacios Mosquera",
+   "coords_fecha": "2026-11-28"
   },
   "s_324d7230": {
    "nombre": "La Mecánica",
@@ -2727,8 +2815,15 @@
    "lat": 10.3917183,
    "lng": -75.4959899,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11402944458816219897&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJB3JoMsQl9o4R-eo_5ZFlP54",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Los Almendros Mz E # Lote 11",
    "alias": [
@@ -2738,7 +2833,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Cartagena",
-   "corto": "El Teatrino"
+   "corto": "El Teatrino",
+   "coords_fecha": "2026-11-28"
   },
   "s_3aba7a01": {
    "nombre": "Escuela de Encenillos",
@@ -2816,18 +2912,26 @@
   },
   "s_3c2f53cf": {
    "nombre": "Museo Casa Consistorial",
-   "lat": 6.15777,
-   "lng": -75.64284,
+   "lat": 6.1578278,
+   "lng": -75.642973,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=1396174974099564038&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJbUqwfQCBRo4RBqZ-3701YBM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "cinemancia-2025.json (publicado)"
+    }
    },
    "alias": [],
    "festivales": [
     "cinemancia-2025"
    ],
    "ciudad": "La Estrella",
-   "corto": "Casa Consistorial"
+   "corto": "Casa Consistorial",
+   "coords_fecha": "2026-11-28"
   },
   "s_3cc54ab6": {
    "nombre": "Casa de la Juventud Damawha",
@@ -2856,8 +2960,15 @@
    "lat": 4.8162251,
    "lng": -75.6979463,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3705163406429757924&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJdUVt1E6HOI4R5KEFw3xiazM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Carrera 6 Nº 23-58",
    "alias": [
@@ -2867,7 +2978,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Pereira",
-   "corto": "Colombo Americano de Pereira"
+   "corto": "Colombo Americano de Pereira",
+   "coords_fecha": "2026-11-28"
   },
   "s_3d810f53": {
    "nombre": "CasArte3962",
@@ -2915,8 +3027,15 @@
    "lat": 4.9648759,
    "lng": -74.4333762,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "siembrafest-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=1729975345898196848&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJtTo7PWabQI4RcA9ySmkbAhg",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "siembrafest-2026.json (publicado)"
+    }
    },
    "address": "Urbanización San José",
    "alias": [
@@ -2926,7 +3045,8 @@
     "siembrafest-2026"
    ],
    "ciudad": "Sasaima",
-   "corto": "IED San Nicolás"
+   "corto": "IED San Nicolás",
+   "coords_fecha": "2026-11-28"
   },
   "s_3e183821": {
    "nombre": "Lab UNAL",
@@ -3052,11 +3172,18 @@
   },
   "s_4285aa18": {
    "nombre": "John Bassett Theatre",
-   "lat": 43.6438376,
-   "lng": -79.3866925,
+   "lat": 43.6438444,
+   "lng": -79.3879444,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tiff-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=496230975868049313&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJJ_TZo9Y0K4gRoRcpg3H34gY",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "tiff-2026.json (publicado)"
+    }
    },
    "address": "Front Street West",
    "alias": [
@@ -3069,7 +3196,8 @@
     "JBT"
    ],
    "ciudad": "Toronto",
-   "corto": "John Bassett Theatre"
+   "corto": "John Bassett Theatre",
+   "coords_fecha": "2026-11-28"
   },
   "s_42f35085": {
    "nombre": "Teatro Pablo Tobón Uribe",
@@ -3113,11 +3241,18 @@
   },
   "s_445eff6c": {
    "nombre": "AMC 19th St. East 6",
-   "lat": 40.7378,
-   "lng": -73.9895,
+   "lat": 40.7385558,
+   "lng": -73.9897796,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tribeca-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3398227499087174845&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ_58pLKJZwokRvRwO5eftKC8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "tribeca-2026.json (publicado)"
+    }
    },
    "address": "890 Broadway, New York, NY 10003",
    "alias": [],
@@ -3126,15 +3261,23 @@
    ],
    "corto": "AMC 19th St.",
    "ciudad": "Nueva York",
-   "_ciudad_fijada": "Nominatim reverso"
+   "_ciudad_fijada": "Nominatim reverso",
+   "coords_fecha": "2026-11-28"
   },
   "s_469ea671": {
    "nombre": "Museo Panóptico de Ibagué",
-   "lat": 4.4481695,
-   "lng": -75.2399655,
+   "lat": 4.4480048,
+   "lng": -75.2406832,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=17565569474854004848&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJTaUyvobEOI4RcCge-l5wxfM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "alias": [
     "Centro Cultural Panóptico de Ibagué",
@@ -3152,15 +3295,23 @@
    ],
    "salas_alias": {
     "Celda Teatro Ibagué - Proyección en loop": "Celda Teatro Ibagué (Proyección en loop)"
-   }
+   },
+   "coords_fecha": "2026-11-28"
   },
   "s_46b59d10": {
    "nombre": "Cine York",
-   "lat": -34.5076739,
-   "lng": -58.4849533,
+   "lat": -34.5076573,
+   "lng": -58.4849519,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "finca-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=10328786582930837584&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJPXFBGkCxvJURUNBpRKw4V48",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "finca-2026.json (publicado)"
+    }
    },
    "address": "Juan Bautista Alberdi 895, Olivos, Vicente López",
    "alias": [
@@ -3170,7 +3321,8 @@
     "finca-2026"
    ],
    "ciudad": "Olivos",
-   "corto": "Cine York"
+   "corto": "Cine York",
+   "coords_fecha": "2026-11-28"
   },
   "s_46bfcf2a": {
    "nombre": "Auditorio principal Campus El Cable",
@@ -3323,8 +3475,15 @@
    "lat": 4.4491415,
    "lng": -75.200056,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=697936928181488434&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJV6ecwgHFOI4RMoviN_CRrwk",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "alias": [
     "Universidad de Ibagué - Ibagué"
@@ -3340,7 +3499,8 @@
     "Media Torta Facultad de Humanidades"
    ],
    "ciudad": "Ibagué",
-   "corto": "Universidad de Ibagué"
+   "corto": "Universidad de Ibagué",
+   "coords_fecha": "2026-11-28"
   },
   "s_4c39e6c3": {
    "nombre": "Biblioteca Pública Carlos E. Restrepo",
@@ -3414,11 +3574,18 @@
   },
   "s_4cdac717": {
    "nombre": "Ópera de Arame",
-   "lat": -25.384501,
-   "lng": -49.276154,
+   "lat": -25.3845574,
+   "lng": -49.2761701,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "olhar-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3349466015583978640&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ9VsTK2jn3JQRkEQgTpixey4",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "olhar-2026.json (publicado)"
+    }
    },
    "address": "R. João Gava - Pilarzinho",
    "alias": [],
@@ -3426,7 +3593,8 @@
     "olhar-2026"
    ],
    "ciudad": "Curitiba",
-   "corto": "Ópera de Arame"
+   "corto": "Ópera de Arame",
+   "coords_fecha": "2026-11-28"
   },
   "s_4cdb95d4": {
    "nombre": "Sena Galán",
@@ -3448,11 +3616,18 @@
   },
   "s_4d15085b": {
    "nombre": "Cine Club La Florida",
-   "lat": 4.7592804,
-   "lng": -75.6116548,
+   "lat": 4.7592674,
+   "lng": -75.6116451,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=7001892177780956479&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJdQYUpOeFOI4RP104jNa3K2E",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Corregimiento La Florida",
    "alias": [
@@ -3462,15 +3637,23 @@
     "ficdeh-2026"
    ],
    "ciudad": "Pereira",
-   "corto": "Cine Club La Florida"
+   "corto": "Cine Club La Florida",
+   "coords_fecha": "2026-11-28"
   },
   "s_4da9a121": {
    "nombre": "Centro Cultural del Socorro",
-   "lat": 10.3842515,
-   "lng": -75.4805496,
+   "lat": 10.3842473,
+   "lng": -75.4806009,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12755166838854015946&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJRxshZdcl9o4Rylu8AKl0A7E",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Cra. 71 # 26-210, sobre la Avenida Principal del barrio El Socorro",
    "alias": [
@@ -3480,7 +3663,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Cartagena",
-   "corto": "Centro Cultural del Socorro"
+   "corto": "Centro Cultural del Socorro",
+   "coords_fecha": "2026-11-28"
   },
   "s_4ea5f87b": {
    "nombre": "Casa de la Juventud",
@@ -3502,11 +3686,18 @@
   },
   "s_4ed8fa7d": {
    "nombre": "Lugar del Poema",
-   "lat": 10.420315,
-   "lng": -75.5481268,
+   "lat": 10.4201632,
+   "lng": -75.5480842,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=1548723530218724273&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJh9npcwAv9o4Rsdv5YdgrfhU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Pasaje Leclerc, calle 24 # 8b-83 piso 2, Getsemaní",
    "alias": [
@@ -3516,7 +3707,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Cartagena",
-   "corto": "Lugar del Poema"
+   "corto": "Lugar del Poema",
+   "coords_fecha": "2026-11-28"
   },
   "s_4ee78b3f": {
    "nombre": "Biblioteca Pública La Victoria",
@@ -3588,11 +3780,18 @@
   },
   "s_525d04e9": {
    "nombre": "Royal Alexandra Theatre",
-   "lat": 43.6473934,
-   "lng": -79.3876006,
+   "lat": 43.6473619,
+   "lng": -79.3875894,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tiff-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=10264776022346893320&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJc4-p5NA0K4gRCAjvPmjPc44",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "tiff-2026.json (publicado)"
+    }
    },
    "address": "260 King Street West",
    "alias": [
@@ -3605,7 +3804,8 @@
     "RA"
    ],
    "ciudad": "Toronto",
-   "corto": "Royal Alexandra Theatre"
+   "corto": "Royal Alexandra Theatre",
+   "coords_fecha": "2026-11-28"
   },
   "s_526f7636": {
    "nombre": "Universidad de Antioquia",
@@ -3714,11 +3914,18 @@
   },
   "s_554ab71f": {
    "nombre": "Plaza de mercado",
-   "lat": 7.9886985,
-   "lng": -75.1936034,
+   "lat": 7.9886767,
+   "lng": -75.1935116,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "fecibac-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=5534470336927628158&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJC228LQBvW44RfvuB1HJjzkw",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "fecibac-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Plaza de mercado - Caucasia"
@@ -3727,15 +3934,23 @@
     "fecibac-2026"
    ],
    "ciudad": "Caucasia",
-   "corto": "Plaza de mercado"
+   "corto": "Plaza de mercado",
+   "coords_fecha": "2026-11-28"
   },
   "s_55abdd71": {
    "nombre": "Universidad CESMAG",
    "lat": 1.2090585,
    "lng": -77.2785053,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=17598831025237501463&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ719GDZvULo4RF6ZnKZObO_Q",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
@@ -3746,7 +3961,8 @@
     "Salón de Teatro"
    ],
    "ciudad": "Pasto",
-   "corto": "Universidad CESMAG"
+   "corto": "Universidad CESMAG",
+   "coords_fecha": "2026-11-28"
   },
   "s_55ba19eb": {
    "nombre": "Cinefilo",
@@ -3771,8 +3987,15 @@
    "lat": 6.3777171,
    "lng": -75.4462385,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "girardota-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11477801712151285895&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJQYOEUAA7RI4Rh9AlX9hXSZ8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "girardota-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 16 #5-55",
    "alias": [],
@@ -3780,15 +4003,23 @@
     "girardota-2026"
    ],
    "ciudad": "Girardota",
-   "corto": "Punto de Turismo"
+   "corto": "Punto de Turismo",
+   "coords_fecha": "2026-11-28"
   },
   "s_56d5bec2": {
    "nombre": "Roy Thomson Hall",
-   "lat": 43.6465586,
-   "lng": -79.386339,
+   "lat": 43.6466068,
+   "lng": -79.3864069,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tiff-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3739586063603374985&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJd-AY1tM0K4gRiZsUMLat5TM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "tiff-2026.json (publicado)"
+    }
    },
    "address": "60 Simcoe Street",
    "alias": [
@@ -3801,15 +4032,23 @@
     "RTH"
    ],
    "ciudad": "Toronto",
-   "corto": "Roy Thomson Hall"
+   "corto": "Roy Thomson Hall",
+   "coords_fecha": "2026-11-28"
   },
   "s_57240f05": {
    "nombre": "Hudson Yards Public Square and Gardens",
-   "lat": 40.7536,
-   "lng": -74.0021,
+   "lat": 40.7539248,
+   "lng": -74.0033698,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tribeca-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6788170426805668400&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJoYqcM7RZwokRMEqQtAltNF4",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "tribeca-2026.json (publicado)"
+    }
    },
    "address": "Hudson Yards Public Square, New York, NY 10001",
    "alias": [],
@@ -3818,22 +4057,31 @@
    ],
    "corto": "Hudson Yards",
    "ciudad": "Nueva York",
-   "_ciudad_fijada": "Nominatim reverso"
+   "_ciudad_fijada": "Nominatim reverso",
+   "coords_fecha": "2026-11-28"
   },
   "s_57b40373": {
    "nombre": "Clandestino Records",
-   "lat": 5.0701875,
-   "lng": -75.5166875,
+   "lat": 5.0701551,
+   "lng": -75.5166325,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=1622917746127987483&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ3zG6HwBvR44RG-OibRfDhRY",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "corto": "Clandestino Records"
+   "corto": "Clandestino Records",
+   "coords_fecha": "2026-11-28"
   },
   "s_57f81227": {
    "nombre": "Archipiélago Sonoro",
@@ -3918,11 +4166,18 @@
   },
   "s_5b798d64": {
    "nombre": "Biblioteca Sabaneta",
-   "lat": 6.1495623,
-   "lng": -75.6187333,
+   "lat": 6.149713,
+   "lng": -75.6188583,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "cinemancia-2025.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=4278919435031814651&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJuaKx6d6DRo4R-yGWM47GYTs",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "cinemancia-2025.json (publicado)"
+    }
    },
    "address": "Calle 75 sur #45-47",
    "alias": [],
@@ -3930,7 +4185,8 @@
     "cinemancia-2025"
    ],
    "ciudad": "Sabaneta",
-   "corto": "Biblioteca Sabaneta"
+   "corto": "Biblioteca Sabaneta",
+   "coords_fecha": "2026-11-28"
   },
   "s_5c62c6c3": {
    "nombre": "Teatro Caribe",
@@ -3991,19 +4247,31 @@
    "lat": 11.0191881,
    "lng": -74.8731999,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficica-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=9321134844701599470&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ5UYgeXYs9I4R7mb0ecFSW4E",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficica-2026-venues-geo.json"
+    }
    },
    "address": "Ciudadela Universitaria, Puerto Colombia",
-   "alias": [],
+   "alias": [
+    "Universidad del Atlántico",
+    "Universidad del Atlántico - Centro de Convenciones - Barranquilla"
+   ],
    "festivales": [
+    "ficdeh-2026",
     "ficica-2026"
    ],
    "salas": [
     "Teatrino 2"
    ],
    "ciudad": "Barranquilla",
-   "corto": "Universidad del Atlántico, sede Norte"
+   "corto": "Universidad del Atlántico, sede Norte",
+   "coords_fecha": "2026-11-28"
   },
   "s_5f0c609d": {
    "nombre": "Auditorio Cultural Diego Echavarría Misas",
@@ -4028,8 +4296,15 @@
    "lat": 10.9944069,
    "lng": -74.7919365,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficidi-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=4710044383886665268&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ_Z-iq3At9I4RNGbjiWlwXUE",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficidi-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 59 #59-132",
    "alias": [],
@@ -4040,15 +4315,23 @@
     "Salón del Mirador de la Bandera (azotea)"
    ],
    "ciudad": "Barranquilla",
-   "corto": "Universidad Simón Bolívar, sede 1"
+   "corto": "Universidad Simón Bolívar, sede 1",
+   "coords_fecha": "2026-11-28"
   },
   "s_603976c3": {
    "nombre": "Librería Bagatá",
-   "lat": 5.6912842,
-   "lng": -76.6574025,
+   "lat": 5.691432,
+   "lng": -76.6574936,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=2940114681788935419&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJnR__VjKPSI4R-6zwxrlizSg",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Cra. 7 #27-3 (frente al Colegio Carrasquilla)",
    "alias": [
@@ -4058,7 +4341,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Quibdó",
-   "corto": "Librería Bagatá"
+   "corto": "Librería Bagatá",
+   "coords_fecha": "2026-11-28"
   },
   "s_61310bc4": {
    "nombre": "Universidad Autónoma de Occidente",
@@ -4239,11 +4523,18 @@
   },
   "s_63e34462": {
    "nombre": "CCEBA",
-   "lat": -34.59511,
-   "lng": -58.388438,
+   "lat": -34.5950787,
+   "lng": -58.3882366,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "finca-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6432947392904779947&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJOygwaMrKvJURq1jdFJJrRlk",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "finca-2026.json (publicado)"
+    }
    },
    "address": "Paraná 1159, CABA",
    "alias": [
@@ -4253,7 +4544,8 @@
     "finca-2026"
    ],
    "ciudad": "Buenos Aires",
-   "corto": "CCEBA"
+   "corto": "CCEBA",
+   "coords_fecha": "2026-11-28"
   },
   "s_643e6771": {
    "nombre": "Cineprox Mayorca",
@@ -4297,8 +4589,15 @@
    "lat": 4.8150592,
    "lng": -75.6983206,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3238663039408620000&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJFazQnt2HOI4R4EEjC-AK8iw",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "CC El Lago. Calle 24 #7-17, local 303",
    "alias": [
@@ -4308,7 +4607,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Pereira",
-   "corto": "Shuffle live music"
+   "corto": "Shuffle live music",
+   "coords_fecha": "2026-11-28"
   },
   "s_66915e12": {
    "nombre": "Casa Municipal de la Cultura",
@@ -4590,8 +4890,15 @@
    "lat": 5.630645,
    "lng": -73.5367607,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "villadelcine-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6042073619487040721&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJoSGhHQ3XQY4R0aRI1PHB2VM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "villadelcine-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Casa San Pedro Campestre - Villa de Leyva",
@@ -4601,15 +4908,23 @@
     "villadelcine-2026"
    ],
    "ciudad": "Villa de Leyva",
-   "corto": "Casa San Pedro Campestre"
+   "corto": "Casa San Pedro Campestre",
+   "coords_fecha": "2026-11-28"
   },
   "s_6bdaa2bc": {
    "nombre": "Parque Educativo El Zócalo",
    "lat": 6.232024,
    "lng": -75.1580099,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6539063111559040013&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJvVeWhSsdRI4RDUxWKEFrv1o",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Parque Educativo El Zócalo - Guatapé",
@@ -4619,7 +4934,8 @@
     "guatape-2026"
    ],
    "ciudad": "Guatapé",
-   "corto": "Parque Educativo El Zócalo"
+   "corto": "Parque Educativo El Zócalo",
+   "coords_fecha": "2026-11-28"
   },
   "s_6c6c37df": {
    "nombre": "Nueva Villa de Aburrá",
@@ -4664,8 +4980,15 @@
    "lat": 6.2925953,
    "lng": -75.5500455,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "miradas-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=10843387448870022302&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJxUMYRgEvRI4RnqzTG29ze5Y",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "miradas-2026-venues-geo.json"
+    }
    },
    "address": "Barrio Santa Cruz, comuna 2, Medellín",
    "alias": [
@@ -4675,7 +4998,8 @@
     "miradas-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "JAC Santa Cruz parte alta"
+   "corto": "JAC Santa Cruz parte alta",
+   "coords_fecha": "2026-11-28"
   },
   "s_6cf2cf5a": {
    "nombre": "Casa B",
@@ -4742,8 +5066,15 @@
    "lat": 6.2088875,
    "lng": -75.163474,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=7750169050137607311&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ81t53rkFRI4Rj7ytXrAhjms",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Camping La Espacial - Guatapé",
@@ -4753,30 +5084,46 @@
     "guatape-2026"
    ],
    "ciudad": "Guatapé",
-   "corto": "Camping La Espacial"
+   "corto": "Camping La Espacial",
+   "coords_fecha": "2026-11-28"
   },
   "s_6f96b935": {
    "nombre": "Fundación Universitaria San Martín, Sede Mijitayo",
    "lat": 1.2270611,
    "lng": -77.286592,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=9310875469901777615&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJdafsgYfTLo4Rz8pko-jfNoE",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficpa-2026"
    ],
    "ciudad": "Pasto",
-   "corto": "Fundación Universitaria San Martín, Sede Mijitayo"
+   "corto": "Fundación Universitaria San Martín, Sede Mijitayo",
+   "coords_fecha": "2026-11-28"
   },
   "s_7050e38f": {
    "nombre": "Teatro Municipal Enrique Buenaventura",
    "lat": 3.4494433,
    "lng": -76.5359075,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=17570038278875175767&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ9feXVmOmMI4RV9tefrlQ1fM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 5 #6-64, centro",
    "alias": [],
@@ -4787,15 +5134,23 @@
     "Teatrino"
    ],
    "ciudad": "Cali",
-   "corto": "Teatro Municipal Enrique Buenaventura"
+   "corto": "Teatro Municipal Enrique Buenaventura",
+   "coords_fecha": "2026-11-28"
   },
   "s_71565dd9": {
    "nombre": "Casa Campesina",
    "lat": 1.6497377,
    "lng": -75.611525,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "mambe-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3166159577368195748&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJHQluS45RJI4RpHI7T1x18Cs",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "mambe-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Casa Campesina - Florencia"
@@ -4804,7 +5159,8 @@
     "mambe-2026"
    ],
    "ciudad": "Florencia",
-   "corto": "Casa Campesina"
+   "corto": "Casa Campesina",
+   "coords_fecha": "2026-11-28"
   },
   "s_72770c6f": {
    "nombre": "Biblioteca Comfama Caldas",
@@ -4851,8 +5207,15 @@
    "lat": 6.2351704,
    "lng": -75.2215165,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=2475404478965480257&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ4ez8frMdRI4RQfslJEJnWiI",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Finca La Manuela - Guatapé"
@@ -4861,7 +5224,8 @@
     "guatape-2026"
    ],
    "ciudad": "Guatapé",
-   "corto": "Finca La Manuela"
+   "corto": "Finca La Manuela",
+   "coords_fecha": "2026-11-28"
   },
   "s_73cac39d": {
    "nombre": "Salón Comunal Vda. San Bernardo",
@@ -4953,8 +5317,15 @@
    "lat": 1.2115349,
    "lng": -77.278292,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=15558701077133496802&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJfwL03oTULo4R4pEHNTKc69c",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "address": "Cl. 17 #21A-51",
    "alias": [],
@@ -4962,15 +5333,23 @@
     "ficpa-2026"
    ],
    "ciudad": "Pasto",
-   "corto": "Teatro Colombia"
+   "corto": "Teatro Colombia",
+   "coords_fecha": "2026-11-28"
   },
   "s_76fd6900": {
    "nombre": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López",
-   "lat": 4.8111739,
-   "lng": -75.6769712,
+   "lat": 4.811031,
+   "lng": -75.6769695,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11036962143048108471&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJa4ArNoiHOI4RtwnRv5cqK5k",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Carrera 7b # 2e-05, barrio Alfonso López",
    "alias": [
@@ -4980,15 +5359,23 @@
     "ficdeh-2026"
    ],
    "ciudad": "Pereira",
-   "corto": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López"
+   "corto": "Museo Intangible del Confinamiento. Casa de la Cultura Alfonso López",
+   "coords_fecha": "2026-11-28"
   },
   "s_7715f7c0": {
    "nombre": "Casa Taller Sirirí",
    "lat": 2.4869714,
    "lng": -76.5677516,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "popayan-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3294752872853612966&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJnZHj0ZkFMI4RpikjEUhQuS0",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "popayan-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 16 #67N-65, Popayán",
    "alias": [],
@@ -4996,7 +5383,8 @@
     "popayan-2026"
    ],
    "ciudad": "Popayán",
-   "corto": "Casa Taller Sirirí"
+   "corto": "Casa Taller Sirirí",
+   "coords_fecha": "2026-11-28"
   },
   "s_77fb8213": {
    "nombre": "Bulevar del Oriente",
@@ -5040,8 +5428,15 @@
    "lat": 3.4483475,
    "lng": -76.5400415,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=9475615534465631803&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJp-ORJSWnMI4RO0b_5x8mgIM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Calle 2 #4-66, San Antonio",
    "alias": [],
@@ -5049,22 +5444,31 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Espectra"
+   "corto": "Espectra",
+   "coords_fecha": "2026-11-28"
   },
   "s_797f44ee": {
    "nombre": "Samaria",
-   "lat": 5.078985,
-   "lng": -75.486459,
+   "lat": 5.07899,
+   "lng": -75.48646,
    "evidencia": {
-    "nivel": "nominatim",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=438210047572865740&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJk2iHXQBvR44RzHKWbrfVFAY",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: nominatim)",
+    "antes": {
+     "nivel": "nominatim",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "corto": "Samaria"
+   "corto": "Samaria",
+   "coords_fecha": "2026-11-28"
   },
   "s_7a47fbd2": {
    "nombre": "ESAP",
@@ -5093,8 +5497,15 @@
    "lat": 7.9888277,
    "lng": -75.2001708,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "fecibac-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3677598493174937033&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJC1z4GwJvW44RyTU0RFh0CTM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "fecibac-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Cámara de Comercio - Caucasia"
@@ -5106,7 +5517,8 @@
     "Auditorio"
    ],
    "ciudad": "Caucasia",
-   "corto": "Cámara de Comercio"
+   "corto": "Cámara de Comercio",
+   "coords_fecha": "2026-11-28"
   },
   "s_7aa97950": {
    "nombre": "Planetario de Medellín",
@@ -5142,15 +5554,23 @@
    "lat": 3.3452691,
    "lng": -76.5210844,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=5214669789695022215&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJEwwF-behMI4Rh5S7k4s6Xkg",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Ciudad Pacífica, El Hormiguero (sur de Cali)",
    "alias": [],
    "festivales": [
     "ficcali-2026"
    ],
-   "ciudad": "Cali"
+   "ciudad": "Cali",
+   "coords_fecha": "2026-11-28"
   },
   "s_7d5e0def": {
    "nombre": "Museo de Arte Moderno",
@@ -5198,8 +5618,15 @@
    "lat": 6.8162013,
    "lng": -73.269468,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "leviza-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=2921128909414260679&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJK_3wrsYzaI4Rx9_CLETviSg",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "leviza-2026.json (publicado)"
+    }
    },
    "address": "Cra. 10 #1938, Zapatoca, Santander",
    "alias": [
@@ -5209,7 +5636,8 @@
     "leviza-2026"
    ],
    "ciudad": "Zapatoca",
-   "corto": "Mediateca"
+   "corto": "Mediateca",
+   "coords_fecha": "2026-11-28"
   },
   "s_7e3dd06f": {
    "nombre": "Teatro Baggenuff",
@@ -5232,8 +5660,15 @@
    "lat": 2.4429541,
    "lng": -76.6055212,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "popayan-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=14699960419655170958&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJO4yUwg8DMI4RjjvZMR7AAMw",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "popayan-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 6 #3-14, Centro, Popayán",
    "alias": [],
@@ -5244,7 +5679,8 @@
     "Auditorio Maya"
    ],
    "ciudad": "Popayán",
-   "corto": "Facultad de Artes Unicauca"
+   "corto": "Facultad de Artes Unicauca",
+   "coords_fecha": "2026-11-28"
   },
   "s_7f1eac48": {
    "nombre": "Barrio Llano de Bolívar",
@@ -5312,8 +5748,15 @@
    "lat": 1.6313624,
    "lng": -75.6038036,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "mambe-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6596531550728562594&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJjVxwcABRJI4RoifV1n6Wi1s",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "mambe-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Candela Café Bar - Florencia"
@@ -5322,7 +5765,8 @@
     "mambe-2026"
    ],
    "ciudad": "Florencia",
-   "corto": "Candela Café Bar"
+   "corto": "Candela Café Bar",
+   "coords_fecha": "2026-11-28"
   },
   "s_8090daa6": {
    "nombre": "Barrio La Esmeralda",
@@ -5465,8 +5909,15 @@
    "lat": 11.0193206,
    "lng": -74.8504426,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficica-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6646723606346754769&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJIYa2IGos9I4R0WqAdOfnPVw",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficica-2026-venues-geo.json"
+    }
    },
    "address": "Km 5, vía Puerto Colombia",
    "alias": [],
@@ -5474,7 +5925,8 @@
     "ficica-2026"
    ],
    "ciudad": "Barranquilla",
-   "corto": "Universidad del Norte"
+   "corto": "Universidad del Norte",
+   "coords_fecha": "2026-11-28"
   },
   "s_854bd5a3": {
    "nombre": "Función Aire Libre",
@@ -5498,8 +5950,15 @@
    "lat": 3.4457545,
    "lng": -76.537896,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6178212328948493756&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ7X5VLn2mMI4RvO3pLWFrvVU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Calle 4 #10-48, San Antonio",
    "alias": [],
@@ -5507,15 +5966,23 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Teatro La Concha"
+   "corto": "Teatro La Concha",
+   "coords_fecha": "2026-11-28"
   },
   "s_859077b8": {
    "nombre": "Cinemas Valle de Atriz",
    "lat": 1.2276955,
    "lng": -77.2859232,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=8516339082879712805&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJxdejfnjULo4RJT7SPUYdMHY",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "address": "C.C. Valle de Atriz, Av. Panamericana",
    "alias": [],
@@ -5526,7 +5993,8 @@
     "Sala 2"
    ],
    "ciudad": "Pasto",
-   "corto": "Cinemas Valle de Atriz"
+   "corto": "Cinemas Valle de Atriz",
+   "coords_fecha": "2026-11-28"
   },
   "s_8590800a": {
    "nombre": "Casa de la Juventud José Saramago",
@@ -5577,8 +6045,15 @@
    "lat": 5.6305425,
    "lng": -73.5241643,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "villadeleyvaiff-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=18165784430133949650&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJuXfybn7XQY4R0rR0WLHUGfw",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "villadeleyvaiff-2026-venues-geo.json"
+    }
    },
    "address": "Villa de Leyva, Boyacá",
    "alias": [
@@ -5587,7 +6062,8 @@
    "festivales": [
     "villadeleyvaiff-2026"
    ],
-   "ciudad": "Villa de Leyva"
+   "ciudad": "Villa de Leyva",
+   "coords_fecha": "2026-11-28"
   },
   "s_86bebcba": {
    "nombre": "Barrio la estrella",
@@ -5633,8 +6109,15 @@
    "lat": 1.2310572,
    "lng": -77.2932987,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=5714704585288279019&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ3UyAHI_TLo4R62Nn4oq1Tk8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "address": "Cl. 18 #47-154",
    "alias": [],
@@ -5645,7 +6128,8 @@
     "Sala de Proyecciones Biblioteca"
    ],
    "ciudad": "Pasto",
-   "corto": "Universidad de Nariño, Sede Torobajo"
+   "corto": "Universidad de Nariño, Sede Torobajo",
+   "coords_fecha": "2026-11-28"
   },
   "s_8858d894": {
    "nombre": "Parque Biblioteca Belén",
@@ -5725,11 +6209,18 @@
   },
   "s_89b03e3b": {
    "nombre": "Fundación Puerto Colombia",
-   "lat": 10.9881836,
-   "lng": -74.9591253,
+   "lat": 10.9882333,
+   "lng": -74.9590891,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11895053786736731207&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJF-Wr-Zgq9I4RR6SbdmW4E6U",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Estación Ferrocarril de Bolívar, Cra. 4 # 2-45",
    "alias": [
@@ -5739,7 +6230,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Barranquilla",
-   "corto": "Fundación Puerto Colombia"
+   "corto": "Fundación Puerto Colombia",
+   "coords_fecha": "2026-11-28"
   },
   "s_8b3ca384": {
    "nombre": "CITI",
@@ -5788,8 +6280,15 @@
    "lat": 6.234552,
    "lng": -75.162125,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=10640977859842344888&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJE4R6ZT0dRI4RuAezNvxYrJM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "COMFAMA sede Parque primcipal",
@@ -5800,7 +6299,8 @@
    ],
    "ciudad": "Guatapé",
    "corto": "Comfama",
-   "institucion": "i_0b12d8c2"
+   "institucion": "i_0b12d8c2",
+   "coords_fecha": "2026-11-28"
   },
   "s_8d369c94": {
    "nombre": "Centro Comunitario Nueva Colombia / Biblioteca Pa To Ma Suto",
@@ -5941,8 +6441,15 @@
    "lat": 5.6338197,
    "lng": -73.5236226,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "villadeleyvaiff-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=365496522809706746&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ5zG_8w3XQY4R-oi2qCaBEgU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "villadeleyvaiff-2026-venues-geo.json"
+    }
    },
    "address": "Plaza Mayor, Villa de Leyva, Boyacá",
    "alias": [
@@ -5952,7 +6459,8 @@
     "villadeleyvaiff-2026"
    ],
    "ciudad": "Villa de Leyva",
-   "corto": "Plaza Mayor"
+   "corto": "Plaza Mayor",
+   "coords_fecha": "2026-11-28"
   },
   "s_928647f0": {
    "nombre": "Parque Emilio Ulloa",
@@ -5995,11 +6503,18 @@
   },
   "s_92e9bbf4": {
    "nombre": "Scotiabank Theatre Toronto",
-   "lat": 43.6485875,
-   "lng": -79.3913729,
+   "lat": 43.6487721,
+   "lng": -79.3912304,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tiff-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=10338934543637613031&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ6WXdCtA0K4gR5wmJfTBGe48",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "tiff-2026.json (publicado)"
+    }
    },
    "address": "259 Richmond Street West",
    "alias": [
@@ -6025,7 +6540,8 @@
     "SCOTIA 9"
    ],
    "ciudad": "Toronto",
-   "corto": "Scotiabank Theatre Toronto"
+   "corto": "Scotiabank Theatre Toronto",
+   "coords_fecha": "2026-11-28"
   },
   "s_936e7c22": {
    "nombre": "Silencio",
@@ -6070,8 +6586,15 @@
    "lat": 5.6899285,
    "lng": -76.6441132,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12944659262241254321&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJf4mfEBSPSI4RsStc6AOrpLM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "alias": [
     "Cineland - Quibdó"
@@ -6080,15 +6603,23 @@
     "ficdeh-2026"
    ],
    "ciudad": "Quibdó",
-   "corto": "Cineland"
+   "corto": "Cineland",
+   "coords_fecha": "2026-11-28"
   },
   "s_94b49a61": {
    "nombre": "Hotel Mesón de los Virreyes",
    "lat": 5.6347096,
    "lng": -73.5217695,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "villadelcine-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=1782579658303655362&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJC8crqw3XQY4Rws0GNcH-vBg",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "villadelcine-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Auditorio del Hotel Mesón de los Virreyes",
@@ -6105,15 +6636,23 @@
     "Biblioteca"
    ],
    "ciudad": "Villa de Leyva",
-   "corto": "Hotel Mesón de los Virreyes"
+   "corto": "Hotel Mesón de los Virreyes",
+   "coords_fecha": "2026-11-28"
   },
   "s_964bfd80": {
    "nombre": "Malecón",
    "lat": 6.2356097,
    "lng": -75.1626319,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=14648311626611118981&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ655FW1odRI4RhVNhd9BBScs",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Malecón - Guatapé",
@@ -6128,7 +6667,8 @@
     "Pantalla CORNARE"
    ],
    "ciudad": "Guatapé",
-   "corto": "Malecón"
+   "corto": "Malecón",
+   "coords_fecha": "2026-11-28"
   },
   "s_968bdbf4": {
    "nombre": "Lember Cinéma",
@@ -6172,11 +6712,18 @@
   },
   "s_977026c6": {
    "nombre": "Beacon Theatre",
-   "lat": 40.7799,
-   "lng": -73.981,
+   "lat": 40.7804541,
+   "lng": -73.9810962,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tribeca-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=16483267983410910136&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJEdN5k4lYwokRuNPGGOZUwOQ",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "tribeca-2026.json (publicado)"
+    }
    },
    "address": "2124 Broadway, New York, NY 10023",
    "alias": [],
@@ -6185,7 +6732,8 @@
    ],
    "corto": "Beacon Theatre",
    "ciudad": "Nueva York",
-   "_ciudad_fijada": "Nominatim reverso"
+   "_ciudad_fijada": "Nominatim reverso",
+   "coords_fecha": "2026-11-28"
   },
   "s_98028200": {
    "nombre": "Centro Cultural Brisas de Mayo",
@@ -6211,11 +6759,18 @@
   },
   "s_985165e3": {
    "nombre": "Universidad Autónoma",
-   "lat": 5.0674375,
-   "lng": -75.5031875,
+   "lat": 5.0674694,
+   "lng": -75.5031743,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=1743499469988391043&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJG2V5EYxvR44Rg2i9zocnMhg",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Universidad Autónoma - Aula Torreón F-101"
@@ -6227,22 +6782,31 @@
     "Aula Torreón F-101"
    ],
    "ciudad": "Manizales",
-   "corto": "Universidad Autónoma"
+   "corto": "Universidad Autónoma",
+   "coords_fecha": "2026-11-28"
   },
   "s_987cd558": {
    "nombre": "Media Torta de Chipre",
-   "lat": 5.0723125,
-   "lng": -75.5259375,
+   "lat": 5.0723213,
+   "lng": -75.5259618,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=2694535620545141420&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJhQkQxuJvR44RrNo64d7pZCU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "_ciudad_fijada": "lugar vecino del almacén a 1051 m"
+   "_ciudad_fijada": "lugar vecino del almacén a 1051 m",
+   "coords_fecha": "2026-11-28"
   },
   "s_98bbb7e0": {
    "nombre": "La Trocha · Casa de la Paz",
@@ -6344,8 +6908,15 @@
    "lat": 6.1745466,
    "lng": -75.3342677,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "filcmar-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6777579274915064980&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJv4kMDCSgRo4RlKxc_nDMDl4",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "filcmar-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Galería San José - CBA Marinilla"
@@ -6354,7 +6925,8 @@
     "filcmar-2026"
    ],
    "ciudad": "Marinilla",
-   "corto": "Galería San José"
+   "corto": "Galería San José",
+   "coords_fecha": "2026-11-28"
   },
   "s_9a119b45": {
    "nombre": "MON",
@@ -6404,8 +6976,15 @@
    "lat": 2.4285559,
    "lng": -76.6175557,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "popayan-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=10607091667481242167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJDzO6ad0DMI4RN6o5PKz1M5M",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "popayan-2026-venues-geo.json"
+    }
    },
    "address": "Túnel bajo, Popayán",
    "alias": [],
@@ -6413,7 +6992,8 @@
     "popayan-2026"
    ],
    "ciudad": "Popayán",
-   "corto": "Mikuna Casa Cultural"
+   "corto": "Mikuna Casa Cultural",
+   "coords_fecha": "2026-11-28"
   },
   "s_9bd9d312": {
    "nombre": "Cine Arte Cacodelphia",
@@ -6457,8 +7037,15 @@
    "lat": 4.6085973,
    "lng": -76.0829082,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "cinetoro-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=2006753661141339647&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJK3BRdLVqOI4R_00LlNJr2Rs",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "cinetoro-2026-venues-geo.json"
+    }
    },
    "address": "Toro, Valle del Cauca",
    "alias": [
@@ -6468,7 +7055,8 @@
     "cinetoro-2026"
    ],
    "ciudad": "Toro",
-   "corto": "Cine Teatro"
+   "corto": "Cine Teatro",
+   "coords_fecha": "2026-11-28"
   },
   "s_9c38c3bf": {
    "nombre": "Sendero del Bosque",
@@ -6490,8 +7078,15 @@
    "lat": 6.2331638,
    "lng": -75.1608265,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11275907192055796831&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ3ThkZCkdRI4RXxTCTtkRfJw",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Museo Comunitario - Guatapé"
@@ -6500,7 +7095,8 @@
     "guatape-2026"
    ],
    "ciudad": "Guatapé",
-   "corto": "Museo Comunitario"
+   "corto": "Museo Comunitario",
+   "coords_fecha": "2026-11-28"
   },
   "s_9cd42c9a": {
    "nombre": "Universidad Minuto de Dios",
@@ -6577,8 +7173,15 @@
    "lat": 3.4482429,
    "lng": -76.5343592,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6094861123916850754&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJQehChmSmMI4RQuZmduZLlVQ",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Calle 8 #6-23, centro (San Pedro/La Merced)",
    "alias": [],
@@ -6586,15 +7189,23 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Centro Cultural Comfandi"
+   "corto": "Centro Cultural Comfandi",
+   "coords_fecha": "2026-11-28"
   },
   "s_9edb6fc4": {
    "nombre": "Parque Principal de La Florida",
    "lat": 1.2992226,
    "lng": -77.4064299,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=16040091590015830445&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJxUCLUSnPLo4RrcmfK1Hamd4",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 4 #3, La Florida",
    "alias": [],
@@ -6602,7 +7213,8 @@
     "ficpa-2026"
    ],
    "ciudad": "La Florida",
-   "corto": "Parque Principal de La Florida"
+   "corto": "Parque Principal de La Florida",
+   "coords_fecha": "2026-11-28"
   },
   "s_a00d148a": {
    "nombre": "Auditorio SENA Vélez",
@@ -6610,9 +7222,16 @@
    "lng": -73.6678772,
    "evidencia": {
     "nivel": "maps",
-    "url": "https://www.google.com/maps/place/SENA/@6.0098388,-73.6678772,17z/data=!3m1!4b1!4m6!3m5!1s0x8e41f06d1b94d193:0xd47ace7939d6dd68!8m2!3d6.0098388!4d-73.6678772",
-    "fecha": "2026-11-27",
-    "fuente": "verificado en Google Maps"
+    "url": "https://maps.google.com/?cid=15310776903256169832&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJk9GUG23wQY4RaN3WOXnOetQ",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: maps)",
+    "antes": {
+     "nivel": "maps",
+     "url": "https://www.google.com/maps/place/SENA/@6.0098388,-73.6678772,17z/data=!3m1!4b1!4m6!3m5!1s0x8e41f06d1b94d193:0xd47ace7939d6dd68!8m2!3d6.0098388!4d-73.6678772",
+     "fecha": "2026-11-27",
+     "fuente": "verificado en Google Maps"
+    }
    },
    "address": "Vélez, Santander",
    "alias": [
@@ -6622,7 +7241,8 @@
     "provinciadevelez-2026"
    ],
    "ciudad": "Vélez",
-   "corto": "Auditorio SENA Vélez"
+   "corto": "Auditorio SENA Vélez",
+   "coords_fecha": "2026-11-28"
   },
   "s_a140e4f3": {
    "nombre": "Finca Agroturística El Encanto de Mis Abuelos",
@@ -6645,24 +7265,6 @@
    "ciudad": "Medellín",
    "corto": "Finca Agroturística El Encanto de Mis Abuelos",
    "coords_fecha": "2026-11-27"
-  },
-  "s_a2381802": {
-   "nombre": "Universidad del Atlántico",
-   "lat": 11.019602,
-   "lng": -74.8732855,
-   "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
-   },
-   "address": "Universidad del Atlántico - Puerto Colombia - Cra. 30 # 8-49, Puerto Colombia",
-   "alias": [
-    "Universidad del Atlántico - Centro de Convenciones - Barranquilla"
-   ],
-   "festivales": [
-    "ficdeh-2026"
-   ],
-   "ciudad": "Barranquilla",
-   "corto": "Universidad del Atlántico - Centro de Convenciones"
   },
   "s_a3e4479d": {
    "nombre": "Caas Morón",
@@ -6732,8 +7334,15 @@
    "lat": 4.6092418,
    "lng": -76.0773237,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "cinetoro-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=9195999494056958110&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJsankKbZqOI4RntjvPdHAnn8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "cinetoro-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Coliseo Institución Educativa Fray José Joaquín Escobar - Toro"
@@ -6742,7 +7351,8 @@
     "cinetoro-2026"
    ],
    "ciudad": "Toro",
-   "corto": "Coliseo Institución Educativa Fray José Joaquín Escobar"
+   "corto": "Coliseo Institución Educativa Fray José Joaquín Escobar",
+   "coords_fecha": "2026-11-28"
   },
   "s_a5a8c84b": {
    "nombre": "Museo Casa de la Memoria",
@@ -6821,23 +7431,38 @@
    "lat": 10.9933967,
    "lng": -74.8183852,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficica-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=17400840846353282714&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJB8wFsQUt9I4Rmrb-X440fPE",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficica-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficica-2026"
    ],
    "ciudad": "Barranquilla",
-   "corto": "Parque Sagrado Corazón"
+   "corto": "Parque Sagrado Corazón",
+   "coords_fecha": "2026-11-28"
   },
   "s_a752daa6": {
    "nombre": "Casa Ethel",
    "lat": 3.4389718,
    "lng": -76.5455675,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=10482729521410624657&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJxRZmFRGnMI4RkUwuuPUiepE",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 25 #4-53, Miraflores",
    "alias": [],
@@ -6845,7 +7470,8 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Casa Ethel"
+   "corto": "Casa Ethel",
+   "coords_fecha": "2026-11-28"
   },
   "s_a778bfa3": {
    "nombre": "Casa de la Juventud Huitaca",
@@ -6930,11 +7556,18 @@
   },
   "s_a9ccfb29": {
    "nombre": "Casa de la Juventud Usaquén",
-   "lat": 4.7302391,
-   "lng": -74.0258586,
+   "lat": 4.7296057,
+   "lng": -74.0247105,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=15065246874936177421&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJW_enRQCPP44RDXMisjaCEtE",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Calle 155 # 7-45",
    "alias": [
@@ -6944,22 +7577,31 @@
     "ficdeh-2026"
    ],
    "ciudad": "Bogotá",
-   "corto": "Casa de la Juventud Usaquén"
+   "corto": "Casa de la Juventud Usaquén",
+   "coords_fecha": "2026-11-28"
   },
   "s_aafb86e6": {
    "nombre": "Parque Principal de Yacuanquer",
-   "lat": 1.114646,
-   "lng": -77.4013722,
+   "lat": 1.1150868,
+   "lng": -77.4005441,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3438857002800689454&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJoZUlgRgyKY4RLrFMZTlGuS8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficpa-2026"
    ],
    "ciudad": "Yacuanquer",
-   "corto": "Parque Principal de Yacuanquer"
+   "corto": "Parque Principal de Yacuanquer",
+   "coords_fecha": "2026-11-28"
   },
   "s_ab15d573": {
    "nombre": "Casa Taller Palo de Mango",
@@ -7026,15 +7668,23 @@
    "lat": 6.173035,
    "lng": -75.3347087,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "filcmar-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=4199617093357909090&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJAzSBJSSgRo4RYrRB8n4JSDo",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "filcmar-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "filcmar-2026"
    ],
    "ciudad": "Marinilla",
-   "corto": "Teatro Municipal Simona Duque"
+   "corto": "Teatro Municipal Simona Duque",
+   "coords_fecha": "2026-11-28"
   },
   "s_acff4c50": {
    "nombre": "Aranjuez",
@@ -7078,8 +7728,15 @@
    "lat": 1.2131613,
    "lng": -77.2784112,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6593480596293309795&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJcZvgUbrVLo4RY1V-J6u_gFs",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 23 #17-85",
    "alias": [],
@@ -7087,7 +7744,8 @@
     "ficpa-2026"
    ],
    "ciudad": "Pasto",
-   "corto": "Casa Páramo"
+   "corto": "Casa Páramo",
+   "coords_fecha": "2026-11-28"
   },
   "s_ae7f3b59": {
    "nombre": "Biblioteca Municipal",
@@ -7126,11 +7784,18 @@
   },
   "s_afbde4e6": {
    "nombre": "Cámara de Comercio de Pereira",
-   "lat": 4.814082,
-   "lng": -75.6977866,
+   "lat": 4.8140117,
+   "lng": -75.6978337,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=1132773630432445008&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJy9JhO0aHOI4RUALbfJ1ruA8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "alias": [
     "Cámara de Comercio de Pereira - Pereira"
@@ -7139,15 +7804,23 @@
     "ficdeh-2026"
    ],
    "ciudad": "Pereira",
-   "corto": "Cámara de Comercio de Pereira"
+   "corto": "Cámara de Comercio de Pereira",
+   "coords_fecha": "2026-11-28"
   },
   "s_b054f641": {
    "nombre": "Casa Cromo Casa Cultural",
-   "lat": 4.559016,
-   "lng": -75.6542441,
+   "lat": 4.5590695,
+   "lng": -75.6544577,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=15429441897055407885&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJubzYfwD1OI4RDU-EHKhjINY",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Calle 22 Norte # 12-39",
    "alias": [
@@ -7157,15 +7830,23 @@
     "ficdeh-2026"
    ],
    "ciudad": "Armenia",
-   "corto": "Casa Cromo Casa Cultural"
+   "corto": "Casa Cromo Casa Cultural",
+   "coords_fecha": "2026-11-28"
   },
   "s_b14cf4f4": {
    "nombre": "Teatro Regional Valerio Antonio Jiménez",
-   "lat": 6.1720347,
-   "lng": -75.3326927,
+   "lat": 6.171947,
+   "lng": -75.3325301,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "filcmar-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=15350618087049648974&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJk7GEriWgRo4RTttHsdFZCNU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "filcmar-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
@@ -7176,7 +7857,8 @@
    ],
    "ciudad": "Marinilla",
    "corto": "Teatro Regional Valerio Antonio Jiménez",
-   "institucion": "i_4a303e29"
+   "institucion": "i_4a303e29",
+   "coords_fecha": "2026-11-28"
   },
   "s_b2da5f1d": {
    "nombre": "Museo Juan del Corral",
@@ -7343,8 +8025,15 @@
    "lat": 4.4096964,
    "lng": -76.1539664,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "cinetoro-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=13152173480953764142&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJUYBERxU3OI4RLtmPBBnohbY",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "cinetoro-2026-venues-geo.json"
+    }
    },
    "address": "Cl. 8 #8-53, Roldanillo, Valle del Cauca",
    "alias": [
@@ -7354,15 +8043,23 @@
     "cinetoro-2026"
    ],
    "ciudad": "Roldanillo",
-   "corto": "Museo Rayo"
+   "corto": "Museo Rayo",
+   "coords_fecha": "2026-11-28"
   },
   "s_b74ca288": {
    "nombre": "VISA Screening Room at the Princess of Wales Theatre",
-   "lat": 43.6470405,
-   "lng": -79.3892399,
+   "lat": 43.6469783,
+   "lng": -79.3892259,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tiff-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=17642948444392437104&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJc4-p5NA0K4gRcLWKQiJY2PQ",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "tiff-2026.json (publicado)"
+    }
    },
    "address": "300 King Street West",
    "alias": [
@@ -7375,7 +8072,8 @@
     "VSR"
    ],
    "ciudad": "Toronto",
-   "corto": "VISA Screening Room at the Princess of Wales Theatre"
+   "corto": "VISA Screening Room at the Princess of Wales Theatre",
+   "coords_fecha": "2026-11-28"
   },
   "s_b75b331b": {
    "nombre": "Fundación Universitaria Bellas Artes",
@@ -7436,11 +8134,18 @@
   },
   "s_b7eadc36": {
    "nombre": "Alianza Francesa",
-   "lat": 10.4264842,
-   "lng": -75.5482642,
+   "lat": 10.4266467,
+   "lng": -75.5480586,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=7845307741635855341&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJTS97354v9o4R7cPTJdMh4Gw",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Parque Fernández de Madrid, Cra. 8 # 37-34, San Diego",
    "alias": [
@@ -7450,22 +8155,31 @@
     "ficdeh-2026"
    ],
    "ciudad": "Cartagena",
-   "corto": "Alianza Francesa"
+   "corto": "Alianza Francesa",
+   "coords_fecha": "2026-11-28"
   },
   "s_b862f340": {
    "nombre": "Casa de la Secretaría de Cultura",
-   "lat": 5.0678125,
-   "lng": -75.5199375,
+   "lat": 5.0678208,
+   "lng": -75.519931,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=8595309094693996541&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJvcsGifBvR44R_Yfr6xSsSHc",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "_ciudad_fijada": "lugar vecino del almacén a 446 m"
+   "_ciudad_fijada": "lugar vecino del almacén a 446 m",
+   "coords_fecha": "2026-11-28"
   },
   "s_b9e0404b": {
    "nombre": "Uniamazonia Sede Porvenir",
@@ -7496,8 +8210,15 @@
    "lat": 6.2342773,
    "lng": -75.1617247,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=2934191218167429984&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJM_P5cCkdRI4RYLvw7V1XuCg",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Domo Parque Principal",
@@ -7515,15 +8236,23 @@
     "Tarima Principal"
    ],
    "ciudad": "Guatapé",
-   "corto": "Parque Principal"
+   "corto": "Parque Principal",
+   "coords_fecha": "2026-11-28"
   },
   "s_ba188ef6": {
    "nombre": "SVA Theatre",
-   "lat": 40.7467,
-   "lng": -74.0001,
+   "lat": 40.7460403,
+   "lng": -73.9996948,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "tribeca-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=13961553968430559649&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJueJgN7pZwokRobG_4FxnwcE",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "tribeca-2026.json (publicado)"
+    }
    },
    "address": "333 W 23rd St, New York, NY 10011",
    "alias": [],
@@ -7532,7 +8261,8 @@
    ],
    "corto": "SVA Theatre",
    "ciudad": "Nueva York",
-   "_ciudad_fijada": "Nominatim reverso"
+   "_ciudad_fijada": "Nominatim reverso",
+   "coords_fecha": "2026-11-28"
   },
   "s_ba748121": {
    "nombre": "Centro Cultural Bacatá",
@@ -7562,8 +8292,15 @@
    "lat": 6.2960781,
    "lng": -75.5518993,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "fantasmagoria-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=5900571539055217416&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJEZYcScsoRI4RCIsqXY0K41E",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "fantasmagoria-2026-venues-geo.json"
+    }
    },
    "address": "Estación Andalucía, Metrocable línea K",
    "alias": [],
@@ -7571,7 +8308,8 @@
     "fantasmagoria-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Estación Metrocable Andalucía"
+   "corto": "Estación Metrocable Andalucía",
+   "coords_fecha": "2026-11-28"
   },
   "s_bad03f9a": {
    "nombre": "Estación del Tren",
@@ -7603,8 +8341,15 @@
    "lat": 6.2344921,
    "lng": -75.6023711,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "fantasmagoria-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6821329576555062289&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ6QB32NApRI4RESRu4hs7ql4",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "fantasmagoria-2026-venues-geo.json"
+    }
    },
    "address": "Av. 80 #32-31",
    "alias": [],
@@ -7612,7 +8357,8 @@
     "fantasmagoria-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "La Comarca"
+   "corto": "La Comarca",
+   "coords_fecha": "2026-11-28"
   },
   "s_bbbdcb1f": {
    "nombre": "Universidad Nacional",
@@ -7638,11 +8384,18 @@
   },
   "s_bc531678": {
    "nombre": "Banco de la República",
-   "lat": 1.2115002,
-   "lng": -77.2766571,
+   "lat": 1.2112072,
+   "lng": -77.2770962,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6012023193350319948&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ-XyNL4XULo4RTC8OxT3_blM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
@@ -7654,7 +8407,8 @@
     "Sala de Apoyo"
    ],
    "ciudad": "Pasto",
-   "corto": "Banco de la República"
+   "corto": "Banco de la República",
+   "coords_fecha": "2026-11-28"
   },
   "s_bc53ff29": {
    "nombre": "Universidad Tecnológica de Pereira -UTP",
@@ -7740,8 +8494,15 @@
    "lat": 5.0110174,
    "lng": -74.4699592,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "siembrafest-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=13656482386405933368&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJbwEVr0aaQI4ROMEaE2CShb0",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "siembrafest-2026.json (publicado)"
+    }
    },
    "address": "Parque de la Molienda — parque principal",
    "alias": [
@@ -7751,7 +8512,8 @@
     "siembrafest-2026"
    ],
    "ciudad": "Villeta",
-   "corto": "Cinema Villeta"
+   "corto": "Cinema Villeta",
+   "coords_fecha": "2026-11-28"
   },
   "s_bf5c6a6a": {
    "nombre": "Universidad Jorge Tadeo Lozano, Módulo 4",
@@ -7778,8 +8540,15 @@
    "lat": 4.6063616,
    "lng": -74.0673857,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "midbo-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=18395259434941014849&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJMzO8naKZP44RQePPav4WSf8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "midbo-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 4 #22-40",
    "alias": [],
@@ -7791,7 +8560,8 @@
    ],
    "ciudad": "Bogotá",
    "corto": "Universidad Jorge Tadeo Lozano, Edificio Fabio Lozano",
-   "institucion": "i_6ff39c43"
+   "institucion": "i_6ff39c43",
+   "coords_fecha": "2026-11-28"
   },
   "s_bfb2e06b": {
    "nombre": "Cine Club El Ventanal",
@@ -7837,8 +8607,15 @@
    "lat": 5.0072155,
    "lng": -74.4787477,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "siembrafest-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=14208296789933127722&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJFQJDKziaQI4RKnhJ06YCLsU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "siembrafest-2026.json (publicado)"
+    }
    },
    "address": "Calle 2 n.º 13-03, barrio San Rafael",
    "alias": [
@@ -7848,15 +8625,23 @@
     "siembrafest-2026"
    ],
    "ciudad": "Villeta",
-   "corto": "SENA CDAE Villeta"
+   "corto": "SENA CDAE Villeta",
+   "coords_fecha": "2026-11-28"
   },
   "s_bfe8eb92": {
    "nombre": "Cámara de Comercio de Medellín",
    "lat": 6.2501303,
    "lng": -75.5637803,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "fantasmagoria-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=4741833638182948139&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJZb9bRvgoRI4RK43kE5JgzkE",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "fantasmagoria-2026-venues-geo.json"
+    }
    },
    "address": "Cl. 53 #45-77, Centro, Medellín",
    "alias": [],
@@ -7867,7 +8652,8 @@
     "Auditorio"
    ],
    "ciudad": "Medellín",
-   "corto": "Cámara de Comercio de Medellín"
+   "corto": "Cámara de Comercio de Medellín",
+   "coords_fecha": "2026-11-28"
   },
   "s_c0e88ef0": {
    "nombre": "Institución Educativa Pío XII",
@@ -7896,8 +8682,15 @@
    "lat": 6.2545467,
    "lng": -75.5379079,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "miradas-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=13910510664347476928&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJS0xwNGApRI4RwOO2iL8PDME",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "miradas-2026-venues-geo.json"
+    }
    },
    "address": "Barrio El Faro, comuna 8, Medellín",
    "alias": [
@@ -7907,7 +8700,8 @@
     "miradas-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Junta de Acción Comunal El Faro"
+   "corto": "Junta de Acción Comunal El Faro",
+   "coords_fecha": "2026-11-28"
   },
   "s_c19bda57": {
    "nombre": "Casa de las Luciérnagas",
@@ -7979,18 +8773,26 @@
   },
   "s_c4b65a07": {
    "nombre": "Casa de la Cultura",
-   "lat": 5.598525,
-   "lng": -75.819492,
+   "lat": 5.5979156,
+   "lng": -75.8197759,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "jardin-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=7229861806504549246&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJATRKFZ1TRo4Rfhve7wGhVWQ",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "jardin-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "jardin-2026"
    ],
    "ciudad": "Jardín",
-   "corto": "Casa de la Cultura"
+   "corto": "Casa de la Cultura",
+   "coords_fecha": "2026-11-28"
   },
   "s_c564ed7b": {
    "nombre": "La Pascasia",
@@ -8076,8 +8878,15 @@
    "lat": 3.3728466,
    "lng": -76.5388725,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=18388185888708445600&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJeeHrQgOhMI4RoEVRGKT1L_8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Centro Comercial Unicentro, Carrera 100 #5-169",
    "alias": [],
@@ -8085,7 +8894,8 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Cine Colombia Unicentro"
+   "corto": "Cine Colombia Unicentro",
+   "coords_fecha": "2026-11-28"
   },
   "s_cb9cf76f": {
    "nombre": "Casa de la Juventud Nacho Sánchez",
@@ -8114,8 +8924,15 @@
    "lat": 4.6091797,
    "lng": -76.0785289,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "cinetoro-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12497444349320330875&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJwTcRDABrOI4Re35z4WvXb60",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "cinetoro-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Rosalia's Garden - Toro"
@@ -8124,7 +8941,8 @@
     "cinetoro-2026"
    ],
    "ciudad": "Toro",
-   "corto": "Rosalia's Garden"
+   "corto": "Rosalia's Garden",
+   "coords_fecha": "2026-11-28"
   },
   "s_cc663c68": {
    "nombre": "Book Times",
@@ -8304,8 +9122,15 @@
    "lat": 3.4292722,
    "lng": -76.5438465,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12911080760032981035&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJW93ueWinMI4RK3AloItfLbM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 37A #5-27, Nuevo San Fernando",
    "alias": [],
@@ -8316,15 +9141,23 @@
     "Domo"
    ],
    "ciudad": "Cali",
-   "corto": "Yawa"
+   "corto": "Yawa",
+   "coords_fecha": "2026-11-28"
   },
   "s_d241f4f3": {
    "nombre": "Universidad Alexander von Humboldt",
-   "lat": 4.5425151,
-   "lng": -75.6627651,
+   "lat": 4.5426196,
+   "lng": -75.6628168,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=18340850137740666580&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJV8qAO__0OI4R1Oa0ugbKh_4",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Avenida Bolívar # 1-189",
    "alias": [
@@ -8334,7 +9167,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Armenia",
-   "corto": "Universidad Alexander von Humboldt"
+   "corto": "Universidad Alexander von Humboldt",
+   "coords_fecha": "2026-11-28"
   },
   "s_d278bee5": {
    "nombre": "Plazoleta La Maceta",
@@ -8357,15 +9191,23 @@
    "lat": 3.481656,
    "lng": -76.4877616,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=15067547694319142381&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJX4TeiNinMI4R7QUm9MuuGtE",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Calle 71 #1A-10, San Luis I (Comuna 6)",
    "alias": [],
    "festivales": [
     "ficcali-2026"
    ],
-   "ciudad": "Cali"
+   "ciudad": "Cali",
+   "coords_fecha": "2026-11-28"
   },
   "s_d4bd8200": {
    "nombre": "Universidad Distrital ASAB",
@@ -8420,8 +9262,15 @@
    "lat": 3.4447028,
    "lng": -76.5464776,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3249788158214018143&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJbTt8z3-mMI4RXxSenRyRGS0",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 14A Oeste #6-00",
    "alias": [],
@@ -8429,7 +9278,8 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Teatro al Aire Libre Los Cristales"
+   "corto": "Teatro al Aire Libre Los Cristales",
+   "coords_fecha": "2026-11-28"
   },
   "s_d7c9ee58": {
    "nombre": "La Tante Boutique",
@@ -8477,8 +9327,15 @@
    "lat": 6.3775808,
    "lng": -75.4461999,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "girardota-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=8924484397472429213&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJyzaQJ1A7RI4RnTTcikYj2ns",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "girardota-2026-venues-geo.json"
+    }
    },
    "address": "Cl. 6 #12-7",
    "alias": [],
@@ -8486,7 +9343,8 @@
     "girardota-2026"
    ],
    "ciudad": "Girardota",
-   "corto": "Parque Principal"
+   "corto": "Parque Principal",
+   "coords_fecha": "2026-11-28"
   },
   "s_d883ae77": {
    "nombre": "Centro Cultural Gabriel García Márquez",
@@ -8541,8 +9399,15 @@
    "lat": 1.2295096,
    "lng": -77.2899877,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=140251050059643373&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJy2Yfm4jTLo4R7TkuQpZF8gE",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "address": "Calle 18 #47-150, Torobajo",
    "alias": [],
@@ -8553,7 +9418,8 @@
     "Sala de Audiencias"
    ],
    "ciudad": "Pasto",
-   "corto": "Universidad Cooperativa de Colombia, Torobajo"
+   "corto": "Universidad Cooperativa de Colombia, Torobajo",
+   "coords_fecha": "2026-11-28"
   },
   "s_da9dd614": {
    "nombre": "Centro de Integración e Innovación Social",
@@ -8631,8 +9497,15 @@
    "lat": 4.7138599,
    "lng": -74.0868349,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=13788164020988813190&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJn0eHQKmFP44Rhh_czx9mWb8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Calle 127 A # 87",
    "alias": [
@@ -8642,15 +9515,23 @@
     "ficdeh-2026"
    ],
    "ciudad": "Bogotá",
-   "corto": "CEFE Cometas"
+   "corto": "CEFE Cometas",
+   "coords_fecha": "2026-11-28"
   },
   "s_dd71de11": {
    "nombre": "Universidad Santiago de Cali",
    "lat": 3.4033961,
    "lng": -76.5470651,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "semanacine-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6397823542062735863&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJs1mG8nCnMI4R9-FHSJ2iyVg",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "semanacine-2026-venues-geo.json"
+    }
    },
    "address": "Calle 5 #62-00, Pampalinda, Cali",
    "alias": [],
@@ -8663,15 +9544,23 @@
     "Plazoleta de Los Sabios"
    ],
    "ciudad": "Cali",
-   "corto": "Universidad Santiago de Cali"
+   "corto": "Universidad Santiago de Cali",
+   "coords_fecha": "2026-11-28"
   },
   "s_dd84dcf7": {
    "nombre": "IED Alonso de Olalla",
    "lat": 5.0044879,
    "lng": -74.4701587,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "siembrafest-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=7931058780438632016&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJbewj00iaQI4RUJbJtPDHEG4",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "siembrafest-2026.json (publicado)"
+    }
    },
    "address": "Diagonal 1 Sur n.º 72-31, barrio Carlos Lleras",
    "alias": [
@@ -8681,15 +9570,23 @@
     "siembrafest-2026"
    ],
    "ciudad": "Villeta",
-   "corto": "IED Alonso de Olalla"
+   "corto": "IED Alonso de Olalla",
+   "coords_fecha": "2026-11-28"
   },
   "s_dd9fc38c": {
    "nombre": "Universidad Mariana",
    "lat": 1.2238916,
    "lng": -77.2830765,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=15951137982864715970&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJdTKJ2n7ULo4RwnDkj3vTXd0",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "address": "Cl 18 #34-104",
    "alias": [],
@@ -8702,7 +9599,8 @@
     "Sala Audiovisual Pedro Schumacher"
    ],
    "ciudad": "Pasto",
-   "corto": "Universidad Mariana"
+   "corto": "Universidad Mariana",
+   "coords_fecha": "2026-11-28"
   },
   "s_df30b46a": {
    "nombre": "Universidad de la Costa – CUC",
@@ -8736,15 +9634,23 @@
    "lat": 5.59612,
    "lng": -75.8143,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "jardin-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=357813668862942851&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJW0gIlXhTRo4Rg95a1KI19wQ",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "jardin-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "jardin-2026"
    ],
    "ciudad": "Jardín",
-   "corto": "Coliseo Municipal"
+   "corto": "Coliseo Municipal",
+   "coords_fecha": "2026-11-28"
   },
   "s_dfa5f4a5": {
    "nombre": "Cinemateca del Caribe",
@@ -8777,26 +9683,41 @@
   },
   "s_dfae17a9": {
    "nombre": "Alianza Francesa",
-   "lat": 5.0588125,
-   "lng": -75.4884375,
+   "lat": 5.0587918,
+   "lng": -75.4884151,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=16297712680516990497&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJF6kRB6VlR44RITaYfVUbLeI",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "corto": "Alianza Francesa"
+   "corto": "Alianza Francesa",
+   "coords_fecha": "2026-11-28"
   },
   "s_dfb79418": {
    "nombre": "Galería Pérez Rojas",
    "lat": 5.6334099,
    "lng": -73.5231699,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "villadelcine-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12971186134588200957&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJfcCD7w3XQY4R_ReaqxDpArQ",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "villadelcine-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Galería Pérez Rojas - Villa de Leyva"
@@ -8805,7 +9726,8 @@
     "villadelcine-2026"
    ],
    "ciudad": "Villa de Leyva",
-   "corto": "Galería Pérez Rojas"
+   "corto": "Galería Pérez Rojas",
+   "coords_fecha": "2026-11-28"
   },
   "s_e023fd68": {
    "nombre": "MonkeyDo",
@@ -8852,8 +9774,15 @@
    "lat": 10.9984824,
    "lng": -74.8126315,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficidi-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=7095771145949399958&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJGYbCIw8t9I4RlsvHIUM-eWI",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficidi-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 46 #79-82",
    "alias": [],
@@ -8861,7 +9790,8 @@
     "ficidi-2026"
    ],
    "ciudad": "Barranquilla",
-   "corto": "La Maloca Cultural"
+   "corto": "La Maloca Cultural",
+   "coords_fecha": "2026-11-28"
   },
   "s_e1521829": {
    "nombre": "Coocine",
@@ -8969,11 +9899,18 @@
   },
   "s_e4ad0263": {
    "nombre": "Centro Cultural Banco de la República",
-   "lat": 6.249052,
-   "lng": -75.5684408,
+   "lat": 6.2493462,
+   "lng": -75.5681485,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=9619008894368500011&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJj3lXVP8oRI4RK0koMKCVfYU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Cl. 50 #50-21 Piso 3",
    "alias": [
@@ -8983,7 +9920,8 @@
     "ficdeh-2026"
    ],
    "ciudad": "Medellín",
-   "corto": "Centro Cultural Banco de la República"
+   "corto": "Centro Cultural Banco de la República",
+   "coords_fecha": "2026-11-28"
   },
   "s_e4f61235": {
    "nombre": "Polideportivo San Antonio",
@@ -9004,11 +9942,18 @@
   },
   "s_e5a9771f": {
    "nombre": "Centro Cultural 25 de Mayo",
-   "lat": -34.5763854,
-   "lng": -58.4837318,
+   "lat": -34.5762565,
+   "lng": -58.4835898,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "finca-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11841949411138741895&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJzzkrzme2vJURhyYSgz8OV6Q",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "finca-2026.json (publicado)"
+    }
    },
    "address": "Av. Triunvirato 4444, Villa Urquiza, CABA",
    "alias": [
@@ -9018,22 +9963,31 @@
     "finca-2026"
    ],
    "ciudad": "Buenos Aires",
-   "corto": "CC 25 de Mayo"
+   "corto": "CC 25 de Mayo",
+   "coords_fecha": "2026-11-28"
   },
   "s_e605777d": {
    "nombre": "Casa de la Cultura",
-   "lat": 1.2160418,
-   "lng": -77.2786615,
+   "lat": 1.216207,
+   "lng": -77.278453,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficpa-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=465815524858767212&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ1wWhjYbULo4RbKcResDodgY",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficpa-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficpa-2026"
    ],
    "ciudad": "Pasto",
-   "corto": "Casa de la Cultura"
+   "corto": "Casa de la Cultura",
+   "coords_fecha": "2026-11-28"
   },
   "s_e6b32b7f": {
    "nombre": "Centro Día Gerontológico",
@@ -9077,8 +10031,15 @@
    "lat": 6.3799362,
    "lng": -75.4461132,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "girardota-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=4602795656102068390&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJGeTtU0U7RI4RpsCsN0Nq4D8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "girardota-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 18 #5A-65",
    "alias": [],
@@ -9087,30 +10048,46 @@
    ],
    "ciudad": "Girardota",
    "corto": "Comfama",
-   "institucion": "i_0b12d8c2"
+   "institucion": "i_0b12d8c2",
+   "coords_fecha": "2026-11-28"
   },
   "s_e94299cf": {
    "nombre": "SES Hospital Universitario de Caldas",
-   "lat": 5.0629375,
-   "lng": -75.5009375,
+   "lat": 5.0629484,
+   "lng": -75.5009284,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficma-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=7078666910875495027&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ5zRdRIpvR44Rc6oLEg16PGI",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficma-2026-venues-geo.json"
+    }
    },
    "alias": [],
    "festivales": [
     "ficma-2026"
    ],
    "ciudad": "Manizales",
-   "_ciudad_fijada": "lugar vecino del almacén a 559 m"
+   "_ciudad_fijada": "lugar vecino del almacén a 559 m",
+   "coords_fecha": "2026-11-28"
   },
   "s_ea18aa85": {
    "nombre": "Casa Cultural Valerio Antonio Jiménez",
    "lat": 6.171947,
    "lng": -75.3325301,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "filcmar-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=15350618087049648974&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJk7GEriWgRo4RTttHsdFZCNU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "filcmar-2026-venues-geo.json"
+    }
    },
    "address": "Cl. 30 #25-102",
    "alias": [],
@@ -9122,15 +10099,23 @@
    ],
    "ciudad": "Marinilla",
    "corto": "Casa Cultural Valerio Antonio Jiménez",
-   "institucion": "i_4a303e29"
+   "institucion": "i_4a303e29",
+   "coords_fecha": "2026-11-28"
   },
   "s_eb2718df": {
    "nombre": "Morning",
    "lat": 6.3772694,
    "lng": -75.4448023,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "girardota-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=5990946060259768736&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJOTiODUk7RI4RoDlPTrMdJFM",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "girardota-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 14 #5B-54",
    "alias": [],
@@ -9138,15 +10123,23 @@
     "girardota-2026"
    ],
    "ciudad": "Girardota",
-   "corto": "Morning"
+   "corto": "Morning",
+   "coords_fecha": "2026-11-28"
   },
   "s_ec14401a": {
    "nombre": "Centro de Eventos Guatapé Plaza",
    "lat": 6.2332747,
    "lng": -75.1621119,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=18191110774728929569&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJU0nsCQAdRI4RIbF_dd7Oc_w",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Centro de Eventos Guatapé Plaza - Guatapé"
@@ -9155,7 +10148,8 @@
     "guatape-2026"
    ],
    "ciudad": "Guatapé",
-   "corto": "Centro de Eventos Guatapé Plaza"
+   "corto": "Centro de Eventos Guatapé Plaza",
+   "coords_fecha": "2026-11-28"
   },
   "s_ec2796d0": {
    "nombre": "Playa Río Cauca, Barrio Las Vegas",
@@ -9201,8 +10195,15 @@
    "lat": 4.9288644,
    "lng": -74.4321437,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "siembrafest-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=14858376687623548106&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJ07s_CumcQI4Ryiy_1N-OM84",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "siembrafest-2026.json (publicado)"
+    }
    },
    "alias": [
     "Escuela Rural Santa Ana - Sasaima"
@@ -9211,7 +10212,8 @@
     "siembrafest-2026"
    ],
    "ciudad": "Sasaima",
-   "corto": "Escuela Rural Santa Ana"
+   "corto": "Escuela Rural Santa Ana",
+   "coords_fecha": "2026-11-28"
   },
   "s_ecedd1d7": {
    "nombre": "Plaza Mayor",
@@ -9242,8 +10244,15 @@
    "lat": 6.8115307,
    "lng": -73.2714857,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "leviza-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3188778063887142426&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJl0BLTqEyaI4RGg6NFcHQQCw",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "leviza-2026.json (publicado)"
+    }
    },
    "address": "Zapatoca, Santander",
    "alias": [
@@ -9253,15 +10262,23 @@
     "leviza-2026"
    ],
    "ciudad": "Zapatoca",
-   "corto": "Polideportivo"
+   "corto": "Polideportivo",
+   "coords_fecha": "2026-11-28"
   },
   "s_ed5a19ae": {
    "nombre": "Museo Casa Antonio Nariño",
    "lat": 5.6321598,
    "lng": -73.5248406,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "villadelcine-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=14344071996952451179&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJPynJUQzXQY4Ra5j6qnthEMc",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "villadelcine-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Casa Museo Antonio Nariño",
@@ -9279,7 +10296,8 @@
    "corto": "Museo Casa Antonio Nariño",
    "salas_alias": {
     "Salón principal · 2do piso": "Salón principal · 1er piso"
-   }
+   },
+   "coords_fecha": "2026-11-28"
   },
   "s_ee37319b": {
    "nombre": "Centro Cultural y de Convenciones Fernando Botero",
@@ -9313,8 +10331,15 @@
    "lat": 3.4558323,
    "lng": -76.5231237,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11463468644248203545&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJOcAj_n2nMI4RGTE-8v5rFp8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 5 #22-59, Comuna 3",
    "alias": [],
@@ -9322,7 +10347,8 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "CineQuanon"
+   "corto": "CineQuanon",
+   "coords_fecha": "2026-11-28"
   },
   "s_eec0c2a8": {
    "nombre": "Casa de la Juventud Aldea De Pensadores",
@@ -9405,8 +10431,15 @@
    "lat": 2.4875749,
    "lng": -76.5606068,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "popayan-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6769197533246114514&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJlUQnfhcEMI4R0sqVr0oF8V0",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "popayan-2026-venues-geo.json"
+    }
    },
    "address": "Cra. 9 #73AN-200, Norte, Popayán",
    "alias": [],
@@ -9417,15 +10450,23 @@
     "Pantalla gigante"
    ],
    "ciudad": "Popayán",
-   "corto": "Centro Comercial Terra Plaza"
+   "corto": "Centro Comercial Terra Plaza",
+   "coords_fecha": "2026-11-28"
   },
   "s_f49eeca2": {
    "nombre": "Curiplaya",
    "lat": 1.61352,
    "lng": -75.6126315,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "mambe-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=11931895055926840774&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJNUevdA9OJI4Rxk3C4VWblqU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "mambe-2026-venues-geo.json"
+    }
    },
    "alias": [
     "Curiplaya - Florencia"
@@ -9437,7 +10478,8 @@
     "Edificio Curiplaya"
    ],
    "ciudad": "Florencia",
-   "corto": "Curiplaya"
+   "corto": "Curiplaya",
+   "coords_fecha": "2026-11-28"
   },
   "s_f52bd37d": {
    "nombre": "Parque Central de Chachagüí",
@@ -9559,11 +10601,18 @@
   },
   "s_f7d2d58e": {
    "nombre": "Rotonda Tienda Museo del Café",
-   "lat": 4.964313,
-   "lng": -74.434938,
+   "lat": 4.9642729,
+   "lng": -74.4348762,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "siembrafest-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=6730202736098505239&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJL9bfPkibQI4RF3KD97p7Zl0",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "siembrafest-2026.json (publicado)"
+    }
    },
    "alias": [
     "Rotonda Tienda Museo del Café - Sasaima"
@@ -9572,7 +10621,8 @@
     "siembrafest-2026"
    ],
    "ciudad": "Sasaima",
-   "corto": "Rotonda Tienda Museo del Café"
+   "corto": "Rotonda Tienda Museo del Café",
+   "coords_fecha": "2026-11-28"
   },
   "s_f81e2500": {
    "nombre": "Vereda Ilo Alto",
@@ -9596,8 +10646,15 @@
    "lat": 6.258973,
    "lng": -75.5841253,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "fantasmagoria-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=12118829842400234926&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJxQUJzhopRI4Rrk2riYi7Lqg",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "fantasmagoria-2026-venues-geo.json"
+    }
    },
    "address": "Tv. 51A #67B-90",
    "alias": [],
@@ -9609,7 +10666,8 @@
     "Sala de tecnología"
    ],
    "ciudad": "Medellín",
-   "corto": "Universidad Católica Luis Amigó"
+   "corto": "Universidad Católica Luis Amigó",
+   "coords_fecha": "2026-11-28"
   },
   "s_f9e78567": {
    "nombre": "Draco Hobby",
@@ -9652,8 +10710,15 @@
    "lat": 4.9573716,
    "lng": -74.5255619,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "siembrafest-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=9169922350204986363&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJGQgXBPmfQI4R-yPiDcsbQn8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "siembrafest-2026.json (publicado)"
+    }
    },
    "alias": [
     "Vda. Chapaima - Villeta"
@@ -9662,7 +10727,8 @@
     "siembrafest-2026"
    ],
    "ciudad": "Villeta",
-   "corto": "Vda. Chapaima"
+   "corto": "Vda. Chapaima",
+   "coords_fecha": "2026-11-28"
   },
   "s_fb44dd3d": {
    "nombre": "Muelle Corona",
@@ -9709,8 +10775,15 @@
    "lat": 3.4478189,
    "lng": -76.5387144,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "ficcali-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=3832476788149374489&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJUc7luHymMI4RGc6SX1WxLzU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "ficcali-2026-venues-geo.json"
+    }
    },
    "address": "Carrera 6 #3-03, San Antonio",
    "alias": [],
@@ -9718,15 +10791,23 @@
     "ficcali-2026"
    ],
    "ciudad": "Cali",
-   "corto": "Café Macondo"
+   "corto": "Café Macondo",
+   "coords_fecha": "2026-11-28"
   },
   "s_fc1bd923": {
    "nombre": "Escuela de Administración y Mercadotecnia del Quindío (EAM)",
    "lat": 4.541757,
    "lng": -75.6634798,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "ficdeh-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=15419618234819696635&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJF7KkaP_0OI4R-1eQghZ9_dU",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "ficdeh-2026.json (publicado)"
+    }
    },
    "address": "Cra. 14 # 3-11 (Avenida Bolívar)",
    "alias": [
@@ -9736,15 +10817,23 @@
     "ficdeh-2026"
    ],
    "ciudad": "Armenia",
-   "corto": "Escuela de Administración y Mercadotecnia del Quindío (EAM)"
+   "corto": "Escuela de Administración y Mercadotecnia del Quindío (EAM)",
+   "coords_fecha": "2026-11-28"
   },
   "s_fce87735": {
    "nombre": "El Majagual",
    "lat": 6.2407531,
    "lng": -75.1541429,
    "evidencia": {
-    "nivel": "manual",
-    "fuente": "guatape-2026-venues-geo.json"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=8549616263774078155&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJD_Sw-ZEDRI4RywQosLFWpnY",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: manual)",
+    "antes": {
+     "nivel": "manual",
+     "fuente": "guatape-2026-venues-geo.json"
+    }
    },
    "alias": [
     "El Majagual - Guatapé",
@@ -9754,7 +10843,8 @@
     "guatape-2026"
    ],
    "ciudad": "Guatapé",
-   "corto": "El Majagual"
+   "corto": "El Majagual",
+   "coords_fecha": "2026-11-28"
   },
   "s_fd423d59": {
    "nombre": "Casa Yurtas",
@@ -9835,11 +10925,18 @@
   },
   "s_ff72ca1b": {
    "nombre": "Teatro da Vila",
-   "lat": -25.505168,
-   "lng": -49.324059,
+   "lat": -25.505117,
+   "lng": -49.3242848,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "olhar-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=18375543690540476319&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJt5PJztvj3JQRn-dV9aALA_8",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "olhar-2026.json (publicado)"
+    }
    },
    "address": "R. Davi Xavier da Silva, 451 - Cidade Industrial de Curitiba",
    "alias": [],
@@ -9847,7 +10944,8 @@
     "olhar-2026"
    ],
    "ciudad": "Curitiba",
-   "corto": "Teatro da Vila"
+   "corto": "Teatro da Vila",
+   "coords_fecha": "2026-11-28"
   },
   "s_ffcf8a2c": {
    "nombre": "Servicio Forjar Restaurativo Arborizadora Baja",
@@ -9871,11 +10969,18 @@
   },
   "s_fff0c4b6": {
    "nombre": "Universidad de los Andes",
-   "lat": 4.6014026,
-   "lng": -74.064905,
+   "lat": 4.6014581,
+   "lng": -74.0661334,
    "evidencia": {
-    "nivel": "aproximado",
-    "fuente": "qaff-2026.json (publicado)"
+    "nivel": "maps",
+    "url": "https://maps.google.com/?cid=642313150416140747&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "place_id": "ChIJNbMkoaSZP44Ry7kdPWj06Qg",
+    "fecha": "2026-11-28",
+    "fuente": "Google Places, tanda de deuda (antes: aproximado)",
+    "antes": {
+     "nivel": "aproximado",
+     "fuente": "qaff-2026.json (publicado)"
+    }
    },
    "address": "Cra. 1 # 18A-12",
    "alias": [
@@ -9893,7 +10998,8 @@
     "Salón (RGD08)"
    ],
    "ciudad": "Bogotá",
-   "corto": "Universidad de los Andes"
+   "corto": "Universidad de los Andes",
+   "coords_fecha": "2026-11-28"
   }
  },
  "redirecciones": {
@@ -10278,6 +11384,7 @@
   "s_a1f91919": "s_ff62cf6a",
   "s_a207fcf9": "s_c564ed7b",
   "s_a21d63ab": "s_891e8481",
+  "s_a2381802": "s_5d1ff362",
   "s_a2a1a1e7": "s_384e68d5",
   "s_a3ce67ac": "s_7aa97950",
   "s_a44550d4": "s_891e8481",
@@ -10801,6 +11908,11 @@
     "Comfama Otraparte",
     "Teatro Otraparte",
     "el Teatro Otraparte queda dentro del Parque Cultural y Ambiental Otraparte (Cl. 27 Sur #43A-51, Envigado), la sede de Comfama Otraparte; la Casa Museo Otraparte es el lugar vecino, aparte. Confirmado por Juan el 27 nov 2026"
+   ],
+   [
+    "Universidad del Atlántico",
+    "Universidad del Atlántico, sede Norte",
+    "Google da el mismo lugar (mismo place_id) y las dos direcciones son la Ciudadela Universitaria de Puerto Colombia"
    ]
   ],
   "distintos": [
@@ -10979,12 +12091,10 @@
  "_deuda": {
   "sin_url": [
    "s_0a4d1410",
-   "s_1071539b",
    "s_148dd95b",
    "s_19daa131",
    "s_1b1244a2",
    "s_1ee22222",
-   "s_213dce05",
    "s_298b07a2",
    "s_36b34e66",
    "s_3c28b8d0",
@@ -10995,132 +12105,50 @@
    "s_4ea5f87b",
    "s_526f7636",
    "s_54536669",
-   "s_554ab71f",
-   "s_55abdd71",
-   "s_55f3a489",
-   "s_57b40373",
-   "s_5d1ff362",
    "s_5f0c609d",
-   "s_5f50f1dc",
    "s_6183659b",
    "s_63acec57",
    "s_643e6771",
    "s_68138fbc",
    "s_68a263f4",
    "s_6a28357a",
-   "s_6bb19ae3",
-   "s_6bdaa2bc",
    "s_6c6c37df",
-   "s_6cbcf2c5",
    "s_6ee94d4a",
-   "s_6f855f0a",
-   "s_6f96b935",
-   "s_7050e38f",
-   "s_71565dd9",
-   "s_72e761e5",
    "s_74e18f6b",
    "s_756703ef",
    "s_7585ad81",
-   "s_76882a90",
-   "s_7715f7c0",
    "s_7826af67",
-   "s_78a3e599",
-   "s_797f44ee",
-   "s_7a6a2db7",
-   "s_7b8b1c0e",
    "s_7dac69ba",
-   "s_7ecef455",
-   "s_80902cf9",
    "s_80974dfb",
-   "s_830a426d",
-   "s_85744479",
-   "s_859077b8",
-   "s_85e5255e",
    "s_86bebcba",
-   "s_882ae757",
-   "s_8d191328",
    "s_8d94ab1d",
-   "s_92850ca4",
    "s_936e7c22",
-   "s_94b49a61",
-   "s_964bfd80",
-   "s_985165e3",
-   "s_987cd558",
-   "s_99a993f3",
-   "s_9b2fec9a",
-   "s_9c038cff",
    "s_9c38c3bf",
-   "s_9c496716",
    "s_9daa0da4",
-   "s_9eb51c8b",
-   "s_9edb6fc4",
-   "s_a4fd24e0",
-   "s_a7342bf5",
-   "s_a752daa6",
    "s_a788828f",
-   "s_aafb86e6",
    "s_ab91ad2b",
-   "s_ac49afea",
    "s_acff4c50",
-   "s_ad9e5f5a",
    "s_ae7f3b59",
-   "s_b14cf4f4",
    "s_b655ef88",
-   "s_b705c40c",
    "s_b7e0f2f4",
-   "s_b862f340",
    "s_b9e0404b",
-   "s_b9fca4a4",
-   "s_bab68d8b",
-   "s_bb5ec19d",
-   "s_bc531678",
    "s_bf32b45a",
    "s_bf5c6a6a",
-   "s_bf8a2fa2",
    "s_bfb2e06b",
-   "s_bfe8eb92",
-   "s_c160e346",
-   "s_c4b65a07",
-   "s_c85c8e31",
-   "s_cc00aafb",
-   "s_d1aeb7dc",
    "s_d278bee5",
-   "s_d478c93a",
-   "s_d686ed25",
-   "s_d831483f",
-   "s_d9b4f1c1",
    "s_dbb94309",
-   "s_dd71de11",
-   "s_dd9fc38c",
-   "s_dfa5ca4b",
-   "s_dfae17a9",
-   "s_dfb79418",
-   "s_e046a622",
    "s_e2717fd7",
    "s_e4f61235",
-   "s_e605777d",
    "s_e6b32b7f",
-   "s_e8c35b78",
-   "s_e94299cf",
-   "s_ea18aa85",
-   "s_eb2718df",
-   "s_ec14401a",
    "s_ec2796d0",
    "s_ec96d903",
-   "s_ed5a19ae",
-   "s_ee9c7bec",
    "s_f21094a3",
    "s_f24df433",
-   "s_f4246a34",
-   "s_f49eeca2",
    "s_f52bd37d",
    "s_f6cc0705",
    "s_f6ec1bbd",
-   "s_f95d634b",
    "s_f9f4208c",
    "s_fb44dd3d",
-   "s_fba24cd3",
-   "s_fce87735",
    "s_fd423d59",
    "s_fe8d7da8"
   ],
@@ -11129,14 +12157,9 @@
    "s_00e7323f",
    "s_010ecd16",
    "s_0237c113",
-   "s_035a81a0",
-   "s_09b62d67",
    "s_0a0f2470",
-   "s_0af324db",
    "s_0bbb84e5",
    "s_0cc0d8e2",
-   "s_1021dabf",
-   "s_1038a36e",
    "s_15e48dad",
    "s_1992e58d",
    "s_1a11bba5",
@@ -11147,102 +12170,51 @@
    "s_24c3ac31",
    "s_27e8f3e2",
    "s_2a85b8da",
-   "s_2b03fa90",
-   "s_2c894bd8",
-   "s_2d1affc7",
    "s_2f988a5e",
    "s_301651c3",
    "s_30a8fc5c",
-   "s_3217e964",
    "s_3324b403",
    "s_39107202",
-   "s_3a422f2a",
    "s_3bb9f4df",
    "s_3c174214",
-   "s_3c2f53cf",
-   "s_3d446a6c",
    "s_3d810f53",
-   "s_3df2df68",
    "s_3facd89f",
    "s_4156e8d0",
-   "s_4285aa18",
-   "s_445eff6c",
-   "s_469ea671",
-   "s_46b59d10",
    "s_47a90dcc",
-   "s_4c2461fa",
-   "s_4cdac717",
    "s_4cdb95d4",
-   "s_4d15085b",
-   "s_4da9a121",
-   "s_4ed8fa7d",
-   "s_525d04e9",
    "s_55ba19eb",
-   "s_56d5bec2",
-   "s_57240f05",
    "s_57fda933",
-   "s_5b798d64",
-   "s_603976c3",
    "s_63ca461f",
-   "s_63e34462",
-   "s_659f2a44",
    "s_72d9a1aa",
    "s_73cac39d",
    "s_73e47185",
-   "s_76fd6900",
    "s_77fb8213",
    "s_7d5e0def",
-   "s_7de8bddf",
    "s_7e3dd06f",
    "s_854bd5a3",
-   "s_89b03e3b",
    "s_8d369c94",
    "s_8d82c9c5",
    "s_8da0fd42",
    "s_928f01a3",
-   "s_92e9bbf4",
-   "s_944f92f0",
    "s_968bdbf4",
-   "s_977026c6",
    "s_9a119b45",
    "s_9bd9d312",
    "s_9cd42c9a",
-   "s_a2381802",
    "s_a3e4479d",
-   "s_a9ccfb29",
    "s_af437f4a",
-   "s_afbde4e6",
-   "s_b054f641",
-   "s_b74ca288",
    "s_b75b331b",
-   "s_b7eadc36",
-   "s_ba188ef6",
    "s_bbbdcb1f",
    "s_bc53ff29",
-   "s_bf4f782d",
-   "s_bfe8b044",
    "s_cc663c68",
    "s_cdc0ebb9",
    "s_ce6a3ac5",
    "s_cefad4d8",
-   "s_d241f4f3",
    "s_db1dfa76",
    "s_dbbed1c0",
-   "s_dc6b1f28",
-   "s_dd84dcf7",
    "s_e034e3f9",
-   "s_e4ad0263",
-   "s_e5a9771f",
    "s_e84293c6",
-   "s_ecea4a9b",
-   "s_ed587a37",
    "s_f1eeffaa",
-   "s_f7d2d58e",
-   "s_f81e2500",
-   "s_fa7b2078",
-   "s_fc1bd923",
-   "s_ff72ca1b",
-   "s_fff0c4b6"
+   "s_f81e2500"
   ]
  }
 }
