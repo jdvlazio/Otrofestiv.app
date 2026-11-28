@@ -5610,6 +5610,12 @@
       "url": "https://medellin.comicconcolombia.com/es/agenda",
       "fecha": "2026-11-25",
       "resultado": "encontro"
+     },
+     {
+      "url": "https://medellin.comicconcolombia.com/es/agenda",
+      "fecha": "2026-11-28",
+      "resultado": "ilegible",
+      "nota": "agenda armada con JavaScript; el HTML no trae el horror"
      }
     ],
     "redes": [
@@ -5618,6 +5624,12 @@
       "fecha": "2026-11-25",
       "resultado": "ilegible",
       "nota": "perfil con restricción de edad; Facebook tampoco se lee (vigía 25 nov)"
+     },
+     {
+      "url": "https://www.instagram.com/medellinhorrorfest/",
+      "fecha": "2026-11-28",
+      "resultado": "ilegible",
+      "nota": "perfil con restricción de edad («Log in to continue»); lectura IG en navegador detenida (vigía 28 nov)"
      }
     ],
     "sede": [
@@ -6853,6 +6865,12 @@
       "fecha": "2026-11-27",
       "resultado": "ilegible",
       "nota": "desafío anti-bot"
+     },
+     {
+      "url": "https://ficgofestival.com",
+      "fecha": "2026-11-28",
+      "resultado": "nada",
+      "nota": "solo la edición 2025; nada de 2026 (vigía 28 nov 09:00)"
      }
     ],
     "redes": [
@@ -6973,6 +6991,12 @@
       "fecha": "2026-11-26",
       "resultado": "ilegible",
       "nota": "HTTP 404 el 26 nov."
+     },
+     {
+      "url": "https://changuitovisual.wixsite.com/changuitovisual",
+      "fecha": "2026-11-28",
+      "resultado": "nada",
+      "nota": "Wix sin texto de 2026"
      }
     ],
     "redes": [
@@ -6981,6 +7005,12 @@
       "fecha": "2026-11-25",
       "resultado": "no_mirada",
       "nota": "IG @changuitofilmfestival, FB changuitovisual"
+     },
+     {
+      "url": "https://www.facebook.com/changuito.visual.7",
+      "fecha": "2026-11-28",
+      "resultado": "nada",
+      "nota": "perfil personal sin publicaciones públicas"
      }
     ],
     "sede": [
@@ -7267,6 +7297,12 @@
       "fecha": "2026-11-26",
       "resultado": "nada",
       "nota": "Legible hoy: solo enlaces de secciones (Movies, Academy, Films, Film Festival); sin fechas, selección ni programación 2026."
+     },
+     {
+      "url": "https://www.tengofefilms.com/",
+      "fecha": "2026-11-28",
+      "resultado": "nada",
+      "nota": "sin texto de 2026 legible (página armada con JavaScript)"
      }
     ],
     "redes": [
@@ -7418,6 +7454,12 @@
       "fecha": "2026-11-27",
       "resultado": "nada",
       "nota": "Resoluciones 134–138 de noviembre son de otros temas; la selección prometida para el 26 nov no está publicada."
+     },
+     {
+      "url": "https://www.tenjoculturayturismo.gov.co/normativa-entidad",
+      "fecha": "2026-11-28",
+      "resultado": "nada",
+      "nota": "sin resolución de seleccionados; las últimas (134–138) son de otros temas"
      }
     ],
     "boleteria": [
