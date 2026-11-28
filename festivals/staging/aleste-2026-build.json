@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "MAMM (fichas del ciclo) + láminas de @aleste.colombia (3, 5 y 10 nov 2026) + web oficial programa2026 (16 nov, Bogotá)",
-  "capturado": "2026-11-25",
+  "capturado": "2026-11-28",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_secciones": "16 nov 2026: las secciones son las de la web oficial (alestfestival.com/programa2026), tal cual. Se retiran «Al Este en el MAMM / en la Cinemateca», que eran rótulos nuestros por sede. «Fokus: Las grietas en el muro» (lámina IG) pasa a «del muro», como dice la web, que es la fuente más nueva. Emojis y nombres en inglés: propuesta, a confirmar con Juan.",
@@ -27,6 +27,9 @@
   "2026-11-29"
  ],
  "_por_que_dias_vacios": "23 y 24: entre Medellín (18–22) y Bogotá (25–29). 29: el festival lo anuncia, pero ninguna lámina del 13 nov trae función ese día.",
+ "radar_salas_ok": {
+  "Sala Gaitán": "El radar #1397 la nombra por BOGOSHORTS (comentario del 28 nov), no por Al Este"
+ },
  "prioLimit": 6,
  "dias": [
   "2026-11-18",
@@ -235,8 +238,8 @@
   "MAMM - Medellín": {
    "short": "MAMM",
    "city": "Medellín",
-   "lat": 6.2237797,
-   "lng": -75.57384,
+   "lat": 6.2237539,
+   "lng": -75.5738537,
    "address": "Cra. 44 #19A-100",
    "_prec": "manual",
    "_nota": "pin verificado en Mamut; dirección de la web del MAMM",
@@ -2247,6 +2250,7 @@
     "date": "2026-11-23",
     "tipo": "sala"
    },
+   "synopsis_en": "A selection of five Bolivian animated shorts: \"Cuentos de la Cuenca\", on caring for the environment; \"Ekeko\", on the Andean deity of abundance; \"La muñeca de maíz\", a tender bond in the Chaco; \"Pascay\", on grief and highland traditions; and \"Paulina y el cóndor\", a moving journey to the big city.",
    "_fid": "f_caf13da1b1",
    "id": "f_caf13da1b1",
    "is_free": true,
@@ -2283,8 +2287,7 @@
      "tipo": "festival-web",
      "fecha": "2026-11-23"
     }
-   },
-   "synopsis_en": "A selection of five Bolivian animated shorts: \"Cuentos de la Cuenca\", on caring for the environment; \"Ekeko\", on the Andean deity of abundance; \"La muñeca de maíz\", a tender bond in the Chaco; \"Pascay\", on grief and highland traditions; and \"Paulina y el cóndor\", a moving journey to the big city."
+   }
   },
   {
    "title": "Hecho en Colombia – Bloque 1",
@@ -2386,8 +2389,8 @@
      "tmdb_id": 1193850,
      "synopsis": "En diciembre de 1986, el cineasta y poeta ruso Andréi Tarkovski muere a los 54 años a causa de un cáncer, luego de haberse exiliado de la URSS. Una tarde de verano del siglo 21, acompañado de una cámara súper8mm, viajo a visitar su tumba. Esta película es la bitácora de este viaje.",
      "synopsis_en": "Log of a trip to the cemetery where the grave of the Russian filmmaker and poet Andrei Tarkovsky lies.",
-     "synopsis_lang": "es",
-     "year": 2024
+     "year": 2024,
+     "synopsis_lang": "es"
     },
     {
      "title": "Futuros luminosos",
@@ -2580,7 +2583,7 @@
    },
    "lbSlug": "todas-las-canciones-del-mundo",
    "tmdb_id": 1744092,
-   "synopsis_en": "A narrative or documentary journey into the collective and emotional memory that songs build in people’s lives. It weaves together different stories around the creation, loss or preservation of music, showing how melodies define historical, geographical and personal moments in Colombia.",
+   "synopsis_en": "Omar, an Andean music teacher with a 25-year career, faces the closure of the university program to which he has devoted his life and the indifference of students and authorities. Amid empty classrooms, concerts and rehearsals, he begins a silent process of mourning and transformation.",
    "_fid": "f_1c1639d27e",
    "id": "f_1c1639d27e",
    "is_free": false,
@@ -3047,6 +3050,7 @@
      "tmdb_id": 1791609,
      "synopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
      "synopsis_en": "A fragmented vision of frailejones that juxtaposes close-ups of the plant, like a morphological study, with scientific illustrations, official representations and discourses about it. Shot on photosensitive film, it shows the plant as a territory inhabited by diverse forms of life.",
+     "genre": "Documental",
      "year": 2026,
      "synopsis_lang": "es"
     },
@@ -3106,7 +3110,8 @@
      "posterSource": "tmdb",
      "lbSlug": "transversal-30ff",
      "tmdb_id": 1525925,
-     "synopsis_en": "In this comedy-drama, two friends in the middle of a move try to find the address of the new apartment one of them is moving into, but end up completely lost in the city."
+     "synopsis_en": "In the middle of a move, two friends look for the address of the new apartment one of them is moving into, but both are equally lost.",
+     "genre": "Comedia"
     }
    ],
    "_fid": "f_cb55e388f2",
@@ -3370,6 +3375,7 @@
    "_fid": "f_61974e3c92",
    "id": "f_61974e3c92",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313375",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3395,6 +3401,11 @@
     "entrada": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
+    },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-28",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4088?sede=11"
     },
     "has_qa": {
      "tipo": "festival-web",
@@ -3530,6 +3541,7 @@
    "_fid": "f_730c9c11c9",
    "id": "f_730c9c11c9",
    "is_free": false,
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230607313374",
    "_procedencia": {
     "day": {
      "tipo": "festival-web",
@@ -3555,6 +3567,11 @@
      "tipo": "festival-web",
      "fecha": "2026-11-16"
     },
+    "ticket_url": {
+     "tipo": "sala",
+     "fecha": "2026-11-28",
+     "url": "https://cinematecadebogota.gov.co/node/peliculas/4090?sede=11"
+    },
     "has_qa": {
      "tipo": "festival-web",
      "fecha": "2026-11-16"
@@ -3575,8 +3592,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-11-25T07:40:55",
-  "plan_sha": "504f5daa1302f309",
+  "fecha": "2026-11-28T08:04:43",
+  "plan_sha": "fecb3533d2345434",
   "paso": 9,
   "cmd": "python3 pipeline/aleste-2026-verificar.py"
  }
